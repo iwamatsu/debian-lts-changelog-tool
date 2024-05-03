@@ -236,3 +236,25 @@ class DebianLTSPackages:
     def get_year_data(self, year: int):
         for month in range (1, 13):
             get_month_data(year, month)
+
+    def create_changelog(self, distribution: str, date_from: str, date_to: str, output_file: str) -> None:
+        if os.path.isfile(output_file):
+            os.remove(output_file)
+
+        cur = self.sql_conn.cursor()
+
+        date_from_date = date_from.split(' ')[0]
+        date_from_time = date_from.split(' ')[1]
+        date_to_date = date_to.split(' ')[0]
+        date_to_time = date_to.split(' ')[1]
+
+        distribution_sec = f'{distribution}-security'
+        sql = f"""SELECT name, version, upload_date, upload_time, upload_info
+                  FROM package_data WHERE upload_date >= ? and upload_date <= ? and distribution IN (?, ?) 
+                  ORDER BY name ASC, upload_date DESC;"""
+        cur.execute(sql, (date_from_date, date_to_date, distribution, distribution_sec))
+        with open(output_file, mode='a') as f:
+            for fetch_data in cur.fetchall():
+                f.write(self.get_changelog_data_main(fetch_data[4]))
+
+        cur.close()
