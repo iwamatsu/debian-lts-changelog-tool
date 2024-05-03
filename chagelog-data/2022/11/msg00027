@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 20 Nov 2022 18:03:02 +0200
+Source: graphicsmagick
+Architecture: source
+Version: 1.4+really1.3.35-1~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ graphicsmagick (1.4+really1.3.35-1~deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-1270
+     Heap buffer overflow when parsing MIFF.
+Checksums-Sha1:
+ efb56ecb875301f284964c35451f2e1d28d2ba3e 3087 graphicsmagick_1.4+really1.3.35-1~deb10u3.dsc
+ b0460d7fb8b2d542a44446322ea62c053bc54b0c 5543224 graphicsmagick_1.4+really1.3.35.orig.tar.xz
+ cf73556180841bc1995cb46cb21463243fa72120 146824 graphicsmagick_1.4+really1.3.35-1~deb10u3.debian.tar.xz
+ ba121857f8a3b24eaaf464eaa60eb5f2c94f9986 12021 graphicsmagick_1.4+really1.3.35-1~deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ b5e6f3c79377173c953720c9951dab68934a2d23dfce21efa5bba488fc083f64 3087 graphicsmagick_1.4+really1.3.35-1~deb10u3.dsc
+ 188a8d6108fea87a0208723e8d206ec1d4d7299022be8ce5d0a9720509250250 5543224 graphicsmagick_1.4+really1.3.35.orig.tar.xz
+ f0af2d6e836ddce8af5d4fb69702c5d9a97fbe0d21d64915660078fbe534c40c 146824 graphicsmagick_1.4+really1.3.35-1~deb10u3.debian.tar.xz
+ 5628ff9cd2d7e7b6a024866867b397af7e131e25db3b0804586d7bb5ae2c09e1 12021 graphicsmagick_1.4+really1.3.35-1~deb10u3_amd64.buildinfo
+Files:
+ ce01c385a3516b413d8e63e98b62b7a2 3087 graphics optional graphicsmagick_1.4+really1.3.35-1~deb10u3.dsc
+ e565b6ce1564d62409b3faa5c747096e 5543224 graphics optional graphicsmagick_1.4+really1.3.35.orig.tar.xz
+ b97cf759b98f6fb07b2cc051ddfd5478 146824 graphics optional graphicsmagick_1.4+really1.3.35-1~deb10u3.debian.tar.xz
+ 4bfea830f867d54b9fbc1359aab7baf3 12021 graphics optional graphicsmagick_1.4+really1.3.35-1~deb10u3_amd64.buildinfo
+

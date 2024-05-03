@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 10 Oct 2022 15:07:25 CEST
+Source: wordpress
+Architecture: source
+Version: 5.0.17+dfsg1-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 23f7f95565722bf7f61f071cf76f74ed03668ae3 2632 wordpress_5.0.17+dfsg1-0+deb10u1.dsc
+ e24acef6c8dba2d6c81231099b57fd3f937e075f 7894864 wordpress_5.0.17+dfsg1.orig.tar.xz
+ 3bb3dc9d030e1567c6f15f5a547187cfeafd79ba 6820028 wordpress_5.0.17+dfsg1-0+deb10u1.debian.tar.xz
+ cfe7d532f76506a592b8cf207e58164a51568d05 7685 wordpress_5.0.17+dfsg1-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 041a0e0477197dd251e5207540b5b1aab3c08a1e402419facba3bedfc6130311 2632 wordpress_5.0.17+dfsg1-0+deb10u1.dsc
+ 92a96fe8c2d685bbaba5628c2308e6d52c716908cb9e7c923d2a96228a576576 7894864 wordpress_5.0.17+dfsg1.orig.tar.xz
+ f1dd2fc6458599f2e27744430d6a21acbe91128cc5fadd3ff65d25094ccb0de6 6820028 wordpress_5.0.17+dfsg1-0+deb10u1.debian.tar.xz
+ fb411f79ab8786b6a5e02063d9f20e3bfd614969806f1048bab82fde8702118d 7685 wordpress_5.0.17+dfsg1-0+deb10u1_amd64.buildinfo
+Changes:
+ wordpress (5.0.17+dfsg1-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Security release:
+     - CVE-2019-17670: Server Side Request Forgery (SSRF) vulnerability
+     - XSS and escaping issues. CVE assignment still pending.
+Files:
+ 973cc9ef94adc3f82640d0102df70781 2632 web optional wordpress_5.0.17+dfsg1-0+deb10u1.dsc
+ 3ef5e283fc6d97cc2697465ba6cde283 7894864 web optional wordpress_5.0.17+dfsg1.orig.tar.xz
+ ac7d0e63e367f84b8f213d1c560dc843 6820028 web optional wordpress_5.0.17+dfsg1-0+deb10u1.debian.tar.xz
+ a8188301a7ed0b455bb53cd832662a6a 7685 web optional wordpress_5.0.17+dfsg1-0+deb10u1_amd64.buildinfo
+

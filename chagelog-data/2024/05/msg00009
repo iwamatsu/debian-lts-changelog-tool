@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 08 May 2024 17:57:07 +0200
+Source: python-idna
+Architecture: source
+Version: 2.6-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1069127
+Changes:
+ python-idna (2.6-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-3651: Specially crafted inputs to idna.encode() can consume
+     significant resources, which may lead to denial of service.
+     (Closes: #1069127)
+Checksums-Sha1:
+ d6af0da4367d4def659fddbe0f4bb5d1ebe78f83 2243 python-idna_2.6-1+deb10u1.dsc
+ abf5e2e7d8f52dd00e658f1ead4eb9f4d2240bf4 135992 python-idna_2.6.orig.tar.gz
+ 337ec85d6e9207dbac783252e32bcde673b3cad5 7532 python-idna_2.6-1+deb10u1.debian.tar.xz
+ 9d2d9a7b6cc55a2caed6e5c976655e14271b6b03 7377 python-idna_2.6-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ a9173579a521361fd5667ae308eab68d92b0e30804fca834cbeae08405d22d8a 2243 python-idna_2.6-1+deb10u1.dsc
+ 2c6a5de3089009e3da7c5dde64a141dbc8551d5b7f6cf4ed7c2568d0cc520a8f 135992 python-idna_2.6.orig.tar.gz
+ 31df1cece917291135d3f3dcdd15332ac7a783e4db4f89b57b7be561d0c4605a 7532 python-idna_2.6-1+deb10u1.debian.tar.xz
+ cbe2907522a8ad570f58f42a2952768098e0e991a9d081408748b12a61c66ce5 7377 python-idna_2.6-1+deb10u1_amd64.buildinfo
+Files:
+ c7b1294952e78673536f70b7e8942ae9 2243 python optional python-idna_2.6-1+deb10u1.dsc
+ c706e2790b016bd0ed4edd2d4ba4d147 135992 python optional python-idna_2.6.orig.tar.gz
+ 1b00a6d5c42b374e58023fc44c0e0a0e 7532 python optional python-idna_2.6-1+deb10u1.debian.tar.xz
+ 14f07f605394616614b08f913372f444 7377 python optional python-idna_2.6-1+deb10u1_amd64.buildinfo
+

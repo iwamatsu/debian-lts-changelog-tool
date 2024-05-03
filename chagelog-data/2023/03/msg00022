@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 24 Mar 2023 09:53:44 +0100
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2021a-0+deb10u9) buster-security; urgency=medium
+ .
+   * Backport changes from upstream:
+     - Fiji no longer observes DST.
+     - Update DST rules for Mexico.
+     - Update DST rules for Lebanon.
+   * Add myself to Uploaders.
+Checksums-Sha1:
+ faadb82233a15fcfaa89defca0a78d66dbc98412 2067 tzdata_2021a-0+deb10u9.dsc
+ 97ce41ba4f9a1e359bb30edc0eab8dd7397b3ee2 117516 tzdata_2021a-0+deb10u9.debian.tar.xz
+ c1b4deb0d7cfa698007f9790b0db61742cc4e033 5841 tzdata_2021a-0+deb10u9_source.buildinfo
+Checksums-Sha256:
+ 1d71da79dbad98c4a2365444ba3bff230bb8f6b0c55d4b2a914fe3b45537c4ed 2067 tzdata_2021a-0+deb10u9.dsc
+ c1091bde9b6f93ec2c31519ac6284f659a44adaece0d85ce9ef6fb34155a0c8d 117516 tzdata_2021a-0+deb10u9.debian.tar.xz
+ 01bde2ac165afe25f9c760a3e09320a242c291c48811c202c6fcd89f081cfeea 5841 tzdata_2021a-0+deb10u9_source.buildinfo
+Files:
+ 47256f44361522d4b9c2f59229165b79 2067 localization required tzdata_2021a-0+deb10u9.dsc
+ 169ef8e983abe23a97ea035a628c6477 117516 localization required tzdata_2021a-0+deb10u9.debian.tar.xz
+ a381d32620983b49b34318414a27e1bd 5841 localization required tzdata_2021a-0+deb10u9_source.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Apr 2024 21:24:00 +0300
+Source: trafficserver
+Architecture: source
+Version: 8.1.7-0+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jean Baptiste Favre <debian@jbfavre.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ trafficserver (8.1.7-0+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-31309: HTTP/2 CONTINUATION DoS attack
+Checksums-Sha1:
+ 8855adcd27a9019cb48db077d6c1f7fcd8a6659e 2729 trafficserver_8.1.7-0+deb10u4.dsc
+ 1ec1f18838d33352cdf494e96284244984d085d7 7919920 trafficserver_8.1.7.orig.tar.xz
+ 6c5f391d29f1df4632355891cabb9003ce7b2a1a 54536 trafficserver_8.1.7-0+deb10u4.debian.tar.xz
+Checksums-Sha256:
+ 22d031644ff14bd1d0332f12db275134ec583084badafec054489510c38a4a50 2729 trafficserver_8.1.7-0+deb10u4.dsc
+ c472f50f27193de9d516ea545242b80609d05abf19b04f6e43009f4555059b5a 7919920 trafficserver_8.1.7.orig.tar.xz
+ d1b07450ea95a02d5c85c7df985daaaf50d6fe5b7892db2c418443ca13492108 54536 trafficserver_8.1.7-0+deb10u4.debian.tar.xz
+Files:
+ 993987867b5b7beb380056e27a3eb1a3 2729 web optional trafficserver_8.1.7-0+deb10u4.dsc
+ 3c495598c8068a3df19a19382b3b4089 7919920 web optional trafficserver_8.1.7.orig.tar.xz
+ 824d678182a8ca7368ddc6bb31e4593e 54536 web optional trafficserver_8.1.7-0+deb10u4.debian.tar.xz
+

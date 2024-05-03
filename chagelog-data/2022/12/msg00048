@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Dec 2022 20:56:24 CET
+Source: libcommons-net-java
+Architecture: source
+Version: 3.6-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ baecf0138554d689f878ea9d7a5746b586d164ba 2581 libcommons-net-java_3.6-1+deb10u1.dsc
+ 81906c6f5984c08db58f2f248010adebb1ae47d3 307800 libcommons-net-java_3.6.orig.tar.xz
+ 1fced8492aea77288e0f36deaaac1ff0241b6c37 7060 libcommons-net-java_3.6-1+deb10u1.debian.tar.xz
+ d1aa74dffd3dd9a62e0a5d8ff74fdfcbe4f05479 14107 libcommons-net-java_3.6-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c1913090307119658309138b6a91df458dc7c6b371207c753a517448ce365d3d 2581 libcommons-net-java_3.6-1+deb10u1.dsc
+ 7eee0e4ac4905c84b5c585a6785cdf9c87b89502f608059b2e766c92f60c4811 307800 libcommons-net-java_3.6.orig.tar.xz
+ 11bd1d473abbf4ce55143f7a07e5cffad5507eb6038babfc6e2dabb212c1c15d 7060 libcommons-net-java_3.6-1+deb10u1.debian.tar.xz
+ 20b1ee7a28edda15117b9940dc80cddc6db5d2aba5e27c4856ae847acabb8063 14107 libcommons-net-java_3.6-1+deb10u1_amd64.buildinfo
+Closes: 1025910
+Changes:
+ libcommons-net-java (3.6-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-37533:
+     ZeddYu Lu discovered that the FTP client of Apache Commons Net, a Java
+     client API for basic Internet protocols, trusts the host from PASV response
+     by default. A malicious server can redirect the Commons Net code to use a
+     different host, but the user has to connect to the malicious server in the
+     first place. This may lead to leakage of information about services running
+     on the private network of the client. (Closes: #1025910)
+Files:
+ b5b0f808fff1ac0e2b111869c4fab25f 2581 java optional libcommons-net-java_3.6-1+deb10u1.dsc
+ c7b1c720fc0dd36a7bcd85ace116dc76 307800 java optional libcommons-net-java_3.6.orig.tar.xz
+ bc8e57f083e8a2a4b10f2db93ed8b8ef 7060 java optional libcommons-net-java_3.6-1+deb10u1.debian.tar.xz
+ c5ec28fd901e043542766ab99584dfb8 14107 java optional libcommons-net-java_3.6-1+deb10u1_amd64.buildinfo
+

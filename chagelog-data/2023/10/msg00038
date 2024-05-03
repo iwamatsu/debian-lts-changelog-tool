@@ -1,0 +1,89 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 21 Oct 2023 16:42:26 +0000
+Source: ceph
+Architecture: source
+Version: 12.2.11+dfsg1-2.1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Ceph Maintainers <ceph-maintainers@lists.ceph.com>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1053690
+Changes:
+ ceph (12.2.11+dfsg1-2.1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Stefano Rivera ]
+   * Collection of minor security updates for Ceph.
+   * CVE-2020-27781: Privilege Escalation: User credentials could be manipulated
+     and stolen by Native CephFS consumers of OpenStack Manila, resulting in
+     potential privilege escalation. An Open Stack Manila user can request
+     access to a share to an arbitrary cephx user, including existing users.
+     The access key is retrieved via the interface drivers. Then, all users of
+     the requesting OpenStack project can view the access key. This enables the
+     attacker to target any resource that the user has access to. This can be
+     done to even "admin" users, compromising the ceph administrator.
+   * CVE-2021-20288: Potential Privilege Escalation: When handling
+     CEPHX_GET_PRINCIPAL_SESSION_KEY requests, ignore CEPH_ENTITY_TYPE_AUTH in
+     CephXServiceTicketRequest::keys.
+   * CVE-2020-1760: XSS: A flaw was found in the Ceph Object Gateway, where it
+     supports request sent by an anonymous user in Amazon S3. This flaw could
+     lead to potential XSS attacks due to the lack of proper neutralization of
+     untrusted input.
+   * CVE-2020-25678: Information Disclosure: ceph stores mgr module passwords
+     in clear text. This can be found by searching the mgr logs for grafana and
+     dashboard, with passwords visible.
+   * CVE-2019-10222: Denial of service: An unauthenticated attacker could crash
+     the Ceph RGW server by sending valid HTTP headers and terminating the
+     connection, resulting in a remote denial of service for Ceph RGW clients.
+   * CVE-2020-10753 and CVE-2021-3524: Header Injection: It was possible to
+     inject HTTP headers via a CORS ExposeHeader tag in an Amazon S3 bucket. The
+     newline character in the ExposeHeader tag in the CORS configuration file
+     generates a header injection in the response when the CORS request is
+     made.
+   * CVE-2020-12059: Denial of Service: A POST request with an invalid tagging
+     XML could crash the RGW process by triggering a NULL pointer exception.
+   * CVE-2020-1700: Denial of Service: A flaw was found in the way the Ceph RGW
+     Beast front-end handles unexpected disconnects. An authenticated attacker
+     can abuse this flaw by making multiple disconnect attempts resulting in a
+     permanent leak of a socket connection by radosgw. This flaw could lead to
+     a denial of service condition by pile up of CLOSE_WAIT sockets, eventually
+     leading to the exhaustion of available resources, preventing legitimate
+     users from connecting to the system.
+   * CVE-2021-3531: Denial of Service: When processing a GET Request in Ceph
+     Storage RGW for a swift URL that ends with two slashes it could cause the
+     rgw to crash, resulting in a denial of service.
+   * CVE-2021-3979: Loss of Confidentiality: A key length flaw was found in
+     Ceph Storage. An attacker could exploit the fact that the key length is
+     incorrectly passed in an encryption algorithm to create a non random key,
+     which is weaker and can be exploited for loss of confidentiality and
+     integrity on encrypted disks.
+ .
+   [ Bastien Roucariès ]
+ .
+   * CVE-2023-43040: A flaw was found in Ceph RGW. An unprivileged
+     user can write to any bucket(s) accessible by a given key
+     if a POST's form-data contains a key called 'bucket'
+     with a value matching the name of the bucket used to sign
+     the request. The result of this is that a user could actually
+     upload to any bucket accessible by the specified access key
+     as long as the bucket in the POST policy matches the bucket
+     in said POST form part. (Closes: #1053690)
+Checksums-Sha1:
+ 07e972628b7eb2727b0a8569e79a5aa4314a19c5 5510 ceph_12.2.11+dfsg1-2.1+deb10u1.dsc
+ 50362b51a08bfe5284f1be1911beb58bf0c3aa8f 54781136 ceph_12.2.11+dfsg1.orig.tar.xz
+ 2d7d46a9ab8940073b423c87e2f7dd35ead4068c 400416 ceph_12.2.11+dfsg1-2.1+deb10u1.debian.tar.xz
+ d2aa6418bfa1556d51bad6820bf162d90b496d8f 38170 ceph_12.2.11+dfsg1-2.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 4953a00fb85a2fae4fe585f71c4199302c450b33be1e05a57811d9950cefe6f2 5510 ceph_12.2.11+dfsg1-2.1+deb10u1.dsc
+ 71f093b198481387a30067efd34948fb94dd2f967b543ce000277ab699afc75d 54781136 ceph_12.2.11+dfsg1.orig.tar.xz
+ 049124e0b5d973603c4f37c09b6c017a73429cee6ba00f5955f11a68e9c9b490 400416 ceph_12.2.11+dfsg1-2.1+deb10u1.debian.tar.xz
+ ddb18b7489e12da6cca1ef0b0b7d92b0017c967d8ac529fcf3bff4cc535f0f20 38170 ceph_12.2.11+dfsg1-2.1+deb10u1_amd64.buildinfo
+Files:
+ 79bfe6287f00fb00fb5e1536cd687edf 5510 admin optional ceph_12.2.11+dfsg1-2.1+deb10u1.dsc
+ e4caffbadf81a0b95b05d82dea2fd39a 54781136 admin optional ceph_12.2.11+dfsg1.orig.tar.xz
+ 1e45c8eeffa4c0cf6b7a6f10c320ef13 400416 admin optional ceph_12.2.11+dfsg1-2.1+deb10u1.debian.tar.xz
+ 67dbf7976aa3160296f32d1c3535022e 38170 admin optional ceph_12.2.11+dfsg1-2.1+deb10u1_amd64.buildinfo
+

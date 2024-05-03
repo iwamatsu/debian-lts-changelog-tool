@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 07 Jun 2023 18:36:12 +0530
+Source: ruby2.5
+Architecture: source
+Version: 2.5.5-3+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@ubuntu.com>
+Closes: 1037178
+Changes:
+ ruby2.5 (2.5.5-3+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * Fix CVE-2023-28755's regex which caused regression.
+     (Closes: #1037178)
+   * d/p/CVE-2021-33621*.patch: adds regex to lib/cgi/core.rb and
+     lib/cgi/cookie.rb along with tests to check http response headers
+     and cookie fields for invalid characters. (Fixes: CVE-2021-33621)
+   * d/p/CVE-2022-28739.patch: fix dtoa buffer overrun in missing/dtoa.c,
+     test/ruby/test_float.rb. (Fixes: CVE-2022-28739)
+   * d/p/CVE-2023-28756*.patch: re-do the CVE-2023-28756 patch(es).
+     Last update backported the tests which weren't working, et al.
+   * d/p/certs_up_fix.patch : add patch to refresh expired SSL certs.
+Checksums-Sha1:
+ 450ace55196dbe29be8e136362d8550205682a68 2482 ruby2.5_2.5.5-3+deb10u6.dsc
+ c477ffe8f8ed605036df6c8892bd3c800b8e9722 10208264 ruby2.5_2.5.5.orig.tar.xz
+ 5454b23f16f5cdf3e01eea8ba53b3c8178be141e 153072 ruby2.5_2.5.5-3+deb10u6.debian.tar.xz
+ 5a4319cafc4b5757a9ceda567d399a1a4872a6b5 6576 ruby2.5_2.5.5-3+deb10u6_source.buildinfo
+Checksums-Sha256:
+ 8e012442d8b9e1d42e7662c55a19ed4769942c6b2ff1552867027adbb58dc3fe 2482 ruby2.5_2.5.5-3+deb10u6.dsc
+ a49a222bbeeeb0191ae043a509cd05137869f971a33fef74d3c0aaae95170877 10208264 ruby2.5_2.5.5.orig.tar.xz
+ d9394a90d1e5722b2041144f61c1e9a3948ed2aa88668c88ffaf998eca98e3cc 153072 ruby2.5_2.5.5-3+deb10u6.debian.tar.xz
+ e7e10f9dbddcec72cd42d3304c53160c6706bc78952365ec600b7030b4e7995e 6576 ruby2.5_2.5.5-3+deb10u6_source.buildinfo
+Files:
+ 747c5ff7ebe400712ffa30c068e18153 2482 ruby optional ruby2.5_2.5.5-3+deb10u6.dsc
+ 9a1922884905ac8be7ddf8de1408472d 10208264 ruby optional ruby2.5_2.5.5.orig.tar.xz
+ 82e4dfc4d45c735af1bdaf8a5736ef09 153072 ruby optional ruby2.5_2.5.5-3+deb10u6.debian.tar.xz
+ f1bc57e2ae14a00514d7eee505f88634 6576 ruby optional ruby2.5_2.5.5-3+deb10u6_source.buildinfo
+

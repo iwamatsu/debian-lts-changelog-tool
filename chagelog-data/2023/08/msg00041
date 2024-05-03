@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 26 Aug 2023 21:23:41 CEST
+Source: unrar-nonfree
+Architecture: source
+Version: 1:5.6.6-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Martin Meredith <mez@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 6dc0a44db904858cf01867114cfbb65bfdb6859b 2257 unrar-nonfree_5.6.6-1+deb10u4.dsc
+ 5fb37d7a4cee9c0efbb1e4bfb2fd1006a381ff99 13880 unrar-nonfree_5.6.6-1+deb10u4.debian.tar.xz
+ 0efeca66bb2c45ed88c15b1f0d9e05675b7be595 6314 unrar-nonfree_5.6.6-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 54491fd01e18a50fb88254d86ba9bc70fa60c22903bff18ee8e63ae04b59cb00 2257 unrar-nonfree_5.6.6-1+deb10u4.dsc
+ fafaa650b5cb063fe67c37136a30d1781e0fa4fa1ee1cfeeb8781b08e4750371 13880 unrar-nonfree_5.6.6-1+deb10u4.debian.tar.xz
+ 809b6fb20e6595704c3172b1f6a8817f2d48dc41ff3854b897e6b7dffa42a702 6314 unrar-nonfree_5.6.6-1+deb10u4_amd64.buildinfo
+Changes:
+ unrar-nonfree (1:5.6.6-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-40477:
+     A specific flaw within the processing of recovery volumes exists in UnRAR,
+     an unarchiver for rar files. It allows remote attackers to execute
+     arbitrary code on affected installations. User interaction is required to
+     exploit this vulnerability. The target must visit a malicious page or open
+     a malicious rar file.
+Files:
+ c108bb766818e8ccb09004af7ad4628f 2257 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u4.dsc
+ 5552169ddadce61aca303aa91aab7a27 13880 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u4.debian.tar.xz
+ a992ee7a0bb81a271a074403663a1a0d 6314 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u4_amd64.buildinfo
+

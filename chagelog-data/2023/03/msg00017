@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 Mar 2023 11:33:46 +1300
+Source: xapian-core
+Architecture: source
+Version: 1.4.11-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Olly Betts <olly@survex.com>
+Changed-By: Olly Betts <olly@survex.com>
+Closes: 1032398
+Changes:
+ xapian-core (1.4.11-1+deb10u1) buster-security; urgency=medium
+ .
+   * debian/patches/fix-db-corruption-on-ENOSPC.patch: New patch to
+     fix potential database corruption if switching the new revision
+     live fails with ENOSPC but the recovery process does NOT get ENOSPC.
+     The fix here is taken from upstream's 1.4.22 release and is the simplest
+     way to address the problem: simply reread the current version file
+     from disk which means the in memory state will match the previously
+     committed state.  Closes: #1032398
+   * debian/patches/fix-check-on-replication-changesets.patch: Fix xapian-check
+     and Database::check() on a database with valid replication changesets to
+     not incorrectly fail with "DatabaseError: Changes file - bad table code".
+     The fix here is taken from upstream's 1.4.15 release.
+Checksums-Sha1:
+ e387c9ef45ab402b80f74b96f6cc342043241b59 2178 xapian-core_1.4.11-1+deb10u1.dsc
+ c1e452e4dc59351a72214ae24cf2b7a6c10fc9ef 2975524 xapian-core_1.4.11.orig.tar.xz
+ 70e7c9d923796c0de92120dbc7e2133fec663409 21828 xapian-core_1.4.11-1+deb10u1.debian.tar.xz
+ 76383f862635b238eb786715c8c32e759e46157d 7833 xapian-core_1.4.11-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 920b0ba60bc19bd28996d5ec481fa859e55b6ab4a425eb8c3c98cd6f8268d247 2178 xapian-core_1.4.11-1+deb10u1.dsc
+ 9f16b2f3e2351a24034d7636f73566ab74c3f0729e9e0492934e956b25c5bc07 2975524 xapian-core_1.4.11.orig.tar.xz
+ cf770b4ed737c0acff587f96353a2aecf322480f7b226c445bbdfd03b7d39af2 21828 xapian-core_1.4.11-1+deb10u1.debian.tar.xz
+ d48eb44d7ab237871747558c0474024a14761864028f8b5fea02f8b872484a0e 7833 xapian-core_1.4.11-1+deb10u1_amd64.buildinfo
+Files:
+ 60b5eec33ce3e1566259076e7e81cd42 2178 libs optional xapian-core_1.4.11-1+deb10u1.dsc
+ e66b2d585e2f56d3b67d10667196391b 2975524 libs optional xapian-core_1.4.11.orig.tar.xz
+ efd06d02e6be816143b7f5d8c442ddb4 21828 libs optional xapian-core_1.4.11-1+deb10u1.debian.tar.xz
+ 7b56c273ec447c548fae0bba5ac089d7 7833 libs optional xapian-core_1.4.11-1+deb10u1_amd64.buildinfo
+

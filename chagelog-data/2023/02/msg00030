@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 21 Feb 2023 18:59:52 +0200
+Source: apr-util
+Architecture: source
+Version: 1.6.1-4+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ apr-util (1.6.1-4+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-25147: Integer Overflow or Wraparound vulnerability
+     in apr_base64().
+Checksums-Sha1:
+ 26f6be6e6cb9bdb0672b0c6a2c258e8a4dc377f9 2860 apr-util_1.6.1-4+deb10u1.dsc
+ 4cc73bc36ca697419f555476f2fc1c63df6069f4 428595 apr-util_1.6.1.orig.tar.bz2
+ e0803c3de11cf90a7be5429a7f4756b3867bf056 801 apr-util_1.6.1.orig.tar.bz2.asc
+ 9fda98fc51812b972c4747544f599638fb9c41ef 214156 apr-util_1.6.1-4+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ ba89c56dcc7ff25156d8eb620cd8861771777a16e92ce305f81804d5182957c0 2860 apr-util_1.6.1-4+deb10u1.dsc
+ d3e12f7b6ad12687572a3a39475545a072608f4ba03a6ce8a3778f607dd0035b 428595 apr-util_1.6.1.orig.tar.bz2
+ 47837b605290c0d7659b73734e4a9d5e6c0c24c13185cd4d91837afe63c07ca4 801 apr-util_1.6.1.orig.tar.bz2.asc
+ d23e081f41f7c0f1caf73b09096f1e06681bfa559450335697612e4f8574bc7b 214156 apr-util_1.6.1-4+deb10u1.debian.tar.xz
+Files:
+ b9bbc33e8ec7d401abbe0bbcc1ce88f5 2860 libs optional apr-util_1.6.1-4+deb10u1.dsc
+ 8ff5dc36fa39a2a3db1df196d3ed6086 428595 libs optional apr-util_1.6.1.orig.tar.bz2
+ 56d1c76f41e658277444bb744d67d43e 801 libs optional apr-util_1.6.1.orig.tar.bz2.asc
+ de69d8f33dc96dd3cc0a09c6c974bf98 214156 libs optional apr-util_1.6.1-4+deb10u1.debian.tar.xz
+

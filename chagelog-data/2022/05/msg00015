@@ -1,0 +1,47 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 13 May 2022 11:01:41 -0700
+Source: htmldoc
+Binary: htmldoc htmldoc-common
+Architecture: source all amd64
+Version: 1.8.27-8+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Jeff Licquia <licquia@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ htmldoc    - HTML processor that generates indexed HTML, PS, and PDF
+ htmldoc-common - Common arch-independent files for htmldoc
+Changes:
+ htmldoc (1.8.27-8+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-27114: Prevent an integer overflow vulnerability in the
+     image_load_jpeg function due to a conflation or confusion of
+     declared/expected/observed image dimensions.
+Checksums-Sha1:
+ ad3de420a561f3069795de773d18475985d62014 1976 htmldoc_1.8.27-8+deb9u3.dsc
+ 1dc2603983d7ad7024cfbeab7a0c7fab2230cf8f 4462252 htmldoc_1.8.27.orig.tar.gz
+ 0fa1a90d35133088bb9aae067ce1a80c6fbd4bdd 13784 htmldoc_1.8.27-8+deb9u3.debian.tar.xz
+ 2371807ff20cacb22f6fab7427470c89bb56cc18 4842064 htmldoc-common_1.8.27-8+deb9u3_all.deb
+ 1888ef82e55ee28013a1c3721605a077f2187f52 387352 htmldoc-dbgsym_1.8.27-8+deb9u3_amd64.deb
+ 6c326d9be353727d0cfa6c79c6a9bf30e2f890a7 7957 htmldoc_1.8.27-8+deb9u3_amd64.buildinfo
+ d576bab575f0a171c7afa53537ca68276370b873 207638 htmldoc_1.8.27-8+deb9u3_amd64.deb
+Checksums-Sha256:
+ 5c05514a918922a2fbd97ba727b804b96eefca3f0a422f81ce3f9e98f0b5b070 1976 htmldoc_1.8.27-8+deb9u3.dsc
+ 64f6d9f40f00f9cc68df6508123e88ed30fef924881fd28dca45358ecd79d320 4462252 htmldoc_1.8.27.orig.tar.gz
+ 4348cb6ae58ccbb2a41b6b8ecba267acab189602a97f81567da295a3f543bfeb 13784 htmldoc_1.8.27-8+deb9u3.debian.tar.xz
+ 6d8fecce9d8d59d8fbdf4cdda6062c3c4cfa69180fbf4391a454a35704708c30 4842064 htmldoc-common_1.8.27-8+deb9u3_all.deb
+ d53eec66541e8407404bedfc63f50a76d02cf5645c451ebcc3a17221e6d32437 387352 htmldoc-dbgsym_1.8.27-8+deb9u3_amd64.deb
+ 70571e61ae9de19b3b92ee5195f80796a80a3cc85e7975edbd8c9c6c2a6a6237 7957 htmldoc_1.8.27-8+deb9u3_amd64.buildinfo
+ 5eda810e21e43cfa47646119a53a7520c596cc9ed9f8e0ce921b0c15fec4ead3 207638 htmldoc_1.8.27-8+deb9u3_amd64.deb
+Files:
+ fad8c754ced022dc566735e6e8ba4044 1976 web optional htmldoc_1.8.27-8+deb9u3.dsc
+ b284888cc2285b32e96cbce620b927c1 4462252 web optional htmldoc_1.8.27.orig.tar.gz
+ 2ec400ac3c8b8b9bccf070bc112126a7 13784 web optional htmldoc_1.8.27-8+deb9u3.debian.tar.xz
+ 57d884bee5dcbf22489c2fb95bd14140 4842064 web optional htmldoc-common_1.8.27-8+deb9u3_all.deb
+ 38d4e9a422acb286644c35276c1815dd 387352 debug extra htmldoc-dbgsym_1.8.27-8+deb9u3_amd64.deb
+ 31c9ac8bd59b4c54917a63be71428529 7957 web optional htmldoc_1.8.27-8+deb9u3_amd64.buildinfo
+ eca747f1da6b36c3b12d9c60d27890c2 207638 web optional htmldoc_1.8.27-8+deb9u3_amd64.deb
+

@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 25 Sep 2023 11:21:56 -0300
+Source: glib2.0
+Architecture: source
+Version: 2.58.3-2+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Changes:
+ glib2.0 (2.58.3-2+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team
+   * Add debian/salsa-ci.yml using lts-team/pipeline for buster
+   * Fix several GVariant-related issues:
+   * CVE-2023-29499: GVariant deserialization fails to validate that the input
+     conforms to the expected format, leading to denial of service.
+   * CVE-2023-32611: GVariant deserialization is vulnerable to a slowdown issue
+     where a crafted GVariant can cause excessive processing, leading to denial
+     of service.
+   * CVE-2023-32665: GVariant deserialization is vulnerable to an exponential
+     blowup issue where a crafted GVariant can cause excessive processing,
+     leading to denial of service.
+Checksums-Sha1:
+ 6a27026dbcde82d4d7b69942c2179f38fec807e7 2729 glib2.0_2.58.3-2+deb10u5.dsc
+ bf36847f994bf7961ab0a3bb7afb8e63bce241aa 130900 glib2.0_2.58.3-2+deb10u5.debian.tar.xz
+ 2fbcf91bdaa7bc5016899a20c8e6d0e818eec1af 11644 glib2.0_2.58.3-2+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 59c25e933d20f4f711c4b6685fbfeb46f1df344aa0e09c862b77fcaef94c57d3 2729 glib2.0_2.58.3-2+deb10u5.dsc
+ 5c9d1dc438c0a8923eaf65391e04906230d06a71426dc1aa6df785b12a4d21d4 130900 glib2.0_2.58.3-2+deb10u5.debian.tar.xz
+ 68430aff8cdab2ebfa8542b40052e1a489ff7265f7efb4ff3de38453853ed224 11644 glib2.0_2.58.3-2+deb10u5_amd64.buildinfo
+Files:
+ c9c7fe5ccab432f00a2e92c73620ea68 2729 libs optional glib2.0_2.58.3-2+deb10u5.dsc
+ e8ad6cbb292b5a3662ff4d03046c968c 130900 libs optional glib2.0_2.58.3-2+deb10u5.debian.tar.xz
+ afe5fce0ffc60782ec80b90f68a4ee32 11644 libs optional glib2.0_2.58.3-2+deb10u5_amd64.buildinfo
+

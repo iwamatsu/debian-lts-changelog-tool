@@ -1,0 +1,92 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 18 Mar 2024 03:45:43 +0530
+Source: zfs-linux
+Binary: libnvpair1linux libuutil1linux libzfs2linux libzfslinux-dev libzpool2linux zfs-dbg zfs-dkms zfs-dracut zfs-initramfs zfs-test zfs-zed zfsutils-linux
+Architecture: source amd64 all
+Version: 0.7.12-2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Description:
+ libnvpair1linux - Solaris name-value library for Linux
+ libuutil1linux - Solaris userland utility library for Linux
+ libzfs2linux - OpenZFS filesystem library for Linux
+ libzfslinux-dev - OpenZFS filesystem development files for Linux
+ libzpool2linux - OpenZFS pool library for Linux
+ zfs-dbg    - Debugging symbols for OpenZFS userland libraries and tools
+ zfs-dkms   - OpenZFS filesystem kernel modules for Linux
+ zfs-dracut - OpenZFS root filesystem capabilities for Linux - dracut
+ zfs-initramfs - OpenZFS root filesystem capabilities for Linux - initramfs
+ zfs-test   - OpenZFS test infrastructure an support scripts
+ zfs-zed    - OpenZFS Event Daemon
+ zfsutils-linux - command-line tools to manage OpenZFS filesystems
+Closes: 1056752 1059322
+Changes:
+ zfs-linux (0.7.12-2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * silent failure when parsing IPv6 restrictions
+     - debian/patches/CVE-2013-20001.patch: pass through ipv6 addresses in
+       bracket notation in lib/libshare/os/linux/nfs.c, man/man8/zfs.8,
+       tests/runfiles/linux.run,
+       tests/zfs-tests/tests/functional/cli_root/zfs_share/Makefile.am,
+       tests/zfs-tests/tests/functional/cli_root/zfs_share/zfs_share_007_neg.ksh,
+       tests/zfs-tests/tests/functional/cli_root/zfs_share/zfs_share_013_pos.ksh.
+     - Fixes: CVE-2013-20001. Closes: #1059322.
+   * backport of "dnode_is_dirty: check dnode and its data for dirtiness"
+     by robn. (Fixes: CVE-2023-49298) (Closes: #1056752)
+Checksums-Sha1:
+ 3b4a43f5f70ffe9683e367cf7f9b7ea9c23cfb04 3089 zfs-linux_0.7.12-2+deb10u3.dsc
+ ac7b0856501adb6135f1acca71e23e48aeb9adcc 6565017 zfs-linux_0.7.12.orig.tar.gz
+ 8d48eb16bee95d58375d308d08a5c808ec1cac62 54736 zfs-linux_0.7.12-2+deb10u3.debian.tar.xz
+ 429aecb56cc4886154163ecd1347746db79c0786 47668 libnvpair1linux_0.7.12-2+deb10u3_amd64.deb
+ 9e9b815b8f34caa6f5eb488fc0941e146e319a94 50424 libuutil1linux_0.7.12-2+deb10u3_amd64.deb
+ d368a8d6112e74a05314ee43a443f7ed3d9fd154 140708 libzfs2linux_0.7.12-2+deb10u3_amd64.deb
+ 677c69ff193c6245d465fa51a88f7a5d3d00f629 1034760 libzfslinux-dev_0.7.12-2+deb10u3_amd64.deb
+ c77160d2e963c0e9dfd653455eb19e00004aef11 571348 libzpool2linux_0.7.12-2+deb10u3_amd64.deb
+ fce043ab32cd6a5f43480d4ee2e00d0a1c5d3b26 4358104 zfs-dbg_0.7.12-2+deb10u3_amd64.deb
+ 30b832cce5ea7d406f2104f367e51e0ad3194289 1399876 zfs-dkms_0.7.12-2+deb10u3_all.deb
+ 7313d9124b31c44dccdaa2750acc18813a8df438 23300 zfs-dracut_0.7.12-2+deb10u3_all.deb
+ 53839a1186de55cfdfd4a05896bd3a9b6b1a2fb1 27452 zfs-initramfs_0.7.12-2+deb10u3_all.deb
+ 13c9a3ff78a4a934cf99babe594056f5d67c52b9 9807 zfs-linux_0.7.12-2+deb10u3_amd64.buildinfo
+ e836871a94ff4a48a5dfab6f9914f520d116ba84 2547684 zfs-test_0.7.12-2+deb10u3_amd64.deb
+ b3bbcc2fe7749980d39916d02a3dd3de66e71459 64672 zfs-zed_0.7.12-2+deb10u3_amd64.deb
+ 59c477229ffe65ba54c759ac01ed7ff0fcc37a23 292368 zfsutils-linux_0.7.12-2+deb10u3_amd64.deb
+Checksums-Sha256:
+ e2e32059a2b5d6b9ca1b2292a542dd1089d8db5dbc3b3a8d6053602ad8eda612 3089 zfs-linux_0.7.12-2+deb10u3.dsc
+ 720e3b221c1ba5d4c18c990e48b86a2eb613575a0c3cc84c0aa784b17b7c2848 6565017 zfs-linux_0.7.12.orig.tar.gz
+ 30658a439cd65553349833fde1163432e2441a5b3f3e2aa65b061e46ceb37766 54736 zfs-linux_0.7.12-2+deb10u3.debian.tar.xz
+ d0c9f61e45f35b21f4c534375e0197a2b660e1690dded818b7d07676034997a8 47668 libnvpair1linux_0.7.12-2+deb10u3_amd64.deb
+ 2ecb1c3a740e069bf9304386ca11ae78d901b68acccdfd403bcebfdec2aa4f02 50424 libuutil1linux_0.7.12-2+deb10u3_amd64.deb
+ fcb45078cc5669d52fcfdfaed6d9c1695400a23fc0709a7bed8147d677221ead 140708 libzfs2linux_0.7.12-2+deb10u3_amd64.deb
+ 4703efc7581b470927cee20682bfb6f1bed41ced9036be42653fb9e2147386ad 1034760 libzfslinux-dev_0.7.12-2+deb10u3_amd64.deb
+ 9646e1f89971ef6ca5ec4b8680188812c633130cd347095ecaa86159139a3e77 571348 libzpool2linux_0.7.12-2+deb10u3_amd64.deb
+ 880ec6de7f49ebec4ff67d509a5b12bbe82284abbc95249fd836f031a99a117d 4358104 zfs-dbg_0.7.12-2+deb10u3_amd64.deb
+ e6208094c3ae77bf2b000cdad1aedaf37de172ef388dc3e7d455ac477926472c 1399876 zfs-dkms_0.7.12-2+deb10u3_all.deb
+ c5611fde4cbadb874f0b32cdf1321f7a16b88ebf119f1905d3dfa0fb71c57618 23300 zfs-dracut_0.7.12-2+deb10u3_all.deb
+ de0a2a7dafe39ef246bdefe649f8cfdc3efd4b789c4140b20cca567c9a18dfaf 27452 zfs-initramfs_0.7.12-2+deb10u3_all.deb
+ 6e6958a6483793446545ebbe7eb1c6ec2602b122c89a4a2303f512d0f29c7702 9807 zfs-linux_0.7.12-2+deb10u3_amd64.buildinfo
+ 0cc1fd526a1091d66586075b3e4a247b5aa39bc74698268e562a1b0388148bd2 2547684 zfs-test_0.7.12-2+deb10u3_amd64.deb
+ 132fc6e526e32e63690a73c74292b7fa54e48951532b8883a8bd23ceefe3df3c 64672 zfs-zed_0.7.12-2+deb10u3_amd64.deb
+ ef32fb130b38cf8b9cf9f303b0a15cfaefceee86a51359a6fc38245124694c18 292368 zfsutils-linux_0.7.12-2+deb10u3_amd64.deb
+Files:
+ 9552e44c0626b3ef65987d9b9b53cb1e 3089 contrib/kernel optional zfs-linux_0.7.12-2+deb10u3.dsc
+ 384c4bc1cc47c9c3f630e3232227f601 6565017 contrib/kernel optional zfs-linux_0.7.12.orig.tar.gz
+ e52e043ca622ccffeed98fc5a3232d06 54736 contrib/kernel optional zfs-linux_0.7.12-2+deb10u3.debian.tar.xz
+ 4f46514cf138e44cd37c5b2790e24633 47668 contrib/libs optional libnvpair1linux_0.7.12-2+deb10u3_amd64.deb
+ 0227c361245fd99f4c8fb0d135d4c16f 50424 contrib/libs optional libuutil1linux_0.7.12-2+deb10u3_amd64.deb
+ 2ab6ea4443c1961436a12c0865ddcb78 140708 contrib/libs optional libzfs2linux_0.7.12-2+deb10u3_amd64.deb
+ 8db05f2ef5bc632b9b4251febce3f93d 1034760 contrib/libdevel optional libzfslinux-dev_0.7.12-2+deb10u3_amd64.deb
+ c3e5073612d11c1751e786cd777e3e1b 571348 contrib/libs optional libzpool2linux_0.7.12-2+deb10u3_amd64.deb
+ 342479b6b7fa20b40be7b5a0bfd8a689 4358104 contrib/debug optional zfs-dbg_0.7.12-2+deb10u3_amd64.deb
+ bc89f9df25cf6655f79f2879c2ab90e0 1399876 contrib/kernel optional zfs-dkms_0.7.12-2+deb10u3_all.deb
+ 8795b058f73ef5cf426e7305ff64e173 23300 contrib/kernel optional zfs-dracut_0.7.12-2+deb10u3_all.deb
+ 906d5af7ffb4752b323827066e70c9e8 27452 contrib/kernel optional zfs-initramfs_0.7.12-2+deb10u3_all.deb
+ 7dcf70d278e78d039489e108d06a51ba 9807 contrib/kernel optional zfs-linux_0.7.12-2+deb10u3_amd64.buildinfo
+ 0aede2df01cbc454867ab675fb4013de 2547684 contrib/admin optional zfs-test_0.7.12-2+deb10u3_amd64.deb
+ 7460d2978c40a72fe4b60c46e8f1bcb2 64672 contrib/admin optional zfs-zed_0.7.12-2+deb10u3_amd64.deb
+ 543f8b0746e626755e10fb924668f18e 292368 contrib/admin optional zfsutils-linux_0.7.12-2+deb10u3_amd64.deb
+

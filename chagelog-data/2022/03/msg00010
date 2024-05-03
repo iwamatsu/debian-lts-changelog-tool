@@ -1,0 +1,157 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 08 Mar 2022 20:10:51 +0100
+Source: linux-latest-4.19
+Binary: linux-image-4.19-alpha-generic linux-headers-4.19-alpha-generic linux-image-4.19-alpha-generic-dbg linux-image-4.19-alpha-smp linux-headers-4.19-alpha-smp linux-image-4.19-alpha-smp-dbg linux-image-4.19-amd64 linux-headers-4.19-amd64 linux-image-4.19-amd64-dbg linux-image-4.19-cloud-amd64 linux-headers-4.19-cloud-amd64 linux-image-4.19-cloud-amd64-dbg linux-image-4.19-rt-amd64 linux-headers-4.19-rt-amd64 linux-image-4.19-rt-amd64-dbg linux-image-4.19-arm64 linux-headers-4.19-arm64 linux-image-4.19-arm64-dbg linux-image-4.19-rt-arm64 linux-headers-4.19-rt-arm64 linux-image-4.19-rt-arm64-dbg linux-image-4.19-marvell linux-headers-4.19-marvell linux-image-4.19-marvell-dbg linux-image-4.19-rpi linux-headers-4.19-rpi linux-image-4.19-rpi-dbg linux-image-4.19-armmp linux-headers-4.19-armmp linux-image-4.19-armmp-dbg linux-image-4.19-armmp-lpae linux-headers-4.19-armmp-lpae linux-image-4.19-armmp-lpae-dbg linux-image-4.19-rt-armmp linux-headers-4.19-rt-armmp
+ linux-image-4.19-rt-armmp-dbg linux-image-4.19-parisc linux-headers-4.19-parisc linux-image-4.19-parisc-smp linux-headers-4.19-parisc-smp linux-image-4.19-parisc64-smp linux-headers-4.19-parisc64-smp linux-image-4.19-686 linux-headers-4.19-686 linux-image-4.19-686-dbg linux-image-4.19-686-pae linux-headers-4.19-686-pae linux-image-4.19-686-pae-dbg linux-image-4.19-rt-686-pae linux-headers-4.19-rt-686-pae linux-image-4.19-rt-686-pae-dbg linux-image-4.19-itanium linux-headers-4.19-itanium linux-image-4.19-itanium-dbg linux-image-4.19-mckinley linux-headers-4.19-mckinley linux-image-4.19-mckinley-dbg linux-image-4.19-m68k linux-headers-4.19-m68k linux-image-4.19-m68k-dbg linux-image-4.19-4kc-malta linux-headers-4.19-4kc-malta linux-image-4.19-4kc-malta-dbg linux-image-4.19-5kc-malta linux-headers-4.19-5kc-malta linux-image-4.19-5kc-malta-dbg linux-image-4.19-octeon linux-headers-4.19-octeon linux-image-4.19-octeon-dbg linux-image-4.19-loongson-3
+ linux-headers-4.19-loongson-3 linux-image-4.19-loongson-3-dbg linux-image-4.19-mips64r6 linux-headers-4.19-mips64r6 linux-image-4.19-mips64r6-dbg linux-image-4.19-mips64r6el linux-headers-4.19-mips64r6el linux-image-4.19-mips64r6el-dbg linux-image-4.19-mips32r6 linux-headers-4.19-mips32r6 linux-image-4.19-mips32r6-dbg linux-image-4.19-mips32r6el linux-headers-4.19-mips32r6el linux-image-4.19-mips32r6el-dbg linux-image-4.19-powerpc linux-headers-4.19-powerpc linux-image-4.19-powerpc-dbg linux-image-4.19-powerpc-smp linux-headers-4.19-powerpc-smp linux-image-4.19-powerpc-smp-dbg linux-image-4.19-powerpc64 linux-headers-4.19-powerpc64 linux-image-4.19-powerpc64-dbg linux-image-4.19-powerpcspe linux-headers-4.19-powerpcspe linux-image-4.19-powerpcspe-dbg linux-image-4.19-powerpc64le linux-headers-4.19-powerpc64le linux-image-4.19-powerpc64le-dbg linux-image-4.19-riscv64 linux-headers-4.19-riscv64 linux-image-4.19-riscv64-dbg linux-image-4.19-s390x
+ linux-headers-4.19-s390x linux-image-4.19-s390x-dbg linux-image-4.19-sh7751r linux-headers-4.19-sh7751r linux-image-4.19-sh7751r-dbg linux-image-4.19-sh7785lcr linux-headers-4.19-sh7785lcr linux-image-4.19-sh7785lcr-dbg linux-image-4.19-sparc64 linux-headers-4.19-sparc64 linux-image-4.19-sparc64-dbg linux-image-4.19-sparc64-smp linux-headers-4.19-sparc64-smp
+ linux-image-4.19-sparc64-smp-dbg
+Architecture: source
+Version: 105+deb10u14~deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Description:
+ linux-headers-4.19-4kc-malta - Header files for Linux 4kc-malta configuration (meta-package)
+ linux-headers-4.19-5kc-malta - Header files for Linux 5kc-malta configuration (meta-package)
+ linux-headers-4.19-686 - Header files for Linux 686 configuration (meta-package)
+ linux-headers-4.19-686-pae - Header files for Linux 686-pae configuration (meta-package)
+ linux-headers-4.19-alpha-generic - Header files for Linux alpha-generic configuration (meta-package)
+ linux-headers-4.19-alpha-smp - Header files for Linux alpha-smp configuration (meta-package)
+ linux-headers-4.19-amd64 - Header files for Linux amd64 configuration (meta-package)
+ linux-headers-4.19-arm64 - Header files for Linux arm64 configuration (meta-package)
+ linux-headers-4.19-armmp - Header files for Linux armmp configuration (meta-package)
+ linux-headers-4.19-armmp-lpae - Header files for Linux armmp-lpae configuration (meta-package)
+ linux-headers-4.19-cloud-amd64 - Header files for Linux cloud-amd64 configuration (meta-package)
+ linux-headers-4.19-itanium - Header files for Linux itanium configuration (meta-package)
+ linux-headers-4.19-loongson-3 - Header files for Linux loongson-3 configuration (meta-package)
+ linux-headers-4.19-m68k - Header files for Linux m68k configuration (meta-package)
+ linux-headers-4.19-marvell - Header files for Linux marvell configuration (meta-package)
+ linux-headers-4.19-mckinley - Header files for Linux mckinley configuration (meta-package)
+ linux-headers-4.19-mips32r6 - Header files for Linux mips32r6 configuration (meta-package)
+ linux-headers-4.19-mips32r6el - Header files for Linux mips32r6el configuration (meta-package)
+ linux-headers-4.19-mips64r6 - Header files for Linux mips64r6 configuration (meta-package)
+ linux-headers-4.19-mips64r6el - Header files for Linux mips64r6el configuration (meta-package)
+ linux-headers-4.19-octeon - Header files for Linux octeon configuration (meta-package)
+ linux-headers-4.19-parisc - Header files for Linux parisc configuration (meta-package)
+ linux-headers-4.19-parisc-smp - Header files for Linux parisc-smp configuration (meta-package)
+ linux-headers-4.19-parisc64-smp - Header files for Linux parisc64-smp configuration (meta-package)
+ linux-headers-4.19-powerpc - Header files for Linux powerpc configuration (meta-package)
+ linux-headers-4.19-powerpc-smp - Header files for Linux powerpc-smp configuration (meta-package)
+ linux-headers-4.19-powerpc64 - Header files for Linux powerpc64 configuration (meta-package)
+ linux-headers-4.19-powerpc64le - Header files for Linux powerpc64le configuration (meta-package)
+ linux-headers-4.19-powerpcspe - Header files for Linux powerpcspe configuration (meta-package)
+ linux-headers-4.19-riscv64 - Header files for Linux riscv64 configuration (meta-package)
+ linux-headers-4.19-rpi - Header files for Linux rpi configuration (meta-package)
+ linux-headers-4.19-rt-686-pae - Header files for Linux rt-686-pae configuration (meta-package)
+ linux-headers-4.19-rt-amd64 - Header files for Linux rt-amd64 configuration (meta-package)
+ linux-headers-4.19-rt-arm64 - Header files for Linux rt-arm64 configuration (meta-package)
+ linux-headers-4.19-rt-armmp - Header files for Linux rt-armmp configuration (meta-package)
+ linux-headers-4.19-s390x - Header files for Linux s390x configuration (meta-package)
+ linux-headers-4.19-sh7751r - Header files for Linux sh7751r configuration (meta-package)
+ linux-headers-4.19-sh7785lcr - Header files for Linux sh7785lcr configuration (meta-package)
+ linux-headers-4.19-sparc64 - Header files for Linux sparc64 configuration (meta-package)
+ linux-headers-4.19-sparc64-smp - Header files for Linux sparc64-smp configuration (meta-package)
+ linux-image-4.19-4kc-malta - Linux for MIPS Malta (meta-package)
+ linux-image-4.19-4kc-malta-dbg - Debugging symbols for Linux 4kc-malta configuration (meta-package
+ linux-image-4.19-5kc-malta - Linux for MIPS Malta (64-bit) (meta-package)
+ linux-image-4.19-5kc-malta-dbg - Debugging symbols for Linux 5kc-malta configuration (meta-package
+ linux-image-4.19-686 - Linux for older PCs (meta-package)
+ linux-image-4.19-686-dbg - Debugging symbols for Linux 686 configuration (meta-package)
+ linux-image-4.19-686-pae - Linux for modern PCs (meta-package)
+ linux-image-4.19-686-pae-dbg - Debugging symbols for Linux 686-pae configuration (meta-package)
+ linux-image-4.19-alpha-generic - Linux for Alpha (meta-package)
+ linux-image-4.19-alpha-generic-dbg - Debugging symbols for Linux alpha-generic configuration (meta-pac
+ linux-image-4.19-alpha-smp - Linux for Alpha SMP (meta-package)
+ linux-image-4.19-alpha-smp-dbg - Debugging symbols for Linux alpha-smp configuration (meta-package
+ linux-image-4.19-amd64 - Linux for 64-bit PCs (meta-package)
+ linux-image-4.19-amd64-dbg - Debugging symbols for Linux amd64 configuration (meta-package)
+ linux-image-4.19-arm64 - Linux for 64-bit ARMv8 machines (meta-package)
+ linux-image-4.19-arm64-dbg - Debugging symbols for Linux arm64 configuration (meta-package)
+ linux-image-4.19-armmp - Linux for ARMv7 multiplatform compatible SoCs (meta-package)
+ linux-image-4.19-armmp-dbg - Debugging symbols for Linux armmp configuration (meta-package)
+ linux-image-4.19-armmp-lpae - Linux for ARMv7 multiplatform compatible SoCs supporting LPAE (me
+ linux-image-4.19-armmp-lpae-dbg - Debugging symbols for Linux armmp-lpae configuration (meta-packag
+ linux-image-4.19-cloud-amd64 - Linux for x86-64 cloud (meta-package)
+ linux-image-4.19-cloud-amd64-dbg - Debugging symbols for Linux cloud-amd64 configuration (meta-packa
+ linux-image-4.19-itanium - Linux for Itanium (Merced) (meta-package)
+ linux-image-4.19-itanium-dbg - Debugging symbols for Linux itanium configuration (meta-package)
+ linux-image-4.19-loongson-3 - Linux for Loongson 3A/3B (meta-package)
+ linux-image-4.19-loongson-3-dbg - Debugging symbols for Linux loongson-3 configuration (meta-packag
+ linux-image-4.19-m68k - Linux for Motorola MC68020+ family (meta-package)
+ linux-image-4.19-m68k-dbg - Debugging symbols for Linux m68k configuration (meta-package)
+ linux-image-4.19-marvell - Linux for Marvell Kirkwood/Orion (meta-package)
+ linux-image-4.19-marvell-dbg - Debugging symbols for Linux marvell configuration (meta-package)
+ linux-image-4.19-mckinley - Linux for Itanium 2+ (meta-package)
+ linux-image-4.19-mckinley-dbg - Debugging symbols for Linux mckinley configuration (meta-package)
+ linux-image-4.19-mips32r6 - Linux for MIPS R6 (32 bit, big endian) (meta-package)
+ linux-image-4.19-mips32r6-dbg - Debugging symbols for Linux mips32r6 configuration (meta-package)
+ linux-image-4.19-mips32r6el - Linux for MIPS R6 (32 bit, little endian) (meta-package)
+ linux-image-4.19-mips32r6el-dbg - Debugging symbols for Linux mips32r6el configuration (meta-packag
+ linux-image-4.19-mips64r6 - Linux for MIPS R6 (64 bit, big endian) (meta-package)
+ linux-image-4.19-mips64r6-dbg - Debugging symbols for Linux mips64r6 configuration (meta-package)
+ linux-image-4.19-mips64r6el - Linux for MIPS R6 (64 bit, little endian) (meta-package)
+ linux-image-4.19-mips64r6el-dbg - Debugging symbols for Linux mips64r6el configuration (meta-packag
+ linux-image-4.19-octeon - Linux for Octeon (meta-package)
+ linux-image-4.19-octeon-dbg - Debugging symbols for Linux octeon configuration (meta-package)
+ linux-image-4.19-parisc - Linux for 32-bit PA-RISC (meta-package)
+ linux-image-4.19-parisc-smp - Linux for multiprocessor 32-bit PA-RISC (meta-package)
+ linux-image-4.19-parisc64-smp - Linux for multiprocessor 64-bit PA-RISC (meta-package)
+ linux-image-4.19-powerpc - Linux for uniprocessor 32-bit PowerPC (meta-package)
+ linux-image-4.19-powerpc-dbg - Debugging symbols for Linux powerpc configuration (meta-package)
+ linux-image-4.19-powerpc-smp - Linux for multiprocessor 32-bit PowerPC (meta-package)
+ linux-image-4.19-powerpc-smp-dbg - Debugging symbols for Linux powerpc-smp configuration (meta-packa
+ linux-image-4.19-powerpc64 - Linux for 64-bit PowerPC (meta-package)
+ linux-image-4.19-powerpc64-dbg - Debugging symbols for Linux powerpc64 configuration (meta-package
+ linux-image-4.19-powerpc64le - Linux for Little-endian 64-bit PowerPC (meta-package)
+ linux-image-4.19-powerpc64le-dbg - Debugging symbols for Linux powerpc64le configuration (meta-packa
+ linux-image-4.19-powerpcspe - Linux for 32-bit PowerPC with SPE (instead of AltiVec) with SMP s
+ linux-image-4.19-powerpcspe-dbg - Debugging symbols for Linux powerpcspe configuration (meta-packag
+ linux-image-4.19-riscv64 - Linux for 64-bit RISC-V platforms (meta-package)
+ linux-image-4.19-riscv64-dbg - Debugging symbols for Linux riscv64 configuration (meta-package)
+ linux-image-4.19-rpi - Linux for Raspberry Pi and Pi Zero (meta-package)
+ linux-image-4.19-rpi-dbg - Debugging symbols for Linux rpi configuration (meta-package)
+ linux-image-4.19-rt-686-pae - Linux for modern PCs (meta-package), PREEMPT_RT
+ linux-image-4.19-rt-686-pae-dbg - Debugging symbols for Linux rt-686-pae configuration (meta-packag
+ linux-image-4.19-rt-amd64 - Linux for 64-bit PCs (meta-package), PREEMPT_RT
+ linux-image-4.19-rt-amd64-dbg - Debugging symbols for Linux rt-amd64 configuration (meta-package)
+ linux-image-4.19-rt-arm64 - Linux for 64-bit ARMv8 machines (meta-package), PREEMPT_RT
+ linux-image-4.19-rt-arm64-dbg - Debugging symbols for Linux rt-arm64 configuration (meta-package)
+ linux-image-4.19-rt-armmp - Linux for ARMv7 multiplatform compatible SoCs (meta-package), PRE
+ linux-image-4.19-rt-armmp-dbg - Debugging symbols for Linux rt-armmp configuration (meta-package)
+ linux-image-4.19-s390x - Linux for IBM zSeries (meta-package)
+ linux-image-4.19-s390x-dbg - Debugging symbols for Linux s390x configuration (meta-package)
+ linux-image-4.19-sh7751r - Linux for sh7751r (meta-package)
+ linux-image-4.19-sh7751r-dbg - Debugging symbols for Linux sh7751r configuration (meta-package)
+ linux-image-4.19-sh7785lcr - Linux for sh7785lcr (meta-package)
+ linux-image-4.19-sh7785lcr-dbg - Debugging symbols for Linux sh7785lcr configuration (meta-package
+ linux-image-4.19-sparc64 - Linux for uniprocessor 64-bit UltraSPARC (meta-package)
+ linux-image-4.19-sparc64-dbg - Debugging symbols for Linux sparc64 configuration (meta-package)
+ linux-image-4.19-sparc64-smp - Linux for multiprocessor 64-bit UltraSPARC (meta-package)
+ linux-image-4.19-sparc64-smp-dbg - Debugging symbols for Linux sparc64-smp configuration (meta-packa
+Changes:
+ linux-latest-4.19 (105+deb10u14~deb9u1) stretch-security; urgency=high
+ .
+   * Rebuild for stretch:
+     - ABI version is 0.bpo.19, not 19
+ .
+ linux-latest (105+deb10u14) buster-security; urgency=high
+ .
+   * Update to 4.19.0-19
+   * linux-image: Add NEWS for unprivileged eBPF change
+Checksums-Sha1:
+ c293711c265ac9b8038cbc2a5e54d07505f7e56c 12657 linux-latest-4.19_105+deb10u14~deb9u1.dsc
+ 9fa01ec442604287f47ac0a14f70ac7ffe25b054 21412 linux-latest-4.19_105+deb10u14~deb9u1.tar.xz
+ 5c370ad6e28100e068c58f2671df6ab6d9f59d46 9437 linux-latest-4.19_105+deb10u14~deb9u1_source.buildinfo
+Checksums-Sha256:
+ 5c22b53daac4661a074f5929d32a29304ef3e1bb722f99aee8db5174502678f7 12657 linux-latest-4.19_105+deb10u14~deb9u1.dsc
+ 07ca2e13b1cdc9d7ed7f4a659a72ca78d7dddabac7dd10bb973494c2386a442b 21412 linux-latest-4.19_105+deb10u14~deb9u1.tar.xz
+ c2ebba5b59edadb2632e470155f65e8741a26da4bd21d7742931a4bf76cc239f 9437 linux-latest-4.19_105+deb10u14~deb9u1_source.buildinfo
+Files:
+ e9eb013c58a5d3ae8a5e413bfd665814 12657 kernel optional linux-latest-4.19_105+deb10u14~deb9u1.dsc
+ 478d61c2246633e35a2640881ac4001a 21412 kernel optional linux-latest-4.19_105+deb10u14~deb9u1.tar.xz
+ 0cd307e232011b2e59ebe161b57502e4 9437 kernel optional linux-latest-4.19_105+deb10u14~deb9u1_source.buildinfo
+

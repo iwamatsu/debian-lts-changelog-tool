@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 12 Jun 2023 17:05:44 CEST
+Source: vim
+Architecture: source
+Version: 2:8.1.0875-5+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 6608150c36764e012dee9c939393ca46e6f28348 2971 vim_8.1.0875-5+deb10u5.dsc
+ 3f8c366b26c716dfb8e424944e2c724c29452f71 212340 vim_8.1.0875-5+deb10u5.debian.tar.xz
+ 479ad4868d2ddbb98e1e88346c7ed46aae9b4b10 23385 vim_8.1.0875-5+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ c19a6051bf5ddbb75c156d6ef5aa44f1a1730a54233ff16d993b3a4c043e7bab 2971 vim_8.1.0875-5+deb10u5.dsc
+ 8a4ade899d568bf7349c428d7704de283cf318f7ece75027756a6d58b1dfff7e 212340 vim_8.1.0875-5+deb10u5.debian.tar.xz
+ 21405bcbf595dc0e487abf26ec8b3e3008bd7676816838dc78f7820685bca898 23385 vim_8.1.0875-5+deb10u5_amd64.buildinfo
+Changes:
+ vim (2:8.1.0875-5+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-4141, CVE-2023-0054, CVE-2023-1175, CVE-2023-2610:
+     Multiple security vulnerabilities have been discovered in vim, an enhanced
+     vi editor. Buffer overflows and out-of-bounds reads may lead to a
+     denial-of-service (application crash) or other unspecified impact.
+Files:
+ 4a5382bca896e203da1218865ed560b3 2971 editors optional vim_8.1.0875-5+deb10u5.dsc
+ 36161997661743514a0e3f4c93c88e58 212340 editors optional vim_8.1.0875-5+deb10u5.debian.tar.xz
+ 102c275239d2445c19a11e1c41ad9e26 23385 editors optional vim_8.1.0875-5+deb10u5_amd64.buildinfo
+

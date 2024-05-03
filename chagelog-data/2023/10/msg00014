@@ -1,0 +1,49 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 07 Oct 2023 17:11:57 +0200
+Source: freerdp2
+Architecture: source
+Version: 2.3.0+dfsg1-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 965979 1051638
+Changes:
+ freerdp2 (2.3.0+dfsg1-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer for the LTS security team.
+   * Backport upstream version 2.3.0 from bullseye to buster.
+     This adresses:
+      CVE-2020-4030 CVE-2020-4031 CVE-2020-4032
+      CVE-2020-4033 CVE-2020-11017 CVE-2020-11018 CVE-2020-11019
+      CVE-2020-11038 CVE-2020-11039 CVE-2020-11040 CVE-2020-11041
+      CVE-2020-11042 CVE-2020-11043 CVE-2020-11044 CVE-2020-11045
+      CVE-2020-11046 CVE-2020-11047 CVE-2020-11048 CVE-2020-11049
+      CVE-2020-11058 CVE-2020-11085 CVE-2020-11086 CVE-2020-11087
+      CVE-2020-11088 CVE-2020-11089 CVE-2020-11095 CVE-2020-11096
+      CVE-2020-11097 CVE-2020-11098 CVE-2020-11099 CVE-2020-13396
+      CVE-2020-13397 CVE-2020-13398 and
+      CVE-2020-15103 (Closes: #965979)
+   * Backporting/Importing upstream patches for (Closes: #1051638)
+     CVE-2023-39350 CVE-2023-39351 CVE-2023-39352 CVE-2023-39353
+     CVE-2023-39354 CVE-2023-39355 CVE-2023-39356 CVE-2023-39357
+     CVE-2023-40181 CVE-2023-40186 CVE-2023-40188 CVE-2023-40569
+     CVE-2023-40589
+Checksums-Sha1:
+ adf0f34ec1ae5322fe41b0b792b7c993a1f2ce92 3600 freerdp2_2.3.0+dfsg1-2+deb10u3.dsc
+ 53e25fdbb5f25822eaccac90bab07a9439bba7fc 2220204 freerdp2_2.3.0+dfsg1.orig.tar.xz
+ f5165f630f078e2b1b5d61bcb317e8e1446c0135 87972 freerdp2_2.3.0+dfsg1-2+deb10u3.debian.tar.xz
+ 2e62c213fcce5d4d741d2cdc1e0797f2c9a7be0d 24151 freerdp2_2.3.0+dfsg1-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ d211810bbc7c485986f09b95824fe49f1c97d06e6398109fea2f48e0f885a189 3600 freerdp2_2.3.0+dfsg1-2+deb10u3.dsc
+ 50f80150580ce906ae86a7ec6667b7a4e3d1a6befadf4089361018386ad5477f 2220204 freerdp2_2.3.0+dfsg1.orig.tar.xz
+ fc1439719d333ebe6928434920f6ace8793f8777d146085a4c1053c4c66bc1be 87972 freerdp2_2.3.0+dfsg1-2+deb10u3.debian.tar.xz
+ 1fe8a8396623bbc24ce45fddccb7ed24e9cc4585366f793aa1f22f9dc9293ea6 24151 freerdp2_2.3.0+dfsg1-2+deb10u3_amd64.buildinfo
+Files:
+ 986028072f467b07e155fb9f4525970f 3600 x11 optional freerdp2_2.3.0+dfsg1-2+deb10u3.dsc
+ 2817f81dcd347f0466320b382beede49 2220204 x11 optional freerdp2_2.3.0+dfsg1.orig.tar.xz
+ 7479bece7794296f73b0a8eddf74d983 87972 x11 optional freerdp2_2.3.0+dfsg1-2+deb10u3.debian.tar.xz
+ 41c3d4f5dc6f347ffe66cc6d83f38c07 24151 x11 optional freerdp2_2.3.0+dfsg1-2+deb10u3_amd64.buildinfo
+

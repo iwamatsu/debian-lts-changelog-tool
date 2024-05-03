@@ -1,0 +1,28 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 02 Jun 2022 14:39:35 +0200
+Source: firefox-esr
+Architecture: source
+Version: 91.10.0esr-1~deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (91.10.0esr-1~deb9u1) stretch-security; urgency=medium
+ .
+   * Backport to stretch.
+Checksums-Sha1:
+ 47b87310318c0f63f1f27dc30009e17b0234074c 45919 firefox-esr_91.10.0esr-1~deb9u1.dsc
+ 1c9a438df0b942d7ef7fae83e105215f942479c7 184372 firefox-esr_91.10.0esr-1~deb9u1.debian.tar.xz
+ 03d74b7c2020b773ba88ea447ec525f1b3b97325 7319 firefox-esr_91.10.0esr-1~deb9u1_source.buildinfo
+Checksums-Sha256:
+ cb315e40a0c0db0bc1271de98a4045ef659279cd09cfd2ea9768bfc889875005 45919 firefox-esr_91.10.0esr-1~deb9u1.dsc
+ 3e2bae17b272e478b79a61f11d44215750a80a8a9a0642a086059016d570e548 184372 firefox-esr_91.10.0esr-1~deb9u1.debian.tar.xz
+ 622e6271963e0b7a37cc350d91eb09f1bf7147dcbe152fe91c345eea629cd76a 7319 firefox-esr_91.10.0esr-1~deb9u1_source.buildinfo
+Files:
+ 9f8c8920c4b5f99c621469731aacb674 45919 web optional firefox-esr_91.10.0esr-1~deb9u1.dsc
+ 9ca4290396d05d52a7c5a8c448484570 184372 web optional firefox-esr_91.10.0esr-1~deb9u1.debian.tar.xz
+ d339e1e461ad9f33eb8e1e2e322f7f72 7319 web optional firefox-esr_91.10.0esr-1~deb9u1_source.buildinfo
+

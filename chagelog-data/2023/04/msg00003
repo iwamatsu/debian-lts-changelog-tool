@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed,  5 Apr 2023 00:31:52 CEST
+Source: openimageio
+Architecture: source
+Version: 2.0.5~dfsg0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ bb97f374b0800d92a9a5e35447ea7a3490833afd 2961 openimageio_2.0.5~dfsg0-1+deb10u1.dsc
+ e7e755735900f35a28d298821d9bb69e15b76506 24524232 openimageio_2.0.5~dfsg0.orig.tar.xz
+ aabb7db9bd55013c41a7ab5954ad1ef2efb15929 34764 openimageio_2.0.5~dfsg0-1+deb10u1.debian.tar.xz
+ b8ab349eb01d511335645b0f66e3ad9a6c4f7510 27058 openimageio_2.0.5~dfsg0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 711bdf89707e1d5da3babff49cd8614590e5d9ce23a6c1029a3c9ee3410242ed 2961 openimageio_2.0.5~dfsg0-1+deb10u1.dsc
+ 30b76d6c1fa7f307da4433599fa4758f05ef64e270be7f5754699cd98cae3cf5 24524232 openimageio_2.0.5~dfsg0.orig.tar.xz
+ 30ec49d37305a31b2fa8acf68283c2ae384829a65897410f80616bc124119541 34764 openimageio_2.0.5~dfsg0-1+deb10u1.debian.tar.xz
+ 17f16e27cf945e018df71eda491e23e3a9e9f7a715f0a034f031d909e1c75efc 27058 openimageio_2.0.5~dfsg0-1+deb10u1_amd64.buildinfo
+Changes:
+ openimageio (2.0.5~dfsg0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-36354, CVE-2022-41639, CVE-2022-41977, CVE-2022-41988,
+     CVE-2022-41838, CVE-2022-41999, CVE-2022-41981, CVE-2022-43592,
+     CVE-2022-43593, CVE-2022-43594, CVE-2022-43595, CVE-2022-43596,
+     CVE-2022-43597, CVE-2022-43598, CVE-2022-43599, CVE-2022-43600,
+     CVE-2022-43601, CVE-2022-43602 and CVE-2022-43603.
+     Multiple security vulnerabilties have been discovered in OpenImageIO, a
+     library for reading and writing images. Buffer overflows and out-of-bounds
+     read and write programming errors may lead to a denial of service
+     (application crash) or the execution of arbitrary code if a malformed image
+     file is processed.
+Files:
+ 9c48785b8ec7ca51a90245e99d4385bf 2961 libs optional openimageio_2.0.5~dfsg0-1+deb10u1.dsc
+ b00e35be94d1474ce27876388e5f669b 24524232 libs optional openimageio_2.0.5~dfsg0.orig.tar.xz
+ 23096078d81fa99b044608f1fe17e351 34764 libs optional openimageio_2.0.5~dfsg0-1+deb10u1.debian.tar.xz
+ 7a9778f6120d469d2495b9f09ace33de 27058 libs optional openimageio_2.0.5~dfsg0-1+deb10u1_amd64.buildinfo
+

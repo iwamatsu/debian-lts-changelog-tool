@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Oct 2022 15:36:30 CET
+Source: libxml2
+Architecture: source
+Version: 2.9.4+dfsg1-7+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 66f139a442fcf61a6d096b5aaaa44ffdd3dbad30 3159 libxml2_2.9.4+dfsg1-7+deb10u5.dsc
+ 01d900b40d77ee6974d7edb6381ada286e5ec585 48120 libxml2_2.9.4+dfsg1-7+deb10u5.debian.tar.xz
+ 711f864ea5e538d11b8cbb47a4c566fc4dbb8074 10726 libxml2_2.9.4+dfsg1-7+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 6303e2cd44297bc4217a383ee9689d21405fe76a55e3ca1117777aa459a890e3 3159 libxml2_2.9.4+dfsg1-7+deb10u5.dsc
+ 4fe41d5913d7c93847d34a575489eccc56cffdb927b2128e26f297885a8f7528 48120 libxml2_2.9.4+dfsg1-7+deb10u5.debian.tar.xz
+ a1fc8aa897b45aab00f48fd88f40432fc6f5d308d05f738b9db59bdb1a2aa056 10726 libxml2_2.9.4+dfsg1-7+deb10u5_amd64.buildinfo
+Changes:
+ libxml2 (2.9.4+dfsg1-7+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-40303:
+     Parsing a XML document with the XML_PARSE_HUGE
+     option enabled can result in an integer overflow because safety checks were
+     missing in some functions. Also, the xmlParseEntityValue function didn't
+     have any length limitation.
+   * Fix CVE-2022-40304:
+     When a reference cycle is detected in the XML entity cleanup function the
+     XML entity data can be stored in a dictionary. In this case, the
+     dictionary becomes corrupted resulting in logic errors, including memory
+     errors like double free.
+Files:
+ 8d1a70d36677ab7fa33d2b4ba78b5018 3159 libs optional libxml2_2.9.4+dfsg1-7+deb10u5.dsc
+ e10a2b27c8b0b12ce907f2ea8a4aaeca 48120 libs optional libxml2_2.9.4+dfsg1-7+deb10u5.debian.tar.xz
+ c9e606901e9ea1539febe8a6f786b011 10726 libs optional libxml2_2.9.4+dfsg1-7+deb10u5_amd64.buildinfo
+

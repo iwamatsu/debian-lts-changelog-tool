@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 01 Mar 2023 03:34:16 +0100
+Source: spip
+Architecture: source
+Version: 3.2.4-1+deb10u11
+Distribution: buster-security
+Urgency: high
+Maintainer: David Prévot <taffit@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ spip (3.2.4-1+deb10u11) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport fix from upstream regression release v3.2.19:
+     + fix (de)activation of plugins with dependencies.
+Checksums-Sha1:
+ 1f201698362c55fd244ad645c3686d65ce40d734 1841 spip_3.2.4-1+deb10u11.dsc
+ 751392cbb92f0590e88f25b1151b6d54d6178d62 111412 spip_3.2.4-1+deb10u11.debian.tar.xz
+ b7ace0c70a10b169f7c3982d07ee832c4b9b7579 8347 spip_3.2.4-1+deb10u11_amd64.buildinfo
+Checksums-Sha256:
+ 86721c941429393931f7d5e57645f69a05572bc17d5ad48d221d19f6e7ed85b6 1841 spip_3.2.4-1+deb10u11.dsc
+ a76917e23ea421fdf84ad3ddb0f7cd86dd35333aa0e484f50cf9d82f81a7f455 111412 spip_3.2.4-1+deb10u11.debian.tar.xz
+ 52571aebb7dea5043b75e1119abca47e311c6c6453e7c44db4987f8b9c766ec7 8347 spip_3.2.4-1+deb10u11_amd64.buildinfo
+Files:
+ 798f38935204b2b2693c9c3fe45d32bb 1841 web optional spip_3.2.4-1+deb10u11.dsc
+ 2ddbf94051995f8cc9f7437d42fcef24 111412 web optional spip_3.2.4-1+deb10u11.debian.tar.xz
+ 3842a1e0212e253343869e8edee432de 8347 web optional spip_3.2.4-1+deb10u11_amd64.buildinfo
+

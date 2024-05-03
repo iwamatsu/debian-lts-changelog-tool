@@ -1,0 +1,119 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Dec 2022 19:03:02 +0100
+Source: xorg-server
+Binary: xdmx xdmx-dbgsym xdmx-tools xdmx-tools-dbgsym xnest xnest-dbgsym xorg-server-source xserver-common xserver-xephyr xserver-xephyr-dbgsym xserver-xorg-core xserver-xorg-core-dbgsym xserver-xorg-core-udeb xserver-xorg-dev xserver-xorg-legacy xserver-xorg-legacy-dbgsym xvfb xvfb-dbgsym xwayland xwayland-dbgsym
+Architecture: source amd64 all
+Version: 2:1.20.4-1+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ xdmx       - distributed multihead X server
+ xdmx-tools - Distributed Multihead X tools
+ xnest      - Nested X server
+ xorg-server-source - Xorg X server - source files
+ xserver-common - common files used by various X servers
+ xserver-xephyr - nested X server
+ xserver-xorg-core - Xorg X server - core server
+ xserver-xorg-core-udeb - Xorg X server - core server (udeb)
+ xserver-xorg-dev - Xorg X server - development files
+ xserver-xorg-legacy - setuid root Xorg server wrapper
+ xvfb       - Virtual Framebuffer 'fake' X server
+ xwayland   - Xwayland X server
+Changes:
+ xorg-server (2:1.20.4-1+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-46340
+     Xtest: disallow GenericEvents in XTestSwapFakeInput
+   * CVE-2022-46341
+     Xi: disallow passive grabs with a detail > 255
+   * CVE-2022-46342
+     Xext: free the XvRTVideoNotify when turning off from the same client
+   * CVE-2022-46343
+     Xext: free the screen saver resource when replacing it
+   * CVE-2022-46344
+     Xi: avoid integer truncation in length check of ProcXIChangeProperty
+   * CVE-2022-4283
+     xkb: reset the radio_groups pointer to NULL after freeing it
+   * Xi: return an error from XI property changes if verification failed
+Checksums-Sha1:
+ cf76baee2cfeec371dcca77396cb18263f4353c0 4341 xorg-server_1.20.4-1+deb10u7.dsc
+ 94dd9612c5e4233ed3cb23063ab10f43b4ae4bb2 8553791 xorg-server_1.20.4.orig.tar.gz
+ 0e82004e5d04f2e6663b6d5417d8300468347dac 161141 xorg-server_1.20.4-1+deb10u7.diff.gz
+ aebf541c94870dd98dca876e88e7095b53a2f93a 5831976 xdmx-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ f46e2bc39ceee6a5dd856bdabec941dca0e8cd25 233948 xdmx-tools-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 6004f175e5ccb6149550fcad805ee4fea808f03e 2265588 xdmx-tools_1.20.4-1+deb10u7_amd64.deb
+ 28d5db5c52e516fdabb307ee320f06adebc6b2d5 2969352 xdmx_1.20.4-1+deb10u7_amd64.deb
+ a60ce9c385216f56ace4e427d18ca7ca335bf329 4373192 xnest-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 2e2f9af14fc6c91ae4810806d0e2bd25f9626c5c 2855152 xnest_1.20.4-1+deb10u7_amd64.deb
+ cd379772ce36f609b774af0ed77a95b141171427 7410624 xorg-server-source_1.20.4-1+deb10u7_all.deb
+ b9c6e87b4b317a7260bf55d7aa49a85f293385a3 17715 xorg-server_1.20.4-1+deb10u7_amd64.buildinfo
+ ca27ba9188d9fbbe22cbce7d41028c3a7cf85dc5 2235436 xserver-common_1.20.4-1+deb10u7_all.deb
+ e26a0c20dcc0b031351068fcf76760d331d21490 8108424 xserver-xephyr-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 47eaa3993d090b3424726e8764ce6c932fe0a3a4 3124848 xserver-xephyr_1.20.4-1+deb10u7_amd64.deb
+ c44154aafadec0c7ace223362eacd2d9d8bc5b54 11091208 xserver-xorg-core-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 68d87070bade4f150995a6b10c85090947274030 936852 xserver-xorg-core-udeb_1.20.4-1+deb10u7_amd64.udeb
+ dc1b14ee3123cbd38518692422248cf8e9554b2f 3543540 xserver-xorg-core_1.20.4-1+deb10u7_amd64.deb
+ e29f0df03c9791245e276861c2448ae9ef0bcf77 2409240 xserver-xorg-dev_1.20.4-1+deb10u7_amd64.deb
+ 9fc1c65e551be7d0927348b686bd9ab44b2f6403 9436 xserver-xorg-legacy-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ b3b6680cf6f0b8af045dc36a069bd0ec04fc55c7 2240992 xserver-xorg-legacy_1.20.4-1+deb10u7_amd64.deb
+ 000296d976a3e606b5df2efb9b59d6b0cc6ff1f8 5348460 xvfb-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 8a6f40d091a5d6667717187eb4560f142216da78 2989644 xvfb_1.20.4-1+deb10u7_amd64.deb
+ e922f719d485e9a5890087871304231b8df005d5 7731496 xwayland-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 2cb1211c9576b5f3cb4c818d9dbec75393aab613 3076332 xwayland_1.20.4-1+deb10u7_amd64.deb
+Checksums-Sha256:
+ ea6aeba4221cf6bda2001cbc5a58d89157388c9a0c5724d20823e945dcebcb2a 4341 xorg-server_1.20.4-1+deb10u7.dsc
+ a6447de89eca3e22eeead682b325d902779569534ad83388c9e16611d72baaf3 8553791 xorg-server_1.20.4.orig.tar.gz
+ 404c7712b4db52075dd7b721a4bee3c5248eea9e010651258d0718413b6b16b3 161141 xorg-server_1.20.4-1+deb10u7.diff.gz
+ 1be18b1ac80013478b51d81d5f2dcc923fbf5fccf787cd1d75c8b58f63538b74 5831976 xdmx-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 06f58cd94c380165835901e4d3ff2d7fbe6e7f8b21e30ff27a5e7a37cc80ee65 233948 xdmx-tools-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 9c3d4cdb7f70cdd15f16396793d5254d7f3e28c63183d1d483996f07567b1b66 2265588 xdmx-tools_1.20.4-1+deb10u7_amd64.deb
+ 16adf21a27f406cc67d26fa46d48cf397f6747bb70080c0c6659990e7a3c214e 2969352 xdmx_1.20.4-1+deb10u7_amd64.deb
+ d61093278c415b5fb0ff952020845d1223a2eddc329e2781ce55fefc603b343d 4373192 xnest-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ ae34efa9ec791ba28843c2c29ba88531ec7ce1e1d6c56c5c25b5fddcae8f1a75 2855152 xnest_1.20.4-1+deb10u7_amd64.deb
+ f2ba4956719ee3e7ba6f8eb9c95d17cfdc6f6062d10061d3e26e0b5cd5a284a5 7410624 xorg-server-source_1.20.4-1+deb10u7_all.deb
+ 0fa632700588f406a50883c61e78605c5c4c5ee1c868d10dce41a3568bd7a679 17715 xorg-server_1.20.4-1+deb10u7_amd64.buildinfo
+ 722eda7464033c5889262b9fcb1c3bf93e80d92dcbfb3fb43ad630710e5510ef 2235436 xserver-common_1.20.4-1+deb10u7_all.deb
+ b40d2bce05cdb6291905345c6638342daf9dff26b6b4a217736d3ba2069f3d3a 8108424 xserver-xephyr-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ ad690aa5b40915d83839345afaa3ec77f7450549021d3295ece628e43099a180 3124848 xserver-xephyr_1.20.4-1+deb10u7_amd64.deb
+ a7975cd6ee253025267d578b53eb08716312e0ace0bd69578bd69c7601058203 11091208 xserver-xorg-core-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ b67abace458f49561f4d9d63d63e18e64c54efa3526e490ce8644d0d55f02610 936852 xserver-xorg-core-udeb_1.20.4-1+deb10u7_amd64.udeb
+ f6c924ff30a0de07945dce05c3d9ab8fcbffd2e512a737e21e86a592c4444511 3543540 xserver-xorg-core_1.20.4-1+deb10u7_amd64.deb
+ b7fae7947d6f3b5ead2fe1472c05198a1f301211d896c42bdc97455ca7b636b1 2409240 xserver-xorg-dev_1.20.4-1+deb10u7_amd64.deb
+ 9ab660a1b2e73d97805f1b2af6263b39e7dce3c6d0d2b9270184c39093c8d5ef 9436 xserver-xorg-legacy-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 40677ebae42ab330001b6150ef287294c0c49f0316e799512c0d22be5f640a8e 2240992 xserver-xorg-legacy_1.20.4-1+deb10u7_amd64.deb
+ 453144ece1a9e7f32a9d18eafdf87b6dc9952241e3056a417b6c2f93a9716ed4 5348460 xvfb-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 6e3193deb73eb8b0cbad361ef523cc1ccbd80d327e0543035df808e1d4b218ec 2989644 xvfb_1.20.4-1+deb10u7_amd64.deb
+ ed752eeda69f820631dde0425f997bc95d48a2bd891978f53677cbca0d4b2e68 7731496 xwayland-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 3f479780780096f2c4e2df8e1470ecfd7b0604e74d03eb018419e9072889e9c6 3076332 xwayland_1.20.4-1+deb10u7_amd64.deb
+Files:
+ 8b75e67442962ee2d403251dfb823751 4341 x11 optional xorg-server_1.20.4-1+deb10u7.dsc
+ 4151b46d6036f4997d27c2d2b7be38e7 8553791 x11 optional xorg-server_1.20.4.orig.tar.gz
+ 230fa7db2acd9990e2ee792cc785725f 161141 x11 optional xorg-server_1.20.4-1+deb10u7.diff.gz
+ d9704b7ae76edc90c54fa77906071f85 5831976 debug optional xdmx-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ d2968ee154c235e11867b946cacfa9f2 233948 debug optional xdmx-tools-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ edf343aaf37f5ba5d19bc57dc9627bea 2265588 x11 optional xdmx-tools_1.20.4-1+deb10u7_amd64.deb
+ e4a000798124ef96ef64f846faaefad1 2969352 x11 optional xdmx_1.20.4-1+deb10u7_amd64.deb
+ e69051c3dcb20f389beacd311d2a37be 4373192 debug optional xnest-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 671931e7fe8ae74e88a08f0364a679ce 2855152 x11 optional xnest_1.20.4-1+deb10u7_amd64.deb
+ d96bdce2c2c131a2ee06af8f0cf3725e 7410624 x11 optional xorg-server-source_1.20.4-1+deb10u7_all.deb
+ 763d86f4b5b1fe5cf6b3bcce2e3a9f74 17715 x11 optional xorg-server_1.20.4-1+deb10u7_amd64.buildinfo
+ a7c268e8ba69bb3f7a39a5450dcb5daa 2235436 x11 optional xserver-common_1.20.4-1+deb10u7_all.deb
+ 231ebf3a992a7988e6165eb485d4de10 8108424 debug optional xserver-xephyr-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 98e6bb126983fdcfa8b2c208409e1bbd 3124848 x11 optional xserver-xephyr_1.20.4-1+deb10u7_amd64.deb
+ 9295d9f967b96e72e29aca4a88d425a1 11091208 debug optional xserver-xorg-core-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 54fa123be5741118ffb33a0767089dd3 936852 debian-installer optional xserver-xorg-core-udeb_1.20.4-1+deb10u7_amd64.udeb
+ a466eb61efd85758993e7438fdd26fe2 3543540 x11 optional xserver-xorg-core_1.20.4-1+deb10u7_amd64.deb
+ 62a92871191aa9baf6b3168a4df40414 2409240 x11 optional xserver-xorg-dev_1.20.4-1+deb10u7_amd64.deb
+ 74f6b9052d7616c5a1cb7ebee0adbfb7 9436 debug optional xserver-xorg-legacy-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ 81151d11804c07597073dfe421e07335 2240992 x11 optional xserver-xorg-legacy_1.20.4-1+deb10u7_amd64.deb
+ 282c4a99a12983f421467f5ab9eeda6c 5348460 debug optional xvfb-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ c0656a88434182b60bff8ce99b2b2b72 2989644 x11 optional xvfb_1.20.4-1+deb10u7_amd64.deb
+ 819c281ab79c2c7fa95791bdd1267185 7731496 debug optional xwayland-dbgsym_1.20.4-1+deb10u7_amd64.deb
+ ba36e007e98dd292722b51579fd59b01 3076332 x11 optional xwayland_1.20.4-1+deb10u7_amd64.deb
+Package-Type: udeb
+

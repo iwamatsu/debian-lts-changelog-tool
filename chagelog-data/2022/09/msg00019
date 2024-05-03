@@ -1,0 +1,79 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Sep 2022 13:57:41 +0000
+Source: rails
+Binary: rails ruby-actioncable ruby-actionmailer ruby-actionpack ruby-actionview ruby-activejob ruby-activemodel ruby-activerecord ruby-activestorage ruby-activesupport ruby-rails ruby-railties
+Architecture: source all
+Version: 2:5.2.2.1+dfsg-1+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ rails      - MVC ruby based framework geared for web application development (
+ ruby-actioncable - WebSocket framework for Rails (part of Rails)
+ ruby-actionmailer - email composition, delivery, and receiving framework (part of Rai
+ ruby-actionpack - web-flow and rendering framework putting the VC in MVC (part of R
+ ruby-actionview - framework for handling view template lookup and rendering (part o
+ ruby-activejob - job framework with pluggable queues
+ ruby-activemodel - toolkit for building modeling frameworks (part of Rails)
+ ruby-activerecord - object-relational mapper framework (part of Rails)
+ ruby-activestorage - Local and cloud file storage framework (part of Rails)
+ ruby-activesupport - Support and utility classes used by the Rails 4.1 framework
+ ruby-rails - MVC ruby based framework geared for web application development
+ ruby-railties - tools for creating, working with, and running Rails applications
+Changes:
+ rails (2:5.2.2.1+dfsg-1+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Regression on last upload. Disable patch for CVE-2022-32224
+Checksums-Sha1:
+ 05cee8ea579dd633b1c7501186d2dd8343d7f7c9 4420 rails_5.2.2.1+dfsg-1+deb10u5.dsc
+ 8c6c3e8d676fdf008fceb6324feee6c5445379c2 108732 rails_5.2.2.1+dfsg-1+deb10u5.debian.tar.xz
+ 44dfdfa058b91e54ea71675e09c7fd7d26b9dd4b 15040 rails_5.2.2.1+dfsg-1+deb10u5_all.deb
+ c5b8c6e421d20927c68f19f01071ef092edf337a 25734 rails_5.2.2.1+dfsg-1+deb10u5_amd64.buildinfo
+ 1d40cbaea03d5394bfe88a2c02a0cad64d97af06 42424 ruby-actioncable_5.2.2.1+dfsg-1+deb10u5_all.deb
+ d924f5923b31cedb5b1684fdad75542ae3ad55e6 38148 ruby-actionmailer_5.2.2.1+dfsg-1+deb10u5_all.deb
+ ed9b68df5d23ea97db30ad2e68ea629138b774f3 184488 ruby-actionpack_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 734a5f85f3d66aa6dfb64f0be3cb99fa05589e86 144568 ruby-actionview_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 7fb0ecb88789a1abde92d7e20e3936e10360b66f 35012 ruby-activejob_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 5b7307f947136f5e4b054c699ccf17011a626d26 60772 ruby-activemodel_5.2.2.1+dfsg-1+deb10u5_all.deb
+ ed126c32248cc94fa4273ace17eaf292fb68b936 290044 ruby-activerecord_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 690ec58337a2c011a55a67a58b773e4f57eb0aff 51392 ruby-activestorage_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 06501490c27f85e7f5827e0d55a6c23bc30018a9 237700 ruby-activesupport_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 94afdb79f950d12735d78902be8e99a37dc55804 19188 ruby-rails_5.2.2.1+dfsg-1+deb10u5_all.deb
+ ff8965f9d86325319c38e9b1d455331dcea3948a 224436 ruby-railties_5.2.2.1+dfsg-1+deb10u5_all.deb
+Checksums-Sha256:
+ add3114510276dde76740722728c822920a918b665c798acd8c7cb424980aa03 4420 rails_5.2.2.1+dfsg-1+deb10u5.dsc
+ 9c1bdf1f00fc25a1a50b094079b331a0015f41bffc92de779013cea2885f9a3e 108732 rails_5.2.2.1+dfsg-1+deb10u5.debian.tar.xz
+ 54d4089a27df8e94155a9be57a48f8c41c3b3ab7d59ae196907f6ec2eaaaac52 15040 rails_5.2.2.1+dfsg-1+deb10u5_all.deb
+ b608adfd29370e00c42e3ca7bb0afa1f3667482fde5d2c70fec4eb3a672b9caf 25734 rails_5.2.2.1+dfsg-1+deb10u5_amd64.buildinfo
+ 1529510f013f727548f147260ddf2bf548513ffc58109739dea215966a58237c 42424 ruby-actioncable_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 7bfff25acf1607339085eb033d9feb41ad661849af3633773c6f8683bbe8c919 38148 ruby-actionmailer_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 26a35c3ca2113758ce93905f907655803ca727b8255621b1f02679bdfe38c216 184488 ruby-actionpack_5.2.2.1+dfsg-1+deb10u5_all.deb
+ fa74b3e872b566bfc847a37d4ad904029a519a0e429c197fc45291f746f78875 144568 ruby-actionview_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 2107dfa721e0dcd4f514ea6d16a799785ad0321c86beec457bd6d870e1c1d1e1 35012 ruby-activejob_5.2.2.1+dfsg-1+deb10u5_all.deb
+ a2cb3b044eada932af5431d96032d2672a8b64fb4fa688253beda024bfc0b015 60772 ruby-activemodel_5.2.2.1+dfsg-1+deb10u5_all.deb
+ f398f8cf3f9a5dac97d928c416f347a842e306148a1bf02a10abf1ec7271e797 290044 ruby-activerecord_5.2.2.1+dfsg-1+deb10u5_all.deb
+ cf6bcea267e593a4740c3806e390fe0ba91738ccc15f95395efad70747e39473 51392 ruby-activestorage_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 690b91621acfea69c5726d34979685022821211e0585072ed96eb43caf1b6af7 237700 ruby-activesupport_5.2.2.1+dfsg-1+deb10u5_all.deb
+ b9ce4b5b48b1ae0131a428596b4f8af2911362136d94a37334f901029837ea27 19188 ruby-rails_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 60b072d66f522123cd5c0113e61754d59e53d34c904a9edc44b5a83fae15da34 224436 ruby-railties_5.2.2.1+dfsg-1+deb10u5_all.deb
+Files:
+ fcaa4c00bf0b53e78b74962ac5be4244 4420 ruby optional rails_5.2.2.1+dfsg-1+deb10u5.dsc
+ 86aab85643fafdd4e7bd117a97e3c8e9 108732 ruby optional rails_5.2.2.1+dfsg-1+deb10u5.debian.tar.xz
+ 4f5bb7546475ac42b3e8c41d9397333d 15040 ruby optional rails_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 5ca24a37aa9d79e8fab0bacdd67b6182 25734 ruby optional rails_5.2.2.1+dfsg-1+deb10u5_amd64.buildinfo
+ 0e9716d411533983aa0c5362c7ed5fa7 42424 ruby optional ruby-actioncable_5.2.2.1+dfsg-1+deb10u5_all.deb
+ f8d5134761464c4ff4d9d0630a1f9cdc 38148 ruby optional ruby-actionmailer_5.2.2.1+dfsg-1+deb10u5_all.deb
+ dbcd396dd47e53fc9be98c3f99414e82 184488 ruby optional ruby-actionpack_5.2.2.1+dfsg-1+deb10u5_all.deb
+ db90d00b5042fc5d0b823cbce767c702 144568 ruby optional ruby-actionview_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 568ea6b22d0acf3d2573a802dc1c6476 35012 ruby optional ruby-activejob_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 35d863117116198620ef60dd2cb13b27 60772 ruby optional ruby-activemodel_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 19ea897276864ed0247c6d30ec1a3238 290044 ruby optional ruby-activerecord_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 18eb2fb5741e34bc5534e4576db61a7c 51392 ruby optional ruby-activestorage_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 23a71e47740160bc93f5fca22a75c464 237700 ruby optional ruby-activesupport_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 5144ea02d4b91cd00890dd2976793d4e 19188 ruby optional ruby-rails_5.2.2.1+dfsg-1+deb10u5_all.deb
+ 147f4f24ce8bcd1d1ef431ea2bb740c1 224436 ruby optional ruby-railties_5.2.2.1+dfsg-1+deb10u5_all.deb
+

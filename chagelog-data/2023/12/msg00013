@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 17 Dec 2023 23:18:25 +0200
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Closes: 926148
+Changes:
+ curl (7.64.0-4+deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-28322: POST-after-PUT confusion.
+   * CVE-2023-46218: Cookie mixed case PSL bypass.
+ .
+   [ Boyuan Yang ]
+   * Reduce verbose "Expire in" ... messages. (Closes: #926148)
+ .
+   [ Samuel Henrique ]
+   * Set CURL_PATCHSTAMP to package's version,
+     so it shows up in "--version" output.
+   * Add debian/salsa-ci.yml
+Checksums-Sha1:
+ 5550befc40c796a5e8eb0f3f7d767626a5f81539 2694 curl_7.64.0-4+deb10u8.dsc
+ 5911d4400e988ae52368f2266a5f84378983dbde 4032645 curl_7.64.0.orig.tar.gz
+ df4eade7f46d819ec16c540db1f2c241d0b5c948 71744 curl_7.64.0-4+deb10u8.debian.tar.xz
+Checksums-Sha256:
+ 43cb6b77daab8e8861a5c01bf1f44915fa6a94161f15b0ed2403be90e5a80bc2 2694 curl_7.64.0-4+deb10u8.dsc
+ cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5 4032645 curl_7.64.0.orig.tar.gz
+ b41c8488fac73431610536b19b63d96e29cd12d1b4f51e433ce2ac206a7d5683 71744 curl_7.64.0-4+deb10u8.debian.tar.xz
+Files:
+ 188794e8a10349bf4f1791d4b890985e 2694 web optional curl_7.64.0-4+deb10u8.dsc
+ a026740d599a32bcbbe6e70679397899 4032645 web optional curl_7.64.0.orig.tar.gz
+ eace838b252f157be071f5bd7090ae4e 71744 web optional curl_7.64.0-4+deb10u8.debian.tar.xz
+

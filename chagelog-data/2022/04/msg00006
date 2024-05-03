@@ -1,0 +1,61 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 10 Apr 2022 11:03:02 +0200
+Source: fribidi
+Binary: libfribidi0 libfribidi-dev libfribidi0-udeb libfribidi-bin
+Architecture: source amd64
+Version: 0.19.7-1+deb9u2
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libfribidi-bin - Free Implementation of the Unicode BiDi algorithm (utility)
+ libfribidi-dev - Development files for FreeBidi library
+ libfribidi0 - Free Implementation of the Unicode BiDi algorithm
+ libfribidi0-udeb - Free Implementation of the Unicode BiDi algorithm (udeb)
+Changes:
+ fribidi (0.19.7-1+deb9u2) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-25308
+     stack-buffer-overflow issue in main()
+   * CVE-2022-25309
+     heap-buffer-overflow issue in fribidi_cap_rtl_to_unicode()
+   * CVE-2022-25310
+     SEGV issue in fribidi_remove_bidi_marks()
+Checksums-Sha1:
+ c4e6ece0a75f3998b518d4ec25869f3b654ac3e3 2440 fribidi_0.19.7-1+deb9u2.dsc
+ e470e078eafe6c065708def3e037c129c0d7367d 648299 fribidi_0.19.7.orig.tar.bz2
+ d972a372d0b38d30468d3bb3d768cb56476119d5 8816 fribidi_0.19.7-1+deb9u2.debian.tar.xz
+ cdb47805c8c332e199db9c4cfbc80fd0c6f986ef 7534 fribidi_0.19.7-1+deb9u2_amd64.buildinfo
+ 55bc104f6e625ae794414d2b2109516ae30b1aee 2784 libfribidi-bin-dbgsym_0.19.7-1+deb9u2_amd64.deb
+ 0dd23d1379302178cb4054ab4a1b0f24c8b899bf 31062 libfribidi-bin_0.19.7-1+deb9u2_amd64.deb
+ f3b97722885716f1fb46c5991927ed92ceb22330 64654 libfribidi-dev_0.19.7-1+deb9u2_amd64.deb
+ 4d31842e70eed6953e8a80020021e643b45945f0 3504 libfribidi0-dbgsym_0.19.7-1+deb9u2_amd64.deb
+ 0b6de5fbe2f0631beffc8f08f1449fb01611bee7 16614 libfribidi0-udeb_0.19.7-1+deb9u2_amd64.udeb
+ e38b0f4d107a099effcdb3b329975c6d44c3d060 45714 libfribidi0_0.19.7-1+deb9u2_amd64.deb
+Checksums-Sha256:
+ 1b023c748efae81748f33a3737dbd9006082dbcae2339adacd3b8f825624b70f 2440 fribidi_0.19.7-1+deb9u2.dsc
+ 08222a6212bbc2276a2d55c3bf370109ae4a35b689acbc66571ad2a670595a8e 648299 fribidi_0.19.7.orig.tar.bz2
+ 1cd63a9f611f7ca28749cdf71597e50edf1b7ce3517538934f6687acd89d694c 8816 fribidi_0.19.7-1+deb9u2.debian.tar.xz
+ 126e416f3542b5a50a3eedbaa2c7a2745b4c75a1e63d13f4ffc4dc180a411e52 7534 fribidi_0.19.7-1+deb9u2_amd64.buildinfo
+ 2748c80635a422656c5c1316a461a9b2a5e118f20f1be0251d123e2bfb2c1068 2784 libfribidi-bin-dbgsym_0.19.7-1+deb9u2_amd64.deb
+ 311618fac335c7667e1a9059c4447eb5aab5c85ece432c1da4b871f3f2e0f299 31062 libfribidi-bin_0.19.7-1+deb9u2_amd64.deb
+ b72068fe3fdedbaad0ecb7be9b98a804945bc1c206161ecf1422194c882a6d2b 64654 libfribidi-dev_0.19.7-1+deb9u2_amd64.deb
+ 04f69fb3dde39e93357e15f9109cc0351b95e6b8ea3aa4b5586822edfa035b66 3504 libfribidi0-dbgsym_0.19.7-1+deb9u2_amd64.deb
+ 74dbe889e89c118521b3c93d86f21992dc34e962989ab409270da3bf9e1f5878 16614 libfribidi0-udeb_0.19.7-1+deb9u2_amd64.udeb
+ fc13caab4dc26eade89db042f7d2d31527a970d86bc6222d2a71a844e194c66e 45714 libfribidi0_0.19.7-1+deb9u2_amd64.deb
+Files:
+ 0cf69587c7235f00304332d62868475c 2440 libs optional fribidi_0.19.7-1+deb9u2.dsc
+ 6c7e7cfdd39c908f7ac619351c1c5c23 648299 libs optional fribidi_0.19.7.orig.tar.bz2
+ cf548b215011254318cec8983a50c2f6 8816 libs optional fribidi_0.19.7-1+deb9u2.debian.tar.xz
+ 158be2c549c82fbee886c60d8de61e5d 7534 libs optional fribidi_0.19.7-1+deb9u2_amd64.buildinfo
+ a0c75c4dc1e15713ed6e2a8e35568fcc 2784 debug extra libfribidi-bin-dbgsym_0.19.7-1+deb9u2_amd64.deb
+ 917ed396b7db5dc5c4cc2950c3c66c05 31062 utils optional libfribidi-bin_0.19.7-1+deb9u2_amd64.deb
+ 4908b8296017caa08ca3135abd5c853a 64654 libdevel optional libfribidi-dev_0.19.7-1+deb9u2_amd64.deb
+ 7ab8459cf69c361296c3e71baca5787b 3504 debug extra libfribidi0-dbgsym_0.19.7-1+deb9u2_amd64.deb
+ 0d370f844961edaedb41619dc04f8a5e 16614 debian-installer extra libfribidi0-udeb_0.19.7-1+deb9u2_amd64.udeb
+ d10e75eef59ff65ccbc384e65132375f 45714 libs optional libfribidi0_0.19.7-1+deb9u2_amd64.deb
+

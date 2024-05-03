@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 11 May 2022 02:06:54 +0530
+Source: mutt
+Architecture: source
+Version: 1.7.2-1+deb9u6
+Distribution: stretch-security
+Urgency: high
+Maintainer: Mutt maintainers <pkg-mutt-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1009734
+Changes:
+ mutt (1.7.2-1+deb9u6) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix uudecode buffer overflow.
+     (Fixes: CVE-2022-1328) (Closes: #1009734)
+Checksums-Sha1:
+ bed27074b6f653a65ff8b6d9eeb33ea7cf2865f4 2261 mutt_1.7.2-1+deb9u6.dsc
+ 39be2b552b99ed16f263487017c68cdbc1c7b384 4025880 mutt_1.7.2.orig.tar.gz
+ 6ae5a1bd4132466477f7b7ebaccabc3f6a6d2996 944924 mutt_1.7.2-1+deb9u6.debian.tar.xz
+ e1f941f834cd9a0e91cac762d393b3edc70e287f 6219 mutt_1.7.2-1+deb9u6_source.buildinfo
+Checksums-Sha256:
+ a4c94aafbbe9e895b1947f19ad4b571231d8b687d07fbee77c43bd82e05c1aa7 2261 mutt_1.7.2-1+deb9u6.dsc
+ 1553501687cd22d5b8aaee4dc5a7d9dcf6cc61d7956f6aabaadd252d10cd5ff9 4025880 mutt_1.7.2.orig.tar.gz
+ 594f420299c6c71a94c67b92c55c1cc398f785afd7fa3984eea36b0c577a83f7 944924 mutt_1.7.2-1+deb9u6.debian.tar.xz
+ 7bfe7567380bc2b34c1b3206cc7a5d8951162fc8ff2ad810679ebf69b6f64ef0 6219 mutt_1.7.2-1+deb9u6_source.buildinfo
+Files:
+ e3a47cb0519c74ed0a079a8a3682f301 2261 mail optional mutt_1.7.2-1+deb9u6.dsc
+ 15425c4c9946d58c22ccb44901544e6d 4025880 mail optional mutt_1.7.2.orig.tar.gz
+ ad649cc9bce2d9de197afba62b616a81 944924 mail optional mutt_1.7.2-1+deb9u6.debian.tar.xz
+ 60bc820ee28e5a4d8f1120901f738e89 6219 mail optional mutt_1.7.2-1+deb9u6_source.buildinfo
+

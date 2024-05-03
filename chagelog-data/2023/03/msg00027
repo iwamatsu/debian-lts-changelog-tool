@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 Mar 2023 11:34:36 +0000
+Source: xrdp
+Architecture: source
+Version: 0.9.9-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Changes:
+ xrdp (0.9.9-1+deb10u2) buster-security; urgency=medium
+ .
+   * Fix CVE-2022-23468 (buffer over flow in xrdp_login_wnd_create).
+   * Fix CVE-2022-23478 (Out of Bound Write in xrdp_mm_trans_process_drdynvc_channel_open).
+   * Fix CVE-2022-23479 (buffer over flow in xrdp_mm_chan_data_in).
+   * Fix CVE-2022-23483 (Out of Bound Read in libxrdp_send_to_channel).
+   * Fix CVE-2022-23484 (Integer Overflow in xrdp_mm_process_rail_update_window_text).
+   * Fix CVE-2022-23493 (Out of Bound Read in xrdp_mm_trans_process_drdynvc_channel_close).
+Checksums-Sha1:
+ 54ffddf412c18c781aca6d39f28aa81aa6374655 1739 xrdp_0.9.9-1+deb10u2.dsc
+ b4393b698fee9d006f6b29129c378954a31ea1b5 30452 xrdp_0.9.9-1+deb10u2.debian.tar.xz
+ 0685bfbb0e6a9022222cd78e9e7266b9287dd2c7 7319 xrdp_0.9.9-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 4d4ca4821e50b7c4745b2414d8e4f849922461fd8b7dbdf93f3a81d270aa1372 1739 xrdp_0.9.9-1+deb10u2.dsc
+ fd75efa780dd93e44cd58042946d5a28d340fd48179e75bb9374d95539fb5bfc 30452 xrdp_0.9.9-1+deb10u2.debian.tar.xz
+ 504f19ed6bfa65c95b0fe7b9fca243ea5496f22fab0d722d81dbc3caebf858be 7319 xrdp_0.9.9-1+deb10u2_amd64.buildinfo
+Files:
+ 5c58cbc9397408da78192030355710f5 1739 net optional xrdp_0.9.9-1+deb10u2.dsc
+ cb48651c778b1e818dfccaf764d78073 30452 net optional xrdp_0.9.9-1+deb10u2.debian.tar.xz
+ 29f4be0206f1bed31a8c4a36ae07415e 7319 net optional xrdp_0.9.9-1+deb10u2_amd64.buildinfo
+

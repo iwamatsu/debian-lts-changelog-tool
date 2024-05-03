@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 17:01:02 CET
+Source: libjettison-java
+Architecture: source
+Version: 1.5.3-1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ d628eabdc433de5ac7c65118e458d67233c825f5 2275 libjettison-java_1.5.3-1~deb10u1.dsc
+ cd806d8acda7345be602f3ddbeb3a5e30c2f71e2 72810 libjettison-java_1.5.3.orig.tar.gz
+ b0eeb12afffd9fe566d5a58742c27d1123fbf21e 2996 libjettison-java_1.5.3-1~deb10u1.debian.tar.xz
+ 1345c2fbc7f780655bdd0a9e4a79131914fedd03 13570 libjettison-java_1.5.3-1~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ b64fa065c03e78e10cfa13d1dc510d817e48c3c1e28ae1fd6d34db2db0c2f75c 2275 libjettison-java_1.5.3-1~deb10u1.dsc
+ c68ff9851b25789467e8168b3e54ada18e21964fae2b1986027e6bf133947920 72810 libjettison-java_1.5.3.orig.tar.gz
+ 75213ccd0443e2810e95644806d5a9628cbe177a8eed28c6c51812541102f176 2996 libjettison-java_1.5.3-1~deb10u1.debian.tar.xz
+ 99f70f30ba24d705638c500d8e3d34c1507903545b16789a9127eac74cbfb63d 13570 libjettison-java_1.5.3-1~deb10u1_amd64.buildinfo
+Changes:
+ libjettison-java (1.5.3-1~deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2022-40150, CVE-2022-45685, CVE-2022-45693:
+     denial of service via stack overflow / out of memory
+Files:
+ 46946488ce7afa63c1718c887a98c727 2275 java optional libjettison-java_1.5.3-1~deb10u1.dsc
+ 4fe6afb04644a6a85ac23fb35a663935 72810 java optional libjettison-java_1.5.3.orig.tar.gz
+ 8323f28672e685c2b07aae0b9f647835 2996 java optional libjettison-java_1.5.3-1~deb10u1.debian.tar.xz
+ f5c9ea702587bcddaeaf4ffe27ce58ae 13570 java optional libjettison-java_1.5.3-1~deb10u1_amd64.buildinfo
+

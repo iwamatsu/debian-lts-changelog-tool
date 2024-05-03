@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 02 Oct 2023 16:11:34 +0200
+Source: grub2
+Architecture: source
+Version: 2.06-3~deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Changed-By: Julian Andres Klode <jak@debian.org>
+Changes:
+ grub2 (2.06-3~deb10u4) buster-security; urgency=medium
+ .
+   [ Mate Kukri ]
+   * SECURITY UPDATE: Crafted file system images can cause out-of-bounds write
+     and may leak sensitive information into the GRUB pager.
+     - d/patches/ntfs-cve-fixes/fs-ntfs-Fix-an-OOB-read-when-parsing-a-volume-
+       label.patch:
+       fs/ntfs: Fix an OOB read when parsing a volume label
+     - d/patches/ntfs-cve-fixes/fs-ntfs-Fix-an-OOB-read-when-parsing-bs-for-
+       index-at.patch:
+       fs/ntfs: Fix an OOB read when parsing bitmaps for index attributes
+     - d/patches/ntfs-cve-fixes/fs-ntfs-Fix-an-OOB-read-when-parsing-dory-
+       entries-fr.patch:
+       fs/ntfs: Fix an OOB read when parsing directory entries from resident and
+       non-resident index attributes
+     - d/patches/ntfs-cve-fixes/fs-ntfs-Fix-an-OOB-read-when-reading-data-fhe-
+       reside.patch:
+       fs/ntfs: Fix an OOB read when reading data from the resident $DATA +
+       attribute
+     - CVE-2023-4693
+   * SECURITY UPDATE: Crafted file system images can cause heap-based buffer
+     overflow and may allow arbitrary code execution and secure boot bypass.
+     - d/patches/ntfs-cve-fixes/fs-ntfs-Fix-an-OOB-write-when-parsing-the-
+       ATTRIBUTE_LIST-.patch:
+       fs/ntfs: Fix an OOB write when parsing the $ATTRIBUTE_LIST attribute for
+       the $MFT file
+     - d/patches/ntfs-cve-fixes/fs-ntfs-Make-code-more-readable.patch
+       fs/ntfs: Make code more readable
+     - CVE-2023-4692
+ .
+   [ Julian Andres Klode ]
+   * Bump SBAT to grub,4
+Checksums-Sha1:
+ c43511c7180bf0f55fa0196693a9af4b5b9b1529 7117 grub2_2.06-3~deb10u4.dsc
+ 7d766831665384745452a659a3fdcdb79a9f83be 1095736 grub2_2.06-3~deb10u4.debian.tar.xz
+ 11a8f92c3855b4385fc260599a68ebdd5b8545ac 14847 grub2_2.06-3~deb10u4_source.buildinfo
+Checksums-Sha256:
+ 8004a43c658a84c9a2834e50a234ddfcec8b89698b58c0f6c6b17931fd3c6b8d 7117 grub2_2.06-3~deb10u4.dsc
+ ad07f5d1de940c6311bea6a98a7b2f9c15ce8ddde27605bae277ab7374fc8d83 1095736 grub2_2.06-3~deb10u4.debian.tar.xz
+ b6fe9dc3604d43aa52327ea121e08eb496adebddc8438ab50723dc539e9bd82d 14847 grub2_2.06-3~deb10u4_source.buildinfo
+Files:
+ d00051c7e033ff43125022eaa42d60c2 7117 admin optional grub2_2.06-3~deb10u4.dsc
+ 65d93171bf6a707d0527ad471e540a33 1095736 admin optional grub2_2.06-3~deb10u4.debian.tar.xz
+ 2425569c2c2f9a5c8f4df13c243e455c 14847 admin optional grub2_2.06-3~deb10u4_source.buildinfo
+

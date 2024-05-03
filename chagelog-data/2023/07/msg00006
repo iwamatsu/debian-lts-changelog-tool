@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 22 Jun 2023 15:05:31 +0200
+Source: debian-archive-keyring
+Architecture: source
+Version: 2019.1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Release Team <packages@release.debian.org>
+Changed-By: Jochen Sprickerhof <jspricke@debian.org>
+Changes:
+ debian-archive-keyring (2019.1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add Debian Stable Release Key (12/bookworm) (ID: 0xF8D2585B8783D481)
+   * Debian Archive Automatic Signing Key (12/bookworm) (ID: B7C5D7D6350947F8)
+   * Debian Security Archive Automatic Signing Key (12/bookworm) (ID: 254CF3B5AEC0A8F0)
+Checksums-Sha1:
+ fec597eeb2539b6745ffc9e05c7b2407c339608b 1907 debian-archive-keyring_2019.1+deb10u2.dsc
+ 2d06cfc45a784ee9d9961a98cb09778b40598e0a 274312 debian-archive-keyring_2019.1+deb10u2.tar.xz
+ 4c73e1d741f2fa73645888166be466b0b53c6e39 7077 debian-archive-keyring_2019.1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 7acc7d3add782c639e12c451a6784ddfd389b155a723c4ab5158eea9f79108cf 1907 debian-archive-keyring_2019.1+deb10u2.dsc
+ 1e9f3d32f25962aeec3753d8d663bd7513dfcf31316216cfb7c007c09004eb44 274312 debian-archive-keyring_2019.1+deb10u2.tar.xz
+ 8af5fcdc33a15d4745a859887136a5f98b205a982f652b61c2e3e2b0f6830606 7077 debian-archive-keyring_2019.1+deb10u2_amd64.buildinfo
+Files:
+ cc0bed2c3b158b995452753127815180 1907 misc important debian-archive-keyring_2019.1+deb10u2.dsc
+ 6688f9fe5616ef7cc36f7faef42ae722 274312 misc important debian-archive-keyring_2019.1+deb10u2.tar.xz
+ 0572b0479520453ee5eae1cfad5993a1 7077 misc important debian-archive-keyring_2019.1+deb10u2_amd64.buildinfo
+

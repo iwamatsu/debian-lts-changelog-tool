@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 Jan 2023 14:03:02 +0100
+Source: libarchive
+Architecture: source
+Version: 3.3.3-4+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Peter Pentchev <roam@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libarchive (3.3.3-4+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-36227
+     null pointer dereference due to missing check after calloc
+Checksums-Sha1:
+ b4cd4e055249a1735c1d0266767aa553064e4fd3 2548 libarchive_3.3.3-4+deb10u3.dsc
+ 499a8f48a895faff4151d7398b24070d578f0b2e 6535598 libarchive_3.3.3.orig.tar.gz
+ 50776a493efb2bc35e18e1a649fedc4a2ab63cbc 24948 libarchive_3.3.3-4+deb10u3.debian.tar.xz
+ cb18b6844b513729b035db83093412cc9998495a 8373 libarchive_3.3.3-4+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 89354642e26e1ee08588d5549527968c7615e391304d46c11df9b83903af4956 2548 libarchive_3.3.3-4+deb10u3.dsc
+ ba7eb1781c9fbbae178c4c6bad1c6eb08edab9a1496c64833d1715d022b30e2e 6535598 libarchive_3.3.3.orig.tar.gz
+ 9a6217ca0d0bc489a8f6f0cbb7465c5d3bb1b54410e82922cfd3423d1082da8f 24948 libarchive_3.3.3-4+deb10u3.debian.tar.xz
+ 5df52b5926f88fea9fe7dff345a4f11d00e594d31d3b1a42d635a6a8e2639286 8373 libarchive_3.3.3-4+deb10u3_amd64.buildinfo
+Files:
+ 27705a3bb18cf70d48ff39e24e57e0cf 2548 libs optional libarchive_3.3.3-4+deb10u3.dsc
+ 4038e366ca5b659dae3efcc744e72120 6535598 libs optional libarchive_3.3.3.orig.tar.gz
+ c58e33c9eae457f587e826a9c6836b06 24948 libs optional libarchive_3.3.3-4+deb10u3.debian.tar.xz
+ e3a963d7655fa99e51f48e83ecc2e5c1 8373 libs optional libarchive_3.3.3-4+deb10u3_amd64.buildinfo
+

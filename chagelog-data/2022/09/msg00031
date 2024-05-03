@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 24 Sep 2022 11:03:02 +0200
+Source: expat
+Architecture: source
+Version: 2.2.6-2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ expat (2.2.6-2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-40674
+     heap use-after-free issue in doContent()
+     (based on the backport for Bullseye made by Laszlo Boszormenyi)
+   * update test-* patches to be able to run testsuite
+   * debian/rules: add run of testsuite
+                   (but leave it deactivated as I only tested on amd64)
+Checksums-Sha1:
+ e54bb057c344711b256946101e18c1b950e02c36 2140 expat_2.2.6-2+deb10u5.dsc
+ 87a4efb7434b84581e20b91e6dddbf1e8d32364a 8275473 expat_2.2.6.orig.tar.gz
+ 2b3bbdd2f8330aea2a07485f1f12d07ea333a91a 28464 expat_2.2.6-2+deb10u5.debian.tar.xz
+ 93b067af8b5cfd35fef77c5e082b1f4de40a3058 8669 expat_2.2.6-2+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 2eee1ea4da8668417e03851c3934773e7b39bacd3f2c4da35644a8b7f472b6da 2140 expat_2.2.6-2+deb10u5.dsc
+ 574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff 8275473 expat_2.2.6.orig.tar.gz
+ 102e9c7195796b831942b8b380b6396906a49b54426c5082baea4602dd07ef4c 28464 expat_2.2.6-2+deb10u5.debian.tar.xz
+ c9a23d7f05aab3c7db15364fd2cdd91283f1f8a840754b17ca7c307a0e907a41 8669 expat_2.2.6-2+deb10u5_amd64.buildinfo
+Files:
+ 16be1e04fb8a3380acdf55f5f6cf01a6 2140 text optional expat_2.2.6-2+deb10u5.dsc
+ b6ccd2705cf8e732707eb4132a1c4dbc 8275473 text optional expat_2.2.6.orig.tar.gz
+ 7081000be2047287a5e2e7332ddf2690 28464 text optional expat_2.2.6-2+deb10u5.debian.tar.xz
+ 934fb6b659f39f29108834261dfa47d6 8669 text optional expat_2.2.6-2+deb10u5_amd64.buildinfo
+

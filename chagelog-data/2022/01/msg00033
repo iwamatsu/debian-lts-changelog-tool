@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Jan 2022 21:55:40 CET
+Source: expat
+Binary: lib64expat1-dev lib64expat1 libexpat1-dev libexpat1 libexpat1-udeb expat
+Architecture: source
+Version: 2.2.0-2+deb9u4
+Distribution: stretch-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ expat      - XML parsing C library - example application
+ lib64expat1 - XML parsing C library - runtime library (64bit)
+ lib64expat1-dev - XML parsing C library - development kit (64bit)
+ libexpat1  - XML parsing C library - runtime library
+ libexpat1-dev - XML parsing C library - development kit
+ libexpat1-udeb - XML parsing C library - runtime library (udeb)
+Checksums-Sha1:
+ d9bb97908f15c8bd97583b7a36ead03ae0928e96 2446 expat_2.2.0-2+deb9u4.dsc
+ e081c553adcd7492d6da4aba2108686eb9d3d49a 15892 expat_2.2.0-2+deb9u4.debian.tar.xz
+ cd07746df3fd6739484759ca334ed239fa7e9162 7643 expat_2.2.0-2+deb9u4_amd64.buildinfo
+Checksums-Sha256:
+ edd9c1c2b26eb213e1238727f447437be4b35827b38822d9bb28dfba225106f9 2446 expat_2.2.0-2+deb9u4.dsc
+ 6271aeb53ffb23a0723848f4875f678424f273e3c9e65257f0fe1c7725e2c68a 15892 expat_2.2.0-2+deb9u4.debian.tar.xz
+ 7e190acb12c4991ec8c39db8469b82309f0c06d8ba024e4174d09ba63786d133 7643 expat_2.2.0-2+deb9u4_amd64.buildinfo
+Changes:
+ expat (2.2.0-2+deb9u4) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-46143, CVE-2022-22822, CVE-2022-22823, CVE-2022-22824,
+     CVE-2022-22825, CVE-2022-22826, CVE-2022-22827, CVE-2022-23852,
+     CVE-2022-23990 and CVE-2021-45960.
+     Multiple security vulnerabilities have been discovered in Expat, the XML
+     parsing C library. Integer overflows or invalid shifts may lead to a denial
+     of service or other unspecified impact.
+Files:
+ da43bd7678625165fcf6e11040273a58 2446 text optional expat_2.2.0-2+deb9u4.dsc
+ 8b4432fe6f7b0bd1133983a8ef1b8f4b 15892 text optional expat_2.2.0-2+deb9u4.debian.tar.xz
+ a433bc793ee08b88749ad62367bcdf72 7643 text optional expat_2.2.0-2+deb9u4_amd64.buildinfo
+

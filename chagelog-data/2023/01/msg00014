@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 18 Jan 2023 22:15:12 CET
+Source: libitext5-java
+Architecture: source
+Version: 5.5.13-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 01d22506bcdf37f8db387b64e3fa70e513472966 2558 libitext5-java_5.5.13-1+deb10u1.dsc
+ fb7a3b80c5bbb70cbd8e2323d1ac9dba50f57e4b 90335136 libitext5-java_5.5.13.orig.tar.xz
+ 55922f3840e112dcc29fbcefc0391dee42220364 198072 libitext5-java_5.5.13-1+deb10u1.debian.tar.xz
+ 36bdfb1a7f4f109275664fb4af47e866fa46ef88 14839 libitext5-java_5.5.13-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 824387ce23d5b511f9e1e1664a0704a2b4b32f2412efa4c7b76d181d510c465c 2558 libitext5-java_5.5.13-1+deb10u1.dsc
+ 427de564662d8f8d844cf4ebff3be2ce401607ea9ec4e735d6121984783363a0 90335136 libitext5-java_5.5.13.orig.tar.xz
+ 02a2306d16768f388260bdd6ce8bbfa472d64a9c340e8a52f3d9ad08e8fba73d 198072 libitext5-java_5.5.13-1+deb10u1.debian.tar.xz
+ a244abddaa8496c4bc5035ad223c4469de523a174b343f0de992e3fb83af1be1 14839 libitext5-java_5.5.13-1+deb10u1_amd64.buildinfo
+Changes:
+ libitext5-java (5.5.13-1+deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2021-43113:
+     It was discovered that the CompareTool of iText, a Java PDF library which
+     uses the external ghostscript software to compare PDFs at a pixel level,
+     allowed command injection when parsing a specially crafted filename.
+Files:
+ dfe2fdced37009d2ceecbce4ff20d057 2558 java optional libitext5-java_5.5.13-1+deb10u1.dsc
+ f5dcb784372a1cdcfd3c2eceb3d5b800 90335136 java optional libitext5-java_5.5.13.orig.tar.xz
+ f68967330552ecb72a9f58515f687c2e 198072 java optional libitext5-java_5.5.13-1+deb10u1.debian.tar.xz
+ 321b5e269648baaafef5523b5b54fcc7 14839 java optional libitext5-java_5.5.13-1+deb10u1_amd64.buildinfo
+

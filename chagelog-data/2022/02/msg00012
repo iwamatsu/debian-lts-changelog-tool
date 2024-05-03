@@ -1,0 +1,62 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 09 Feb 2022 11:40:17 +0100
+Source: openjdk-8
+Architecture: source
+Version: 8u322-b06-1~deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Java Maintenance <debian-java@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ openjdk-8 (8u322-b06-1~deb9u1) stretch-security; urgency=medium
+ .
+   [ Emilio Pozuelo Monfort ]
+   * New upstream release.
+   * Adapt rules for the move to git and for the new merged repo layout.
+   * Security fixes:
+     - JDK-8264934, CVE-2022-21248: Enhance cross VM serialization
+     - JDK-8268488: More valuable DerValues
+     - JDK-8268494: Better inlining of inlined interfaces
+     - JDK-8268512: More content for ContentInfo
+     - JDK-8268795: Enhance digests of Jar files
+     - JDK-8268801: Improve PKCS attribute handling
+     - JDK-8268813, CVE-2022-21283: Better String matching
+     - JDK-8269151: Better construction of EncryptedPrivateKeyInfo
+     - JDK-8269944: Better HTTP transport redux
+     - JDK-8270392, CVE-2022-21293: Improve String constructions
+     - JDK-8270416, CVE-2022-21294: Enhance construction of Identity maps
+     - JDK-8270492, CVE-2022-21282: Better resolution of URIs
+     - JDK-8270498, CVE-2022-21296: Improve SAX Parser configuration management
+     - JDK-8270646, CVE-2022-21299: Improved scanning of XML entities
+     - JDK-8271962: Better TrueType font loading
+     - JDK-8271968: Better canonical naming
+     - JDK-8271987: Manifest improved manifest entries
+     - JDK-8272014, CVE-2022-21305: Better array indexing
+     - JDK-8272026, CVE-2022-21340: Verify Jar Verification
+     - JDK-8272236, CVE-2022-21341: Improve serial forms for transport
+     - JDK-8272272: Enhance jcmd communication
+     - JDK-8272462: Enhance image handling
+     - JDK-8273290: Enhance sound handling
+     - JDK-8273748, CVE-2022-21349: Improve Solaris font rendering
+     - JDK-8273756, CVE-2022-21360: Enhance BMP image support
+     - JDK-8273838, CVE-2022-21365: Enhanced BMP processing
+   * Other changes, see
+     https://mail.openjdk.java.net/pipermail/jdk8u-dev/2022-January/014522.html
+Checksums-Sha1:
+ d7458864023c59a02029ec72b773c1cb02a5c7a9 4492 openjdk-8_8u322-b06-1~deb9u1.dsc
+ 6e1d44e024cd11e7478bebe884e410defb9cd2f6 175344032 openjdk-8_8u322-b06.orig.tar.gz
+ a53bb496e18f909b18a46a0bec15baf1f102ee60 176468 openjdk-8_8u322-b06-1~deb9u1.debian.tar.xz
+ cd84ae571758ad28d5a2eb0dbc6379425a4ef592 11205 openjdk-8_8u322-b06-1~deb9u1_source.buildinfo
+Checksums-Sha256:
+ 435e2ace9fd0dbeeef0604c50fe6a03bc94fea89cdc32bc2f9e40030d69a7032 4492 openjdk-8_8u322-b06-1~deb9u1.dsc
+ e41a14d40b2fa5c7732e68b0d6bc0736d68a719ba9989b3b00ad04457163d596 175344032 openjdk-8_8u322-b06.orig.tar.gz
+ 2a0aa7e90eddac58fd50271eed46945b5f363cfc482acd03fa4ea3503d3da0a3 176468 openjdk-8_8u322-b06-1~deb9u1.debian.tar.xz
+ 72f46839baeeb8ce0511e09863bee17dec0004d6e8c51b1559ff4b46fd41c789 11205 openjdk-8_8u322-b06-1~deb9u1_source.buildinfo
+Files:
+ 7a384f9fb132636324141bc161bb5546 4492 java optional openjdk-8_8u322-b06-1~deb9u1.dsc
+ c9fa0e85ee57ba230a78d2c612ecf8ee 175344032 java optional openjdk-8_8u322-b06.orig.tar.gz
+ 3d615ed0caec124a4cbc5b8dff4ca872 176468 java optional openjdk-8_8u322-b06-1~deb9u1.debian.tar.xz
+ 0bd6e3ab38b3b78a02389686920297fc 11205 java optional openjdk-8_8u322-b06-1~deb9u1_source.buildinfo
+

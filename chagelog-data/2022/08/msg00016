@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 Aug 2022 20:35:08 +0530
+Source: puma
+Binary: puma puma-dbgsym
+Architecture: source amd64
+Version: 3.12.0-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ puma       - threaded HTTP 1.1 server for Ruby/Rack applications
+Changes:
+ puma (3.12.0-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2021-29509, CVE-2021-41136, CVE-2022-23634, CVE-2022-24790
+Checksums-Sha1:
+ dbaa516bbc59a33f61ddffade60c4473ed3bb9bc 2033 puma_3.12.0-2+deb10u3.dsc
+ 1a9411a70f5c98a5a555d37834da21332fc9203f 215213 puma_3.12.0.orig.tar.gz
+ b6b4eb30f8485ad2e7cc10aed908fc18db796b5c 17944 puma_3.12.0-2+deb10u3.debian.tar.xz
+ bbe3592a60ed9d4b1bd8242aa9c384a6acc04669 37060 puma-dbgsym_3.12.0-2+deb10u3_amd64.deb
+ ec873958d8a96f061de12c90c6cfe6f758a50762 9438 puma_3.12.0-2+deb10u3_amd64.buildinfo
+ 90cdc7020a765dc1569e531e2492a0342a134b57 115248 puma_3.12.0-2+deb10u3_amd64.deb
+Checksums-Sha256:
+ 8d9c83a2df6e6e942549fefad00c3eeb1d8396e3586a72a21e903594802fabaf 2033 puma_3.12.0-2+deb10u3.dsc
+ c604674a201ca8698c4efa34a0d24dd10037de9b91301f349b063aa2ded0532a 215213 puma_3.12.0.orig.tar.gz
+ 14069dd4f9e64184a322a7cb45070265c0be697b474933de63f86fb0322b135a 17944 puma_3.12.0-2+deb10u3.debian.tar.xz
+ 1301ab535daa0782991645ffed3186a27e9a5b0bef502fd4c4fdb2b608ad7a4f 37060 puma-dbgsym_3.12.0-2+deb10u3_amd64.deb
+ f0a5cdb674cfe41234302314818d46563aafe4cf4c1017f487ecfa62a22124ea 9438 puma_3.12.0-2+deb10u3_amd64.buildinfo
+ 24bc51b3050b933833f0208f6aefa29209cbd97dc49f67191b547e395c3c44d8 115248 puma_3.12.0-2+deb10u3_amd64.deb
+Files:
+ 2f68d5bb0b766aa3f083d9c3e4e223cf 2033 ruby optional puma_3.12.0-2+deb10u3.dsc
+ b89fdf9a5b89233c5d165080e555b306 215213 ruby optional puma_3.12.0.orig.tar.gz
+ 559c76d2b402465766137396f0c22274 17944 ruby optional puma_3.12.0-2+deb10u3.debian.tar.xz
+ cfa29f88c0927616edfde3bca3415b3a 37060 debug optional puma-dbgsym_3.12.0-2+deb10u3_amd64.deb
+ 277198c95d5a52c36278d7749b6a95ea 9438 ruby optional puma_3.12.0-2+deb10u3_amd64.buildinfo
+ 278284b71c4258865d3c4b136fa2d45e 115248 ruby optional puma_3.12.0-2+deb10u3_amd64.deb
+

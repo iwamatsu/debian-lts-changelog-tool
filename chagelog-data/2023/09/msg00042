@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 27 Sep 2023 19:47:00 +0000
+Source: vim
+Architecture: source
+Version: 2:8.1.0875-5+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ vim (2:8.1.0875-5+deb10u6) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-4752: heap use after free in ins_compl_get_exp()
+   * CVE-2023-4781: heap-buffer-overflow in vim_regsub_both()
+Checksums-Sha1:
+ 1fe69db3f66bd3983196c74a137354efb3c0cf23 2845 vim_8.1.0875-5+deb10u6.dsc
+ 35445014e05012b00ce7a1efd236ab01d485ae25 213268 vim_8.1.0875-5+deb10u6.debian.tar.xz
+ 81dd3d4a3ce179f7b833885af32927685d07d9f2 23302 vim_8.1.0875-5+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 305b28d8d1f14c1bd00e0fb915c37e9f7293f387bba973331012de63fd58f1bd 2845 vim_8.1.0875-5+deb10u6.dsc
+ 33b2a5b0a94deea866dfecb9a52d92927ca96eee1c2a7f2cf6e8c3088cf23906 213268 vim_8.1.0875-5+deb10u6.debian.tar.xz
+ e88d8f31857f78ca01a32df414f8e22a4fde16279882e04949cd1d3ce543113a 23302 vim_8.1.0875-5+deb10u6_amd64.buildinfo
+Files:
+ 57b468f74bff0ba0e7a40e9d2982454f 2845 editors optional vim_8.1.0875-5+deb10u6.dsc
+ c04a2e39b2f2c335ae6be272a0111dd4 213268 editors optional vim_8.1.0875-5+deb10u6.debian.tar.xz
+ 0659796baa27742435f19bf41ffdd4fd 23302 editors optional vim_8.1.0875-5+deb10u6_amd64.buildinfo
+

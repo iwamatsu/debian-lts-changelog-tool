@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 16 Nov 2022 18:56:09 +0100
+Source: php-phpseclib
+Architecture: source
+Version: 2.0.30-2~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ php-phpseclib (2.0.30-2~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport stable 2.x branch to buster (includes CVE backport, full test
+     suite import, and bug fixes)
+Checksums-Sha1:
+ b61c7db35a571d9f6091abcd5078cdf7a882d088 2170 php-phpseclib_2.0.30-2~deb10u1.dsc
+ 6a7c5941260f578fc978d366240d967d44253d87 336038 php-phpseclib_2.0.30.orig.tar.gz
+ 8192b43dad79a3b2d2b6b952ec68e3bf7a2c48fb 15832 php-phpseclib_2.0.30-2~deb10u1.debian.tar.xz
+ 09d9a5b1ee283aeb050c35bc67a9114c496a9b01 7332 php-phpseclib_2.0.30-2~deb10u1_all.buildinfo
+Checksums-Sha256:
+ abb9c94f1a916c3ed4ef02e354668852348c8f95a410f356910bc03a263ea2b3 2170 php-phpseclib_2.0.30-2~deb10u1.dsc
+ 7c9f51e9321d81c254759ecf2a04c4a90be0470ecd8c547a0a0f073e57b0efb7 336038 php-phpseclib_2.0.30.orig.tar.gz
+ 3ef7722db850b73d4c2f92fef338b5307e6a8a64b277fc36e89748a175477219 15832 php-phpseclib_2.0.30-2~deb10u1.debian.tar.xz
+ 1e4c41caadf29476e369b36ba6340528dc8ef9b735c729383b37a359996ca387 7332 php-phpseclib_2.0.30-2~deb10u1_all.buildinfo
+Files:
+ 2bc396fe6907abb0f86d8f31cfd3f143 2170 php optional php-phpseclib_2.0.30-2~deb10u1.dsc
+ 122aadbb4c0e6754dd0d3c994406444c 336038 php optional php-phpseclib_2.0.30.orig.tar.gz
+ 4ad8cab4a30108bc0b8f7a27925ed012 15832 php optional php-phpseclib_2.0.30-2~deb10u1.debian.tar.xz
+ 0825f3e1cd90f0c6a6a8bc937a617684 7332 php optional php-phpseclib_2.0.30-2~deb10u1_all.buildinfo
+

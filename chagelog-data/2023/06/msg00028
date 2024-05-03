@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 10:16:38 +0200
+Source: ffmpeg
+Architecture: source
+Version: 7:4.1.11-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ ffmpeg (7:4.1.11-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * New upstream release (CVE-2022-3109, CVE-2022-3341).
+Checksums-Sha1:
+ 90710be273e72dfb41ef8fdfc390991ecd1a4fc7 5221 ffmpeg_4.1.11-0+deb10u1.dsc
+ a3c74ffd5acca82ba8a57d3854035f8493404336 8925740 ffmpeg_4.1.11.orig.tar.xz
+ b9c2c531b920caa4c6f359f749ced3abf71da6fa 520 ffmpeg_4.1.11.orig.tar.xz.asc
+ 85cd694b8a502f8351faff500b1273b70bb68e93 47952 ffmpeg_4.1.11-0+deb10u1.debian.tar.xz
+ 38a8a96ac3517aab2daef970a0b31556332b706b 28545 ffmpeg_4.1.11-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 0fd622bb20c4d41cb6301feef9ea0d0d517d92ec96bf2ea4f88c8b2e30547acd 5221 ffmpeg_4.1.11-0+deb10u1.dsc
+ 10af4b401cd719d969eb52185a6566556dd6770b9578860dd312ad2ed84ea5f4 8925740 ffmpeg_4.1.11.orig.tar.xz
+ 7efd3f367780c903e104657f03bb69e3c8cb236a91c1a29bfb8e06e860d20af4 520 ffmpeg_4.1.11.orig.tar.xz.asc
+ c326ada373030c8aa66a13f31f5f09ba2e6669b5a0ee94ea57669864c1d4e8f2 47952 ffmpeg_4.1.11-0+deb10u1.debian.tar.xz
+ fe9bbc9c03a8c849d15a7939f18ae896af2b78fb325a0877204361882ab9a9e1 28545 ffmpeg_4.1.11-0+deb10u1_amd64.buildinfo
+Files:
+ 25d53c8169934f3f072de238f586bff1 5221 video optional ffmpeg_4.1.11-0+deb10u1.dsc
+ b6d72a34572f849ba7c3e879000f2706 8925740 video optional ffmpeg_4.1.11.orig.tar.xz
+ 08109b041137ccbac6b2ba117ac4eb48 520 video optional ffmpeg_4.1.11.orig.tar.xz.asc
+ f6b4e10416da155b5c1c30e7acae140e 47952 video optional ffmpeg_4.1.11-0+deb10u1.debian.tar.xz
+ e03c5f60862ca275244845d0ca24c11f 28545 video optional ffmpeg_4.1.11-0+deb10u1_amd64.buildinfo
+

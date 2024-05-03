@@ -1,0 +1,92 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 26 May 2022 13:34:43 +0100
+Source: neutron
+Binary: python-neutron neutron-server neutron-common neutron-plugin-nec-agent neutron-l3-agent neutron-dhcp-agent neutron-metadata-agent neutron-metering-agent neutron-openvswitch-agent neutron-linuxbridge-agent neutron-plugin-linuxbridge-agent neutron-plugin-openvswitch-agent neutron-sriov-agent neutron-macvtap-agent
+Architecture: source all
+Version: 2:9.1.1-3+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ neutron-common - OpenStack virtual network service - common files
+ neutron-dhcp-agent - OpenStack virtual network service - DHCP agent
+ neutron-l3-agent - OpenStack virtual network service - l3 agent
+ neutron-linuxbridge-agent - OpenStack virtual network service - Linux bridge agent
+ neutron-macvtap-agent - OpenStack virtual network service - MacVTap Agent
+ neutron-metadata-agent - OpenStack virtual network service - metadata agent
+ neutron-metering-agent - OpenStack virtual network service - metering agent
+ neutron-openvswitch-agent - OpenStack virtual network service - Open vSwitch agent
+ neutron-plugin-linuxbridge-agent - transitional dummy package for switching to Neutron Linuxbridge a
+ neutron-plugin-nec-agent - OpenStack virtual network service - NEC agent
+ neutron-plugin-openvswitch-agent - transitional dummy package for switching to Neutron OpenVswitch a
+ neutron-server - OpenStack virtual network service - server
+ neutron-sriov-agent - OpenStack virtual network service - SR-IOV agent
+ python-neutron - OpenStack virtual network service - Python library
+Closes: 993398
+Changes:
+ neutron (2:9.1.1-3+deb9u3) stretch-security; urgency=high
+ .
+   * Re-upload changes proposed in previous changelog entry. The +deb9u2 update
+     was incorrectly prepared and did not actually apply the fix for
+     CVE-2021-40085. (Closes: #993398)
+Checksums-Sha1:
+ ba9318082047ac3c33374c0ec77439e5c5cc6338 4926 neutron_9.1.1-3+deb9u3.dsc
+ 029ab9c8d4046e918401569c2238a9384e0d18a0 2046540 neutron_9.1.1.orig.tar.xz
+ 104b0d6166a7c4024a6c8c2192dc108ac1e356a0 45576 neutron_9.1.1-3+deb9u3.debian.tar.xz
+ 16b14dc81a5852ca968072ecd690ed61ac902a0a 67004 neutron-common_9.1.1-3+deb9u3_all.deb
+ b18fea38c16a12264296dc66379e46a4806a0dde 23142 neutron-dhcp-agent_9.1.1-3+deb9u3_all.deb
+ 7445256726fd4b7b622af85958f6828f03051e25 15716 neutron-l3-agent_9.1.1-3+deb9u3_all.deb
+ 5cf13ffa087bdc6ca9cc28265e5bfe0d2a61ed6c 15262 neutron-linuxbridge-agent_9.1.1-3+deb9u3_all.deb
+ d03fb54b5e6b424b32f8c6d9b036cb2cb6d43716 14240 neutron-macvtap-agent_9.1.1-3+deb9u3_all.deb
+ 10a491c54ab16ed465084e4fa081a65aff3a2f82 34994 neutron-metadata-agent_9.1.1-3+deb9u3_all.deb
+ 3cee19a20f11aa778982d91de7ec5de1903c3ac3 13446 neutron-metering-agent_9.1.1-3+deb9u3_all.deb
+ 8578df5217f507fb3b72240b6b8c4df9312299f5 12482 neutron-openvswitch-agent_9.1.1-3+deb9u3_all.deb
+ 5cd745e0c0a94120d95176451fe0715318da1da8 9022 neutron-plugin-linuxbridge-agent_9.1.1-3+deb9u3_all.deb
+ 463383e0c2b955f10025dd83c47960eacdbeb7fb 9360 neutron-plugin-nec-agent_9.1.1-3+deb9u3_all.deb
+ 503ca303e8af7ccabe4c25efc289a407626edcc3 9024 neutron-plugin-openvswitch-agent_9.1.1-3+deb9u3_all.deb
+ c5f744d3d0d09631f37e37eeed056b1378efc458 32890 neutron-server_9.1.1-3+deb9u3_all.deb
+ 4e1554c33e16863d2284d0953d93558850fd5a22 12034 neutron-sriov-agent_9.1.1-3+deb9u3_all.deb
+ 6e0f05ddbeed027bd9c3bb64ff806d7e049cf9e8 19194 neutron_9.1.1-3+deb9u3_amd64.buildinfo
+ 08b07e5b1f1f546848d143e431dfb93df0f476e1 1447464 python-neutron_9.1.1-3+deb9u3_all.deb
+Checksums-Sha256:
+ b1174ac2ee214ea3d6f4aec5798755c62a4a32a4b844ac58a109f32db0d5b04d 4926 neutron_9.1.1-3+deb9u3.dsc
+ f711b6a6a4cdca37c45f37ea697c2c5579ddb329002982344cdd603c1d2327c4 2046540 neutron_9.1.1.orig.tar.xz
+ b8442bbe4d3d104336f79a9230c52e9be46296d1854179362f7f4db88f977515 45576 neutron_9.1.1-3+deb9u3.debian.tar.xz
+ 584609046a9713c91a415776bfa5f230a81ce4766c53bc02131c47baa24993e6 67004 neutron-common_9.1.1-3+deb9u3_all.deb
+ f0da70a2aef9a994f7f4b2958cdef6ce058c13326063587411f3a6c00af9f818 23142 neutron-dhcp-agent_9.1.1-3+deb9u3_all.deb
+ 94ced8fbd2f27f9c666e0ba2d99e43f21aa3374b673d092e75e858170982a946 15716 neutron-l3-agent_9.1.1-3+deb9u3_all.deb
+ d5da62c6b815868d8e565126eb448ef6ec6d0f6637cd052c958deb4b537e0f70 15262 neutron-linuxbridge-agent_9.1.1-3+deb9u3_all.deb
+ aeed99b5e166a5562cb14ebfcea01d2d9c52482d304730fe3a046a99e360fa55 14240 neutron-macvtap-agent_9.1.1-3+deb9u3_all.deb
+ 220e9671828037ea4d64e94585382f1318968feb87b4b4d6067d4bb20a4fd8f3 34994 neutron-metadata-agent_9.1.1-3+deb9u3_all.deb
+ 517baeff7a15ff0fdad11e6e6c36b1d0448146caea500dfdda15aacad347c50e 13446 neutron-metering-agent_9.1.1-3+deb9u3_all.deb
+ 7a668eca6628213683fb48bcdef5c49d584204f7545a483bed396c357369f9e9 12482 neutron-openvswitch-agent_9.1.1-3+deb9u3_all.deb
+ 868707fbe1acf7ada7b96d3f672c86c9c8b0a383df3f01398c1a86284fa80724 9022 neutron-plugin-linuxbridge-agent_9.1.1-3+deb9u3_all.deb
+ 0c7d392a7bd474fa7f424817e921ad0d93999db2acd6809a0143f70c2fffb8c5 9360 neutron-plugin-nec-agent_9.1.1-3+deb9u3_all.deb
+ 3b92d753c0265fa10e82035b9d228229cae7a605d645295c6a8506aaa4ed0246 9024 neutron-plugin-openvswitch-agent_9.1.1-3+deb9u3_all.deb
+ 4f2b3f38d62fbdf14a56f45f9366005074846d0427b58fadb4ff5c09ffb984ef 32890 neutron-server_9.1.1-3+deb9u3_all.deb
+ fed14092ea81d607e58646bb4f6fa45818cddc386ad6ea902df89d89285d046a 12034 neutron-sriov-agent_9.1.1-3+deb9u3_all.deb
+ 0f650e5aab7567398e997ea22c8f694336da2f5387d10a40c1246279e76a096a 19194 neutron_9.1.1-3+deb9u3_amd64.buildinfo
+ 5f683ef3de9d2f3b291611b2e7b1ead5ec3e0a73eaa5737ae122bb0574e2c22b 1447464 python-neutron_9.1.1-3+deb9u3_all.deb
+Files:
+ 7856c3ce351133a84ec7b40425bfb4c7 4926 net optional neutron_9.1.1-3+deb9u3.dsc
+ 9a737bdcfb801e3968c897116d23f952 2046540 net optional neutron_9.1.1.orig.tar.xz
+ 2582411775f8271e51d6a441644e1650 45576 net optional neutron_9.1.1-3+deb9u3.debian.tar.xz
+ a44884918404ffc2b5ea12bb77bf0e92 67004 net optional neutron-common_9.1.1-3+deb9u3_all.deb
+ 137afd0448c7f85c0fb9e2f9e72b06a3 23142 net optional neutron-dhcp-agent_9.1.1-3+deb9u3_all.deb
+ 360ceb05ec2fa8cd648b387022eb2f23 15716 net optional neutron-l3-agent_9.1.1-3+deb9u3_all.deb
+ e45362d7f2c3399939caf36b4c6e9344 15262 net optional neutron-linuxbridge-agent_9.1.1-3+deb9u3_all.deb
+ 1114c8207f90ca652edc4424cfd86873 14240 net optional neutron-macvtap-agent_9.1.1-3+deb9u3_all.deb
+ 22274bc68ce9b9c7c1dbbea9d42f4ba5 34994 net optional neutron-metadata-agent_9.1.1-3+deb9u3_all.deb
+ 35a218edb66ec0e21b4ac7e8c1b58204 13446 net optional neutron-metering-agent_9.1.1-3+deb9u3_all.deb
+ dea3ef9a21d395d8874ad74718a62ca0 12482 net optional neutron-openvswitch-agent_9.1.1-3+deb9u3_all.deb
+ eada6b74d455ea0a6dd545573ee8cc1c 9022 oldlibs optional neutron-plugin-linuxbridge-agent_9.1.1-3+deb9u3_all.deb
+ 89ae9cbc3587cbd76599373244ff37a9 9360 net optional neutron-plugin-nec-agent_9.1.1-3+deb9u3_all.deb
+ a5471197c72b4b5376c177b8bdde7b40 9024 oldlibs optional neutron-plugin-openvswitch-agent_9.1.1-3+deb9u3_all.deb
+ 3b6f378ec16efe92311b2bca5a31e29f 32890 net optional neutron-server_9.1.1-3+deb9u3_all.deb
+ c8a751b56e8ab6930e33f85877e8388f 12034 net optional neutron-sriov-agent_9.1.1-3+deb9u3_all.deb
+ 6ff94ec15cf99c1191270bd7ecc46f3c 19194 net optional neutron_9.1.1-3+deb9u3_amd64.buildinfo
+ 1851e2d5e67b7d354de57260c105f475 1447464 python optional python-neutron_9.1.1-3+deb9u3_all.deb
+

@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 14 May 2023 00:24:41 CEST
+Source: hugo
+Architecture: source
+Version: 0.55.6+really0.54.0-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 5fd2706e0c60a059fbade927fe9ad6e63154eb39 4165 hugo_0.55.6+really0.54.0-1+deb10u1.dsc
+ 2403c0500eba54ca082e63659719877c62b75bc1 21262923 hugo_0.55.6+really0.54.0.orig.tar.gz
+ 34abb4317218bba6c42e4022af91346e2b352f27 251980 hugo_0.55.6+really0.54.0-1+deb10u1.debian.tar.xz
+ 24957dde941017f920e6f8370515bdce58400d11 16008 hugo_0.55.6+really0.54.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3625ce81f9a52071926c2407ee326b514427dd58c88722857defa2b7f95a7f81 4165 hugo_0.55.6+really0.54.0-1+deb10u1.dsc
+ fe0f4d4542491706cc19cb8c0acd63f1d9989cfbeaaad39d93031e91bf73fd91 21262923 hugo_0.55.6+really0.54.0.orig.tar.gz
+ fdf7d017224aa3fb84bda02394896bcc3b9fc76fcba2f3d52fc8376d1a6aec24 251980 hugo_0.55.6+really0.54.0-1+deb10u1.debian.tar.xz
+ ebf5a485363df0b16877db1e7326ad30f48ba7531f2d986f810bb95fdf71574d 16008 hugo_0.55.6+really0.54.0-1+deb10u1_amd64.buildinfo
+Changes:
+ hugo (0.55.6+really0.54.0-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-websocket 1.4.0-1+deb10u1.
+Files:
+ cd595013a937d1bc312aadbdc4dcac5d 4165 web optional hugo_0.55.6+really0.54.0-1+deb10u1.dsc
+ 130094d05e74c46b7d7c73739976e368 21262923 web optional hugo_0.55.6+really0.54.0.orig.tar.gz
+ f05bf28fca0e235965bfd70c3779e690 251980 web optional hugo_0.55.6+really0.54.0-1+deb10u1.debian.tar.xz
+ 8a5e884b83c79a6311184f2bc4a7ba69 16008 web optional hugo_0.55.6+really0.54.0-1+deb10u1_amd64.buildinfo
+

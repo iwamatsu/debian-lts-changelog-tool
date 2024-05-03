@@ -1,0 +1,66 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 17 Jan 2023 20:27:50 +0100
+Source: tiff
+Architecture: source
+Version: 4.1.0+git191117-2~deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1011160 1014494 1022555 1024737
+Changes:
+ tiff (4.1.0+git191117-2~deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-1354: A heap buffer overflow flaw was found in Libtiffs'
+     tiffinfo.c in TIFFReadRawDataStriped() function. This flaw allows an
+     attacker to pass a crafted TIFF file to the tiffinfo tool, triggering
+     a heap buffer overflow issue and causing a crash that leads to a
+     denial of service.
+   * CVE-2022-1355: A stack buffer overflow flaw was found in Libtiffs'
+     tiffcp.c in main() function. This flaw allows an attacker to pass a
+     crafted TIFF file to the tiffcp tool, triggering a stack buffer
+     overflow issue, possibly corrupting the memory, and causing a crash
+     that leads to a denial of service. (Closes: #1011160)
+   * CVE-2022-2056, CVE-2022-2057, CVE-2022-2058: Divide By Zero error in
+     tiffcrop allows attackers to cause a denial-of-service via a crafted
+     tiff file. (Closes: #1014494)
+   * CVE-2022-2867, CVE-2022-2868, CVE-2022-2869: libtiff's tiffcrop
+     utility has underflow and input validation flaw that can lead to out
+     of bounds read and write. An attacker who supplies a crafted file to
+     tiffcrop (likely via tricking a user to run tiffcrop on it with
+     certain parameters) could cause a crash or in some cases, further
+     exploitation.
+   * CVE-2022-3570, CVE-2022-3598: multiple heap buffer overflows in
+     tiffcrop.c utility in libtiff allows attacker to trigger unsafe or out
+     of bounds memory access via crafted TIFF image file which could result
+     into application crash, potential information disclosure or any other
+     context-dependent impact (Closes: #1022555)
+   * CVE-2022-3597, CVE-2022-3626, CVE-2022-3627: out-of-bounds write,
+     allowing attackers to cause a denial-of-service via a crafted tiff
+     file. (Closes: #1022555)
+   * CVE-2022-3599: out-of-bounds read in writeSingleSection in
+     tools/tiffcrop.c, allowing attackers to cause a denial-of-service via
+     a crafted tiff file. (Closes: #1022555)
+   * CVE-2022-3970: affects the function TIFFReadRGBATileExt of the file
+     libtiff/tif_getimage.c. The manipulation leads to integer
+     overflow. (Closes: #1024737)
+   * CVE-2022-34526: a stack overflow was discovered in the _TIFFVGetField
+     function of Tiffsplit. This vulnerability allows attackers to cause a
+     Denial of Service (DoS) via a crafted TIFF file parsed by the
+     "tiffsplit" or "tiffcrop" utilities.
+Checksums-Sha1:
+ 1f7fdc7aab7c37cb74033d0a44229e036f06f8f3 2274 tiff_4.1.0+git191117-2~deb10u5.dsc
+ 6d855d1ece774c122c950039874ca3993b91b03f 40312 tiff_4.1.0+git191117-2~deb10u5.debian.tar.xz
+ e656d7f8d56d3f0e0fa3aa894143d32732afbcd3 11686 tiff_4.1.0+git191117-2~deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 7077e5047df9053ccdfd0aefdc959cd5078f86a78b9c8d6bfd226ea66bd52e4e 2274 tiff_4.1.0+git191117-2~deb10u5.dsc
+ 70af094d655a57e45d815388d76547c81af25ddc83805ee026bd7462ae008f67 40312 tiff_4.1.0+git191117-2~deb10u5.debian.tar.xz
+ 47d86d38e39a79d39bfe70fdbf906e058bf6093bbeca56f7102f20c5ad624cd1 11686 tiff_4.1.0+git191117-2~deb10u5_amd64.buildinfo
+Files:
+ fc330400ab8158b4a577fb28ffd1f899 2274 libs optional tiff_4.1.0+git191117-2~deb10u5.dsc
+ 0f71f08c7cc43312edfac309e5755e20 40312 libs optional tiff_4.1.0+git191117-2~deb10u5.debian.tar.xz
+ 0620d4cee98284d700f833dc2f74782f 11686 libs optional tiff_4.1.0+git191117-2~deb10u5_amd64.buildinfo
+

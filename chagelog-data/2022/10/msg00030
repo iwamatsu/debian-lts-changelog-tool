@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 24 Oct 2022 11:58:28 +0200
+Source: libbluray
+Architecture: source
+Version: 1:1.1.0-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1011716
+Changes:
+ libbluray (1:1.1.0-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Apply upstream fix for Oracle Java CPU from April 2022
+     (Closes: #1011716)
+Checksums-Sha1:
+ 5fbde44ad3a7a0bafa931946a7669c4b165168c2 2447 libbluray_1.1.0-1+deb10u1.dsc
+ cd87b665e52c86dfa0caacbf3edbe62372685caf 742368 libbluray_1.1.0.orig.tar.bz2
+ d32cba67e1d3de670e9bb4774cf4c81ee3a85601 17748 libbluray_1.1.0-1+deb10u1.debian.tar.xz
+ 829b0d33db88717b6e646a0ec46e3e6e30d154a2 8614 libbluray_1.1.0-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ bb79f870d59c58d156ed52fa1cc36f66aa225d6c850726b1922f66912cc8e220 2447 libbluray_1.1.0-1+deb10u1.dsc
+ e6a600d26ad3453a168dbb144f041134e954b541b44a9a5aa213d1c7d8c3fe83 742368 libbluray_1.1.0.orig.tar.bz2
+ 2259e3240f4355c0ed6778b20869bae74963409bd2c252ad9e7cce3479f14c4c 17748 libbluray_1.1.0-1+deb10u1.debian.tar.xz
+ 75a010d399eb6e874128367c1bdced4adb978db7588ccd766f2647bf4868a871 8614 libbluray_1.1.0-1+deb10u1_source.buildinfo
+Files:
+ 199a965b707f1288ccfe6ea6b839eb95 2447 libs optional libbluray_1.1.0-1+deb10u1.dsc
+ ba1aa5803a55e89f813090ec6d238635 742368 libs optional libbluray_1.1.0.orig.tar.bz2
+ 9d5c474335318b6b685db3ff3c14ce92 17748 libs optional libbluray_1.1.0-1+deb10u1.debian.tar.xz
+ d29950468341c185c0b55b29cd920e7f 8614 libs optional libbluray_1.1.0-1+deb10u1_source.buildinfo
+

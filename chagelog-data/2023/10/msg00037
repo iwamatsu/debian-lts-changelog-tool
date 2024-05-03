@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 21 Oct 2023 17:13:50 +0000
+Source: ruby-rmagick
+Architecture: source
+Version: 2.16.0-6+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ ruby-rmagick (2.16.0-6+deb10u1) buster-security; urgency=medium
+ .
+   * CVE-2023-5349: Fix a memory leak
+   * Remove Vincent Fourmond and Gunnar Wolf from uploaders
+     (like in unstable) and add myself.
+   * Add salsa-ci test
+Checksums-Sha1:
+ f1d6a0ae3d1dd8cc12c0ebd517ee45255880fd23 2375 ruby-rmagick_2.16.0-6+deb10u1.dsc
+ fbf3714d04c606a64bc7b856c48ebc16e36af2ff 1556911 ruby-rmagick_2.16.0.orig.tar.gz
+ 3cc6ba7ebc3987db80989da988de685e5a88135a 11820 ruby-rmagick_2.16.0-6+deb10u1.debian.tar.xz
+ 6998d2e4286f7a48c270eb6f5e9fa6abf00f3769 15995 ruby-rmagick_2.16.0-6+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 26a1db007914a040be606f109723ac4665176601cda390a0d0437957bfa4a310 2375 ruby-rmagick_2.16.0-6+deb10u1.dsc
+ 84f3450a6bdea1ed5787cf4444ee073403b2da839a8ff2538e8ac1d34e64f9e7 1556911 ruby-rmagick_2.16.0.orig.tar.gz
+ 12c62edd649923f190b8c056bd1473bba343b13fa05cd3803b138b9db6e5d9a2 11820 ruby-rmagick_2.16.0-6+deb10u1.debian.tar.xz
+ c0d8067857daa46c03d040496490ddbb5482f415fb9b7d5c51a0cac5852ac6b3 15995 ruby-rmagick_2.16.0-6+deb10u1_amd64.buildinfo
+Files:
+ 4c0e060bd75c93fb113c9b3808f2f2c7 2375 ruby optional ruby-rmagick_2.16.0-6+deb10u1.dsc
+ 47b0ffa3abea94c3fa95f6604d9fe462 1556911 ruby optional ruby-rmagick_2.16.0.orig.tar.gz
+ b5b02e0bc3a2347b571edb21197d5d88 11820 ruby optional ruby-rmagick_2.16.0-6+deb10u1.debian.tar.xz
+ 5dd0476fb69ae8ad77e329e756e80cc7 15995 ruby optional ruby-rmagick_2.16.0-6+deb10u1_amd64.buildinfo
+

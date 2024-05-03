@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 11 Jan 2023 22:51:42 CET
+Source: netty
+Architecture: source
+Version: 1:4.1.33-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 3198bf9ea642933f2ba55200b3b4c5f1558bb055 2617 netty_4.1.33-1+deb10u3.dsc
+ b62077488aa3e1c239d42091fd4ca3e0bc89be76 34008 netty_4.1.33-1+deb10u3.debian.tar.xz
+ fcc34d492b36e285ee440536c4d2e0b90f680cee 14475 netty_4.1.33-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 60b345292371d8eed616aef4eb032979913f6928562231bc7317d509d072fef2 2617 netty_4.1.33-1+deb10u3.dsc
+ ca500c0246db8ee2916e66e93f102ca1f0d0d2063e1ee05559f7a5f185947762 34008 netty_4.1.33-1+deb10u3.debian.tar.xz
+ 8b506366352214deffc716d26d9241ee1b467483564dfc41c69d42852d48a636 14475 netty_4.1.33-1+deb10u3_amd64.buildinfo
+Changes:
+ netty (1:4.1.33-1+deb10u3) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2021-37136, CVE-2021-37137, CVE-2021-43797, CVE-2022-41881 and
+     CVE-2022-41915. Several out-of-memory, stack overflow or HTTP request
+     smuggling vulnerabilities have been discovered in Netty which may allow
+     attackers to cause a denial of service or bypass restrictions when used as
+     a proxy.
+Files:
+ e539e12b7e2a2187eec924d115d34b61 2617 java optional netty_4.1.33-1+deb10u3.dsc
+ 83905182531e52fcc617a8627bc96fd5 34008 java optional netty_4.1.33-1+deb10u3.debian.tar.xz
+ 174d18cce4bc4a64318099af318a7975 14475 java optional netty_4.1.33-1+deb10u3_amd64.buildinfo
+

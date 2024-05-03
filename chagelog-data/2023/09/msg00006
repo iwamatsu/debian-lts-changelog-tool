@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 10 Sep 2023 15:08:49 +0200
+Source: libraw
+Architecture: source
+Version: 0.19.2-2+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ libraw (0.19.2-2+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2020-22628: Buffer Overflow vulnerability in LibRaw::stretch().
+Checksums-Sha1:
+ 29bfd73fe31921f327ff800a9773548a1109724c 2211 libraw_0.19.2-2+deb10u4.dsc
+ f67010a556d67a9d9f7e0fc4e837d4a13e1e49c6 25568 libraw_0.19.2-2+deb10u4.debian.tar.xz
+ 60663df8093c45b557f044a3a918c4cd6128f601 7203 libraw_0.19.2-2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 3b8f6ad21765c11a07924ea36f75bf0e08b3fd3343f733c050fa48d173bd1151 2211 libraw_0.19.2-2+deb10u4.dsc
+ fd5ed7ad5ec22f2d30f9d958b242b40b4bb9fdb2a349efbeed89a454d816cb41 25568 libraw_0.19.2-2+deb10u4.debian.tar.xz
+ 4275ef8bc55684035001d3da7e546c3dc7c457e4ae7bb844ad34c23d36c3f604 7203 libraw_0.19.2-2+deb10u4_amd64.buildinfo
+Files:
+ 439db697311ce6c8b2d1a0863319384d 2211 libs optional libraw_0.19.2-2+deb10u4.dsc
+ ef7151f8b7838be34581f6c6ac91531e 25568 libs optional libraw_0.19.2-2+deb10u4.debian.tar.xz
+ ad38bb2d19be701be482d05c07d1072c 7203 libs optional libraw_0.19.2-2+deb10u4_amd64.buildinfo
+

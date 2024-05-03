@@ -1,0 +1,62 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 14 Sep 2022 14:27:48 +0200
+Source: mariadb-10.3
+Architecture: source
+Version: 1:10.3.36-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ mariadb-10.3 (1:10.3.36-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream version 10.3.36. Includes security fixes for:
+     - CVE-2018-25032
+     - CVE-2022-32091
+     - CVE-2022-32084
+   * New upstream version 10.3.35. Includes security fixes for:
+     - CVE-2021-46669
+     - CVE-2022-21427
+     - CVE-2022-27376
+     - CVE-2022-27377
+     - CVE-2022-27378
+     - CVE-2022-27379
+     - CVE-2022-27380
+     - CVE-2022-27381
+     - CVE-2022-27383
+     - CVE-2022-27384
+     - CVE-2022-27386
+     - CVE-2022-27387
+     - CVE-2022-27445
+     - CVE-2022-27447
+     - CVE-2022-27448
+     - CVE-2022-27449
+     - CVE-2022-27452
+     - CVE-2022-27456
+     - CVE-2022-27458
+     - CVE-2022-32087
+     - CVE-2022-32085
+     - CVE-2022-32083
+     - CVE-2022-32088
+Checksums-Sha1:
+ 317578b2a395c042b5e80dc04bddf94340db75c6 4812 mariadb-10.3_10.3.36-0+deb10u1.dsc
+ 07b7574cd1a74b73fe3f079cd356a59c2deecba3 73944352 mariadb-10.3_10.3.36.orig.tar.gz
+ 14a8bedfde13e0b0404bd3f5144a8c1952ea912e 195 mariadb-10.3_10.3.36.orig.tar.gz.asc
+ f5f73b4ffd73b2623176106d1f07681ce47e763f 221616 mariadb-10.3_10.3.36-0+deb10u1.debian.tar.xz
+ 74943c0109790ab627e27a5a77e24a4cb0b9201b 7285 mariadb-10.3_10.3.36-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ d462460909591a22baba9585c6f88164dd6049155c2feaafd84fc37ec1683305 4812 mariadb-10.3_10.3.36-0+deb10u1.dsc
+ 003c497c387a28184acfb4fd30e4150ea1f0300004845fdcf48e5122e36c5dc6 73944352 mariadb-10.3_10.3.36.orig.tar.gz
+ fd6bcd9265d73201b19384d16d795ff709f0cad305e281b3c4f7e04541541f4a 195 mariadb-10.3_10.3.36.orig.tar.gz.asc
+ b3e483681c60276a9fe3187961d0004b9e9704d3e54fef5c828d9164e69607a3 221616 mariadb-10.3_10.3.36-0+deb10u1.debian.tar.xz
+ 7a87e8e2d664bf97461cf6760d2c6cf530e632c17726c494c8b403bebdcf72af 7285 mariadb-10.3_10.3.36-0+deb10u1_source.buildinfo
+Files:
+ c41c6ebc77b51698df8f8de466bb92f6 4812 database optional mariadb-10.3_10.3.36-0+deb10u1.dsc
+ b61f20e20a55ec2a4eeac1c96559574c 73944352 database optional mariadb-10.3_10.3.36.orig.tar.gz
+ b253151b99aebb6c9a3f83b86f0d97a0 195 database optional mariadb-10.3_10.3.36.orig.tar.gz.asc
+ 58ebb485b7e03264814b91d36df3171e 221616 database optional mariadb-10.3_10.3.36-0+deb10u1.debian.tar.xz
+ ce2ee19bcc86ee17e5aacf2d64ace9b7 7285 database optional mariadb-10.3_10.3.36-0+deb10u1_source.buildinfo
+

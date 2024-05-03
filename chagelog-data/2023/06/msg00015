@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri,  9 Jun 2023 21:34:23 CEST
+Source: pypdf2
+Architecture: source
+Version: 1.26.0-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 5712b9831a807e52f34f4663f2266ecb82ba37c1 1996 pypdf2_1.26.0-2+deb10u1.dsc
+ 29859e086b6e78459feb660ba24f3b22773e11c1 199539 pypdf2_1.26.0.orig.tar.gz
+ 40dd62006fc2f8aab95b08ce469580dcb0b1affc 4304 pypdf2_1.26.0-2+deb10u1.debian.tar.xz
+ eb5ccc95fdaf1b3ce55a851e6be9ce553ac89055 6934 pypdf2_1.26.0-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ a4232efb2d68eae3e9710f2c0262bebb62991078a34df643dbb1900f9ab6c54d 1996 pypdf2_1.26.0-2+deb10u1.dsc
+ 140b1fed792f487f2fd814eb0e832a5b6ef5ae362da302c1fc5a9786d5acb469 199539 pypdf2_1.26.0.orig.tar.gz
+ f3187e3fdd1ce15ab82f5eb5fa4c9538767489aef91b32be7a175a69149e661a 4304 pypdf2_1.26.0-2+deb10u1.debian.tar.xz
+ d7466939104f1873180b4865f5d73163734b870918d6883a34226e7b4b8ddf1a 6934 pypdf2_1.26.0-2+deb10u1_amd64.buildinfo
+Changes:
+ pypdf2 (1.26.0-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-24859:
+     Sebastian Krause discovered that manipulated inline images can force
+     PyPDF2, a pure Python PDF library, into an infinite loop, if a maliciously
+     crafted PDF file is processed.
+Files:
+ 0705e770b8de3f824a2e12540fad5f79 1996 python optional pypdf2_1.26.0-2+deb10u1.dsc
+ 3959e3a15606e4b6c0405487cefb4e21 199539 python optional pypdf2_1.26.0.orig.tar.gz
+ 882a3c02cc24ae2b91f1401e849945e3 4304 python optional pypdf2_1.26.0-2+deb10u1.debian.tar.xz
+ 9f125654f0eab8694d70670a370ec0f8 6934 python optional pypdf2_1.26.0-2+deb10u1_amd64.buildinfo
+

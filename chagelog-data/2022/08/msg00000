@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 04 Aug 2022 13:57:08 +0200
+Source: xorg-server
+Architecture: source
+Version: 2:1.20.4-1+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ xorg-server (2:1.20.4-1+deb10u5) buster-security; urgency=medium
+ .
+   * xkb: add request length validation for XkbSetGeometry (CVE-2022-2319)
+   * xkb: swap XkbSetDeviceInfo and XkbSetDeviceInfoCheck (CVE-2022-2320)
+Checksums-Sha1:
+ 1830468bfb012106f9b94e0b6ff579f9fb9c4bf9 4182 xorg-server_1.20.4-1+deb10u5.dsc
+ 94dd9612c5e4233ed3cb23063ab10f43b4ae4bb2 8553791 xorg-server_1.20.4.orig.tar.gz
+ 32ab1947e2baa1604b594fba221b3610fc61e13c 155263 xorg-server_1.20.4-1+deb10u5.diff.gz
+ 11c1627c9109c4eaf12c6816d949992235d16309 17563 xorg-server_1.20.4-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ c94f66cdcddb415764e117f268f6f4accdd4ce92564f612f9a68f2776203a474 4182 xorg-server_1.20.4-1+deb10u5.dsc
+ a6447de89eca3e22eeead682b325d902779569534ad83388c9e16611d72baaf3 8553791 xorg-server_1.20.4.orig.tar.gz
+ 235d0a4ba2b855f9a9a5f29dee6c3527263c9a4f5c58020cb7af45240101b191 155263 xorg-server_1.20.4-1+deb10u5.diff.gz
+ 34fe47f4d54fbe0624175591df240782d6c5c08687258c30f6ebed3eaaefffb9 17563 xorg-server_1.20.4-1+deb10u5_amd64.buildinfo
+Files:
+ 7ce6f232949167b08ad6efb52256da87 4182 x11 optional xorg-server_1.20.4-1+deb10u5.dsc
+ 4151b46d6036f4997d27c2d2b7be38e7 8553791 x11 optional xorg-server_1.20.4.orig.tar.gz
+ cbe4e322f1b1ecbccf41e55daeea19fc 155263 x11 optional xorg-server_1.20.4-1+deb10u5.diff.gz
+ 18a1f0ebcc02ca328663b0a7c1ea4c2c 17563 x11 optional xorg-server_1.20.4-1+deb10u5_amd64.buildinfo
+

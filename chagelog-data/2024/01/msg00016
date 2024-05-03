@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 22 Jan 2024 18:07:32 CET
+Source: squid
+Architecture: source
+Version: 4.6-1+deb10u10
+Distribution: buster-security
+Urgency: high
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 841c41c8eb2ac16aab950351289b65a973d03dca 2829 squid_4.6-1+deb10u10.dsc
+ 74f9ca699706ed343d9fe225539f89af601e4c22 87772 squid_4.6-1+deb10u10.debian.tar.xz
+ df52a0ec61d7a516d52bb4bae9faaf827b273675 10792 squid_4.6-1+deb10u10_amd64.buildinfo
+Checksums-Sha256:
+ 5bad7daa070501fbf6876ed553c640981bce42a525a7ad120c256408ead473a6 2829 squid_4.6-1+deb10u10.dsc
+ 67ccc52f92e82f8118786d5be394c502e3d9fc4d74e1aec41e2b1e0096fdbf31 87772 squid_4.6-1+deb10u10.debian.tar.xz
+ 1465b6c6b7c9542a1c694408a52c17905e85eace5933da6dac23ff4daf2d1914 10792 squid_4.6-1+deb10u10_amd64.buildinfo
+Closes: 1060857
+Changes:
+ squid (4.6-1+deb10u10) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-46846:
+     It was discovered that the fix for CVE-2023-46846 was incomplete. In some
+     cases Squid, a full featured web proxy cache, returned empty responses for
+     URLs when Transfer-Encoding: chunked was in use. (Closes: #1060857)
+Files:
+ 21bf9abeb35ead6cfce20ba8bbfd5408 2829 web optional squid_4.6-1+deb10u10.dsc
+ c968c057e009fa901e7bf9a73232c439 87772 web optional squid_4.6-1+deb10u10.debian.tar.xz
+ ce8c83cd46897764cd3720e9bc9c51ae 10792 web optional squid_4.6-1+deb10u10_amd64.buildinfo
+

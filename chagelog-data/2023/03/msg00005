@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 05 Mar 2023 10:48:13 +0100
+Source: xfig
+Architecture: source
+Version: 1:3.2.7a-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Roland Rosenfeld <roland@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Closes: 992395
+Changes:
+ xfig (1:3.2.7a-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Roland Rosenfeld ]
+   * 10_CVE-2021-40241: Avoid buffer overflow in LANG (CVE-2021-40241)
+     (Closes: #992395).
+Checksums-Sha1:
+ 8fd904558cc29ff9e0fe1cd36cfca2e615fc6b05 2248 xfig_3.2.7a-3+deb10u1.dsc
+ ca3f21f659f7b2c6bbdb7902e6020762a197fc58 5055456 xfig_3.2.7a.orig.tar.xz
+ 90faaffb2353d744f332e89b7e82dfa18af0783e 39728 xfig_3.2.7a-3+deb10u1.debian.tar.xz
+ 4e5d6288922a98889f629678867922bd0f9005ea 9214 xfig_3.2.7a-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 9a6a7d6957e36c5a94cda9c0f3636ee132b07a7a6b3e02c33ee554a4a2f9e716 2248 xfig_3.2.7a-3+deb10u1.dsc
+ ca89986fc9ddb9f3c5a4f6f70e5423f98e2f33f5528a9d577fb05bbcc07ddf24 5055456 xfig_3.2.7a.orig.tar.xz
+ 7ebfbadee0b20cb2a72a9a04455c68982ce75982f09d2a6bc29d5622a28f186d 39728 xfig_3.2.7a-3+deb10u1.debian.tar.xz
+ b4d896ca75bb31bc3f9bd8add87c9d76ef3977295399d49b83d1373683cadaf1 9214 xfig_3.2.7a-3+deb10u1_source.buildinfo
+Files:
+ 03f861855af0444526e56c486ab9640d 2248 graphics optional xfig_3.2.7a-3+deb10u1.dsc
+ b429f12968972a26add09f481d99186d 5055456 graphics optional xfig_3.2.7a.orig.tar.xz
+ 5e9b49ddedaa54c7022d739480d3c5e4 39728 graphics optional xfig_3.2.7a-3+deb10u1.debian.tar.xz
+ bc74149c9949e5460e8cf26906372e81 9214 graphics optional xfig_3.2.7a-3+deb10u1_source.buildinfo
+

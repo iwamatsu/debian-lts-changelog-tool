@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 04 Oct 2023 17:12:55 +0200
+Source: libx11
+Architecture: source
+Version: 2:1.6.7-1+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ libx11 (2:1.6.7-1+deb10u4) buster-security; urgency=medium
+ .
+   * CVE-2023-43785: out-of-bounds memory access in _XkbReadKeySyms
+   * CVE-2023-43786: stack exhaustion from infinite recursion in PutSubImage
+   * CVE-2023-43787: integer overflow in XCreateImage
+   * Add some more patches for extra hardening.
+Checksums-Sha1:
+ 1043de0797e378e1856c027f0495bb38be489bee 2410 libx11_1.6.7-1+deb10u4.dsc
+ 0b54b17e757f24791cf9c6994f2c2e92851c824a 2972354 libx11_1.6.7.orig.tar.gz
+ ba2bef9c6773082bfa17dcd6627647cd88def116 57414 libx11_1.6.7-1+deb10u4.diff.gz
+ c8bf610e6eddc9e2460f239ad560db9fea9094ca 6384 libx11_1.6.7-1+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 04b3214f5376f1d51742e2399c5b3458c34ad9b5ad6f2dc41876a6e46bab0b48 2410 libx11_1.6.7-1+deb10u4.dsc
+ f62ab88c2a87b55e1dc338726a55bb6ed8048084fe6a3294a7ae324ca45159d1 2972354 libx11_1.6.7.orig.tar.gz
+ cbf262ac55def260fdf1d8dae689fe28db222130fdc3e305c24bd138ba59ba4a 57414 libx11_1.6.7-1+deb10u4.diff.gz
+ c506efe124f517638d5ff12552c3b51e3c4078c3a4c9076bd6ecc778b66fe252 6384 libx11_1.6.7-1+deb10u4_source.buildinfo
+Files:
+ 243180602584c81ae50450c7fd41914a 2410 x11 optional libx11_1.6.7-1+deb10u4.dsc
+ 31eaf1595bd88fbacaf6b235b93dee50 2972354 x11 optional libx11_1.6.7.orig.tar.gz
+ 111bf5afe4c076698772073b3e65b333 57414 x11 optional libx11_1.6.7-1+deb10u4.diff.gz
+ 97a0632b56896dc54ca26eddf0600389 6384 x11 optional libx11_1.6.7-1+deb10u4_source.buildinfo
+

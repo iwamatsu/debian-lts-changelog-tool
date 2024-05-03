@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed,  5 Apr 2023 18:23:55 CEST
+Source: tomcat9
+Architecture: source
+Version: 9.0.31-1~deb10u8
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 4e0745cd0deb07a83c50c16d4fc3d085b8615b69 2889 tomcat9_9.0.31-1~deb10u8.dsc
+ 7e34400a97c93048dc39165b49bfe830eb9bc53c 52148 tomcat9_9.0.31-1~deb10u8.debian.tar.xz
+ 0be296fa0a9dfb92aa9127f14e62c09692c4bed9 13782 tomcat9_9.0.31-1~deb10u8_source.buildinfo
+Checksums-Sha256:
+ 6fa6a8687541cf88fd7802a8416ba9155f1d78432207935fea3e254b5e763c4c 2889 tomcat9_9.0.31-1~deb10u8.dsc
+ 939a6d2677ad05da3398bafef3ea5f7af22a4c8917854d70f7a56cf6edc30439 52148 tomcat9_9.0.31-1~deb10u8.debian.tar.xz
+ 7f7b7d4c27cb9becbf7b1a7ec32c31a38ad3c1344680eba57bf5ba4d4680dcac 13782 tomcat9_9.0.31-1~deb10u8_source.buildinfo
+Changes:
+ tomcat9 (9.0.31-1~deb10u8) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2022-42252:
+     Apache Tomcat was configured to ignore invalid HTTP headers via setting
+     rejectIllegalHeader to false. Tomcat did not reject a request containing an
+     invalid Content-Length header making a request smuggling attack possible if
+     Tomcat was located behind a reverse proxy that also failed to reject the
+     request with the invalid header.
+   * Fix CVE-2023-28708:
+     When using the RemoteIpFilter with requests received from a reverse proxy
+     via HTTP that include the X-Forwarded-Proto header set to https, session
+     cookies created by Apache Tomcat did not include the secure attribute. This
+     could result in the user agent transmitting the session cookie over an
+     insecure channel.
+Files:
+ ef2094506244567e3bd6260940974720 2889 java optional tomcat9_9.0.31-1~deb10u8.dsc
+ 93c170db7c291d70f6c2bd64cb9392e1 52148 java optional tomcat9_9.0.31-1~deb10u8.debian.tar.xz
+ 545dabae2db34c5e2f0aaf46f6610091 13782 java optional tomcat9_9.0.31-1~deb10u8_source.buildinfo
+

@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 30 Apr 2024 16:41:10 +0100
+Source: astropy
+Built-For-Profiles: nocheck
+Architecture: source
+Version: 3.1.2-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Astronomy Maintainers <debian-astro-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ astropy (3.1.2-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload on the Debian LTS team.
+   * CVE-2023-41334: Prevent a remote code execution vulnerability. Improper
+     input validation in the TranformGraph().to_dot_graph function could have
+     led to arbitary command execution, as values were passed as the first
+     argument to subprocess.Popen. Although an error will be raised, the command
+     or script will still be executed successfully.
+   * Add debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ 580f4908e57ccc4861c00c163ead7c49d9460a14 2782 astropy_3.1.2-2+deb10u1.dsc
+ 401c7e1c2232f2d97a691ce5b0fdc9c892fff1bd 8203507 astropy_3.1.2.orig.tar.gz
+ 246d132ddec5ac451adf8cb37aa90de87bcea4d9 39888 astropy_3.1.2-2+deb10u1.debian.tar.xz
+ 3cd2a45aba0c046f8816e93d695a033e0d236521 12621 astropy_3.1.2-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3558464c9e2b2ee97bb0d4ae5c5d408413dfc207ca85d2eb61c995456f778c71 2782 astropy_3.1.2-2+deb10u1.dsc
+ 4a78a8ec9666d0a51a37f03494aaa5012e241ba37053e6c913c039cddee89ede 8203507 astropy_3.1.2.orig.tar.gz
+ 31ed646ccd4ff13ea23af14c53db1e77a26bef16f56145ad70f86175cf79fd5d 39888 astropy_3.1.2-2+deb10u1.debian.tar.xz
+ fbc1d49ae195534d8858ec932d01a24b59045740d9a2b9395239bb04a7096332 12621 astropy_3.1.2-2+deb10u1_amd64.buildinfo
+Files:
+ ee1ab509e985acc6507836a65b921046 2782 python optional astropy_3.1.2-2+deb10u1.dsc
+ 2e197984c6ab44672b807bc25ce4b03f 8203507 python optional astropy_3.1.2.orig.tar.gz
+ b34311ecf25ccc25e2065d45f4239a14 39888 python optional astropy_3.1.2-2+deb10u1.debian.tar.xz
+ eb62ad9c12c6025a1db09f8415915b1f 12621 python optional astropy_3.1.2-2+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 31 Dec 2023 20:54:01 +0100
+Source: php-guzzlehttp-psr7
+Architecture: source
+Version: 1.4.2-0.1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1034581
+Changes:
+ php-guzzlehttp-psr7 (1.4.2-0.1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-29197: Improper header parsing.  An attacker could sneak in a
+     newline (\n) into both the header names and values.  This is a follow-up
+     to CVE-2022-24775 where the fix was incomplete. (Closes: #1034581)
+Checksums-Sha1:
+ df74a918f79d299a942a2e2a96eedcf36dfee092 2109 php-guzzlehttp-psr7_1.4.2-0.1+deb10u2.dsc
+ 274b4dbef5e8eee15139b62b56a82fd916ceeb3f 40470 php-guzzlehttp-psr7_1.4.2.orig.tar.gz
+ 213c5d1c7f878521a945149dffe6c552ee8a90dc 5712 php-guzzlehttp-psr7_1.4.2-0.1+deb10u2.debian.tar.xz
+ 8ed4391accee13512b44d0249d69c60e7d060678 6386 php-guzzlehttp-psr7_1.4.2-0.1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ f52b965e7526ff0ae3a03dd7ccb47b1842433b8c55d6c39c3e6d00b9a35d8965 2109 php-guzzlehttp-psr7_1.4.2-0.1+deb10u2.dsc
+ 13a13f6816a9162b4c1101221c9bf5637932c553a32e71ae5ab8854375ecafdf 40470 php-guzzlehttp-psr7_1.4.2.orig.tar.gz
+ 69cc4cd7abb5296c3d6ce48ddf251b9c63cf2b7dfd2ad4fa5491299e9ccc804c 5712 php-guzzlehttp-psr7_1.4.2-0.1+deb10u2.debian.tar.xz
+ fb547fc85781b33f81cd429a25d39d3dc5d405e2a6e94a3900e5267cf3d4d6d9 6386 php-guzzlehttp-psr7_1.4.2-0.1+deb10u2_amd64.buildinfo
+Files:
+ ae463a3358dc6a1b52dcdd5f51e55177 2109 php optional php-guzzlehttp-psr7_1.4.2-0.1+deb10u2.dsc
+ 476be136b9605d7525d31b3f0fafcf7c 40470 php optional php-guzzlehttp-psr7_1.4.2.orig.tar.gz
+ 15f1196f29c94bd423701deb6acce3be 5712 php optional php-guzzlehttp-psr7_1.4.2-0.1+deb10u2.debian.tar.xz
+ c162052bc4a7b009a783e9cd4404cb58 6386 php optional php-guzzlehttp-psr7_1.4.2-0.1+deb10u2_amd64.buildinfo
+

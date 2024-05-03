@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 03 Oct 2022 17:18:50 +0200
+Source: barbican
+Architecture: source
+Version: 1:7.0.0-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 987198
+Changes:
+ barbican (1:7.0.0-1+deb10u1) buster-security; urgency=medium
+ .
+   * Add Add-a-healthcheck-URL.patch.
+   * Do not manage stuff in /etc/barbican/vassals (Closes: #987198).
+   * CVE-2022-3100: add upstream patch:
+     query_string_were_mistakenly_being_used_in_the_RBAC_policy_engine.patch.
+Checksums-Sha1:
+ 76d3599780dc4cbb4837e5b21726849cee9ee877 3966 barbican_7.0.0-1+deb10u1.dsc
+ 2344259ae6735fadff1e3057e30a926a8f998507 451048 barbican_7.0.0.orig.tar.xz
+ dc5f5271cec3680febfccc6262be9948193eed2e 9700 barbican_7.0.0-1+deb10u1.debian.tar.xz
+ 86d82f554b36686e29f7fb9a0e6c71973cb98d5d 17734 barbican_7.0.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ de226a9fd991281a00dfa5e6dfdf57de5e0ecd410b651ebb12cce68e4395552b 3966 barbican_7.0.0-1+deb10u1.dsc
+ dfa9f36f7ed70c9e2f56007a7d64786b4079cb82fdd0bdf116fc2a33219eb014 451048 barbican_7.0.0.orig.tar.xz
+ e164931a2a6ddded58439183e644bb5bfee3c2ab7ce517c6a973f9a09db19f36 9700 barbican_7.0.0-1+deb10u1.debian.tar.xz
+ b76b5c994c12d6470b27adc5714a4772b69c034b4c7436ad6fe76dd74cd6c555 17734 barbican_7.0.0-1+deb10u1_amd64.buildinfo
+Files:
+ 76c4e08a56c1f677c9d21577fc56fe76 3966 net optional barbican_7.0.0-1+deb10u1.dsc
+ 4cf5b5a9becd2c57623851bf6fbfd2e6 451048 net optional barbican_7.0.0.orig.tar.xz
+ 5d41de41fb52f77f04d95d09b7d78a2f 9700 net optional barbican_7.0.0-1+deb10u1.debian.tar.xz
+ 833f4848ba312b2414e8d35fefaa6e38 17734 net optional barbican_7.0.0-1+deb10u1_amd64.buildinfo
+

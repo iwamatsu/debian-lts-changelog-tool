@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Oct 2023 11:58:15 +0100
+Source: nss
+Architecture: source
+Version: 2:3.42.1-1+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ nss (2:3.42.1-1+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-25648: Tighten handling of CCS msgs in TLS 1.3 to avoid DoS.
+   * CVE-2023-4421: Quieten PKCS#11 interface to avoid timing issues.
+     - Pass --no-parallel to dh(1) and -j1 in override_dh_autobuild.
+Checksums-Sha1:
+ eb2acfc13367e5b153625dbb2bc6ed5079b600d0 2235 nss_3.42.1-1+deb10u7.dsc
+ bbf426cacc7aa7e9fe60f567680b464333a61ff0 1120808 nss_3.42.1-1+deb10u7.debian.tar.xz
+ 31cf73bfc4ce058bbce467cf38cf865e8197cba2 6186 nss_3.42.1-1+deb10u7_source.buildinfo
+Checksums-Sha256:
+ de9a6b0da77afbc2714954cddbbb6d27f94cba178ad8b730a1586c08624c95bb 2235 nss_3.42.1-1+deb10u7.dsc
+ 0bc793bd118db93c6888f093be658b8027a07e3952c7a64f3f536fa7914bc8ad 1120808 nss_3.42.1-1+deb10u7.debian.tar.xz
+ 2bac99fecc1cc267af761809c224476088cc11bc65b5d64c6b0a865d0d47ce83 6186 nss_3.42.1-1+deb10u7_source.buildinfo
+Files:
+ 9c2746c677f14b80b4901ddb517834a0 2235 libs optional nss_3.42.1-1+deb10u7.dsc
+ 0f94d1896cbccdc74782e7f90ddd6828 1120808 libs optional nss_3.42.1-1+deb10u7.debian.tar.xz
+ dcd1c35df4953d6d605fb2da11e491c1 6186 libs optional nss_3.42.1-1+deb10u7_source.buildinfo
+

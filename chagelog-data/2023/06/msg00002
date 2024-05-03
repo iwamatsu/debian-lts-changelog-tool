@@ -1,0 +1,69 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 02 Jun 2023 11:45:31 -0400
+Source: sofia-sip
+Binary: libsofia-sip-ua-dev libsofia-sip-ua-glib-dev libsofia-sip-ua-glib3 libsofia-sip-ua-glib3-dbgsym libsofia-sip-ua0 libsofia-sip-ua0-dbgsym sofia-sip-bin sofia-sip-bin-dbgsym sofia-sip-doc
+Architecture: source amd64 all
+Version: 1.12.11+20110422.1-2.1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Ron Lee <ron@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libsofia-sip-ua-dev - Sofia-SIP library development files
+ libsofia-sip-ua-glib-dev - Sofia-SIP library glib/gobject interface development files
+ libsofia-sip-ua-glib3 - Sofia-SIP library glib/gobject interfaces runtime
+ libsofia-sip-ua0 - Sofia-SIP library runtime
+ sofia-sip-bin - Sofia-SIP library utilities
+ sofia-sip-doc - Sofia-SIP library documentation
+Closes: 1036847
+Changes:
+ sofia-sip (1.12.11+20110422.1-2.1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-32307: Prevent a series of heap overflow and integer overflow
+     vulnerabilities in the handling of "STUN" packets. (Closes: #1036847)
+Checksums-Sha1:
+ cdaaabb497af50c9fe9e0c955f30094f7b9f8edb 2405 sofia-sip_1.12.11+20110422.1-2.1+deb10u4.dsc
+ b9a1fea432ec06eaa5c325fb8c50519195a80e16 2948980 sofia-sip_1.12.11+20110422.1.orig.tar.gz
+ 395e882d2b33d1fd8762813008f3398553fc9799 28704 sofia-sip_1.12.11+20110422.1-2.1+deb10u4.diff.gz
+ 4f6b29c430b92cc584c67317510c328b228f9ab6 759508 libsofia-sip-ua-dev_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 899ad7a01679aa65aeb3865b7a2294f0c3e1be6a 15992 libsofia-sip-ua-glib-dev_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ bfd31a4a1e6aa449b0dc642b9894d1f317bcc691 21660 libsofia-sip-ua-glib3-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ cf2d63efa112f4e9edb244f5ad46753bce314435 16524 libsofia-sip-ua-glib3_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 4a040ae67ffe6c6b322a6f49693c52e8b1739877 2094720 libsofia-sip-ua0-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 99e6b4352271117bcb6a5bf1591ad0efc3074491 534952 libsofia-sip-ua0_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 186f2485a1d3c1a6a2712551be005c131a1d4435 453152 sofia-sip-bin-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ f19249b7cf8e6ed06dd35c39f5015169d47affa0 118504 sofia-sip-bin_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ eac64efec55bf036ecf8a3970dc469487260ddc2 8755212 sofia-sip-doc_1.12.11+20110422.1-2.1+deb10u4_all.deb
+ b2bc6058b3d2e6249a04e485bacea40a8718e9d8 11321 sofia-sip_1.12.11+20110422.1-2.1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ ea8237b5431b68bd765c17471b5975b44c7ef2910cd7b89e6d9e84c885e1f016 2405 sofia-sip_1.12.11+20110422.1-2.1+deb10u4.dsc
+ bfa615962e55688db441ae0c17d77a0831f4f50ee5ca45b0c75c7ebaf7eb95ab 2948980 sofia-sip_1.12.11+20110422.1.orig.tar.gz
+ 31d8e65431f5c1cc1daa89a69aeb06cf057cfbc157c80e83fe12c0d77a37bd1d 28704 sofia-sip_1.12.11+20110422.1-2.1+deb10u4.diff.gz
+ 3885079b13a294c12a27f1d456cdfaba8c31cf977eab25d346acd1005684b1b6 759508 libsofia-sip-ua-dev_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 4e8cf4115ec712a372f2686213c4b219d14b71e27013cdfbac211111aa9e2cff 15992 libsofia-sip-ua-glib-dev_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ d72c1b806b232810d9be3b683702cc202507f6ebd04d8356e54d2dc419653bea 21660 libsofia-sip-ua-glib3-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 1ed09f9e2afe0d19d557c3e65fc9298b97decf88fb596897156f7db9454ad1db 16524 libsofia-sip-ua-glib3_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ e30872350b422d8958a916a2d80d58a2f9b1d76718a37333312ece4d70df97de 2094720 libsofia-sip-ua0-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 4961082c767e28e5daa82ff4b7552f5f4b8974e31c50e92bd5ea8eed212992aa 534952 libsofia-sip-ua0_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ e7ac0a2e13ea3987c7d981c1a8d11f0bdac2c781119c931b66f1f15180495498 453152 sofia-sip-bin-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ f38caf1f56051fe681d35a35149c9f8ee1d5681512a4094797e128c6dd2e5d8b 118504 sofia-sip-bin_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 3576a5bb03122a34beff21bf1923f7ca54131f5ffaef6a7253edd4b238d7247c 8755212 sofia-sip-doc_1.12.11+20110422.1-2.1+deb10u4_all.deb
+ efde5937436b2a0017f889c844d0e82d4fa53531a3ee8aa6084cbad0642b6210 11321 sofia-sip_1.12.11+20110422.1-2.1+deb10u4_amd64.buildinfo
+Files:
+ 482f7ad5054a281405af1b9d1d192f56 2405 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u4.dsc
+ 366b3531dd39c77974bdf2b4b8e69a27 2948980 net optional sofia-sip_1.12.11+20110422.1.orig.tar.gz
+ 47918415eb8b3e6d3b09ccd60a3f6c9d 28704 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u4.diff.gz
+ 6c4e784a20393a03fee76626adb3189f 759508 libdevel optional libsofia-sip-ua-dev_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 571583d5166bfd166106d5a724ea95a0 15992 libdevel optional libsofia-sip-ua-glib-dev_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 7783df4d46e83e64cac51e53a1ee0aa7 21660 debug optional libsofia-sip-ua-glib3-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 5a1bce4a606414cd9fe4c62dfdacc6c1 16524 libs optional libsofia-sip-ua-glib3_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 1378c653fceaca741238b9214ed75624 2094720 debug optional libsofia-sip-ua0-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ fa0a0b96e77730ab508f4472ab4d2ab9 534952 libs optional libsofia-sip-ua0_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ 66fcb78344cd0c086e5437f8fa4c6db5 453152 debug optional sofia-sip-bin-dbgsym_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ f67f0ad2ed571fae5dc070832e27ee71 118504 net optional sofia-sip-bin_1.12.11+20110422.1-2.1+deb10u4_amd64.deb
+ ba2ba79a3a857160ddb66f289f25e4f8 8755212 doc optional sofia-sip-doc_1.12.11+20110422.1-2.1+deb10u4_all.deb
+ 69146509b25fc58aa64ff60ab5438d96 11321 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u4_amd64.buildinfo
+

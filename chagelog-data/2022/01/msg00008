@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 12 Jan 2022 09:49:35 +0100
+Source: thunderbird
+Architecture: source
+Version: 1:91.5.0-1~deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ thunderbird (1:91.5.0-1~deb9u1) stretch-security; urgency=medium
+ .
+   * Backport to stretch.
+   * Fix-Floating-Point-Normalization-breakage-on-32bit-Linux.patch:
+     - Fix build on armhf by not defining __double_t to long double.
+Checksums-Sha1:
+ bc992875ca667cf2b2a6519054e568709c950341 19800 thunderbird_91.5.0-1~deb9u1.dsc
+ 972792b86fb55a90d45d268a3ccdbdf2ee503de8 12014504 thunderbird_91.5.0.orig-thunderbird-l10n.tar.xz
+ f8975543e11cc0f9c32ce5a589ac771173a68476 427588784 thunderbird_91.5.0.orig.tar.xz
+ c2fbf1ec689f6978a27c6f8e4966e404737889bf 563368 thunderbird_91.5.0-1~deb9u1.debian.tar.xz
+ bdcf48abd3db78949c9408ce179b61eb1324b78b 7052 thunderbird_91.5.0-1~deb9u1_source.buildinfo
+Checksums-Sha256:
+ 5166da64011a40d81091370d7359287f482d9889c2004fcd22beca93e76fa120 19800 thunderbird_91.5.0-1~deb9u1.dsc
+ fd289bdda7e01030b91628cbbef0ca6339b16df29f4d0cdc3d0aefdd2e3abe79 12014504 thunderbird_91.5.0.orig-thunderbird-l10n.tar.xz
+ 8a86d2c6c1114bb4c2dd82586f45c39a24addb470b789176e34a7ea00f2ab4b2 427588784 thunderbird_91.5.0.orig.tar.xz
+ 912d947bfa30703e276ef19186a2c55377f9b64d96d94a66b25b0f49fad23486 563368 thunderbird_91.5.0-1~deb9u1.debian.tar.xz
+ 59ea358619ca99564ff485d72701c35739c1c944f68bff39493316fc18561553 7052 thunderbird_91.5.0-1~deb9u1_source.buildinfo
+Files:
+ 909ff38ce7bfeb539cedc00a5f57f7b1 19800 mail optional thunderbird_91.5.0-1~deb9u1.dsc
+ 46ad33a3d6597a54c6d6ceb4e24f88c5 12014504 mail optional thunderbird_91.5.0.orig-thunderbird-l10n.tar.xz
+ 5ffbe3d52101096f33b29fb729daccbc 427588784 mail optional thunderbird_91.5.0.orig.tar.xz
+ 3e0f3644e364a3a1b5fc5c6a81b89a62 563368 mail optional thunderbird_91.5.0-1~deb9u1.debian.tar.xz
+ 51c37d3eb3b76772950e4f3a10d7b36e 7052 mail optional thunderbird_91.5.0-1~deb9u1_source.buildinfo
+

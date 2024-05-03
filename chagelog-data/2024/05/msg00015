@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 13 May 2024 22:06:10 CEST
+Source: glib2.0
+Architecture: source
+Version: 2.58.3-2+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Simon McVittie <smcv@debian.org>
+Checksums-Sha1:
+ ab2c09cfb08bd7916c54cf7178fdd143c43d706f 3485 glib2.0_2.58.3-2+deb10u6.dsc
+ f5d81b31ecb92f2920d8626768ae24dd41a8d49c 148468 glib2.0_2.58.3-2+deb10u6.debian.tar.xz
+ e6ed366c8aeed9d74630202641a151c2d008993a 8817 glib2.0_2.58.3-2+deb10u6_source.buildinfo
+Checksums-Sha256:
+ 66bed4b3fa52679c2dc648aa64d3966e585528a99ea38776854752acd9714279 3485 glib2.0_2.58.3-2+deb10u6.dsc
+ 1e5a8b2922d60421ca0f5c8078a6efeaa037b9e5f7b0cdaabc2a4f54ffdc7f99 148468 glib2.0_2.58.3-2+deb10u6.debian.tar.xz
+ 65da2e1663f1df3d6b18c847bc0a30cf15f2ca388928cdd83f9cb7a27ee43790 8817 glib2.0_2.58.3-2+deb10u6_source.buildinfo
+Changes:
+ glib2.0 (2.58.3-2+deb10u6) buster-security; urgency=high
+ .
+   * d/patches: Backport GDBus fixes from 2.80.1, 2.80.2
+     - If local users send signals on the D-Bus system bus that spoof a
+       trusted sender, do not deliver them to signal subscriptions for the
+       trusted sender's well-known bus name (CVE-2024-34397)
+     - Fix a use-after-free when subscribing to signals with an arg0
+       match rule, originally from 2.79.0 and necessary to make the test
+       for CVE-2024-34397 pass reliably
+     - Add a local backport of g_set_str(), required by the above
+     - Relax name owner checks to avoid a regression in ibus
+       (avoids: #1070730, etc.)
+   * d/p/gdbusmessage-Clean-the-cached-arg0-when-setting-the-messa.patch:
+     Add patch from upstream fixing a memory leak that can occur in
+     rare situations with the above changes (avoids: #1070851)
+Files:
+ 543ceb74c3de35b946b2cb06f71b40b4 3485 libs optional glib2.0_2.58.3-2+deb10u6.dsc
+ 4d808b9288cafb33201d714878293209 148468 libs optional glib2.0_2.58.3-2+deb10u6.debian.tar.xz
+ 5bf8db6bfaef5d7bc0994ef64fb5679e 8817 libs optional glib2.0_2.58.3-2+deb10u6_source.buildinfo
+

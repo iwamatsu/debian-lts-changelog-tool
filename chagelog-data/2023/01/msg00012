@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 15 Jan 2023 12:31:08 +0100
+Source: node-minimatch
+Architecture: source
+Version: 3.0.4-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ node-minimatch (3.0.4-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-3517: Regular Expression Denial of Service (ReDoS) when calling
+     the braceExpand function with specific arguments.
+Checksums-Sha1:
+ b395fd3c0c32f72be28a6782d57761eac8a9d3f4 2206 node-minimatch_3.0.4-3+deb10u1.dsc
+ 3d2ca7cb7b5d2412a99f74abb724b31d51a228ab 17300 node-minimatch_3.0.4.orig.tar.gz
+ 6d615d541b7d91b2d26f04bd5885d8d771e43e6a 7396 node-minimatch_3.0.4-3+deb10u1.debian.tar.xz
+ 321551869c176a62667329ca7e687ad1f40cc4ff 7374 node-minimatch_3.0.4-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 33093bc05e69556483bf0e8b5bc19bbc5340fd3251fb0b52f191ad75e804e377 2206 node-minimatch_3.0.4-3+deb10u1.dsc
+ c7bc74495b892018119f37241d39f29262699ca63af014d0c8927c0f272798b4 17300 node-minimatch_3.0.4.orig.tar.gz
+ 0554aea20534509f804c306f291eae657143d9729210f4e4048ec1dddcbf5d11 7396 node-minimatch_3.0.4-3+deb10u1.debian.tar.xz
+ 178fddba821e9d078ce1df9dfeba75af97c99e7cbc4eaed694831f2a652569bd 7374 node-minimatch_3.0.4-3+deb10u1_amd64.buildinfo
+Files:
+ 2e0b7f87c425ca91520959183710ebdd 2206 javascript extra node-minimatch_3.0.4-3+deb10u1.dsc
+ d1c2abf1f67a15200bad73e91195ecde 17300 javascript extra node-minimatch_3.0.4.orig.tar.gz
+ 5114089c079f9502ede5f798c384271f 7396 javascript extra node-minimatch_3.0.4-3+deb10u1.debian.tar.xz
+ 360a1f935cfdf7c35910eaf562823c08 7374 javascript extra node-minimatch_3.0.4-3+deb10u1_amd64.buildinfo
+

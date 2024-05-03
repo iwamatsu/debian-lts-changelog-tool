@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 29 Jan 2023 04:48:04 +0530
+Source: libhtml-stripscripts-perl
+Architecture: source
+Version: 1.06-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1029400
+Changes:
+ libhtml-stripscripts-perl (1.06-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Handler for style attribute is vulnerable to ReDoS.
+     (Fixes: CVE-2023-24038) (Closes: #1029400)
+Checksums-Sha1:
+ d1ed2f7d2a504ca03235e706b533ccb7ecc85407 2311 libhtml-stripscripts-perl_1.06-1+deb10u1.dsc
+ 5dca2d42f3dbdb575f4c2c719ebda5eeea020cd5 44745 libhtml-stripscripts-perl_1.06.orig.tar.gz
+ fa7107c63b48b224e6531dbf16ab1123842d9179 3696 libhtml-stripscripts-perl_1.06-1+deb10u1.debian.tar.xz
+ f7379b839a418d504430459593fef456e3ec6551 6208 libhtml-stripscripts-perl_1.06-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 434c632d9f0326c3bcca9850aa0e8303939848b9cd99ba81914a92bca9d0d721 2311 libhtml-stripscripts-perl_1.06-1+deb10u1.dsc
+ 222bfb7ec1fdfa465e32da3dc4abed2edc7364bbe19e8e3c513c7d585b0109ad 44745 libhtml-stripscripts-perl_1.06.orig.tar.gz
+ 30dd3a35f7fdec81825e9fc714b8a40bf931eb3b6dd6374d04781985c333d7f7 3696 libhtml-stripscripts-perl_1.06-1+deb10u1.debian.tar.xz
+ 0eb76263a3f1fb4ddb014a4c2094109202397cc7e69cbc46708ffb20720bde61 6208 libhtml-stripscripts-perl_1.06-1+deb10u1_source.buildinfo
+Files:
+ eb0705bfce63a48b021357210caa1aca 2311 perl optional libhtml-stripscripts-perl_1.06-1+deb10u1.dsc
+ 23124893ca6f844cecb73b368af50d57 44745 perl optional libhtml-stripscripts-perl_1.06.orig.tar.gz
+ 5b579ac4c518ba80ef17069b87893ba9 3696 perl optional libhtml-stripscripts-perl_1.06-1+deb10u1.debian.tar.xz
+ e71b3615a5729f66a60d67c9abef6d9f 6208 perl optional libhtml-stripscripts-perl_1.06-1+deb10u1_source.buildinfo
+

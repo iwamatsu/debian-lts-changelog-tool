@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 14 May 2023 00:30:24 CEST
+Source: gitlab-workhorse
+Architecture: source
+Version: 7.6.0+debian-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ a0325240bf64ae1759fb1ff5b7bee6b414481d9f 3189 gitlab-workhorse_7.6.0+debian-1+deb10u1.dsc
+ a9f782fd58cd86eb6b58afa62a4a742359dc5981 664220 gitlab-workhorse_7.6.0+debian.orig.tar.xz
+ 55f53bebca23a74c43cefd6b45423cc1ee2eba6d 4156 gitlab-workhorse_7.6.0+debian-1+deb10u1.debian.tar.xz
+ 55f037e321f346e8bfb8624d143747f18845d75a 9224 gitlab-workhorse_7.6.0+debian-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 703bd87e16c6359d9e3be269e71679eb694bf09bbe9117be34291e88ffae52f4 3189 gitlab-workhorse_7.6.0+debian-1+deb10u1.dsc
+ ea26debe3179f1c855c1d1319fc804dc1cb7a48806f767a6d95512ed2ee5de65 664220 gitlab-workhorse_7.6.0+debian.orig.tar.xz
+ daa59132700cf461e4d8b74b17b68ebea2e11599b87d9bfe7a92d5f3f2547f6c 4156 gitlab-workhorse_7.6.0+debian-1+deb10u1.debian.tar.xz
+ 51a8327f995ab4045e4011d60c61a717b150c4b146db72a4dc42bb8859b17dbb 9224 gitlab-workhorse_7.6.0+debian-1+deb10u1_amd64.buildinfo
+Changes:
+ gitlab-workhorse (7.6.0+debian-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-websocket 1.4.0-1+deb10u1.
+Files:
+ 023ad6277fc024393c74ec66b86c2a42 3189 httpd optional gitlab-workhorse_7.6.0+debian-1+deb10u1.dsc
+ b4a3bc91cfc1b0836ee37d1ccc25fd94 664220 httpd optional gitlab-workhorse_7.6.0+debian.orig.tar.xz
+ d152f1674f1d7e95ea5a334ba44208cf 4156 httpd optional gitlab-workhorse_7.6.0+debian-1+deb10u1.debian.tar.xz
+ 206b391a46c3453b0fcf2669c7d88820 9224 httpd optional gitlab-workhorse_7.6.0+debian-1+deb10u1_amd64.buildinfo
+

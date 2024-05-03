@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 17:45:38 CET
+Source: jersey1
+Architecture: source
+Version: 1.19.3-6+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 805df13a58d46728f8b81e8794b0147bf9d90eb8 3130 jersey1_1.19.3-6+deb10u1.dsc
+ 026bdc6e0fdbbfd9575ae7bb45b2d2a01910d74e 1232392 jersey1_1.19.3.orig.tar.xz
+ 3c98b55e8175b6f86559a32f5f22620a61542f88 17228 jersey1_1.19.3-6+deb10u1.debian.tar.xz
+ c541b246a4b2453ba658e12cb37886ed51359176 16695 jersey1_1.19.3-6+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 8d556682004d438c2edf7d12f913e1fd94762628c147b8d791ed4b8e1a90577a 3130 jersey1_1.19.3-6+deb10u1.dsc
+ 87de2c8d0f7abbd89fcfb12ba6516ccb33f8aeb80f31237ac08166a37b56863a 1232392 jersey1_1.19.3.orig.tar.xz
+ 508e23999746ddc992918c1f869db6b3c8ef59f9f0b7cff0bf911e2614be8416 17228 jersey1_1.19.3-6+deb10u1.debian.tar.xz
+ 18bd49b688b21b06e11b0b465efdb61c76e78db8c6f4b3e07cbbd24f24d1f071 16695 jersey1_1.19.3-6+deb10u1_amd64.buildinfo
+Changes:
+ jersey1 (1.19.3-6+deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix FTBFS with libjettison-java 1.5.3.
+Files:
+ b323c2d8155577f5f1bf825d4b57d883 3130 java optional jersey1_1.19.3-6+deb10u1.dsc
+ b16545846d7336be10c86100abeded5c 1232392 java optional jersey1_1.19.3.orig.tar.xz
+ 6187dbfdcdaa5cdfe1ea32b357b9dcbd 17228 java optional jersey1_1.19.3-6+deb10u1.debian.tar.xz
+ 28360eb7797fe3f190c944fb965c2d52 16695 java optional jersey1_1.19.3-6+deb10u1_amd64.buildinfo
+

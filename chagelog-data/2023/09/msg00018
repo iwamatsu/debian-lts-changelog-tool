@@ -1,0 +1,69 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 01 Aug 2023 09:28:24 +0200
+Source: rustc-mozilla
+Binary: libstd-rust-mozilla-1.63 libstd-rust-mozilla-1.63-dbgsym libstd-rust-mozilla-dev rust-mozilla-doc rust-mozilla-gdb rust-mozilla-lldb rust-mozilla-src rustc-mozilla
+Architecture: source amd64 all
+Version: 1.63.0+dfsg1-2~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ libstd-rust-mozilla-1.63 - Rust standard libraries
+ libstd-rust-mozilla-dev - Rust standard libraries - development files
+ rust-mozilla-doc - Rust systems programming language - Documentation
+ rust-mozilla-gdb - Rust debugger (gdb)
+ rust-mozilla-lldb - Rust debugger (lldb)
+ rust-mozilla-src - Rust systems programming language - source code
+ rustc-mozilla - Rust systems programming language
+Changes:
+ rustc-mozilla (1.63.0+dfsg1-2~deb10u1) buster-security; urgency=medium
+ .
+   * Backport to buster.
+   * Revert debhelper bump and associated changes.
+   * Disable windows cross-compiling support.
+Checksums-Sha1:
+ 7454693f5c8f8494c1dda587f551b4d2c8a034c3 3286 rustc-mozilla_1.63.0+dfsg1-2~deb10u1.dsc
+ ff1d41375c653af984a5ad24e5ef8b7b2b61969f 846026984 rustc-mozilla_1.63.0+dfsg1.orig-stage0.tar.xz
+ 8874482956d1092c47edc3a6aa77ed5c7c2346b5 32527136 rustc-mozilla_1.63.0+dfsg1.orig.tar.xz
+ 9c7bca8ba83156c27ce9bd2ae4e365169eec3818 92604 rustc-mozilla_1.63.0+dfsg1-2~deb10u1.debian.tar.xz
+ 61c93b4162d2211e09230f5dfac3aa53ad6d1575 184326196 libstd-rust-mozilla-1.63-dbgsym_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ 4b5b02890b40e7c5328f134a15ff6b6fd441f57d 18845844 libstd-rust-mozilla-1.63_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ ac446423d1f7c17d66cc2ce8660a810c43299011 34328816 libstd-rust-mozilla-dev_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ 01dbff7c7678b42e00576cc11579656db8fd2a0a 17070712 rust-mozilla-doc_1.63.0+dfsg1-2~deb10u1_all.deb
+ c806e0812eebf4dfb0753c6018d5f383e1363a7f 196464 rust-mozilla-gdb_1.63.0+dfsg1-2~deb10u1_all.deb
+ 8a3b3cebc5c66dfaee735c401696b66d941644b2 197360 rust-mozilla-lldb_1.63.0+dfsg1-2~deb10u1_all.deb
+ bf90f59a9fc4a8607f7ebeaefbc1adb749c521cc 18169600 rust-mozilla-src_1.63.0+dfsg1-2~deb10u1_all.deb
+ a90b28e0facb8712629efc8c868be3cf76d78949 10981 rustc-mozilla_1.63.0+dfsg1-2~deb10u1_amd64.buildinfo
+ cc2f8028fc8f5d4d39a3c8a9ad466659a210b94b 207692 rustc-mozilla_1.63.0+dfsg1-2~deb10u1_amd64.deb
+Checksums-Sha256:
+ 89e114fa94124af6131e327a9772b8539ec3a2ce907b8653f626915a6cbfed4f 3286 rustc-mozilla_1.63.0+dfsg1-2~deb10u1.dsc
+ 64d2d1a192194699d10cc8df36ee05c0294c33f726f9616c9a4a5443369a8029 846026984 rustc-mozilla_1.63.0+dfsg1.orig-stage0.tar.xz
+ ad79e62b57ab06516595da2513369b0285b6e2bde1331c00a4197f492f7fad3d 32527136 rustc-mozilla_1.63.0+dfsg1.orig.tar.xz
+ 1962c0886d85cd02fa1a00de7168fe43487f5a668930e81f891f6febf7a73f56 92604 rustc-mozilla_1.63.0+dfsg1-2~deb10u1.debian.tar.xz
+ e1bc251fc696ab87edab8e733a2d29b1e427d3f4639cb9a3c1207c9e9c25c4ae 184326196 libstd-rust-mozilla-1.63-dbgsym_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ c44252f583d217654cdb77bf8b0f513dc90fc8bcf805b6b29305d23344e6952b 18845844 libstd-rust-mozilla-1.63_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ 5146e63c07361e496cbadf860619aa60d58b13b885301474f309f4df9cec73ea 34328816 libstd-rust-mozilla-dev_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ 7ca7965357489baa77d2fc006e646355c6d28cfbc4fcaa1698fa60e2c9f485ba 17070712 rust-mozilla-doc_1.63.0+dfsg1-2~deb10u1_all.deb
+ 25bbbca4f198d57c97890ca1af2f6d77752c4ebe03b265d90fe754496763b1ed 196464 rust-mozilla-gdb_1.63.0+dfsg1-2~deb10u1_all.deb
+ 88593419fc64f89f63eec0f8febd90445a69e1c0a1511675526f6ce4c29483d0 197360 rust-mozilla-lldb_1.63.0+dfsg1-2~deb10u1_all.deb
+ 0b2a2b460aafc5699af129ebd54125d8a15a25906cdf4bfd6528d3ea6f768068 18169600 rust-mozilla-src_1.63.0+dfsg1-2~deb10u1_all.deb
+ d4348e454ac4c78b7d7562467c79da061bb6ef5b17673340759c1f397cd52346 10981 rustc-mozilla_1.63.0+dfsg1-2~deb10u1_amd64.buildinfo
+ 3b1b09d9351246883cd0b82bd7eb34ad8df5824abea32e1b2b9adecb14a1f1c6 207692 rustc-mozilla_1.63.0+dfsg1-2~deb10u1_amd64.deb
+Files:
+ 13ce318151322e1719bb77c383441a29 3286 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u1.dsc
+ 83490ae382f1f6dcbe6c3c5d47a0f7b2 846026984 devel optional rustc-mozilla_1.63.0+dfsg1.orig-stage0.tar.xz
+ 8a49f05851fbe10382d8f925b5a58412 32527136 devel optional rustc-mozilla_1.63.0+dfsg1.orig.tar.xz
+ 2a2b79924565e10f95e8c955575ef370 92604 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u1.debian.tar.xz
+ 2fe8f67c24c0c857736d144d4218f24f 184326196 debug optional libstd-rust-mozilla-1.63-dbgsym_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ ad0f6ad5d1dcd54e333e645c0af94649 18845844 libs optional libstd-rust-mozilla-1.63_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ 1831fb7df9aaaa43d9cc62ed7d119164 34328816 libdevel optional libstd-rust-mozilla-dev_1.63.0+dfsg1-2~deb10u1_amd64.deb
+ bccdfdd4d25ed2c5973f0e106cb2e6a0 17070712 doc optional rust-mozilla-doc_1.63.0+dfsg1-2~deb10u1_all.deb
+ f09163f124c2048471e216452068ba72 196464 devel optional rust-mozilla-gdb_1.63.0+dfsg1-2~deb10u1_all.deb
+ a130881d5596e7c9419e8a0f7b23e3bd 197360 devel optional rust-mozilla-lldb_1.63.0+dfsg1-2~deb10u1_all.deb
+ 4d09014f1ce3c55b0074942184206f21 18169600 devel optional rust-mozilla-src_1.63.0+dfsg1-2~deb10u1_all.deb
+ f87358a08dc51e8506716ba4b816a18c 10981 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u1_amd64.buildinfo
+ 49c21c121e8269fe6024707e5b3f9cf4 207692 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u1_amd64.deb
+

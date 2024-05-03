@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 27 Aug 2023 07:38:21 +0200
+Source: rar
+Architecture: source
+Version: 2:6.23-1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Martin Meredith <mez@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Changes:
+ rar (2:6.23-1~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-40477:
+     A specific flaw within the processing of recovery volumes exists in RAR,
+     an archive program for rar files. It allows remote attackers to execute
+     arbitrary code on affected installations. User interaction is required to
+     exploit this vulnerability. The target must visit a malicious page or open
+     a malicious rar file.
+Checksums-Sha1:
+ 01dad0e8173db0d68eeb192e2e83d57cc619b827 2166 rar_6.23-1~deb10u1.dsc
+ 5f623a7f849d094dfb4dd670b346968b9ecf872b 614350 rar_6.23.orig-amd64.tar.gz
+ 2ab8d91d4d267bfc19d1893bcf36c160e09840e1 627653 rar_6.23.orig.tar.gz
+ 8a8acf48be458408b32f0122b9f6d6d9782739f8 11136 rar_6.23-1~deb10u1.debian.tar.xz
+ ce2d3efe6017aff2f6f17f257f34d0120b079b6b 5351 rar_6.23-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ f680214ae1daa674ef5cab8230687fb73ae28aee3fa0be5ff949cc1c35d897f8 2166 rar_6.23-1~deb10u1.dsc
+ a17002df0d47f65486a93fdbd84b5a50a16302f76873f88bccad0c8c126169dc 614350 rar_6.23.orig-amd64.tar.gz
+ 090f5e32112fcf1a19bdd8d3c1905ed839ebeade4f7be03a5d2db61b2e6595a6 627653 rar_6.23.orig.tar.gz
+ 88d2859cd34360e41a2218a1d86bb6ece06df3a2adea91d052220877c5f2faf0 11136 rar_6.23-1~deb10u1.debian.tar.xz
+ cc8785e72fd60f05849531f6f35d8a52d946da2a78b90dc42dd7965dc000a110 5351 rar_6.23-1~deb10u1_source.buildinfo
+Files:
+ 5698893f75b9e9ab4fbddc71ff822ea1 2166 non-free/utils optional rar_6.23-1~deb10u1.dsc
+ 89cbf9a8306eb24ee82b2e9270896e2a 614350 non-free/utils optional rar_6.23.orig-amd64.tar.gz
+ 886aaf5485284103748a742b46f1d80b 627653 non-free/utils optional rar_6.23.orig.tar.gz
+ 1ebca727d4fcb3e822a218f1550ed76e 11136 non-free/utils optional rar_6.23-1~deb10u1.debian.tar.xz
+ 1fa053ea929df8cb26b3e5aca1af1fe8 5351 non-free/utils optional rar_6.23-1~deb10u1_source.buildinfo
+

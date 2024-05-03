@@ -1,0 +1,41 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 10 Oct 2022 13:19:03 +0200
+Source: dbus
+Architecture: source
+Version: 1.12.24-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ dbus (1.12.24-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream stable release. Notable changes:
+     - Fix several denial of service issues where an authenticated attacker
+       can crash the system bus by sending crafted messages
+       (CVE-2022-42010, CVE-2022-42011, CVE-2022-42012)
+     - Use a path-based Unix socket for the session bus, avoiding sandbox
+       escape for Flatpak apps with network access (dbus#416)
+     - Don't crash if asked to watch more than 128 directories for changes
+Checksums-Sha1:
+ 8c8aa75d38fa14df5137e31e871036ab6a3c1b65 3784 dbus_1.12.24-0+deb10u1.dsc
+ 455d2090d300f0f3be0ba2e3c82d0c4cf0fd8968 2120623 dbus_1.12.24.orig.tar.gz
+ e592c47782be97a24b89917ecd48722acaae37c2 833 dbus_1.12.24.orig.tar.gz.asc
+ ca5f5fca849edea97030f967f76d8669740d0760 63416 dbus_1.12.24-0+deb10u1.debian.tar.xz
+ c508cad60ba71315bbaad25fcfc481a43f6bc313 6938 dbus_1.12.24-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 6ad9a7b33ad953c9dd05753c7c4ed2e6584dc54278639d1f868e893cb9787a3a 3784 dbus_1.12.24-0+deb10u1.dsc
+ bc42d196c1756ac520d61bf3ccd6f42013617def45dd1e591a6091abf51dca38 2120623 dbus_1.12.24.orig.tar.gz
+ a81b175c65d1daa36d7043d113d6f11d5b4a43c3125f5613bfe734ad1c79a41b 833 dbus_1.12.24.orig.tar.gz.asc
+ 2dffa62933b82bbb45e0acc7ccb672d6edc24129008a02caa71c5f81c8bb7ef7 63416 dbus_1.12.24-0+deb10u1.debian.tar.xz
+ a17cd30910ad622c13d5dcf65222109c1bd84b4a132b9269fb9a3c3c521c11d0 6938 dbus_1.12.24-0+deb10u1_source.buildinfo
+Files:
+ ca521d5b51d3af8fa74ded99ab81d8e4 3784 admin optional dbus_1.12.24-0+deb10u1.dsc
+ 2d118d2d29e895eb3b47ccd68670403e 2120623 admin optional dbus_1.12.24.orig.tar.gz
+ 965c83cb8993e9a7f1d45717a6846194 833 admin optional dbus_1.12.24.orig.tar.gz.asc
+ 04a71a619bfea6a391076e663adb2615 63416 admin optional dbus_1.12.24-0+deb10u1.debian.tar.xz
+ 7835ea8f3fb2ba2ac5ffd1dab5ca4d8a 6938 admin optional dbus_1.12.24-0+deb10u1_source.buildinfo
+

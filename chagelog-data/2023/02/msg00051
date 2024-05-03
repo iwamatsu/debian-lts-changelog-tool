@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 28 Feb 2023 00:27:21 +0100
+Source: syslog-ng
+Architecture: source
+Version: 3.19.1-5+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: syslog-ng maintainers <syslog-ng-maintainers@alioth-lists.debian.net>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ syslog-ng (3.19.1-5+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-38725: Integer overflow and buffer out-of-bounds issues in the
+     RFC3164 parser, which could allows remote attackers to cause a Denial of
+     Service via crafted syslog input.
+   * Fix crash (segfault) during handling short inputs.
+Checksums-Sha1:
+ cf85eb61eb3b4a718ee447a1d6057fc98aa8ab3b 4557 syslog-ng_3.19.1-5+deb10u1.dsc
+ a3e0b20d6103a722de3d44f99705677a5fb89762 1467436 syslog-ng_3.19.1.orig.tar.gz
+ 6ec665375de513c267ff258804562e8246259c46 53196 syslog-ng_3.19.1-5+deb10u1.debian.tar.xz
+ d454d15bbf8f4839af44b6eb6888ef7c6dec35f0 18455 syslog-ng_3.19.1-5+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 120fd71806a30ef4cac7a017669059227f85791f987ca9c6ddc9c83c88bca7b9 4557 syslog-ng_3.19.1-5+deb10u1.dsc
+ e8e55c3393f41e0b0e4f5c836856ab71345abcfe4b2f66ff88c10fe67cdbb18b 1467436 syslog-ng_3.19.1.orig.tar.gz
+ 993805f3666953b48efad7aca61ece3ba48e89ec22f48b4100d20d0598112339 53196 syslog-ng_3.19.1-5+deb10u1.debian.tar.xz
+ 943d3c679759289da9938d2f76eb80fb41ac7545856d2c431caf243ab0e8d83b 18455 syslog-ng_3.19.1-5+deb10u1_amd64.buildinfo
+Files:
+ 8945a63b2b3790be1f346c0049a23aab 4557 admin optional syslog-ng_3.19.1-5+deb10u1.dsc
+ 370b066fda02da03b9d4653652519217 1467436 admin optional syslog-ng_3.19.1.orig.tar.gz
+ cee04bef9d98c258fb73ebd546aee3be 53196 admin optional syslog-ng_3.19.1-5+deb10u1.debian.tar.xz
+ c4a6071604197d01446c87a29d9a2124 18455 admin optional syslog-ng_3.19.1-5+deb10u1_amd64.buildinfo
+

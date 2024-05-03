@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 21 Mar 2024 12:20:25 +0800
+Source: pillow
+Architecture: source
+Version: 5.4.1-2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ pillow (5.4.1-2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport follow-up fix for CVE-2022-22817, upstream commit c930be075.
+   * Mark d/rules with .NOTPARALLEL for an implicit -j1.
+   * Backport upstream fix for CVE-2021-23437.
+   * Backport upstream fix for CVE-2023-44271.
+Checksums-Sha1:
+ c48ef695c8590d4b7cc20e6a29a3f42e9f60e97a 2883 pillow_5.4.1-2+deb10u5.dsc
+ d2fcfc134378a108965faaebb49a2cd67eb67964 24460 pillow_5.4.1-2+deb10u5.debian.tar.xz
+ 990dafce6df1683652e5ad452a5645f69209e23c 8884 pillow_5.4.1-2+deb10u5_source.buildinfo
+Checksums-Sha256:
+ b7f935a3c2608d9b945b14dae6f70900dff87dcca388599580043c7c62507e10 2883 pillow_5.4.1-2+deb10u5.dsc
+ 76bb4e2ee611b3fa1f94d90f854ad1469c0d7799982cb1d14478107a9b4673bc 24460 pillow_5.4.1-2+deb10u5.debian.tar.xz
+ a2268fb1c25a2a68c6279e599a579160374e9fb7c4652fec75c13c84d59a2a19 8884 pillow_5.4.1-2+deb10u5_source.buildinfo
+Files:
+ 5cea63c8fcbf81e01acd716ea226b570 2883 python optional pillow_5.4.1-2+deb10u5.dsc
+ 51cf99ada7a6665afa35a99b8f896906 24460 python optional pillow_5.4.1-2+deb10u5.debian.tar.xz
+ 114c46b34c6f97402844cfbd6ce1c140 8884 python optional pillow_5.4.1-2+deb10u5_source.buildinfo
+

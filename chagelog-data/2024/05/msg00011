@@ -1,0 +1,49 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 05 May 2024 11:33:57 +0100
+Source: shim
+Architecture: source
+Version: 15.8-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian EFI team <debian-efi@lists.debian.org>
+Changed-By: Steve McIntyre <93sam@debian.org>
+Closes: 1046268 1069054
+Changes:
+ shim (15.8-1~deb10u1) buster-security; urgency=medium
+ .
+   * New upstream release fixing more bugs
+   * Remove all our previous patches, no longer needed:
+     + Make-sbat_var.S-parse-right-with-buggy-gcc-binutils.patch (now
+       upstream)
+     + Enable-NX.patch (we don't want NX just yet until the whole boot
+       stack is NX-capable)
+     + block-grub-sbat3-debian.patch (not needed now upstream grub SBAT
+       is 4)
+   * Cherry-pick 2 new patches from upstream for grub revocations:
+     + 0001-sbat-Add-grub.peimage-2-to-latest-CVE-2024-2312.patch
+     + 0002-sbat-Also-bump-latest-for-grub-4-and-to-todays-date.patch
+   * Log if the build is nx-compatible or not
+   * Force shim to use the latest revocations by default to block some
+     older grub / peimage issues. This is:
+     "shim,4\ngrub,4\ngrub.peimage,2\n"
+   * Install a copy of the Debian CA certificate into /usr/share/shim.
+     Closes: #1069054
+   * Clean up better after build. Closes: #1046268
+Checksums-Sha1:
+ 2160a2f36df9be7c0cb0f7cde75f808ce8219437 2326 shim_15.8-1~deb10u1.dsc
+ cdec924ca437a4509dcb178396996ddf92c11183 2315201 shim_15.8.orig.tar.bz2
+ 30269c6e79531b5d0a39ce928fd603c16266abf9 34676 shim_15.8-1~deb10u1.debian.tar.xz
+ 01fa8832609438b4265c932c4dfa792fb3503528 6319 shim_15.8-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ 5e82fdf15f33fc68eca2ef995c788c092df3512a8c35273d2494a0d62af595ea 2326 shim_15.8-1~deb10u1.dsc
+ a79f0a9b89f3681ab384865b1a46ab3f79d88b11b4ca59aa040ab03fffae80a9 2315201 shim_15.8.orig.tar.bz2
+ c76ea4b6db6db0f290483e54bcca679b46d6dbfbb66c43019ffb765152df098d 34676 shim_15.8-1~deb10u1.debian.tar.xz
+ 28790d7d3307c68e681f1d568e86286ca3487a6b2ad9b8ab81d718d7bf30127a 6319 shim_15.8-1~deb10u1_source.buildinfo
+Files:
+ ee8d6c9a7be8d839086b359f6d4d4d31 2326 admin optional shim_15.8-1~deb10u1.dsc
+ a9452c2e6fafe4e1b87ab2e1cac9ec00 2315201 admin optional shim_15.8.orig.tar.bz2
+ 083c62cc33687d05a9fecafd814f9c20 34676 admin optional shim_15.8-1~deb10u1.debian.tar.xz
+ cdf19a4f94c8764e93760b40c2a696c9 6319 admin optional shim_15.8-1~deb10u1_source.buildinfo
+

@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 11 Jul 2023 14:04:13 CEST
+Source: rabbitmq-server
+Architecture: source
+Version: 3.8.2-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 58dd6450988b0305b8f0e31484ee27d2a85dd37b 2825 rabbitmq-server_3.8.2-1+deb10u1.dsc
+ 70076751de7573b0714f63b4bacf9efcbe962f33 15178744 rabbitmq-server_3.8.2.orig.tar.xz
+ 21d0d232cf51e146bcabbc8b4686cba345b52887 20832 rabbitmq-server_3.8.2-1+deb10u1.debian.tar.xz
+ 4f78ab965d099327a0ea26fa8754073f05747478 8213 rabbitmq-server_3.8.2-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 8829d3183902dae34218127fc81cc6350959dbd5cd5a8a29ad403469b441f940 2825 rabbitmq-server_3.8.2-1+deb10u1.dsc
+ 8c6729b985cb21bab13363b1c806cfa15845b046be9e641ab1496bd5a1eaf19d 15178744 rabbitmq-server_3.8.2.orig.tar.xz
+ 28dc5d957e3d0eae53b004aa73b60899b63eed37896e2aa6ab95207b5305866e 20832 rabbitmq-server_3.8.2-1+deb10u1.debian.tar.xz
+ 00f13b8c25f6a00628ea388bbe1dc88f4e3c2aaaf087bb95d7fc0694473b747a 8213 rabbitmq-server_3.8.2-1+deb10u1_amd64.buildinfo
+Changes:
+ rabbitmq-server (3.8.2-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * New upstream release.
+   * Fix compatibility with erlang >= 22 and address CVE-2022-37026.
+Files:
+ 120df066474dfce2c085c758f093f3c8 2825 net optional rabbitmq-server_3.8.2-1+deb10u1.dsc
+ ad7127242cfdcc1948331f9364d1012f 15178744 net optional rabbitmq-server_3.8.2.orig.tar.xz
+ 6bbf5b6e4654321ce1fef25faaec1385 20832 net optional rabbitmq-server_3.8.2-1+deb10u1.debian.tar.xz
+ acb3f0a62054185d451c41978afeb943 8213 net optional rabbitmq-server_3.8.2-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 13 May 2022 10:22:35 -0700
+Source: ruby-nokogiri
+Binary: ruby-nokogiri
+Architecture: source amd64
+Version: 1.6.8.1-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ruby-nokogiri - HTML, XML, SAX, and Reader parser for Ruby
+Closes: 1009787
+Changes:
+ ruby-nokogiri (1.6.8.1-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-24836: Prevent a denial of service attack caused by the use of
+     an inefficient regular expression that is susceptible to excessive
+     backtracking. (Closes: #1009787)
+Checksums-Sha1:
+ 7ebc402ddb55c5aad8f568b9dcdf2d16f179c2e0 2284 ruby-nokogiri_1.6.8.1-1+deb9u2.dsc
+ 3b217ef19d26c88424428a9dfd11bb7f051bd610 415104 ruby-nokogiri_1.6.8.1.orig.tar.gz
+ 8b6c645d0994b8dd25a1b98d20d881544b0053e0 10240 ruby-nokogiri_1.6.8.1-1+deb9u2.debian.tar.xz
+ 333062095eb353bdb23c60b6394d3a6a7c952217 188456 ruby-nokogiri-dbgsym_1.6.8.1-1+deb9u2_amd64.deb
+ 699e1f9a233b5a7e7d67a332effcd4171c0954b7 7650 ruby-nokogiri_1.6.8.1-1+deb9u2_amd64.buildinfo
+ 14012a7926bca276a2b821f9d121f6f168cb7af5 106924 ruby-nokogiri_1.6.8.1-1+deb9u2_amd64.deb
+Checksums-Sha256:
+ ca36db376192111ca970c410f8f56f9b8eccd3e34342bcb32c7eaa158c53eaea 2284 ruby-nokogiri_1.6.8.1-1+deb9u2.dsc
+ 4ae97d9af051b80b6a526d55be2a71c1f18e3b8967a9e59c3b6b8a1d475f5889 415104 ruby-nokogiri_1.6.8.1.orig.tar.gz
+ 4cb941a401a1d63ef5cec701bb54f5af88b46d3c902e366b2a66d2dc29221932 10240 ruby-nokogiri_1.6.8.1-1+deb9u2.debian.tar.xz
+ 84d7eb190758fc526213354696507345039558743f5422c3424aac1d11f7bba7 188456 ruby-nokogiri-dbgsym_1.6.8.1-1+deb9u2_amd64.deb
+ 45aca7d8c5c508b142230f48415b66b832ef4a269388a611e0c70d95667babd9 7650 ruby-nokogiri_1.6.8.1-1+deb9u2_amd64.buildinfo
+ 52308677d5ed48aa552f78a2cb10aa7626eeec8da5eb3738d0d22fe28fd50f40 106924 ruby-nokogiri_1.6.8.1-1+deb9u2_amd64.deb
+Files:
+ 0a0fe46d312ce9024ced4ec22a8af329 2284 ruby optional ruby-nokogiri_1.6.8.1-1+deb9u2.dsc
+ babd4c2d8c0a9081e59da9898e91c559 415104 ruby optional ruby-nokogiri_1.6.8.1.orig.tar.gz
+ d3f314edd15064ca286c89abd1ec61ba 10240 ruby optional ruby-nokogiri_1.6.8.1-1+deb9u2.debian.tar.xz
+ e810fc2ef03969dbfa0f1ab32f360c53 188456 debug extra ruby-nokogiri-dbgsym_1.6.8.1-1+deb9u2_amd64.deb
+ 26bfa87985424861ebce39d9f2c3887b 7650 ruby optional ruby-nokogiri_1.6.8.1-1+deb9u2_amd64.buildinfo
+ 488ce194471f307bf93ea1d756f10a4e 106924 ruby optional ruby-nokogiri_1.6.8.1-1+deb9u2_amd64.deb
+

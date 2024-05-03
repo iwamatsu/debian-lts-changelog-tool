@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 05 Nov 2023 17:49:49 +0000
+Source: open-vm-tools
+Architecture: source
+Version: 2:10.3.10-1+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Bernd Zeimetz <bzed@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1054666
+Changes:
+ open-vm-tools (2:10.3.10-1+deb10u6) buster-security; urgency=medium
+ .
+   * Closes:  #1054666
+   * Fix CVE-2023-34059:
+     This fixes a file descriptor hijack vulnerability in
+     the vmware-user-suid-wrapper command.
+     A malicious actor with non-root privileges might have been able
+     to hijack the /dev/uinput file descriptor allowing
+     them to simulate user inputs.
+   * Fix CVE-2023-34058:
+     This fixes a SAML Token Signature Bypass vulnerability.
+     A malicious actor that has been granted Guest Operation Privileges
+     in a target virtual machine might have been able to
+     elevate their privileges if that target
+     virtual machine has been assigned a more privileged Guest Alias.
+Checksums-Sha1:
+ ef48785de8f65acef4d23cda71707068c9783f61 2383 open-vm-tools_10.3.10-1+deb10u6.dsc
+ fa02653827deb3320cce80cf5554a40aadad0f1d 52120 open-vm-tools_10.3.10-1+deb10u6.debian.tar.xz
+ 6ae185c0f321840917217ccb9fdcde86ea070973 17761 open-vm-tools_10.3.10-1+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 291251ea9a8afe5fbe9af8022d1ec86c51e01f7cfc21f4cfbd7d19329deda350 2383 open-vm-tools_10.3.10-1+deb10u6.dsc
+ a409dd2c57050097de51bc5d3174ef967c5fcee27270dcbee8034fd809a6df5e 52120 open-vm-tools_10.3.10-1+deb10u6.debian.tar.xz
+ 81c8f297721a54d7cd24720b97a51c04524ba1dfd7130e29314ec65b591c7684 17761 open-vm-tools_10.3.10-1+deb10u6_amd64.buildinfo
+Files:
+ c520ea22558024426621c8a4d11f73cc 2383 admin extra open-vm-tools_10.3.10-1+deb10u6.dsc
+ 0fbd0e67a28220595c53904ce841e98e 52120 admin extra open-vm-tools_10.3.10-1+deb10u6.debian.tar.xz
+ dfb1b0f8252adc32afacc06b66388292 17761 admin extra open-vm-tools_10.3.10-1+deb10u6_amd64.buildinfo
+

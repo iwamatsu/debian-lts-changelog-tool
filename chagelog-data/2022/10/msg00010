@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 07 Oct 2022 10:46:08 -0700
+Source: libpgjava
+Architecture: source
+Version: 42.2.5-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1016662
+Changes:
+ libpgjava (42.2.5-2+deb10u2) buster-security; urgency=high
+ .
+   * CVE-2022-31197: Prevent a SQL injection vulnerability caused by the lack of
+     escaping of column names. A malicious user could have crafted a schema that
+     caused an application to execute commands as a privileged user.
+     (Closes: #1016662)
+Checksums-Sha1:
+ 1bf056ceb945d3cb591f18bd37d9d332148f967d 2585 libpgjava_42.2.5-2+deb10u2.dsc
+ 246426838c07688b8cc40bd6c3abedbff51b2ad8 21268 libpgjava_42.2.5-2+deb10u2.debian.tar.xz
+ 61b1b93269a9a9c96a99eeda4d0b95e0523f91b1 14040 libpgjava_42.2.5-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ ba7875ff4d5bb1240c5dbcedb36c0aa590ea6185c73eea9710524260a6486543 2585 libpgjava_42.2.5-2+deb10u2.dsc
+ 54fc3448133fe3fce1b622220a7be39456df75718c7cfed436a642dabcd6cdb3 21268 libpgjava_42.2.5-2+deb10u2.debian.tar.xz
+ 837619a0c67630ca318d73bf153cbb950e1b4fa1e64ac6554c12d4daff37ebef 14040 libpgjava_42.2.5-2+deb10u2_amd64.buildinfo
+Files:
+ ac97b8f95d635ea48f5334c1b0da7c96 2585 java optional libpgjava_42.2.5-2+deb10u2.dsc
+ b37b895b501bba4626db03a31a2ab8ce 21268 java optional libpgjava_42.2.5-2+deb10u2.debian.tar.xz
+ 98fd6917588df8d8464e365d014fec48 14040 java optional libpgjava_42.2.5-2+deb10u2_amd64.buildinfo
+

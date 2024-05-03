@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 15 Aug 2023 08:15:42 -0300
+Source: lxc
+Architecture: source
+Version: 1:3.1.0+really3.0.3-8+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: pkg-lxc <pkg-lxc-devel@lists.alioth.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Changes:
+ lxc (1:3.1.0+really3.0.3-8+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Add d/salsa-ci.yml with Lts-team/pipeline's buster recipe
+   * Add upstream patch to fix CVE-2022-47952
+Checksums-Sha1:
+ a2bf659902eae290d2ccc9863e0db77044fd9f2c 2313 lxc_3.1.0+really3.0.3-8+deb10u1.dsc
+ 05665debbb056bac43ddb0dc55b0bb1392dab818 1263371 lxc_3.1.0+really3.0.3.orig.tar.gz
+ 26f828d26e111a58334bcb8b8fb2a63d6fde8973 833 lxc_3.1.0+really3.0.3.orig.tar.gz.asc
+ 722225f8e12ebade62590459b6aeb20fcc47134a 59980 lxc_3.1.0+really3.0.3-8+deb10u1.debian.tar.xz
+ bedd55d0c3488379ba4bcae8c0f00c1d9cbb4051 12011 lxc_3.1.0+really3.0.3-8+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 90ae8a2f2500b6a4826eb81676ec796080b1e4fe69869393161fa139aff15e0e 2313 lxc_3.1.0+really3.0.3-8+deb10u1.dsc
+ 620cb832cc02c63bf4d330657bf6176544e145da281ee384a34d689635a19841 1263371 lxc_3.1.0+really3.0.3.orig.tar.gz
+ a63e4391e512f87c2637621d2b1af03fdbda608b172c242bd2fc1f0e436e0123 833 lxc_3.1.0+really3.0.3.orig.tar.gz.asc
+ 7d6d28b208a8c2a0181319a91f9b7aa7887fd7f69fa13f936e7e23fa62c2e11a 59980 lxc_3.1.0+really3.0.3-8+deb10u1.debian.tar.xz
+ 5e44f76699f41b17f8be777706b45da4c07e943922144f12ad3d0de93f70f503 12011 lxc_3.1.0+really3.0.3-8+deb10u1_amd64.buildinfo
+Files:
+ dcae4ba938b13be5701e2bf7ad5832ee 2313 admin optional lxc_3.1.0+really3.0.3-8+deb10u1.dsc
+ 0aa1a982f7dfa4c7b8ce87b7047b0b6e 1263371 admin optional lxc_3.1.0+really3.0.3.orig.tar.gz
+ 0d68fe6a95969318cb3c148130a82c3a 833 admin optional lxc_3.1.0+really3.0.3.orig.tar.gz.asc
+ 2d110218ee568ed8d32e89078ba3e979 59980 admin optional lxc_3.1.0+really3.0.3-8+deb10u1.debian.tar.xz
+ 13ae6d5dcefc5d717f40dbb341b7e8f5 12011 admin optional lxc_3.1.0+really3.0.3-8+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 19 Nov 2023 21:48:35 +0000
+Source: node-json5
+Architecture: source
+Version: 0.5.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ node-json5 (0.5.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-46175: The `parse` method of the JSON5
+     library does not restrict parsing of keys named
+     `__proto__`, allowing specially crafted strings to
+     pollute the prototype of the resulting object
+Checksums-Sha1:
+ 73e9bad68f68ed95c6e82ab815dfd273c65545f7 2070 node-json5_0.5.1-1+deb10u1.dsc
+ ca188312413baa0d7b5af8920ca35a7a15a37417 20034 node-json5_0.5.1.orig.tar.gz
+ 1684f51c7eb952c7a57633ecfc670cdf380339e4 9288 node-json5_0.5.1-1+deb10u1.debian.tar.xz
+ b96478854c1b01a9fd05c1cfc0b6c0b2cdbe0d59 7104 node-json5_0.5.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ a1cbf4a0939efb8b332abc4f250e4760a914be77a4863ddf210b33c830ae078d 2070 node-json5_0.5.1-1+deb10u1.dsc
+ 3618908ccc9038ecbd5e11b8e20f38246a2527778b3a38c8814d499aa05e206e 20034 node-json5_0.5.1.orig.tar.gz
+ dfe2120ba86a270e5014a66342381add28dbdbabaf1b1687fdcda136cef0ac45 9288 node-json5_0.5.1-1+deb10u1.debian.tar.xz
+ 3298d17a8d1c145ee4ee266283e704de4665a958184d0460d86c2d5ba2e1cbd1 7104 node-json5_0.5.1-1+deb10u1_amd64.buildinfo
+Files:
+ d358e565d0ab911b2deec9ab7e8f638d 2070 javascript optional node-json5_0.5.1-1+deb10u1.dsc
+ 4cdb1f68a67ce3d1118e840ebf6711af 20034 javascript optional node-json5_0.5.1.orig.tar.gz
+ 2736480b2ee67da6ff10c810f0f474d3 9288 javascript optional node-json5_0.5.1-1+deb10u1.debian.tar.xz
+ ebe2b1c0a0d8c36221d602b819839d50 7104 javascript optional node-json5_0.5.1-1+deb10u1_amd64.buildinfo
+

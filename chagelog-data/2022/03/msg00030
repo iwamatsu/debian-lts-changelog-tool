@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 21 Mar 2022 00:17:43 +0530
+Source: usbredir
+Architecture: source
+Version: 0.7.1-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Liang Guo <guoliang@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ usbredir (0.7.1-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-3700: use-after-free when serializing data.
+Checksums-Sha1:
+ 3aa2aa4a5bee17dbaea7176f854d033428cc9ed1 2302 usbredir_0.7.1-1+deb9u1.dsc
+ baa5d8fcdb3246052fbfac86aee750ae8d33c4fd 329895 usbredir_0.7.1.orig.tar.bz2
+ cd5b1ad57bd4c81d35d9b05fee5ce40d866c7fa4 4568 usbredir_0.7.1-1+deb9u1.debian.tar.xz
+ 022e2ab1b5fcf5b3c1916b893ae11600e45ed07f 6166 usbredir_0.7.1-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 372de489239f8c46a278f7acc58735077b87fbac6291d7c04effaf39c985f9b6 2302 usbredir_0.7.1-1+deb9u1.dsc
+ 407e9e27a1369f01264d5501ffbe88935ddd7d5de675f5835db05dc9c9ac56f3 329895 usbredir_0.7.1.orig.tar.bz2
+ 0f61c0e745c2c605d83d8d7b98c7e81256bf554695d3aea9193364c45652980f 4568 usbredir_0.7.1-1+deb9u1.debian.tar.xz
+ b87549930ff7fe9167d2d449d5af3ec8a18150a594dcb3bba3703674be7b8a99 6166 usbredir_0.7.1-1+deb9u1_source.buildinfo
+Files:
+ 7f43c67727d9e0fc736c8fb95e01e8ad 2302 libs optional usbredir_0.7.1-1+deb9u1.dsc
+ 35cfb1720967727dea523b943cc4126b 329895 libs optional usbredir_0.7.1.orig.tar.bz2
+ b5f62284da7cb8571d2ecd56684d7043 4568 libs optional usbredir_0.7.1-1+deb9u1.debian.tar.xz
+ c2a0e30fa40ae3c42dc71ddb5e48580b 6166 libs optional usbredir_0.7.1-1+deb9u1_source.buildinfo
+

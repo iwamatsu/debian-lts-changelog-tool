@@ -1,0 +1,56 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 29 Mar 2022 10:32:32 +0200
+Source: cacti
+Binary: cacti
+Architecture: source
+Version: 0.8.8h+ds1-10+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Cacti Maintainer <pkg-cacti-maint@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ cacti      - web interface for graphing of monitoring systems
+Closes: 926700 949996
+Changes:
+ cacti (0.8.8h+ds1-10+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-10060: Cacti has XSS because it does not properly reject
+     unintended characters, related to use of the sanitize_uri function in
+     lib/functions.php.
+   * CVE-2018-10061: Cacti has XSS because it makes certain
+     htmlspecialchars calls without the ENT_QUOTES flag (these calls occur
+     when the html_escape function in lib/html.php is not used).
+   * CVE-2019-11025: no escaping occurs before printing out the value of
+     the SNMP community string (SNMP Options) in the View poller cache,
+     leading to XSS. (Closes: #926700)
+   * CVE-2020-7106: Cacti has stored XSS in multiple files as demonstrated
+     by the description parameter in data_sources.php (a raw string from
+     the database that is displayed by $header to trigger the
+     XSS). (Closes: #949996)
+   * CVE-2020-13230: disabling a user account does not immediately
+     invalidate any permissions granted to that account (e.g., permission
+     to view logs).
+   * CVE-2020-23226: Multiple Cross Site Scripting (XSS) vulnerabilities
+     exist in multiple files.
+   * CVE-2021-23225: Cacti allows authenticated users with User Management
+     permissions to inject arbitrary web script or HTML in the
+     "new_username" field during creation of a new user via "Copy" method
+     at user_admin.php.
+   * CVE-2022-0730: under certain ldap conditions, Cacti authentication can
+     be bypassed with certain credential types.
+Checksums-Sha1:
+ da6347b074be2f67d561b301b78d4d9db4dd1652 2011 cacti_0.8.8h+ds1-10+deb9u2.dsc
+ ab1f485fde4c570e0e10338e73113a4568c5d806 57156 cacti_0.8.8h+ds1-10+deb9u2.debian.tar.xz
+ d88c18a1a0822f9059f5a4d74719f4a4cc12ed25 5626 cacti_0.8.8h+ds1-10+deb9u2_all.buildinfo
+Checksums-Sha256:
+ b311b9811f10980141b69d26ba879a24c9586c19eab7b8c48dd3119705524c2b 2011 cacti_0.8.8h+ds1-10+deb9u2.dsc
+ a9a911f5211a755a89c874f412804636f352ea100403e535a21078e7b29caf99 57156 cacti_0.8.8h+ds1-10+deb9u2.debian.tar.xz
+ f2ee385d73c131a7f5754b8cb4a69cc6851422936e4fee474bb71ee96cee43f5 5626 cacti_0.8.8h+ds1-10+deb9u2_all.buildinfo
+Files:
+ 0587788e7ed0424c0d2dd42d399380d5 2011 web extra cacti_0.8.8h+ds1-10+deb9u2.dsc
+ 1739e48f615bbd9577496f6623a819a8 57156 web extra cacti_0.8.8h+ds1-10+deb9u2.debian.tar.xz
+ 9d7fa41a8b55404295ad0278b792b670 5626 web extra cacti_0.8.8h+ds1-10+deb9u2_all.buildinfo
+

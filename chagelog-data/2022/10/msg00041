@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 28 Oct 2022 23:03:02 +0200
+Source: ncurses
+Architecture: source
+Version: 6.1+20181013-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ ncurses (6.1+20181013-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-29458
+     Avoid out-of-bounds read in convert_strings in the terminfo library.
+Checksums-Sha1:
+ f5bdf4d697d1e15f09409797406f6271617fb2df 4338 ncurses_6.1+20181013-2+deb10u3.dsc
+ 4af288c253634e3056a3646554a8b138fd6353be 3411288 ncurses_6.1+20181013.orig.tar.gz
+ eb1f4c538d0c64d83d8575bbb4c7d1f2996fc567 251 ncurses_6.1+20181013.orig.tar.gz.asc
+ 9ba0f7f75c36d90b1182a902d0b41ed2c7d65f6c 62512 ncurses_6.1+20181013-2+deb10u3.debian.tar.xz
+ ef974616152b8bb1903545ab63549d727ad884d8 16308 ncurses_6.1+20181013-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 4d24cabc68bafb9750d6a4dd6a3916c0f1e7656923250fbf02ae25aa7aef3466 4338 ncurses_6.1+20181013-2+deb10u3.dsc
+ aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59 3411288 ncurses_6.1+20181013.orig.tar.gz
+ 865931406e519909a4d0ab87b14d0c6d3ebccb7b3e0dac5c6095f0dfce5e14cf 251 ncurses_6.1+20181013.orig.tar.gz.asc
+ a71085f2aef402719769bbf5ce99677005be73324c06f54900fb3cf6bb2bf2c5 62512 ncurses_6.1+20181013-2+deb10u3.debian.tar.xz
+ 74addc22ecf878a6e5d5ed2d85d37aaee12b9273a00e828af9a0feb2a89a442c 16308 ncurses_6.1+20181013-2+deb10u3_amd64.buildinfo
+Files:
+ d563e20b6a6de0bf588f132fe1204f22 4338 libs required ncurses_6.1+20181013-2+deb10u3.dsc
+ ea0fcd870f98479c49aac1c83e2533da 3411288 libs required ncurses_6.1+20181013.orig.tar.gz
+ ddd6d2f7aa0aee770cdecd4fde0bbe58 251 libs required ncurses_6.1+20181013.orig.tar.gz.asc
+ 7e01aa12c3e18220c767a5fc96d3bc21 62512 libs required ncurses_6.1+20181013-2+deb10u3.debian.tar.xz
+ 78d0b28de6a0aa9e89d6b80e7626aad8 16308 libs required ncurses_6.1+20181013-2+deb10u3_amd64.buildinfo
+

@@ -1,0 +1,60 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 18 Mar 2022 22:45:58 CET
+Source: bind9
+Binary: bind9 bind9utils bind9-doc host bind9-host libbind-dev libbind9-140 libdns162 libirs141 libisc160 liblwres141 libisccc140 libisccfg140 dnsutils lwresd libbind-export-dev libdns-export162 libdns-export162-udeb libisc-export160 libisc-export160-udeb libisccfg-export140 libisccc-export140 libisccc-export140-udeb libisccfg-export140-udeb libirs-export141 libirs-export141-udeb
+Architecture: source
+Version: 1:9.10.3.dfsg.P4-12.3+deb9u11
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian DNS Packaging <pkg-dns-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ bind9      - Internet Domain Name Server
+ bind9-doc  - Documentation for BIND
+ bind9-host - Version of 'host' bundled with BIND 9.X
+ bind9utils - Utilities for BIND
+ dnsutils   - Clients provided with BIND
+ host       - Transitional package
+ libbind-dev - Static Libraries and Headers used by BIND
+ libbind-export-dev - Development files for the exported BIND libraries
+ libbind9-140 - BIND9 Shared Library used by BIND
+ libdns-export162 - Exported DNS Shared Library
+ libdns-export162-udeb - Exported DNS library for debian-installer (udeb)
+ libdns162  - DNS Shared Library used by BIND
+ libirs-export141 - Exported IRS Shared Library
+ libirs-export141-udeb - Exported IRS library for debian-installer (udeb)
+ libirs141  - DNS Shared Library used by BIND
+ libisc-export160 - Exported ISC Shared Library
+ libisc-export160-udeb - Exported ISC library for debian-installer (udeb)
+ libisc160  - ISC Shared Library used by BIND
+ libisccc-export140 - Command Channel Library used by BIND
+ libisccc-export140-udeb - Command Channel Library used by BIND (udeb)
+ libisccc140 - Command Channel Library used by BIND
+ libisccfg-export140 - Exported ISC CFG Shared Library
+ libisccfg-export140-udeb - Exported ISC CFG library for debian-installer (udeb)
+ libisccfg140 - Config File Handling Library used by BIND
+ liblwres141 - Lightweight Resolver Library used by BIND
+ lwresd     - Lightweight Resolver Daemon
+Checksums-Sha1:
+ 9d478c9086ffd85324e9f2a5497872f7a9cda508 4041 bind9_9.10.3.dfsg.P4-12.3+deb9u11.dsc
+ ca75a170a1bb41659b0df0a86ecbead5621a6d7d 107272 bind9_9.10.3.dfsg.P4-12.3+deb9u11.debian.tar.xz
+ 4b274d30432ac50f66c0ee6a12a9dcd6db653295 21982 bind9_9.10.3.dfsg.P4-12.3+deb9u11_amd64.buildinfo
+Checksums-Sha256:
+ 8bdf6d35d48ab863007d415513ed2f52f296a7bfb8dc877aecf4f20e7e51b7a1 4041 bind9_9.10.3.dfsg.P4-12.3+deb9u11.dsc
+ abc5bcecfe9bdf3db6237e5d19e17828082e55b338d5cd6eb66eb034003337aa 107272 bind9_9.10.3.dfsg.P4-12.3+deb9u11.debian.tar.xz
+ d80503b4d48b904042b096e4386a1ae16da8c3b701df6abbd816a1f02efdd330 21982 bind9_9.10.3.dfsg.P4-12.3+deb9u11_amd64.buildinfo
+Changes:
+ bind9 (1:9.10.3.dfsg.P4-12.3+deb9u11) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-25220:
+     When using forwarders, bogus NS records supplied by, or via, those
+     forwarders may be cached and used by named if it needs to recurse for any
+     reason, causing it to obtain and pass on potentially incorrect answers.
+Files:
+ db9de1475282fcc97a5e2400c15bed4a 4041 net optional bind9_9.10.3.dfsg.P4-12.3+deb9u11.dsc
+ 8aaa2ca6ee668e97bbc78d7aee8b6d42 107272 net optional bind9_9.10.3.dfsg.P4-12.3+deb9u11.debian.tar.xz
+ 5a3487b90c4af8ddbd3bc273f3179386 21982 net optional bind9_9.10.3.dfsg.P4-12.3+deb9u11_amd64.buildinfo
+

@@ -1,0 +1,54 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 06 Feb 2023 12:14:55 +0100
+Source: webkit2gtk
+Architecture: source
+Version: 2.38.4-2~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian WebKit Maintainers <pkg-webkit-maintainers@lists.alioth.debian.org>
+Changed-By: Alberto Garcia <berto@igalia.com>
+Changes:
+ webkit2gtk (2.38.4-2~deb10u1) buster-security; urgency=high
+ .
+   * Rebuild for buster-security.
+   * debian/patches/force-single-process.patch:
+     - Force the single-process mode in Evolution and Geary
+   * debian/patches/support-old-cmake.patch:
+     - Fix build with cmake < 3.15
+   * debian/patches/no-gtk-overlay-scrolling.patch:
+     - Gtk in buster does not have 'gtk-overlay-scrolling' so remove the
+       constant warnings about its absence (see #1024535).
+   * debian/patches/fix-gst-build.patch:
+     - Fix FTBFS with GStreamer < 1.18.0
+   * debian/control.in:
+     - Remove build dependencies on ccache, libwpebackend-fdo-1.0-dev,
+       libmanette-0.2-dev and liblcms2-dev.
+     - Switch build dependency from libenchant-2-dev to libenchant-dev.
+     - Switch build dependency from libfreetype-dev to libfreetype6-dev.
+     - Switch build dependencies on libegl-dev, libgl-dev and libgles-dev
+       with libegl1-mesa-dev, libgl1-mesa-dev and libgles2-mesa-dev.
+   * Downgrade xdg-desktop-portal-gtk from a recommendation to a
+     suggestion (See #989307)
+   * debian/rules:
+     - Set ENABLE_SOUP3=NO, ENABLE_GTK4=NO and USE_PREBUILT_DOCS=YES. This
+       builds the 4.0 API packages only (soup2 build).
+     - Build with -DENABLE_GAMEPAD=OFF -DUSE_LCMS=OFF.
+   * Set the debhelper compatibility level back to 10. This fixes a dh_dwz
+     error ".debug_info section not present"
+     - Add debian/compat file.
+     - Update build dependency on debhelper.
+Checksums-Sha1:
+ af95cbfea78c95df20d4b8c968782fb5ffbedeaf 4021 webkit2gtk_2.38.4-2~deb10u1.dsc
+ c2d28ae3d2e6271017faeca0f420a7585182c0de 79920 webkit2gtk_2.38.4-2~deb10u1.debian.tar.xz
+ bb7b851220510b8cd0a0538c4ad9d74ff20081e8 15176 webkit2gtk_2.38.4-2~deb10u1_source.buildinfo
+Checksums-Sha256:
+ eca704a7e08cbd4a6c99195af3713667fc9975365e24568d422c11914a89aa7b 4021 webkit2gtk_2.38.4-2~deb10u1.dsc
+ 128c141e3c483644e81371f1915f9bb27fab17437a03a2177c30a8c9a7162653 79920 webkit2gtk_2.38.4-2~deb10u1.debian.tar.xz
+ 1fa8d12c85f205f668334697677f3b5d489fb75863a842202dc3ac03d852104e 15176 webkit2gtk_2.38.4-2~deb10u1_source.buildinfo
+Files:
+ f6b0506e73ad4bbd7dd6e100226f453a 4021 web optional webkit2gtk_2.38.4-2~deb10u1.dsc
+ d5e43b0ec6862844c100b5ee0046c9d1 79920 web optional webkit2gtk_2.38.4-2~deb10u1.debian.tar.xz
+ 14f7146e66f52f55429da462e2098aca 15176 web optional webkit2gtk_2.38.4-2~deb10u1_source.buildinfo
+

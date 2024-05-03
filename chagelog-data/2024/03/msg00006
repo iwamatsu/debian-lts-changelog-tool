@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 05 Mar 2024 22:30:19 +0200
+Source: libuv1
+Architecture: source
+Version: 1.24.1-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dominique Dumont <dod@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libuv1 (1.24.1-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-24806: Improper Domain Look in uv_getaddrinfo()
+Checksums-Sha1:
+ ae80a0a9f623a2d5ecc1c58db74fc964c5fd09d6 2084 libuv1_1.24.1-1+deb10u2.dsc
+ 83ec703ec3a3a4b62c73f6930ca60ceccf41b64b 1204188 libuv1_1.24.1.orig.tar.gz
+ b385a95b07fbf37f06df1f3acaab75a47491ce60 18232 libuv1_1.24.1-1+deb10u2.debian.tar.xz
+Checksums-Sha256:
+ a66f79913f0f28f35eb342d02b9b96e14461d27076f95b1056e8fb958348963e 2084 libuv1_1.24.1-1+deb10u2.dsc
+ 55f4d03e5d600d8a753e8f300f4ce5a9a39d7f8386855627fcc952bd561f4b4e 1204188 libuv1_1.24.1.orig.tar.gz
+ b17e1b436292049ca7a5237bcd064b0bc69cad50b3ce72ce1a64a53b2a9579b4 18232 libuv1_1.24.1-1+deb10u2.debian.tar.xz
+Files:
+ cf3cff625509a3bebe0dcf43eecf937e 2084 libs optional libuv1_1.24.1-1+deb10u2.dsc
+ 31f92d18edb56afa7a3828a827cbe2a0 1204188 libs optional libuv1_1.24.1.orig.tar.gz
+ 74eb46cd6958aece6b7312c524975dbd 18232 libs optional libuv1_1.24.1-1+deb10u2.debian.tar.xz
+

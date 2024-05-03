@@ -1,0 +1,59 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 09 Jan 2023 12:45:54 +0000
+Source: libtasn1-6
+Binary: libtasn1-6 libtasn1-6-dbgsym libtasn1-6-dev libtasn1-bin libtasn1-bin-dbgsym libtasn1-doc
+Architecture: source amd64 all
+Version: 4.13-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libtasn1-6 - Manage ASN.1 structures (runtime)
+ libtasn1-6-dev - Manage ASN.1 structures (development)
+ libtasn1-bin - Manage ASN.1 structures (binaries)
+ libtasn1-doc - Manage ASN.1 structures (documentation)
+Changes:
+ libtasn1-6 (4.13-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2021-46848: Fix an off-by-one array size issue that affected the
+     asn1_encode_simple_der function.
+   * Add debian/.gitlab-ci.yml and disable crossbuilding tests.
+   * Move texinfo to Build-Depends to fix "any"-style build.
+Checksums-Sha1:
+ a49537a46793a2cf1d2f6ccc08bb464f9cdd8ef8 2356 libtasn1-6_4.13-3+deb10u1.dsc
+ a84afb4cd8187c1fa5901c6bc1cf1486eea66635 1891703 libtasn1-6_4.13.orig.tar.gz
+ b01a95fa5420dd88ba3e4a67e2c9ffd75fe9efb4 64024 libtasn1-6_4.13-3+deb10u1.debian.tar.xz
+ ce2b8bb8d47b6765353cf3a1ed645eb335210ea6 86932 libtasn1-6-dbgsym_4.13-3+deb10u1_amd64.deb
+ 02d6eb0756ad8020e531da10fc24822d87aaded5 103760 libtasn1-6-dev_4.13-3+deb10u1_amd64.deb
+ 85c1511cdd4fdcdc503d1b89731a7665192a42e6 10996 libtasn1-6_4.13-3+deb10u1_amd64.buildinfo
+ 6fc7e9c7a894dfcc5a9b802704e5e00f6690c085 51992 libtasn1-6_4.13-3+deb10u1_amd64.deb
+ be9c383ae63b32fee3bfb756894114757f8e710d 41920 libtasn1-bin-dbgsym_4.13-3+deb10u1_amd64.deb
+ 765e13157c73e46ab2a0fd078051a0a5ae6e6652 33352 libtasn1-bin_4.13-3+deb10u1_amd64.deb
+ 62bdd018364e5f6567b482d71d1e5e8832c86f4b 316772 libtasn1-doc_4.13-3+deb10u1_all.deb
+Checksums-Sha256:
+ 933482c3acb7b1983edc0e47f644daa2f1c0738107e22ac02bd30880ca6db8f1 2356 libtasn1-6_4.13-3+deb10u1.dsc
+ 7e528e8c317ddd156230c4e31d082cd13e7ddeb7a54824be82632209550c8cca 1891703 libtasn1-6_4.13.orig.tar.gz
+ 73593231706c7e01f12b0ce60b8e45c7beafefd8598678537c1a067727d0ff40 64024 libtasn1-6_4.13-3+deb10u1.debian.tar.xz
+ c25f3c0c2588b8c11a9455d265f9ac875e8f598fc473ce392a41685ab15771f5 86932 libtasn1-6-dbgsym_4.13-3+deb10u1_amd64.deb
+ 6ce456b89585e1e940f76b63db603a15c027aaca6793c1e4fab07f10bf915750 103760 libtasn1-6-dev_4.13-3+deb10u1_amd64.deb
+ 2ed2eb2bf83cd7aba5ea3aaac80dc17f7125f1f363f8799ccc560f83e357a5a1 10996 libtasn1-6_4.13-3+deb10u1_amd64.buildinfo
+ 8ce4dc06fd788d0103c60dc190b296f75a4552339297e8ed1e9d2dde9f7abe2d 51992 libtasn1-6_4.13-3+deb10u1_amd64.deb
+ bbe0834b72bbd12997f5d89a5e2f2c7f35b27454b037b570ddb122839171307c 41920 libtasn1-bin-dbgsym_4.13-3+deb10u1_amd64.deb
+ d9f0f15c174c51f0316becde00a1995e1347436b11b750887770da24d820ca29 33352 libtasn1-bin_4.13-3+deb10u1_amd64.deb
+ 0269b4d76bb85fbfb665977a4d89f50ecab70ec8e3589d40ef9d0ea98fd8534d 316772 libtasn1-doc_4.13-3+deb10u1_all.deb
+Files:
+ 4e7ef286b34fd44897c34ba7a239e016 2356 libs standard libtasn1-6_4.13-3+deb10u1.dsc
+ ce2ba4d3088119b48e7531a703669c52 1891703 libs standard libtasn1-6_4.13.orig.tar.gz
+ f4e65993738b8b0d347de62c5b7c6ebe 64024 libs standard libtasn1-6_4.13-3+deb10u1.debian.tar.xz
+ 94833ffc4afd3f3e496d67b41c887018 86932 debug optional libtasn1-6-dbgsym_4.13-3+deb10u1_amd64.deb
+ 5b35f5250911d48056a5b67883fcbfdf 103760 libdevel optional libtasn1-6-dev_4.13-3+deb10u1_amd64.deb
+ 624edb6293557ad72c62d14dabd92254 10996 libs standard libtasn1-6_4.13-3+deb10u1_amd64.buildinfo
+ e168ee842e806fb04f201b819696d4ce 51992 libs standard libtasn1-6_4.13-3+deb10u1_amd64.deb
+ 26e11796f8f8c5bdaa47be7e7f8b58ce 41920 debug optional libtasn1-bin-dbgsym_4.13-3+deb10u1_amd64.deb
+ 9cf881bc1714c58c7ec76f7305f2a72f 33352 devel optional libtasn1-bin_4.13-3+deb10u1_amd64.deb
+ 3d74f7c46a1eb333cb73b43f7a1bf3a8 316772 doc optional libtasn1-doc_4.13-3+deb10u1_all.deb
+

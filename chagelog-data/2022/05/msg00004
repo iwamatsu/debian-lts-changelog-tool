@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 04 May 2022 15:55:46 +0200
+Source: libz-mingw-w64
+Binary: libz-mingw-w64 libz-mingw-w64-dev
+Architecture: source
+Version: 1.2.11+dfsg-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Stephen Kitt <skitt@debian.org>
+Changed-By: Andreas Rönnquist <gusnan@debian.org>
+Description:
+ libz-mingw-w64 - compression library - Windows runtime
+ libz-mingw-w64-dev - compression library - Windows development files
+Changes:
+ libz-mingw-w64 (1.2.11+dfsg-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-25032: Fix a bug that can crash deflate on some input
+     when using Z_FIXED
+Checksums-Sha1:
+ f913e1a37362ee36b977b59f5b441921d2d1f8b6 2090 libz-mingw-w64_1.2.11+dfsg-1+deb9u1.dsc
+ 1886ba62dcf49bcc040523fdd150d50dbd88aebf 349668 libz-mingw-w64_1.2.11+dfsg.orig.tar.xz
+ a23cf8cc22db07ed6b033270c3945b5b3887717e 9476 libz-mingw-w64_1.2.11+dfsg-1+deb9u1.debian.tar.xz
+ 8ba51f2efbc0fa364165cd020f7a6cdad5a6fe78 6056 libz-mingw-w64_1.2.11+dfsg-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 3804cfde61992ebe603701af127d53c715510735f88c12908717bac011226a33 2090 libz-mingw-w64_1.2.11+dfsg-1+deb9u1.dsc
+ 9d0404bc07629383dd71cb0b50749d7dcd156d28476f8a197bfb0f50005e4177 349668 libz-mingw-w64_1.2.11+dfsg.orig.tar.xz
+ ee9bb9a87c3ab1974b8b62f4ee5159ae088ab4a15be463fbcfc6b6d496fd4e1f 9476 libz-mingw-w64_1.2.11+dfsg-1+deb9u1.debian.tar.xz
+ 36a85029837803158968896bff81730293db810bc80d7a432447edab35c1da78 6056 libz-mingw-w64_1.2.11+dfsg-1+deb9u1_source.buildinfo
+Files:
+ bd6e45621b0154a040a8407da45955ed 2090 libs optional libz-mingw-w64_1.2.11+dfsg-1+deb9u1.dsc
+ 01cc763786fae1dac0876e8ec87cd33d 349668 libs optional libz-mingw-w64_1.2.11+dfsg.orig.tar.xz
+ e99321ee26c91741df041481718a5727 9476 libs optional libz-mingw-w64_1.2.11+dfsg-1+deb9u1.debian.tar.xz
+ 1bc99d338674ac31c440f607fec74dd8 6056 libs optional libz-mingw-w64_1.2.11+dfsg-1+deb9u1_source.buildinfo
+

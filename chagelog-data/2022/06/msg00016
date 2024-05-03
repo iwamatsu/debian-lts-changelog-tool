@@ -1,0 +1,58 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 20 Jun 2022 14:18:17 +0200
+Source: sleuthkit
+Binary: sleuthkit libtsk13 libtsk-dev
+Architecture: source
+Version: 4.4.0-5+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Forensics <forensics-devel@lists.alioth.debian.org>
+Changed-By: Andreas Rönnquist <gusnan@debian.org>
+Description:
+ libtsk-dev - library for forensics analysis (development files)
+ libtsk13   - library for forensics analysis on volume and filesystem data
+ sleuthkit  - tools for forensics analysis on volume and filesystem data
+Changes:
+ sleuthkit (4.4.0-5+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team
+   * Mark __gnu_ symbols as MISSING
+   * CVE-2020-10232: Prevent a stack buffer overflow in yaffsfs_istat by
+     increasing the buffer size to the size required by tsk_fs_time_to_str.
+   * CVE-2018-19497: In The Sleuth Kit (TSK) through 4.6.4, hfs_cat_traverse in
+     tsk/fs/hfs.c does not properly determine when a key length is too large,
+     which allows attackers to cause a denial of service (SEGV on unknown
+     address with READ memory access in a tsk_getu16 call in
+     hfs_dir_open_meta_cb in tsk/fs/hfs_dent.c).
+   * CVE-2020-1010065: The Sleuth Kit 4.6.0 and earlier is affected by: Integer
+     Overflow. The impact is: Opening crafted disk image triggers crash in
+     tsk/fs/hfs_dent.c:237. The component is: Overflow in fls tool used on HFS
+     image. Bug is in tsk/fs/hfs.c file in function hfs_cat_traverse() in lines:
+     952, 1062. The attack vector is: Victim must open a crafted HFS filesystem
+     image.
+   * CVE-2017-13760: fls hangs on a corrupt exfat image in tsk_img_read() in
+     tsk/img/img_io.c in libtskimg.a.
+   * CVE-2017-13756: Opening a crafted disk image triggers infinite recursion in
+     dos_load_ext_table() in tsk/vs/dos.c in libtskvs.a, as demonstrated by
+     mmls.
+   * CVE-2017-13755: Opening a crafted ISO 9660 image triggers an out-of-bounds
+     read in iso9660_proc_dir() in tsk/fs/iso9660_dent.c in libtskfs.a, as
+     demonstrated by fls.
+Checksums-Sha1:
+ c8808fba785096d592027760942f3afd10c95357 2176 sleuthkit_4.4.0-5+deb9u1.dsc
+ 61aa651b2ba73474a4c721077cadd20808cfea45 9025218 sleuthkit_4.4.0.orig.tar.gz
+ 186cd73f69be4c7e29d2ea86f8b6fcc96a862492 39484 sleuthkit_4.4.0-5+deb9u1.debian.tar.xz
+ 62a1f6819ba0f2cf45cb95899dfdb74f7fede4a4 7132 sleuthkit_4.4.0-5+deb9u1_source.buildinfo
+Checksums-Sha256:
+ dac18b56dde1ca50e8444204579d18e1d8ef95e2a9e175c517b1648d35d7e057 2176 sleuthkit_4.4.0-5+deb9u1.dsc
+ 83fff175cf1d5505f80b0c43d15ab0025e5bf91e03aeee528c68de07b3b53336 9025218 sleuthkit_4.4.0.orig.tar.gz
+ ad9c09cf288058d8f41329279dba7e6bd119c208ea82bb8b8a3621549d24e364 39484 sleuthkit_4.4.0-5+deb9u1.debian.tar.xz
+ 7d3d2db4b2d06c48cc5f7d5db2ba1bee59bce995db09d1d137e98c167050cbf0 7132 sleuthkit_4.4.0-5+deb9u1_source.buildinfo
+Files:
+ e1fbba5710db0b2244996751c95b0d08 2176 admin optional sleuthkit_4.4.0-5+deb9u1.dsc
+ 25a220e6e418cc68c12a902507c2f307 9025218 admin optional sleuthkit_4.4.0.orig.tar.gz
+ c25a2217c8dc4b12310af73714cb22a2 39484 admin optional sleuthkit_4.4.0-5+deb9u1.debian.tar.xz
+ acd3160656320cf7b02a5baeb03ff921 7132 admin optional sleuthkit_4.4.0-5+deb9u1_source.buildinfo
+

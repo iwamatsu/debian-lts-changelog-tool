@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat,  3 Sep 2022 23:35:17 CEST
+Source: ghostscript
+Architecture: source
+Version: 9.27~dfsg-2+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 08072a8dd9dd85ae0e104a7b15721c94b3d7b3c3 2946 ghostscript_9.27~dfsg-2+deb10u6.dsc
+ 885aa098b0d2fb25b84cea4861639c7becad8481 126324 ghostscript_9.27~dfsg-2+deb10u6.debian.tar.xz
+ f77928d3001e295d6ce3765c489c54c9de88179f 12575 ghostscript_9.27~dfsg-2+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ e729529135c1103c4c22d404e6dc1394238360ac7a166451541fbc1830915ad0 2946 ghostscript_9.27~dfsg-2+deb10u6.dsc
+ d06f0541d1cb64e9c755bb359b3aeb12e0e13ceb3dcb50cdc324e2f7d168078a 126324 ghostscript_9.27~dfsg-2+deb10u6.debian.tar.xz
+ 01bea78611e04496cf7e5eb40d7de20f80458509a94beeeb85b4d4cc0e81e5e9 12575 ghostscript_9.27~dfsg-2+deb10u6_amd64.buildinfo
+Changes:
+ ghostscript (9.27~dfsg-2+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2020-27792:
+     A heap-based buffer over write vulnerability was found in GhostScript's
+     lp8000_print_page() function in gdevlp8k.c file. An attacker could trick a
+     user to open a crafted PDF file, triggering the heap buffer overflow that
+     could lead to memory corruption or a denial of service.
+Files:
+ 10e575cbfe627741577c410f1bcbdd6e 2946 text optional ghostscript_9.27~dfsg-2+deb10u6.dsc
+ 844f3e121035e07e484bc94160e13ce8 126324 text optional ghostscript_9.27~dfsg-2+deb10u6.debian.tar.xz
+ 1056f424fe185339f2708207809ecb94 12575 text optional ghostscript_9.27~dfsg-2+deb10u6_amd64.buildinfo
+

@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 31 Jan 2023 10:41:03 +0100
+Source: shim
+Architecture: source
+Version: 15.7-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian EFI team <debian-efi@lists.debian.org>
+Changed-By: Steve McIntyre <93sam@debian.org>
+Changes:
+ shim (15.7-1~deb10u1) buster-security; urgency=medium
+ .
+   * New upstream release fixing more bugs
+   * Add further patches from upstream:
+     + Make sbat_var.S parse right with buggy gcc/binutils
+     + Enable NX support at build time, as required by policy for signing
+       new shim binaries.
+   * Block Debian grub binaries with sbat < 4 (see #1024617)
+   * Rebuild for buster
+     + Add patches reverting arm64 build system changes so we can
+       build using older binutils.
+Checksums-Sha1:
+ fe8e00541722f9bd6cacdd551ae83e38215bb33b 2326 shim_15.7-1~deb10u1.dsc
+ c0e7c121f0c1aaa0332766def5a328d45064d78a 1334863 shim_15.7.orig.tar.bz2
+ f0c9eb46256b59a260d599ac7c0715e519fac613 35232 shim_15.7-1~deb10u1.debian.tar.xz
+ deb795a6fe12721466bee469e782dc480f8ae54e 6221 shim_15.7-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ af75d420be09558cb16a1a46f2c65e96bbe35ae3d99ad5889fdb3b3a90cdcbf3 2326 shim_15.7-1~deb10u1.dsc
+ 87cdeb190e5c7fe441769dde11a1b507ed7328e70a178cd9858c7ac7065cfade 1334863 shim_15.7.orig.tar.bz2
+ 59b9b7b214b8b0ae2d29fa8734e94bd791354111f8cae27582efee68c0d0b49b 35232 shim_15.7-1~deb10u1.debian.tar.xz
+ bc1c462a07db80859469540db21b98342af4340c06283125ffab21437c05d630 6221 shim_15.7-1~deb10u1_source.buildinfo
+Files:
+ 213000f32bcde7205e357c9cece8d69f 2326 admin optional shim_15.7-1~deb10u1.dsc
+ 63486ab76be78a51e8491136ef2e0183 1334863 admin optional shim_15.7.orig.tar.bz2
+ 14e2b46cbeba2c11b66eb6aae432ea32 35232 admin optional shim_15.7-1~deb10u1.debian.tar.xz
+ 7533bd57f567f350a5fc92c85ac79a56 6221 admin optional shim_15.7-1~deb10u1_source.buildinfo
+

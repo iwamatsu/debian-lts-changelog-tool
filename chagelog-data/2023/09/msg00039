@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 01 Aug 2023 09:15:51 +0200
+Source: rust-cbindgen
+Architecture: source
+Version: 0.24.3-2~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ rust-cbindgen (0.24.3-2~deb10u1) buster-security; urgency=medium
+ .
+   * Backport to buster.
+Checksums-Sha1:
+ d1242c1b25e9ade2d446e162d87c5cf3115e8552 2352 rust-cbindgen_0.24.3-2~deb10u1.dsc
+ db96ad7d12d7c61d6faa73d0af8acb87bcd2fbfc 133887 rust-cbindgen_0.24.3.orig.tar.gz
+ 90c9062425bb53df5590417fdd64ecf54f46080b 2315972 rust-cbindgen_0.24.3-2~deb10u1.debian.tar.xz
+ 99f7c5be270c1234a59bf7c1349df9c3b107a9af 5905 rust-cbindgen_0.24.3-2~deb10u1_source.buildinfo
+Checksums-Sha256:
+ 229a8451296c07b692ceb28fa03232bbd415d53b55ec4a7c7c81414ab8e265bd 2352 rust-cbindgen_0.24.3-2~deb10u1.dsc
+ 9fffca8a8ab40701232f6f91e3a1aaf4e6ff42e58d7c657dacdf406588691e32 133887 rust-cbindgen_0.24.3.orig.tar.gz
+ 517238a03e8859237b1921eb0bafe076821bd7a4f98208d6d453e76c7876c4c1 2315972 rust-cbindgen_0.24.3-2~deb10u1.debian.tar.xz
+ 2cd91353de0b4b19e733b1be4ba6df654956dba2e801ea63ceba1b7d7b3e83ed 5905 rust-cbindgen_0.24.3-2~deb10u1_source.buildinfo
+Files:
+ cc55d054e81d63e3629d9c8966c7289f 2352 utils optional rust-cbindgen_0.24.3-2~deb10u1.dsc
+ c30389cdcb1d4dc7605b47f5ede2412c 133887 utils optional rust-cbindgen_0.24.3.orig.tar.gz
+ 6d6cc06c8bd165465ab81f27f29bf0f0 2315972 utils optional rust-cbindgen_0.24.3-2~deb10u1.debian.tar.xz
+ 8c79d1acaad8703cd5e7e4fce91bc1a3 5905 utils optional rust-cbindgen_0.24.3-2~deb10u1_source.buildinfo
+

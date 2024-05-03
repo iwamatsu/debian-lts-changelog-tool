@@ -1,0 +1,100 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 08 Mar 2022 11:53:19 +0000
+Source: twisted
+Binary: python3-twisted python3-twisted-bin python3-twisted-bin-dbg python-twisted-bin python-twisted-bin-dbg python-twisted-core python-twisted-conch python-twisted-mail python-twisted-names python-twisted-news python-twisted-runner python-twisted-runner-dbg python-twisted-web python-twisted-words twisted-doc python-twisted
+Architecture: source amd64 all
+Version: 16.6.0-2+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-twisted - Event-based framework for internet applications (dependency packa
+ python-twisted-bin - Event-based framework for internet applications
+ python-twisted-bin-dbg - Event-based framework for internet applications (debug extension)
+ python-twisted-conch - twisted dummy package for Twisted SSH Implementation
+ python-twisted-core - Event-based framework for internet applications
+ python-twisted-mail - twisted dummy package for SMTP, IMAP and POP protocol implementat
+ python-twisted-names - twisted package for DNS protocol implementation
+ python-twisted-news - twisted dummy package for NNTP protocol implementation
+ python-twisted-runner - twisted dummy package for process management
+ python-twisted-runner-dbg - twisted dummy package for process management
+ python-twisted-web - twisted dummy package for HTTP protocol implementation
+ python-twisted-words - twisted dummy package for Chat and Instant Messaging
+ python3-twisted - Event-based framework for internet applications
+ python3-twisted-bin - Event-based framework for internet applications
+ python3-twisted-bin-dbg - Event-based framework for internet applications (debug extension)
+ twisted-doc - Official documentation of Twisted
+Changes:
+ twisted (16.6.0-2+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-21716: Prevent an issue where SSH client and server implementions
+     could accept an infinite amount of data for the peer's SSH version
+     identifier so that a buffer uses all available memory.
+Checksums-Sha1:
+ 6005bd3fd7072f35d463c685612acfae30c3f0c7 3461 twisted_16.6.0-2+deb9u2.dsc
+ 57ea06c54e59c314f904870946c4a3586d7b86ea 2979747 twisted_16.6.0.orig.tar.bz2
+ 30488d85524298f0dfe91e55f81afd10b9719827 29840 twisted_16.6.0-2+deb9u2.debian.tar.xz
+ 215182f395f16f5647386ea1ed11fdd67b841419 77896 python-twisted-bin-dbg_16.6.0-2+deb9u2_amd64.deb
+ 7e7ab069af43702b2d8ae6e3a8e718a169af9095 23268 python-twisted-bin_16.6.0-2+deb9u2_amd64.deb
+ 4e0e9fbf175aaf627ea66c329587aceabc78049b 32702 python-twisted-conch_16.6.0-2+deb9u2_all.deb
+ 2e9030f334d9e879c88e7ae64c9d795548a74e39 1981888 python-twisted-core_16.6.0-2+deb9u2_all.deb
+ 69576820d44ce0eb321a544a3942d0ef38feb722 27740 python-twisted-mail_16.6.0-2+deb9u2_all.deb
+ 3a479593ef3de797dc1c8211069ec5f3499b3509 23218 python-twisted-names_16.6.0-2+deb9u2_all.deb
+ 6aef1dfee23839c61a8fd67571f01dd0d81dcfa6 12280 python-twisted-news_16.6.0-2+deb9u2_all.deb
+ ea7617587bbdbb86fb6bbfdbb54da39c7dcd4f7a 948 python-twisted-runner-dbg_16.6.0-2+deb9u2_all.deb
+ 30f499ff6e3e8c4b477ac671e9ddee13c45347cb 12294 python-twisted-runner_16.6.0-2+deb9u2_all.deb
+ ce8e56df024562c55e28f406bf10d14df4cc9f6c 80336 python-twisted-web_16.6.0-2+deb9u2_all.deb
+ 9eebf6a51b9b5c0620befbb6ac9ab8ada157d527 24972 python-twisted-words_16.6.0-2+deb9u2_all.deb
+ 07dce4fedf9a956b80566591a42c97389bdf28e2 12704 python-twisted_16.6.0-2+deb9u2_all.deb
+ e804d692fc5357e9290495462fe81bd16f2a79a9 47218 python3-twisted-bin-dbg_16.6.0-2+deb9u2_amd64.deb
+ 36fee6e2ddd3cc7efaf3862c38246be85c907f56 18546 python3-twisted-bin_16.6.0-2+deb9u2_amd64.deb
+ f1c5feef24fc9797d54c5a6b3db42f5bf0c243c3 1675644 python3-twisted_16.6.0-2+deb9u2_all.deb
+ ec8dfc89992890e14da39716aeb97cc8d8e3911a 685990 twisted-doc_16.6.0-2+deb9u2_all.deb
+ 128b5d9292fafc8dacc8c9b0de37a44bb3853fda 13377 twisted_16.6.0-2+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ cf2706e377098c8255eb67092c10df04b7916231e8c16575159edb31135b10f5 3461 twisted_16.6.0-2+deb9u2.dsc
+ d0fe115ea7ef8cf632d05103de60356c6e992b2153d6830bdc4476f8accb1fca 2979747 twisted_16.6.0.orig.tar.bz2
+ 34f91c8ea1081c9dc33f81fb7797d0c3112ae96b14131ba32f154cfcbf189521 29840 twisted_16.6.0-2+deb9u2.debian.tar.xz
+ 08630cdb8e6b004c85e3b5cbe370cdbf3f5383df4aff8abfa6f421c1e78e4439 77896 python-twisted-bin-dbg_16.6.0-2+deb9u2_amd64.deb
+ 1be99369ad273b4eaa94b74b63ae8ac7f581d291a03c44076a36bc9f4f001db8 23268 python-twisted-bin_16.6.0-2+deb9u2_amd64.deb
+ 3cdad1a3981471d88cc80d061e6c22880384a28e6baf061051bc9b9a4870ad28 32702 python-twisted-conch_16.6.0-2+deb9u2_all.deb
+ 83424580756c23a2741064ba1ab88af39a4fcd90769cbe3b1e3f0305918c02fd 1981888 python-twisted-core_16.6.0-2+deb9u2_all.deb
+ 610a36c7cad265faba848c4e1fad6e78ed4fcd8a8e96338b6095089ed8b9fa16 27740 python-twisted-mail_16.6.0-2+deb9u2_all.deb
+ 880e27f26bafc7b06ef81fbe51a6907ebea4062c097cb216c204dffd41e7691f 23218 python-twisted-names_16.6.0-2+deb9u2_all.deb
+ 907e7696625247d94a64a49bcb21169ff640c444ff3696bbd0a66e99cccea310 12280 python-twisted-news_16.6.0-2+deb9u2_all.deb
+ 1a5386ee1a656e38024b9b2d9b3bd573982a533a2ddfccb5877d42caad42bf40 948 python-twisted-runner-dbg_16.6.0-2+deb9u2_all.deb
+ 41a41d9f0263040efbdba2418043af3d17f6fb7a4d6dd98358f72ed3b5ba34b8 12294 python-twisted-runner_16.6.0-2+deb9u2_all.deb
+ 7ea41798a6582537180febe54dcaae93a7a5c77ca9087be6611dec9079d3fee7 80336 python-twisted-web_16.6.0-2+deb9u2_all.deb
+ aaaeacf08d530453174d4661629d477904f87f516d00ca5002adbe833640ca86 24972 python-twisted-words_16.6.0-2+deb9u2_all.deb
+ 8abe9f0f3d76393f0f797394f91e491a5078e21ef51a64cef0365e2e1f30c4ac 12704 python-twisted_16.6.0-2+deb9u2_all.deb
+ 519b200c154db98ddf013d5aeda831c0af5a445a1ac3997ebcd28602b287f17d 47218 python3-twisted-bin-dbg_16.6.0-2+deb9u2_amd64.deb
+ 2b7240e14a6debd69054e120550d80998c72b8894e4647c1eabb2c388bfb638b 18546 python3-twisted-bin_16.6.0-2+deb9u2_amd64.deb
+ 503496074f94facdabadf2af9257bfccdaf295d6e9343f0a86cfb5c1e7285ef7 1675644 python3-twisted_16.6.0-2+deb9u2_all.deb
+ 70483c2125f505a6ed41064de58e72874108261e32e539227b456b776bcb3e2e 685990 twisted-doc_16.6.0-2+deb9u2_all.deb
+ 495c1c1756acd112605d1d765580fe023d2012dc459f2aee2bf3a08f2f0298c2 13377 twisted_16.6.0-2+deb9u2_amd64.buildinfo
+Files:
+ 9d3d2360932cf603aa5ec07896fb8b9f 3461 python optional twisted_16.6.0-2+deb9u2.dsc
+ 54a88ffe773d5a83c91fcfe86044b094 2979747 python optional twisted_16.6.0.orig.tar.bz2
+ 9cad701494ca27c5899d514986a2cf40 29840 python optional twisted_16.6.0-2+deb9u2.debian.tar.xz
+ 4c98dd499b2b1bfe02d223c65c0520c6 77896 debug extra python-twisted-bin-dbg_16.6.0-2+deb9u2_amd64.deb
+ b3349dbdfff4b4be0bfb3e11a5a0f4fc 23268 python optional python-twisted-bin_16.6.0-2+deb9u2_amd64.deb
+ 4237d1494bbdc376f00a92d09b5ab9db 32702 python optional python-twisted-conch_16.6.0-2+deb9u2_all.deb
+ 4ae72b0014adda71222ce72a0a96bf34 1981888 python optional python-twisted-core_16.6.0-2+deb9u2_all.deb
+ c6241bd1c1c081613dfa1732c7b3febf 27740 python optional python-twisted-mail_16.6.0-2+deb9u2_all.deb
+ 25e0906520ab4bea852c9b81665d3899 23218 python optional python-twisted-names_16.6.0-2+deb9u2_all.deb
+ c53716701a87fc66b33ebee739a5ac77 12280 python optional python-twisted-news_16.6.0-2+deb9u2_all.deb
+ 3f28ff5e79e9aedfeab35377fc974b95 948 debug extra python-twisted-runner-dbg_16.6.0-2+deb9u2_all.deb
+ 619ec25cdbae92866fb6e30262453105 12294 python optional python-twisted-runner_16.6.0-2+deb9u2_all.deb
+ 2612f2daa02f2d1c93ee306a11b6959c 80336 python optional python-twisted-web_16.6.0-2+deb9u2_all.deb
+ 3a76efeb78f8e5e8494d1d5a596a68ff 24972 python optional python-twisted-words_16.6.0-2+deb9u2_all.deb
+ cec3525bd7c3989882fa65a28c242efe 12704 python extra python-twisted_16.6.0-2+deb9u2_all.deb
+ e8788beccf3020e9180771fe4b9285ac 47218 debug extra python3-twisted-bin-dbg_16.6.0-2+deb9u2_amd64.deb
+ c4f650bd737bda7ee74fe7843e1ff138 18546 python optional python3-twisted-bin_16.6.0-2+deb9u2_amd64.deb
+ 4e397e0140d33584ec5199eb1b364eb7 1675644 python optional python3-twisted_16.6.0-2+deb9u2_all.deb
+ 811ca0594904443de7645a33cbaec90c 685990 doc extra twisted-doc_16.6.0-2+deb9u2_all.deb
+ 39e9992bec617e0c7e57d0118147ca1e 13377 python optional twisted_16.6.0-2+deb9u2_amd64.buildinfo
+

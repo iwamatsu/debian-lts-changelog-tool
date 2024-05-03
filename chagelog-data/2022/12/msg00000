@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 29 Nov 2022 22:31:21 +1030
+Source: snapd
+Built-For-Profiles: noudeb
+Architecture: source
+Version: 2.37.4-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Michael Hudson-Doyle <mwhudson@debian.org>
+Changed-By: Alex Murray <alex.murray@canonical.com>
+Changes:
+ snapd (2.37.4-1+deb10u2) buster-security; urgency=medium
+ .
+   * SECURITY UPDATE: Local privilege escalation
+     - snap-confine: Fix race condition in snap-confine when preparing a
+       private tmp mount namespace for a snap
+     - CVE-2022-3328
+Checksums-Sha1:
+ 5fc3a0ad4ad5a3de7d4123a101836c71abfb5a1c 3524 snapd_2.37.4-1+deb10u2.dsc
+ 2173849bdaafcee7636921b177b7f7d8c97e23c3 72384 snapd_2.37.4-1+deb10u2.debian.tar.xz
+ 183b1e2a6b5f7fe87c20a564826d397f664e2297 16212 snapd_2.37.4-1+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 7792fcc4584ce44d9ec344623a5274c973950a79b1ddd9970916fd58124edc59 3524 snapd_2.37.4-1+deb10u2.dsc
+ bcd27262950b3ad3f311ab4918fdc18a66757617600ab23bebe3a5d5885ead4d 72384 snapd_2.37.4-1+deb10u2.debian.tar.xz
+ 590b3a190910dffcc0e7546aa82187342dd0469d0a6d46e85aa0b59a567f3876 16212 snapd_2.37.4-1+deb10u2_source.buildinfo
+Files:
+ 7d8fe7458c850ecf2934f522029c8c62 3524 devel optional snapd_2.37.4-1+deb10u2.dsc
+ 497727b2d3b050aea7068c2c43619378 72384 devel optional snapd_2.37.4-1+deb10u2.debian.tar.xz
+ 872f80feb276cc36f73a706b4b6515dd 16212 devel optional snapd_2.37.4-1+deb10u2_source.buildinfo
+

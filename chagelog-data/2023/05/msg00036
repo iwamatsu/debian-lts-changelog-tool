@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 30 May 2023 22:46:43 +0200
+Source: sssd
+Architecture: source
+Version: 1.16.3-3.2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ sssd (1.16.3-3.2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Bump minimum version for libsss-certmap0 in sssd-common's Depends: field,
+     as the CVE-2022-4254 fix from 1.16.3-3.2+deb10u1 introduces new symbols
+     which are used in sssd-common's sssd_pam.  (Without the version bump one
+     can upgrade sssd-common without upgrading libsss-certmap0, which breaks
+     SSSD.)
+Checksums-Sha1:
+ 2b9af621211293c95ad73ce8f4e764d78e9edd93 4953 sssd_1.16.3-3.2+deb10u2.dsc
+ b8d7072ac09eedf561765f3dcd05286edb188b49 124211 sssd_1.16.3-3.2+deb10u2.diff.gz
+ 675f96246ca9ec589055db0ce47c0f95a32ad92c 30528 sssd_1.16.3-3.2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 3b57cdac4f512abdc27940765665d236cf415a08d3e35ea1675352ac247d3428 4953 sssd_1.16.3-3.2+deb10u2.dsc
+ db7f0034183e54eb7e041b5719e9e454da32d1e61b243e8aee5b1dd8f8997ffa 124211 sssd_1.16.3-3.2+deb10u2.diff.gz
+ 86850f5e8c5ce46b64e5274e6ebb4f179bbe335b9e0f53935f1d8854a91ad304 30528 sssd_1.16.3-3.2+deb10u2_amd64.buildinfo
+Files:
+ 91a61bfd0e5795fa927618d26d4f5e82 4953 utils optional sssd_1.16.3-3.2+deb10u2.dsc
+ ec234adde41319cdb224f9ad9a1fd9bc 124211 utils optional sssd_1.16.3-3.2+deb10u2.diff.gz
+ 1cfbc0081af8c1686178ebdf8b6f0c13 30528 utils optional sssd_1.16.3-3.2+deb10u2_amd64.buildinfo
+

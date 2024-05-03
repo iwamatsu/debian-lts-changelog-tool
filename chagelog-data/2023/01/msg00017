@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 20 Jan 2023 09:43:51 +0100
+Source: swift
+Architecture: source
+Version: 2.19.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1029200
+Changes:
+ swift (2.19.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * CVE-2022-47950 / OSSA-2023-001: Arbitrary file access through custom S3 XML
+     entities. Add upstream patch backported to Buster:
+     CVE-2022-47950-stable-rocky.patch (Closes: #1029200).
+   * Add fix-test_host_is_storage_domain.patch.
+Checksums-Sha1:
+ 28b34cc1f4315c9f8d434feb01b6c3aa932e675b 3296 swift_2.19.1-1+deb10u1.dsc
+ 8937bc49580a0ba77408326fdf11b064a6096827 2120732 swift_2.19.1.orig.tar.xz
+ e1260b4a674e679890091c4d9dc02d33304b18bc 23540 swift_2.19.1-1+deb10u1.debian.tar.xz
+ ae3e602475dd85c5dd9cf85875bc6518f3c95167 15561 swift_2.19.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3a92fd4254282638c50d3d63de6038c47c25c5eafb7c694bfdb6745290f774f2 3296 swift_2.19.1-1+deb10u1.dsc
+ fe8c3c2a601b34e014f8397d1773a8b61477c06a7b41c8f6d04706c678fc5375 2120732 swift_2.19.1.orig.tar.xz
+ 20e8c774bc2022a516c0098833d75ef22a3577d8522d730c37a9ba3d5226d198 23540 swift_2.19.1-1+deb10u1.debian.tar.xz
+ 21a4d8f866ec9032c6c7ef363a2d98ae695a73adb0596c3a59e2c5f1d2cd83f5 15561 swift_2.19.1-1+deb10u1_amd64.buildinfo
+Files:
+ b27fe172200d125e58813e56c8c216c5 3296 net optional swift_2.19.1-1+deb10u1.dsc
+ 905fffd834288d1d293ba504f4b53d50 2120732 net optional swift_2.19.1.orig.tar.xz
+ 57cb40cd333e889c0009ab3720d55df0 23540 net optional swift_2.19.1-1+deb10u1.debian.tar.xz
+ 65a9dfd047221f5490ead086bdeb342f 15561 net optional swift_2.19.1-1+deb10u1_amd64.buildinfo
+

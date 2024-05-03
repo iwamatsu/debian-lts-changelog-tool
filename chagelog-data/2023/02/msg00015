@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 10 Feb 2023 23:37:28 CET
+Source: snort
+Architecture: source
+Version: 2.9.20-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Javier Fernández-Sanguino Peña <jfs@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ ffc6bdc7098294dfad74e95025beb950f27b3154 2612 snort_2.9.20-0+deb10u1.dsc
+ 4af284a39d9efb3ad7fe003e23f7800e9537417f 6661238 snort_2.9.20.orig.tar.gz
+ d1454a33f3a094090872ce1ec6e0e3b4f2f4a0f5 685472 snort_2.9.20-0+deb10u1.debian.tar.xz
+ acf75360286fa5bb330675a9081ad4d2a2242e9c 12013 snort_2.9.20-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3cf40a565290331b683a26989f149dadb3a45e8d3d57c1e00356b16ceceb2b95 2612 snort_2.9.20-0+deb10u1.dsc
+ 58e45c45c17e5a63429ea1bedae695c53a3dacbadafbe999441e35186665b2b8 6661238 snort_2.9.20.orig.tar.gz
+ 63be67492e9100b5bc8a0a9b6ff42a9f51f21f7d0d9bf1a880f49d082374da87 685472 snort_2.9.20-0+deb10u1.debian.tar.xz
+ f25f31022274736aee88ee7de11ef9802157190e0d68509faae1904fc30dcd8c 12013 snort_2.9.20-0+deb10u1_amd64.buildinfo
+Changes:
+ snort (2.9.20-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * New upstream version 2.9.20.
+     -Fix CVE-2021-40114, CVE-2021-34749, CVE-2021-1495, CVE-2021-1494,
+      CVE-2021-1224, CVE-2021-1223,CVE-2020-3315, CVE-2020-3299,
+      CVE-2021-1236.
+   * Refresh the patches.
+   * Drop autoconf, fix_compile_errors and fix_ftbfs_in_manual.tex patches
+     because they are apparently no longer required.
+Files:
+ e1f6f72ea83f6cdad15be4f5a88fea79 2612 net optional snort_2.9.20-0+deb10u1.dsc
+ 2668bfae6b88cb50ae195a3ab1fda64c 6661238 net optional snort_2.9.20.orig.tar.gz
+ 458081c3e1629b96f0a2096d22896e0c 685472 net optional snort_2.9.20-0+deb10u1.debian.tar.xz
+ 460bb78d33f0b0a07cd3c2a6db0db695 12013 net optional snort_2.9.20-0+deb10u1_amd64.buildinfo
+

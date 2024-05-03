@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 21 Nov 2022 16:48:59 +0100
+Source: libarchive
+Architecture: source
+Version: 3.3.3-4+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Peter Pentchev <roam@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 945287 1001986 1001990
+Changes:
+ libarchive (3.3.3-4+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-19221: archive_wstring_append_from_mbs in archive_string.c
+     has an out-of-bounds read because of an incorrect mbrtowc or mbtowc
+     call. For example, bsdtar crashes via a crafted archive.
+     (Closes: #945287)
+   * CVE-2021-23177: an improper link resolution flaw while extracting an
+     archive can lead to changing the access control list (ACL) of the
+     target of the link. An attacker may provide a malicious archive to a
+     victim user, who would trigger this flaw when trying to extract the
+     archive. A local attacker may use this flaw to change the ACL of a
+     file on the system and gain more privileges. (Closes: #1001986)
+   * CVE-2021-31566: an improper link resolution flaw can occur while
+     extracting an archive leading to changing modes, times, access control
+     lists, and flags of a file outside of the archive. An attacker may
+     provide a malicious archive to a victim user, who would trigger this
+     flaw when trying to extract the archive. A local attacker may use this
+     flaw to gain more privileges in a system. (Closes: #1001990)
+Checksums-Sha1:
+ 9648bb8a593e3af4cfa43c55511cd86f9f9af47e 2389 libarchive_3.3.3-4+deb10u2.dsc
+ 0678fc50d64a95e644b320e38c7446b738d369a3 24592 libarchive_3.3.3-4+deb10u2.debian.tar.xz
+ 32eec367153439cbf0c6d6f23ffbfc438caec1a1 7410 libarchive_3.3.3-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 06691583f7308cbee040af499751507d8c197d85e92bf20b268adb2ff12e7d30 2389 libarchive_3.3.3-4+deb10u2.dsc
+ 895a83cc3c6de67969e1063ee3f51b3337a7dd128cedbb34e7132ea56c5431ae 24592 libarchive_3.3.3-4+deb10u2.debian.tar.xz
+ 18d687a01a05509d1080d685bf8ed26bd39be390bc62cfa4c4cdf7e91bebbe29 7410 libarchive_3.3.3-4+deb10u2_amd64.buildinfo
+Files:
+ 078c92052835fc4c539b7702591545df 2389 libs optional libarchive_3.3.3-4+deb10u2.dsc
+ 6673a3f079d96086145763e3a89d60bd 24592 libs optional libarchive_3.3.3-4+deb10u2.debian.tar.xz
+ b80655db8ba3e2b0a10c90f724d6485b 7410 libs optional libarchive_3.3.3-4+deb10u2_amd64.buildinfo
+

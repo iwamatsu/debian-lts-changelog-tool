@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 07 Jul 2023 13:05:40 +0100
+Source: nsis
+Architecture: source
+Version: 3.04-1+deb9u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Thomas Gaugler <thomas@dadie.net>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ nsis (3.04-1+deb9u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Cherry-pick upstream commits to fix CVE-2023-37378.
+   * Hardcode VER_REVISION to ignore deb9u1 suffix.
+Checksums-Sha1:
+ f4fa09ca3a8906621fec65d0846c714ca62b9e31 2122 nsis_3.04-1+deb9u1.dsc
+ f5e9a27f04de42881eb59d0fa6002bd17fefda6e 1740579 nsis_3.04.orig.tar.bz2
+ 4c5a749c1ca8c21efb345e504c04a7ddbaef8dc5 21904 nsis_3.04-1+deb9u1.debian.tar.xz
+Checksums-Sha256:
+ befb404073fc1c952cc45085947c93db083a74d315b2a439ffae3e46add39c23 2122 nsis_3.04-1+deb9u1.dsc
+ 609536046c50f35cfd909dd7df2ab38f2e835d0da3c1048aa0d48c59c5a4f4f5 1740579 nsis_3.04.orig.tar.bz2
+ 94704faf715f606cd1dfd92e10f641de83890d26df52361453214d38301e2015 21904 nsis_3.04-1+deb9u1.debian.tar.xz
+Files:
+ b861b71781a79d9896f9b6e8981b686c 2122 devel optional nsis_3.04-1+deb9u1.dsc
+ da38a203cc51f8b967053863e1d7616c 1740579 devel optional nsis_3.04.orig.tar.bz2
+ 08fbf29e12ad19be3ae86eb513f0c456 21904 devel optional nsis_3.04-1+deb9u1.debian.tar.xz
+

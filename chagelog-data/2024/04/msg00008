@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 10 Apr 2024 20:46:20 +0300
+Source: pillow
+Architecture: source
+Version: 5.4.1-2+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ pillow (5.4.1-2+deb10u6) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-28219: buffer overflow in _imagingcms.c
+Checksums-Sha1:
+ 3b14c2b7388535cb2602566bd8091077e04f3fa5 2846 pillow_5.4.1-2+deb10u6.dsc
+ 480e72c23fe96c4241f87ed64661b5ffa6157718 12248208 pillow_5.4.1.orig.tar.xz
+ 8af5240d13ebd7c6f05c207ebbcd458aa2dfb852 24972 pillow_5.4.1-2+deb10u6.debian.tar.xz
+Checksums-Sha256:
+ 2178ffbff32912ceee9c3641e99342659711a3ae7b8688c92fa482e4c1a29f14 2846 pillow_5.4.1-2+deb10u6.dsc
+ db7f301e4bf1eade3321430014b71230492443015929a221163c6b52af68320d 12248208 pillow_5.4.1.orig.tar.xz
+ 98e99481265c77f0f8a999d0a0c4e977f45ee127840dd25c7a3dc0001c05ab0b 24972 pillow_5.4.1-2+deb10u6.debian.tar.xz
+Files:
+ 929b71c62d5015e88191e77d16aec1cc 2846 python optional pillow_5.4.1-2+deb10u6.dsc
+ c05bfe9b46c70b5823d9e25fa796ff19 12248208 python optional pillow_5.4.1.orig.tar.xz
+ 87844776bfe1cfb3742c2f3c3ddf3dfc 24972 python optional pillow_5.4.1-2+deb10u6.debian.tar.xz
+

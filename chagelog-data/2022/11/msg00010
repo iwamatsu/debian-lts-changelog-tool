@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 10 Nov 2022 00:46:44 CET
+Source: libjettison-java
+Architecture: source
+Version: 1.4.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 17e9de0429970cc1b3ddf27a3eb9e415b5760126 2284 libjettison-java_1.4.0-1+deb10u1.dsc
+ d045a60915f2dbd7af3df94580b0dabf47f9b20b 51596 libjettison-java_1.4.0.orig.tar.xz
+ 4d472ebb0182b22109663a9d4d8a6939144c7c64 3776 libjettison-java_1.4.0-1+deb10u1.debian.tar.xz
+ 579fa1db99bdc0b385ba25df5c456654b6b8db40 13562 libjettison-java_1.4.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ af44025cfacc4bb8e3ea50a42f24e699d0681e2f4a888dc4b50be7ea82c3db2a 2284 libjettison-java_1.4.0-1+deb10u1.dsc
+ f4324cedd04d0b2ec92225f7f56e1d6a8f780f6da77a35123075995d4af7cecf 51596 libjettison-java_1.4.0.orig.tar.xz
+ ae8c75d84cab29bbf9de35477c852b4515647ea4b3d8ddd2a4392288c60c6f75 3776 libjettison-java_1.4.0-1+deb10u1.debian.tar.xz
+ 30eab4c1e93cc6c4d357b59bc7f4564c35425443f34114e61c44adad8a80f42a 13562 libjettison-java_1.4.0-1+deb10u1_amd64.buildinfo
+Changes:
+ libjettison-java (1.4.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-40149:
+     It was discovered that libjettison-java, a collection of StAX parsers and
+     writers for JSON, was vulnerable to a denial-of-service attack, if the
+     attacker provided untrusted XML or JSON data.
+Files:
+ 4ff37ae390f11f66a7396b6daddcdcee 2284 java optional libjettison-java_1.4.0-1+deb10u1.dsc
+ 23b2c0dcbbd2228604f85b78f6314b3a 51596 java optional libjettison-java_1.4.0.orig.tar.xz
+ 01ed85cc619a7a29e77c90b24f11eaf3 3776 java optional libjettison-java_1.4.0-1+deb10u1.debian.tar.xz
+ 70b94d926137074a74b5a9dfcd1e03d8 13562 java optional libjettison-java_1.4.0-1+deb10u1_amd64.buildinfo
+

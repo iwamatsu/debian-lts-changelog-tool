@@ -1,0 +1,319 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 30 May 2023 10:49:33 -0400
+Source: kamailio
+Binary: kamailio kamailio-autheph-modules kamailio-autheph-modules-dbgsym kamailio-berkeley-bin kamailio-berkeley-bin-dbgsym kamailio-berkeley-modules kamailio-berkeley-modules-dbgsym kamailio-cnxcc-modules kamailio-cnxcc-modules-dbgsym kamailio-cpl-modules kamailio-cpl-modules-dbgsym kamailio-dbgsym kamailio-erlang-modules kamailio-erlang-modules-dbgsym kamailio-extra-modules kamailio-extra-modules-dbgsym kamailio-geoip-modules kamailio-geoip-modules-dbgsym kamailio-geoip2-modules kamailio-geoip2-modules-dbgsym kamailio-ims-modules kamailio-ims-modules-dbgsym kamailio-json-modules kamailio-json-modules-dbgsym kamailio-kazoo-modules kamailio-kazoo-modules-dbgsym kamailio-ldap-modules kamailio-ldap-modules-dbgsym kamailio-lua-modules kamailio-lua-modules-dbgsym kamailio-memcached-modules kamailio-memcached-modules-dbgsym kamailio-mongodb-modules kamailio-mongodb-modules-dbgsym kamailio-mono-modules kamailio-mono-modules-dbgsym kamailio-mysql-modules
+ kamailio-mysql-modules-dbgsym kamailio-outbound-modules kamailio-outbound-modules-dbgsym kamailio-perl-modules kamailio-perl-modules-dbgsym kamailio-phonenum-modules kamailio-phonenum-modules-dbgsym kamailio-postgres-modules kamailio-postgres-modules-dbgsym kamailio-presence-modules kamailio-presence-modules-dbgsym kamailio-python-modules kamailio-python-modules-dbgsym kamailio-python3-modules kamailio-python3-modules-dbgsym kamailio-rabbitmq-modules kamailio-rabbitmq-modules-dbgsym kamailio-radius-modules kamailio-radius-modules-dbgsym kamailio-redis-modules kamailio-redis-modules-dbgsym kamailio-ruby-modules kamailio-ruby-modules-dbgsym kamailio-sctp-modules kamailio-sctp-modules-dbgsym kamailio-snmpstats-modules kamailio-snmpstats-modules-dbgsym kamailio-sqlite-modules kamailio-sqlite-modules-dbgsym kamailio-systemd-modules kamailio-systemd-modules-dbgsym kamailio-tls-modules kamailio-tls-modules-dbgsym kamailio-unixodbc-modules kamailio-unixodbc-modules-dbgsym
+ kamailio-utils-modules kamailio-utils-modules-dbgsym kamailio-websocket-modules kamailio-websocket-modules-dbgsym kamailio-xml-modules kamailio-xml-modules-dbgsym kamailio-xmpp-modules
+ kamailio-xmpp-modules-dbgsym
+Architecture: source amd64
+Version: 5.2.1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ kamailio   - very fast, dynamic and configurable SIP server
+ kamailio-autheph-modules - authentication using ephemeral credentials for the Kamailio SIP s
+ kamailio-berkeley-bin - Berkeley database module for Kamailio - helper program
+ kamailio-berkeley-modules - Berkeley database module for the Kamailio SIP server
+ kamailio-cnxcc-modules - cnxcc modules for the Kamailio SIP server
+ kamailio-cpl-modules - CPL module (CPL interpreter engine) for the Kamailio SIP server
+ kamailio-erlang-modules - Erlang modules for the Kamailio SIP server
+ kamailio-extra-modules - Extra modules for the Kamailio SIP Server
+ kamailio-geoip-modules - geoip module for the Kamailio SIP Server
+ kamailio-geoip2-modules - geoip2 module for the Kamailio SIP Server
+ kamailio-ims-modules - IMS module for the Kamailio SIP server
+ kamailio-json-modules - Json parser and Json-RPC modules for the Kamailio SIP server
+ kamailio-kazoo-modules - kazoo modules for the Kamailio SIP server
+ kamailio-ldap-modules - LDAP modules for the Kamailio SIP server
+ kamailio-lua-modules - app_lua module for Kamailio Lua support
+ kamailio-memcached-modules - interface to the memcached server, for the Kamailio SIP server
+ kamailio-mongodb-modules - mongodb modules for the Kamailio SIP server
+ kamailio-mono-modules - app_mono module for the Kamailio SIP server
+ kamailio-mysql-modules - MySQL database connectivity module for Kamailio
+ kamailio-outbound-modules - SIP Outbound module for the Kamailio SIP server
+ kamailio-perl-modules - Perl extensions and database driver for the Kamailio SIP server
+ kamailio-phonenum-modules - phonenum modules for the Kamailio SIP server
+ kamailio-postgres-modules - PostgreSQL database connectivity module for the Kamailio SIP serv
+ kamailio-presence-modules - SIP presence modules for Kamailio
+ kamailio-python-modules - app_python module for the Kamailio SIP server
+ kamailio-python3-modules - The app_python3 module for the Kamailio SIP server
+ kamailio-rabbitmq-modules - RabbitMQ and AMQP integration modules for the Kamailio SIP server
+ kamailio-radius-modules - RADIUS modules for the Kamailio SIP server
+ kamailio-redis-modules - Redis database connectivity module for the Kamailio SIP server
+ kamailio-ruby-modules - The app_ruby module for Kamailio Ruby support
+ kamailio-sctp-modules - SCTP SIP transport module for the Kamailio SIP server
+ kamailio-snmpstats-modules - SNMP AgentX subagent module for the Kamailio SIP server
+ kamailio-sqlite-modules - SQLite database connectivity module for the Kamailio SIP server
+ kamailio-systemd-modules - systemd logging modules for the Kamailio SIP server
+ kamailio-tls-modules - TLS support for the Kamailio SIP server (authentication, transpor
+ kamailio-unixodbc-modules - unixODBC database connectivity module for the Kamailio SIP server
+ kamailio-utils-modules - Utility functions for the Kamailio SIP server
+ kamailio-websocket-modules - WebSocket module for the Kamailio SIP server
+ kamailio-xml-modules - XML based extensions for Kamailio's Management Interface
+ kamailio-xmpp-modules - XMPP gateway module for the Kamailio SIP server
+Changes:
+ kamailio (5.2.1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2020-27507: Prevent a potential denial-of-service (DoS) attack via a
+     buffer-overflow vulnerability which was caused by the Kamailio server
+     mishandling INVITE requests with duplicated fields.
+Checksums-Sha1:
+ d5888a208da01c75bee535af1c359b44c621cb57 5823 kamailio_5.2.1-1+deb10u1.dsc
+ 205eb2b60ac22c93aa7ec981a85f6f4268ec5726 12270091 kamailio_5.2.1.orig.tar.gz
+ 9bdeab14cdb91ae3040d1038c4d72e55d67d4690 27664 kamailio_5.2.1-1+deb10u1.debian.tar.xz
+ 3965bb29775e2bfa106e58142aaf6156d4d7d7d8 46204 kamailio-autheph-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 34c4aca2524d476ac36b9b9ab5b52479b128bcc0 201728 kamailio-autheph-modules_5.2.1-1+deb10u1_amd64.deb
+ c56e5c669ae7a17b4530e4774c8a86154fc62742 25056 kamailio-berkeley-bin-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 15ed3fd84315c2bd3bad7777733a337886d33d1c 181416 kamailio-berkeley-bin_5.2.1-1+deb10u1_amd64.deb
+ ac065b5b4eec3090e56d0522388258da453bc466 169144 kamailio-berkeley-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 7d42548dd17baa2490a1428446b24cd756e7dd3e 265372 kamailio-berkeley-modules_5.2.1-1+deb10u1_amd64.deb
+ 5be47e3cc0290ca2e9a70cdb1ea832220b729965 68728 kamailio-cnxcc-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ e749a80a63531e817dccfd3d8ae74d724c5c4e6b 238620 kamailio-cnxcc-modules_5.2.1-1+deb10u1_amd64.deb
+ f5d4f566edfe1798c98a7d07e4450988b6292335 152900 kamailio-cpl-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 35ed13050f100d27abd7f71b8f074b02814c3b7b 317664 kamailio-cpl-modules_5.2.1-1+deb10u1_amd64.deb
+ 31a1025ac6ed1eb70eedcd70d096f9b5f07c6b07 8001496 kamailio-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ ab41ee2c8c56709564f511bf2832a3445e4fc67e 149296 kamailio-erlang-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ fcce704bd6ac836a3ed62e1688e5c311b0acd1c9 345324 kamailio-erlang-modules_5.2.1-1+deb10u1_amd64.deb
+ 34a16ce618b9db019b82b3415a681f113a724c5a 285284 kamailio-extra-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 454b07a493fec2c58c0576137c11bc2ff9d2a16a 310552 kamailio-extra-modules_5.2.1-1+deb10u1_amd64.deb
+ 9fa794371a3424a6dd3484a2316f79e318aa28b3 27548 kamailio-geoip-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 21e279a6cc389debf24867cea36451f0f047c230 184636 kamailio-geoip-modules_5.2.1-1+deb10u1_amd64.deb
+ 5f5538dac1c083fd0bb7f4258e344e53882e9391 27864 kamailio-geoip2-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 5ed5494980d7a6913f2db3b93fa43124495dcc6d 184512 kamailio-geoip2-modules_5.2.1-1+deb10u1_amd64.deb
+ f0018bfb8f7723c3bdf440b5eb66138e77ad1805 2579228 kamailio-ims-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6d94a28df4381cfe1516c389a28dd5a07ee82491 1365264 kamailio-ims-modules_5.2.1-1+deb10u1_amd64.deb
+ 590016be5613c00138130432ec30453dfd049f2a 151668 kamailio-json-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8673702d7f2091edbf79a90f3d7f2cd98043412d 222676 kamailio-json-modules_5.2.1-1+deb10u1_amd64.deb
+ ce8e0ac42367014ea1fed8897930f7d276c34933 130620 kamailio-kazoo-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 5262716f2ea4e687be0c5933060ab38001c0acd8 298308 kamailio-kazoo-modules_5.2.1-1+deb10u1_amd64.deb
+ ac53bf68fb9b5679c10c8cbee8a16ba5889e5b0a 135448 kamailio-ldap-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 12d46a049eefd08ce7e4b95e6975d6b51fb1b44b 265900 kamailio-ldap-modules_5.2.1-1+deb10u1_amd64.deb
+ d36036ffae4704233f9509730d4c3eb073e5d5fa 119992 kamailio-lua-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 76ee2c193e3a03539fbc24340ccad6106caeae81 308400 kamailio-lua-modules_5.2.1-1+deb10u1_amd64.deb
+ ebb1df7b56fb9b16fa9315a08cccda29e813706d 34476 kamailio-memcached-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ e71a08822def3a449d69c4aa300a6b81b618342b 190492 kamailio-memcached-modules_5.2.1-1+deb10u1_amd64.deb
+ 42818b3f7c2d39fa5d26594502239fa6ae7f4da3 65036 kamailio-mongodb-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ a9e604bb3f5073957bd4adc5885441f10b2e3532 221172 kamailio-mongodb-modules_5.2.1-1+deb10u1_amd64.deb
+ b9d80cbc41c6fd688bc1c198a15daae14ffc7be9 30472 kamailio-mono-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 0676ff9a429477afec277e0f1177ee3ebbd473b9 193376 kamailio-mono-modules_5.2.1-1+deb10u1_amd64.deb
+ 72f7163767eea161e3473fa2b69a60969f82e7d9 127924 kamailio-mysql-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 533f2ccaa88146aee28c8d04aa25f52bd92d5049 233900 kamailio-mysql-modules_5.2.1-1+deb10u1_amd64.deb
+ e8630ecee7ac3b9e841aea9dcde6d167fe77c8ca 24592 kamailio-outbound-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 9bf96311519d25d89cc24729a814121cf6dccf07 188904 kamailio-outbound-modules_5.2.1-1+deb10u1_amd64.deb
+ 9fa8b38f327d16643826edca1ef9468d23adad79 218064 kamailio-perl-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ dd0df8bb1b2a6893d53d23cd4cc9e5753a2b1a69 243948 kamailio-perl-modules_5.2.1-1+deb10u1_amd64.deb
+ 1bd1da2e88894d958b61583f92d3e99f90991028 83428 kamailio-phonenum-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8ffbdc768f58de4ac00563696615c6f7790a4230 186888 kamailio-phonenum-modules_5.2.1-1+deb10u1_amd64.deb
+ 3ceba6d1839be2177a92f320ac6b735f3e029d0d 80328 kamailio-postgres-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ ae7a07371c66e0f2954a5b944122bee30faa6d6a 250104 kamailio-postgres-modules_5.2.1-1+deb10u1_amd64.deb
+ 2c37bd682ff7a58f09a4d274c6f81dca65d02ba5 1267604 kamailio-presence-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ d7bb472a0d5a11111431f142cf256239b0ff0394 836448 kamailio-presence-modules_5.2.1-1+deb10u1_amd64.deb
+ c0e2dedfd7be37dfa8509cebf1e8f18b00401800 126984 kamailio-python-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 3ad220a776d5a6135146737dc243f3e70c0f8bfa 238100 kamailio-python-modules_5.2.1-1+deb10u1_amd64.deb
+ 71145c637ba76f6cb6c7c5ee1b5f0a4e09d07dc3 145732 kamailio-python3-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8768ac34ca96c6668716a4eb01ffa08058680066 240716 kamailio-python3-modules_5.2.1-1+deb10u1_amd64.deb
+ 62c1893e2518cc23e86107c29dd3d88f218ac530 28068 kamailio-rabbitmq-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 9afede5ec81b4388cbfa1890e9c7497f5f569fa6 191880 kamailio-rabbitmq-modules_5.2.1-1+deb10u1_amd64.deb
+ 2438c2ca0ed58f9dcaf648b2dc5316ce1a0034fd 128180 kamailio-radius-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ b363b2ab5d4b9fe7847c5a03ad50ad65477ddc9e 252060 kamailio-radius-modules_5.2.1-1+deb10u1_amd64.deb
+ aadbea63a016bce8345665e689a9be58c7557293 142908 kamailio-redis-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 0555a15db8e0bac1dfd19f47f9c7a97b63601be4 352160 kamailio-redis-modules_5.2.1-1+deb10u1_amd64.deb
+ c63dec503f558a3c30bffacea5399b2c6ca12ce4 66272 kamailio-ruby-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 3978be8e6e0e5a4f0d6a638be4331357979d953c 221244 kamailio-ruby-modules_5.2.1-1+deb10u1_amd64.deb
+ 62938ab37085c1f558e36f83d0002bac5ddfb07a 54404 kamailio-sctp-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 90c32c5165fbd277e2282a35d42122d2c152fd66 217452 kamailio-sctp-modules_5.2.1-1+deb10u1_amd64.deb
+ 38a4678382f624e5949a687222e84a8645c36fbd 210512 kamailio-snmpstats-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ d9445776ae71267685a231c5d69b6462ebda619d 247956 kamailio-snmpstats-modules_5.2.1-1+deb10u1_amd64.deb
+ bfaa1a4ccd02daf7523511000b37c107ccb25d40 28844 kamailio-sqlite-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ bbb3a86e80949ab728610f4995d3e9df67c8a67d 196280 kamailio-sqlite-modules_5.2.1-1+deb10u1_amd64.deb
+ aa8e4cf5ef2f6cada7c21fff1bb2b5a88a56046d 22476 kamailio-systemd-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 825ce6851e82292738ea3c5020f7e39f60af8916 181984 kamailio-systemd-modules_5.2.1-1+deb10u1_amd64.deb
+ ae61954e66e99bb7c08524ea2034e71dbc0b8414 219988 kamailio-tls-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 057782dec254266a6b492b65953fc93f4e277049 352428 kamailio-tls-modules_5.2.1-1+deb10u1_amd64.deb
+ 46dbc26854695dfb1f721d27b068891b1b111966 39064 kamailio-unixodbc-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ d8c8293bbc06abd76c10d19ce3cf09f947f0165e 205064 kamailio-unixodbc-modules_5.2.1-1+deb10u1_amd64.deb
+ e779f08ec23983fb87a9ceaa613243471ccab3c1 124552 kamailio-utils-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 2d7e2730259d11a1794df225ec2a5aaaa43bdd89 260588 kamailio-utils-modules_5.2.1-1+deb10u1_amd64.deb
+ 38d6f333022f26154d65dd2c90b3b2576ad408fb 75820 kamailio-websocket-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 808319aefa0fd311512343edef789f33d8082be8 225836 kamailio-websocket-modules_5.2.1-1+deb10u1_amd64.deb
+ 0133f8b867fef08406f23274348a8cf0692b7063 130348 kamailio-xml-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 251d00d6633d8767bedba5e89b456f6adf99829c 304368 kamailio-xml-modules_5.2.1-1+deb10u1_amd64.deb
+ 7ff4cdbc9ab3cb93122abfab1da0345d744fd49f 81536 kamailio-xmpp-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ af12f56f154bb69b2745199aa63ca9845069ebe7 218772 kamailio-xmpp-modules_5.2.1-1+deb10u1_amd64.deb
+ 7ab4f14d2986b31c32707ee7ca48f9e3503815dc 39245 kamailio_5.2.1-1+deb10u1_amd64.buildinfo
+ 65caf4776d5b4ba819bd2689d39e3c945a1789f9 6331676 kamailio_5.2.1-1+deb10u1_amd64.deb
+Checksums-Sha256:
+ 29329764218ea69e5bf49a3cae16ac58eb5b85f0610cfe612b659478bc991647 5823 kamailio_5.2.1-1+deb10u1.dsc
+ 95d2158f97c76124a381364d99de1420f193275c5a1c9f88489c6409702f2c8f 12270091 kamailio_5.2.1.orig.tar.gz
+ 82ed560029e4125a9f9863234a7985228edd04e024fa8c2091a662f7bda9fd28 27664 kamailio_5.2.1-1+deb10u1.debian.tar.xz
+ 1ed25144e51e1b19f435c967c00cf6344657bfce4c06e20c4918b02943623894 46204 kamailio-autheph-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6d57a10c3c4486d68c9d1db780546815e26dc2a47d7da1f3e2f868a31081ac49 201728 kamailio-autheph-modules_5.2.1-1+deb10u1_amd64.deb
+ 0a18b3bbe483053c6d8441405cdfe4a1811a20d50c654809cdac33c428587563 25056 kamailio-berkeley-bin-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ dff3343c8398d11c3e1590c84ae6ddbba5f96898616f600ade68308690946a82 181416 kamailio-berkeley-bin_5.2.1-1+deb10u1_amd64.deb
+ 9bb86343675d267ed44ef1c5134babb2540cd38574a6fd0e05ba1acf9d544b94 169144 kamailio-berkeley-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ bef8e40a43a9cdce602f7beb2102661c2a0c40061a72f17bc75d4754c6401d5c 265372 kamailio-berkeley-modules_5.2.1-1+deb10u1_amd64.deb
+ 34692c723c6f2d19e33a4bb4258379d340f01b9909ab29fd028f74074f327676 68728 kamailio-cnxcc-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ fd3a7e242baa269d50f67697f9d70187268ad2f6c6d4cdca41375c2d91449674 238620 kamailio-cnxcc-modules_5.2.1-1+deb10u1_amd64.deb
+ 0d1e7f5aaf4214ad484509050d8ca8eefb75291588ebcb717cf23f4998baf525 152900 kamailio-cpl-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 2c868a3942698b4ed62e87849e11a0d41c73ccca665e6413a75f552c1885da5e 317664 kamailio-cpl-modules_5.2.1-1+deb10u1_amd64.deb
+ d5eac352f52f7c760cb7ae3e31438e61434fba951e3d9d789ef7c4ba92de31ef 8001496 kamailio-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 70f7a98d710908fe4f8ce5e884e0068890ff5641088ca962a21f0ea32b3c84ca 149296 kamailio-erlang-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 88c5c0defabc1af6f8dbe9112e4f0b72ad620643fcd1e8639b2ee46175351f34 345324 kamailio-erlang-modules_5.2.1-1+deb10u1_amd64.deb
+ 8bf4d7cfc39a434f3f859007c40b554bc285d001d394154d06dff731322789f0 285284 kamailio-extra-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ ed7c03b9d542e2feb28445aaf07d048f8dd3b53c7ffd782b86eff8886d49ec20 310552 kamailio-extra-modules_5.2.1-1+deb10u1_amd64.deb
+ 34f5084def997ed85b0761935d057f00f0a7df9dcd0625272a8d0dec22b248ac 27548 kamailio-geoip-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ a778ac3dbab3e5dc9ec3fd150cabba8a9842d4432765506064c56ef3bd2c7eb3 184636 kamailio-geoip-modules_5.2.1-1+deb10u1_amd64.deb
+ c414efeb66e1119813d90c22b4c0bced583c032e865063dba0f1a1940d98ba34 27864 kamailio-geoip2-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ e5b3af46516808dfac8f98cdf041e1a30ea86c5911a4e5f1a8366657b705a1c2 184512 kamailio-geoip2-modules_5.2.1-1+deb10u1_amd64.deb
+ d7514539948b0ffd688b24506f0ade87fd6c45627b5628f68db7d9e48c98567a 2579228 kamailio-ims-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 03f8db1d9507e8fd5b555d4d4ed6e52b2a183c8a3441dc7e3f6d813dee7f6ad6 1365264 kamailio-ims-modules_5.2.1-1+deb10u1_amd64.deb
+ 06a383e2c44e65681ef961b885e34d50443058336fb1179418cbacb55450e7fa 151668 kamailio-json-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8dd00974f0ceb9e526b5c96badc1bcbec05b9b0ffe81f831ca5bb3a90d880da2 222676 kamailio-json-modules_5.2.1-1+deb10u1_amd64.deb
+ 172250c1ca44eded82993cbdeb6946f69731c27d011a6a2716d2ba9cc0a45ea4 130620 kamailio-kazoo-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 538b22de5e59f7a985c086d948529ab2c1f06d8432c99894f98da67c6c951c37 298308 kamailio-kazoo-modules_5.2.1-1+deb10u1_amd64.deb
+ 698e7b973600eae766e59de5f8d54595b6bb0825bdcc8fcdeb89a5d6adbb54e2 135448 kamailio-ldap-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6acb81c98315220926b4150584d02a6194bef35e9e4fb786483a8eff652340b0 265900 kamailio-ldap-modules_5.2.1-1+deb10u1_amd64.deb
+ ed192619368d4930bd1637547f7b6d6d6ed7da917c4802b5b73108232983756c 119992 kamailio-lua-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 4afd98fa0b5221523898a715c940d30696579f95ca24d7b2715d3084b12a5e7a 308400 kamailio-lua-modules_5.2.1-1+deb10u1_amd64.deb
+ ec608a4f2525d8c40513d87c6a6c4e15911db8d665619cda1991cb01e9c1b05b 34476 kamailio-memcached-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 7d2d411a1422b8096a3a855bfc963561aa2e2bc5dcc3cd1d29b4409040c9aa83 190492 kamailio-memcached-modules_5.2.1-1+deb10u1_amd64.deb
+ 78e37c200869ed3fc4733fa80a6a8a44fb260d66035584596a54d940fee7a022 65036 kamailio-mongodb-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ f503f62ee84cf683d3c366c8593ebaaa56b08a3196458637119d7fb3f20b2d72 221172 kamailio-mongodb-modules_5.2.1-1+deb10u1_amd64.deb
+ 26a30a3f45a0bf75d22eca59522589fc141c23e7c593ea525fd81e61aa294b50 30472 kamailio-mono-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 0bbd5e2b63588dbb2dad90cf0ddae06f1f7fc10d7f83e5a763c77c5bd6ed38fa 193376 kamailio-mono-modules_5.2.1-1+deb10u1_amd64.deb
+ 219f4ddeff908cbbe0ad00bbc3c03a6f5d25c88d01606bf54ee74b83302288e9 127924 kamailio-mysql-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 3c1a4196f6cf2424bb99d1174a504031157de84079ae0fbb3985e2c0b92658cb 233900 kamailio-mysql-modules_5.2.1-1+deb10u1_amd64.deb
+ baa4a199a29c260b8aff5953a01333cc461a11e95b1c548f34fb85026d7d4bbe 24592 kamailio-outbound-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ fa0d667dcdf2f0b1faa812b0019e149eb2236ab0bdf7773ddce8252488e97f65 188904 kamailio-outbound-modules_5.2.1-1+deb10u1_amd64.deb
+ d756a30f3927f526774b3140490b4adc75f35160a8672d19728925331923fea8 218064 kamailio-perl-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6c137e2d51f25b3182e13ae508c2107f20229488627498a8f3987d111fb94ce7 243948 kamailio-perl-modules_5.2.1-1+deb10u1_amd64.deb
+ d5fe42942a417bf75d8d6dcf689eb9bb76dbf10972c88c1cfa1ccd6461cf8017 83428 kamailio-phonenum-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 28d0571e284c0bc982e959556490472c8f5761381e3dc97a31ccb626b7805890 186888 kamailio-phonenum-modules_5.2.1-1+deb10u1_amd64.deb
+ 105567dea1e83dfc0e32c7b8748d3a6f2b0965d68b401b4f4924a1822d0ed8d0 80328 kamailio-postgres-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ e03e4d79b2d18d7eed01aeeee0f73227d80b54435b4a5a2b5a25575b18378eac 250104 kamailio-postgres-modules_5.2.1-1+deb10u1_amd64.deb
+ 9b37c9208584161d7627368b8b957be66b1e4e71059b62a2eeb67f604095a5e4 1267604 kamailio-presence-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ c91e8b0eefcad0d7d4f36d7d4c230067e3c22186e7d485982c2df7b789fe87e5 836448 kamailio-presence-modules_5.2.1-1+deb10u1_amd64.deb
+ 9278e62b5b4efa59f90a847c1ea74dd5afb9a9dd789ceb9823b23af4787cdb2a 126984 kamailio-python-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ fa601505396f16725a69a8cf12c14ecef1354daf0990b2f3534ce7ad951b60b5 238100 kamailio-python-modules_5.2.1-1+deb10u1_amd64.deb
+ a5974377b6755c1db51a0ed6d735ade8ef80afdcc68a273afa40208c85cef879 145732 kamailio-python3-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 5cbe48d17995403599d88fc66dd9f0f892265da1e06bbc1de99f0b116ec64942 240716 kamailio-python3-modules_5.2.1-1+deb10u1_amd64.deb
+ eea7b8468fc79dafd66ba6d916cc6a79f2b562b8b0f8333b443cbb42ff55aeb1 28068 kamailio-rabbitmq-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ e1151d3915aebeb6f34011fd37abdb850c836b72dd60360e7b581f6ee7d951ba 191880 kamailio-rabbitmq-modules_5.2.1-1+deb10u1_amd64.deb
+ 17d7d84a86aafd3a855d3dc21563a22514f733270afd1af8ee66583965e41849 128180 kamailio-radius-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 1f59a2e1bb5d226e3b4842bfbee03836ad2ce45cccbf178e3f14312ac014e1f0 252060 kamailio-radius-modules_5.2.1-1+deb10u1_amd64.deb
+ 624fca5153db30477f9bd0c487dbaafb3a01418c7f1c6d936066926fd36bcd14 142908 kamailio-redis-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 80ef1cebe926c7ecd714a7057068e21e8a5e98507bf72b3a607a37e0adccee7d 352160 kamailio-redis-modules_5.2.1-1+deb10u1_amd64.deb
+ e046ee810910dc9c04dcebf406b9e120ab5a0fa762564d49e37f3e4bd3ee7767 66272 kamailio-ruby-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 820eb06dd57fbc5fa3aa6a715c8ddc5a0531955ab181696ef91a77b4e3639b7b 221244 kamailio-ruby-modules_5.2.1-1+deb10u1_amd64.deb
+ ea1f3016499b29a31c3c7c255b390cb318c164e331ade2f2b7293d1ade1face2 54404 kamailio-sctp-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8af3e3693ff12e33d5a62fa871f2dc7f6079aaf3353bbb363dccf1fe372ba4e1 217452 kamailio-sctp-modules_5.2.1-1+deb10u1_amd64.deb
+ 4c728d60fa11ebd7e6e39a7b28bf74901c0ef6271c00eafe84dc88bbdbb57a24 210512 kamailio-snmpstats-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ d92d0d545c782c392aa345bbaaaaaafc6440f30d48cfa327e0ec4349eea396a2 247956 kamailio-snmpstats-modules_5.2.1-1+deb10u1_amd64.deb
+ 8b3c4a9fc6e672f6ef58f3baf73f35c03eedc748cabefb3ebf8d4a379f317bf8 28844 kamailio-sqlite-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ c2e1163046df73dced274e842a2471e8045f7d036c34eef6cadcb9d83bc2813f 196280 kamailio-sqlite-modules_5.2.1-1+deb10u1_amd64.deb
+ 21760ea17a3fb6bb96a2e16520745428eec49cc0b1ac94c08634558a396a71e3 22476 kamailio-systemd-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ a7d71dfba61b9199d981f74755e0669a9452cbd36c49ad15a0ba7c59f50bdccc 181984 kamailio-systemd-modules_5.2.1-1+deb10u1_amd64.deb
+ 6e3305d7400c36dca6dc70bcddfb9a6615decbb503065f6db387896ea67cec74 219988 kamailio-tls-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 206907ee86f1d3a07f419291260ac950d1f346c998ab9c811461bcb9de9ef968 352428 kamailio-tls-modules_5.2.1-1+deb10u1_amd64.deb
+ 6826e69cc2d0d3aeaff5807ad9ee16969e18bbb4bceb2cefc2e8b28259a4db63 39064 kamailio-unixodbc-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8efb9d254785a5a7d2e696d0a8d0a1a0a53ecba6271840122912c9c73554fc1e 205064 kamailio-unixodbc-modules_5.2.1-1+deb10u1_amd64.deb
+ fb04648b0f66f3289fdd2bc93fafca3ab91f5c6350dd1f8c698461179aac54f1 124552 kamailio-utils-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 7a2fd3f44aade487c74c0afbdde89bbb941bde2013870388578de04cc03be3eb 260588 kamailio-utils-modules_5.2.1-1+deb10u1_amd64.deb
+ 71630ce77598412f5b1c86173f2c149fe26d805a36fe52c8aff36e157c20c01b 75820 kamailio-websocket-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 4a9f8ead12c16ba45781e5f9ffbb9b3822081b2be32e6ca394b21eecd3a302a1 225836 kamailio-websocket-modules_5.2.1-1+deb10u1_amd64.deb
+ 3245fe392ce8a915f3b6569fb41dc3285ec0aca686919f3a2c8c99f5091cb240 130348 kamailio-xml-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 4483d9be20891056a3bf385df1083fcbda3dcd60751e9dbc3bc5e3139f084fdb 304368 kamailio-xml-modules_5.2.1-1+deb10u1_amd64.deb
+ e8884394b1324386db6e96955b9a53cc809861c0a770cb6b93d5a181ef128c19 81536 kamailio-xmpp-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6fa33320c525c09751e0a32171cdd7f91fe3133cc3354f5360734c94120b1767 218772 kamailio-xmpp-modules_5.2.1-1+deb10u1_amd64.deb
+ aca60250cd48e71bdcb6373afe68bcfb0a36784f6dfae5f3e17213e437ab71e0 39245 kamailio_5.2.1-1+deb10u1_amd64.buildinfo
+ 02a6df57af48a138d8a96a95884367cc3c5033f9d3852acb01eeefb356af7d94 6331676 kamailio_5.2.1-1+deb10u1_amd64.deb
+Files:
+ 113005cb61d306769ca9df0df34379f4 5823 net optional kamailio_5.2.1-1+deb10u1.dsc
+ 46893eb5a7a9dd0fd2df91a3b15e952b 12270091 net optional kamailio_5.2.1.orig.tar.gz
+ 44a200232191653130f98aa5ff9af5e8 27664 net optional kamailio_5.2.1-1+deb10u1.debian.tar.xz
+ d439e23ab4b251dd6ab830dbd4dc27e6 46204 debug optional kamailio-autheph-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 4a524ab1a3aba7b229a787aeffc61584 201728 net optional kamailio-autheph-modules_5.2.1-1+deb10u1_amd64.deb
+ 5d263d5de7f46ff9c3d84ec5507ab240 25056 debug optional kamailio-berkeley-bin-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ f5293959c6260bcc934ecd7225b8da27 181416 net optional kamailio-berkeley-bin_5.2.1-1+deb10u1_amd64.deb
+ e88d433de294604a8d7761be6ce13dc7 169144 debug optional kamailio-berkeley-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ a37b7a3f860c62924ca880927d447e30 265372 net optional kamailio-berkeley-modules_5.2.1-1+deb10u1_amd64.deb
+ 2e834d8f08e39a99bfcafb74a8196165 68728 debug optional kamailio-cnxcc-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ bc9996ffd2802e5b56d4adb8129a4a47 238620 net optional kamailio-cnxcc-modules_5.2.1-1+deb10u1_amd64.deb
+ 5f313dd263abeadf3c06b093dec2a18a 152900 debug optional kamailio-cpl-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 833aa62c6aa4b999a477f1a79d95ffbe 317664 net optional kamailio-cpl-modules_5.2.1-1+deb10u1_amd64.deb
+ 3f946b9741c3083702225932e874b7d6 8001496 debug optional kamailio-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 55d0c0a5bb0d723def53e922c071ea11 149296 debug optional kamailio-erlang-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ f28f2756464316b9361e86410ac90795 345324 net optional kamailio-erlang-modules_5.2.1-1+deb10u1_amd64.deb
+ 80837394102d933a23433f0877be9108 285284 debug optional kamailio-extra-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 4308332c81f72925502f8b48d7658efd 310552 net optional kamailio-extra-modules_5.2.1-1+deb10u1_amd64.deb
+ bb4cb3abc7323439cd1fde5e31d9cab5 27548 debug optional kamailio-geoip-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 41a742cb32a9a2d764ae819dd7fdacc9 184636 net optional kamailio-geoip-modules_5.2.1-1+deb10u1_amd64.deb
+ 0a9aeee577095b26aebb180c7a085011 27864 debug optional kamailio-geoip2-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 2e41a283e65e2a2ed0fd53aa07d275e9 184512 net optional kamailio-geoip2-modules_5.2.1-1+deb10u1_amd64.deb
+ 0288dfb80a0670bf899a5de2ce4d2d88 2579228 debug optional kamailio-ims-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 95df4b097c0316901f7c7827c23dc0eb 1365264 net optional kamailio-ims-modules_5.2.1-1+deb10u1_amd64.deb
+ 4e5b2e8f42af6412cfb047518309a8aa 151668 debug optional kamailio-json-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ fba22254285f1a7e7ddf7ade26efaac8 222676 net optional kamailio-json-modules_5.2.1-1+deb10u1_amd64.deb
+ de3a8a7f356bc2179af94108dd6631ab 130620 debug optional kamailio-kazoo-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8197d9789227fd5870c3bfad6bfa12c4 298308 net optional kamailio-kazoo-modules_5.2.1-1+deb10u1_amd64.deb
+ dc574052bb54f1b48ce99d6bef92c1a5 135448 debug optional kamailio-ldap-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 9c24a9119b97af3bd7bd89efb1a50b88 265900 net optional kamailio-ldap-modules_5.2.1-1+deb10u1_amd64.deb
+ 37a1c908a472f1c04c897e3f36024fd4 119992 debug optional kamailio-lua-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 1ce4319e1d6915fccc2d374d56f3cd5f 308400 net optional kamailio-lua-modules_5.2.1-1+deb10u1_amd64.deb
+ fe46d43565805982a1a285c808dbc995 34476 debug optional kamailio-memcached-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ fc378bc9317a64cea116fc8c4e3fb6ef 190492 net optional kamailio-memcached-modules_5.2.1-1+deb10u1_amd64.deb
+ 2048f9c45906cc64d260a5b2bfb2c79f 65036 debug optional kamailio-mongodb-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ f7cb3ef53f31fa8904a409cc53e7674d 221172 net optional kamailio-mongodb-modules_5.2.1-1+deb10u1_amd64.deb
+ de651a3719926e200536462c3ffe5dd3 30472 debug optional kamailio-mono-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 63fe4bf3cd64ba565923d1da70def50b 193376 net optional kamailio-mono-modules_5.2.1-1+deb10u1_amd64.deb
+ f995b0ab6567dcbda8d7bf8e587bd5a2 127924 debug optional kamailio-mysql-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 1d657d8d1ee0cae8d29112e2135b33cd 233900 net optional kamailio-mysql-modules_5.2.1-1+deb10u1_amd64.deb
+ cda8156eb73284aa7cd152988bd0baae 24592 debug optional kamailio-outbound-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ a1c747b17e88ac6f11e997bf648ab1ef 188904 net optional kamailio-outbound-modules_5.2.1-1+deb10u1_amd64.deb
+ abdb26b856c1cfd9b0a3d075e728da30 218064 debug optional kamailio-perl-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ b242bc211312a87dac39982cc8992c9f 243948 net optional kamailio-perl-modules_5.2.1-1+deb10u1_amd64.deb
+ 5174bd02eded34fc45fb7c34c53a3703 83428 debug optional kamailio-phonenum-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 67247f9fa2c941d59f9371317fa85526 186888 net optional kamailio-phonenum-modules_5.2.1-1+deb10u1_amd64.deb
+ 058857eef98b3b5c699dc73834aad38a 80328 debug optional kamailio-postgres-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ afae34ac106304f3e68ef105cb12c6f8 250104 net optional kamailio-postgres-modules_5.2.1-1+deb10u1_amd64.deb
+ 8dff6cb94364bf1d8ead3da897225e4f 1267604 debug optional kamailio-presence-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ caed795b0bba864fe1b5b166df5225cf 836448 net optional kamailio-presence-modules_5.2.1-1+deb10u1_amd64.deb
+ c2e8f657396a978e492ef0a207babc71 126984 debug optional kamailio-python-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 66b79d6e64de6013ceef885dd763f2e5 238100 net optional kamailio-python-modules_5.2.1-1+deb10u1_amd64.deb
+ 58dd73de17243fc0bc40dd49891a3ebd 145732 debug optional kamailio-python3-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6a6de86662fd34bb96db2e2223cc9fde 240716 net optional kamailio-python3-modules_5.2.1-1+deb10u1_amd64.deb
+ e9f3e8633b57d546eede67c6f79029ac 28068 debug optional kamailio-rabbitmq-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ af139d198424960fe5a2539400f18492 191880 net optional kamailio-rabbitmq-modules_5.2.1-1+deb10u1_amd64.deb
+ afa61309163f226d791f83cf78cb5b6f 128180 debug optional kamailio-radius-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 13fedb4c71cd4692904ee8e8553a8ba7 252060 net optional kamailio-radius-modules_5.2.1-1+deb10u1_amd64.deb
+ 5ba25ed946f44edd437afccafa473761 142908 debug optional kamailio-redis-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 8fe9b40f86f61e5d53b6a83eee856a3f 352160 net optional kamailio-redis-modules_5.2.1-1+deb10u1_amd64.deb
+ e5ad7ade8f62992826050921b51f9bba 66272 debug optional kamailio-ruby-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 4b1a9fd477e9f9e6a23598d7b79323db 221244 net optional kamailio-ruby-modules_5.2.1-1+deb10u1_amd64.deb
+ 8856950fc504ee38759b15d1752374a8 54404 debug optional kamailio-sctp-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ c790c2ca06d8a804ea2f4c82f7fe7587 217452 net optional kamailio-sctp-modules_5.2.1-1+deb10u1_amd64.deb
+ 8043300f0f9e741eb00172682a09c3e9 210512 debug optional kamailio-snmpstats-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 9acfc060b098511b0a1efdf9d618a048 247956 net optional kamailio-snmpstats-modules_5.2.1-1+deb10u1_amd64.deb
+ 8e72805ba100b1988bad5dc522afa08d 28844 debug optional kamailio-sqlite-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ b0add575b56fb440a17be900093fb9bc 196280 net optional kamailio-sqlite-modules_5.2.1-1+deb10u1_amd64.deb
+ a2f5faf1fa65449b6c9bc0c8e05d0876 22476 debug optional kamailio-systemd-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 6ccf506eeb4f4199ca8c8a1cc176057d 181984 net optional kamailio-systemd-modules_5.2.1-1+deb10u1_amd64.deb
+ 48da07835217f6e2f0bc6c9177ca742f 219988 debug optional kamailio-tls-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 671d729e103bf8f466aacd78a5105b09 352428 net optional kamailio-tls-modules_5.2.1-1+deb10u1_amd64.deb
+ 03a0ce9e3ca255dc84af5bd09d3aef30 39064 debug optional kamailio-unixodbc-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ e40c5af67a408ad7b83fe57673663d52 205064 net optional kamailio-unixodbc-modules_5.2.1-1+deb10u1_amd64.deb
+ 679f69003b9af8df1ad1bfb367c84cdf 124552 debug optional kamailio-utils-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ f7c0534009f3c6efaf0c80c237a2000f 260588 net optional kamailio-utils-modules_5.2.1-1+deb10u1_amd64.deb
+ 9563e699ac801974fe05b4e070c71dcb 75820 debug optional kamailio-websocket-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 07b534db3ff25550d4d4721d47af6dc4 225836 net optional kamailio-websocket-modules_5.2.1-1+deb10u1_amd64.deb
+ c2972f26c298758c9af07ee6cb172e3d 130348 debug optional kamailio-xml-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ 5beaa56e71e976ba0414c39672c1d5ce 304368 net optional kamailio-xml-modules_5.2.1-1+deb10u1_amd64.deb
+ 9cd2aba90a630256caee7617a6b881cc 81536 debug optional kamailio-xmpp-modules-dbgsym_5.2.1-1+deb10u1_amd64.deb
+ d05df47754b2172c2307aa9c8e5306f0 218772 net optional kamailio-xmpp-modules_5.2.1-1+deb10u1_amd64.deb
+ 71d4fdaad15369bda2b98446a388cada 39245 net optional kamailio_5.2.1-1+deb10u1_amd64.buildinfo
+ 9e070eb7d813a01eafca481b38b4e68d 6331676 net optional kamailio_5.2.1-1+deb10u1_amd64.deb
+

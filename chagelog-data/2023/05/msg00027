@@ -1,0 +1,50 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 21 May 2023 18:57:13 +0000
+Source: imagemagick
+Architecture: source
+Version: 8:6.9.10.23+dfsg-2.1+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 996588 1013282 1016442
+Changes:
+ imagemagick (8:6.9.10.23+dfsg-2.1+deb10u5) buster-security; urgency=medium
+ .
+   * Fix CVE-2021-20176: divide by zero in gem.c file.
+   * Fix CVE-2021-20241: divide by zero in jp2 coder. (Closes: #1013282)
+   * Fix CVE-2021-20243: divide by zero in dcm coder.
+   * Fix CVE-2021-20244: divide by zero in fx.c.
+   * Fix CVE-2021-20245: divide by zero in webp coder.git
+   * Fix CVE-2021-20246: divide by zero in resample.c
+   * Fix CVE-2021-20309: divide by zero in WaveImage.c
+   * Fix CVE-2021-20312: integer overflow in WriteTHUMBNAILImage()
+     of coders/thumbnail.c
+   * Fix CVE-2021-20313: potential cipher leak when the calculate
+     signatures in TransformSignature().
+   * Fix CVE-2021-39212: Policy bypass for postscript files
+     (Closes: #996588)
+   * Fix CVE-2022-28463: Buffer overflow in cin coder.
+   * Fix CVE-2022-32545: Fix undefined behavior due to
+     an outside the range of representable values of
+     type 'unsigned char' conversion in psd file handling.
+     (Closes: #1016442)
+   * Fix CVE-2022-32546: Fix undefined behavior due to
+     an outside the range of representable values of
+     type 'long' conversion in pcl file handling.
+   * Fix CVE-2022-32547: unaligned access in property.c
+Checksums-Sha1:
+ 35b960c35489426d8b12ae07f047d405dac76770 5213 imagemagick_6.9.10.23+dfsg-2.1+deb10u5.dsc
+ 80d872fcd4fc57da8c9da3c34d199918c900ed5a 255776 imagemagick_6.9.10.23+dfsg-2.1+deb10u5.debian.tar.xz
+ 3e5348e0bb141b420ef203d53333613b9e11f849 31567 imagemagick_6.9.10.23+dfsg-2.1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 99c0c70e45aba343da29ed550c5dc64828619f39d048b96ee5ab632942955536 5213 imagemagick_6.9.10.23+dfsg-2.1+deb10u5.dsc
+ 156f75576b8a12e3107258489b2c6229538c64053d3fe0d523e499c8bb382422 255776 imagemagick_6.9.10.23+dfsg-2.1+deb10u5.debian.tar.xz
+ bfdaaa33950288a3f386b3f35aaee64fdf33d8c0ac0870a311d5def3002b5d83 31567 imagemagick_6.9.10.23+dfsg-2.1+deb10u5_amd64.buildinfo
+Files:
+ c4cd89163780e5fa0d84b9e90506b85a 5213 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u5.dsc
+ 4a846757014f1ac60041fc8a896de6cb 255776 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u5.debian.tar.xz
+ 5ac741a2dedd337023f898ba31b8e276 31567 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u5_amd64.buildinfo
+

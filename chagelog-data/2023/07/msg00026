@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 24 Jul 2023 11:08:59 +0200
+Source: python-git
+Architecture: source
+Version: 2.1.11-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1027163
+Changes:
+ python-git (2.1.11-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-24439: Remote Code Execution (RCE) due to improper user input
+     validation, which makes it possible to inject a maliciously crafted
+     remote URL into the clone command. Exploiting this vulnerability is
+     possible because the library makes external calls to git without
+     sufficient sanitization of input arguments. (Closes: #1027163)
+   * [CVE pending] Follow-up fix for CVE-2022-24439.
+Checksums-Sha1:
+ 53147cda152605cfd17217f09fc5058c89973dca 2459 python-git_2.1.11-1+deb10u1.dsc
+ ce688b7680625d1417feafd94b79312c2750020c 428531 python-git_2.1.11.orig.tar.gz
+ c38a90021ff59355d518fee1f6e9ef2b1db69573 14112 python-git_2.1.11-1+deb10u1.debian.tar.xz
+ c7d92395e23468805263689fa44ce4023e7642eb 9088 python-git_2.1.11-1+deb10u1_all.buildinfo
+Checksums-Sha256:
+ 23cf0eed3bd11b2292d1d00e45e7359e3eda86f14d7fc95ac52cdbc41295664e 2459 python-git_2.1.11-1+deb10u1.dsc
+ 8237dc5bfd6f1366abeee5624111b9d6879393d84745a507de0fda86043b65a8 428531 python-git_2.1.11.orig.tar.gz
+ 5d98fbe12402c921aa54b6f3e3c493caaddb19de599bc40ff9a9ac2ba52b54e7 14112 python-git_2.1.11-1+deb10u1.debian.tar.xz
+ 665b864f11ad0eb233cf750d89c58a98af229365257dda3127867373455e0722 9088 python-git_2.1.11-1+deb10u1_all.buildinfo
+Files:
+ a3c773074b24a6c9a78c1e67311f6899 2459 python optional python-git_2.1.11-1+deb10u1.dsc
+ cee43a39a1468084d49d1c49fb675204 428531 python optional python-git_2.1.11.orig.tar.gz
+ a7c2dabd5c05101a0d6a7ef9d41a72b8 14112 python optional python-git_2.1.11-1+deb10u1.debian.tar.xz
+ 189f350118d823674d36ec3f92478203 9088 python optional python-git_2.1.11-1+deb10u1_all.buildinfo
+

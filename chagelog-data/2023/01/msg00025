@@ -1,0 +1,29 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 27 Jan 2023 11:23:03 +0100
+Source: python-oslo.utils
+Architecture: source
+Version: 3.36.5-0+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Changes:
+ python-oslo.utils (3.36.5-0+deb10u3) buster-security; urgency=medium
+ .
+   * Add patch to address CVE-2022-47951:
+     imageutils_Report_format_specific_..._when_using_JSON_output_format.patch
+Checksums-Sha1:
+ 57edeb7a77c67265cb4271b0136393b895dc0e9c 3467 python-oslo.utils_3.36.5-0+deb10u3.dsc
+ 37e4e001ce6d2a2dbad57794187050233ab75ef2 7456 python-oslo.utils_3.36.5-0+deb10u3.debian.tar.xz
+ 904cb0a8af34ae8c1173cf5574e621809e3038e8 14693 python-oslo.utils_3.36.5-0+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ b917158419932a19355a553d5d55c78d5963d5b002dcd5de3e44c6d2936d10df 3467 python-oslo.utils_3.36.5-0+deb10u3.dsc
+ d89cc5ce7670e8e5d72cb873fa1f773eeb4a76d47519dae2eb582d76f76d0eb2 7456 python-oslo.utils_3.36.5-0+deb10u3.debian.tar.xz
+ 308cd0e5c216d7bc32786462c194a4bb4c13d03b2a00610ffbd646924c8dcb46 14693 python-oslo.utils_3.36.5-0+deb10u3_amd64.buildinfo
+Files:
+ 95f3dab439e8542ef4b447064029ca68 3467 python optional python-oslo.utils_3.36.5-0+deb10u3.dsc
+ adb0516261cb4460cc3e6eeddebab18a 7456 python optional python-oslo.utils_3.36.5-0+deb10u3.debian.tar.xz
+ 14f402d46763ede3d16d24c010a14df0 14693 python optional python-oslo.utils_3.36.5-0+deb10u3_amd64.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed,  7 Sep 2022 09:53:49 CEST
+Source: libgoogle-gson-java
+Architecture: source
+Version: 2.8.5-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1130adf8d3c319e65cb251bd2be64f76fd66e64b 2353 libgoogle-gson-java_2.8.5-3+deb10u1.dsc
+ eec1e76a3f3888a34806bc9ef4b3268509ba8b79 315920 libgoogle-gson-java_2.8.5.orig.tar.xz
+ 26aaa7ecefd23fdd9fe29b33db93837de3be859a 6180 libgoogle-gson-java_2.8.5-3+deb10u1.debian.tar.xz
+ bd747939500d4e3fd950b7008c3a2f562946d67a 16130 libgoogle-gson-java_2.8.5-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 533ce4a98e99b8968cf8dcca74f60bfbaf0883bf70d8fac0cfebf9d19db225e4 2353 libgoogle-gson-java_2.8.5-3+deb10u1.dsc
+ 26e5df7fd48d5918f6d6961b3b065c2908444dc865ad6de87ad0d1986fc464c8 315920 libgoogle-gson-java_2.8.5.orig.tar.xz
+ 260dfe4c63097ca705ee9219b7a1a971fd3c90db9d1943c24cc58a953590b98d 6180 libgoogle-gson-java_2.8.5-3+deb10u1.debian.tar.xz
+ a04fc1360f9f44accb1632483f22f865eca274e0012bd25227c7e6f49e0e9278 16130 libgoogle-gson-java_2.8.5-3+deb10u1_amd64.buildinfo
+Changes:
+ libgoogle-gson-java (2.8.5-3+deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * CVE-2022-25647: A flaw was found in gson, which is vulnerable to
+     Deserialization of Untrusted Data via the writeReplace() method in internal
+     classes. This issue may lead to denial of service attacks.
+Files:
+ cd47d9fb10965f10bb152f2dff928cef 2353 java optional libgoogle-gson-java_2.8.5-3+deb10u1.dsc
+ b1c552cb28516fba50e21a49d78ee8e0 315920 java optional libgoogle-gson-java_2.8.5.orig.tar.xz
+ e31715a00db2ca6b8721148e3cb4ecc4 6180 java optional libgoogle-gson-java_2.8.5-3+deb10u1.debian.tar.xz
+ 1b6ecbbf0b97a2cf36b5290e48f11243 16130 java optional libgoogle-gson-java_2.8.5-3+deb10u1_amd64.buildinfo
+

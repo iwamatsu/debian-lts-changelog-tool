@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 13:00:25 CEST
+Source: gokey
+Architecture: source
+Version: 0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ c8d7dd3e95d9c1b934029a08064f9737713fa54a 2713 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1.dsc
+ 6e82dcd674acc69fa19506bb528f8b7f4c78a40b 9792 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780.orig.tar.xz
+ 57ab9e726df71e4abc78dbdf4a818535e8deecf3 10148 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1.debian.tar.xz
+ 61410911aeeab872500ee517af492690b9f8494a 7226 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 95113cc58656c5885e7813d77dcd22c94fec42721bf484ec899eed14ed7c8cdf 2713 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1.dsc
+ 62b302c93e73908c390111bbd2886839c268fde32487932f4152780c1cf7abe6 9792 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780.orig.tar.xz
+ 336ebc0c7ba4c8cb9e5b4cc0dba40f74e60ad1f959940bb68e7bd33ed6aa37c1 10148 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1.debian.tar.xz
+ 07df2f98a9ecdf3ad7fb0a50e30a0a13667646d3a9af43aef6963a9e9d5607ee 7226 gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1_amd64.buildinfo
+Changes:
+ gokey (0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 665ce64be5efbc453ba318f3b035d20e 2713 utils optional gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1.dsc
+ 8afe1f968f5f0ad6a0a19e8776dcd75e 9792 utils optional gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780.orig.tar.xz
+ ac65529043e0a0bb22f673e0f20ab811 10148 utils optional gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1.debian.tar.xz
+ 1c13b70f4a546088e8aee2916a0496a3 7226 utils optional gokey_0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1_amd64.buildinfo
+

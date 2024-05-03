@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 08 Apr 2022 16:14:56 +0200
+Source: libxml2
+Architecture: source
+Version: 2.9.4+dfsg1-2.2+deb9u6
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ libxml2 (2.9.4+dfsg1-2.2+deb9u6) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-23308: use-after-free of ID and IDREF attributes.
+   * CVE-2017-16932: infinite recursion in parameter entities.
+   * CVE-2017-5969: NULL pointer deref in xmlDumpElementContent.
+   * CVE-2017-5130: integer overflow in memory debug code.
+   * CVE-2016-9318: improve handling of context input_id.
+Checksums-Sha1:
+ fd3189d54117e4de72229b3670cb67b6858b0715 2894 libxml2_2.9.4+dfsg1-2.2+deb9u6.dsc
+ fe85bc7dcee757778c41a0d1cdbe2fe0c049d6ec 4067518 libxml2_2.9.4+dfsg1.orig.tar.gz
+ 19f7b1ad980c1b3ac16a9ece583eaa3390248fd0 41540 libxml2_2.9.4+dfsg1-2.2+deb9u6.debian.tar.xz
+ af8d98386cdd669123a61969fda7f341cbdae55d 7770 libxml2_2.9.4+dfsg1-2.2+deb9u6_source.buildinfo
+Checksums-Sha256:
+ 5002f54c3f12aef19f932950c12cb92a6e1c00dcb085ac0e416088160a9e5c41 2894 libxml2_2.9.4+dfsg1-2.2+deb9u6.dsc
+ 57441479117cd4b3a3fbe1eda8028d578e3b2de7e745362f67669a0cf5fb3726 4067518 libxml2_2.9.4+dfsg1.orig.tar.gz
+ 3edf83ed72cc8bfab3356f848a6ef7dce5dfd86524664dd83ab02574d65546e7 41540 libxml2_2.9.4+dfsg1-2.2+deb9u6.debian.tar.xz
+ 22143a2c8a328e8ba03f9c441345b919d9496d7712661f459d9a069413584bcf 7770 libxml2_2.9.4+dfsg1-2.2+deb9u6_source.buildinfo
+Files:
+ 9de021ee693979dd31806963a17f46ee 2894 libs optional libxml2_2.9.4+dfsg1-2.2+deb9u6.dsc
+ 0e054dd84ae213ec973654194c7511b5 4067518 libs optional libxml2_2.9.4+dfsg1.orig.tar.gz
+ f923a73554ffd863d70352810e7ff8bf 41540 libs optional libxml2_2.9.4+dfsg1-2.2+deb9u6.debian.tar.xz
+ 64ba1b623d0f1a3703e3be45a539a674 7770 libs optional libxml2_2.9.4+dfsg1-2.2+deb9u6_source.buildinfo
+

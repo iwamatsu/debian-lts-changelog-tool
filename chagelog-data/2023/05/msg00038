@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 31 May 2023 20:52:34 CEST
+Source: texlive-bin
+Architecture: source
+Version: 2018.20181218.49446-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian TeX Maintainers <debian-tex-maint@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f10f5318d0b8204a11121936c60e4a156b3be58c 3607 texlive-bin_2018.20181218.49446-1+deb10u2.dsc
+ 3423fe2ec225fa464703e758e4fecd1cd79e4029 1015552 texlive-bin_2018.20181218.49446-1+deb10u2.debian.tar.xz
+ d61bda7dc162f6ba8047f615fa0d4a1e9e0220fc 18278 texlive-bin_2018.20181218.49446-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ beff22be5387899d1eac0fb4e397fe5e3471ee7a7e40a29192883679cb2c5fef 3607 texlive-bin_2018.20181218.49446-1+deb10u2.dsc
+ f70dfe87780935776560d8fecc187adf0e19fb084565835ebc790233bccf485e 1015552 texlive-bin_2018.20181218.49446-1+deb10u2.debian.tar.xz
+ 4cb021fb19258cb81f8be5465371495b3d338b24c6437ca2b4d590087e91d673 18278 texlive-bin_2018.20181218.49446-1+deb10u2_amd64.buildinfo
+Closes: 1036891
+Changes:
+ texlive-bin (2018.20181218.49446-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * It was discovered that the patch to fix CVE-2023-32700 was incomplete and
+     caused an error when running the lualatex command. (Closes: #1036891)
+     Thanks to Philippe SWARTVAGHER for the report.
+   * Fix CVE-2019-18604:
+     A flaw was found in axohelp in axodraw2. The sprintf function is mishandled
+     which may cause a stack overflow error.
+Files:
+ 5ded65f9999133cf8dcda2c37cf841f5 3607 tex optional texlive-bin_2018.20181218.49446-1+deb10u2.dsc
+ b02205c64a5e76a3e627e607f9007c7c 1015552 tex optional texlive-bin_2018.20181218.49446-1+deb10u2.debian.tar.xz
+ f8a5cefb0890fd443dbfad3ed719f5d2 18278 tex optional texlive-bin_2018.20181218.49446-1+deb10u2_amd64.buildinfo
+

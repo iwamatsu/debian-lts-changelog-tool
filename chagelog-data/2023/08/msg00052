@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 31 Aug 2023 23:06:22 +0300
+Source: gst-plugins-ugly1.0
+Architecture: source
+Version: 1.14.4-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Maintainers of GStreamer packages <gst-plugins-ugly1.0@packages.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ gst-plugins-ugly1.0 (1.14.4-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * SA-2023-0004, SA-2023-0005: RealMedia demuxer vulnerabilities
+Checksums-Sha1:
+ 0b975bde6f0c94cc9e908d1963b188bc24bad004 2931 gst-plugins-ugly1.0_1.14.4-1+deb10u2.dsc
+ 64a7b39cf7dc984dd9bff821e545ff084a1c26f9 889632 gst-plugins-ugly1.0_1.14.4.orig.tar.xz
+ fb66edac156a86391c3aa7e602d09849b51c3a16 27748 gst-plugins-ugly1.0_1.14.4-1+deb10u2.debian.tar.xz
+Checksums-Sha256:
+ 37f0a3be1c687272f5ec6474bd8d86c7da3faa38b9ced8510383df3668869661 2931 gst-plugins-ugly1.0_1.14.4-1+deb10u2.dsc
+ ac02d837f166c35ff6ce0738e281680d0b90052cfb1f0255dcf6aaca5f0f6d23 889632 gst-plugins-ugly1.0_1.14.4.orig.tar.xz
+ e843bd5834f86e0a716add147a6695d68f11955529161a7bc3529e5766fa5b7b 27748 gst-plugins-ugly1.0_1.14.4-1+deb10u2.debian.tar.xz
+Files:
+ d02d82a3e08cd281718ba002ffdf972b 2931 libs optional gst-plugins-ugly1.0_1.14.4-1+deb10u2.dsc
+ 90768a0074db071175ce980064d9a1ac 889632 libs optional gst-plugins-ugly1.0_1.14.4.orig.tar.xz
+ e99ffe04d1015ad7bd47651842edb151 27748 libs optional gst-plugins-ugly1.0_1.14.4-1+deb10u2.debian.tar.xz
+

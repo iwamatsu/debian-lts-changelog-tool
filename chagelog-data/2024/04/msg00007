@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 28 Mar 2024 23:03:07 +0200
+Source: gtkwave
+Architecture: source
+Version: 3.3.98+really3.3.118-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Electronics Team <pkg-electronics-devel@alioth-lists.debian.net>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Closes: 1060407
+Changes:
+ gtkwave (3.3.98+really3.3.118-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * New upstream release.
+     - Fixes multiple vulnerabilities:
+       CVE-2023-32650, CVE-2023-34087, CVE-2023-34436, CVE-2023-35004,
+       CVE-2023-35057, CVE-2023-35128, CVE-2023-35702, CVE-2023-35703,
+       CVE-2023-35704, CVE-2023-35955, CVE-2023-35956, CVE-2023-35957,
+       CVE-2023-35958, CVE-2023-35959, CVE-2023-35960, CVE-2023-35961,
+       CVE-2023-35962, CVE-2023-35963, CVE-2023-35964, CVE-2023-35969,
+       CVE-2023-35970, CVE-2023-35989, CVE-2023-35992, CVE-2023-35994,
+       CVE-2023-35995, CVE-2023-35996, CVE-2023-35997, CVE-2023-36746,
+       CVE-2023-36747, CVE-2023-36861, CVE-2023-36864, CVE-2023-36915,
+       CVE-2023-36916, CVE-2023-37282, CVE-2023-37416, CVE-2023-37417,
+       CVE-2023-37418, CVE-2023-37419, CVE-2023-37420, CVE-2023-37442,
+       CVE-2023-37443, CVE-2023-37444, CVE-2023-37445, CVE-2023-37446,
+       CVE-2023-37447, CVE-2023-37573, CVE-2023-37574, CVE-2023-37575,
+       CVE-2023-37576, CVE-2023-37577, CVE-2023-37578, CVE-2023-37921,
+       CVE-2023-37922, CVE-2023-37923, CVE-2023-38583, CVE-2023-38618,
+       CVE-2023-38619, CVE-2023-38620, CVE-2023-38621, CVE-2023-38622,
+       CVE-2023-38623, CVE-2023-38648, CVE-2023-38649, CVE-2023-38650,
+       CVE-2023-38651, CVE-2023-38652, CVE-2023-38653, CVE-2023-38657,
+       CVE-2023-39234, CVE-2023-39235, CVE-2023-39270, CVE-2023-39271,
+       CVE-2023-39272, CVE-2023-39273, CVE-2023-39274, CVE-2023-39275,
+       CVE-2023-39316, CVE-2023-39317, CVE-2023-39413, CVE-2023-39414,
+       CVE-2023-39443, CVE-2023-39444
+       (Closes: #1060407)
+   * Readd ghwdump for buster.
+Checksums-Sha1:
+ 330647b70c557c63f41c3ace356b9fa9c6f229b7 2197 gtkwave_3.3.98+really3.3.118-0+deb10u1.dsc
+ 35da928d360225333c4d408565535c03aec11b95 3507767 gtkwave_3.3.98+really3.3.118.orig.tar.gz
+ 28737406108caad85835843d85a7ab0838d7771c 19756 gtkwave_3.3.98+really3.3.118-0+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ c783876a44a633fb0e8a60a4096a2fcc1e5b2e5255e7b1a6e46eb9601f027062 2197 gtkwave_3.3.98+really3.3.118-0+deb10u1.dsc
+ 416d037c1f5f6dfc8fe9d2da87b650d9ebb4e9a7e8714e558ab4ea818eebeaa0 3507767 gtkwave_3.3.98+really3.3.118.orig.tar.gz
+ 2678abcb4a16a03c1a040e72160586d8114e9a3657a3697454cf25252788ae72 19756 gtkwave_3.3.98+really3.3.118-0+deb10u1.debian.tar.xz
+Files:
+ 178675d681b801c6c9e9f166da483347 2197 electronics optional gtkwave_3.3.98+really3.3.118-0+deb10u1.dsc
+ 8960ea5b268e14e1f662b03c3072afb6 3507767 electronics optional gtkwave_3.3.98+really3.3.118.orig.tar.gz
+ b37ac1693d695564f6fabba238f075b6 19756 electronics optional gtkwave_3.3.98+really3.3.118-0+deb10u1.debian.tar.xz
+

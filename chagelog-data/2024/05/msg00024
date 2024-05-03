@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 May 2024 19:20:40 +0200
+Source: less
+Architecture: source
+Version: 487-0.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1064293 1068938
+Changes:
+ less (487-0.1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-48624: LESSCLOSE invocation doesn't shell quote filenames.
+     Closes: #1064293
+   * Fix CVE-2024-32487: Arbitrary command execution via a newline character in
+     filenames. Closes: #1068938
+Checksums-Sha1:
+ 1b700fcb7ea016018ff9f706d19294d8db852cf7 1755 less_487-0.1+deb10u1.dsc
+ 8a5c4be2a51f11543793defec7ccb77c525f007e 318488 less_487.orig.tar.gz
+ 8604b0c441c5dbb74542334d7fed72a15dd35737 20624 less_487-0.1+deb10u1.debian.tar.xz
+ 07396facc7c583b65ff6ce888699cb0bcf84482d 5982 less_487-0.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 046cd026bb122e954524c5c397bd8f708bc7430c1617fadb1b27770d4f86850d 1755 less_487-0.1+deb10u1.dsc
+ f3dc8455cb0b2b66e0c6b816c00197a71bf6d1787078adeee0bcf2aea4b12706 318488 less_487.orig.tar.gz
+ 6b1e3a9fe1dfd19bfa7a6e551ef2e151c8d3ed25f2e112a3e62277a32d62a853 20624 less_487-0.1+deb10u1.debian.tar.xz
+ 1086552bebd52122c1126e32e7c133778b4194b90fbfc0f72f481967e041fa5a 5982 less_487-0.1+deb10u1_amd64.buildinfo
+Files:
+ f4919eff010d58827b89dcad915a7cfc 1755 text important less_487-0.1+deb10u1.dsc
+ dcc8bf183a83b362d37fe9ef8df1fb60 318488 text important less_487.orig.tar.gz
+ a8b0dad685efa87c590e7717688472e6 20624 text important less_487-0.1+deb10u1.debian.tar.xz
+ fde52250bd49d7ce071b3416b315b35d 5982 text important less_487-0.1+deb10u1_amd64.buildinfo
+

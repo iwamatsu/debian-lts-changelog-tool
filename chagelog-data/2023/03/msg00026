@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 Mar 2023 12:17:23 +0200
+Source: runc
+Architecture: source
+Version: 1.0.0~rc6+dfsg1-3+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ runc (1.0.0~rc6+dfsg1-3+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Skip cgroup test that fails with current buildd kernel
+     (5.10.0-21/bullseye)
+Checksums-Sha1:
+ b896c37bfb39cb9c4f8408269bd34261370f0538 2825 runc_1.0.0~rc6+dfsg1-3+deb10u2.dsc
+ b3ab070dc7de0c069ef9f3abadf43c1143d6087c 23696 runc_1.0.0~rc6+dfsg1-3+deb10u2.debian.tar.xz
+ e3451c9d6b6bc271815af0175eb71469ba2f1511 8158 runc_1.0.0~rc6+dfsg1-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ fc4e45ee44bfa1cde3acb136ac30c28d57d8d07173ac3e5582e3a61d333bbc00 2825 runc_1.0.0~rc6+dfsg1-3+deb10u2.dsc
+ 4b05713adb39e3dfe7381afbc5ebb2dbeef6dab75ffab3da389b9756164bb5f0 23696 runc_1.0.0~rc6+dfsg1-3+deb10u2.debian.tar.xz
+ f75ebd4debf1637ec9fd9eb9344ba0bbe70204e090be13e23a017233d80b48aa 8158 runc_1.0.0~rc6+dfsg1-3+deb10u2_amd64.buildinfo
+Files:
+ 9e506573578d91ae33524654fb2b02b0 2825 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u2.dsc
+ 08d57e68ca5685d9fae8c22cf75eb708 23696 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u2.debian.tar.xz
+ 3d98ed67d1f00848e2c2c6aa823dde23 8158 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u2_amd64.buildinfo
+

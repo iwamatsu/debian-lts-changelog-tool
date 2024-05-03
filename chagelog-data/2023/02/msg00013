@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 09 Feb 2023 16:51:55 +0100
+Source: sox
+Architecture: source
+Version: 14.4.2+git20190427-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 933372 1010374 1012138 1012516 1021133 1021134 1021135
+Changes:
+ sox (14.4.2+git20190427-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix some resource leaks.
+   * Replace CVE-2017-11358 patch with the non-broken one from upstream
+     (Closes: #933372)
+   * Fix big endian 64bit FTBFS: Import upstream patch to fix hcom writing
+   * Enable test suite. Non-fatal on mipsen, see #1030674
+   * Fix CVE-2021-3643 and CVE-2021-23210: voc validation (Closes: #1010374)
+   * Fix CVE-2021-23159 and CVE-2021-23172: hcom validation
+     (Closes: #1021133, #1021134)
+   * Fix CVE-2021-33844: wav validation (Closes: #1021135)
+   * Fix CVE-2021-40426: sphere validation (Closes: #1012138)
+   * Fix CVE-2022-31650: aiff validation (Closes: #1012516)
+   * Fix CVE-2022-31651: reject implausible rate (Closes: #1012516)
+   * Silence dh_missing
+   * Add an autopkgtest
+Checksums-Sha1:
+ 960ea8e992790dcc065e0be8afc25833987d6343 2880 sox_14.4.2+git20190427-1+deb10u1.dsc
+ dc9668256b9d81ef25d672f14f12ec026b0b4087 935449 sox_14.4.2+git20190427.orig.tar.bz2
+ 0486c887fde888ba8c2e9c3f9accdd6f2720dde3 27332 sox_14.4.2+git20190427-1+deb10u1.debian.tar.xz
+ 054fde48a979a2c9079bbcfb1610a4f9254d164f 13884 sox_14.4.2+git20190427-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d105b9b835df3e08a4b2a64570244f397308ff095dfda87e159f99d96994aa52 2880 sox_14.4.2+git20190427-1+deb10u1.dsc
+ 81a6956d4330e75b5827316e44ae381e6f1e8928003c6aa45896da9041ea149c 935449 sox_14.4.2+git20190427.orig.tar.bz2
+ af312f5f270aa4b912dbd8ebc09df823b4daa61b968e8ec1b5892053163b2c39 27332 sox_14.4.2+git20190427-1+deb10u1.debian.tar.xz
+ 77f061db06ab2e577e2ec2f221eb69a5e5de2eb92a6992cc9b57b0cb4bca843b 13884 sox_14.4.2+git20190427-1+deb10u1_amd64.buildinfo
+Files:
+ 4deb0b78b081c2931b905119bb84c53e 2880 sound optional sox_14.4.2+git20190427-1+deb10u1.dsc
+ ba804bb1ce5c71dd484a102a5b27d0dd 935449 sound optional sox_14.4.2+git20190427.orig.tar.bz2
+ 70f8f14e0e29c14c7f56c1451b7e43ad 27332 sound optional sox_14.4.2+git20190427-1+deb10u1.debian.tar.xz
+ a19fbd80f25751a811bf9010dcef0c39 13884 sound optional sox_14.4.2+git20190427-1+deb10u1_amd64.buildinfo
+

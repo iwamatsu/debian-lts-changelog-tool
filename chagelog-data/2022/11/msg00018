@@ -1,0 +1,62 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 17 Nov 2022 09:45:39 +0000
+Source: python-django
+Binary: python-django python-django-common python-django-doc python3-django
+Built-For-Profiles: nocheck
+Architecture: source all
+Version: 1:1.11.29-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-django - High-level Python web development framework (Python 2 version)
+ python-django-common - High-level Python web development framework (common)
+ python-django-doc - High-level Python web development framework (documentation)
+ python3-django - High-level Python web development framework (Python 3 version)
+Closes: 1003113 1004752
+Changes:
+ python-django (1:1.11.29-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian Long Term Security (LTS) team.
+ .
+   * CVE-2021-45452: Storage.save allowed directory traversal if crafted
+     filenames were passed directlyto it. (Closes: #1003113)
+ .
+   * CVE-2022-22818: The {% debug %} template tag did not properly encode the
+     current context. This may lead to a cross-site scripting (XSS)
+     vulnerability. (Closes: #1004752)
+ .
+   * CVE-2022-23833: The HTTP MultiPartParser had a issue whereby certain
+     inputs to multipart forms could result in an infinite loop when parsing
+     uploaded files. (Closes: #1004752)
+Checksums-Sha1:
+ cd483f46fe8fec48bbf72e03aedb3b22118c4492 3294 python-django_1.11.29-1+deb10u4.dsc
+ e71620c18c985d8f5381bd87c02dbd23f1f48dd0 7977916 python-django_1.11.29.orig.tar.gz
+ 1ae4e9ab1c6ee21c40e6ba9e973ee7c75a84cf3e 43072 python-django_1.11.29-1+deb10u4.debian.tar.xz
+ ea9e46ad5d48365acfff9a45d4d7f8b0230b0049 1539752 python-django-common_1.11.29-1+deb10u4_all.deb
+ 96219cc647f764308b4013bbcf6c756dcb822c49 2648440 python-django-doc_1.11.29-1+deb10u4_all.deb
+ 89d97bd2c837ae27e37681c395c74c3d23162caa 920664 python-django_1.11.29-1+deb10u4_all.deb
+ a47aa97eb7632234a0b0432f8e8cfcb13adfe5d3 8849 python-django_1.11.29-1+deb10u4_amd64.buildinfo
+ e5731b3dbd7f2823679c38085849b13e3da83153 920544 python3-django_1.11.29-1+deb10u4_all.deb
+Checksums-Sha256:
+ a38bf127581c389265bb89dd7c32ccd97661b073d941acbedb5eccc4b3ff48a3 3294 python-django_1.11.29-1+deb10u4.dsc
+ 4200aefb6678019a0acf0005cd14cfce3a5e6b9b90d06145fcdd2e474ad4329c 7977916 python-django_1.11.29.orig.tar.gz
+ b9455bf010626dc5a1f1b666dcd7caf2878f5355c62afae3b5cb30b50514456d 43072 python-django_1.11.29-1+deb10u4.debian.tar.xz
+ 86a8f2b9651d541d6e50e882e700da2f2593ce4035f92e6cdcdb4dfac4523ac9 1539752 python-django-common_1.11.29-1+deb10u4_all.deb
+ 2212115f60090a8f732db463ef241d5c6fb8e5dbdc52774c8ed260025859250a 2648440 python-django-doc_1.11.29-1+deb10u4_all.deb
+ adf7429baefa0c7df470994c467553e0bbb564ad2cff88afcde690a9dcefa1c1 920664 python-django_1.11.29-1+deb10u4_all.deb
+ a7a2ba33033c55a2519ea9f83907fd7c2029ce05a835b71ad00302cb184c5437 8849 python-django_1.11.29-1+deb10u4_amd64.buildinfo
+ 8688a6b3bc6e98b839a0c412b42f655d0204e24f7c66f62733098e17cec6745b 920544 python3-django_1.11.29-1+deb10u4_all.deb
+Files:
+ 190672d0d9ecd82649958551dca0a641 3294 python optional python-django_1.11.29-1+deb10u4.dsc
+ e725953dfc63ea9e3b5b0898a8027bd7 7977916 python optional python-django_1.11.29.orig.tar.gz
+ d088ce49d8c48978db09932bd0f88d56 43072 python optional python-django_1.11.29-1+deb10u4.debian.tar.xz
+ 21ffb89e3463f87af330e290a33ffe2c 1539752 python optional python-django-common_1.11.29-1+deb10u4_all.deb
+ dc78c8d5b4f8310f7aa14a7545b7cdac 2648440 doc optional python-django-doc_1.11.29-1+deb10u4_all.deb
+ 76f8834222db832fd4ef170e6c1a1a21 920664 python optional python-django_1.11.29-1+deb10u4_all.deb
+ 07ba0219bdcec301f092bb4cb00a1c4d 8849 python optional python-django_1.11.29-1+deb10u4_amd64.buildinfo
+ 11cd0f785a0844fca8334823481198ba 920544 python optional python3-django_1.11.29-1+deb10u4_all.deb
+

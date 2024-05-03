@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:39:28 CEST
+Source: syncthing
+Architecture: source
+Version: 1.0.0~ds1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 24a7ea22f15a99169930bc1ed1e1a063a00c1519 3800 syncthing_1.0.0~ds1-1+deb10u1.dsc
+ fdc62e1bab83c5b3895b35680e1843f0ec294090 3104520 syncthing_1.0.0~ds1.orig.tar.xz
+ ededa2cab4e1090c1687d0e280ca1045719fe0ff 22672 syncthing_1.0.0~ds1-1+deb10u1.debian.tar.xz
+ 8bb797d63f102155d0f92deb3e417a1a12a75909 12528 syncthing_1.0.0~ds1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1a38a4e8ac9ed3dc75c4608599c0e537c3685baac7720193165d10b1aed872fe 3800 syncthing_1.0.0~ds1-1+deb10u1.dsc
+ c18257e8b31acd1d0f2889768d96bbcdbb9ffb49945184477639923bcb3bd0e2 3104520 syncthing_1.0.0~ds1.orig.tar.xz
+ 22ce5e508de095382a971284636fcbfd52756e56015059a01a1347ac9bcdbabc 22672 syncthing_1.0.0~ds1-1+deb10u1.debian.tar.xz
+ 8aac7f2b435d9ba9bcb5d8b6071ff7d5c7f0829303976a5b5b3f0cfe0389a6a5 12528 syncthing_1.0.0~ds1-1+deb10u1_amd64.buildinfo
+Changes:
+ syncthing (1.0.0~ds1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 1ba3c6b1cee3b1ae719b6e4c9251e0b3 3800 utils optional syncthing_1.0.0~ds1-1+deb10u1.dsc
+ 76558b79f00d5b56fe94a3f42beec707 3104520 utils optional syncthing_1.0.0~ds1.orig.tar.xz
+ ec31f33ac7663ef610e155d2c6145a4f 22672 utils optional syncthing_1.0.0~ds1-1+deb10u1.debian.tar.xz
+ cc730f9277ed5d076ebe984b81f99d0f 12528 utils optional syncthing_1.0.0~ds1-1+deb10u1_amd64.buildinfo
+

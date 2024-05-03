@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 11 Jan 2023 20:40:40 CET
+Source: libxstream-java
+Architecture: source
+Version: 1.4.11.1-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 11bd30a15f5a2e3a4e4764f32b4ee591cfa5410e 2591 libxstream-java_1.4.11.1-1+deb10u4.dsc
+ 9ca0224d6e7fa377a346da4589771aafb0518b6a 11632 libxstream-java_1.4.11.1-1+deb10u4.debian.tar.xz
+ db38ec9398e8cecba7333879f50777ba5d209feb 16679 libxstream-java_1.4.11.1-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 187737eec0643de53cd7f55e2c6016eeda29a77f26e882df77936d25f90ce81b 2591 libxstream-java_1.4.11.1-1+deb10u4.dsc
+ 4b0cc4f40074da724391ee1b16f4cf9c8cd7d3aa771964c207c45c44d126a601 11632 libxstream-java_1.4.11.1-1+deb10u4.debian.tar.xz
+ 474199b330b4e1e5e6312c6b4a8ca1fcf9916c58b4ff4805b7c9e43729b7ea4b 16679 libxstream-java_1.4.11.1-1+deb10u4_amd64.buildinfo
+Closes: 1027754
+Changes:
+ libxstream-java (1.4.11.1-1+deb10u4) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2022-41966:
+     XStream serializes Java objects to XML and back again. Versions prior to
+     1.4.11.1-1+deb10u4 may allow a remote attacker to terminate the application
+     with a stack overflow error, resulting in a denial of service only via
+     manipulation of the processed input stream. The attack uses the hash code
+     implementation for collections and maps to force recursive hash calculation
+     causing a stack overflow. This issue is patched in version
+     1.4.11.1-1+deb10u4 which handles the stack overflow and raises an
+     InputManipulationException instead. A potential workaround for users who
+     only use HashMap or HashSet and whose XML refers these only as default map
+     or set, is to change the default implementation of java.util.Map and
+     java.util per the code example in the referenced advisory. However, this
+     implies that your application does not care about the implementation of the
+     map and all elements are
+     comparable. (Closes: #1027754)
+Files:
+ e178c1709014c28fd6aea7bbf2992bfc 2591 java optional libxstream-java_1.4.11.1-1+deb10u4.dsc
+ 2502881f1a1aecbd8e7d8b6d2f942ff0 11632 java optional libxstream-java_1.4.11.1-1+deb10u4.debian.tar.xz
+ ecea8576653d1d6126b4ffbb4351f85e 16679 java optional libxstream-java_1.4.11.1-1+deb10u4_amd64.buildinfo
+

@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 19 Jun 2023 21:10:11 +0200
+Source: php7.3
+Architecture: source
+Version: 7.3.31-1~deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ php7.3 (7.3.31-1~deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-3247: Missing error check and insufficient random bytes in HTTP
+     Digest authentication for SOAP.
+Checksums-Sha1:
+ 8d8f4578cfffae2de8f1666fbb81721652bf436f 5867 php7.3_7.3.31-1~deb10u4.dsc
+ b0ffd118734d1052089caea86cac3adc0b2a3084 80572 php7.3_7.3.31-1~deb10u4.debian.tar.xz
+ f67e5edcc0570b16595566596a6a2a4a54ff007e 35750 php7.3_7.3.31-1~deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 2b93efe16836cf67be98e94dd14fd7325121c39da09fdfd297d007cf5e7ff27d 5867 php7.3_7.3.31-1~deb10u4.dsc
+ 1fcd0a0f22d7b82d1094e88ec52fc9bf91fc9f780016fabb187a5cb7cf6158fe 80572 php7.3_7.3.31-1~deb10u4.debian.tar.xz
+ 8924bcd0189b435507d8e6735e226b4d870d32400dce257d10d9bbf49e50aa52 35750 php7.3_7.3.31-1~deb10u4_amd64.buildinfo
+Files:
+ fd9a587e449f94ca05c61654020244b2 5867 php optional php7.3_7.3.31-1~deb10u4.dsc
+ d4ee40826fd642715ad7004a0d3f7b17 80572 php optional php7.3_7.3.31-1~deb10u4.debian.tar.xz
+ 28f3cfd4e5313943e7864605bd297cf5 35750 php optional php7.3_7.3.31-1~deb10u4_amd64.buildinfo
+

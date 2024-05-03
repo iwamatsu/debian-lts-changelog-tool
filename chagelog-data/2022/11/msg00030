@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 22 Nov 2022 23:19:18 CET
+Source: nginx
+Architecture: source
+Version: 1.14.2-2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ b039a8d6227cc12de6cb2383a036ee09b95ab81d 4332 nginx_1.14.2-2+deb10u5.dsc
+ bf5187c639761408b2d74587c1726a1eeab49b4c 935176 nginx_1.14.2-2+deb10u5.debian.tar.xz
+ 670d0ee425ddcc823298e44fbc865812b7e15b48 23558 nginx_1.14.2-2+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 55105c6396ad17d125d8c49ae3731eb36d085933e77ddf3605d6dbba05df8ce9 4332 nginx_1.14.2-2+deb10u5.dsc
+ 9456b8ab944a8dbfc2913f78a12caa77c65792042300e8a3917235652ad5bfe3 935176 nginx_1.14.2-2+deb10u5.debian.tar.xz
+ b0a55b6903d0884cde65e0724f6be5a8d2fa75b03fd74a19dc5b02dd4f6b10ed 23558 nginx_1.14.2-2+deb10u5_amd64.buildinfo
+Changes:
+ nginx (1.14.2-2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-3618:
+     ALPACA is an application layer protocol content confusion attack,
+     exploiting TLS servers implementing different protocols but using
+     compatible certificates, such as multi-domain or wildcard certificates. A
+     MiTM attacker having access to victim's traffic at the TCP/IP layer can
+     redirect traffic from one subdomain to another, resulting in a valid TLS
+     session. This breaks the authentication of TLS and cross-protocol attacks
+     may be possible where the behavior of one protocol service may compromise
+     the other at the application layer.
+   * Fix CVE-2022-41741 and CVE-2022-41742:
+     It was discovered that parsing errors in the mp4 module of Nginx, a
+     high-performance web and reverse proxy server, could result in denial of
+     service, memory disclosure or potentially the execution of arbitrary code
+     when processing a malformed mp4 file.
+Files:
+ 12a93b31e488b799cbbcdc8ff2c37f96 4332 httpd optional nginx_1.14.2-2+deb10u5.dsc
+ feaea4d7b8ffdfe703cddc59941a9076 935176 httpd optional nginx_1.14.2-2+deb10u5.debian.tar.xz
+ bd9be01c24440d5d9597c38bce2efbb9 23558 httpd optional nginx_1.14.2-2+deb10u5_amd64.buildinfo
+

@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Sep 2022 19:03:02 +0200
+Source: libsndfile
+Architecture: source
+Version: 1.0.28-6+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libsndfile (1.0.28-6+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-4156
+     heap out-of-bounds read
+Checksums-Sha1:
+ 1cc15894a8b03ec84ccc6aa223e15edc8d6ec1db 2386 libsndfile_1.0.28-6+deb10u2.dsc
+ 85aa967e19f6b9bf975601d79669025e5f8bc77d 1202833 libsndfile_1.0.28.orig.tar.gz
+ 94c70bdbf524d7e110f7a77b34c732d28a6a5130 17352 libsndfile_1.0.28-6+deb10u2.debian.tar.xz
+ 4e7afda0ae8c3b6c245d20c0411f1a514debfa18 7332 libsndfile_1.0.28-6+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ a9677b57a3dc2663bacceb4e13e3dce0bd8fc85f285c74ed9c7f30254e3dbf8b 2386 libsndfile_1.0.28-6+deb10u2.dsc
+ 1ff33929f042fa333aed1e8923aa628c3ee9e1eb85512686c55092d1e5a9dfa9 1202833 libsndfile_1.0.28.orig.tar.gz
+ 99138eb796a8f2d29c3e5c338e09f8a5fef7aa7b25b2890e7b33239c615981a9 17352 libsndfile_1.0.28-6+deb10u2.debian.tar.xz
+ 7331b20bc9cf3d39f1982f690d661f4667620dda97c6778e1938038396e67ecb 7332 libsndfile_1.0.28-6+deb10u2_amd64.buildinfo
+Files:
+ ee03351b467b618756487e54abe7f6a1 2386 devel optional libsndfile_1.0.28-6+deb10u2.dsc
+ 646b5f98ce89ac60cdb060fcd398247c 1202833 devel optional libsndfile_1.0.28.orig.tar.gz
+ 84c022c9d83fad97698e31327fd8a72c 17352 devel optional libsndfile_1.0.28-6+deb10u2.debian.tar.xz
+ 2e9bf9d3edf8d8c4b49ebfd9d8b7ff30 7332 devel optional libsndfile_1.0.28-6+deb10u2_amd64.buildinfo
+

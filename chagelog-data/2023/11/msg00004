@@ -1,0 +1,46 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 07 Nov 2023 12:01:03 +0000
+Source: tang
+Binary: tang tang-dbgsym
+Architecture: source amd64
+Version: 7-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ tang       - network-based cryptographic binding server
+Closes: 1038119
+Changes:
+ tang (7-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-1672: Prevent a race condition which was resulting in a small time
+     window where newly-generated private keys were readable by other processes
+     on the same host. (Closes: #1038119)
+   * Use "Last-Update" (over "Date") in field names in Debian patches to avoid
+     issues with gbp-pq(1).
+Checksums-Sha1:
+ e1df7ccb06a7fa44d34043ffa0f2064677031a6c 1920 tang_7-1+deb10u2.dsc
+ e08a9fec3760328fd263a347b497898fb3c0e891 115130 tang_7.orig.tar.bz2
+ 9de4de969cec0beab93c17595fdb27f6ed832ecb 3576 tang_7-1+deb10u2.debian.tar.xz
+ 9261501521fd82a89dca8ba729b0e791851ac015 17868 tang-dbgsym_7-1+deb10u2_amd64.deb
+ 90157cf7e29a9c91e4ca09396011d9adea91e351 7803 tang_7-1+deb10u2_amd64.buildinfo
+ c62ca6316d02fca70f47b567108f407aae35d557 15004 tang_7-1+deb10u2_amd64.deb
+Checksums-Sha256:
+ 9691b19f227ef8e3ab57b3198009d1b8f008cf1cbdc8679b4dcb539f3b6ab5ae 1920 tang_7-1+deb10u2.dsc
+ fbe13e4e3103cd24cada7824b63e510cffd650832ecd075fd49b99475a4f9bfa 115130 tang_7.orig.tar.bz2
+ d1873dc5055d08180de7753d5d1c611244e4efabd877d44680098949c0bc1569 3576 tang_7-1+deb10u2.debian.tar.xz
+ 0b69ea0375f5764fc4e7473c8a8c84854125effb5297879fd2b011560215f256 17868 tang-dbgsym_7-1+deb10u2_amd64.deb
+ 739a99f6b2537a9fefdab4ebfc2a6facb5f981ac31aec64b75b2804dc988eb44 7803 tang_7-1+deb10u2_amd64.buildinfo
+ c2d234469e09396667154ca3254cdf2ce28244b0d9f02e1d227a15c8b161e904 15004 tang_7-1+deb10u2_amd64.deb
+Files:
+ f255927f700e2630f739d5b335f94aa9 1920 net optional tang_7-1+deb10u2.dsc
+ a6d16e73d52cef370fe769ee8aec8319 115130 net optional tang_7.orig.tar.bz2
+ 7f368781886c69251e658cc3107fb48b 3576 net optional tang_7-1+deb10u2.debian.tar.xz
+ fa38d666334fc04f850ba4f695bbdc49 17868 debug optional tang-dbgsym_7-1+deb10u2_amd64.deb
+ 9e156810d7929f0fd9ca45457f84b50b 7803 net optional tang_7-1+deb10u2_amd64.buildinfo
+ 538072a028f8aeacd46b8f0695337bfd 15004 net optional tang_7-1+deb10u2_amd64.deb
+

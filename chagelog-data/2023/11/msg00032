@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 Nov 2023 15:48:57 +0200
+Source: gimp-dds
+Architecture: source
+Version: 3.0.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ gimp-dds (3.0.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-44441: File parsing heap buffer overflow.
+Checksums-Sha1:
+ c7704fe0f02b67c79a7ad95b7e06fdd16d2b1969 2022 gimp-dds_3.0.1-1+deb10u1.dsc
+ f142a6f0794c6ece16047e25a5ed75930cf33cc8 470026 gimp-dds_3.0.1.orig.tar.bz2
+ ce089069dce1282e7f000c24e189cf58021c1ced 3952 gimp-dds_3.0.1-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 902f638fd0ed0646c2c0ce8331f3204494cc2dc0992c9dd8573d10e6408cada0 2022 gimp-dds_3.0.1-1+deb10u1.dsc
+ 6e53df3b8b98c55f22fa7ea2c3ed17478626c924b24c69d499f5d813c3c2788a 470026 gimp-dds_3.0.1.orig.tar.bz2
+ ba418ee8d198f4ae6e8d8beae5e84c0144a781e58358353a3cdfdf9d464b5efc 3952 gimp-dds_3.0.1-1+deb10u1.debian.tar.xz
+Files:
+ ab4b384aca7370fff3607c3e32f0996c 2022 graphics optional gimp-dds_3.0.1-1+deb10u1.dsc
+ 19a0310e97b93d836beb3239fa0cbd63 470026 graphics optional gimp-dds_3.0.1.orig.tar.bz2
+ b3c8d7accd67693c378386b11efbf0e2 3952 graphics optional gimp-dds_3.0.1-1+deb10u1.debian.tar.xz
+

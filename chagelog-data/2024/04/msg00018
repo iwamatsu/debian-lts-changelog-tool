@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 Apr 2024 15:06:16 +0200
+Source: mediawiki
+Architecture: source
+Version: 1:1.31.16-1+deb10u8
+Distribution: buster-security
+Urgency: high
+Maintainer: Kunal Mehta <legoktm@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ mediawiki (1:1.31.16-1+deb10u8) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-51704: group-*-member messages can result in XSS on
+     Special:log/rights.
+   * Fix CVE-2024-PENDING: Denial of service vector via GET request to
+     Special:MovePage on pages with thousands of subpages.
+Checksums-Sha1:
+ c294c3aa57365831107a9e4d951bc772521f0d4f 2130 mediawiki_1.31.16-1+deb10u8.dsc
+ de399a789c710a3b863eba852ab654a42c615f1d 124044 mediawiki_1.31.16-1+deb10u8.debian.tar.xz
+ ae90601c0376e3b69e9584a5500893e2b0fdee19 6829 mediawiki_1.31.16-1+deb10u8_amd64.buildinfo
+Checksums-Sha256:
+ 2e04414d8f3c6904efa24f6000a461d0c1eeccddcce2271945344668b1095051 2130 mediawiki_1.31.16-1+deb10u8.dsc
+ e803f6aa5fcbfbcaf5c000547495b79b465a96f8e1daacfbd9de4f6847f99976 124044 mediawiki_1.31.16-1+deb10u8.debian.tar.xz
+ dde716b00ea86acfd819f9afd424a8de87c1293fbe32f4c2be40abb277dfac4f 6829 mediawiki_1.31.16-1+deb10u8_amd64.buildinfo
+Files:
+ e513d23046097130001b8b1dacb99e37 2130 web optional mediawiki_1.31.16-1+deb10u8.dsc
+ 67cb8ca5c494d0ff61beb7415d2deedb 124044 web optional mediawiki_1.31.16-1+deb10u8.debian.tar.xz
+ 8f42952e81887322c63d1ccd22821420 6829 web optional mediawiki_1.31.16-1+deb10u8_amd64.buildinfo
+

@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 28 Jun 2022 15:02:11 +0200
+Source: firejail
+Binary: firejail firejail-profiles
+Architecture: source amd64 all
+Version: 0.9.58.2-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Reiner Herrmann <reiner@reiner-h.de>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ firejail   - sandbox to restrict the application environment
+ firejail-profiles - profiles for the firejail application sandbox
+Closes: 1012510
+Changes:
+ firejail (0.9.58.2-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport for stretch to fix CVE-2022-31214 (Closes: #1012510)
+Checksums-Sha1:
+ 2300d40166d5524e7a5aa4c2f476af36aa13dc27 2521 firejail_0.9.58.2-2+deb9u1.dsc
+ 0153e705562fe995f926319d4315415ad540dc09 27532 firejail_0.9.58.2-2+deb9u1.debian.tar.xz
+ 70d8d322b6ce24f792a2133033e9cee52ef5a7d3 723792 firejail-dbgsym_0.9.58.2-2+deb9u1_amd64.deb
+ af2f116f5ffce24811fbd92f8bbd7afb3da3d6be 70992 firejail-profiles_0.9.58.2-2+deb9u1_all.deb
+ 34e87cf3e09f91b527a547670b1612f6c21c33aa 6627 firejail_0.9.58.2-2+deb9u1_amd64.buildinfo
+ 936faec8519d5ad5fc8b0fac7852910f702920b3 296302 firejail_0.9.58.2-2+deb9u1_amd64.deb
+Checksums-Sha256:
+ b4689b422c2206e9994851a252529fc9ac1014e700fcd564c00fd14af5cdbd50 2521 firejail_0.9.58.2-2+deb9u1.dsc
+ 690941ff90d84da1ef2812b727f40dbd6eff686340f38f60ce569f586aeb08ac 27532 firejail_0.9.58.2-2+deb9u1.debian.tar.xz
+ 6cac14b30cb4d7cbba9110f605d60f778274ec610c5f5d783f62b2bca36c13d2 723792 firejail-dbgsym_0.9.58.2-2+deb9u1_amd64.deb
+ 6c442f8b505cfe08a6f748ac5cfb77362b8d34396df1c49a35e05308178cb368 70992 firejail-profiles_0.9.58.2-2+deb9u1_all.deb
+ a2b74cdbbd82421edb364f144689b24c6d87761f97c673f690f5ecf77f4aedee 6627 firejail_0.9.58.2-2+deb9u1_amd64.buildinfo
+ 8db690e94838d6a4cfe27e086a042b2415ea5cdf8b4fc94d515334c3043e6adf 296302 firejail_0.9.58.2-2+deb9u1_amd64.deb
+Files:
+ aedc1a06012f595d7fc0bfeeffd52202 2521 utils optional firejail_0.9.58.2-2+deb9u1.dsc
+ 93b181b2a9461108a60afb2357e0af59 27532 utils optional firejail_0.9.58.2-2+deb9u1.debian.tar.xz
+ d6b4f2f48186e138c75c2a3ca9060ec4 723792 debug extra firejail-dbgsym_0.9.58.2-2+deb9u1_amd64.deb
+ d77fd332b71123bee60c9dc6e6d8f6b5 70992 utils optional firejail-profiles_0.9.58.2-2+deb9u1_all.deb
+ 1164b539fd969aaea160e9677a752d03 6627 utils optional firejail_0.9.58.2-2+deb9u1_amd64.buildinfo
+ 41d60c0fd390df6d050be5d7889e37d9 296302 utils optional firejail_0.9.58.2-2+deb9u1_amd64.deb
+

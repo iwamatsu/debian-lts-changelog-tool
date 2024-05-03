@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 02 Jun 2022 23:36:53 +0530
+Source: debian-security-support
+Architecture: source
+Version: 1:9+2022.06.02
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Holger Levsen <holger@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ debian-security-support (1:9+2022.06.02) stretch-security; urgency=medium
+ .
+   [ Abhijith PA ]
+   * security-support-ended.deb9: drop support for keystone.
+ .
+   [ Utkarsh Gupta ]
+   * Copy respective files from master (uploaded to Debian
+     sid via 1:12+2022.06.01):
+     + security-support-ended.deb9: drop support for
+       - node-.*
+       - libspring-java
+       - guacamole-client
+       - gpac
+       - ansible
+       - mysql-connector-java
+       - ckeditor3
+     + security-support-ended.deb10: drop support for
+       - xen
+   * d/.gitlab-ci.yml: Remove build artifacts to fix CI
+     pipeline. \o/
+Checksums-Sha1:
+ e18a8ed837b289c3cdb85bd8b3f3ed5b479bf3b6 1890 debian-security-support_9+2022.06.02.dsc
+ a4d2caf3d08d14515cf5c089c38d736c26c9f642 32524 debian-security-support_9+2022.06.02.tar.xz
+ 2b5d5f1caa5b229d31849392396d9770d661b2fd 6182 debian-security-support_9+2022.06.02_source.buildinfo
+Checksums-Sha256:
+ f228f27e8744e312dca7cd68a5490dbe576d2257304690795ec5041744b613e9 1890 debian-security-support_9+2022.06.02.dsc
+ 6dcc2312a0896490adfaab678854c6c43421580267617353ba821ef0c429f64f 32524 debian-security-support_9+2022.06.02.tar.xz
+ 086d2f1eb497b73d3d69e091e09e0f0f008f4a02e2bba3f4c9c1e4150fd8fccb 6182 debian-security-support_9+2022.06.02_source.buildinfo
+Files:
+ bb67821819f91a4cbe3b147fd03e146a 1890 admin optional debian-security-support_9+2022.06.02.dsc
+ ff145fef68fa79f1adc3fcd488252a4a 32524 admin optional debian-security-support_9+2022.06.02.tar.xz
+ 877f10a84a0188c8f291dbe945589f3b 6182 admin optional debian-security-support_9+2022.06.02_source.buildinfo
+

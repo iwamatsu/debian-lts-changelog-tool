@@ -1,0 +1,137 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 10 Oct 2022 09:05:09 -0700
+Source: strongswan
+Binary: charon-cmd charon-cmd-dbgsym charon-systemd charon-systemd-dbgsym libcharon-extra-plugins libcharon-extra-plugins-dbgsym libstrongswan libstrongswan-dbgsym libstrongswan-extra-plugins libstrongswan-extra-plugins-dbgsym libstrongswan-standard-plugins libstrongswan-standard-plugins-dbgsym strongswan strongswan-charon strongswan-charon-dbgsym strongswan-libcharon strongswan-libcharon-dbgsym strongswan-nm strongswan-nm-dbgsym strongswan-pki strongswan-pki-dbgsym strongswan-scepclient strongswan-scepclient-dbgsym strongswan-starter strongswan-starter-dbgsym strongswan-swanctl strongswan-swanctl-dbgsym
+Built-For-Profiles: nocheck
+Architecture: source amd64 all
+Version: 5.7.2-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ charon-cmd - standalone IPsec client
+ charon-systemd - strongSwan IPsec client, systemd support
+ libcharon-extra-plugins - strongSwan charon library (extra plugins)
+ libstrongswan - strongSwan utility and crypto library
+ libstrongswan-extra-plugins - strongSwan utility and crypto library (extra plugins)
+ libstrongswan-standard-plugins - strongSwan utility and crypto library (standard plugins)
+ strongswan - IPsec VPN solution metapackage
+ strongswan-charon - strongSwan Internet Key Exchange daemon
+ strongswan-libcharon - strongSwan charon library
+ strongswan-nm - strongSwan plugin to interact with NetworkManager
+ strongswan-pki - strongSwan IPsec client, pki command
+ strongswan-scepclient - strongSwan IPsec client, SCEP client
+ strongswan-starter - strongSwan daemon starter and configuration file parser
+ strongswan-swanctl - strongSwan IPsec client, swanctl command
+Closes: 1021271
+Changes:
+ strongswan (5.7.2-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-40617: Prevent an issue where strongswan could query URLs with
+     untrusted certificates and potentially lead to a DoS attack by blocking
+     the fetcher thread. (Closes: #1021271)
+   * Add debian/.gitlab-ci.yml:
+     - Don't run piuparts tests.
+     - Don't test arm64 crossbuilding in LTS.
+   * Mark the autopkgtest as flaky; it currently fails but we still want to run it.
+Checksums-Sha1:
+ 075cc1face713097e8c2cdd668be741df822cbc1 3273 strongswan_5.7.2-1+deb10u3.dsc
+ 307d4d7c7d5cf6e904b85ec735cb8eefc33bb9c2 4997818 strongswan_5.7.2.orig.tar.bz2
+ 3412e3c3057c717da0611c023145c03af655a4c3 119684 strongswan_5.7.2-1+deb10u3.debian.tar.xz
+ 6658975697407951194069d54b86c02dd226a4f4 104564 charon-cmd-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 315c4a1ae13f1c9f4c0bd6b2a99ce583cd899f4d 97268 charon-cmd_5.7.2-1+deb10u3_amd64.deb
+ fc41682a700cbb0f8d093ed59c171188b2c97418 53296 charon-systemd-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 578f36315495ff47440aab60eed7e869dfb09a11 93652 charon-systemd_5.7.2-1+deb10u3_amd64.deb
+ 04de3fda854473ea66ff3b4f9247bee59f2f7bd6 3361448 libcharon-extra-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 86ddb824e1a6aabae6a315a586d76d90fee0e170 250144 libcharon-extra-plugins_5.7.2-1+deb10u3_amd64.deb
+ f1b220f8a7ba8072f2834b5557e567c0296782fc 2925196 libstrongswan-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 12ee79388f5795b1086901cac6fefc81d4a4bffc 1117648 libstrongswan-extra-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ cf7ca8fabf88af1789f33320ceda452a57903293 253876 libstrongswan-extra-plugins_5.7.2-1+deb10u3_amd64.deb
+ 2a44582e634a2cf8b8a263f89555b62b52b8ddfe 757628 libstrongswan-standard-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 1d42c632988418d51421a98bcdf80b8faac65653 141424 libstrongswan-standard-plugins_5.7.2-1+deb10u3_amd64.deb
+ 94217bfb83e9ddd4159b4ee59427fde898551f85 422228 libstrongswan_5.7.2-1+deb10u3_amd64.deb
+ 4e117fc4c09f10625a04a95e23761ba3d1d0f803 53420 strongswan-charon-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 308a536a0e57fa7c6e02e20f8e027ad6d766ce46 97228 strongswan-charon_5.7.2-1+deb10u3_amd64.deb
+ ffee54731fe33af2b6fba945a7f4a2bf7675c9d8 4440936 strongswan-libcharon-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 19e9ee503c9076ec248a8cc7b6b85b4ef716c24b 312176 strongswan-libcharon_5.7.2-1+deb10u3_amd64.deb
+ e2e7dae6c14b5057268c408e34c48db2879060bf 202264 strongswan-nm-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ cd7e14ccd2d909f7960867b2edc0f492d6d33a80 98564 strongswan-nm_5.7.2-1+deb10u3_amd64.deb
+ 5ff685306d2a4ecd9df2c1009f706e4f73d35fe9 190420 strongswan-pki-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 0a8a49c613011f71ee9aed868194111b4011b9a5 128852 strongswan-pki_5.7.2-1+deb10u3_amd64.deb
+ cc011c2ae040c2cef28788559ad65d166c5c1bce 62264 strongswan-scepclient-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ f285c8e278a9a9a8af77ae08a0fc5ba87e3b50c2 102876 strongswan-scepclient_5.7.2-1+deb10u3_amd64.deb
+ d46f2de4654b407a9fb798b7082b8b6ed593a214 649456 strongswan-starter-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 7f1a53e11dee4484dfbe190db266763a53a85312 228308 strongswan-starter_5.7.2-1+deb10u3_amd64.deb
+ 8578fa9a77383a34505f7065af7a97a00f0d93e1 749076 strongswan-swanctl-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 4e4218829f5bda2cd3f743ca33a59b4a4f2907ba 184728 strongswan-swanctl_5.7.2-1+deb10u3_amd64.deb
+ 16a431717527d59dbdcd8f7ffb16e513dcfe0bc1 93384 strongswan_5.7.2-1+deb10u3_all.deb
+ ad230fb6376e19892b8cd9074c9fd8918d9b8135 17364 strongswan_5.7.2-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ add33acfad3ae4b3e178012d9ba9fdc7bf8e71971290526e2bfacb225b3aa29f 3273 strongswan_5.7.2-1+deb10u3.dsc
+ 308e3ba76e2ce2da070e48fcebbe1fa923a27cc71e43bf63917e6f2a889ecc70 4997818 strongswan_5.7.2.orig.tar.bz2
+ 3e8f528cd83f5c97067874c5268f8f3c3a2ff24a4e6288ebcc63cf01f824f960 119684 strongswan_5.7.2-1+deb10u3.debian.tar.xz
+ 5287307055bab4de638cd343dc3342ec305267f56981dd9b5862158388610540 104564 charon-cmd-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 0ccbfbb4ba1a8a18b76c19990600482c0e82db46532d35b1bf622735ffcd7835 97268 charon-cmd_5.7.2-1+deb10u3_amd64.deb
+ 66fcda22188db374cf604842b57fa043aa8e7ba02673a7bad7629297a00049a2 53296 charon-systemd-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 7619e4ba966ac6d8789e2a6c9d6df480a7b5fc990267fba2aa66c3158d9288bd 93652 charon-systemd_5.7.2-1+deb10u3_amd64.deb
+ 7f783cc9b764acfebc60ff1223f004b5ce8074fd8a967debe130494ab97bac3a 3361448 libcharon-extra-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ b3cd785f37dd86cb7d2d0589f1e8787c27b5408be080b087072f107b8ad74261 250144 libcharon-extra-plugins_5.7.2-1+deb10u3_amd64.deb
+ e80e2c888c4e268cf36c6b8bc7b447c8255a04b6382946b88c406f6681bd9ccc 2925196 libstrongswan-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 8a476e6a082f7a847511904a04f5045b6e276e592abec3fa824cfd9042e54371 1117648 libstrongswan-extra-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ ce68d28bd5175fdf1d4ff302d2114dd86bf2ee78c6b8f2d6f969954432cc9ad2 253876 libstrongswan-extra-plugins_5.7.2-1+deb10u3_amd64.deb
+ e5b22d7896decc9721eb8158da343204a76aa62cb1011fa266604cfe62024e1d 757628 libstrongswan-standard-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 849915679bef38339116b4694b325c1591bdeb8dc90a43ad9cde36b43f26adfb 141424 libstrongswan-standard-plugins_5.7.2-1+deb10u3_amd64.deb
+ 4597c08f0c1ffb39d3da44bf8bb05f4090cccbf49c71c5e360a1c6ff65a2b5b8 422228 libstrongswan_5.7.2-1+deb10u3_amd64.deb
+ edd0caf08dd850e1a7d16c7738446803b50cf730ff2b7c31ecfc2e978a74d747 53420 strongswan-charon-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 9a54e5defebb68c174900b4c983bad05fbd7b8e6c0fb1dd25da6598b951e1409 97228 strongswan-charon_5.7.2-1+deb10u3_amd64.deb
+ 3353ad46c0b72ab5018188fa972fa01a63c6efe689bd08623a3b41b43c0147ee 4440936 strongswan-libcharon-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 4b140f36c37ecee23024ca27eb3ec88eed595f515298e9bd67702aa5a73857fe 312176 strongswan-libcharon_5.7.2-1+deb10u3_amd64.deb
+ 656b8e4deb87848b101312b4e57e9b6abc58cd1d745fafb9ba493045df729a3d 202264 strongswan-nm-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 3119c6171cb398d99df369b7389983daeda2fea229838e8253c5784681a5096b 98564 strongswan-nm_5.7.2-1+deb10u3_amd64.deb
+ 226f1b21a5492c4a102bd0ed9de311f50702e3e14644e9ed0ea3f6caebc4436f 190420 strongswan-pki-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ b865e98c9b2017d5e9453461dcc0922f2a67451cfba3f72247c5a50c56e49d0e 128852 strongswan-pki_5.7.2-1+deb10u3_amd64.deb
+ 688d6583fa6979fc5907ede69b04c64565d011e4f5034f0e5aef08ecddbdc9dd 62264 strongswan-scepclient-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ bfe27e712e1677554243c6883c2e39ce98d83aac2d36eda05513722ae2dbf57f 102876 strongswan-scepclient_5.7.2-1+deb10u3_amd64.deb
+ a88502b3a106bf0dc5b811810b25f65c4ced1d55eea6d7c10997f3f5cca94bfa 649456 strongswan-starter-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ dd17cae73dd7ff3af92da24e1b4907bc0e8187cae9b775b6609146272712a7b8 228308 strongswan-starter_5.7.2-1+deb10u3_amd64.deb
+ c301296bdb00bb8b43b3dfea822215536f0ed95984abb0805cf088f044f7d973 749076 strongswan-swanctl-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 6e65279c0e5d7c82187823408bf0857415c445717e90ca13d0a3adba452dcd84 184728 strongswan-swanctl_5.7.2-1+deb10u3_amd64.deb
+ 92a37de755dd5691b9942e9237e0b200bf0af45068be14cf7a6e610ffb681a2e 93384 strongswan_5.7.2-1+deb10u3_all.deb
+ 880432720508f7c50132d93489578f8957ad13d4edcd094b6b7795fc3a0484e3 17364 strongswan_5.7.2-1+deb10u3_amd64.buildinfo
+Files:
+ bff81d02a0c90de4942090f0c1c3f6fc 3273 net optional strongswan_5.7.2-1+deb10u3.dsc
+ 618de96dc2a506f82a162a5abf9263d4 4997818 net optional strongswan_5.7.2.orig.tar.bz2
+ dc6e2c2b73f2bf5d2413f92aabc814ca 119684 net optional strongswan_5.7.2-1+deb10u3.debian.tar.xz
+ ed75c412a83a0f989bb425f66b9503b1 104564 debug optional charon-cmd-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ a5f212104b74c3e940e516d67f6d26c0 97268 net optional charon-cmd_5.7.2-1+deb10u3_amd64.deb
+ 8c182e41e70b0c944ddc9b87c3d1622c 53296 debug optional charon-systemd-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 7758de0eccd35f14ed48a1604f658936 93652 net optional charon-systemd_5.7.2-1+deb10u3_amd64.deb
+ 68bdfb26d33e570315280af13aa34a60 3361448 debug optional libcharon-extra-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ c522f030ca4c3248d1f9e22cdad58fa0 250144 net optional libcharon-extra-plugins_5.7.2-1+deb10u3_amd64.deb
+ 4da1b71ca9690041eab980b64bf76b55 2925196 debug optional libstrongswan-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ f5a5b258485b20b4c65279c4553560fa 1117648 debug optional libstrongswan-extra-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ dc772222177e462bab740893b445fb36 253876 net optional libstrongswan-extra-plugins_5.7.2-1+deb10u3_amd64.deb
+ 9ceff2a923b04b80b41c7687c3ad0143 757628 debug optional libstrongswan-standard-plugins-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ aadfc8a4b67cd849c196450bdc55edf6 141424 net optional libstrongswan-standard-plugins_5.7.2-1+deb10u3_amd64.deb
+ 3ee0a3aba5b4f5b5701f878e3b778e24 422228 net optional libstrongswan_5.7.2-1+deb10u3_amd64.deb
+ 6a386a8c4a6e9a7d8c6d9680a7b0ef01 53420 debug optional strongswan-charon-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ fe8bd0720504508c2ee5e09d61151a6d 97228 net optional strongswan-charon_5.7.2-1+deb10u3_amd64.deb
+ 21b1871b4b280b0a318d7ed278f38ff3 4440936 debug optional strongswan-libcharon-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 2e96574fd25b0447b4abc2960e3bf717 312176 net optional strongswan-libcharon_5.7.2-1+deb10u3_amd64.deb
+ 7f78430795b8b30c50724266854d8aa1 202264 debug optional strongswan-nm-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 2eb32ab7d33d5eddf63a47b5e361d100 98564 net optional strongswan-nm_5.7.2-1+deb10u3_amd64.deb
+ 440f0e7bce9fbfac3d4713d164762357 190420 debug optional strongswan-pki-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 3f23eea7382609482a854baa094ab312 128852 net optional strongswan-pki_5.7.2-1+deb10u3_amd64.deb
+ 7e2629087f3425122a71bc106273892e 62264 debug optional strongswan-scepclient-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 12e4ac12fd66efa85aa35ba4c7920c85 102876 net optional strongswan-scepclient_5.7.2-1+deb10u3_amd64.deb
+ 17611417b6b32190ef77e7ce29111dfa 649456 debug optional strongswan-starter-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ 1f5b489859673e4db1f17890a061d0f3 228308 net optional strongswan-starter_5.7.2-1+deb10u3_amd64.deb
+ 7ea85499b5297fb7fe74def25359dd28 749076 debug optional strongswan-swanctl-dbgsym_5.7.2-1+deb10u3_amd64.deb
+ ea011a9de0bf81dfc6dcf85aa788f076 184728 net optional strongswan-swanctl_5.7.2-1+deb10u3_amd64.deb
+ 6e56f60de9361ed727fc2639081ec3e1 93384 net optional strongswan_5.7.2-1+deb10u3_all.deb
+ 235b0db6b9d7320015bb35c8ae2c8c22 17364 net optional strongswan_5.7.2-1+deb10u3_amd64.buildinfo
+

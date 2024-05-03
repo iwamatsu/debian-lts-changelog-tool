@@ -1,0 +1,59 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 26 Nov 2022 17:00:54 +0100
+Source: heimdal
+Architecture: source
+Version: 7.5.0+dfsg-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Brian May <bam@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 946786 996586 1024187
+Changes:
+ heimdal (7.5.0+dfsg-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team, with fixes for:
+     + CVE-2019-14870: The AD KDC before 7.7.1/7.8 does not apply
+       delegation_not_allowed (aka not-delegated) user attributes for S4U2Self;
+       instead the forwardable flag is set even if the impersonated client has
+       the not-delegated flag set. Closes: #946786.
+     + CVE-2021-3671: A NULL dereference was found in the way the server
+       handled a missing sname in TGS-REQ, leading to denial of service of the
+       KDC before 7.7.1/7.8. Closes: #996586.
+     + CVE-2021-44758: An initial SPNEGO token that has no acceptable
+       mechanisms causes a NULL dereference in acceptors. Closes: #1024187.
+       - Follow-up regression (FTBFS) fix: gss: Remove useless grep from
+         check-context.
+     + CVE-2022-3437: RC4 (arcfour), 1DES and 3DES3 unwrap didn't use constant
+       memcmp() and were subject to buffer overflow, potentially leaking secret
+       keys when using these ciphers. Closes: #1024187.
+     + CVE-2022-41916: The KDC and 3rd party applications using Heimdal's
+       libhx509 before 7.7.1/7.8 is subject to a denial of service
+       vulnerability due to an out of bound read in the PKI certificate
+       validation library. Closes: #1024187.
+     + CVE-2022-42898: Heimdal before 7.7.1/7.8 suffers from an integer
+       multiplication overflow when calculating how many bytes to allocate for
+       a buffer for the parsed Privilege Attribute Certificate (PAC).  64 bits
+       systems are not exploitable. Closes: #1024187.
+       - Follow-up regression fix for lib/krb5/store-int.c:_krb5_get_int64() on
+         32-bit systems.
+     + CVE-2022-44640: Invalid free() in ASN.1 codec, potentially allowing
+       remote code execution against Heimdal KDCs before 7.7.1/7.8.
+       Closes: #1024187.
+Checksums-Sha1:
+ c502f3e19c0eb1f8f42462023e5226d6272e7c0f 3611 heimdal_7.5.0+dfsg-3+deb10u1.dsc
+ 1ba39f71a5627a23afbc8b987362831bed764f7d 8955005 heimdal_7.5.0+dfsg.orig.tar.gz
+ c736fa5ce04c0849150a84dc5ad4f3ae8e116ac9 471348 heimdal_7.5.0+dfsg-3+deb10u1.debian.tar.xz
+ 27fb8df5ed76c1114f3f00f45208206d6dbf4cf0 22157 heimdal_7.5.0+dfsg-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ fd39b3cfb931a543f189ecfab730159d2dd8bf9b7fb754ffeab6bbabc6b6326f 3611 heimdal_7.5.0+dfsg-3+deb10u1.dsc
+ 489119b7a1a900b88163765654dc59cba9a321b078fafc76629e2b85ef140867 8955005 heimdal_7.5.0+dfsg.orig.tar.gz
+ 8f8a537dc6d9ca57b20068a2bb32dcf1b54a8dea54e55612395033cd66bbf905 471348 heimdal_7.5.0+dfsg-3+deb10u1.debian.tar.xz
+ f61f0e7c353fbba24a1f363b4209eef77909f67f15071dd5af0f020d430fcd87 22157 heimdal_7.5.0+dfsg-3+deb10u1_amd64.buildinfo
+Files:
+ 1b9ed0d4f5c867496fa1b1b446ac48b9 3611 net optional heimdal_7.5.0+dfsg-3+deb10u1.dsc
+ b45b9d03cdd4f3288e79feba99e13a51 8955005 net optional heimdal_7.5.0+dfsg.orig.tar.gz
+ 022f7634cfbda46344d98662088b2270 471348 net optional heimdal_7.5.0+dfsg-3+deb10u1.debian.tar.xz
+ c11c0710edc870c15cc0ae792aa6a545 22157 net optional heimdal_7.5.0+dfsg-3+deb10u1_amd64.buildinfo
+

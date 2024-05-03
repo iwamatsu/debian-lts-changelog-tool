@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 16 May 2023 23:08:08 CEST
+Source: netatalk
+Architecture: source
+Version: 3.1.12~ds-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 587f935c7c701c1345236fe661a2f78cbd6b1341 2675 netatalk_3.1.12~ds-3+deb10u1.dsc
+ 4e74bef5aa967b56058e17c1cd482dec3534337e 1412452 netatalk_3.1.12~ds.orig.tar.xz
+ 4062bc88c9eb94883462d590a7507f6f9ef8667b 65112 netatalk_3.1.12~ds-3+deb10u1.debian.tar.xz
+ 1bce4686150a1b13a29bd6f6a572bec2661b32c0 10375 netatalk_3.1.12~ds-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 76dab8d8aeab90f285bc653a1d56f01c4dcff59607692c5c01d4e32f7ecdba49 2675 netatalk_3.1.12~ds-3+deb10u1.dsc
+ fd1161dc17e3263f27204b6589045d56173d13c8e308311b09a6e0a7d1f1ca96 1412452 netatalk_3.1.12~ds.orig.tar.xz
+ 875ba7829cb4e646053614dd7ac53dda3502c7b3c4ef45b0588e3f4248fc2f97 65112 netatalk_3.1.12~ds-3+deb10u1.debian.tar.xz
+ fdcb6e45f3b9a5c12ba5ee731178ddfeaeef108e48f22e449070fa7acec62727 10375 netatalk_3.1.12~ds-3+deb10u1_amd64.buildinfo
+Changes:
+ netatalk (3.1.12~ds-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-31439, CVE-2022-0194, CVE-2022-23121, CVE-2022-23122,
+     CVE-2022-23123, CVE-2022-23124, CVE-2022-23125, CVE-2022-43634,
+     CVE-2022-45188.
+     Multiple security vulnerabilities have been discovered in netatalk, the
+     Apple Filing Protocol service, which allow remote attackers to disclose
+     sensitive information, cause a denial of service or execute arbitrary code.
+Files:
+ 82be0c2b597cfb331b9c0444180531e1 2675 net optional netatalk_3.1.12~ds-3+deb10u1.dsc
+ 7ef9068c950dfbdf7e0e59a3f081c95f 1412452 net optional netatalk_3.1.12~ds.orig.tar.xz
+ 3902f0dd74919af77d867731dd302e0d 65112 net optional netatalk_3.1.12~ds-3+deb10u1.debian.tar.xz
+ e5593ab4c270d6ff5e03d27d5df52f3d 10375 net optional netatalk_3.1.12~ds-3+deb10u1_amd64.buildinfo
+

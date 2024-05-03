@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 26 Apr 2022 19:43:24 +0200
+Source: golang-1.8
+Binary: golang-1.8-go golang-1.8-src golang-1.8-doc golang-1.8
+Architecture: source
+Version: 1.8.1-1+deb9u5
+Distribution: stretch-security
+Urgency: high
+Maintainer: Go Compiler Team <pkg-golang-devel@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ golang-1.8 - Go programming language compiler - metapackage
+ golang-1.8-doc - Go programming language - documentation
+ golang-1.8-go - Go programming language compiler, linker, compiled stdlib
+ golang-1.8-src - Go programming language - source files
+Changes:
+ golang-1.8 (1.8.1-1+deb9u5) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-23772: Rat.SetString in math/big has an overflow that can
+     lead to Uncontrolled Memory Consumption.
+   * CVE-2022-23806: Curve.IsOnCurve in crypto/elliptic can incorrectly
+     return true in situations with a big.Int value that is not a valid
+     field element.
+   * CVE-2022-24921: regexp.Compile allows stack exhaustion via a deeply
+     nested expression.
+Checksums-Sha1:
+ 58cf80170a11a8a4ecae89c7334d486b97c690f0 2487 golang-1.8_1.8.1-1+deb9u5.dsc
+ 50509a79b9a67e065e53741e3a2c677bcdcd0dd1 66076 golang-1.8_1.8.1-1+deb9u5.debian.tar.xz
+ 6a35425fb579f0ed6426ed436a64095ef201c10f 6159 golang-1.8_1.8.1-1+deb9u5_amd64.buildinfo
+Checksums-Sha256:
+ a9b91dc988f5de476abc4894da57fa8a8c4311a53fcdffc7c080987b0c375e69 2487 golang-1.8_1.8.1-1+deb9u5.dsc
+ 7491e004ec2294b46f9abd00d04216e2809786f4198ad6fb4604191ad8aaa9a8 66076 golang-1.8_1.8.1-1+deb9u5.debian.tar.xz
+ 3def01e581845d44cdbf1a70f3e165fdedb2061e07792565826af80bee4f9052 6159 golang-1.8_1.8.1-1+deb9u5_amd64.buildinfo
+Files:
+ 9576c5d2ab47e0f197ea69a62b3cbf67 2487 devel optional golang-1.8_1.8.1-1+deb9u5.dsc
+ 996f121b7bf04ae8b1d30eb114f504d8 66076 devel optional golang-1.8_1.8.1-1+deb9u5.debian.tar.xz
+ 6e7b48e83f962ebf5576b8e308132058 6159 devel optional golang-1.8_1.8.1-1+deb9u5_amd64.buildinfo
+

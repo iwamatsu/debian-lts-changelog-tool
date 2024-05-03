@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 10 Apr 2022 16:12:05 +0530
+Source: gzip
+Architecture: source
+Version: 1.6-5+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Bdale Garbee <bdale@gag.com>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1009168
+Changes:
+ gzip (1.6-5+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to avoid exploit via multi-newline file
+     namesfix. (Fixes: CVE-2022-1271) (Closes: #1009168)
+Checksums-Sha1:
+ c0a54068c6dca344078a194a89b75369200084ce 1946 gzip_1.6-5+deb9u1.dsc
+ 7ec6403090b3eaeb53ef017223cb8034eebc1f49 1074924 gzip_1.6.orig.tar.gz
+ 78e0834748fb75cd98df085543d6ee467b033e0e 16004 gzip_1.6-5+deb9u1.debian.tar.xz
+ 4732c8d6e45446a5c76e8d6a6a39443231cf34d0 6072 gzip_1.6-5+deb9u1_source.buildinfo
+Checksums-Sha256:
+ ba2e9a0443b6befcc2bd5d6f82679f18eb05e1c6429766422cab47c53d25dc93 1946 gzip_1.6-5+deb9u1.dsc
+ 97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e 1074924 gzip_1.6.orig.tar.gz
+ 6ec66e03a1bc272a00b19c94d4d90f1e4d6b4970f0faa4dd29118b52ed1ed1a2 16004 gzip_1.6-5+deb9u1.debian.tar.xz
+ b9374efe62299c02cc077597ce3311cb026934f620174fae9d1d3f4e241674e8 6072 gzip_1.6-5+deb9u1_source.buildinfo
+Files:
+ 8625c05a7b20b16ba2ae3921235776b8 1946 utils required gzip_1.6-5+deb9u1.dsc
+ 38603cb2843bf5681ff41aab3bcd6a20 1074924 utils required gzip_1.6.orig.tar.gz
+ 7472912f82b1259ba5c155a1ae1d4c08 16004 utils required gzip_1.6-5+deb9u1.debian.tar.xz
+ e19f863f58bf4ffc1ac49b01d22740c0 6072 utils required gzip_1.6-5+deb9u1_source.buildinfo
+

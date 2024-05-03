@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 17 Feb 2022 11:16:32 +0100
+Source: zsh
+Architecture: source
+Version: 5.3.1-4+deb9u5
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Zsh Maintainers <pkg-zsh-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ zsh (5.3.1-4+deb9u5) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-45444: code execution when controlling command output inside
+     the prompt.
+Checksums-Sha1:
+ 1e6eb5724875e9397a099e0c25b4c0eac075044c 2569 zsh_5.3.1-4+deb9u5.dsc
+ 23449081a0a1ccb0e989a18e72fba286c0765863 2567396 zsh_5.3.1.orig.tar.xz
+ 74d3f2c682e5011a4fee4c933d651af060ab461a 88216 zsh_5.3.1-4+deb9u5.debian.tar.xz
+ b0297d85b83c4a20f375d715d50637b058556936 6811 zsh_5.3.1-4+deb9u5_source.buildinfo
+Checksums-Sha256:
+ 4c2d6fe7c7fc00a94d057060c8fde09deb7accb18cda2afddf5b93dd5c819229 2569 zsh_5.3.1-4+deb9u5.dsc
+ be8ab2d56b1b20d81a045f389093ae90d12ff7b0dd6d7a7a1970e0c7fa7eccc2 2567396 zsh_5.3.1.orig.tar.xz
+ 3eb05bf7da3e44a8484d670600f850720cdcd10ca35d44872afe142eaa840a1e 88216 zsh_5.3.1-4+deb9u5.debian.tar.xz
+ 38d247e6fb4caa612d8e2cfeb4a6163ced1cba546931d013c81dc492f0515451 6811 zsh_5.3.1-4+deb9u5_source.buildinfo
+Files:
+ 4bf310f50dbe0e38f0270556334c847e 2569 shells optional zsh_5.3.1-4+deb9u5.dsc
+ 7b9ff3d1585f759ee0b3490a975f80f2 2567396 shells optional zsh_5.3.1.orig.tar.xz
+ d7e34886da0cbf694cc9e6d9111cf831 88216 shells optional zsh_5.3.1-4+deb9u5.debian.tar.xz
+ 0a0d492dd568dba06b67d621210c3d19 6811 shells optional zsh_5.3.1-4+deb9u5_source.buildinfo
+

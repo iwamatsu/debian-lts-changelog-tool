@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 11 Dec 2022 23:46:16 CET
+Source: openexr
+Architecture: source
+Version: 2.2.1-4.1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fdd3ae1dc5c40ea6a17f9f376c273451f4e77070 2453 openexr_2.2.1-4.1+deb10u2.dsc
+ 11edb5bf2862e34f9e97762068f98818f2b2093c 37452 openexr_2.2.1-4.1+deb10u2.debian.tar.xz
+ 521d185125993034e9ab6352c5d1d0e549da505b 7349 openexr_2.2.1-4.1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ d0462492a4d2177d5510446ebaf058c16bbc735a4ce851a0bd864ac741bffa35 2453 openexr_2.2.1-4.1+deb10u2.dsc
+ 76695ba4b3f11b3f56a1e98f23bf72040f0a1afcb012021fc3367ab194cf26fd 37452 openexr_2.2.1-4.1+deb10u2.debian.tar.xz
+ 1e58f97fa84a94a28dc77d396e7501827c3255618bc2b2f5fc0184aba7247b0e 7349 openexr_2.2.1-4.1+deb10u2_amd64.buildinfo
+Closes: 986796 990450 990899 992703 1014828
+Changes:
+ openexr (2.2.1-4.1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-23215, CVE-2021-26260, CVE-2021-45942, CVE-2021-3598,
+     CVE-2021-3605, CVE-2021-3933, CVE-2021-3941, CVE-2020-16587,
+     CVE-2020-16588, CVE-2020-16589, CVE-2021-3474, CVE-2021-3475,
+     CVE-2021-3476, CVE-2021-3477, CVE-2021-3478, CVE-2021-3479,
+     CVE-2021-20296, CVE-2021-20298, CVE-2021-20299, CVE-2021-20300,
+     CVE-2021-20302, CVE-2021-20303.
+     Multiple security vulnerabilities have been found in OpenEXR, command-line
+     tools and a library for the OpenEXR image format. Buffer overflows or
+     out-of-bound reads could lead to a denial of service (application crash) if
+     a malformed image file is processed.
+     (Closes: #986796, #992703, #990450, #990899, #1014828)
+Files:
+ 5401b59806ecad5d9fc2df05d71c3684 2453 graphics optional openexr_2.2.1-4.1+deb10u2.dsc
+ e189a251f70eccf95de826f563897fec 37452 graphics optional openexr_2.2.1-4.1+deb10u2.debian.tar.xz
+ 8938e4c521b983eb92250c1f709352cc 7349 graphics optional openexr_2.2.1-4.1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  6 Nov 2023 23:27:18 CET
+Source: trapperkeeper-webserver-jetty9-clojure
+Architecture: source
+Version: 1.7.0-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fd4b7f84deb37eca22321a2cf648c552b4cf5bb3 2883 trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2.dsc
+ 0b1a61f59891cd499584fa0f4c991415ddff5eed 112104 trapperkeeper-webserver-jetty9-clojure_1.7.0.orig.tar.xz
+ cca99a4abfe44cf8753c1c024ba41ee6500e246f 12708 trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2.debian.tar.xz
+ 82bc2fc84071fcd8561adb79bbf7db4bec96fb35 13122 trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ be071d454a0765b29711ce598e8c386059e6e486a0f1b7bbee5bf4f3de1f2b6c 2883 trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2.dsc
+ 6c34d9b4e7ee38553586b44098006bc841da1d7d355ff2711f2808479e2d2f09 112104 trapperkeeper-webserver-jetty9-clojure_1.7.0.orig.tar.xz
+ 74e4aa1cba9583f301803b063e85a260fac3c6796893731451925b476138a263 12708 trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2.debian.tar.xz
+ d19bad0d5452f7b097936fd7b50e6736e48a163b0f4a6c3a7ead086a500fbc65 13122 trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2_amd64.buildinfo
+Closes: 1055348
+Changes:
+ trapperkeeper-webserver-jetty9-clojure (1.7.0-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload.
+ .
+   [ Adam D. Barratt ]
+   * Replace deprecated class SslContextFactory with SslContextFactory#Server.
+     Largely based on a patch by Markus Koschany. (Closes: #1055348)
+Files:
+ 74d3f938ae5f3a9a7d65e39ee9f0643a 2883 java optional trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2.dsc
+ ede9aa849317c84380b6fa73d13f628a 112104 java optional trapperkeeper-webserver-jetty9-clojure_1.7.0.orig.tar.xz
+ cfce7e68e0dd8436fa2df0b57024b757 12708 java optional trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2.debian.tar.xz
+ 092a0b1ce5119c7297d55a0fa1de4aa1 13122 java optional trapperkeeper-webserver-jetty9-clojure_1.7.0-2+deb10u2_amd64.buildinfo
+

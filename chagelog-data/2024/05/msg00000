@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 30 Apr 2024 21:44:30 -0400
+Source: distro-info-data
+Architecture: source
+Version: 0.41+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Benjamin Drung <bdrung@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ distro-info-data (0.41+deb10u9) buster-security; urgency=medium
+ .
+   * Correct typo in previous changelog entry (0.59, not 0.58)
+   * Add new columns from distro-info-data.
+     - This breaks distro-info << 0.21+deb10u1.
+     - Update validation tests to match.
+     - Port validation tests typing syntax to Python 3.7.
+   * Update data to 0.61:
+     - Declare LTS and ELTS intentions for bullseye and bookworm
+     - debian: Fix LTS EOL date for bullseye
+     - debian.csv: Fix EOL date for 2.2
+     - Add Ubuntu 24.10 "Oracular Oriole" (LP: #2064136)
+Checksums-Sha1:
+ ea1a3bece30c22237165d5769345184cde400f71 1071 distro-info-data_0.41+deb10u9.dsc
+ 51e0e8ccd4af306d328765c11c982ada777e2110 8884 distro-info-data_0.41+deb10u9.tar.xz
+ 0bcd0c25903db52f515bd6963a36269d3cb95386 6005 distro-info-data_0.41+deb10u9_source.buildinfo
+Checksums-Sha256:
+ 4adde29794d65ab3b39c10395ef03ebf5c559d2a107e12293c4a4e215f1099fb 1071 distro-info-data_0.41+deb10u9.dsc
+ 8711bfe01f6ae626824454400e67f6159a271fb6290e83c6914116ff3e954ba7 8884 distro-info-data_0.41+deb10u9.tar.xz
+ e24aa5e8c842e16019430d006d6c7049695c2d3f484bf776abc5eab4e49dabfd 6005 distro-info-data_0.41+deb10u9_source.buildinfo
+Files:
+ 827954e02d4c47e4a789798e0bb1f998 1071 devel optional distro-info-data_0.41+deb10u9.dsc
+ 3402db58f86ca9f5e56171890fb1cf5c 8884 devel optional distro-info-data_0.41+deb10u9.tar.xz
+ a4b94cbec8d5a1426df49bdd5ff71e85 6005 devel optional distro-info-data_0.41+deb10u9_source.buildinfo
+

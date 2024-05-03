@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 21 Feb 2024 12:06:49 CET
+Source: unbound
+Architecture: source
+Version: 1.9.0-2+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ cb19ae9923fd9576dd338e5ac77e3d56734be91d 3209 unbound_1.9.0-2+deb10u4.dsc
+ 746f1e7b96789c9b76b40c18abfb815ea129e0a9 50628 unbound_1.9.0-2+deb10u4.debian.tar.xz
+ 15f6bcf6b8d78857e4bc3a19cc38f51c5b085191 11519 unbound_1.9.0-2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ eb3725142a45ff8211d8b2f8ab0506a58cb5503a6c7527cafb5fe072c4912fa1 3209 unbound_1.9.0-2+deb10u4.dsc
+ 37e6fa5153d01ce11240287feb874978c7d3ab76b7f1203050a9a1a7bd2be5be 50628 unbound_1.9.0-2+deb10u4.debian.tar.xz
+ 5a72c23c90ff576e7e0fde4a37e22007454f046901b0a02a602622f2c26af6be 11519 unbound_1.9.0-2+deb10u4_amd64.buildinfo
+Changes:
+ unbound (1.9.0-2+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-50387 and CVE-2023-50868:
+     Two vulnerabilities were discovered in unbound, a validating, recursive,
+     caching DNS resolver. Specially crafted DNSSEC answers could lead unbound
+     down a very CPU intensive and time costly DNSSEC (CVE-2023-50387) or NSEC3
+     hash (CVE-2023-50868) validation path, resulting in denial of service.
+Files:
+ bc808249dc6f81fea9fbefad3192a597 3209 net optional unbound_1.9.0-2+deb10u4.dsc
+ 6a7f4a95afcbeba56da58e8a1c02dc65 50628 net optional unbound_1.9.0-2+deb10u4.debian.tar.xz
+ 1b6953ed8a5df9b4880becaee239dc03 11519 net optional unbound_1.9.0-2+deb10u4_amd64.buildinfo
+

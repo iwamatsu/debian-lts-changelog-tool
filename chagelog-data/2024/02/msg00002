@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 03 Feb 2024 14:21:52 +0530
+Source: rear
+Binary: rear rear-doc
+Architecture: source all amd64
+Version: 2.4+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Frédéric Bonnard <frediz@debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ rear       - Bare metal disaster recovery and system migration framework
+ rear-doc   - Bare metal disaster recovery and system migration framework (docu
+Changes:
+ rear (2.4+dfsg-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2024-23301
+Checksums-Sha1:
+ 52720a7efeca6979927133a6b60033e2c58477ee 2005 rear_2.4+dfsg-1+deb10u1.dsc
+ 2c8db21cdf80a919f7d0c3a13e0a8c5b50b8e228 417712 rear_2.4+dfsg.orig.tar.xz
+ 64be9f57ec6b42c0f6358e7a064c8274cf742c90 4824 rear_2.4+dfsg-1+deb10u1.debian.tar.xz
+ 6e1cc4413d3471bc7ffc7986992195a082a1e8de 60504 rear-doc_2.4+dfsg-1+deb10u1_all.deb
+ 3b36ce3a4d4fa97efae18c303d7f4d2e4c740cd0 6869 rear_2.4+dfsg-1+deb10u1_amd64.buildinfo
+ be602e0479d1124d7b5fc94c706d02122d5cf68c 377524 rear_2.4+dfsg-1+deb10u1_amd64.deb
+Checksums-Sha256:
+ af2cdb4c567be66acf4fb881f1280e3e78cff7bc7de1b455e829bb5329c52803 2005 rear_2.4+dfsg-1+deb10u1.dsc
+ b1c6f396e1fe83302fc338e9492e1f27d888cff8b3cff8bb20f784977dcae5f8 417712 rear_2.4+dfsg.orig.tar.xz
+ ac46c54f8a4189c7d8b91973857f71c77d48420d76fec4e85183c318c9d74590 4824 rear_2.4+dfsg-1+deb10u1.debian.tar.xz
+ 784410b199072d951272fb5c3444eeac883d72f06a977b352c422a3fbf62baff 60504 rear-doc_2.4+dfsg-1+deb10u1_all.deb
+ db4bf50f62131dba9e169e1b48ec0f78279f78e23b34f3ec9009b010b6160556 6869 rear_2.4+dfsg-1+deb10u1_amd64.buildinfo
+ 897faf2d7446e1e6cd3b154f47a3edae3b1f0495c3b06497c49903a58c7182b2 377524 rear_2.4+dfsg-1+deb10u1_amd64.deb
+Files:
+ 5a5c0ae29a18a013a89c2610010eec07 2005 admin optional rear_2.4+dfsg-1+deb10u1.dsc
+ 2a415bb81a9358b0316f4c81fbdce9c7 417712 admin optional rear_2.4+dfsg.orig.tar.xz
+ 6c130dbe7a77429cbd3ddb63299f7893 4824 admin optional rear_2.4+dfsg-1+deb10u1.debian.tar.xz
+ ecc679e2af5457f5db99e7a244436df8 60504 doc optional rear-doc_2.4+dfsg-1+deb10u1_all.deb
+ 07dad3bc71696c754fd7116fccc823e5 6869 admin optional rear_2.4+dfsg-1+deb10u1_amd64.buildinfo
+ be7f5edb65aff259d19f624ea660fd6e 377524 admin optional rear_2.4+dfsg-1+deb10u1_amd64.deb
+

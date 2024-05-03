@@ -1,0 +1,50 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Dec 2022 22:40:43 +0100
+Source: cacti
+Architecture: source
+Version: 1.2.2+ds1-2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Cacti Maintainer <pkg-cacti-maint@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 951832 1008693 1025648
+Changes:
+ cacti (1.2.2+ds1-2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-46169: A command injection vulnerability allows an unauthenticated
+     user to execute arbitrary code on a server running Cacti, if a poller_item
+     with the action type POLLER_ACTION_SCRIPT_PHP (2) is configured.
+     (Closes: #1025648)
+   * CVE-2022-0730: Under certain LDAP conditions, Cacti authentication can be
+     bypassed with certain credential types. (Closes: #1008693)
+   * CVE-2020-25706: A cross-site scripting (XSS) vulnerability was found in
+     templates_import.php.
+   * CVE-2020-23226: Multiple Cross Site Scripting (XSS) vulneratiblities were
+     found in reports_admin.php (1x), data_queries.php (2x), data_input.php (3x),
+     graph_templates.php (4x), graphs.php (5x), reports_admin.php (6x), and
+     data_input.php (7x).
+   * CVE-2020-8813: A guest user with the graph real-time privilege could execute
+     arbitrary OS commands via shell metacharacters in a cookie.  It remains
+     unclear how PHP 7.2 and later are affected. (Closes: #951832)
+Checksums-Sha1:
+ 08ea0ddd36d7fa1fbdf5df4f5724bad46c5e8939 2483 cacti_1.2.2+ds1-2+deb10u5.dsc
+ 5bcf2410f398f22ea55696428dfdc9f033303e0c 12751572 cacti_1.2.2+ds1.orig-docs-source.tar.gz
+ d0a763c27c1c9778e782a14abae3075dbfd3c8a7 3702668 cacti_1.2.2+ds1.orig.tar.xz
+ 7880fe113c6ed9db6a79dff80c5a71cd0c5abcc2 77956 cacti_1.2.2+ds1-2+deb10u5.debian.tar.xz
+ 4651f8f9f806e8a82b401be6a7f8acdae352a148 6022 cacti_1.2.2+ds1-2+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 6359608176695b02cd383f73e4329fb00fb32d38cf9d5f7e39c8c9b3b4d71610 2483 cacti_1.2.2+ds1-2+deb10u5.dsc
+ 5d94359ea0b15cfe8f96ddc9999394594563cb34de2bb500a54f7b27565b44b4 12751572 cacti_1.2.2+ds1.orig-docs-source.tar.gz
+ 45d263e2cbc7aa40e162c35adbe45229bd231e16faf082dbc01fb36403140bef 3702668 cacti_1.2.2+ds1.orig.tar.xz
+ 4e0c38f4c842fbaa611d56c8201d791990c82932e249a0d9070b6cf402895354 77956 cacti_1.2.2+ds1-2+deb10u5.debian.tar.xz
+ fae9589002ea62cadfc6a0358e8e8f05eb0e0e3daa58f03a8b82984919584418 6022 cacti_1.2.2+ds1-2+deb10u5_amd64.buildinfo
+Files:
+ 3e20d29e3dd54058215c82bd0586e254 2483 web optional cacti_1.2.2+ds1-2+deb10u5.dsc
+ ebdf0461474378c083051b44ce15aa34 12751572 web optional cacti_1.2.2+ds1.orig-docs-source.tar.gz
+ b14ae7d08f482659a44d76cbeca91ebd 3702668 web optional cacti_1.2.2+ds1.orig.tar.xz
+ be0686d50010938905b3b126af6abbdb 77956 web optional cacti_1.2.2+ds1-2+deb10u5.debian.tar.xz
+ ed447d3c6c2aa65c949023540c69e1ca 6022 web optional cacti_1.2.2+ds1-2+deb10u5_amd64.buildinfo
+

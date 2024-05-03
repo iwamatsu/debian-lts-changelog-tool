@@ -1,0 +1,52 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 29 Jun 2022 14:41:17 +0200
+Source: systemd
+Binary: systemd systemd-sysv systemd-container systemd-journal-remote systemd-coredump libpam-systemd libnss-myhostname libnss-mymachines libnss-resolve libnss-systemd libsystemd0 libsystemd-dev udev libudev1 libudev-dev udev-udeb libudev1-udeb
+Architecture: source
+Version: 232-25+deb9u14
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ libnss-myhostname - nss module providing fallback resolution for the current hostname
+ libnss-mymachines - nss module to resolve hostnames for local container instances
+ libnss-resolve - nss module to resolve names via systemd-resolved
+ libnss-systemd - nss module providing dynamic user and group name resolution
+ libpam-systemd - system and service manager - PAM module
+ libsystemd-dev - systemd utility library - development files
+ libsystemd0 - systemd utility library
+ libudev-dev - libudev development files
+ libudev1   - libudev shared library
+ libudev1-udeb - libudev shared library (udeb)
+ systemd    - system and service manager
+ systemd-container - systemd container/nspawn tools
+ systemd-coredump - tools for storing and retrieving coredumps
+ systemd-journal-remote - tools for sending and receiving remote journal logs
+ systemd-sysv - system and service manager - SysV links
+ udev       - /dev/ and hotplug management daemon
+ udev-udeb  - /dev/ and hotplug management daemon (udeb)
+Changes:
+ systemd (232-25+deb9u14) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-1712: a heap use-after-free vulnerability was found in systemd
+     before version v245-rc1, where asynchronous Polkit queries are performed
+     while handling dbus messages. A local unprivileged attacker can abuse this
+     flaw to crash systemd services or potentially execute code and elevate
+     their privileges, by sending specially crafted dbus messages.
+Checksums-Sha1:
+ 1249649a2e0abf10a9eb459cd72f75d33b4ae388 4801 systemd_232-25+deb9u14.dsc
+ a1fe8f2aea8af675b9108c80c16cbbd823822b99 226108 systemd_232-25+deb9u14.debian.tar.xz
+ 600c848b4f41ece4165dab5b6587e15376c4fb6b 10344 systemd_232-25+deb9u14_source.buildinfo
+Checksums-Sha256:
+ d6d984868b4433d19cabae917b911fed1a41aab3164622a78df6ecfcff9f9ae7 4801 systemd_232-25+deb9u14.dsc
+ a29f06ca3662f74adf89590ea7ca07479d44941a632b9303362d9047c20991aa 226108 systemd_232-25+deb9u14.debian.tar.xz
+ 7b46527a3609d8792bdece8b4fe56e942e0c0ec87dd3ae8bb2c454a467ac2a51 10344 systemd_232-25+deb9u14_source.buildinfo
+Files:
+ 9590d418f44a2e05694d0c0d88cfb145 4801 admin optional systemd_232-25+deb9u14.dsc
+ eab35b42c1278c816e102b506fdc7155 226108 admin optional systemd_232-25+deb9u14.debian.tar.xz
+ 536be08249bf5860bf3918d3f043ea68 10344 admin optional systemd_232-25+deb9u14_source.buildinfo
+

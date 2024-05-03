@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 02 Dec 2022 16:08:36 +0100
+Source: giflib
+Architecture: source
+Version: 5.1.4-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 904114
+Changes:
+ giflib (5.1.4-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2018-11490 (Closes: #904114), CVE-2019-15133
+Checksums-Sha1:
+ 09da9416e5c32d64e0f8a1fb64226d938bf54a50 1951 giflib_5.1.4-3+deb10u1.dsc
+ 5f1157cfc377916280849e247b8e34fa0446513f 639703 giflib_5.1.4.orig.tar.bz2
+ 7c8ea7586fbb6f09f348f3d1b21fb77139935e96 8616 giflib_5.1.4-3+deb10u1.debian.tar.xz
+ d681775e2f371e22a6f96c43f52d6b47d09548d7 6947 giflib_5.1.4-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3286f34a902c1abf2059bdacc6ab9848c6fa7436dcb639993142557490d71486 1951 giflib_5.1.4-3+deb10u1.dsc
+ df27ec3ff24671f80b29e6ab1c4971059c14ac3db95406884fc26574631ba8d5 639703 giflib_5.1.4.orig.tar.bz2
+ 6813adb9128b5eb2cf59b339aa521fbe707d010813239ea830a435ef13cdb9f7 8616 giflib_5.1.4-3+deb10u1.debian.tar.xz
+ 18f9a2bdce17b784ffdcf21e0215df80516c255cd9bcf363426092a17182685e 6947 giflib_5.1.4-3+deb10u1_amd64.buildinfo
+Files:
+ e9f1dee122b6bf2eae24af5286e3f408 1951 libs optional giflib_5.1.4-3+deb10u1.dsc
+ 2c171ced93c0e83bb09e6ccad8e3ba2b 639703 libs optional giflib_5.1.4.orig.tar.bz2
+ 0dbe03b360a87dfecae7df36fd22c0aa 8616 libs optional giflib_5.1.4-3+deb10u1.debian.tar.xz
+ f13c07db1f0d9085bcf2f3e43a594e27 6947 libs optional giflib_5.1.4-3+deb10u1_amd64.buildinfo
+

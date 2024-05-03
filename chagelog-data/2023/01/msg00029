@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 27 Jan 2023 18:10:55 +0100
+Source: libapache-session-browseable-perl
+Architecture: source
+Version: 1.3.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ libapache-session-browseable-perl (1.3.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-36659: Validity of the X.509 certificate is not checked by
+     default when connecting to remote LDAP backends, because the default
+     configuration of the Net::LDAPS module for Perl is used.
+     This upload changes the default behavior to require X.509 validation
+     against the distribution bundle /etc/ssl/certs/ca-certificates.crt.
+     Previous behavior can reverted by setting `ldapVerify => "none"` when
+     initializing the Apache::Session::Browseable::LDAP object.
+Checksums-Sha1:
+ 208187608f2eff5c8bd54f180d1a1e19ed951743 2459 libapache-session-browseable-perl_1.3.0-1+deb10u1.dsc
+ 098e51d75551753aecc7f42615c32cd7466e0a69 33269 libapache-session-browseable-perl_1.3.0.orig.tar.gz
+ 95609590e059cd7e3ad994d8cb1b46c70b288d8e 4844 libapache-session-browseable-perl_1.3.0-1+deb10u1.debian.tar.xz
+ 29a121f2a8179bf12b8ec86add44b9bd5d68ea0c 6566 libapache-session-browseable-perl_1.3.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 8c8fb3c001775b904d52ecb05d52f417ee808c75c4cd834a8ba0e39538a82e3e 2459 libapache-session-browseable-perl_1.3.0-1+deb10u1.dsc
+ 2e503bf7e9a9e53ceadd01bcf1221095e7a6cbafe5bc1ee991bfe0420af7ade2 33269 libapache-session-browseable-perl_1.3.0.orig.tar.gz
+ 8f180ded1983607709a300269e4e0d7dabdc7b0a194f03b54a0288dcb11fe888 4844 libapache-session-browseable-perl_1.3.0-1+deb10u1.debian.tar.xz
+ c13faa0e94a1a9ab8a1dc64b9067e1b1988b2c9dc5bae88707fa1c58aa71d35c 6566 libapache-session-browseable-perl_1.3.0-1+deb10u1_amd64.buildinfo
+Files:
+ f854e48591747f61f9a1060c7152123a 2459 perl optional libapache-session-browseable-perl_1.3.0-1+deb10u1.dsc
+ 69fbb87439257f56befd129f63836aee 33269 perl optional libapache-session-browseable-perl_1.3.0.orig.tar.gz
+ 5ed8f15a629242eb8f46f25c8aae4b09 4844 perl optional libapache-session-browseable-perl_1.3.0-1+deb10u1.debian.tar.xz
+ 0eb6bf6b39f750b5b891f58600c0257c 6566 perl optional libapache-session-browseable-perl_1.3.0-1+deb10u1_amd64.buildinfo
+

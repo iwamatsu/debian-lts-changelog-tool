@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 28 May 2022 08:38:03 +0100
+Source: modsecurity-apache
+Binary: libapache2-mod-security2 libapache2-modsecurity
+Architecture: source amd64 all
+Version: 2.9.1-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Alberto Gonzalez Iniesta <agi@inittab.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libapache2-mod-security2 - Tighten web applications security for Apache
+ libapache2-modsecurity - Dummy transitional package
+Changes:
+ modsecurity-apache (2.9.1-2+deb9u1) stretch-security; urgency=high
+ .
+   * CVE-2021-42717: Fix a resource exhaustion attack caused by extremely nested
+     JSON objects.
+Checksums-Sha1:
+ dc441ecdfd290c36ca2ab30ba961b88e9c56ef51 2062 modsecurity-apache_2.9.1-2+deb9u1.dsc
+ 5e3a88b86eb431a74bffbe0d30969b7162c0feb0 4261212 modsecurity-apache_2.9.1.orig.tar.gz
+ e85874e9febe35ca0b113e37ce59eff9d5b0c369 10432 modsecurity-apache_2.9.1-2+deb9u1.debian.tar.xz
+ 00a67f999f8adb7af94dba6e362119fa36b0a159 781848 libapache2-mod-security2-dbgsym_2.9.1-2+deb9u1_amd64.deb
+ 9ef44bef386b8273a1f65a43f95e1be83ecad7f9 349588 libapache2-mod-security2_2.9.1-2+deb9u1_amd64.deb
+ ddefe82c682af4f42f53f272318012755b9af500 32768 libapache2-modsecurity_2.9.1-2+deb9u1_all.deb
+ c076764808fcc53d4679f95d54fc8f8c7af3e8cc 8317 modsecurity-apache_2.9.1-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ e3877029c81ee138342cdcd954095aa29a92f74baed888d6f89676468d20bf5c 2062 modsecurity-apache_2.9.1-2+deb9u1.dsc
+ 958cc5a7a7430f93fac0fd6f8b9aa92fc1801efce0cda797d6029d44080a9b24 4261212 modsecurity-apache_2.9.1.orig.tar.gz
+ 9c2c4e90dd9f5db51a5412a3375e3361a84a0efdcebdde571fcdd9bc2b336086 10432 modsecurity-apache_2.9.1-2+deb9u1.debian.tar.xz
+ 0dd75059f25659f98d4b474760266067f820d3ea3e49702c276c65d540be9671 781848 libapache2-mod-security2-dbgsym_2.9.1-2+deb9u1_amd64.deb
+ 06a7c166cba6b33a1987cbfdc162fab0fe37bf424a56ace5e1228b0059d9cd37 349588 libapache2-mod-security2_2.9.1-2+deb9u1_amd64.deb
+ 426a76d4d00d835e4f7e448698f03f76e5d97883dd1cf81e3f59dc878cad0110 32768 libapache2-modsecurity_2.9.1-2+deb9u1_all.deb
+ f0eb90b6304ed10e991a68cb2138d3514251374d051189fc9f37a3424d79f16a 8317 modsecurity-apache_2.9.1-2+deb9u1_amd64.buildinfo
+Files:
+ ac534e9c717d8037331e94ca1d250ec4 2062 httpd optional modsecurity-apache_2.9.1-2+deb9u1.dsc
+ 0fa92b852abc857a20b9e24f83f814cf 4261212 httpd optional modsecurity-apache_2.9.1.orig.tar.gz
+ 3ca42c0872209a0c530d57351469805d 10432 httpd optional modsecurity-apache_2.9.1-2+deb9u1.debian.tar.xz
+ 138e09df9bc2712649d0442fb89f8f09 781848 debug extra libapache2-mod-security2-dbgsym_2.9.1-2+deb9u1_amd64.deb
+ 5bb609210b49c36c0eb98edcbc8548d9 349588 httpd optional libapache2-mod-security2_2.9.1-2+deb9u1_amd64.deb
+ 3a472417bac02658f1d97a30018ca13f 32768 oldlibs extra libapache2-modsecurity_2.9.1-2+deb9u1_all.deb
+ fe7a2be56dbaf89ca1a11449119bbb55 8317 httpd optional modsecurity-apache_2.9.1-2+deb9u1_amd64.buildinfo
+

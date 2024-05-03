@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 03 Aug 2023 22:38:37 +0200
+Source: cjose
+Architecture: source
+Version: 0.6.1+dfsg1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Matthew A. Miller <linuxwolf@outer-planes.net>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1041423
+Changes:
+ cjose (0.6.1+dfsg1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-37464: incorrect Authentication Tag length usage in AES GCM
+     decryption. (Closes: #1041423)
+Checksums-Sha1:
+ c6ec5493a86d92a5300bd0f8f0b4c007840c48bb 2112 cjose_0.6.1+dfsg1-1+deb10u1.dsc
+ adf8464666d7fe2a83f6713127c60feca5ae928e 471889 cjose_0.6.1+dfsg1.orig.tar.gz
+ b150d8a9fbfab227aa3d55dfd88401ef790a9895 6240 cjose_0.6.1+dfsg1-1+deb10u1.debian.tar.xz
+ 8b919683fc7896bd751b8b9ba96c8aceb5ce36f0 6438 cjose_0.6.1+dfsg1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 40f95f8fe48e8d0330770b9264281dd0692fde401fbef8f4a9b240467b8fcbab 2112 cjose_0.6.1+dfsg1-1+deb10u1.dsc
+ f62222b9331b9f1a916bd390bef3626fcf7869b84d2a5a0def82324b9346d7ff 471889 cjose_0.6.1+dfsg1.orig.tar.gz
+ 3abb02170fe1d27320f0e2f0b500752cdcab6932e5ce524a476280a20868f662 6240 cjose_0.6.1+dfsg1-1+deb10u1.debian.tar.xz
+ 703a9750d476be26fed0b9e7e920f20098ab9fb3dfcba35f298f141fabde6d72 6438 cjose_0.6.1+dfsg1-1+deb10u1_amd64.buildinfo
+Files:
+ 288cd7c64a99c886138030b48603d26d 2112 libs optional cjose_0.6.1+dfsg1-1+deb10u1.dsc
+ 5ca9e51c9471e8d0e61dc8e566ca438a 471889 libs optional cjose_0.6.1+dfsg1.orig.tar.gz
+ 3c6c8be434e1ad107e0d8ce25726da72 6240 libs optional cjose_0.6.1+dfsg1-1+deb10u1.debian.tar.xz
+ 8b1ffb16a5c974f96d7fbde636ccac69 6438 libs optional cjose_0.6.1+dfsg1-1+deb10u1_amd64.buildinfo
+

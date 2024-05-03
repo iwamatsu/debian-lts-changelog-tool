@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 15 Jun 2022 14:00:22 +0200
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb9u4
+Distribution: stretch-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1012191
+Changes:
+ tzdata (2021a-0+deb9u4) stretch-security; urgency=medium
+ .
+   * Cherry-pick patches from upstream (thanks Aurelien Jarno):
+     - 07-no-leap-second-2022-06-30.patch: update leap-seconds.list, new
+       expiration date on 28 December 2022.  Closes: #1012191.
+Checksums-Sha1:
+ 4125fc5e6a0394a9fa40ff1221f8a3a7e272c4e2 2029 tzdata_2021a-0+deb9u4.dsc
+ 6eb2d326b2746a86fd861b2a636107b6065b0a0f 107952 tzdata_2021a-0+deb9u4.debian.tar.xz
+ bdd794cdac9f8fa97e1d5aacc53c64e767d10371 5781 tzdata_2021a-0+deb9u4_source.buildinfo
+Checksums-Sha256:
+ e4117835c21c65b0c4527770a2518085fad326f5513838819613d64c458f08e9 2029 tzdata_2021a-0+deb9u4.dsc
+ ac1ba438b78485a77b91ca4c6628eb32ba085c44d7dd70ac1b9f709bdf6fe2dd 107952 tzdata_2021a-0+deb9u4.debian.tar.xz
+ 21ff7af2fe7f8f8a5150fea1c53e9a83240600de3ab412fdf555e666ab713bf7 5781 tzdata_2021a-0+deb9u4_source.buildinfo
+Files:
+ eb0d293836732fffe1abc3081d950cfa 2029 localization required tzdata_2021a-0+deb9u4.dsc
+ 02f8d462b17dc82dd8995f0c07faad2f 107952 localization required tzdata_2021a-0+deb9u4.debian.tar.xz
+ 86f3154f2319a4df46e0d0742d8f479a 5781 localization required tzdata_2021a-0+deb9u4_source.buildinfo
+

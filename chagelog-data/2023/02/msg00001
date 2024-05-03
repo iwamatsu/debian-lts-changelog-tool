@@ -1,0 +1,59 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 01 Feb 2023 10:34:19 -0800
+Source: python-django
+Binary: python-django python-django-common python-django-doc python3-django
+Architecture: source all
+Version: 1:1.11.29-1+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-django - High-level Python web development framework (Python 2 version)
+ python-django-common - High-level Python web development framework (common)
+ python-django-doc - High-level Python web development framework (documentation)
+ python3-django - High-level Python web development framework (Python 3 version)
+Closes: 1030251
+Changes:
+ python-django (1:1.11.29-1+deb10u6) buster-security; urgency=high
+ .
+   * CVE-2023-23969: Prevent a potential Denial of Service vulnerability with
+     pathological values for the Accept-Language header.
+ .
+     The parsed values of Accept-Language headers are cached in order to avoid
+     repetitive parsing. This could have led to a potential denial-of-service
+     vector via excessive memory usage if the raw value of Accept-Language
+     headers was very large.
+ .
+     Accept-Language headers are now limited to a maximum length in order to
+     avoid this issue. (Closes: #1030251)
+Checksums-Sha1:
+ ccdbbe7e2202a940361dcc0af90709672f556544 3294 python-django_1.11.29-1+deb10u6.dsc
+ e71620c18c985d8f5381bd87c02dbd23f1f48dd0 7977916 python-django_1.11.29.orig.tar.gz
+ de4b63460a85cf9961484392d1de7c068ff126fd 44388 python-django_1.11.29-1+deb10u6.debian.tar.xz
+ e93746a46838feb4165a1d3ec8fc53d395219d62 1540372 python-django-common_1.11.29-1+deb10u6_all.deb
+ 99efe36b534eb8eca72ad6410baa3e49fdcda521 2693444 python-django-doc_1.11.29-1+deb10u6_all.deb
+ acb653d0f04d92bb6012ec279d443a9b7ea0245b 921184 python-django_1.11.29-1+deb10u6_all.deb
+ 8f002585810efb2b6780335119f385d5ba96efa3 14915 python-django_1.11.29-1+deb10u6_amd64.buildinfo
+ acbd0085272f7ed140382a61195b846b4bad615b 920916 python3-django_1.11.29-1+deb10u6_all.deb
+Checksums-Sha256:
+ 105fc8a425affad86fed484adb0f0aa0fe8dbdf8d4c09a7b661a5a398bf1714e 3294 python-django_1.11.29-1+deb10u6.dsc
+ 4200aefb6678019a0acf0005cd14cfce3a5e6b9b90d06145fcdd2e474ad4329c 7977916 python-django_1.11.29.orig.tar.gz
+ f6b1ea344b0f7ef4b7ee0b051eceecbb03474c7a98e9913cfadb44a03990903c 44388 python-django_1.11.29-1+deb10u6.debian.tar.xz
+ b65815dfe8a213f46c6b6d5023747f7ee47a615e7b3432e89d89c4714df34e20 1540372 python-django-common_1.11.29-1+deb10u6_all.deb
+ b7d903e574eb5292cf4edd4275ee1c587c8f678947bb7e302b1e5c378da0a23b 2693444 python-django-doc_1.11.29-1+deb10u6_all.deb
+ b3b36edda3cd7cb4f7f2dfc6990184a23523fda93314ee7133ea48b5851a5b34 921184 python-django_1.11.29-1+deb10u6_all.deb
+ 063ff0afdf46b3dc441a3b4f4ee8f400f8361810eb62c3f14e62685cd931ad4a 14915 python-django_1.11.29-1+deb10u6_amd64.buildinfo
+ 2e5010958632499c6056dc87d778433526eda031402287ffdbe5bf965fe4eb66 920916 python3-django_1.11.29-1+deb10u6_all.deb
+Files:
+ 5cbc49028d939e0b7d9209971adf465a 3294 python optional python-django_1.11.29-1+deb10u6.dsc
+ e725953dfc63ea9e3b5b0898a8027bd7 7977916 python optional python-django_1.11.29.orig.tar.gz
+ 3fc134a788ed81bf82a9f1c147d08b42 44388 python optional python-django_1.11.29-1+deb10u6.debian.tar.xz
+ 23b4d96541348976a04db3fcb1d043b0 1540372 python optional python-django-common_1.11.29-1+deb10u6_all.deb
+ fb2cf2c9760193d750f7b85dfa728a93 2693444 doc optional python-django-doc_1.11.29-1+deb10u6_all.deb
+ 0ad7bdc8401b6d402ec9653ad5bff2a4 921184 python optional python-django_1.11.29-1+deb10u6_all.deb
+ 29de9a49a211d55ad0ecb90f17d359a5 14915 python optional python-django_1.11.29-1+deb10u6_amd64.buildinfo
+ 08dbebc9ac1f1787ab582f636c844cc7 920916 python optional python3-django_1.11.29-1+deb10u6_all.deb
+

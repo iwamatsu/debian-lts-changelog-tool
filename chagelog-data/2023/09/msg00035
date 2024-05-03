@@ -1,0 +1,43 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 01 Aug 2023 12:15:02 +0200
+Source: cargo-mozilla
+Binary: cargo-mozilla cargo-mozilla-dbgsym
+Architecture: source amd64
+Version: 0.66.0+ds1-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ cargo-mozilla - Rust package manager
+Changes:
+ cargo-mozilla (0.66.0+ds1-1~deb10u1) buster-security; urgency=medium
+ .
+   * Backport to buster.
+Checksums-Sha1:
+ 73ce580470e0ff6654ef1543a644b4ecb3dab6dd 2774 cargo-mozilla_0.66.0+ds1-1~deb10u1.dsc
+ b1b613958bd6ed7e68b6d78507ad5769031121b7 8437884 cargo-mozilla_0.66.0+ds1.orig-vendor.tar.gz
+ edba3b0a4ffe2a31785316c0d7f86bce4c60ec11 2203875 cargo-mozilla_0.66.0+ds1.orig.tar.gz
+ 4bde3d2cf242de333bba1a54094d8a780af7d90b 3133060 cargo-mozilla_0.66.0+ds1-1~deb10u1.debian.tar.xz
+ ee2dfce3dfd709a41625948be3973ac7698bbd3c 34613808 cargo-mozilla-dbgsym_0.66.0+ds1-1~deb10u1_amd64.deb
+ 67637278cd5262fc975aa5fba9b6e85abc69362f 8045 cargo-mozilla_0.66.0+ds1-1~deb10u1_amd64.buildinfo
+ 9c1882a6c24bc52e33fa1d9e21a06611a1a9ee08 3751260 cargo-mozilla_0.66.0+ds1-1~deb10u1_amd64.deb
+Checksums-Sha256:
+ 39567bd87110169ce22767c1f418e8ba69fdcddfe09f540e7be53a6d5f880d2f 2774 cargo-mozilla_0.66.0+ds1-1~deb10u1.dsc
+ 2ecaea3a8f0c8406a6bb07a596c6834f895d7f7964d806f88e20559ebc23040a 8437884 cargo-mozilla_0.66.0+ds1.orig-vendor.tar.gz
+ a34dfd2d662a00e426351cde058d3bec039a6b751f7e9a31805e9fe000a98014 2203875 cargo-mozilla_0.66.0+ds1.orig.tar.gz
+ fac31b8f671f29ae50a24adf81b60e6985108bc869d9ffe34577e3e9517f635d 3133060 cargo-mozilla_0.66.0+ds1-1~deb10u1.debian.tar.xz
+ dcca826edeb1581111b18124bae1ae45bcda82e820235bc1d752a91609eb4903 34613808 cargo-mozilla-dbgsym_0.66.0+ds1-1~deb10u1_amd64.deb
+ cd4b44dc635fb766b69432a6e6369e91a3954fceba7b2ff449078ae5d5d68bb5 8045 cargo-mozilla_0.66.0+ds1-1~deb10u1_amd64.buildinfo
+ df4c53c7ad2b5b28aaabd90ba5513fd93e7be5ff563124b18d397241b26f7400 3751260 cargo-mozilla_0.66.0+ds1-1~deb10u1_amd64.deb
+Files:
+ 887f3def12aafd750da34e6fcccd9722 2774 devel optional cargo-mozilla_0.66.0+ds1-1~deb10u1.dsc
+ ddd4c6c5efce2b56765d2280accc8bdf 8437884 devel optional cargo-mozilla_0.66.0+ds1.orig-vendor.tar.gz
+ e1c27af54cbba3d7d5020013e0336f87 2203875 devel optional cargo-mozilla_0.66.0+ds1.orig.tar.gz
+ 6c488974caca9229684a7cdf18da5564 3133060 devel optional cargo-mozilla_0.66.0+ds1-1~deb10u1.debian.tar.xz
+ eb82fb44f7e1af50486be84799ef3ef0 34613808 debug optional cargo-mozilla-dbgsym_0.66.0+ds1-1~deb10u1_amd64.deb
+ c58b504e10bdb80645897de69bfc36f3 8045 devel optional cargo-mozilla_0.66.0+ds1-1~deb10u1_amd64.buildinfo
+ a996d53d4a2245937b3faf4c6aa21c62 3751260 devel optional cargo-mozilla_0.66.0+ds1-1~deb10u1_amd64.deb
+

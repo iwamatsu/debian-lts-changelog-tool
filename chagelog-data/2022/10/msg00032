@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 26 Oct 2022 17:34:03 +0200
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2021a-0+deb10u8) buster-security; urgency=medium
+ .
+   * Cherry-pick patches from upstream (thanks Aurelien Jarno):
+     - 12-syria-dst.patch: Syria is abandoning the DST regime and is
+       changing to permanent +03, so it will not fall back from +03 to
+       +02 on 2022-10-28.
+     - 13-jordan-dst.patch: Jordan is abandoning the DST regime and are
+       changing to permanent +03, so it will not fall back from +03 to
+       +02 on 2022-10-28.
+Checksums-Sha1:
+ 4ce38034d96ac1036d042bb560ab72240210813e 2023 tzdata_2021a-0+deb10u8.dsc
+ e24b30685d4e3a80cb6754a0d179e487d049180d 115632 tzdata_2021a-0+deb10u8.debian.tar.xz
+ 8e12c19bc0f9422c7076f90b38c4f983824ae049 5841 tzdata_2021a-0+deb10u8_source.buildinfo
+Checksums-Sha256:
+ 8d17f1f3620ef11e275fde3693f1f22495da66cdc40f2ec95ab804c7f4d56471 2023 tzdata_2021a-0+deb10u8.dsc
+ e14dc836022592a32b8a99d33f9105e4a31258da39704e022a61a3c07824e49f 115632 tzdata_2021a-0+deb10u8.debian.tar.xz
+ 4b90f220b4a98cbd67371624e152d5cdbadac633b8a6c76c2051b9f6e31eb5c6 5841 tzdata_2021a-0+deb10u8_source.buildinfo
+Files:
+ 074b34f0b076e76acf157df41d50d2a3 2023 localization required tzdata_2021a-0+deb10u8.dsc
+ 85c3b66a46bfe48adaebb49f46c0af17 115632 localization required tzdata_2021a-0+deb10u8.debian.tar.xz
+ 6bfbe8b82d382a2fcff50b6bc8b90776 5841 localization required tzdata_2021a-0+deb10u8_source.buildinfo
+

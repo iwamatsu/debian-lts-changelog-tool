@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 19 Nov 2023 15:41:10 CET
+Source: netty
+Architecture: source
+Version: 1:4.1.33-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ b64a44927195db8f30ede42d58cf91acd648549d 2617 netty_4.1.33-1+deb10u4.dsc
+ e23547fcdba70d842d60a8cbd2eac17ad5fab027 87496 netty_4.1.33-1+deb10u4.debian.tar.xz
+ 4fd6ee3b42a49e93e0af263c52b0fb04296f156d 14510 netty_4.1.33-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ fee2bfd37136d5e42c0446a13fee14d788d976e31713438fe561d74bec9635a3 2617 netty_4.1.33-1+deb10u4.dsc
+ 3baa891ec5c9223f05266bd92c7c26cd325e4484346d79ac7fbf0de1a0fb6cd2 87496 netty_4.1.33-1+deb10u4.debian.tar.xz
+ 2ea3fb1c5fafe43362ba18e6d82e6e2353f86d8f1dd653782e516fefd9a053d6 14510 netty_4.1.33-1+deb10u4_amd64.buildinfo
+Changes:
+ netty (1:4.1.33-1+deb10u4) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2023-44487:
+     The HTTP/2 protocol allows a denial of service (server resource
+     consumption) because request cancellation can reset many streams quickly.
+   * Fix a FTBFS with newer OpenJDK versions.
+Files:
+ e9bb8819b730527d5fe6fe9ec65bd162 2617 java optional netty_4.1.33-1+deb10u4.dsc
+ ba789792f3a628e57d3f2703a59e5d90 87496 java optional netty_4.1.33-1+deb10u4.debian.tar.xz
+ 933699aff85689a7ca00e9f8e666c2ea 14510 java optional netty_4.1.33-1+deb10u4_amd64.buildinfo
+

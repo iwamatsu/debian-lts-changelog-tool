@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 24 Oct 2022 17:51:18 +0200
+Source: wkhtmltopdf
+Architecture: source
+Version: 0.12.5-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Emmanuel Bouthenot <kolter@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ wkhtmltopdf (0.12.5-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-21365: disable local filesystem access by default.
+Checksums-Sha1:
+ aab7d397c6cf6ffafd3a4452578a1d5fdf1da647 2009 wkhtmltopdf_0.12.5-1+deb10u1.dsc
+ fe48862f4e000517ac4a3587d9470f25f881a7f5 110674 wkhtmltopdf_0.12.5.orig.tar.gz
+ 8d7bcf83b54b5788a4969e92e75d5c580f0847e6 6152 wkhtmltopdf_0.12.5-1+deb10u1.debian.tar.xz
+ e0b57740508ae914d88ebe78b28416427d6e2af3 5865 wkhtmltopdf_0.12.5-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 02737bf56084105f3be11f0b53449b2fc3d90f84ca53bd820f90e1cdcb639301 2009 wkhtmltopdf_0.12.5-1+deb10u1.dsc
+ 0d656da9d7dc227a74998e07aa169674b1f8cce5f603c6c03b0e1f19c4f7de88 110674 wkhtmltopdf_0.12.5.orig.tar.gz
+ 419a3beecd200cb7838a004c83313eb80c4fcd874335cfdf263c52100b3baa6d 6152 wkhtmltopdf_0.12.5-1+deb10u1.debian.tar.xz
+ 9933ce384319c746efcebcc22c8203d59de5693c6def061bac401fd0975eed0b 5865 wkhtmltopdf_0.12.5-1+deb10u1_source.buildinfo
+Files:
+ 81b6c271b6d24f70ac4162cb8732ea3c 2009 utils optional wkhtmltopdf_0.12.5-1+deb10u1.dsc
+ 826678bece0793f491104ccdc933414e 110674 utils optional wkhtmltopdf_0.12.5.orig.tar.gz
+ 08f0063f671c1d57290874038ddc48b5 6152 utils optional wkhtmltopdf_0.12.5-1+deb10u1.debian.tar.xz
+ 06c5a780747fb5468c8c6bd32d5b794c 5865 utils optional wkhtmltopdf_0.12.5-1+deb10u1_source.buildinfo
+

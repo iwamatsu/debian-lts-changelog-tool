@@ -1,0 +1,57 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 28 Aug 2023 10:22:16 -0700
+Source: opendmarc
+Binary: libopendmarc-dev libopendmarc2 libopendmarc2-dbgsym opendmarc opendmarc-dbgsym
+Architecture: source amd64
+Version: 1.3.2-6+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Scott Kitterman <scott@kitterman.com>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libopendmarc-dev - Headers and development libraries for the OpenDMARC library
+ libopendmarc2 - Library for DMARC validation and reporting
+ opendmarc  - Milter implementation of DMARC
+Closes: 977767
+Changes:
+ opendmarc (1.3.2-6+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2020-12272: Prevent an issue that allowed attackers to inject
+     authentication results to provide false information about the domain that
+     originated an email message. This was caused by incorrect parsing and
+     interpretation of SPF/DKIM authentication results. (Closes: #977767)
+   * Add autopkgtests.
+Checksums-Sha1:
+ 1a4c9cb390ba08b3bd66b631982cb399e66f29fb 2110 opendmarc_1.3.2-6+deb10u3.dsc
+ dd7deac10966094735a32c0df6631898d59db603 593448 opendmarc_1.3.2.orig.tar.gz
+ f4d33388e645a2d233c341cc6d153ee02f5588ec 27236 opendmarc_1.3.2-6+deb10u3.debian.tar.xz
+ 9fc2fd2a757a3dbc543b1b766188f1f142b6f8d4 62228 libopendmarc-dev_1.3.2-6+deb10u3_amd64.deb
+ e025670c79bed5b152c80aa4f109f7f594f70720 56524 libopendmarc2-dbgsym_1.3.2-6+deb10u3_amd64.deb
+ 53d708778e97af5e24bfc125fef4415b515c31a4 36128 libopendmarc2_1.3.2-6+deb10u3_amd64.deb
+ a8b665553566cd70691284598a9f427f8a773874 96048 opendmarc-dbgsym_1.3.2-6+deb10u3_amd64.deb
+ 0a6ce18895e71b64041d9db8c349f8aa5ce33969 7673 opendmarc_1.3.2-6+deb10u3_amd64.buildinfo
+ 3775d55e7077f20f3bd334e10e75382b666271f2 97868 opendmarc_1.3.2-6+deb10u3_amd64.deb
+Checksums-Sha256:
+ 7e5272298b0f1b3a44a11d259d2a826f459eb31935dc22f9e6a9af474645025b 2110 opendmarc_1.3.2-6+deb10u3.dsc
+ 213c4b01a9ff5dcdf331f7bd1dd6a382077abbf8ee9111852f2101ec917c2ffb 593448 opendmarc_1.3.2.orig.tar.gz
+ a6bb09b6dc95f5801a040b30c5ab309d841b09820fa10fd3c17e35a25db52d3c 27236 opendmarc_1.3.2-6+deb10u3.debian.tar.xz
+ d72df8d9429ac5e818cfa8cee1ea5d63c656024c63302f016b3501ac3147d162 62228 libopendmarc-dev_1.3.2-6+deb10u3_amd64.deb
+ 3ee0add4a2565887ae75c6317646767932018483091a2348f67c22168274cc68 56524 libopendmarc2-dbgsym_1.3.2-6+deb10u3_amd64.deb
+ b964df4dd27587b0a1fd621370504c5346defae6e9c3dc764868d60099e980b1 36128 libopendmarc2_1.3.2-6+deb10u3_amd64.deb
+ b57c769ba70c6d3ac24a6088eda8944dea5404391e74259207026231bf5a1530 96048 opendmarc-dbgsym_1.3.2-6+deb10u3_amd64.deb
+ d1411e3d7a67546d8387d61de594bb664accf0f9bdc8213266fcdbb45e8857d7 7673 opendmarc_1.3.2-6+deb10u3_amd64.buildinfo
+ 3d33c5a1ef68d5801792edf6ca7bded524bfb91a85c88dd214af06cb159325fc 97868 opendmarc_1.3.2-6+deb10u3_amd64.deb
+Files:
+ c9e3acfc4a5852da82ce8682d22b7596 2110 mail optional opendmarc_1.3.2-6+deb10u3.dsc
+ 2b4e9b8be7fe61800515cef1d7e6a905 593448 mail optional opendmarc_1.3.2.orig.tar.gz
+ 4b52bc31e1b5c82668365c931acc71ac 27236 mail optional opendmarc_1.3.2-6+deb10u3.debian.tar.xz
+ 4968bd5e5319e3542621ca75d815d41a 62228 libdevel optional libopendmarc-dev_1.3.2-6+deb10u3_amd64.deb
+ b49c666502f7ef6f94f2315065590095 56524 debug optional libopendmarc2-dbgsym_1.3.2-6+deb10u3_amd64.deb
+ b056b583bd3d836aa9365e28e1c95bef 36128 libs optional libopendmarc2_1.3.2-6+deb10u3_amd64.deb
+ 47de0a08c6cf9ebb6a5fff9c2de7575f 96048 debug optional opendmarc-dbgsym_1.3.2-6+deb10u3_amd64.deb
+ 8d668476b7668fea345c1634cafe272e 7673 mail optional opendmarc_1.3.2-6+deb10u3_amd64.buildinfo
+ 92190c29069f816c356813b30c16049a 97868 mail optional opendmarc_1.3.2-6+deb10u3_amd64.deb
+

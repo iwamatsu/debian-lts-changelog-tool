@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 18 May 2022 05:57:05 +0530
+Source: elog
+Architecture: source
+Version: 3.1.2-1-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Roger Kalt <roger.kalt@gmail.com>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ elog (3.1.2-1-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fixed NULL pointer deference in
+     show_uploader_json. (Fixes: CVE-2020-8659)
+Checksums-Sha1:
+ 376b90824a39f396ae0950df58de3ea767d6bb01 1765 elog_3.1.2-1-1+deb9u1.dsc
+ e22f0eebc632b5b4e129311d36174ec18b47d703 1494648 elog_3.1.2-1.orig.tar.gz
+ b88152e77a01a394404de3bd77c6871a417e3a45 18772 elog_3.1.2-1-1+deb9u1.debian.tar.xz
+ 8cc48725662f3c2cfca7b1a1229d817fbb01c891 6057 elog_3.1.2-1-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ cec0a9a13a3baf2ccc3dd0bc5b5f862e3bfbcaff89381786a10affded6e614d3 1765 elog_3.1.2-1-1+deb9u1.dsc
+ 5de1057b4071d76a17a90c3a8044d3b4c3e6d973904518f8dac0cc3b7a2ffeaa 1494648 elog_3.1.2-1.orig.tar.gz
+ bdeb8cbfda6b1e6e3acd83e76459ef36f19442c66d6d46a8cb809173e8a8024b 18772 elog_3.1.2-1-1+deb9u1.debian.tar.xz
+ c7d7a9d96b267571c09e4999fd1e6e724ff9e435cc08f8a2077dea79a63f3c55 6057 elog_3.1.2-1-1+deb9u1_source.buildinfo
+Files:
+ 3513a3b6f4fe49507d75e4cd7f24361e 1765 web optional elog_3.1.2-1-1+deb9u1.dsc
+ dde6a95b2e322a1a4eca3b0bfc7b59f6 1494648 web optional elog_3.1.2-1.orig.tar.gz
+ 65a6126ae3cb057e4f591d10b8028d4c 18772 web optional elog_3.1.2-1-1+deb9u1.debian.tar.xz
+ b937378a443c90d03cb8635cde55e8bb 6057 web optional elog_3.1.2-1-1+deb9u1_source.buildinfo
+

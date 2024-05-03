@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 31 Dec 2023 00:53:09 +0100
+Source: libspreadsheet-parseexcel-perl
+Architecture: source
+Version: 0.6500-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1059450
+Changes:
+ libspreadsheet-parseexcel-perl (0.6500-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-7101: Arbitrary code execution (ACE) vulnerability due to
+     passing unvalidated input from a file into a string-type “eval”.
+     Specifically, the issue stems from the evaluation of Number format strings
+     (not to be confused with printf-style format strings) within the Excel
+     parsing logic. (Closes: #1059450)
+Checksums-Sha1:
+ a241b25c00e6c973257a3bc3183ab0842aaabd5a 2554 libspreadsheet-parseexcel-perl_0.6500-1+deb10u1.dsc
+ 76f49a87bffcbe0191117493c69017cf6a0598da 206923 libspreadsheet-parseexcel-perl_0.6500.orig.tar.gz
+ d7a5b43579d6290ade61917bf1452c7bbf0c15fd 6892 libspreadsheet-parseexcel-perl_0.6500-1+deb10u1.debian.tar.xz
+ 1a82b051c06801e28ee4b9f416470837e30eaaa2 7369 libspreadsheet-parseexcel-perl_0.6500-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 257a8cff375e87a8f6a2b8d265a4547af1ff54348e0c8283d1769c3aedb220d3 2554 libspreadsheet-parseexcel-perl_0.6500-1+deb10u1.dsc
+ 6ec4cb429bd58d81640fe12116f435c46f51ff1040c68f09cc8b7681c1675bec 206923 libspreadsheet-parseexcel-perl_0.6500.orig.tar.gz
+ 7da9630b93e7a5aca4417fcfaa20c26cc1a068665dbf74d5c8e875797347be59 6892 libspreadsheet-parseexcel-perl_0.6500-1+deb10u1.debian.tar.xz
+ 65046d519af907f9ccf8db6dd3f52d737ba4efbb58f5af6134d93b93a852035d 7369 libspreadsheet-parseexcel-perl_0.6500-1+deb10u1_amd64.buildinfo
+Files:
+ e545dd22a62aee33e9754ba2aa9d5ff7 2554 perl optional libspreadsheet-parseexcel-perl_0.6500-1+deb10u1.dsc
+ 4b8857e3a391d86501c1b742b459ac9e 206923 perl optional libspreadsheet-parseexcel-perl_0.6500.orig.tar.gz
+ 4ec38c2c36c753fdf5d5ac45a9b59411 6892 perl optional libspreadsheet-parseexcel-perl_0.6500-1+deb10u1.debian.tar.xz
+ 876a04c2d08a82f2ae1b44e942067453 7369 perl optional libspreadsheet-parseexcel-perl_0.6500-1+deb10u1_amd64.buildinfo
+

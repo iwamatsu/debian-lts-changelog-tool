@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 May 2022 17:30:46 CEST
+Source: haproxy
+Binary: haproxy haproxy-doc vim-haproxy
+Architecture: source
+Version: 1.7.5-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian HAProxy Maintainers <pkg-haproxy-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ haproxy    - fast and reliable load balancing reverse proxy
+ haproxy-doc - fast and reliable load balancing reverse proxy (HTML documentatio
+ vim-haproxy - syntax highlighting for HAProxy configuration files
+Checksums-Sha1:
+ be026d67f9d862a72b8fa773e0e964b02f3a4f48 2479 haproxy_1.7.5-2+deb9u1.dsc
+ 1b06931b9fd83ba64ef59a25b9ce6275b0f67809 1743979 haproxy_1.7.5.orig.tar.gz
+ 94194548200df422ba1e10b94866ce0bb7ee127f 63884 haproxy_1.7.5-2+deb9u1.debian.tar.xz
+ c25e373f7f8e4dcef56de365e0c3cb7e4c75f3a1 8377 haproxy_1.7.5-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 69fed627e7fd95296d8a7d9277f375edd19bbe34bcd4d34292f37143b3aea686 2479 haproxy_1.7.5-2+deb9u1.dsc
+ b04d7db6383c662eb0a421a95af7becac6d9744a1abf0df6b0280c1e61416121 1743979 haproxy_1.7.5.orig.tar.gz
+ d4a3e1fc3ba96d387cff1538b72b3321604cf358b006fa5ced67c441490ae381 63884 haproxy_1.7.5-2+deb9u1.debian.tar.xz
+ c3f9013495a5c37153a4601060d36bb5c9e476935325210570c3810ea4668483 8377 haproxy_1.7.5-2+deb9u1_amd64.buildinfo
+Changes:
+ haproxy (1.7.5-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2018-20102: out-of-bounds read in dns_validate_dns_response in
+     dns.c
+   * Fix CVE-2018-20103: crafted packet can trigger infinite recursion and
+     thus resulting in stack exhaustion
+   * Fix CVE-2019-18277: possible HTTP request smuggling
+Files:
+ 4e5414569d7b5e497928e9e7872cbc98 2479 net optional haproxy_1.7.5-2+deb9u1.dsc
+ ed84c80cb97852d2aa3161ed16c48a1c 1743979 net optional haproxy_1.7.5.orig.tar.gz
+ 6e82e0d2db513b28c5de7fc993fdc2c4 63884 net optional haproxy_1.7.5-2+deb9u1.debian.tar.xz
+ b979f675bf9d1a5133c03fff6c715bd9 8377 net optional haproxy_1.7.5-2+deb9u1_amd64.buildinfo
+

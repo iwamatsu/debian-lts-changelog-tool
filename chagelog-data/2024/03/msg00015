@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 15 Mar 2024 13:02:54 +0100
+Source: spip
+Architecture: source
+Version: 3.2.4-1+deb10u13
+Distribution: buster-security
+Urgency: high
+Maintainer: David Prévot <taffit@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1059331
+Changes:
+ spip (3.2.4-1+deb10u13) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-52322: XSS vulnerability because input from _request() is not
+     sanitized. (Closes: #1059331)
+Checksums-Sha1:
+ ab1f908001a54dc33f8e3500f36a60a880449565 1841 spip_3.2.4-1+deb10u13.dsc
+ e4782f426cc4efddfe3c02973d98b8c3414374f8 115392 spip_3.2.4-1+deb10u13.debian.tar.xz
+ 6b384f6a7f2305646befae3f2bc4a88a9c872701 8374 spip_3.2.4-1+deb10u13_amd64.buildinfo
+Checksums-Sha256:
+ c105aec2c626205327c4fbbdbdc7b73f7dbbe49d71cb0f6332fccafde8d9fd32 1841 spip_3.2.4-1+deb10u13.dsc
+ a442e278604c315afb5faa3b7fc6382591b8ce135024dc44be882f51eac9514d 115392 spip_3.2.4-1+deb10u13.debian.tar.xz
+ d3a03fdaf21f5a3ac82e39ead8da09d9e0bcb56ce67dceef133b628f7da2f096 8374 spip_3.2.4-1+deb10u13_amd64.buildinfo
+Files:
+ 98a320ef8b17b50e8fa1e71655b281c8 1841 web optional spip_3.2.4-1+deb10u13.dsc
+ c183479466def73fe27401fca05d7598 115392 web optional spip_3.2.4-1+deb10u13.debian.tar.xz
+ 78999210fe783d8aa0ed669a71844e1e 8374 web optional spip_3.2.4-1+deb10u13_amd64.buildinfo
+

@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 Oct 2023 07:33:48 +0400
+Source: node-browserify-sign
+Binary: node-browserify-sign
+Architecture: source all
+Version: 4.0.4-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Yadd <yadd@debian.org>
+Description:
+ node-browserify-sign - adds node crypto signing for browsers
+Closes: 1054667
+Changes:
+ node-browserify-sign (4.0.4-2+deb10u1) buster-security; urgency=medium
+ .
+   * Team upload
+   * Properly check the upper bound for DSA signatures (Closes: #1054667, CVE-2023-46234)
+Checksums-Sha1:
+ c3db606297074d80bd32bcba6c3431f725bbca3b 2408 node-browserify-sign_4.0.4-2+deb10u1.dsc
+ c98e0fd4feb8693d19979acaf760402b0dae88aa 43700 node-browserify-sign_4.0.4.orig.tar.gz
+ 4844dad11ec507a61b46181b980e5712c20a87dd 3428 node-browserify-sign_4.0.4-2+deb10u1.debian.tar.xz
+ c835021c3fb51af34ab4b68f5af959a82c1cedcd 6268 node-browserify-sign_4.0.4-2+deb10u1_all.deb
+ 27a4c662f511d56cadb8e721baa0b2fe62393b6f 7401 node-browserify-sign_4.0.4-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ e28d2391204d417e5b750e6f9d9aecff5255646deebca079ebdd7fb0baad1ec5 2408 node-browserify-sign_4.0.4-2+deb10u1.dsc
+ 816438d4f6b74676e0ff3a0a41b955e7c175f9dc20990c7e23b1654e2b310b6b 43700 node-browserify-sign_4.0.4.orig.tar.gz
+ b2c7f7b07865426252c57e7059f66e6b3f519efe71c774fdf553e1af544bd23c 3428 node-browserify-sign_4.0.4-2+deb10u1.debian.tar.xz
+ d95d1dc9528f891b871a0d34403cd3f13d051d4149bea1b2b3a9bd41e279efc5 6268 node-browserify-sign_4.0.4-2+deb10u1_all.deb
+ a704aac0257bbc32e7b61974b03ce3d4ac860414c699c901856bdc4628112999 7401 node-browserify-sign_4.0.4-2+deb10u1_amd64.buildinfo
+Files:
+ 3f8b6d11abf0dca5364e21c8577723ee 2408 javascript optional node-browserify-sign_4.0.4-2+deb10u1.dsc
+ ec682d9ef5e1153af4d22074b7cbdf48 43700 javascript optional node-browserify-sign_4.0.4.orig.tar.gz
+ 7bd95851ad8eefbfa66964b784925d30 3428 javascript optional node-browserify-sign_4.0.4-2+deb10u1.debian.tar.xz
+ 1100f022fcf2b3990be5a08fcc5ebbfa 6268 javascript optional node-browserify-sign_4.0.4-2+deb10u1_all.deb
+ d76e00b5cacc920a5d410d89c80d451b 7401 javascript optional node-browserify-sign_4.0.4-2+deb10u1_amd64.buildinfo
+

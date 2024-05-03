@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 08 Oct 2023 00:25:02 +0200
+Source: inetutils
+Architecture: source
+Version: 2:1.9.4-7+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Guillem Jover <guillem@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ inetutils (2:1.9.4-7+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix incomplete patch for CVE-2019-0053: inetutils' telnet client doesn't
+     sufficiently validate environment variables, which can lead to stack-based
+     buffer overflows.
+   * Fix CVE-2023-40303: Unchecked return values of set*id() family functions
+     in ftpd, rcp, rlogin, rsh, rshd, and uucpd may lead to privilege
+     escalation.
+Checksums-Sha1:
+ 1a85b8af23cc6ddfa5b92b5c8b8847f8697b74d4 2742 inetutils_1.9.4-7+deb10u3.dsc
+ ccb52a5f2f63073ef42c43f5b6042117d7b9effc 101728 inetutils_1.9.4-7+deb10u3.debian.tar.xz
+ ab9f416ca1473b05899d33d5797b9f4e3d41400e 13249 inetutils_1.9.4-7+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 4759c9041d75fbf813ea7a9d64ad4cdf98168f0b8ad396ea240a1d0a2339b950 2742 inetutils_1.9.4-7+deb10u3.dsc
+ d5eaad7e4e6ed7a0cb57a5dfbdb31b6aa4b56ffed237cba0ef679e0432869a17 101728 inetutils_1.9.4-7+deb10u3.debian.tar.xz
+ c9db9710439d728d200869263f483ca91b21cd3510ab7ef05394e5018a8e0726 13249 inetutils_1.9.4-7+deb10u3_amd64.buildinfo
+Files:
+ ad4ca2e02aef4bf790022199fa787900 2742 net optional inetutils_1.9.4-7+deb10u3.dsc
+ 3600af148283e9e7e1f9690074ba53ad 101728 net optional inetutils_1.9.4-7+deb10u3.debian.tar.xz
+ 84d4b4047ce929c132e3c5f0ba6a2bf3 13249 net optional inetutils_1.9.4-7+deb10u3_amd64.buildinfo
+

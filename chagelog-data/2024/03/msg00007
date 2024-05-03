@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 06 Mar 2024 17:08:41 +0200
+Source: yard
+Architecture: source
+Version: 0.9.16-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ yard (0.9.16-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2019-1020001: Arbitrary path traversal and file access in yard server
+   * CVE-2024-27285: Cross-Site Scripting in generated frames.html
+Checksums-Sha1:
+ cdab40905f5570b1eca8be3092742f4a89976e0a 2192 yard_0.9.16-1+deb10u1.dsc
+ e218b2f322d70dc618364fc682fefc4b983f2088 642089 yard_0.9.16.orig.tar.gz
+ 0ddbe965f93b8b1492daf9ae1cbfc4594c3b1a47 80576 yard_0.9.16-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ a0c88ebaf40680c6d65c2b79b04a6a75201439c4ff21356c0ca83822e49ddab2 2192 yard_0.9.16-1+deb10u1.dsc
+ b30486df55460bd06e7c15e0798813aa6c113701874b875d11fc64c673d90768 642089 yard_0.9.16.orig.tar.gz
+ d590f8c297345bb19b581f213badef0c197542e1d060f0238094f1976b5dd5ab 80576 yard_0.9.16-1+deb10u1.debian.tar.xz
+Files:
+ 33bf8fb4225f8027f1b70fdad217570c 2192 ruby optional yard_0.9.16-1+deb10u1.dsc
+ e81af9528231d072cc2b5506d0a56bff 642089 ruby optional yard_0.9.16.orig.tar.gz
+ a917860c26841cc9cc222ef9fdd76fe7 80576 ruby optional yard_0.9.16-1+deb10u1.debian.tar.xz
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 28 Sep 2023 12:35:46 +0100
+Source: ncurses
+Architecture: source
+Version: 6.1+20181013-2+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ ncurses (6.1+20181013-2+deb10u4) buster-security; urgency=medium
+ .
+   [ Sean Whitton ]
+   * Non-maintainer upload by the LTS Security Team.
+   * Cherry-pick upstream fix for CVE-2020-19189.
+   * Add additional CVEs fixed to CVE-2019-17594.diff & CVE-2020-17595.diff.
+ .
+   [ Anton Gladky ]
+   * Add debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ bcf81ed066cf2112a9b84143aca1b1ca35c6ac86 3951 ncurses_6.1+20181013-2+deb10u4.dsc
+ d0659b906ff3aac87bc3e6d51003714acbf61483 63228 ncurses_6.1+20181013-2+deb10u4.debian.tar.xz
+ 1d51119e013554000e4b24fce7fc6cea362d5465 6289 ncurses_6.1+20181013-2+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 84f56725a0bd1031423169a45b27519b4d397920b6095489f0def539946a3d2c 3951 ncurses_6.1+20181013-2+deb10u4.dsc
+ e3bf15e6a02dab6110d420d4582b79d3ff85edb7781cfba5b10101b9306af97e 63228 ncurses_6.1+20181013-2+deb10u4.debian.tar.xz
+ 26dc2ef00c8d41eae0247798f25e65d18eb4f6bf100dae8525fea6f3593544c8 6289 ncurses_6.1+20181013-2+deb10u4_source.buildinfo
+Files:
+ 35e1ca1acc1070c69e855121ccc1cdd5 3951 libs required ncurses_6.1+20181013-2+deb10u4.dsc
+ 558857dc8875d9d71090bb60e56fb2bf 63228 libs required ncurses_6.1+20181013-2+deb10u4.debian.tar.xz
+ 62e1f38efeac856e43adf6630e1ef13b 6289 libs required ncurses_6.1+20181013-2+deb10u4_source.buildinfo
+

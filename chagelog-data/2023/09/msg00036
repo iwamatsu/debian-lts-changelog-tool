@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 24 Sep 2023 14:01:16 +0530
+Source: ghostscript
+Architecture: source
+Version: 9.27~dfsg-2+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Changes:
+ ghostscript (9.27~dfsg-2+deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * CVE-2020-21710: A divide by zero issue discovered in
+     eps_print_page in gdevepsn.c.
+   * CVE-2020-21890: Buffer Overflow vulnerability in clj_media_size
+     function in devices/gdevclj.c
+Checksums-Sha1:
+ 349459ad60a201152ab5ddf67e50d51901a4c876 2824 ghostscript_9.27~dfsg-2+deb10u9.dsc
+ f8f3037beaff07b89fd2931f3988ae19de3fa7d8 128392 ghostscript_9.27~dfsg-2+deb10u9.debian.tar.xz
+ 57e0a4842db14776c1faa99688bd21a997bd6b96 12466 ghostscript_9.27~dfsg-2+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ da0961f45659cca6611253e2499d5ad055f97bd0056ca9763604572cb54c1fb4 2824 ghostscript_9.27~dfsg-2+deb10u9.dsc
+ 6a11edff2f4457f2d8583eab739db39b3f69903be67e1d526ac0f3c612b155e2 128392 ghostscript_9.27~dfsg-2+deb10u9.debian.tar.xz
+ 4237306328a63b02d75591022473da0be1a80038f07719dd6233cb1d1cb734cb 12466 ghostscript_9.27~dfsg-2+deb10u9_amd64.buildinfo
+Files:
+ 7155307076a0080cea31a625e7936cea 2824 text optional ghostscript_9.27~dfsg-2+deb10u9.dsc
+ 44fff2cf290a4dba7ae34dee65d40cc8 128392 text optional ghostscript_9.27~dfsg-2+deb10u9.debian.tar.xz
+ 5d8aee793a3ab6612ad58cb379c31be9 12466 text optional ghostscript_9.27~dfsg-2+deb10u9_amd64.buildinfo
+

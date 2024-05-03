@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 24 May 2022 21:01:53 +0200
+Source: filezilla
+Binary: filezilla filezilla-common
+Architecture: source
+Version: 3.24.0-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Adrien Cunin <adri2000@ubuntu.com>
+Changed-By: Andreas Rönnquist <gusnan@debian.org>
+Description:
+ filezilla  - Full-featured graphical FTP/FTPS/SFTP client
+ filezilla-common - Architecture independent files for filezilla
+Changes:
+ filezilla (3.24.0-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-5429 - Untrusted search path in FileZilla before 3.41.0-rc1
+     allows an attacker to gain privileges via a malicious 'fzsftp' binary
+     in the user's home directory.
+   * Add debian/.gitlab-ci.yml
+   * Add patch to not build fzshellext
+Checksums-Sha1:
+ 4028f87641173be76b815b7da5763f9e0d21f9b6 2247 filezilla_3.24.0-1+deb9u1.dsc
+ 955eb2da0bdf7875ad7ce1192c589a3b10fc4f10 4635977 filezilla_3.24.0.orig.tar.bz2
+ a23d1a5f2f97f5ceba0e11957cd98e0878b8507f 12760 filezilla_3.24.0-1+deb9u1.debian.tar.xz
+ a81799b38d0f339059ee4090ae5b0cfd7a0d802f 13375 filezilla_3.24.0-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 928737eabf061d7329101b39a57e5026066b24932ff1e9aceeb0e7a8ab201955 2247 filezilla_3.24.0-1+deb9u1.dsc
+ 3d5dd4899cdeca038afd330f24098a61a223f15b172611e0c210244911cd4cad 4635977 filezilla_3.24.0.orig.tar.bz2
+ d7541d9586b15f3169471337ad06b72cddfd3f26e126468f7a2afeffb5bea71c 12760 filezilla_3.24.0-1+deb9u1.debian.tar.xz
+ e47e35143512510227082d1ddce5b0cc3cbd57ac97edbd0ac131a40568599075 13375 filezilla_3.24.0-1+deb9u1_source.buildinfo
+Files:
+ 594e889c5474394a32fc21f0f6cdad90 2247 net optional filezilla_3.24.0-1+deb9u1.dsc
+ e63a42b8f384554ef58f44d7e4ba26b7 4635977 net optional filezilla_3.24.0.orig.tar.bz2
+ 90f0ebf514fe18ef1042aa7f2b3f1d4a 12760 net optional filezilla_3.24.0-1+deb9u1.debian.tar.xz
+ 4c116a611df26a48f1887a508b675c61 13375 net optional filezilla_3.24.0-1+deb9u1_source.buildinfo
+

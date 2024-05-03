@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 02 May 2023 13:03:14 +0200
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb10u11
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2021a-0+deb10u11) buster-security; urgency=medium
+ .
+   * Sync patchset with bullseye.
+   * Revert the Lebanon DST change.
+   * Update templates and add translations for Ciudad Juarez.
+   * No leap second in June 2023.
+Checksums-Sha1:
+ 1840fd073fc55a381f6c6369a4ef9ce01b775afd 2071 tzdata_2021a-0+deb10u11.dsc
+ 271eed9ab4834212e2148fcc448bb6de265b7705 125268 tzdata_2021a-0+deb10u11.debian.tar.xz
+ 3c2e9781ee7e00e5606560ceabdf2fd5a5b9b4e7 5845 tzdata_2021a-0+deb10u11_source.buildinfo
+Checksums-Sha256:
+ fded995a1d0bbc9582e8655f3ba944e4dfe60d28b9cf19f14ad9626dc75ea432 2071 tzdata_2021a-0+deb10u11.dsc
+ 69f2530f28967f31e7bc4e8f9b928e66b205463608c0430971bc56f55e715e57 125268 tzdata_2021a-0+deb10u11.debian.tar.xz
+ 09f59906baacb44146d599862edac1a8dc3dbf2e6313ee837c0c141b592e93c8 5845 tzdata_2021a-0+deb10u11_source.buildinfo
+Files:
+ e1e63f625a5ed77d8dbcde8984648762 2071 localization required tzdata_2021a-0+deb10u11.dsc
+ 9c1b3b1718b907a889988798c045951b 125268 localization required tzdata_2021a-0+deb10u11.debian.tar.xz
+ e9cca57922dfab981144a59ddb61c79a 5845 localization required tzdata_2021a-0+deb10u11_source.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 07 Aug 2023 14:39:40 +0300
+Source: ghostscript
+Architecture: source
+Version: 9.27~dfsg-2+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ghostscript (9.27~dfsg-2+deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-38559: Buffer overflow in devn_pcx_write_rle()
+Checksums-Sha1:
+ cab19a4b32d0454b81c55dd2c80e4b2f307825df 2795 ghostscript_9.27~dfsg-2+deb10u8.dsc
+ ce6d3c89086a238ff6683e3a0fa3a71be7891d94 17723588 ghostscript_9.27~dfsg.orig.tar.xz
+ fc21586af68f8aa6b7ba2d09441b9e979c2c5d00 127372 ghostscript_9.27~dfsg-2+deb10u8.debian.tar.xz
+Checksums-Sha256:
+ a9a2791ad8dccb81a477e3da434031efb3546e2851a08d73f315b70fb788f6c7 2795 ghostscript_9.27~dfsg-2+deb10u8.dsc
+ b90d2117e93c63d774a5ab0a4d6a19c5dcbfd877462ee39a405262948e23ff9b 17723588 ghostscript_9.27~dfsg.orig.tar.xz
+ 8bf803f92d134e4b8ad32a2c68378e633016b9131f26938394198227aafc6ac1 127372 ghostscript_9.27~dfsg-2+deb10u8.debian.tar.xz
+Files:
+ dbdb589efa33a4eecbd582e11097fb91 2795 text optional ghostscript_9.27~dfsg-2+deb10u8.dsc
+ 5fd2cef0eafc9482f96342344faf935f 17723588 text optional ghostscript_9.27~dfsg.orig.tar.xz
+ 0e6b275c4762aa2798506f05f118a886 127372 text optional ghostscript_9.27~dfsg-2+deb10u8.debian.tar.xz
+

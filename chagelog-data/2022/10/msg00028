@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 22 Oct 2022 18:39:32 +0200
+Source: bluez
+Architecture: source
+Version: 5.50-1.2~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Bluetooth Maintainers <team+pkg-bluetooth@tracker.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 998626 1000262 1003712
+Changes:
+ bluez (5.50-1.2~deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-8921: SDP infoleak, the vulnerability lies in the handling of
+     a SVC_ATTR_REQ by the SDP implementation of BlueZ. By crafting a
+     malicious CSTATE, it is possible to trick the server into returning
+     more bytes than the buffer actually holds, resulting in leaking
+     arbitrary heap data.
+   * CVE-2019-8922: SDP Heap Overflow; this vulnerability lies in the SDP
+     protocol handling of attribute requests as well. By requesting a huge
+     number of attributes at the same time, an attacker can overflow the
+     static buffer provided to hold the response.
+   * CVE-2021-41229: sdp_cstate_alloc_buf allocates memory which will
+     always be hung in the singly linked list of cstates and will not be
+     freed. This will cause a memory leak over time. The data can be a very
+     large object, which can be caused by an attacker continuously sending
+     sdp packets and this may cause the service of the target device to
+     crash. (Closes: #1000262)
+   * CVE-2021-43400: a use-after-free in gatt-database.c can occur when a
+     client disconnects during D-Bus processing of a WriteValue
+     call. (Closes: #998626)
+   * CVE-2022-0204: a heap overflow vulnerability was found in bluez. An
+     attacker with local network access could pass specially crafted files
+     causing an application to halt or crash, leading to a denial of
+     service. (Closes: #1003712)
+   * CVE-2022-39176: BlueZ allows physically proximate attackers to obtain
+     sensitive information because profiles/audio/avrcp.c does not validate
+     params_len.
+   * CVE-2022-39177: BlueZ allows physically proximate attackers to cause a
+     denial of service because malformed and invalid capabilities can be
+     processed in profiles/audio/avdtp.c.
+Checksums-Sha1:
+ 60bf752e20f5eba8322cd241a4e9fcb525f26ee4 2588 bluez_5.50-1.2~deb10u3.dsc
+ ed1732599d8d86010c6763ffb042bd4528679620 45776 bluez_5.50-1.2~deb10u3.debian.tar.xz
+ 81124665b07e3d1e352b3d298d6cb3f44801118b 11614 bluez_5.50-1.2~deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 3b14cf06b04eb41eb5a2cb9f762250499f552d37e93adbb1a0ff7071a67302b7 2588 bluez_5.50-1.2~deb10u3.dsc
+ d0b5c330e59fa1b61d0aee21727a6afb36b2f4d4ffa25e9c730f588e33b7d174 45776 bluez_5.50-1.2~deb10u3.debian.tar.xz
+ 35b8998471570eadd5e3f8d5b3d49a7b3b021f4103e5910e98fb5597245549ad 11614 bluez_5.50-1.2~deb10u3_amd64.buildinfo
+Files:
+ 050737ce8cf5e8e023b774947d5cf35c 2588 admin optional bluez_5.50-1.2~deb10u3.dsc
+ 4b66ce7f37cdf5555be10a9db984f992 45776 admin optional bluez_5.50-1.2~deb10u3.debian.tar.xz
+ 4d8367d17c0014579a60282fcf89cab7 11614 admin optional bluez_5.50-1.2~deb10u3_amd64.buildinfo
+

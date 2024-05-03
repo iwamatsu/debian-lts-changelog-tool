@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 19 Apr 2023 22:12:30 +0200
+Source: golang-1.11
+Architecture: source
+Version: 1.11.6-1+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Go Compiler Team <team+go-compiler@tracker.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ golang-1.11 (1.11.6-1+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Drop CVE-2022-23772 fix which causes test suite failures on arm64
+     (even though the same backport approach worked for golang-1.7&1.8).
+Checksums-Sha1:
+ b51d0c835c9f8afae72480d154ac96948a1582ec 2615 golang-1.11_1.11.6-1+deb10u6.dsc
+ 997bf8f804b9b0d14981645a856cfae12df1875c 53276 golang-1.11_1.11.6-1+deb10u6.debian.tar.xz
+ 05e4f9989533993fa42b3f991f4c1bf70e484a99 5839 golang-1.11_1.11.6-1+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 60bcd5bc28444f2d7cce0e4643ae97711c1008fa4c7998de4466e9bcc6683505 2615 golang-1.11_1.11.6-1+deb10u6.dsc
+ 85520e082a0a9b26dc67e08159b97829081aeb683b8a44c916eca7672d81f937 53276 golang-1.11_1.11.6-1+deb10u6.debian.tar.xz
+ 98ae0fa2492d22b461578558b0320d0b116c7188ee238883ed30011e9401c9bb 5839 golang-1.11_1.11.6-1+deb10u6_amd64.buildinfo
+Files:
+ 32b7c4e3ca45e57e4fe27238f5387c3a 2615 devel optional golang-1.11_1.11.6-1+deb10u6.dsc
+ 45ecfe281c486c746acd407f47286c07 53276 devel optional golang-1.11_1.11.6-1+deb10u6.debian.tar.xz
+ 3616b45848de57479bd70370da06ebdc 5839 devel optional golang-1.11_1.11.6-1+deb10u6_amd64.buildinfo
+

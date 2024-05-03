@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 07 Dec 2022 00:03:45 +0530
+Source: node-json-schema
+Architecture: source
+Version: 0.2.3-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 999765
+Changes:
+ node-json-schema (0.2.3-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to not allow __proto__ property to be used for
+     schema default/coerce. (Fixes: CVE-2021-3918) (Closes: #999765)
+Checksums-Sha1:
+ 9557c41203dee79d6d3375c087e6df5d0cc60055 2144 node-json-schema_0.2.3-1+deb10u1.dsc
+ 6495003273d669952c71d5b43f3811a1481e2c1d 33108 node-json-schema_0.2.3.orig.tar.gz
+ 9a64d794af79f94d2175aa70bde8eea30ab724f7 3512 node-json-schema_0.2.3-1+deb10u1.debian.tar.xz
+ f96d943d46e828373442285511f59b7d2ba09064 6376 node-json-schema_0.2.3-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 1815c931750662c98ebbad87ffc974ee6fd44f0f2329d88197fe18e3b378fc19 2144 node-json-schema_0.2.3-1+deb10u1.dsc
+ 1ce9554e24a25c8b523897804692521bc8aab28e2561123b0790e4947545a1a3 33108 node-json-schema_0.2.3.orig.tar.gz
+ d42e0eda6ae9ffab54cb66a112a983cf13fa0083a41f80e92f262909f5e14591 3512 node-json-schema_0.2.3-1+deb10u1.debian.tar.xz
+ 8425aa941ab2fe76d8e3f756c9f04924cd4bd741fe37a57cb3a63a915898230d 6376 node-json-schema_0.2.3-1+deb10u1_source.buildinfo
+Files:
+ c035360ecf7a41e6641a15448b751e4a 2144 web optional node-json-schema_0.2.3-1+deb10u1.dsc
+ 0f8d7b77e92606eee2d74faa573f9c33 33108 web optional node-json-schema_0.2.3.orig.tar.gz
+ db4a6c6434e5570a44e123ae10c39ed1 3512 web optional node-json-schema_0.2.3-1+deb10u1.debian.tar.xz
+ 02cb7652491b7ca337a6a503a47aebf3 6376 web optional node-json-schema_0.2.3-1+deb10u1_source.buildinfo
+

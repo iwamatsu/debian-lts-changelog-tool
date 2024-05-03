@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:49:06 CEST
+Source: acmetool
+Architecture: source
+Version: 0.0.62-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 119110a083a603027d8428ac003ebae6ccd9647f 2899 acmetool_0.0.62-3+deb10u1.dsc
+ 923aac794e8b8b95cbdf3f7b93d4d8092e1edc42 132853 acmetool_0.0.62.orig.tar.gz
+ 781d2c38a61ad9e8b0018e270c4d2753f0757174 8216 acmetool_0.0.62-3+deb10u1.debian.tar.xz
+ f44b167cd6f9df7cfc50575b7caaa0e57a014c22 9431 acmetool_0.0.62-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 989f32157e012cb57717af0a770e1a9c662ceea45eca98bce1931308285b8178 2899 acmetool_0.0.62-3+deb10u1.dsc
+ ceaab0bc974846a26bce79e918ab79080013f6eed05dc981347c48eefde6d4f5 132853 acmetool_0.0.62.orig.tar.gz
+ 273c3953166055aef39a01045950bb5918b45e1edb888dbd22aa2c683ea37567 8216 acmetool_0.0.62-3+deb10u1.debian.tar.xz
+ 593a2544488f5cf4b6c1223138495f122fab24fb596407c2cc27e28202c29078 9431 acmetool_0.0.62-3+deb10u1_amd64.buildinfo
+Changes:
+ acmetool (0.0.62-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 436236d6791ffcc0bfae719d1bac5d6b 2899 web optional acmetool_0.0.62-3+deb10u1.dsc
+ 96b55d4969220ea11fc3dcf02e719854 132853 web optional acmetool_0.0.62.orig.tar.gz
+ 971fba11077b0fec4b5e1a1931bf435b 8216 web optional acmetool_0.0.62-3+deb10u1.debian.tar.xz
+ 9c2b8ba675c27f912f1218d5b78a1511 9431 web optional acmetool_0.0.62-3+deb10u1_amd64.buildinfo
+

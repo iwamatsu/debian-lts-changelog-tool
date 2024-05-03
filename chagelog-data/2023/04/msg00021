@@ -1,0 +1,56 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 21 Apr 2023 12:41:23 +0100
+Source: redis
+Binary: redis redis-sentinel redis-server redis-tools redis-tools-dbgsym
+Built-For-Profiles: nocheck
+Architecture: source amd64 all
+Version: 5:5.0.14-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Chris Lamb <lamby@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ redis      - Persistent key-value database with network interface (metapackage
+ redis-sentinel - Persistent key-value database with network interface (monitoring)
+ redis-server - Persistent key-value database with network interface
+ redis-tools - Persistent key-value database with network interface (client)
+Closes: 1034613
+Changes:
+ redis (5:5.0.14-1+deb10u4) buster-security; urgency=high
+ .
+   * CVE-2023-28856: Authenticated users could have used the `HINCRBYFLOAT`
+     command to create an invalid hash field that would have crashed the Redis
+     server on access. (Closes: #1034613)
+Checksums-Sha1:
+ 3363b6d7c25219bd036669951d17143baf98bd6d 2190 redis_5.0.14-1+deb10u4.dsc
+ d383cc7958c7ea89006509e4793c76eaa591cd20 2017965 redis_5.0.14.orig.tar.gz
+ 6017f70620aeb2e55f31184aa99116c7aeb15bdc 28876 redis_5.0.14-1+deb10u4.debian.tar.xz
+ 7b94384e74aba07ba85c6c40b120a72228f8362c 63776 redis-sentinel_5.0.14-1+deb10u4_amd64.deb
+ 70dbadee36d6ec574bb9e3d6dc5bc210e76f3054 91016 redis-server_5.0.14-1+deb10u4_amd64.deb
+ e8788bb9468bc98d5fdef4f38eedfc42d1bbf8de 1255964 redis-tools-dbgsym_5.0.14-1+deb10u4_amd64.deb
+ d366f7b92ddff5a4a3ece587ae5f0d2992c4a2f7 540936 redis-tools_5.0.14-1+deb10u4_amd64.deb
+ fa7ee594c92da2a7dfbea51ecefbd3f6957e48d5 56336 redis_5.0.14-1+deb10u4_all.deb
+ f268b54a18e4967ec4683f0df80231a103c06801 7133 redis_5.0.14-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 66923b7b7ade094161c862e4421375aca54b29783e815b875ae56e0d6034876e 2190 redis_5.0.14-1+deb10u4.dsc
+ 6d8e87baeaae521a4ad2d9b5e2af78f582a4212a370c4a8e7e1c58dbbd9a0f19 2017965 redis_5.0.14.orig.tar.gz
+ c7e24c73b6d7742ce292352ecc233078f20ccacf708a673a81111eff380c0a28 28876 redis_5.0.14-1+deb10u4.debian.tar.xz
+ 1d64df33b11ae6bde039b8bd0d5bea00fbd79a9cf32d3d57ab2f181996301afb 63776 redis-sentinel_5.0.14-1+deb10u4_amd64.deb
+ bec4606532f23e17f94c9648ab2dc9e5836122807088fdf260a47600d749c84f 91016 redis-server_5.0.14-1+deb10u4_amd64.deb
+ b6ec93dfd6a7df385667a41d2ec7be3bdcdc5b45b92e872376445d24c94eaddb 1255964 redis-tools-dbgsym_5.0.14-1+deb10u4_amd64.deb
+ 43109675ffa978c7d48a71785762aa27e695ea3ed401e35b99297245f3a2fc9a 540936 redis-tools_5.0.14-1+deb10u4_amd64.deb
+ 60add8509dfd248a8d0fc5b51aed6b91de15530c799b53ee33c8a96875a4209b 56336 redis_5.0.14-1+deb10u4_all.deb
+ 4efebf0e08343c30ba2f473eefa5fa89875cdf10b14e651957a84b5d9d39e63f 7133 redis_5.0.14-1+deb10u4_amd64.buildinfo
+Files:
+ 524389166cab14ad567c1e664e5da9e7 2190 database optional redis_5.0.14-1+deb10u4.dsc
+ 1a06c1b414d9f895b32e6af714932175 2017965 database optional redis_5.0.14.orig.tar.gz
+ 88abe64790dbd6df4b9a5b94957bdf83 28876 database optional redis_5.0.14-1+deb10u4.debian.tar.xz
+ f804a211d3917abec0ea055bdeb95d67 63776 database optional redis-sentinel_5.0.14-1+deb10u4_amd64.deb
+ 30629134e0179ebb878264eb5026cfa9 91016 database optional redis-server_5.0.14-1+deb10u4_amd64.deb
+ 3a7d4ce11021e8ebffec5dfc29bcc5c5 1255964 debug optional redis-tools-dbgsym_5.0.14-1+deb10u4_amd64.deb
+ a1a38961a616a4c45409e5e7a92d1d10 540936 database optional redis-tools_5.0.14-1+deb10u4_amd64.deb
+ 416b1195500fd482d0f6889fdb52302b 56336 database optional redis_5.0.14-1+deb10u4_all.deb
+ a4b76565d77d299d4db379975d12f73d 7133 database optional redis_5.0.14-1+deb10u4_amd64.buildinfo
+

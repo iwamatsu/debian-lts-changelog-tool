@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 02 Jun 2023 18:37:25 +0300
+Source: wireshark
+Architecture: source
+Version: 2.6.20-0+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Balint Reczey <rbalint@ubuntu.com>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ wireshark (2.6.20-0+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-2856: VMS TCPIPtrace file parser crash.
+   * CVE-2023-2858: NetScaler file parser crash.
+   * CVE-2023-2879: GDSDB infinite loop.
+   * CVE-2023-2952: XRA dissector infinite loop.
+Checksums-Sha1:
+ 231427633ae2bed04ea20ba9a563af7667e994f7 3565 wireshark_2.6.20-0+deb10u7.dsc
+ 2e4295eeba3f54134c1f37a6e931e0f4a67c0487 28805496 wireshark_2.6.20.orig.tar.xz
+ 281767cd49b312d14fa978642e5ca5e94aac7e98 103972 wireshark_2.6.20-0+deb10u7.debian.tar.xz
+Checksums-Sha256:
+ a61888be1243fab5cc79a0eed0690dfb5bd1e21bbd5d1112337f52ca51de9829 3565 wireshark_2.6.20-0+deb10u7.dsc
+ a97a5f3934ef09b93236f7dbc97a162c0348667cbc9dd68291473b8f7b276c60 28805496 wireshark_2.6.20.orig.tar.xz
+ ef09296c714d79203cba47c03287d9876f40409c2b2ad254416e05a4cdf9fc6e 103972 wireshark_2.6.20-0+deb10u7.debian.tar.xz
+Files:
+ 8a865117ff4ed0b36e6e688f9900e85f 3565 net optional wireshark_2.6.20-0+deb10u7.dsc
+ ac4f79c6878703634797e041fd136a98 28805496 net optional wireshark_2.6.20.orig.tar.xz
+ 6bf258a0a7c0c2a5fa13bb958e62fcf4 103972 net optional wireshark_2.6.20-0+deb10u7.debian.tar.xz
+

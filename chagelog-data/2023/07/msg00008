@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 08 Jul 2023 13:48:07 +0200
+Source: php-cas
+Architecture: source
+Version: 1.3.6-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Xavier Guimard <yadd@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1023571
+Changes:
+ php-cas (1.3.6-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport patch for CVE-2022-39369. (Closes: #1023571)
+Checksums-Sha1:
+ 746460ad961c31490faf166c109a1ad72c0e94c9 1885 php-cas_1.3.6-1+deb10u1.dsc
+ 5b79a351d6ef04515e2d5a0b2e6cbd89dcc950fb 68029 php-cas_1.3.6.orig.tar.gz
+ 14fb5cb6129e17e935194db04129d439bae3ef7c 9988 php-cas_1.3.6-1+deb10u1.debian.tar.xz
+ 09384aef8258bc4be71e6bb5050690fd0f056fc0 6179 php-cas_1.3.6-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 4967ec0d8ea2ef9541b14d5bba1bb88d360974a266c2859a448ab20294431e30 1885 php-cas_1.3.6-1+deb10u1.dsc
+ afeb6d568aa06798c1311e3b1c097795071a1c6099eeb56ac513ce1a9d972637 68029 php-cas_1.3.6.orig.tar.gz
+ bd474b580268f8e2fe2bf3d2ce55f71a5ef0f840aa5d648fe183f122880da4be 9988 php-cas_1.3.6-1+deb10u1.debian.tar.xz
+ b236dcae6aaf5a01953e36cbc92eccc74e1c6f89f9a06700b5fa8f60852e77b9 6179 php-cas_1.3.6-1+deb10u1_amd64.buildinfo
+Files:
+ 43fddffb34092a84bedefc8e13662310 1885 php optional php-cas_1.3.6-1+deb10u1.dsc
+ e3d2b078fadd00f0d5c8d187b11fd592 68029 php optional php-cas_1.3.6.orig.tar.gz
+ fba43ccc75f70d5e6dbe834f76aa6f5c 9988 php optional php-cas_1.3.6-1+deb10u1.debian.tar.xz
+ 1686f356ee22885c4c30a8507d3b9605 6179 php optional php-cas_1.3.6-1+deb10u1_amd64.buildinfo
+

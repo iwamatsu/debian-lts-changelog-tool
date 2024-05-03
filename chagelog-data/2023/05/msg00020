@@ -1,0 +1,51 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 15 May 2023 12:42:43 -0700
+Source: epiphany-browser
+Binary: epiphany-browser epiphany-browser-data epiphany-browser-dbgsym
+Architecture: source all amd64
+Version: 3.32.1.2-3~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ epiphany-browser - Intuitive GNOME web browser
+ epiphany-browser-data - Data files for the GNOME web browser
+Closes: 1031727
+Changes:
+ epiphany-browser (3.32.1.2-3~deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-26081: Prevent a potential credential stealing attack. When using
+     a sandboxed Content Security Policy (CSP) or the HTML <iframe/> tag, the
+     sandboxed web content was trusted by the main/surrounding resource. After
+     this change, however, the password manager is disabled entirely in this
+     situations so that the untrusted web content cannot exfiltrate passwords.
+     (Closes: #1031727)
+Checksums-Sha1:
+ 62d84c9e80d48ecc929e6788aaeac5721b4e573e 2891 epiphany-browser_3.32.1.2-3~deb10u3.dsc
+ e06957dfc76e16e8fd3fa23ff51e485fa582634d 5473300 epiphany-browser_3.32.1.2.orig.tar.xz
+ 85d61be574539752e319cf0645d87e5884aad728 89744 epiphany-browser_3.32.1.2-3~deb10u3.debian.tar.xz
+ 3450f659c785ea3eac15f23b20af12e0872966d5 3254892 epiphany-browser-data_3.32.1.2-3~deb10u3_all.deb
+ b7afc761413a8a3faa144dea7c2f61c816656db7 4335788 epiphany-browser-dbgsym_3.32.1.2-3~deb10u3_amd64.deb
+ 356f88281ca205b2fc90c27548b0a8c49f896221 20676 epiphany-browser_3.32.1.2-3~deb10u3_amd64.buildinfo
+ 28238974f61791c7d2c350e45a54813b753c9e57 1730500 epiphany-browser_3.32.1.2-3~deb10u3_amd64.deb
+Checksums-Sha256:
+ facc74ef8e39b9581c8f31b26aaa31c019a18d28dd4881501c70d63ba66345a2 2891 epiphany-browser_3.32.1.2-3~deb10u3.dsc
+ a8284fb9bbc8b7914a154a8eac1598c8b59ae421e0d685146fb48198427926be 5473300 epiphany-browser_3.32.1.2.orig.tar.xz
+ c3d95e59ff05b209417971e314abe994ce51b13a23f199332334b10125979c5c 89744 epiphany-browser_3.32.1.2-3~deb10u3.debian.tar.xz
+ 604fb3a61933e30b32af35e82e854c2b2f7387f99136222ae26bb83effff6f5f 3254892 epiphany-browser-data_3.32.1.2-3~deb10u3_all.deb
+ afb76c2a0ebfa3a319e3d62274777c0db46507e9a2e09c6d0ecbe12a8e2adfb1 4335788 epiphany-browser-dbgsym_3.32.1.2-3~deb10u3_amd64.deb
+ 24978fb42bf9f7b27540b3cc73b10c31524462a113b38aecdb1f32be1afaf454 20676 epiphany-browser_3.32.1.2-3~deb10u3_amd64.buildinfo
+ e0fe2f00f1dd5f3ec290e5ccedd24c4f4c27519ed05dbc52fc87107341d1c161 1730500 epiphany-browser_3.32.1.2-3~deb10u3_amd64.deb
+Files:
+ b4eeefbd09d16517dbc74a02016e36d7 2891 gnome optional epiphany-browser_3.32.1.2-3~deb10u3.dsc
+ 93faec353e9f62519859e6164350fd5d 5473300 gnome optional epiphany-browser_3.32.1.2.orig.tar.xz
+ 8f21b25b40fc400dd871398ffb71d5d1 89744 gnome optional epiphany-browser_3.32.1.2-3~deb10u3.debian.tar.xz
+ 69d50b8f65348254bb802ff07cac05c5 3254892 gnome optional epiphany-browser-data_3.32.1.2-3~deb10u3_all.deb
+ 6a1796f3a7bfcf272a47711deb1c2600 4335788 debug optional epiphany-browser-dbgsym_3.32.1.2-3~deb10u3_amd64.deb
+ 5c942b757f6cda72d1418da32548c910 20676 gnome optional epiphany-browser_3.32.1.2-3~deb10u3_amd64.buildinfo
+ d7ffa8413ec44f8c1db51e4b21ee052b 1730500 gnome optional epiphany-browser_3.32.1.2-3~deb10u3_amd64.deb
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Jan 2024 21:15:21 +0000
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ curl (7.64.0-4+deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-27534: A path traversal vulnerability existed.
+     SFTP implementation causes the tilde (~) character to be
+     wrongly replaced when used as a prefix in the first path
+     element, in addition to its intended use as the first
+     element to indicate a path relative to the user's home
+     directory. Attackers can exploit this flaw to bypass
+     filtering or execute arbitrary code by crafting a
+     path like /~2/foo while accessing a server with
+     a specific user.
+Checksums-Sha1:
+ 8e53de70724514047ea998bec09101d2aab8ff38 2719 curl_7.64.0-4+deb10u9.dsc
+ eb536d14661eb4d8e23f866e97f901d9f8feda13 72416 curl_7.64.0-4+deb10u9.debian.tar.xz
+ 53144bba08895f6ae59c924349c484c10f08526e 11907 curl_7.64.0-4+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ 4aa1619bb94edf34dc8c66fce4665089a9d2daa78ddaf0af7c9d63180b5bd306 2719 curl_7.64.0-4+deb10u9.dsc
+ ca0718f3388879cc2c7b6db8d5d784c88ac599721812888c45d84b63c454ef58 72416 curl_7.64.0-4+deb10u9.debian.tar.xz
+ cd3962af92e091a5a0ed3e060c9d5cb47c41608d06d857fe9b77ef1ecc4e17d4 11907 curl_7.64.0-4+deb10u9_amd64.buildinfo
+Files:
+ cf55c9f3a6de5818ff9615d66de703c0 2719 web optional curl_7.64.0-4+deb10u9.dsc
+ 4cbf807feb576058d9f97c770fbb1883 72416 web optional curl_7.64.0-4+deb10u9.debian.tar.xz
+ 3135e1334b8b96fa5ed9c89794b7beb0 11907 web optional curl_7.64.0-4+deb10u9_amd64.buildinfo
+

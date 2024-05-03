@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 07 Feb 2023 21:07:24 +0100
+Source: heimdal
+Architecture: source
+Version: 7.5.0+dfsg-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Brian May <bam@debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ heimdal (7.5.0+dfsg-3+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team
+   * Fix CVE-2022-45142
+Checksums-Sha1:
+ 8088fbb72afa9690432821cb229cf00e4426bd18 3611 heimdal_7.5.0+dfsg-3+deb10u2.dsc
+ 9b87367cfa10fff0bc30a545184d80a0a6c17da1 471744 heimdal_7.5.0+dfsg-3+deb10u2.debian.tar.xz
+ 9b162eecb5a00edfceadf7a4584b86625685d7b7 21874 heimdal_7.5.0+dfsg-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ c2e7600cbda043dc86e2220fe6b7cd6563a5aa9c8c335426ca7449e8c0acb369 3611 heimdal_7.5.0+dfsg-3+deb10u2.dsc
+ 4e8d48a9bf2756af282f944172765e34b0d53aeacbf578f0a36cf8be525b08c5 471744 heimdal_7.5.0+dfsg-3+deb10u2.debian.tar.xz
+ 33015e485ac78a35a2ebeb9f159807155991e89c79cc724294cc48432046ea07 21874 heimdal_7.5.0+dfsg-3+deb10u2_amd64.buildinfo
+Files:
+ cd6093ebb257b69813fb5bffdee28939 3611 net optional heimdal_7.5.0+dfsg-3+deb10u2.dsc
+ 4bc542ce858a1d74523a932b35414ec6 471744 net optional heimdal_7.5.0+dfsg-3+deb10u2.debian.tar.xz
+ 82af832c265b89604cea7f5131520197 21874 net optional heimdal_7.5.0+dfsg-3+deb10u2_amd64.buildinfo
+

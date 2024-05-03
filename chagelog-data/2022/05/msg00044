@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 May 2022 14:49:59 CEST
+Source: pngcheck
+Binary: pngcheck
+Architecture: source
+Version: 2.3.0-7+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Jari Aalto <jari.aalto@cante.net>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ pngcheck   - print info and check PNG, JNG and MNG files
+Checksums-Sha1:
+ 554561ac1f239debb05a816447137de3621201d9 2037 pngcheck_2.3.0-7+deb9u1.dsc
+ e7f1535abbf2f809e036a9a43c759eeac5e39350 59864 pngcheck_2.3.0.orig.tar.gz
+ 0c1aa19f84de37b42f09e2297ccbe5c70e826a17 7216 pngcheck_2.3.0-7+deb9u1.debian.tar.xz
+ 6dfa526a5411d603c215ded3e70f65f0d8edd0cf 6389 pngcheck_2.3.0-7+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ a2d9c4e62fc1c5a7e5a40a8dbcea23b2ce03144300b995319419b9be1d317f23 2037 pngcheck_2.3.0-7+deb9u1.dsc
+ 77f0a039ac64df55fbd06af6f872fdbad4f639d009bbb5cd5cbe4db25690f35f 59864 pngcheck_2.3.0.orig.tar.gz
+ 1b9be3e9b18d1d686b19a17ca41d65b70f72e1b2f030d9f0e1118803d19baf56 7216 pngcheck_2.3.0-7+deb9u1.debian.tar.xz
+ 457a60e2495295ea8e17de63bd03dcce3e71bc954521db0b00a2e2e95c7f5eb4 6389 pngcheck_2.3.0-7+deb9u1_amd64.buildinfo
+Changes:
+ pngcheck (2.3.0-7+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2020-27818:
+     A flaw was found in the check_chunk_name() function of pngcheck. This flaw
+     allows an attacker who can pass a malicious file to be processed by
+     pngcheck to cause a temporary denial of service.
+Files:
+ 39433608b42e39922e291ce047227902 2037 graphics optional pngcheck_2.3.0-7+deb9u1.dsc
+ 980bd6d9a3830fdce746d7fe3c9166ee 59864 graphics optional pngcheck_2.3.0.orig.tar.gz
+ 4ea4b74d2bb95758265c7b9abf7db32a 7216 graphics optional pngcheck_2.3.0-7+deb9u1.debian.tar.xz
+ 6b495fb9932b08ca42916bfa9cee25ff 6389 graphics optional pngcheck_2.3.0-7+deb9u1_amd64.buildinfo
+

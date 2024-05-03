@@ -1,0 +1,66 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 12 May 2022 16:44:49 -0400
+Source: waitress
+Architecture: source
+Version: 1.0.1-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Andrew Shadura <andrewsh@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Closes: 1008013
+Changes:
+ waitress (1.0.1-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Security updates to fix request smuggling bugs, when combined with another
+     http proxy that interprets requests differently. This can lead to a
+     potential for HTTP request smuggling/splitting whereby Waitress may see
+     two requests while the front-end server only sees a single HTTP message.
+     This can result in cache poisoning or unexpected information disclosure.
+     The specific issues resolved are:
+     - CVE-2019-16785: Only recognise CRLF as a line-terminator, not a plain
+       LF. Before this change waitress could see two requests where the
+       front-end proxy only saw one.
+     - CVE-2019-16786: Waitress would parse the Transfer-Encoding header and
+       only look for a single string value, if that value was not "chunked" it
+       would fall through and use the Content-Length header instead.
+       This could allow for Waitress to treat a single request as multiple
+       requests in the case of HTTP pipelining.
+     - CVE-2019-16789: Specially crafted requests containing special whitespace
+       characters in the Transfer-Encoding header would get parsed by Waitress
+       as being a chunked request, but a front-end server would use the
+       Content-Length instead as the Transfer-Encoding header is considered
+       invalid due to containing invalid characters.
+       If a front-end server does HTTP pipelining to a backend Waitress server
+       this could lead to HTTP request splitting which may lead to potential
+       cache poisoning or unexpected information disclosure.
+     - CVE-2019-16792: If two Content-Length headers are sent in a single
+       request, Waitress would treat the request as having no body, thereby
+       treating the body of the request as a new request in HTTP pipelining.
+     - CVE-2022-24761: There are two classes of vulnerability that may lead to
+       request smuggling that are addressed by this advisory:
+       + The use of Python's int() to parse strings into integers, leading to
+         +10 to be parsed as 10, or 0x01 to be parsed as 1, where as the
+         standard specifies that the string should contain only digits or hex
+         digits.
+       + Waitress does not support chunk extensions, however it was discarding
+         them without validating that they did not contain illegal characters.
+       (Closes: #1008013)
+Checksums-Sha1:
+ d5b6a80fbdbac73fc04a3919af521980c244b890 1476 waitress_1.0.1-1+deb9u1.dsc
+ 100bfdaf85005cb0edfeed45dbf032e1ae01535e 123963 waitress_1.0.1.orig.tar.gz
+ 4930e9c1958e184723561bb62695b9746d94d8c3 20676 waitress_1.0.1-1+deb9u1.debian.tar.xz
+ 562005f18a6c03726707f1dc5bd8f852797851e2 7434 waitress_1.0.1-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ d39d03fb3a6b38a51589fd9271c6e56fc3269d6772b1f9f1608ca0d1a65f2ebc 1476 waitress_1.0.1-1+deb9u1.dsc
+ 35c248756be59339b937206af0de74cbd3a9ff764cb98a0ff0983f74bf057f3b 123963 waitress_1.0.1.orig.tar.gz
+ 6daf9840292ef7c76ac79756b41864fb77e6fb3a8d011c31d215967a16c254dd 20676 waitress_1.0.1-1+deb9u1.debian.tar.xz
+ a990720ead7416e236849fea998ecf2d22889c97e49cf6295242a2ff64fd5bc5 7434 waitress_1.0.1-1+deb9u1_source.buildinfo
+Files:
+ 2455da2057b328c33f04cb479686b847 1476 python optional waitress_1.0.1-1+deb9u1.dsc
+ f772be86041cbb1302db0d5365d6ff01 123963 python optional waitress_1.0.1.orig.tar.gz
+ 55c5e8adf4f934f1a92c64a1a8cccbb4 20676 python optional waitress_1.0.1-1+deb9u1.debian.tar.xz
+ ae2f053e44e60fe4334273ecbb1273ce 7434 python optional waitress_1.0.1-1+deb9u1_source.buildinfo
+

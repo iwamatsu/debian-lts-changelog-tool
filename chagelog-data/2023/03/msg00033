@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 Mar 2023 22:32:31 +0300
+Source: systemd
+Architecture: source
+Version: 241-7~deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ systemd (241-7~deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-26604: Local privilege escalation for some sudo
+     configurations.
+Checksums-Sha1:
+ e83aa8976b822d23e00055ef1e13e0189e32774c 4946 systemd_241-7~deb10u9.dsc
+ 66378cd752881489006dde6ae5faab971af8c0e5 7640538 systemd_241.orig.tar.gz
+ 4864cba1f9d69ab96fc00c22628671571271f4e9 186388 systemd_241-7~deb10u9.debian.tar.xz
+Checksums-Sha256:
+ b6193b050e56b4b3dbaeceb9b51bb157fb467c1ac025dc3fa5178499ed615dff 4946 systemd_241-7~deb10u9.dsc
+ b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e 7640538 systemd_241.orig.tar.gz
+ 7d7c554a2ce017978c7c17d50aa06d9fc43a1cdf5ed73cfe2ab555360e710581 186388 systemd_241-7~deb10u9.debian.tar.xz
+Files:
+ 713548d6399816ee7941106cdd7fea86 4946 admin optional systemd_241-7~deb10u9.dsc
+ c5953c24c850b44fcf714326e567dc37 7640538 admin optional systemd_241.orig.tar.gz
+ b847500a5212b2c02eb044792c6b7658 186388 admin optional systemd_241-7~deb10u9.debian.tar.xz
+

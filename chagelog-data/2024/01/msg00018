@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 22 Jan 2024 16:05:42 -0800
+Source: ruby-httparty
+Architecture: source
+Version: 0.16.2+dfsg1-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ ruby-httparty (0.16.2+dfsg1-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-22049: Fix an HTTP header injection vulnerability. A remote,
+     unauthenticated attacker could have provided a crafted filename parameter
+     during multipart/form-data uploads which could have resulted in, for
+     example, an attacker controlling filenames being written to disk.
+   * Add a debian/.gitlab-ci.yml and allow piuparts & reprotest failures in
+     Salsa CI tests.
+Checksums-Sha1:
+ 22435cede9dd1f34e409d0c1ac410d8962f2d4cf 2230 ruby-httparty_0.16.2+dfsg1-3+deb10u1.dsc
+ 245d441bff399173aea2d2f7ea2357ff5c1e86d8 83510 ruby-httparty_0.16.2+dfsg1.orig.tar.gz
+ a75fc1ece9547af44b70a6c07d6a8178016ad535 19688 ruby-httparty_0.16.2+dfsg1-3+deb10u1.debian.tar.xz
+ 2dc7326bdc645dfade78512ef942309e03c288e0 11063 ruby-httparty_0.16.2+dfsg1-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d816201444e8235581270805631051d6144aa60bb7c48309f13cee082475a600 2230 ruby-httparty_0.16.2+dfsg1-3+deb10u1.dsc
+ 26c4bee9a9d4cd98fee9edaa34dc0523b4cef7fe15610b870b4e16d35ae0b856 83510 ruby-httparty_0.16.2+dfsg1.orig.tar.gz
+ 8272527538eecd8aa4da6ba0ba61c3eafa0c78a3156537d10a46e5a5f8dfcc2b 19688 ruby-httparty_0.16.2+dfsg1-3+deb10u1.debian.tar.xz
+ 97d3cfe6a50f19a008c22902bb32e1411863b393826c9559a966943bc28ae1f0 11063 ruby-httparty_0.16.2+dfsg1-3+deb10u1_amd64.buildinfo
+Files:
+ 1c332f77c68a674ab4dbac1deed75b6d 2230 ruby optional ruby-httparty_0.16.2+dfsg1-3+deb10u1.dsc
+ 4449ee21ff2ac7524fc3768a1713fc89 83510 ruby optional ruby-httparty_0.16.2+dfsg1.orig.tar.gz
+ cdda9f0462a71eaa09e61639151c0861 19688 ruby optional ruby-httparty_0.16.2+dfsg1-3+deb10u1.debian.tar.xz
+ 6816a2b13bcb9fa11ab1187be1fe7af9 11063 ruby optional ruby-httparty_0.16.2+dfsg1-3+deb10u1_amd64.buildinfo
+

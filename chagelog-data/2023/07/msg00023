@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 18 Jul 2023 22:01:12 +0200
+Source: libapache2-mod-auth-openidc
+Architecture: source
+Version: 2.3.10.2-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Moritz Schlarb <schlarbm@uni-mainz.de>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 993648 1026444
+Changes:
+ libapache2-mod-auth-openidc (2.3.10.2-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2021-39191: URL Redirection to Untrusted Site ('Open Redirect') in
+     mod_auth_openidc. (Closes: #993648)
+   * Backport upstream fix to prevent open redirect on refresh token requests.
+   * Fix CVE-2022-23527: Open Redirect in oidc_validate_redirect_url() using
+     tab character. (Closes: #1026444)
+Checksums-Sha1:
+ 320018b9e2d6fb9db9807f7bed281c1df88eea10 2534 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3.dsc
+ 1dc57cc423acd32d617c6b042c8ccdfae89120f6 18040 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3.debian.tar.xz
+ b6be186b226720c6c932e9097484e39e1535c195 7688 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ e0b105a8668669eab3dc47aa1e8bfa746e22bb63e03e3e792a705f865caa7ff7 2534 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3.dsc
+ 12d1e9024265c9778ae9c3f2d31411e3f447e3ea14eba067304a1ae3fe20e1da 18040 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3.debian.tar.xz
+ c9cc6847f857013de16fa3f0cc005e31348471601b759e567a72f0e4e5f26cf6 7688 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3_amd64.buildinfo
+Files:
+ 101d67f1fd4518d52f5453a0c7758aa9 2534 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3.dsc
+ 5fa93e0d2920cd0dfb9f93bebd68f8aa 18040 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3.debian.tar.xz
+ 77ace1116c2448be8ca821ee40874239 7688 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u3_amd64.buildinfo
+

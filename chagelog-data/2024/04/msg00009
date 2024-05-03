@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 15 Apr 2024 14:30:14 +0300
+Source: xorg-server
+Architecture: source
+Version: 2:1.20.4-1+deb10u14
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ xorg-server (2:1.20.4-1+deb10u14) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-31080: Heap buffer overread in ProcXIGetSelectedEvents()
+   * CVE-2024-31081: Heap buffer overread in ProcXIPassiveGrabDevice()
+   * CVE-2024-31083: Use-after-free in ProcRenderAddGlyphs()
+Checksums-Sha1:
+ 4bf732494b697e293b78baae4efcc54ef58e9f32 4186 xorg-server_1.20.4-1+deb10u14.dsc
+ 94dd9612c5e4233ed3cb23063ab10f43b4ae4bb2 8553791 xorg-server_1.20.4.orig.tar.gz
+ 257a01543988f509f284e505fce02fcb49739dd8 177175 xorg-server_1.20.4-1+deb10u14.diff.gz
+Checksums-Sha256:
+ be70dce223c531fa10cf39e3184a4ca5e12e0d891b9847824a1cb054e183b2bc 4186 xorg-server_1.20.4-1+deb10u14.dsc
+ a6447de89eca3e22eeead682b325d902779569534ad83388c9e16611d72baaf3 8553791 xorg-server_1.20.4.orig.tar.gz
+ 157485f84a4f06a33d85c106a0cbc4ffdea9299732ba86bafadc0b5009e4778b 177175 xorg-server_1.20.4-1+deb10u14.diff.gz
+Files:
+ 0ffbecf3f1e5d94702180334859b2f3d 4186 x11 optional xorg-server_1.20.4-1+deb10u14.dsc
+ 4151b46d6036f4997d27c2d2b7be38e7 8553791 x11 optional xorg-server_1.20.4.orig.tar.gz
+ f4cbbb393224006320ebcecf52ace7cf 177175 x11 optional xorg-server_1.20.4-1+deb10u14.diff.gz
+

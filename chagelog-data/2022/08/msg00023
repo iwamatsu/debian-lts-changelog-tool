@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 29 Aug 2022 17:14:23 +0100
+Source: dpdk
+Architecture: source
+Version: 18.11.11-1~deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian DPDK Maintainers <pkg-dpdk-devel@lists.alioth.debian.org>
+Changed-By: Luca Boccassi <bluca@debian.org>
+Changes:
+ dpdk (18.11.11-1~deb10u2) buster-security; urgency=high
+ .
+   * Backport patches to fix CVE-2022-2132 in the vhost PMD
+Checksums-Sha1:
+ 7a13a6888ab4e53d2d9de7fc57a32fb677f90ddf 15488 dpdk_18.11.11-1~deb10u2.dsc
+ a6bd55f36aec7835f11d11a9583aadbe7fd08a65 11416228 dpdk_18.11.11.orig.tar.xz
+ c6172f9337483be2141171c1e0174ee2d8a459e6 56476 dpdk_18.11.11-1~deb10u2.debian.tar.xz
+ fbadd32ebee778225442411f187877edaf40d40e 16819 dpdk_18.11.11-1~deb10u2_source.buildinfo
+Checksums-Sha256:
+ 5709000c2e1a8497f74174fd1ff30058531250ebcce148a15857f6b7011c700e 15488 dpdk_18.11.11-1~deb10u2.dsc
+ 35ddaf4b16a04e6069d9e49a4dc41c41cca31763ae4240121f486b1fbf11ca15 11416228 dpdk_18.11.11.orig.tar.xz
+ e4e65c3af5bb9766adb32e7928693f4f09dd2deadc19f22a6cf17d7ee1869925 56476 dpdk_18.11.11-1~deb10u2.debian.tar.xz
+ 515fea999a671db25d80e6526de362d478fda6c48064bfb10c37d75fd8b4db53 16819 dpdk_18.11.11-1~deb10u2_source.buildinfo
+Files:
+ fd61084535b7f83101ad5a1cc066c771 15488 libs optional dpdk_18.11.11-1~deb10u2.dsc
+ 2d3c3c107ff93ce0d7dd149d3b633b28 11416228 libs optional dpdk_18.11.11.orig.tar.xz
+ 7604dfff8a5c70e4c712bff747141a56 56476 libs optional dpdk_18.11.11-1~deb10u2.debian.tar.xz
+ b1e47bfcd6042cf74cdad86b7b4d746a 16819 libs optional dpdk_18.11.11-1~deb10u2_source.buildinfo
+

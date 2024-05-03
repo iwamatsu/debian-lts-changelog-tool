@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 02 Nov 2023 15:45:45 +0100
+Source: phppgadmin
+Binary: phppgadmin
+Architecture: source all
+Version: 5.1+ds-4+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ phppgadmin - web-based administration tool for PostgreSQL
+Closes: 1053004
+Changes:
+ phppgadmin (5.1+ds-4+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-40619: Prevent an issue related to the deserialisation of
+     untrusted data, which may have led to remote code execution because
+     user-controlled data was passed directly to the PHP 'unserialize()'
+     function. (Closes: #1053004)
+Checksums-Sha1:
+ 34a391a32ad65de62869e3fc1a063a76d3181180 1985 phppgadmin_5.1+ds-4+deb10u1.dsc
+ 860c21256bf63cc565de933980dd4c67e87d6da6 604669 phppgadmin_5.1+ds.orig.tar.gz
+ bfb2da1c1fdf74f39013ad196bd85f02d0105e94 15204 phppgadmin_5.1+ds-4+deb10u1.debian.tar.xz
+ f397a18d29621f5cc78b5fa8e3a5837ffffd7dbe 450916 phppgadmin_5.1+ds-4+deb10u1_all.deb
+ a41338908269ece4c27017e67f22a50becddc6dc 6324 phppgadmin_5.1+ds-4+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ fa914e8eda334044ce9b7be36bad1072becc6b2ce3e5a7ed89f42311cab6dd15 1985 phppgadmin_5.1+ds-4+deb10u1.dsc
+ 8c85ee9f5667df4a50918e3dd21de380e769b0db86135d6fbfc3ef4190e8dd6d 604669 phppgadmin_5.1+ds.orig.tar.gz
+ 533756401305acee9ec38bc0b78a52443987fdf749a32dae853763dbb837e604 15204 phppgadmin_5.1+ds-4+deb10u1.debian.tar.xz
+ ca79b1a9a7a419e5e3ed4e32703b46142a3143de940ae7c38ef839a8af2d8a68 450916 phppgadmin_5.1+ds-4+deb10u1_all.deb
+ f250325d0865d71013e9040f0d1df7b7f22b73c8eaaaf497925208f0161c925a 6324 phppgadmin_5.1+ds-4+deb10u1_amd64.buildinfo
+Files:
+ 44a2092efa157246dff885db01405373 1985 web optional phppgadmin_5.1+ds-4+deb10u1.dsc
+ 8e7715db76a2f93fa9f9f813ef0ab490 604669 web optional phppgadmin_5.1+ds.orig.tar.gz
+ ea40faa83e2ddb9f068e9ee8d078dc36 15204 web optional phppgadmin_5.1+ds-4+deb10u1.debian.tar.xz
+ f6b3e77bf88032514f12e124fa887488 450916 web optional phppgadmin_5.1+ds-4+deb10u1_all.deb
+ 25b92230e7b9d59b8856c76b2c1513b7 6324 web optional phppgadmin_5.1+ds-4+deb10u1_amd64.buildinfo
+

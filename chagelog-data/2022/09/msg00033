@@ -1,0 +1,29 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 26 Sep 2022 13:14:57 +0200
+Source: firefox-esr
+Architecture: source
+Version: 102.3.0esr-1~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (102.3.0esr-1~deb10u2) buster-security; urgency=medium
+ .
+   * Build swgl with -fno-inline on arm* and i386, due to ICEs with GCC 8.
+   * Fix build failure on at least i386 on TestCombinedStacks.cpp.
+Checksums-Sha1:
+ e73987c6ea021cc060571a307ca6159040aae7e5 45878 firefox-esr_102.3.0esr-1~deb10u2.dsc
+ ffef0dcefb0676c352df6563a9f9e86ad01190f8 175896 firefox-esr_102.3.0esr-1~deb10u2.debian.tar.xz
+ 0f010f5939833d8de7d95cfe2109f3e32e02fe92 7371 firefox-esr_102.3.0esr-1~deb10u2_source.buildinfo
+Checksums-Sha256:
+ 7aa0966c9ec6e5554a579718e7eef98c8124e4790229d10b0c1fdd90c2162562 45878 firefox-esr_102.3.0esr-1~deb10u2.dsc
+ 023d2afa33a644888b9cd7fb1b43b29b27551fe196c862811a4230e352a993ce 175896 firefox-esr_102.3.0esr-1~deb10u2.debian.tar.xz
+ 728c8463a15b422cde831ac719033187c70b335e152ca4671f1c3ea68b3b325e 7371 firefox-esr_102.3.0esr-1~deb10u2_source.buildinfo
+Files:
+ 066b8ee55c973b1783e45b7c056849f7 45878 web optional firefox-esr_102.3.0esr-1~deb10u2.dsc
+ 9816398baa568ada0bdc2e19af8333e3 175896 web optional firefox-esr_102.3.0esr-1~deb10u2.debian.tar.xz
+ b2c9bf15f3090d522a9025d96324dd80 7371 web optional firefox-esr_102.3.0esr-1~deb10u2_source.buildinfo
+

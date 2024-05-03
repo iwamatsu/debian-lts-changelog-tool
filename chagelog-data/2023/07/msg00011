@@ -1,0 +1,49 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 08 Jul 2023 13:03:19 +0200
+Source: fusiondirectory
+Architecture: source
+Version: 1.2.3-4+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: FusionDirectory Packagers <team+fusiondirectory@tracker.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ fusiondirectory (1.2.3-4+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Tobias Frost ]
+   * Backport compatibility with php-cas version addressing CVE 2022-39369.
+ .
+   [ Abhijith PA ]
+   * Fix CVE-2022-36179, CVE-2022-36180.
+Checksums-Sha1:
+ b356b34ba276f9151b377d743ea0ffaad95a20d3 12689 fusiondirectory_1.2.3-4+deb10u2.dsc
+ 65539b1005c2b2586b90e6b27ac32bf12cedb650 2230218 fusiondirectory_1.2.3.orig-core.tar.gz
+ c5dbe02259406144c2c87e8935af2c9361955158 833 fusiondirectory_1.2.3.orig-core.tar.gz.asc
+ 3ca0e276fb28c13ffc669c782793855d7b42289c 1887945 fusiondirectory_1.2.3.orig-plugins.tar.gz
+ 7b90f1eb1f23e9bddd3b27b7966bd89afe245fd8 833 fusiondirectory_1.2.3.orig-plugins.tar.gz.asc
+ eaa2d841e148d380dbc40c97b0309fc78d1695c2 315 fusiondirectory_1.2.3.orig.tar.gz
+ 2ab298ce0f4d3d216590e311e3c5b5bb62335755 46088 fusiondirectory_1.2.3-4+deb10u2.debian.tar.xz
+ 6f1f859fa80b2948d7a7dd5e17ff9367a091223a 41803 fusiondirectory_1.2.3-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 691fd7ed869f9f0baa6ab6051fbd4f3cbc78a7466e2a78675db9b80387ad9e6a 12689 fusiondirectory_1.2.3-4+deb10u2.dsc
+ 13e367b52a0e9c852055223ab40c013faba7cf26c50eab39200e096a3a8035a7 2230218 fusiondirectory_1.2.3.orig-core.tar.gz
+ 29cf2e9432cdd885a51cfd6563733d937ad0104fc5aa9facde7567b1e0ccf561 833 fusiondirectory_1.2.3.orig-core.tar.gz.asc
+ f52ded4ba1649a1e5ba5ebc5f61b31adcc769d6dcb0c692aadd544b5b5cb6a24 1887945 fusiondirectory_1.2.3.orig-plugins.tar.gz
+ 02f6c000a4ba23eae1831ee145ea7234d7a3e34470bdaf2f50111d71967040f8 833 fusiondirectory_1.2.3.orig-plugins.tar.gz.asc
+ 3bfe5c8f5c54c32c9ce6068326dc01095a1930c0b4ac6b38b9ba5c10fff6a271 315 fusiondirectory_1.2.3.orig.tar.gz
+ 68fa324d1ae9c88e7bdf9e6cba50cdd710fce6cbe4be295e62568167e2bbf500 46088 fusiondirectory_1.2.3-4+deb10u2.debian.tar.xz
+ 7e350b5be91f8b61eb48f23025b7359d696767f956a44595d204c3193917894e 41803 fusiondirectory_1.2.3-4+deb10u2_amd64.buildinfo
+Files:
+ 6839853907fd2452b4f737d8edb44b23 12689 web optional fusiondirectory_1.2.3-4+deb10u2.dsc
+ 36b18a7f82f6e796ce20f815b449eab4 2230218 web optional fusiondirectory_1.2.3.orig-core.tar.gz
+ 3e800c7191ea4384a6b83b55a3aa36c7 833 web optional fusiondirectory_1.2.3.orig-core.tar.gz.asc
+ 2a67d8454cfeed2b7805e96b5cf1b48a 1887945 web optional fusiondirectory_1.2.3.orig-plugins.tar.gz
+ c5fcdcb795130893249b49c552a90025 833 web optional fusiondirectory_1.2.3.orig-plugins.tar.gz.asc
+ 059995aaf8132d3275577e57e5875f09 315 web optional fusiondirectory_1.2.3.orig.tar.gz
+ 3a0e2f0cd5c983fead2c3812a1c8ae99 46088 web optional fusiondirectory_1.2.3-4+deb10u2.debian.tar.xz
+ 67ae0c9890cf81ff57858724afa54d3f 41803 web optional fusiondirectory_1.2.3-4+deb10u2_amd64.buildinfo
+

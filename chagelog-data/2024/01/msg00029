@@ -1,0 +1,47 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Jan 2024 13:40:18 +0000
+Source: postfix
+Architecture: source
+Version: 3.4.23-0+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: LaMont Jones <lamont@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ postfix (3.4.23-0+deb10u2) buster-security; urgency=medium
+ .
+   [Bastien Roucariès]
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Allow to build with kernel from backport
+ .
+   [Wietse Venema]
+ .
+   * Fix CVE-2023-51764: Postfix allowed SMTP smuggling
+     unless configured with
+     smtpd_data_restrictions=reject_unauth_pipelining and
+     smtpd_discard_ehlo_keywords=chunking.
+     Remote attackers can use a published exploitation technique
+     to inject e-mail messages with a spoofed MAIL FROM address,
+     allowing bypass of an SPF protection mechanism.
+Checksums-Sha1:
+ 27a9b93cb4ca908a42ec889c38f3fdf2b517c20b 3066 postfix_3.4.23-0+deb10u2.dsc
+ 8aea6a870705c87ffc57738c3feb70869961298e 4586103 postfix_3.4.23.orig.tar.gz
+ 38424cd34d40d71b79d5221c0ed9c4b3977355e2 220 postfix_3.4.23.orig.tar.gz.asc
+ 106ad0db88642ce3a2116ebff01cab02d3e7a6bb 220724 postfix_3.4.23-0+deb10u2.debian.tar.xz
+ fa6b62afa3e932559690a0d4b1d37588fd1f28ef 12817 postfix_3.4.23-0+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 3716d814705831d4f3081c68bdd18ee6c199a1f79646bfcc92d275d71ac0359f 3066 postfix_3.4.23-0+deb10u2.dsc
+ 1759e953bf7baccb533899845c17753bf57a99ebac9c21717626262966a122f9 4586103 postfix_3.4.23.orig.tar.gz
+ 05ea60983d569ea342a00ca7dafa4f5406ce5540a8053080a85c6ba7774e1eb2 220 postfix_3.4.23.orig.tar.gz.asc
+ 044adb97bfcbeca0d06bd960fc5460ec5211412f03e0d5df6a8363cda9830ebf 220724 postfix_3.4.23-0+deb10u2.debian.tar.xz
+ f83c62e8adfa21f08df00dd2f0226ffec8e56743dd198a0dc86488c08da752c1 12817 postfix_3.4.23-0+deb10u2_amd64.buildinfo
+Files:
+ f1859bafba02057308dcf50246b10baa 3066 mail optional postfix_3.4.23-0+deb10u2.dsc
+ 99c3b5c6d7c8639bc76f216950fc5266 4586103 mail optional postfix_3.4.23.orig.tar.gz
+ fa2a629a3d8f0b8e1ee00c8af40d11d9 220 mail optional postfix_3.4.23.orig.tar.gz.asc
+ c886f19fcb52cc323c3054efbb4cacb4 220724 mail optional postfix_3.4.23-0+deb10u2.debian.tar.xz
+ b02bf422c45029d578a6a79cd719a3d9 12817 mail optional postfix_3.4.23-0+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,48 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 10 Apr 2022 14:16:30 +0200
+Source: openjpeg2
+Binary: libopenjp2-7-dev libopenjp2-7 libopenjpip7 libopenjp3d7 libopenjp2-7-dbg libopenjpip-dec-server libopenjpip-viewer libopenjpip-server libopenjp3d-tools libopenjp2-tools
+Architecture: source
+Version: 2.1.2-1.1+deb9u7
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Description:
+ libopenjp2-7 - JPEG 2000 image compression/decompression library
+ libopenjp2-7-dbg - debug symbols for libopenjp2-7, a JPEG 2000 image library
+ libopenjp2-7-dev - development files for OpenJPEG, a JPEG 2000 image library
+ libopenjp2-tools - command-line tools using the JPEG 2000 library
+ libopenjp3d-tools - command-line tools using the JPEG 2000 - 3D library
+ libopenjp3d7 - JP3D (JPEG 2000 / Part 10) image compression/decompression librar
+ libopenjpip-dec-server - tool to allow caching of JPEG 2000 files using JPIP protocol
+ libopenjpip-server - JPIP server for JPEG 2000 files
+ libopenjpip-viewer - JPEG 2000 java based viewer for advanced remote JPIP access
+ libopenjpip7 - JPEG 2000 Interactive Protocol
+Changes:
+ openjpeg2 (2.1.2-1.1+deb9u7) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-1122: input directory with a large number of files
+     can lead to to a segmentation fault and a denial of service.
+   * Fix CVE-2021-29338: integer overflow allows remote attackers to
+     crash the application, causing a Denial of Service.
+   * Fix CVE-2020-27843: out-of-bounds read through specially crafted
+     input to the conversion or encoding functionality.
+   * Fix CVE-2020-27842: null pointer dereference through specially crafted
+     input.
+Checksums-Sha1:
+ ec9787e74cac0a8f28f1e4b5faf0ace5abd6f160 2822 openjpeg2_2.1.2-1.1+deb9u7.dsc
+ 3b77579e1346ee08e0f5770bbe26a167d687143a 31800 openjpeg2_2.1.2-1.1+deb9u7.debian.tar.xz
+ 37f1de4c738c2d691643df1b5c163fa3626e88e7 12756 openjpeg2_2.1.2-1.1+deb9u7_source.buildinfo
+Checksums-Sha256:
+ f29a6e1cd404a7d53918ed1711e12b293cfa8332e62eb6dd671f0cc5837534b1 2822 openjpeg2_2.1.2-1.1+deb9u7.dsc
+ e724b7d585b9cc1db6deeeefa2236e882a521d11491ffe3589170cb95c032d1f 31800 openjpeg2_2.1.2-1.1+deb9u7.debian.tar.xz
+ d264b4d518fb7d24e3126078e6b5bb46634936061a3253e0f4c26099bdc31753 12756 openjpeg2_2.1.2-1.1+deb9u7_source.buildinfo
+Files:
+ 3f1556b17988a4126be71d0bce81837d 2822 libs optional openjpeg2_2.1.2-1.1+deb9u7.dsc
+ 2701439149b3d98aa69db64a1a5c941a 31800 libs optional openjpeg2_2.1.2-1.1+deb9u7.debian.tar.xz
+ 1df8ad5ef6fc6fe7e27daefab60d57ee 12756 libs optional openjpeg2_2.1.2-1.1+deb9u7_source.buildinfo
+

@@ -1,0 +1,73 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 25 Mar 2023 10:55:37 +0000
+Source: libreoffice
+Architecture: source
+Version: 1:6.1.5-3+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ libreoffice (1:6.1.5-3+deb10u8) buster-security; urgency=medium
+ .
+   * Add salsa testsuite
+   * CVE-2022-26307: add Initialization Vectors to password storage.
+     LibreOffice supports the storage of passwords for web connections in
+     the user’s configuration database. The stored passwords are encrypted
+     with a single master key provided by the user. A flaw in LibreOffice
+     existed where master key was poorly encoded resulting in weakening its
+     entropy from 128 to 43 bits making the stored passwords vulerable to a
+     brute force attack if an attacker has access to the users stored
+     config.
+   * fix CVE-2022-26306: LibreOffice supports the storage of passwords for
+     web connections in the user’s configuration database. The stored
+     passwords are encrypted with a single master key provided by the
+     user. A flaw in LibreOffice existed where the required initialization
+     vector for encryption was always the same which weakens the security
+     of the encryption making them vulnerable if an attacker has access to
+     the user's configuration data
+   * CVE-2022-26305: compare authors using Thumbprint
+     An Improper Certificate Validation vulnerability in LibreOffice
+     existed where determining if a macro was signed by a trusted author
+     was done by only matching the serial number and issuer string of the
+     used certificate with that of a trusted certificate. This is not
+     sufficient to verify that the macro was actually signed with the
+     certificate. An adversary could therefore create an arbitrary
+     certificate with a serial number and an issuer string identical to a
+     trusted certificate which LibreOffice would present as belonging to
+     the trusted author, potentially leading to the user to execute
+     arbitrary code contained in macros improperly trusted.
+   * CVE-2021-25636: only use X509Data
+     LibreOffice supports digital signatures of ODF documents and macros
+     within documents, presenting visual aids that no alteration of the
+     document occurred since the last signing and that the signature is
+     valid. An Improper Certificate Validation vulnerability in LibreOffice
+     allowed an attacker to create a digitally signed ODF document, by
+     manipulating the documentsignatures.xml or macrosignatures.xml stream
+     within the document to contain both "X509Data" and "KeyValue" children
+     of the "KeyInfo" tag, which when opened caused LibreOffice to verify
+     using the "KeyValue" but to report verification with the unrelated
+     "X509Data" value.
+   * CVE-2022-3140: Insufficient validation of "vnd.libreoffice.command"
+     URI schemes. LibreOffice supports Office URI Schemes to enable browser
+     integration of LibreOffice with MS SharePoint server. An additional
+     scheme 'vnd.libreoffice.command' specific to LibreOffice was added. In
+     the affected versions of LibreOffice links using that scheme could be
+     constructed to call internal macros with arbitrary arguments. Which
+     when clicked on, or activated by document events, could result in
+     arbitrary script execution without warning.
+Checksums-Sha1:
+ 0b03713ea42d694e2c597460cd3261509b7623e7 27751 libreoffice_6.1.5-3+deb10u8.dsc
+ f23b1a6050231271e527b194ce83ad3ed954989e 9996232 libreoffice_6.1.5-3+deb10u8.debian.tar.xz
+ 0ec1071c1524abf6aba7240b999a84bb29dd498c 108321 libreoffice_6.1.5-3+deb10u8_amd64.buildinfo
+Checksums-Sha256:
+ 5723a6e1bea450f793398d436918c66d6572641ecb4b67ade9058bb37c207544 27751 libreoffice_6.1.5-3+deb10u8.dsc
+ ed935fba8b49aff02d29612738c2a8430cac7936050b72b5a3ab7fa058294b1a 9996232 libreoffice_6.1.5-3+deb10u8.debian.tar.xz
+ 1710d542f404d7daf61e6bf09a1bed57f4a43537d28489661003e5e095e64c6a 108321 libreoffice_6.1.5-3+deb10u8_amd64.buildinfo
+Files:
+ d2979f58da0c4fc9ab28a1328a4a33b7 27751 editors optional libreoffice_6.1.5-3+deb10u8.dsc
+ ce9cd195e539d187fb5d955bb0daefb6 9996232 editors optional libreoffice_6.1.5-3+deb10u8.debian.tar.xz
+ 21352543a2e9f6467d4a73f98a71dfe2 108321 editors optional libreoffice_6.1.5-3+deb10u8_amd64.buildinfo
+

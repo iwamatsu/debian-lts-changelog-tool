@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 Feb 2023 23:20:29 CET
+Source: c-ares
+Architecture: source
+Version: 1.14.0-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Gregor Jasny <gjasny@googlemail.com>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 7382c3f0a8b9902aaaa4eb318d46f7ffbbdda664 2079 c-ares_1.14.0-1+deb10u2.dsc
+ 5b4989208c936d6445d4d73487634fe0b07e8ea7 1335940 c-ares_1.14.0.orig.tar.gz
+ 15286b78c3ab60f61991a507be125ebf0f0f012e 12084 c-ares_1.14.0-1+deb10u2.debian.tar.xz
+ 3d4410e9b91ccd4088957b002c2d6028bcc715b5 6317 c-ares_1.14.0-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ ffe6cc5dfcfc56c3cc6453fd7ebf0fe07c4d3704b19968f04bd0f3ae182a7335 2079 c-ares_1.14.0-1+deb10u2.dsc
+ 45d3c1fd29263ceec2afc8ff9cd06d5f8f889636eb4e80ce3cc7f0eaf7aadc6e 1335940 c-ares_1.14.0.orig.tar.gz
+ 2fba5ebeeeacc8b9618592daaca93d1eb68a7d8bd25931c712fb1f4c22ff11d7 12084 c-ares_1.14.0-1+deb10u2.debian.tar.xz
+ a2c3cd6f4527d41c106bd7c269501fad28028c7b8591640095e1777573d41dbb 6317 c-ares_1.14.0-1+deb10u2_amd64.buildinfo
+Changes:
+ c-ares (1.14.0-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-4904:
+     It was discovered that in c-ares, an asynchronous name resolver library,
+     the config_sortlist function is missing checks about the validity of the
+     input string, which allows a possible arbitrary length stack overflow and
+     thus may cause a denial of service.
+Files:
+ ffcaed2743cacd2f4cef4e4f284fc3ec 2079 libs optional c-ares_1.14.0-1+deb10u2.dsc
+ e57b37a7c46283e83c21cde234df10c7 1335940 libs optional c-ares_1.14.0.orig.tar.gz
+ 297f930c53a314a44099885f4e4e41b2 12084 libs optional c-ares_1.14.0-1+deb10u2.debian.tar.xz
+ 522a65822fe26acbb7242453cb6b8274 6317 libs optional c-ares_1.14.0-1+deb10u2_amd64.buildinfo
+

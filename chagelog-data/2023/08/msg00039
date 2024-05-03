@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 23 Aug 2023 00:02:23 CEST
+Source: mediawiki
+Architecture: source
+Version: 1:1.31.16-1+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Kunal Mehta <legoktm@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 15267d3e3c5b74ebedb92de2fc997e3497a139ac 2281 mediawiki_1.31.16-1+deb10u6.dsc
+ a079ebf437c8782922212a40ba3b798c4ade8580 117804 mediawiki_1.31.16-1+deb10u6.debian.tar.xz
+ ace421bb3c66c61521180e99f79bdacb22941e6e 6884 mediawiki_1.31.16-1+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 88443bea56013bf928b5d0d4b8825a2ac6f14a402dd46143143ba7a239f2ed54 2281 mediawiki_1.31.16-1+deb10u6.dsc
+ f0ac74fadbf29a559fc2f483a998c54cfc6e515a27096dd1e0567afd8f0ba630 117804 mediawiki_1.31.16-1+deb10u6.debian.tar.xz
+ d33d3fa674a065103aecb31b5ecea006dc31d3615304ce66148d1bcd2176e1bf 6884 mediawiki_1.31.16-1+deb10u6_amd64.buildinfo
+Changes:
+ mediawiki (1:1.31.16-1+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-29141:
+     An auto-block can occur for an untrusted X-Forwarded-For header in
+     MediaWiki, a website engine for collaborative work. X-Forwarded-For is not
+     necessarily trustworthy and can specify multiple IP addresses in a single
+     header, all of which are checked for blocks. When a user is autoblocked,
+     the wiki will create an IP block behind-the-scenes for that user without
+     exposing the user's IP on-wiki. However, spoofing XFF would let an
+     attacker guess at the IPs of users who have active autoblocks, since the
+     block message includes the username of the original block target.
+Files:
+ 4cb97dfc5380d5d38fa11f435612de61 2281 web optional mediawiki_1.31.16-1+deb10u6.dsc
+ a55fceeb6e6f860d7bdd56974b74c99f 117804 web optional mediawiki_1.31.16-1+deb10u6.debian.tar.xz
+ 49e3dcdc67560b07f1de113ff1fffae5 6884 web optional mediawiki_1.31.16-1+deb10u6_amd64.buildinfo
+

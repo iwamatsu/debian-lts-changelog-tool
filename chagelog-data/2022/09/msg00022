@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 12 Sep 2022 23:03:02 +0200
+Source: mod-wsgi
+Architecture: source
+Version: 4.6.5-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ mod-wsgi (4.6.5-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-2255
+     drop X-Client-IP header when is not a trusted header
+Checksums-Sha1:
+ 18498bf328bb92971fe43cd1e5da6f0cf4c0bb32 2333 mod-wsgi_4.6.5-1+deb10u1.dsc
+ 42cf04c2d273511211f41bb2be17dcf5b8b969dd 582840 mod-wsgi_4.6.5.orig.tar.xz
+ e7a5ce78578595683500750c9377f3205cf29184 10876 mod-wsgi_4.6.5-1+deb10u1.debian.tar.xz
+ 4654cf056067411ab55a18499ceaf6350232a421 8894 mod-wsgi_4.6.5-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 672c75ebf924ab55dcad8f84f855ae9be00b5a1b103f23b4f1b1dfa82703cdc2 2333 mod-wsgi_4.6.5-1+deb10u1.dsc
+ 53c2fc43a53a6513d884592a9e318deff877c4b8ff185ebcdb5b7da02073052f 582840 mod-wsgi_4.6.5.orig.tar.xz
+ 8af378547714cd10861cfebc1f8041f36ca5b90bfd46eca97380cea859cc9714 10876 mod-wsgi_4.6.5-1+deb10u1.debian.tar.xz
+ dede7cbf8e5bbc5c2cf729fea528292ff989146bf1e729682f71b37e62f419ca 8894 mod-wsgi_4.6.5-1+deb10u1_amd64.buildinfo
+Files:
+ e37efb20a02186988f0cec6cbd3468a5 2333 httpd optional mod-wsgi_4.6.5-1+deb10u1.dsc
+ de45cedada4e79f92718c1bfca085b93 582840 httpd optional mod-wsgi_4.6.5.orig.tar.xz
+ dcd7ae4fe8ee35b464af9597de495dd9 10876 httpd optional mod-wsgi_4.6.5-1+deb10u1.debian.tar.xz
+ 160ae980f7e104eff982282ba0fc1a3f 8894 httpd optional mod-wsgi_4.6.5-1+deb10u1_amd64.buildinfo
+

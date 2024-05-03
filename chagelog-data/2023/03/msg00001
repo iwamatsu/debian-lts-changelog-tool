@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 01 Mar 2023 15:33:15 +0000
+Source: node-css-what
+Architecture: source
+Version: 2.1.0-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 989264 1032188
+Changes:
+ node-css-what (2.1.0-1+deb10u1) buster-security; urgency=medium
+ .
+   * Team upload
+   * node-css-what was vulnerable to Regular Expression Denial of Service
+     (ReDoS) due to the usage of insecure regular expression in the
+     re_attr variable.
+     The exploitation of this vulnerability could be triggered
+     via the parse function.
+     Fix CVE-2022-21222, CVE-2021-33587 (Closes: #989264, #1032188)
+Checksums-Sha1:
+ f55780b6faa5e27804a85457a3f69f2e9a8f44c1 2093 node-css-what_2.1.0-1+deb10u1.dsc
+ f20af476cee90d8b53b680e25c5ee575f27ebf29 18191 node-css-what_2.1.0.orig.tar.gz
+ 4f2c1970813111d4013575ef6309a6a6c0acc5f0 3888 node-css-what_2.1.0-1+deb10u1.debian.tar.xz
+ 0514d4cb32f781e5451dd996f8a1afa88d639763 5866 node-css-what_2.1.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d38266128d1ed71ca2b184f3676a1d05d5c49ed11825cad44619ee255cf7b255 2093 node-css-what_2.1.0-1+deb10u1.dsc
+ 3403b117a3a2c3c4ba2adc2fa8af4791c04e45dfb8c0b5cf76f80663bd73f8b6 18191 node-css-what_2.1.0.orig.tar.gz
+ ce2500030009678443600e08a7074b96e2ab45ac507a224e66dd0fa9c60c93c5 3888 node-css-what_2.1.0-1+deb10u1.debian.tar.xz
+ f1b71fd0199e03107d1ad42c84b7e34d127736606480ed7c2487797cf135e628 5866 node-css-what_2.1.0-1+deb10u1_amd64.buildinfo
+Files:
+ 15b9c8379a3d36737b2af17eb336ddd6 2093 web extra node-css-what_2.1.0-1+deb10u1.dsc
+ 8a49dc24a170093dfbc094f15a92f2ab 18191 web extra node-css-what_2.1.0.orig.tar.gz
+ fa6e0d89479f95420f8badefe16399d2 3888 web extra node-css-what_2.1.0-1+deb10u1.debian.tar.xz
+ bdc73375d2f783bccc863107f54fcfa1 5866 web extra node-css-what_2.1.0-1+deb10u1_amd64.buildinfo
+

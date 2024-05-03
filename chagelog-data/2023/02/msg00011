@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 08 Feb 2023 19:46:07 +0100
+Source: wireshark
+Architecture: source
+Version: 2.6.20-0+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Balint Reczey <rbalint@ubuntu.com>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ wireshark (2.6.20-0+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Apply applicable part of the patch for CVE-2022-4345.
+     (only one dissector is affected, the others missing the
+      vulnerable features).
+   * Apply applicable parts of the patch for CVE-2023-0411.
+     (see patch -- named after the CVE for details)
+   * Backport patch for CVE-2023-0412.
+   * Cherry-pick upstream fix for CVE-2023-0413.
+   * Apply upstream patch for CVE-2023-0415.
+   * Apply upstream patch for CVE-2023-0417.
+Checksums-Sha1:
+ b936005999f0871e0113c709973cf5f9564ce483 3562 wireshark_2.6.20-0+deb10u5.dsc
+ 9ebf5da297b70f7639ed91f627845759ba50c3a7 99356 wireshark_2.6.20-0+deb10u5.debian.tar.xz
+ 320ec5f569484ad9cfaab1870e7408e2be08e0bd 27726 wireshark_2.6.20-0+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 029544033f75d9be96e38dbc73e8a76be5437b5913eadd90983c435c0cb0c505 3562 wireshark_2.6.20-0+deb10u5.dsc
+ 05a549ede7389dbcac2f122582b78bbb9351e26d840b9696964276cd1cd58595 99356 wireshark_2.6.20-0+deb10u5.debian.tar.xz
+ b67a9660cc5b49d9f7b4f6b8e9fd9c029b4f0feeba2d805d76a3a12b3c2f4b7d 27726 wireshark_2.6.20-0+deb10u5_amd64.buildinfo
+Files:
+ 24117ae06bd1080009c16a850e64808b 3562 net optional wireshark_2.6.20-0+deb10u5.dsc
+ 610c3fbf8f2f5d6244b65d30ed389ee2 99356 net optional wireshark_2.6.20-0+deb10u5.debian.tar.xz
+ afd74bcad01debfbb506e6333376ba43 27726 net optional wireshark_2.6.20-0+deb10u5_amd64.buildinfo
+

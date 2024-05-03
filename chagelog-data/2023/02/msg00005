@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 31 Jan 2023 09:59:30 +0100
+Source: jtreg6
+Binary: jtreg6
+Architecture: source all
+Version: 6.1+2-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ jtreg6     - Regression Test Harness for the OpenJDK platform
+Changes:
+ jtreg6 (6.1+2-1~deb10u1) buster-security; urgency=medium
+ .
+   * Backport to buster.
+Checksums-Sha1:
+ cfca1ef71d85465a82179c54f296c2ca9db3a4b4 2070 jtreg6_6.1+2-1~deb10u1.dsc
+ 4df5006f9243bb5d19ae8f08477c5f9a85b7ff0e 584709 jtreg6_6.1+2.orig.tar.gz
+ b02abcb36b2aec391dc16760d6d16a75cc980078 6604 jtreg6_6.1+2-1~deb10u1.debian.tar.xz
+ 021e5584d8c8167d981b89156699eecdff4ccf47 623756 jtreg6_6.1+2-1~deb10u1_all.deb
+ 13934f112222e5bc7a0a5d3dae4b601efdf71fcd 11434 jtreg6_6.1+2-1~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c386aaf019276324d8398b1b5a76e006112096918bbce404f07f26213a00a8fc 2070 jtreg6_6.1+2-1~deb10u1.dsc
+ d68397542188a24ecf8c42c4cf4b818dda2bd95aee8d6b0980ede78c36fcb40f 584709 jtreg6_6.1+2.orig.tar.gz
+ 50f1eba45a843407dbd07d2dd617bd721f24041233f44d6c5a8d7aeb9b5b3c0f 6604 jtreg6_6.1+2-1~deb10u1.debian.tar.xz
+ cab7f7f8259011208f52f778bf6327e359692814e035228719a4245426accb70 623756 jtreg6_6.1+2-1~deb10u1_all.deb
+ 061175a7d97292be90ec5f9879bc4c1ba56b2ad1ac40e7c2c0db82f08f85324d 11434 jtreg6_6.1+2-1~deb10u1_amd64.buildinfo
+Files:
+ 893da5626448e39cb1e87551ad7b37ea 2070 java optional jtreg6_6.1+2-1~deb10u1.dsc
+ 96f0d82138b253ed4076c80654504dd5 584709 java optional jtreg6_6.1+2.orig.tar.gz
+ 29ffa96503727eb32e36cbcd1e6c260f 6604 java optional jtreg6_6.1+2-1~deb10u1.debian.tar.xz
+ 7e6d864e6adea00bac8a83f0c9c298c3 623756 java optional jtreg6_6.1+2-1~deb10u1_all.deb
+ c28e09da30e2437cdb26c4985f2c39a5 11434 java optional jtreg6_6.1+2-1~deb10u1_amd64.buildinfo
+

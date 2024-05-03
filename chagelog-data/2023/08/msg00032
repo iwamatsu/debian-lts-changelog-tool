@@ -1,0 +1,49 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 29 Mar 2023 11:02:23 +0200
+Source: openssh
+Architecture: source
+Version: 1:7.9p1-10+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Launchpad-Bugs-Fixed: 1798049
+Changes:
+ openssh (1:7.9p1-10+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload.
+ .
+   [ Salvatore Bonaccorso ]
+   * ssh(1): Fix bad interaction between the ssh_config ConnectTimeout
+     and ConnectionAttempts directives - connection attempts after the
+     first were ignoring the requested timeout (LP: #1798049).
+ .
+   [ Utkarsh Gupta ]
+   * remote code execution relating to PKCS#11 providers
+     - debian/patches/CVE-2023-38408-1.patch: terminate process if requested
+       to load a PKCS#11 provider that isn't a PKCS#11 provider in
+       ssh-pkcs11.c.
+     - debian/patches/CVE-2023-38408-3.patch: ensure FIDO/PKCS11 libraries
+       contain expected symbols in misc.c, misc.h, ssh-pkcs11.c, ssh-sk.c.
+     - CVE-2023-38408
+Checksums-Sha1:
+ aa62c54ddb4cdfeb8e4aeb85203fe080ed367411 3226 openssh_7.9p1-10+deb10u3.dsc
+ 993aceedea8ecabb1d0dd7293508a361891c4eaa 1565384 openssh_7.9p1.orig.tar.gz
+ e23d601363ab5ff0daae5714e77d06539a9aebe9 683 openssh_7.9p1.orig.tar.gz.asc
+ c0e0721bf8128d0c30ed697b8671600491c4bac0 175660 openssh_7.9p1-10+deb10u3.debian.tar.xz
+ ff23ae66a7fdaea1aa38af9c3a106297e5b30c11 6285 openssh_7.9p1-10+deb10u3_source.buildinfo
+Checksums-Sha256:
+ d76e7b22b887f7f2505ac4b7d37affeda4e9427ea8293caaf6d8254e21651ccf 3226 openssh_7.9p1-10+deb10u3.dsc
+ 6b4b3ba2253d84ed3771c8050728d597c91cfce898713beb7b64a305b6f11aad 1565384 openssh_7.9p1.orig.tar.gz
+ 4fd584498595450d68f5514b3d79eb14425a3d6aa9e9021d9e928fdd7b4469eb 683 openssh_7.9p1.orig.tar.gz.asc
+ 81f45c86ca3c83e9751cdbaad0dc526027cc17fb76dfc5d86501c57bd253f39a 175660 openssh_7.9p1-10+deb10u3.debian.tar.xz
+ 35faaf0e11a38ced7c86af22b18de0f93aea737e4f2c4eb57a613a4c0e33afd7 6285 openssh_7.9p1-10+deb10u3_source.buildinfo
+Files:
+ 481270ee75ef88188d108dfc9235c35e 3226 net standard openssh_7.9p1-10+deb10u3.dsc
+ c6af50b7a474d04726a5aa747a5dce8f 1565384 net standard openssh_7.9p1.orig.tar.gz
+ 36f798ff56b24004e16c08bf4a5fc021 683 net standard openssh_7.9p1.orig.tar.gz.asc
+ e973846875c5661dbf286473a9bf1713 175660 net standard openssh_7.9p1-10+deb10u3.debian.tar.xz
+ d227632556b467f247f4e896a4d23dc3 6285 net standard openssh_7.9p1-10+deb10u3_source.buildinfo
+

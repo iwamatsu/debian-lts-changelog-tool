@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 24 Feb 2024 09:03:02 +0100
+Source: libjwt
+Architecture: source
+Version: 1.10.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian IoT Maintainers <debian-iot-maintainers@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Closes: 1063534
+Changes:
+ libjwt (1.10.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * CVE-2024-25189 (Closes: #1063534)
+     fix a timing side channel via strcmp()
+Checksums-Sha1:
+ 0f01e52a78ad55601b8a4b84814b18d1069f4cb6 2383 libjwt_1.10.1-1+deb10u1.dsc
+ 0adf82766b762a5cb8efac0ab0222427de9d3c86 91258 libjwt_1.10.1.orig.tar.gz
+ 82fbb9306c740d647ae82e81a54f9c6ce3497d23 8304 libjwt_1.10.1-1+deb10u1.debian.tar.xz
+ 33df96f8b3a8f222d0068dd9d88f691f600a6212 8165 libjwt_1.10.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 63971303270e2bf5c2a76624f362196b1c7d53906be0cd77bd9de24c982521be 2383 libjwt_1.10.1-1+deb10u1.dsc
+ 4f8f827248af3998c979fa97cfd0aca04956f2b340a379bcb93da66c9a3f63b3 91258 libjwt_1.10.1.orig.tar.gz
+ a132d701ae1920a093a706e87d2ebaf4a478b0d20ecc2144cedbaf3b0f758f52 8304 libjwt_1.10.1-1+deb10u1.debian.tar.xz
+ 9f97b27ca903af80c6ebcc886f6f7e43367f956bc6e47a228bc479bf51f8dd97 8165 libjwt_1.10.1-1+deb10u1_amd64.buildinfo
+Files:
+ 9e183e38c8bf975b69fe9b5273b30ae6 2383 devel optional libjwt_1.10.1-1+deb10u1.dsc
+ 5c5ab84bb0e3ccf30ee2891e7f719875 91258 devel optional libjwt_1.10.1.orig.tar.gz
+ 6425141bf9407d1c7c6e5a7736e933e2 8304 devel optional libjwt_1.10.1-1+deb10u1.debian.tar.xz
+ 24dd3a02d976ebf5fb6fca3d1c2cd8e9 8165 devel optional libjwt_1.10.1-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 19 Jan 2022 13:26:37 -0600
+Source: drupal7
+Binary: drupal7
+Architecture: source all
+Version: 7.52-2+deb9u17
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Gunnar Wolf <gwolf@debian.org>
+Changed-By: Gunnar Wolf <gwolf@debian.org>
+Description:
+ drupal7    - fully-featured content management framework
+Changes:
+ drupal7 (7.52-2+deb9u17) stretch-security; urgency=medium
+ .
+   * SA-CORE-2022-001 and SA-CORE-2022-002 deal with cross-site scripting
+     attacks related to the use of the very old version 1.13.0 of jQuery.
+Checksums-Sha1:
+ f266639884252c72892f4523011aefc94430cd1a 1276 drupal7_7.52-2+deb9u17.dsc
+ e3b2a8c2a3dbd1742c5e220e8dc9562503a48b83 229580 drupal7_7.52-2+deb9u17.debian.tar.xz
+ c4c0a090876df3df68a56f45b2e9c57d9cd1b924 2542112 drupal7_7.52-2+deb9u17_all.deb
+ fa9ef9ab0813c6beb5ce2960bd6b4bdc484585f3 9055 drupal7_7.52-2+deb9u17_amd64.buildinfo
+Checksums-Sha256:
+ 8ad5a2087b82c6b8540503fae1018a2bdd5d2841e0935bea6c2195679856eb86 1276 drupal7_7.52-2+deb9u17.dsc
+ ee073de40c33c3ba83c4f01a9dac9675b34800e7614060964bd08f62070c4aa5 229580 drupal7_7.52-2+deb9u17.debian.tar.xz
+ fd060774e2020a08c56bb3e6e736ee68267c4ac5e00f898695b804bf5cc09e3d 2542112 drupal7_7.52-2+deb9u17_all.deb
+ 5082cf94a7b54e0385ec8997b4bd18b6266a586cb89b6e5c5fe4f77c1bc1aab6 9055 drupal7_7.52-2+deb9u17_amd64.buildinfo
+Files:
+ 88a0c05d77acb3a9ecd858885f06c8d0 1276 web extra drupal7_7.52-2+deb9u17.dsc
+ 1c61f5b4a205078455da1972e0ca4977 229580 web extra drupal7_7.52-2+deb9u17.debian.tar.xz
+ 416d5e3947abe212278f77e053cfc140 2542112 web extra drupal7_7.52-2+deb9u17_all.deb
+ 811b2eda5851618a2a93165a79e53af3 9055 web extra drupal7_7.52-2+deb9u17_amd64.buildinfo
+

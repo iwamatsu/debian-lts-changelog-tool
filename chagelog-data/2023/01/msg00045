@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 Jan 2023 21:28:37 +0100
+Source: node-qs
+Architecture: source
+Version: 6.5.2-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ node-qs (6.5.2-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-24999: Prototype poisoning vulnerability.  qs allows for instance
+     the creation of array-like objects by setting an Array in the `__ proto__`
+     property; the resulting Objects inherit the `Array` prototype, thereby
+     exposing native Array functions.
+Checksums-Sha1:
+ 42a5e5403994547ecc803c18c0d0439ff2db3556 1988 node-qs_6.5.2-1+deb10u1.dsc
+ 6c80d815df84e0bb2fd4e486cc0d7279d7998bcb 23602 node-qs_6.5.2.orig.tar.gz
+ 2080c6d1fd22ac260f9a0bef8b615920ad229bfc 4204 node-qs_6.5.2-1+deb10u1.debian.tar.xz
+ bca55e265e5b842a32c8e416a6a48a1239dda53a 5751 node-qs_6.5.2-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 75773e8e44b6e82e6cbf4bf46610379ff072b09404c6b98b1aba2aacde1b1367 1988 node-qs_6.5.2-1+deb10u1.dsc
+ 7834ea513688f96bfe73b00a3caced38f7ee3a6b68584b67cd93dd987251db40 23602 node-qs_6.5.2.orig.tar.gz
+ 9f302ddc07e1eb537f3305fcb74150ec0990063b45c41b4f062de1ecd77b0b07 4204 node-qs_6.5.2-1+deb10u1.debian.tar.xz
+ 98c0bf8483b84492e65d19c4dce79b0b4276ef563013cb64a9b3527f25ae2789 5751 node-qs_6.5.2-1+deb10u1_amd64.buildinfo
+Files:
+ 267abcf740492a4831d853bd8b27e12e 1988 javascript optional node-qs_6.5.2-1+deb10u1.dsc
+ cf8d7a41b09a362b51539bb14b17ad5b 23602 javascript optional node-qs_6.5.2.orig.tar.gz
+ 8fd22e9081832234adc4b4d0838b8e5a 4204 javascript optional node-qs_6.5.2-1+deb10u1.debian.tar.xz
+ 0a3a38a9a6b86974938f33df5ddcab83 5751 javascript optional node-qs_6.5.2-1+deb10u1_amd64.buildinfo
+

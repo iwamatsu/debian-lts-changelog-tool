@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu,  3 Feb 2022 13:11:44 CET
+Source: librecad
+Binary: librecad librecad-data
+Architecture: source
+Version: 2.1.2-1+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ librecad   - Computer-aided design (CAD) system
+ librecad-data - Computer-aided design (CAD) system -- shared files
+Checksums-Sha1:
+ fc6c4580e22479092ce754226f10cf74fd782d7d 2415 librecad_2.1.2-1+deb9u3.dsc
+ 40b718d3aea49f3c03a14f16735dedc62792001a 17428 librecad_2.1.2-1+deb9u3.debian.tar.xz
+ a21e2e48dbcea876e4cbe6f0891b307d086fff97 13969 librecad_2.1.2-1+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ ae4d657152fc5abe5cb5ba9f9f588585bc0eb2a092bb3603f3a87e3718b9e828 2415 librecad_2.1.2-1+deb9u3.dsc
+ f5c79da1b8fd63f5706f0bf211d19c148c5c85d440acb71c14fc00b27f21e9c3 17428 librecad_2.1.2-1+deb9u3.debian.tar.xz
+ 9fb4a86f358786e2361b57a83b2be32c361869e40d97ec487d91331f78981878 13969 librecad_2.1.2-1+deb9u3_amd64.buildinfo
+Changes:
+ librecad (2.1.2-1+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-45341 and CVE-2021-45342:
+     A buffer overflow vulnerability in CDataMoji of the jwwlib component of
+     LibreCAD allows an attacker to achieve Remote Code Execution using a
+     crafted JWW document.
+   * Fix CVE-2021-45343:
+     In LibreCAD, a NULL pointer dereference in the HATCH handling of libdxfrw
+     allows an attacker to crash the application using a crafted DXF document.
+Files:
+ 8e314dde964504d406ff8fdd0e049814 2415 graphics optional librecad_2.1.2-1+deb9u3.dsc
+ 2d3067f1bb6e7277d1d39be2ea871023 17428 graphics optional librecad_2.1.2-1+deb9u3.debian.tar.xz
+ baaef29374e82d061310d430691fac3f 13969 graphics optional librecad_2.1.2-1+deb9u3_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 05 Dec 2022 14:12:02 +0530
+Source: http-parser
+Architecture: source
+Version: 2.8.1-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1016690
+Changes:
+ http-parser (2.8.1-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2020-8287: Prevent a potential HTTP request smuggling vulnerability
+     caused by http-parser allowing two copies of a header field in a HTTP
+     request. (Closes: #1016690)
+Checksums-Sha1:
+ 44f0c45d9e0228418089435824f0dcb041853b0c 2037 http-parser_2.8.1-1+deb10u3.dsc
+ e980b680be6f31ea1f1a6d849d629248b5a9043e 50731 http-parser_2.8.1.orig.tar.gz
+ c58028b3cb44ad4430134c258279ff95b1ed96c3 9740 http-parser_2.8.1-1+deb10u3.debian.tar.xz
+ cb87eb166926fc615ab2bd93f2403def8802971d 6167 http-parser_2.8.1-1+deb10u3_source.buildinfo
+Checksums-Sha256:
+ 677292ba18aa1c613f77f1f31447ab1daeb0766ba12ec85fc19226554e2dcb26 2037 http-parser_2.8.1-1+deb10u3.dsc
+ 51615f68b8d67eadfd2482decc63b3e55d749ce0055502bbb5b0032726d22d96 50731 http-parser_2.8.1.orig.tar.gz
+ c87e3a11d9646f247525811dfad7db94bd08eb7e5b9a1662e1aa936e3fa0ba80 9740 http-parser_2.8.1-1+deb10u3.debian.tar.xz
+ 5d2aca9641fec529b604078fdc089bfffb24d8dc12867ee0e2e64585eadb7673 6167 http-parser_2.8.1-1+deb10u3_source.buildinfo
+Files:
+ 11475ae020bd130ab24ffd900f1c53a3 2037 libs optional http-parser_2.8.1-1+deb10u3.dsc
+ cb8cbe17d68c4101eebe80229e32efdb 50731 libs optional http-parser_2.8.1.orig.tar.gz
+ ab55544e98a603238cc42e6f25d56c66 9740 libs optional http-parser_2.8.1-1+deb10u3.debian.tar.xz
+ 56fe8d6d4d026616fc1753e0a8c47551 6167 libs optional http-parser_2.8.1-1+deb10u3_source.buildinfo
+

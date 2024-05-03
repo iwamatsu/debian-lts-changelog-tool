@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 20 Jan 2022 22:03:02 +0100
+Source: libspf2
+Binary: libspf2-2 libspf2-dev libspf2-2-dbg spfquery libmail-spf-xs-perl
+Architecture: source amd64
+Version: 1.2.10-7+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libmail-spf-xs-perl - library for validating mail senders with SPF - Perl bindings
+ libspf2-2  - library for validating mail senders with SPF
+ libspf2-2-dbg - library for validating mail senders with SPF (debugging symbols)
+ libspf2-dev - Header and development libraries for libspf2
+ spfquery   - query SPF (Sender Policy Framework) to validate mail senders
+Changes:
+ libspf2 (1.2.10-7+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-33912
+     Sanity check for sprintf
+   * CVE-2021-33913
+     Fixed reverse macro modifier
+Checksums-Sha1:
+ 732715177ced071110b73f89e9598719ea3e6759 2271 libspf2_1.2.10-7+deb9u2.dsc
+ 3c31b20c737d9a8044440e5bf25697016b9cb582 508842 libspf2_1.2.10.orig.tar.gz
+ 91e4f16730899d9a334a6185e86de6c9dac1bcff 15732 libspf2_1.2.10-7+deb9u2.debian.tar.xz
+ 2676087fb836d04c843bd8ff42db3fbea5a58e67 13060 libmail-spf-xs-perl_1.2.10-7+deb9u2_amd64.deb
+ 2f861d26e071f89c8c5f5004748d0654bfdbe80b 206650 libspf2-2-dbg_1.2.10-7+deb9u2_amd64.deb
+ ad326b2ed5cac74865241d4a4c0d085ff68a4ba9 57216 libspf2-2_1.2.10-7+deb9u2_amd64.deb
+ 176aa460a458a54c40dcf56d5edfbf576be69d60 60770 libspf2-dev_1.2.10-7+deb9u2_amd64.deb
+ 65251ec6e750074c1cd29f381c611388d8a43151 7215 libspf2_1.2.10-7+deb9u2_amd64.buildinfo
+ 17d0c60fd82876056326336874d2498a42b27a4f 19602 spfquery_1.2.10-7+deb9u2_amd64.deb
+Checksums-Sha256:
+ 9cdf8abdbc1890dacd65e0f343c879d2eda7659d3ec4d408c813ca2625610aee 2271 libspf2_1.2.10-7+deb9u2.dsc
+ d91e3de81ae287a2976c44f60283bd3000d720e6a112dc7142eedf1831b821c9 508842 libspf2_1.2.10.orig.tar.gz
+ b52fd80576fb385828b6c341140c1adebda54ee77eff76b2b63ec011cfe6d3ec 15732 libspf2_1.2.10-7+deb9u2.debian.tar.xz
+ 0957c73099387f4bc66ab56093e9c31193f9dc78f2ae5509ec8747d3259309b7 13060 libmail-spf-xs-perl_1.2.10-7+deb9u2_amd64.deb
+ 486f195ba42c925607b3a77f2ea5c7ff71bf133310747f5b5d51cb3b6d508d68 206650 libspf2-2-dbg_1.2.10-7+deb9u2_amd64.deb
+ 29aedaaad0c65aa6148e01fbf521d03c0ca0b2d2cbfb3c721fed16f323f1971a 57216 libspf2-2_1.2.10-7+deb9u2_amd64.deb
+ 94266908943b996781c80e5d52f2b585b43dbaf321bb97c75b15ba8c197e3774 60770 libspf2-dev_1.2.10-7+deb9u2_amd64.deb
+ 5451a9cec1cf6eb936103ec4dc0732ddaf153fca823be3f91f14351b369e00c1 7215 libspf2_1.2.10-7+deb9u2_amd64.buildinfo
+ 72e8c3f20fb2efcba478b84b9a752f6737cfae151ca9683b91f378cf8c26216f 19602 spfquery_1.2.10-7+deb9u2_amd64.deb
+Files:
+ 6ca45d9b9ec5a9713489912963bcd10b 2271 libs optional libspf2_1.2.10-7+deb9u2.dsc
+ 7bb9937d0705649eaa8646de66dc3562 508842 libs optional libspf2_1.2.10.orig.tar.gz
+ dd3f74766fe286db5a620860edb5b7da 15732 libs optional libspf2_1.2.10-7+deb9u2.debian.tar.xz
+ 3396948a4b2e7a8425b221062ed77d8d 13060 perl extra libmail-spf-xs-perl_1.2.10-7+deb9u2_amd64.deb
+ 3391243fce11cb7f16f74b0f49daaac7 206650 debug extra libspf2-2-dbg_1.2.10-7+deb9u2_amd64.deb
+ e6c31cd8d8c278ea235e010fed262773 57216 libs optional libspf2-2_1.2.10-7+deb9u2_amd64.deb
+ 3d6c5bedc410587897ab96c0b5d60c38 60770 libdevel optional libspf2-dev_1.2.10-7+deb9u2_amd64.deb
+ c99d9539bc5d75a13c9f88a930b8af85 7215 libs optional libspf2_1.2.10-7+deb9u2_amd64.buildinfo
+ 5a5b7f2a9279ea9d3084c24b7fcd0374 19602 mail optional spfquery_1.2.10-7+deb9u2_amd64.deb
+

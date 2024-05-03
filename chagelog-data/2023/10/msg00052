@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 Oct 2023 11:37:34 +0200
+Source: distro-info-data
+Architecture: source
+Version: 0.41+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Benjamin Drung <bdrung@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ distro-info-data (0.41+deb10u8) buster-security; urgency=medium
+ .
+   * Update data to 0.58, without new columns:
+     - Add Ubuntu 24.04 LTS Noble Numbat (LP: #2041662).
+     - Correct Ubuntu 16.04 EOL to 2021-04-30
+     - Correct Debian 3.1 EOL date to 2008-03-31
+     - Correct Debian 7 EOL date to 2016-04-25
+     - Move Debian 9 EOL to the 9.13 release date 2020-07-18
+     - Move Debian 10 EOL to the 10.13 release date 2022-09-10
+   * Catch up previously excluded historical updates from 0.46:
+     - Tweak EOL dates, by a couple of days, for Ubuntu 9.10, 10.04, 12.04,
+       15.04, 15.10, and 19.04.
+Checksums-Sha1:
+ bc2dc35e102a41b180ffb64f9c0de4ffd7c9805f 1070 distro-info-data_0.41+deb10u8.dsc
+ 006e0f845821049c008904198c2874a517c2085a 8136 distro-info-data_0.41+deb10u8.tar.xz
+ c2961e7a39992dc10b28b0b63ecada3d421df477 5423 distro-info-data_0.41+deb10u8_source.buildinfo
+Checksums-Sha256:
+ bfc282b6a0feb239c0d7303c55a89ac882783f92d130b69ffab8baf371b36478 1070 distro-info-data_0.41+deb10u8.dsc
+ 71a276d1a3a9b2f8e92d09c127f83c0aa4328bd45203f4154612811e3d230f22 8136 distro-info-data_0.41+deb10u8.tar.xz
+ 23c00992397dfa3997361a248ecdc53c146d740f14af9afa798a34ea06d53ef5 5423 distro-info-data_0.41+deb10u8_source.buildinfo
+Files:
+ 2dae661472d208c597d4c04684150f31 1070 devel optional distro-info-data_0.41+deb10u8.dsc
+ 85a5d1604a889ccd100437f4e9fe666b 8136 devel optional distro-info-data_0.41+deb10u8.tar.xz
+ 843197c5862e2060dc3e10dea10530f4 5423 devel optional distro-info-data_0.41+deb10u8_source.buildinfo
+

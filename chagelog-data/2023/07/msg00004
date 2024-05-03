@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 06 Jul 2023 15:00:33 +0000
+Source: ruby-redcloth
+Architecture: source
+Version: 4.3.2-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ ruby-redcloth (4.3.2-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-31606: Regular Expression Denial of Service (ReDoS)
+     issue was discovered in the sanitize_html function of redcloth.
+     This vulnerability allows attackers to cause a Denial of
+     Service (DoS) via supplying a crafted payload.
+Checksums-Sha1:
+ 3dd64a34430da4126f5e9fb5f2a0f187400729ed 2138 ruby-redcloth_4.3.2-3+deb10u1.dsc
+ 7c1706784c0835008c781c407af309a5065dac1b 91880 ruby-redcloth_4.3.2.orig.tar.gz
+ 7725f823b680edc5da44e71db1a1ce7573681108 6800 ruby-redcloth_4.3.2-3+deb10u1.debian.tar.xz
+ 4c49adc9d8407ba650bd05f0e3b354486a7e2050 9790 ruby-redcloth_4.3.2-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ a39cde18e7d48979d5ab6ff18de0d4c4a0f401bcd75898b09d910ec62d16d837 2138 ruby-redcloth_4.3.2-3+deb10u1.dsc
+ fbfc709ef742f962896e1cd063b8bd828bdc0ddce36755edbe493cd3231ea850 91880 ruby-redcloth_4.3.2.orig.tar.gz
+ 2fd77c6390d751a0eb899733c1b51beef12d85e12e18726ce33277124857f8c6 6800 ruby-redcloth_4.3.2-3+deb10u1.debian.tar.xz
+ db68de98b647135e3a3668fdd6b38ca17daec7f198cc8aef584e6bf1f2e178e6 9790 ruby-redcloth_4.3.2-3+deb10u1_amd64.buildinfo
+Files:
+ c2314384eb6f87daea468cc891e2baae 2138 ruby optional ruby-redcloth_4.3.2-3+deb10u1.dsc
+ ef305724e95b4cbdfbaa085ac2d956c1 91880 ruby optional ruby-redcloth_4.3.2.orig.tar.gz
+ ddb3e5d9e3d2b15098540de82a8bc4bf 6800 ruby optional ruby-redcloth_4.3.2-3+deb10u1.debian.tar.xz
+ 9a390872aaddf5f473626a3facb5f497 9790 ruby optional ruby-redcloth_4.3.2-3+deb10u1_amd64.buildinfo
+

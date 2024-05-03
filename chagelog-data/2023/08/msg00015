@@ -1,0 +1,80 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 08 Aug 2023 19:36:53 +0200
+Source: linux-5.10
+Architecture: source
+Version: 5.10.179-5~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-5.10 (5.10.179-5~deb10u1) buster-security; urgency=high
+ .
+   * Rebuild for buster:
+     - Change ABI number to 0.deb10.24
+ .
+ linux (5.10.179-5) bullseye-security; urgency=high
+ .
+   * Fix "init, x86: Move mem_encrypt_init() into arch_cpu_finalize_init()"
+     backport
+ .
+ linux (5.10.179-4) bullseye-security; urgency=high
+ .
+   [ Salvatore Bonaccorso ]
+   * [x86] Add mitigations for Gather Data Sampling (GDS) (CVE-2022-40982)
+     - init: Provide arch_cpu_finalize_init()
+     - x86/cpu: Switch to arch_cpu_finalize_init()
+     - ARM: cpu: Switch to arch_cpu_finalize_init()
+     - ia64/cpu: Switch to arch_cpu_finalize_init()
+     - m68k/cpu: Switch to arch_cpu_finalize_init()
+     - mips/cpu: Switch to arch_cpu_finalize_init()
+     - sh/cpu: Switch to arch_cpu_finalize_init()
+     - sparc/cpu: Switch to arch_cpu_finalize_init()
+     - um/cpu: Switch to arch_cpu_finalize_init()
+     - init: Remove check_bugs() leftovers
+     - init: Invoke arch_cpu_finalize_init() earlier
+     - init, x86: Move mem_encrypt_init() into arch_cpu_finalize_init()
+     - x86/fpu: Remove cpuinfo argument from init functions
+     - x86/fpu: Mark init functions __init
+     - x86/fpu: Move FPU initialization into arch_cpu_finalize_init()
+     - x86/speculation: Add Gather Data Sampling mitigation
+     - x86/speculation: Add force option to GDS mitigation
+     - x86/speculation: Add Kconfig option for GDS
+     - KVM: Add GDS_NO support to KVM
+     - x86/xen: Fix secondary processors' FPU initialization
+     - x86/mm: fix poking_init() for Xen PV guests
+     - x86/mm: Use mm_alloc() in poking_init()
+     - mm: Move mm_cachep initialization to mm_init()
+     - x86/mm: Initialize text poking earlier
+ .
+   [ Ben Hutchings ]
+   * Documentation/x86: Fix backwards on/off logic about YMM support
+   * [x86] Add a Speculative RAS Overflow (SRSO) mitigation (CVE-2023-20569)
+     - x86/cpu: Add VM page flush MSR availablility as a CPUID feature
+     - x86/cpufeatures: Assign dedicated feature word for CPUID_0x8000001F[EAX]
+     - tools headers cpufeatures: Sync with the kernel sources
+     - x86/bugs: Increase the x86 bugs vector size to two u32s
+     - x86/cpu, kvm: Add support for CPUID_80000021_EAX
+     - x86/srso: Add a Speculative RAS Overflow mitigation
+     - x86/srso: Add IBPB_BRTYPE support
+     - x86/srso: Add SRSO_NO support
+     - x86/srso: Add IBPB
+     - x86/srso: Add IBPB on VMEXIT
+     - x86/srso: Fix return thunks in generated code
+     - x86/srso: Tie SBPB bit setting to microcode patch detection
+   * Bump ABI to 24
+Checksums-Sha1:
+ 414addbcaf65dd35be7053b07b4a3aa9d65f5f17 42421 linux-5.10_5.10.179-5~deb10u1.dsc
+ 5edf449121dc6b06e9cf12e31e4fda9b6f2b8890 1617376 linux-5.10_5.10.179-5~deb10u1.debian.tar.xz
+ 1af37cb8ac0c12db3d2f2ee81c6ffde7e3df5387 13596 linux-5.10_5.10.179-5~deb10u1_source.buildinfo
+Checksums-Sha256:
+ efd5c58edfb83c081bbee9efe4a58b76083a601073585b2a06e61e63d59fa0c9 42421 linux-5.10_5.10.179-5~deb10u1.dsc
+ 95170db16b4c0953d237d07cf9399c002350133f42641dd2683b05ce71e8ddc2 1617376 linux-5.10_5.10.179-5~deb10u1.debian.tar.xz
+ e76b9f5dea9411320a44cf3978ca9f3d13d688eeef22dea151e4b9072e5a0665 13596 linux-5.10_5.10.179-5~deb10u1_source.buildinfo
+Files:
+ 7239d1f71eb28b66491e2136bc7bbb47 42421 kernel optional linux-5.10_5.10.179-5~deb10u1.dsc
+ b740f3fac69d6e6781278cf35196b82f 1617376 kernel optional linux-5.10_5.10.179-5~deb10u1.debian.tar.xz
+ 8f0d18656f94757a8963813be3c54319 13596 kernel optional linux-5.10_5.10.179-5~deb10u1_source.buildinfo
+

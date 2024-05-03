@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Apr 2023 18:36:34 +0300
+Source: jackson-databind
+Architecture: source
+Version: 2.9.8-3+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ jackson-databind (2.9.8-3+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-10650: Block one more gadget type (ignite-jta).
+Checksums-Sha1:
+ 8f0092e781527fac30f1cf6fdefe1851e9464b74 2563 jackson-databind_2.9.8-3+deb10u5.dsc
+ 0d93659eea570c33325d3dd50b335eb11a75a92c 847888 jackson-databind_2.9.8.orig.tar.xz
+ 73371f144ede29e906b1a97c26379b35d117f81d 14312 jackson-databind_2.9.8-3+deb10u5.debian.tar.xz
+Checksums-Sha256:
+ 5676139b2aab6d4791261d9015611a6e7a6b6fbc9464608ce3d4cae49abdb22b 2563 jackson-databind_2.9.8-3+deb10u5.dsc
+ 520d5c76dd7afbe27b642b419fb9aecaf583ec5778081e593925cf289a0a9063 847888 jackson-databind_2.9.8.orig.tar.xz
+ 9e062215dfe12923697552e3d9758cae916b2e75cfda879bb1cfee79b75f0b7e 14312 jackson-databind_2.9.8-3+deb10u5.debian.tar.xz
+Files:
+ 1769ce1cbca54f64692b06a7e3f9d21b 2563 java optional jackson-databind_2.9.8-3+deb10u5.dsc
+ a31a309a0754d3b16f4a53a827fc4c10 847888 java optional jackson-databind_2.9.8.orig.tar.xz
+ 25dac299cf50f31054c7d3afa26bf9f6 14312 java optional jackson-databind_2.9.8-3+deb10u5.debian.tar.xz
+

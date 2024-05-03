@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 20 Feb 2022 11:19:25 +0100
+Source: thunderbird
+Architecture: source
+Version: 1:91.6.1-1~deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ thunderbird (1:91.6.1-1~deb9u1) stretch-security; urgency=medium
+ .
+   * Backport to stretch.
+Checksums-Sha1:
+ 95a8d122efadd9b6540e2e9af1669cb0257da3b4 19800 thunderbird_91.6.1-1~deb9u1.dsc
+ 33c00f4b0ea0c1f90ef83381f0cba1d40b89844b 12176224 thunderbird_91.6.1.orig-thunderbird-l10n.tar.xz
+ 3a5be6c4925a15dc31969e02fba816e52ad14a00 427090300 thunderbird_91.6.1.orig.tar.xz
+ 5c002093f107d77b8b179e2ad4e425e9f067c3d2 563604 thunderbird_91.6.1-1~deb9u1.debian.tar.xz
+ 32fa7af6dd77dabaa37610bf96ae9281aa9b16cd 7116 thunderbird_91.6.1-1~deb9u1_source.buildinfo
+Checksums-Sha256:
+ 659e43ad15146f4fe8598970d6d6dcd2448ba519c65fbf140db966ce2d21561e 19800 thunderbird_91.6.1-1~deb9u1.dsc
+ 27aab46ccc3c6b048df1065fb1642ebfb647e260c6e05dadcef2f3f503501a04 12176224 thunderbird_91.6.1.orig-thunderbird-l10n.tar.xz
+ acaa5904fc171d7a84f47b088c2946cbb9e0a00c8efa789d91c181d73ea53d4a 427090300 thunderbird_91.6.1.orig.tar.xz
+ c8c77bd7514f0df8ca0f56db2036b41a8a4dc71006ba40e9a158e177a89136db 563604 thunderbird_91.6.1-1~deb9u1.debian.tar.xz
+ 246388031e3fe5d5ea03cd1f3bb9398e9db4e279c1e9b5b3f379cefbae53c85f 7116 thunderbird_91.6.1-1~deb9u1_source.buildinfo
+Files:
+ 3d2be45d4e8248f55c087eebe29a3c07 19800 mail optional thunderbird_91.6.1-1~deb9u1.dsc
+ b4ec67fc017637c40159ce89858a00f9 12176224 mail optional thunderbird_91.6.1.orig-thunderbird-l10n.tar.xz
+ ecc3ac73962c78bb81e97cad9b3c57bf 427090300 mail optional thunderbird_91.6.1.orig.tar.xz
+ e122876cb89cdf8304bcfc7514d83b23 563604 mail optional thunderbird_91.6.1-1~deb9u1.debian.tar.xz
+ 90b1751c54e539d3b32096ac4c535633 7116 mail optional thunderbird_91.6.1-1~deb9u1_source.buildinfo
+

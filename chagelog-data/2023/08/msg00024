@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 13 Aug 2023 15:58:45 +0000
+Source: sox
+Architecture: source
+Version: 14.4.2+git20190427-1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1041112
+Changes:
+ sox (14.4.2+git20190427-1+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2023-32627: A floating point exception vulnerability
+     was found in sox, in the read_samples function at sox/src/voc.c.
+     This flaw can lead to a denial of service.
+     (Closes: #1041112)
+Checksums-Sha1:
+ 177835de7e8c9d22f28c8fa29182e64451c7d68a 2905 sox_14.4.2+git20190427-1+deb10u3.dsc
+ 17057d54a5f4af8792009c0fc23ce43fd2280bb9 27836 sox_14.4.2+git20190427-1+deb10u3.debian.tar.xz
+ 6cd99e99dd5eda531b71dfcc7d2fbfc52c9a37d6 14220 sox_14.4.2+git20190427-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ bb42bfca3d0dd7a6490a86ba2eadd21a840ba148ea493a27ee829ed315a3eaa2 2905 sox_14.4.2+git20190427-1+deb10u3.dsc
+ 6390c81c433fe3da7e1dc91c50b35a4e67b671340390440c35f12bf2197b9309 27836 sox_14.4.2+git20190427-1+deb10u3.debian.tar.xz
+ 85f7f11f5ee462a976e8a8d9091c472426c6a3cec2e064c77bee144773562329 14220 sox_14.4.2+git20190427-1+deb10u3_amd64.buildinfo
+Files:
+ 8b6c815c4754ea257fcf5c1ee1867aed 2905 sound optional sox_14.4.2+git20190427-1+deb10u3.dsc
+ 82d9bea0d00022f687f1febb762f205d 27836 sound optional sox_14.4.2+git20190427-1+deb10u3.debian.tar.xz
+ 5f55a0b850dc08799e8b9456573a0f6a 14220 sound optional sox_14.4.2+git20190427-1+deb10u3_amd64.buildinfo
+

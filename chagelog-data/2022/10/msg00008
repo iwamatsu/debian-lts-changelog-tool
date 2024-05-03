@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 05 Oct 2022 11:07:30 +0200
+Source: bind9
+Architecture: source
+Version: 1:9.11.5.P4+dfsg-5.1+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ bind9 (1:9.11.5.P4+dfsg-5.1+deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-2795: degraded performance when processing large delegations.
+   * CVE-2022-38177: memory leak in ECDSA verification.
+   * CVE-2022-38178: memory leak in EdDSA verification.
+Checksums-Sha1:
+ 77d7d9e9ff7b92641d0898a8f184fe40c17a55d4 3966 bind9_9.11.5.P4+dfsg-5.1+deb10u8.dsc
+ 5f3c14b760a987b5353c04d939fa0f91533a0c57 3956484 bind9_9.11.5.P4+dfsg.orig.tar.xz
+ 6f9b55861066c99f4f627dfaad0334bcb434d690 121948 bind9_9.11.5.P4+dfsg-5.1+deb10u8.debian.tar.xz
+ e1cb937241a27053363440128fa430f79e764a10 6455 bind9_9.11.5.P4+dfsg-5.1+deb10u8_source.buildinfo
+Checksums-Sha256:
+ 76bdd2f2e484a81447360a8db21aa2a44d46ea29026a9be1e7ea94e114961228 3966 bind9_9.11.5.P4+dfsg-5.1+deb10u8.dsc
+ 34b20e4e17875d5c4280d52264bae08f527e38eb6bcfca431432b0cafcd03c6d 3956484 bind9_9.11.5.P4+dfsg.orig.tar.xz
+ 4c68ef23ad840c42c1d699cf79c0e93aafe5d3a3d7bf5e4714c14f1a723e4cf3 121948 bind9_9.11.5.P4+dfsg-5.1+deb10u8.debian.tar.xz
+ a1578b4f9ca54cfbe90d5ddc977d4afe5579485abcfb1a6c752b44afb0e8a215 6455 bind9_9.11.5.P4+dfsg-5.1+deb10u8_source.buildinfo
+Files:
+ 71644ea748aa51a104dc43dd29fcd3f2 3966 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u8.dsc
+ b59921f04a722b0a30fab88dcf256449 3956484 net optional bind9_9.11.5.P4+dfsg.orig.tar.xz
+ a356fc37eaebfae32d6ac3f87e58ea87 121948 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u8.debian.tar.xz
+ a348cd3cbdd9c388591e56a91f5ca734 6455 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u8_source.buildinfo
+

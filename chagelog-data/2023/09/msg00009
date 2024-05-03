@@ -1,0 +1,46 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 12 Sep 2023 10:37:46 -0700
+Source: e2guardian
+Binary: e2guardian e2guardian-dbgsym
+Architecture: source amd64
+Version: 5.3.1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Edu Packaging Team <debian-edu-pkg-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ e2guardian - Web content filtering (Dansguardian fork)
+Closes: 1003125
+Changes:
+ e2guardian (5.3.1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2021-44273: Validation of SSL certificates was missing in e2guardian's
+     MITM prevention engine. In standalone mode (ie. acting as a proxy or a
+     transparent proxy) with SSL MITM enabled, e2guardian did not validate
+     hostnames in certificates of the web servers that it connected to, and thus
+     was itself vulnerable to MITM attacks. (Closes: #1003125)
+Checksums-Sha1:
+ 3b56fc19787db2bed51143782025b7e6aa73fba8 2155 e2guardian_5.3.1-1+deb10u1.dsc
+ c99b0554ca963c9000ce373d66010940f112012b 2008811 e2guardian_5.3.1.orig.tar.gz
+ be30b6d3070c16dd8affea3ca6bf2a47561b97ce 14156 e2guardian_5.3.1-1+deb10u1.debian.tar.xz
+ ccaaf016895362dd7481686af0340b176ac64ff5 6704404 e2guardian-dbgsym_5.3.1-1+deb10u1_amd64.deb
+ 427bec77de5bbb590cd81b4f0feb365b67db6515 6158 e2guardian_5.3.1-1+deb10u1_amd64.buildinfo
+ f47dea15351c4a9fe615a0b6ab9a79abdd0247f1 782608 e2guardian_5.3.1-1+deb10u1_amd64.deb
+Checksums-Sha256:
+ 8969719276306797b39c421450695083a25a70d6c299ba84d7c003c6cfaddb7b 2155 e2guardian_5.3.1-1+deb10u1.dsc
+ 3ccab41663b63c6a654fd9f7bf44f8598689e9940b02434a724dc137961633a9 2008811 e2guardian_5.3.1.orig.tar.gz
+ 30a5e9cfac02340ae43fe996bad739062cec3be8b34ef23dcca40b7b3c1d266c 14156 e2guardian_5.3.1-1+deb10u1.debian.tar.xz
+ d4f392e4a663d2e44b5abaf53fc6103158f14839bbbe9814639599459831babe 6704404 e2guardian-dbgsym_5.3.1-1+deb10u1_amd64.deb
+ c5dc8a1be366c3d8d3c73375443ce752c0b3d748dc852098e37202bc14838b4a 6158 e2guardian_5.3.1-1+deb10u1_amd64.buildinfo
+ 4545ddda5be82c0a7d55c00c5ca7d10163e4814bb5baa98fca0c0cb10abde6b4 782608 e2guardian_5.3.1-1+deb10u1_amd64.deb
+Files:
+ b187a49812d4b5acf89fdb492e82a0c5 2155 web optional e2guardian_5.3.1-1+deb10u1.dsc
+ 00e599650c9ceb9a70b900c4dd16ca84 2008811 web optional e2guardian_5.3.1.orig.tar.gz
+ 989512fe03d7e7bd795f5c05a7e572bf 14156 web optional e2guardian_5.3.1-1+deb10u1.debian.tar.xz
+ 261e96d522c03600cd7ed26f6e7ce22f 6704404 debug optional e2guardian-dbgsym_5.3.1-1+deb10u1_amd64.deb
+ b514964f4bde74381b61e5ad89adfe49 6158 web optional e2guardian_5.3.1-1+deb10u1_amd64.buildinfo
+ 2471a5d96f02e5c69fa294eb6194fb20 782608 web optional e2guardian_5.3.1-1+deb10u1_amd64.deb
+

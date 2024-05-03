@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 18 Jun 2023 16:48:42 CEST
+Source: requests
+Architecture: source
+Version: 2.21.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ e4a82cd345c636b75eba0c5dcecde00de649cbfa 2560 requests_2.21.0-1+deb10u1.dsc
+ 970805c2affcc5b237d86e7308dc4310f16d6f79 111528 requests_2.21.0.orig.tar.gz
+ 3bd80765d3166d4da6262b6ff31c9815cfa7deb6 7720 requests_2.21.0-1+deb10u1.debian.tar.xz
+ 6326ab299603cec2d10b69f473503baea5e33fc0 7412 requests_2.21.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3eaa478b1d9f92f6f762b09affb17f0569e93d3a40a15f46ba5e5db79bbba56e 2560 requests_2.21.0-1+deb10u1.dsc
+ 502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e 111528 requests_2.21.0.orig.tar.gz
+ 79758c9101c2df6ab4a42742f1fbe2aee813a125ff5a2cb097267b51c7850f12 7720 requests_2.21.0-1+deb10u1.debian.tar.xz
+ b6ee1cad8eb831ee3ca966543fc3f19397f480041ea807a07b5fc28d09038547 7412 requests_2.21.0-1+deb10u1_amd64.buildinfo
+Changes:
+ requests (2.21.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-32681:
+     Requests has been leaking Proxy-Authorization headers to destination
+     servers when redirected to an HTTPS endpoint. For HTTP connections sent
+     through the tunnel, the proxy will identify the header in the request
+     itself and remove it prior to forwarding to the destination server. However
+     when sent over HTTPS, the `Proxy-Authorization` header must be sent in the
+     CONNECT request as the proxy has no visibility into the tunneled request.
+     This results in Requests forwarding proxy credentials to the destination
+     server unintentionally, allowing a malicious actor to potentially
+     exfiltrate sensitive information.
+Files:
+ 69476a91c5d0438afad4374ac21f5d1a 2560 python optional requests_2.21.0-1+deb10u1.dsc
+ 1bcd0e0977c3f8db1848ba0e2b7ab904 111528 python optional requests_2.21.0.orig.tar.gz
+ 26d1df52dae51b4a1c43ba84d6bddda7 7720 python optional requests_2.21.0-1+deb10u1.debian.tar.xz
+ 4e2ac95c49df0cd0ab274fb8c05bcac6 7412 python optional requests_2.21.0-1+deb10u1_amd64.buildinfo
+

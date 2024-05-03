@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 10:10:06 CEST
+Source: rclone
+Architecture: source
+Version: 1.45-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 135608459ae27b6cf0d4d18a14ff7fb9f1086d4a 3280 rclone_1.45-3+deb10u1.dsc
+ 920c1027ba0c1e4666c6cdb4a84b3dde818ef3e5 12057352 rclone_1.45.orig.tar.xz
+ 8bd08ae78c25c64580f0909e5db4847c4072c29b 13752 rclone_1.45-3+deb10u1.debian.tar.xz
+ a8d0c95d14cc5f1d701281a4f4282f9c82be0eec 13556 rclone_1.45-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 0836b0d4fd517f57203b18761aa7e048804fff79c494d7201b2de10fbe11d060 3280 rclone_1.45-3+deb10u1.dsc
+ 62aeb98f789480d19ed135da581a600d79dcddadcbd099971c723bd4217cd6bc 12057352 rclone_1.45.orig.tar.xz
+ 47403a09a5badf67f68099795dc284adeb1dd8e438940c9bc1a5012d2636f403 13752 rclone_1.45-3+deb10u1.debian.tar.xz
+ a674b5aee6c80003159a2d3b613eccf86d74a584224fa61f56d26effac5e0ca5 13556 rclone_1.45-3+deb10u1_amd64.buildinfo
+Changes:
+ rclone (1.45-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 38a8c4ff951b6338f5c15a0b19725a08 3280 net optional rclone_1.45-3+deb10u1.dsc
+ f13ab3945391beaccb9dfa38c91469fe 12057352 net optional rclone_1.45.orig.tar.xz
+ d922c7a2f747957d42b26b86e2acfa98 13752 net optional rclone_1.45-3+deb10u1.debian.tar.xz
+ 0577d64784b07993732beee3d5bf307c 13556 net optional rclone_1.45-3+deb10u1_amd64.buildinfo
+

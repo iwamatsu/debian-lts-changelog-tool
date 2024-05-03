@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Oct 2022 16:15:28 CEST
+Source: batik
+Architecture: source
+Version: 1.10-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f0915cce4bc1e4cb250937561a0f1cf665be1ae1 2332 batik_1.10-2+deb10u2.dsc
+ 7fe65c7594207a52cbda62f91dd9c6ce3345983b 5549417 batik_1.10.orig.tar.gz
+ 369a0c46243f095788d462e40aef12be0d87808f 33628 batik_1.10-2+deb10u2.debian.tar.xz
+ dbfa3a9dc31ef70d741628ba85a674d878f970c7 15493 batik_1.10-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 049548cc7a4efd70e7f1e648443a2f1a0cf1acdb01fd5397258c86f3b2c90ea4 2332 batik_1.10-2+deb10u2.dsc
+ 800af9f9eede082fed10fe76de87d31653c634afa32e85f1091c73bede6d14be 5549417 batik_1.10.orig.tar.gz
+ 69f5b872f2d5ff5101744f83e8568c31b6296cf3a974cd624da358a58a6ba375 33628 batik_1.10-2+deb10u2.debian.tar.xz
+ 85ba1e1a34faf2ae5895cdd848c13f60d353a61a6db9a2570163761136c2154f 15493 batik_1.10-2+deb10u2_amd64.buildinfo
+Changes:
+ batik (1.10-2+deb10u2) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2022-41704 and CVE-2022-42890:
+     It was discovered that Apache Batik, an SVG library for Java, allowed
+     attackers to run arbitrary Java code when processing a malicious SVG file.
+Files:
+ b88c894c4e8a7e017781c15bcb00b981 2332 java optional batik_1.10-2+deb10u2.dsc
+ 312d7ff1d9106e0a3d61361b9e94e5e1 5549417 java optional batik_1.10.orig.tar.gz
+ 159fc0dc3a2df4f1233dff9f012c96a9 33628 java optional batik_1.10-2+deb10u2.debian.tar.xz
+ c92961ff080854dfb4996ff1f3274a62 15493 java optional batik_1.10-2+deb10u2_amd64.buildinfo
+

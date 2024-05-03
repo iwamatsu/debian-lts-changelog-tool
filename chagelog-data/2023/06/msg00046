@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 19 Jun 2023 23:03:02 +0200
+Source: minidlna
+Architecture: source
+Version: 1.2.1+dfsg-2+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Alexander GQ Gerasiov <gq@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ minidlna (1.2.1+dfsg-2+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-33476
+     upnphttp: Fix chunk length parsing
+Checksums-Sha1:
+ df2eb940199a561d493ba2315dd0c64c2a8f573a 2222 minidlna_1.2.1+dfsg-2+deb10u4.dsc
+ a25d04d2b93e0a1467113e55adcd57591b1da887 157380 minidlna_1.2.1+dfsg.orig.tar.xz
+ e17a84608597ac4e2ff6f6b18732af10b307615f 27052 minidlna_1.2.1+dfsg-2+deb10u4.debian.tar.xz
+ 645328d1b5e424436cb1f6d009b87ef390a22065 9564 minidlna_1.2.1+dfsg-2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ ebce7869f67d443c7b8d252242cd6e30204cc38a0747a5d2181303aaecaa60ec 2222 minidlna_1.2.1+dfsg-2+deb10u4.dsc
+ 72f688c4dd0412fb7a9389bf4ade3bad773924eae9cb31f510440414af3785a0 157380 minidlna_1.2.1+dfsg.orig.tar.xz
+ 2d6285ac594520accb7e9095629af268132a3556b95c52c4626a20032b55040a 27052 minidlna_1.2.1+dfsg-2+deb10u4.debian.tar.xz
+ 86eab7384bed1f2914bd356296a384716bfbcdedabd00da4d565c7ebf5e53718 9564 minidlna_1.2.1+dfsg-2+deb10u4_amd64.buildinfo
+Files:
+ 26c9f964ea2b35d6a17b26379a6ba16d 2222 net optional minidlna_1.2.1+dfsg-2+deb10u4.dsc
+ e80278115a6a4cf75fd5524f8f0ee5dc 157380 net optional minidlna_1.2.1+dfsg.orig.tar.xz
+ b68a59251ccc021bd032992023f9d089 27052 net optional minidlna_1.2.1+dfsg-2+deb10u4.debian.tar.xz
+ 1bfb909639666469cb4e271d1adfe79c 9564 net optional minidlna_1.2.1+dfsg-2+deb10u4_amd64.buildinfo
+

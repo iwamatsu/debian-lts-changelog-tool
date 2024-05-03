@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 12 Jan 2022 12:56:32 +0100
+Source: roundcube
+Binary: roundcube-core roundcube roundcube-mysql roundcube-pgsql roundcube-sqlite3 roundcube-plugins
+Architecture: source
+Version: 1.2.3+dfsg.1-4+deb9u10
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Description:
+ roundcube  - skinnable AJAX based webmail solution for IMAP servers - metapack
+ roundcube-core - skinnable AJAX based webmail solution for IMAP servers
+ roundcube-mysql - metapackage providing MySQL dependencies for RoundCube
+ roundcube-pgsql - metapackage providing PostgreSQL dependencies for RoundCube
+ roundcube-plugins - skinnable AJAX based webmail solution for IMAP servers - plugins
+ roundcube-sqlite3 - metapackage providing SQLite dependencies for RoundCube
+Closes: 1003027
+Changes:
+ roundcube (1.2.3+dfsg.1-4+deb9u10) stretch-security; urgency=high
+ .
+   * Backport fix for CVE-2021-46144: Fix cross-site scripting (XSS) via HTML
+     messages with malicious CSS content. (Closes: #1003027)
+Checksums-Sha1:
+ 6558a1e4ee35a287295347b3f251ea2196142537 2476 roundcube_1.2.3+dfsg.1-4+deb9u10.dsc
+ 3d345adc86d65b53621e1cc0f6a92fd0e8388726 4451812 roundcube_1.2.3+dfsg.1-4+deb9u10.debian.tar.xz
+ aaf1f3bc385f2c58f9357a5645ffc8fb419a97af 9781 roundcube_1.2.3+dfsg.1-4+deb9u10_amd64.buildinfo
+Checksums-Sha256:
+ dfb3d230cf8db1f0e1ccad501e73aee1c35bf7582592f745a25897534995ac72 2476 roundcube_1.2.3+dfsg.1-4+deb9u10.dsc
+ b93fa91e6ce9193f555f5d14806f742d016dbb97c744b4cf481d6c25403450c1 4451812 roundcube_1.2.3+dfsg.1-4+deb9u10.debian.tar.xz
+ 2bb76015828dcdc8acec001b2ef3a1d3022a5e4fe62dd7899906d5c227c6c6e9 9781 roundcube_1.2.3+dfsg.1-4+deb9u10_amd64.buildinfo
+Files:
+ 2f97407fab63d752ca0d4e5dbb7952db 2476 web extra roundcube_1.2.3+dfsg.1-4+deb9u10.dsc
+ d4970622a39ecfc2f2f2386323d084fc 4451812 web extra roundcube_1.2.3+dfsg.1-4+deb9u10.debian.tar.xz
+ 35de9d5c9e7bb8cd7945da8b955d43b2 9781 web extra roundcube_1.2.3+dfsg.1-4+deb9u10_amd64.buildinfo
+

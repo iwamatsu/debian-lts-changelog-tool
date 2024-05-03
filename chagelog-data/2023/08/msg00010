@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  7 Aug 2023 19:26:23 CEST
+Source: libhtmlcleaner-java
+Architecture: source
+Version: 2.21-5+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Alexandre Rossi <alexandre.rossi@gmail.com>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ dcc8aefb62bf2341f3114255d48a405de7903a58 2392 libhtmlcleaner-java_2.21-5+deb10u1.dsc
+ 161ca8303e49b9161237fedd16e9e928e2b77681 260863 libhtmlcleaner-java_2.21.orig.tar.gz
+ c7c71f56ac4e3b5b8de998feec345eba8d50d411 9404 libhtmlcleaner-java_2.21-5+deb10u1.debian.tar.xz
+ 6b60f1e3e9ff48061c3ea3499acc9b63e995481e 15273 libhtmlcleaner-java_2.21-5+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 67a9b2aec4f9f34cbcf8aa1b6409d9506f1e27a32205347f20822caf3786599f 2392 libhtmlcleaner-java_2.21-5+deb10u1.dsc
+ 231aca0f356b4e5bf36fe53422008165094eb72bd5b1836dd73b61758448b359 260863 libhtmlcleaner-java_2.21.orig.tar.gz
+ 1c45ca67c47e6c70d50958e23f39ddb274c22a98dd488a2245515996aa4f6198 9404 libhtmlcleaner-java_2.21-5+deb10u1.debian.tar.xz
+ af005c66151b2537fb45d8712a8a4e2d76cec6f8fedc5026161d0aec37f52829 15273 libhtmlcleaner-java_2.21-5+deb10u1_amd64.buildinfo
+Changes:
+ libhtmlcleaner-java (2.21-5+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload.
+   * Fix CVE-2023-34624:
+     A security vulnerability has been discovered in libhtmlcleaner-java, a Java
+     HTML parser library. An attacker was able to cause a denial of service
+     (StackOverflowError) if the parser runs on user supplied input with deeply
+     nested HTML elements. This update introduces a new nesting depth limit
+     which can be overridden in cleaner properties.
+Files:
+ e4b21b53f0eef38a588bcda6eefb452a 2392 java optional libhtmlcleaner-java_2.21-5+deb10u1.dsc
+ d1adfc9e547c1b7943773a9460b0ce38 260863 java optional libhtmlcleaner-java_2.21.orig.tar.gz
+ dab248c5d17973187bbb4db39973b5c9 9404 java optional libhtmlcleaner-java_2.21-5+deb10u1.debian.tar.xz
+ 34786529662ff5a4cbb20b437cede33f 15273 java optional libhtmlcleaner-java_2.21-5+deb10u1_amd64.buildinfo
+

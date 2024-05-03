@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 04 Jun 2023 18:01:54 +0300
+Source: cpio
+Architecture: source
+Version: 2.12+dfsg-9+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ cpio (2.12+dfsg-9+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-14866: Improper validation of input files when generating
+     tar archives.
+   * CVE-2021-38185: Arbitrary code via crafted pattern file.
+Checksums-Sha1:
+ 2fb0fd0e4b3fd89c8e97081aebd0519df557e5a5 1939 cpio_2.12+dfsg-9+deb10u1.dsc
+ 7002b7d8e5d890f40d0e2dc8aa1cfb56258e4236 1241589 cpio_2.12+dfsg.orig.tar.bz2
+ 43345068fa328f8ffb5a1e7dcc21ba2779e1ccaf 30448 cpio_2.12+dfsg-9+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 84b94b550ac07f92a78a0f9450621273f0c224672c76674fc4953bbf83668e6a 1939 cpio_2.12+dfsg-9+deb10u1.dsc
+ f27a009166b26925802030d87b99b7113014691bfa081260878aee076dc01183 1241589 cpio_2.12+dfsg.orig.tar.bz2
+ ab6dfbf8db0be8b53747bf837c3ab23cd5025cb35a074deaaf0cdd42769aa58a 30448 cpio_2.12+dfsg-9+deb10u1.debian.tar.xz
+Files:
+ 44601e2ef8d47202aad3fb1fdefe852b 1939 utils important cpio_2.12+dfsg-9+deb10u1.dsc
+ cb761902199835a2a7be756d836679a1 1241589 utils important cpio_2.12+dfsg.orig.tar.bz2
+ c347c3d3169886e8e8148e545d908514 30448 utils important cpio_2.12+dfsg-9+deb10u1.debian.tar.xz
+

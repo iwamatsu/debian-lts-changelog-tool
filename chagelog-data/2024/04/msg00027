@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 30 Apr 2024 18:59:06 +0200
+Source: nghttp2
+Architecture: source
+Version: 1.36.0-2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1068415
+Changes:
+ nghttp2 (1.36.0-2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-28182: An implementation using the nghttp2 library will
+     continue to receive CONTINUATION frames, and will not callback to the
+     application to allow visibility into this information before it resets the
+     stream, resulting in Denial of Service. (Closes: #1068415)
+   * d/libnghttp2-14.symbols: Add missig symbol from the backported upstream
+     fix.
+Checksums-Sha1:
+ 0c3967e9c47cef280d096227e09b0160ba925c9e 2576 nghttp2_1.36.0-2+deb10u3.dsc
+ 432531d3e42d45719c3ac3b31934199a00928d3a 22668 nghttp2_1.36.0-2+deb10u3.debian.tar.xz
+ fc6c1a9d4119651c29ab99ee93720475f5e0872f 10996 nghttp2_1.36.0-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ f6ab7fca79781b13788a96f3aeeaab0610f903bcd022939cde0d6670ce1c486b 2576 nghttp2_1.36.0-2+deb10u3.dsc
+ 49f33901378a63f365dccd5cd8e6dd795835f17b2aff67ef4d72aa2402ad94c7 22668 nghttp2_1.36.0-2+deb10u3.debian.tar.xz
+ 0347d3889afe3a1388d1f9f9701c372e5685fa5074e7673c6b726e1bfc989d39 10996 nghttp2_1.36.0-2+deb10u3_amd64.buildinfo
+Files:
+ fceb3f766900e7c901d1a8f701e11b30 2576 httpd optional nghttp2_1.36.0-2+deb10u3.dsc
+ 22f4b45b39ca9ebd1f3771a4a838185c 22668 httpd optional nghttp2_1.36.0-2+deb10u3.debian.tar.xz
+ bad6c1092c519da85259f4c4b4493d2c 10996 httpd optional nghttp2_1.36.0-2+deb10u3_amd64.buildinfo
+

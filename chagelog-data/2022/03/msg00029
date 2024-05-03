@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 20 Mar 2022 19:47:52 CET
+Source: libpano13
+Binary: libpano13-dev libpano13-3 libpano13-bin
+Architecture: source
+Version: 2.9.19+dfsg-2+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libpano13-3 - panorama tools library
+ libpano13-bin - panorama tools utilities
+ libpano13-dev - panorama tools library development files
+Checksums-Sha1:
+ c1bb13ea6f3ddae4ed1197034432028a87e7489e 2373 libpano13_2.9.19+dfsg-2+deb9u2.dsc
+ 7f3d22db5c964416c2e65118477716ace53d5163 10516 libpano13_2.9.19+dfsg-2+deb9u2.debian.tar.xz
+ 82b6403a099c1aacf54b24981a3f3fc2b109f89d 7824 libpano13_2.9.19+dfsg-2+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ b6fe0793ce94df95d98ee4ccb7087020b3cfb719c57eac12634c7820b1c413f7 2373 libpano13_2.9.19+dfsg-2+deb9u2.dsc
+ eeca20fd05836c092edbdb4f2b970686a47c59bb0e31311185a74a122db10ee2 10516 libpano13_2.9.19+dfsg-2+deb9u2.debian.tar.xz
+ 403b652745874aa3d7c6604c8b0c944a9e6d9376a4a5dedcb9e21c011486a3ba 7824 libpano13_2.9.19+dfsg-2+deb9u2_amd64.buildinfo
+Changes:
+ libpano13 (2.9.19+dfsg-2+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-33293:
+     It was discovered that Panorama Tools, a toolkit to generate, edit and
+     transform many kinds of panoramic images, contained an out-of-bounds read
+     vulnerability which could lead to a denial of service (application crash)
+     when a malformed image file is processed.
+Files:
+ 760100c582ebae83a4da203ebee7cb68 2373 libs optional libpano13_2.9.19+dfsg-2+deb9u2.dsc
+ 1ee5d69d24bb64bf688cb270f187cf34 10516 libs optional libpano13_2.9.19+dfsg-2+deb9u2.debian.tar.xz
+ 2971172bfd65cee8662c54f5b7fc239a 7824 libs optional libpano13_2.9.19+dfsg-2+deb9u2_amd64.buildinfo
+

@@ -1,0 +1,52 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 13 Sep 2023 11:43:01 +0200
+Source: ruby-rails-html-sanitizer
+Architecture: source
+Version: 1.0.4-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1027153
+Changes:
+ ruby-rails-html-sanitizer (1.0.4-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team. (Closes: #1027153)
+   * CVE-2022-23517: Certain configurations use an inefficient regular
+     expression that is susceptible to excessive backtracking when
+     attempting to sanitize certain SVG attributes. This may lead to a
+     denial of service through CPU resource consumption.
+     Fix requires ruby-loofah >= 2.2.3-1+deb10u2.
+   * CVE-2022-23518: cross-site scripting via data URIs when used in
+     combination with Loofah.
+     Fix requires ruby-loofah >= 2.2.3-1+deb10u2.
+   * CVE-2022-23519: XSS vulnerability with certain configurations of
+     Rails::Html::Sanitizer may allow an attacker to inject content if the
+     application developer has overridden the sanitizer's allowed tags in
+     either of the following ways: allow both "math" and "style" elements,
+     or allow both "svg" and "style" elements.
+     Same fix as CVE-2022-23520.
+   * CVE-2022-23520: XSS vulnerability with certain configurations of
+     Rails::Html::Sanitizer due to an incomplete fix of
+     CVE-2022-32209. Rails::Html::Sanitizer may allow an attacker to inject
+     content if the application developer has overridden the sanitizer's
+     allowed tags to allow both "select" and "style" elements. Code is only
+     impacted if allowed tags are being overridden.
+     Fix requires ruby-loofah >= 2.2.3-1+deb10u2.
+   * Drop patch for CVE 2022-32209, replaced by the one for
+     CVE-2022-23519/23520.
+Checksums-Sha1:
+ dc0b50a213f03870b5945f0c6b2d02000fa4c443 2315 ruby-rails-html-sanitizer_1.0.4-1+deb10u2.dsc
+ bc5b5d808c8c432f9e7e4b444a880521f09e5a8d 5804 ruby-rails-html-sanitizer_1.0.4-1+deb10u2.debian.tar.xz
+ a2f0d15b5132942650333bb153b85d0588e97a1e 10692 ruby-rails-html-sanitizer_1.0.4-1+deb10u2_all.buildinfo
+Checksums-Sha256:
+ fd733490e6c65e2a5dc9a6367a25f896952c6bf754aa5c910f0efa8ac912a250 2315 ruby-rails-html-sanitizer_1.0.4-1+deb10u2.dsc
+ fb76ce27e14eefccdec444e9161753c559e5f91db4c9c1cdc865f83b0db40223 5804 ruby-rails-html-sanitizer_1.0.4-1+deb10u2.debian.tar.xz
+ ed06a6bd714a44f6c4fcf7fa437be0d54ac711f6fdd1e53e4fad6e21e344e510 10692 ruby-rails-html-sanitizer_1.0.4-1+deb10u2_all.buildinfo
+Files:
+ 05219782833801177faa588a178b494f 2315 ruby optional ruby-rails-html-sanitizer_1.0.4-1+deb10u2.dsc
+ 7ec55154551538dd28e82fdb21c1b77a 5804 ruby optional ruby-rails-html-sanitizer_1.0.4-1+deb10u2.debian.tar.xz
+ 7e4be50670e644040e34fbe67add48af 10692 ruby optional ruby-rails-html-sanitizer_1.0.4-1+deb10u2_all.buildinfo
+

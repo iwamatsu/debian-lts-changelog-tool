@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 05 Dec 2022 14:25:46 +0530
+Source: awstats
+Architecture: source
+Version: 7.6+dfsg-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ awstats (7.6+dfsg-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix cross site scripting xss due to printing response
+     from Net::XWhois without proper checks. (Fixes CVE-2022-46391)
+Checksums-Sha1:
+ 8c7fa53a7db2bbdba5fe743b6aaf8a4099dcdf82 1960 awstats_7.6+dfsg-2+deb10u2.dsc
+ 6238c3cc189a2e66bab612b9b1c7aab14dd8cc2e 2949231 awstats_7.6+dfsg.orig.tar.gz
+ 5b8d6f3de06918d00b1accd18536009539f0ee96 39432 awstats_7.6+dfsg-2+deb10u2.debian.tar.xz
+ e4b3a1859c943cc84bc56d5b317e86b0f9b49e26 6167 awstats_7.6+dfsg-2+deb10u2_source.buildinfo
+Checksums-Sha256:
+ cc35be5ec923b7b8ca2c3ad8f1dcc58d9419c39974ef9977b8733f79d9d6ccab 1960 awstats_7.6+dfsg-2+deb10u2.dsc
+ ac19025ba103e65a1799f947d26562c0dd116d76414b461ad564fa36936a634e 2949231 awstats_7.6+dfsg.orig.tar.gz
+ 1ff46abca57cea70e96328ba2dd700c0c89bcbbfc89ff6ce48ebf05a55c7964b 39432 awstats_7.6+dfsg-2+deb10u2.debian.tar.xz
+ d08dae01e3bc14a7a9539e0a7c33b210352d0fe52d3ae95cbb42db008d8ca0d3 6167 awstats_7.6+dfsg-2+deb10u2_source.buildinfo
+Files:
+ 3d6f54acf8d5178061ff2f11de6a894c 1960 web optional awstats_7.6+dfsg-2+deb10u2.dsc
+ 3e0c2847f87aab80e2a220ccb56a860c 2949231 web optional awstats_7.6+dfsg.orig.tar.gz
+ f5d17f004972964d648c954af66d14c5 39432 web optional awstats_7.6+dfsg-2+deb10u2.debian.tar.xz
+ de4b0a98ae60f29d8504f36dbc593964 6167 web optional awstats_7.6+dfsg-2+deb10u2_source.buildinfo
+

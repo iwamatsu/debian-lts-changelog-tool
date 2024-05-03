@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 26 Jun 2023 16:20:01 +0300
+Source: libx11
+Architecture: source
+Version: 2:1.6.7-1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libx11 (2:1.6.7-1+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-3138: Missing input validation in various functions
+     may result in denial of service.
+Checksums-Sha1:
+ e4e7dba2a027cd330b61bb41a1f59b0edce09d10 2651 libx11_1.6.7-1+deb10u3.dsc
+ 0b54b17e757f24791cf9c6994f2c2e92851c824a 2972354 libx11_1.6.7.orig.tar.gz
+ 075d8fb97f89b0b66d4e6dcd98e9e3cf5103225e 404 libx11_1.6.7.orig.tar.gz.asc
+ 8f8eca1fdb30d38f4697dd642608dd7a987e219e 54595 libx11_1.6.7-1+deb10u3.diff.gz
+Checksums-Sha256:
+ 905952f62ab103f2f695929429199ad3fb6d9a576dc2b7d60270d9d64795de75 2651 libx11_1.6.7-1+deb10u3.dsc
+ f62ab88c2a87b55e1dc338726a55bb6ed8048084fe6a3294a7ae324ca45159d1 2972354 libx11_1.6.7.orig.tar.gz
+ 01a06afbe0574a30721d98f1c80b668ebc46410a9e8b2eb81e69b4bd8667c386 404 libx11_1.6.7.orig.tar.gz.asc
+ a4eea30cb49f6ab0fb302a50d9eae2b8ec33ec01cae6bd4a4e6a6f409f2cb92f 54595 libx11_1.6.7-1+deb10u3.diff.gz
+Files:
+ aeb6819d9d386b4f048050c81c56cbcb 2651 x11 optional libx11_1.6.7-1+deb10u3.dsc
+ 31eaf1595bd88fbacaf6b235b93dee50 2972354 x11 optional libx11_1.6.7.orig.tar.gz
+ e50912ee47112f363ad3059c0d0fb21b 404 x11 optional libx11_1.6.7.orig.tar.gz.asc
+ a2ef324177a375147a0441e9e8fa3624 54595 x11 optional libx11_1.6.7-1+deb10u3.diff.gz
+

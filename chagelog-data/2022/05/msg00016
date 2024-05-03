@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 13 May 2022 14:29:21 +0200
+Source: libgoogle-gson-java
+Binary: libgoogle-gson-java libgoogle-gson-java-doc
+Architecture: source all
+Version: 2.4-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Description:
+ libgoogle-gson-java - Converts Java objects into their JSON representation
+ libgoogle-gson-java-doc - Documentation for libgoogle-gson-java
+Closes: 1010670
+Changes:
+ libgoogle-gson-java (2.4-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add patch to fix CVE-2022-25647. (Closes: #1010670)
+Checksums-Sha1:
+ bca9d2ca25aaea2edfb40ca01ca02f1e4a8b0981 1688 libgoogle-gson-java_2.4-1+deb9u1.dsc
+ 257430ccf0460a8da5837a065bd24acc219d147f 399094 libgoogle-gson-java_2.4.orig.tar.gz
+ 4b3994a75230347b82db416e44cdd1f2c49cd347 5248 libgoogle-gson-java_2.4-1+deb9u1.debian.tar.xz
+ b089c910c035b218212d7e3a4b43aa81b21d3307 72452 libgoogle-gson-java-doc_2.4-1+deb9u1_all.deb
+ 393b21cab8c444d2cbd4c0dc4c255bf6bfcf35bd 189300 libgoogle-gson-java_2.4-1+deb9u1_all.deb
+ 41417933863a832d16fcc85c8fd04a853fd00338 15077 libgoogle-gson-java_2.4-1+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 320c2d79d93a5b7b11b9f041d000f7b2f80b428c67692e18f4b8fd99bbd3a4a1 1688 libgoogle-gson-java_2.4-1+deb9u1.dsc
+ 2e12eac4551a5d0f80ca6b175622888cfda1d6af3267fbcadd2300a72d6615c6 399094 libgoogle-gson-java_2.4.orig.tar.gz
+ ce982a2727ac067802cf27764c7fdb43329e5daaaf7e5b193412836c3d68c37b 5248 libgoogle-gson-java_2.4-1+deb9u1.debian.tar.xz
+ ab158a11ced5023c0058e566749c7504466a51f6936ff5eb37e1318d278f1515 72452 libgoogle-gson-java-doc_2.4-1+deb9u1_all.deb
+ 71fa687762711eae19336cb12bc72895329c69a0b82b0277ea52f936b24d878c 189300 libgoogle-gson-java_2.4-1+deb9u1_all.deb
+ 56da7e2d9e2e99496ba26383f76223a0b6c45e300c525c19826e3030ce65b1b2 15077 libgoogle-gson-java_2.4-1+deb9u1_amd64.buildinfo
+Files:
+ f43c6e3a8ebbf8da0fb7ca3e8b92dc87 1688 java optional libgoogle-gson-java_2.4-1+deb9u1.dsc
+ f75ab055a843fdb2bb70a3f59e7eebc7 399094 java optional libgoogle-gson-java_2.4.orig.tar.gz
+ 9549a9081947ceecc0d74a0c268c7367 5248 java optional libgoogle-gson-java_2.4-1+deb9u1.debian.tar.xz
+ 05804973dbdf2c615d97df4dd5b815c3 72452 doc optional libgoogle-gson-java-doc_2.4-1+deb9u1_all.deb
+ aca2de237c928b0b71a35a389c0e2d0f 189300 java optional libgoogle-gson-java_2.4-1+deb9u1_all.deb
+ dc56f880f81b1c9513bac553132c3fc4 15077 java optional libgoogle-gson-java_2.4-1+deb9u1_amd64.buildinfo
+

@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri,  3 Jun 2022 11:39:43 CEST
+Source: pypdf2
+Binary: python-pypdf2 python3-pypdf2
+Architecture: source
+Version: 1.26.0-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ python-pypdf2 - Pure-Python library built as a PDF toolkit (Python 2)
+ python3-pypdf2 - Pure-Python library built as a PDF toolkit (Python 3)
+Checksums-Sha1:
+ fbab48cf00fb3acabefe40735741a88ba81ac65b 1992 pypdf2_1.26.0-2+deb9u1.dsc
+ 29859e086b6e78459feb660ba24f3b22773e11c1 199539 pypdf2_1.26.0.orig.tar.gz
+ 24939f4367eb9c3bc0c8ea8b8fe791980f753393 4304 pypdf2_1.26.0-2+deb9u1.debian.tar.xz
+ 92a753b8b35b5b02f26e1b4bf17d6634309d0ce2 7123 pypdf2_1.26.0-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ a26ccd97e17b73153abcca78cc160d3df7c8faf24993b6f84523b29717316036 1992 pypdf2_1.26.0-2+deb9u1.dsc
+ 140b1fed792f487f2fd814eb0e832a5b6ef5ae362da302c1fc5a9786d5acb469 199539 pypdf2_1.26.0.orig.tar.gz
+ 14433855cd5dec79ada09ffe103c2070fded9f952c2f00f06ce035ce4bb661a7 4304 pypdf2_1.26.0-2+deb9u1.debian.tar.xz
+ c448bce9b0964b617878656702d9e43a735f46def681bf59230f20fc31fd36b4 7123 pypdf2_1.26.0-2+deb9u1_amd64.buildinfo
+Changes:
+ pypdf2 (1.26.0-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-24859:
+     Sebastian Krause discovered that manipulated inline images can force
+     PyPDF2, a pure Python PDF library, into an infinite loop, if a maliciously
+     crafted PDF file is processed.
+Files:
+ fe0bb81efb4fb3b18a3cd4b277ceffe1 1992 python optional pypdf2_1.26.0-2+deb9u1.dsc
+ 3959e3a15606e4b6c0405487cefb4e21 199539 python optional pypdf2_1.26.0.orig.tar.gz
+ baf858fb43f878cf9cb64be7ddd66376 4304 python optional pypdf2_1.26.0-2+deb9u1.debian.tar.xz
+ 0988faaedd148f972254a1a0dde189f9 7123 python optional pypdf2_1.26.0-2+deb9u1_amd64.buildinfo
+

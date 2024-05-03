@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:34:57 CEST
+Source: dnscrypt-proxy
+Architecture: source
+Version: 2.0.19+ds1-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Eric Dorland <eric@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 92df534ba5c24759335ecf5a73a07dcb52c2a6e4 3113 dnscrypt-proxy_2.0.19+ds1-2+deb10u1.dsc
+ 12b66b6a3945276c64be6ebd77d079df9f9e2d29 105044 dnscrypt-proxy_2.0.19+ds1.orig.tar.xz
+ fbbc1a143c8a534f9b106a6fc285c2206a7db6a0 8124 dnscrypt-proxy_2.0.19+ds1-2+deb10u1.debian.tar.xz
+ a2b0ca5689e636dc1b34035d6711a82957dc9f05 8217 dnscrypt-proxy_2.0.19+ds1-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 274a8c624f8517d7624aceb44cf7c7a882c67ebd7c57728a83cd99334d4ee64f 3113 dnscrypt-proxy_2.0.19+ds1-2+deb10u1.dsc
+ 5692c2cb3c6d573d4ebbc52721eaa48da92ae2cbd2f44870867ad02357b11834 105044 dnscrypt-proxy_2.0.19+ds1.orig.tar.xz
+ b142e109779fd5286040e463c4059321f996a186259059c3970cb14013f7a7d1 8124 dnscrypt-proxy_2.0.19+ds1-2+deb10u1.debian.tar.xz
+ 471fabe0801a28ca6c0ef56b99bbe852e60d85d9f1339943508469edde058cdd 8217 dnscrypt-proxy_2.0.19+ds1-2+deb10u1_amd64.buildinfo
+Changes:
+ dnscrypt-proxy (2.0.19+ds1-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ b416d44b3510d98574d886205d50d7a3 3113 net optional dnscrypt-proxy_2.0.19+ds1-2+deb10u1.dsc
+ eec8d706bedbf6927d9d965a085fbe60 105044 net optional dnscrypt-proxy_2.0.19+ds1.orig.tar.xz
+ bbef2b15243e228bfe34f918e32b654a 8124 net optional dnscrypt-proxy_2.0.19+ds1-2+deb10u1.debian.tar.xz
+ c7410db975c62ade7fbd7b1468c1a3db 8217 net optional dnscrypt-proxy_2.0.19+ds1-2+deb10u1_amd64.buildinfo
+

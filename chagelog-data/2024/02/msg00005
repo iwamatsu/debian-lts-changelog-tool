@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 19 Feb 2024 00:02:56 +0100
+Source: runc
+Binary: golang-github-opencontainers-runc-dev runc runc-dbgsym
+Architecture: source all amd64
+Version: 1.0.0~rc6+dfsg1-3+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Description:
+ golang-github-opencontainers-runc-dev - Open Container Project - development files
+ runc       - Open Container Project - runtime
+Changes:
+ runc (1.0.0~rc6+dfsg1-3+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * d/patches/CVE-2021-43784.patch: Added to fix CVE-2021-43784.
+     - When writing netlink messages, it is possible to have a byte array larger
+       than UINT16_MAX which would result in the length field overflowing and
+       allowing user-controlled data to be parsed as control characters (such as
+       creating custom mount points, changing which set of namespaces to allow,
+       and so on).
+   * d/patches/CVE-2024-21626.patch: Added to fix CVE-2024-21626.
+     - Due to an internal file descriptor leak, an attacker could cause a
+       newly-spawned container process (from runc exec) to have a working
+       directory in the host filesystem namespace, allowing for a container
+       escape, or for a container process to gain access to the host filesystem
+       through runc run, or to overwrite semi-arbitrary host binaries, allowing
+       for complete container escapes.
+Checksums-Sha1:
+ 147181303583fae6261fc9f73f1a25ac9925e5b1 2825 runc_1.0.0~rc6+dfsg1-3+deb10u3.dsc
+ 4621756acb358643463fadc903c270537cf28394 205292 runc_1.0.0~rc6+dfsg1.orig.tar.xz
+ a62e115b17a8725998c9cb9c2263f592e943a4c9 27044 runc_1.0.0~rc6+dfsg1-3+deb10u3.debian.tar.xz
+ 0267f33028519b3c14f9231200cedc4723ce2883 177412 golang-github-opencontainers-runc-dev_1.0.0~rc6+dfsg1-3+deb10u3_all.deb
+ 1ea03dd17f4f76292bb33c4578fd37cdb49901a4 1903184 runc-dbgsym_1.0.0~rc6+dfsg1-3+deb10u3_amd64.deb
+ f95f3e3417ab07de0d58d8d62ba494862d38ce9c 8971 runc_1.0.0~rc6+dfsg1-3+deb10u3_amd64.buildinfo
+ ec6290127b356eaef827f15eb328acdeac4a5d19 2580452 runc_1.0.0~rc6+dfsg1-3+deb10u3_amd64.deb
+Checksums-Sha256:
+ 255fea4ff97960a4db4e451d8f987e57f12df43890364e008914ce4a29b5456c 2825 runc_1.0.0~rc6+dfsg1-3+deb10u3.dsc
+ dbb1b7e3751687edbb23738176f38f36b6b21a146c8a1af4df6c19a17cd6dfae 205292 runc_1.0.0~rc6+dfsg1.orig.tar.xz
+ 37b11fee62362fe5bd73a3c1da9a26ca33b5ea7963ce4ebf0634d648925ae608 27044 runc_1.0.0~rc6+dfsg1-3+deb10u3.debian.tar.xz
+ 6b7c4f5c9aac425c5596a4a0c987e90251a4408eccdb89142c0c90c773e6db70 177412 golang-github-opencontainers-runc-dev_1.0.0~rc6+dfsg1-3+deb10u3_all.deb
+ 9cb8d1496440f7617ec6e1bf315dc06519685ae65fc27ef8dbbfab7278b3b6fa 1903184 runc-dbgsym_1.0.0~rc6+dfsg1-3+deb10u3_amd64.deb
+ ebd3948d1bc225e9349501cba1b5bad5f46893346551c33345a70acda2ca08a7 8971 runc_1.0.0~rc6+dfsg1-3+deb10u3_amd64.buildinfo
+ 3e2d15874180f63206dad51d85003c029fc65a4b37be841be9bdfb1a8c123598 2580452 runc_1.0.0~rc6+dfsg1-3+deb10u3_amd64.deb
+Files:
+ 58a62723a62bed4299341800637989d3 2825 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u3.dsc
+ d3f9984668dd53953041843ee26fa4d7 205292 devel optional runc_1.0.0~rc6+dfsg1.orig.tar.xz
+ f7fada2a1cae1ac5baaa3bf53388abce 27044 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u3.debian.tar.xz
+ b923af3f3d29df3115a0133e8a977f2b 177412 devel optional golang-github-opencontainers-runc-dev_1.0.0~rc6+dfsg1-3+deb10u3_all.deb
+ c6d4c1cb1cfa6dfb334788d14359e227 1903184 debug optional runc-dbgsym_1.0.0~rc6+dfsg1-3+deb10u3_amd64.deb
+ 0e6fc60632240a44a2c2af80610cee34 8971 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u3_amd64.buildinfo
+ 983b37b95a59db2015ff0facc23769f3 2580452 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u3_amd64.deb
+

@@ -1,0 +1,43 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 15 Mar 2022 11:19:04 +0100
+Source: spip
+Architecture: source
+Version: 3.1.4-4~deb9u5
+Distribution: stretch-security
+Urgency: medium
+Maintainer: David Prévot <taffit@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ spip (3.1.4-4~deb9u5) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload.
+   * Switch back to a sane version number.
+   * Add missing dependency on php-xml.
+   * Recommend php-gd.
+   * Fix security issues, backported from buster:
+   * XSS:
+     - 0049-Verifier-qu-on-a-bien-le-droit-de-modifier-le-login-.patch
+     - 0050-appliquer-rawurlencode-aussi-sur-les-tableaux-qu-on-.patch
+   * CVE-2022-26846, CVE-2022-26847:
+     - 0022-Utilisation-des-fonctions-de-sanitization-sur-galeri.patch
+       + prerequisite.
+     - 0051-D-pr-cier-et-s-curiser-l-insertion-d-une-galerie-dan.patch
+       + Don't use nullable types, not available in PHP 7.0 in stretch.
+Checksums-Sha1:
+ 37ce181ad7c2fe6df1e163331415bf22e8fed7dd 1828 spip_3.1.4-4~deb9u5.dsc
+ 5c11a4ba509364298fda7e5e6838c7caead8d091 5848656 spip_3.1.4.orig.tar.xz
+ 7b70e254388ae774fc62f395ed7fa0cd41336fed 108268 spip_3.1.4-4~deb9u5.debian.tar.xz
+ 03cc9d44f18c49a4aa57559300daa78397fd4b61 5721 spip_3.1.4-4~deb9u5_source.buildinfo
+Checksums-Sha256:
+ 9285d41edb9b2bcf48853a926483c5d8615474baecd7ed2372e3f9452f2a7235 1828 spip_3.1.4-4~deb9u5.dsc
+ 884778eca338242da714641727b9acaa8ec10a5aefeefc1dbe1d38ad379d8318 5848656 spip_3.1.4.orig.tar.xz
+ aa11e728dbcae4bd27e460624a1294447dfdd19e27d493fdc02e7197a21b7700 108268 spip_3.1.4-4~deb9u5.debian.tar.xz
+ b3268641441c1b09fd4b94f6231a4bed490acb63ecff9f4bb6d1990c7255a083 5721 spip_3.1.4-4~deb9u5_source.buildinfo
+Files:
+ faa9e6154f7d0028751191b24bc9bc23 1828 web extra spip_3.1.4-4~deb9u5.dsc
+ 773ba92d20896200e8301361cbc814f6 5848656 web extra spip_3.1.4.orig.tar.xz
+ 82adfa78e81e3316cb88385c39de8104 108268 web extra spip_3.1.4-4~deb9u5.debian.tar.xz
+ b920d91fab6df8ba3e177395f22b9961 5721 web extra spip_3.1.4-4~deb9u5_source.buildinfo
+

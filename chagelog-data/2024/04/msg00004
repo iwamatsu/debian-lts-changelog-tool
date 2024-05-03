@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat,  6 Apr 2024 22:13:03 CEST
+Source: jetty9
+Architecture: source
+Version: 9.4.50-4+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 815243cdbe3fe92e8dd56a6d2765612e0c2175ce 2779 jetty9_9.4.50-4+deb10u2.dsc
+ 2dae548a95f1ac4ede45e399e3dcb57f08f6c7b0 82572 jetty9_9.4.50-4+deb10u2.debian.tar.xz
+ 37baa282c7566b756d639c1d4c20787c8f5211be 17855 jetty9_9.4.50-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ a833b6a931138831be2f20029dff842320c133f84c864dfa4afa019daa87fab9 2779 jetty9_9.4.50-4+deb10u2.dsc
+ ad246bd073a526f6a45e6e8f5a7851ffba08dbd8c4887db3a1850ee7423f4338 82572 jetty9_9.4.50-4+deb10u2.debian.tar.xz
+ b9deba9fc797e66d8a8d1be7f872b61804be25b6e67e1691691a0caf8736fd9b 17855 jetty9_9.4.50-4+deb10u2_amd64.buildinfo
+Changes:
+ jetty9 (9.4.50-4+deb10u2) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2024-22201:
+     It was discovered that remote attackers may leave many HTTP/2 connections
+     in ESTABLISHED state (not closed), TCP congested and idle. Eventually the
+     server will stop accepting new connections from valid clients which can
+     cause a denial of service.
+Files:
+ fc2fac1c4055a6abb10ae70acd5e9579 2779 java optional jetty9_9.4.50-4+deb10u2.dsc
+ 552a5ee435fb0e0b9135ac02d2f68c91 82572 java optional jetty9_9.4.50-4+deb10u2.debian.tar.xz
+ cb685f8a295cad7a9871cac727cc59aa 17855 java optional jetty9_9.4.50-4+deb10u2_amd64.buildinfo
+

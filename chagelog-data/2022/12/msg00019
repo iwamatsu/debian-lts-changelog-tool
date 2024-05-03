@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 08 Dec 2022 00:19:43 +0000
+Source: grub2
+Architecture: source
+Version: 2.06-3~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Changed-By: Steve McIntyre <93sam@debian.org>
+Closes: 1024617
+Changes:
+ grub2 (2.06-3~deb10u3) buster-security; urgency=high
+ .
+   [ Steve McIntyre ]
+   * Actually ensure the patches are applied for CVE-2022-2601 and
+     CVE-2022-3775. Closes: #1024617
+   * Include fonts in the memdisk build for EFI images.
+   * Fix bug in core file code so errors are handled better. This makes
+     the fallback font-handling patch work properly.
+   * Bump Debian SBAT level to 4
+     - Due to a mistake in the buster upload (2.06-3~deb10u2) that left
+       the CVE-2022-2601 bugs in place, we need to bump SBAT for all of
+       the Debian GRUB binaries. :-(
+Checksums-Sha1:
+ fa41a6e6d90f2de0ec8761f5ae06e223d2aed95c 7121 grub2_2.06-3~deb10u3.dsc
+ b641e4849c84f4bbce4ef9cd90998d1598de1eb3 1092300 grub2_2.06-3~deb10u3.debian.tar.xz
+ 77e993eeebf1475bb89c1f64ce2cd85e919fe68f 15008 grub2_2.06-3~deb10u3_source.buildinfo
+Checksums-Sha256:
+ a8cf057d0da176178feb078ddb1baa296de4e8dfe7ae45f21432501fe8919ee9 7121 grub2_2.06-3~deb10u3.dsc
+ 4bb2f2acd1ec4cfdbe5662cef6d6bce87bf594daef70c94f0c09c7e8fe9913ee 1092300 grub2_2.06-3~deb10u3.debian.tar.xz
+ 6c29e1ba8d57e1d661a6c75d633c0e39f065752b07a63924afbffda7d676e85e 15008 grub2_2.06-3~deb10u3_source.buildinfo
+Files:
+ ec9fe4eb759692da022e748998c92604 7121 admin optional grub2_2.06-3~deb10u3.dsc
+ c636b36874dab275036d56e560f31047 1092300 admin optional grub2_2.06-3~deb10u3.debian.tar.xz
+ de33fd66d7ccd259cf44cc3427dfc6c9 15008 admin optional grub2_2.06-3~deb10u3_source.buildinfo
+

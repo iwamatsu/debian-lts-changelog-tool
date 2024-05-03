@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 May 2023 01:18:40 +0200
+Source: libraw
+Architecture: source
+Version: 0.19.2-2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1031790 1036281
+Changes:
+ libraw (0.19.2-2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Helmut Grohne ]
+   * Fix CVE number in deb10u2 changelog.
+ .
+   [ Guilhem Moulin ]
+   * CVE-2021-32142: Stack buffer overflow in LibRaw_buffer_datastream::
+     gets(). Closes: #1031790.
+   * CVE-2023-1729: Heap-buffer-overflow in LibRaw::raw2image_ex(int).
+     Closes: #1036281.
+Checksums-Sha1:
+ 4c607bbb3ec31cb76f74c34f2c68e0c4a56fb710 2211 libraw_0.19.2-2+deb10u3.dsc
+ f5d9118a5d6df35bed346838b4a8fcc7e1de0293 25264 libraw_0.19.2-2+deb10u3.debian.tar.xz
+ 23594d30f6672b29ab236f9951dc7b5694211642 7201 libraw_0.19.2-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 204ec9ca7271ee9a6ec8b3e5dfdadbfb454b0090e7e649c3e9ed8568a60b096c 2211 libraw_0.19.2-2+deb10u3.dsc
+ 029b7f63678e2ea313c301b19d74d9e64991aa3db9acb8c00f33d007f6fdc40f 25264 libraw_0.19.2-2+deb10u3.debian.tar.xz
+ fd42e0042aaf3ed5e8fdcd3434f7e0e0842f78173d2fed48dffeb5b1cd525c4a 7201 libraw_0.19.2-2+deb10u3_amd64.buildinfo
+Files:
+ b3979e2ea5d228cd62627681d0fb482c 2211 libs optional libraw_0.19.2-2+deb10u3.dsc
+ 40ce8b355b05d23a1f15541a3a643331 25264 libs optional libraw_0.19.2-2+deb10u3.debian.tar.xz
+ f4b0cb3d0e1584cf1fbcf8957f8c6aa6 7201 libs optional libraw_0.19.2-2+deb10u3_amd64.buildinfo
+

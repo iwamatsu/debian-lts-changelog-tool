@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 20 May 2023 15:29:05 +0000
+Source: node-nth-check
+Architecture: source
+Version: 1.0.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ node-nth-check (1.0.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team
+   * CVE-2021-3803: Fix ReDos in parse.js
+Checksums-Sha1:
+ b1fc3bcdc97bd5c6dbc3979b1483632a25ace787 2131 node-nth-check_1.0.1-1+deb10u1.dsc
+ 9929acdf628fc2c41098deab82ac580cf149aae4 2861 node-nth-check_1.0.1.orig.tar.gz
+ 68fb278bfa4b61e150b3e5a8b64504a050e75958 3468 node-nth-check_1.0.1-1+deb10u1.debian.tar.xz
+ d28dc3d9dd56cbedbb2bc5d5d67df795088dac4e 5875 node-nth-check_1.0.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 81959294a302e205f0dd33b9ffcc59948771b65ca450ef12ceed5503f9130e80 2131 node-nth-check_1.0.1-1+deb10u1.dsc
+ ca441f256fbecd248d996edbef0c88d41b0a81b69d3a3f33ebe650dd2b62fea0 2861 node-nth-check_1.0.1.orig.tar.gz
+ 80372fb55a57a640ec0c0fa0db553cfbd350d2775d7927eee38ca6086d44b9ba 3468 node-nth-check_1.0.1-1+deb10u1.debian.tar.xz
+ 1f2feb2971058363f21b78f83c13205692f68f2ddbbea1084283a1bab687a6e4 5875 node-nth-check_1.0.1-1+deb10u1_amd64.buildinfo
+Files:
+ fedd5f8cdf32a45b5e3fef5767370395 2131 web optional node-nth-check_1.0.1-1+deb10u1.dsc
+ 5daeff246fe3d1c893c30ecc2045706e 2861 web optional node-nth-check_1.0.1.orig.tar.gz
+ 596bbc47d84f3d83606152f507229ba0 3468 web optional node-nth-check_1.0.1-1+deb10u1.debian.tar.xz
+ 0fa3f84940cce7c8e547377a423f483e 5875 web optional node-nth-check_1.0.1-1+deb10u1_amd64.buildinfo
+

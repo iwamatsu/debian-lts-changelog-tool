@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 03 Dec 2022 18:30:45 +0530
+Source: jqueryui
+Architecture: source
+Version: 1.12.1+dfsg-5+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ jqueryui (1.12.1+dfsg-5+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Make sure altField is treated as a CSS selector. (Fixes: CVE-2021-41182)
+   * Make sure text option are text, shorten HTML strings.
+     (Fixes: CVE-2021-41183)
+   * Make sure `of` is treated as a CSS selector. (Fixes: CVE-2021-41184)
+   * Add patch to not re-evaluate text labels as HTML. (Fixes: CVE-2022-31160)
+   * Drop diff tests as they forbid patches. Sigh. Thanks, Yadd.
+Checksums-Sha1:
+ e31fbf790c1f3b0f9d432bc543cf3b55053736b9 2337 jqueryui_1.12.1+dfsg-5+deb10u1.dsc
+ 548e338a77a9ccc2594a154c5b02508bbe2420c0 696380 jqueryui_1.12.1+dfsg.orig.tar.gz
+ 0964bcfd25e4b26906b29870c6d936dfda517ebc 127408 jqueryui_1.12.1+dfsg-5+deb10u1.debian.tar.xz
+ ab1650253f5235372ddcbe7b7c095d487b9c2b8f 6403 jqueryui_1.12.1+dfsg-5+deb10u1_source.buildinfo
+Checksums-Sha256:
+ f790a9521988e8e90c512c38effbae94ddbd49b3caedeadd25c90d90578a5609 2337 jqueryui_1.12.1+dfsg-5+deb10u1.dsc
+ 472cf4cd5d43ecc078a4cb80fd29675a258f52205510775a7ecace59995a5a60 696380 jqueryui_1.12.1+dfsg.orig.tar.gz
+ ae280a070b316998cf5627032f6f647bd69ae9f77ba7a5bd2c0a8f201ba245b9 127408 jqueryui_1.12.1+dfsg-5+deb10u1.debian.tar.xz
+ 40029c4d902f207b230453feebb0b8ca10fe64945bdc23cc870c18346cc99290 6403 jqueryui_1.12.1+dfsg-5+deb10u1_source.buildinfo
+Files:
+ 7a9e6b1204215b42869c22daaab4020e 2337 javascript optional jqueryui_1.12.1+dfsg-5+deb10u1.dsc
+ 05348fb9a557e6df14306ecb0a79b618 696380 javascript optional jqueryui_1.12.1+dfsg.orig.tar.gz
+ efb363f4ad6d47a2df87b111942eb348 127408 javascript optional jqueryui_1.12.1+dfsg-5+deb10u1.debian.tar.xz
+ 2a34a4cf26e00538105e321ac46f3441 6403 javascript optional jqueryui_1.12.1+dfsg-5+deb10u1_source.buildinfo
+

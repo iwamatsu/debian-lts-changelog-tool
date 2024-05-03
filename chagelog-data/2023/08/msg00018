@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 10 Aug 2023 17:46:54 +0000
+Source: php-dompdf
+Architecture: source
+Version: 0.6.2+dfsg-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ php-dompdf (0.6.2+dfsg-3+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-3838 fix was incomplete in handling fonts vulnerabilty.
+     Backport needed to further backport upstream chroot changes,
+     conjointly with ubuntu security team.
+     Thanks to Camila Camargo de Matos.
+Checksums-Sha1:
+ 87bb730f3f5ff79655f8ad2fe525296a7e57bdc3 2189 php-dompdf_0.6.2+dfsg-3+deb10u2.dsc
+ af6738e9d518bd5cc2785e3ce38360a1c1699552 22748 php-dompdf_0.6.2+dfsg-3+deb10u2.debian.tar.xz
+ b97ad49c4da485759fdd1c1320c29055d92e7b2d 6435 php-dompdf_0.6.2+dfsg-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 9986eb18fdc5ec0ce8b794bc83cd07af88bdbe36f1b1b76fd7731924ed140f6b 2189 php-dompdf_0.6.2+dfsg-3+deb10u2.dsc
+ 6b8659167a6f2a2a33a748669caaf41f2c2a79cbb8e34991f03b4f1a6f3f55ac 22748 php-dompdf_0.6.2+dfsg-3+deb10u2.debian.tar.xz
+ fc6710ebeafb549c57fbc6ae0212084c4c1200facab6700b73dd81db9c9243a3 6435 php-dompdf_0.6.2+dfsg-3+deb10u2_amd64.buildinfo
+Files:
+ e798df50f5dbb150203f7f614ba9f87e 2189 php optional php-dompdf_0.6.2+dfsg-3+deb10u2.dsc
+ f98cbffb92a14a931df1be0d1fe7e131 22748 php optional php-dompdf_0.6.2+dfsg-3+deb10u2.debian.tar.xz
+ e4f9d246f1af81cd7556d701d37aa883 6435 php optional php-dompdf_0.6.2+dfsg-3+deb10u2_amd64.buildinfo
+

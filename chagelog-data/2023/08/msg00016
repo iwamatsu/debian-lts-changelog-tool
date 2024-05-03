@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 08 Aug 2023 04:35:25 +0200
+Source: linux-signed-arm64
+Architecture: source
+Version: 4.19.289+2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-signed-arm64 (4.19.289+2) buster-security; urgency=high
+ .
+   * Sign kernel from linux 4.19.289-2
+ .
+   * [x86] Add mitigations for Gather Data Sampling (GDS) (CVE-2022-40982)
+     - init: Provide arch_cpu_finalize_init()
+     - x86/cpu: Switch to arch_cpu_finalize_init()
+     - ARM: cpu: Switch to arch_cpu_finalize_init()
+     - init: Remove check_bugs() leftovers
+     - init: Invoke arch_cpu_finalize_init() earlier
+     - init, x86: Move mem_encrypt_init() into arch_cpu_finalize_init()
+     - x86/fpu: Remove cpuinfo argument from init functions
+     - x86/fpu: Mark init functions __init
+     - x86/fpu: Move FPU initialization into arch_cpu_finalize_init()
+     - x86/speculation: Add Gather Data Sampling mitigation
+     - x86/speculation: Add force option to GDS mitigation
+     - x86/speculation: Add Kconfig option for GDS
+     - KVM: Add GDS_NO support to KVM
+     - x86/xen: Fix secondary processors' FPU initialization
+     - Documentation/x86: Fix backwards on/off logic about YMM support
+   * [x86] cpu: Avoid ABI change for GDS mitigations
+Checksums-Sha1:
+ e7a8b0eee098a0b74e22126c5ac262fa6b16821f 6605 linux-signed-arm64_4.19.289+2.dsc
+ a20f38d6ce8dba314f33330c370ad9650ac46a82 2101632 linux-signed-arm64_4.19.289+2.tar.xz
+Checksums-Sha256:
+ a64f351b947b362df7878961d4f3a85f3643cec22f1910d06544f50f7a8445cc 6605 linux-signed-arm64_4.19.289+2.dsc
+ 51be404d1761d3e02b1116e4e1dc069eb5240ec69b564939a8aa94c47800aabd 2101632 linux-signed-arm64_4.19.289+2.tar.xz
+Files:
+ e54e059dbe109ddfbde85ae55f95025c 6605 kernel optional linux-signed-arm64_4.19.289+2.dsc
+ a0d0eb2ac8436d82efd4afecb49de495 2101632 kernel optional linux-signed-arm64_4.19.289+2.tar.xz
+

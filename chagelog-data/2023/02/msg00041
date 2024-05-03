@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 23 Feb 2023 16:14:14 +0100
+Source: git
+Architecture: source
+Version: 1:2.20.1-2+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Gerrit Pape <pape@smarden.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ git (1:2.20.1-2+deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Add a follow up fix for CVE-2022-23521 where one of the patches could
+     cause issues on 32 bit platforms.
+   * Backport dir-iterator flag changes.
+     - Adjust CVE-2022-39253-01 to use dir-iterator flags.
+   * CVE-2023-22490: local repository clone when .git/objects is a symlink.
+   * CVE-2023-23946: file overwrite in git-apply via file containing both
+     a symlink and a file overwrite using that symlink.
+Checksums-Sha1:
+ 105b871152172b14f45af186f26d667fe929c605 2894 git_2.20.1-2+deb10u8.dsc
+ 58dca49db21f4bebf56f8861f15800f1c57c5ee3 5359872 git_2.20.1.orig.tar.xz
+ 5a5135eb3f4da1f175d163f2691cd79ebd7d65fd 705964 git_2.20.1-2+deb10u8.debian.tar.xz
+ 9cd6ccc73ac4a07d57408f91dc6958a1b754daa4 6411 git_2.20.1-2+deb10u8_source.buildinfo
+Checksums-Sha256:
+ 017c617a2764f00ef6a239494e2350fd58c6cace009b75c03b5fd2c0fe147760 2894 git_2.20.1-2+deb10u8.dsc
+ 9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9 5359872 git_2.20.1.orig.tar.xz
+ f87671e6b0fced18ef329cab7fcc76000815e13aff19dbd5fa621a7bf3e18403 705964 git_2.20.1-2+deb10u8.debian.tar.xz
+ 00ce52605dcc4e6a294c322e8c2f41264d85276801fe21e1bd5d196361c2b41a 6411 git_2.20.1-2+deb10u8_source.buildinfo
+Files:
+ f20d54c4d30c1691fa6d00121171bfdb 2894 vcs optional git_2.20.1-2+deb10u8.dsc
+ 5fb4ff92b56ce3172b99c1c74c046c1a 5359872 vcs optional git_2.20.1.orig.tar.xz
+ a02d611ee8f53b4dd7fdaea7fc0cada1 705964 vcs optional git_2.20.1-2+deb10u8.debian.tar.xz
+ 2fc8468ef704f9949b5c35c9b7d14e63 6411 vcs optional git_2.20.1-2+deb10u8_source.buildinfo
+

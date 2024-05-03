@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 07 Jun 2022 08:27:02 +0100
+Source: librecad
+Binary: librecad librecad-data
+Architecture: source all amd64
+Version: 2.1.2-1+deb9u4
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ librecad   - Computer-aided design (CAD) system
+ librecad-data - Computer-aided design (CAD) system -- shared files
+Closes: 1010349
+Changes:
+ librecad (2.1.2-1+deb9u4) stretch-security; urgency=high
+ .
+   * CVE-2021-21897: A code execution vulnerability existed in the
+     DL_Dxf::handleLWPolylineData functionality. A specially-crafted .dxf file
+     could have led to a heap buffer overflow. (Closes: #1010349)
+Checksums-Sha1:
+ 462f5fbdea48651ea92a44ebadfd366422c6dce0 2264 librecad_2.1.2-1+deb9u4.dsc
+ 4d9a3136f8c386be5767e890f748dc82035e33ce 17852 librecad_2.1.2-1+deb9u4.debian.tar.xz
+ ee190e3a87222272a1fefc3df762d53328bf9362 8728746 librecad-data_2.1.2-1+deb9u4_all.deb
+ ab01c9517cf139f6046dcf9aacd27779ba2524d6 53703524 librecad-dbgsym_2.1.2-1+deb9u4_amd64.deb
+ c84e7afce4dd196f951fab1baf7cbc33e22fbfa2 13779 librecad_2.1.2-1+deb9u4_amd64.buildinfo
+ 68af338f06dbf49659d59da71dcf37fe9ed5d498 2565712 librecad_2.1.2-1+deb9u4_amd64.deb
+Checksums-Sha256:
+ 821e2b06f67fed0c2b47ee3dcc1da42da6cd116f5f6d582ccb4dd806ba71e4f8 2264 librecad_2.1.2-1+deb9u4.dsc
+ 746637839ce0866ea2094cdd45865b27fb5eec4a151b5838d8104ceb86ac71cd 17852 librecad_2.1.2-1+deb9u4.debian.tar.xz
+ 899d3d68ed0910fb24c58e50d2c93dbf0062cf630a9ddb0df31dd939df2d20f2 8728746 librecad-data_2.1.2-1+deb9u4_all.deb
+ 1df66f21e09d29cad0f788864f29bd0c8d6b0800ebb889e44a81fbdbf59acc64 53703524 librecad-dbgsym_2.1.2-1+deb9u4_amd64.deb
+ 4d7de13b8274019990ba14ae98ff73f7b5b6cf729c08bd53b7b4eb76f21f7191 13779 librecad_2.1.2-1+deb9u4_amd64.buildinfo
+ cc52f8671c8f205a11490fbe831424aa2e1f7f3e6d51243594fe0a60819d08d3 2565712 librecad_2.1.2-1+deb9u4_amd64.deb
+Files:
+ 84b08680a5ed69e9647cdf70e9a79e14 2264 graphics optional librecad_2.1.2-1+deb9u4.dsc
+ a2f83c8be7545c28a5e51fad1d7c56ca 17852 graphics optional librecad_2.1.2-1+deb9u4.debian.tar.xz
+ d3406e75b046666d4dc303dc775d2e0b 8728746 graphics optional librecad-data_2.1.2-1+deb9u4_all.deb
+ d4cacbb9525b6968c5e40aa4487d0b8c 53703524 debug extra librecad-dbgsym_2.1.2-1+deb9u4_amd64.deb
+ 9b0859bdb5385c8d62b4740b8e1f2250 13779 graphics optional librecad_2.1.2-1+deb9u4_amd64.buildinfo
+ e65cd91da1fb580d3e64d6c84db46e59 2565712 graphics optional librecad_2.1.2-1+deb9u4_amd64.deb
+

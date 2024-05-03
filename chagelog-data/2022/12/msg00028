@@ -1,0 +1,53 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Dec 2022 15:14:23 +0100
+Source: git
+Architecture: source
+Version: 1:2.20.1-2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Gerrit Pape <pape@smarden.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ git (1:2.20.1-2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-24765: Git not checking the ownership of directories in a
+     local multi-user system when running commands specified in the local
+     repository configuration.  This allows the owner of the repository to
+     cause arbitrary commands to be executed by other users who access the
+     repository.
+   * The above introduces new 'safe.directory' checks which may cause
+     regressions: allow opt-out of such checks with 'safe.directory=*'
+   * CVE-2022-29187: an unsuspecting user could still be affected by the
+     issue reported in CVE-2022-24765, for example when navigating as root
+     into a shared tmp directory that is owned by them, but where an
+     attacker could create a git repository.
+   * CVE-2022-39253: exposure of sensitive information to a malicious
+     actor. When performing a local clone (where the source and target of
+     the clone are on the same volume), Git copies the contents of the
+     source's `$GIT_DIR/objects` directory into the destination by either
+     creating hardlinks to the source contents, or copying them (if
+     hardlinks are disabled via `--no-hardlinks`). A malicious actor could
+     convince a victim to clone a repository with a symbolic link pointing
+     at sensitive information on the victim's machine.
+   * CVE-2022-39260: `git shell` improperly uses an `int` to represent the
+     number of entries in the array, allowing a malicious actor to
+     intentionally overflow the return value, leading to arbitrary heap
+     writes. Because the resulting array is then passed to `execv()`, it is
+     possible to leverage this attack to gain remote code execution on a
+     victim machine.
+Checksums-Sha1:
+ 618326d517325bfa21a37917c8b11f1e48f0f55a 2894 git_2.20.1-2+deb10u5.dsc
+ c15c18bd96f2611fd0f0ee4eeb543798ae9124dc 676036 git_2.20.1-2+deb10u5.debian.tar.xz
+ 27c650e2bba038bd90aef295dc21f68aef51ee01 11775 git_2.20.1-2+deb10u5_all.buildinfo
+Checksums-Sha256:
+ 6a8d22b88d0deab73b3da6a23b725788349adb246dcab4fc314bd2c309d63566 2894 git_2.20.1-2+deb10u5.dsc
+ 0dc9f3fef30893e6678026345881dd07c7933f7f139aa06145e20a7127b50c47 676036 git_2.20.1-2+deb10u5.debian.tar.xz
+ 0b955aa5c167f4357a86101fa567069b8af9f912b528915390cc3df72b35ac26 11775 git_2.20.1-2+deb10u5_all.buildinfo
+Files:
+ fa5346bf770a5974210c0f5c61708cf4 2894 vcs optional git_2.20.1-2+deb10u5.dsc
+ 4cf58e4fbe1beaf593f1751d56c8db4f 676036 vcs optional git_2.20.1-2+deb10u5.debian.tar.xz
+ 160eb185dce976d6eeff0b098c662bcd 11775 vcs optional git_2.20.1-2+deb10u5_all.buildinfo
+

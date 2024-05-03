@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 May 2022 15:57:35 CEST
+Source: smarty3
+Binary: smarty3
+Architecture: source
+Version: 3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6
+Distribution: stretch-security
+Urgency: high
+Maintainer: Mike Gabriel <sunweaver@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ smarty3    - ${phpcomposer:description}
+Checksums-Sha1:
+ 7070df0aed80d8e5c1b368ff79cd51f9a65b3b6f 2359 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6.dsc
+ 59c0ca8092549114867c1ff3a143a9ecbd59ecc0 13532 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6.debian.tar.xz
+ 6ee522566fdcf22afd5c091e0da5cb2ca763c5bb 6880 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6_amd64.buildinfo
+Checksums-Sha256:
+ 417770fd77df73f05ad65ca78db9fec8b3177a541f18035428e886a8125eb936 2359 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6.dsc
+ 1bbfe3ee9545e4c19ca2fa9cf9d8479722ad8eddcebeed74af4a9c98c182d78c 13532 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6.debian.tar.xz
+ 0657b99517a92363b23a37d10000245a090b29aa1b7aa1cc4419c3514ac46169 6880 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6_amd64.buildinfo
+Changes:
+ smarty3 (3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2022-29221: template authors could inject php code by choosing a
+     malicious {block} name or {include} file name
+Files:
+ 763e88bc19fcbac66274943104f38813 2359 web optional smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6.dsc
+ c6b3b089b34bf49ba5c42d7727f58597 13532 web optional smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6.debian.tar.xz
+ db525c66f84b8b616770641007235b4b 6880 web optional smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u6_amd64.buildinfo
+

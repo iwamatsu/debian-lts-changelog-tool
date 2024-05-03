@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 17 Mar 2024 15:34:05 +0000
+Source: imagemagick
+Architecture: source
+Version: 8:6.9.10.23+dfsg-2.1+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ imagemagick (8:6.9.10.23+dfsg-2.1+deb10u7) buster-security; urgency=medium
+ .
+   * Fix CVE-2022-48541: A memory leak allows remote attackers to perform
+     a denial of service via the "identify -help" command.
+Checksums-Sha1:
+ d46802b712cf36009139a990fe8e0c6718a8e579 5239 imagemagick_6.9.10.23+dfsg-2.1+deb10u7.dsc
+ 3f9a2a33bfef8572408f8a2a252ab401613ee17d 267020 imagemagick_6.9.10.23+dfsg-2.1+deb10u7.debian.tar.xz
+ 9b6f2253886c258a83d9e546edc4393bc78e57cf 31699 imagemagick_6.9.10.23+dfsg-2.1+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 47484df76dc887fa59823061d63a69564e654940013f4940159549d67a01ff6b 5239 imagemagick_6.9.10.23+dfsg-2.1+deb10u7.dsc
+ 249b3fb7f114074af2126215f9ae3cb4d02fbc7dfa54240d7b2249cfd40d624a 267020 imagemagick_6.9.10.23+dfsg-2.1+deb10u7.debian.tar.xz
+ d6db9d2e718f28ca5be18d523b113c658cfd2867f5c0c8cc71b0b73379e3062e 31699 imagemagick_6.9.10.23+dfsg-2.1+deb10u7_amd64.buildinfo
+Files:
+ debac897a7854aca82d73629285d468e 5239 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u7.dsc
+ 15681594fff6de13c7e807f8bc1ba21a 267020 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u7.debian.tar.xz
+ 3631b4714b19ff3b5ad63bb73320579d 31699 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u7_amd64.buildinfo
+

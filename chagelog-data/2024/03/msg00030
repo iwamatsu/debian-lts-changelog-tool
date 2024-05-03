@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 26 Mar 2024 00:54:55 +0100
+Source: nodejs
+Architecture: source
+Version: 10.24.0~dfsg-1~deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1039990 1064055
+Changes:
+ nodejs (10.24.0~dfsg-1~deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * d/p/CVE-2022-32212.patch: Also backport upstream commit a1121b456c (unit
+     tests).
+   * Fix DNS unit tests which caused FTFBS in some build environments.
+   * CVE-2023-30590: Documentation change for generateKeys() API function to
+     align on the actual behavior, that is, only generate a private key if none
+     has been set yet. (Closes: #1039990)
+   * CVE-2023-46809: Marvin Attack vulnerability in the privateDecrypt() API of
+     the crypto library.  This is a timing variant of the Bleichenbacher attack
+     against PKCS#1 v1.5 padding.  The fix disables RSA_PKCS1_PADDING and
+     includes a security revert flag that can be used to restore support (and
+     the vulnerability). (Closes: #1064055)
+   * CVE-2024-22025: Denial of Service by resource exhaustion in fetch() brotli
+     decoding.
+Checksums-Sha1:
+ f2fc475f0cf38a55da02ed23d7fdfe93528a95ac 3032 nodejs_10.24.0~dfsg-1~deb10u4.dsc
+ 6054b2a9a0c7e9138a7b618a86c9df26ae10f3ad 122320 nodejs_10.24.0~dfsg-1~deb10u4.debian.tar.xz
+ 93feb72cfa7cf6f551a91e16cbae31c0bad12053 9440 nodejs_10.24.0~dfsg-1~deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ c512c0fd4bc8a6499dbb00c2bfec9796fa5ac92af0a7cc0fcd9278bdb104cf26 3032 nodejs_10.24.0~dfsg-1~deb10u4.dsc
+ ca564889e120d1444c16f4564f9aa1a67e5c70b40acb50ded1fc7893b20af3b2 122320 nodejs_10.24.0~dfsg-1~deb10u4.debian.tar.xz
+ 66142ff41588657d5ef5cd8f1cb94a980d3d6adbc11b198be1e6b7337381b09e 9440 nodejs_10.24.0~dfsg-1~deb10u4_amd64.buildinfo
+Files:
+ 41c0e89abe1ac0a90c266bf0b754280f 3032 javascript optional nodejs_10.24.0~dfsg-1~deb10u4.dsc
+ b04aedc934ac139e86f205ab22b0374a 122320 javascript optional nodejs_10.24.0~dfsg-1~deb10u4.debian.tar.xz
+ 1d3c52ef39c06b6fc2fa1ed0e0d7fe4f 9440 javascript optional nodejs_10.24.0~dfsg-1~deb10u4_amd64.buildinfo
+

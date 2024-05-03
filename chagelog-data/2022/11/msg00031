@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 23 Nov 2022 15:54:38 +0100
+Source: vim
+Architecture: source
+Version: 2:8.1.0875-5+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ vim (2:8.1.0875-5+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add missing CVE to previous changelog entry.
+   * Fix CVE-2022-0318, CVE-2022-0392, CVE-2022-0629,
+     CVE-2022-0696, CVE-2022-1619, CVE-2022-1621, CVE-2022-1785,
+     CVE-2022-1897, CVE-2022-1942, CVE-2022-2000, CVE-2022-2129,
+     CVE-2022-3235, CVE-2022-3256, CVE-2022-3352
+Checksums-Sha1:
+ c401f99ae328fe993d3d49fdc928f1a6ddbca31a 2820 vim_8.1.0875-5+deb10u4.dsc
+ f3acaff37517fc2e05495ae63fa7894d85b749f5 212432 vim_8.1.0875-5+deb10u4.debian.tar.xz
+ 421b0c24d5c0072d6916417c5afa213aa2641680 23188 vim_8.1.0875-5+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 494a0f1a803b8b35a0bacb78c094f86ac7c48ac6f6a1eafff32d0be5c3eed12a 2820 vim_8.1.0875-5+deb10u4.dsc
+ db9ae1a94ab02fc1815ad543c8ec232d412d7b43c9b61321b07872376cb9808b 212432 vim_8.1.0875-5+deb10u4.debian.tar.xz
+ e5943702e28fb8dec00a9be58b701db385d9c711d8db39c7f574e05b85d15f57 23188 vim_8.1.0875-5+deb10u4_amd64.buildinfo
+Files:
+ 65af2de0eb72431836cf779619c7c1f8 2820 editors optional vim_8.1.0875-5+deb10u4.dsc
+ 0675ec63f353407b9c811c8957b9be21 212432 editors optional vim_8.1.0875-5+deb10u4.debian.tar.xz
+ b79bddd9ab7062232b42ff3fd5b9d430 23188 editors optional vim_8.1.0875-5+deb10u4_amd64.buildinfo
+

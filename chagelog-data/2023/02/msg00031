@@ -1,0 +1,61 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 21 Feb 2023 09:54:10 -0800
+Source: amanda
+Binary: amanda-client amanda-client-dbgsym amanda-common amanda-common-dbgsym amanda-server amanda-server-dbgsym
+Architecture: source amd64
+Version: 1:3.5.1-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Jose M Calhariz <calhariz@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ amanda-client - Advanced Maryland Automatic Network Disk Archiver (Client)
+ amanda-common - Advanced Maryland Automatic Network Disk Archiver (Libs)
+ amanda-server - Advanced Maryland Automatic Network Disk Archiver (Server)
+Closes: 1029829
+Changes:
+ amanda (1:3.5.1-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-37704: Prevent a potential privilege escalation vulnerability
+     from the regular user "backup" to root. The SUID binary located at
+     /lib/amanda/rundump executed /usr/sbin/dump as root with arguments
+     controlled by the attacker, which may have led to an escalation of
+     privileges, denial of service (DoS), information disclosure, etc.
+     (Closes: #1029829)
+Checksums-Sha1:
+ edcf6877af0d491dfebfa2a0a068a1eb26e670a4 2216 amanda_3.5.1-2+deb10u1.dsc
+ a92fa595ad525e3cc86565a81353220c146a0ac4 5239952 amanda_3.5.1.orig.tar.gz
+ dacf183aa2bef5eed420eca749a1648680b33955 45184 amanda_3.5.1-2+deb10u1.debian.tar.xz
+ 0c78340ee06bdace8d8b091bcdb6cb41cb55dbb0 636332 amanda-client-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ 184e45eeeb0c69407eb5ecc2aec04d9fd01141a1 446284 amanda-client_3.5.1-2+deb10u1_amd64.deb
+ 2edadfe737960b0b8bfa71548f862d1cc77f7f3f 5280332 amanda-common-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ 825c8e608f2f49b7af41a9c536f54b7f273a412e 2035780 amanda-common_3.5.1-2+deb10u1_amd64.deb
+ bad0dc3d55a45d4f13c8612ebcc3ba0a236c8ed7 464988 amanda-server-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ 70a4716f3a421174b15a700c586325d5c7f6fc28 461456 amanda-server_3.5.1-2+deb10u1_amd64.deb
+ f51abc384ba54a5eb49efb34101d54051a35042c 14805 amanda_3.5.1-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ e0089ba2fcf2da5dd4d90a0c7e22188c84f8e67721dad85f047bdbf6a80c0bf5 2216 amanda_3.5.1-2+deb10u1.dsc
+ 6cb9a13fb7a09970d288ddb2c380e7165c5fe38b85bc761ca7ffe334bc5c534b 5239952 amanda_3.5.1.orig.tar.gz
+ 03e6d528838fffa7094bcc00f82d31cb20a9f4f521ec35979f990ce18ae34a5a 45184 amanda_3.5.1-2+deb10u1.debian.tar.xz
+ 288ac0c6cdb7c74950c66c650838dbc464c35b308bbb7ee664f18c82d10b4722 636332 amanda-client-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ 24e3403255ae91affed440ae8582db7407b3aeef727a73ba50cddd92d8fc643c 446284 amanda-client_3.5.1-2+deb10u1_amd64.deb
+ f7aba6289c8a84d08254c8438cbab73a085300d72239b2a52e01749bc7a9a63e 5280332 amanda-common-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ dabbbaa4bab9338e1baaba868ac04c2aee3c07e588a9e3e860370d30fcb53c78 2035780 amanda-common_3.5.1-2+deb10u1_amd64.deb
+ 8e3aa010851845ab8493c2f59cbcafad954b10c89f31d11fc88b78e957180527 464988 amanda-server-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ b808325c34d4658815b842504931e677d18f94c625bd4955622aef9f8baca2bd 461456 amanda-server_3.5.1-2+deb10u1_amd64.deb
+ f0094b1a2aa07b8f439cd5a0358d8487300179efcfc4bb998e1d6e18091cbba9 14805 amanda_3.5.1-2+deb10u1_amd64.buildinfo
+Files:
+ 31035269abd596dc0cb4effcc0f1e1b8 2216 utils optional amanda_3.5.1-2+deb10u1.dsc
+ a780f158cbbacfb017ce4a519120b772 5239952 utils optional amanda_3.5.1.orig.tar.gz
+ ec8e43190be20d86e96db5e573bbadd7 45184 utils optional amanda_3.5.1-2+deb10u1.debian.tar.xz
+ 82cca1c7ca57096eab3a9d8f50e85fd5 636332 debug optional amanda-client-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ cab402e684bbe7072f2c44c272e868e3 446284 utils optional amanda-client_3.5.1-2+deb10u1_amd64.deb
+ 0ceec3a9cb51c3d6ff34264c2eb869ca 5280332 debug optional amanda-common-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ f5b9389485c63a112fca410e88f6dbbc 2035780 utils optional amanda-common_3.5.1-2+deb10u1_amd64.deb
+ 66905dac94cd7c8df9f0f7fbdbe5dc2d 464988 debug optional amanda-server-dbgsym_3.5.1-2+deb10u1_amd64.deb
+ 997b10b8be6815adc8d69d11fbbdea14 461456 utils optional amanda-server_3.5.1-2+deb10u1_amd64.deb
+ efb47e1540608ceaec170088f6530dc9 14805 utils optional amanda_3.5.1-2+deb10u1_amd64.buildinfo
+

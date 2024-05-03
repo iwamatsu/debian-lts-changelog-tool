@@ -1,0 +1,73 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 12 Oct 2022 15:56:25 +0530
+Source: squid
+Binary: squid squid-cgi squid-cgi-dbgsym squid-common squid-dbgsym squid-purge squid-purge-dbgsym squid3 squidclient squidclient-dbgsym
+Architecture: source amd64 all
+Version: 4.6-1+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ squid      - Full featured Web Proxy cache (HTTP proxy)
+ squid-cgi  - Full featured Web Proxy cache (HTTP proxy) - control CGI
+ squid-common - Full featured Web Proxy cache (HTTP proxy) - common files
+ squid-purge - Full featured Web Proxy cache (HTTP proxy) - cache management uti
+ squid3     - Transitional package
+ squidclient - Full featured Web Proxy cache (HTTP proxy) - HTTP(S) message util
+Changes:
+ squid (4.6-1+deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2022-41317: Exposure of Sensitive Information in Cache
+     Manager
+   * Fix CVE-2022-41318: Buffer Over Read in SSPI and SMB
+     Authentication
+Checksums-Sha1:
+ e71625edef56380094b1bf7422a419593142b24e 2703 squid_4.6-1+deb10u8.dsc
+ 57d392b177bd9fe5896b480e29356cc555b5bfc8 5174095 squid_4.6.orig.tar.gz
+ b3c8fe0bd3cfdd4c1b5680d175d94765473108f3 84792 squid_4.6-1+deb10u8.debian.tar.xz
+ af68b837028dd49e77c004db5c07db51f77c8c48 268576 squid-cgi-dbgsym_4.6-1+deb10u8_amd64.deb
+ 858d458c72035915aa39faf15de7be12f727568f 187720 squid-cgi_4.6-1+deb10u8_amd64.deb
+ 5f119ed81736b54318247d2a0576a3760d525646 309440 squid-common_4.6-1+deb10u8_all.deb
+ a4c18071f080f4bca42dd6526b4af95c06cbafd0 32044604 squid-dbgsym_4.6-1+deb10u8_amd64.deb
+ 812b273ce70f4823ee603724dd246271b32011a1 137864 squid-purge-dbgsym_4.6-1+deb10u8_amd64.deb
+ 27ab9fead68e4f3f1837638167c60cce8edc89b9 177188 squid-purge_4.6-1+deb10u8_amd64.deb
+ 4926cc626b18699652dbf5256e3a97c833464876 157420 squid3_4.6-1+deb10u8_all.deb
+ d9ae31b82c43ce89495e209dd5f75e7d9d9be37a 10599 squid_4.6-1+deb10u8_amd64.buildinfo
+ 46ff5851b9f9db240cdae99d94b328d91716e2dd 2643784 squid_4.6-1+deb10u8_amd64.deb
+ b1afb71c44534130cc6120777d26de7b89f7bccd 301128 squidclient-dbgsym_4.6-1+deb10u8_amd64.deb
+ a5601d25559e98845dc31722dc1c1a0177549f05 189912 squidclient_4.6-1+deb10u8_amd64.deb
+Checksums-Sha256:
+ 3e20fa2735b6ecb6d99fd60a82485010b3f1a670c33aac3978a83e58e91a06df 2703 squid_4.6-1+deb10u8.dsc
+ 190f5c015624f53279e5376749b08192f4023219398db3a40892d484513701c7 5174095 squid_4.6.orig.tar.gz
+ c84633d8202e556a36fa45cd04c59cff3c9006fbd8fe9330f6aa2bb57febc497 84792 squid_4.6-1+deb10u8.debian.tar.xz
+ 1bf608bef852e38c99fe446a789143d7b93a8f4bbc463c579a6a0157dc48a5d3 268576 squid-cgi-dbgsym_4.6-1+deb10u8_amd64.deb
+ bdc3f47ec8b249dd60c2c46659c728aab67f3e95a6262d956523a99a020c9607 187720 squid-cgi_4.6-1+deb10u8_amd64.deb
+ 678a51c50bcfcdfbb5d6fbaffc6c5b9f7f4096722eaaea371a2c0bcd71b55303 309440 squid-common_4.6-1+deb10u8_all.deb
+ 93bca62f5ccccd58359b0e935e436280254928609896d6ed1b01a3efad6e37af 32044604 squid-dbgsym_4.6-1+deb10u8_amd64.deb
+ 5fbf741a49b2dfe4948e73962fe05d59b03fe2a8a563d7498952e1928534d724 137864 squid-purge-dbgsym_4.6-1+deb10u8_amd64.deb
+ 9c65b1b43062a7261a199208ab2160c9b45951b52439241bf3a48b24e7a1cd42 177188 squid-purge_4.6-1+deb10u8_amd64.deb
+ cf1b11a0b16a186a419a41f14143141de8b1df11aba6cb826ad6d41ca159ef1e 157420 squid3_4.6-1+deb10u8_all.deb
+ 632add6f2ba8842700462725843ccbc9eb3e316d5a57b02c84c3cfbca9cc7c9d 10599 squid_4.6-1+deb10u8_amd64.buildinfo
+ 8adaf241d67fa786aa4e9e44c287e099fe2d3bf1fb32dcba2a70e6102751bc7c 2643784 squid_4.6-1+deb10u8_amd64.deb
+ d8424ceda7e19bb8b085497cb243d867dd2238ae62e29159d61d02bc76a1547c 301128 squidclient-dbgsym_4.6-1+deb10u8_amd64.deb
+ 400a4594abcd573cc009507768058a20189564828d58b5b0422726e2195d6537 189912 squidclient_4.6-1+deb10u8_amd64.deb
+Files:
+ b04b3d793cce90cec1204dd3aadbb4ab 2703 web optional squid_4.6-1+deb10u8.dsc
+ bc5f9ddeda7e39d2f3338bc4bbce0d9b 5174095 web optional squid_4.6.orig.tar.gz
+ eee0e9b068c6586f725b444f444881de 84792 web optional squid_4.6-1+deb10u8.debian.tar.xz
+ 5a37849816955e41fc3480585e75f996 268576 debug optional squid-cgi-dbgsym_4.6-1+deb10u8_amd64.deb
+ c0eaf51ff71371617e821e5c7aa7beb3 187720 web optional squid-cgi_4.6-1+deb10u8_amd64.deb
+ b233d70af0f27ebc89b4a3d04e5dc043 309440 web optional squid-common_4.6-1+deb10u8_all.deb
+ 94738c5ea55ad76cfc043a0d54570986 32044604 debug optional squid-dbgsym_4.6-1+deb10u8_amd64.deb
+ 4a49cdbe40eed0f4ba6e2be059b88c46 137864 debug optional squid-purge-dbgsym_4.6-1+deb10u8_amd64.deb
+ 3dea9f13edb397aae454e77e647fe373 177188 web optional squid-purge_4.6-1+deb10u8_amd64.deb
+ e7ac295e619b11a50833981f460b3ea4 157420 oldlibs optional squid3_4.6-1+deb10u8_all.deb
+ 46ef47c1a5476de006042a6923e041d9 10599 web optional squid_4.6-1+deb10u8_amd64.buildinfo
+ 8c5a17b3a6e6771b1a7251b5383b2f51 2643784 web optional squid_4.6-1+deb10u8_amd64.deb
+ 627c2730db9620cca1959563c1c8fb86 301128 debug optional squidclient-dbgsym_4.6-1+deb10u8_amd64.deb
+ 1f4a5ee8f6205d59c37ce4b9bf1065b3 189912 web optional squidclient_4.6-1+deb10u8_amd64.deb
+

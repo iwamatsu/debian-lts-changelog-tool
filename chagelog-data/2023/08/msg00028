@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 15 Aug 2023 21:14:44 +0200
+Source: openssl
+Architecture: source
+Version: 1.1.1n-0+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ openssl (1.1.1n-0+deb10u6) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-3446 (Excessive time with over sized modulus in DH_check()).
+   * CVE-2023-3817 (Skip checking q properties in DH_check() if it is
+     obviously invalid).
+Checksums-Sha1:
+ 3bf8004aa6f18af18a8558383d72c9dc5a1f9b64 2649 openssl_1.1.1n-0+deb10u6.dsc
+ 2455e27de1b17e2fd872d47475bce2a41f10b8a4 143244 openssl_1.1.1n-0+deb10u6.debian.tar.xz
+ 750ace178c7a0afaefcbc8d1c7277b279c21db54 6192 openssl_1.1.1n-0+deb10u6_source.buildinfo
+Checksums-Sha256:
+ 7581c6b6f2b194f23673da136c2e2697c0ca69462fb9daa0e344504ae12042e8 2649 openssl_1.1.1n-0+deb10u6.dsc
+ 95e5d25cc39d3b50ffa4e1c83477540d0b34726dee2b812372e005e6ce44f6fc 143244 openssl_1.1.1n-0+deb10u6.debian.tar.xz
+ f33fee673d6f6d06b1dbecfaab335e816bd6544ea8f116439d3cf2c0a557c8d8 6192 openssl_1.1.1n-0+deb10u6_source.buildinfo
+Files:
+ 5436865478157ca5853c240c42b0393c 2649 utils optional openssl_1.1.1n-0+deb10u6.dsc
+ bf6f07f3efd9360faef5fcfb618cb89f 143244 utils optional openssl_1.1.1n-0+deb10u6.debian.tar.xz
+ b011d0853e5f3cd5cffb05f604b877e4 6192 utils optional openssl_1.1.1n-0+deb10u6_source.buildinfo
+

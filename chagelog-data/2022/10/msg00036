@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 28 Oct 2022 02:57:28 +0530
+Source: expat
+Architecture: source
+Version: 2.2.6-2+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1022743
+Changes:
+ expat (2.2.6-2+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Add patch to fix heap use-after-free after overeager destruction
+     of a shared DTD in function XML_ExternalEntityParserCreate in
+     out-of-memory situations. (Fixes: CVE-2022-43680) (Closes: #1022743)
+Checksums-Sha1:
+ 560795335f559f6681d0433620885afac6fe17bc 2010 expat_2.2.6-2+deb10u6.dsc
+ 87a4efb7434b84581e20b91e6dddbf1e8d32364a 8275473 expat_2.2.6.orig.tar.gz
+ f549eb945362160fb950d6f64ae09403a90c423d 29268 expat_2.2.6-2+deb10u6.debian.tar.xz
+ 97265e8d2e5dbe7c0930ce9c89530fd56891e6ce 6126 expat_2.2.6-2+deb10u6_source.buildinfo
+Checksums-Sha256:
+ 12e5e94724e3c495aab1fb7dba2f30eabf554b0b3ecafa3ad59fffb0ac379ebf 2010 expat_2.2.6-2+deb10u6.dsc
+ 574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff 8275473 expat_2.2.6.orig.tar.gz
+ f938a77385f9e1a452ab2b45b887dc6539607d097211bf69d1194453d0f05d57 29268 expat_2.2.6-2+deb10u6.debian.tar.xz
+ e02ee05974774dca2667dc74395defeb8348f46d052048db64fed1c3ca7da429 6126 expat_2.2.6-2+deb10u6_source.buildinfo
+Files:
+ e21f97aae8a81a4170520f356e0be0f3 2010 text optional expat_2.2.6-2+deb10u6.dsc
+ b6ccd2705cf8e732707eb4132a1c4dbc 8275473 text optional expat_2.2.6.orig.tar.gz
+ 98109f32c1f59464dea3731d12c8e7d4 29268 text optional expat_2.2.6-2+deb10u6.debian.tar.xz
+ 4dc56d9503081ab2853a9ed92bb6f682 6126 text optional expat_2.2.6-2+deb10u6_source.buildinfo
+

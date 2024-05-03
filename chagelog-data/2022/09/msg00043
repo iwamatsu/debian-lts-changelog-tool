@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 30 Sep 2022 13:07:30 +0200
+Source: mariadb-10.3
+Architecture: source
+Version: 1:10.3.36-0+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1020301
+Changes:
+ mariadb-10.3 (1:10.3.36-0+deb10u2) buster-security; urgency=medium
+ .
+   * Rebuild without upstream extra debian/ files (including a trigger
+     file for mariadb-server-10.3). Closes: #1020301.
+Checksums-Sha1:
+ 6ffb1fa4f79b1be15e34980f7e5ce951cc6caae9 4812 mariadb-10.3_10.3.36-0+deb10u2.dsc
+ 07b7574cd1a74b73fe3f079cd356a59c2deecba3 73944352 mariadb-10.3_10.3.36.orig.tar.gz
+ 14a8bedfde13e0b0404bd3f5144a8c1952ea912e 195 mariadb-10.3_10.3.36.orig.tar.gz.asc
+ 6fab83aa52605886ae40b19d73b19053ca1814cb 219712 mariadb-10.3_10.3.36-0+deb10u2.debian.tar.xz
+ 8b579a34983b4ba568286cfc0574f70e0557af7b 7309 mariadb-10.3_10.3.36-0+deb10u2_source.buildinfo
+Checksums-Sha256:
+ c1d2adadc25876b48333249b7a6628501920ad310cffe10a7a1cf40f2b3855ed 4812 mariadb-10.3_10.3.36-0+deb10u2.dsc
+ 003c497c387a28184acfb4fd30e4150ea1f0300004845fdcf48e5122e36c5dc6 73944352 mariadb-10.3_10.3.36.orig.tar.gz
+ fd6bcd9265d73201b19384d16d795ff709f0cad305e281b3c4f7e04541541f4a 195 mariadb-10.3_10.3.36.orig.tar.gz.asc
+ dd00709d450b9e64b9bfbdff2baf3f4b2e8cfe935de89ca4341fdaaf9e2721b1 219712 mariadb-10.3_10.3.36-0+deb10u2.debian.tar.xz
+ 1eaf0c9c8904e8d45af058b6e5ccb87d70cd5cefd8cc435cd0067daa9a782dd3 7309 mariadb-10.3_10.3.36-0+deb10u2_source.buildinfo
+Files:
+ 47e42a97ac51e37f292530c574ecc0ea 4812 database optional mariadb-10.3_10.3.36-0+deb10u2.dsc
+ b61f20e20a55ec2a4eeac1c96559574c 73944352 database optional mariadb-10.3_10.3.36.orig.tar.gz
+ b253151b99aebb6c9a3f83b86f0d97a0 195 database optional mariadb-10.3_10.3.36.orig.tar.gz.asc
+ 16d7b72931cd6f694f6b6eb613abd5c7 219712 database optional mariadb-10.3_10.3.36-0+deb10u2.debian.tar.xz
+ 6dd068d945449212410a145a091a7637 7309 database optional mariadb-10.3_10.3.36-0+deb10u2_source.buildinfo
+

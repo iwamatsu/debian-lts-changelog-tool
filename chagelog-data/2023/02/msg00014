@@ -1,0 +1,41 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 07 Feb 2023 17:14:48 +0100
+Source: postgresql-11
+Architecture: source
+Version: 11.19-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Christoph Berg <myon@debian.org>
+Changes:
+ postgresql-11 (11.19-0+deb10u1) buster-security; urgency=medium
+ .
+   * New upstream version.
+ .
+     + libpq can leak memory contents after GSSAPI transport encryption
+       initiation fails (Jacob Champion)
+ .
+       A modified server, or an unauthenticated man-in-the-middle, can send a
+       not-zero-terminated error message during setup of GSSAPI (Kerberos)
+       transport encryption.  libpq will then copy that string, as well as
+       following bytes in application memory up to the next zero byte, to its
+       error report. Depending on what the calling application does with the
+       error report, this could result in disclosure of application memory
+       contents.  There is also a small probability of a crash due to reading
+       beyond the end of memory.  Fix by properly zero-terminating the server
+       message. (CVE-2022-41862)
+Checksums-Sha1:
+ 2aaed70889bf4c746a0c2d8e07b7cb65bdffd0de 3745 postgresql-11_11.19-0+deb10u1.dsc
+ bdedc14451403f96d4ca8e26a17f97e3b0afaa5b 20457793 postgresql-11_11.19.orig.tar.bz2
+ f1fd9a3e57660221d27647da3dcf384a9d909cb4 28740 postgresql-11_11.19-0+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 663f4e1d38c8efedf890dd95aa9d443e6e6ea24f73f22f520a8a185d4717fc98 3745 postgresql-11_11.19-0+deb10u1.dsc
+ 13109e2b71f1139405c27201da3733a61ace72ee1c228d9c9f0320e06aee14c2 20457793 postgresql-11_11.19.orig.tar.bz2
+ e874621849ec4696824b96cbc0d28bdd663d9ad1b9d97d5f273b3bb9774d9268 28740 postgresql-11_11.19-0+deb10u1.debian.tar.xz
+Files:
+ 6ca7f507b256d58aba17ece31212255c 3745 database optional postgresql-11_11.19-0+deb10u1.dsc
+ bf9dcee07bb35e8bf4e206d17a585640 20457793 database optional postgresql-11_11.19.orig.tar.bz2
+ d446f40abffaf911bb61e3e50dfbe912 28740 database optional postgresql-11_11.19-0+deb10u1.debian.tar.xz
+

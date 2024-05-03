@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 03 Dec 2022 02:08:58 +0530
+Source: g810-led
+Architecture: source
+Version: 0.3.3-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Stephen Kitt <skitt@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1024998
+Changes:
+ g810-led (0.3.3-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to rely on uaccess to control device access.
+     (Fixes: CVE-2022-46338) (Closes: #1024998)
+Checksums-Sha1:
+ d4c0050d892cc7c1a23a0ed6d6bb28babad9b4b2 2014 g810-led_0.3.3-2+deb10u1.dsc
+ cb51c9844fccf1f335c8f30b346649aa8f5cd862 34548 g810-led_0.3.3.orig.tar.gz
+ 4d5a3531e6fc4971eebf52a24ecd648cd5d332ce 5320 g810-led_0.3.3-2+deb10u1.debian.tar.xz
+ 28f2b39d84882439e30b31dae8705f24855cc1d6 6131 g810-led_0.3.3-2+deb10u1_source.buildinfo
+Checksums-Sha256:
+ ed2263d45e75755958ef569b8ef475f855427d1db838353d5296fa28bc6081e0 2014 g810-led_0.3.3-2+deb10u1.dsc
+ 822038b230a2427974688b34de31b57cd0d522ae2cfa59f04940e3dbfcb039fc 34548 g810-led_0.3.3.orig.tar.gz
+ f3a0332410e84d38f0210170f98da9208c4a9006d72e87160ba1352ea93fc0ac 5320 g810-led_0.3.3-2+deb10u1.debian.tar.xz
+ 8f8e2688e6f96d89fec990759fac723672018f88d165ac542d1c2a93eaba06d3 6131 g810-led_0.3.3-2+deb10u1_source.buildinfo
+Files:
+ 646d2bbda6fee1a6964c307a7e962523 2014 utils optional g810-led_0.3.3-2+deb10u1.dsc
+ 373897dc4f5cd0d500df3d7abc7511b3 34548 utils optional g810-led_0.3.3.orig.tar.gz
+ 4f60ed5a69a6410b436906f7bde6fbfb 5320 utils optional g810-led_0.3.3-2+deb10u1.debian.tar.xz
+ d0d142cd509f6f8ec37d999f0d7c07c8 6131 utils optional g810-led_0.3.3-2+deb10u1_source.buildinfo
+

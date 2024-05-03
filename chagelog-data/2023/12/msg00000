@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 03 Dec 2023 08:02:33 +0100
+Source: opendkim
+Architecture: source
+Version: 2.11.0~alpha-12+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1041107
+Changes:
+ opendkim (2.11.0~alpha-12+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Preparing CVE-2022-48521, cherry picking fix from David Bürgin:
+     * Add patch "rev-ares-deletion.patch" for CVE-2022-48521:
+       Delete Authentication-Results headers in reverse (Closes: #1041107).
+Checksums-Sha1:
+ e52267cf5b317c7f8f2ecd039a5f2f4261f72991 2404 opendkim_2.11.0~alpha-12+deb10u1.dsc
+ 4379cff2b32505525abf3c2874d707e1c8737b2c 1216303 opendkim_2.11.0~alpha.orig.tar.gz
+ e08958d91416869d07d31a3bef151617cd7487bf 26468 opendkim_2.11.0~alpha-12+deb10u1.debian.tar.xz
+ 956cb90326460190beba1f0fa54494907a367371 10688 opendkim_2.11.0~alpha-12+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ ee2cb16d8be27d60cd11224d1148f1da47568ad12e81888a86fb5d3077df6f23 2404 opendkim_2.11.0~alpha-12+deb10u1.dsc
+ b3bc2e319584b89fa0053cd1d8d028e3cd37d525e8f6593a83d31cd31984e7db 1216303 opendkim_2.11.0~alpha.orig.tar.gz
+ cfc572b883631eabfc28e7184c59499f7fd4ba380e0c20c4ba55278c1621083f 26468 opendkim_2.11.0~alpha-12+deb10u1.debian.tar.xz
+ 72795ea3bb1ec3e0e2a907dd63bb7c69c9c1c1725c3939266e1fe88f0840681a 10688 opendkim_2.11.0~alpha-12+deb10u1_amd64.buildinfo
+Files:
+ 99aacd5f8ab6ecd4e47590ccde7caa4f 2404 mail extra opendkim_2.11.0~alpha-12+deb10u1.dsc
+ 9e2e7f6a5047f4850611f10039db9ece 1216303 mail extra opendkim_2.11.0~alpha.orig.tar.gz
+ f22b033a6fcd0e3fc9efc269538030e8 26468 mail extra opendkim_2.11.0~alpha-12+deb10u1.debian.tar.xz
+ 733ad7a2929b8dcd205e8d5c0f594692 10688 mail extra opendkim_2.11.0~alpha-12+deb10u1_amd64.buildinfo
+

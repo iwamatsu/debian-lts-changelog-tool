@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Sep 2023 19:40:00 +0000
+Source: prometheus-alertmanager
+Architecture: source
+Version: 0.15.3+ds-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1050558
+Changes:
+ prometheus-alertmanager (0.15.3+ds-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-40577: A vulnerability was found in the way prometheus handles
+     alerts sent by client applications such as the Prometheus server.
+     An attacker with the permission to perform POST requests on the
+     /api/v1/alerts endpoint could be able to execute arbitrary
+     JavaScript code on the users of Prometheus Alertmanager.
+     (Closes: #1050558)
+Checksums-Sha1:
+ 4a1f20914ce730b7aca205f2905664e212d1e6cf 3029 prometheus-alertmanager_0.15.3+ds-3+deb10u1.dsc
+ fe874838d17584d69d4a03183eaf4cef53fb7dbc 220285 prometheus-alertmanager_0.15.3+ds.orig.tar.gz
+ 8715f606650f57a83be45c7d80ab8d614405bd39 15988 prometheus-alertmanager_0.15.3+ds-3+deb10u1.debian.tar.xz
+ 6d6ec6add4b404db02d052fe487ff76a9a7d69e8 10964 prometheus-alertmanager_0.15.3+ds-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1e1cdf7375d35fe6694d35a1b133227e17a713f1e436c8b591daa7ea7b2cf1f1 3029 prometheus-alertmanager_0.15.3+ds-3+deb10u1.dsc
+ aad478d06307f2f0203e3cd6d20709015721736d5fe446f4de655e40033fcbf6 220285 prometheus-alertmanager_0.15.3+ds.orig.tar.gz
+ ad2b26abc6e846ff77170df4b44e1b0dae9c033d9f7efdd483b21555b9b086e9 15988 prometheus-alertmanager_0.15.3+ds-3+deb10u1.debian.tar.xz
+ 58a4e76e0d4ce8d03f0faf38d803481a402fcafdf12034cdd58244b9dcdb5cf4 10964 prometheus-alertmanager_0.15.3+ds-3+deb10u1_amd64.buildinfo
+Files:
+ 14a03c9ba54ea55e717fd353843e3fa8 3029 net optional prometheus-alertmanager_0.15.3+ds-3+deb10u1.dsc
+ f9ce174eefa4f0de231f5d9a23666ba1 220285 net optional prometheus-alertmanager_0.15.3+ds.orig.tar.gz
+ 0816a25f45434598d24a48f82814fecf 15988 net optional prometheus-alertmanager_0.15.3+ds-3+deb10u1.debian.tar.xz
+ 34ba1d0ca5519887d915c0086b33e352 10964 net optional prometheus-alertmanager_0.15.3+ds-3+deb10u1_amd64.buildinfo
+

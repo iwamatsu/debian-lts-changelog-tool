@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 22 Jun 2023 22:03:38 +0200
+Source: lua5.3
+Architecture: source
+Version: 5.3.3-1.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Enrico Tassi <gareuselesinge@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 920321 988734
+Changes:
+ lua5.3 (5.3.3-1.1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2019-6706: Use after free in lua_upvaluejoin in lapi.c. (Closes:
+     #920321)
+   * Fix CVE-2020-24370: Segmentation fault in getlocal and setlocal functions
+     in ldebug.c. (Closes: #988734)
+Checksums-Sha1:
+ 5e62af8d09b77057e0ea279b2dd23da030a9be0e 2100 lua5.3_5.3.3-1.1+deb10u1.dsc
+ a0341bc3d1415b814cc738b2ec01ae56045d64ef 294290 lua5.3_5.3.3.orig.tar.gz
+ b9f6ad586cddf1b82b0aa9c4244edf2745efba71 9384 lua5.3_5.3.3-1.1+deb10u1.debian.tar.xz
+ a3345ffa1dce52cc8e1c85c342d71b460bc28fd6 6665 lua5.3_5.3.3-1.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c7d520895234fa7a3f2a7eac256815e0599bd0ab4bdd653cd6b57766eb51bd55 2100 lua5.3_5.3.3-1.1+deb10u1.dsc
+ 5113c06884f7de453ce57702abaac1d618307f33f6789fa870e87a59d772aca2 294290 lua5.3_5.3.3.orig.tar.gz
+ fd6f0591e34ceb217e5d647b2a884aefa7bfc9f449e425e349f72b3be43178fd 9384 lua5.3_5.3.3-1.1+deb10u1.debian.tar.xz
+ 62827a2c2eb9f9bfb53524f37c5b0227de540ce019aa00393126b4c2cac97280 6665 lua5.3_5.3.3-1.1+deb10u1_amd64.buildinfo
+Files:
+ 837b33029271de3aff6fd0eddedf5215 2100 interpreters optional lua5.3_5.3.3-1.1+deb10u1.dsc
+ 703f75caa4fdf4a911c1a72e67a27498 294290 interpreters optional lua5.3_5.3.3.orig.tar.gz
+ 01b1065c663977b39a88f5aa8f74172d 9384 interpreters optional lua5.3_5.3.3-1.1+deb10u1.debian.tar.xz
+ 286d6393289112ab7dfeeb7e9e5a6999 6665 interpreters optional lua5.3_5.3.3-1.1+deb10u1_amd64.buildinfo
+

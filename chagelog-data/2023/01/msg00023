@@ -1,0 +1,55 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 25 Jan 2023 20:31:05 +0100
+Source: git
+Architecture: source
+Version: 1:2.20.1-2+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Gerrit Pape <pape@smarden.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ git (1:2.20.1-2+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-23521: gitattributes are a mechanism to allow defining
+     attributes for paths. These attributes can be defined by adding a
+     `.gitattributes` file to the repository, which contains a set of file
+     patterns and the attributes that should be set for paths matching this
+     pattern. When parsing gitattributes, multiple integer overflows can
+     occur when there is a huge number of path patterns, a huge number of
+     attributes for a single pattern, or when the declared attribute names
+     are huge. These overflows can be triggered via a crafted
+     `.gitattributes` file that may be part of the commit history. Git
+     silently splits lines longer than 2KB when parsing gitattributes from
+     a file, but not when parsing them from the index. Consequentially, the
+     failure mode depends on whether the file exists in the working tree,
+     the index or both. This integer overflow can result in arbitrary heap
+     reads and writes, which may result in remote code execution.
+   * CVE-2022-41903: `git log` can display commits in an arbitrary format
+     using its `--format` specifiers. This functionality is also exposed to
+     `git archive` via the `export-subst` gitattribute. When processing the
+     padding operators, there is a integer overflow in
+     `pretty.c::format_and_pad_commit()` where a `size_t` is stored
+     improperly as an `int`, and then added as an offset to a
+     `memcpy()`. This overflow can be triggered directly by a user running
+     a command which invokes the commit formatting machinery (e.g., `git
+     log --format=...`). It may also be triggered indirectly through git
+     archive via the export-subst mechanism, which expands format
+     specifiers inside of files within the repository during a git
+     archive. This integer overflow can result in arbitrary heap writes,
+     which may result in arbitrary code execution.
+Checksums-Sha1:
+ 814809d8e0022e88232e9e48d3612c1e9428a6ae 2894 git_2.20.1-2+deb10u7.dsc
+ 5bcae02e621ae6af397e333efbb14d53ff86e2c2 693472 git_2.20.1-2+deb10u7.debian.tar.xz
+ 137a7ab58f58e4b453fbef0107693df72d7835ed 8494 git_2.20.1-2+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 5604b00ffaa0e19fa390c282f1da2adb3a00cc16aab73e55ebe29ce8a69a0c1f 2894 git_2.20.1-2+deb10u7.dsc
+ a8787e368edcb5518d0d07ad60294d54981eaa890cad16b060fca3220e957d5d 693472 git_2.20.1-2+deb10u7.debian.tar.xz
+ 5ea35e364ef2f230c015844d29d83c66b29047e93e96888401be385b72540052 8494 git_2.20.1-2+deb10u7_amd64.buildinfo
+Files:
+ b038a095402a500b2ebae80d147dd72f 2894 vcs optional git_2.20.1-2+deb10u7.dsc
+ b8997b52b03aa97b7eb4e269ce0c7f31 693472 vcs optional git_2.20.1-2+deb10u7.debian.tar.xz
+ b4003191db0585e00f2e985063306823 8494 vcs optional git_2.20.1-2+deb10u7_amd64.buildinfo
+

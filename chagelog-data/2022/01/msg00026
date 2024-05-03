@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 25 Jan 2022 12:28:45 +0100
+Source: nss
+Architecture: source
+Version: 2:3.26.2-1.1+deb9u5
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <pkg-mozilla-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ nss (2:3.26.2-1.1+deb9u5) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-22747: null pointer dereference on empty pkcs7 sequence.
+Checksums-Sha1:
+ 671689774d8cc177a9e335d850eb0300c398572f 2276 nss_3.26.2-1.1+deb9u5.dsc
+ 40c178e9aa416b76c169a1f425d4852d56fa1232 7388390 nss_3.26.2.orig.tar.gz
+ bf1454001ada526e5701db1f8720f692ae805e10 252752 nss_3.26.2-1.1+deb9u5.debian.tar.xz
+ e7a732d4f02b09d474ed7cece783c3780bcee0bb 5707 nss_3.26.2-1.1+deb9u5_source.buildinfo
+Checksums-Sha256:
+ d70eb703b3e210edca9076a4e9b67ddc58aa8f93dc69fd431e7859805705c90d 2276 nss_3.26.2-1.1+deb9u5.dsc
+ 13a40a2f97edf5fab3d4c7fdd928e77df36dc539cd8354b6b5d79ab93a131a5a 7388390 nss_3.26.2.orig.tar.gz
+ 689ed44f3ca533273883fd285cfcf38e407883b8c590d0a7efb5794fb78563cb 252752 nss_3.26.2-1.1+deb9u5.debian.tar.xz
+ 83d63f8de60a86d6677dfd147e4cb9c3c2643b8255b017af38a4c7ee6ba2d43e 5707 nss_3.26.2-1.1+deb9u5_source.buildinfo
+Files:
+ 8526f432ecfa75e527aa721471698952 2276 libs optional nss_3.26.2-1.1+deb9u5.dsc
+ 643b46c81a1235a81459d853a084e401 7388390 libs optional nss_3.26.2.orig.tar.gz
+ 7530ea5cb8e79ccac743131a95b0ff22 252752 libs optional nss_3.26.2-1.1+deb9u5.debian.tar.xz
+ 31fc28607de106032417bcc37b59fcc7 5707 libs optional nss_3.26.2-1.1+deb9u5_source.buildinfo
+

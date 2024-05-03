@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 15 Dec 2022 17:40:12 +0100
+Source: libde265
+Architecture: source
+Version: 1.0.3-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1014977
+Changes:
+ libde265 (1.0.3-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Cherry-pick upstream patches for:
+     - CVE-2020-21599 (See #1014999)
+     - CVE-2021-35452, CVE-2021-36408, CVE-2021-36409, CVE-2021-36410 and
+       CVE-2021-36411 (Closes: 1014977)
+Checksums-Sha1:
+ 5f7dfd400fca22b7f3e1e35fb9febc5e23e044cc 2245 libde265_1.0.3-1+deb10u1.dsc
+ 3a246d4c526422c85443edcd8bc904004b2b42c7 871127 libde265_1.0.3.orig.tar.gz
+ e51aca29456988467de0c23d0097084c8be3caab 11588 libde265_1.0.3-1+deb10u1.debian.tar.xz
+ 228fe264fd72ebfdb5f81d2a355b3c147f5f6c50 13601 libde265_1.0.3-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d654810caeeac7d37340a6793228ede8ef6d728592ccf5e117555f7bdb68eb42 2245 libde265_1.0.3-1+deb10u1.dsc
+ e4206185a7c67d3b797d6537df8dcaa6e5fd5a5f93bd14e65a755c33cd645f7a 871127 libde265_1.0.3.orig.tar.gz
+ 52b7d8d393c79a853c18c89652a272a402c2af0a5f87be78a817c13050c6a4e7 11588 libde265_1.0.3-1+deb10u1.debian.tar.xz
+ dd98116cd82c060bd7f39dcf9c64d309c2a7a36e7bfe1e6e24d7e2c945922057 13601 libde265_1.0.3-1+deb10u1_amd64.buildinfo
+Files:
+ ad6bfb177aa716645e0f5bc6ee9be229 2245 libs optional libde265_1.0.3-1+deb10u1.dsc
+ 0e1e26ffcb2177c3749c748e20fcd588 871127 libs optional libde265_1.0.3.orig.tar.gz
+ 511e9d0c18cd23440b905babbf272274 11588 libs optional libde265_1.0.3-1+deb10u1.debian.tar.xz
+ 7b3a91d0ea5d5beea1d9fec0b3ca1321 13601 libs optional libde265_1.0.3-1+deb10u1_amd64.buildinfo
+

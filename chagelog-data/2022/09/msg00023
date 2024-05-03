@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 21 Jul 2020 10:36:47 +0200
+Source: bzip2
+Architecture: source
+Version: 1.0.6-9.2~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@debian.org>
+Closes: 944557 965309
+Changes:
+ bzip2 (1.0.6-9.2~deb10u2) buster-security; urgency=medium
+ .
+   * Append -D_FILE_OFFSET_BITS=64 variable to buildflags, to renable handling
+     big files in 32-bit archs (Closes: #944557)
+   * debian/patches/40-bzdiff-l.patch: Fix bzdiff does not work when comparing
+     two bzip2 compressed files. Thanks to Joey Schulze <joey@infodrom.org>.
+     (Closes: #965309)
+Checksums-Sha1:
+ 07c3d1cef900261d9ba9875817754aaa859e3da0 2225 bzip2_1.0.6-9.2~deb10u2.dsc
+ 3725a0554fa6bb654ef2728fef36bc06aed4e388 708737 bzip2_1.0.6.orig.tar.bz2
+ 90251a670887a1cde73716e2f0f43c8d2029c609 27749 bzip2_1.0.6-9.2~deb10u2.debian.tar.bz2
+ 0549dcdfc8b07659299bb1d030545fa7daf62ad4 5821 bzip2_1.0.6-9.2~deb10u2_source.buildinfo
+Checksums-Sha256:
+ ebc297b875639162712a3e2fe09218566b0955441e7211a7f211211889b69727 2225 bzip2_1.0.6-9.2~deb10u2.dsc
+ d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7 708737 bzip2_1.0.6.orig.tar.bz2
+ cec354e1a9f9251ec4cd02897e6557dd3cb84941da250f2ee095687728558b62 27749 bzip2_1.0.6-9.2~deb10u2.debian.tar.bz2
+ 9d4561486913703c73ab467dcc803bbe040f890c8f1a2a9c4f55108a356bed46 5821 bzip2_1.0.6-9.2~deb10u2_source.buildinfo
+Files:
+ ae833888daa4dae3fc87e2b5db7ad58b 2225 utils important bzip2_1.0.6-9.2~deb10u2.dsc
+ 2a1df12bd405cc86790291797673753c 708737 utils important bzip2_1.0.6.orig.tar.bz2
+ 0ff5035538ab6b0fecbcbe13dcf45551 27749 utils important bzip2_1.0.6-9.2~deb10u2.debian.tar.bz2
+ 6c4b9d5b65a7132acc6c1020ea47a7e4 5821 utils important bzip2_1.0.6-9.2~deb10u2_source.buildinfo
+

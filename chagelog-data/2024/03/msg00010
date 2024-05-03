@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 10 Mar 2024 15:45:51 +0100
+Source: nss
+Architecture: source
+Version: 2:3.42.1-1+deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1056284
+Changes:
+ nss (2:3.42.1-1+deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add upstream patch for CVE-2024-0743, integer underflow can lead to
+     potentially exploitable crash.
+   * Add upstream patch for CVE-2023-5388, timing attack against RSA
+     decryption in TLS. (Closes: #1056284)
+Checksums-Sha1:
+ 9f7940e8c5d90986a93c58cf21c6becd17db260c 2198 nss_3.42.1-1+deb10u8.dsc
+ b8a0d5ec55a17899eb240e033701bb112c3a577c 1115524 nss_3.42.1-1+deb10u8.debian.tar.xz
+ 33dbd679bc37b4d82971028098de2d0292675846 6899 nss_3.42.1-1+deb10u8_amd64.buildinfo
+Checksums-Sha256:
+ 551ab49564503b47fac8fc00e3160ba439301e7c010be12ebad174f38ef44ddd 2198 nss_3.42.1-1+deb10u8.dsc
+ cf3233938eb4c886a21cef588098faa665d8e914481e8b70597cbe0502b58033 1115524 nss_3.42.1-1+deb10u8.debian.tar.xz
+ 393d1a75f7631e89a77720639bc24d9f5ee8d054a1689a0bb373d07298c03faf 6899 nss_3.42.1-1+deb10u8_amd64.buildinfo
+Files:
+ 3c039f493295c8a48b65e92306927008 2198 libs optional nss_3.42.1-1+deb10u8.dsc
+ 52fd1f0c00f227f60996abeaa874de3f 1115524 libs optional nss_3.42.1-1+deb10u8.debian.tar.xz
+ 82f6d29abc8a841870cc4cb99a5ae591 6899 libs optional nss_3.42.1-1+deb10u8_amd64.buildinfo
+

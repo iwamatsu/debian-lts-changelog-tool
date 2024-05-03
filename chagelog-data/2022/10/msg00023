@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 08 Oct 2022 17:53:16 +0200
+Source: glibc
+Architecture: source
+Version: 2.28-10+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 856503 945250 953108 953788 961452 973914 979273 981198 983479 989147 990542
+Changes:
+ glibc (2.28-10+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by LTS team.
+   * CVE-2016-10228 iconv option parsing Closes: #856503
+   * CVE-2019-19126 setuid environment filtering Closes: #945250
+   * CVE-2019-25013 oob read in iconv Closes: #979273
+   * CVE-2020-1752 use after free in glob Closes: #953788
+   * CVE-2020-6096 [arm] memcpy underflow Closes: #961452
+   * CVE-2020-10029 sinl buffer overflow Closes: #953108
+   * CVE-2020-27618 iconv infinite loop Closes: #973914
+   * CVE-2021-3326 iconv abort Closes: #981198
+   * CVE-2021-3999 oob write for getcwd size 1
+   * CVE-2021-27645 nscd double free Closes: #983479
+   * CVE-2021-33574 mq_notify use after free Closes: #989147
+   * CVE-2021-35942 wordexp input validation Closes: #990542
+   * CVE-2022-23218 svcunix_create buffer overflow
+   * CVE-2022-23219 clnt_create buffer overflow
+Checksums-Sha1:
+ 3bd3b180729a3b24a205f10014bc2f34ceb8c46e 8921 glibc_2.28-10+deb10u2.dsc
+ 2d661b89603cc44217286eb86f2e2093cace9595 17061292 glibc_2.28.orig.tar.xz
+ c640147011092a06bc687905b8557d7dd04bad33 922792 glibc_2.28-10+deb10u2.debian.tar.xz
+ 30f62d538f2adf91e144ddf33c56b950cbaaad62 14163 glibc_2.28-10+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 1db9443dcf591e7c3980686ebf782400658761c6dcf832c704efbd592e203418 8921 glibc_2.28-10+deb10u2.dsc
+ 53d3c1c7bff0fb25d4c7874bf13435dc44a71fd7dd5ffc9bfdcb513cdfc36854 17061292 glibc_2.28.orig.tar.xz
+ e9e8a1512517faa1cab5a5fe0231dcae3d410ad3f981a8db5e1494ed68bee15a 922792 glibc_2.28-10+deb10u2.debian.tar.xz
+ 403fb7c232c07f06b8f5acdfd6a1244387bd5bf44266f338fb10c35604b77b6e 14163 glibc_2.28-10+deb10u2_amd64.buildinfo
+Files:
+ 8a9b02db2971504e563523b8f49e0955 8921 libs required glibc_2.28-10+deb10u2.dsc
+ 2d78d5b080fbe4fefa2e1ccef9c39dbc 17061292 libs required glibc_2.28.orig.tar.xz
+ 7126538aa85de4e8b9cb6d03ba5de681 922792 libs required glibc_2.28-10+deb10u2.debian.tar.xz
+ e3d0be2de1e3611fa7e7c4a1bce0608c 14163 libs required glibc_2.28-10+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,331 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 13 Oct 2023 20:56:38 +0400
+Source: node-babel
+Binary: node-babel-cli node-babel-code-frame node-babel-core node-babel-generator node-babel-helper-bindify-decorators node-babel-helper-builder-binary-assignment-operator-visitor node-babel-helper-builder-react-jsx node-babel-helper-call-delegate node-babel-helper-define-map node-babel-helper-explode-assignable-expression node-babel-helper-explode-class node-babel-helper-function-name node-babel-helper-get-function-arity node-babel-helper-hoist-variables node-babel-helper-optimise-call-expression node-babel-helper-regex node-babel-helper-remap-async-to-generator node-babel-helper-replace-supers node-babel-helpers node-babel-messages node-babel-plugin-external-helpers node-babel-plugin-syntax-async-functions node-babel-plugin-syntax-async-generators node-babel-plugin-syntax-class-constructor-call node-babel-plugin-syntax-class-properties node-babel-plugin-syntax-decorators node-babel-plugin-syntax-do-expressions node-babel-plugin-syntax-dynamic-import
+ node-babel-plugin-syntax-exponentiation-operator node-babel-plugin-syntax-export-extensions node-babel-plugin-syntax-flow node-babel-plugin-syntax-function-bind node-babel-plugin-syntax-jsx node-babel-plugin-syntax-object-rest-spread node-babel-plugin-syntax-trailing-function-commas node-babel-plugin-transform-async-generator-functions node-babel-plugin-transform-async-to-generator node-babel-plugin-transform-class-constructor-call node-babel-plugin-transform-class-properties node-babel-plugin-transform-decorators node-babel-plugin-transform-do-expressions node-babel-plugin-transform-es3-member-expression-literals node-babel-plugin-transform-es3-property-literals node-babel-plugin-transform-exponentiation-operator node-babel-plugin-transform-export-extensions node-babel-plugin-transform-flow-strip-types node-babel-plugin-transform-function-bind node-babel-plugin-transform-jscript node-babel-plugin-transform-object-rest-spread
+ node-babel-plugin-transform-proto-to-assign node-babel-plugin-transform-react-display-name node-babel-plugin-transform-react-jsx node-babel-plugin-transform-react-jsx-self node-babel-plugin-transform-react-jsx-source node-babel-plugin-transform-regenerator node-babel-plugin-transform-runtime node-babel-plugin-transform-strict-mode node-babel-polyfill node-babel-preset-es2015 node-babel-preset-es2016 node-babel-preset-es2017 node-babel-preset-flow node-babel-preset-latest node-babel-preset-react node-babel-preset-stage-0 node-babel-preset-stage-1 node-babel-preset-stage-2 node-babel-preset-stage-3 node-babel-register node-babel-runtime node-babel-template node-babel-traverse
+ node-babel-types
+Architecture: source all
+Version: 6.26.0+dfsg-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Yadd <yadd@debian.org>
+Description:
+ node-babel-cli - Babel command line
+ node-babel-code-frame - generate errors that contain a code frame that point to source lo
+ node-babel-core - Babel compiler core.
+ node-babel-generator - Turns an AST into code.
+ node-babel-helper-bindify-decorators - Helper function to bindify decorators
+ node-babel-helper-builder-binary-assignment-operator-visitor - Helper function to build binary assignment operator visitors
+ node-babel-helper-builder-react-jsx - Helper function to build react jsx
+ node-babel-helper-call-delegate - Helper function to call delegate
+ node-babel-helper-define-map - Helper function to define a map
+ node-babel-helper-explode-assignable-expression - Helper function to explode assignable expressions
+ node-babel-helper-explode-class - Helper function to explode classes
+ node-babel-helper-function-name - Helper function to change the property 'name' of every function
+ node-babel-helper-get-function-arity - Helper function to get function arity
+ node-babel-helper-hoist-variables - Helper function to hoist variables
+ node-babel-helper-optimise-call-expression - Helper function to optimise call expression
+ node-babel-helper-regex - Helper function to check for literal RegEx
+ node-babel-helper-remap-async-to-generator - Helper function to remap async functions to generators
+ node-babel-helper-replace-supers - Helper function to replace supers
+ node-babel-helpers - Collection of helper functions used by Babel transforms
+ node-babel-messages - Collection of debug messages used by Babel.
+ node-babel-plugin-external-helpers - helper functions that’ll be placed at the top of the generated co
+ node-babel-plugin-syntax-async-functions - Allow parsing of async functions
+ node-babel-plugin-syntax-async-generators - Allow parsing of async generators
+ node-babel-plugin-syntax-class-constructor-call - Allow parsing of class constructor calls
+ node-babel-plugin-syntax-class-properties - Allow parsing of class properties
+ node-babel-plugin-syntax-decorators - Allow parsing of decorators
+ node-babel-plugin-syntax-do-expressions - Allow parsing of do expressinos
+ node-babel-plugin-syntax-dynamic-import - Allow parsing of import
+ node-babel-plugin-syntax-exponentiation-operator - Allow parsing of the exponentiation operator
+ node-babel-plugin-syntax-export-extensions - Allow parsing of export extensions
+ node-babel-plugin-syntax-flow - Allow parsing of the flow syntax
+ node-babel-plugin-syntax-function-bind - Allow parsing of function bind
+ node-babel-plugin-syntax-jsx - Allow parsing of jsx
+ node-babel-plugin-syntax-object-rest-spread - Allow parsing of object rest/spread
+ node-babel-plugin-syntax-trailing-function-commas - Compile trailing function commas to ES5
+ node-babel-plugin-transform-async-generator-functions - Convert async generator functions to ES2015 generators
+ node-babel-plugin-transform-async-to-generator - Turn async functions into ES2015 generators
+ node-babel-plugin-transform-class-constructor-call - Enable new.target in ES2015 classes
+ node-babel-plugin-transform-class-properties - Compile additional export-from statements to ES2015
+ node-babel-plugin-transform-decorators - Compile class and object decorators to ES5
+ node-babel-plugin-transform-do-expressions - Compile do expressions to ES5
+ node-babel-plugin-transform-es3-member-expression-literals - Ensure that reserved words are quoted in property accesses
+ node-babel-plugin-transform-es3-property-literals - Ensure that reserved words are quoted in object property keys
+ node-babel-plugin-transform-exponentiation-operator - Compile the exponentiation operator to ES5
+ node-babel-plugin-transform-export-extensions - Compile ES2015/ES2016 class properties to ES5
+ node-babel-plugin-transform-flow-strip-types - Strip flow type annotations from your output code
+ node-babel-plugin-transform-function-bind - Compile the functino bind operator to ES5
+ node-babel-plugin-transform-jscript - fix buggy JScript named function expressions
+ node-babel-plugin-transform-object-rest-spread - Compile object rest and spread to ES5
+ node-babel-plugin-transform-proto-to-assign - Babel plugin for turning __proto__ into a shallow property clone
+ node-babel-plugin-transform-react-display-name - Add displayName to React.createClass calls
+ node-babel-plugin-transform-react-jsx - Turn JSX into React function calls
+ node-babel-plugin-transform-react-jsx-self - Add a __self prop to all JSX Elements
+ node-babel-plugin-transform-react-jsx-source - Add a __source prop to all JSX Elements
+ node-babel-plugin-transform-regenerator - Explode async and generator functions into a state machine
+ node-babel-plugin-transform-runtime - Externalise references to helpers and builtins
+ node-babel-plugin-transform-strict-mode - Enable strict mode for all files
+ node-babel-polyfill - Provides polyfills necessary for a full ES2015+ environment
+ node-babel-preset-es2015 - Babel preset for all es2015 plugins
+ node-babel-preset-es2016 - Babel preset for all es2016 plugins
+ node-babel-preset-es2017 - Babel preset for all es2017 plugins
+ node-babel-preset-flow - Babel preset for all Flow plugins
+ node-babel-preset-latest - Babel preset including es2015+
+ node-babel-preset-react - Babel preset for all React plugins
+ node-babel-preset-stage-0 - Babel preset for stage 0 plugins
+ node-babel-preset-stage-1 - Babel preset for stage 1 plugins
+ node-babel-preset-stage-2 - Babel preset for stage 2 plugins
+ node-babel-preset-stage-3 - Babel preset for stage 3 plugins
+ node-babel-register - babel require hook
+ node-babel-runtime - babel selfContained runtime
+ node-babel-template - Generate an AST from a string template.
+ node-babel-traverse - Babel Traverse module
+ node-babel-types - lodash-esque utility library for AST nodes
+Closes: 1053880
+Changes:
+ node-babel (6.26.0+dfsg-3+deb10u1) buster-security; urgency=medium
+ .
+   * Team upload
+   * Only evaluate own String/Number/Math methods
+     (Closes: #1053880, CVE-2023-45133)
+Checksums-Sha1:
+ ec60d7c816cb5c42fd8c7e687dcdb658e9ec49f0 10199 node-babel_6.26.0+dfsg-3+deb10u1.dsc
+ e75e535627b862b32d99e5d6313850fe767dedbd 628232 node-babel_6.26.0+dfsg.orig.tar.gz
+ 7b71a3d790e2cf68b8e5a0550852758713a0c2ab 13492 node-babel_6.26.0+dfsg-3+deb10u1.debian.tar.xz
+ 27d89eea7a070d4f5476860112ff391d3168eb5c 73760 node-babel-cli_6.26.0+dfsg-3+deb10u1_all.deb
+ 0f92b8dd943278e0be2e02e7c530a8a1d59e4e7e 69124 node-babel-code-frame_6.26.0+dfsg-3+deb10u1_all.deb
+ 0294ee646308b32feab6b2e86d258e31965b08a6 85112 node-babel-core_6.26.0+dfsg-3+deb10u1_all.deb
+ d45fbcfcad43badaa143976d4dcab65f84febd0e 83772 node-babel-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ a1e562d5c2cacb081570cb5b23c6c9fd17474e87 68008 node-babel-helper-bindify-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ 20adf7a7d1d454b35458802fc61146c5da06ba27 68020 node-babel-helper-builder-binary-assignment-operator-visitor_6.26.0+dfsg-3+deb10u1_all.deb
+ 596ff7bc1fd27204a3923306995987bc130a0366 68944 node-babel-helper-builder-react-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ d0ad9e4a38b5e4032df10e847abc913123ab6825 68072 node-babel-helper-call-delegate_6.26.0+dfsg-3+deb10u1_all.deb
+ 46b9bbee47db190bbdd07fecfc4b9b0dd0bbe765 68696 node-babel-helper-define-map_6.26.0+dfsg-3+deb10u1_all.deb
+ 9f4e9f12dee29fb9f5a50bea462aaab82b44d585 68020 node-babel-helper-explode-assignable-expression_6.26.0+dfsg-3+deb10u1_all.deb
+ 454cf35746509ca1b4ba63e2ea13f1ae7968db01 68228 node-babel-helper-explode-class_6.26.0+dfsg-3+deb10u1_all.deb
+ 4314a758b74daf780382aa79bf2223b3515ed0fc 68736 node-babel-helper-function-name_6.26.0+dfsg-3+deb10u1_all.deb
+ e0155566bda78bfe8beca470c42167a39f54813c 67660 node-babel-helper-get-function-arity_6.26.0+dfsg-3+deb10u1_all.deb
+ 8a8d3af1a18c4b552e7871f863ceac7fcc90d7c3 68132 node-babel-helper-hoist-variables_6.26.0+dfsg-3+deb10u1_all.deb
+ f41c0bae99e80a62961dc62871758c3069d01eea 67708 node-babel-helper-optimise-call-expression_6.26.0+dfsg-3+deb10u1_all.deb
+ 25848c55de1bdbf4de4aca2b4b5d45672f6c83bb 67744 node-babel-helper-regex_6.26.0+dfsg-3+deb10u1_all.deb
+ 664db585e29e97665eb19b32752fb016c2ea881f 69696 node-babel-helper-remap-async-to-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ 57b0a1ff2a3b0b5a7662808fdbb95286d5c8259c 69356 node-babel-helper-replace-supers_6.26.0+dfsg-3+deb10u1_all.deb
+ 53eaef2a1875f8db359a25b65d57efe20200bfcf 71520 node-babel-helpers_6.26.0+dfsg-3+deb10u1_all.deb
+ 3a3efb9a7ebca87f750f8a9ad60bf1019bcb6a4f 69108 node-babel-messages_6.26.0+dfsg-3+deb10u1_all.deb
+ 4f123c34324e25ab1e4ef651c2cfd8048b84f2f2 67680 node-babel-plugin-external-helpers_6.26.0+dfsg-3+deb10u1_all.deb
+ 03f86675d0511d2c296bae22417fe5477876f5fd 67720 node-babel-plugin-syntax-async-functions_6.26.0+dfsg-3+deb10u1_all.deb
+ 4065e74c9a560a43f61b1860c8433aaf90b6e9d3 67692 node-babel-plugin-syntax-async-generators_6.26.0+dfsg-3+deb10u1_all.deb
+ f469a6f321129a545854548b5e9ce62530b4ee9c 67784 node-babel-plugin-syntax-class-constructor-call_6.26.0+dfsg-3+deb10u1_all.deb
+ d57c5bd56b185d2e6d3caa825facbba78e31ca74 67576 node-babel-plugin-syntax-class-properties_6.26.0+dfsg-3+deb10u1_all.deb
+ 1473aab26c3b8f598aea484ade00f23fb39b3a4d 67568 node-babel-plugin-syntax-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ e16a5189b865bdb36abae832b2d928a1f8fc64a2 67572 node-babel-plugin-syntax-do-expressions_6.26.0+dfsg-3+deb10u1_all.deb
+ 53d71f4d97c0c8a52b626166e602725115aa240c 67576 node-babel-plugin-syntax-dynamic-import_6.26.0+dfsg-3+deb10u1_all.deb
+ fdf6b5f5862816b5326db2b80329551e7406e15c 67584 node-babel-plugin-syntax-exponentiation-operator_6.26.0+dfsg-3+deb10u1_all.deb
+ d5ce0c044c10be7f7e69ec5a254b27e9c5acc990 67568 node-babel-plugin-syntax-export-extensions_6.26.0+dfsg-3+deb10u1_all.deb
+ 0410ee131e815cd80c09778ea80afb81177098b0 67564 node-babel-plugin-syntax-flow_6.26.0+dfsg-3+deb10u1_all.deb
+ f0c46f1964e5e580c17c9b9cfa0304e54e5489d0 67564 node-babel-plugin-syntax-function-bind_6.26.0+dfsg-3+deb10u1_all.deb
+ 17628cd6545765d3c2c1e6fe2cb37e6257e97fc6 67556 node-babel-plugin-syntax-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ ebcfc100937076a1d5726c73f547a492c9e9a561 67600 node-babel-plugin-syntax-object-rest-spread_6.26.0+dfsg-3+deb10u1_all.deb
+ 494d2e56f297c5e289cd9a1fc1d0f3f13b9db051 68168 node-babel-plugin-syntax-trailing-function-commas_6.26.0+dfsg-3+deb10u1_all.deb
+ cb10cc21dd1b99a9f2c8064eb22d008e895b8782 68796 node-babel-plugin-transform-async-generator-functions_6.26.0+dfsg-3+deb10u1_all.deb
+ 6d303a18fe88f164b51cbd379819dadcc323d8b2 67980 node-babel-plugin-transform-async-to-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ afc5c8fb229bfea02c3cae27d5409e9efddeafab 69188 node-babel-plugin-transform-class-constructor-call_6.26.0+dfsg-3+deb10u1_all.deb
+ cee9c0b0840cf7330ab170554fcd12054d57f78f 70056 node-babel-plugin-transform-class-properties_6.26.0+dfsg-3+deb10u1_all.deb
+ a95f56c9f5afeda95e85ac81d69747707effa3fe 69280 node-babel-plugin-transform-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ 7ca14fb41dc7bc9ce095245814cbf2d901acc483 68548 node-babel-plugin-transform-do-expressions_6.26.0+dfsg-3+deb10u1_all.deb
+ 867812c75c24424f43bbea80a1bb93c29eaf7889 67820 node-babel-plugin-transform-es3-member-expression-literals_6.26.0+dfsg-3+deb10u1_all.deb
+ 17bdb993cbb5d3a9bb9e11043b0809d694a52822 67800 node-babel-plugin-transform-es3-property-literals_6.26.0+dfsg-3+deb10u1_all.deb
+ 6d6d2fc023fa79ca6d350a314f592db8a903514d 68044 node-babel-plugin-transform-exponentiation-operator_6.26.0+dfsg-3+deb10u1_all.deb
+ f2728ab48e975847049e6c1b0dc09557e4d3e4f8 68164 node-babel-plugin-transform-export-extensions_6.26.0+dfsg-3+deb10u1_all.deb
+ 153331872f13f88511e8b4a81eba502b45dbd0ea 68420 node-babel-plugin-transform-flow-strip-types_6.26.0+dfsg-3+deb10u1_all.deb
+ 41e6ce0eaf23e3a12928812850ad12a5b1c821bb 68776 node-babel-plugin-transform-function-bind_6.26.0+dfsg-3+deb10u1_all.deb
+ 7cccfd96a1ee3b33af3a2f5d9a5bf9432c09cb18 67936 node-babel-plugin-transform-jscript_6.26.0+dfsg-3+deb10u1_all.deb
+ ab52cd722bf5fb8679ce6130d242cd325930e393 70168 node-babel-plugin-transform-object-rest-spread_6.26.0+dfsg-3+deb10u1_all.deb
+ fd8d81be860f8428bb00c37bd5708461c3800fc7 68712 node-babel-plugin-transform-proto-to-assign_6.26.0+dfsg-3+deb10u1_all.deb
+ ea046ced181959e599d191c433d752256531c8fa 68432 node-babel-plugin-transform-react-display-name_6.26.0+dfsg-3+deb10u1_all.deb
+ 2e837f9a9d0b216433ae546243852fb313c2c664 67880 node-babel-plugin-transform-react-jsx-self_6.26.0+dfsg-3+deb10u1_all.deb
+ 21c589d36a54e5817868efa48bee764e9d38968a 68224 node-babel-plugin-transform-react-jsx-source_6.26.0+dfsg-3+deb10u1_all.deb
+ 545f6fd241f29e4069890636ce9b01361bb31727 68856 node-babel-plugin-transform-react-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ 4e49ae1e4eb842a504bec64a30f8c000b0ebc589 67872 node-babel-plugin-transform-regenerator_6.26.0+dfsg-3+deb10u1_all.deb
+ b488354ed4df9bdb9c98a30c0c728361fbc0f0af 72600 node-babel-plugin-transform-runtime_6.26.0+dfsg-3+deb10u1_all.deb
+ 1ac0dd7cb0d21e4a0b52f341fcadb52958116e05 68384 node-babel-plugin-transform-strict-mode_6.26.0+dfsg-3+deb10u1_all.deb
+ cab0f4534e9b3fd046f8dc79aeb00bd7aa5bf90e 67852 node-babel-polyfill_6.26.0+dfsg-3+deb10u1_all.deb
+ 798d7e66c07ab16f0c11f17f6f473265b1c02c66 97308 node-babel-preset-es2015_6.26.0+dfsg-3+deb10u1_all.deb
+ c5237985581a1d20e873ea8aeedd2cad36f51f2c 67640 node-babel-preset-es2016_6.26.0+dfsg-3+deb10u1_all.deb
+ a19ad95dffa8beab75879eca55d56c6084940a86 67732 node-babel-preset-es2017_6.26.0+dfsg-3+deb10u1_all.deb
+ a3e9eee7cd42e65942c3eb8e1c38dc113785f87b 67784 node-babel-preset-flow_6.26.0+dfsg-3+deb10u1_all.deb
+ 2ca437daa2f52ffeefb31f3813bb89e5e32fbbe2 67964 node-babel-preset-latest_6.26.0+dfsg-3+deb10u1_all.deb
+ bfb6278575f1285c8060a3b0edb3c9575402b5d1 68124 node-babel-preset-react_6.26.0+dfsg-3+deb10u1_all.deb
+ 28ce0911c576bda3d2f52178e8f49bb15bc84f32 67728 node-babel-preset-stage-0_6.26.0+dfsg-3+deb10u1_all.deb
+ b98237279836ec636d56a365dcaddf953bdf6ef3 68228 node-babel-preset-stage-1_6.26.0+dfsg-3+deb10u1_all.deb
+ d7e46860c06cc8858cf63de188307d06eea05f09 68204 node-babel-preset-stage-2_6.26.0+dfsg-3+deb10u1_all.deb
+ 44c810a24452d1dbaab8a74da8b3de051cc12bd5 68272 node-babel-preset-stage-3_6.26.0+dfsg-3+deb10u1_all.deb
+ 1ecb5200e634d6899859d7c3ff573c50c043df21 70464 node-babel-register_6.26.0+dfsg-3+deb10u1_all.deb
+ de6e1350150bf1c6dfa7ab58c620db2868fee6a8 80744 node-babel-runtime_6.26.0+dfsg-3+deb10u1_all.deb
+ e43bbd2ab87cc630d363eee8e73f6ef6b5a71781 69052 node-babel-template_6.26.0+dfsg-3+deb10u1_all.deb
+ 488e98ff507aa106f837b48a466651511d5adf71 92448 node-babel-traverse_6.26.0+dfsg-3+deb10u1_all.deb
+ 32516786e52fef71c7ac830e978ec765bc8a4392 86056 node-babel-types_6.26.0+dfsg-3+deb10u1_all.deb
+ e2d9cb10cc63514e4a63e11709dc7e8a199cb2cb 46398 node-babel_6.26.0+dfsg-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 6e50f408cd799539d1bdda8f4f9d9b1bfa7e43eccdc83b7b7cacbe32ec793184 10199 node-babel_6.26.0+dfsg-3+deb10u1.dsc
+ f2789c3e9d11503b6ec59e631f40cc86a41d8f1b7e8e0763c4a71d048a66f413 628232 node-babel_6.26.0+dfsg.orig.tar.gz
+ 41fcb4ca7ff001e9b9eac2d3c90a6cf8db9116d7e34fa006e3df938143cbe105 13492 node-babel_6.26.0+dfsg-3+deb10u1.debian.tar.xz
+ 7d72928638e0e91ce52a724853d94dcd64c031077b3b9db7e340a475e18a6c52 73760 node-babel-cli_6.26.0+dfsg-3+deb10u1_all.deb
+ 320c63d48d8d54a3a51c0a8212aacfd3a1acb2aeeb482adeb4cef560353ad399 69124 node-babel-code-frame_6.26.0+dfsg-3+deb10u1_all.deb
+ 30f92d2b5f85ad8160a4b9d3a26fc1d57801cb239a97571460ac0ed2c0c3b2b4 85112 node-babel-core_6.26.0+dfsg-3+deb10u1_all.deb
+ 8db8d65672716b329a49873b3d62a3f8b76afbea4c39d5de805764b935cbeb5a 83772 node-babel-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ 3d957de8897d3a1fb456b07d917ceeb3a217a004abf757353451ac0e94ef9941 68008 node-babel-helper-bindify-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ 7c203835f40354a40ef7444a12c6c786d6aee2eeb46114118af38cbef1f08469 68020 node-babel-helper-builder-binary-assignment-operator-visitor_6.26.0+dfsg-3+deb10u1_all.deb
+ cff0c3c7b6a010b401f6ded34e02407f1bb94171e49a7f0ed360b8cb52fbc45b 68944 node-babel-helper-builder-react-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ 3a1eeeb95a9bb52e821eb3f4bffb0294f7ac14af97f7804084ece4ff36b10ced 68072 node-babel-helper-call-delegate_6.26.0+dfsg-3+deb10u1_all.deb
+ 7ada9b07504d3d435255c6b40393b73ee03876639c9fc31e6d4ac87d6bfc5afd 68696 node-babel-helper-define-map_6.26.0+dfsg-3+deb10u1_all.deb
+ a98097268aec4f977269b2cd2857215d8afcfdc35cdca240004df03667b6202e 68020 node-babel-helper-explode-assignable-expression_6.26.0+dfsg-3+deb10u1_all.deb
+ baecb5d0d4d5d421299dc240780eb447fefd7a6352f3913015e4ec0f50394265 68228 node-babel-helper-explode-class_6.26.0+dfsg-3+deb10u1_all.deb
+ ede229b224a389c6fcb4de472a1cb4f3aa81b3f6d987d4dddc77d4d9161a025f 68736 node-babel-helper-function-name_6.26.0+dfsg-3+deb10u1_all.deb
+ 73b1be148986df615d55453bc070225085b2708ffa78ec221521545d43a0d01e 67660 node-babel-helper-get-function-arity_6.26.0+dfsg-3+deb10u1_all.deb
+ 6afead8ba53d2d6d561eb15d1cb925c22861021610c72aacf9bd86388a46d024 68132 node-babel-helper-hoist-variables_6.26.0+dfsg-3+deb10u1_all.deb
+ c7e1dc58ec22ed8e960bd3706f70fde3c431a6b6f2d96e3aac78ade1eefc8b98 67708 node-babel-helper-optimise-call-expression_6.26.0+dfsg-3+deb10u1_all.deb
+ 972f3ef9bfad4e7505745ffa76041dee64e38d6e4c44f12159c615dfa08a9b1f 67744 node-babel-helper-regex_6.26.0+dfsg-3+deb10u1_all.deb
+ 44d9aa04067ca2cfe05989b163c30bece91f715a3e90bdcf8a13d66bfa613e16 69696 node-babel-helper-remap-async-to-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ abed694768e717fe1ba85e4295fff70ddd75821c8c93e66d61aef64369c3da26 69356 node-babel-helper-replace-supers_6.26.0+dfsg-3+deb10u1_all.deb
+ 6bd37b99cf7ba1212da1a6448b253ec1ac1586735f2542d77730c276e2e59a1b 71520 node-babel-helpers_6.26.0+dfsg-3+deb10u1_all.deb
+ b1099e28567e41ca900580997aa31506573cd9b16dc17dcb9d1f9c203ff2abe1 69108 node-babel-messages_6.26.0+dfsg-3+deb10u1_all.deb
+ fa1ff9b371370d9e980b3b4be4a8f0550956aab4dc7892dc27e8a75b0d7af808 67680 node-babel-plugin-external-helpers_6.26.0+dfsg-3+deb10u1_all.deb
+ 893fcf7a66586307b1685c2386bddb66992a921e1c769aca2473e17ff3ea21cc 67720 node-babel-plugin-syntax-async-functions_6.26.0+dfsg-3+deb10u1_all.deb
+ ceccf153c310f14e3497cde9461767a42d7d3c32e875bc82f49bfcfb77a2fac2 67692 node-babel-plugin-syntax-async-generators_6.26.0+dfsg-3+deb10u1_all.deb
+ 74f9cc89b2cd886f59a9fd0f3ff6f0179d3ca42d10574f76c01060fc49bf984b 67784 node-babel-plugin-syntax-class-constructor-call_6.26.0+dfsg-3+deb10u1_all.deb
+ 4a0265440ba58c9f8de824393dcaa23e935ee2bd2872b2b10e7373401be96d8b 67576 node-babel-plugin-syntax-class-properties_6.26.0+dfsg-3+deb10u1_all.deb
+ 1e666080a76deca1a582267c357b7a5b839d30c0d0289f56bea3ead8dcb75859 67568 node-babel-plugin-syntax-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ b3ce4ce5aaa951c96335770fda90fa9738d2a03aae5eafe83a20c47fc8ce71c4 67572 node-babel-plugin-syntax-do-expressions_6.26.0+dfsg-3+deb10u1_all.deb
+ 0fa5019d251008265fb4eb7fd24078d537610de7740d7aac47508c5bdda06e9a 67576 node-babel-plugin-syntax-dynamic-import_6.26.0+dfsg-3+deb10u1_all.deb
+ 8b72e0d5532fd900fb15d4840cb394ac24733a32cb801b5a6b4a125d8278559e 67584 node-babel-plugin-syntax-exponentiation-operator_6.26.0+dfsg-3+deb10u1_all.deb
+ 86bdd0210892ee81cdfa7ada0f9ead75146b946b3f71b88788077f841fb3781b 67568 node-babel-plugin-syntax-export-extensions_6.26.0+dfsg-3+deb10u1_all.deb
+ 401472cde7b0919189914f7bc49291690c4600216105b2c4598b3db001d0a6a3 67564 node-babel-plugin-syntax-flow_6.26.0+dfsg-3+deb10u1_all.deb
+ 94d814e43a68ccecb02292803d92b07e38c3610dd5d684574d3cecee511d5b34 67564 node-babel-plugin-syntax-function-bind_6.26.0+dfsg-3+deb10u1_all.deb
+ 2de5945980b57c736ef42ef1f13151cb0b30b50ab3eb95f7020c77871f6df1cc 67556 node-babel-plugin-syntax-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ 5a14f145eba9d381b8710100de6b5ba532553350ee7df042cfbde1803eb33666 67600 node-babel-plugin-syntax-object-rest-spread_6.26.0+dfsg-3+deb10u1_all.deb
+ 9c4e719ff50159981f6de96114229f8f4efcb1d6ae11eb9e24fb4dcc7cd5ba8e 68168 node-babel-plugin-syntax-trailing-function-commas_6.26.0+dfsg-3+deb10u1_all.deb
+ f8e570bd96f4802b54e7f7c43c05fa895859412c0edd48c01d9bf7ab09e21d2d 68796 node-babel-plugin-transform-async-generator-functions_6.26.0+dfsg-3+deb10u1_all.deb
+ 6784fb5c38af6a74e1000260a8212ed6ce5b539f12e7354af929e524c53a9270 67980 node-babel-plugin-transform-async-to-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ 5bfa8d2e4ef71ab94bc76c7faf23634cc05ce17334d204881a90d277305926fd 69188 node-babel-plugin-transform-class-constructor-call_6.26.0+dfsg-3+deb10u1_all.deb
+ 9949ede6b739bff63d185baf615c2583b3335ac183b064ec05a3001bad12febd 70056 node-babel-plugin-transform-class-properties_6.26.0+dfsg-3+deb10u1_all.deb
+ 899510565941632cb44b7c32e5dcc4b9dfd8c814a0a7e880d95b4b439012affd 69280 node-babel-plugin-transform-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ 08d031a85af5db262b6ac3843f54cec44ba104b81c7807ca752918eb5b50c283 68548 node-babel-plugin-transform-do-expressions_6.26.0+dfsg-3+deb10u1_all.deb
+ eb9b3a5217d10e4e67f627d3aad56f7a017af6b1373b5ca66e0de6029848609f 67820 node-babel-plugin-transform-es3-member-expression-literals_6.26.0+dfsg-3+deb10u1_all.deb
+ 4364fe16943626b1273d1079dab964852b32a5f845212333209d16572978b991 67800 node-babel-plugin-transform-es3-property-literals_6.26.0+dfsg-3+deb10u1_all.deb
+ 5a8dd4507f5bbb41000e28451dfff79bd4bf723c933ae5cf627093bc85854d36 68044 node-babel-plugin-transform-exponentiation-operator_6.26.0+dfsg-3+deb10u1_all.deb
+ ea8c6ce2ba5c8a98068f6951517f7a3a9ebc4e1a78c2bcc8cfc837fc52e88014 68164 node-babel-plugin-transform-export-extensions_6.26.0+dfsg-3+deb10u1_all.deb
+ 70aa82dd034e0b850fac45621e813c19249c387bea2434328ca7e8bac32ae5f7 68420 node-babel-plugin-transform-flow-strip-types_6.26.0+dfsg-3+deb10u1_all.deb
+ ca2016320bf154e53eff7f416fea927ae487d607b73efae0493f66125119cc07 68776 node-babel-plugin-transform-function-bind_6.26.0+dfsg-3+deb10u1_all.deb
+ 5612d9f582188d0503f764fa2b9f9cec0a0ab3a63fb048af1f20bf1411e2ff51 67936 node-babel-plugin-transform-jscript_6.26.0+dfsg-3+deb10u1_all.deb
+ 2c77d7fab948ce845128fc52d27655fc8dbff13567022db0eb6a0b90eeace5ca 70168 node-babel-plugin-transform-object-rest-spread_6.26.0+dfsg-3+deb10u1_all.deb
+ 3c74bb4c12e24e89caee1da8d590fb175641c803335ca5671fe958f03cd60320 68712 node-babel-plugin-transform-proto-to-assign_6.26.0+dfsg-3+deb10u1_all.deb
+ 8aee963ee2fda85835f7759040be692484658b6b97351fe55e75812a160f2095 68432 node-babel-plugin-transform-react-display-name_6.26.0+dfsg-3+deb10u1_all.deb
+ e4f5d2084b7c62e41929f3b673f8cfc038a14fc880a39d1b3f5cb6a9e97470b0 67880 node-babel-plugin-transform-react-jsx-self_6.26.0+dfsg-3+deb10u1_all.deb
+ faf0f0ad5975a4ec57acdafee2ceca6be0808c4cfe303df21c8333c2701db9ea 68224 node-babel-plugin-transform-react-jsx-source_6.26.0+dfsg-3+deb10u1_all.deb
+ 7f09c48cc307f486837ea26e524fae237101730d000966d32071e44066452281 68856 node-babel-plugin-transform-react-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ e9cc76ffa0ab6a9457b25dde8be6f2cdc5ab9602c972feeb4bb9a5d0e5d8a1ca 67872 node-babel-plugin-transform-regenerator_6.26.0+dfsg-3+deb10u1_all.deb
+ 75a15392918ef72ce0ff287e596f6fa76b827ab6b100adddda4020d460a8aac8 72600 node-babel-plugin-transform-runtime_6.26.0+dfsg-3+deb10u1_all.deb
+ e8599f864581ce1a3c405a204f4393d4dd8b11390eee95d4172be9b69e3487c7 68384 node-babel-plugin-transform-strict-mode_6.26.0+dfsg-3+deb10u1_all.deb
+ 1d73ee81b37e54ff27ef07171d3a29eb443c0b91a41e3e93eb0aa487e00c84e4 67852 node-babel-polyfill_6.26.0+dfsg-3+deb10u1_all.deb
+ b6e0544a6bd20a729f8031e03931473a26d10936e26a2e1df63cc6c30285b3e8 97308 node-babel-preset-es2015_6.26.0+dfsg-3+deb10u1_all.deb
+ 146b6b1d617bf7b303471ee07db236b5f528857bb4f59b4bbb2aa92fa56aacb9 67640 node-babel-preset-es2016_6.26.0+dfsg-3+deb10u1_all.deb
+ b743db08ae3a230d510c225a0503d2b67adfe199ebc78798e4d46ea9eaa339be 67732 node-babel-preset-es2017_6.26.0+dfsg-3+deb10u1_all.deb
+ b2679689165ab88981db06c9e5ffe61d7f6a953b15d86161ab5abfa10b239ae9 67784 node-babel-preset-flow_6.26.0+dfsg-3+deb10u1_all.deb
+ 4fb6dc2121bd800c93afcb8fc39895075fd1833dd92d745cde4881ffa045d639 67964 node-babel-preset-latest_6.26.0+dfsg-3+deb10u1_all.deb
+ e0851f79d0d75610b813a7c822d51c0c705c4023f3014e7934f9c2add4e9521f 68124 node-babel-preset-react_6.26.0+dfsg-3+deb10u1_all.deb
+ 1d444245e52834993883eded0bf34484d8cb6a8e9d53825c08a13ac80763c89b 67728 node-babel-preset-stage-0_6.26.0+dfsg-3+deb10u1_all.deb
+ 085a40d661c6f716545a98090d88a4ef0fa42e5610e9d9eb416ecd7d7b9c40e7 68228 node-babel-preset-stage-1_6.26.0+dfsg-3+deb10u1_all.deb
+ a32b9dd348c3bf9f100352a221ed4b3283952a1501c627d1b0ba7bbc2c52192b 68204 node-babel-preset-stage-2_6.26.0+dfsg-3+deb10u1_all.deb
+ 918ab31c5a58061b02150b5cca1d676ff13c599b61755e7d5399b91e5e1908e9 68272 node-babel-preset-stage-3_6.26.0+dfsg-3+deb10u1_all.deb
+ c0462614f0ba39325c454a0a7cc7073c87b79eef74ddc538dfd1428ad289e3d1 70464 node-babel-register_6.26.0+dfsg-3+deb10u1_all.deb
+ e6d20d5233b01f6ffe4c5c3f3752aa927dd58d5e1742fe339ec5ae16ff844685 80744 node-babel-runtime_6.26.0+dfsg-3+deb10u1_all.deb
+ efd5b06ba54b975e5def4ee2e99715b10e21964430fbaa0ecb4f80eab6f905ab 69052 node-babel-template_6.26.0+dfsg-3+deb10u1_all.deb
+ 5a7cee0578a716d6a4eeac740bf5a2d956e417ba5d8a3c08241ae9a77bb112f2 92448 node-babel-traverse_6.26.0+dfsg-3+deb10u1_all.deb
+ 9e935e148120e11b5105e07ffe2c8edafc9fca3f1f067c8db71532dd932a808d 86056 node-babel-types_6.26.0+dfsg-3+deb10u1_all.deb
+ 531a353f3475555ca7470b1d0c5d7f3a7e36366264f10f8813b83bba1c90cbda 46398 node-babel_6.26.0+dfsg-3+deb10u1_amd64.buildinfo
+Files:
+ 6e02650d6a32d70050b5abf4b3df6bc5 10199 javascript optional node-babel_6.26.0+dfsg-3+deb10u1.dsc
+ c230227e479a37a0c160a1c0cca3591d 628232 javascript optional node-babel_6.26.0+dfsg.orig.tar.gz
+ 95cd4f60918ede1b1f1ded269865c3a1 13492 javascript optional node-babel_6.26.0+dfsg-3+deb10u1.debian.tar.xz
+ 9f39152b1dde6c3e347b21df4d978e38 73760 javascript optional node-babel-cli_6.26.0+dfsg-3+deb10u1_all.deb
+ c471d9ae78e07bcb06ffcce2a908d6c2 69124 javascript optional node-babel-code-frame_6.26.0+dfsg-3+deb10u1_all.deb
+ a7b360c62b662994664dea0af982ccea 85112 javascript optional node-babel-core_6.26.0+dfsg-3+deb10u1_all.deb
+ 0c544b302a29eb0798e9f4a12cb8078d 83772 javascript optional node-babel-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ 51f5f0e3cf785d08efe6949a416430dc 68008 javascript optional node-babel-helper-bindify-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ 6ace947a858e723311670cf1263aa625 68020 javascript optional node-babel-helper-builder-binary-assignment-operator-visitor_6.26.0+dfsg-3+deb10u1_all.deb
+ f1dd2aae15d62b97e1e09846da7fcfa3 68944 javascript optional node-babel-helper-builder-react-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ 0c486122b35a319383410aae658a869e 68072 javascript optional node-babel-helper-call-delegate_6.26.0+dfsg-3+deb10u1_all.deb
+ 12c669e05e41111f02abba904c79c482 68696 javascript optional node-babel-helper-define-map_6.26.0+dfsg-3+deb10u1_all.deb
+ 49bbcf8a13ddc878774cbafdc7733dc4 68020 javascript optional node-babel-helper-explode-assignable-expression_6.26.0+dfsg-3+deb10u1_all.deb
+ 84c1814a42fe0b2fce62a55d1e38fada 68228 javascript optional node-babel-helper-explode-class_6.26.0+dfsg-3+deb10u1_all.deb
+ 3d38a4dd0b579616f807b450a7fd7a91 68736 javascript optional node-babel-helper-function-name_6.26.0+dfsg-3+deb10u1_all.deb
+ ae46e02fd9f91c9e2f276014bee448b5 67660 javascript optional node-babel-helper-get-function-arity_6.26.0+dfsg-3+deb10u1_all.deb
+ 7324f65e358fa853896f93c88e3a3316 68132 javascript optional node-babel-helper-hoist-variables_6.26.0+dfsg-3+deb10u1_all.deb
+ a41645ca895faa86637c9309b2d7f9bb 67708 javascript optional node-babel-helper-optimise-call-expression_6.26.0+dfsg-3+deb10u1_all.deb
+ aed20af3932a1f52ce9dae03f09e8eb8 67744 javascript optional node-babel-helper-regex_6.26.0+dfsg-3+deb10u1_all.deb
+ 6adc34a97762658e76158894c0b2dbd1 69696 javascript optional node-babel-helper-remap-async-to-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ ad22c9a11e3fa66cffdd52178a1fd89d 69356 javascript optional node-babel-helper-replace-supers_6.26.0+dfsg-3+deb10u1_all.deb
+ a698147c6d9160753991216bea9ce30e 71520 javascript optional node-babel-helpers_6.26.0+dfsg-3+deb10u1_all.deb
+ 9514d9e26eb588bff92e6ed22e0042d8 69108 javascript optional node-babel-messages_6.26.0+dfsg-3+deb10u1_all.deb
+ 2b5410377582ef75a9a8705830715b46 67680 javascript optional node-babel-plugin-external-helpers_6.26.0+dfsg-3+deb10u1_all.deb
+ f6e3d340915c64f53291438ca0d1eefa 67720 javascript optional node-babel-plugin-syntax-async-functions_6.26.0+dfsg-3+deb10u1_all.deb
+ 34a2465f69b6fed3a01cb7d8ee7f5a3e 67692 javascript optional node-babel-plugin-syntax-async-generators_6.26.0+dfsg-3+deb10u1_all.deb
+ a3f7039eeec5a6a820d88e8c217cc1ae 67784 javascript optional node-babel-plugin-syntax-class-constructor-call_6.26.0+dfsg-3+deb10u1_all.deb
+ a5d20299ba8835642ad78e4a31a3cec4 67576 javascript optional node-babel-plugin-syntax-class-properties_6.26.0+dfsg-3+deb10u1_all.deb
+ cc1213188542c5713df3bfede6c421fc 67568 javascript optional node-babel-plugin-syntax-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ dee0bf2a07b0a0cb881699a600bc27b4 67572 javascript optional node-babel-plugin-syntax-do-expressions_6.26.0+dfsg-3+deb10u1_all.deb
+ 73a7599a48737852413559823f5f1023 67576 javascript optional node-babel-plugin-syntax-dynamic-import_6.26.0+dfsg-3+deb10u1_all.deb
+ b5b3bd1a13d7191313c30f8983bd4347 67584 javascript optional node-babel-plugin-syntax-exponentiation-operator_6.26.0+dfsg-3+deb10u1_all.deb
+ 6d597c27c5bfda26c548753fa2ce5716 67568 javascript optional node-babel-plugin-syntax-export-extensions_6.26.0+dfsg-3+deb10u1_all.deb
+ d79740cdbb0930fb8ec632cd9a02580e 67564 javascript optional node-babel-plugin-syntax-flow_6.26.0+dfsg-3+deb10u1_all.deb
+ 23d7ee481296c2f4bbefc903dc25ab78 67564 javascript optional node-babel-plugin-syntax-function-bind_6.26.0+dfsg-3+deb10u1_all.deb
+ 751f3a9c4db9d54460948be73f3aa3d1 67556 javascript optional node-babel-plugin-syntax-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ 24af384e29d06abfcba3b5c15207e909 67600 javascript optional node-babel-plugin-syntax-object-rest-spread_6.26.0+dfsg-3+deb10u1_all.deb
+ eeb588cb6f3b23380958acb9e4f9abd9 68168 javascript optional node-babel-plugin-syntax-trailing-function-commas_6.26.0+dfsg-3+deb10u1_all.deb
+ c83ac87b21513d826325f3017dff2694 68796 javascript optional node-babel-plugin-transform-async-generator-functions_6.26.0+dfsg-3+deb10u1_all.deb
+ 8280d5ac74ea87394de5b8b1d2d9ac05 67980 javascript optional node-babel-plugin-transform-async-to-generator_6.26.0+dfsg-3+deb10u1_all.deb
+ fb5abc754bdbac3dc0feb05410ffcf3f 69188 javascript optional node-babel-plugin-transform-class-constructor-call_6.26.0+dfsg-3+deb10u1_all.deb
+ 10b58bf9b6365749b23594318c74ece0 70056 javascript optional node-babel-plugin-transform-class-properties_6.26.0+dfsg-3+deb10u1_all.deb
+ 7a7a3f645d2049efe04407ad68a0abfd 69280 javascript optional node-babel-plugin-transform-decorators_6.26.0+dfsg-3+deb10u1_all.deb
+ 58a962a9f729dc3e2c010fb10dff7995 68548 javascript optional node-babel-plugin-transform-do-expressions_6.26.0+dfsg-3+deb10u1_all.deb
+ dd5862fe12bab22394073a789df60b06 67820 javascript optional node-babel-plugin-transform-es3-member-expression-literals_6.26.0+dfsg-3+deb10u1_all.deb
+ 1143608101ce12554c1d4d237da457ec 67800 javascript optional node-babel-plugin-transform-es3-property-literals_6.26.0+dfsg-3+deb10u1_all.deb
+ ce19f07247c10ceba7bb52542488e9dd 68044 javascript optional node-babel-plugin-transform-exponentiation-operator_6.26.0+dfsg-3+deb10u1_all.deb
+ 4049711747f12e38aa79c59028ba4355 68164 javascript optional node-babel-plugin-transform-export-extensions_6.26.0+dfsg-3+deb10u1_all.deb
+ 64c4c0a9822933431e767e82a53ade51 68420 javascript optional node-babel-plugin-transform-flow-strip-types_6.26.0+dfsg-3+deb10u1_all.deb
+ a4dff9405e03317aa9c03c854aecc1f3 68776 javascript optional node-babel-plugin-transform-function-bind_6.26.0+dfsg-3+deb10u1_all.deb
+ 8f30262eb471384a0acdc6a95802e402 67936 javascript optional node-babel-plugin-transform-jscript_6.26.0+dfsg-3+deb10u1_all.deb
+ ce0375e79b67c93b8dbd69ae67dbe00c 70168 javascript optional node-babel-plugin-transform-object-rest-spread_6.26.0+dfsg-3+deb10u1_all.deb
+ 3443925a60773b228202732f754993ef 68712 javascript optional node-babel-plugin-transform-proto-to-assign_6.26.0+dfsg-3+deb10u1_all.deb
+ ea71330e9b52f472df34e2cebe623cdc 68432 javascript optional node-babel-plugin-transform-react-display-name_6.26.0+dfsg-3+deb10u1_all.deb
+ 2529c6b53ce75ad70159dfac4c6c8c07 67880 javascript optional node-babel-plugin-transform-react-jsx-self_6.26.0+dfsg-3+deb10u1_all.deb
+ 4339e6d06bb8a2f6f90e6cccb0f10772 68224 javascript optional node-babel-plugin-transform-react-jsx-source_6.26.0+dfsg-3+deb10u1_all.deb
+ e24bc761d24eb0a5e1308eb449fa7167 68856 javascript optional node-babel-plugin-transform-react-jsx_6.26.0+dfsg-3+deb10u1_all.deb
+ 2bbbfb5f2a6f6f643e0d0ca21ae1a554 67872 javascript optional node-babel-plugin-transform-regenerator_6.26.0+dfsg-3+deb10u1_all.deb
+ ef0d04a978d7defa222be44e07a7ba7f 72600 javascript optional node-babel-plugin-transform-runtime_6.26.0+dfsg-3+deb10u1_all.deb
+ 4632de7a7c0d67e6145088ce17d03860 68384 javascript optional node-babel-plugin-transform-strict-mode_6.26.0+dfsg-3+deb10u1_all.deb
+ eadb3cc03b9316b97710e954ce9cdca6 67852 javascript optional node-babel-polyfill_6.26.0+dfsg-3+deb10u1_all.deb
+ 46c719d64ca624beec123379a520a76f 97308 javascript optional node-babel-preset-es2015_6.26.0+dfsg-3+deb10u1_all.deb
+ 5569442043db28108a5e8ab6441d6a1b 67640 javascript optional node-babel-preset-es2016_6.26.0+dfsg-3+deb10u1_all.deb
+ 1e5bf92bbc107751699c720403f1450f 67732 javascript optional node-babel-preset-es2017_6.26.0+dfsg-3+deb10u1_all.deb
+ 9808397f89c39f028ceee54490abead6 67784 javascript optional node-babel-preset-flow_6.26.0+dfsg-3+deb10u1_all.deb
+ 51afef88db911c9b4b950b472fd1fcb7 67964 javascript optional node-babel-preset-latest_6.26.0+dfsg-3+deb10u1_all.deb
+ b85b5a663a5874b445c8a5abbd2be074 68124 javascript optional node-babel-preset-react_6.26.0+dfsg-3+deb10u1_all.deb
+ fda76604851373334818c4e4936690c9 67728 javascript optional node-babel-preset-stage-0_6.26.0+dfsg-3+deb10u1_all.deb
+ a93de8b556663725e13e9859923175a6 68228 javascript optional node-babel-preset-stage-1_6.26.0+dfsg-3+deb10u1_all.deb
+ 6066e12404745fa47f6197f6166d9432 68204 javascript optional node-babel-preset-stage-2_6.26.0+dfsg-3+deb10u1_all.deb
+ eaf2e4555b6b3e67f4125586d3a86f6e 68272 javascript optional node-babel-preset-stage-3_6.26.0+dfsg-3+deb10u1_all.deb
+ c65ae8f1fab4730690f8f2aa39af5104 70464 javascript optional node-babel-register_6.26.0+dfsg-3+deb10u1_all.deb
+ 119391ecb57893d53a1fd5fa8e14916a 80744 javascript optional node-babel-runtime_6.26.0+dfsg-3+deb10u1_all.deb
+ 26dcfae0063f108fc6469747bcbb2a5b 69052 javascript optional node-babel-template_6.26.0+dfsg-3+deb10u1_all.deb
+ ec871eacce0aac9cdb0c955840b8aba3 92448 javascript optional node-babel-traverse_6.26.0+dfsg-3+deb10u1_all.deb
+ 480056e9f4d68a438f665d9f9c6d342d 86056 javascript optional node-babel-types_6.26.0+dfsg-3+deb10u1_all.deb
+ 8f3b8ef68aa649859f4425451d8ca313 46398 javascript optional node-babel_6.26.0+dfsg-3+deb10u1_amd64.buildinfo
+

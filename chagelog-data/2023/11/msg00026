@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 25 Nov 2023 13:03:02 +0100
+Source: minizip
+Architecture: source
+Version: 1.1-8+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Michael Gilbert <mgilbert@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ minizip (1.1-8+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-45853
+     Reject overflows of zip header fields in minizip.
+Checksums-Sha1:
+ f7c3bfcd980659acaacf571598a515fd38bb3f34 2029 minizip_1.1-8+deb10u1.dsc
+ 22037612d49e9ddd70848eca9ad4ff5752c86897 36204 minizip_1.1.orig.tar.xz
+ a6c28e485b5c17a4567dfd172abd6b646db55015 5856 minizip_1.1-8+deb10u1.debian.tar.xz
+ 68797bafbf9aa6799a642f50fb83d8c1144837f3 6876 minizip_1.1-8+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 98f4d51c64e24da14269a950688b63d7d48b5194a34a65ce22f8abf72ecc2f85 2029 minizip_1.1-8+deb10u1.dsc
+ 7d8da446d3b6799e7851f077a66551a46b80fc3de708549e79dbd3e49e842ba1 36204 minizip_1.1.orig.tar.xz
+ 5b8f6af96fb6ebcade6202c5a40d9797f0650fb2ba4575b5915d9bbf4d1b55a8 5856 minizip_1.1-8+deb10u1.debian.tar.xz
+ 9147afcb42d11f618ba8bd1f1e64b5536bb250c399833f9ad80b090f36e19f1f 6876 minizip_1.1-8+deb10u1_amd64.buildinfo
+Files:
+ 3ab7be78118d9f60508807c5edd7e291 2029 libs optional minizip_1.1-8+deb10u1.dsc
+ e1f720f8ce48ba142becd3acf8d33a00 36204 libs optional minizip_1.1.orig.tar.xz
+ c9e8e999e6c7b1c5c12630bd7dc7a117 5856 libs optional minizip_1.1-8+deb10u1.debian.tar.xz
+ 0b59440944cc77a2c67ba75e5f4321d8 6876 libs optional minizip_1.1-8+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 30 Sep 2023 17:35:12 +0300
+Source: trafficserver
+Architecture: source
+Version: 8.1.7-0+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jean Baptiste Favre <debian@jbfavre.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ trafficserver (8.1.7-0+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-47185, CVE-2023-33934: Improper input validation
+Checksums-Sha1:
+ 79414e2103961950c5b5393cf17282f912ced2c0 2729 trafficserver_8.1.7-0+deb10u2.dsc
+ 1ec1f18838d33352cdf494e96284244984d085d7 7919920 trafficserver_8.1.7.orig.tar.xz
+ 132ca7635ff29a9280e3071202257015c89266ba 50152 trafficserver_8.1.7-0+deb10u2.debian.tar.xz
+Checksums-Sha256:
+ 38a570d5d9adc7ae283b26141d229f2ce0d42c4aa01bedc9d323a6c2afab6bdf 2729 trafficserver_8.1.7-0+deb10u2.dsc
+ c472f50f27193de9d516ea545242b80609d05abf19b04f6e43009f4555059b5a 7919920 trafficserver_8.1.7.orig.tar.xz
+ 3555e5071e21f62f5e1978599c7a012803e0370a75c7fb41e782a2b40986fd5d 50152 trafficserver_8.1.7-0+deb10u2.debian.tar.xz
+Files:
+ 733620f01d1a1dac2a03653aa2d4d710 2729 web optional trafficserver_8.1.7-0+deb10u2.dsc
+ 3c495598c8068a3df19a19382b3b4089 7919920 web optional trafficserver_8.1.7.orig.tar.xz
+ 11a9d4ac6e4db9fcd9d6806c3c93d97c 50152 web optional trafficserver_8.1.7-0+deb10u2.debian.tar.xz
+

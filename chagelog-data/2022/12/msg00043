@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 23 Dec 2022 08:51:22 +0000
+Source: node-trim-newlines
+Binary: node-trim-newlines
+Architecture: source all
+Version: 1.0.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ node-trim-newlines - Trim newlines from start and/or end of a string
+Changes:
+ node-trim-newlines (1.0.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2021-33623: Fix a potential regular expression denial-of-service
+     (ReDoS) attack in trim-newlines' .end() method.
+Checksums-Sha1:
+ 5a3da5dbbbefac89263dfb7685c8035125fb6569 2127 node-trim-newlines_1.0.0-1+deb10u1.dsc
+ 547ae561e83a7df14661620b60f865867d072361 2193 node-trim-newlines_1.0.0.orig.tar.gz
+ 49e099c36a4c57561d699ff087b9a8692bb867aa 2664 node-trim-newlines_1.0.0-1+deb10u1.debian.tar.xz
+ cf1723ba26e7c6e8c4a78d28b48581bea5118574 3260 node-trim-newlines_1.0.0-1+deb10u1_all.deb
+ 0f32c0f5cca28ac1e5c670444383283c786c4f33 5822 node-trim-newlines_1.0.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 97b43dadff1674952ac0909f2ea78aa2b52d14f5dc38ae0d0dfe5c47a10b0587 2127 node-trim-newlines_1.0.0-1+deb10u1.dsc
+ a0ae452504bf24d3406d46b3ee1e19235d870e4e17924f35be3d1cdf045b715c 2193 node-trim-newlines_1.0.0.orig.tar.gz
+ 4543c7f507a21619734cae52672429090de65f64274bdae8d90b786ba70725b1 2664 node-trim-newlines_1.0.0-1+deb10u1.debian.tar.xz
+ 40b47792f9b8302aac93abadac4509de1b658478d0535e0a3a84ae1121eda404 3260 node-trim-newlines_1.0.0-1+deb10u1_all.deb
+ cef42a5f94ee6a62e07dfe825a579207fb096bdda6cc499fb94f186a43d0e9e1 5822 node-trim-newlines_1.0.0-1+deb10u1_amd64.buildinfo
+Files:
+ aa65b269f4a53e8656cd99b0831afa76 2127 web optional node-trim-newlines_1.0.0-1+deb10u1.dsc
+ 5ac6f11417468a1418fab41d4da3e864 2193 web optional node-trim-newlines_1.0.0.orig.tar.gz
+ c9bfa4a5825b6e031072d22a6496c435 2664 web optional node-trim-newlines_1.0.0-1+deb10u1.debian.tar.xz
+ 34fbd488235219b67acfaae869a250ee 3260 web optional node-trim-newlines_1.0.0-1+deb10u1_all.deb
+ eb4ab1a369ff90914af2a63de1df7683 5822 web optional node-trim-newlines_1.0.0-1+deb10u1_amd64.buildinfo
+

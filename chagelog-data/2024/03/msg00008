@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 07 Mar 2024 22:13:52 +0200
+Source: fontforge
+Architecture: source
+Version: 1:20170731~dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ fontforge (1:20170731~dfsg-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-5395: Use-after-free in SFD_GetFontMetaData()
+   * CVE-2020-5496: Buffer overflow in Type2NotDefSplines()
+   * CVE-2024-25081: Spline Font command injection via crafted filenames
+   * CVE-2024-25082: Spline Font command injection via crafted archives
+     or compressed files
+Checksums-Sha1:
+ a90d87d6c1eccd4e6b4ca40ad4250fd07ce51dc3 3154 fontforge_20170731~dfsg-1+deb10u1.dsc
+ 2062bafa78013d87509cebffc8b412b4a6786f72 17896802 fontforge_20170731~dfsg.orig.tar.gz
+ db12021d2c5915c1dcd4b6fb9b06f9dfb7923a7a 57524 fontforge_20170731~dfsg-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ affb09704c222997fcbe43781788b1b50eea3318b68abaa98c08d3cfe608440a 3154 fontforge_20170731~dfsg-1+deb10u1.dsc
+ 642dd957a7e36d68e37c8be9f849a2b2ec2f9e831103d1458660a165fe3e4ae7 17896802 fontforge_20170731~dfsg.orig.tar.gz
+ 4268a047eaa63e163a540c4189fd3102d55d0831158d2beefed990fd63eb1ca8 57524 fontforge_20170731~dfsg-1+deb10u1.debian.tar.xz
+Files:
+ 809618e46cebfd68001eca80f966f592 3154 fonts optional fontforge_20170731~dfsg-1+deb10u1.dsc
+ 127bbd78bb24624b8d4d2965ef4ad3cf 17896802 fonts optional fontforge_20170731~dfsg.orig.tar.gz
+ ba8c8222279f831ef2090eb07410b2a4 57524 fonts optional fontforge_20170731~dfsg-1+deb10u1.debian.tar.xz
+

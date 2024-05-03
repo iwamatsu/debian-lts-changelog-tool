@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 19 Jun 2023 22:03:02 +0200
+Source: libfastjson
+Architecture: source
+Version: 0.99.8-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Michael Biebl <biebl@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libfastjson (0.99.8-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-12762
+     fix for out-of-bounds write with large JSON file
+Checksums-Sha1:
+ eeaa5e419f614ee8c2ed829bf6c638bb9109c2e5 2130 libfastjson_0.99.8-2+deb10u1.dsc
+ 1ac8e58d6aebfb79c12061011f177737d4707842 433819 libfastjson_0.99.8.orig.tar.gz
+ b598332416d1cc6437770df7791597233514d5a0 3792 libfastjson_0.99.8-2+deb10u1.debian.tar.xz
+ 1c36c900bd62361945102ff732b6bdaa719bd313 6395 libfastjson_0.99.8-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 446cec0d774de7275021be2cb11a6c6e6654b5485937cce38da6d34b90dece40 2130 libfastjson_0.99.8-2+deb10u1.dsc
+ 3544c757668b4a257825b3cbc26f800f59ef3c1ff2a260f40f96b48ab1d59e07 433819 libfastjson_0.99.8.orig.tar.gz
+ 776f07e9c52713104dcf3994ebfab52146fa05c2745b882455dd7e850f4643af 3792 libfastjson_0.99.8-2+deb10u1.debian.tar.xz
+ 71570d755c1be42c587c603cea21a316952593b69dc84563cf78ed030f9a9f63 6395 libfastjson_0.99.8-2+deb10u1_amd64.buildinfo
+Files:
+ fd46e161ddb82582d7c37799f285e401 2130 libs optional libfastjson_0.99.8-2+deb10u1.dsc
+ fe7b4eae1bf40499f6f92b51d7e5899e 433819 libs optional libfastjson_0.99.8.orig.tar.gz
+ 36675a9a33f9885c43b81fc28dc2e8c4 3792 libs optional libfastjson_0.99.8-2+deb10u1.debian.tar.xz
+ 59fdb58bc068ece5151417860b0726a0 6395 libs optional libfastjson_0.99.8-2+deb10u1_amd64.buildinfo
+

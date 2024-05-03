@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 31 Jan 2024 22:09:59 +0100
+Source: debian-security-support
+Architecture: source
+Version: 1:10+2024.01.31
+Distribution: buster-security
+Urgency: medium
+Maintainer: Holger Levsen <holger@debian.org>
+Changed-By: Holger Levsen <holger@debian.org>
+Closes: 1057343
+Changes:
+ debian-security-support (1:10+2024.01.31) buster-security; urgency=medium
+ .
+   [ Santiago Ruano Rincón ]
+   * Mark salt as non-supported in buster. (MR: debian/debian-security-support!22)
+ .
+   [ Holger Levsen ]
+   * Add tiles to security-support-limited, Closes: #1057343.
+   * Drop debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ 7a06e414996a0ddc6b7e6677d632d2fb74ef532e 1871 debian-security-support_10+2024.01.31.dsc
+ 2e69d39fcc95d2e9966b6637b76700e964b8e184 31376 debian-security-support_10+2024.01.31.tar.xz
+ f7b7246ae7a9334d965ab33504a166d135275b3d 7009 debian-security-support_10+2024.01.31_source.buildinfo
+Checksums-Sha256:
+ 48e05604d774e7b282a5014193641a13b9b11a42e79fad6792de06b98fb45fac 1871 debian-security-support_10+2024.01.31.dsc
+ d42eaf076fbd6d1aca06b71fffb92c0f06e5a815957c4168b422905a25073c1c 31376 debian-security-support_10+2024.01.31.tar.xz
+ ab1c3061ae322a8d73a188be3acca02eff875f4a2641ca18d847dc0015a8a094 7009 debian-security-support_10+2024.01.31_source.buildinfo
+Files:
+ 1f465400b296701e72ef82ce657bfc67 1871 admin optional debian-security-support_10+2024.01.31.dsc
+ 3ce00aee577c215dd071ffd1eefc62cf 31376 admin optional debian-security-support_10+2024.01.31.tar.xz
+ d7df39ea6d0b6a169433c07c3c360eec 7009 admin optional debian-security-support_10+2024.01.31_source.buildinfo
+

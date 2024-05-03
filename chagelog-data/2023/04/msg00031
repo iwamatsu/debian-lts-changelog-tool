@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Apr 2023 19:03:02 +0200
+Source: sniproxy
+Architecture: source
+Version: 0.6.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Jan Dittberner <jandd@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ sniproxy (0.6.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-25076
+     fix buffer overflow while handling wildcard backend hosts
+Checksums-Sha1:
+ 0a376f972d89b54e0b368b16be5b3c9473ceef7f 2082 sniproxy_0.6.0-1+deb10u1.dsc
+ 26ff187c46eb4f98f9f1731cd26f341383ea6454 78515 sniproxy_0.6.0.orig.tar.gz
+ 883eef1dd18a3b86cd6d45e09f58b5ea0648776e 6432 sniproxy_0.6.0-1+deb10u1.debian.tar.xz
+ 1f5e82d53db188f269515937fcfb209b50f3051b 7033 sniproxy_0.6.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 629b1b4380ab4d9312b3724ba3e1744e67556d435862190919464765c5dff1e6 2082 sniproxy_0.6.0-1+deb10u1.dsc
+ d73c77a9fa8199ae7ac551c0332d3e0a3ff234623f53d65369a8fa560d9880e2 78515 sniproxy_0.6.0.orig.tar.gz
+ 271a9640940f5c42c152efcd22573dea30123c31e30ba5f0a8af367528b2b7bd 6432 sniproxy_0.6.0-1+deb10u1.debian.tar.xz
+ bf26d333d778b944ec005604d04c7ca9caf76b2f3d1e11b529b3c35285d2cf8e 7033 sniproxy_0.6.0-1+deb10u1_amd64.buildinfo
+Files:
+ 2bd6428bd67f10a7a2124eb910b8d69c 2082 web optional sniproxy_0.6.0-1+deb10u1.dsc
+ bcfb5d1efe045b8b356a4229f2339f02 78515 web optional sniproxy_0.6.0.orig.tar.gz
+ 7993808f3de2f6e486dc787d5fbd01a4 6432 web optional sniproxy_0.6.0-1+deb10u1.debian.tar.xz
+ b6d88f270447b7b77727d297d386449e 7033 web optional sniproxy_0.6.0-1+deb10u1_amd64.buildinfo
+

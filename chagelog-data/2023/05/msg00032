@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 May 2023 22:20:58 +0200
+Source: rainloop
+Architecture: source
+Version: 1.12.1-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Daniel Ring <dring@wolfishly.me>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1004548
+Changes:
+ rainloop (1.12.1-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-13389: RainLoop Webmail lacks XSS protection mechanisms such as
+     xlink:href validation, the X-XSS-Protection header, and the
+     Content-Security-Policy header.
+   * CVE-2022-29360: RainLoop's Email Viewer allows XSS via a crafted email
+     message (closes: #1004548).
+Checksums-Sha1:
+ 5c7e4851b5dbee26d3d3976f109319acacaea7f5 2461 rainloop_1.12.1-2+deb10u1.dsc
+ d45974b27b5e2230b1620faaa99d401cad2904a4 5607805 rainloop_1.12.1.orig.tar.gz
+ db78dbbb1178796641c69a5d1c3416f8bbe2cc6a 39636 rainloop_1.12.1-2+deb10u1.debian.tar.xz
+ 188b8caa0f83e2279331c99f1a89ff33d7e1d7d1 18696 rainloop_1.12.1-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ ad069420592ee848dfc844980d1a52bfeaf2fc7318009df6d7310d13c2a81708 2461 rainloop_1.12.1-2+deb10u1.dsc
+ 9da8c1f76fbbeb11bcf9294a18771123c90957a22edd8264b8e00eaa5857d79e 5607805 rainloop_1.12.1.orig.tar.gz
+ d311bdd0dd4d1f87ef5c5642f124b16030e1ab2a0079f34914a53b8c406004f0 39636 rainloop_1.12.1-2+deb10u1.debian.tar.xz
+ 92c9221845a202ccab7ec633560c8c7cb926639139b4b2e5fe78694dd24a2d34 18696 rainloop_1.12.1-2+deb10u1_amd64.buildinfo
+Files:
+ ad377c5b28a9a9373bddde43feb12ac4 2461 web optional rainloop_1.12.1-2+deb10u1.dsc
+ 71020067a10c1da996e8ff6b7b6d6cab 5607805 web optional rainloop_1.12.1.orig.tar.gz
+ 569b9183363fa95284fadf4c70eb3dfd 39636 web optional rainloop_1.12.1-2+deb10u1.debian.tar.xz
+ f463c18c872b5898bdd4d23ec73bfa1a 18696 web optional rainloop_1.12.1-2+deb10u1_amd64.buildinfo
+

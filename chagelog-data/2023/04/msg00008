@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 07 Apr 2023 17:48:45 +0200
+Source: udisks2
+Architecture: source
+Version: 2.8.1-4+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ udisks2 (2.8.1-4+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-3802: Mount ext filesystems as read-only if there are errors.
+     (patch taken from jessie update, thanks to Emilio for preparing it)
+Checksums-Sha1:
+ 6f2d951312283787b8ea34789b9143919a0f8336 3463 udisks2_2.8.1-4+deb10u1.dsc
+ e69fc1a417f4d5e116487ca735bbef89e96cc0f4 1354879 udisks2_2.8.1.orig.tar.bz2
+ 532c656778d7c5e7f80c971d13ef5f3c0b67a764 16740 udisks2_2.8.1-4+deb10u1.debian.tar.xz
+ e1d47f844d6f0b451b3d315293c0d7f93bc7e2c1 17621 udisks2_2.8.1-4+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 90877aa493be5e13091b65bf03596fd438cc8fdcb498737765cedc5dfc90d070 3463 udisks2_2.8.1-4+deb10u1.dsc
+ 4fcf49ef63c071bb35ea6351fdc2208dd6e54dfefd6ee29ee0c414f8dfde461c 1354879 udisks2_2.8.1.orig.tar.bz2
+ 6fcae71e7296395defa6bba412ed6a3104457014c3225b20078b90da360451ca 16740 udisks2_2.8.1-4+deb10u1.debian.tar.xz
+ 6b9bc7b2bd4041f314e16fa245cdd62163112f140bd39f812f352f31f450a312 17621 udisks2_2.8.1-4+deb10u1_amd64.buildinfo
+Files:
+ bd4c1efa5b43e8ebb7121423572c84a2 3463 admin optional udisks2_2.8.1-4+deb10u1.dsc
+ aefebdb5a082f99b4f86cadc41352b3d 1354879 admin optional udisks2_2.8.1.orig.tar.bz2
+ a3b337aa9803b2ca40091346c37e6db0 16740 admin optional udisks2_2.8.1-4+deb10u1.debian.tar.xz
+ df987e02e4dbd446999e9e9e5845e7f7 17621 admin optional udisks2_2.8.1-4+deb10u1_amd64.buildinfo
+

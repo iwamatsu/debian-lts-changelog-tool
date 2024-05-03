@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 18 Aug 2022 11:45:28 +0200
+Source: freecad
+Architecture: source
+Version: 0.18~pre1+dfsg1-5+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1005747
+Changes:
+ freecad (0.18~pre1+dfsg1-5+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-45844: command injection via crafted filename during
+     DWG file import/export with ODA converter (Closes: #1005747).
+Checksums-Sha1:
+ 431e2cb3e794f84849ec5d5e5038fe9c1effa2e4 3493 freecad_0.18~pre1+dfsg1-5+deb10u1.dsc
+ c229e9b348e4fedffaafd4601da34de05a847782 44335370 freecad_0.18~pre1+dfsg1.orig.tar.gz
+ 16ce93f3c6253b31cd1dada7b31322aa876c009c 30912 freecad_0.18~pre1+dfsg1-5+deb10u1.debian.tar.xz
+ 8dd4795b03fd408a758d0fa4b7d8b98296e5d7f7 7270 freecad_0.18~pre1+dfsg1-5+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 9d1b59b8f807202dcf1df925e9954ede4bbca69770d3d3d05822438742aa529d 3493 freecad_0.18~pre1+dfsg1-5+deb10u1.dsc
+ bf06601ef129310a4072ef08de142c8875254cf2a56125252a438a16f0019a60 44335370 freecad_0.18~pre1+dfsg1.orig.tar.gz
+ 8154aa705703dd183f89ef3610cf858c4fae4661e20e2e571c1210ab51cd6ffe 30912 freecad_0.18~pre1+dfsg1-5+deb10u1.debian.tar.xz
+ e01682a8106ef07e72c446a8c6438b43989d2c8c647ca907f4d6411ee274902e 7270 freecad_0.18~pre1+dfsg1-5+deb10u1_source.buildinfo
+Files:
+ 1fde65d76b8231701503a049879cad3f 3493 science optional freecad_0.18~pre1+dfsg1-5+deb10u1.dsc
+ b0aaaba79438580169554ed2e3d906af 44335370 science optional freecad_0.18~pre1+dfsg1.orig.tar.gz
+ d1e5011a962f230ac3ae9fc2f1befdea 30912 science optional freecad_0.18~pre1+dfsg1-5+deb10u1.debian.tar.xz
+ f95be4188b1ae346f0dd79832c5b63ed 7270 science optional freecad_0.18~pre1+dfsg1-5+deb10u1_source.buildinfo
+

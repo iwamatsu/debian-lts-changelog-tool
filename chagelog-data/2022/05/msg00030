@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 20 May 2022 21:45:25 CEST
+Source: libpgjava
+Binary: libpostgresql-jdbc-java libpostgresql-jdbc-java-doc
+Architecture: source
+Version: 9.4.1212-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libpostgresql-jdbc-java - Java database (JDBC) driver for PostgreSQL
+ libpostgresql-jdbc-java-doc - Java database (JDBC) driver for PostgreSQL (documentation)
+Checksums-Sha1:
+ 5e08a71cd08f09ce37b6e6928f9f1a3e3d73f725 2549 libpgjava_9.4.1212-1+deb9u1.dsc
+ 1fb352bc3852314705a4b0707d1a5972bbfcc27a 490036 libpgjava_9.4.1212.orig.tar.xz
+ 59321e1a7d991836d2fac6a18c0cca4b7bf703ec 10672 libpgjava_9.4.1212-1+deb9u1.debian.tar.xz
+ 8b37d10d24b54b3c36378ebe842f32775aefdf8f 16286 libpgjava_9.4.1212-1+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 200302b4a278ab835e2eda4808a41c9f67172e6878d07f42170fdc4ce1ab33c5 2549 libpgjava_9.4.1212-1+deb9u1.dsc
+ f8007c8dcef6cc914751a9eb5b08e5e04d643e0cdb2b0b8fd2b5aa23ef3a0fa1 490036 libpgjava_9.4.1212.orig.tar.xz
+ 7f722b1012e740f72d82e65a5faa0ec4f0e1e9244ce59a95cd951e329c601e33 10672 libpgjava_9.4.1212-1+deb9u1.debian.tar.xz
+ b1a5a06bec2b1c1b59759aa2fa5611dc16721c60185e120d11f89b9028310fa7 16286 libpgjava_9.4.1212-1+deb9u1_amd64.buildinfo
+Changes:
+ libpgjava (9.4.1212-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * It was found that libpgjava, the offical PostgreSQL JDBC Driver, would be
+     vulnerable if an attacker controlled jdbc url or properties. The JDBC
+     driver did not verify if certain classes implemented the expected interface
+     before instantiating the class. This can lead to code execution loaded via
+     arbitrary classes.
+Files:
+ 9fc48ee4180aadc6d090fce5dd9407bd 2549 java optional libpgjava_9.4.1212-1+deb9u1.dsc
+ 87f14d262824492069e5c74e56df1e7f 490036 java optional libpgjava_9.4.1212.orig.tar.xz
+ 6b33d2be869e55e9ca095df183ff9d11 10672 java optional libpgjava_9.4.1212-1+deb9u1.debian.tar.xz
+ e8eecee89908c479db8597f87561289e 16286 java optional libpgjava_9.4.1212-1+deb9u1_amd64.buildinfo
+

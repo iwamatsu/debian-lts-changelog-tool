@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:12:05 CEST
+Source: gitlab-shell
+Architecture: source
+Version: 8.4.3+dfsg1-1deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 97e7c1d685cea2b7b2e6ad58f3389093653caae5 2746 gitlab-shell_8.4.3+dfsg1-1deb10u1.dsc
+ 298f0e89472e136c424b532c154aef31fab4ddbc 236640 gitlab-shell_8.4.3+dfsg1.orig.tar.xz
+ 195224e60338ba13b94722fdca0e09f6e0930383 6352 gitlab-shell_8.4.3+dfsg1-1deb10u1.debian.tar.xz
+ dbd32c1197cd4c7abc92d50524a97f5a9d9bef57 11386 gitlab-shell_8.4.3+dfsg1-1deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1c073736d277a0074b760c9bfce6fb6a7eff3ef8875a73a34775819bef524ae6 2746 gitlab-shell_8.4.3+dfsg1-1deb10u1.dsc
+ 24320b1d3013da262ed8b73886ed0b35c9ef2582fd2ce6574ee1850e9e9ee9d5 236640 gitlab-shell_8.4.3+dfsg1.orig.tar.xz
+ dcee2f621c79f6988d5041075b60d5eb53840a2c7a85eb6fa2c1443108e12012 6352 gitlab-shell_8.4.3+dfsg1-1deb10u1.debian.tar.xz
+ 6c22134176256d19055f64d0d647492f756a0e2ef276d381c5a7b3ad0d8e4dc0 11386 gitlab-shell_8.4.3+dfsg1-1deb10u1_amd64.buildinfo
+Changes:
+ gitlab-shell (8.4.3+dfsg1-1deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 39bd86e787ba3da1d8f3f174c235cf4f 2746 ruby optional gitlab-shell_8.4.3+dfsg1-1deb10u1.dsc
+ 14e94d47fd0a37d11033b994eed0b10f 236640 ruby optional gitlab-shell_8.4.3+dfsg1.orig.tar.xz
+ f2eba3a81ab03d8e256bf59ded116f81 6352 ruby optional gitlab-shell_8.4.3+dfsg1-1deb10u1.debian.tar.xz
+ daa9cdeeb554d2cc5a7d29def48c573f 11386 ruby optional gitlab-shell_8.4.3+dfsg1-1deb10u1_amd64.buildinfo
+

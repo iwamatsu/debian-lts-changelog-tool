@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 03 Jun 2023 17:39:29 +0200
+Source: openssl
+Architecture: source
+Version: 1.1.1n-0+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1034720
+Changes:
+ openssl (1.1.1n-0+deb10u5) buster-security; urgency=medium
+ .
+   [ Sylvain Beucler ]
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Sebastian Andrzej Siewior ]
+   * CVE-2023-0464 (Excessive Resource Usage Verifying X.509 Policy
+     Constraints) (Closes: #1034720).
+   * CVE-2023-0465 (Invalid certificate policies in leaf certificates are
+     silently ignored).
+   * CVE-2023-0466 (Certificate policy check not enabled).
+   * Alternative fix for CVE-2022-4304 (Timing Oracle in RSA Decryption).
+   * CVE-2023-2650 (Possible DoS translating ASN.1 object identifiers).
+Checksums-Sha1:
+ 35ee64d8510fb711f5c51e722cc3fd9b3903d123 2649 openssl_1.1.1n-0+deb10u5.dsc
+ 669d67e97e63ae57198cf61be74fddf94613ffad 141656 openssl_1.1.1n-0+deb10u5.debian.tar.xz
+ 3b377d733e3eff55b9baa0fff19a36631e5a5234 7162 openssl_1.1.1n-0+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ e3425b95ac7d834456045c3404067d494e8592ca74ee893bb5c603a124778668 2649 openssl_1.1.1n-0+deb10u5.dsc
+ 3eea17893cc08d1c10abee2e99ec7b5d91aec0ac3d3367e7db8aab0e26fec771 141656 openssl_1.1.1n-0+deb10u5.debian.tar.xz
+ ca9162d28495df4232b6db2fb0cd58534bc338a6f1943a8c2beb755f7e64ea17 7162 openssl_1.1.1n-0+deb10u5_amd64.buildinfo
+Files:
+ c458f7f81bbf29b233d69b05a808d076 2649 utils optional openssl_1.1.1n-0+deb10u5.dsc
+ 373a18dce45b77d3ce8c0e3f649386d2 141656 utils optional openssl_1.1.1n-0+deb10u5.debian.tar.xz
+ b0ab453881b41272013af1e7d0c5e697 7162 utils optional openssl_1.1.1n-0+deb10u5_amd64.buildinfo
+

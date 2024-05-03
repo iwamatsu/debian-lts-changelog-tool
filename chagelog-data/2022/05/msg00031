@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 20 May 2022 21:25:09 +0200
+Source: rsyslog
+Binary: rsyslog rsyslog-mysql rsyslog-pgsql rsyslog-mongodb rsyslog-elasticsearch rsyslog-kafka rsyslog-gssapi rsyslog-gnutls rsyslog-relp rsyslog-czmq rsyslog-hiredis
+Architecture: source
+Version: 8.24.0-1+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Michael Biebl <biebl@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ rsyslog    - reliable system and kernel logging daemon
+ rsyslog-czmq - ZeroMQ protocol support for rsyslog via CZMQ
+ rsyslog-elasticsearch - Elasticsearch output plugin for rsyslog
+ rsyslog-gnutls - TLS protocol support for rsyslog
+ rsyslog-gssapi - GSSAPI authentication and encryption support for rsyslog
+ rsyslog-hiredis - Redis output plugin for rsyslog
+ rsyslog-kafka - Kafka output plugin for rsyslog
+ rsyslog-mongodb - MongoDB output plugin for rsyslog
+ rsyslog-mysql - MySQL output plugin for rsyslog
+ rsyslog-pgsql - PostgreSQL output plugin for rsyslog
+ rsyslog-relp - RELP protocol support for rsyslog
+Changes:
+ rsyslog (8.24.0-1+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix flaky tests/dynstats_prevent_premature_eviction.sh through
+     upstream backports.
+Checksums-Sha1:
+ c64b0691112f58444dbd236463d5769f5e7d9bcb 2867 rsyslog_8.24.0-1+deb9u3.dsc
+ 74e8eb87e68a070189c3e1d89f1351dd9ca2566f 28840 rsyslog_8.24.0-1+deb9u3.debian.tar.xz
+ 5d81f020e4579c116e35360f5347bfc342f0220c 15529 rsyslog_8.24.0-1+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 7fbfc2dd127c1a786d9fa45b432fc196e0dbabe04b26724fd2b27ef4aa8d8999 2867 rsyslog_8.24.0-1+deb9u3.dsc
+ 4c6b3afae958ef95495e8a0f8e325b677fda984765b0e599a09e7dec50deca66 28840 rsyslog_8.24.0-1+deb9u3.debian.tar.xz
+ d6d99c2bfbf29d712c2d9da4513c89166a389235d302a024b2790c518a567e00 15529 rsyslog_8.24.0-1+deb9u3_amd64.buildinfo
+Files:
+ db3f7dca4fe733e55d940d212f58b937 2867 admin important rsyslog_8.24.0-1+deb9u3.dsc
+ 0bd018bc7942167eafbf49131d2dc919 28840 admin important rsyslog_8.24.0-1+deb9u3.debian.tar.xz
+ 19a08d30139f25b24d532fcaccbb000d 15529 admin important rsyslog_8.24.0-1+deb9u3_amd64.buildinfo
+

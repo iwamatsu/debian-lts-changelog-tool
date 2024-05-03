@@ -1,0 +1,46 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 16 Aug 2022 09:57:32 +0200
+Source: webkit2gtk
+Architecture: source
+Version: 2.36.6-1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian WebKit Maintainers <pkg-webkit-maintainers@lists.alioth.debian.org>
+Changed-By: Alberto Garcia <berto@igalia.com>
+Changes:
+ webkit2gtk (2.36.6-1~deb10u1) buster-security; urgency=high
+ .
+   * Rebuild for buster-security.
+   * debian/patches/force-single-process.patch:
+     - Force the single-process mode in Evolution and Geary
+   * debian/control:
+     - Remove all 4.1 API packages (soup3 build).
+     - Remove Breaks for Evolution < 3.34.1.
+     - Remove build dependencies on ccache, libwpebackend-fdo-1.0-dev,
+       libmanette-0.2-dev, liblcms2-dev and libsoup-3.0-dev.
+     - Switch build dependency from libenchant-2-dev to libenchant-dev.
+     - Switch build dependencies on libgl-dev and libgles-dev with
+       libgl1-mesa-dev and libgles2-mesa-dev.
+   * Downgrade xdg-desktop-portal-gtk from a recommendation to a
+     suggestion (See #989307)
+   * debian/rules:
+     - Build with -DENABLE_GAMEPAD=OFF -DUSE_LCMS=OFF.
+   * Set the debhelper compatibility level back to 10. This fixes a dh_dwz
+     error ".debug_info section not present"
+     - Add debian/compat file.
+     - Update build dependency on debhelper.
+Checksums-Sha1:
+ 73d58ee28a4ddf54a231c6a4c137b3491cc53a18 4153 webkit2gtk_2.36.6-1~deb10u1.dsc
+ d6b36a5cdd9f75223258d82195e9e0e3f82c425f 76972 webkit2gtk_2.36.6-1~deb10u1.debian.tar.xz
+ bd407b4833da965dc6dc98c41b3ec6523576a758 14957 webkit2gtk_2.36.6-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ d4f67058c4ef0a464767d126a522301c47de585b5b3039fc3069a3d8e8face5f 4153 webkit2gtk_2.36.6-1~deb10u1.dsc
+ 39869c4ca4bf9e633c58ed3bde88b328afc44d57793cd56923a947502c18ac89 76972 webkit2gtk_2.36.6-1~deb10u1.debian.tar.xz
+ 9650c41562ea3b24d22b0c8384bb6a605212f0b4b4566cdc58bc4799ff84d21a 14957 webkit2gtk_2.36.6-1~deb10u1_source.buildinfo
+Files:
+ 36b7df955b490a66e8641ac54ae2ddb6 4153 web optional webkit2gtk_2.36.6-1~deb10u1.dsc
+ 58a279baae65250fc4dfdfbd56649bef 76972 web optional webkit2gtk_2.36.6-1~deb10u1.debian.tar.xz
+ 7a1264d4bc0830ea2932e946bf5083ee 14957 web optional webkit2gtk_2.36.6-1~deb10u1_source.buildinfo
+

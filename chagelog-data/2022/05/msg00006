@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu,  5 May 2022 21:09:36 CEST
+Source: smarty3
+Binary: smarty3
+Architecture: source
+Version: 3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5
+Distribution: stretch-security
+Urgency: high
+Maintainer: Mike Gabriel <sunweaver@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ smarty3    - ${phpcomposer:description}
+Checksums-Sha1:
+ b4971eceecf5644ed1490ecb1a70456c4346a842 2359 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5.dsc
+ 15038bb1caf96403a1235f11b414a30484fd27e4 12076 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5.debian.tar.xz
+ f32ed51877176a5920a76d456d0361d43f1c708d 6880 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5_amd64.buildinfo
+Checksums-Sha256:
+ 2a93c11f88ccbc42fd118589eadf4b00611dd20db5397d1c131f2193d5e5f978 2359 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5.dsc
+ 7b9472c0ba13c8daf1afb62845066288ba6ff3e74b21d6fee09f2519dc72f884 12076 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5.debian.tar.xz
+ 2e0c09ecc8e82fe2b34cab864e9be8cc5de92e0475ed69c50960dc92d7bf8316 6880 smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5_amd64.buildinfo
+Changes:
+ smarty3 (3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix the following security vulnerabilities:
+   * CVE-2021-21408: template authors could run restricted static php methods
+   * CVE-2021-29454: template authors could run arbitrary PHP code by crafting
+     a malicious math string
+Files:
+ 7f871d231600b6aacd97d7333f0b1bdf 2359 web optional smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5.dsc
+ 3027d45b335a6f2f7680921688a86f2f 12076 web optional smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5.debian.tar.xz
+ 6d63bb94651d65f5fc7311dae42d7bca 6880 web optional smarty3_3.1.31+20161214.1.c7d42e4+selfpack1-2+deb9u5_amd64.buildinfo
+

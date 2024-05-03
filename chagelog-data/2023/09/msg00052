@@ -1,0 +1,176 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 30 Sep 2023 17:53:21 +0200
+Source: firmware-nonfree
+Binary: firmware-adi firmware-amd-graphics firmware-atheros firmware-bnx2 firmware-bnx2x firmware-brcm80211 firmware-cavium firmware-intel-sound firmware-intelwimax firmware-ipw2x00 firmware-ivtv firmware-iwlwifi firmware-libertas firmware-linux firmware-linux-nonfree firmware-misc-nonfree firmware-myricom firmware-netronome firmware-netxen firmware-qcom-media firmware-qlogic firmware-ralink firmware-realtek firmware-samsung firmware-siano firmware-ti-connectivity
+Architecture: source all
+Version: 20190114+really20220913-0+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Description:
+ firmware-adi - Binary firmware for Analog Devices Inc. DSL modem chips (dummmy p
+ firmware-amd-graphics - Binary firmware for AMD/ATI graphics chips
+ firmware-atheros - Binary firmware for Qualcomm Atheros wireless cards
+ firmware-bnx2 - Binary firmware for Broadcom NetXtremeII
+ firmware-bnx2x - Binary firmware for Broadcom NetXtreme II 10Gb
+ firmware-brcm80211 - Binary firmware for Broadcom/Cypress 802.11 wireless cards
+ firmware-cavium - Binary firmware for Cavium Ethernet adapters
+ firmware-intel-sound - Binary firmware for Intel sound DSPs
+ firmware-intelwimax - Binary firmware for Intel WiMAX Connection
+ firmware-ipw2x00 - Binary firmware for Intel Pro Wireless 2100, 2200 and 2915
+ firmware-ivtv - Binary firmware for iTVC15-family MPEG codecs (ivtv and pvrusb2 d
+ firmware-iwlwifi - Binary firmware for Intel Wireless cards
+ firmware-libertas - Binary firmware for Marvell wireless cards
+ firmware-linux - Binary firmware for various drivers in the Linux kernel (metapack
+ firmware-linux-nonfree - Binary firmware for various drivers in the Linux kernel (metapack
+ firmware-misc-nonfree - Binary firmware for various drivers in the Linux kernel
+ firmware-myricom - Binary firmware for Myri-10G Ethernet adapters
+ firmware-netronome - Binary firmware for Netronome network adapters
+ firmware-netxen - Binary firmware for QLogic Intelligent Ethernet (3000 and 3100 Se
+ firmware-qcom-media - Binary firmware for Qualcomm SoCs
+ firmware-qlogic - Binary firmware for QLogic HBAs
+ firmware-ralink - Binary firmware for Ralink wireless cards (dummmy package)
+ firmware-realtek - Binary firmware for Realtek wired/wifi/BT adapters
+ firmware-samsung - Binary firmware for Samsung MFC video codecs
+ firmware-siano - Binary firmware for Siano MDTV receivers
+ firmware-ti-connectivity - Binary firmware for TI Connectivity wifi and BT/FM/GPS adapters
+Changes:
+ firmware-nonfree (20190114+really20220913-0+deb10u2) buster-security; urgency=medium
+ .
+   [ Ben Hutchings ]
+   * Clean up backport to buster:
+     - Revert "Update to linux-support 5.19.0-1"
+     - Use linux-support 5.10.0-0.deb10.23
+     - d/rules, d/watch: Make orig target and uscan work with +really versions
+     - qcom-media: Use lintian-overrides from qcom-soc
+   * d/copyright: Add information about files re-added under debian/config
+   * Make CI work for buster:
+     - d/salsa-ci.yml: Set RELEASE to buster
+     - d/salsa-ci.yml: Set changelog suite to UNRELEASED to avoid lintian error
+     - d/salsa-ci.yml: Run extract-source job in target release, not unstable
+ .
+   [ Tobias Frost ]
+   * Use linux-support 5.10.0-0.deb10.24
+   * Import changed firmware files from Intel for
+     CVE-2022-27635 - Potential privilege escalation vector
+     CVE-2022-36351 - Potential denial of service via adjacent access
+     CVE-2022-38076 - Potential privilege escalation vector
+     CVE-2022-40964 - Potential privilege escalation vector
+     CVE-2022-46329 - Potential privilege escalation vector
+     Details see Intel Advisory INTEL-SA-00766
+     - Intel Bluetooth AX2xx series:
+       intel/ibt-0041-0041.sfi
+       intel/ibt-19-0-0.sfi
+       intel/ibt-19-0-1.sfi
+       intel/ibt-19-0-4.sfi
+       intel/ibt-19-16-4.sfi
+       intel/ibt-19-240-1.sfi
+       intel/ibt-19-240-4.sfi
+       intel/ibt-19-32-0.sfi
+       intel/ibt-19-32-1.sfi
+       intel/ibt-19-32-4.sfi
+       intel/ibt-20-0-3.sfi
+       intel/ibt-20-1-3.sfi
+       intel/ibt-20-1-4.sfi
+     - Intel Wireless 22000 series
+       iwlwifi-Qu-b0-hr-b0-77.ucode
+       iwlwifi-Qu-b0-jf-b0-77.ucode
+       iwlwifi-Qu-c0-hr-b0-77.ucode
+       iwlwifi-Qu-c0-jf-b0-77.ucode
+       iwlwifi-QuZ-a0-hr-b0-77.ucode
+       iwlwifi-cc-a0-77.ucode
+     The updated firmware files might need an updated kernel.
+Checksums-Sha1:
+ 210a40c11e6e687be507ce4daa2d7373f82828bc 4140 firmware-nonfree_20190114+really20220913-0+deb10u2.dsc
+ e76b138b67f517960feb78b55c9a27cdb55149dc 9553304 firmware-nonfree_20190114+really20220913-0+deb10u2.debian.tar.xz
+ bd7c4cc4519408ab7570b8ee71774da382daf19f 26708 firmware-adi_20190114+really20220913-0+deb10u2_all.deb
+ f125c456338f2430376efc495c990a76ec792e21 10836488 firmware-amd-graphics_20190114+really20220913-0+deb10u2_all.deb
+ bf4a3c7027ed7ed99c6a7fa82c91a4de6ff6a96e 10754996 firmware-atheros_20190114+really20220913-0+deb10u2_all.deb
+ 5314d61fd21caa0e0c2346c85446b383c445c9e1 148656 firmware-bnx2_20190114+really20220913-0+deb10u2_all.deb
+ cf07dc36ad222ea86c728ca0226d429df6e51f63 3963848 firmware-bnx2x_20190114+really20220913-0+deb10u2_all.deb
+ 6ca0a0af15aa618c8d12a32196432cdd4d8a9412 6247124 firmware-brcm80211_20190114+really20220913-0+deb10u2_all.deb
+ f3f91b13e7c4689e204e006213962142f976d2a7 693736 firmware-cavium_20190114+really20220913-0+deb10u2_all.deb
+ 5aa6f5493999a242395c6b6f7eded647ccb7207c 834596 firmware-intel-sound_20190114+really20220913-0+deb10u2_all.deb
+ dd36ad4b061a05c293905dcc092239c65041c805 1239152 firmware-intelwimax_20190114+really20220913-0+deb10u2_all.deb
+ a46c1e4824a48ff76e4b71210bbf65a1e42ddbc2 293848 firmware-ipw2x00_20190114+really20220913-0+deb10u2_all.deb
+ 7d3b94dc097caaeecf7fd51d374800c7c8b2c8ed 152008 firmware-ivtv_20190114+really20220913-0+deb10u2_all.deb
+ 07d3899c03f28888df28a6aeb1e15fdb63c2b8ce 20639480 firmware-iwlwifi_20190114+really20220913-0+deb10u2_all.deb
+ 6617e65c1b341811f026021627fc759be6b52252 31235444 firmware-libertas_20190114+really20220913-0+deb10u2_all.deb
+ 98db58d8636c710fbafee1840ac3bcb8d36bd5b4 63356 firmware-linux-nonfree_20190114+really20220913-0+deb10u2_all.deb
+ 15a98247cd350b01003bbc168edf2ff8b8713faa 63624 firmware-linux_20190114+really20220913-0+deb10u2_all.deb
+ f0e4e974369bb85cc5ac0ef2c8e7bb921983469f 12172116 firmware-misc-nonfree_20190114+really20220913-0+deb10u2_all.deb
+ b5e50cff957f903b91d4c0bb3093bb075c212747 316236 firmware-myricom_20190114+really20220913-0+deb10u2_all.deb
+ 67e998dd7ada5a41fd537cc92ee3c2453aacbec5 1754404 firmware-netronome_20190114+really20220913-0+deb10u2_all.deb
+ 91efde08df08fb97c9a4a71e2e6de3e29c85a4fb 1287188 firmware-netxen_20190114+really20220913-0+deb10u2_all.deb
+ a075b220f7cc27ebabf78a1560d038abc68bd94b 14803 firmware-nonfree_20190114+really20220913-0+deb10u2_amd64.buildinfo
+ 1e1a9c278212f1ff5476d790953390e76013301d 21672276 firmware-qcom-media_20190114+really20220913-0+deb10u2_all.deb
+ e5c0d0a2354c27fc18f86d507d9eddf47d3d49f6 3804528 firmware-qlogic_20190114+really20220913-0+deb10u2_all.deb
+ 1c975dc69b96fb5e365d24effb5469a354fcec53 26692 firmware-ralink_20190114+really20220913-0+deb10u2_all.deb
+ 45484f6bbcaa3c3004106fba2c1108d23a865685 1079188 firmware-realtek_20190114+really20220913-0+deb10u2_all.deb
+ 17a528cd7cec3c0fbf4dae7f996346bbccea887e 565476 firmware-samsung_20190114+really20220913-0+deb10u2_all.deb
+ 10ec0cfaa64f4ed1749ee47364dc25405aecb23d 368336 firmware-siano_20190114+really20220913-0+deb10u2_all.deb
+ aa0a4e60f7660480d798b786fbd1aa1dc9f71f2d 1081864 firmware-ti-connectivity_20190114+really20220913-0+deb10u2_all.deb
+Checksums-Sha256:
+ 45adb6cd06053f66b3a78a2bb185d9fdb0329d251e8873a53072fb1c6a4140e0 4140 firmware-nonfree_20190114+really20220913-0+deb10u2.dsc
+ 1aeb2a9de16998524bb089ccbec617c2692dfaec06769cc7c42b9ffa41f29297 9553304 firmware-nonfree_20190114+really20220913-0+deb10u2.debian.tar.xz
+ 49529ffd26bad715bc241f7233104d290e949cb93dc9919e3f2e91d2515d14ad 26708 firmware-adi_20190114+really20220913-0+deb10u2_all.deb
+ 01bd888a88bc85b1dc4694ff4a5806466ee2282efec96d43e3ea8b687cff9e56 10836488 firmware-amd-graphics_20190114+really20220913-0+deb10u2_all.deb
+ 1c532abbd6d4c424222a9aa7ae0ac0097c74708ea5ba4bf53a9eaf48faa91a88 10754996 firmware-atheros_20190114+really20220913-0+deb10u2_all.deb
+ aca89343b666267ca4c21707a563c6614417a0d1739651d5f9a27d2b9842d64a 148656 firmware-bnx2_20190114+really20220913-0+deb10u2_all.deb
+ fc3c3c8a7bdb52a205729d24858b8d437ac0961548ea28977d3b3f10a1b0dd7e 3963848 firmware-bnx2x_20190114+really20220913-0+deb10u2_all.deb
+ 43dfb67e15b1e3b563ec1ee6f0e9e6041706389668ec6a2ff0fa6153e9102a59 6247124 firmware-brcm80211_20190114+really20220913-0+deb10u2_all.deb
+ 7b0380792633c205c6f301198ef20c8e6153b823476fb31f34a9f7ce0b6bdc96 693736 firmware-cavium_20190114+really20220913-0+deb10u2_all.deb
+ 2c0bc0e72039b9ddde63c4d8154ea3c78584bf061342e81154e173bf2d610846 834596 firmware-intel-sound_20190114+really20220913-0+deb10u2_all.deb
+ 02702cf6d244c9121f5774f11848ff1be42a09547d567cc50e725b7fe6665271 1239152 firmware-intelwimax_20190114+really20220913-0+deb10u2_all.deb
+ 877b4be674c3fb91461eeae8def6609645689978cdd0af7ced16e794e67962c3 293848 firmware-ipw2x00_20190114+really20220913-0+deb10u2_all.deb
+ e382c8daa12a00dfaf07b5c8a3ee69fc20f30a79c4987052e464e4409bd1416e 152008 firmware-ivtv_20190114+really20220913-0+deb10u2_all.deb
+ 2ebcb66665f3b5557e0c4c185008ba945a0fd9f913edcf602342cef55644a7cc 20639480 firmware-iwlwifi_20190114+really20220913-0+deb10u2_all.deb
+ 60deb063c03ad0ab5dc0bdb874d8b60a28605bc99f2ea30cbe458bd33d741efe 31235444 firmware-libertas_20190114+really20220913-0+deb10u2_all.deb
+ 0fc27bdad3c1c50b494993348a7a6961761600d94f1790ccce021f673f1df90a 63356 firmware-linux-nonfree_20190114+really20220913-0+deb10u2_all.deb
+ 3a538983296223e4cd980e1ec2449a5333e6dbe08e9f8f64daf47c31f417d21e 63624 firmware-linux_20190114+really20220913-0+deb10u2_all.deb
+ 0cb2c0d5c5e7f5a0d2e00c3a8aae2c53b88a68ea9846d745d29455cf82175cc1 12172116 firmware-misc-nonfree_20190114+really20220913-0+deb10u2_all.deb
+ 28310632fa1496e3e2795820feb6f80f6ce6e46b330f62179e8a441a767fb196 316236 firmware-myricom_20190114+really20220913-0+deb10u2_all.deb
+ 8308be6ffff8c040d68cfa94f573e14af369b8e281910d2623de44805d7d6985 1754404 firmware-netronome_20190114+really20220913-0+deb10u2_all.deb
+ bf3f511402e65fc15e432c99ceb9309a2109b9f3d88a6e01224eaabb7a8a85c7 1287188 firmware-netxen_20190114+really20220913-0+deb10u2_all.deb
+ 8c1cd28cc00f9df917e51a55f567aa5c037d880c289a7099bf315f3487a50f1b 14803 firmware-nonfree_20190114+really20220913-0+deb10u2_amd64.buildinfo
+ 063722c347eab8bb8494d44f26e6cdc8ec7353c31dc179b5994d631bf1222108 21672276 firmware-qcom-media_20190114+really20220913-0+deb10u2_all.deb
+ 55bf3928ec6db3ad3abe75499ee832769e8a855785205172834be0faf5bf17cf 3804528 firmware-qlogic_20190114+really20220913-0+deb10u2_all.deb
+ 78bd772b03c06cadb4e866be65424c24386d4ec485b0b8ea818221cb7b24032a 26692 firmware-ralink_20190114+really20220913-0+deb10u2_all.deb
+ 557070716ea82c145c8e4b26ffaaa76a069de272379c8b15db0dd6686f98fc85 1079188 firmware-realtek_20190114+really20220913-0+deb10u2_all.deb
+ 609d4341a3ac6a7a550f37dc39c7f1bc46865556926354796a7f4c64654e6b4e 565476 firmware-samsung_20190114+really20220913-0+deb10u2_all.deb
+ 138e16fe5335038af569d877edcaee6a7283a5b015dad4a09e6199e91f194a18 368336 firmware-siano_20190114+really20220913-0+deb10u2_all.deb
+ a5dfb78e37feea93c64e8462c8abe17cc9c31df49ad5c3b3fd35b1d92208fb24 1081864 firmware-ti-connectivity_20190114+really20220913-0+deb10u2_all.deb
+Files:
+ 7e5bccf3213ee543c4cec863366df9bd 4140 non-free/kernel optional firmware-nonfree_20190114+really20220913-0+deb10u2.dsc
+ 977f777ebf9e244a8a2b05b2bdf1d000 9553304 non-free/kernel optional firmware-nonfree_20190114+really20220913-0+deb10u2.debian.tar.xz
+ 7f92ef4ccb77a6a85c87e93dcea57bfc 26708 non-free/oldlibs optional firmware-adi_20190114+really20220913-0+deb10u2_all.deb
+ 0aa9d39f8f51316990712d88e64fb6c7 10836488 non-free/kernel optional firmware-amd-graphics_20190114+really20220913-0+deb10u2_all.deb
+ 7e464d9854ec8f4de5fac683ac1e8880 10754996 non-free/kernel optional firmware-atheros_20190114+really20220913-0+deb10u2_all.deb
+ d89797a37012340d8dad997bfefb4e71 148656 non-free/kernel optional firmware-bnx2_20190114+really20220913-0+deb10u2_all.deb
+ c7640ca6a4c5f6c3042fa0c609cde5ac 3963848 non-free/kernel optional firmware-bnx2x_20190114+really20220913-0+deb10u2_all.deb
+ 1c36301ec2269c61d45059c8f7e534ec 6247124 non-free/kernel optional firmware-brcm80211_20190114+really20220913-0+deb10u2_all.deb
+ 9fc6402b1a7fc5eba9ce918d008552a0 693736 non-free/kernel optional firmware-cavium_20190114+really20220913-0+deb10u2_all.deb
+ a3b1797504607a85f4aeb426c0372171 834596 non-free/kernel optional firmware-intel-sound_20190114+really20220913-0+deb10u2_all.deb
+ 048d6131ac6010a1f49c8f400500a7eb 1239152 non-free/kernel optional firmware-intelwimax_20190114+really20220913-0+deb10u2_all.deb
+ bc27ebf29c03d802b44cebe4a94c5a0a 293848 non-free/kernel optional firmware-ipw2x00_20190114+really20220913-0+deb10u2_all.deb
+ 06c903f800ad07bef3352653f40cc23b 152008 non-free/kernel optional firmware-ivtv_20190114+really20220913-0+deb10u2_all.deb
+ 8be7c58bd46e89e8e437451ec67c461e 20639480 non-free/kernel optional firmware-iwlwifi_20190114+really20220913-0+deb10u2_all.deb
+ d3729b4895eef4518f647a8c6221c8ac 31235444 non-free/kernel optional firmware-libertas_20190114+really20220913-0+deb10u2_all.deb
+ a04d6e5d81e564f42f361ca4bf3c9797 63356 non-free/metapackages optional firmware-linux-nonfree_20190114+really20220913-0+deb10u2_all.deb
+ 17febe6c5bdadf595fcfda509f304a08 63624 non-free/metapackages optional firmware-linux_20190114+really20220913-0+deb10u2_all.deb
+ bb554abeaaa02776abdff2504a092b5c 12172116 non-free/kernel optional firmware-misc-nonfree_20190114+really20220913-0+deb10u2_all.deb
+ 7ad23056f6976c63a4b057918c3a4082 316236 non-free/kernel optional firmware-myricom_20190114+really20220913-0+deb10u2_all.deb
+ 71fdb834f66d23c65898ad71dd4f8f2f 1754404 non-free/kernel optional firmware-netronome_20190114+really20220913-0+deb10u2_all.deb
+ 610e7266a8375474245763d05ebfad42 1287188 non-free/kernel optional firmware-netxen_20190114+really20220913-0+deb10u2_all.deb
+ fe5cf8d60fe519e0c88d1ae82bab6f48 14803 non-free/kernel optional firmware-nonfree_20190114+really20220913-0+deb10u2_amd64.buildinfo
+ 5a10581a32208c03a07f7cc3fd6caba3 21672276 non-free/kernel optional firmware-qcom-media_20190114+really20220913-0+deb10u2_all.deb
+ 3db4637d71efc14eacc8476bb3e92db8 3804528 non-free/kernel optional firmware-qlogic_20190114+really20220913-0+deb10u2_all.deb
+ 65bb1695b985b4a43571a0e11fc3dc3c 26692 non-free/oldlibs optional firmware-ralink_20190114+really20220913-0+deb10u2_all.deb
+ 5a899affd86552d498e3def6b52a6ba7 1079188 non-free/kernel optional firmware-realtek_20190114+really20220913-0+deb10u2_all.deb
+ 1b285b707f38ec8b84cf81331d30a445 565476 non-free/kernel optional firmware-samsung_20190114+really20220913-0+deb10u2_all.deb
+ 2bbc8ccb7088846060b3a35af20a792d 368336 non-free/kernel optional firmware-siano_20190114+really20220913-0+deb10u2_all.deb
+ b26dbff828d0e03e6effd891468c2d4b 1081864 non-free/kernel optional firmware-ti-connectivity_20190114+really20220913-0+deb10u2_all.deb
+

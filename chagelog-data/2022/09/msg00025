@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 16 Sep 2022 09:20:33 +0200
+Source: libraw
+Architecture: source
+Version: 0.19.2-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ libraw (0.19.2-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Backport fixes for vulnerabilities:
+     - CVE-2020-35530
+     - CVE-2020-35531
+     - CVE-2020-35532
+     - CVE-2020-35533
+Checksums-Sha1:
+ 5246af6235ac27f0425f34df85005c31a2207392 2211 libraw_0.19.2-2+deb10u1.dsc
+ 20a94ec01fa8aba937a1eae7d2b8fb32b126d855 556045 libraw_0.19.2.orig.tar.gz
+ 1228be9a6237a0fa53f28a7232a1b86489c40555 23044 libraw_0.19.2-2+deb10u1.debian.tar.xz
+ 01a27c8468988fe4a9d016e7a81a22a57e60724c 7181 libraw_0.19.2-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3fdc9ff22616c8fa6155f3d683ceabb1e2dd5358964df676f6d35cfe766ba562 2211 libraw_0.19.2-2+deb10u1.dsc
+ 9d175bd3a32acf6ff8206d8eb96f0e0f8fc09992d73458cfc4f8cc655af49957 556045 libraw_0.19.2.orig.tar.gz
+ db8698c52b463ee277e891822c7ae748fd85841167bf9f931888e38699d466ba 23044 libraw_0.19.2-2+deb10u1.debian.tar.xz
+ b8889bdbd1c7f83d6bd17e3d2b0f737be9d78641c1c7ffe722973f748e70495e 7181 libraw_0.19.2-2+deb10u1_amd64.buildinfo
+Files:
+ 0e6fa5c6a794f6abf155e985a06aa552 2211 libs optional libraw_0.19.2-2+deb10u1.dsc
+ 09cb9708b739dbd7b3a5a8b39d60b0ea 556045 libs optional libraw_0.19.2.orig.tar.gz
+ 916cc022af83b3b00161e1e09eccf77e 23044 libs optional libraw_0.19.2-2+deb10u1.debian.tar.xz
+ ae6f0cd9785b11fc51e16d361cdff8c1 7181 libs optional libraw_0.19.2-2+deb10u1_amd64.buildinfo
+

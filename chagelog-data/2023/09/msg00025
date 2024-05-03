@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 20 Sep 2023 09:59:17 +0200
+Source: python2.7
+Architecture: source
+Version: 2.7.16-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ python2.7 (2.7.16-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Add testsuite-fix-with-expat.diff: Fix autopkgtests with updated expat.
+   * Fix issue9189.diff: Update test suite to match behaviour change.
+   * autopkgtest: mark distutils as non-failing
+   * Add CVE-2021-23336.diff: Only use '&' as query string separator
+   * Add CVE-2022-0391.diff: Make urlsplit robust against newlines
+   * Add CVE-2022-48560.diff: Fix use-after-free in heapq module.
+   * Add CVE-2022-48565.diff: Reject entities declarations while parsing XML
+     plists.
+   * Add CVE-2022-48566.diff: Make constant time comparison more constant-time.
+   * Add CVE-2023-24329.diff: More WHATWG-compatible URL parsing
+   * Add CVE-2023-40217.diff: Prevent reading unauthenticated data on a
+     SSLSocket
+Checksums-Sha1:
+ 7be56bc94d80b35fc887238ca72cfac64b958cbf 3362 python2.7_2.7.16-2+deb10u3.dsc
+ 40de79a8753703c97ffb1da166b5ba8923f7e391 338936 python2.7_2.7.16-2+deb10u3.diff.gz
+ 9ae759323c657b6c56b1589a2b038eac7d95b431 14483 python2.7_2.7.16-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 61289b1c5cb580fa68b4c5ef0d85c82f1321d175a7d68a74793aed2245e581c1 3362 python2.7_2.7.16-2+deb10u3.dsc
+ 4e92d3caf343930a756e5fdf21a254c499c949bcbc95ed73a746770a564b60d5 338936 python2.7_2.7.16-2+deb10u3.diff.gz
+ 6972cace97b046c92cf11794777dc153238226e25bf3ed5cdc9d4e6ddcc18e09 14483 python2.7_2.7.16-2+deb10u3_amd64.buildinfo
+Files:
+ f4d888c197dfc6394abef8b0ceacb456 3362 python optional python2.7_2.7.16-2+deb10u3.dsc
+ 134ec11d45c9a205ed2189b6cf2c48d6 338936 python optional python2.7_2.7.16-2+deb10u3.diff.gz
+ fe2adeae0fcaa1c010d30b89c028f1ea 14483 python optional python2.7_2.7.16-2+deb10u3_amd64.buildinfo
+

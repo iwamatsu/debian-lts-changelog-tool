@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 16 May 2022 13:01:39 +0200
+Source: ffmpeg
+Architecture: source
+Version: 7:3.2.18-0+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Changed-By: Enrico Zini <enrico@debian.org>
+Changes:
+ ffmpeg (7:3.2.18-0+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * New upstream version 3.2.18.
+      - fixed a number of issues found by the OSS-Fuzz project
+      - fixed upstream issues #8176, #8181, #8186, #8265, #8282, #8486, and
+        #9517
+      - upstreamed all patches previously backported by Debian
+   * Dropped all debian/patches, now completely upstreamed
+Checksums-Sha1:
+ d27e3b1e18910a97c378c91feabea8a54124cbd9 5183 ffmpeg_3.2.18-0+deb9u1.dsc
+ e6d9b141b73fbf1ad9680c37473810ae04e2f7f8 8067704 ffmpeg_3.2.18.orig.tar.xz
+ c7e06681ed9f78dfb04d1de69ce9e6a9d6c3438c 520 ffmpeg_3.2.18.orig.tar.xz.asc
+ 49016aa0934eb26d8e91536a96a7339b7fb42be4 41552 ffmpeg_3.2.18-0+deb9u1.debian.tar.xz
+ b4f9ede4e0def5de89abbf2f022ec1f738b4c7df 13077 ffmpeg_3.2.18-0+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 97e8d3ae3f51b0b4462cebfa5743d9c3342b889862b88866ab9aa420c6f943d3 5183 ffmpeg_3.2.18-0+deb9u1.dsc
+ 30db56b0ae80207c8783256b44beb04d581677a6109d1075992a5a7d8906d4ba 8067704 ffmpeg_3.2.18.orig.tar.xz
+ 3f98108797e5fd52de1e39e094637057c7e082f7b94d8cd79fcc342c4f0ce91a 520 ffmpeg_3.2.18.orig.tar.xz.asc
+ 714315a82db62a74847c216a503ffa3adb447ee3748510fb7704056bd6fc7f02 41552 ffmpeg_3.2.18-0+deb9u1.debian.tar.xz
+ 7e624226d58cd24b032c2d3a5352ddd798b6b4ab8f09b1bb4cf825bd578f69f4 13077 ffmpeg_3.2.18-0+deb9u1_source.buildinfo
+Files:
+ 891b334e5f6bd3b40c78a96b2a18f2e3 5183 video optional ffmpeg_3.2.18-0+deb9u1.dsc
+ 75b85445b6af10a60287ef51d7140923 8067704 video optional ffmpeg_3.2.18.orig.tar.xz
+ e625b4c1efd07def66ca964781d58f95 520 video optional ffmpeg_3.2.18.orig.tar.xz.asc
+ 85f37bf8d5dee0f98b1762811eb896b9 41552 video optional ffmpeg_3.2.18-0+deb9u1.debian.tar.xz
+ 38a45bdc5d578a88a246a0ad53d6c3ae 13077 video optional ffmpeg_3.2.18-0+deb9u1_source.buildinfo
+

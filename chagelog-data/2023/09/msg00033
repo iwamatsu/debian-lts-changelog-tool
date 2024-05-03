@@ -1,0 +1,28 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 25 Sep 2023 08:45:38 +0200
+Source: rustc-mozilla
+Architecture: source
+Version: 1.63.0+dfsg1-2~deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ rustc-mozilla (1.63.0+dfsg1-2~deb10u3) buster-security; urgency=medium
+ .
+   * Fix dh_install call from the debhelper version drop.
+Checksums-Sha1:
+ 9bbbabba72703ada9b43959e097671f1b7a2e9cf 3286 rustc-mozilla_1.63.0+dfsg1-2~deb10u3.dsc
+ a7d4b2d36590218bf5e1d9494854833a75948079 92988 rustc-mozilla_1.63.0+dfsg1-2~deb10u3.debian.tar.xz
+ aca2715de0fc4629d7f43e46b4c96decec283d40 7451 rustc-mozilla_1.63.0+dfsg1-2~deb10u3_source.buildinfo
+Checksums-Sha256:
+ af02cd0d3c94869d8a1860b11c77a6cfeb04552b7df77c5c9d66555a33148e27 3286 rustc-mozilla_1.63.0+dfsg1-2~deb10u3.dsc
+ 6acbeb1705a087b4603b71df3df93e8152144819b2dee962dba02a58bec53ea3 92988 rustc-mozilla_1.63.0+dfsg1-2~deb10u3.debian.tar.xz
+ 64815b0a1d2bfab685186192d39716b49e180245dd50702b48033595bd10ba53 7451 rustc-mozilla_1.63.0+dfsg1-2~deb10u3_source.buildinfo
+Files:
+ d6330e076771ddf7be437c4ff63e30c0 3286 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u3.dsc
+ 7c6870fe348a3437b7161d92c72c5f8d 92988 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u3.debian.tar.xz
+ 06633a32edd5fc32f6eaa0a3b98791d4 7451 devel optional rustc-mozilla_1.63.0+dfsg1-2~deb10u3_source.buildinfo
+

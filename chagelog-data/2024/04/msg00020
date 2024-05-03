@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Apr 2024 17:23:38 +0300
+Source: zabbix
+Architecture: source
+Version: 1:4.0.4+dfsg-1+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ zabbix (1:4.0.4+dfsg-1+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-22119: Improper validation of form input field
+Checksums-Sha1:
+ d4dc85973f969a30c581ea6d77d1e933e40bfe4a 2876 zabbix_4.0.4+dfsg-1+deb10u5.dsc
+ 3c6d9fd22d054a78a45425fd2e83b606a60c5f55 7880948 zabbix_4.0.4+dfsg.orig.tar.xz
+ 98b7a2a56c598d15373913432c651970dc5ea514 220516 zabbix_4.0.4+dfsg-1+deb10u5.debian.tar.xz
+Checksums-Sha256:
+ 860c29944c24de81714f030edee38510d43c573fc0c0a0c2bf4eba56c33d13cc 2876 zabbix_4.0.4+dfsg-1+deb10u5.dsc
+ be5a320928ee5cfc87fa50a3f3f8beebc6de24d449fe8cdd89c3762a0e84cb03 7880948 zabbix_4.0.4+dfsg.orig.tar.xz
+ a380ddb4fd54b9ffa38ccd927eb4399959b3abfb3234b19a9adeb7fbc37d9cfc 220516 zabbix_4.0.4+dfsg-1+deb10u5.debian.tar.xz
+Files:
+ 60364caf0c6aaec7225f5b0515915cd4 2876 net optional zabbix_4.0.4+dfsg-1+deb10u5.dsc
+ 43c4a65f0d27ac1edff4f3b4e9a58f74 7880948 net optional zabbix_4.0.4+dfsg.orig.tar.xz
+ fd373a49012ac8f9005d4371ed65c8b1 220516 net optional zabbix_4.0.4+dfsg-1+deb10u5.debian.tar.xz
+

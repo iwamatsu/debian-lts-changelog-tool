@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 May 2022 19:45:19 +0200
+Source: libdbi-perl
+Binary: libdbi-perl
+Architecture: source
+Version: 1.636-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ libdbi-perl - Perl Database Interface (DBI)
+Changes:
+ libdbi-perl (1.636-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2014-10402: DBD::File drivers can open files from folders other
+     than those specifically passed via the f_dir attribute in the data
+     source name (DSN). NOTE: this issue exists because of an incomplete
+     fix for [CVE]-2014-10401.
+Checksums-Sha1:
+ e9012ef3bb53118b5ed9436ed952f45ba1b4a972 2345 libdbi-perl_1.636-1+deb9u2.dsc
+ 7dc0f3c0482dab8036851528a9fa0a2048ce00cc 17440 libdbi-perl_1.636-1+deb9u2.debian.tar.xz
+ ffb0a5034c59b05158f36d23f9a87db58261124e 6090 libdbi-perl_1.636-1+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ 8bb13a33b262982d7b4fec1dc81cc9738b79dd712f93c18d397c06891add5e6f 2345 libdbi-perl_1.636-1+deb9u2.dsc
+ 0032dc9bb71c9ec606b60ec6669b083a27c7e9e8b1b3821ada77df3961256cf1 17440 libdbi-perl_1.636-1+deb9u2.debian.tar.xz
+ 50f7656448d7be597e6062a0d4c7c6f28ba288f090a7ed9249d1b3ee457bce09 6090 libdbi-perl_1.636-1+deb9u2_amd64.buildinfo
+Files:
+ f47e35d7074116979d70d68611c32a01 2345 perl optional libdbi-perl_1.636-1+deb9u2.dsc
+ b82991f7d7f81042e54cf4d03b4e5095 17440 perl optional libdbi-perl_1.636-1+deb9u2.debian.tar.xz
+ df19a51dd8394f2fc4aee2b7f54b0605 6090 perl optional libdbi-perl_1.636-1+deb9u2_amd64.buildinfo
+

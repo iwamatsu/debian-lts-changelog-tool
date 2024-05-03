@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 14 Nov 2023 14:46:33 +0100
+Source: libclamunrar
+Binary: libclamunrar libclamunrar9 libclamunrar9-dbgsym
+Architecture: source amd64 all
+Version: 0.103.10-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ libclamunrar - anti-virus utility for Unix - unrar support
+ libclamunrar9 - anti-virus utility for Unix - unrar support
+Changes:
+ libclamunrar (0.103.10-0+deb10u1) buster-security; urgency=medium
+ .
+   * Update to 0.103.10.
+Checksums-Sha1:
+ f213290f342aa0cd8664fb3855194814d6d84ded 2173 libclamunrar_0.103.10-0+deb10u1.dsc
+ dc11bd2a86f2885b88775bf3b8a6e372722a5651 510540 libclamunrar_0.103.10.orig.tar.xz
+ 563c4c39b6c4f4a2a4e256ab03a78c7da9d083ae 10472 libclamunrar_0.103.10-0+deb10u1.debian.tar.xz
+ 4a5a184a3eef71318b34f63148ea4ee0a549a6dd 1020776 libclamunrar9-dbgsym_0.103.10-0+deb10u1_amd64.deb
+ 024ef25c013c5f01974e35c00800bf1f922f8e37 127748 libclamunrar9_0.103.10-0+deb10u1_amd64.deb
+ dc3187e51506d9742f44ddb61a5527580172f3e6 7116 libclamunrar_0.103.10-0+deb10u1_all.deb
+ ff61e3b544fc493f1b5e3a9f1acc5ad3daa08a23 6260 libclamunrar_0.103.10-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 00abaa30ab5ff8b7146c544f966b8fa3b1decd75328876af9676dfd439f09cea 2173 libclamunrar_0.103.10-0+deb10u1.dsc
+ 848350c5c298a23db359fbe6be8a6740fb3b9efffa032cc231b69a1333ee8c3d 510540 libclamunrar_0.103.10.orig.tar.xz
+ 3969d011a3ddd473af0582501b9c7e28adcd5f2eb1341edf15bdd9af6c674ede 10472 libclamunrar_0.103.10-0+deb10u1.debian.tar.xz
+ edb7eaaaaaa04e5df2d1808581ea55651e064a4dbfee22b09a373643d711b802 1020776 libclamunrar9-dbgsym_0.103.10-0+deb10u1_amd64.deb
+ ff7a3219d155b4e3030e490a11f4a03b64e0cfac39aa5ef4c16a377a7002b910 127748 libclamunrar9_0.103.10-0+deb10u1_amd64.deb
+ 2b5953f415283dd4542a22c3ef20cb7127f17d8ede1bc2e0763d7be67c12c868 7116 libclamunrar_0.103.10-0+deb10u1_all.deb
+ 8e709da6e7e225c9d85a00ee97ec4c4393e760fd280d9eb537071a179ed20910 6260 libclamunrar_0.103.10-0+deb10u1_amd64.buildinfo
+Files:
+ c5c8571724730ebfdb4114db7cd65971 2173 non-free/libs optional libclamunrar_0.103.10-0+deb10u1.dsc
+ cd1e23e0428be47ad9e0a3a1490da35c 510540 non-free/libs optional libclamunrar_0.103.10.orig.tar.xz
+ 8316e8633f0b58e957f9b9206d827f56 10472 non-free/libs optional libclamunrar_0.103.10-0+deb10u1.debian.tar.xz
+ f5dd6bbfa762665a087e79766a353848 1020776 non-free/debug optional libclamunrar9-dbgsym_0.103.10-0+deb10u1_amd64.deb
+ 7c955c63033701be4a8e89f8b8fda507 127748 non-free/libs optional libclamunrar9_0.103.10-0+deb10u1_amd64.deb
+ 8eddc1ac5b46d13a64d9c8165e50903b 7116 non-free/libs optional libclamunrar_0.103.10-0+deb10u1_all.deb
+ 62999052b41ab5e704d6a543a974f18e 6260 non-free/libs optional libclamunrar_0.103.10-0+deb10u1_amd64.buildinfo
+

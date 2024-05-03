@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 03 May 2022 00:36:37 +0530
+Source: mruby
+Binary: mruby libmruby-dev
+Architecture: source amd64
+Version: 1.2.0+20161228+git30d5424a-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ libmruby-dev - lightweight implementation of the Ruby language (development file
+ mruby      - lightweight implementation of the Ruby language
+Changes:
+ mruby (1.2.0+20161228+git30d5424a-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2017-9527, CVE-2018-10191, CVE-2018-11743, CVE-2018-12249
+     CVE-2018-14337 CVE-2020-15866
+Checksums-Sha1:
+ 012d914794894d1a2671b58fb2f5534e1970508b 2082 mruby_1.2.0+20161228+git30d5424a-1+deb9u1.dsc
+ d93ace42d86951a49808aa299927ac45d69b6ca7 405220 mruby_1.2.0+20161228+git30d5424a.orig.tar.gz
+ 1f3557112916a4bb82489c809a43ded68db18be7 6040 mruby_1.2.0+20161228+git30d5424a-1+deb9u1.debian.tar.xz
+ 3855c4fb3501497cd7a65edcfb3a050a455ec993 272622 libmruby-dev_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+ df32d24c7200b4227465c1d311444a6635f5bbff 1943424 mruby-dbgsym_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+ dda5e8b3aca058c44f02a251baf49ed7b342b5e4 7348 mruby_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.buildinfo
+ 5587788a0a1f90a0d4566bfbcf86c7a4f542b404 298158 mruby_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+Checksums-Sha256:
+ 703f23fc78d3bbd0911bb152d696bf77b3942bb16d7f2225cbde8a05a1c42535 2082 mruby_1.2.0+20161228+git30d5424a-1+deb9u1.dsc
+ 95c48a211d59cc6782bdeeb2dc8404f5477967f579e6f9da89048ddec1c4556f 405220 mruby_1.2.0+20161228+git30d5424a.orig.tar.gz
+ b0235b2af759c453eec497a5bc61bcaed30909bea72f52ba925fff8e2a1a413f 6040 mruby_1.2.0+20161228+git30d5424a-1+deb9u1.debian.tar.xz
+ 848149cb8b1e9f47f4b341ec7bb94657c5ff232469c594d559d0b7015260e568 272622 libmruby-dev_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+ 4f47f2520be1deb3b702f674abde17b04568acffdfcace6d081a5d07ab34001c 1943424 mruby-dbgsym_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+ e59b86dc98f1463faac473bcff7c74f5d9e7b25fe47a97ad83020b4519705e28 7348 mruby_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.buildinfo
+ 0fc6f813444b2a7991d37b5d9422f391a63ae145575ba5bc2caa2220d1478c5a 298158 mruby_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+Files:
+ adb34a0c7bef0d5e481a48cf96d8f34b 2082 ruby extra mruby_1.2.0+20161228+git30d5424a-1+deb9u1.dsc
+ 1deef3f60c42eef56bc2aaf690d46cab 405220 ruby extra mruby_1.2.0+20161228+git30d5424a.orig.tar.gz
+ dcea6d491fcdaac848f293ea3a6c4601 6040 ruby extra mruby_1.2.0+20161228+git30d5424a-1+deb9u1.debian.tar.xz
+ 20965cf513105bde74883909c0d8b015 272622 libdevel extra libmruby-dev_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+ c8ce83e5fcf0b737be4b963f9eaa97e6 1943424 debug extra mruby-dbgsym_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+ 1c5de999d6467ff515c13f60c42bd947 7348 ruby extra mruby_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.buildinfo
+ bd382cf3bad00ef7b849acef72cb435c 298158 ruby extra mruby_1.2.0+20161228+git30d5424a-1+deb9u1_amd64.deb
+

@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 26 Jun 2022 20:53:36 CEST
+Source: maven-shared-utils
+Binary: libmaven-shared-utils-java libmaven-shared-utils-java-doc
+Architecture: source
+Version: 3.0.0-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libmaven-shared-utils-java - Replacement for plexus-utils in Maven
+ libmaven-shared-utils-java-doc - Replacement for plexus-utils in Maven (documentation)
+Checksums-Sha1:
+ fb53c1f01ca4a6cbf9e41c4e44e4627d43ac0cab 2579 maven-shared-utils_3.0.0-1+deb9u1.dsc
+ 0c4f2ca8ba0fccd26ad207cf8623bb3cc6202658 117160 maven-shared-utils_3.0.0.orig.tar.xz
+ 5a69117af02c979e261849c00103c860ef8dbb93 5872 maven-shared-utils_3.0.0-1+deb9u1.debian.tar.xz
+ 7b8b1a3d2c63b5f58e717376c53ef70cb222a10a 16278 maven-shared-utils_3.0.0-1+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ dbb2bfe08a4b255f2d9711835e970b5954c2cf5e2aca8c2457ade98274de360a 2579 maven-shared-utils_3.0.0-1+deb9u1.dsc
+ bfc0a4df7a77dbc7f76829fd17e6ac532cd086a5b2f1d84a25a7fcbcb147ea9c 117160 maven-shared-utils_3.0.0.orig.tar.xz
+ 8c804348a3a813c19baca3c798772c91b05fcba95502d23e94920cf37b4429c2 5872 maven-shared-utils_3.0.0-1+deb9u1.debian.tar.xz
+ 0608270a15c02868ac3a48fc263d5186517bbcfd83d15d3efd3f27fc7f8308df 16278 maven-shared-utils_3.0.0-1+deb9u1_amd64.buildinfo
+Changes:
+ maven-shared-utils (3.0.0-1+deb9u1) stretch-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2022-29599: Apache Maven maven-shared-utils,
+     the Commandline class can emit double-quoted strings without proper
+     escaping, allowing shell injection attacks.
+Files:
+ dc8fcce73678edfbf59f29182562bdd4 2579 java optional maven-shared-utils_3.0.0-1+deb9u1.dsc
+ 51edf3ef9dc9c9068a8ebb1768e257ca 117160 java optional maven-shared-utils_3.0.0.orig.tar.xz
+ eb0796ac988197ec85fd92994f3ce2f2 5872 java optional maven-shared-utils_3.0.0-1+deb9u1.debian.tar.xz
+ 5c843546d203e0c7cbdaf7af08c790bb 16278 java optional maven-shared-utils_3.0.0-1+deb9u1_amd64.buildinfo
+

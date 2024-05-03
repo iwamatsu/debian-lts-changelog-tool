@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 24 Feb 2023 20:40:50 +0200
+Source: mono
+Architecture: source
+Version: 5.18.0.240+dfsg-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Mono Group <pkg-mono-group@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ mono (5.18.0.240+dfsg-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-26314: Triggering arbitrary code execution was possible
+     due to .desktop files registered as application/x-ms-dos-executable
+     MIME handlers.
+Checksums-Sha1:
+ d46d48318325e4619f1d30ba8019305ec702439b 19721 mono_5.18.0.240+dfsg-3+deb10u1.dsc
+ e77e5cc2a75232107e6ed65d4d48be77eb066d6f 170392651 mono_5.18.0.240+dfsg.orig.tar.gz
+ 00b80079edb1a266c169174f8c84068809147c8f 154748 mono_5.18.0.240+dfsg-3+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ be325ec60aae43a734812d2dfcd7f86fcfff78641092ff1962125b8242629e88 19721 mono_5.18.0.240+dfsg-3+deb10u1.dsc
+ 4d4f414bb660ae1c5b4fa91ff75e755e838a4eb9453b34670186ecd9b8515e12 170392651 mono_5.18.0.240+dfsg.orig.tar.gz
+ c02697d3dedbf50f9fc3e58d129e4f1bf4942876130ecce0e510d1f0c629caf5 154748 mono_5.18.0.240+dfsg-3+deb10u1.debian.tar.xz
+Files:
+ a4e8de6a8f3e03a10a69c0e382e0a4dc 19721 cli-mono optional mono_5.18.0.240+dfsg-3+deb10u1.dsc
+ 1ec9694fcd75034ec9730f1ce242f8bb 170392651 cli-mono optional mono_5.18.0.240+dfsg.orig.tar.gz
+ 66cc8fa7277e7b3802607bb15ac916d0 154748 cli-mono optional mono_5.18.0.240+dfsg-3+deb10u1.debian.tar.xz
+

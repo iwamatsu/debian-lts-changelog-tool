@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 27 Jun 2023 17:41:26 +0200
+Source: samba
+Architecture: source
+Version: 2:4.9.5+dfsg-5+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Changed-By: Lee Garrett <debian@rocketjump.eu>
+Changes:
+ samba (2:4.9.5+dfsg-5+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Update debian/gbp.conf to match LTS repo usage
+   * Clean up previous patches (See #1031835)
+   * Refresh all patches
+   * CVE-2016-2124: don't fallback to non spnego authentication if we require
+     kerberos in Samba client
+   * CVE-2019-10218 CVE-2019-14833 CVE-2019-14847
+   * CVE-2019-14902 CVE-2019-14907 CVE-2019-19344
+Checksums-Sha1:
+ ad8be30ea0a24021214252b019a1b9a6b73b8d5e 4789 samba_4.9.5+dfsg-5+deb10u4.dsc
+ 616847e98fc0be208e90bffe787f4b696a4404c1 288092 samba_4.9.5+dfsg-5+deb10u4.debian.tar.xz
+ 5c3d854768f743ab02915d6d9f9d0a8bf00393b4 23316 samba_4.9.5+dfsg-5+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ c39c2681f0c89bfb3c7890426a3ed73001586709ec29e34f08777ae6ca43380e 4789 samba_4.9.5+dfsg-5+deb10u4.dsc
+ 194c5dfb3fe7bf61cf152567ad65b90797ac4ff79c26759e96c9eac72b786f09 288092 samba_4.9.5+dfsg-5+deb10u4.debian.tar.xz
+ bc1f2276e0f6c69b73c83c1949cce649f3a8eedb8395fa17bb6c5facc52f6a6d 23316 samba_4.9.5+dfsg-5+deb10u4_amd64.buildinfo
+Files:
+ e060b0e12166d980a619eeb9be13570a 4789 net optional samba_4.9.5+dfsg-5+deb10u4.dsc
+ fac21f9064e9b6ab8514547deb7dacfe 288092 net optional samba_4.9.5+dfsg-5+deb10u4.debian.tar.xz
+ 0e70be4872f15be4cbfb0f65afe75c96 23316 net optional samba_4.9.5+dfsg-5+deb10u4_amd64.buildinfo
+

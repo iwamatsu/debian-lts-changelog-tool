@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 17 Mar 2022 09:48:43 +0100
+Source: openssl1.0
+Architecture: source
+Version: 1.0.2u-1~deb9u7
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ openssl1.0 (1.0.2u-1~deb9u7) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-0778: infinite loop in BN_mod_sqrt.
+Checksums-Sha1:
+ fa4eedee490d8427101a318593a6a7c29062ff7b 2304 openssl1.0_1.0.2u-1~deb9u7.dsc
+ 740916d79ab0d209d2775277b1c6c3ec2f6502b2 5355412 openssl1.0_1.0.2u.orig.tar.gz
+ 8cb60f10882e175c4d7630a5107406ccbe75df87 107300 openssl1.0_1.0.2u-1~deb9u7.debian.tar.xz
+ a94b236f239639904ee81bdcf98a56b0ac10c527 5803 openssl1.0_1.0.2u-1~deb9u7_source.buildinfo
+Checksums-Sha256:
+ ae5c98694b9e3124447c50db1527bb8c5ba8d8ed8850308f099c1def9c7d32c8 2304 openssl1.0_1.0.2u-1~deb9u7.dsc
+ ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16 5355412 openssl1.0_1.0.2u.orig.tar.gz
+ 5ae9f8274909202f77894d7909df4b76b5f5fd20edf5cb098725688f5e8eddb7 107300 openssl1.0_1.0.2u-1~deb9u7.debian.tar.xz
+ 9bbf7aa644958fa03a5f9134f222fce7ea2869f50d5da75de238258630082f05 5803 openssl1.0_1.0.2u-1~deb9u7_source.buildinfo
+Files:
+ 19d5cd3542ca58be36ed4d0215b61c63 2304 utils optional openssl1.0_1.0.2u-1~deb9u7.dsc
+ cdc2638f789ecc2db2c91488265686c1 5355412 utils optional openssl1.0_1.0.2u.orig.tar.gz
+ 957427fbd4cd9d5a2cdba22e0dd93fbc 107300 utils optional openssl1.0_1.0.2u-1~deb9u7.debian.tar.xz
+ 3b0694b09559127e6012b7e8ba2b149c 5803 utils optional openssl1.0_1.0.2u-1~deb9u7_source.buildinfo
+

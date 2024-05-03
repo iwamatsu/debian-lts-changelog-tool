@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 27 Jan 2023 22:03:02 +0100
+Source: tor
+Architecture: source
+Version: 0.3.5.16-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Peter Palfrader <weasel@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ tor (0.3.5.16-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-23589
+     logic error on the decision whether SOCKS4 or SOCKS4a is safe
+Checksums-Sha1:
+ 9488f980106e528bdb83823a02e5776bf2761e77 2504 tor_0.3.5.16-1+deb10u1.dsc
+ 1b4b0949252d9b36763597434bde803d2dcb4390 7166947 tor_0.3.5.16.orig.tar.gz
+ c57ecd5af0bcb4100b7b099402c660257eae66ec 51668 tor_0.3.5.16-1+deb10u1.diff.gz
+ 75d434f2fc74b762429a4e2c3533e547f19fd4af 7798 tor_0.3.5.16-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 8ffc404b888d306c1bfc11148e1b5236c14330a5d8feb5dba9a08a208a59d8f3 2504 tor_0.3.5.16-1+deb10u1.dsc
+ bf348e96508bd12a73d15025d2701563767ce205523a0cb3a5a2f8f48dfbfcc9 7166947 tor_0.3.5.16.orig.tar.gz
+ a0a86e9e12e79cbb158abab949852e43d512480cb18ad9e68a2b2db5792676f7 51668 tor_0.3.5.16-1+deb10u1.diff.gz
+ 0ffe3e097a13e771726f2a64cc71ba028a01c58fab8bcbaf4c4e9b153fbda133 7798 tor_0.3.5.16-1+deb10u1_amd64.buildinfo
+Files:
+ 99d84f1b944f67600df51701fce050d9 2504 net optional tor_0.3.5.16-1+deb10u1.dsc
+ 9549c3d8de248cac869190d1cace821f 7166947 net optional tor_0.3.5.16.orig.tar.gz
+ 71222f70ac5f6bcd3a8c7f46e3c65c77 51668 net optional tor_0.3.5.16-1+deb10u1.diff.gz
+ b84ccef9e0bcdf7c04d6edfb543a6b96 7798 net optional tor_0.3.5.16-1+deb10u1_amd64.buildinfo
+

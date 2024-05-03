@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 29 Mar 2022 10:57:09 +0200
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb9u3
+Distribution: stretch-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2021a-0+deb9u3) stretch-security; urgency=medium
+ .
+   * Cherry-pick patches from 2021a-0+deb10u4 (tzdata 2022a), thanks to
+     Aurelien Jarno:
+    - 06-palestine-dst2.patch: Palestine will spring forward on 2022-03-27,
+      not -03-26.
+Checksums-Sha1:
+ 648909ee9f59324f6dfadd760b8b3fee624debb4 2029 tzdata_2021a-0+deb9u3.dsc
+ 6ee064428752ad7e57d833404ebf989e616f968f 107648 tzdata_2021a-0+deb9u3.debian.tar.xz
+ 269a35b8850099d3c87ae58128d09e4b56c55450 5729 tzdata_2021a-0+deb9u3_source.buildinfo
+Checksums-Sha256:
+ 2882260ade8d64b1f1b436ce6f7abf2cfdc63c8bfedad15457f78d99d5260751 2029 tzdata_2021a-0+deb9u3.dsc
+ a7b6917310703b1d9d46d3854154ccf3a91557825d04eaa5217c409290d1b126 107648 tzdata_2021a-0+deb9u3.debian.tar.xz
+ 925e4266bc6b87fb5c76ffdcf83999ef8b56ec6e2e6cbbed6702f1bfdba7484a 5729 tzdata_2021a-0+deb9u3_source.buildinfo
+Files:
+ ce28970465e0ba3f5bbeecc447335bf3 2029 localization required tzdata_2021a-0+deb9u3.dsc
+ 462e82dbe453d83d416b4ae904cc069b 107648 localization required tzdata_2021a-0+deb9u3.debian.tar.xz
+ 335bcc1d55405a9037ed9cb16914614f 5729 localization required tzdata_2021a-0+deb9u3_source.buildinfo
+

@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 27 Nov 2022 22:50:36 CET
+Source: varnish
+Architecture: source
+Version: 6.1.1-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Varnish Package Maintainers <team+varnish-team@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ b56699950b1ba9b8c5bab31a9d6d138fd6db824c 2588 varnish_6.1.1-1+deb10u4.dsc
+ 2fc233becfcc72f5303f0156f395d0a09bb291e2 29140 varnish_6.1.1-1+deb10u4.debian.tar.xz
+ df562c1d80b2fafd62e71470849744af88f514d6 10664 varnish_6.1.1-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 0eda7e3b628e4743740fd9852ebe6d79980d16c4f6710cbe9b2d2be72b539eda 2588 varnish_6.1.1-1+deb10u4.dsc
+ 9a8756ebea6a9eb1c649321cfa9733d0ac3b61db207b9c664d687dbb4ac1dac3 29140 varnish_6.1.1-1+deb10u4.debian.tar.xz
+ 25a5fb92f7b2adfe372c4be490ca20b5ac85e6f299af208bb1f7a99842b5964b 10664 varnish_6.1.1-1+deb10u4_amd64.buildinfo
+Changes:
+ varnish (6.1.1-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-45060:
+     An HTTP Request Forgery issue was discovered in Varnish Cache. An attacker
+     may introduce characters through HTTP/2 pseudo-headers that are invalid in
+     the context of an HTTP/1 request line, causing the Varnish server to
+     produce invalid HTTP/1 requests to the backend. This could, in turn, be
+     used to exploit vulnerabilities in a server behind the Varnish server.
+   * Fix CVE-2020-11653:
+     An issue was discovered in Varnish Cache. It occurs when communication with
+     a TLS termination proxy uses PROXY version 2. There can be an assertion
+     failure and daemon restart, which causes a performance loss.
+Files:
+ 65ce5eca3d44c62276e245634983c015 2588 web optional varnish_6.1.1-1+deb10u4.dsc
+ e24dabb24dcc1af30b15ceb7550eb833 29140 web optional varnish_6.1.1-1+deb10u4.debian.tar.xz
+ 565a7d397e8e0351b81cbc222f9e7722 10664 web optional varnish_6.1.1-1+deb10u4_amd64.buildinfo
+

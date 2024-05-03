@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 09 Aug 2022 13:38:18 +0300
+Source: gst-plugins-good1.0
+Architecture: source
+Version: 1.14.4-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of GStreamer packages <gst-plugins-good1.0@packages.debian.org>
+Changed-By: Sebastian Dröge <slomo@debian.org>
+Changes:
+ gst-plugins-good1.0 (1.14.4-1+deb10u2) buster-security; urgency=high
+ .
+   * debian/patches/0001-avidemux-Fix-integer-overflow-resulting-in-heap-corr.patch:
+     + Fix heap-based buffer overflow in the avi demuxer when handling certain
+       AVI files (CVE-2022-1921).
+   * debian/patches/0001-matroskademux-Avoid-integer-overflow-resulting-in-he.patch:
+     + Fix potential heap overwrite in the mkv demuxer when handling certain
+       Matroska files (CVE-2022-1920).
+   * debian/patches/0001-qtdemux-Fix-integer-overflows-in-zlib-decompression-.patch:
+     + Fix potential heap overwrite in the qt demuxer when handling certain
+       QuickTime/MP4 files (CVE-2022-2122).
+   * debian/patches/0001-matroskademux-Fix-integer-overflows-in-zlib-bz2-etc-.patch:
+     + Fix potential heap overwrite in the mkv demuxer when handling certain
+       Matroska/WebM files (CVE-2022-1922, CVE-2022-1923, CVE-2022-1924, CVE-2022-1925).
+Checksums-Sha1:
+ 5808dba946c36b4e16735ed8739054b7abd95d5c 4027 gst-plugins-good1.0_1.14.4-1+deb10u2.dsc
+ 382f7e424437ea8a3d1d7701569eddea76b18375 3792524 gst-plugins-good1.0_1.14.4.orig.tar.xz
+ 6fd0528f5133276d13f26ca7c889b227d40572e9 42440 gst-plugins-good1.0_1.14.4-1+deb10u2.debian.tar.xz
+ 8ea9568da63cfe4654d870c5d74fac14c0df23cc 21738 gst-plugins-good1.0_1.14.4-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ af5a6aad9760e14b8b06c672d296188e9e3ac9144addcf50b61cb56dabe429c4 4027 gst-plugins-good1.0_1.14.4-1+deb10u2.dsc
+ 5f8b553260cb0aac56890053d8511db1528d53cae10f0287cfce2cb2acc70979 3792524 gst-plugins-good1.0_1.14.4.orig.tar.xz
+ 1ead4e093bf2b71a7298790e25dd588a083f6fc032f0ad288ec9461dabd48e2d 42440 gst-plugins-good1.0_1.14.4-1+deb10u2.debian.tar.xz
+ 3deb37c9500c6218de7717d1588e92fca0cab9bd21f5fa2cb6994207527289bf 21738 gst-plugins-good1.0_1.14.4-1+deb10u2_amd64.buildinfo
+Files:
+ ccb56a817f912bed4f22138411893059 4027 libs optional gst-plugins-good1.0_1.14.4-1+deb10u2.dsc
+ 6e3b247097366cf2639f22abfece7113 3792524 libs optional gst-plugins-good1.0_1.14.4.orig.tar.xz
+ 14553847670d3a560f61ca84095d06ef 42440 libs optional gst-plugins-good1.0_1.14.4-1+deb10u2.debian.tar.xz
+ 317cb446f75df3bbbf0016146dc7e4e7 21738 libs optional gst-plugins-good1.0_1.14.4-1+deb10u2_amd64.buildinfo
+

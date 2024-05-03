@@ -1,0 +1,79 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 28 Dec 2023 09:32:51 +0000
+Source: ansible
+Architecture: source
+Version: 2.7.7+dfsg-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Harlan Lieberman-Berg <hlieberman@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1053693
+Changes:
+ ansible (2.7.7+dfsg-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Enable autopkgtest
+   * Add salsa-ci testing
+   * Fix regresion on CVE-2019-10206
+   * Fix CVE-2021-3447: A flaw was found in several
+     ansible modules, where parameters containing credentials,
+     such as secrets, were being logged in plain-text on
+     managed nodes, as well as being made visible on the
+     controller node when run in verbose mode. These parameters
+     were not protected by the no_log feature. An attacker can
+     take advantage of this information to steal those credentials,
+     provided when they have access to the log files
+     containing them. The highest threat from this vulnerability
+     is to data confidentiality
+   * Fix CVE-2021-3583: A flaw was found in Ansible, where
+     a user's controller is vulnerable to template injection.
+     This issue can occur through facts used in the template
+     if the user is trying to put templates in multi-line YAML
+     strings and the facts being handled do not routinely
+     include special template characters. This flaw allows
+     attackers to perform command injection, which discloses
+     sensitive information. The highest threat from this
+     vulnerability is to confidentiality and integrity.
+   * Fix CVE-2021-3620: A flaw was found in Ansible Engine's
+     ansible-connection module, where sensitive information
+     such as the Ansible user credentials is disclosed by
+     default in the traceback error message. The highest
+     threat from this vulnerability is to confidentiality.
+   * Fix CVE-2021-20178: A flaw was found in ansible module
+     snmp_fact where credentials are disclosed in the console log by
+     default and not protected by the security feature
+     This flaw allows an attacker to steal privkey and authkey
+     credentials. The highest threat from this vulnerability
+     is to confidentiality.
+   * CVE-2021-20191: A flaw was found in ansible. Credentials,
+     such as secrets, are being disclosed in console log by default
+     and not protected by no_log feature when using Cisco nxos moduel.
+     An attacker can take advantage of this information to steal those
+     credentials. The highest threat from this vulnerability is
+     to data confidentiality.
+   * CVE-2022-3697: A flaw was found in Ansible in the amazon.aws
+     collection when using the tower_callback parameter from the
+     amazon.aws.ec2_instance module. This flaw allows an attacker
+     to take advantage of this issue as the module is handling the
+     parameter insecurely, leading to the password leaking in the logs.
+   * CVE-2023-5115: An absolute path traversal attack existed
+     in the Ansible automation platform. This flaw allows an
+     attacker to craft a malicious Ansible role and make the
+     victim execute the role. A symlink can be used to
+     overwrite a file outside of the extraction path.
+     (Closes: #1053693)
+Checksums-Sha1:
+ 07203c60f9ad077990e27a06f09f5c8fcffaacbb 2638 ansible_2.7.7+dfsg-1+deb10u2.dsc
+ 37ad2cfb44b607c929a5d5c7fe162d3e691426ac 63556 ansible_2.7.7+dfsg-1+deb10u2.debian.tar.xz
+ 1197b4d7083a4d8130f2d63042d1a10d7116b3f9 7916 ansible_2.7.7+dfsg-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ ced4f38b04977f6e4dab1faae5ff0c8d82952b502b4cef3e3211e7c5852411e3 2638 ansible_2.7.7+dfsg-1+deb10u2.dsc
+ 4a4d1fb3937f8b3088f5da599f3fa186fc11c1594af3b76c76172c271b260282 63556 ansible_2.7.7+dfsg-1+deb10u2.debian.tar.xz
+ bcf788265413eba61010125f3ee9dece6f32791d0b53040cc2530ada169fc518 7916 ansible_2.7.7+dfsg-1+deb10u2_amd64.buildinfo
+Files:
+ dc2721bba81f6aaa47aa73fd562c214c 2638 admin optional ansible_2.7.7+dfsg-1+deb10u2.dsc
+ d7f86223c8ca5ad3b1d92f46d74e9c6f 63556 admin optional ansible_2.7.7+dfsg-1+deb10u2.debian.tar.xz
+ 95056f093a910a4a9a82b5392773a174 7916 admin optional ansible_2.7.7+dfsg-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 03 Oct 2022 07:06:24 +0200
+Source: lighttpd
+Architecture: source
+Version: 1.4.53-4+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ lighttpd (1.4.53-4+deb10u3) buster-security; urgency=medium
+ .
+   * Maintainer security upload by LTS team.
+   * Fix CVE-2022-37797 mod_wstunnel DoS.
+Checksums-Sha1:
+ 9e1548f65ddc2c8c24628382508201957a95062d 3926 lighttpd_1.4.53-4+deb10u3.dsc
+ d12067c152c4102c4977fb268c669850a6264220 59232 lighttpd_1.4.53-4+deb10u3.debian.tar.xz
+ 2c6c7d72840f4c7e00e9df310c00c32968c2e375 18117 lighttpd_1.4.53-4+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ a9ea6cec8a06f3bb4c7404f7c782c1c2fe0459199609b5d041a3d0f6a4e47427 3926 lighttpd_1.4.53-4+deb10u3.dsc
+ 3399f6dab49c6f1278a43f9883b341ecacef208083ee5b201a0255928988c888 59232 lighttpd_1.4.53-4+deb10u3.debian.tar.xz
+ ead0c24593a7140c23823c37b18bd7f20b47624cc45ae4a91b17f2de8e6024dd 18117 lighttpd_1.4.53-4+deb10u3_amd64.buildinfo
+Files:
+ 1cca3b20ecc904b1391fa65b8fe61d24 3926 httpd optional lighttpd_1.4.53-4+deb10u3.dsc
+ 7daba42d82a1b7a06566ef9419051750 59232 httpd optional lighttpd_1.4.53-4+deb10u3.debian.tar.xz
+ 8bf1f73c82f16dc3694b13a9624bc569 18117 httpd optional lighttpd_1.4.53-4+deb10u3_amd64.buildinfo
+

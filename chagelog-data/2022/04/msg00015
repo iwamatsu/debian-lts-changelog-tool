@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 16 Apr 2022 22:43:48 +0200
+Source: abcm2ps
+Architecture: source
+Version: 7.8.9-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Anselm Lingnau <lingnau@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ abcm2ps (7.8.9-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-32435: fix stack-based buffer overflow in the function get_key.
+   * CVE-2018-10753: fix Stack-based buffer overflow in the function
+                     delayed_output.
+   * CVE-2018-10771: fix stack-based buffer overflow in the get_key function in
+                     parse.c.
+   * CVE-2019-1010069: fix incorrect access control.
+   * CVE-2021-32434: fix array overflow when wrong duration in voice overlay.
+   * CVE-2021-32436: fix out-of-bounds read in the function write_title().
+Checksums-Sha1:
+ 2d358546e5f561bf44a193fafa9b1e42f5361a9c 1732 abcm2ps_7.8.9-1+deb9u1.dsc
+ eb5afe6c62d2e51290aafe072fc35234394cdbac 328212 abcm2ps_7.8.9.orig.tar.gz
+ 87eca8bce30fa00aa2017845791b5edcfd9aa40c 19612 abcm2ps_7.8.9-1+deb9u1.debian.tar.xz
+ cfdd7adb5b8a8ae1b4ae4c87d048149312626f36 6508 abcm2ps_7.8.9-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ d209fa72945ce03e5a6449977af21f54b34d5d9b9c8c55a896d283c207c9b92e 1732 abcm2ps_7.8.9-1+deb9u1.dsc
+ b42520a6ac8308b689bf746c12a8db7a43609ac0397f3181c9a79ab906a3866a 328212 abcm2ps_7.8.9.orig.tar.gz
+ 8aad89dfbe0057637405b1f95227b402e469f5505ea33dd8c5d4a6644fd3d53f 19612 abcm2ps_7.8.9-1+deb9u1.debian.tar.xz
+ ca5177c70bad12e47fa15eda310499689ad39ce18e845d378e7b321b03dc267c 6508 abcm2ps_7.8.9-1+deb9u1_source.buildinfo
+Files:
+ a0187230e7fae7d7438f16af21b73e9f 1732 text optional abcm2ps_7.8.9-1+deb9u1.dsc
+ 06dcab9d9a9e4522775e0ad0a925d364 328212 text optional abcm2ps_7.8.9.orig.tar.gz
+ b43cdef15284a0a627ce2b397079ac59 19612 text optional abcm2ps_7.8.9-1+deb9u1.debian.tar.xz
+ a55b69a956dde7871247f431f74f2ea4 6508 text optional abcm2ps_7.8.9-1+deb9u1_source.buildinfo
+

@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 31 Jan 2023 10:06:57 +0100
+Source: openjdk-11
+Architecture: source
+Version: 11.0.18+10-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: OpenJDK Team <openjdk-11@packages.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ openjdk-11 (11.0.18+10-1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Backport to buster.
+   * rules: enable testsuite, jtreg6 has been backported.
+Checksums-Sha1:
+ c0eaab908cf4da8facb1ac5e1b3b1336d87be01f 4494 openjdk-11_11.0.18+10-1~deb10u1.dsc
+ 52e2711138f65e5b6f11b5509fd9c41eb074fd65 76323424 openjdk-11_11.0.18+10.orig.tar.xz
+ fb4f135013deefebd86e6c22f8434f96cb0bc06c 151184 openjdk-11_11.0.18+10-1~deb10u1.debian.tar.xz
+ fda75dad207067c5042dd6f3eec7e189ad5ea659 12156 openjdk-11_11.0.18+10-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ 492f27eb96827443e5f8c18e7788f6660a30a63187a8d5940a27dd17a11b7bed 4494 openjdk-11_11.0.18+10-1~deb10u1.dsc
+ 18b013e603242b2fe8c3e4bf64094902e2c36162db313a34766d96a1853842db 76323424 openjdk-11_11.0.18+10.orig.tar.xz
+ 81ccbbefc6b4e27e963ed6362a80dccde35b1f81726ad458c1b97ba19f349ffa 151184 openjdk-11_11.0.18+10-1~deb10u1.debian.tar.xz
+ 4967ad1d10c9fd2ab52c373fcaa7f21aef0b57686eb1d65238d98a3eae9f7534 12156 openjdk-11_11.0.18+10-1~deb10u1_source.buildinfo
+Files:
+ 86cf679d67ee5435f9fae5972e64d46c 4494 java optional openjdk-11_11.0.18+10-1~deb10u1.dsc
+ be5708acdf6254ffb006e21425e41a9b 76323424 java optional openjdk-11_11.0.18+10.orig.tar.xz
+ 46db16da129704b71b9c1cd514eebf26 151184 java optional openjdk-11_11.0.18+10-1~deb10u1.debian.tar.xz
+ 55500e0fc2f087f7bd7ae7a547722e2a 12156 java optional openjdk-11_11.0.18+10-1~deb10u1_source.buildinfo
+

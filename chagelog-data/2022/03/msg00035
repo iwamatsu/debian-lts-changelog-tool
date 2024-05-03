@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 02 Mar 2022 19:40:34 +0530
+Source: pjproject
+Binary: libpjlib-util2 libpjmedia-audiodev2 libpjmedia-codec2 libpjmedia-videodev2 libpjmedia2 libpjnath2 libpjsip-simple2 libpjsip-ua2 libpjsip2 libpjsua2 libpjsua2-2v5 libpj2 libpjproject-dev python-pjproject
+Architecture: source
+Version: 2.5.5~dfsg-6+deb9u3
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ libpj2     - PJ Project - PJProject core libraries
+ libpjlib-util2 - PJ Project - helper utilities
+ libpjmedia-audiodev2 - PJ Project - Audio devices
+ libpjmedia-codec2 - PJ Project - Multimedia codecs handling
+ libpjmedia-videodev2 - SIP handling library - video devices
+ libpjmedia2 - PJ Project - VoIP media
+ libpjnath2 - PJ Project - NAT handling
+ libpjproject-dev - PJ Project - development headers
+ libpjsip-simple2 - PJ Project - SIP SIMPLE instant messaging
+ libpjsip-ua2 - SIP handling library - SIP user agent library
+ libpjsip2  - PJ Project - SIP handling library
+ libpjsua2  - PJ Project - Basic VoIP client library
+ libpjsua2-2v5 - PJ Project - Basic VoIP client library
+ python-pjproject - PJ Project - Python bindings
+Changes:
+ pjproject (2.5.5~dfsg-6+deb9u3) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2021-32686, CVE-2021-37706, CVE-2021-41141, CVE-2021-43299,
+     CVE-2021-43300, CVE-2021-43301, CVE-2021-43302, CVE-2021-43303,
+     CVE-2021-43804, CVE-2021-43845, CVE-2022-21722, CVE-2022-21723,
+     CVE-2022-23608, CVE-2022-24754, CVE-2022-24764
+   * New symbols pj_strtol2, pj_strtoul3, PJSIP_EINVAL_ERR_EXCEPTION
+Checksums-Sha1:
+ b3b84d6cd8f3b7bd2bce882d8fdaa9b8ed80de0e 3338 pjproject_2.5.5~dfsg-6+deb9u3.dsc
+ bb5d1b64db3355544e84fb323e48e7e7cf9813bb 58780 pjproject_2.5.5~dfsg-6+deb9u3.debian.tar.xz
+ df71da55cf6ae97adb545b9791524b0ec4fa95a9 23756 pjproject_2.5.5~dfsg-6+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 1938fc617b41f3ac228104cc39d28ff2828daba79177787eb50b5d2f2e4dc274 3338 pjproject_2.5.5~dfsg-6+deb9u3.dsc
+ ddba96ae2c8e1438805fc7e38dd0209a54c41637e8d387e6cebe19c0bb64db89 58780 pjproject_2.5.5~dfsg-6+deb9u3.debian.tar.xz
+ 15d33783065b5bce995ddb57653763601b691d7b4301eb8a255b271c5c1ff5d7 23756 pjproject_2.5.5~dfsg-6+deb9u3_amd64.buildinfo
+Files:
+ df994987176d52495d35f1c7efe7bbcf 3338 comm optional pjproject_2.5.5~dfsg-6+deb9u3.dsc
+ 09eb0a8cfdb95ec512b2d920e00f6133 58780 comm optional pjproject_2.5.5~dfsg-6+deb9u3.debian.tar.xz
+ 85fc950ee530811286d6224c5faf86ab 23756 comm optional pjproject_2.5.5~dfsg-6+deb9u3_amd64.buildinfo
+

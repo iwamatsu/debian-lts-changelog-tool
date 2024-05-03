@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 20 Nov 2023 19:58:59 CET
+Source: activemq
+Architecture: source
+Version: 5.15.16-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ dca6377678c1fce1e92b608a2f06ff1956c74ef6 3648 activemq_5.15.16-0+deb10u1.dsc
+ 9bd1f423c7e208454bf5fd0ed67f00b1080ea1c8 5917548 activemq_5.15.16.orig.tar.gz
+ 59de8d1f091b427f8072316aaffc9a367b6ddb03 17128 activemq_5.15.16-0+deb10u1.debian.tar.xz
+ 0233546468cd53d47f184308513533b2ff43535f 16415 activemq_5.15.16-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 41360e0b12599f2d40405633ed7782baa25e853e561aa8df20ee3f034519c346 3648 activemq_5.15.16-0+deb10u1.dsc
+ b9ed733f56d4058e515f00944807976b731769acf40493603f17cbf714f6ea79 5917548 activemq_5.15.16.orig.tar.gz
+ b31c928e19a4fcd036acdf22b0f7feaca6699bd9d3820cf4eb723f86c45b4fbd 17128 activemq_5.15.16-0+deb10u1.debian.tar.xz
+ b06c463921d14f8133257b9c68d06785774024e428d980be383818f8f7241d95 16415 activemq_5.15.16-0+deb10u1_amd64.buildinfo
+Changes:
+ activemq (5.15.16-0+deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * New upstream version 5.15.16.
+   * Fix CVE-2020-13920:
+     Apache ActiveMQ uses LocateRegistry.createRegistry() to create the JMX RMI
+     registry and binds the server to the "jmxrmi" entry. It is possible to
+     connect to the registry without authentication and call the rebind method
+     to rebind jmxrmi to something else. If an attacker creates another server
+     to proxy the original, and bound that, he effectively becomes a man in the
+     middle and is able to intercept the credentials when an user connects.
+   * Fix CVE-2021-26117:
+     The optional ActiveMQ LDAP login module can be configured to use anonymous
+     access to the LDAP server. In this case the anonymous context is used to
+     verify a valid users password in error, resulting in no check on the
+     password.
+   * Fix CVE-2023-46604:
+     The Java OpenWire protocol marshaller is vulnerable to Remote Code
+     Execution. This vulnerability may allow a remote attacker with network
+     access to either a Java-based OpenWire broker or client to run arbitrary
+     shell commands by manipulating serialized class types in the OpenWire
+     protocol to cause either the client or the broker (respectively) to
+     instantiate any class on the classpath.
+Files:
+ 697ee6f810c92c3f0eb57de2c800d312 3648 java optional activemq_5.15.16-0+deb10u1.dsc
+ 7e677d52e34707290eed3aaa5b397372 5917548 java optional activemq_5.15.16.orig.tar.gz
+ bd5b64751c2b4198a22eb7e7133fd89f 17128 java optional activemq_5.15.16-0+deb10u1.debian.tar.xz
+ a74ece61cf2555b8d803d65529080361 16415 java optional activemq_5.15.16-0+deb10u1_amd64.buildinfo
+

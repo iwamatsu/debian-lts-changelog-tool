@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 25 Mar 2024 13:49:43 +0200
+Source: gross
+Architecture: source
+Version: 1.0.2-4.1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Antonio Radici <antonio@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Closes: 1067115
+Changes:
+ gross (1.0.2-4.1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Rebuild for buster-security.
+ .
+ gross (1.0.2-4.1) unstable; urgency=high
+ .
+   * Non-maintainer upload.
+   * CVE-2023-52159: Stack-based buffer overflow (Closes: #1067115)
+Checksums-Sha1:
+ bad8444f996072112962a5486ec2059da5921db3 1869 gross_1.0.2-4.1~deb10u1.dsc
+ 00961feb7b9c8330bb6db2a33b8d5c378c1eaee2 317461 gross_1.0.2.orig.tar.gz
+ 6396a71c85ee2a33732c1a227f7bc644bc4a4edb 7044 gross_1.0.2-4.1~deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 7dc4ea5f30630f74814a8c65c24cf3aee1140ed831606d41b65d9acc99fab2c2 1869 gross_1.0.2-4.1~deb10u1.dsc
+ 8443b9ba46537ed6470bda60109df68d40d3dd11b9f5a07c9180cb01af7147f9 317461 gross_1.0.2.orig.tar.gz
+ 014bbb4a9a8456dae31c19e25619a5d16ff35bcb1a7164551c2558699171e18e 7044 gross_1.0.2-4.1~deb10u1.debian.tar.xz
+Files:
+ 50d358b2e0f736ab33a91cdaac7482c7 1869 mail extra gross_1.0.2-4.1~deb10u1.dsc
+ cb88d88553161c01e9bed7a74c3e9263 317461 mail extra gross_1.0.2.orig.tar.gz
+ 498debea1b739736a2018abe8cc6c72d 7044 mail extra gross_1.0.2-4.1~deb10u1.debian.tar.xz
+

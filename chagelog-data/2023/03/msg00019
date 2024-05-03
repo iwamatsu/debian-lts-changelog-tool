@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 Mar 2023 11:58:46 +0000
+Source: imagemagick
+Architecture: source
+Version: 8:6.9.10.23+dfsg-2.1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ imagemagick (8:6.9.10.23+dfsg-2.1+deb10u4) buster-security; urgency=high
+ .
+   * Fix FTBFS due to CVE-2020-27767
+   * Add regression test for Bug #1032998.
+Checksums-Sha1:
+ 9f997050bcaf6a43608aa3ce546220b36b607586 5213 imagemagick_6.9.10.23+dfsg-2.1+deb10u4.dsc
+ 855c51fb1473346ab1185c82f82c04c93e60a79b 250344 imagemagick_6.9.10.23+dfsg-2.1+deb10u4.debian.tar.xz
+ 009f28472b8dfa1667fa938cbbb180949421de4d 11437 imagemagick_6.9.10.23+dfsg-2.1+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 85d696c8a24f56b5e5426169d2a62ee0384eb6510da9f63cb0977d18f6b7b30c 5213 imagemagick_6.9.10.23+dfsg-2.1+deb10u4.dsc
+ 620c138bdb37cdba07ce7f5047452b37092f2a5746fff8fd17e4cb5f99e2f2bb 250344 imagemagick_6.9.10.23+dfsg-2.1+deb10u4.debian.tar.xz
+ 5ca20849ca5a149ee70a7088f8f8b40487f24a4fe54b3bbd33e6062cf77d7877 11437 imagemagick_6.9.10.23+dfsg-2.1+deb10u4_source.buildinfo
+Files:
+ 50ac3df023d011c3a14a16c469596b41 5213 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u4.dsc
+ c9bb00accd058dc719b3d99ff1f2260c 250344 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u4.debian.tar.xz
+ 9db513fcdf0bd5dcdcccadd9138abef0 11437 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u4_source.buildinfo
+

@@ -1,0 +1,69 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue,  7 Jun 2022 19:05:46 CEST
+Source: avahi
+Binary: avahi-daemon avahi-dnsconfd avahi-autoipd python-avahi avahi-utils avahi-discover libavahi-common3 libavahi-common-data libavahi-common-dev libavahi-core7 libavahi-core-dev libavahi-client3 libavahi-client-dev libavahi-glib1 libavahi-glib-dev libavahi-gobject0 libavahi-gobject-dev libavahi-qt4-1 libavahi-qt4-dev libavahi-compat-libdnssd1 libavahi-compat-libdnssd-dev libavahi-ui0 libavahi-ui-dev libavahi-ui-gtk3-0 libavahi-ui-gtk3-dev avahi-ui-utils
+Architecture: source
+Version: 0.6.32-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ avahi-autoipd - Avahi IPv4LL network address configuration daemon
+ avahi-daemon - Avahi mDNS/DNS-SD daemon
+ avahi-discover - Service discover user interface for avahi
+ avahi-dnsconfd - Avahi DNS configuration tool
+ avahi-ui-utils - Avahi GTK+ utilities
+ avahi-utils - Avahi browsing, publishing and discovery utilities
+ libavahi-client-dev - Development files for the Avahi client library
+ libavahi-client3 - Avahi client library
+ libavahi-common-data - Avahi common data files
+ libavahi-common-dev - Development files for the Avahi common library
+ libavahi-common3 - Avahi common library
+ libavahi-compat-libdnssd-dev - Development headers for the Avahi Apple Bonjour compatibility lib
+ libavahi-compat-libdnssd1 - Avahi Apple Bonjour compatibility library
+ libavahi-core-dev - Development files for Avahi's embeddable mDNS/DNS-SD library
+ libavahi-core7 - Avahi's embeddable mDNS/DNS-SD library
+ libavahi-glib-dev - Development headers for the Avahi GLib integration library
+ libavahi-glib1 - Avahi GLib integration library
+ libavahi-gobject-dev - Development headers for the Avahi GObject library
+ libavahi-gobject0 - Avahi GObject library
+ libavahi-qt4-1 - Avahi Qt 4 integration library
+ libavahi-qt4-dev - Development headers for the Avahi Qt 4 integration library
+ libavahi-ui-dev - Development headers for the Avahi GTK+ User interface library
+ libavahi-ui-gtk3-0 - Avahi GTK+ User interface library for GTK3
+ libavahi-ui-gtk3-dev - Development headers for the Avahi GTK+ User interface library
+ libavahi-ui0 - Avahi GTK+ User interface library
+ python-avahi - Python utility package for Avahi
+Checksums-Sha1:
+ ba0a55e0bcd21879da751d976ced6ac67026ce09 4442 avahi_0.6.32-2+deb9u1.dsc
+ 1c6d234058fd7883b3a4515e99216fdc8f71b223 1297169 avahi_0.6.32.orig.tar.gz
+ 99c9497087b568f66c44d3f52330f9901ac6b472 29928 avahi_0.6.32-2+deb9u1.debian.tar.xz
+ 7d3e4fd3efa79778ee63356b1e437fdc58d262d8 28245 avahi_0.6.32-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ e04580262cc3cefa5dc01e81408c925a88d88f462dd503818da769f47e44c0b5 4442 avahi_0.6.32-2+deb9u1.dsc
+ d54991185d514a0aba54ebeb408d7575b60f5818a772e28fa0e18b98bc1db454 1297169 avahi_0.6.32.orig.tar.gz
+ d1a456ba6996943370c2d46c2a760386141e3125be8158ac09212af23d8b9eee 29928 avahi_0.6.32-2+deb9u1.debian.tar.xz
+ f3132d2d2a3a846fac394b087cb06588436270445e309ad126b486613231577b 28245 avahi_0.6.32-2+deb9u1_amd64.buildinfo
+Changes:
+ avahi (0.6.32-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-3468:
+     The event used to signal the termination of the client connection on the
+     avahi Unix socket is not correctly handled in the client_work function,
+     allowing a local attacker to trigger an infinite loop.
+   * Fix CVE-2021-26720:
+     avahi-daemon-check-dns.sh in the Debian avahi package is executed as root
+     via /etc/network/if-up.d/avahi-daemon, and allows a local attacker to cause
+     a denial of service or create arbitrary empty files via a symlink attack on
+     files under /run/avahi-daemon.
+     avahi-daemon: Depend on sudo in order to drop the root privileges.
+Files:
+ 7acbad22441d2e1914bc90c5ab507691 4442 net optional avahi_0.6.32-2+deb9u1.dsc
+ 22b5e705d3eabb31d26f2e1e7b074013 1297169 net optional avahi_0.6.32.orig.tar.gz
+ 8b826b393c58d3691dfd5aa42615ccc3 29928 net optional avahi_0.6.32-2+deb9u1.debian.tar.xz
+ 6159ef009b6e0ef10ffcba1355892771 28245 net optional avahi_0.6.32-2+deb9u1_amd64.buildinfo
+

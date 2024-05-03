@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 08 Oct 2023 14:30:21 +0000
+Source: batik
+Architecture: source
+Version: 1.10-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 984829 1020589
+Changes:
+ batik (1.10-2+deb10u3) buster-security; urgency=medium
+ .
+   * LTS Team upload
+   * Fix CVE-2020-11987: a server-side request forgery was found,
+     caused by improper input validation by the NodePickerPanel.
+     By using a specially-crafted argument, an attacker could exploit
+     this vulnerability to cause the underlying server to make
+     arbitrary GET requests. (Closes: #984829)
+   * Fix multiple Server-Side Request Forgery (SSRF) vulnerabilities
+     (Closes: #1020589):
+     - CVE-2022-38398: A Server-Side Request Forgery (SSRF) vulnerability
+       was found that allows an attacker to load a url thru the jar
+       protocol.
+     - CVE-2022-38648: A Server-Side Request Forgery (SSRF) vulnerability
+       was found that allows an attacker to fetch external resources.
+     - CVE-2022-40146: A Server-Side Request Forgery (SSRF) vulnerability
+       was found that allows an attacker to access files using a Jar url.
+   * Fix multiple Server-Side Request Forgery (SSRF) vulnerabilities:
+     - CVE-2022-44729: A Server-Side Request Forgery (SSRF) vulnerability
+       was found. A malicious SVG could trigger loading external resources
+       by default, causing resource consumption or in some
+       cases even information disclosure.
+     - CVE-2022-44730: A Server-Side Request Forgery (SSRF) vulnerability
+       was found. A malicious SVG can probe user profile / data and send
+       it directly as parameter to a URL.
+Checksums-Sha1:
+ ff31060090cfe2c701678041fb62ab0c8f44b059 2206 batik_1.10-2+deb10u3.dsc
+ 5cc63e27631680b5bfed0ed50944026dbaf36650 38044 batik_1.10-2+deb10u3.debian.tar.xz
+ d67b549a95daff6e7ac819f35128f84e21d127b7 15314 batik_1.10-2+deb10u3_i386.buildinfo
+Checksums-Sha256:
+ c0fd53102c2b183fca57af802e49024fd0fbd8317cd096ae182d9d346467ba47 2206 batik_1.10-2+deb10u3.dsc
+ fd7429db242eb0ba7bfa88dc836fd8fc09efab98614f2797210b649479706d6e 38044 batik_1.10-2+deb10u3.debian.tar.xz
+ d72559b223b13df20bee322772a2b52d73e0a63abe90bb35753edbda631c61ca 15314 batik_1.10-2+deb10u3_i386.buildinfo
+Files:
+ c7df8e1c1573c885d2e52f1ca485a1f2 2206 java optional batik_1.10-2+deb10u3.dsc
+ 06c9040007ac3973976cdf41db142f92 38044 java optional batik_1.10-2+deb10u3.debian.tar.xz
+ 198fe03da0c09c373b00c974469f2cc4 15314 java optional batik_1.10-2+deb10u3_i386.buildinfo
+

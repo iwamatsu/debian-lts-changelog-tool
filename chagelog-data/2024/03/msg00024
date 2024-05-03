@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 23 Mar 2024 12:03:02 +0100
+Source: libnet-cidr-lite-perl
+Architecture: source
+Version: 0.21-2+debu10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libnet-cidr-lite-perl (0.21-2+debu10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-47154
+     don't allow bypass of access control that is based on IP addresses
+Checksums-Sha1:
+ 44ab6cb536378413accc77216c832d4bbb436488 2395 libnet-cidr-lite-perl_0.21-2+debu10u1.dsc
+ 6d8e98d81bf9728d81598898f11fa0559fa2bd71 9931 libnet-cidr-lite-perl_0.21.orig.tar.gz
+ eed4013b57f6e173945905facc55c936d455ff78 3704 libnet-cidr-lite-perl_0.21-2+debu10u1.debian.tar.xz
+ 629fc72b277d39e6d8e6ee24bf310bb9b64e69bd 5982 libnet-cidr-lite-perl_0.21-2+debu10u1_amd64.buildinfo
+Checksums-Sha256:
+ ab593b732761ed9973c6478ed5f148c60fbaea9766b9d8aa3213369a9c582c1c 2395 libnet-cidr-lite-perl_0.21-2+debu10u1.dsc
+ cfa125e8a2aef9259bc3a44e07cbdfb7894b64d22e7c0cee92aee2f5c7915093 9931 libnet-cidr-lite-perl_0.21.orig.tar.gz
+ 1287224290e8f2a94d2a3b9b2b36de23576fb9cfed4bbd2a31625b00c02dcca7 3704 libnet-cidr-lite-perl_0.21-2+debu10u1.debian.tar.xz
+ b1c12d6de8916df60d37ae2c8a0412c790ced07888b5485361831b78ec0502f8 5982 libnet-cidr-lite-perl_0.21-2+debu10u1_amd64.buildinfo
+Files:
+ 4b0f6019f254d508a306adf00351c208 2395 perl optional libnet-cidr-lite-perl_0.21-2+debu10u1.dsc
+ 12280b3754886b876918f03f53aee4f5 9931 perl optional libnet-cidr-lite-perl_0.21.orig.tar.gz
+ 98d95f64b1eaf157ee047901f5772651 3704 perl optional libnet-cidr-lite-perl_0.21-2+debu10u1.debian.tar.xz
+ 4fd782e84ac6ba821087b56ee3434dec 5982 perl optional libnet-cidr-lite-perl_0.21-2+debu10u1_amd64.buildinfo
+

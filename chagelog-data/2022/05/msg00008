@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 05 May 2022 19:13:10 +0200
+Source: ecdsautils
+Binary: ecdsautils
+Architecture: source
+Version: 0.3.2+git20151018-2+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Steffen Moeller <moeller@debian.org>
+Changed-By: Sven Eckelmann <sven@narfation.org>
+Description:
+ ecdsautils - ECDSA elliptic curve cryptography command line tools
+Changes:
+ ecdsautils (0.3.2+git20151018-2+deb9u1) stretch-security; urgency=medium
+ .
+   * debian/patches:
+     - Add 0001-verify-fix-signature-verification-CVE-2022-24884.patch,
+       Fix CVE-2022-24884: Improper Verification of ECDSA Signatures
+Checksums-Sha1:
+ 41e39df39e9d0842d2b69465b07a4b3277a70ffb 1969 ecdsautils_0.3.2+git20151018-2+deb9u1.dsc
+ d9772ffbdd17071e64ff2ed1f6c211d3b76b16e7 11888 ecdsautils_0.3.2+git20151018.orig.tar.xz
+ f8f788e84baf6c87cdf823680e5e6f5dfe7654d2 4012 ecdsautils_0.3.2+git20151018-2+deb9u1.debian.tar.xz
+ 153ee2e54eccb7de0cf6c103466ef5b772ce35f2 7474 ecdsautils_0.3.2+git20151018-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 517f468f795aee229bbed646c4b8aa7066dd0a69fce04c88adf74e674a6973fc 1969 ecdsautils_0.3.2+git20151018-2+deb9u1.dsc
+ 7dccf86cc12ac3b78dfb1f76650d2040bb59712ff3599d39a74ddef630324dd7 11888 ecdsautils_0.3.2+git20151018.orig.tar.xz
+ 7a92b43a79444cf34f13608e486626ea0c713e0a2c772fe311600cc66994badf 4012 ecdsautils_0.3.2+git20151018-2+deb9u1.debian.tar.xz
+ f977075e0482264ff5fe07aeb2029bb43e01338d2977fb87aacc19ba5696ceee 7474 ecdsautils_0.3.2+git20151018-2+deb9u1_amd64.buildinfo
+Files:
+ 797035c322d2317f27d83d566bedb7df 1969 utils extra ecdsautils_0.3.2+git20151018-2+deb9u1.dsc
+ 4bfcf061cba8be9de5e4c814247bf7f4 11888 utils extra ecdsautils_0.3.2+git20151018.orig.tar.xz
+ 2c8173932b09b808983846cd116ec9de 4012 utils extra ecdsautils_0.3.2+git20151018-2+deb9u1.debian.tar.xz
+ 76bc4e9747f5b48ab74aceec1b4967fc 7474 utils extra ecdsautils_0.3.2+git20151018-2+deb9u1_amd64.buildinfo
+

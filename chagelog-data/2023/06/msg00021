@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 11:48:15 CEST
+Source: snapd
+Architecture: source
+Version: 2.37.4-1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Michael Hudson-Doyle <mwhudson@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ b05617397758267cf1d2d5c3e71d0cf344335b87 3717 snapd_2.37.4-1+deb10u3.dsc
+ b12f25e4f149496c4f46a48537689b4fc698215b 1885960 snapd_2.37.4.orig.tar.xz
+ fc18d4dd0a0b9b1b0d91b1724ad6bb4ce8eca338 72504 snapd_2.37.4-1+deb10u3.debian.tar.xz
+ 6654f833792cfec6402b73330c15614325672520 12455 snapd_2.37.4-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ ab797e3a792d23e262250efbf21d5285cee68a5ed138d89e4fc213f0892e5e30 3717 snapd_2.37.4-1+deb10u3.dsc
+ 03b3a6c32a48c3ac5ee863ce4de284ed70ac4b45e58f165a21b30ee903c7e73f 1885960 snapd_2.37.4.orig.tar.xz
+ c4de5989b23ab22c9d853436e324c8f49a64743420dc2aa7b0fa9868605bcd6f 72504 snapd_2.37.4-1+deb10u3.debian.tar.xz
+ 08db4f3580e5d15f1ccd60c2682f1fc128522348cffa31c8a2cde3a44c19133d 12455 snapd_2.37.4-1+deb10u3_amd64.buildinfo
+Changes:
+ snapd (2.37.4-1+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ e4495023d4887a3b8d8a3a91422e0ee4 3717 devel optional snapd_2.37.4-1+deb10u3.dsc
+ bbdc4399f884008c126e2089a25afb70 1885960 devel optional snapd_2.37.4.orig.tar.xz
+ f67f44be86e0a3e7d97f58c3e845f170 72504 devel optional snapd_2.37.4-1+deb10u3.debian.tar.xz
+ 01b760fad79034ec25355ec85fa55e1e 12455 devel optional snapd_2.37.4-1+deb10u3_amd64.buildinfo
+

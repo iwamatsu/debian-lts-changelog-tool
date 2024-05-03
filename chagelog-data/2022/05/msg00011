@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 24 Apr 2022 21:07:12 +0200
+Source: openjdk-8
+Architecture: source
+Version: 8u332-ga-1~deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Java Maintenance <debian-java@lists.debian.org>
+Changed-By: Thorsten Glaser <tg@mirbsd.de>
+Changes:
+ openjdk-8 (8u332-ga-1~deb9u1) stretch-security; urgency=high
+ .
+   * Disable tests (debian/README.source documents why they fail)
+   * Build for wheezy (wtf), jessie (ELTS), stretch (LTS), buster,
+     bullseye (wtf) and PPA for (LTS) trusty, xenial, bionic,
+     focal and jammy
+   * Effort sponsored by ⮡ tarent
+Checksums-Sha1:
+ 9617fbda4b93c387d9aa2bbe8d0f37771e3ce8a1 4482 openjdk-8_8u332-ga-1~deb9u1.dsc
+ 3f5bbfe6c816051019b263acf63a18a05f0c409b 66375615 openjdk-8_8u332-ga.orig.tar.gz
+ 229c3430c1d1e6191e3d8a05e80fae8eab0411ac 178100 openjdk-8_8u332-ga-1~deb9u1.debian.tar.xz
+ 242756e9f0e8c5e3baaf732dabcd270803cff878 11294 openjdk-8_8u332-ga-1~deb9u1_source.buildinfo
+Checksums-Sha256:
+ 618d764e8fd213e731cfbcdd520296da8b428e7795db4f39aeeeff05f21d1188 4482 openjdk-8_8u332-ga-1~deb9u1.dsc
+ 6618c1ae5794a262424d8d683b068485dcf074f05c4451ad56ff8cba2df8c98c 66375615 openjdk-8_8u332-ga.orig.tar.gz
+ 0072ce05b8748a64f5399538bdc632376b34a0347608b590bb9f66bd926b42da 178100 openjdk-8_8u332-ga-1~deb9u1.debian.tar.xz
+ 62767d35e3f85a7ce01f739df7bcb931af04e8bebd1dbb71aa487d0e4a84b373 11294 openjdk-8_8u332-ga-1~deb9u1_source.buildinfo
+Files:
+ 8cbe64ad7226ec74bc294e1389e259fc 4482 java optional openjdk-8_8u332-ga-1~deb9u1.dsc
+ 34d17113580e7d3c7f5b3e0c846aeadc 66375615 java optional openjdk-8_8u332-ga.orig.tar.gz
+ 59c1cfa5f1533afa0075cc97b83090f7 178100 java optional openjdk-8_8u332-ga-1~deb9u1.debian.tar.xz
+ da736e03bd9052c91effaefcbf11898b 11294 java optional openjdk-8_8u332-ga-1~deb9u1_source.buildinfo
+

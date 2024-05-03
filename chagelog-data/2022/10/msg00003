@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun,  2 Oct 2022 23:11:48 CEST
+Source: snakeyaml
+Architecture: source
+Version: 1.23-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ deaad2102b8e49bd5f049bfb7d7583df691d7e7f 2394 snakeyaml_1.23-1+deb10u1.dsc
+ 6544f5a4fce9a8b1fecf3da258736b3a61ebe068 263228 snakeyaml_1.23.orig.tar.xz
+ a72dcffbaa299e4b0d39fc9d5d5af9888dbd721f 13040 snakeyaml_1.23-1+deb10u1.debian.tar.xz
+ ffdc07bcda8252b7e85252e7132ace9c3aa70f48 14030 snakeyaml_1.23-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ bea24a775ec5b01be69613a309f23b311f067f8986768e55db8488d030110685 2394 snakeyaml_1.23-1+deb10u1.dsc
+ 2746d5d594bcc1597bf950f76e5d191bf7722236c208bc3df5f09eabfd8e7659 263228 snakeyaml_1.23.orig.tar.xz
+ 40e4e0e6b3d6753416a2f37bc1f7393a39f0ef81b64ff07651c3aa6bcf96554b 13040 snakeyaml_1.23-1+deb10u1.debian.tar.xz
+ cbdf402b8a383de457c06c4a9321b13dc33b27bd9a476c6c4187e13719732892 14030 snakeyaml_1.23-1+deb10u1_amd64.buildinfo
+Changes:
+ snakeyaml (1.23-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-25857, CVE-2022-38749, CVE-2022-38750 and CVE-2022-38751.
+     Several security vulnerabilities have been discovered in SnakeYaml, a YAML
+     parser for Java, which could facilitate a denial of service attack whenever
+     maliciously crafted input files are processed by SnakeYaml.
+Files:
+ 62210a77b4375d1d8856a29cab7be14e 2394 java optional snakeyaml_1.23-1+deb10u1.dsc
+ 3df78afc2f9eaf6f30a3cb53bdb5fcc3 263228 java optional snakeyaml_1.23.orig.tar.xz
+ 9bb0000aa239f65260dc58b59f92b9d4 13040 java optional snakeyaml_1.23-1+deb10u1.debian.tar.xz
+ e1640d24d07edd089ff47f39af9c87e2 14030 java optional snakeyaml_1.23-1+deb10u1_amd64.buildinfo
+

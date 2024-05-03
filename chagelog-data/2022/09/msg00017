@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 13 Sep 2022 13:59:23 +0100
+Source: python-oslo.utils
+Architecture: source
+Version: 3.36.5-0+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ python-oslo.utils (3.36.5-0+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS security team.
+   * CVE-2022-0718: Due to improper parsing, passwords with a double quote
+     in them where not masked in logs logs, causing any part of the password
+     after the double quote to be revealed in plaintext.
+   * Configure autopkgtests to work.
+Checksums-Sha1:
+ e30219367b9175481e54a28bb6955680be63a00e 3467 python-oslo.utils_3.36.5-0+deb10u2.dsc
+ 4857b06bce697218ef1a840b0e730395424273ab 65920 python-oslo.utils_3.36.5.orig.tar.xz
+ 9b4634ff88ad7820a22e5bdbd6e1847852d137e5 6140 python-oslo.utils_3.36.5-0+deb10u2.debian.tar.xz
+ 5a544394d0fc6f8e2d7329526cef53ab2630c812 15367 python-oslo.utils_3.36.5-0+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ ae195f95433506a799af118079806f06e5740b57da6133d16a6e849c1137e22f 3467 python-oslo.utils_3.36.5-0+deb10u2.dsc
+ beaed7ec2e0d81ca3e0744c47eab2c333921cc6aa6890e05413ff3c4da701cde 65920 python-oslo.utils_3.36.5.orig.tar.xz
+ 1d91e90e1a3f3cfe64ebf347c7689f9f290628574ad18d73729f8988f1ccb5ad 6140 python-oslo.utils_3.36.5-0+deb10u2.debian.tar.xz
+ bb12b9d2774c59533d4d65a0ef74042dc5ab90be6c35e8dea1e9a1a06681ab62 15367 python-oslo.utils_3.36.5-0+deb10u2_amd64.buildinfo
+Files:
+ 537a142058c9aaed4b298f2f980638b6 3467 python optional python-oslo.utils_3.36.5-0+deb10u2.dsc
+ 54cee239fbc4876cea8e6828744aacdb 65920 python optional python-oslo.utils_3.36.5.orig.tar.xz
+ ec4144c40c129c5ad778920093adac4c 6140 python optional python-oslo.utils_3.36.5-0+deb10u2.debian.tar.xz
+ 8e38fd8568b84a4c08b9876fa0981e84 15367 python optional python-oslo.utils_3.36.5-0+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,58 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 23 Oct 2023 13:22:27 +0100
+Source: redis
+Binary: redis redis-sentinel redis-server redis-tools redis-tools-dbgsym
+Built-For-Profiles: nocheck
+Architecture: source amd64 all
+Version: 5:5.0.14-1+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Chris Lamb <lamby@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ redis      - Persistent key-value database with network interface (metapackage
+ redis-sentinel - Persistent key-value database with network interface (monitoring)
+ redis-server - Persistent key-value database with network interface
+ redis-tools - Persistent key-value database with network interface (client)
+Closes: 1054225
+Changes:
+ redis (5:5.0.14-1+deb10u5) buster-security; urgency=high
+ .
+   * CVE-2023-45145: On startup, Redis began listening on a Unix socket before
+     adjusting its permissions to the user-provided configuration. If a
+     permissive umask(2) was used, this created a race condition that enabled,
+     during a short period of time, another process to establish an otherwise
+     unauthorized connection. (Closes: #1054225)
+Checksums-Sha1:
+ 67db60d74fe79c2d8a5a970527b86bb4ec379bde 2190 redis_5.0.14-1+deb10u5.dsc
+ d383cc7958c7ea89006509e4793c76eaa591cd20 2017965 redis_5.0.14.orig.tar.gz
+ 9178b2511356de186e5760ae34ca14df9a33237b 29768 redis_5.0.14-1+deb10u5.debian.tar.xz
+ 5f9ceeb9316ba31a67144e801c967889dc2e512b 63940 redis-sentinel_5.0.14-1+deb10u5_amd64.deb
+ 8e5cc3234e6bc92cc5bdaca4928c047b3d198b9e 91192 redis-server_5.0.14-1+deb10u5_amd64.deb
+ 26fe0e37452b683ddb792f5836897f6cc5170344 1256112 redis-tools-dbgsym_5.0.14-1+deb10u5_amd64.deb
+ 6330fb762471ca10c1728da5442aa076adfbb0b6 541192 redis-tools_5.0.14-1+deb10u5_amd64.deb
+ b94f953abf0b033979a3bb0735ebd5dd40c88c43 56500 redis_5.0.14-1+deb10u5_all.deb
+ 201b70efd55ccda7e849093ac45869f226a3c829 7133 redis_5.0.14-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 928c9a40ee850296f457f609d5b8d46606c88233d13782a97a6dbd75230642a1 2190 redis_5.0.14-1+deb10u5.dsc
+ 6d8e87baeaae521a4ad2d9b5e2af78f582a4212a370c4a8e7e1c58dbbd9a0f19 2017965 redis_5.0.14.orig.tar.gz
+ 1331c19525d5e03a4cb97c56fcbdbb167a6edbd68e5a870f1c6b60cf12316ccd 29768 redis_5.0.14-1+deb10u5.debian.tar.xz
+ 2e781b0f80704476b6e314cb6183a1f4a792100a1574fc347aee02751da9932b 63940 redis-sentinel_5.0.14-1+deb10u5_amd64.deb
+ 6a8efa4b738f5d2b0ddf199e70747f2e78f86739e81d6960e482ed33554d96d7 91192 redis-server_5.0.14-1+deb10u5_amd64.deb
+ eab9ca1c761e5258951072bd450c51134c77542856fe4815fd9eb0a4d6b9a62e 1256112 redis-tools-dbgsym_5.0.14-1+deb10u5_amd64.deb
+ 7784efe18fcf41a5365f3d52f1d3c68deb5c80e599799deb9080abf5fddb996a 541192 redis-tools_5.0.14-1+deb10u5_amd64.deb
+ b3062f8baaa925984f750dd4edccbeecd23f325039558f0696bbb21c9ab60c49 56500 redis_5.0.14-1+deb10u5_all.deb
+ 5bd4b62513effcab8a0939c9feb776b4fcc5c5a5e5daeb434ef2ff8fa41f652a 7133 redis_5.0.14-1+deb10u5_amd64.buildinfo
+Files:
+ e8a495840dff74c78b65678ec79e63f7 2190 database optional redis_5.0.14-1+deb10u5.dsc
+ 1a06c1b414d9f895b32e6af714932175 2017965 database optional redis_5.0.14.orig.tar.gz
+ 4aca4e9cbef50674532cf79832d815fc 29768 database optional redis_5.0.14-1+deb10u5.debian.tar.xz
+ b6d9f296ce9b6cca7db80267dac447c5 63940 database optional redis-sentinel_5.0.14-1+deb10u5_amd64.deb
+ 9774bb143d5dda57a9d351a8f3d56afc 91192 database optional redis-server_5.0.14-1+deb10u5_amd64.deb
+ dd4c8b157e5412876140f754d0a394cf 1256112 debug optional redis-tools-dbgsym_5.0.14-1+deb10u5_amd64.deb
+ 29c17387dbf53b9a5dc6682b7c388047 541192 database optional redis-tools_5.0.14-1+deb10u5_amd64.deb
+ 12ac32052d09e8b94c2a9f9b94ca516f 56500 database optional redis_5.0.14-1+deb10u5_all.deb
+ ca429555b34a64920a12143fbc85a4fd 7133 database optional redis_5.0.14-1+deb10u5_amd64.buildinfo
+

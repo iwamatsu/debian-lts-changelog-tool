@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 20 Jan 2024 21:31:44 +0000
+Source: mariadb-10.3
+Architecture: source
+Version: 1:10.3.39-0+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1055034
+Changes:
+ mariadb-10.3 (1:10.3.39-0+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-22084: A vulnerability allowed
+     high privileged attacker with network access
+     via multiple protocols to compromise the server.
+     Successful attacks of this vulnerability can result
+     in unauthorized ability to cause a hang or
+     frequently repeatable crash (complete DOS) the server
+     (Closes: #1055034)
+Checksums-Sha1:
+ de010b68d3cf06c2fc0b64b5dc68a184f7f62f29 4837 mariadb-10.3_10.3.39-0+deb10u2.dsc
+ 6c4f78d03f7bd6b02731e219a21f15c5e944879e 232160 mariadb-10.3_10.3.39-0+deb10u2.debian.tar.xz
+ 705a7d739ac687c5e791995f7e1de0b22e2994fb 23361 mariadb-10.3_10.3.39-0+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 15608bb4fc9babf80fb19d57dfb51cb179e41c5e9909dd17ea78406e1e0b78aa 4837 mariadb-10.3_10.3.39-0+deb10u2.dsc
+ 9e5f474c25942d353ef4e1fe1de088ea7491673cb81e995d1fa6b5fd72ab28c8 232160 mariadb-10.3_10.3.39-0+deb10u2.debian.tar.xz
+ 004f5a797ac690f8a0133b0cc212449164dfadf2347c0875eeec97e3ecdb7468 23361 mariadb-10.3_10.3.39-0+deb10u2_amd64.buildinfo
+Files:
+ f67cc83ec5bd29eeabcbd1c761f990a5 4837 database optional mariadb-10.3_10.3.39-0+deb10u2.dsc
+ 82d8a120ef3e284fd682cc990f818a5e 232160 database optional mariadb-10.3_10.3.39-0+deb10u2.debian.tar.xz
+ 6cb46dfd2542f636b967f8e078883e57 23361 database optional mariadb-10.3_10.3.39-0+deb10u2_amd64.buildinfo
+

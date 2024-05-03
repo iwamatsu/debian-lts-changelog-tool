@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 27 Jan 2023 13:16:18 +0100
+Source: cinder
+Architecture: source
+Version: 2:13.0.7-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1029562
+Changes:
+ cinder (2:13.0.7-1+deb10u2) buster-security; urgency=medium
+ .
+   * New upstream point release.
+   * Refreshed New_snapshot_clone_size_option.patch.
+   * Removed fix-python3-compatibility-ceph.patch applied upstream.
+   * Add cgroup-bin as runtime dependency, needed for QoS.
+   * Add add-a-healthcheck-url.patch.
+   * CVE-2022-47951: By supplying a specially created VMDK flat image which
+     references a specific backing file path, an authenticated user may convince
+     systems to return a copy of that file's contents from the server resulting
+     in unauthorized access to potentially sensitive data. Add upstream patch
+     CVE-2022-47951-Check_VMDK_subformat_against_an_allowed_list.patch
+     (Closes: #1029562).
+   * Blacklist test_mount_quobyte_should_reraise_already_mounted_error().
+   * Fixed minimum version of python3-oslo.utils (>= 3.36.5-0+deb10u3~),
+     required by the above CVE patch.
+Checksums-Sha1:
+ 5d536dd5346d49da15e07426befa819f6469bd6e 4748 cinder_13.0.7-1+deb10u2.dsc
+ c3dbab12bdc5ec378678f5a1084cf2ce5c4238e8 3805912 cinder_13.0.7.orig.tar.xz
+ 1c16fa47b56894bf6bddc165e938723f84d9c4fa 48976 cinder_13.0.7-1+deb10u2.debian.tar.xz
+ b908c303e246d6c034d7555c17b39456214cac2b 18563 cinder_13.0.7-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ feeef1cfbc708339cacc5060e67775031b5f8fb5aa0583cc281cd5647a95b9bc 4748 cinder_13.0.7-1+deb10u2.dsc
+ 4d9db991272d041cf9b89e4511090637748629671fe15dd276a42fcb075217f1 3805912 cinder_13.0.7.orig.tar.xz
+ 5903f9dd675c3f7d287e4e77a7b98a3e68e6243032e394527d8d6bc4be8981ad 48976 cinder_13.0.7-1+deb10u2.debian.tar.xz
+ ede502eefd2f77ddc22bfc785bca128fe54c320a347cfe332c0d02fa4e34d292 18563 cinder_13.0.7-1+deb10u2_amd64.buildinfo
+Files:
+ e8185a2f7cccf8af79a73c7b22fff7df 4748 net optional cinder_13.0.7-1+deb10u2.dsc
+ a10ff554b70cf70d58d9c510e330dc5d 3805912 net optional cinder_13.0.7.orig.tar.xz
+ a35f54ff65ef0570abf1ac1c8adbd714 48976 net optional cinder_13.0.7-1+deb10u2.debian.tar.xz
+ 292c748829576e120622fa43529e4793 18563 net optional cinder_13.0.7-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 18 Dec 2023 01:09:20 +0100
+Source: spip
+Architecture: source
+Version: 3.2.4-1+deb10u12
+Distribution: buster-security
+Urgency: high
+Maintainer: David Prévot <taffit@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ spip (3.2.4-1+deb10u12) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream security fixes from 4.1.10:
+     + Limit recursion depth in protege_champ().
+     + Avoid usage of unserialize() in security screen.
+     + Deny access to hidden files in supplied .htaccess file.
+     + Update security screen to 1.5.3.
+   * Backport upstream security fixes from 4.1.11:
+     + Refactor weeding out of credentials and other authentication data into
+       new function auth_desensibiliser_session() and use it in
+       auth_informer_login() as well.
+Checksums-Sha1:
+ 60f512d83bfaf13a0770bb1276c4d89a77d2627a 1841 spip_3.2.4-1+deb10u12.dsc
+ 35f94dfe9beb7b9323175e0203399eb2d5d9d210 114476 spip_3.2.4-1+deb10u12.debian.tar.xz
+ 876785cdfc0c0e038bc3aaa4ed8b88f88d8c4065 8358 spip_3.2.4-1+deb10u12_amd64.buildinfo
+Checksums-Sha256:
+ 3c20ae903f120af50c0494b833f93b8b2a820bbd06798f378bb4083563c1f534 1841 spip_3.2.4-1+deb10u12.dsc
+ 3fc8682f7b3dfbdec4eca6a86bbc45cc5d01e4c02971f3b47866d650ad585816 114476 spip_3.2.4-1+deb10u12.debian.tar.xz
+ 42ad104535418010218e071d45731de351f381ac61cbe15f8cd250644fb6aebb 8358 spip_3.2.4-1+deb10u12_amd64.buildinfo
+Files:
+ dc603415cf3b371312f19aeea185319a 1841 web optional spip_3.2.4-1+deb10u12.dsc
+ 28616b9c4c7a9096d868bdc943d002e0 114476 web optional spip_3.2.4-1+deb10u12.debian.tar.xz
+ 6b275d3362c5f5a52cb3806cdaf2170d 8358 web optional spip_3.2.4-1+deb10u12_amd64.buildinfo
+

@@ -1,0 +1,47 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 28 Mar 2022 20:03:02 +0200
+Source: libgc
+Binary: libgc1c2 libgc-dev
+Architecture: source amd64
+Version: 1:7.4.2-8+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Christoph Egger <christoph@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libgc-dev  - conservative garbage collector for C (development)
+ libgc1c2   - conservative garbage collector for C and C++
+Changes:
+ libgc (1:7.4.2-8+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2016-9427
+     Integer overflow causing denial of service and possibly execute
+     arbitrary code.
+Checksums-Sha1:
+ 7497a4160bb748b061a3a04c1f9d7f971c276c39 2187 libgc_7.4.2-8+deb9u1.dsc
+ 441777b9865a730c9c804f5f5de2aa9a55fc9419 730375 libgc_7.4.2.orig.tar.gz
+ f717651cd764188a4903096d15fd122e8a2dca99 23060 libgc_7.4.2-8+deb9u1.debian.tar.xz
+ 770ee0ab83831905e4d0a997c3ea2b923cc81508 352268 libgc-dev_7.4.2-8+deb9u1_amd64.deb
+ df4edfc88ee20e50f7820f047f1013f907f13edc 183594 libgc1c2-dbgsym_7.4.2-8+deb9u1_amd64.deb
+ 55e4382637e954928ba249811a54026d7d8ba02e 208726 libgc1c2_7.4.2-8+deb9u1_amd64.deb
+ 30082ceb3b1ddabac0b55749fca029261a8ef69f 7096 libgc_7.4.2-8+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ acced98f4c75d6577116dd92e4d297f9e0c5156b6bf8cef052c3281be3d97645 2187 libgc_7.4.2-8+deb9u1.dsc
+ 09f21d38dd42bced14d6875f55804cb1b5e6bc486da7980187ecd2e768739c62 730375 libgc_7.4.2.orig.tar.gz
+ 560d4b21acbea88c0e533e402a3df14e1a15576af4787e2ddaee4141bf60cc91 23060 libgc_7.4.2-8+deb9u1.debian.tar.xz
+ ebd82418db60672ae5ab6fb3c0269ad45bd33abf3db2623ce0cfd784b584f6eb 352268 libgc-dev_7.4.2-8+deb9u1_amd64.deb
+ 2b932d557f8d3b61cfab6e3e475cf76b9ada1224a082d8edee4301917026b849 183594 libgc1c2-dbgsym_7.4.2-8+deb9u1_amd64.deb
+ 08905ccb5c5237995540c22b8d18fcbc623bf353ceeedc49241c80cfaebe4e8e 208726 libgc1c2_7.4.2-8+deb9u1_amd64.deb
+ 40817efbaedc4bc2484ebec95ee3f63c0c10529e899adc67d8c959c2ac234a66 7096 libgc_7.4.2-8+deb9u1_amd64.buildinfo
+Files:
+ 01c8377347d324126e5a53f252dc0adc 2187 libs standard libgc_7.4.2-8+deb9u1.dsc
+ ef64e9927f4670daebc4b9399278fb72 730375 libs standard libgc_7.4.2.orig.tar.gz
+ 30de41d1ad222c63760591f0de69cc3d 23060 libs standard libgc_7.4.2-8+deb9u1.debian.tar.xz
+ 9df6e170bcdc1a6040120e2ca8b1ee73 352268 libdevel optional libgc-dev_7.4.2-8+deb9u1_amd64.deb
+ 10d61ddee42ec30ab4bb1210fd47002a 183594 debug extra libgc1c2-dbgsym_7.4.2-8+deb9u1_amd64.deb
+ 3f55250cba8b58e01b32c8cdd7a418e3 208726 libs standard libgc1c2_7.4.2-8+deb9u1_amd64.deb
+ 10d452b6bfdcc1208d037c7b8621f621 7096 libs standard libgc_7.4.2-8+deb9u1_amd64.buildinfo
+

@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 20 Aug 2023 19:21:11 +0100
+Source: flask
+Architecture: source
+Version: 1.0.2-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ flask (1.0.2-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add backported upstream patch to fix CVE-2023-30861.
+   * Add debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ e637515705ff62053085e9f48574149bdb742abc 2590 flask_1.0.2-3+deb10u1.dsc
+ 97c8c0cb00ed98eb1cca8da478ca701485afdc18 644534 flask_1.0.2.orig.tar.gz
+ 2b039b6c7784ca3f708796d2db19c73f6db4df68 7304 flask_1.0.2-3+deb10u1.debian.tar.xz
+ aba8289f8659682f300e3a61d55f0de037a79f1b 7943 flask_1.0.2-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ c22c4337ffece41dab4272e06f19e952671248c561740d251bc96ba117f84db1 2590 flask_1.0.2-3+deb10u1.dsc
+ 2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48 644534 flask_1.0.2.orig.tar.gz
+ 6d77e3423c22f79532b7e4e2ad15bfaddb1124e0814edec90854ba25154aa72c 7304 flask_1.0.2-3+deb10u1.debian.tar.xz
+ eaab87b0bb5099b5196a5b9ae2ac5c05856a033751473344ef99d1b269fa8005 7943 flask_1.0.2-3+deb10u1_source.buildinfo
+Files:
+ 4cc7aa22696a7e92a485c5a3567b37e0 2590 python optional flask_1.0.2-3+deb10u1.dsc
+ 824f0f20aae1f44c9c7dc4054adb7969 644534 python optional flask_1.0.2.orig.tar.gz
+ 5810138cc8919b709dd622b0a96f0e9d 7304 python optional flask_1.0.2-3+deb10u1.debian.tar.xz
+ e646cc16347351385919627c8362a9c7 7943 python optional flask_1.0.2-3+deb10u1_source.buildinfo
+

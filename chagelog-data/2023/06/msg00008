@@ -1,0 +1,28 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 26 May 2023 18:54:51 +0200
+Source: linux-signed-5.10-arm64
+Architecture: source
+Version: 5.10.179+1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-signed-5.10-arm64 (5.10.179+1~deb10u1) buster-security; urgency=high
+ .
+   * Sign kernel from linux-5.10 5.10.179-1~deb10u1
+ .
+   * Rebuild for buster:
+     - Change ABI number to 0.deb10.23
+Checksums-Sha1:
+ e06184e30f09aa2c97ec73a3c0f42485d5faac86 3000 linux-signed-5.10-arm64_5.10.179+1~deb10u1.dsc
+ 2fa24629f79a41679b14682bd6ca7f730470ff12 2591192 linux-signed-5.10-arm64_5.10.179+1~deb10u1.tar.xz
+Checksums-Sha256:
+ 4742c65c56d242e4d086e9027876127642c7af9b9abeffa0058a8780f5d8a294 3000 linux-signed-5.10-arm64_5.10.179+1~deb10u1.dsc
+ 1e2f5e06d9cab5b0ec61467d7621da4b73ed66c1c185b154ff549e04a5d94ccd 2591192 linux-signed-5.10-arm64_5.10.179+1~deb10u1.tar.xz
+Files:
+ e77df8231bdec6bdf50756c919d3a097 3000 kernel optional linux-signed-5.10-arm64_5.10.179+1~deb10u1.dsc
+ 2337cefca31dcdc3dd782e61c20d791c 2591192 kernel optional linux-signed-5.10-arm64_5.10.179+1~deb10u1.tar.xz
+

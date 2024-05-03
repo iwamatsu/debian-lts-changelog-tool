@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 04 Dec 2023 17:50:05 +0100
+Source: roundcube
+Architecture: source
+Version: 1.3.17+dfsg.1-1~deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Roundcube Maintainers <pkg-roundcube-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1055421
+Changes:
+ roundcube (1.3.17+dfsg.1-1~deb10u5) buster-security; urgency=high
+ .
+   * Fix CVE-2023-47272: Cross-site scripting (XSS) vulnerability in setting
+     Content-Type/Content-Disposition for attachment preview/download.
+     (Closes: #1055421)
+Checksums-Sha1:
+ a876b8795afc55a2a800bfeade3023a1a13e123e 2487 roundcube_1.3.17+dfsg.1-1~deb10u5.dsc
+ 73adaf0953cf216b87a04207df2039196fed04f9 3059172 roundcube_1.3.17+dfsg.1-1~deb10u5.debian.tar.xz
+ 06750b232e40454a55ba2fb37eb61d5d7c5e2d59 9429 roundcube_1.3.17+dfsg.1-1~deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ c62885c062ac7851e0b741b711f86f0808421d6599829f4af0952351bffded8b 2487 roundcube_1.3.17+dfsg.1-1~deb10u5.dsc
+ ee5b9996bb688dc95c1effb7593c3692bae8fc940195c125d84823e893044e51 3059172 roundcube_1.3.17+dfsg.1-1~deb10u5.debian.tar.xz
+ 3784d08c507f3abc61f47cd7a11564ec86d943ff57b45cf2b883ae921ee7c2ff 9429 roundcube_1.3.17+dfsg.1-1~deb10u5_amd64.buildinfo
+Files:
+ c0f92d32fb76fa323138f8a4e999d145 2487 web optional roundcube_1.3.17+dfsg.1-1~deb10u5.dsc
+ 6ceef8ce73d29f5e1fec047025f31a00 3059172 web optional roundcube_1.3.17+dfsg.1-1~deb10u5.debian.tar.xz
+ 976a2b76870436d3e2e8cdc6efa4b8df 9429 web optional roundcube_1.3.17+dfsg.1-1~deb10u5_amd64.buildinfo
+

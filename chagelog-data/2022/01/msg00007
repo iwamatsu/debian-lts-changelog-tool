@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 14 Jan 2022 21:59:31 CET
+Source: ghostscript
+Binary: ghostscript ghostscript-x ghostscript-doc libgs9 libgs9-common libgs-dev ghostscript-dbg
+Architecture: source
+Version: 9.26a~dfsg-0+deb9u8
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ ghostscript - interpreter for the PostScript language and for PDF
+ ghostscript-dbg - interpreter for the PostScript language and for PDF - Debug symbo
+ ghostscript-doc - interpreter for the PostScript language and for PDF - Documentati
+ ghostscript-x - interpreter for the PostScript language and for PDF - X11 support
+ libgs-dev  - interpreter for the PostScript language and for PDF - Development
+ libgs9     - interpreter for the PostScript language and for PDF - Library
+ libgs9-common - interpreter for the PostScript language and for PDF - common file
+Checksums-Sha1:
+ 24684ab47b16eff640d1262270ce088350f58a4c 3048 ghostscript_9.26a~dfsg-0+deb9u8.dsc
+ 42644fc2627923d4d013948a57daa416bcfefcf9 136344 ghostscript_9.26a~dfsg-0+deb9u8.debian.tar.xz
+ f31ca90eb076db468cf5c04704bc98d1fa9148bf 13610 ghostscript_9.26a~dfsg-0+deb9u8_amd64.buildinfo
+Checksums-Sha256:
+ 4adbd9b02355ede2a523316ab6266c6fc0a655cc931b1ed5a346db2699bdbac3 3048 ghostscript_9.26a~dfsg-0+deb9u8.dsc
+ 06e50c8bfbdc59e35e7af19dd57a3ca1f22cfb781362826a8f2df33e6370bcd8 136344 ghostscript_9.26a~dfsg-0+deb9u8.debian.tar.xz
+ 0c153a74f335d7457ab5ba8b5356219ae1cf140677039b1a882a5e58eaadadfe 13610 ghostscript_9.26a~dfsg-0+deb9u8_amd64.buildinfo
+Changes:
+ ghostscript (9.26a~dfsg-0+deb9u8) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-45949:
+     Ghostscript GhostPDL has a heap-based buffer overflow in
+     sampled_data_finish (called from sampled_data_continue and interp).
+   * Fix CVE-2021-45944:
+     Ghostscript GhostPDL 9.50 has a use-after-free in
+     sampled_data_sample (called from sampled_data_continue and interp).
+Files:
+ ab1525860084d74842556de85f840aaf 3048 text optional ghostscript_9.26a~dfsg-0+deb9u8.dsc
+ ba59918dc9e551df1f2b1f5ae2e5340f 136344 text optional ghostscript_9.26a~dfsg-0+deb9u8.debian.tar.xz
+ cb0aff33d5e547aa4d8adf3c6ec602bc 13610 text optional ghostscript_9.26a~dfsg-0+deb9u8_amd64.buildinfo
+

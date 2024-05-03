@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 22 Sep 2022 18:25:09 +0200
+Source: unzip
+Architecture: source
+Version: 6.0-23+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Santiago Vila <sanvila@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1010355
+Changes:
+ unzip (6.0-23+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-0530: segmentation fault on invalid input.
+   * CVE-2022-0529: heap buffer overwrite. Closes: #1010355.
+Checksums-Sha1:
+ c8064bfca2b5504c5f46415635f06555e7f5071f 1721 unzip_6.0-23+deb10u3.dsc
+ abf7de8a4018a983590ed6f5cbd990d4740f8a22 1376845 unzip_6.0.orig.tar.gz
+ b990672ceea3e773341c8ad8664bff0a0f26ca5b 24832 unzip_6.0-23+deb10u3.debian.tar.xz
+ 4069dd3f8cdbe86acf686842cf2f1a3e5cdded94 5809 unzip_6.0-23+deb10u3_source.buildinfo
+Checksums-Sha256:
+ 9b81c5b61e9ba3dd1a256db953f436aae8800d8f15d2f38511cbc9c1658a555b 1721 unzip_6.0-23+deb10u3.dsc
+ 036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37 1376845 unzip_6.0.orig.tar.gz
+ f1a8e2c967f6821dfc76586c092780ca73c3aed05ac21872e5123c6d11c9684a 24832 unzip_6.0-23+deb10u3.debian.tar.xz
+ 3c3717b5dc1b8b450845f80eea9d1c51b3c397112cab1279e47cd6d416a4814a 5809 unzip_6.0-23+deb10u3_source.buildinfo
+Files:
+ 0189a0d8b99fa6042b4db2cf2ceeb1fa 1721 utils optional unzip_6.0-23+deb10u3.dsc
+ 62b490407489521db863b523a7f86375 1376845 utils optional unzip_6.0.orig.tar.gz
+ 9d8730d7ead21773466791690009c178 24832 utils optional unzip_6.0-23+deb10u3.debian.tar.xz
+ d9b3c45bfd1228c53243b613edbdb863 5809 utils optional unzip_6.0-23+deb10u3_source.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 21 Sep 2023 18:05:28 CEST
+Source: gsl
+Architecture: source
+Version: 2.5+dfsg-6+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ a06d66396d3d39e41b5b84f1891861d312747619 2235 gsl_2.5+dfsg-6+deb10u1.dsc
+ c4b211e31aaed8f7dcb93a65692be28b91d9e9ce 6724547 gsl_2.5+dfsg.orig.tar.gz
+ 62ef73831fbbbd726453ba27c3dc2e2da0fa2244 21024 gsl_2.5+dfsg-6+deb10u1.debian.tar.xz
+ 8ed23c6251f3ea16acca3d4bfe38358c95e7a4fe 5993 gsl_2.5+dfsg-6+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 2291317bbd91e64f9a571ea1a92079134a2d9e1977cb975745ae59d47bad5e30 2235 gsl_2.5+dfsg-6+deb10u1.dsc
+ 904339a3ca8a3f884e4d83440138411fbe19f3e60ce57076c679e2c3c832864e 6724547 gsl_2.5+dfsg.orig.tar.gz
+ 6de678a84b403c8ef60efb0e63c986e3977e0dd15223c1c88ea5cbb7a52c97e2 21024 gsl_2.5+dfsg-6+deb10u1.debian.tar.xz
+ b01f5aff4dc24d4a482a9fe0c558793b123837fc7bd136cfe6837f041aca92cf 5993 gsl_2.5+dfsg-6+deb10u1_source.buildinfo
+Changes:
+ gsl (2.5+dfsg-6+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * A buffer overflow can occur when calculating the quantile value using the
+     Statistics Library of GSL (GNU Scientific Library). Processing a
+     maliciously crafted input data for gsl_stats_quantile_from_sorted_data of
+     the library may lead to unexpected application termination or arbitrary
+     code execution.
+Files:
+ 19033d5c35c25f1151b03388f6c972aa 2235 math optional gsl_2.5+dfsg-6+deb10u1.dsc
+ 2ec54e89bdbaa641b668e147e6215115 6724547 math optional gsl_2.5+dfsg.orig.tar.gz
+ d38b6306c6e577108f798528339c1e03 21024 math optional gsl_2.5+dfsg-6+deb10u1.debian.tar.xz
+ dc76589af342a61cafdb6e51a946ac99 5993 math optional gsl_2.5+dfsg-6+deb10u1_source.buildinfo
+

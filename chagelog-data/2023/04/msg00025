@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 21 Apr 2023 22:01:00 +0000
+Source: apache2
+Architecture: source
+Version: 2.4.38-3+deb10u10
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1032476
+Changes:
+ apache2 (2.4.38-3+deb10u10) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-27522: HTTP Response Smuggling in mod_proxy_uwsgi
+     (Closes: #1032476)
+   * CVE-2023-25690: Some mod_proxy configurations allow a HTTP
+     Request Smuggling attack. Configurations are affected
+     when mod_proxy is enabled along with some form of RewriteRule
+     or ProxyPassMatch in which a non-specific pattern matches
+     some portion of the user-supplied request-target (URL)
+     data and is then re-inserted into the proxied request-target
+     using variable substitution. (Closes: #1032476)
+   * Backport perl-framework testsuite from sid
+   * Backport regression fix for CVE-2023-25690
+Checksums-Sha1:
+ 1b44c2b9bf4495c76605ba6f996f23c2721cdee5 3363 apache2_2.4.38-3+deb10u10.dsc
+ e06ec00b95fee8b9db13abc0daaf58e8098a8d54 1104408 apache2_2.4.38-3+deb10u10.debian.tar.xz
+ e72705fd292ebee852dc7f87acc8774fc29eb2b4 12190 apache2_2.4.38-3+deb10u10_amd64.buildinfo
+Checksums-Sha256:
+ c6ae667395293ef81a94bf83a4cdb08781af467959740e40aa266cf609f111ad 3363 apache2_2.4.38-3+deb10u10.dsc
+ 3ee2646e17bcb20b7dd7932b13b839dcc2a7c4e14472c502004d8acbf95f7798 1104408 apache2_2.4.38-3+deb10u10.debian.tar.xz
+ 1de97254084db618e5366a2aa901223805d2c1b1118e12a3d2dce7117df9719b 12190 apache2_2.4.38-3+deb10u10_amd64.buildinfo
+Files:
+ c00a35d7fe9e8c7a0cfbdd7c4e4f29bc 3363 httpd optional apache2_2.4.38-3+deb10u10.dsc
+ 8bf613c2924497120933a00cae3ce06c 1104408 httpd optional apache2_2.4.38-3+deb10u10.debian.tar.xz
+ de75603fba43ceb688e4d188a84c1f78 12190 httpd optional apache2_2.4.38-3+deb10u10_amd64.buildinfo
+

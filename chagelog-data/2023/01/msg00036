@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Jan 2023 13:03:02 +0100
+Source: libzen
+Architecture: source
+Version: 0.4.37-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Chow Loong Jin <hyperair@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libzen (0.4.37-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-36646
+     fix for possible null pointer dereference
+Checksums-Sha1:
+ 0326571f66bb177a9f8c51b04e31f9679ac6d5a2 2185 libzen_0.4.37-1+deb10u1.dsc
+ 736f976568936da0fe7b6173b95d8969d4d5aabe 158475 libzen_0.4.37.orig.tar.gz
+ 228be304e69268af5e46b4c3290b5f4b63e38449 9540 libzen_0.4.37-1+deb10u1.debian.tar.xz
+ ecd5d219eb07cb6c0de08a8f4f5bb3b6f4580d8b 7877 libzen_0.4.37-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 2c4e493d7d592d63da0188bb168292e0dcc0ee3764de95fa1fae6ffbc3801957 2185 libzen_0.4.37-1+deb10u1.dsc
+ 165ea5cd8d2e26d09b93b388904d228b71717b4a024b4694d455a407269686a6 158475 libzen_0.4.37.orig.tar.gz
+ 17fbe981f54e9bf95761482161ec2704a0bcedacc173826a25b87a98198aaad5 9540 libzen_0.4.37-1+deb10u1.debian.tar.xz
+ 0a9a73afac780d0f178b10212edb384d93e11d77043d394d808264d24b8b0739 7877 libzen_0.4.37-1+deb10u1_amd64.buildinfo
+Files:
+ 96e0e5604b9643866139ba3d525eb998 2185 libs optional libzen_0.4.37-1+deb10u1.dsc
+ d02400f51736963df3c1abd4ff474ee5 158475 libs optional libzen_0.4.37.orig.tar.gz
+ 84e6963feae3c59f155feba28c902762 9540 libs optional libzen_0.4.37-1+deb10u1.debian.tar.xz
+ b4ebda2b5476ed7909d9c2fe2f313e80 7877 libs optional libzen_0.4.37-1+deb10u1_amd64.buildinfo
+

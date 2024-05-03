@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri,  4 Feb 2022 14:20:42 CET
+Source: apng2gif
+Binary: apng2gif
+Architecture: source
+Version: 1.8-0.1~deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Jari Aalto <jari.aalto@cante.net>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ apng2gif   - tool for converting APNG images to animated GIF format
+Checksums-Sha1:
+ 2dd9eed34413eb40110ac66f6231aadd18f8987a 2065 apng2gif_1.8-0.1~deb9u1.dsc
+ f1f24e5ece9b6880334ba218c5ff7dadf91aedda 437914 apng2gif_1.8.orig.tar.gz
+ dbf266308a6036c1793967beca91aa40836dc524 6912 apng2gif_1.8-0.1~deb9u1.debian.tar.xz
+ 2cf95a916fb7204fa52be23077d4794543435d15 6428 apng2gif_1.8-0.1~deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 1acbda5033d3721564f22978f7e4a0cabcc9ffc1b5469609c496ba916e0069b3 2065 apng2gif_1.8-0.1~deb9u1.dsc
+ 4d47a2c0e6656bbc5afeecccc62b22f885a6b0434944bd52824126a156959649 437914 apng2gif_1.8.orig.tar.gz
+ 103b7763b7df93b52318cba2ff8d1ea2d606fb7d134565f237803d4f8a0039ae 6912 apng2gif_1.8-0.1~deb9u1.debian.tar.xz
+ fc43a584c772fbf3a6bde48f065ba9b19912136e0626663685cf12f1376bf344 6428 apng2gif_1.8-0.1~deb9u1_amd64.buildinfo
+Changes:
+ apng2gif (1.8-0.1~deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Backport version 1.8 and fix CVE-2017-6960, CVE-2017-6961 and
+     CVE-2017-6962. Imroper sanitization of user input can result in denial of
+     service (application crash) or possible execution of arbitrary code if a
+     malformed image file is processed.
+Files:
+ 1386d68be5ed5346ac4206123ea02185 2065 graphics optional apng2gif_1.8-0.1~deb9u1.dsc
+ 4cf980234840ce2aa856cf328c644e85 437914 graphics optional apng2gif_1.8.orig.tar.gz
+ 42ab6c617f2ad24cc877b3c53eb1e5df 6912 graphics optional apng2gif_1.8-0.1~deb9u1.debian.tar.xz
+ f982012a09d64aef8112aa3e6b2d8d5a 6428 graphics optional apng2gif_1.8-0.1~deb9u1_amd64.buildinfo
+

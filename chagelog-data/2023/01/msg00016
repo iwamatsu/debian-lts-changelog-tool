@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 19 Jan 2023 23:20:22 CET
+Source: lava
+Architecture: source
+Version: 2019.01-5+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 9226d1071f650be97ffd2c525a19453c78bf73f8 3128 lava_2019.01-5+deb10u2.dsc
+ 482046368465c847ca0c04e9da4ad20ea2a13307 74252 lava_2019.01-5+deb10u2.debian.tar.xz
+ c36d05744708b532128ee2d9a44945ac8162661b 10892 lava_2019.01-5+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ e98b4caccf1480d3405bfb8f21ac249018211d66410fc2c5fc93cfe1e0e7d256 3128 lava_2019.01-5+deb10u2.dsc
+ 75e74ec6ba02e4366549f621eb27670fda99ca14bec2ac7358adc0310a97fe16 74252 lava_2019.01-5+deb10u2.debian.tar.xz
+ 4384e61ea423b1cebfd9f8a64c78f24f7040b3e41939fc1b3fcc5b5c2a536552 10892 lava_2019.01-5+deb10u2_amd64.buildinfo
+Changes:
+ lava (2019.01-5+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-44641:
+     Igor Ponomarev discovered that LAVA, a continuous integration system for
+     deploying operating systems onto physical and virtual hardware for running
+     tests, was suspectible to denial of service via recursive XML entity
+     expansion.
+Files:
+ 2233a0f1cd6dfa64193fb6b013c47547 3128 net optional lava_2019.01-5+deb10u2.dsc
+ c92dc710216e6802f32ea294b1bea022 74252 net optional lava_2019.01-5+deb10u2.debian.tar.xz
+ e77d93edfa565b9df04fbc881aa49921 10892 net optional lava_2019.01-5+deb10u2_amd64.buildinfo
+

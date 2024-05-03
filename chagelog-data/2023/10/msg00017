@@ -1,0 +1,47 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 07 Oct 2023 18:59:08 +0200
+Source: python-urllib3
+Architecture: source
+Version: 1.24.1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 927172 927412 1053626
+Changes:
+ python-urllib3 (1.24.1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Follow-up for CVE-2018-20060: Remove Authorization headers regardless of
+     case on cross-origin redirects.
+   * Fix CVE-2019-11236: An attacker controlling the request parameter can
+     inject headers by injecting CR/LF characters. (Closes: #927172)
+   * Fix CVE-2019-11324: When verifying HTTPS connections when an SSLContext is
+     passed to urllib3, system CA certificates will be loaded into the
+     SSLContext by default in addition to any manually-specified CA
+     certificates.  This causes TLS handshakes that should fail given only the
+     manually specified certs to succeed based on system CA certs.
+     (Closes: #927412)
+   * Fix CVE-2020-26137: CRLF injection vulnerability when the attacker
+     controls the HTTP request method, as demonstrated by inserting CR and LF
+     control characters in the first argument of putrequest().
+   * Fix CVE-2023-43804: Cookie request header isn't stripped during
+     cross-origin redirects. (Closes: #1053626)
+Checksums-Sha1:
+ 5fd34e0f77435c604702c441691f11736ee3afe8 2507 python-urllib3_1.24.1-1+deb10u1.dsc
+ 2d5593e48a650e4ba05358c7d2de865684001948 229688 python-urllib3_1.24.1.orig.tar.gz
+ f3e88a3039397b70f06d47976eaab4e212935039 15416 python-urllib3_1.24.1-1+deb10u1.debian.tar.xz
+ 6ce9c308a5a0e4d375d9d61b1d85b545906eef50 8136 python-urllib3_1.24.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ f17188185cd26100502c9d9da1c1f08e3398e8ae26df0afba97d38d46f40a682 2507 python-urllib3_1.24.1-1+deb10u1.dsc
+ de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22 229688 python-urllib3_1.24.1.orig.tar.gz
+ b51ee434baafa86c75adc7dbea38eb70042a5851583df4e736aef0d806538222 15416 python-urllib3_1.24.1-1+deb10u1.debian.tar.xz
+ 37e7266eb8ffa43e1f0a4134dad761b5edbabd61d269e2e4a918166deba58645 8136 python-urllib3_1.24.1-1+deb10u1_amd64.buildinfo
+Files:
+ c11776a41192284ced2620d0fc1f0cd8 2507 python optional python-urllib3_1.24.1-1+deb10u1.dsc
+ f3d8b1841539200c949a33e87e551d8e 229688 python optional python-urllib3_1.24.1.orig.tar.gz
+ c714539ce21ac88bb8bf044eccfc25b0 15416 python optional python-urllib3_1.24.1-1+deb10u1.debian.tar.xz
+ 6e1033e48f8200d24c867ae32c2ebd80 8136 python optional python-urllib3_1.24.1-1+deb10u1_amd64.buildinfo
+

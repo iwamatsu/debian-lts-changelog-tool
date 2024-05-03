@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 17 Nov 2023 17:29:31 +0100
+Source: freerdp2
+Architecture: source
+Version: 2.3.0+dfsg1-2+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1001062 1021659
+Changes:
+ freerdp2 (2.3.0+dfsg1-2+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Import fix for CVE-2021-41160 - Improper region checks in all clients
+     allow out of bound write to memory (Closes: #1001062)
+   * Import fix for CVE-2022-24883 - FreeRDP Server authentication might allow
+     invalid credentials to pass.
+   * Import fix for (see #1024511)
+     - CVE-2022-39316 - Out of bound read in zgfx decoder and
+     - CVE-2022-39318 - Division by zero in urbdrc channel
+     - CVE-2022-39319 - Missing length validation in urbdrc channel
+     - CVE-2022-39347 - Missing path sanitation with `drive` channel
+     - CVE-2022-41877 - Missing input length validation in `drive` channel
+   * Import fix for CVE-2022-39282 and CVE-2023-39283 (Closes: #1021659)
+   * Previous upload had a typo in the CVE list: It was CVE 2023-40567 not
+     CVE 2023-39357; fixing changelog entry.
+Checksums-Sha1:
+ f1676978bcbafd39e39dbf49800d4186a92493d7 3600 freerdp2_2.3.0+dfsg1-2+deb10u4.dsc
+ 15db1727064b78bff6e1eafd7a50458a8a603da9 94240 freerdp2_2.3.0+dfsg1-2+deb10u4.debian.tar.xz
+ 972193273722b5f558e035b1d1cb9bd7bcf710c1 24151 freerdp2_2.3.0+dfsg1-2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 6d17df0885e6f4e41979c88756601376dec80d96929268fc9cd7cd3b4f270ac2 3600 freerdp2_2.3.0+dfsg1-2+deb10u4.dsc
+ 8280e9ca0e713ce4982a31f8cb61fa173b634e71bf1e5aee63e19f2d0bb7d316 94240 freerdp2_2.3.0+dfsg1-2+deb10u4.debian.tar.xz
+ 78a5701daf3e6083aa76d3758f448afde0c184d8f30d5e0001bd3b778e3f923d 24151 freerdp2_2.3.0+dfsg1-2+deb10u4_amd64.buildinfo
+Files:
+ a24ea95e9072c0f84456b2ba3a73f5a7 3600 x11 optional freerdp2_2.3.0+dfsg1-2+deb10u4.dsc
+ b529159dd5d228f5a07f15125e94f101 94240 x11 optional freerdp2_2.3.0+dfsg1-2+deb10u4.debian.tar.xz
+ 0d50b4e8454cbe2a51bd225c5f6d57ad 24151 x11 optional freerdp2_2.3.0+dfsg1-2+deb10u4_amd64.buildinfo
+

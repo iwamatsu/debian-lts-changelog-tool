@@ -1,0 +1,101 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 15 Mar 2024 10:18:20 +0100
+Source: cacti
+Architecture: source
+Version: 1.2.2+ds1-2+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Cacti Maintainer <pkg-cacti-maint@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1059254
+Changes:
+ cacti (1.2.2+ds1-2+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-39357: When the column type is numeric, the sql_save function
+     directly utilizes user input. Many files and functions calling the
+     sql_save function do not perform prior validation of user input,
+     leading to the existence of multiple SQL injection vulnerabilities in
+     Cacti. This allows authenticated users to exploit these SQL injection
+     vulnerabilities to perform privilege escalation and remote code
+     execution.
+   * CVE-2023-39360: Stored Cross-Site-Scripting (XSS) Vulnerability allows
+     an authenticated user to poison data. The vulnerability is found in
+     `graphs_new.php`. Several validations are performed, but the
+     `returnto` parameter is directly passed to `form_save_button`. In
+     order to bypass this validation, returnto must contain
+     `host.php`.
+   * CVE-2023-39361: SQL injection discovered in graph_view.php. Since
+     guest users can access graph_view.php without authentication by
+     default, if guest users are being utilized in an enabled state, there
+     could be the potential for significant damage. Attackers may exploit
+     this vulnerability, and there may be povssibilities for actions such as
+     the usurpation of administrative privileges or remote code execution.
+   * CVE-2023-39362: An authenticated privileged user, can use a malicious
+     string in the SNMP options of a Device, performing command injection
+     and obtaining remote code execution on the underlying server. The
+     `lib/snmp.php` file has a set of functions, with similar behavior,
+     that accept in input some variables and place them into an `exec` call
+     without a proper escape or validation.
+   * CVE-2023-39364: Users with console access can be redirected to an
+     arbitrary website after a change password performed via a specifically
+     crafted URL. The `auth_changepassword.php` file accepts `ref` as a URL
+     parameter and reflects it in the form used to perform the change
+     password. It's value is used to perform a redirect via `header` PHP
+     function. A user can be tricked in performing the change password
+     operation, e.g., via a phishing message, and then interacting with the
+     malicious website where the redirection has been performed, e.g.,
+     downloading malwares, providing credentials, etc.
+   * CVE-2023-39365: Issues with Cacti Regular Expression validation
+     combined with the external links feature can lead to limited SQL
+     Injections and subsequent data leakage.
+   * CVE-2023-39513: Stored Cross-Site-Scripting (XSS) Vulnerability which
+     allows an authenticated user to poison data stored in the _cacti_'s
+     database. The script under `host.php` is used to monitor and manage
+     hosts in the _cacti_ app, hence displays useful information such as
+     data queries and verbose logs.
+   * CVE-2023-39515: Stored Cross-Site-Scripting (XSS) Vulnerability allows
+     an authenticated user to poison data stored in the cacti's
+     database. These data will be viewed by administrative cacti accounts
+     and execute JavaScript code in the victim's browser at view-time. The
+     script under `data_debug.php` displays data source related debugging
+     information such as _data source paths, polling settings, meta-data on
+     the data source_.
+   * CVE-2023-39516: Stored Cross-Site-Scripting (XSS) Vulnerability which
+     allows an authenticated user to poison data stored in the _cacti_'s
+     database. These data will be viewed by administrative _cacti_ accounts
+     and execute JavaScript code in the victim's browser at view-time. The
+     script under `data_sources.php` displays the data source management
+     information (e.g. data source path, polling configuration etc.) for
+     different data visualizations of the _cacti_ app.
+   * CVE-2023-49084: While using the detected SQL Injection and
+     insufficient processing of the include file path, it is possible to
+     execute arbitrary code on the server. Exploitation of the
+     vulnerability is possible for an authorized user. The vulnerable
+     component is the `link.php`. (Closes: #1059254)
+   * CVE-2023-49085: It is possible to execute arbitrary SQL code through
+     the `pollers.php` script. An authorized user may be able to execute
+     arbitrary SQL code. The vulnerable component is the `pollers.php`.
+   * CVE-2023-49086: Bypassing an earlier fix (CVE-2023-39360) that leads
+     to a DOM XSS attack. Exploitation of the vulnerability is possible for
+     an authorized user. The vulnerable component is the
+     `graphs_new.php`. (Closes: #1059254)
+   * CVE-2023-49088: The fix applied for CVE-2023-39515 in version 1.2.25
+     is incomplete as it enables an adversary to have a victim browser
+     execute malicious code when a victim user hovers their mouse over the
+     malicious data source path in `data_debug.php`.
+Checksums-Sha1:
+ 96bb3a61d874b07d175cc0bb17fa65b373c24a24 2486 cacti_1.2.2+ds1-2+deb10u6.dsc
+ 02bc6a28fbad0839c88a2b346ec8c2f7c8f1b719 103860 cacti_1.2.2+ds1-2+deb10u6.debian.tar.xz
+ 5eded9afe2002531bdfd6af4785b41b6e88582a7 5778 cacti_1.2.2+ds1-2+deb10u6_all.buildinfo
+Checksums-Sha256:
+ 0014cf44ba13090ec558cd8a6a4ac65628f1eb7cc1a3f5b372249dab211f72d1 2486 cacti_1.2.2+ds1-2+deb10u6.dsc
+ 0a17a19c744ad92ab985312a2c7b577bf5ee778aa80997b0ab73423c2c7f509e 103860 cacti_1.2.2+ds1-2+deb10u6.debian.tar.xz
+ 0ddc2970842d7f11a3b6a2d6001c97901395834deca8a0a4ba8c640f1ecf5255 5778 cacti_1.2.2+ds1-2+deb10u6_all.buildinfo
+Files:
+ 979f57f00351f8e465e7da6f57e1bdfe 2486 web optional cacti_1.2.2+ds1-2+deb10u6.dsc
+ 3331f42755006df5a48b5f6204933012 103860 web optional cacti_1.2.2+ds1-2+deb10u6.debian.tar.xz
+ b2f0cab815e345345d16bcb1e346531c 5778 web optional cacti_1.2.2+ds1-2+deb10u6_all.buildinfo
+

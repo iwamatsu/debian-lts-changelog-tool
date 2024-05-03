@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 25 Nov 2022 00:45:09 +0100
+Source: inetutils
+Architecture: source
+Version: 2:1.9.4-7+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Guillem Jover <guillem@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 945861 956084 993476
+Changes:
+ inetutils (2:1.9.4-7+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Cherry-pick patches from s-p-u to fix:
+     + CVE-2019-0053: inetutils' telnet client doesn't sufficiently validate
+       environment variables, which can lead to stack-based buffer overflows.
+       Closes: #945861.
+     + CVE-2021-40491: inetutils' ftp client before 2.2 does not validate
+       addresses returned by PSV/LSPV responses to make sure they match the
+       server address.  An evil ftpd can use this flaw to access services in
+       the client's private network.  This is similar to curl's CVE-2020-8284.
+       Closes: #993476.
+     + CVE-2022-39028: inetutils's telnetd through 2.3 has a NULL pointer
+       dereference which a client can trigger by sending 0xff 0xf7 or 0xff
+       0xf8.  Closes: #956084.
+   * Add d/gbp.conf to point to 'debian/buster' branch.
+   * Add d/salsa-ci.yml.
+Checksums-Sha1:
+ d88026c81d01b40d51094d17c2fc87de8b4e68cc 2739 inetutils_1.9.4-7+deb10u2.dsc
+ 8dc4e66e80678fe86717d486e470b395258c2fd5 98576 inetutils_1.9.4-7+deb10u2.debian.tar.xz
+ 65e9c78ef82ce9429165c0bb4d58bca91aa33eba 13239 inetutils_1.9.4-7+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ e1f6f63ae981dbdf239a51995cf0e045fd6ebb630dc7d4274e26945dd15c3ce2 2739 inetutils_1.9.4-7+deb10u2.dsc
+ 005490d899975de4c73b506b535f36b6fab692da1c919ebd5b6f33ca4880c97b 98576 inetutils_1.9.4-7+deb10u2.debian.tar.xz
+ 0ba7fb609affb08d7d87879590f4ed6142cf0cf37ce774fe0d6940c38ad8931c 13239 inetutils_1.9.4-7+deb10u2_amd64.buildinfo
+Files:
+ 5f71e2117dff69fa614a353144416b5d 2739 net optional inetutils_1.9.4-7+deb10u2.dsc
+ e564a267e1bc3625a14670524b6b457f 98576 net optional inetutils_1.9.4-7+deb10u2.debian.tar.xz
+ eb259e2b837703a624c419c187c5015e 13239 net optional inetutils_1.9.4-7+deb10u2_amd64.buildinfo
+

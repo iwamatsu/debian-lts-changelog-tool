@@ -1,0 +1,53 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 22 Aug 2023 09:42:24 -0400
+Source: qt4-x11
+Architecture: source
+Version: 4:4.8.7+dfsg-18+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Roberto C. Sánchez <roberto@debian.org>
+Changes:
+ qt4-x11 (4:4.8.7+dfsg-18+deb10u2) buster-security; urgency=medium
+ .
+   [ Scarlett Moore ]
+   * Non-maintainer upload by LTS team.
+   * Patch from Fedora to fix root certificates issue.
+     If the global configuration doesn't allow root certificates to be loaded
+     on demand then we have to disable it for qsslsocketprivate as well.
+     (Fixes: CVE-2023-34410)
+   * Patch from Fedora to fix: Uninitialized variable usage in m_unitsPerEm.
+     (Fixes: CVE-2023-32573)
+   * Add patch to do stricter error checking when parsing
+     path nodes. (Fixes: CVE-2021-45930)
+   * Add patch to clamp parsed doubles to float representable
+     values. (Fixes: CVE-2021-3481)
+ .
+   [ Roberto C. Sánchez ]
+   * Add patch to prevent buffer overflow when a SVG file with an image inside
+     it is rendered.
+     (Fixes: CVE-2023-32763)
+   * Add patch to prevent an application crash in QXmlStreamReader via a
+     crafted XML string that triggers a situation in which a prefix is greater
+     than a length.
+     (Fixes: CVE-2023-37369)
+   * Add patch to prevent infinite loops in recursive entity expansion.
+     (Fixes: CVE-2023-38197)
+Checksums-Sha1:
+ dafb4a878e1f17c6b8123a3b573937ac2e02003e 6053 qt4-x11_4.8.7+dfsg-18+deb10u2.dsc
+ 051d10326cb95eda77a6834eace7fc929dbe4676 199073788 qt4-x11_4.8.7+dfsg.orig.tar.xz
+ 9aaa271e8b07e6055dadb20bae8a4a988c770253 335148 qt4-x11_4.8.7+dfsg-18+deb10u2.debian.tar.xz
+ 64cf63903acbd165ff0537542312231196e5ea1a 31735 qt4-x11_4.8.7+dfsg-18+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ c3a0af5f14c638e8a6b7c46a5f56193da60231ce83497e5b472acb090de28c10 6053 qt4-x11_4.8.7+dfsg-18+deb10u2.dsc
+ 4d33e5516c19e166e9090edc36f77f8249d2d83ef939ba68e2a542de7a196eaf 199073788 qt4-x11_4.8.7+dfsg.orig.tar.xz
+ a826e5928bc118fbddd79886b90245056ebc0761bb85e2209c5806485256dba2 335148 qt4-x11_4.8.7+dfsg-18+deb10u2.debian.tar.xz
+ b0ef3600ed119a1ec7ab8262d900a26a1dd916c8eff2a32f0b446a8da313e037 31735 qt4-x11_4.8.7+dfsg-18+deb10u2_amd64.buildinfo
+Files:
+ 7a7762eb5b516f8746eb4bf0ba3c5cf7 6053 oldlibs optional qt4-x11_4.8.7+dfsg-18+deb10u2.dsc
+ be7dc671c64894c29ab392577fc81c2d 199073788 oldlibs optional qt4-x11_4.8.7+dfsg.orig.tar.xz
+ 68799eafe6c4760720008a083a994db6 335148 oldlibs optional qt4-x11_4.8.7+dfsg-18+deb10u2.debian.tar.xz
+ 43f7f28801e903eeded56aeb45e6db69 31735 oldlibs optional qt4-x11_4.8.7+dfsg-18+deb10u2_amd64.buildinfo
+

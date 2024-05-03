@@ -1,0 +1,48 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 18 Mar 2022 10:37:11 +0000
+Source: python-treq
+Binary: python-treq python3-treq python-treq-doc
+Architecture: source all
+Version: 15.1.0-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Orestis Ioannou <orestis@oioannou.com>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-treq - Higher level API for making HTTP requests with Twisted (Python 2)
+ python-treq-doc - Higher level API for making HTTP requests with Twisted (doc)
+ python3-treq - Higher level API for making HTTP requests with Twisted (Python 3)
+Closes: 1005041
+Changes:
+ python-treq (15.1.0-1+deb9u1) stretch-security; urgency=high
+ .
+   * CVE-2022-23607: Prevent an information disclosure issue where HTTP cookies
+     were not bound to a single domain and were sent to every domain instead.
+     (Closes: #1005041)
+Checksums-Sha1:
+ 71ad8a3676e33af5e00679895ef0ed61bcf52d3e 2507 python-treq_15.1.0-1+deb9u1.dsc
+ f19a67a14cfe4031dd0564fbb1623d539386933d 42642 python-treq_15.1.0.orig.tar.gz
+ 3cb7e9f1d767ca9c06fa653118db4e2cbbe6846b 3600 python-treq_15.1.0-1+deb9u1.debian.tar.xz
+ 4c1ee460056cc53947fbd38ecb345db8842ef364 29388 python-treq-doc_15.1.0-1+deb9u1_all.deb
+ d3d9c04510bbb788fa20d6715841f10e38ac4d3c 29674 python-treq_15.1.0-1+deb9u1_all.deb
+ 7f5c84776e0fd9f1e660571ec65f4c78e4d9fe99 9262 python-treq_15.1.0-1+deb9u1_amd64.buildinfo
+ c097bbd073004853977447deec3c583eb9020613 29766 python3-treq_15.1.0-1+deb9u1_all.deb
+Checksums-Sha256:
+ 078f89f41b5f733c85ce542007fd70e8224ac813bce81e17face1df844048f37 2507 python-treq_15.1.0-1+deb9u1.dsc
+ 425a47d5d52a993d51211028fb6ade252e5fbea094e878bb4b644096a7322de8 42642 python-treq_15.1.0.orig.tar.gz
+ bc51f458408dac73f69cedf09b10224c1ba585d3e02d04ee8545c381db208210 3600 python-treq_15.1.0-1+deb9u1.debian.tar.xz
+ 182636e16bfd59f6809a2f35907569dd34ed0ecdf14d1295a336dbfcf5c74975 29388 python-treq-doc_15.1.0-1+deb9u1_all.deb
+ 87d8f2d3b02a456325fa093077782f86ffac87ba9dc0eab77e83f49592eb4530 29674 python-treq_15.1.0-1+deb9u1_all.deb
+ 725fc1439e2b4550641f58bb83e1a26af59f2bbfec500e3188b8e546a20c96eb 9262 python-treq_15.1.0-1+deb9u1_amd64.buildinfo
+ d64dbc722a19adc4ca1853c20b168213af644438655bf5330de94460bba3831b 29766 python3-treq_15.1.0-1+deb9u1_all.deb
+Files:
+ 1b6c77cf388e7f9a495751fb1c96e9ef 2507 python optional python-treq_15.1.0-1+deb9u1.dsc
+ b1fb60759ad5a885cb8ea562553f2d4c 42642 python optional python-treq_15.1.0.orig.tar.gz
+ 01348782f9a0e8462f771e787b80c638 3600 python optional python-treq_15.1.0-1+deb9u1.debian.tar.xz
+ 1da134cf2089b8cff4dcd8e7d84a6a41 29388 doc optional python-treq-doc_15.1.0-1+deb9u1_all.deb
+ 8a12f3ed50aab685340fae6e052ddd65 29674 python optional python-treq_15.1.0-1+deb9u1_all.deb
+ f530ec5c9aa84d718784d1e225c52065 9262 python optional python-treq_15.1.0-1+deb9u1_amd64.buildinfo
+ e5893ff38a6b91b255d6a6eab2e08e2c 29766 python optional python3-treq_15.1.0-1+deb9u1_all.deb
+

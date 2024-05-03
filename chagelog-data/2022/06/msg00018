@@ -1,0 +1,64 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 22 Jun 2022 10:55:37 +0100
+Source: exo
+Binary: libexo-1-dev libexo-1-0 exo-utils libexo-1-0-dbg exo-utils-dbg libexo-common libexo-helpers
+Architecture: source amd64 all
+Version: 0.10.7-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Xfce Maintainers <pkg-xfce-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ exo-utils  - Utility files for libexo
+ exo-utils-dbg - debugging information for exo-utils
+ libexo-1-0 - Library with extensions for Xfce
+ libexo-1-0-dbg - debugging information for libexo
+ libexo-1-dev - Development files for libexo
+ libexo-common - libexo common files
+ libexo-helpers - helpers for the exo library
+Closes: 1013129
+Changes:
+ exo (0.10.7-1+deb9u1) stretch-security; urgency=high
+ .
+   * CVE-2022-32278: XFCE 4.16 allowed attackers to execute arbitrary code
+     because xdg-open could execute a .desktop file on an attacker-controlled
+     FTP server. (Closes: #1013129)
+Checksums-Sha1:
+ cde1052a545a3ff18d97e737e329fbcf1174559e 2506 exo_0.10.7-1+deb9u1.dsc
+ 1edbd1eeda577ff0a0473145490b33eb8f9c24c4 1262301 exo_0.10.7.orig.tar.bz2
+ 0532979077f5d63e8a6ec88fab439cfbf383781c 13432 exo_0.10.7-1+deb9u1.debian.tar.xz
+ ed6749d796331f4b23ada9c745b437ed46f99bc3 264082 exo-utils-dbg_0.10.7-1+deb9u1_amd64.deb
+ 65b0e3d852d6d0be7334da60e430593cb653e95c 174410 exo-utils_0.10.7-1+deb9u1_amd64.deb
+ 6ee5fd1a23ce4cfb0b87bf58260d9ea20323703b 15123 exo_0.10.7-1+deb9u1_amd64.buildinfo
+ ec7076cb3d6394a4aa4f07f1fb63ee3284884fc5 676694 libexo-1-0-dbg_0.10.7-1+deb9u1_amd64.deb
+ 8a7e588a205d13b0913aa8dead51ddfa0332f9bc 466494 libexo-1-0_0.10.7-1+deb9u1_amd64.deb
+ ea603eebd0e3b032b113965436c327d60edf0a5a 332192 libexo-1-dev_0.10.7-1+deb9u1_amd64.deb
+ bf90572f96a687f1978864ae71426c2c3456489f 145660 libexo-common_0.10.7-1+deb9u1_all.deb
+ fc4620fd6e1dffc757082dd5275543d52e92b925 148998 libexo-helpers_0.10.7-1+deb9u1_amd64.deb
+Checksums-Sha256:
+ ac5e75935e2d0f4b0c83a5ad1e36d2a452f90abb896f8b040bb3f2a2de6ae6ca 2506 exo_0.10.7-1+deb9u1.dsc
+ 521581481128af93e815f9690020998181f947ac9e9c2b232b1f144d76b1b35c 1262301 exo_0.10.7.orig.tar.bz2
+ 5f10fe5edb19ca59a887934875c52444246746924e635b3cad7b9cfb81c504a0 13432 exo_0.10.7-1+deb9u1.debian.tar.xz
+ fc60d68547ad3b137f1d20bdc343df640b90e578f158d6469afae834073710f5 264082 exo-utils-dbg_0.10.7-1+deb9u1_amd64.deb
+ abf3fc260684d92b271b6d993d72ea16605936418badbf5f05ab2288725178d1 174410 exo-utils_0.10.7-1+deb9u1_amd64.deb
+ 2404c1db46e11ec92d1621acbaa29804b6961e15d89f8eca8b1aac55edda7309 15123 exo_0.10.7-1+deb9u1_amd64.buildinfo
+ 6843930c2196904859c4a89290d562131b263146b3e1cf2084da2c237517e346 676694 libexo-1-0-dbg_0.10.7-1+deb9u1_amd64.deb
+ d72dd7f2822502950a16b349cdea9444773028bcb4d06f64db84b0710e871f5f 466494 libexo-1-0_0.10.7-1+deb9u1_amd64.deb
+ fa97b4196209b01ba182e2630ac315f0eaa857550a58769dad8879782d503ee3 332192 libexo-1-dev_0.10.7-1+deb9u1_amd64.deb
+ dd50e16132cec8f6b0e00fa0e100c123749de9a99bb3d8f683d3165e48254a75 145660 libexo-common_0.10.7-1+deb9u1_all.deb
+ 8b067336f20c1a76ebc163323af86f5cdd1f60e410b0a129cb29f35b56fed800 148998 libexo-helpers_0.10.7-1+deb9u1_amd64.deb
+Files:
+ 48b9ebcaa0a58753b30d9a5574c2e161 2506 xfce optional exo_0.10.7-1+deb9u1.dsc
+ 92ca200b8787cdd7494164cbc0ed8200 1262301 xfce optional exo_0.10.7.orig.tar.bz2
+ 9176d5f80954ce5949ef2bd04fa3f453 13432 xfce optional exo_0.10.7-1+deb9u1.debian.tar.xz
+ ec7ddd37c591db679784fdd43006eb39 264082 debug extra exo-utils-dbg_0.10.7-1+deb9u1_amd64.deb
+ ffbcc432041221383eb465b09304d109 174410 xfce optional exo-utils_0.10.7-1+deb9u1_amd64.deb
+ 6f7a9ddc658e6c4b1806e2320512cf0d 15123 xfce optional exo_0.10.7-1+deb9u1_amd64.buildinfo
+ 7e2b83c8db488a3372e19bc84138163b 676694 debug extra libexo-1-0-dbg_0.10.7-1+deb9u1_amd64.deb
+ 2d2854021661330723a5dd4b0addc7f1 466494 libs optional libexo-1-0_0.10.7-1+deb9u1_amd64.deb
+ e3cee2c8011f9e9d8a794cf4a4a3d21b 332192 libdevel optional libexo-1-dev_0.10.7-1+deb9u1_amd64.deb
+ 093e58ebb6a3b9f9ce63c03f508d63c3 145660 libs optional libexo-common_0.10.7-1+deb9u1_all.deb
+ 34ddf14bafbca3a8b4d488115df3875c 148998 libs optional libexo-helpers_0.10.7-1+deb9u1_amd64.deb
+

@@ -1,0 +1,72 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 17 Jan 2022 17:57:03 +0100
+Source: slurm-llnl
+Binary: slurm-wlm slurm-client slurm-client-dbg slurmd slurmd-dbg slurmctld slurmctld-dbg libslurmdb30 libslurmdb30-dbg libslurm30 libslurm30-dbg libpmi0 libpmi0-dbg libpmi2-0 libpmi2-0-dbg libslurm-dev libslurmdb-dev libpmi0-dev libpmi2-0-dev slurm-wlm-doc slurm-wlm-basic-plugins slurm-wlm-basic-plugins-dbg slurm-wlm-basic-plugins-dev sview slurmdbd slurmdbd-dbg libslurm-perl libslurmdb-perl slurm-wlm-torque libpam-slurm slurm-llnl slurm-llnl-slurmdbd slurm-wlm-emulator slurm-client-emulator
+Architecture: source
+Version: 16.05.9-1+deb9u5
+Distribution: stretch-security
+Urgency: high
+Maintainer: Gennaro Oliva <oliva.g@na.icar.cnr.it>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ libpam-slurm - PAM module to authenticate using the SLURM resource manager
+ libpmi0    - SLURM PMI library implementation
+ libpmi0-dbg - debugging symbols for SLURM PMI library implementation
+ libpmi0-dev - SLURM PMI library implementation development files
+ libpmi2-0  - SLURM PMI2 library implementation
+ libpmi2-0-dbg - debugging symbols for SLURM PMI2 library implementation
+ libpmi2-0-dev - SLURM PMI2 library implementation development files
+ libslurm-dev - SLURM development files
+ libslurm-perl - Perl API for SLURM
+ libslurm30 - Runtime library files for SLURM
+ libslurm30-dbg - debugging symbols for SLURM slurm runtime library
+ libslurmdb-dev - SLURM DataBase Daemon development files
+ libslurmdb-perl - Perl API for the SLURM database
+ libslurmdb30 - Runtime library files for the SLURM DataBase Daemon
+ libslurmdb30-dbg - debugging symbols for SLURM slurmdbd runtime library
+ slurm-client - SLURM client side commands
+ slurm-client-dbg - debugging symbols for SLURM client side commands
+ slurm-client-emulator - SLURM client side commands for the emulator
+ slurm-llnl - transitional dummy package for slurm-wlm
+ slurm-llnl-slurmdbd - transitional dummy package for slurmdbd
+ slurm-wlm  - Simple Linux Utility for Resource Management
+ slurm-wlm-basic-plugins - SLURM basic plugins
+ slurm-wlm-basic-plugins-dbg - debugging symbols for SLURM basic plugins
+ slurm-wlm-basic-plugins-dev - SLURM basic plugins development files
+ slurm-wlm-doc - SLURM documentation
+ slurm-wlm-emulator - SLURM emulator
+ slurm-wlm-torque - Torque compatibility wrappers for SLURM
+ slurmctld  - SLURM central management daemon
+ slurmctld-dbg - debugging symbols for SLURM central management daemon
+ slurmd     - SLURM compute node daemon
+ slurmd-dbg - debugging symbols for SLURM compute node daemon
+ slurmdbd   - Secure enterprise-wide interface to a database for SLURM
+ slurmdbd-dbg - debugging symbols for slurmdbd daemon
+ sview      - GUI to view and modify SLURM state
+Changes:
+ slurm-llnl (16.05.9-1+deb9u5) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-12838: SchedMD Slurm allows SQL Injection.
+   * CVE-2020-12693: in the rare case where Message Aggregation is enabled,
+     Slurm allows Authentication Bypass via an Alternate Path or Channel. A
+     race condition allows a user to launch a process as an arbitrary user.
+   * CVE-2020-27745: RPC Buffer Overflow in the PMIx MPI plugin.
+   * CVE-2021-31215: SchedMD Slurm allows remote code execution as
+     SlurmUser because use of a PrologSlurmctld or EpilogSlurmctld script
+     leads to environment mishandling.
+Checksums-Sha1:
+ 7150b6e6e1931b6e1239c18ad4210a35a2cf1c4e 4165 slurm-llnl_16.05.9-1+deb9u5.dsc
+ 2ccc6fc5c7ee0e604033b4537c45e3abea5a0c7e 128956 slurm-llnl_16.05.9-1+deb9u5.debian.tar.xz
+ d1c50fac9bb65753fffa5e40a9eb53c7f4cb0e8f 22896 slurm-llnl_16.05.9-1+deb9u5_amd64.buildinfo
+Checksums-Sha256:
+ 8e36a8d06b48aaf2a9ca05658461398e3b7433e41b81dc584e01d17ca1dd997f 4165 slurm-llnl_16.05.9-1+deb9u5.dsc
+ 196ab54641c80cadbb995165c98ffb6d6fc363d9bd81feaca98af6600fe4241a 128956 slurm-llnl_16.05.9-1+deb9u5.debian.tar.xz
+ 09213342554d7f23a497cac53a4cd2a5e9537ee8c8d38266a78ef612eb60ef0e 22896 slurm-llnl_16.05.9-1+deb9u5_amd64.buildinfo
+Files:
+ 32582bbf1139d9ab80f2aebd024c38db 4165 admin extra slurm-llnl_16.05.9-1+deb9u5.dsc
+ 34a1b19ea7cf7e3c279ab73744087706 128956 admin extra slurm-llnl_16.05.9-1+deb9u5.debian.tar.xz
+ 377d08e2bc1832fac22d34c562fd06ea 22896 admin extra slurm-llnl_16.05.9-1+deb9u5_amd64.buildinfo
+

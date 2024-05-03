@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 24 Nov 2023 18:03:46 CET
+Source: symfony
+Architecture: source
+Version: 3.4.22+dfsg-2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 0bcc11fe399d4f68395eee9a664ddf231dd00d2f 7053 symfony_3.4.22+dfsg-2+deb10u3.dsc
+ 13fea87c490a2ff72c7a2085f4c03edec984e745 55936 symfony_3.4.22+dfsg-2+deb10u3.debian.tar.xz
+ 524592a6e767b71538862c6a9db3f2a63581b4fc 29871 symfony_3.4.22+dfsg-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 26ac3cc54ac1a2cec05406a525fcc01857a551f9cbacb48adedef8d7b7429575 7053 symfony_3.4.22+dfsg-2+deb10u3.dsc
+ 6039edf91b315f4081fcef6753e128dbb9a43db3c297811de2fb49288ec04a44 55936 symfony_3.4.22+dfsg-2+deb10u3.debian.tar.xz
+ ecd1c8cb7977888499d585a0125b80b237374f8200295e878ea569543094241b 29871 symfony_3.4.22+dfsg-2+deb10u3_amd64.buildinfo
+Changes:
+ symfony (3.4.22+dfsg-2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-46734:
+     Pierre Rudloff discovered a potential XSS vulnerability in Symfony, a PHP
+     framework. Some Twig filters in CodeExtension use `is_safe=html` but do not
+     actually ensure their input is safe. Symfony now escapes the output of the
+     affected filters.
+Files:
+ 51095e1dee8250bff9459ceb15c19d57 7053 php optional symfony_3.4.22+dfsg-2+deb10u3.dsc
+ 33f863966aa958383d89b319ff4b7279 55936 php optional symfony_3.4.22+dfsg-2+deb10u3.debian.tar.xz
+ c869ac3aeb393b4d8c5bf6855c2c10f2 29871 php optional symfony_3.4.22+dfsg-2+deb10u3_amd64.buildinfo
+

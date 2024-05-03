@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 17 Nov 2022 10:39:09 +0100
+Source: lava
+Architecture: source
+Version: 2019.01-5+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian LAVA team <pkg-linaro-lava-devel@lists.alioth.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Closes: 1021737
+Changes:
+ lava (2019.01-5+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-42902: Dynamic code execution in lava_server/lavatable.
+     (Closes: #1021737)
+   * Patch share/requires.py to support -security distributions.
+Checksums-Sha1:
+ 912d150c563c47c6f2b052a5b494dcfbd1987404 2441 lava_2019.01-5+deb10u1.dsc
+ b78bcad2528918af19c78d5e03f1c6cb1c9d0901 2931396 lava_2019.01.orig.tar.xz
+ d9474dc67aad2be40f1d025a2a724f184738f698 73740 lava_2019.01-5+deb10u1.debian.tar.xz
+ 954b7f2c878bcb642c38419f103a4cfb5a8b4348 10197 lava_2019.01-5+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ f694ecba31f457481afd9c00053040b839db81b216a73efe5561fe175459999e 2441 lava_2019.01-5+deb10u1.dsc
+ 6455313c0056ab0747842c99af40e238ea4a0f148e8404f85838d1594748c072 2931396 lava_2019.01.orig.tar.xz
+ 9d5f14fd378510c7beff5c31058e8d4039c3e45e414acf99655d5efa7c40f2e0 73740 lava_2019.01-5+deb10u1.debian.tar.xz
+ 15c7e7b19fcbf4eb1ecd971205487e8b2ca244af05047cf8512d6621c3e24d4a 10197 lava_2019.01-5+deb10u1_amd64.buildinfo
+Files:
+ 396ab311f55b89ec1d7140e8d7f3d230 2441 net optional lava_2019.01-5+deb10u1.dsc
+ 909a01922da6bcc762da65b2f881cc83 2931396 net optional lava_2019.01.orig.tar.xz
+ 7d7ad226efcb3a8ba0497c23a62d59a0 73740 net optional lava_2019.01-5+deb10u1.debian.tar.xz
+ 1a3794865b43728e45524e818741fbfa 10197 net optional lava_2019.01-5+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 20 Sep 2023 06:21:23 -0300
+Source: mutt
+Architecture: source
+Version: 1.10.1-2.1+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Mutt maintainers <mutt@packages.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Closes: 1051563
+Changes:
+ mutt (1.10.1-2.1+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team
+   * Add debian/salsa-ci.yml using lts-team/pipeline for buster
+   * Fix rfc2047 base64 decoding to abort on illegal characters.
+     (CVE-2023-4874, CVE-2023-4875) (Closes: #1051563)
+   * Fix write_one_header() illegal header check. (CVE-2023-4874)
+     (Closes: #1051563)
+   * Check for NULL userhdrs. (CVE-2023-4875) (Closes: #1051563)
+   * Patches prepared by Chris Frey <cdfrey@foursquare.net>
+Checksums-Sha1:
+ 278c0411044f270210881b8cefed58b31f2e23b8 1519 mutt_1.10.1-2.1+deb10u7.dsc
+ 47f505b50dc9763910db5e583b648ef1e02cd318 69564 mutt_1.10.1-2.1+deb10u7.debian.tar.xz
+ b363d6e70db9b7eaf86c2a34fa07fad30427cd59 7974 mutt_1.10.1-2.1+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ aad45373a68b114aa9da6bd444896958e562b65a72523a473dba3336a6c1da86 1519 mutt_1.10.1-2.1+deb10u7.dsc
+ b383e70200573d6934976af4eb9827ed0c70a4df4c25e9d1820e73817f6860c9 69564 mutt_1.10.1-2.1+deb10u7.debian.tar.xz
+ 1daddfb893a0c26748145557030558a336b28eeb62f007a17d6cf5f6c95444a7 7974 mutt_1.10.1-2.1+deb10u7_amd64.buildinfo
+Files:
+ dd4cf228dbd1a52eb14786d9a3fb6435 1519 mail optional mutt_1.10.1-2.1+deb10u7.dsc
+ b3443c7af80a0ff80313a4c7c3339901 69564 mail optional mutt_1.10.1-2.1+deb10u7.debian.tar.xz
+ 014de835c9116e690b60946bfca97577 7974 mail optional mutt_1.10.1-2.1+deb10u7_amd64.buildinfo
+

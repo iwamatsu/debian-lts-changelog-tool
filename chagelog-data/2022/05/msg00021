@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 16 May 2022 17:28:11 +0530
+Source: cifs-utils
+Architecture: source
+Version: 2:6.7-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1010818
+Changes:
+ cifs-utils (2:6.7-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team. (Closes: #1010818)
+   * Add patch to fix length check for ip option
+     parsing. (Fixes: CVE-2022-27239)
+   * Add patch to fix verbose messages on
+     option parsing. (Fixes: CVE-2022-29869)
+Checksums-Sha1:
+ f6f98d3b4a0995e6ee8c453eabfdcf66fe330ba0 2315 cifs-utils_6.7-1+deb9u1.dsc
+ 9ba5091d7c2418a90773c861f04a3f4a36854c14 363647 cifs-utils_6.7.orig.tar.bz2
+ 60fc06f729a36fb7cb5756e8acc5fdda667f5d2d 7508 cifs-utils_6.7-1+deb9u1.debian.tar.xz
+ bd5d21370077adea8fb91bf80ce4133cbb6aae4d 6109 cifs-utils_6.7-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ c76237d7e887529d1bf5ebd76a7b963bacff3f87115d0166850f9ab6a59a2913 2315 cifs-utils_6.7-1+deb9u1.dsc
+ b2f21612474ab012e75accd167aab607a0614ff67efb56ea0f36789fa785cfab 363647 cifs-utils_6.7.orig.tar.bz2
+ cdecd1ebd8af0c48a5fac27d13f2bb35367df0e98fd57e078b475d6f30c43acb 7508 cifs-utils_6.7-1+deb9u1.debian.tar.xz
+ eb1f3d5a0b6452131469e63502b8877df467d37037139f7181528da87876ebca 6109 cifs-utils_6.7-1+deb9u1_source.buildinfo
+Files:
+ 57dd7e152404f260604969fcd58fa802 2315 otherosfs optional cifs-utils_6.7-1+deb9u1.dsc
+ af3ae1d27aca624c4daac5bf3eb0d4c1 363647 otherosfs optional cifs-utils_6.7.orig.tar.bz2
+ 31717b989ccf836ef53262cb9117443c 7508 otherosfs optional cifs-utils_6.7-1+deb9u1.debian.tar.xz
+ 5deaebbb2d727aa77eabdf5e92f9863e 6109 otherosfs optional cifs-utils_6.7-1+deb9u1_source.buildinfo
+

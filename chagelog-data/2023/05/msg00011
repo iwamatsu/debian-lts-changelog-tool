@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 10 May 2023 00:25:13 CEST
+Source: emacs
+Architecture: source
+Version: 1:26.1+1-3.2+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Rob Browning <rlb@defaultvalue.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ e628cb5dd8733ca8e14487f9bd30f560455e780c 3682 emacs_26.1+1-3.2+deb10u4.dsc
+ 7b07ef3f2f11368b489f3b170e407ff0889a8e36 114528 emacs_26.1+1-3.2+deb10u4.debian.tar.xz
+ 2d4222e74d9544bc7f6151adcb97807e2b7182ff 25196 emacs_26.1+1-3.2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ d1a28ab5512e06a220c2711725a4bf4a7020210240e017ec6807ebc2dfcf8519 3682 emacs_26.1+1-3.2+deb10u4.dsc
+ e8feedf68b92fdb314eda93e4704ff121dc23f6434856977cff013f2d126e5be 114528 emacs_26.1+1-3.2+deb10u4.debian.tar.xz
+ 40be7d8d39a34aaeccc86ee44644f906ae8247b0523c3145ac3e36b6f82fa8be 25196 emacs_26.1+1-3.2+deb10u4_amd64.buildinfo
+Changes:
+ emacs (1:26.1+1-3.2+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-48337, CVE-2022-48339 and CVE-2023-28617:
+     Xi Lu discovered that missing input sanitising in Emacs could result in the
+     execution of arbitrary shell commands.
+Files:
+ c134a0a4325be3137ab995ad88e8fbc7 3682 editors optional emacs_26.1+1-3.2+deb10u4.dsc
+ ee44ec39ecb88f8c144672ae1a6332bb 114528 editors optional emacs_26.1+1-3.2+deb10u4.debian.tar.xz
+ 442d7f1f2cdd94d5edf743dfb923664f 25196 editors optional emacs_26.1+1-3.2+deb10u4_amd64.buildinfo
+

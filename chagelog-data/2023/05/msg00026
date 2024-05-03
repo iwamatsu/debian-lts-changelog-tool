@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 19 May 2023 18:25:20 +0200
+Source: cups-filters
+Architecture: source
+Version: 1.21.6-5+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Closes: 1036224
+Changes:
+ cups-filters (1.21.6-5+deb10u1) buster-security; urgency=high
+ .
+   * CVE-2023-24805
+     prevent arbitrary command execution by escaping the quoting
+     of the arguments in a job with a forged job title
+     more information are available in the commit message at:
+     https://github.com/OpenPrinting/cups-filters/commit/93e60d3df35
+     (Closes: #1036224)
+   * debian/control: add myself to Uploaders:
+Checksums-Sha1:
+ 56871aa872601a0e36d59b4ed3dbada54da9f6d9 3061 cups-filters_1.21.6-5+deb10u1.dsc
+ b50b613ef20d14cef8d184ecef15030ce17fdfa2 1474944 cups-filters_1.21.6.orig.tar.xz
+ 1fb8eefe1111243a7c6eb1ebc6618c0517da71e5 83664 cups-filters_1.21.6-5+deb10u1.debian.tar.xz
+ b6bb21a6ed190aabdcfd856bd1592947fd43c3db 15630 cups-filters_1.21.6-5+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ f83998588d0c97e97943642f2b940a3136e192a88a85284336b9f32c9f78ffed 3061 cups-filters_1.21.6-5+deb10u1.dsc
+ 630e5dbcfe4fa50a726b193223604831a928a2fac9ef84022118aa05c84d1d4c 1474944 cups-filters_1.21.6.orig.tar.xz
+ 14309fdbfba076575ead3986f3d3a9c7c26222777aaf88b38fbb60bc2b0ce6e0 83664 cups-filters_1.21.6-5+deb10u1.debian.tar.xz
+ 087683ebedc03f6c3152551f8384c0efd2319752c169162abf4567cab4230772 15630 cups-filters_1.21.6-5+deb10u1_amd64.buildinfo
+Files:
+ bb7787fb327f58cd3750f6252b262ab1 3061 net optional cups-filters_1.21.6-5+deb10u1.dsc
+ 852a18e51051e44a5993012e98e4e7b3 1474944 net optional cups-filters_1.21.6.orig.tar.xz
+ df42c18b170fe1f9e3c0e6408b391204 83664 net optional cups-filters_1.21.6-5+deb10u1.debian.tar.xz
+ e07306968413c30780ce45ec4e79e908 15630 net optional cups-filters_1.21.6-5+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 19 Sep 2023 20:36:42 CEST
+Source: frr
+Architecture: source
+Version: 7.5.1-1.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: David Lamparter <equinox-debian@diac24.net>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1ac7006bc4b2d081f78fb25ce5d1d55a2b23fc7c 2792 frr_7.5.1-1.1+deb10u1.dsc
+ 21a4552ff613fc4b08b0ca46b8343a84d5567ee1 34460 frr_7.5.1-1.1+deb10u1.debian.tar.xz
+ 15f9861ae41a465ddf29f185abc1ae1d0ac8815f 11784 frr_7.5.1-1.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 59372ee7d17d13e539874f171652b7be87852209f4ba445591e7cf4b56514178 2792 frr_7.5.1-1.1+deb10u1.dsc
+ 22c88afff448a6fb046c9ae03bca4c509dea340095dfbeb68b94f86fd7098957 34460 frr_7.5.1-1.1+deb10u1.debian.tar.xz
+ e04b8dfc89004a5038aacd075efe439d69f1b434c58ad3a09d9b19798206c6e3 11784 frr_7.5.1-1.1+deb10u1_amd64.buildinfo
+Changes:
+ frr (7.5.1-1.1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-36440, CVE-2022-40302, CVE-2022-40318, CVE-2022-43681,
+     CVE-2023-31490, CVE-2023-38802, CVE-2023-41358, CVE-2023-41360,
+     CVE-2023-41361 and CVE-2023-41909.
+     Multiple security vulnerabilities were found in frr, the FRRouting suite
+     of internet protocols. Maliciously constructed Border Gateway Protocol
+     (BGP) packages or corrupted tunnel attributes may cause a denial of service
+     (application crash) which could be exploited by a remote attacker.
+Files:
+ 3387c7ee8e92009cf1e5432c186e0506 2792 net optional frr_7.5.1-1.1+deb10u1.dsc
+ 135cf132030df1f6c7b9c13157e2b419 34460 net optional frr_7.5.1-1.1+deb10u1.debian.tar.xz
+ 0056390cda23317131fbfce89baae53d 11784 net optional frr_7.5.1-1.1+deb10u1_amd64.buildinfo
+

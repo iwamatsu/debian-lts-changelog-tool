@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 21 Oct 2023 09:43:49 +0200
+Source: zabbix
+Architecture: source
+Version: 1:4.0.4+dfsg-1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1051300
+Changes:
+ zabbix (1:4.0.4+dfsg-1+deb10u3) buster-security; urgency=medium
+ .
+   * Fix NEWS files for individual packages.
+   * Fix sqlite3 database scheme and warn in NEWS that a new database
+     is required as zabbix does not update sqlite3 database, and
+     users are supposed to start with new ones on updates.
+     Closes: #1051300
+Checksums-Sha1:
+ ad450c1e86ceaee519eede80fda6ddf7b2d2a9c8 2876 zabbix_4.0.4+dfsg-1+deb10u3.dsc
+ fe0c339c8e10f350db1257942775a151c3479557 218692 zabbix_4.0.4+dfsg-1+deb10u3.debian.tar.xz
+ 0262f30bb082dc84590d2aa916364abd92697160 18568 zabbix_4.0.4+dfsg-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 409b4e8ae0c88f68fb31888a3e4980fb31a503d997173695afeb164cdcd55856 2876 zabbix_4.0.4+dfsg-1+deb10u3.dsc
+ 55fcc673aa786a95846ca0954ad2c6e65ea246b74ea1d3923f4f9d24e70a6b7b 218692 zabbix_4.0.4+dfsg-1+deb10u3.debian.tar.xz
+ 74666a8000101536fca541626226ff3ba8c874db62470fb6e24a8c7da0ed3b4f 18568 zabbix_4.0.4+dfsg-1+deb10u3_amd64.buildinfo
+Files:
+ db90f1b4e4071267fd6b897d5706bdd3 2876 net optional zabbix_4.0.4+dfsg-1+deb10u3.dsc
+ da8fd27072af5c132df2f0a398765481 218692 net optional zabbix_4.0.4+dfsg-1+deb10u3.debian.tar.xz
+ c5073b382f87c57b5472a5beff81ba0b 18568 net optional zabbix_4.0.4+dfsg-1+deb10u3_amd64.buildinfo
+

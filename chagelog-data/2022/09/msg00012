@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 09 Sep 2022 12:30:48 +0200
+Source: libxslt
+Architecture: source
+Version: 1.1.32-2.2~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ libxslt (1.1.32-2.2~deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2019-5815: heap corruption in xsltNumberFormatGetMultipleLevel.
+   * CVE-2021-30560: use-after-free in xsltApplyTemplates.
+Checksums-Sha1:
+ 61b0dff84110523fb4a814a1b917de84d08af74d 2626 libxslt_1.1.32-2.2~deb10u2.dsc
+ c47969f16747a72f9095b6a7a56d3afdd1e6e9ac 3440715 libxslt_1.1.32.orig.tar.gz
+ 95fab8554d4771acb32c6beb48aef7aa83b31255 455 libxslt_1.1.32.orig.tar.gz.asc
+ 6ed106d4d93829f380ab154414781c779e2ce3f4 36732 libxslt_1.1.32-2.2~deb10u2.debian.tar.xz
+ 54104623a66a0744da66c83c83bf9b17d1844a1e 5903 libxslt_1.1.32-2.2~deb10u2_source.buildinfo
+Checksums-Sha256:
+ 3c0337b8a133dfaa154ee89b8b94d80c739d9f89f1db71a0731ecfc4d7573647 2626 libxslt_1.1.32-2.2~deb10u2.dsc
+ 526ecd0abaf4a7789041622c3950c0e7f2c4c8835471515fd77eec684a355460 3440715 libxslt_1.1.32.orig.tar.gz
+ 68b374a73747c57a17d62f0ccc1e9714f68a292e700fe4c88e3c2d9dcba71871 455 libxslt_1.1.32.orig.tar.gz.asc
+ be4616f8433ced836bb4e66fdbec6cfe92b406e06019b73ccaf1fe431b54004d 36732 libxslt_1.1.32-2.2~deb10u2.debian.tar.xz
+ 7affed0308a7b689a5554da45dd9820c9d73161119772945ccc3b29ec23ef433 5903 libxslt_1.1.32-2.2~deb10u2_source.buildinfo
+Files:
+ b33abc28b83e69ac069ae8f27760281c 2626 text optional libxslt_1.1.32-2.2~deb10u2.dsc
+ 1fc72f98e98bf4443f1651165f3aa146 3440715 text optional libxslt_1.1.32.orig.tar.gz
+ 2f41fa5ea6fa755670157ece22cfa584 455 text optional libxslt_1.1.32.orig.tar.gz.asc
+ 75ca77f85f6d36247233c8672a98bfc4 36732 text optional libxslt_1.1.32-2.2~deb10u2.debian.tar.xz
+ 8cc91da48e2ebb2f37605aabe2f60d2e 5903 text optional libxslt_1.1.32-2.2~deb10u2_source.buildinfo
+

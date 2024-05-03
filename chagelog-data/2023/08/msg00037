@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 22 Aug 2023 11:57:54 +0200
+Source: zabbix
+Architecture: source
+Version: 1:4.0.4+dfsg-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1026847
+Changes:
+ zabbix (1:4.0.4+dfsg-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport patch for CVE-2013-7484: Insecure storage of passwords.
+   * Disable guest user on new installs, warn via d/NEWS to disable it on
+     existing installations. (CVE-2019-17382)
+   * Apply upstream patch for CVE-2022-43515. Closes: #1026847
+   * Backport patch for CVE-2023-29450 - unauthorized filesystem access.
+   * Backport patch for CVE-2023-29451 - JSON parser uses uninitialized buffer
+     on invalid UTF-8.
+   * Backport upstream patch CVE-2023-29455 - Reflected XSS in graph item
+     propoerties.
+   * Backport upstream patch for CVE-2023-29457 - Reflected XSS in Action form
+     fields
+   * Backport upstream patch for CVE-2023-29456 - Inefficient URL schema
+     validation
+   * Backport upstream patch for CVE-2023-29454 - Persistent XSS in the user form
+   * Fix regression of CVE-2022-35229: Discovery filter could not be edited,
+     due to the old jquery bundled with zabbix.
+Checksums-Sha1:
+ 77bbaabaee37bde6b74ad13a8d40cab4911f9220 2876 zabbix_4.0.4+dfsg-1+deb10u2.dsc
+ 9246683b988b3ee198245a0558ea5b9cca9a625a 218456 zabbix_4.0.4+dfsg-1+deb10u2.debian.tar.xz
+ 5e0ac240efe37a57f2210fb30094c0de6232519a 18678 zabbix_4.0.4+dfsg-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 109f6953a87b8c133a527c512c568961bb39f1922a656bdf9dfdd698433ae3dd 2876 zabbix_4.0.4+dfsg-1+deb10u2.dsc
+ 9e93da40b8a1fef0fbe8915bcb6790229788f28f3465b6229c6924a7353a61fd 218456 zabbix_4.0.4+dfsg-1+deb10u2.debian.tar.xz
+ e14da7ad6e29a4d6caae810f7d4422668a10c26c086bf3372a37b43ce7fea870 18678 zabbix_4.0.4+dfsg-1+deb10u2_amd64.buildinfo
+Files:
+ d631595e937879fa019eda89885b9aa0 2876 net optional zabbix_4.0.4+dfsg-1+deb10u2.dsc
+ 5537978a72125befa6166873f9ce2adf 218456 net optional zabbix_4.0.4+dfsg-1+deb10u2.debian.tar.xz
+ cfc0c7898874cbe1736c23579cbab027 18678 net optional zabbix_4.0.4+dfsg-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 14 Nov 2023 10:23:27 +0000
+Source: ruby-sanitize
+Binary: ruby-sanitize
+Architecture: source all
+Version: 4.6.6-2.1~deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ruby-sanitize - whitelist-based HTML sanitizer
+Closes: 1041430
+Changes:
+ ruby-sanitize (4.6.6-2.1~deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upoad by the Debian LTS team.
+   * CVE-2023-36823: Using carefully crafted input, an attacker may have be able
+     to sneak arbitrary HTML and CSS through Sanitize when configured to use the
+     built-in "relaxed" config or when using a custom config that allowed
+     "style" elements and one or more CSS "at"-rules. This could have resulted
+     in cross-site scripting (XSS) or other undesired behavior if the malicious
+     HTML and CSS were rendered in a browser. (Closes: #1041430)
+Checksums-Sha1:
+ ca3fb55b6823eba3a4f8b0c80ed245d735667f90 2175 ruby-sanitize_4.6.6-2.1~deb10u2.dsc
+ e660c44ac13c945d43598eaf3a6f4f68c0b472ec 40115 ruby-sanitize_4.6.6.orig.tar.gz
+ d27845126e8bd0d53231f3e65a58c056869644f0 8276 ruby-sanitize_4.6.6-2.1~deb10u2.debian.tar.xz
+ eab8ee8d01c473ae02f2aabead0cc5daef0a479c 31748 ruby-sanitize_4.6.6-2.1~deb10u2_all.deb
+ 18fe0d16dc3559fd822c64b0d84514f647c3dd51 9316 ruby-sanitize_4.6.6-2.1~deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ b5a59d22b693a93917c5e9a4507db6dd2ae3202cd094cdcfa98c0b849858ae54 2175 ruby-sanitize_4.6.6-2.1~deb10u2.dsc
+ 5d5b72076d13b731638e6189a83988237a47ab4d8ce6bfa5aded31ec0f333238 40115 ruby-sanitize_4.6.6.orig.tar.gz
+ 39150778a0bdcdd941df3b5a041c525cd8850198fd31951853e4ccf1a1eefb9b 8276 ruby-sanitize_4.6.6-2.1~deb10u2.debian.tar.xz
+ d30d0c3238dfa22148e8f64e4d25d8734461dfe92e7cc7d5a3d8825c6ed6ad67 31748 ruby-sanitize_4.6.6-2.1~deb10u2_all.deb
+ 032f0b8370334f8fa502e425062fb03f70d48830004b35807d47a647349399da 9316 ruby-sanitize_4.6.6-2.1~deb10u2_amd64.buildinfo
+Files:
+ 98db32c97edc5d5a965f553d2ba4cac5 2175 ruby optional ruby-sanitize_4.6.6-2.1~deb10u2.dsc
+ aa34226fdbfd69430ae83aabbb8d894a 40115 ruby optional ruby-sanitize_4.6.6.orig.tar.gz
+ a0d7bf3e104ef10b86ba9ab996d37d62 8276 ruby optional ruby-sanitize_4.6.6-2.1~deb10u2.debian.tar.xz
+ 4bad5fbf5e3d1ecff7b65f581ce471e9 31748 ruby optional ruby-sanitize_4.6.6-2.1~deb10u2_all.deb
+ c639a1c407b93456bf6e62ec1b098ae2 9316 ruby optional ruby-sanitize_4.6.6-2.1~deb10u2_amd64.buildinfo
+

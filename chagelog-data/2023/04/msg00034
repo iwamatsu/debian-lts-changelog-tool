@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Apr 2023 22:31:27 +0300
+Source: libapache2-mod-auth-openidc
+Architecture: source
+Version: 2.3.10.2-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Moritz Schlarb <schlarbm@uni-mainz.de>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libapache2-mod-auth-openidc (2.3.10.2-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-20479: Insufficient validatation of URLs beginning with
+     a slash and backslash.
+   * CVE-2021-32785: Crash when using an unencrypted Redis cache.
+   * CVE-2021-32786: Open Redirect vulnerability in the logout functionality.
+   * CVE-2021-32791: AES GCM encryption in used static IV and AAD.
+   * CVE-2021-32792: XSS vulnerability when using OIDCPreservePost.
+   * CVE-2023-28625: NULL pointer dereference with OIDCStripCookies.
+Checksums-Sha1:
+ 5588e76fc19351e31f4d99fd12a16f729578a7be 2534 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u2.dsc
+ bede99318fd540076dc2e2f2f80714ae1736b0bb 263825 libapache2-mod-auth-openidc_2.3.10.2.orig.tar.gz
+ 481efbc75e5b1e4a250c25e9b955f254ef812b57 11772 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u2.debian.tar.xz
+Checksums-Sha256:
+ a6922e6d04d0e8db2df176e13cdf3b30a7e972233b4a30985aa76a4736c0e82a 2534 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u2.dsc
+ d72fd1131554225b9256a5d5f5e93ecce298ac8946c2511973ab07436902c641 263825 libapache2-mod-auth-openidc_2.3.10.2.orig.tar.gz
+ 858641603b23c7ffb23d0321c33fe45e9085912e3c27cbe7cc7c06d76085b8ae 11772 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u2.debian.tar.xz
+Files:
+ 8c94117c2e1c35fda20724898317f376 2534 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u2.dsc
+ 6b81eb34bfc2baecd44bb3a775d27a1d 263825 httpd optional libapache2-mod-auth-openidc_2.3.10.2.orig.tar.gz
+ 18ac62858feb4aba8c8f61441159aca9 11772 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u2.debian.tar.xz
+

@@ -1,0 +1,46 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 27 Jan 2023 11:32:53 +0100
+Source: nova
+Architecture: source
+Version: 2:18.1.0-6+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1029561
+Changes:
+ nova (2:18.1.0-6+deb10u2) buster-security; urgency=medium
+ .
+   * CVE-2022-47951: By supplying a specially created VMDK flat image which
+     references a specific backing file path, an authenticated user may convince
+     systems to return a copy of that file's contents from the server resulting
+     in unauthorized access to potentially sensitive data. Add upstream patches
+     (Closes: #1029561):
+     - cve-2022-47951-nova-stable-rocky.patch
+     - images_Make_JSON_the_default_output_format_of_calls_to_qemu-img_info.patch
+     - images_Move_qemu-img_info_calls_into_privsep.patch
+   * Fixed minimum version of python3-oslo.utils (>= 3.36.5-0+deb10u3~),
+     required by the above CVE patch.
+   * Build-depends on qemu-utils (needed for new tests).
+   * Blacklist non-working tests:
+     - test_convert_image_with_prlimit_fail
+     - test_qemu_img_info_with_disk_not_found
+     - test_create_cow_image
+Checksums-Sha1:
+ 24f5f1844185d5fb1a892addc1c7173fd26c7524 5892 nova_18.1.0-6+deb10u2.dsc
+ d479978a9479de7a80b5cb4d058f1800b697452d 10826849 nova_18.1.0.orig.tar.gz
+ 2926f9e93310a9c88195fe208f48741c4e6e2fd5 73928 nova_18.1.0-6+deb10u2.debian.tar.xz
+ 384adb681fa94c64303f50cb34105c1b7865b56b 25043 nova_18.1.0-6+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 7ad52890c9c0a8ec2ba6cb819da751005d42e7b4d86a3a842071c46ad0ae0010 5892 nova_18.1.0-6+deb10u2.dsc
+ 27e2fb0b5c7419a40b433730a9e9ecfab9662a9a6ebbdc99ee78aedeb2dee32b 10826849 nova_18.1.0.orig.tar.gz
+ b0936d987dd3b00632ea7900bfb16786bbb357d81fcaf638e5788152d2ccd902 73928 nova_18.1.0-6+deb10u2.debian.tar.xz
+ 1e3d522d1e0c60ac135034c756e12d4a9ea17236ef10cc6d88a6c6c167572cee 25043 nova_18.1.0-6+deb10u2_amd64.buildinfo
+Files:
+ f25cceb3e1ffea83f42d988a9179366e 5892 net optional nova_18.1.0-6+deb10u2.dsc
+ 0178de51807cfa0dd05ecb32773dd246 10826849 net optional nova_18.1.0.orig.tar.gz
+ 64421b2831dd17f3002a89cc8580a37d 73928 net optional nova_18.1.0-6+deb10u2.debian.tar.xz
+ 06aaf6e9dedff7cc3a106f41580f4223 25043 net optional nova_18.1.0-6+deb10u2_amd64.buildinfo
+

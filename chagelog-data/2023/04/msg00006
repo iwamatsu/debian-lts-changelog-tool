@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed,  5 Apr 2023 22:39:00 CEST
+Source: trafficserver
+Architecture: source
+Version: 8.1.6+ds-1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Jean Baptiste Favre <debian@jbfavre.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f60c6aff2a6a93b868141166a6354e7eccf17345 2901 trafficserver_8.1.6+ds-1~deb10u1.dsc
+ 4a6a4ee97e1ca09d38411df4852bbe531d3be619 46016 trafficserver_8.1.6+ds-1~deb10u1.debian.tar.xz
+ 3ece50c9f2e90ed4ce6b2e45e3fd75c306608908 15966 trafficserver_8.1.6+ds-1~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 5ecc0cc5e4bfda48dacc46fc1e4b12ce3e79af46c362aca14f240e6aacd31034 2901 trafficserver_8.1.6+ds-1~deb10u1.dsc
+ 5e7c45029d3c80b5c5db011cfd655864f54111f15ec51a9751b618eae6089b73 46016 trafficserver_8.1.6+ds-1~deb10u1.debian.tar.xz
+ ffb6560b9b4534f6cb4c9a931cd4c585ab414fe40a34b9f832e7cda5fd793876 15966 trafficserver_8.1.6+ds-1~deb10u1_amd64.buildinfo
+Changes:
+ trafficserver (8.1.6+ds-1~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Backport upstream version 8.1.6 to Buster.
+   * Fix CVE-2022-31778, CVE-2022-31779, CVE-2022-32749, CVE-2022-37392.
+     Several vulnerabilities were discovered in Apache Traffic Server, a reverse
+     and forward proxy server, which could result in HTTP request smuggling,
+     cache poisoning or information disclosure.
+Files:
+ ddac86d04572aaf1dcd8423451fb3450 2901 web optional trafficserver_8.1.6+ds-1~deb10u1.dsc
+ e07903b3b6641fb2450dc5fe8909415f 46016 web optional trafficserver_8.1.6+ds-1~deb10u1.debian.tar.xz
+ 52ff667f399b743d3260e6b3de105be0 15966 web optional trafficserver_8.1.6+ds-1~deb10u1_amd64.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 14 May 2022 20:04:31 -0400
+Source: openssl
+Architecture: source
+Version: 1.1.0l-1~deb9u6
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ openssl (1.1.0l-1~deb9u6) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-1292: Do not use shell to invoke openssl in c_rehash.
+Checksums-Sha1:
+ c403cfa75b20383632818c46a042d25bfb0352cd 2034 openssl_1.1.0l-1~deb9u6.dsc
+ 611f080c22d0b9f4b2165b6eeeff9ab695d15a14 88068 openssl_1.1.0l-1~deb9u6.debian.tar.xz
+ 58108441e00b3444ce12f66c9edf25d8bc4080a9 5145 openssl_1.1.0l-1~deb9u6_source.buildinfo
+Checksums-Sha256:
+ de1b5154b6f25c377c1b15535f8ac0d24349c1a2e78bc31244f3b01b16972129 2034 openssl_1.1.0l-1~deb9u6.dsc
+ bfd0b20117f5e682bf85a82229071854821667b9f4b9c26dfc2cfed2867ba0a1 88068 openssl_1.1.0l-1~deb9u6.debian.tar.xz
+ 6bb1e6128b8c33f6d478575f6bcb289375b70d5e5bbfa2a3d20751b6ae271898 5145 openssl_1.1.0l-1~deb9u6_source.buildinfo
+Files:
+ c5e5602a48c2659989578040db81b4d8 2034 utils optional openssl_1.1.0l-1~deb9u6.dsc
+ 86c2a14d88f1ae92ab4aaa1e3e229435 88068 utils optional openssl_1.1.0l-1~deb9u6.debian.tar.xz
+ c95d84ed2ec2556e519d6b6006de4271 5145 utils optional openssl_1.1.0l-1~deb9u6_source.buildinfo
+

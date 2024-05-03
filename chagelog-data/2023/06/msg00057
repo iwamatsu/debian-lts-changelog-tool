@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Jun 2023 18:41:23 +0300
+Source: trafficserver
+Architecture: source
+Version: 8.1.7-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jean Baptiste Favre <debian@jbfavre.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ trafficserver (8.1.7-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * New upstream release.
+     - CVE-2022-47184: The TRACE method can be used to disclose
+       network information.
+     - CVE-2023-30631: Configuration option to block the PUSH method
+       in ATS didn't work.
+     - CVE-2023-33933: s3_auth plugin problem with hash calculation.
+Checksums-Sha1:
+ ed184317291768089836f5783dbe49e4e6db1052 2729 trafficserver_8.1.7-0+deb10u1.dsc
+ 1ec1f18838d33352cdf494e96284244984d085d7 7919920 trafficserver_8.1.7.orig.tar.xz
+ 6d4863357db01e9a6df4034bb5d50d0dff6632c2 46140 trafficserver_8.1.7-0+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 1e6269169ab5a7d78ab401a66e04c553ecb802c0d3bda6f70d3093bd557c4d95 2729 trafficserver_8.1.7-0+deb10u1.dsc
+ c472f50f27193de9d516ea545242b80609d05abf19b04f6e43009f4555059b5a 7919920 trafficserver_8.1.7.orig.tar.xz
+ 7408b46e08594eeab48ba3eeaea71888339f7de2a05f69c7ba5feec5f65f305f 46140 trafficserver_8.1.7-0+deb10u1.debian.tar.xz
+Files:
+ cd10f9fdc5e8a88dad7b2f8c32367cbc 2729 web optional trafficserver_8.1.7-0+deb10u1.dsc
+ 3c495598c8068a3df19a19382b3b4089 7919920 web optional trafficserver_8.1.7.orig.tar.xz
+ de302f9d3209f984a9de8750f74ebeb2 46140 web optional trafficserver_8.1.7-0+deb10u1.debian.tar.xz
+

@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 12 Oct 2023 09:36:39 +0100
+Source: org-mode
+Binary: elpa-org org-mode
+Architecture: source all
+Version: 9.1.14+dfsg-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ elpa-org   - Keep notes, maintain ToDo lists, and do project planning in emacs
+ org-mode   - Transition Package, org-mode to elpa-org
+Closes: 1033341
+Changes:
+ org-mode (9.1.14+dfsg-3+deb10u1) buster-security; urgency=high
+ .
+   * CVE-2023-28617: Prevent a potential exploit where attackers could have
+     executed arbitrary shell commands via a filename (or directory name) that
+     contained shell metacharacters. (Closes: #1033341)
+Checksums-Sha1:
+ 1e6ab52518e9ca465e54cfd5ee570a60722e04e1 2012 org-mode_9.1.14+dfsg-3+deb10u1.dsc
+ fd5090d36d6a16c3e3f653f6fed40be9d9e9888b 1259588 org-mode_9.1.14+dfsg.orig.tar.xz
+ d4cfbaa8f7843d2d0cd03e3cbe0d30fa8f465fa2 9624 org-mode_9.1.14+dfsg-3+deb10u1.debian.tar.xz
+ 80c4d91342561b168f48f339c8d3538f3e58d4fe 1045880 elpa-org_9.1.14+dfsg-3+deb10u1_all.deb
+ 18ed768529e554cfc2ac7d29a10b13cd37c1be9c 7984 org-mode_9.1.14+dfsg-3+deb10u1_all.deb
+ 4f3d10ef591ed6fd7b7c05f403c6b6c482a57aec 8097 org-mode_9.1.14+dfsg-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 4eb567963c33ca55dc50d04bfc5c27168fc52ded50f04c962eb34b5e5739ba91 2012 org-mode_9.1.14+dfsg-3+deb10u1.dsc
+ 4a9fa59b54ecab7b54ef6c67cde2caedadb37bf75f000d62bd21056783f0e70b 1259588 org-mode_9.1.14+dfsg.orig.tar.xz
+ 9e41472c59d1d6e46c60648929ad55d40a6663b012d454e02b67ba96379462a3 9624 org-mode_9.1.14+dfsg-3+deb10u1.debian.tar.xz
+ 4f6423bd75b0664d4efa81a12a8741ea600a0391d6aac106936cf40cb6380fc0 1045880 elpa-org_9.1.14+dfsg-3+deb10u1_all.deb
+ aa3d153d5c3e97a8b35c527b46d72faf61bb9e25f2f491fea2d3648a89c04e04 7984 org-mode_9.1.14+dfsg-3+deb10u1_all.deb
+ 0c76bb98b2a443651839a80549597a20116c68149f2c8f8369ffa28d22b86e39 8097 org-mode_9.1.14+dfsg-3+deb10u1_amd64.buildinfo
+Files:
+ 3307d0b9d5f8eaf12a43971f1f734792 2012 lisp optional org-mode_9.1.14+dfsg-3+deb10u1.dsc
+ ce54b386de97f1d2f1750bc587b148f7 1259588 lisp optional org-mode_9.1.14+dfsg.orig.tar.xz
+ 3d148bb97c0cb48a24e55cb92d59e747 9624 lisp optional org-mode_9.1.14+dfsg-3+deb10u1.debian.tar.xz
+ dc2d07a92a8fe7c197243040e8cb83d4 1045880 lisp optional elpa-org_9.1.14+dfsg-3+deb10u1_all.deb
+ c3cce254622960084a22bd7dc7218f37 7984 lisp optional org-mode_9.1.14+dfsg-3+deb10u1_all.deb
+ 2295393cb50bbc4534e9e2868c40603e 8097 lisp optional org-mode_9.1.14+dfsg-3+deb10u1_amd64.buildinfo
+

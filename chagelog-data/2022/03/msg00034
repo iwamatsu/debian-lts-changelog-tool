@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 18 Mar 2022 13:54:25 +0100
+Source: apache2
+Architecture: source
+Version: 2.4.25-3+deb9u13
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ apache2 (2.4.25-3+deb9u13) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-22719: denial of service in mod_lua via crafted request body.
+   * CVE-2022-22720: HTTP request smuggling.
+   * CVE-2022-22721: integer overflow leading to buffer overflow write.
+   * CVE-2022-23943: heap memory overwrite via crafted data in mod_sed.
+Checksums-Sha1:
+ 5dd0a53ab6e95fc31e91e70c73da7aeefe2f13f8 2990 apache2_2.4.25-3+deb9u13.dsc
+ bd6d138c31c109297da2346c6e7b93b9283993d2 6398218 apache2_2.4.25.orig.tar.bz2
+ ee0d213570f25e33e02ef5ee904d8c0b636b14bd 829032 apache2_2.4.25-3+deb9u13.debian.tar.xz
+ 546293d74d543563cbeb84cddb65a5a9d3e3b620 6313 apache2_2.4.25-3+deb9u13_source.buildinfo
+Checksums-Sha256:
+ ffb4924f69b031617a52070c6a63984c7f21a02bc03bae1bf03a66e0cf077042 2990 apache2_2.4.25-3+deb9u13.dsc
+ f87ec2df1c9fee3e6bfde3c8b855a3ddb7ca1ab20ca877bd0e2b6bf3f05c80b2 6398218 apache2_2.4.25.orig.tar.bz2
+ 4d513ae8a99d64225d2ad289ef7b4255ca1c00776846d95cbf95d49c960c0f9a 829032 apache2_2.4.25-3+deb9u13.debian.tar.xz
+ 7b0c331aa5058b56da27e17423b9ede27269018f508853f72ec9c68424dec120 6313 apache2_2.4.25-3+deb9u13_source.buildinfo
+Files:
+ e0dacd49d34c0e9293effb3ec5b3a74b 2990 httpd optional apache2_2.4.25-3+deb9u13.dsc
+ 2826f49619112ad5813c0be5afcc7ddb 6398218 httpd optional apache2_2.4.25.orig.tar.bz2
+ 3bedabc15b83b457ff1307a321145750 829032 httpd optional apache2_2.4.25-3+deb9u13.debian.tar.xz
+ a999c9de33a64aebb510464cc8c14365 6313 httpd optional apache2_2.4.25-3+deb9u13_source.buildinfo
+

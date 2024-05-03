@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Oct 2022 15:23:14 +0200
+Source: pysha3
+Architecture: source
+Version: 1.0.2-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Ben Finney <bignose@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Closes: 1023030
+Changes:
+ pysha3 (1.0.2-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix a buffer overflow issue in SHA-3 CVE-2022-37454 (Closes: #1023030).
+Checksums-Sha1:
+ 2ac7dee56ff4bafea08554f559ddce4689a637f9 1594 pysha3_1.0.2-2+deb10u1.dsc
+ d5d85a2f0c3a482c48b4ccde67872970204d9c33 9420 pysha3_1.0.2-2+deb10u1.debian.tar.xz
+ 837439af40836e6a5737881bbcd4f89fb4224124 7505 pysha3_1.0.2-2+deb10u1_source.buildinfo
+Checksums-Sha256:
+ af0a91625fc6b87dd8d073450b0b561c97dec7e951e848b959105d57f7b44576 1594 pysha3_1.0.2-2+deb10u1.dsc
+ 12983c3b18b4956ca2512a8c2bdf31a8edd20743326f286e57a7fb974ba02b4b 9420 pysha3_1.0.2-2+deb10u1.debian.tar.xz
+ c9dccd8f21d5ecc55c3f2353183065268f523a5f9cbe94995cc8da8b0bcacc2f 7505 pysha3_1.0.2-2+deb10u1_source.buildinfo
+Files:
+ 4ea7d583adc9fad563c2495ce60318c7 1594 python optional pysha3_1.0.2-2+deb10u1.dsc
+ 1de1aeb35767fc096d2cbe1f7249cc7c 9420 python optional pysha3_1.0.2-2+deb10u1.debian.tar.xz
+ ce045abe03aadb4b26a81266a11880fb 7505 python optional pysha3_1.0.2-2+deb10u1_source.buildinfo
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 26 Sep 2022 00:06:46 CEST
+Source: poppler
+Architecture: source
+Version: 0.71.0-5+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ cc1027987a6ccee4e65cb13e6b2ec74f87394c9b 3473 poppler_0.71.0-5+deb10u1.dsc
+ b748621566779788894b7b321fe4f3c6d52dd3c1 1480852 poppler_0.71.0.orig.tar.xz
+ ffe25c59949815f926e7d87e41fb0530c0ab0f81 42836 poppler_0.71.0-5+deb10u1.debian.tar.xz
+ 28c34a0d6956961b3962d0a204934149cb9da9c9 19545 poppler_0.71.0-5+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 2827e1b8c7501f66aaa6376507b61ae4aede7e4ec1f85b8a4d4c7739562ef7c0 3473 poppler_0.71.0-5+deb10u1.dsc
+ badbecd2dddf63352fd85ec08a9c2ed122fdadacf2a34fcb4cc227c4d01f2cf9 1480852 poppler_0.71.0.orig.tar.xz
+ 3f3e0d5c27188c7f2f2babf790d3510185d5173ff81a4c91fea114226b022b80 42836 poppler_0.71.0-5+deb10u1.debian.tar.xz
+ ae8e7bc6cba7b90c95eadc7d3c5c490ec4c7837f779cd9df1312f51241aaefa7 19545 poppler_0.71.0-5+deb10u1_amd64.buildinfo
+Changes:
+ poppler (0.71.0-5+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2018-18897, CVE-2018-19058, CVE-2018-20650, CVE-2019-9903,
+     CVE-2019-9959, CVE-2019-14494, CVE-2020-27778, CVE-2022-38784,
+     CVE-2022-27337.
+     Several security vulnerabilities have been discovered in Poppler, a PDF
+     rendering library, that could lead to denial of service or possibly other
+     unspecified impact when processing maliciously crafted documents.
+Files:
+ 26c66c01c2d200a0cad5a6c30c2a1877 3473 devel optional poppler_0.71.0-5+deb10u1.dsc
+ b505011e49e922c83f3ffb57ab40bc28 1480852 devel optional poppler_0.71.0.orig.tar.xz
+ cca4ef1b19ddc746f199f625304363e1 42836 devel optional poppler_0.71.0-5+deb10u1.debian.tar.xz
+ 46959cf3041422ac7799c6dc45ba9bbf 19545 devel optional poppler_0.71.0-5+deb10u1_amd64.buildinfo
+

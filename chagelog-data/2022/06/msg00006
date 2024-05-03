@@ -1,0 +1,43 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 03 Jun 2022 13:19:14 +0200
+Source: pidgin
+Binary: libpurple0 pidgin pidgin-data pidgin-dev pidgin-dbg finch finch-dev libpurple-dev libpurple-bin
+Architecture: source
+Version: 2.12.0-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Ari Pollak <ari@debian.org>
+Changed-By: Andreas Rönnquist <gusnan@debian.org>
+Description:
+ finch      - text-based multi-protocol instant messaging client
+ finch-dev  - text-based multi-protocol instant messaging client - development
+ libpurple-bin - multi-protocol instant messaging library - extra utilities
+ libpurple-dev - multi-protocol instant messaging library - development files
+ libpurple0 - multi-protocol instant messaging library
+ pidgin     - graphical multi-protocol instant messaging client
+ pidgin-data - multi-protocol instant messaging client - data files
+ pidgin-dbg - Debugging symbols for Pidgin
+ pidgin-dev - multi-protocol instant messaging client - development files
+Changes:
+ pidgin (2.12.0-1+deb9u1) stretch-security; urgency=medium
+ .
+   * CVE-2022-26491 - Remove _xmppconnect support
+   * d/gbp.conf - Set debian/stretch branch
+Checksums-Sha1:
+ 394b8f07fc4a564047ad1cf5d739d671ef5d83d8 2862 pidgin_2.12.0-1+deb9u1.dsc
+ 38f48c48978425b86fc9f4e8ba08216ff379451b 9270704 pidgin_2.12.0.orig.tar.bz2
+ 6df301efbbb71952be66784aeacf3c668367da62 63408 pidgin_2.12.0-1+deb9u1.debian.tar.xz
+ 12cfd70023c0c53c41464c63b7250cebc1e3d7ca 21077 pidgin_2.12.0-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ cdb99e937c573dc78f1a551b5311db22c7c320012ec690fdb8974b95e5960baa 2862 pidgin_2.12.0-1+deb9u1.dsc
+ 8c3d3536d6d3c971bd433ff9946678af70a0f6aa4e6969cc2a83bb357015b7f8 9270704 pidgin_2.12.0.orig.tar.bz2
+ 3b46cf8817b231a7b0677039578919665e972f52357e5502763c331dd03ef97b 63408 pidgin_2.12.0-1+deb9u1.debian.tar.xz
+ 39a615ba8ad6820aeafa8afff52d0dd02f5a9484ec82452abb0005ddd2e6e59b 21077 pidgin_2.12.0-1+deb9u1_source.buildinfo
+Files:
+ 8a76fced778437cfba11d006f23e1599 2862 net optional pidgin_2.12.0-1+deb9u1.dsc
+ 8287400c4e5663e0e7844e868d5152af 9270704 net optional pidgin_2.12.0.orig.tar.bz2
+ 20f852057a4c4e1e613f2aa3381588ad 63408 net optional pidgin_2.12.0-1+deb9u1.debian.tar.xz
+ 6b827a61c26d90afff96cfe13b623793 21077 net optional pidgin_2.12.0-1+deb9u1_source.buildinfo
+

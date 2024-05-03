@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 25 Feb 2022 22:03:02 +0100
+Source: htmldoc
+Binary: htmldoc htmldoc-common
+Architecture: source all amd64
+Version: 1.8.27-8+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Jeff Licquia <licquia@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ htmldoc    - HTML processor that generates indexed HTML, PS, and PDF
+ htmldoc-common - Common arch-independent files for htmldoc
+Changes:
+ htmldoc (1.8.27-8+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-0534
+     A crafted GIF file could lead to a stack out-of-bounds read,
+     which could result in a crash (segmentation fault).
+   * CVE-2021-43579
+     Converting an HTML document, which links to a crafted BMP file,
+     could lead to a stack-based buffer overflow, which could result
+     in remote code execution.
+   * CVE-2021-40985
+     A crafted BMP image could lead to a buffer overflow, which could
+     cause a denial of service.
+Checksums-Sha1:
+ 7aefd22570eec7c8a107119b372ddb02ecdeb82f 2135 htmldoc_1.8.27-8+deb9u2.dsc
+ 1dc2603983d7ad7024cfbeab7a0c7fab2230cf8f 4462252 htmldoc_1.8.27.orig.tar.gz
+ b6203d2c1587d5e82aa275f670f9b8aad0d23865 13340 htmldoc_1.8.27-8+deb9u2.debian.tar.xz
+ 67f53cf02ade28d0a35359f24be4aee43c58bb01 4843392 htmldoc-common_1.8.27-8+deb9u2_all.deb
+ 92085afbaac6dda8e74f86fd61afe8da2b7c58da 387200 htmldoc-dbgsym_1.8.27-8+deb9u2_amd64.deb
+ 90d8a1085702fddac03d07b7f76c6323505898ee 8072 htmldoc_1.8.27-8+deb9u2_amd64.buildinfo
+ b7e2907c918eecc439979686c82f72e1603ce8bb 207480 htmldoc_1.8.27-8+deb9u2_amd64.deb
+Checksums-Sha256:
+ f539593fefaa79171824a71b7d61f31e6ffcab95a6bf078d3d2a40eeadd9af5b 2135 htmldoc_1.8.27-8+deb9u2.dsc
+ 64f6d9f40f00f9cc68df6508123e88ed30fef924881fd28dca45358ecd79d320 4462252 htmldoc_1.8.27.orig.tar.gz
+ f0404f333614d5a658f7947d844cdbcab7b2f99d75c3747a087953d2409c4064 13340 htmldoc_1.8.27-8+deb9u2.debian.tar.xz
+ 47d22589f30e95d5c480b37c91b69e0cfc704f915490f3abfda3aca5f3e1965c 4843392 htmldoc-common_1.8.27-8+deb9u2_all.deb
+ 29d94048e27cbaa04b0eecdbb4388f19bb42e55589793019cb57773d7668a382 387200 htmldoc-dbgsym_1.8.27-8+deb9u2_amd64.deb
+ 541b3cd41844ffcda0746af03b5a53017d9188135452d490701b8dae16ebf428 8072 htmldoc_1.8.27-8+deb9u2_amd64.buildinfo
+ b0e705293f8e6858a71c48c7e507433998a7b57fc0f68e8982689135a551ea82 207480 htmldoc_1.8.27-8+deb9u2_amd64.deb
+Files:
+ b697d7740dd30ed664b87ee957de9080 2135 web optional htmldoc_1.8.27-8+deb9u2.dsc
+ b284888cc2285b32e96cbce620b927c1 4462252 web optional htmldoc_1.8.27.orig.tar.gz
+ d24e3ccaecde4d0ebe7adeb397458f1a 13340 web optional htmldoc_1.8.27-8+deb9u2.debian.tar.xz
+ e9d436027488863a0dcde4d1faff869b 4843392 web optional htmldoc-common_1.8.27-8+deb9u2_all.deb
+ 24e77562996360fb9c8f54a1fbb79687 387200 debug extra htmldoc-dbgsym_1.8.27-8+deb9u2_amd64.deb
+ dc70b5979124ad100296b418be54b6a7 8072 web optional htmldoc_1.8.27-8+deb9u2_amd64.buildinfo
+ 5a6808ae9d793bd5c653989292831abd 207480 web optional htmldoc_1.8.27-8+deb9u2_amd64.deb
+

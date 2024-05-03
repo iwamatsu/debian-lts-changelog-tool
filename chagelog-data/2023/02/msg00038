@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 22 Feb 2023 14:58:58 +0200
+Source: sofia-sip
+Architecture: source
+Version: 1.12.11+20110422.1-2.1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Ron Lee <ron@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ sofia-sip (1.12.11+20110422.1-2.1+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-47516: Denial of service (crash) via a crafted
+     UDP message that leads to internal assert.
+Checksums-Sha1:
+ ce17d42a152fd5c0359a8368985ad847a92a1182 2405 sofia-sip_1.12.11+20110422.1-2.1+deb10u3.dsc
+ b9a1fea432ec06eaa5c325fb8c50519195a80e16 2948980 sofia-sip_1.12.11+20110422.1.orig.tar.gz
+ dd3bcfe7302a372ef4ba4e211eddda0fcc30dc2a 27983 sofia-sip_1.12.11+20110422.1-2.1+deb10u3.diff.gz
+Checksums-Sha256:
+ 340790309030f5efff4389efe6d0ecf492af40c3451d5e81206898eade7be173 2405 sofia-sip_1.12.11+20110422.1-2.1+deb10u3.dsc
+ bfa615962e55688db441ae0c17d77a0831f4f50ee5ca45b0c75c7ebaf7eb95ab 2948980 sofia-sip_1.12.11+20110422.1.orig.tar.gz
+ f47af45cce40bf0b0c6cc0bfaffb9d0eb011d28b9d108c424e0f504d2b8e4d97 27983 sofia-sip_1.12.11+20110422.1-2.1+deb10u3.diff.gz
+Files:
+ 1f1c3cc29f1505d1e5669e211eab376e 2405 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u3.dsc
+ 366b3531dd39c77974bdf2b4b8e69a27 2948980 net optional sofia-sip_1.12.11+20110422.1.orig.tar.gz
+ f7c5745742441592a767dd9f1b6d76ba 27983 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u3.diff.gz
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 04 Mar 2024 17:48:29 +0000
+Source: composer
+Architecture: source
+Version: 1.8.4-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ composer (1.8.4-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload.
+   * Add Test suite from upstream
+   * Force system dependencies loading
+   * Fix CVE-2023-43655: . Users publishing a composer.phar
+     to a public web-accessible server where the composer.phar
+     can be executed as a php file may be subject to a
+     remote code execution vulnerability if PHP also has
+     `register_argc_argv` enabled in php.ini
+Checksums-Sha1:
+ 97280f22af00097343c851c42d92965367cb9a52 2356 composer_1.8.4-1+deb10u3.dsc
+ 64c9bd0068668de48bc25b67e620c657e25bfa70 425448 composer_1.8.4-1+deb10u3.debian.tar.xz
+ cf2a23b4da7cbbcef19716a862c2740312f0aaa8 9611 composer_1.8.4-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ f90f1993e390cc31bfef036088952c06f1e16dc34e3cce7a52502325f5f76b30 2356 composer_1.8.4-1+deb10u3.dsc
+ 9f3fe62907d2ca006fac6d05983b27efa35d6f05f690787cb3e17bec5b867cec 425448 composer_1.8.4-1+deb10u3.debian.tar.xz
+ c9e0896689a7ed27284d48554434b2151bd077874e5d2209ac8f4760ab008e1b 9611 composer_1.8.4-1+deb10u3_amd64.buildinfo
+Files:
+ 2c74b4c9e24600494c9909a4b4639d57 2356 php optional composer_1.8.4-1+deb10u3.dsc
+ d40213042e5dcee9c415f5474f8f75e8 425448 php optional composer_1.8.4-1+deb10u3.debian.tar.xz
+ 36b5f90d90ac75df00b1de0b65bd433b 9611 php optional composer_1.8.4-1+deb10u3_amd64.buildinfo
+

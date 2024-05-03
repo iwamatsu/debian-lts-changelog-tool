@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 21 Feb 2023 22:54:31 CET
+Source: tiff
+Architecture: source
+Version: 4.1.0+git191117-2~deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1074d2bdc7d76aa6b5869f2e6cfc2863c98c2087 2425 tiff_4.1.0+git191117-2~deb10u7.dsc
+ c491c08e6a6240c7128bac3e8273552e9b5c8f5a 42464 tiff_4.1.0+git191117-2~deb10u7.debian.tar.xz
+ 0244bc0ab18c782c7862bf0ce68d9f54023120cf 12439 tiff_4.1.0+git191117-2~deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 68740044419a2f921ce39e92973e49c5b392d0129166b4e7f41c463b32a8bd9f 2425 tiff_4.1.0+git191117-2~deb10u7.dsc
+ b45fdac41b38b02afd4b42e5714ec8f8587219b153687ebe86abe61a1698ffd3 42464 tiff_4.1.0+git191117-2~deb10u7.debian.tar.xz
+ d9d241cb7bbfa0b5a46647da6727a8b622ef7457cc024159576f406fdf3cbfd1 12439 tiff_4.1.0+git191117-2~deb10u7_amd64.buildinfo
+Changes:
+ tiff (4.1.0+git191117-2~deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Several flaws were found in tiffcrop, a program distributed by tiff,
+     a library and tools providing support for the Tag Image File Format (TIFF).
+     A specially crafted tiff file can lead to an out-of-bounds write or read
+     resulting in a denial of service.
+Files:
+ 58cafd4c7b90840cca93fffd422f3db9 2425 libs optional tiff_4.1.0+git191117-2~deb10u7.dsc
+ 10f46a648550d9d12bc3837b67fc0efb 42464 libs optional tiff_4.1.0+git191117-2~deb10u7.debian.tar.xz
+ e8dd1e0e2956505d7402a53316201eeb 12439 libs optional tiff_4.1.0+git191117-2~deb10u7_amd64.buildinfo
+

@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 25 Jan 2022 11:41:58 +0530
+Source: libraw
+Binary: libraw15 libraw-bin libraw-dev libraw-doc
+Architecture: source
+Version: 0.17.2-6+deb9u2
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ libraw-bin - raw image decoder library (tools)
+ libraw-dev - raw image decoder library (development files)
+ libraw-doc - raw image decoder library (documentation)
+ libraw15   - raw image decoder library
+Changes:
+ libraw (0.17.2-6+deb9u2) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2017-13735, CVE-2017-14265, CVE-2017-14348,
+     CVE-2017-14608, CVE-2017-16909, CVE-2017-16910, CVE-2018-5800
+     CVE-2018-5801, CVE-2018-5802, CVE-2018-5804, CVE-2018-5805,
+     CVE-2018-5806, CVE-2018-5807, CVE-2018-5808, CVE-2018-5810,
+     CVE-2018-5811, CVE-2018-5812, CVE-2018-5813, CVE-2018-5815,
+     CVE-2018-5817, CVE-2018-5818, CVE-2018-5819, CVE-2018-20363,
+     CVE-2018-20364 and CVE-2018-20365
+Checksums-Sha1:
+ f420e2f260c565b346f471f7ecdde9642dc99465 2265 libraw_0.17.2-6+deb9u2.dsc
+ 6a7def3f66803b23406be37b92a89797e31c4a11 33944 libraw_0.17.2-6+deb9u2.debian.tar.xz
+ bbfef88f7850e3c489e558a971843922adb712a2 7556 libraw_0.17.2-6+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ 54562b9a721e72522c0975a0bd3d2212356e661683602019f456fe6e172ebfba 2265 libraw_0.17.2-6+deb9u2.dsc
+ 083347a7356791920c0dc108923826363c8e79b9bee691ecd18ed4dbd9221de6 33944 libraw_0.17.2-6+deb9u2.debian.tar.xz
+ 287d2b1ea4d9bde2d19e1f3ef6175c0a8bb70ae729bf752b348cf5d3c20f75dc 7556 libraw_0.17.2-6+deb9u2_amd64.buildinfo
+Files:
+ d981e16d0f9f1bad2816106e3b7a402f 2265 libs optional libraw_0.17.2-6+deb9u2.dsc
+ df0caa5a09f695ff1555156a400242e5 33944 libs optional libraw_0.17.2-6+deb9u2.debian.tar.xz
+ b10660c28762687d9a29b1f3a40d000f 7556 libs optional libraw_0.17.2-6+deb9u2_amd64.buildinfo
+

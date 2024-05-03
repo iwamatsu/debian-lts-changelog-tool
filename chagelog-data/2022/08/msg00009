@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 18 Aug 2022 10:41:44 -0700
+Source: ruby-tzinfo
+Binary: ruby-tzinfo
+Architecture: source all
+Version: 1.2.5-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ruby-tzinfo - Daylight-savings aware timezone library
+Changes:
+ ruby-tzinfo (1.2.5-1+deb10u1) buster-security; urgency=high
+ .
+   * CVE-2022-31163: Prevent a directory-traversal issue in Timezone.get when
+     using the Ruby data source.
+Checksums-Sha1:
+ 9a767af1e7fb2ab034411a2d409ef70d822f3505 2094 ruby-tzinfo_1.2.5-1+deb10u1.dsc
+ 1b4d8de16326ee5c817f961e1ab7c7468eacdf37 158208 ruby-tzinfo_1.2.5.orig.tar.gz
+ 1f6f4db0dccc4695fc97774da5a7cd71e7b32eba 4052 ruby-tzinfo_1.2.5-1+deb10u1.debian.tar.xz
+ a17d7fa4803b1a7840611babe8575b6c7b234b59 44688 ruby-tzinfo_1.2.5-1+deb10u1_all.deb
+ c73f0276554392df696948c4c0581133eadc33b4 9170 ruby-tzinfo_1.2.5-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ ffca32903b86e87d3ab5e7b600fd1d53c91586cb28c620c304682a1ba5f65a8e 2094 ruby-tzinfo_1.2.5-1+deb10u1.dsc
+ 45b88244f7d43f539e9b696f719134da883e607538220e3b30a1ea83d84e6231 158208 ruby-tzinfo_1.2.5.orig.tar.gz
+ 818be49e01b9aec34c59ffe93eb3105974f9998e8ae96df09d81393fd9a644c7 4052 ruby-tzinfo_1.2.5-1+deb10u1.debian.tar.xz
+ dcc8c7230c1346954ab43eca5e20841c8ece2e26fb145c78e0d1491aeaf37946 44688 ruby-tzinfo_1.2.5-1+deb10u1_all.deb
+ 5c510416ef9c66ffe009494c6083118e27aca5cd3987a3d618e64a959c6df2ed 9170 ruby-tzinfo_1.2.5-1+deb10u1_amd64.buildinfo
+Files:
+ 10687fb39cb27b6064f171ca110d221b 2094 ruby optional ruby-tzinfo_1.2.5-1+deb10u1.dsc
+ 416861e8d1e49da98b599aac4db4c6c4 158208 ruby optional ruby-tzinfo_1.2.5.orig.tar.gz
+ 39a239158b1b227838bd5b799e6addac 4052 ruby optional ruby-tzinfo_1.2.5-1+deb10u1.debian.tar.xz
+ 1c4b29f666be5d5955477760609483d6 44688 ruby optional ruby-tzinfo_1.2.5-1+deb10u1_all.deb
+ f08ada088b9033f899ce8a5661de6ee0 9170 ruby optional ruby-tzinfo_1.2.5-1+deb10u1_amd64.buildinfo
+

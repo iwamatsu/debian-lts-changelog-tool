@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 17 Apr 2024 15:59:03 +0200
+Source: tzdata
+Architecture: source
+Version: 2024a-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2024a-0+deb10u1) buster-security; urgency=medium
+ .
+   * New upstream version 2024a
+   * Drop all patches
+   * Rename Pacific/Enderbury to Pacific/Kanton
+   * Rename Europe/Kiev into Europe/Kyiv
+   * Import translations for "Kyiv" and "Kanton" from sid.
+   * Update the build for compatibility with older zic and with previous
+     tzdata releases.
+Checksums-Sha1:
+ 0f6f415dd2678b6d5e2ddf24435e9c465abbc2e5 2065 tzdata_2024a-0+deb10u1.dsc
+ 310a281e4551e4e9a11db4f9ceea85a6529af4af 451270 tzdata_2024a.orig.tar.gz
+ 290f782716e4bcc4d70b7fe86a882087635d913f 108036 tzdata_2024a-0+deb10u1.debian.tar.xz
+ a98873b177526a886a17dee428964f8d67b1cfe5 5985 tzdata_2024a-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ e7c4648141973d5123deee90c37d3750fb3f177658ac0530cbc6cf98397407e7 2065 tzdata_2024a-0+deb10u1.dsc
+ 0d0434459acbd2059a7a8da1f3304a84a86591f6ed69c6248fffa502b6edffe3 451270 tzdata_2024a.orig.tar.gz
+ 7d9ac44f5a3de97824936a2c50a88af1aeea6fabd98e098bbf91e285d9536520 108036 tzdata_2024a-0+deb10u1.debian.tar.xz
+ 888244cd27178a04ddf655a2f64a4778d2e3bc08fa9e7d37671e4d252d908166 5985 tzdata_2024a-0+deb10u1_source.buildinfo
+Files:
+ 38d42e93b6edbabd45d4d5f8550aa5e7 2065 localization required tzdata_2024a-0+deb10u1.dsc
+ 2349edd8335245525cc082f2755d5bf4 451270 localization required tzdata_2024a.orig.tar.gz
+ 24a4a46fe324669122dab0599b31960c 108036 localization required tzdata_2024a-0+deb10u1.debian.tar.xz
+ da8978bb41643b6f1fc9721a3784280c 5985 localization required tzdata_2024a-0+deb10u1_source.buildinfo
+

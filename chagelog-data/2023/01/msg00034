@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 Jan 2023 08:47:05 -0500
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Roberto C. Sánchez <roberto@debian.org>
+Changes:
+ curl (7.64.0-4+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-27774:
+     An insufficiently protected credentials vulnerability exists in curl that
+     could allow an attacker to extract credentials when follows HTTP(S)
+     redirects is used with authentication could leak credentials to other
+     services that exist on different protocols or port numbers.
+   * Follow up to CVE-2022-27782:
+     The patch included to address this CVE in 7.64.0-4+deb10u3 contained a
+     defect which resulted in the vulnerability being completely addressed.  The
+     patch is corrected and the vulberability is fully addressed in this version.
+   * CVE-2022-32221:
+     When doing HTTP(S) transfers, libcurl might erroneously use the read
+     callback (CURLOPT_READFUNCTION) to ask for data to send, even when the
+     CURLOPT_POSTFIELDS option has been set, if the same handle previously was
+     used to issue a PUT request which used that callback.
+   * CVE-2022-35252:
+     When curl is used to retrieve and parse cookies from a HTTP(S) server,
+     it accepts cookies using control codes that when later are sent back to a
+     HTTP server might make the server return 400 responses. Effectively
+     allowing a "sister site" to deny service to all siblings.
+   * CVE-2022-43552:
+     HTTP Proxy deny use-after-free
+Checksums-Sha1:
+ 8d2bdc1b1be2e0902b6892b15789b7201345013f 2694 curl_7.64.0-4+deb10u4.dsc
+ 91cbf9870fe086bbb8057ae3e2342fc6462913bf 59080 curl_7.64.0-4+deb10u4.debian.tar.xz
+ 66ba73edc78da52619c83ba099e855475bb78125 11810 curl_7.64.0-4+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ ba385d7f1468f4bf309642218433f4975b9d5606410941bce7382b8cddebc273 2694 curl_7.64.0-4+deb10u4.dsc
+ a6a0f1c45359fa262ae1612e9d3d3e185c88b4d87473e44557bcc0441a72f10c 59080 curl_7.64.0-4+deb10u4.debian.tar.xz
+ e0013362ab8237ce14273d268f74c6a7125647830e3a95009580cb82ee611117 11810 curl_7.64.0-4+deb10u4_amd64.buildinfo
+Files:
+ a1a433d9fbd4cebf9ca87f42a07d0dba 2694 web optional curl_7.64.0-4+deb10u4.dsc
+ f339698607d0ba7a918fdf2c00375338 59080 web optional curl_7.64.0-4+deb10u4.debian.tar.xz
+ 52783a1817d2b9c49126d11811b16d2b 11810 web optional curl_7.64.0-4+deb10u4_amd64.buildinfo
+

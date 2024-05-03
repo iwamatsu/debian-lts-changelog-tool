@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 19 Apr 2022 10:05:08 +0200
+Source: condor
+Binary: htcondor htcondor-dev htcondor-doc htcondor-dbg libclassad-dev libclassad7 condor condor-doc condor-dev condor-dbg
+Architecture: source
+Version: 8.4.11~dfsg.1-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: HTCondor Developers <condor-debian@cs.wisc.edu>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ condor     - transitional dummy package
+ condor-dbg - transitional dummy package
+ condor-dev - transitional dummy package
+ condor-doc - transitional dummy package
+ htcondor   - distributed workload management system
+ htcondor-dbg - distributed workload management system - debugging symbols
+ htcondor-dev - distributed workload management system - development files
+ htcondor-doc - distributed workload management system - documentation
+ libclassad-dev - HTCondor classads expression language - development library
+ libclassad7 - HTCondor classads expression language - runtime library
+Changes:
+ condor (8.4.11~dfsg.1-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-26110:
+     When a user authenticates to an HTCondor daemon via the CLAIMTOBE method,
+     the user can then impersonate any entity when issuing additional commands
+     to that daemon.
+Checksums-Sha1:
+ 88320b98692acff4ef487dc320180d4e60f511b4 3239 condor_8.4.11~dfsg.1-1+deb9u2.dsc
+ 1d9e1891c77dd24702ea6e1a857ed29cf7d6b87e 80236 condor_8.4.11~dfsg.1-1+deb9u2.debian.tar.xz
+ dc2ce3a2efa172c24724f806fbb86aaadd639ec9 18659 condor_8.4.11~dfsg.1-1+deb9u2_source.buildinfo
+Checksums-Sha256:
+ 937f7ba726f8a3244c416fc01ab7bbe739742c8ef16653b0014f2542fe4d9345 3239 condor_8.4.11~dfsg.1-1+deb9u2.dsc
+ 51e20e7ef28b389468ab9393065f43f11f466237d2098ee27e8ec77257466f76 80236 condor_8.4.11~dfsg.1-1+deb9u2.debian.tar.xz
+ dc968cc7e569ed530ea08f21b32689cdd40d01aaf1f2cde71e85c95c106c0f10 18659 condor_8.4.11~dfsg.1-1+deb9u2_source.buildinfo
+Files:
+ 6825b5e52f427b6b9acde960d5cccc67 3239 science extra condor_8.4.11~dfsg.1-1+deb9u2.dsc
+ ab3b9d24fd5cb601a419ac914adb9686 80236 science extra condor_8.4.11~dfsg.1-1+deb9u2.debian.tar.xz
+ 1567e4ea542e7cbb12b2f0ec9c07e492 18659 science extra condor_8.4.11~dfsg.1-1+deb9u2_source.buildinfo
+

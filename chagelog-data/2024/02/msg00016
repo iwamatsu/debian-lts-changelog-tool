@@ -1,0 +1,61 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 29 Feb 2024 15:09:29 +0000
+Source: python-django
+Architecture: source
+Version: 1:1.11.29-1+deb10u11
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 986447 988053 989394
+Changes:
+ python-django (1:1.11.29-1+deb10u11) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team:
+ .
+     - CVE-2021-28658: Prevent a directory traversal issue which could have been
+       exploited by maliciously crafted filenames. However, the built-in upload
+       handlers were not affected by this vulnerability. (Closes: #986447)
+ .
+     - CVE-2021-31542: Fix a potential directory-traversal vulnerability that
+       could have been exploited by uploaded files. The MultiPartParser,
+       UploadedFile and FieldFile classes allowed directory-traversal via
+       uploaded files with suitably crafted file names. In order to mitigate
+       this risk, stricter basename and path sanitation is now applied.
+       Specifically, empty file names and paths with dot segments are rejected.
+       (Closes: #988053)
+ .
+     - CVE-2021-33203: Prevent a potential directory traversal via admindocs.
+       Staff members could use the admindocs TemplateDetailView view to check
+       the existence of arbitrary files. Additionally, if (and only if) the
+       default admindocs templates have been customized by the developers to
+       also expose the file contents, then not only the existence but also the
+       file contents would have been exposed. As a mitigation, path sanitation
+       is now applied and only files within the template root directories can be
+       loaded.  (Closes: #989394)
+ .
+     - CVE-2021-33571: Prevent possible SSRF, RFI (Remote File Inclusion) and
+       LFI (Local File Inclusion) attacks, since validators accepted leading
+       zeros in IPv4 addresses URLValidator, validate_ipv4_address() and
+       validate_ipv46_address() did not prohibit leading zeros in octal
+       literals. (Closes: #989394)
+ .
+   * Ensure we test for trailing whitespace in URLs under Python 2 (only).
+Checksums-Sha1:
+ b75bac2ef39f6cebd0ffaad921211a7791818c26 3298 python-django_1.11.29-1+deb10u11.dsc
+ e71620c18c985d8f5381bd87c02dbd23f1f48dd0 7977916 python-django_1.11.29.orig.tar.gz
+ a8772c0541988000f7a8010dbd3bb1a3d88e0d53 59876 python-django_1.11.29-1+deb10u11.debian.tar.xz
+ 90031b275d183e8a32276625b02e104385faac19 15045 python-django_1.11.29-1+deb10u11_amd64.buildinfo
+Checksums-Sha256:
+ 56a193f7931ab7ea95f07361518ad7c93f5f1527d134447a81ed051310bc7096 3298 python-django_1.11.29-1+deb10u11.dsc
+ 4200aefb6678019a0acf0005cd14cfce3a5e6b9b90d06145fcdd2e474ad4329c 7977916 python-django_1.11.29.orig.tar.gz
+ 0d0e153199dba084f715b17c54b71632227864160bea981383ae97c8c2527cf3 59876 python-django_1.11.29-1+deb10u11.debian.tar.xz
+ 96e1be559bfbff4e5e82387726575ec2d0ebc72ff4885a86db99c721f2ea9117 15045 python-django_1.11.29-1+deb10u11_amd64.buildinfo
+Files:
+ 737ef04282d7bb0117374cee2efc658b 3298 python optional python-django_1.11.29-1+deb10u11.dsc
+ e725953dfc63ea9e3b5b0898a8027bd7 7977916 python optional python-django_1.11.29.orig.tar.gz
+ 23f360254fa7be2dec2aee0de2d4975c 59876 python optional python-django_1.11.29-1+deb10u11.debian.tar.xz
+ a9e7d39885e5bc73ce018b1d7c4cec34 15045 python optional python-django_1.11.29-1+deb10u11_amd64.buildinfo
+

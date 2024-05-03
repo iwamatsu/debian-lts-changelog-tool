@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 25 May 2022 23:55:31 CEST
+Source: puma
+Binary: puma
+Architecture: source
+Version: 3.6.0-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ puma       - threaded HTTP 1.1 server for Ruby/Rack applications
+Checksums-Sha1:
+ 03d0c8a5961e6c93ad9f5bc255242ff6ac6b4856 2168 puma_3.6.0-1+deb9u2.dsc
+ 39163657daadb8c56ca3c5fe6aa4318e713a8a68 7536 puma_3.6.0-1+deb9u2.debian.tar.xz
+ 19fd9fc81550e187342547e9a749971bff2be17e 7593 puma_3.6.0-1+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ d19fb89f54a4b28fd505b675959bbb6e34869ac9b40fde5558729afa843a7180 2168 puma_3.6.0-1+deb9u2.dsc
+ fd84943a0f83f2fc99f392b980c1bb60b2f035260192b25eb74356cd1b3cc5dc 7536 puma_3.6.0-1+deb9u2.debian.tar.xz
+ d56e81e9975b2e8fc1d0f6b0e2e76a47f72d46a96628bf2fb9ee0127678b1a28 7593 puma_3.6.0-1+deb9u2_amd64.buildinfo
+Changes:
+ puma (3.6.0-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-16770: client could use keepalive requests to monopolize
+     Puma's reactor and create a denial of service attack
+   * Fix CVE-2020-5247: HTTP Response Splitting
+   * Fix CVE-2022-23634: Puma did not always close the response body which could
+     lead to information leakage.
+Files:
+ 3d2c90ef209ea5198da7b2ba0a5315df 2168 ruby optional puma_3.6.0-1+deb9u2.dsc
+ fb672f24ffe573fa251647e9d977296f 7536 ruby optional puma_3.6.0-1+deb9u2.debian.tar.xz
+ 443efa413dbc1f5242681a0fccffacdf 7593 ruby optional puma_3.6.0-1+deb9u2_amd64.buildinfo
+

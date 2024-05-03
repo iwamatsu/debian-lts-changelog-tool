@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 10 Jul 2023 20:09:56 +0200
+Source: node-tough-cookie
+Architecture: source
+Version: 2.3.4+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ node-tough-cookie (2.3.4+dfsg-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-26136: Prototype Pollution vulnerability.
+Checksums-Sha1:
+ 4e41f8cd31cba1f905e698a64a0826e11b4909c9 2109 node-tough-cookie_2.3.4+dfsg-1+deb10u1.dsc
+ 1b860bb688401e80165d97ab8354b2a8aee7619b 94992 node-tough-cookie_2.3.4+dfsg.orig.tar.xz
+ c02005e801764505809ce502ff84a813adaeecac 3940 node-tough-cookie_2.3.4+dfsg-1+deb10u1.debian.tar.xz
+ 471f6b99ca7397efadd231cda675b8efefeec370 5893 node-tough-cookie_2.3.4+dfsg-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1564d7a942963b3ee283ab7cee25fca8d62f65ee5941183315c6bff2072144aa 2109 node-tough-cookie_2.3.4+dfsg-1+deb10u1.dsc
+ dc80a7b7cce58ee94350ad57d2b02534ebbb00ab848e7fa2df2241ba8fd30887 94992 node-tough-cookie_2.3.4+dfsg.orig.tar.xz
+ 04ff865ea194d2b70307da27b739d8c7c015181acb7dd1d755c75d877a8b8dd9 3940 node-tough-cookie_2.3.4+dfsg-1+deb10u1.debian.tar.xz
+ 5d17d3b436a06f181211707180049dc5ed679ec8354f31c7c2354a41f36e2ad6 5893 node-tough-cookie_2.3.4+dfsg-1+deb10u1_amd64.buildinfo
+Files:
+ e2a29a80837efaa5d60f0c1833be760f 2109 web optional node-tough-cookie_2.3.4+dfsg-1+deb10u1.dsc
+ c981498fb1e708562b062d60771c6c85 94992 web optional node-tough-cookie_2.3.4+dfsg.orig.tar.xz
+ 826973407dac6372eeae4d336a17a17e 3940 web optional node-tough-cookie_2.3.4+dfsg-1+deb10u1.debian.tar.xz
+ 70e17c2c014b23a039018037d887c1e3 5893 web optional node-tough-cookie_2.3.4+dfsg-1+deb10u1_amd64.buildinfo
+

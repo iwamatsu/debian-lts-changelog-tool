@@ -1,0 +1,67 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 08 Oct 2023 19:11:59 +0400
+Source: lemonldap-ng
+Binary: lemonldap-ng lemonldap-ng-doc lemonldap-ng-fastcgi-server lemonldap-ng-handler lemonldap-ng-uwsgi-app liblemonldap-ng-common-perl liblemonldap-ng-handler-perl liblemonldap-ng-manager-perl liblemonldap-ng-portal-perl
+Architecture: source all
+Version: 2.0.2+ds-7+deb10u10
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Yadd <yadd@debian.org>
+Description:
+ lemonldap-ng - OpenID-Connect, CAS and SAML compatible Web-SSO system
+ lemonldap-ng-doc - Lemonldap::NG Web-SSO system documentation
+ lemonldap-ng-fastcgi-server - Lemonldap::NG FastCGI server
+ lemonldap-ng-handler - Lemonldap::NG handler part
+ lemonldap-ng-uwsgi-app - Lemonldap::NG uWSGI server
+ liblemonldap-ng-common-perl - Lemonldap::NG common files
+ liblemonldap-ng-handler-perl - Lemonldap::NG handler common libraries
+ liblemonldap-ng-manager-perl - Lemonldap::NG manager part
+ liblemonldap-ng-portal-perl - Lemonldap::NG authentication portal part
+Changes:
+ lemonldap-ng (2.0.2+ds-7+deb10u10) buster-security; urgency=medium
+ .
+   * Fix open redirection when OIDC RP has no oidcRPMetaDataOptionsRedirectUris
+   * Fix SSRF issue (CVE-2023-44469)
+Checksums-Sha1:
+ 5238ee61a0a0072f420c6c58be26ccff6b75fbc0 3882 lemonldap-ng_2.0.2+ds-7+deb10u10.dsc
+ 7b4feeaa2bc931fa64acd0ec747a0b0942ce2479 95244 lemonldap-ng_2.0.2+ds-7+deb10u10.debian.tar.xz
+ 1347a64f7b9ac9d8dcdd9e330a7a5aa9964596fe 5263440 lemonldap-ng-doc_2.0.2+ds-7+deb10u10_all.deb
+ 0b055b0b2bb914b91392f5eea7e9aedf5d017eb4 66104 lemonldap-ng-fastcgi-server_2.0.2+ds-7+deb10u10_all.deb
+ 3e8fd99523bac44758f4bafb75631286d0c736d5 69924 lemonldap-ng-handler_2.0.2+ds-7+deb10u10_all.deb
+ 8e2e360d4f1123b92f5047780fe0f12aa0204405 57024 lemonldap-ng-uwsgi-app_2.0.2+ds-7+deb10u10_all.deb
+ 55760c69c16fc9aa4b101ce0f2274f3be0253688 59136 lemonldap-ng_2.0.2+ds-7+deb10u10_all.deb
+ ab7d44d2cb4f5859dbbf39628cf7c2bfe258cf57 17970 lemonldap-ng_2.0.2+ds-7+deb10u10_amd64.buildinfo
+ 050991871a2baf6b0c25132ebccefd799e742601 157752 liblemonldap-ng-common-perl_2.0.2+ds-7+deb10u10_all.deb
+ 26f84257045903d6e7605f31199ffc90f017b9de 105820 liblemonldap-ng-handler-perl_2.0.2+ds-7+deb10u10_all.deb
+ 6928b228192be4e54c560ec8c59118a2c111680f 333316 liblemonldap-ng-manager-perl_2.0.2+ds-7+deb10u10_all.deb
+ 1cd4d44b96edb11321f2fceace985e487fa33828 2830904 liblemonldap-ng-portal-perl_2.0.2+ds-7+deb10u10_all.deb
+Checksums-Sha256:
+ 54eb81f929b211b9dfa92d773f83b6a3a73520243ae62bc0a4ec986152afe883 3882 lemonldap-ng_2.0.2+ds-7+deb10u10.dsc
+ d49f9c414a5832dfb1f5faecf04fe834cff5cb71313ca50802c7683a743ac206 95244 lemonldap-ng_2.0.2+ds-7+deb10u10.debian.tar.xz
+ 729a37e97bd318632d61549397e9fd08c9ee9f2533b024d20d5d85a64216a8d6 5263440 lemonldap-ng-doc_2.0.2+ds-7+deb10u10_all.deb
+ 6c2c1cf52dd4f93318d6100fc9499674eefb9d47b98294267f5e04873bc4a448 66104 lemonldap-ng-fastcgi-server_2.0.2+ds-7+deb10u10_all.deb
+ 1ee73134a41d1098d961d4af7c84db87059d08dad77943fdfb9246d627668743 69924 lemonldap-ng-handler_2.0.2+ds-7+deb10u10_all.deb
+ f4bf3de5ee5ca52144f512e2ca8ae41804cc0bc65112259d96263813aab7f2f1 57024 lemonldap-ng-uwsgi-app_2.0.2+ds-7+deb10u10_all.deb
+ ab2a6fe3d7b11d5b1016bde23b24c821c518011dbe20430ecfc366b1de599398 59136 lemonldap-ng_2.0.2+ds-7+deb10u10_all.deb
+ 91c5bc5d2ec38d9f538eb00403a368590a38ec1b63aa7c8e9a95fbdacdfbd890 17970 lemonldap-ng_2.0.2+ds-7+deb10u10_amd64.buildinfo
+ 0de7ac63595c944f3baf665c5a65c187e9951ac85499f893cfdeca0e33fd30fb 157752 liblemonldap-ng-common-perl_2.0.2+ds-7+deb10u10_all.deb
+ d21e0a5bc42f2848fc58b99376aac72b729a34eedb8292745f6aabba85dc8d36 105820 liblemonldap-ng-handler-perl_2.0.2+ds-7+deb10u10_all.deb
+ dc8369923aef94e28aba5d4d888bd495bfd91518499b0b6db92f1f3d432ef780 333316 liblemonldap-ng-manager-perl_2.0.2+ds-7+deb10u10_all.deb
+ 3ef04e16d7c76bccd64c195d662e8d4a9ff9ca67639f9da5da9e1090ded7a7b5 2830904 liblemonldap-ng-portal-perl_2.0.2+ds-7+deb10u10_all.deb
+Files:
+ bbe740e3647f764df7d461592571625a 3882 perl optional lemonldap-ng_2.0.2+ds-7+deb10u10.dsc
+ f7700d695f4b7e6f761d7018155256b4 95244 perl optional lemonldap-ng_2.0.2+ds-7+deb10u10.debian.tar.xz
+ da0151f79185555baafa304c8ba92265 5263440 doc optional lemonldap-ng-doc_2.0.2+ds-7+deb10u10_all.deb
+ cbec47a930a57ba9d0cf2b4a8e4aad39 66104 web optional lemonldap-ng-fastcgi-server_2.0.2+ds-7+deb10u10_all.deb
+ 2b0e2a5574e245614141bf1313cb9a2a 69924 perl optional lemonldap-ng-handler_2.0.2+ds-7+deb10u10_all.deb
+ 9b980bf8042b42b597a862bc4ee336e5 57024 web optional lemonldap-ng-uwsgi-app_2.0.2+ds-7+deb10u10_all.deb
+ a5e1081acd95f42c4a457d174edfd59a 59136 perl optional lemonldap-ng_2.0.2+ds-7+deb10u10_all.deb
+ dd15c5302ba87787ec2829c4981dcbcc 17970 perl optional lemonldap-ng_2.0.2+ds-7+deb10u10_amd64.buildinfo
+ b34cc5cefe8d34fb6dbc407d50b930e1 157752 perl optional liblemonldap-ng-common-perl_2.0.2+ds-7+deb10u10_all.deb
+ 64a79dcc4c86c691f4381ae8d5d21b2e 105820 perl optional liblemonldap-ng-handler-perl_2.0.2+ds-7+deb10u10_all.deb
+ 0a2d9d5d090e6160ccee14d42591dcd1 333316 perl optional liblemonldap-ng-manager-perl_2.0.2+ds-7+deb10u10_all.deb
+ f9e83e462c1967ba5c73c25bfa111f1e 2830904 perl optional liblemonldap-ng-portal-perl_2.0.2+ds-7+deb10u10_all.deb
+

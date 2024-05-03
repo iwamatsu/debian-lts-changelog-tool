@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 22 Jul 2023 18:03:02 +0200
+Source: gst-plugins-base1.0
+Architecture: source
+Version: 1.14.4-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of GStreamer packages <gst-plugins-base1.0@packages.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ gst-plugins-base1.0 (1.14.4-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-37328
+     SA-2023-0002: fix for heap overwrite
+   * similar to SA-2023-001
+     fix for integer overflow during parsing of tags
+Checksums-Sha1:
+ 3a700f8716a54982013ee9f81cbe05a1db961059 4282 gst-plugins-base1.0_1.14.4-2+deb10u2.dsc
+ 204ad46dca52230adb80bd96fcad923555251af2 3703232 gst-plugins-base1.0_1.14.4.orig.tar.xz
+ bd609a31c823aaa38d3b5189069db04c0aeb5f54 46264 gst-plugins-base1.0_1.14.4-2+deb10u2.debian.tar.xz
+ e942703d1409bc4216fc00884d1fc42d40779747 20532 gst-plugins-base1.0_1.14.4-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 2b705a2404422b5f88a97709d2a48b108d4cf792d8f2af9e2c126955e481cca8 4282 gst-plugins-base1.0_1.14.4-2+deb10u2.dsc
+ ca6139490e48863e7706d870ff4e8ac9f417b56f3b9e4b3ce490c13b09a77461 3703232 gst-plugins-base1.0_1.14.4.orig.tar.xz
+ 544c3a1b8c6435d9d3e82a5aa8ca9cc70bf39bdce8c064c1bed964d65d86e8b2 46264 gst-plugins-base1.0_1.14.4-2+deb10u2.debian.tar.xz
+ 32846126f4a098320189b5bc12822751d1b294bd3ac00663e485c6478d28d5cd 20532 gst-plugins-base1.0_1.14.4-2+deb10u2_amd64.buildinfo
+Files:
+ 9850d2ac020b54ac9ba502bc62f6899b 4282 libs optional gst-plugins-base1.0_1.14.4-2+deb10u2.dsc
+ 4dbe20c1bf44191c2b8833234df5cb2a 3703232 libs optional gst-plugins-base1.0_1.14.4.orig.tar.xz
+ 679f95c347e0de3aec5f5f91936357ab 46264 libs optional gst-plugins-base1.0_1.14.4-2+deb10u2.debian.tar.xz
+ 69da73c0a23571f024d726cc877f87c7 20532 libs optional gst-plugins-base1.0_1.14.4-2+deb10u2_amd64.buildinfo
+

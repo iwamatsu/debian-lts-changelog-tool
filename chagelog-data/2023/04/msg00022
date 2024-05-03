@@ -1,0 +1,61 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 21 Apr 2023 13:00:35 +0100
+Source: connman
+Binary: connman connman-dbgsym connman-dev connman-doc connman-vpn connman-vpn-dbgsym
+Architecture: source amd64 all
+Version: 1.36-2.1~deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Alexander Sack <asac@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ connman    - Intel Connection Manager daemon
+ connman-dev - Development files for connman
+ connman-doc - ConnMan documentation
+ connman-vpn - Intel Connection Manager daemon - VPN daemon
+Closes: 1034393
+Changes:
+ connman (1.36-2.1~deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-28488: Prevent an issue whereby network-adjacent attackers
+     operating a crafted DHCP server could have caused a stack-based buffer
+     overflow, resulting in a denial of service through terminating the connman
+     process. (Closes: #1034393)
+   * Allow Lintian failures.
+Checksums-Sha1:
+ 180dde8ffade7334f001bd492006917ca1d9aa62 2222 connman_1.36-2.1~deb10u5.dsc
+ 8f29df34231c214c06ee6eca9ed7c233212b8d12 692616 connman_1.36.orig.tar.xz
+ f99f1e48ea70ea36334b5fdfa21cb414ad3a8c11 21804 connman_1.36-2.1~deb10u5.debian.tar.xz
+ 89985253db20e270f3ab3d9c89b8a384bdbbe6c8 1496888 connman-dbgsym_1.36-2.1~deb10u5_amd64.deb
+ 57538317c76cb18959371774717bed1e224b505c 29244 connman-dev_1.36-2.1~deb10u5_amd64.deb
+ 38dc2356fee2013f36943082ab215a8a4b1d8d0f 66560 connman-doc_1.36-2.1~deb10u5_all.deb
+ c560740d7dbf23202d6416e912975a585e1a1741 465956 connman-vpn-dbgsym_1.36-2.1~deb10u5_amd64.deb
+ 517bee4bf6c73f62ae0a78e3dafe01de77751448 129480 connman-vpn_1.36-2.1~deb10u5_amd64.deb
+ f053c80df9ef29b867d5ad891581a44364c652d2 10235 connman_1.36-2.1~deb10u5_amd64.buildinfo
+ 453c4d499ba634fea005d8362fd3cee5b77aea7c 408680 connman_1.36-2.1~deb10u5_amd64.deb
+Checksums-Sha256:
+ fa0d1c47c18a886ae1fdb81182351832a4fc2ba8e18a1fe8d7ad38d80a4f94ae 2222 connman_1.36-2.1~deb10u5.dsc
+ c789db41cc443fa41e661217ea321492ad59a004bebcd1aa013f3bc10a6e0074 692616 connman_1.36.orig.tar.xz
+ 65922353470dc043716fb8ec2df201116fb49baaa6f800e4d6e82a6edfd8c058 21804 connman_1.36-2.1~deb10u5.debian.tar.xz
+ e08f9760ee65b78500bdd7f765c8ba1e97854d3d6268a7cf130f43e214f7bf12 1496888 connman-dbgsym_1.36-2.1~deb10u5_amd64.deb
+ 9be7c970dfb7f664b1a1d0ae80810db8a5df32435a729f02525bf5353f689d17 29244 connman-dev_1.36-2.1~deb10u5_amd64.deb
+ 423091f0434ac5edf477780f06d5346ed71e8281b0daab138510d535df0535a4 66560 connman-doc_1.36-2.1~deb10u5_all.deb
+ ec6c78bb8ae98b34a9e66e5370890ba96c9de83776a63a9ada68b78525d91219 465956 connman-vpn-dbgsym_1.36-2.1~deb10u5_amd64.deb
+ 13ebd9e550efe06761500b6c475c4ba9762fdc231a803dc3d3fbc3a69be51f19 129480 connman-vpn_1.36-2.1~deb10u5_amd64.deb
+ d3e6cc45b9822e616ec4ebce8b2cb123de9d13ca21aed1ba181e684c86c8eefe 10235 connman_1.36-2.1~deb10u5_amd64.buildinfo
+ 4a3cca8de44f768312ef127866a5a9ddb49bb4bbc34bc8caab0328a7b97e9a81 408680 connman_1.36-2.1~deb10u5_amd64.deb
+Files:
+ 8dd28ff6a6a5bbd120f01c4d1be77b49 2222 net optional connman_1.36-2.1~deb10u5.dsc
+ dae77d9c904d2c223ae849e32079d57e 692616 net optional connman_1.36.orig.tar.xz
+ 996e64cf048d9d49a0f0eb2a8f9edec2 21804 net optional connman_1.36-2.1~deb10u5.debian.tar.xz
+ 445ecd934e69144f405b60131724174a 1496888 debug optional connman-dbgsym_1.36-2.1~deb10u5_amd64.deb
+ 55e5fb87cc375560ae801d9a65356cf0 29244 devel optional connman-dev_1.36-2.1~deb10u5_amd64.deb
+ 7ef0a8771a5fe8a94b01a4f389c99f84 66560 doc optional connman-doc_1.36-2.1~deb10u5_all.deb
+ d460ea37336c93625ed96157c0481481 465956 debug optional connman-vpn-dbgsym_1.36-2.1~deb10u5_amd64.deb
+ 50ef8911502f33665d6e4d709e00a3a0 129480 net optional connman-vpn_1.36-2.1~deb10u5_amd64.deb
+ 890ae5776db3a02b3a9901880bc1b754 10235 net optional connman_1.36-2.1~deb10u5_amd64.buildinfo
+ 2775afbf3347a5a4764f7080eb6f11ca 408680 net optional connman_1.36-2.1~deb10u5_amd64.deb
+

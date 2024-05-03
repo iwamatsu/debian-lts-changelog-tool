@@ -1,0 +1,43 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 07 Mar 2022 04:46:14 +0530
+Source: libgit2
+Architecture: source
+Version: 0.25.1+really0.24.6-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Russell Sim <russell.sim@gmail.com>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ libgit2 (0.25.1+really0.24.6-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix potential OOB-read when processing
+     ng packet. (Fixes: CVE-2018-15501)
+   * Add patch to fix out-of-bounds read of delta.
+     (Fixes: CVE-2018-10888)
+   * Add patch to fix sign-extension of big left-shift.
+     (Fixes: CVE-2018-10887)
+   * Add patch to convert read_entry to return entry size
+     via an out-param. (Fixes: CVE-2018-8099)
+   * Add patch to disallow NTFS Alternate Data Stream attacks,
+     even on Linux/macOS. (Fixes: CVE-2020-12278)
+   * Add patch to protect against 8.3 "short name" attacks
+     also on Linux/macOS. (Fixes: CVE-2020-12279)
+Checksums-Sha1:
+ 7db89b7e3d93219990b80c5dafe911753b44acb6 2168 libgit2_0.25.1+really0.24.6-1+deb9u1.dsc
+ 259d7ccdf716b273f239810bdd567195c3e02d0d 4178476 libgit2_0.25.1+really0.24.6.orig.tar.gz
+ ad58427c28ff5aa5e71bcae783653b28e490b033 18548 libgit2_0.25.1+really0.24.6-1+deb9u1.debian.tar.xz
+ 0222a6a8d4933f9a6db0287d58c9822010914a9a 6190 libgit2_0.25.1+really0.24.6-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 90c8c7a1810b93e2cb6544f86157f48974eb98dd3ca03fb0996f22033d01529c 2168 libgit2_0.25.1+really0.24.6-1+deb9u1.dsc
+ 7b441a96967ff525e790f8b66859faba5c6be4c347124011f536ae9075ebc30c 4178476 libgit2_0.25.1+really0.24.6.orig.tar.gz
+ f4d9f3e62f55daf141b2e15adb35ff278da8ca59567dcf6e7b6f60fad02723b0 18548 libgit2_0.25.1+really0.24.6-1+deb9u1.debian.tar.xz
+ f0f620fcbb19b06869611e5d66d163de4dc53f2522128b508ae101b1740eeb18 6190 libgit2_0.25.1+really0.24.6-1+deb9u1_source.buildinfo
+Files:
+ c8f797d05904da5727d903e19b65fd95 2168 libs extra libgit2_0.25.1+really0.24.6-1+deb9u1.dsc
+ cbdf07ec58f63fd01a48d1a6f7b9c37d 4178476 libs extra libgit2_0.25.1+really0.24.6.orig.tar.gz
+ c79f572ad6cd2da574f9cc1bed67f726 18548 libs extra libgit2_0.25.1+really0.24.6-1+deb9u1.debian.tar.xz
+ 5c58b07bcabd7157e75aa9501d524c7d 6190 libs extra libgit2_0.25.1+really0.24.6-1+deb9u1_source.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 14 Dec 2022 16:26:20 +0100
+Source: git
+Architecture: source
+Version: 1:2.20.1-2+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Gerrit Pape <pape@smarden.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ git (1:2.20.1-2+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix rare segfault witnessed on armhf testsuite.
+Checksums-Sha1:
+ 47d2f07e381d2addaee2a0df1b22f92ecc2de933 2894 git_2.20.1-2+deb10u6.dsc
+ dc3ea390e366dd1a021924612e2741cd7831a8ba 676232 git_2.20.1-2+deb10u6.debian.tar.xz
+ 71177a96a5430ef3f80f494702eae1e774e1d618 11775 git_2.20.1-2+deb10u6_all.buildinfo
+Checksums-Sha256:
+ e4693cb9f20d2a7061b43bb30224ee41d779d027e15785e85f8f67eddf4ee3ae 2894 git_2.20.1-2+deb10u6.dsc
+ ce8c8cb4a3f420589aeb2ac244bab88316e34641c7a3efceb049d2854b54196b 676232 git_2.20.1-2+deb10u6.debian.tar.xz
+ 1cf700dc34d06c96d7b00619ca3a9285cc0f823dab0654b6547747e805e222ba 11775 git_2.20.1-2+deb10u6_all.buildinfo
+Files:
+ 0ccd81b92ffd66c534e26594ee125d5a 2894 vcs optional git_2.20.1-2+deb10u6.dsc
+ f5e87836ec9430dd3e96615fd72e2ec6 676232 vcs optional git_2.20.1-2+deb10u6.debian.tar.xz
+ c50ed02747964268d9b16f5c0e720889 11775 vcs optional git_2.20.1-2+deb10u6_all.buildinfo
+

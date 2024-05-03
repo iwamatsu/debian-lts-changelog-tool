@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 22 Dec 2023 19:49:06 +0100
+Source: osslsigncode
+Architecture: source
+Version: 2.0+really2.5-4+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Stephen Kitt <skitt@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1035875
+Changes:
+ osslsigncode (2.0+really2.5-4+deb10u1) buster-security; urgency=medium
+ .
+   * Backport Debian version 2.5-4 to buster:
+     - Fixes CVE-2023-36377, A Buffer Overflow vulnerability (Closes: #1035875)
+   * To make it compile and minimize changes in buster:
+     - Revert debhelper compat level to 12
+     - Add patch to reduce required CMake version to the buster's version.
+     - This requires to fix the CTest "remove_files", which acutally cleans up
+       after build.
+     - Revert swtich to the OpenSSL variant of libcurl.
+Checksums-Sha1:
+ afec8459ecee47e002292b69428add9b24f6ca4c 2038 osslsigncode_2.0+really2.5-4+deb10u1.dsc
+ 3241305fb3b1208635f9462dbe2fd46fd1f100de 154421 osslsigncode_2.0+really2.5.orig.tar.gz
+ 54efe283354635c9e53a4d707f1ad70ee01ea242 32764 osslsigncode_2.0+really2.5-4+deb10u1.debian.tar.xz
+ 542259296ed3e8c4d354784c5b9ac3117f36689b 9128 osslsigncode_2.0+really2.5-4+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 085dca11529e8b21999361ff2d1cf1290d414ad97b639ef402ecf452efe9f64a 2038 osslsigncode_2.0+really2.5-4+deb10u1.dsc
+ 815a0e6dcc1cb327da0cbd22589269aae1191d278e3570cd6e4a7c12d9fabe92 154421 osslsigncode_2.0+really2.5.orig.tar.gz
+ 68fd4345ddecafa17c47e2fa535d178e1d145ac20150ecac8807ec2d7fe618cd 32764 osslsigncode_2.0+really2.5-4+deb10u1.debian.tar.xz
+ e217c4e2f9ed3f3d28759c5cefdb855a10cb5b735937099acb69b89d2a8f4d0a 9128 osslsigncode_2.0+really2.5-4+deb10u1_amd64.buildinfo
+Files:
+ 556b4af21dd5137a078b054e937c755b 2038 otherosfs optional osslsigncode_2.0+really2.5-4+deb10u1.dsc
+ 4f522b69a85771a836ff7d2753a2043b 154421 otherosfs optional osslsigncode_2.0+really2.5.orig.tar.gz
+ 96b06381e744a1dc24cf745e45b51cf3 32764 otherosfs optional osslsigncode_2.0+really2.5-4+deb10u1.debian.tar.xz
+ 1f87e24ef335d80d9d5eda18b2e30424 9128 otherosfs optional osslsigncode_2.0+really2.5-4+deb10u1_amd64.buildinfo
+

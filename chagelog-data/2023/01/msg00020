@@ -1,0 +1,56 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Oct 2022 18:03:47 +0530
+Source: trafficserver
+Binary: trafficserver trafficserver-dbgsym trafficserver-dev trafficserver-experimental-plugins trafficserver-experimental-plugins-dbgsym
+Architecture: source amd64
+Version: 8.0.2+ds-1+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Aron Xu <aron@debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ trafficserver - fast, scalable and extensible HTTP/1.1 and HTTP/2.0 caching proxy
+ trafficserver-dev - Apache Traffic Server Software Developers Kit (SDK)
+ trafficserver-experimental-plugins - experimental plugins for Apache Traffic Server
+Changes:
+ trafficserver (8.0.2+ds-1+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Multiple CVE fixes
+     + CVE-2021-37150: Protocol vs scheme mismatch
+     + CVE-2022-25763 Improper input validation on HTTP/2 headers
+     + CVE-2022-28129  Insufficient Validation of HTTP/1.x Headers
+     + CVE-2022-31780 HTTP/2 framing vulnerabilities
+Checksums-Sha1:
+ 8d85f379d94b73aaa316e05efc0ab9b54c91397c 2834 trafficserver_8.0.2+ds-1+deb10u7.dsc
+ fcc2bef295c541b7a0253a1eebc7a0471e25a294 7836504 trafficserver_8.0.2+ds.orig.tar.xz
+ f11078382a5136448aa086293d4685df9c559526 103240 trafficserver_8.0.2+ds-1+deb10u7.debian.tar.xz
+ 39180931bda5e123ed91154b21f8c19b0eb2ec00 71003708 trafficserver-dbgsym_8.0.2+ds-1+deb10u7_amd64.deb
+ d457ad0922ad7246598de43a06f9a7c201c8ca13 378380 trafficserver-dev_8.0.2+ds-1+deb10u7_amd64.deb
+ 1900a968d252edba9def51e3c36ae6d66cc8431f 5086776 trafficserver-experimental-plugins-dbgsym_8.0.2+ds-1+deb10u7_amd64.deb
+ 1bf1bcb504abdd5eee6380cb7089896cec59fdc6 366364 trafficserver-experimental-plugins_8.0.2+ds-1+deb10u7_amd64.deb
+ 4132f9dd12db78781506ce36241448cb5eb59ebf 15733 trafficserver_8.0.2+ds-1+deb10u7_amd64.buildinfo
+ 14a4f7da68e0640002947dfdc48e305c48bd9041 3130572 trafficserver_8.0.2+ds-1+deb10u7_amd64.deb
+Checksums-Sha256:
+ 76e6ab76ced05fb73095885975f9c96f52928bdaa8c3c2d2e89bfeba5c98a34a 2834 trafficserver_8.0.2+ds-1+deb10u7.dsc
+ 6d761227546db6db481a8fbd49c45d750a9f652952e0b62890880751b3089e24 7836504 trafficserver_8.0.2+ds.orig.tar.xz
+ 76ca91d48a88f013fb67b04a99d78e7d5159669abdeea0a05c41a5e396a95c6a 103240 trafficserver_8.0.2+ds-1+deb10u7.debian.tar.xz
+ e035ca228263d15deb054f2999e9a5e32fd35ab6624effc5e5da506c9caa2ef6 71003708 trafficserver-dbgsym_8.0.2+ds-1+deb10u7_amd64.deb
+ 8e921b7218d07d3f85f6f47c7d1081c7c09fa162f3ee9d76c0c3df94b5750c69 378380 trafficserver-dev_8.0.2+ds-1+deb10u7_amd64.deb
+ e1e740ab274b8b953e04d8ba9b57eb43886d6faabeaebc1b8f1e47768ff73e56 5086776 trafficserver-experimental-plugins-dbgsym_8.0.2+ds-1+deb10u7_amd64.deb
+ 27de9194275502f7e727865b3de43aa9393284d80cee90c4f0816c26c366aef5 366364 trafficserver-experimental-plugins_8.0.2+ds-1+deb10u7_amd64.deb
+ efb82a72f1bfb1624dce6bdd7bad7c75c2774ac6cf2aa443f1e749bf9b04716d 15733 trafficserver_8.0.2+ds-1+deb10u7_amd64.buildinfo
+ 909add835951eff4258fa5b398626a213cd85c8e4b91ff2301a4b40d4485bc55 3130572 trafficserver_8.0.2+ds-1+deb10u7_amd64.deb
+Files:
+ 600e91fcd704e5efcc8da8e2348e032f 2834 web optional trafficserver_8.0.2+ds-1+deb10u7.dsc
+ 2a9abb343af9a20d2a644165de74f9d1 7836504 web optional trafficserver_8.0.2+ds.orig.tar.xz
+ 9cb11111d46460bc25c0b0e021d0a896 103240 web optional trafficserver_8.0.2+ds-1+deb10u7.debian.tar.xz
+ a815edb4e9bb0c6894299be7e9804325 71003708 debug optional trafficserver-dbgsym_8.0.2+ds-1+deb10u7_amd64.deb
+ 694e863219715876ef18e70361e41ed5 378380 web optional trafficserver-dev_8.0.2+ds-1+deb10u7_amd64.deb
+ c01d7ea7e898438257c316baca98970c 5086776 debug optional trafficserver-experimental-plugins-dbgsym_8.0.2+ds-1+deb10u7_amd64.deb
+ 4913387b1cea279660e6585e2d5da65f 366364 web optional trafficserver-experimental-plugins_8.0.2+ds-1+deb10u7_amd64.deb
+ fc34b83dbecdbabab11d23eeaf08ad9d 15733 web optional trafficserver_8.0.2+ds-1+deb10u7_amd64.buildinfo
+ ba54aeae18c1bd120722022a2aa0b369 3130572 web optional trafficserver_8.0.2+ds-1+deb10u7_amd64.deb
+

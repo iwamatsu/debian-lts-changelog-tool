@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 04 May 2024 16:16:32 +0200
+Source: intel-microcode
+Binary: intel-microcode
+Architecture: source amd64
+Version: 3.20240312.1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Description:
+ intel-microcode - Processor microcode firmware for Intel CPUs
+Closes: 1066108
+Changes:
+ intel-microcode (3.20240312.1~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * No-change upload of the bullseye version, rebuilt for buster (LTS),
+     Please consult the changelog entries 3.20240312.1 and 3.20240312.1~deb11u1
+     for details.
+   * Adresses CVE-2023-43490 CVE-2023-39368 CVE-2023-38575 CVE-2023-22655
+     CVE-2023-28746 (Closes: #1066108)
+Checksums-Sha1:
+ b3654bca27445fa71d025ce33bf389b220da54d3 1821 intel-microcode_3.20240312.1~deb10u1.dsc
+ 72c04747bf9d6f830f2293381bfec6f9620cd056 7674952 intel-microcode_3.20240312.1~deb10u1.tar.xz
+ 711a4a6024164e8be4600ec386b4e73fff2317a2 5768 intel-microcode_3.20240312.1~deb10u1_amd64.buildinfo
+ c7adc2078891c530b1405e81315286615a6b2614 7008964 intel-microcode_3.20240312.1~deb10u1_amd64.deb
+Checksums-Sha256:
+ 8874cae7bf44ee4766f8613c7a35f9c54f0a49ceb93387ee331998c7bdcc9913 1821 intel-microcode_3.20240312.1~deb10u1.dsc
+ 7287f0a1722bb84ef10da58f709f805cd2de73c33b2f3d55fec8cdfb4e50b37a 7674952 intel-microcode_3.20240312.1~deb10u1.tar.xz
+ 51e11eef28b58420b93cea8866896ada7bd194c1c86ffc4bc90882275c97a87c 5768 intel-microcode_3.20240312.1~deb10u1_amd64.buildinfo
+ f273eccdeff1e12def1f76ce0f34854e3c9c80e84ad73cecff64b8f24a8114e1 7008964 intel-microcode_3.20240312.1~deb10u1_amd64.deb
+Files:
+ 7945bb17885c30c1a07d39e7a712c80b 1821 non-free/admin standard intel-microcode_3.20240312.1~deb10u1.dsc
+ d6245fb7aac403d3d169f212d7aaeb5b 7674952 non-free/admin standard intel-microcode_3.20240312.1~deb10u1.tar.xz
+ fd8805f88c6da4428e18106e88dc858c 5768 non-free/admin standard intel-microcode_3.20240312.1~deb10u1_amd64.buildinfo
+ c51f59eb8356a2dac6bacc506e393c9f 7008964 non-free/admin standard intel-microcode_3.20240312.1~deb10u1_amd64.deb
+

@@ -1,0 +1,30 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 24 Aug 2022 06:09:13 +0900
+Source: firefox-esr
+Architecture: source
+Version: 91.13.0esr-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Mike Hommey <glandium@debian.org>
+Changes:
+ firefox-esr (91.13.0esr-1~deb10u1) buster-security; urgency=medium
+ .
+   * New upstream release.
+   * Fixes for mfsa2022-35, also known as:
+     CVE-2022-38472, CVE-2022-38473, CVE-2022-38478.
+Checksums-Sha1:
+ ba147966626010fb81cf43d02939410991439410 45890 firefox-esr_91.13.0esr-1~deb10u1.dsc
+ 1263cc6aef0d680945d7e78ee5c8e9d175c5b613 173568 firefox-esr_91.13.0esr-1~deb10u1.debian.tar.xz
+ 8ec94ee5c5080877568cb0ccb867192904563965 7399 firefox-esr_91.13.0esr-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ ea53b49618b3dc0db3b973201ea80a9a03c20f1b10722eb241040035e7d71750 45890 firefox-esr_91.13.0esr-1~deb10u1.dsc
+ 062565c52458a5b0015d270c16a359390d8349592016c856942601447d13c7ff 173568 firefox-esr_91.13.0esr-1~deb10u1.debian.tar.xz
+ 5ac49f057c639b0c83e9be142d751dfd2de568ba8801548ec32e113e26817d64 7399 firefox-esr_91.13.0esr-1~deb10u1_source.buildinfo
+Files:
+ fc539915a71df99d605d63443d4de072 45890 web optional firefox-esr_91.13.0esr-1~deb10u1.dsc
+ 5f36753274add8449b2482998e5e9736 173568 web optional firefox-esr_91.13.0esr-1~deb10u1.debian.tar.xz
+ 29bc5104374e84e3985d3d38cb912160 7399 web optional firefox-esr_91.13.0esr-1~deb10u1_source.buildinfo
+

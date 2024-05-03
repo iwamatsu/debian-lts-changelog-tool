@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 23 Oct 2023 10:29:25 +0200
+Source: dbus
+Architecture: source
+Version: 1.12.28-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ dbus (1.12.28-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream stable release. Notable changes:
+     - CVE-2023-34969: denial of service if a monitor is active.
+Checksums-Sha1:
+ a3b8867914454ed484160827bbb07336577cd734 3784 dbus_1.12.28-0+deb10u1.dsc
+ b367eab7a052f9079ed3c6bdfc5db95031df6ee4 2122182 dbus_1.12.28.orig.tar.gz
+ 4b2a2fd2909cd72dddbca9202938095437484378 833 dbus_1.12.28.orig.tar.gz.asc
+ 78009f7be10d558fdfeb71acf1b535e0f01034e3 63528 dbus_1.12.28-0+deb10u1.debian.tar.xz
+ 2240ed165cd584b13dfb71114a71a087cb5dcaad 7035 dbus_1.12.28-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 9f632ce3f13429ca608f87bcd0afd2cd9fc59b54a2a375bffb894f3e7d906c6b 3784 dbus_1.12.28-0+deb10u1.dsc
+ 9da1e3f2b73f75eec0a9e4509d64be43909d1f2853fe809528a0a53984d76420 2122182 dbus_1.12.28.orig.tar.gz
+ 3f6c19d8c063459682d49d4bf74fc0d13290664ae966f612f118f4d4a73ddaab 833 dbus_1.12.28.orig.tar.gz.asc
+ ef882af20c3855f284967c0f8ff1805fc2d333b2a720f7da1ccd59a9a2322ccd 63528 dbus_1.12.28-0+deb10u1.debian.tar.xz
+ 63f1d18477e9e8e521a17bb2b0236233e73d74856e0e8054c17cc98392e9cad0 7035 dbus_1.12.28-0+deb10u1_source.buildinfo
+Files:
+ e802114cb9656550a829ea9a96d11de3 3784 admin optional dbus_1.12.28-0+deb10u1.dsc
+ 28d92a7a576f7feec7ddb3bb87b28b43 2122182 admin optional dbus_1.12.28.orig.tar.gz
+ fdb93fff82091ad4527217ecc9b02c5b 833 admin optional dbus_1.12.28.orig.tar.gz.asc
+ b78ac95985261a5cfc4fb7f92bdfff21 63528 admin optional dbus_1.12.28-0+deb10u1.debian.tar.xz
+ 9f94699cfaee3142c1122f80b7e26f3e 7035 admin optional dbus_1.12.28-0+deb10u1_source.buildinfo
+

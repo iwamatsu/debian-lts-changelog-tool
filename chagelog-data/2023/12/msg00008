@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 14 Dec 2023 13:54:40 +0000
+Source: haproxy
+Built-For-Profiles: nocheck
+Architecture: source
+Version: 1.8.19-1+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian HAProxy Maintainers <haproxy@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ haproxy (1.8.19-1+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-45539: HAProxy before 2.8.2 accepted the "#" (ie. the "pound" or
+     "hash" symbol) as part of a URI component. This might have allowed remote
+     attackers to obtain sensitive information upon HAProxy's misinterpretation
+     of a "path_end" rule (eg. routing "index.html#.png" to a static server).
+Checksums-Sha1:
+ e6791836d1dc388e6713707e287944f082cc063a 2294 haproxy_1.8.19-1+deb10u5.dsc
+ 0bf50281177405a1e199d1cf89cdbeb348d60c43 75340 haproxy_1.8.19-1+deb10u5.debian.tar.xz
+ eecb69b806ea96efc75b6408fddff43e9cebb7e3 8757 haproxy_1.8.19-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ efc825f5b39113a70b7a573c31894529595e59531177fa679882a695a4a19115 2294 haproxy_1.8.19-1+deb10u5.dsc
+ dcd46f50e69dbcdcef008b1869aa6528da11a9672ee95f305ca403f7e267f7be 75340 haproxy_1.8.19-1+deb10u5.debian.tar.xz
+ 2e4bd62d3a83ebecf826122ea87b8251518ab0c327d60f3bff598d00e712f0e0 8757 haproxy_1.8.19-1+deb10u5_amd64.buildinfo
+Files:
+ 7168cc66fde96a9caf5c9250ac8f3a57 2294 net optional haproxy_1.8.19-1+deb10u5.dsc
+ 540f95cb8624517a6d93dd9fe6f59dac 75340 net optional haproxy_1.8.19-1+deb10u5.debian.tar.xz
+ 4c4c3d7f8cf3d4c63cae9f3d9523b209 8757 net optional haproxy_1.8.19-1+deb10u5_amd64.buildinfo
+

@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 08 Sep 2023 14:26:05 +0200
+Source: jtreg6
+Architecture: source
+Version: 6.1+2-1~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ jtreg6 (6.1+2-1~deb10u2) buster-security; urgency=medium
+ .
+   * Backport changes from Ubuntu, thanks Vladimir Petko:
+     - Add testng7, asmtools and jcommander to (build-)deps.
+     - Add missing packages to the classpath and search paths.
+Checksums-Sha1:
+ 1db6ae32d4fa2621700036532d02940a1281d03f 2117 jtreg6_6.1+2-1~deb10u2.dsc
+ 4df5006f9243bb5d19ae8f08477c5f9a85b7ff0e 584709 jtreg6_6.1+2.orig.tar.gz
+ 1d82c9e1506044d0983e8c2a8ba61124ff657f76 7216 jtreg6_6.1+2-1~deb10u2.debian.tar.xz
+ e53c9034dee57da6f1b941dbb959a37d5ff503fe 8822 jtreg6_6.1+2-1~deb10u2_source.buildinfo
+Checksums-Sha256:
+ ff2ff602183f3e6f2ab83a6e13f4821707d560d7b3e9a24e8446d6dd26d9b438 2117 jtreg6_6.1+2-1~deb10u2.dsc
+ d68397542188a24ecf8c42c4cf4b818dda2bd95aee8d6b0980ede78c36fcb40f 584709 jtreg6_6.1+2.orig.tar.gz
+ e21951b41b83027c4ece25890366b7db2f5fd0bdebabf41e640a47f79e4065d7 7216 jtreg6_6.1+2-1~deb10u2.debian.tar.xz
+ 6af8f42b0d06fd9570d6a990c8c11591da898eb61c6c4230a8ebb43c436cb8e5 8822 jtreg6_6.1+2-1~deb10u2_source.buildinfo
+Files:
+ 24c5c958cd6ce31954ff3175cf76bf4e 2117 java optional jtreg6_6.1+2-1~deb10u2.dsc
+ 96f0d82138b253ed4076c80654504dd5 584709 java optional jtreg6_6.1+2.orig.tar.gz
+ 2234b7febd79cf1966973c7c93ec5057 7216 java optional jtreg6_6.1+2-1~deb10u2.debian.tar.xz
+ 474a54d2e68236039497f13a5d675ce7 8822 java optional jtreg6_6.1+2-1~deb10u2_source.buildinfo
+

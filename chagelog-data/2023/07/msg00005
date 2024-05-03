@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 06 Jul 2023 15:36:25 +0000
+Source: libusrsctp
+Architecture: source
+Version: 0.9.3.0+20190127-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 953270
+Changes:
+ libusrsctp (0.9.3.0+20190127-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2019-20503: out-of-bounds reads in function
+     sctp_load_addresses_from_init. (Closes: #953270)
+Checksums-Sha1:
+ 6300fc6a845b63d30b66f75d17fa04f879768209 2287 libusrsctp_0.9.3.0+20190127-2+deb10u1.dsc
+ f3cde7e2e8ba020053f701f04948971196974130 670356 libusrsctp_0.9.3.0+20190127.orig.tar.gz
+ 0e76e48dce44184fe355a26276a164e799849cd1 7360 libusrsctp_0.9.3.0+20190127-2+deb10u1.debian.tar.xz
+ 14c99d8708cef744562db151cb305da11f5193af 8049 libusrsctp_0.9.3.0+20190127-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 135bb5f75b9b78777846d36a3d9155323a59ab377f2473faa392587bb65f10e8 2287 libusrsctp_0.9.3.0+20190127-2+deb10u1.dsc
+ c22546e8b5b88366f8d7135252e3e6e629d93b5825293905ba1d030931fa4010 670356 libusrsctp_0.9.3.0+20190127.orig.tar.gz
+ 4b082348d45c73ae840b2ec5a64b0458067207e4ac84d33c4b6ad319beb65fab 7360 libusrsctp_0.9.3.0+20190127-2+deb10u1.debian.tar.xz
+ beaa85072e2de71baeace52c52c08e573762b8d8dc78af5478a2d0dd83675504 8049 libusrsctp_0.9.3.0+20190127-2+deb10u1_amd64.buildinfo
+Files:
+ cb823900855bdf84acdf14ac4b890cc6 2287 net optional libusrsctp_0.9.3.0+20190127-2+deb10u1.dsc
+ 5063f0bff383d63503f3b81a35f0174f 670356 net optional libusrsctp_0.9.3.0+20190127.orig.tar.gz
+ 7455f034d8876003385cc88a9e8eb101 7360 net optional libusrsctp_0.9.3.0+20190127-2+deb10u1.debian.tar.xz
+ 0c2a62c13b826e1d1f2e75d5f53697a0 8049 net optional libusrsctp_0.9.3.0+20190127-2+deb10u1_amd64.buildinfo
+

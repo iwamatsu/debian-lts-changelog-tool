@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 10 Jun 2022 13:37:42 +0200
+Source: vlc
+Binary: vlc libvlc-dev libvlc5 libvlccore-dev libvlccore9 libvlc-bin vlc-bin vlc-data vlc-l10n vlc-plugin-base vlc-plugin-access-extra vlc-plugin-video-output vlc-plugin-video-splitter vlc-plugin-visualization vlc-plugin-skins2 vlc-plugin-qt vlc-plugin-fluidsynth vlc-plugin-jack vlc-plugin-notify vlc-plugin-svg vlc-plugin-samba vlc-nox vlc-plugin-zvbi
+Architecture: source
+Version: 3.0.12-0+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ libvlc-bin - tools for VLC's base library
+ libvlc-dev - development files for libvlc
+ libvlc5    - multimedia player and streamer library
+ libvlccore-dev - development files for libvlccore
+ libvlccore9 - base library for VLC and its modules
+ vlc        - multimedia player and streamer
+ vlc-bin    - binaries from VLC
+ vlc-data   - Common data for VLC
+ vlc-l10n   - Translations for VLC
+ vlc-nox    - transitional dummy package
+ vlc-plugin-access-extra - multimedia player and streamer (extra access plugins)
+ vlc-plugin-base - multimedia player and streamer (base plugins)
+ vlc-plugin-fluidsynth - FluidSynth plugin for VLC
+ vlc-plugin-jack - Jack audio plugins for VLC
+ vlc-plugin-notify - LibNotify plugin for VLC
+ vlc-plugin-qt - multimedia player and streamer (Qt plugin)
+ vlc-plugin-samba - Samba plugin for VLC
+ vlc-plugin-skins2 - multimedia player and streamer (Skins2 plugin)
+ vlc-plugin-svg - SVG plugin for VLC
+ vlc-plugin-video-output - multimedia player and streamer (video output plugins)
+ vlc-plugin-video-splitter - multimedia player and streamer (video splitter plugins)
+ vlc-plugin-visualization - multimedia player and streamer (visualization plugins)
+ vlc-plugin-zvbi - transitional dummy package
+Changes:
+ vlc (3.0.12-0+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * New upstream release
+     - CVE-2020-26664: A vulnerability in EbmlTypeDispatcher::send allows
+       attackers to trigger a heap-based buffer overflow via a crafted
+       .mkv file.
+Checksums-Sha1:
+ 801905833497aa9841faded4510be053b9102f00 6429 vlc_3.0.12-0+deb9u1.dsc
+ 7c53fc85c0cfda3f9d813230a2ac3c3c520ff2ef 64484 vlc_3.0.12-0+deb9u1.debian.tar.xz
+ 274c36c81c09b015b5c59fdfc95e8d7b45e1c926 27162 vlc_3.0.12-0+deb9u1_all.buildinfo
+Checksums-Sha256:
+ 81e7537a0639330bfe7c197d65dddc82c4d9885246b4b6f9195683cb6f6651e2 6429 vlc_3.0.12-0+deb9u1.dsc
+ 3896905446764e752eb024b9a17a39b2c7e42a94e9d9a730762656144bb110f8 64484 vlc_3.0.12-0+deb9u1.debian.tar.xz
+ e6470ea22ff7689e72bf5e64ae01f746664c810229ab83013e13fadb6c6fc834 27162 vlc_3.0.12-0+deb9u1_all.buildinfo
+Files:
+ 94778ba712a5300e35ee0cda1b9a7717 6429 video optional vlc_3.0.12-0+deb9u1.dsc
+ ef657a1d17a88a825c107759093c8492 64484 video optional vlc_3.0.12-0+deb9u1.debian.tar.xz
+ 0806fb39bc8a8c6dff083ce4091d9e1e 27162 video optional vlc_3.0.12-0+deb9u1_all.buildinfo
+

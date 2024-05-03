@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 Nov 2023 22:02:12 +0100
+Source: horizon
+Architecture: source
+Version: 3:14.0.2-3+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ horizon (3:14.0.2-3+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-45582: Open Redirect vulnerability via the success_url
+     parameter.
+   * Add DEP-8 tests (inspired by debian/rules).
+Checksums-Sha1:
+ 45cad65f40ec551d9a4a16fd8f4fd45c5176db45 4821 horizon_14.0.2-3+deb10u3.dsc
+ ac8cf4003aaadbebef37fb362dd2a23af6ff01a5 35732 horizon_14.0.2-3+deb10u3.debian.tar.xz
+ 2bfb4bc30f10e2157c715727f4453c261ed73cd0 16259 horizon_14.0.2-3+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 8a86f976d74ff497ec9be821b2edd36a842e773beb0a4b6c5527754ce0ca9158 4821 horizon_14.0.2-3+deb10u3.dsc
+ 16248f3eb91db7691e5949a2e87910da870b6501675ce43e677e4e1e60715357 35732 horizon_14.0.2-3+deb10u3.debian.tar.xz
+ 850fc96fe0fa664e8e8c65627bb860b5f181b2292cf7ad9f5771a460c6f965de 16259 horizon_14.0.2-3+deb10u3_amd64.buildinfo
+Files:
+ e96a20984d4081bc0e6c2ee899711beb 4821 net optional horizon_14.0.2-3+deb10u3.dsc
+ 958be3597fdd2ca4a593748e1629eb29 35732 net optional horizon_14.0.2-3+deb10u3.debian.tar.xz
+ 4f6600ffcf5780ebcc3dccdae831d1a7 16259 net optional horizon_14.0.2-3+deb10u3_amd64.buildinfo
+

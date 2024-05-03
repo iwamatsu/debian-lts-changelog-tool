@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 31 Mar 2024 15:22:37 +0200
+Source: libvirt
+Architecture: source
+Version: 5.0.0-4+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 959447 971555 990709 991594 1002535 1009075 1066058 1067461
+Changes:
+ libvirt (5.0.0-4+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2020-10703: NULL pointer dereference in the libvirt API that is
+     responsible for fetching a storage pool based on its target path.
+   * Fix CVE-2020-12430: Memory leak in the virDomainListGetStats libvirt API
+     that is responsible for retrieving domain statistics when managing QEMU
+     guests. (Closes: #959447)
+   * Fix CVE-2020-25637: Double free memory issue in the libvirt API that is
+     responsible for requesting information about network interfaces of a
+     running QEMU domain. (Closes: #971555)
+   * Fix CVE-2021-3631: SELinux MCS may be accessed by another machine.
+     (Closes: #990709)
+   * Fix CVE-2021-3667: Improper locking in the
+     virStoragePoolLookupByTargetPath API. (Closes: #991594)
+   * Fix CVE-2021-3975: Use-after-free vulnerability. The
+     qemuMonitorUnregister() function in qemuProcessHandleMonitorEOF is called
+     using multiple threads without being adequately protected by a monitor
+     lock.
+   * Fix CVE-2021-4147: Deadlock and crash in libxl driver. (Closes: #1002535)
+   * Fix CVE-2022-0897: Missing locking in nwfilterConnectNumOfNWFilters.
+     (Closes: #1009075)
+   * Fix CVE-2024-1441: Off-by-one error in the udevListInterfacesByStatus()
+     function. (Closes: #1066058)
+   * Fix CVE-2024-2494: Missing check for negative array lengths in RPC server
+     de-serialization routines. (Closes: #1067461)
+   * Fix CVE-2024-2496: NULL pointer dereference in the
+     udevConnectListAllInterfaces() function.
+Checksums-Sha1:
+ bd12a4c27c25325e8ea8fb03dd561aadbe8bd548 4385 libvirt_5.0.0-4+deb10u2.dsc
+ 2daa9f44c8631d11d798b1e2ee6df726df449173 14832576 libvirt_5.0.0.orig.tar.xz
+ 23f41e4e71c45c3b3cd176fe4e4ad99193c82e8d 94788 libvirt_5.0.0-4+deb10u2.debian.tar.xz
+ cef859f8e1f20c8907fcee7cf256bb1391521b1c 21226 libvirt_5.0.0-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 1c378c2fdef3d71d5261b4fb2254cdec7da2229f3ae25423e543bc47bf91b113 4385 libvirt_5.0.0-4+deb10u2.dsc
+ afa81dbbc90b5209575930a820a222ff371e5ece5c1d8ec8f46b53c52b73b2e7 14832576 libvirt_5.0.0.orig.tar.xz
+ 8ccfe07c1f3a65b06e625558e947a5e45179dcd0240b26283345a859c66b531a 94788 libvirt_5.0.0-4+deb10u2.debian.tar.xz
+ d7a9ab71a213579481de4ccc88d0e900b4479d7a8b8bfa4f13d4bda300d081b8 21226 libvirt_5.0.0-4+deb10u2_amd64.buildinfo
+Files:
+ b18a82419536fb92039eafab19eb2c7d 4385 libs optional libvirt_5.0.0-4+deb10u2.dsc
+ b67b226b8f22fbe86991daec5d71ef82 14832576 libs optional libvirt_5.0.0.orig.tar.xz
+ d1d8d43dc22e22d06fb68ff77c18d4a6 94788 libs optional libvirt_5.0.0-4+deb10u2.debian.tar.xz
+ 95e3bfdb0ae2809598ff6d28fedd592a 21226 libs optional libvirt_5.0.0-4+deb10u2_amd64.buildinfo
+

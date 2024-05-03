@@ -1,0 +1,51 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 10 Apr 2023 12:39:28 +0100
+Source: lldpd
+Binary: liblldpctl-dev lldpd lldpd-dbgsym
+Architecture: source amd64
+Version: 1.0.3-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Vincent Bernat <bernat@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ liblldpctl-dev - implementation of IEEE 802.1ab (LLDP) - development files
+ lldpd      - implementation of IEEE 802.1ab (LLDP)
+Closes: 980132
+Changes:
+ lldpd (1.0.3-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2020-27827: Fix an issue where specially-crafted LLDP packets could
+     have caused memory to be lost when allocating data to handle specific
+     optional TLVs, potentially leading to a denial of service (DoS) attack.
+     (Closes: #980132)
+   * CVE-2021-43612: Fix a crash in the SONMP decoder that could have led to a
+     denial of service (DoS) attack.
+Checksums-Sha1:
+ c412fa5d1523c92e277182bb22dfb5eed970be62 2094 lldpd_1.0.3-1+deb10u1.dsc
+ f86492bd0a57fe96c5915b6bf3b69fdae9186963 1605563 lldpd_1.0.3.orig.tar.gz
+ c3dd56daf65f4dfc85d07268547582a21213185d 11548 lldpd_1.0.3-1+deb10u1.debian.tar.xz
+ 60ef86576157cf089cf2d77159abba5e5414b415 73760 liblldpctl-dev_1.0.3-1+deb10u1_amd64.deb
+ 74baa524ee97f64184ed21d4ac24ecfb969639a9 501036 lldpd-dbgsym_1.0.3-1+deb10u1_amd64.deb
+ 49a9faf23ee4f5d27bae9847f01d45d6ccadb9a1 7569 lldpd_1.0.3-1+deb10u1_amd64.buildinfo
+ 45d77893bccaccb95100c1646ff9eeacac779a33 209172 lldpd_1.0.3-1+deb10u1_amd64.deb
+Checksums-Sha256:
+ 338aecfa6efa15a0ae4f6049120683cd7d5bfff24983fabe5fb0c9a1535bd2e9 2094 lldpd_1.0.3-1+deb10u1.dsc
+ 39fced395168015416bfe78b95414facf066f841f349024433aa20ab54e4c360 1605563 lldpd_1.0.3.orig.tar.gz
+ 728313243b6875c95c2e68ada7a48febaf5969c8ac6909c9378ad3543319a2fe 11548 lldpd_1.0.3-1+deb10u1.debian.tar.xz
+ 929fa4afef345205f55ce8706c23ae6347cfee0732d7ec573e9cd2c96d2fbbd4 73760 liblldpctl-dev_1.0.3-1+deb10u1_amd64.deb
+ 32624df7c74a1bf39808f7ffb51a212029fe96af3c5d0e2202ca4108790561d6 501036 lldpd-dbgsym_1.0.3-1+deb10u1_amd64.deb
+ 9bb822c5d74567c321242bdecb68a3cd7c13f92e005e58cc5c5311fb41156c40 7569 lldpd_1.0.3-1+deb10u1_amd64.buildinfo
+ fedcd3f68b593d0044349c1c2c53b81f8eca934e726bd78fd0a874e200cbe75c 209172 lldpd_1.0.3-1+deb10u1_amd64.deb
+Files:
+ 54c8e2e0d8a3d6c7573df6752fd6a87b 2094 net optional lldpd_1.0.3-1+deb10u1.dsc
+ 04844328f053ee343344d892efb8a00c 1605563 net optional lldpd_1.0.3.orig.tar.gz
+ 34bd24e422a6bf3e8b432e90870174c2 11548 net optional lldpd_1.0.3-1+deb10u1.debian.tar.xz
+ 09fad65d98edfc90768d97ddfa6d0fc8 73760 libdevel optional liblldpctl-dev_1.0.3-1+deb10u1_amd64.deb
+ 77a16b4d5a177b8e461b7ac2b6e9f156 501036 debug optional lldpd-dbgsym_1.0.3-1+deb10u1_amd64.deb
+ d9e4aaf8441cfa48de192129a23c3625 7569 net optional lldpd_1.0.3-1+deb10u1_amd64.buildinfo
+ d05da813633b4240a0e62544264d4126 209172 net optional lldpd_1.0.3-1+deb10u1_amd64.deb
+

@@ -1,0 +1,68 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 31 May 2023 09:44:07 -0400
+Source: libwebp
+Binary: libwebp-dev libwebp6 libwebp6-dbgsym libwebpdemux2 libwebpdemux2-dbgsym libwebpmux3 libwebpmux3-dbgsym webp webp-dbgsym
+Architecture: source amd64
+Version: 0.6.1-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Jeff Breidenbach <jab@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libwebp-dev - Lossy compression of digital photographic images.
+ libwebp6   - Lossy compression of digital photographic images.
+ libwebpdemux2 - Lossy compression of digital photographic images.
+ libwebpmux3 - Lossy compression of digital photographic images.
+ webp       - Lossy compression of digital photographic images.
+Closes: 1035371
+Changes:
+ libwebp (0.6.1-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-1999: Prevent a potential arbitrary code execution vulnerability
+     caused by a double-free programming error. (Closes: #1035371)
+Checksums-Sha1:
+ 8dca66e74f42ad238458059432d768088f18104c 2078 libwebp_0.6.1-2+deb10u2.dsc
+ a906ee1ba8a5da0f9c6d3f1fd17af1ed183e774f 3554290 libwebp_0.6.1.orig.tar.gz
+ fd33fde42d81c61616d92f347a6d03eab5d4a144 14396 libwebp_0.6.1-2+deb10u2.debian.tar.xz
+ d3cb46eddbf0471d0162a43160e96c6f762b511e 344244 libwebp-dev_0.6.1-2+deb10u2_amd64.deb
+ 8314fe56d06c0048169ea16b13d1abe2205e19cc 1245904 libwebp6-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 4618be0f84769fdf2f78f8114ec7575ff1095e52 261552 libwebp6_0.6.1-2+deb10u2_amd64.deb
+ bc01fee355fdb4eca491479f5e64c3eb879f0290 11190 libwebp_0.6.1-2+deb10u2_amd64.buildinfo
+ c9df5f518c61c61e3346bcfb624f56eb9bc99aaa 34740 libwebpdemux2-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 8425836e23b452dc645e07cf90d457fd44b4317b 87724 libwebpdemux2_0.6.1-2+deb10u2_amd64.deb
+ b3938b0689a54b793ceca9e846993048eea3d4dd 76248 libwebpmux3-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ adefce631c779a5f99ba7e3e38ed443c61757bcf 97928 libwebpmux3_0.6.1-2+deb10u2_amd64.deb
+ 3bf52234a4df0acc82a34c33953ef61df5a3abd0 281688 webp-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 3ffc0a6eead8a87d84c143f3e3ee9791b0401863 156292 webp_0.6.1-2+deb10u2_amd64.deb
+Checksums-Sha256:
+ e57554e788414a5b38c1d31844bb0c56694bcc8cb1bde282432d7796333d7e75 2078 libwebp_0.6.1-2+deb10u2.dsc
+ a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4 3554290 libwebp_0.6.1.orig.tar.gz
+ f84d655f88949b4a38ef09c28adf864423f9a35a9ef4f9342495e7cce985118e 14396 libwebp_0.6.1-2+deb10u2.debian.tar.xz
+ ad26fe36caff479258735209a6789cde589937bd39759bef38ecf8e53aff4dbd 344244 libwebp-dev_0.6.1-2+deb10u2_amd64.deb
+ f7712307dd72d4cbe214b0c93777724c9305a7fe05e218c9fbc227a7dcd0a105 1245904 libwebp6-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 977b6eb4c658023c5bbeee70ddf5975fa837e8dfb58ac271ae82e9429e1c1ed5 261552 libwebp6_0.6.1-2+deb10u2_amd64.deb
+ b4060cbbe905b0b66b90619adc8ba6d71888fef914ddd0cb9239baeac33cb204 11190 libwebp_0.6.1-2+deb10u2_amd64.buildinfo
+ 71c6442bb10a3982900fdbdccea09704b38b253d3f006ea573e3128a6ab7e925 34740 libwebpdemux2-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ cfe046176f719fe109aebb28e928b11ca82862771d566c90af255536e44d2c07 87724 libwebpdemux2_0.6.1-2+deb10u2_amd64.deb
+ 4eb0886cf3b535c62c857b582c6ba0162e45850ca6952390d3fca534b996e862 76248 libwebpmux3-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 8f4a706fdf5f97de98eafc0b5e382aa3e4ed84577d79fac75174c93db6146801 97928 libwebpmux3_0.6.1-2+deb10u2_amd64.deb
+ ff34d8928de705f72b4d29e11a226b3a0a636270b3892582a201b8a87e5cb4cd 281688 webp-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 3c4ef650e0cc30dfece57caac5f5105c1a521d7626bb8a35ec88533095a62856 156292 webp_0.6.1-2+deb10u2_amd64.deb
+Files:
+ 8e7ace7ef731ab87cc11eae68a99c14e 2078 libs optional libwebp_0.6.1-2+deb10u2.dsc
+ 1c3099cd2656d0d80d3550ee29fc0f28 3554290 libs optional libwebp_0.6.1.orig.tar.gz
+ 561780344cf377a84c6d5b62e1752113 14396 libs optional libwebp_0.6.1-2+deb10u2.debian.tar.xz
+ 9b298abe275e8cd6334e4d86f0c86eb9 344244 libdevel optional libwebp-dev_0.6.1-2+deb10u2_amd64.deb
+ 45b3f1267d90f7e83813575c0e848daa 1245904 debug optional libwebp6-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ 2756de6a4d5d7ab2810148da4cd18de5 261552 libs optional libwebp6_0.6.1-2+deb10u2_amd64.deb
+ 1a7fa0692cc09de877a3f2f606e64245 11190 libs optional libwebp_0.6.1-2+deb10u2_amd64.buildinfo
+ 06dd9af4485121436ba4d0d15f97b244 34740 debug optional libwebpdemux2-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ fcb266f4ac520ad0b9811f191218ba99 87724 libs optional libwebpdemux2_0.6.1-2+deb10u2_amd64.deb
+ 36e36170bf1c4620911281f407c67f48 76248 debug optional libwebpmux3-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ f5029a68eed554382282dd1ad8c2472c 97928 libs optional libwebpmux3_0.6.1-2+deb10u2_amd64.deb
+ 7285bc05f92db87787d619fee8661f63 281688 debug optional webp-dbgsym_0.6.1-2+deb10u2_amd64.deb
+ d8f59142e00c0ca7776654d103daa03a 156292 graphics optional webp_0.6.1-2+deb10u2_amd64.deb
+

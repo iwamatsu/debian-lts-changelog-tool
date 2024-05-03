@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 02 Mar 2023 15:26:27 +0100
+Source: apache2
+Architecture: source
+Version: 2.4.38-3+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Lee Garrett <debian@rocketjump.eu>
+Changes:
+ apache2 (2.4.38-3+deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2006-20001: Fix error path for "Not" prefix parsing.
+   * CVE-2022-36760: HTTP Requests vulnerability in mod_proxy_ajp
+   * CVE-2022-37436: Early truncation of response headers
+   * CVE-2021-33193: mod_proxy HTTP/2 validation bypass
+   * Add tests from master branch for CVE-2019-0215, CVE-2020-1927
+   * Update debian/gbp.conf to use the branch "debian/buster"
+   * Add debian/.gitlab-ci.yml
+Checksums-Sha1:
+ 5aecfb41a2756b7b3a02e83aa19cab7796a75b82 3958 apache2_2.4.38-3+deb10u9.dsc
+ 4df6c477ec4fd6b84e5c713de323387ebe675e30 1098824 apache2_2.4.38-3+deb10u9.debian.tar.xz
+ 09c1f057050661f7159587c235d9084f1633ffb3 12957 apache2_2.4.38-3+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ 449b230e9de3142f203e53f20e1cbe374f455587e6498d7cd4b5f24f5cbfcf72 3958 apache2_2.4.38-3+deb10u9.dsc
+ 513270c229ae6cbb6be6a57bf053a4f8e2792965a56654678a3bf0c618a82cc6 1098824 apache2_2.4.38-3+deb10u9.debian.tar.xz
+ a1469db6d76d4230c09e455a689f7098fc636e8885f8a9aa890dfb97256a6ce4 12957 apache2_2.4.38-3+deb10u9_amd64.buildinfo
+Files:
+ 33b665aea5c6528297ef4478e7d76f7c 3958 httpd optional apache2_2.4.38-3+deb10u9.dsc
+ 377ecf7d65192e8ed3262dadd0459f8c 1098824 httpd optional apache2_2.4.38-3+deb10u9.debian.tar.xz
+ b2bc6498dae63f1d43add586808a01df 12957 httpd optional apache2_2.4.38-3+deb10u9_amd64.buildinfo
+

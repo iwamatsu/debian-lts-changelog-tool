@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu,  9 Feb 2023 00:05:58 CET
+Source: libsdl2
+Architecture: source
+Version: 2.0.9+dfsg1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f741eac7032a30e9721f7df2fedc58a7316d9fa8 2970 libsdl2_2.0.9+dfsg1-1+deb10u1.dsc
+ 15d23df03c37edec93c92a1a3ce7c61cd5dc2770 2277172 libsdl2_2.0.9+dfsg1.orig.tar.xz
+ 46dcb06b5217634791377fffecabb014fc276fad 41608 libsdl2_2.0.9+dfsg1-1+deb10u1.debian.tar.xz
+ 9224091514c307753e7d0e2fab551300ae72afe4 13404 libsdl2_2.0.9+dfsg1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 09b7e34dfc862b58f5d59a783ec18239231ae8eddb80687819983b74880cbc9f 2970 libsdl2_2.0.9+dfsg1-1+deb10u1.dsc
+ 80a8b03376e96d3d210d642a93fc9bf41902399557025419e52a97c37a9cab7d 2277172 libsdl2_2.0.9+dfsg1.orig.tar.xz
+ e048aaeb4818590dcd6f106dd3e46b14d5747121348e01399cdedb6e5ec2d4c7 41608 libsdl2_2.0.9+dfsg1-1+deb10u1.debian.tar.xz
+ ea6cf548efbd5c62cb938d0ac678bf7e742f32d2656d19083799871b0ee04698 13404 libsdl2_2.0.9+dfsg1-1+deb10u1_amd64.buildinfo
+Changes:
+ libsdl2 (2.0.9+dfsg1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-7572, CVE-2019-7573, CVE-2019-7574, CVE-2019-7575,
+     CVE-2019-7576, CVE-2019-7577, CVE-2019-7578, CVE-2019-7635,
+     CVE-2019-7636, CVE-2019-7638, CVE-2019-13616, CVE-2019-13626,
+     CVE-2020-14409, CVE-2020-14410, CVE-2021-33657 and CVE-2022-4743.
+     Several security vulnerabilities have been discovered in SDL2, the Simple
+     DirectMedia Layer library. These vulnerabilities may allow an attacker to
+     cause a denial of service or result in the execution of arbitrary code if
+     malformed images or sound files are processed.
+Files:
+ aee003626b7b637a0d0ea3d386ccb6fa 2970 libs optional libsdl2_2.0.9+dfsg1-1+deb10u1.dsc
+ d9a157f5f23cf0f8f3094ae2cca29500 2277172 libs optional libsdl2_2.0.9+dfsg1.orig.tar.xz
+ 87bb78db9d3c9786d226931c0cd68600 41608 libs optional libsdl2_2.0.9+dfsg1-1+deb10u1.debian.tar.xz
+ 13b9bf7e9b3280bbfa139087ff46c4af 13404 libs optional libsdl2_2.0.9+dfsg1-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,52 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 09 Mar 2022 11:33:47 +0200
+Source: nbd
+Binary: nbd-server nbd-client nbd-client-udeb
+Architecture: source amd64
+Version: 1:3.15.2-3+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Wouter Verhelst <wouter@debian.org>
+Changed-By: Wouter Verhelst <wouter@debian.org>
+Description:
+ nbd-client - Network Block Device protocol - client
+ nbd-client-udeb - Network Block Device protocol - client for Debian Installer (udeb)
+ nbd-server - Network Block Device protocol - server
+Closes: 1003863 1006915
+Changes:
+ nbd (1:3.15.2-3+deb9u1) stretch-security; urgency=medium
+ .
+   * Cherry-pick (relevant parts of) the fix for CVE-2022-26495 from git
+     master. Closes: #1006915.
+   * Fix parsing of nbdtab in nbd-client; Closes: #1003863.
+Checksums-Sha1:
+ a45bd61e405533663d066404cb3e8e27a42f59b3 1763 nbd_3.15.2-3+deb9u1.dsc
+ 475dc264aa33b5b4ae1bb87b0db928a4795bf281 5177073 nbd_3.15.2-3+deb9u1.tar.gz
+ 2fa37306d879395e29fdc54ae0e12da0d0cd89fe 33940 nbd-client-dbgsym_3.15.2-3+deb9u1_amd64.deb
+ 730676a3c6665e6fbb4082c631f02f7c84ab330d 10828 nbd-client-udeb_3.15.2-3+deb9u1_amd64.udeb
+ 8eaba9c2f0c5e54c960786467eac83127b7d8e59 56356 nbd-client_3.15.2-3+deb9u1_amd64.deb
+ 24f34dbc2355ee70fef697cacb7a6d9a831ea320 73564 nbd-server-dbgsym_3.15.2-3+deb9u1_amd64.deb
+ 52267371b5be71aaab4467d85b25456f8b357988 74822 nbd-server_3.15.2-3+deb9u1_amd64.deb
+ 6064d6939257dff048888e93728eacfe27543dc8 8365 nbd_3.15.2-3+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ ba0bcb57129c0d14795551b8abc98f3970083ed84d64f86828d7eb2eea40802a 1763 nbd_3.15.2-3+deb9u1.dsc
+ ee37769eeb2e16fd723b9e64176d986c3443601ed84c81645c9b992da90167ab 5177073 nbd_3.15.2-3+deb9u1.tar.gz
+ 135a4296d789cae71b01c2e7725e968675fce609013ce193de6724781e37e518 33940 nbd-client-dbgsym_3.15.2-3+deb9u1_amd64.deb
+ 4da551a1106711398faa8d214fdd24662180f6808f5a98740a806d2aa2265f2e 10828 nbd-client-udeb_3.15.2-3+deb9u1_amd64.udeb
+ 0a771e5717d00fa1c77781768f4d40376f72faff6cb8815b52b164829e575e3c 56356 nbd-client_3.15.2-3+deb9u1_amd64.deb
+ e3ba562385e518129bf9ec6e553f5a3eeaf5178ba4dcbd18cde4007e8f15a1c9 73564 nbd-server-dbgsym_3.15.2-3+deb9u1_amd64.deb
+ 2837f23964a54470a8a588961a95c5c9beb3a99f292ed1a6d1fba8266651f4f8 74822 nbd-server_3.15.2-3+deb9u1_amd64.deb
+ b738225b80eb8ef94aee7ada6dd4e1f133e83006c59395ecd0199c0c58873621 8365 nbd_3.15.2-3+deb9u1_amd64.buildinfo
+Files:
+ a1d7c3c56338f208d3c98699513cc1d2 1763 admin optional nbd_3.15.2-3+deb9u1.dsc
+ fd14493f3095ff7735f6ae2aaf81534c 5177073 admin optional nbd_3.15.2-3+deb9u1.tar.gz
+ 36fe6aa0451e99f0ee3057482bf94730 33940 debug extra nbd-client-dbgsym_3.15.2-3+deb9u1_amd64.deb
+ 3b31cc94e17f17d7e197eaea5e0a7071 10828 debian-installer optional nbd-client-udeb_3.15.2-3+deb9u1_amd64.udeb
+ 56989513c57a4a5d737b337e1a739199 56356 admin optional nbd-client_3.15.2-3+deb9u1_amd64.deb
+ 111b40bb514318f65421dfc00d99b36a 73564 debug extra nbd-server-dbgsym_3.15.2-3+deb9u1_amd64.deb
+ 4b9b2aed7546e051849d676048d758de 74822 admin optional nbd-server_3.15.2-3+deb9u1_amd64.deb
+ 1fa3200a726d64bfccfbc63c1878c70c 8365 admin optional nbd_3.15.2-3+deb9u1_amd64.buildinfo
+Package-Type: udeb
+

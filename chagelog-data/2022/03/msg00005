@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 03 Mar 2022 10:03:00 +0100
+Source: expat
+Architecture: source
+Version: 2.2.0-2+deb9u5
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ expat (2.2.0-2+deb9u5) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Run the upstream tests during the build.
+   * CVE-2022-25235: arbitrary code execution due to malformed 2- and 3-byte
+     UTF-8.
+   * CVE-2022-25236: arbitrary code execution due to namespace-separator
+     characters.
+   * CVE-2022-25313: stack exhaustion in build_model.
+   * CVE-2022-25315: integer overflow in storeRawNames.
+   * Include follow-up fix for CVE-2022-25236.
+   * Fix build issue in the tests of CVE-2022-23852.
+Checksums-Sha1:
+ e5f0854cca3b7230d52c86d675adbe689b854bde 2295 expat_2.2.0-2+deb9u5.dsc
+ 8453bc52324be4c796fd38742ec48470eef358b3 414352 expat_2.2.0.orig.tar.bz2
+ d9f492bd13c151e6ef6f26f4e26d108bf8e72bb4 27136 expat_2.2.0-2+deb9u5.debian.tar.xz
+ f82eb0c3e8058719bb3d7b6447df75f8f5d0bd86 5901 expat_2.2.0-2+deb9u5_source.buildinfo
+Checksums-Sha256:
+ d50e49dd744a17a863f756c46dde06b667f420ba61dbd626087f910c294a9536 2295 expat_2.2.0-2+deb9u5.dsc
+ d9e50ff2d19b3538bd2127902a89987474e1a4db8e43a66a4d1a712ab9a504ff 414352 expat_2.2.0.orig.tar.bz2
+ abc43ce663f0f46003baa9e6d1a1e6502d3e6747de80294cda54d9756a8ea747 27136 expat_2.2.0-2+deb9u5.debian.tar.xz
+ f5c100fbd310e63167556a81eadef95edfd815b686264684ee9504b4f089d87a 5901 expat_2.2.0-2+deb9u5_source.buildinfo
+Files:
+ 12dee214558be16f09ce93d2433fc167 2295 text optional expat_2.2.0-2+deb9u5.dsc
+ 2f47841c829facb346eb6e3fab5212e2 414352 text optional expat_2.2.0.orig.tar.bz2
+ 4270577c93a86fd17d382849b5f3a673 27136 text optional expat_2.2.0-2+deb9u5.debian.tar.xz
+ 779597978160a733a51fb7a635be75ef 5901 text optional expat_2.2.0-2+deb9u5_source.buildinfo
+

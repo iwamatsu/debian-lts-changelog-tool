@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 13 Aug 2023 22:46:36 CEST
+Source: netatalk
+Architecture: source
+Version: 3.1.12~ds-3+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 4f2ba2ad7fa7c148cad12b2fa23d4dc9db2573c3 2675 netatalk_3.1.12~ds-3+deb10u3.dsc
+ 1a276179f092d314892186f6d47703bc442821e4 67384 netatalk_3.1.12~ds-3+deb10u3.debian.tar.xz
+ 718fa401c32e786ae67c5265923d5297cf43f6c8 10380 netatalk_3.1.12~ds-3+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 025953a093a26f561cf434dbcad9cf1c7e99a8c7df70912da244884a3bb872f8 2675 netatalk_3.1.12~ds-3+deb10u3.dsc
+ 0425af3cbbba700e188c7ce0bc87c97e382479ef5b75e109bfe562ffd73c0d75 67384 netatalk_3.1.12~ds-3+deb10u3.debian.tar.xz
+ 23aa5354880f4591fe8cdba465ffbf22b97be547e8e711bfdf0d7ddab20c74ab 10380 netatalk_3.1.12~ds-3+deb10u3_amd64.buildinfo
+Closes: 1043504
+Changes:
+ netatalk (3.1.12~ds-3+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Another regression was identified in Netatalk, the Apple Filing Protocol
+     service, introduced with the patch for CVE-2022-23123. It is impacting a
+     subset of users that have certain metadata in their shared files. The issue
+     leads to an unavoidable crash and renders netatalk useless with their shared
+     volumes.
+ .
+     Separately, it also contains a fix for saving MS Office files onto an
+     otherwise functioning shared volume. (Closes: #1043504)
+     Thanks to Daniel Markstedt for the report.
+Files:
+ da95debea3d0be180789c5540585b72f 2675 net optional netatalk_3.1.12~ds-3+deb10u3.dsc
+ 36dbb6e036d6d1738a9eea53f42d020d 67384 net optional netatalk_3.1.12~ds-3+deb10u3.debian.tar.xz
+ 666f2d967e8eb0e8dfe3f6b3fc278559 10380 net optional netatalk_3.1.12~ds-3+deb10u3_amd64.buildinfo
+

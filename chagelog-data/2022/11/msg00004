@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 02 Nov 2022 22:49:26 +0100
+Source: python-scciclient
+Architecture: source
+Version: 0.7.2-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Closes: 1018213
+Changes:
+ python-scciclient (0.7.2-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-2996: Missing SSL certificate verification
+     (Closes: #1018213)
+Checksums-Sha1:
+ 019b3311164c180eebe9d7519405d41f7822c325 2221 python-scciclient_0.7.2-2+deb10u1.dsc
+ ff1c240288a269ae6a7400430534204cdfc9966f 49148 python-scciclient_0.7.2.orig.tar.xz
+ cc560ac2989f9ab063c467bfc5aa34909c7728ca 5268 python-scciclient_0.7.2-2+deb10u1.debian.tar.xz
+ 9888ed4b827146240fe28dfdef75a1797e8830ca 10889 python-scciclient_0.7.2-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 767b6b386ae956a26defbcdb8ee565c56b473c1346ab538417b7e4ccc6859c21 2221 python-scciclient_0.7.2-2+deb10u1.dsc
+ 256bd00f2fd33b270a98363b1b2b6473d1568efe505dffc1056ae0cdfb7e3bde 49148 python-scciclient_0.7.2.orig.tar.xz
+ b4fa7ec92f2954e19c1c63641efed631f6d087fee939ad3fad8d4107a753652c 5268 python-scciclient_0.7.2-2+deb10u1.debian.tar.xz
+ 58127c0fb104a14145aedcde4a6baee0fb78bd7ae113678191f96a5ccbd4b48a 10889 python-scciclient_0.7.2-2+deb10u1_amd64.buildinfo
+Files:
+ 7f42e0c7c8e660f6b8aa6defe3b45b05 2221 python optional python-scciclient_0.7.2-2+deb10u1.dsc
+ 5f2603c1f859525356ad4ee4c4a5b6ec 49148 python optional python-scciclient_0.7.2.orig.tar.xz
+ 1b91dddc3524d4b5fea6ea7f55632976 5268 python optional python-scciclient_0.7.2-2+deb10u1.debian.tar.xz
+ 3df96119e94d7c3f0099312c270930c2 10889 python optional python-scciclient_0.7.2-2+deb10u1_amd64.buildinfo
+

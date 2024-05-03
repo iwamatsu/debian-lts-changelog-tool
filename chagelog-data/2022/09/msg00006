@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun,  4 Sep 2022 23:04:23 CEST
+Source: libmodbus
+Architecture: source
+Version: 3.1.4-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: SZ Lin (林上智) <szlin@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f12cf7c8be8d6b0158ae2c7a9190ba8a4c89b208 2129 libmodbus_3.1.4-2+deb10u2.dsc
+ 2398f7738d7e07b495be9ac36dfc19d7182ae449 92596 libmodbus_3.1.4.orig.tar.gz
+ 84360fcd43fa5aafb8bbbdbecf0aaf1f236331dc 9236 libmodbus_3.1.4-2+deb10u2.debian.tar.xz
+ 8404705273660390173131ca947113e050b35541 7200 libmodbus_3.1.4-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 4c2ffcdc76af6b4b61aa40946ff032a3e764732bd40a0c0652bf0499ba2e19e1 2129 libmodbus_3.1.4-2+deb10u2.dsc
+ 05dc9f8fdcc645446754a65e5da5b0575cf975ba95010f7e5a9910c61f275228 92596 libmodbus_3.1.4.orig.tar.gz
+ 58d4bc7d8964c36d7b2c7a1bf6c0d6611756dcab42153129230d0dda69398516 9236 libmodbus_3.1.4-2+deb10u2.debian.tar.xz
+ 3b60667124afa936d93352686463e08b2163c04527c6b436456433907ee0d5ae 7200 libmodbus_3.1.4-2+deb10u2_amd64.buildinfo
+Changes:
+ libmodbus (3.1.4-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-0367:
+     A heap-based buffer overflow flaw was found in libmodbus, a library for the
+     Modbus protocol, which can be abused for a denial of service attack or
+     memory corruption.
+Files:
+ 7d226ff1b170f03ad7ac610095b7ebb9 2129 libs optional libmodbus_3.1.4-2+deb10u2.dsc
+ 242961d016ae841b70bb409c5e5803b2 92596 libs optional libmodbus_3.1.4.orig.tar.gz
+ b9050555836c9418ee78f01eca5815ad 9236 libs optional libmodbus_3.1.4-2+deb10u2.debian.tar.xz
+ 805da1a8d55a76ed87e903b62cd1eb62 7200 libs optional libmodbus_3.1.4-2+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 23 Feb 2023 20:49:08 +0100
+Source: libgit2
+Architecture: source
+Version: 0.27.7+dfsg.1-0.2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Russell Sim <russell.sim@gmail.com>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1029368
+Changes:
+ libgit2 (0.27.7+dfsg.1-0.2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Import patches for
+     - CVE-2020-12278 - NTFS Alternate Data Stream attacks
+     - CVE-2020-12279 - 8.3 "short name" attacks
+     - CVE-2023-22742 - Improper Verification of Cryptographic Signature when
+       using a SSH remote. (Closes: #1029368)
+Checksums-Sha1:
+ 9392ae8c074bf6bd48d6eb2b77669c3e71305726 2144 libgit2_0.27.7+dfsg.1-0.2+deb10u1.dsc
+ 7f1bbd33f8fe5db8f3fc637a5ab3afa670f8647d 2683040 libgit2_0.27.7+dfsg.1.orig.tar.xz
+ ff6806018d7e8ee7aa69c7227a46430556df1196 28404 libgit2_0.27.7+dfsg.1-0.2+deb10u1.debian.tar.xz
+ 2d8396a74741d17e36b2e4f4b9588907d78f1f13 8129 libgit2_0.27.7+dfsg.1-0.2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 31d297d3200a084274850b951e02f57afd2214cd3cff75a44581e209d717c4d5 2144 libgit2_0.27.7+dfsg.1-0.2+deb10u1.dsc
+ c690074c15496d56201d56bf2fd2a64dea5e914be9cbc5bc087e8e81bb7b1fa3 2683040 libgit2_0.27.7+dfsg.1.orig.tar.xz
+ c4c8052e4046ffae6b7bb0b5f7cabd7be2f49c698d96c30d66a207bef410ae04 28404 libgit2_0.27.7+dfsg.1-0.2+deb10u1.debian.tar.xz
+ ca3b3cc12ff0f3921a0fc0a4ef589891a953ce1cf97b7c311d7a6cc7ed640dac 8129 libgit2_0.27.7+dfsg.1-0.2+deb10u1_amd64.buildinfo
+Files:
+ 2b67bef5b0b6951b8c53a447bee7c29b 2144 libs optional libgit2_0.27.7+dfsg.1-0.2+deb10u1.dsc
+ 4e8f6fdf33c262e1903447a3dccc5917 2683040 libs optional libgit2_0.27.7+dfsg.1.orig.tar.xz
+ 99a6fe1f1c42df5a8af83ab709d3ca7a 28404 libs optional libgit2_0.27.7+dfsg.1-0.2+deb10u1.debian.tar.xz
+ 47bedccef1b949c1d7002fc7e7590bc9 8129 libs optional libgit2_0.27.7+dfsg.1-0.2+deb10u1_amd64.buildinfo
+

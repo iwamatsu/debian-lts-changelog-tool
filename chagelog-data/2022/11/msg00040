@@ -1,0 +1,160 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 29 Nov 2022 12:10:12 +0000
+Source: krb5
+Binary: krb5-admin-server krb5-admin-server-dbgsym krb5-doc krb5-gss-samples krb5-gss-samples-dbgsym krb5-k5tls krb5-k5tls-dbgsym krb5-kdc krb5-kdc-dbgsym krb5-kdc-ldap krb5-kdc-ldap-dbgsym krb5-kpropd krb5-kpropd-dbgsym krb5-locales krb5-multidev krb5-otp krb5-otp-dbgsym krb5-pkinit krb5-pkinit-dbgsym krb5-user krb5-user-dbgsym libgssapi-krb5-2 libgssrpc4 libk5crypto3 libkadm5clnt-mit11 libkadm5srv-mit11 libkdb5-9 libkrad-dev libkrad0 libkrb5-3 libkrb5-dbg libkrb5-dev libkrb5support0
+Architecture: source amd64 all
+Version: 1.17-3+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Sam Hartman <hartmans@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ krb5-admin-server - MIT Kerberos master server (kadmind)
+ krb5-doc   - documentation for MIT Kerberos
+ krb5-gss-samples - MIT Kerberos GSS Sample applications
+ krb5-k5tls - TLS plugin for MIT Kerberos
+ krb5-kdc   - MIT Kerberos key server (KDC)
+ krb5-kdc-ldap - MIT Kerberos key server (KDC) LDAP plugin
+ krb5-kpropd - MIT Kerberos key server (Slave KDC Support)
+ krb5-locales - internationalization support for MIT Kerberos
+ krb5-multidev - development files for MIT Kerberos without Heimdal conflict
+ krb5-otp   - OTP plugin for MIT Kerberos
+ krb5-pkinit - PKINIT plugin for MIT Kerberos
+ krb5-user  - basic programs to authenticate using MIT Kerberos
+ libgssapi-krb5-2 - MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+ libgssrpc4 - MIT Kerberos runtime libraries - GSS enabled ONCRPC
+ libk5crypto3 - MIT Kerberos runtime libraries - Crypto Library
+ libkadm5clnt-mit11 - MIT Kerberos runtime libraries - Administration Clients
+ libkadm5srv-mit11 - MIT Kerberos runtime libraries - KDC and Admin Server
+ libkdb5-9  - MIT Kerberos runtime libraries - Kerberos database
+ libkrad-dev - MIT Kerberos RADIUS Library Development
+ libkrad0   - MIT Kerberos runtime libraries - RADIUS library
+ libkrb5-3  - MIT Kerberos runtime libraries
+ libkrb5-dbg - debugging files for MIT Kerberos
+ libkrb5-dev - headers and development libraries for MIT Kerberos
+ libkrb5support0 - MIT Kerberos runtime libraries - Support library
+Closes: 1024267
+Changes:
+ krb5 (1.17-3+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-42898: Prevent integer overflows in PAC parsing; potentially
+     critical for 32-bit KDCs or when cross-realm acts maliciously.
+     (Closes: #1024267)
+Checksums-Sha1:
+ 5128552bbc3034080be8c811189537d3aa750512 3573 krb5_1.17-3+deb10u5.dsc
+ 0c404b081db9c996c581f636ce450ee28778f338 8761763 krb5_1.17.orig.tar.gz
+ 5d4cfa60757cb922919951b16b187133ea5268c1 105892 krb5_1.17-3+deb10u5.debian.tar.xz
+ 9a7b1b9716aebe5ebaec4fa0496130f524ceb416 235640 krb5-admin-server-dbgsym_1.17-3+deb10u5_amd64.deb
+ 67b08144d697495ed594ad8518eae85f6888100a 124864 krb5-admin-server_1.17-3+deb10u5_amd64.deb
+ 8d67feded20d852a471cc2efd334aad8f1dcb3cc 2347588 krb5-doc_1.17-3+deb10u5_all.deb
+ aaaa856dc85b3dcc77e3bbcd6d12629957802360 44732 krb5-gss-samples-dbgsym_1.17-3+deb10u5_amd64.deb
+ ddf450239dcc3dc4709e9ebc539294fb4c77ee68 61556 krb5-gss-samples_1.17-3+deb10u5_amd64.deb
+ a2faf2f27196079e2ac9ab388488632c83fcdd6d 23516 krb5-k5tls-dbgsym_1.17-3+deb10u5_amd64.deb
+ 16ffb13dcd717c4c2df0cc77b4ea7c6bd8935e5e 51920 krb5-k5tls_1.17-3+deb10u5_amd64.deb
+ 0b90c74f510622b230ba301bbb0626247740fe49 570528 krb5-kdc-dbgsym_1.17-3+deb10u5_amd64.deb
+ 8ec80bf568983589e53a4115c98ff700594e1726 290356 krb5-kdc-ldap-dbgsym_1.17-3+deb10u5_amd64.deb
+ 36a866eb85c63a3124ce9dea3650a25a2248c26d 121164 krb5-kdc-ldap_1.17-3+deb10u5_amd64.deb
+ f3cc59f244f77e35163b78bbfa840f626a21466a 210928 krb5-kdc_1.17-3+deb10u5_amd64.deb
+ 76f851acd2dfa7631d10f41bfe76f7eaf08472ec 48268 krb5-kpropd-dbgsym_1.17-3+deb10u5_amd64.deb
+ 8d5ab18edffefe55bf40e0e7124abb326632ae6b 64120 krb5-kpropd_1.17-3+deb10u5_amd64.deb
+ 79a1f0f8ee815cf81591bc16ec6fd52540f7aa9a 95728 krb5-locales_1.17-3+deb10u5_all.deb
+ 58582358d45cb030a697214168a7951ad8cf3ea2 155996 krb5-multidev_1.17-3+deb10u5_amd64.deb
+ ef506eb319da78c9d9d4cefe820917289537431e 32472 krb5-otp-dbgsym_1.17-3+deb10u5_amd64.deb
+ 597516d1e7df9f60ea07562b14842a8d9a444892 53124 krb5-otp_1.17-3+deb10u5_amd64.deb
+ 3a8bdface237b821c8ca1bcf58f6439b0d745bc8 190616 krb5-pkinit-dbgsym_1.17-3+deb10u5_amd64.deb
+ f74d549190d0c64bf1f33ffa0c49f6b797e9ddec 91492 krb5-pkinit_1.17-3+deb10u5_amd64.deb
+ 5f18500ed7ac4f5d7107f5941b9b03ad4e71475f 228492 krb5-user-dbgsym_1.17-3+deb10u5_amd64.deb
+ fce99517758833cf1f087bf2a38075bcf289e5eb 149816 krb5-user_1.17-3+deb10u5_amd64.deb
+ 83008fd639fe55d06cb536fbf06933151b59832f 20557 krb5_1.17-3+deb10u5_amd64.buildinfo
+ 0fd37ff17c2c43a9673091878bb02b1317bb85c8 158532 libgssapi-krb5-2_1.17-3+deb10u5_amd64.deb
+ 338339e33d166eb5fbc44d024416a9fc1f0de325 91536 libgssrpc4_1.17-3+deb10u5_amd64.deb
+ 187dad44e014dafa35e3810ad1d4ea4be9639eb3 122212 libk5crypto3_1.17-3+deb10u5_amd64.deb
+ 565829abe06b99d80fea362b6425b05132802720 73956 libkadm5clnt-mit11_1.17-3+deb10u5_amd64.deb
+ 532010ca13c852f0506e7be2a9ef99768d39ed89 86008 libkadm5srv-mit11_1.17-3+deb10u5_amd64.deb
+ 0accde476377adee9308b37b0f6dad4db8f56b0e 73708 libkdb5-9_1.17-3+deb10u5_amd64.deb
+ b35a27269d4b7b457e2d9967a7f754e027cc2b9a 48240 libkrad-dev_1.17-3+deb10u5_amd64.deb
+ 63cf698d50701880ff025d2f044f9127691a1fff 57700 libkrad0_1.17-3+deb10u5_amd64.deb
+ 5adcdb87cbc6d57c2e2e0e81a1f50e3a7e9bc025 368896 libkrb5-3_1.17-3+deb10u5_amd64.deb
+ a0cd737fd077e917f5cc7f06212f163b3220bbe8 3130612 libkrb5-dbg_1.17-3+deb10u5_amd64.deb
+ 8d56c59d15bb763664ab188df06fd94663ee3ef9 47760 libkrb5-dev_1.17-3+deb10u5_amd64.deb
+ 6e5fc16291cd2892231886d9cd40a4b554f9e42b 65972 libkrb5support0_1.17-3+deb10u5_amd64.deb
+Checksums-Sha256:
+ 9c077e4e8be514692b32bfb3cbfe9de1b660fac9fd2686aae15cb75bf1be4edf 3573 krb5_1.17-3+deb10u5.dsc
+ 5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5 8761763 krb5_1.17.orig.tar.gz
+ b5d9785d100eab8a0de448e39ce0f830d823d5d00d76ee0ffeae6e8d3ca51a9a 105892 krb5_1.17-3+deb10u5.debian.tar.xz
+ 2411b013bc271688756b032e667897a83345ee1d29a82ae6133330dc0fa7af21 235640 krb5-admin-server-dbgsym_1.17-3+deb10u5_amd64.deb
+ 76d71223ad59db394920eab174453162a3c25e6a206c958f129c2d0c794327a3 124864 krb5-admin-server_1.17-3+deb10u5_amd64.deb
+ 84f6c5b3d95a81acc90a6cec28d14f8a9cdc3ffca37eda57a5ee18a2ace66384 2347588 krb5-doc_1.17-3+deb10u5_all.deb
+ 6b1e67490eab876aee24ad8ec279f737ba56a4a56bd34b10dc77d5aa80153e1c 44732 krb5-gss-samples-dbgsym_1.17-3+deb10u5_amd64.deb
+ 269bae195b97840a26917e9f6dc64b14fdd8db467c48c167105b43397c5583ae 61556 krb5-gss-samples_1.17-3+deb10u5_amd64.deb
+ 10fadd462ead034d7f9f65db744be1672a5edb910b0c4b0bad10b23fe98d7ac8 23516 krb5-k5tls-dbgsym_1.17-3+deb10u5_amd64.deb
+ 6af55edaf853da65999c08bbed62dedc4ae55c9e44500e1b06126320797f0b40 51920 krb5-k5tls_1.17-3+deb10u5_amd64.deb
+ 3ca4f67d1d5276e662f68cb98b49fca0b5d363d6215616e011fa7d1834c518ae 570528 krb5-kdc-dbgsym_1.17-3+deb10u5_amd64.deb
+ 18a575d497ab8d15ff684d4394d711bbe990c4db99300be7bd6bd7c745dd04d0 290356 krb5-kdc-ldap-dbgsym_1.17-3+deb10u5_amd64.deb
+ 0ee0ab608b1dbd7e78e7b6382a242d415914538879072ec58bb2724faf74fbb5 121164 krb5-kdc-ldap_1.17-3+deb10u5_amd64.deb
+ a50ece1321fa49c6b67b92f03823495a5ec99f734e42d3f3eb6380a36573b126 210928 krb5-kdc_1.17-3+deb10u5_amd64.deb
+ d1d1554eb1e27d4707e30ed0a43c1203c3739d8b1640f08bd55c37d1235445ae 48268 krb5-kpropd-dbgsym_1.17-3+deb10u5_amd64.deb
+ 6fcf408f221b1fdf1233fcbeb171fe976c2f0a2d1c2f86e598327552ad73b3b0 64120 krb5-kpropd_1.17-3+deb10u5_amd64.deb
+ dcbec924ff1f37df1c610dd6441a302539b0409d206110bd416ef0a3074befbe 95728 krb5-locales_1.17-3+deb10u5_all.deb
+ d3c697c5d99cfc3cf1cce30bd195a80aa95efdb66128d13aad31570e06e54d13 155996 krb5-multidev_1.17-3+deb10u5_amd64.deb
+ 956208e77e120b856e2c8951a0514b58f1ce5bf05120ae80633d4e5f35894eaa 32472 krb5-otp-dbgsym_1.17-3+deb10u5_amd64.deb
+ 10ab1a5f5833ce29024f1b6146b3690a0c8e6e28713516d2373abfab5ee1a75c 53124 krb5-otp_1.17-3+deb10u5_amd64.deb
+ 79c5affa2ee0d2636f9bc16fe6bd58065fe697019321fdddc6bb0ee50e096c05 190616 krb5-pkinit-dbgsym_1.17-3+deb10u5_amd64.deb
+ 6be79bc2bc5b5c852319c933ec8e6f19512377f617f0ea4461e613de1a162a84 91492 krb5-pkinit_1.17-3+deb10u5_amd64.deb
+ ba5488de0f73b91b46c09cfb5c1e70008ec4f1dcab645751069f489939e84ba7 228492 krb5-user-dbgsym_1.17-3+deb10u5_amd64.deb
+ f77ef4551aeed7cbcf0e21eb06e5d6674096fe9e6a2bd95da9b39ae15a9434cf 149816 krb5-user_1.17-3+deb10u5_amd64.deb
+ 80d1153beb5a3721246264fd2aed040670850a05700a9c92d698ca382c279a61 20557 krb5_1.17-3+deb10u5_amd64.buildinfo
+ a2cf57bd0e0abbda362060a8b528a2ca19e2e5f043531c166a07df8aac361ca0 158532 libgssapi-krb5-2_1.17-3+deb10u5_amd64.deb
+ 720c1fcd386a78a95a5f773f8b957e1dfa75dc2d04066c051bdb19f49f31e87a 91536 libgssrpc4_1.17-3+deb10u5_amd64.deb
+ adf078511f0a78f9de65136ac3804951fb78f0aabc91e0ef2997957a6bf73a48 122212 libk5crypto3_1.17-3+deb10u5_amd64.deb
+ d5e59d5a39d1afcb8a90a7be9948eb2ef319638cddc0313d467af73ae910c748 73956 libkadm5clnt-mit11_1.17-3+deb10u5_amd64.deb
+ ebaae2e71b0ea2b9038686d6af7391b8e164490bf4d7cc2e67adb70e6210050f 86008 libkadm5srv-mit11_1.17-3+deb10u5_amd64.deb
+ 35c6a689c362df717385791635c1e721c75cd3dec32b012f2a190b2b5c82276d 73708 libkdb5-9_1.17-3+deb10u5_amd64.deb
+ ca614205f34575a3f9c81abe028bee69c19e2377e22ca77272c64e2dc6b48c5f 48240 libkrad-dev_1.17-3+deb10u5_amd64.deb
+ 5c2ea5e4d53cb0d6daea7709d19ab2b3142d1795914c216c280e3d4409ddf5a6 57700 libkrad0_1.17-3+deb10u5_amd64.deb
+ 962f057e37addc26c4c42ad6716ac23270b46808c06804f133b6112e516bd0a2 368896 libkrb5-3_1.17-3+deb10u5_amd64.deb
+ 2f0e725b073d9c57bce57463988131d826e8f7b5cb85a55254472f582ccd1f11 3130612 libkrb5-dbg_1.17-3+deb10u5_amd64.deb
+ 36ec496fe9499de3dbde1755594c89ff80cd057d27d18459e7b59c3db2a930bd 47760 libkrb5-dev_1.17-3+deb10u5_amd64.deb
+ 1bc68c9a34933bb1a3cf93bb93a0073c14385e0b0ededb071facac05aab1dc98 65972 libkrb5support0_1.17-3+deb10u5_amd64.deb
+Files:
+ 2a36c6c3028bbffeb2084fe3ff322ee9 3573 net optional krb5_1.17-3+deb10u5.dsc
+ 3b729d89eb441150e146780c4138481b 8761763 net optional krb5_1.17.orig.tar.gz
+ e8a1f41f799b78ac1992f4cbed423ae3 105892 net optional krb5_1.17-3+deb10u5.debian.tar.xz
+ af56389f64a3163a54633340d5764168 235640 debug optional krb5-admin-server-dbgsym_1.17-3+deb10u5_amd64.deb
+ 2fd4eca7667f3995e3a80496496075a8 124864 net optional krb5-admin-server_1.17-3+deb10u5_amd64.deb
+ d055e797677d375c40a3e0890322b216 2347588 doc optional krb5-doc_1.17-3+deb10u5_all.deb
+ b51a93f1466ed4de834202ec45d80ebb 44732 debug optional krb5-gss-samples-dbgsym_1.17-3+deb10u5_amd64.deb
+ 9ef18f2305f7692cef85ad19cf95d6da 61556 net optional krb5-gss-samples_1.17-3+deb10u5_amd64.deb
+ ea55919f01687299868b8aee22baaca4 23516 debug optional krb5-k5tls-dbgsym_1.17-3+deb10u5_amd64.deb
+ c3419945b1eb3f1b63ddb653a983badd 51920 net optional krb5-k5tls_1.17-3+deb10u5_amd64.deb
+ b498c1458ec227b9850fab8d15f13ab3 570528 debug optional krb5-kdc-dbgsym_1.17-3+deb10u5_amd64.deb
+ ac249c3b95c6ff80c292232005426a12 290356 debug optional krb5-kdc-ldap-dbgsym_1.17-3+deb10u5_amd64.deb
+ 7d2336cb2dca594177d62a653df73c3f 121164 net optional krb5-kdc-ldap_1.17-3+deb10u5_amd64.deb
+ f3380e61f6a7326806653a0568b804ef 210928 net optional krb5-kdc_1.17-3+deb10u5_amd64.deb
+ 41c559aa6f9731bce1003cf16ebc2d26 48268 debug optional krb5-kpropd-dbgsym_1.17-3+deb10u5_amd64.deb
+ f6735b1d2be4fdc3180ea54c3ad25fd5 64120 net optional krb5-kpropd_1.17-3+deb10u5_amd64.deb
+ 924de4829277f4fe5aee321a05d8f5ea 95728 localization optional krb5-locales_1.17-3+deb10u5_all.deb
+ ad1d3fa3e94313ebb7b27ca9f82c44db 155996 libdevel optional krb5-multidev_1.17-3+deb10u5_amd64.deb
+ 81e4892fbe679bdbf1043dba56a15590 32472 debug optional krb5-otp-dbgsym_1.17-3+deb10u5_amd64.deb
+ 0bb0d766c1fbe15f7ebdc950d5b6fe3d 53124 net optional krb5-otp_1.17-3+deb10u5_amd64.deb
+ 18feef5ff01f1437654044b255fbe215 190616 debug optional krb5-pkinit-dbgsym_1.17-3+deb10u5_amd64.deb
+ bfc45f2593edaa751aa1e6a8d6d48d35 91492 net optional krb5-pkinit_1.17-3+deb10u5_amd64.deb
+ a931f627a25f443afd9312afe7ff0c2a 228492 debug optional krb5-user-dbgsym_1.17-3+deb10u5_amd64.deb
+ e7e7460aac624b9e74f77dd9430026b5 149816 net optional krb5-user_1.17-3+deb10u5_amd64.deb
+ 56c44c03bf35b4a0de7088a0f8f00e87 20557 net optional krb5_1.17-3+deb10u5_amd64.buildinfo
+ df02917680a0796395ecd8a0058fe971 158532 libs optional libgssapi-krb5-2_1.17-3+deb10u5_amd64.deb
+ 3d63f6b605464ad55ba6e0d88f5e3ec8 91536 libs optional libgssrpc4_1.17-3+deb10u5_amd64.deb
+ 413b55ebc6a873b58d129b4a9e8539be 122212 libs optional libk5crypto3_1.17-3+deb10u5_amd64.deb
+ 26e19b044ce4676a1c340b2a2ba986dc 73956 libs optional libkadm5clnt-mit11_1.17-3+deb10u5_amd64.deb
+ bf315111f93b24bf6ab1f383ad5eea88 86008 libs optional libkadm5srv-mit11_1.17-3+deb10u5_amd64.deb
+ 2523d7c98b7d62bf44ded2e9812f211c 73708 libs optional libkdb5-9_1.17-3+deb10u5_amd64.deb
+ 520f5ff3446a49848f1ae093adc094d2 48240 libdevel optional libkrad-dev_1.17-3+deb10u5_amd64.deb
+ 09e092ae658632520217c278e5eed190 57700 libs optional libkrad0_1.17-3+deb10u5_amd64.deb
+ 401872eac20e2c3613039b478c81c517 368896 libs optional libkrb5-3_1.17-3+deb10u5_amd64.deb
+ 7e795e102c81542222fdfeaff5324cdc 3130612 debug optional libkrb5-dbg_1.17-3+deb10u5_amd64.deb
+ 65a3d845dfc9dc6217b16c3751728137 47760 libdevel optional libkrb5-dev_1.17-3+deb10u5_amd64.deb
+ 39944a00654f9c16c01d8c142a788575 65972 libs optional libkrb5support0_1.17-3+deb10u5_amd64.deb
+

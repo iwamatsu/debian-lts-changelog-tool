@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 31 Oct 2022 16:04:00 +0200
+Source: python3.7
+Architecture: source
+Version: 3.7.3-2+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ python3.7 (3.7.3-2+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Resolve CVE-2022-37454, a buffer overflow it the SHA-3 implementation in
+     the _sha3 (and thus hashlib) module.
+Checksums-Sha1:
+ 322e6de82c670f242645a45c45cdb76d5962d23f 2827 python3.7_3.7.3-2+deb10u4.dsc
+ e3584650a06ae2765da0678176deae9d133f1b3d 17108364 python3.7_3.7.3.orig.tar.xz
+ 7d7192990d768b2de0fe7ae9d8ad0d8d7cd26325 220528 python3.7_3.7.3-2+deb10u4.debian.tar.xz
+ 59f8235a4db2b83f94601d0f2e2dffb89b30e62b 9419 python3.7_3.7.3-2+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 4d8de01573ed0ba4016566fcfeec3a83b64fef719978ed3b126f3121652a0ae9 2827 python3.7_3.7.3-2+deb10u4.dsc
+ da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318 17108364 python3.7_3.7.3.orig.tar.xz
+ dd2eaaa5e2215a148990c7e02de50e1ac7add538baf743be1c418c0ec6502259 220528 python3.7_3.7.3-2+deb10u4.debian.tar.xz
+ 7b18f10ae09ca033f41b04d492235a9d9a4e72f85cca19f9c71da0613a6e45a2 9419 python3.7_3.7.3-2+deb10u4_source.buildinfo
+Files:
+ a2eb4d4e29c4401df87ebfb39567f4ee 2827 python optional python3.7_3.7.3-2+deb10u4.dsc
+ 93df27aec0cd18d6d42173e601ffbbfd 17108364 python optional python3.7_3.7.3.orig.tar.xz
+ d8db2a7ee648accc262c1fb4b9ade1e6 220528 python optional python3.7_3.7.3-2+deb10u4.debian.tar.xz
+ 51a712f1d5031852a04f980baa485f46 9419 python optional python3.7_3.7.3-2+deb10u4_source.buildinfo
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 07 May 2024 02:47:26 +0200
+Source: php7.3
+Architecture: source
+Version: 7.3.31-1~deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ php7.3 (7.3.31-1~deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-2756: Due to an incomplete fix to CVE-2022-31629, network and
+     same-site attackers can set a standard insecure cookie in the victim's
+     browser which is treated as a __Host- or __Secure- cookie by PHP
+     applications.
+   * Fix CVE-2024-3096: If a password stored with password_hash starts with a
+     null byte (\x00), testing a blank string as the password via
+     password_verify() will incorrectly return true.
+   * d/p/CVE-2023-3823.patch: Also backport upstream commit 62228a25685 (a
+     no-op on Linux.)
+Checksums-Sha1:
+ 3f3cc4a570e87184ebf3b3f6af4f95d6a712e8bd 5867 php7.3_7.3.31-1~deb10u6.dsc
+ dd58696a4287a4ad99145305e6ba8af375ed8510 86992 php7.3_7.3.31-1~deb10u6.debian.tar.xz
+ 92a5fd56cb61aab5a319ee28b0601884cd14a7e5 35906 php7.3_7.3.31-1~deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 2aea4fd63d9b4c986a49f99c60ef7fdbecc54d26f3afd40fdabb78e49db9588d 5867 php7.3_7.3.31-1~deb10u6.dsc
+ a306ee0b9dad8b5566483a17f56da5f9a5c08d4233819347ca140204b65842b7 86992 php7.3_7.3.31-1~deb10u6.debian.tar.xz
+ e8cc29adba8f45c91a5bce4e217a4e26c436c867da53a5c56d17ddcd9ac580e1 35906 php7.3_7.3.31-1~deb10u6_amd64.buildinfo
+Files:
+ f151f11801207262583c6300b75885ef 5867 php optional php7.3_7.3.31-1~deb10u6.dsc
+ 71bf69cec419ce379c44d132cef55ab8 86992 php optional php7.3_7.3.31-1~deb10u6.debian.tar.xz
+ 8f167c0fa62ed329350d09ab442ec58f 35906 php optional php7.3_7.3.31-1~deb10u6_amd64.buildinfo
+

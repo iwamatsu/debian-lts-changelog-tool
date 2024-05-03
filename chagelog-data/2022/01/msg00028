@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 25 Jan 2022 18:03:02 +0100
+Source: libxfont
+Binary: libxfont2 libxfont2-udeb libxfont-dev
+Architecture: source amd64
+Version: 1:2.0.1-3+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libxfont-dev - X11 font rasterisation library (development headers)
+ libxfont2  - X11 font rasterisation library
+ libxfont2-udeb - X11 font rasterisation library (udeb)
+Changes:
+ libxfont (1:2.0.1-3+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2017-16611
+     Open files with O_NOFOLLOW
+Checksums-Sha1:
+ 3a9ce98a71286c606c2fa75abc28cb0fdc0609c8 2371 libxfont_2.0.1-3+deb9u2.dsc
+ d82d69d7f69fd809e3cd731ec2c4a338789dc055 591227 libxfont_2.0.1.orig.tar.gz
+ 837971e082e8ebf23339ca1f1d7ffbd8e41543bc 28168 libxfont_2.0.1-3+deb9u2.diff.gz
+ 4b6078404c48da3560b37d8edfd533ced4493cab 166304 libxfont-dev_2.0.1-3+deb9u2_amd64.deb
+ d01facf1af82c58791944a0e38aace8fd6ffa16a 227106 libxfont2-dbgsym_2.0.1-3+deb9u2_amd64.deb
+ 1f83735127aa7d2df062f23cf870fa2b93be069d 86568 libxfont2-udeb_2.0.1-3+deb9u2_amd64.udeb
+ d1b75661345260032873b4af522602e2515355ab 132894 libxfont2_2.0.1-3+deb9u2_amd64.deb
+ e3a6a077199f9666ce9ff6106b2a46f28bfc43a0 7731 libxfont_2.0.1-3+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ 71f8fea455684ff35df6fbc912ce57a86a3beb8e66d80e3fd8d3bf33733866db 2371 libxfont_2.0.1-3+deb9u2.dsc
+ 381b6b385a69343df48a082523c856aed9042fbbc8ee0a6342fb502e4321230a 591227 libxfont_2.0.1.orig.tar.gz
+ 25e4287a002f79e55e6c23cebfabd681ce46699c2d0f3fc9e6c443e56e791604 28168 libxfont_2.0.1-3+deb9u2.diff.gz
+ d7b3a3be6b730592cd2b0808da8c3a6e57366861e37c515eefa1e672783bb4b0 166304 libxfont-dev_2.0.1-3+deb9u2_amd64.deb
+ 6479421d142e34066c3b22cff94eca00413fd197fa430a8ebf434d0b80285771 227106 libxfont2-dbgsym_2.0.1-3+deb9u2_amd64.deb
+ 69a5443cbacd1d41d9e6883f3bfe0da4e9bf0851d0cd3bff75df417a79a442ee 86568 libxfont2-udeb_2.0.1-3+deb9u2_amd64.udeb
+ f1634a9cb395876ab9d012d552656be67c7d5f1d37ff0e440cd378e1662ddd3d 132894 libxfont2_2.0.1-3+deb9u2_amd64.deb
+ 63e87def5a8de91e0dc974809452bcc6ad9f141ce7c0aa664f92ec25af093305 7731 libxfont_2.0.1-3+deb9u2_amd64.buildinfo
+Files:
+ e90a3a7a968dc5c92a77ecaf35288003 2371 x11 optional libxfont_2.0.1-3+deb9u2.dsc
+ 6ae5ae1f9fb1213b04f14a802a1d721c 591227 x11 optional libxfont_2.0.1.orig.tar.gz
+ 4bc0c4577cea175afafb1090c193ea94 28168 x11 optional libxfont_2.0.1-3+deb9u2.diff.gz
+ 48d320f7ebf62aa2d4b4709a18d5274f 166304 libdevel optional libxfont-dev_2.0.1-3+deb9u2_amd64.deb
+ c3d9e110b61442751241ed126b1d6d08 227106 debug extra libxfont2-dbgsym_2.0.1-3+deb9u2_amd64.deb
+ 2d7cead4bffdc50c8be0f11ecc7a21a5 86568 debian-installer optional libxfont2-udeb_2.0.1-3+deb9u2_amd64.udeb
+ 2753b0d517e213ebab87db9946034bee 132894 libs optional libxfont2_2.0.1-3+deb9u2_amd64.deb
+ ec2f254b5af9c34b64b1abaf1c292fe1 7731 x11 optional libxfont_2.0.1-3+deb9u2_amd64.buildinfo
+Package-Type: udeb
+

@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 31 Jul 2023 12:02:41 +0200
+Source: amd64-microcode
+Binary: amd64-microcode
+Architecture: source amd64
+Version: 3.20230719.1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Changed-By: Jochen Sprickerhof <jspricke@debian.org>
+Description:
+ amd64-microcode - Processor microcode firmware for AMD CPUs
+Changes:
+ amd64-microcode (3.20230719.1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Rebuild for buster-security.
+   * Revert move to non-free-firmware
+Checksums-Sha1:
+ ae97545a09bf26e6777ba46a70e5aa8612335a1c 1747 amd64-microcode_3.20230719.1~deb10u1.dsc
+ cb5d689cc49ff4957b34bb51b3294243233b997c 120728 amd64-microcode_3.20230719.1~deb10u1.tar.xz
+ c3da4cee2eeb06bd299e3951dccee987a4f5d2ad 5652 amd64-microcode_3.20230719.1~deb10u1_amd64.buildinfo
+ e9de10b39a1ac7bf958750ddf0a285a418ac95fd 120516 amd64-microcode_3.20230719.1~deb10u1_amd64.deb
+Checksums-Sha256:
+ 884b8267a3ff22d91ca5f2ae911d6a34c2d98f1039ade140306c9e5dc9f67f15 1747 amd64-microcode_3.20230719.1~deb10u1.dsc
+ cb3d4a95c17ed342bbdd406875fe8021eb8e4391faab98548a8218865339b6e5 120728 amd64-microcode_3.20230719.1~deb10u1.tar.xz
+ e9e2dc19ae467e8cfb393b369c054c6b250f4e2c883a231cef1a2718c4f402a4 5652 amd64-microcode_3.20230719.1~deb10u1_amd64.buildinfo
+ 42b20845066ba1bada3d2c70b5c7d52ea08f45ea8188ddf9082f0904380ad4f0 120516 amd64-microcode_3.20230719.1~deb10u1_amd64.deb
+Files:
+ 50cd76e40d55ee829b480d9960893ff7 1747 non-free/admin standard amd64-microcode_3.20230719.1~deb10u1.dsc
+ c4bcf568de8c960a751084ac1768c95d 120728 non-free/admin standard amd64-microcode_3.20230719.1~deb10u1.tar.xz
+ c82cc00a58c372d0a5c65ad314f71a8b 5652 non-free/admin standard amd64-microcode_3.20230719.1~deb10u1_amd64.buildinfo
+ cbbe0912046f39b3f108fc99dba7772d 120516 non-free/admin standard amd64-microcode_3.20230719.1~deb10u1_amd64.deb
+

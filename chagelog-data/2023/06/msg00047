@@ -1,0 +1,56 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 19 Jun 2023 23:14:25 -0300
+Source: xmltooling
+Architecture: source
+Version: 3.0.4-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Shib Team <pkg-shibboleth-devel@lists.alioth.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Closes: 1037948
+Changes:
+ xmltooling (3.0.4-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team
+   * Thanks a lot to Ferenc Wágner for preparing the patch!
+ .
+   [ Ferenc Wágner ]
+   * [47aa66a] New patch: CPPXT-157 - Install blocking URI resolver into Santuario.
+     Fix a denial of service vulnerability: Parsing of KeyInfo elements can
+     cause remote resource access.
+     Including certain legal but "malicious in intent" content in the
+     KeyInfo element defined by the XML Signature standard will result
+     in attempts by the SP's shibd process to dereference untrusted
+     URLs.
+     While the content of the URL must be supplied within the message
+     and does not include any SP internal state or dynamic content,
+     there is at minimum a risk of denial of service, and the attack
+     could be combined with others to create more serious vulnerabilities
+     in the future.
+     Thanks to Scott Cantor for the fix. (Closes: #1037948)
+   * [affa8c0] Update changelog for 3.0.4-1+deb10u2 release
+ .
+   [ Santiago Ruano Rincón ]
+   * [39b9667] Backport debian/tests/ from bullseye
+   * [107b2dd] Add debian/salsa-ci.yml using lts-team/pipeline for buster
+Checksums-Sha1:
+ dd589f12741665a3e98a12d62031d894822a7475 2196 xmltooling_3.0.4-1+deb10u2.dsc
+ e0ef8e450c6517eca3273d9900777b354d3997bf 608437 xmltooling_3.0.4.orig.tar.bz2
+ ea9ddb61217250015760c11bf6f1a8641ad3e17b 833 xmltooling_3.0.4.orig.tar.bz2.asc
+ 22d46e7b7ece106e36aa68f3366a1e19e38b790d 55904 xmltooling_3.0.4-1+deb10u2.debian.tar.xz
+ cd0ea8f482837a1f07ec9741eba88f3b987afb5f 9854 xmltooling_3.0.4-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 916a021773af825765c229d58a293dc70b7711176826815ae2c76460ea5aa9e2 2196 xmltooling_3.0.4-1+deb10u2.dsc
+ bb87febe730f97fc58f6f6b6782d7ab89bf240944dd6e5f1c1d9681254bb9a88 608437 xmltooling_3.0.4.orig.tar.bz2
+ d25e2b86fe37f1764ce6262bf6741f378164b1883d5438cd8c8ccc6e7bbd6948 833 xmltooling_3.0.4.orig.tar.bz2.asc
+ 4c87f343b35cb96790fca92d8fd37287ff64d438bc41c20073984ee6404f1b34 55904 xmltooling_3.0.4-1+deb10u2.debian.tar.xz
+ 4be08520f0b7122510e257cc79a5f983170eb2360288965e9a548080874d8520 9854 xmltooling_3.0.4-1+deb10u2_amd64.buildinfo
+Files:
+ 24b377ad2d379a9a84372d240c6f1c50 2196 libs optional xmltooling_3.0.4-1+deb10u2.dsc
+ b210bffe55ddaf8ded77af4ac8389639 608437 libs optional xmltooling_3.0.4.orig.tar.bz2
+ c7858fa00afbaaf864c9b1f7c8c6908b 833 libs optional xmltooling_3.0.4.orig.tar.bz2.asc
+ 7584cf3f76b1fc863725693bf91ce2f5 55904 libs optional xmltooling_3.0.4-1+deb10u2.debian.tar.xz
+ 251c7151648c0df53b6f8d09df73300c 9854 libs optional xmltooling_3.0.4-1+deb10u2_amd64.buildinfo
+

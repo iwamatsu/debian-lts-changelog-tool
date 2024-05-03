@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 31 May 2022 14:26:34 CEST
+Source: libjpeg-turbo
+Binary: libjpeg-dev libjpeg62-turbo-dev libjpeg62-turbo libturbojpeg0 libturbojpeg0-dev libjpeg-turbo-progs
+Architecture: source
+Version: 1:1.5.1-2+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Ondřej Surý <ondrej@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libjpeg-dev - Development files for the JPEG library [dummy package]
+ libjpeg-turbo-progs - Programs for manipulating JPEG files
+ libjpeg62-turbo - libjpeg-turbo JPEG runtime library
+ libjpeg62-turbo-dev - Development files for the libjpeg-turbo JPEG library
+ libturbojpeg0 - TurboJPEG runtime library - SIMD optimized
+ libturbojpeg0-dev - Development files for the TurboJPEG library
+Checksums-Sha1:
+ 8bd2317047059cf8e1e813caddd556842e90132e 2483 libjpeg-turbo_1.5.1-2+deb9u2.dsc
+ 70b7ca9a512c5f84a24612147c5fb6a1a7278882 88280 libjpeg-turbo_1.5.1-2+deb9u2.debian.tar.xz
+ 16fce9eac20f5326e15b640d1cbbea1ed1826505 8602 libjpeg-turbo_1.5.1-2+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ 2cfebb460bcf172bbeceb61d3f6cb88298ebb528b9087cd3bf6ab2a68187f517 2483 libjpeg-turbo_1.5.1-2+deb9u2.dsc
+ 98954d8b6e4d4dd833794f9f07211529cfbb558269223558175d8b7c11d81e84 88280 libjpeg-turbo_1.5.1-2+deb9u2.debian.tar.xz
+ 8da9c49bf71869d46fe8520736e3c44faf68ecd2037f9d4b48bb9d5b50bfe8f8 8602 libjpeg-turbo_1.5.1-2+deb9u2_amd64.buildinfo
+Changes:
+ libjpeg-turbo (1:1.5.1-2+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-2201:
+     integer overflow issues and subsequent segfaults that occurred when
+     attempting to compress or decompress gigapixel images with the TurboJPEG
+     API
+Files:
+ 056f58fe3f8466e9470cb054f356f64e 2483 graphics optional libjpeg-turbo_1.5.1-2+deb9u2.dsc
+ eabc0e20626414d7b00426f1be5324e0 88280 graphics optional libjpeg-turbo_1.5.1-2+deb9u2.debian.tar.xz
+ fc75f10b250acbccc6b49093b25035da 8602 graphics optional libjpeg-turbo_1.5.1-2+deb9u2_amd64.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 22 May 2022 22:56:18 +0200
+Source: admesh
+Architecture: source
+Version: 0.98.2-3+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Closes: 1010770
+Changes:
+ admesh (0.98.2-3+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-25033: Fix heap buffer overflow in
+                     stl_update_connects_remove_1. (Closes: #1010770)
+Checksums-Sha1:
+ a331e5841e803b38cf4e85e759237dad20703c7e 2148 admesh_0.98.2-3+deb9u1.dsc
+ 7d0248d2ec0cf98349f3347d73e2eaed0ede7c53 33984 admesh_0.98.2.orig.tar.xz
+ 902d9489b7923ef3ab54ea39e8c99834b442a2f4 6332 admesh_0.98.2-3+deb9u1.debian.tar.xz
+ a7710661a242568168f69270debab80b115bb2f8 6452 admesh_0.98.2-3+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 60d7a60e3439381eade27b80934136d30ce3f7cad9b6c81b6ca8ef41acfed2b3 2148 admesh_0.98.2-3+deb9u1.dsc
+ a4b14e81be3dd18c6146ddf10004bc827adbf79f8f596a233676d73beadcac68 33984 admesh_0.98.2.orig.tar.xz
+ e613b95ceff51fffdc05b09154514582258fd359c53adb1b1f6db39e5bd31eff 6332 admesh_0.98.2-3+deb9u1.debian.tar.xz
+ b49f58a6b945f55dbca75afc481676c37f82f5af9dd9fbb362a8a28bc91cb653 6452 admesh_0.98.2-3+deb9u1_source.buildinfo
+Files:
+ 99c59c61e8d242452cf520ca851f5ac4 2148 math optional admesh_0.98.2-3+deb9u1.dsc
+ 0ecb83318d0f6c19d2d8779d3f9a3d31 33984 math optional admesh_0.98.2.orig.tar.xz
+ 51297f71632b6dd9976e56f9c5070108 6332 math optional admesh_0.98.2-3+deb9u1.debian.tar.xz
+ 1ae9afef981f31cfd5b14109c9749de6 6452 math optional admesh_0.98.2-3+deb9u1_source.buildinfo
+

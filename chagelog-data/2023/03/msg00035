@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 31 Mar 2023 06:44:06 +0200
+Source: svgpp
+Architecture: source
+Version: 1.2.3+dfsg1-6+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Anton Gladky <gladk@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ svgpp (1.2.3+dfsg1-6+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-44960: fix XMLDocument::getRoot function.
+   * CVE-2019-6245, CVE-2019-6247: set versioned depends on libagg2.
+Checksums-Sha1:
+ deb891a6c07404346424f952325bae569c84624b 2139 svgpp_1.2.3+dfsg1-6+deb10u1.dsc
+ 5ae7ac4a09f5dcb07057498ba752f6caf65bcdd6 176676 svgpp_1.2.3+dfsg1.orig.tar.xz
+ 0ee95c73fcd58dea85adcd6da793ecd68fff547b 5804 svgpp_1.2.3+dfsg1-6+deb10u1.debian.tar.xz
+ 6fe93dd7d663df46b3ec943deeb0131eda306089 9665 svgpp_1.2.3+dfsg1-6+deb10u1_source.buildinfo
+Checksums-Sha256:
+ b3af608438b6f5f9bfb2a86fbfca5f896e379f9b35bb7b31799d60a3f1265930 2139 svgpp_1.2.3+dfsg1-6+deb10u1.dsc
+ b89579973568ade94d07026f82a33d6e858200abf667b9a8e851e47ee60b49e9 176676 svgpp_1.2.3+dfsg1.orig.tar.xz
+ 92d648bc5d4fd641051c343d6fb5c57acf1cd0e3e9a067d60ebe6588442b1c75 5804 svgpp_1.2.3+dfsg1-6+deb10u1.debian.tar.xz
+ f20c2995e780ffedd480f2055552c877e2c36f82f303770e98f72a063d03b438 9665 svgpp_1.2.3+dfsg1-6+deb10u1_source.buildinfo
+Files:
+ bf5aac726a52c1f875c02a833e881d4b 2139 libs optional svgpp_1.2.3+dfsg1-6+deb10u1.dsc
+ ddfcb985b98dc9b0cd89d65be8459666 176676 libs optional svgpp_1.2.3+dfsg1.orig.tar.xz
+ fe721e08c63a8f5906f3e5f9da33bfe8 5804 libs optional svgpp_1.2.3+dfsg1-6+deb10u1.debian.tar.xz
+ 84a719cccb4a180e52f942cf70951beb 9665 libs optional svgpp_1.2.3+dfsg1-6+deb10u1_source.buildinfo
+

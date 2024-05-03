@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 16 May 2023 00:05:46 +0200
+Source: python-ipaddress
+Architecture: source
+Version: 1.0.17-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ python-ipaddress (1.0.17-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-14422: The __hash__() methods of classes IPv4Interface and
+     IPv6Interface had issue of generating constant hash values of 32 and 128
+     respectively causing hash collisions, which might allow a remote attacker
+     to cause a denial of service if an application is affected by the
+     performance of a dictionary containing IPv4Interface or IPv6Interface
+     objects.  The attacker can moreover cause many dictionary entries to be
+     created.
+Checksums-Sha1:
+ 3eebee07a6573840912ccfb8da3035399e14ed63 2210 python-ipaddress_1.0.17-1+deb10u1.dsc
+ 34bfa4108877dc1ccbe40f93145fd6f54718c535 32434 python-ipaddress_1.0.17.orig.tar.gz
+ 50fadc8e8f18f5975edfc3b3386c9a1704f982d5 5040 python-ipaddress_1.0.17-1+deb10u1.debian.tar.xz
+ 67e797a53f50bb045801a58a4e12b9a659fc9fc8 7015 python-ipaddress_1.0.17-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3d8d45929daa8f0eb454fada0a4c71e60621cd8a05e3f3220c10b281f971599e 2210 python-ipaddress_1.0.17-1+deb10u1.dsc
+ 3a21c5a15f433710aaa26f1ae174b615973a25182006ae7f9c26de151cd51716 32434 python-ipaddress_1.0.17.orig.tar.gz
+ 97627abefeb054d894577b9533fb32f96bd5aeb1b63969a922a66fce2a8ce9db 5040 python-ipaddress_1.0.17-1+deb10u1.debian.tar.xz
+ 2ea88a88178039ceed10b3a8ad2a8f620d8fcd37d6ee3a33af7c6bd2bd2ce6b2 7015 python-ipaddress_1.0.17-1+deb10u1_amd64.buildinfo
+Files:
+ 040934c01458d20c5655aa66e02566ec 2210 python optional python-ipaddress_1.0.17-1+deb10u1.dsc
+ 8bbf0326719fafb1f453921ef96729fe 32434 python optional python-ipaddress_1.0.17.orig.tar.gz
+ c699c8a85ebb8394d3a1509027cebe9b 5040 python optional python-ipaddress_1.0.17-1+deb10u1.debian.tar.xz
+ bb580c54c6e57d21f35112cca33e5c50 7015 python optional python-ipaddress_1.0.17-1+deb10u1_amd64.buildinfo
+

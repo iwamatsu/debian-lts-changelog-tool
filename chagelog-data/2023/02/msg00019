@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 Feb 2023 15:37:28 CET
+Source: gnutls28
+Architecture: source
+Version: 3.6.7-4+deb10u10
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 5cfc04164a2ae5aaa3299636fb629c18b1ac61cd 3265 gnutls28_3.6.7-4+deb10u10.dsc
+ 6165e7301c450a13bb693f0f7ef4e0ac4c21847f 102420 gnutls28_3.6.7-4+deb10u10.debian.tar.xz
+ 2bd36f0c72af1154c7c87d4f1b2bc42212ddd13c 11570 gnutls28_3.6.7-4+deb10u10_amd64.buildinfo
+Checksums-Sha256:
+ 12f471baebedb368b8ea0c85cfecdf16b4c2bb5b0ed191587fce28424d6ff46e 3265 gnutls28_3.6.7-4+deb10u10.dsc
+ 7f2bfec4727b90b7d81267098f997bf847494c0c9ff2906606398a40a730ec7f 102420 gnutls28_3.6.7-4+deb10u10.debian.tar.xz
+ fcabb40dae4097b5777585162ba867accb415416b70d52fbffda4828a4aaa0bd 11570 gnutls28_3.6.7-4+deb10u10_amd64.buildinfo
+Changes:
+ gnutls28 (3.6.7-4+deb10u10) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-0361:
+     Hubert Kario discovered a timing side channel in the RSA decryption
+     implementation of the GNU TLS library.
+Files:
+ 104fcbb8b95469867db7f61e520a16e7 3265 libs optional gnutls28_3.6.7-4+deb10u10.dsc
+ 3e92b06d3947507129abe06117ad6b71 102420 libs optional gnutls28_3.6.7-4+deb10u10.debian.tar.xz
+ 592af1a6fb43cfc35f1239fd2b0341f3 11570 libs optional gnutls28_3.6.7-4+deb10u10_amd64.buildinfo
+

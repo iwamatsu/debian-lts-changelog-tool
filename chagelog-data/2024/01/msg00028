@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 29 Jan 2024 11:10:33 -0800
+Source: pillow
+Architecture: source
+Version: 5.4.1-2+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1061172
+Changes:
+ pillow (5.4.1-2+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-50447: Prevent a potential arbitrary code execution vulnerability
+     in the PIL.ImageMath.eval functionality. (Closes: #1061172)
+   * Re-enable running Pillow's own testsuite in debian/rules.
+Checksums-Sha1:
+ 0966493180b96ec058992bfb85aff8fa125e338c 2846 pillow_5.4.1-2+deb10u4.dsc
+ 480e72c23fe96c4241f87ed64661b5ffa6157718 12248208 pillow_5.4.1.orig.tar.xz
+ 42bde42f2780bc5fb354100ce465a6fe50e8793f 22176 pillow_5.4.1-2+deb10u4.debian.tar.xz
+ b560255dcb0576ab3e17009e90fb05b64b77f158 14361 pillow_5.4.1-2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ a93904ee4aa9d2a5f850391e3d7d11a59576f3dded230fcd5143732c2d612783 2846 pillow_5.4.1-2+deb10u4.dsc
+ db7f301e4bf1eade3321430014b71230492443015929a221163c6b52af68320d 12248208 pillow_5.4.1.orig.tar.xz
+ a1fb2613dde2c16d18d9bfee4070d6df4a69a4678941db869ab3288a110c1624 22176 pillow_5.4.1-2+deb10u4.debian.tar.xz
+ ab05960d785ff06d22d1a797a83a01f2c428fde592ed39e70ccce55a4a63fc16 14361 pillow_5.4.1-2+deb10u4_amd64.buildinfo
+Files:
+ 44dcf3d7f15bd53dfb721c3edb7821a2 2846 python optional pillow_5.4.1-2+deb10u4.dsc
+ c05bfe9b46c70b5823d9e25fa796ff19 12248208 python optional pillow_5.4.1.orig.tar.xz
+ a8a88b776c825e873411b7aae351f452 22176 python optional pillow_5.4.1-2+deb10u4.debian.tar.xz
+ 889308726bfda45c3f864f99e8b49dcb 14361 python optional pillow_5.4.1-2+deb10u4_amd64.buildinfo
+

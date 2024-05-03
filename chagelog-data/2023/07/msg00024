@@ -1,0 +1,184 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 07 Jul 2023 17:14:33 +0100
+Source: bind9
+Binary: bind9 bind9-dbgsym bind9-doc bind9-host bind9-host-dbgsym bind9utils bind9utils-dbgsym dnsutils dnsutils-dbgsym libbind-dev libbind-export-dev libbind9-161 libbind9-161-dbgsym libdns-export1104 libdns-export1104-dbgsym libdns-export1104-udeb libdns1104 libdns1104-dbgsym libirs-export161 libirs-export161-dbgsym libirs-export161-udeb libirs161 libirs161-dbgsym libisc-export1100 libisc-export1100-dbgsym libisc-export1100-udeb libisc1100 libisc1100-dbgsym libisccc-export161 libisccc-export161-dbgsym libisccc-export161-udeb libisccc161 libisccc161-dbgsym libisccfg-export163 libisccfg-export163-dbgsym libisccfg-export163-udeb libisccfg163 libisccfg163-dbgsym liblwres161 liblwres161-dbgsym
+Architecture: source amd64 all
+Version: 1:9.11.5.P4+dfsg-5.1+deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ bind9      - Internet Domain Name Server
+ bind9-doc  - Documentation for BIND
+ bind9-host - DNS lookup utility (deprecated)
+ bind9utils - Utilities for BIND
+ dnsutils   - Clients provided with BIND
+ libbind-dev - Static Libraries and Headers used by BIND
+ libbind-export-dev - Development files for the exported BIND libraries
+ libbind9-161 - BIND9 Shared Library used by BIND
+ libdns-export1104 - Exported DNS Shared Library
+ libdns-export1104-udeb - Exported DNS library for debian-installer (udeb)
+ libdns1104 - DNS Shared Library used by BIND
+ libirs-export161 - Exported IRS Shared Library
+ libirs-export161-udeb - Exported IRS library for debian-installer (udeb)
+ libirs161  - DNS Shared Library used by BIND
+ libisc-export1100 - Exported ISC Shared Library
+ libisc-export1100-udeb - Exported ISC library for debian-installer (udeb)
+ libisc1100 - ISC Shared Library used by BIND
+ libisccc-export161 - Command Channel Library used by BIND
+ libisccc-export161-udeb - Command Channel Library used by BIND (udeb)
+ libisccc161 - Command Channel Library used by BIND
+ libisccfg-export163 - Exported ISC CFG Shared Library
+ libisccfg-export163-udeb - Exported ISC CFG library for debian-installer (udeb)
+ libisccfg163 - Config File Handling Library used by BIND
+ liblwres161 - Lightweight Resolver Library used by BIND
+Changes:
+ bind9 (1:9.11.5.P4+dfsg-5.1+deb10u9) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * CVE-2023-2828: It was discovered that the effectiveness of the
+     cache-cleaning algorithm used in named(5) can be severely diminished by
+     querying the resolver for specific RRsets in a certain order, effectively
+     allowing the configured max-cache-size limit to be significantly exceeded.
+   * Add debian/.gitlab-ci.yml
+   * Allow blhc failures; "CPPFLAGS missing", etc.
+   * Backport a1dbd6d68 and ef4eef07f4 from bind9.git to make autopkgtests pass.
+Checksums-Sha1:
+ 74c1eac291c44b0bf5e406ddab86fe826c2db891 3966 bind9_9.11.5.P4+dfsg-5.1+deb10u9.dsc
+ 5f3c14b760a987b5353c04d939fa0f91533a0c57 3956484 bind9_9.11.5.P4+dfsg.orig.tar.xz
+ e645cfd235bdc8ff42a361fbdc97bcf99df06aec 123480 bind9_9.11.5.P4+dfsg-5.1+deb10u9.debian.tar.xz
+ 71d5591511536df54e26cb736bbf9afd066de33b 2186536 bind9-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ e4d04d0addc605c08a75cb9cee3c243398ef3841 449284 bind9-doc_9.11.5.P4+dfsg-5.1+deb10u9_all.deb
+ e15299e77f7007909f1e2b649deb84be48fe838c 109976 bind9-host-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 6688968e2e49c0f40dc9cc86627a76bd012253fc 271836 bind9-host_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ce210cf041894d412c5fadc4bff8da25864324ec 20960 bind9_9.11.5.P4+dfsg-5.1+deb10u9_amd64.buildinfo
+ 6755422bea9122e5788691b3332deb518b734a10 634312 bind9_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ fbbec2842a567e2ac5164e491d5789b764d31227 1044668 bind9utils-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ eb5fe68c4e111c147ec5ebbe2eb8bf066edc4695 433444 bind9utils_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 660bb53054f262f1b2440d43ecc0af3b9af2331e 394144 dnsutils-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 6d5912356fb75c1cd677b5df25ae8b5eeda165a7 365788 dnsutils_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 58389afb5beb4f613bd99ee6b942cce90ca66085 1720424 libbind-dev_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 911b8b35aebc945c42b5640db48aad8f163b78d5 1539464 libbind-export-dev_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ bbc7c42fc8225d00b99bc178972000dfc2043eb6 66752 libbind9-161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ c54b9140160e03b13649cfd2adb6a6ed7b7bfd47 247048 libbind9-161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 4d602307ef8e7af5490263c00ff6e7cf4c59a940 2698052 libdns-export1104-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ bd82a0b2509e76365957999ce98853cf71e85e16 751624 libdns-export1104-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 9ef21d61e02e212b2306543d3a4b4e8d60b051e8 973816 libdns-export1104_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ fb8f274001bee48b9c389073cf1d890bfddc19be 5748140 libdns1104-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ eaa500f2e22c080a15a6d7bc10e9450a7c35dab4 1215612 libdns1104_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ dc837304649d175764a774d59f5d801fc70fdf8d 59280 libirs-export161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 9186c214cdd19a8a7992dfb1b42bb3d7f46a8934 15592 libirs-export161-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ b827b7afa605bd7d0fda8c41dc5a383e74fba1fe 237344 libirs-export161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ f32bd6ae902d529922d18e4813905472a488a4a1 63008 libirs161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 77468c05936b57669a879137431d552382ab17d8 238188 libirs161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 7228981ed1b0bfaea40e18e2ec0180d003d195e6 469800 libisc-export1100-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ efc8bb508a5ad39d2771d42e039b2838a7b4819b 159368 libisc-export1100-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 0a62843927451f3fc70f144ba7d8a3870b35e67b 381064 libisc-export1100_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 81500ca17778f7451839b18dc726ed38f197724d 1069992 libisc1100-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ b802765eb7f85a0f7b32268794003c528a834712 458440 libisc1100_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ba7fc0b867cf81db007f58335faed6ce42620b35 42240 libisccc-export161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 698ccf3d6130b2013cbb47be11d07e63316c74a3 14992 libisccc-export161-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 5725dd7e18efca2c32825b97291e7ac76123950e 236412 libisccc-export161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ c026157344c0f44d428d6f358772ac94e97d4ff7 43336 libisccc161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 567124134bf6cd6b3ec88902cfaf165f9e269af7 237224 libisccc161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 525401b6cc9ff6d71f4494dd7c18e3feb2743c98 102000 libisccfg-export163-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ af1401d03d075c08b35cb9de393100e6f8e3eca3 43332 libisccfg-export163-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ f16c326a96b6d887c7628364d3f2f02136876977 264508 libisccfg-export163_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ b4b703b21701caed766a9f689cbf0d0c69b80d09 109972 libisccfg163-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 6d5c36551250abd5c0b320d072a6a990c17e13a6 267516 libisccfg163_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 597f2c016809420b8a29fa44b1b15ba69b73dcb2 93192 liblwres161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ d889f4e1393a187fb32d7d598afd36cfcf127c42 252116 liblwres161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+Checksums-Sha256:
+ da6e458f8d3af553d9f65416bc659877bbb784615724e15c6583984a5edd8ee9 3966 bind9_9.11.5.P4+dfsg-5.1+deb10u9.dsc
+ 34b20e4e17875d5c4280d52264bae08f527e38eb6bcfca431432b0cafcd03c6d 3956484 bind9_9.11.5.P4+dfsg.orig.tar.xz
+ 62c37fef84552384c9558a8d1c6fcfcc8508e28ed4d79d437b2f5fde2dff4721 123480 bind9_9.11.5.P4+dfsg-5.1+deb10u9.debian.tar.xz
+ 8ee0549f0489266bcdeb33d0cf3689c3e02671660af353810677ebabcced4a37 2186536 bind9-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 5f447eb7b8ee94948d1d47649108be117b064d7bc621fbbe43924965badbf785 449284 bind9-doc_9.11.5.P4+dfsg-5.1+deb10u9_all.deb
+ ed46d76e23a40eb383094df30d5c80c397541fdc65c151a8f853861cbc85ef61 109976 bind9-host-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 69b0e7344724a446c5f7b0ca160b6dc22df94657aa82b6c541b62138dbe54710 271836 bind9-host_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ d1346519a98189b62004b9d736c74d25617ce9ed369ca06ecb44e3d4aa3572f8 20960 bind9_9.11.5.P4+dfsg-5.1+deb10u9_amd64.buildinfo
+ 9e70fca08fbd236dd7df48a1f1c75b4bc8c4b42ecbd276e733f6ec3af438d237 634312 bind9_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 0ce2d66546e5914c5d2d7989c3e84f2abc8bfd2932b19358d562453e3989fe94 1044668 bind9utils-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 8554b706e26ea8259cd3d8ffbb6692df908b6172e6b97ccd9482f0a6208f4697 433444 bind9utils_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 0fa3ad2c33f87d3b9603cada50a45d9e03dbee335c3943e8a4d327ff5ab9dea1 394144 dnsutils-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 0959fb9ad903ace2388d04e818ff17b7b5c0e9424b082dea051c979428d8443c 365788 dnsutils_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ cf5a84ae0300ee4ff9c98ae92fccb7177c3e4a970ad23fa1e6c85f257a3e8b71 1720424 libbind-dev_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 9846d69a643a22044f0e720e523d357bc0963953506485531bd0d3d0cab0fc35 1539464 libbind-export-dev_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 405c32b72c8eb7dde5a17e9f60cef8cdbc9dfec957d5aaf84efda431ee92cb5f 66752 libbind9-161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ b338696179d201286bc1860cca6e9d408bccb926eeccbab31e9680b2cf5d2970 247048 libbind9-161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 28e9e2325ca945a932c6e6310d2168f65facc6ed8213ad3cbb64cd051c918849 2698052 libdns-export1104-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ c1c620f6596368d8742e3e5c9259722d849553578683bc9abdef371f2bd0e357 751624 libdns-export1104-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 340e169e24624cd6e5383d83b2624a3c68e30fc3afc8fb3f1f9e6fc94775738b 973816 libdns-export1104_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 95616fa630dc556f9ff4702c598d4cb2d9d6aaea212c03172be524f362d6b0b1 5748140 libdns1104-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ea44f92b6e247129a1f06846b5c53a2d940c0bb3162a93f3e2556a6d833c5271 1215612 libdns1104_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ d2b6b212b17e14f36360f4735f6347c65e98c1847f1995809d340c6eecc9955b 59280 libirs-export161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ bb31bf4661af99b423d9a2c43a5241a7115884c6328ca3506289cadb2db06ac2 15592 libirs-export161-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 037e851b4de9ab7a61e47bece975d81e3e129d80a616d09b1e3213dcffd33d06 237344 libirs-export161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ea535ed97cffdba4695c362317447c3063663b487782c3058f08ef674f78c00a 63008 libirs161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ d70d6cdf53495ba5330d454a71bbdffbc287191c7b7e8148751ef7b9e9582728 238188 libirs161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ae4e7ecaae83a8a3c300baeee679b0f10382bde06ae2c7e3ba871fcb437dc813 469800 libisc-export1100-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ae58ff332703371816cdd4861884210f8f00606e0334b070f2b601f5a27641ae 159368 libisc-export1100-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 7e29941abeb1ff37d6107422cd66bfddb3e566eaffa41249288e63f6c9258edb 381064 libisc-export1100_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ e7c6ef88879769769c0f7e133217929dffe7eedc3bf807cce785ea11e35659ae 1069992 libisc1100-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 18b59ac481b1d1bc76261fff3ec306ab8a7add18ffcced5c5565bf6ee9839d95 458440 libisc1100_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ bdb51411f03327ab92cc23acd4104b5737f1b211209a0f1706bf98de5ed4d419 42240 libisccc-export161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 03d81062c40f63254cfb44665901a4a9aa6ea9c4f98d3a66a1226fc4e4cab20b 14992 libisccc-export161-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 016c919ec792af8096f2d4c477170b09aed7a8c5542874be5234f46bbf70a50f 236412 libisccc-export161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 2bad201bcb3cb0ebd59bf449f3cf427460d2ece48377fa88d3e7418369e1802d 43336 libisccc161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ a47c77d1c1039cb33c144691892c8f00932d4e4b278e0701bc9a7d54dfc12285 237224 libisccc161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ dc41f08f9b00564092f3083a3a1362c24aca2b3bd8e94aa3f312041d3d276300 102000 libisccfg-export163-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 51802a04016c64ce41fa6705b05fc39e3fb95531fa3de088607657fcdf527bd3 43332 libisccfg-export163-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 5b909054a1897a549759858c39ec6136431afe0d255f4ad71575bd69c41c990a 264508 libisccfg-export163_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 76d59be4c66a1c38e1df89b9cab26321e1c9555909028c9439d5ac1064ff1327 109972 libisccfg163-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 4a6250b85f5b923909b6fe6b3db5e5ce38033c898b3d1d1557b61e51fc29da52 267516 libisccfg163_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 51ceed23b66c555a91f94383eb80e967f5e0335aa85ed8e6db4bee0bc30e6e10 93192 liblwres161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ a97121353bfb6f798e58c011ba2be1c397fc7ee96a78152fd5a790ed3b36963e 252116 liblwres161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+Files:
+ 4146d357e3d1ce903a3cebfe08dc0451 3966 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u9.dsc
+ b59921f04a722b0a30fab88dcf256449 3956484 net optional bind9_9.11.5.P4+dfsg.orig.tar.xz
+ c5bdcd23726a761927f83ac5d2ccc657 123480 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u9.debian.tar.xz
+ b7a4b30af1887b9663d7115129e3f711 2186536 debug optional bind9-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ d7453c84ea8e789f9f531f0990115c0c 449284 doc optional bind9-doc_9.11.5.P4+dfsg-5.1+deb10u9_all.deb
+ 1bf0d52589d311ac5e0bdf855ab8615e 109976 debug optional bind9-host-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 240401749bbca4064632b6b540ee05dd 271836 net standard bind9-host_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 2683cc0ae03e6a796f7607aa1db951ac 20960 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u9_amd64.buildinfo
+ cd93fd41e24786aa781abb912302a073 634312 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ff1e759036789ef6f8536c7b68fe357e 1044668 debug optional bind9utils-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 9ce23f909656f911a463a96e319a1681 433444 net optional bind9utils_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 91945e3437ae054a428881a938af27f8 394144 debug optional dnsutils-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ dff97a2e189947eff516da1d102458d2 365788 net standard dnsutils_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ cd6ba2f89d2acd7c7c59585ddbe335b2 1720424 libdevel optional libbind-dev_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 5ad08dfcbf5c8d65c0f8452da6a80cce 1539464 libdevel optional libbind-export-dev_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 08c2d874bf14e9b0c0d0ca69ca02158e 66752 debug optional libbind9-161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ e57fce4273ab4e81e8cf30975f11c52b 247048 libs optional libbind9-161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ d0865514c5aea62c3945a3c76ab351ba 2698052 debug optional libdns-export1104-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ac6740bd3a9cbe44ff5a24ff824e6180 751624 debian-installer optional libdns-export1104-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 0e41c65b52042c86a2294bb13590f7d7 973816 libs optional libdns-export1104_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 6e08dda155c144a2a561aa86c23d5f46 5748140 debug optional libdns1104-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 51a0bf27d6216e899d39a8a4c6323b94 1215612 libs optional libdns1104_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ ed1c8c9caaba71c3d1f89a4520fd3202 59280 debug optional libirs-export161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ a8e9e7a5d327e3c05bab111b37884264 15592 debian-installer optional libirs-export161-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ f79ca788cd9e64304838ae4b4184f011 237344 libs optional libirs-export161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ f7b12175a0e752aa6c39aac9452e69bb 63008 debug optional libirs161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 03e39a5f56f88553e605bdf025019e4f 238188 libs optional libirs161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 9926debdd93b8ae8e7b68b293aa175aa 469800 debug optional libisc-export1100-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 6395a36cb09d603de94fbc8ebd239461 159368 debian-installer optional libisc-export1100-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ f290755cf3b362a6ec84490fa24703a7 381064 libs optional libisc-export1100_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 35dae6f0c74a9353e023358220619b72 1069992 debug optional libisc1100-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 7a865e56d6d4e205cb94f7371611aa48 458440 libs optional libisc1100_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ f937911aac9d8f1d7aa1a5d10c54fda2 42240 debug optional libisccc-export161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 53e1e844701d77c67a7d878a7b3ae701 14992 debian-installer optional libisccc-export161-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ d88c6c7ccfeb260d74c7de4b199090c0 236412 libs optional libisccc-export161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ a700501839ad35b6aefbf2244dbb3c3d 43336 debug optional libisccc161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ b71d3139753b58f8ac2a5c6164f6d8a3 237224 libs optional libisccc161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 1923164ca5e510bfd6e9a49d4fc2d36d 102000 debug optional libisccfg-export163-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 79e7f134a73e8f5bf32ced200ef5b8ff 43332 debian-installer optional libisccfg-export163-udeb_9.11.5.P4+dfsg-5.1+deb10u9_amd64.udeb
+ 2507e98fc46e42a44fb005dcae425da1 264508 libs optional libisccfg-export163_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ f9a523ab288967779ba8dd02ec5fd2c7 109972 debug optional libisccfg163-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ c1236e9ac8678e53ea67fe7fcc7fe723 267516 libs optional libisccfg163_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 7b95274a6e206959ecb5e21e46155a52 93192 debug optional liblwres161-dbgsym_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+ 701ccfd930c23747eda088642f33530e 252116 libs optional liblwres161_9.11.5.P4+dfsg-5.1+deb10u9_amd64.deb
+

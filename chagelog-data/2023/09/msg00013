@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 15 Sep 2023 07:06:38 +0200
+Source: c-ares
+Architecture: source
+Version: 1.14.0-1+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Gregor Jasny <gjasny@googlemail.com>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ c-ares (1.14.0-1+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2020-22217:
+     fix invalid read in ares_parse_soa_reply.c
+Checksums-Sha1:
+ 1742e6eb79b3934047921ad0746fcd2c58e66b8f 1928 c-ares_1.14.0-1+deb10u4.dsc
+ 865eb136d5370f8b41807f2c3a5ee8c09880ae42 15868 c-ares_1.14.0-1+deb10u4.debian.tar.xz
+ e1ea95fbb995823b44a6aae9192ae53a483d1f2e 6167 c-ares_1.14.0-1+deb10u4_source.buildinfo
+Checksums-Sha256:
+ f94512e868fdb56eac3fac62f83485857df55f3da8727717ee2674cbe1a51c96 1928 c-ares_1.14.0-1+deb10u4.dsc
+ 3c087ca5eed298e72c5ee026b49de57fe87234d6954e1afea155bcbb51bfdcc0 15868 c-ares_1.14.0-1+deb10u4.debian.tar.xz
+ f816a1db569100c0a5911847b2874c468ea8c7b32162469874acddef77a1f0b9 6167 c-ares_1.14.0-1+deb10u4_source.buildinfo
+Files:
+ fdf6e8f2a1a446dc95b25e2ba1b676e6 1928 libs optional c-ares_1.14.0-1+deb10u4.dsc
+ 81696b7c7f36b75b729db007bfb54539 15868 libs optional c-ares_1.14.0-1+deb10u4.debian.tar.xz
+ 1ab61a519798b0b6dd597c6c85a71731 6167 libs optional c-ares_1.14.0-1+deb10u4_source.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 23 Oct 2023 19:03:02 +0200
+Source: xorg-server
+Architecture: source
+Version: 2:1.20.4-1+deb10u10
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ xorg-server (2:1.20.4-1+deb10u10) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-5367
+     Xi/randr: incorrect handling of appending/prepending properties
+   * CVE-2023-5380
+     mi: possible use after free when switching screens
+Checksums-Sha1:
+ 2d43eb35a6eac7bdee461493196cb349b748684b 4345 xorg-server_1.20.4-1+deb10u10.dsc
+ 94dd9612c5e4233ed3cb23063ab10f43b4ae4bb2 8553791 xorg-server_1.20.4.orig.tar.gz
+ e26b1e8f8f6fb5c938b3b0c47033d2e77451d7bc 163927 xorg-server_1.20.4-1+deb10u10.diff.gz
+ c88d832d773ed16ac1fe385fabea0a0d586db352 17779 xorg-server_1.20.4-1+deb10u10_amd64.buildinfo
+Checksums-Sha256:
+ e5a5c83c979a36cc38860167329452745edb419faf993ced345a812a98fbcdfe 4345 xorg-server_1.20.4-1+deb10u10.dsc
+ a6447de89eca3e22eeead682b325d902779569534ad83388c9e16611d72baaf3 8553791 xorg-server_1.20.4.orig.tar.gz
+ 586145db1996d426487c1766806445f9013b1d777adaafa6594f3572218f8269 163927 xorg-server_1.20.4-1+deb10u10.diff.gz
+ 47f1de578e08307341749090e4fdbd13712fd9d99e0aec7a088b5388e159847a 17779 xorg-server_1.20.4-1+deb10u10_amd64.buildinfo
+Files:
+ ae1cd45421154130317b3a891c99f8fc 4345 x11 optional xorg-server_1.20.4-1+deb10u10.dsc
+ 4151b46d6036f4997d27c2d2b7be38e7 8553791 x11 optional xorg-server_1.20.4.orig.tar.gz
+ 1ae7163b4bed50752cf2b550a73353c3 163927 x11 optional xorg-server_1.20.4-1+deb10u10.diff.gz
+ 37a4e0e8945d6edf9f69856868223a28 17779 x11 optional xorg-server_1.20.4-1+deb10u10_amd64.buildinfo
+

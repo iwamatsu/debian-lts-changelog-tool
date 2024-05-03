@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 11 Jan 2023 08:16:21 +0000
+Source: viewvc
+Binary: viewvc viewvc-query
+Architecture: source all
+Version: 1.1.26-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Lev Lamberov <dogsleg@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ viewvc     - web interface for CVS and/or Subversion repositories
+ viewvc-query - utility to query CVS and Subversion commit database
+Changes:
+ viewvc (1.1.26-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-22456 & CVE-2023-22464: Prevent two potential cross-site scripting
+     vulnerabilities. The attack vectors involved files with unsafe names; names
+     that, when embedded into an HTML stream, could cause the browser to run
+     unwanted code.
+Checksums-Sha1:
+ b0ac58bd1e3afd5eac971c4f4c33646f4e5ddc80 1964 viewvc_1.1.26-1+deb10u1.dsc
+ 8055d0bd65134dc488169b91401f09e00a90269c 616804 viewvc_1.1.26.orig.tar.gz
+ 43afb73faf71dda9001126140d8415129c4b8cb1 27284 viewvc_1.1.26-1+deb10u1.debian.tar.xz
+ 1be47d7daff405943854fd729f907e0117e86656 11992 viewvc-query_1.1.26-1+deb10u1_all.deb
+ 0c5ae7424b2040952a7a69a68c60dc3679e7bb3d 532428 viewvc_1.1.26-1+deb10u1_all.deb
+ a04358fb81ed82a457e37c59c362837cba510a08 7123 viewvc_1.1.26-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 93a30c35b4f4bd3b3a576026cf541d3ec2908b646d1ca8b66b48eaf061a162f6 1964 viewvc_1.1.26-1+deb10u1.dsc
+ eaf1322810dbe2e59e54f11cf83f55a0ad64c72c95b7d616d4c7fb81d03ec989 616804 viewvc_1.1.26.orig.tar.gz
+ 2a92541701e78969b5258cfec1d893746bcb4ccee05eae861ead674151b3c267 27284 viewvc_1.1.26-1+deb10u1.debian.tar.xz
+ 84639de6dbd44623379c564599242905876c3da2ef0f494f71f7a483068ef5b3 11992 viewvc-query_1.1.26-1+deb10u1_all.deb
+ 533e1c2440f0733cc6d005b8e38bcbcafcd506464ab92367ba71febb94c937b2 532428 viewvc_1.1.26-1+deb10u1_all.deb
+ f884849b3f178cbdc16ec759aac58991dd646c3392fe1499a75a07c92da9a670 7123 viewvc_1.1.26-1+deb10u1_amd64.buildinfo
+Files:
+ 02c536d9fada3db0a20fe2e691f8b768 1964 vcs optional viewvc_1.1.26-1+deb10u1.dsc
+ d04936c9c0d5cb345797f85210a0fa00 616804 vcs optional viewvc_1.1.26.orig.tar.gz
+ 40423013b7ed23d2edcaf28e61f77e4e 27284 vcs optional viewvc_1.1.26-1+deb10u1.debian.tar.xz
+ a20b6d20bf56d7f1d3de85c6d81855cc 11992 vcs optional viewvc-query_1.1.26-1+deb10u1_all.deb
+ 0b05109d7f3aa7fb7d95326e1c013fd0 532428 vcs optional viewvc_1.1.26-1+deb10u1_all.deb
+ 8f7808f6376990afec817132806f2819 7123 vcs optional viewvc_1.1.26-1+deb10u1_amd64.buildinfo
+

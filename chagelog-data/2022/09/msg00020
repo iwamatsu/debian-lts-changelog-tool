@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 18 Nov 2019 13:30:25 +0100
+Source: nova
+Architecture: source
+Version: 2:18.1.0-6+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 934114
+Changes:
+ nova (2:18.1.0-6+deb10u1) buster-security; urgency=medium
+ .
+   [ Thomas Goirand ]
+   * CVE-2019-14433/ OSSA-2019-003: a Server Resource Faults Leak External
+     Details. Applied upstream security fix: Replace non-nova server fault
+     message (Closes: #934114).
+   * Fix Cinder volume live migration, adding upstream patch:
+     Use_migration_status_during_volume_migrating_and_retyping.patch.
+   * Add patch to fix many issues with live migration fails:
+     libvirt-check-job-status-for-VIR_DOMAIN_EVENT_SUSPENDED_MIGRATED-event.
+   * Add Add-a-healtcheck-url.patch.
+ .
+   [ Michal Arbet ]
+   * Fix bug when package was installed noninteractive
+     and auth_url in placement/neutron section was changed
+   * Update pofiles.
+Checksums-Sha1:
+ 7905f15e226f567a99dfca660686bebb6be6e492 5869 nova_18.1.0-6+deb10u1.dsc
+ d479978a9479de7a80b5cb4d058f1800b697452d 10826849 nova_18.1.0.orig.tar.gz
+ bb96603170ddef90c74455b7389fe47a4bcee73b 67968 nova_18.1.0-6+deb10u1.debian.tar.xz
+ 4b8d5dc7ce3c0347734eb47663ea42f30773969e 24989 nova_18.1.0-6+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 7d688e51b71518507fb7ccf7a5338d85c613e5af487511a22531f0d750b456dc 5869 nova_18.1.0-6+deb10u1.dsc
+ 27e2fb0b5c7419a40b433730a9e9ecfab9662a9a6ebbdc99ee78aedeb2dee32b 10826849 nova_18.1.0.orig.tar.gz
+ 08bc25a19158ecb25feecf1418d754638048148b2f7dec5fb8a4af650da18790 67968 nova_18.1.0-6+deb10u1.debian.tar.xz
+ 0662091887bb143688907b0acab8b5e02fa70157241423d0825d8a5af4140a79 24989 nova_18.1.0-6+deb10u1_amd64.buildinfo
+Files:
+ 8b415efecccd4eec15e33a770f04f47e 5869 net optional nova_18.1.0-6+deb10u1.dsc
+ 0178de51807cfa0dd05ecb32773dd246 10826849 net optional nova_18.1.0.orig.tar.gz
+ 20962672bc825b08ed4fd368a4f6b342 67968 net optional nova_18.1.0-6+deb10u1.debian.tar.xz
+ c57380da2396e03641e6fdb0cb62857f 24989 net optional nova_18.1.0-6+deb10u1_amd64.buildinfo
+

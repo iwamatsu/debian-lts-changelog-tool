@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 24 Jan 2024 21:40:41 +0100
+Source: zabbix
+Architecture: source
+Version: 1:4.0.4+dfsg-1+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1053877
+Changes:
+ zabbix (1:4.0.4+dfsg-1+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Importing fixes for: (Closes: #1053877)
+   * CVE-2023-32721: Stored XSS in the Maps element.
+   * CVE-2023-32723: Request to LDAP is sent before user permissions are
+     checked.
+   * CVE-2023-32726: Possible buffer overread from reading DNS responses.
+Checksums-Sha1:
+ 4bf5711ca6957e78df95c7217a2e78e04b686ecd 2876 zabbix_4.0.4+dfsg-1+deb10u4.dsc
+ 165161bdc3a80f21390fa51618cd2e3cef52bf8b 220132 zabbix_4.0.4+dfsg-1+deb10u4.debian.tar.xz
+ 2b0bc1a11ba3cbb01f0b1a8726d1b0890b959a71 18568 zabbix_4.0.4+dfsg-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ cf51875b6bc145d8bf89f83034d2141727528a895c69a00edf2f373155505850 2876 zabbix_4.0.4+dfsg-1+deb10u4.dsc
+ 1d427b8f16d1f1f2476951f602e880a580bf7c9be1ca043910ca38b1e940baba 220132 zabbix_4.0.4+dfsg-1+deb10u4.debian.tar.xz
+ 4333a9b3f5643650ca15e115e19bba0caac6f99b32045aa5f43b7fb2d5d03247 18568 zabbix_4.0.4+dfsg-1+deb10u4_amd64.buildinfo
+Files:
+ 505407abe6dc9d5f0ddf1a750e0ef28f 2876 net optional zabbix_4.0.4+dfsg-1+deb10u4.dsc
+ 358fe3c342d7b4532377f4e91eadf32d 220132 net optional zabbix_4.0.4+dfsg-1+deb10u4.debian.tar.xz
+ d113810472cc1cab2ff486bad040c4a8 18568 net optional zabbix_4.0.4+dfsg-1+deb10u4_amd64.buildinfo
+

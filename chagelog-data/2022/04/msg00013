@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 13 Apr 2022 13:13:13 +0200
+Source: lrzip
+Binary: lrzip
+Architecture: source
+Version: 0.631-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ lrzip      - compression program with a very high compression ratio
+Closes: 888506 990583
+Changes:
+ lrzip (0.631-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-5786: there is an infinite loop and application hang in the
+     get_fileinfo function (lrzip.c). Remote attackers could leverage this
+     vulnerability to cause a denial of service via a crafted lrz file.
+     (closes: #888506)
+   * CVE-2020-25467: a null pointer dereference was discovered
+     lzo_decompress_buf in stream.c which allows an attacker to cause a
+     denial of service (DOS) via a crafted compressed file.
+   * CVE-2021-27345: a null pointer dereference was discovered in
+     ucompthread in stream.c which allows attackers to cause a denial of
+     service (DOS) via a crafted compressed file.
+   * CVE-2021-27347: use after free in lzma_decompress_buf function in
+     stream.c in allows attackers to cause Denial of Service (DoS) via a
+     crafted compressed file. (closes: #990583)
+   * CVE-2022-26291: lrzip was discovered to contain a multiple concurrency
+     use-after-free between the functions zpaq_decompress_buf() and
+     clear_rulist(). This vulnerability allows attackers to cause a Denial
+     of Service (DoS) via a crafted lrz file.
+Checksums-Sha1:
+ db383f43e03fc2b5cd1257738e3086bd61fc1125 1831 lrzip_0.631-1+deb9u2.dsc
+ 6b724891551ceba5e75e456c8269a2d0cb2fa60d 20784 lrzip_0.631-1+deb9u2.debian.tar.xz
+ 07aa6875049a4d832ea0746422e8cebf2a2d6f1b 6022 lrzip_0.631-1+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ cd4caccd50fa969c0f4a3f236e8c55f82f4ef48740ae6cd387e2f0770c9b6550 1831 lrzip_0.631-1+deb9u2.dsc
+ 96d003e902db296122e26a4bb16f338cdef5810e591eab6b09afe9244db3ebe1 20784 lrzip_0.631-1+deb9u2.debian.tar.xz
+ 98ac821d7f7746354a06a42b004833f207c651e068330ea336210a621f8ba780 6022 lrzip_0.631-1+deb9u2_amd64.buildinfo
+Files:
+ 01021b40cfa3bf8caafad6524e7d7231 1831 utils optional lrzip_0.631-1+deb9u2.dsc
+ 6b2a23ef9ce460be73591301a92a6c1b 20784 utils optional lrzip_0.631-1+deb9u2.debian.tar.xz
+ 3cb74271814630d6d5d5f02dba898f94 6022 utils optional lrzip_0.631-1+deb9u2_amd64.buildinfo
+

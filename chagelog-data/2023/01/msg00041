@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 29 Jan 2023 19:20:59 +0530
+Source: ruby-git
+Architecture: source
+Version: 1.2.8-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Michael Schutte <michi@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1009926
+Changes:
+ ruby-git (1.2.8-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to address command line injection in Git::Lib#fetch.
+     (Fixes: CVE-2022-25648) (Closes: #1009926)
+   * Add patch to properly unescape diff paths and in ls-files do not unescape
+     file paths with eval. (Fixes: CVE-2022-46648, CVE-2022-47318)
+Checksums-Sha1:
+ 9be7e532f9bac2783214deedcc95457ab1e3361b 2023 ruby-git_1.2.8-1+deb10u1.dsc
+ 4be1e9e6d42d1090bbf4247f4598dbca7109184b 103877 ruby-git_1.2.8.orig.tar.gz
+ 72fe304c3510f5a4563a00f871f31d026f01272f 5884 ruby-git_1.2.8-1+deb10u1.debian.tar.xz
+ 99f01fffd3ccad57e89bf24b87fe059d256d2d33 14168 ruby-git_1.2.8-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ d911b89cf9e561c012fcaa7e5cb049dedc4e603d1aa4975c2c8486038774f4af 2023 ruby-git_1.2.8-1+deb10u1.dsc
+ 512813b6d56d2f357623c3d1a28935ad3deae53101fb13fb362a2ea04596f9c9 103877 ruby-git_1.2.8.orig.tar.gz
+ 64cea0e07c3563d4180973650b29bf369a4980b6da954480c75bbda1b0ee4b87 5884 ruby-git_1.2.8-1+deb10u1.debian.tar.xz
+ ef4354284b4e14358732188bb8fb34e694ba9bfc45fa4d104a2aa0c4d976454b 14168 ruby-git_1.2.8-1+deb10u1_source.buildinfo
+Files:
+ 6127a4f7b8be0a7e8b8bec130f6ab49b 2023 ruby optional ruby-git_1.2.8-1+deb10u1.dsc
+ ee1d0254441c5a2e6a258b63085631be 103877 ruby optional ruby-git_1.2.8.orig.tar.gz
+ 1cfb4f030ba462117491c4f6fc745c45 5884 ruby optional ruby-git_1.2.8-1+deb10u1.debian.tar.xz
+ d1f0d6f9bab8ac2ee33e97a4af280ded 14168 ruby optional ruby-git_1.2.8-1+deb10u1_source.buildinfo
+

@@ -1,0 +1,47 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 20 May 2022 14:26:55 +0200
+Source: rsyslog
+Binary: rsyslog rsyslog-mysql rsyslog-pgsql rsyslog-mongodb rsyslog-elasticsearch rsyslog-kafka rsyslog-gssapi rsyslog-gnutls rsyslog-relp rsyslog-czmq rsyslog-hiredis
+Architecture: source
+Version: 8.24.0-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Michael Biebl <biebl@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ rsyslog    - reliable system and kernel logging daemon
+ rsyslog-czmq - ZeroMQ protocol support for rsyslog via CZMQ
+ rsyslog-elasticsearch - Elasticsearch output plugin for rsyslog
+ rsyslog-gnutls - TLS protocol support for rsyslog
+ rsyslog-gssapi - GSSAPI authentication and encryption support for rsyslog
+ rsyslog-hiredis - Redis output plugin for rsyslog
+ rsyslog-kafka - Kafka output plugin for rsyslog
+ rsyslog-mongodb - MongoDB output plugin for rsyslog
+ rsyslog-mysql - MySQL output plugin for rsyslog
+ rsyslog-pgsql - PostgreSQL output plugin for rsyslog
+ rsyslog-relp - RELP protocol support for rsyslog
+Changes:
+ rsyslog (8.24.0-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-16881: a denial of service vulnerability was found in rsyslog
+     in the imptcp module. An attacker could send a specially crafted
+     message to the imptcp socket, which would cause rsyslog to crash.
+   * CVE-2022-24903: modules for TCP syslog reception have a potential heap
+     buffer overflow when octet-counted framing is used. This can result in
+     a segfault or some other malfunction.
+Checksums-Sha1:
+ 028f86836d72d97e46d2c202e8c4f3acc3043ca7 2867 rsyslog_8.24.0-1+deb9u2.dsc
+ bab1d9c683b08ed18c15b95120858932cec08fdb 28044 rsyslog_8.24.0-1+deb9u2.debian.tar.xz
+ 840a1236bf75a4300a52b211b7e34c9ada37590b 15529 rsyslog_8.24.0-1+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ dac2c151a20e1e13f89acb0f1cebd058f84cc1819cfc18b01f1ee2f8679740ed 2867 rsyslog_8.24.0-1+deb9u2.dsc
+ ace84129e9d2bfc72d24d7090a764701efee5e3d7c97aeb20630f50f07776e34 28044 rsyslog_8.24.0-1+deb9u2.debian.tar.xz
+ 9126d6c099d2d69b15b592c0caf40ed6492730033e90c77000c7f48f1cdb4f0f 15529 rsyslog_8.24.0-1+deb9u2_amd64.buildinfo
+Files:
+ ab9c09ff0b2185854427afd61bca0c1a 2867 admin important rsyslog_8.24.0-1+deb9u2.dsc
+ 7ab06f29034d5edc3bcdca3a3d623f7e 28044 admin important rsyslog_8.24.0-1+deb9u2.debian.tar.xz
+ 2820e0ec3151795079ee40b65d5f6cdb 15529 admin important rsyslog_8.24.0-1+deb9u2_amd64.buildinfo
+

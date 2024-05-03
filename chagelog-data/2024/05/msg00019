@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 May 2024 20:03:31 +0000
+Source: fossil
+Architecture: source
+Version: 1:2.8-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1070069
+Changes:
+ fossil (1:2.8-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non maintainer fix by LTS team.
+   * Cherry-pick fix f4ffefe708793b03 for CVE-2024-24795 and add
+     "Breaks: apache2 (<< 2.4.59-1~)" to stage fix; see
+     https://bz.apache.org/bugzilla/show_bug.cgi?id=68905
+     (closes: #1070069)
+Checksums-Sha1:
+ 63d782724ab0e6202cc699d912d8208344d785ff 1876 fossil_2.8-1+deb10u1.dsc
+ 5b44481a47d49e1b552ca0cf74954f2d958686af 3697636 fossil_2.8.orig.tar.xz
+ ed35d88057721b4b7cccca722408057e8b287927 16728 fossil_2.8-1+deb10u1.debian.tar.xz
+ 14a2ea392aa1e46eba732e41f2630b2d3d1bbf65 6657 fossil_2.8-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 324409627134d37db38b138a046a0367b296c796723ec510880ee9010899ccc1 1876 fossil_2.8-1+deb10u1.dsc
+ fdc27fa021971f495452783db404d47227697563bbaadd555ddb84bcfe6f3566 3697636 fossil_2.8.orig.tar.xz
+ d043d72efe687d9f1ca2fcb56dbfe4654ea2d1f45eeb027314710d69b35589a7 16728 fossil_2.8-1+deb10u1.debian.tar.xz
+ 4e48d7408e65bf9538a648c0c76ec8313c3830929bd96d30d301c58013bddacf 6657 fossil_2.8-1+deb10u1_amd64.buildinfo
+Files:
+ 8b066bd8feac32586d8e1296296aa256 1876 vcs optional fossil_2.8-1+deb10u1.dsc
+ da7b64e2acc1f5e47abadc9b08d3afca 3697636 vcs optional fossil_2.8.orig.tar.xz
+ 6df98736f1ef2aa79aff08bf220b67ec 16728 vcs optional fossil_2.8-1+deb10u1.debian.tar.xz
+ 8d0b24db554fcb88c0e4a6fae5a750c3 6657 vcs optional fossil_2.8-1+deb10u1_amd64.buildinfo
+

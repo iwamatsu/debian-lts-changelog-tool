@@ -1,0 +1,71 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 14 May 2022 01:05:35 +0200
+Source: imagemagick
+Binary: imagemagick-6-common imagemagick-6-doc libmagickcore-6-headers libmagickwand-6-headers libmagick++-6-headers libimage-magick-perl libmagickcore-6-arch-config imagemagick-6.q16 libmagickcore-6.q16-3 libmagickcore-6.q16-3-extra libmagickcore-6.q16-dev libmagickwand-6.q16-3 libmagickwand-6.q16-dev libmagick++-6.q16-7 libmagick++-6.q16-dev libimage-magick-q16-perl imagemagick-6.q16hdri libmagickcore-6.q16hdri-3 libmagickcore-6.q16hdri-3-extra libmagickcore-6.q16hdri-dev libmagickwand-6.q16hdri-3 libmagickwand-6.q16hdri-dev libmagick++-6.q16hdri-7 libmagick++-6.q16hdri-dev libimage-magick-q16hdri-perl imagemagick-common imagemagick-doc perlmagick libmagickcore-dev libmagickwand-dev libmagick++-dev imagemagick
+Architecture: source
+Version: 8:6.9.7.4+dfsg-11+deb9u14
+Distribution: stretch-security
+Urgency: medium
+Maintainer: ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>
+Changed-By: Andreas Rönnquist <gusnan@debian.org>
+Description:
+ imagemagick - image manipulation programs -- binaries
+ imagemagick-6-common - image manipulation programs -- infrastructure
+ imagemagick-6-doc - document files of ImageMagick
+ imagemagick-6.q16 - image manipulation programs -- quantum depth Q16
+ imagemagick-6.q16hdri - image manipulation programs -- quantum depth Q16HDRI
+ imagemagick-common - image manipulation programs -- infrastructure dummy package
+ imagemagick-doc - document files of ImageMagick -- dummy package
+ libimage-magick-perl - Perl interface to the ImageMagick graphics routines
+ libimage-magick-q16-perl - Perl interface to the ImageMagick graphics routines -- Q16 versio
+ libimage-magick-q16hdri-perl - Perl interface to the ImageMagick graphics routines -- Q16HDRI ve
+ libmagick++-6-headers - object-oriented C++ interface to ImageMagick - header files
+ libmagick++-6.q16-7 - C++ interface to ImageMagick -- quantum depth Q16
+ libmagick++-6.q16-dev - C++ interface to ImageMagick - development files (Q16)
+ libmagick++-6.q16hdri-7 - C++ interface to ImageMagick -- quantum depth Q16HDRI
+ libmagick++-6.q16hdri-dev - C++ interface to ImageMagick - development files (Q16HDRI)
+ libmagick++-dev - object-oriented C++ interface to ImageMagick -- dummy package
+ libmagickcore-6-arch-config - low-level image manipulation library - architecture header files
+ libmagickcore-6-headers - low-level image manipulation library - header files
+ libmagickcore-6.q16-3 - low-level image manipulation library -- quantum depth Q16
+ libmagickcore-6.q16-3-extra - low-level image manipulation library - extra codecs (Q16)
+ libmagickcore-6.q16-dev - low-level image manipulation library - development files (Q16)
+ libmagickcore-6.q16hdri-3 - low-level image manipulation library -- quantum depth Q16HDRI
+ libmagickcore-6.q16hdri-3-extra - low-level image manipulation library - extra codecs (Q16HDRI)
+ libmagickcore-6.q16hdri-dev - low-level image manipulation library - development files (Q16HDRI
+ libmagickcore-dev - low-level image manipulation library -- dummy package
+ libmagickwand-6-headers - image manipulation library - headers files
+ libmagickwand-6.q16-3 - image manipulation library -- quantum depth Q16
+ libmagickwand-6.q16-dev - image manipulation library - development files (Q16)
+ libmagickwand-6.q16hdri-3 - image manipulation library -- quantum depth Q16HDRI
+ libmagickwand-6.q16hdri-dev - image manipulation library - development files (Q16HDRI)
+ libmagickwand-dev - image manipulation library -- dummy package
+ perlmagick - Perl interface to ImageMagick -- dummy package
+Changes:
+ imagemagick (8:6.9.7.4+dfsg-11+deb9u14) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-3596: A NULL pointer dereference flaw was found in
+     ImageMagick in versions prior to 7.0.10-31 in ReadSVGImage() in
+     coders/svg.c. This issue is due to not checking the return value from
+     libxml2's xmlCreatePushParserCtxt() and uses the value directly, which
+     leads to a crash and segmentation fault.
+   * CVE-2022-28463: ImageMagick is vulnerable to Buffer Overflow.
+Checksums-Sha1:
+ 2dca1312ff2a567519b1c4a00f3e1bc85ea8d263 5194 imagemagick_6.9.7.4+dfsg-11+deb9u14.dsc
+ 8b59ad4ca982549cdc3910ae1312c9c7681989f8 8929800 imagemagick_6.9.7.4+dfsg.orig.tar.xz
+ be7d089f0365d181c959c1afe946e325b22ad2cb 271348 imagemagick_6.9.7.4+dfsg-11+deb9u14.debian.tar.xz
+ a852b9e074c4fd7100aa4b9fdf21ecc92dea437c 13944 imagemagick_6.9.7.4+dfsg-11+deb9u14_source.buildinfo
+Checksums-Sha256:
+ accbdbca182d33df4fac2a7a59809cf5655e98ed3811172b9b44ebb98412f0b1 5194 imagemagick_6.9.7.4+dfsg-11+deb9u14.dsc
+ 47fb2cdd26f5913318c4504f16ea363e04d1f400dda9ec52e461ab661d724026 8929800 imagemagick_6.9.7.4+dfsg.orig.tar.xz
+ 8ffeba6e3a7c1aa2e6fb8648c80567a7b4afb124a5eab663dfb4c8a53bacae35 271348 imagemagick_6.9.7.4+dfsg-11+deb9u14.debian.tar.xz
+ 82b764ed284d55285e354a159392b47717f3abffef8d54c6b4985070c7da8e81 13944 imagemagick_6.9.7.4+dfsg-11+deb9u14_source.buildinfo
+Files:
+ 65f70d9825b9b40c6986bcec631cc8f6 5194 graphics optional imagemagick_6.9.7.4+dfsg-11+deb9u14.dsc
+ a43e39ad84d37e9ffcec5346bf12e446 8929800 graphics optional imagemagick_6.9.7.4+dfsg.orig.tar.xz
+ d14c2f21d7bf83ee33e6db77baa37d22 271348 graphics optional imagemagick_6.9.7.4+dfsg-11+deb9u14.debian.tar.xz
+ d71fd16fb2abf67476275e6aae9bb984 13944 graphics optional imagemagick_6.9.7.4+dfsg-11+deb9u14_source.buildinfo
+

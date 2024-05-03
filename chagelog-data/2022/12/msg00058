@@ -1,0 +1,136 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 12:40:43 +0000
+Source: emacs
+Binary: emacs emacs-bin-common emacs-bin-common-dbgsym emacs-common emacs-el emacs-gtk emacs-gtk-dbgsym emacs-lucid emacs-lucid-dbgsym emacs-nox emacs-nox-dbgsym emacs21 emacs21-nox emacs22 emacs22-gtk emacs22-nox emacs23 emacs23-lucid emacs23-nox emacs24 emacs24-lucid emacs24-nox emacs25 emacs25-lucid emacs25-nox
+Built-For-Profiles: nocheck
+Architecture: source amd64 all
+Version: 1:26.1+1-3.2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Rob Browning <rlb@defaultvalue.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ emacs      - GNU Emacs editor (metapackage)
+ emacs-bin-common - GNU Emacs editor's shared, architecture dependent files
+ emacs-common - GNU Emacs editor's shared, architecture independent infrastructur
+ emacs-el   - GNU Emacs LISP (.el) files
+ emacs-gtk  - GNU Emacs editor (with GTK+ GUI support)
+ emacs-lucid - GNU Emacs editor (with Lucid GUI support)
+ emacs-nox  - GNU Emacs editor (without GUI support)
+ emacs21    - GNU Emacs transitional package to emacs-gtk
+ emacs21-nox - GNU Emacs transitional package to emacs-nox
+ emacs22    - GNU Emacs transitional package to emacs-gtk
+ emacs22-gtk - GNU Emacs transitional package to emacs-gtk
+ emacs22-nox - GNU Emacs transitional package to emacs-nox
+ emacs23    - GNU Emacs transitional package to emacs-gtk
+ emacs23-lucid - GNU Emacs transitional package to emacs-lucid
+ emacs23-nox - GNU Emacs transitional package to emacs-nox
+ emacs24    - GNU Emacs transitional package to emacs-gtk
+ emacs24-lucid - GNU Emacs transitional package to emacs-lucid
+ emacs24-nox - GNU Emacs transitional package to emacs-nox
+ emacs25    - GNU Emacs transitional package to emacs-gtk
+ emacs25-lucid - GNU Emacs transitional package to emacs-lucid
+ emacs25-nox - GNU Emacs transitional package to emacs-nox
+Closes: 1025009
+Changes:
+ emacs (1:26.1+1-3.2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+     CVE-2022-45939: Prevent an issue where attackers could have executed
+     arbitrary commands via shell metacharacters in the name of a source-code
+     file. This was because lib-src/etags.c used the system(3) library function
+     when calling the ctags binary. (Closes: #1025009)
+   * Drop upstream's .gitignore.
+Checksums-Sha1:
+ 063ed9cba139432cf5bdb7e3ae39a6908a45b252 3531 emacs_26.1+1-3.2+deb10u3.dsc
+ 9318da32923e8a4a17ee23113302ff509c0d4056 24259708 emacs_26.1+1.orig.tar.xz
+ fee82adcd9d72cefb316e4662d986b254b6260a1 113012 emacs_26.1+1-3.2+deb10u3.debian.tar.xz
+ 8904cdd5a054b32b1731b9988751b4435506378c 337744 emacs-bin-common-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ d1e67927ad6f6b7169f32a4dcb70d61d28ffb75b 144792 emacs-bin-common_26.1+1-3.2+deb10u3_amd64.deb
+ cc216b6265f0cdf937124464ce8b276618b84b93 13356556 emacs-common_26.1+1-3.2+deb10u3_all.deb
+ a1269a02ef1b93f33a14d300410348f71b92a52f 15912852 emacs-el_26.1+1-3.2+deb10u3_all.deb
+ badd28bdce1b1512b50e29e4fa5d0cef21e5bd7d 7667828 emacs-gtk-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 3ccc6f185a99f6524d719035d5cbdea7a9dfa2c9 3554260 emacs-gtk_26.1+1-3.2+deb10u3_amd64.deb
+ 7e1db34288488ede5a73d4d79841b5d2a53eb5e1 7778004 emacs-lucid-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 3d943103c22326e984b87621fa607087a37f3d0c 3564360 emacs-lucid_26.1+1-3.2+deb10u3_amd64.deb
+ bfb478c1f73c1226bc9b09e2125b79b11500e455 5574016 emacs-nox-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 5e1d7aaf88daf342f904b1c70abd2dc403e22516 3144572 emacs-nox_26.1+1-3.2+deb10u3_amd64.deb
+ 8628a1f566b0dd682fa73bfcf9dd725b3d9322a5 44880 emacs21-nox_26.1+1-3.2+deb10u3_all.deb
+ 981660a5fab94c46238a4d447d3bbceeb8a9fccd 44864 emacs21_26.1+1-3.2+deb10u3_all.deb
+ b24432a13306cbfcd0250d1e52fea90fb96261b0 44876 emacs22-gtk_26.1+1-3.2+deb10u3_all.deb
+ 22fe3cc52408d75a19d13765f8e9445bcb7a8a34 44876 emacs22-nox_26.1+1-3.2+deb10u3_all.deb
+ a3ebe5893243029ed06bb32e921c78bfac9bd7b4 44872 emacs22_26.1+1-3.2+deb10u3_all.deb
+ 4cedb1ebc3b65d90661c8148f3c4d80b15916360 44856 emacs23-lucid_26.1+1-3.2+deb10u3_all.deb
+ ddf2f00b026641843d37fbd3930bd4927344dfe0 44872 emacs23-nox_26.1+1-3.2+deb10u3_all.deb
+ 502e4f469e259754c0627bed0abd24a9437f49d6 44872 emacs23_26.1+1-3.2+deb10u3_all.deb
+ e1e582f497e268cefb4c2b35fabb5d20690b2f58 44872 emacs24-lucid_26.1+1-3.2+deb10u3_all.deb
+ c5fd71f54a530c5162aad91484739ed93f670937 44860 emacs24-nox_26.1+1-3.2+deb10u3_all.deb
+ 7a3a452af3ce38578f03d1c582cc109d50316ab6 44872 emacs24_26.1+1-3.2+deb10u3_all.deb
+ d44cc93d62d8d6a26095688c6474d92d3c7e6ca9 44864 emacs25-lucid_26.1+1-3.2+deb10u3_all.deb
+ ca3db80afe36470fbea5c0c1c19e3a5871fe58ab 44864 emacs25-nox_26.1+1-3.2+deb10u3_all.deb
+ 77a9f28244f5b9e2a245621cc0f9ce2a390ccca7 44872 emacs25_26.1+1-3.2+deb10u3_all.deb
+ 3a11b4bdc4a5ad7eab97cb6babad1c69c5a8ce59 44856 emacs_26.1+1-3.2+deb10u3_all.deb
+ 9af8dc27c8cd8ce37ed9bcff9836c9fc5a892987 24998 emacs_26.1+1-3.2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 1729ce92ef3ae6f18866b0a71db23a43a90069ae912ea4e661aa49cd1bd006f8 3531 emacs_26.1+1-3.2+deb10u3.dsc
+ ab772b04e48396dba221a96d2bff466c9ab13203c5baf046eece0388ed3dff4d 24259708 emacs_26.1+1.orig.tar.xz
+ 91d7b6f6413c1712d510233d553e0ac5a6e3cd419e0a14c0f23a9d4c1cb88179 113012 emacs_26.1+1-3.2+deb10u3.debian.tar.xz
+ 9fc51f422853d224586385bdba6346e6400ac987728d584edfcd7433eeee0caa 337744 emacs-bin-common-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 9ba381d143662c4989311b24a28320568b3291e18652b1191084469a9d6b4750 144792 emacs-bin-common_26.1+1-3.2+deb10u3_amd64.deb
+ 7ebe291edbfac75c987ae546bc6568c77a71cc08509d316e6ee2a20f31336359 13356556 emacs-common_26.1+1-3.2+deb10u3_all.deb
+ 76c6e3c8d0c0caf374b084bb8a6f16f02046ee87e4aca53b8306a39d8136bbd5 15912852 emacs-el_26.1+1-3.2+deb10u3_all.deb
+ c3a4ccdabd6872d4a086bdce946368257d0f18d8bc8fb4b1b8e5185d2fbce908 7667828 emacs-gtk-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 9f7accc0bf8a44fc1d529ffb450ea0f3a3c1419b444c0f2503be91240421f066 3554260 emacs-gtk_26.1+1-3.2+deb10u3_amd64.deb
+ ee8d6c8dd5704679fd890937d0b601af2167d1cec5e7ae9c9e9b1432d7add44b 7778004 emacs-lucid-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 891297bc25a2f913374976a5d714add029f5238442757dea3ad03c03843afce0 3564360 emacs-lucid_26.1+1-3.2+deb10u3_amd64.deb
+ 88d1a819cf76f17a0f3558678ff21ea0630f5aff5c5c9165a43cca25902904ef 5574016 emacs-nox-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 2fa508d1b274be9e74abef19b4b1b8c270377cbda84a22f8ba42f7d7cd00dd8b 3144572 emacs-nox_26.1+1-3.2+deb10u3_amd64.deb
+ e3053221ec275bf6aae7a55f20d6e54ebcac437b00adfda658ee211084ca667f 44880 emacs21-nox_26.1+1-3.2+deb10u3_all.deb
+ bc6ed9bbb34424da72d13eae627f2424ecc81de4a6eabde331142f60c3b73039 44864 emacs21_26.1+1-3.2+deb10u3_all.deb
+ 379ed5494243561572b65c3110380c6bfe02da393b086a7b3891b1b29955a6ca 44876 emacs22-gtk_26.1+1-3.2+deb10u3_all.deb
+ 993ccfe4fbc12fc185de924a8b42e6baceca428d9be15b914076a8d949372d7c 44876 emacs22-nox_26.1+1-3.2+deb10u3_all.deb
+ f701a2b525d9b0992efa52f28dcb70763c4b8dcaa33256ad9e6289d8402089f9 44872 emacs22_26.1+1-3.2+deb10u3_all.deb
+ 19fbdbd85a8f81e6da6b275d5798053036895f548896eb3a624bbe98da36ea30 44856 emacs23-lucid_26.1+1-3.2+deb10u3_all.deb
+ c868e16c58a24bfeb0fab3e3093c4dea6b6c10638292e6277d978ce63641a43b 44872 emacs23-nox_26.1+1-3.2+deb10u3_all.deb
+ bbb46ecfe1bd1ce9c9b175df9bac28d863f39871df34fb72e394cf705a19368d 44872 emacs23_26.1+1-3.2+deb10u3_all.deb
+ e8274eafacfba7cfe72499b85e533940724e177a9aa7edef221d9812f65f5f79 44872 emacs24-lucid_26.1+1-3.2+deb10u3_all.deb
+ 44b3838b53449403b31abd7b0a7e23a0db27869a3b607005083bd28d37485225 44860 emacs24-nox_26.1+1-3.2+deb10u3_all.deb
+ bf5028bd7d7e6938186d935ab319bc58ecdb37c2836364fd8fc3feda4700f8e3 44872 emacs24_26.1+1-3.2+deb10u3_all.deb
+ 134769e605ab631f11d654ab883e73d802f2c62ef664ba46127ed10f7e41ebac 44864 emacs25-lucid_26.1+1-3.2+deb10u3_all.deb
+ ef7f98cee8593fe98d3e6a3802cfd2a383a88cc0e6cc31dbb5441fb7e2d7126e 44864 emacs25-nox_26.1+1-3.2+deb10u3_all.deb
+ caf8d8518c8bcd328c52e9631fdf66d10a73225c89a71159b78e21ef247115fe 44872 emacs25_26.1+1-3.2+deb10u3_all.deb
+ df04f7b9807127719f26111fb703c1539e20543a5988ba9f70356ccee9a473be 44856 emacs_26.1+1-3.2+deb10u3_all.deb
+ 19c0373e782d73abf7e986497718c2c8e47995a6737c18d05919dea3e78c3c36 24998 emacs_26.1+1-3.2+deb10u3_amd64.buildinfo
+Files:
+ 5286d71d096624b6055ffcc1770e36e7 3531 editors optional emacs_26.1+1-3.2+deb10u3.dsc
+ 12cc8ab9906d389f59cc5338b74882d8 24259708 editors optional emacs_26.1+1.orig.tar.xz
+ 0be80f9f3277af8e7a2df7e7c27ff0e6 113012 editors optional emacs_26.1+1-3.2+deb10u3.debian.tar.xz
+ 3616712ad6038ac23ab47a329a6f12fa 337744 debug optional emacs-bin-common-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ 986eb47a81d4304dd7ade2c5651b35c8 144792 editors optional emacs-bin-common_26.1+1-3.2+deb10u3_amd64.deb
+ b2ed13ad524e62526f7ff982a5bc4af7 13356556 editors optional emacs-common_26.1+1-3.2+deb10u3_all.deb
+ edf4c1571cc9996ce94eb94e8de94f1c 15912852 editors optional emacs-el_26.1+1-3.2+deb10u3_all.deb
+ df812fd67166f15a85ff2f46c8dcd794 7667828 debug optional emacs-gtk-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ b12cd686e82ba9e271800aaf45d1cfb3 3554260 editors optional emacs-gtk_26.1+1-3.2+deb10u3_amd64.deb
+ 7bb496aaad676c267b079fddbe904671 7778004 debug optional emacs-lucid-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ e5a0027d2d60cbfe1a7e1f939e9ef8e9 3564360 editors optional emacs-lucid_26.1+1-3.2+deb10u3_amd64.deb
+ 1661a12b56c2c9a9ddea7a3d6d2e3ea1 5574016 debug optional emacs-nox-dbgsym_26.1+1-3.2+deb10u3_amd64.deb
+ cf54a37a8aa0fcff7a2874d7ac944ecb 3144572 editors optional emacs-nox_26.1+1-3.2+deb10u3_amd64.deb
+ 468649c9770bb9bb5e85c88a46d2e481 44880 oldlibs optional emacs21-nox_26.1+1-3.2+deb10u3_all.deb
+ 0cf40e410a67503301fda697b7e4bcaf 44864 oldlibs optional emacs21_26.1+1-3.2+deb10u3_all.deb
+ 9b0829899178749fa4e14bdff16753dd 44876 oldlibs optional emacs22-gtk_26.1+1-3.2+deb10u3_all.deb
+ 84faf6d2ef25d3ea31c4005bf71f4e94 44876 oldlibs optional emacs22-nox_26.1+1-3.2+deb10u3_all.deb
+ ae66f2df0e1926835074934562f6ba20 44872 oldlibs optional emacs22_26.1+1-3.2+deb10u3_all.deb
+ f76c36f6fa2fafa8d5c71a18f0524f1a 44856 oldlibs optional emacs23-lucid_26.1+1-3.2+deb10u3_all.deb
+ 3c7f2b6ecffade5e4a529459b01e673f 44872 oldlibs optional emacs23-nox_26.1+1-3.2+deb10u3_all.deb
+ 8885ff875dc69afdffd4caa9b575aed5 44872 oldlibs optional emacs23_26.1+1-3.2+deb10u3_all.deb
+ 6ca61f96d2df41a0b2b3ef85467174ef 44872 oldlibs optional emacs24-lucid_26.1+1-3.2+deb10u3_all.deb
+ 6d0fa51a81c6189f6775bd39472ac810 44860 oldlibs optional emacs24-nox_26.1+1-3.2+deb10u3_all.deb
+ 124e3bcc9b75335efe92fba8eaadf260 44872 oldlibs optional emacs24_26.1+1-3.2+deb10u3_all.deb
+ b4356f497ba76382f74f6036eb15b5d1 44864 oldlibs optional emacs25-lucid_26.1+1-3.2+deb10u3_all.deb
+ 30f5db5704d4f2dc6717f519c93dfe0c 44864 oldlibs optional emacs25-nox_26.1+1-3.2+deb10u3_all.deb
+ 9919d714b35d15a231b22a1579168b90 44872 oldlibs optional emacs25_26.1+1-3.2+deb10u3_all.deb
+ 793c8410af144f7a1d2a6c5da2db3545 44856 editors optional emacs_26.1+1-3.2+deb10u3_all.deb
+ 8d34ae29d75493ecaf99030d9bee7268 24998 editors optional emacs_26.1+1-3.2+deb10u3_amd64.buildinfo
+

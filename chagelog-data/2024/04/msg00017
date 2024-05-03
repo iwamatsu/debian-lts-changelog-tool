@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 26 Apr 2024 06:23:30 CEST
+Source: knot-resolver
+Architecture: source
+Version: 3.2.1-3+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f6fc96ce23ac41490fe500d993c2eed7af381f14 2931 knot-resolver_3.2.1-3+deb10u2.dsc
+ 8a0d218735e61f4b15e03a0460010aa5c01f2f67 414832 knot-resolver_3.2.1-3+deb10u2.debian.tar.xz
+ 3c243e460f037a52973d78f8dfd428769c37b90a 10313 knot-resolver_3.2.1-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 7d1cef1a6b891147f7aa393d9191ea00995f4ea9322f3bafdf49e40310bfb251 2931 knot-resolver_3.2.1-3+deb10u2.dsc
+ e1874422b868ab3ef6841fa33406b2aaf17fb11750dd7a968307a86229a4e3f1 414832 knot-resolver_3.2.1-3+deb10u2.debian.tar.xz
+ 924ec54ee4c62937ee69401b99679d16408add997b23c130c9850c20442f9219 10313 knot-resolver_3.2.1-3+deb10u2_amd64.buildinfo
+Changes:
+ knot-resolver (3.2.1-3+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-10190, CVE-2019-10191, CVE-2019-19331, CVE-2020-12667:
+     Several security vulnerabilities have been discovered in knot-resolver, a
+     caching, DNSSEC-validating DNS resolver which may allow remote attackers to
+     bypass DNSSEC validation or cause a denial-of-service.
+Files:
+ c912fcb0b9a322377a842458ea7eb738 2931 net optional knot-resolver_3.2.1-3+deb10u2.dsc
+ e58e938302ba2e522b9ff833997d42e4 414832 net optional knot-resolver_3.2.1-3+deb10u2.debian.tar.xz
+ f5a63926a00c4786e1a975da65945fd5 10313 net optional knot-resolver_3.2.1-3+deb10u2_amd64.buildinfo
+

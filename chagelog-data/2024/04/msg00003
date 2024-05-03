@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 06 Apr 2024 18:16:16 +0200
+Source: expat
+Architecture: source
+Version: 2.2.6-2+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1063238
+Changes:
+ expat (2.2.6-2+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix test suite.
+   * Backporting patch for CVE-2023-52425 - DoS (resource consumption)
+     parsing really big tokens due to O(n²) complexity. Closes: #1063238)
+Checksums-Sha1:
+ 9339e324dc600aa01630d878076c0986678f5dcc 1981 expat_2.2.6-2+deb10u7.dsc
+ 99907f6d654007e3b26c221b7b1f696beb02c763 78596 expat_2.2.6-2+deb10u7.debian.tar.xz
+ 5490885edce4d161b39a23b0485039ef268172ac 8508 expat_2.2.6-2+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ d2544ddde86b80328d975ea7747f61670769e516c0ace034995a151ea3ad6659 1981 expat_2.2.6-2+deb10u7.dsc
+ 92659584405905570ca3b5295e4a1106eff4eeae70795004276c801bbbed2490 78596 expat_2.2.6-2+deb10u7.debian.tar.xz
+ 7f83e42774b51f5131a44b0d00d0d676cfd42ecfacc56630324d8afcfaef398f 8508 expat_2.2.6-2+deb10u7_amd64.buildinfo
+Files:
+ b0ae8a37c637b9b49e02ec9de548fd45 1981 text optional expat_2.2.6-2+deb10u7.dsc
+ 4a00d01efba2c6709d5f9b6104636e77 78596 text optional expat_2.2.6-2+deb10u7.debian.tar.xz
+ 78b6796df025f4db76603ad8b03f9dd1 8508 text optional expat_2.2.6-2+deb10u7_amd64.buildinfo
+

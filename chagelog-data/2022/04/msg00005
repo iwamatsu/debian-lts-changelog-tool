@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 09 Apr 2022 22:03:02 +0200
+Source: minidlna
+Binary: minidlna
+Architecture: source amd64
+Version: 1.1.6+dfsg-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Alexander GQ Gerasiov <gq@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ minidlna   - lightweight DLNA/UPnP-AV server targeted at embedded systems
+Changes:
+ minidlna (1.1.6+dfsg-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-26505
+     Validate HTTP requests to protect against DNS rebinding, thus forbid
+     a remote web server to exfiltrate media files.
+Checksums-Sha1:
+ 30dd91e6cbf5f78486c9125175a3a4ae06ebc5cb 2250 minidlna_1.1.6+dfsg-1+deb9u2.dsc
+ 130c1c077a83c986544cf39086e28e566673c10e 152884 minidlna_1.1.6+dfsg.orig.tar.xz
+ fe4752c27a132030187c85b4222bd8076f4d41e5 29124 minidlna_1.1.6+dfsg-1+deb9u2.debian.tar.xz
+ cb35c277d5a83516d6ccdb71ac9815a54401713a 290190 minidlna-dbgsym_1.1.6+dfsg-1+deb9u2_amd64.deb
+ d52c8afeab16b85cdbaeadb6740444ce19a8b496 9106 minidlna_1.1.6+dfsg-1+deb9u2_amd64.buildinfo
+ da406b97fa746f6c9f89261c09663a23b7f7a8d6 147158 minidlna_1.1.6+dfsg-1+deb9u2_amd64.deb
+Checksums-Sha256:
+ a62ca22e7e32455ccfd3cf1cac4625ea2047c431e396f4809fb20a8d85d9b952 2250 minidlna_1.1.6+dfsg-1+deb9u2.dsc
+ 1cd9e96c357161ec1b622ff0e72810e45d8a886261941041240e16c401b85a15 152884 minidlna_1.1.6+dfsg.orig.tar.xz
+ afee3e4fb39d8e50df41484839c0516289a6717b4daa8071ddc3ee75e132047e 29124 minidlna_1.1.6+dfsg-1+deb9u2.debian.tar.xz
+ 56b3e496be83bce323b2fd2ac8c51e56127c0d05a8d89322438a448ddc68c049 290190 minidlna-dbgsym_1.1.6+dfsg-1+deb9u2_amd64.deb
+ a905cdb40cb89337776237e4fcea70841e7218c2a8b47d12ae62012fbeaa3b93 9106 minidlna_1.1.6+dfsg-1+deb9u2_amd64.buildinfo
+ 685d04f8b71848d2dd25339f89559c2a65242d068901886d38bb59881006e5f8 147158 minidlna_1.1.6+dfsg-1+deb9u2_amd64.deb
+Files:
+ 157df0ecc0c78586264fcbc1c6584f22 2250 net optional minidlna_1.1.6+dfsg-1+deb9u2.dsc
+ 9e8474a9f5319772df37d9bc2310aa4b 152884 net optional minidlna_1.1.6+dfsg.orig.tar.xz
+ d35b2d974c1653455618bc93fa90a111 29124 net optional minidlna_1.1.6+dfsg-1+deb9u2.debian.tar.xz
+ 08b14063a71dd5db4ff71d5c0eee9ee7 290190 debug extra minidlna-dbgsym_1.1.6+dfsg-1+deb9u2_amd64.deb
+ b4ccef1eafdfef43f1a80d51e2768219 9106 net optional minidlna_1.1.6+dfsg-1+deb9u2_amd64.buildinfo
+ a039963f92682d19ae69d1c2d6590a5c 147158 net optional minidlna_1.1.6+dfsg-1+deb9u2_amd64.deb
+

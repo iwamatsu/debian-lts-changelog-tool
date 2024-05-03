@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 27 Oct 2023 22:55:02 +0200
+Source: gst-plugins-bad1.0
+Architecture: source
+Version: 1.14.4-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of GStreamer packages <gst-plugins-bad1.0@packages.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ gst-plugins-bad1.0 (1.14.4-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-40476
+     h265parser: Fix possible overflow using max_sub_layers_minus1
+   * CVE-2023-40475
+     mxfdemux: Check number of channels for AES3 audio (CVE-2023-40475)
+   * CVE-2023-40474
+     mxfdemux: Fix integer overflow causing out of bounds writes when handling
+     invalid uncompressed video
+Checksums-Sha1:
+ 1fd4865206fe8af2a8d688c1c8c254d13b32ce42 4984 gst-plugins-bad1.0_1.14.4-1+deb10u4.dsc
+ e9900e00807df2e9a6e1cfd5e8405ae7f9262ac0 4678032 gst-plugins-bad1.0_1.14.4.orig.tar.xz
+ b1c2c0e31fa226065be88e65ed1c77e5e2ff04b0 38020 gst-plugins-bad1.0_1.14.4-1+deb10u4.debian.tar.xz
+ 38c86042b5f397adb3601394bb8ae1110c7bad41 31616 gst-plugins-bad1.0_1.14.4-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 07ee96371402fd75cd95ab0b327963f0d63de97dbd8e8ae71960d4a334726816 4984 gst-plugins-bad1.0_1.14.4-1+deb10u4.dsc
+ 910b4e0e2e897e8b6d06767af1779d70057c309f67292f485ff988d087aa0de5 4678032 gst-plugins-bad1.0_1.14.4.orig.tar.xz
+ 48d9a3f0a2a7163e020badd57ff42ddd2a5edc1679d9bb32c26c002f66568db0 38020 gst-plugins-bad1.0_1.14.4-1+deb10u4.debian.tar.xz
+ da5fd2b3d0391a079c6dadbe58a9d48fddce5efcef5305e2e917f55a548629c2 31616 gst-plugins-bad1.0_1.14.4-1+deb10u4_amd64.buildinfo
+Files:
+ f2270d7f3d318fe4e5193b135aed97bf 4984 libs extra gst-plugins-bad1.0_1.14.4-1+deb10u4.dsc
+ 5d20a91d027708abcf924f6c1279dd25 4678032 libs extra gst-plugins-bad1.0_1.14.4.orig.tar.xz
+ 958f555dbfcbad74c8f4471a86d336c6 38020 libs extra gst-plugins-bad1.0_1.14.4-1+deb10u4.debian.tar.xz
+ ada105133f20e6b53fb884d4ab49635c 31616 libs extra gst-plugins-bad1.0_1.14.4-1+deb10u4_amd64.buildinfo
+

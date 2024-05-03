@@ -1,0 +1,85 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 11:17:34 +0000
+Source: openvswitch
+Binary: openvswitch-common openvswitch-dbg openvswitch-dev openvswitch-pki openvswitch-switch openvswitch-testcontroller openvswitch-vtep ovn-central ovn-controller-vtep ovn-host python-openvswitch python3-openvswitch
+Architecture: source amd64 all
+Version: 2.10.7+ds1-0+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ openvswitch-common - Open vSwitch common components
+ openvswitch-dbg - Debug symbols for Open vSwitch packages
+ openvswitch-dev - Open vSwitch development package
+ openvswitch-pki - Open vSwitch public key infrastructure dependency package
+ openvswitch-switch - Open vSwitch switch implementations
+ openvswitch-testcontroller - Simple controller for testing OpenFlow setups
+ openvswitch-vtep - Open vSwitch VTEP utilities
+ ovn-central - OVN central components
+ ovn-controller-vtep - OVN vtep controller
+ ovn-host   - OVN host components
+ python-openvswitch - Python bindings for Open vSwitch
+ python3-openvswitch - Python 3 bindings for Open vSwitch
+Closes: 1027273
+Changes:
+ openvswitch (2.10.7+ds1-0+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-4337 & CVE-2022-4338: Fix an out-of-bounds read and integer
+     underflow vulnerability. (Closes: #1027273)
+   * Correct Python module import name for autodep8 tests to fix autopkgtests.
+Checksums-Sha1:
+ 5fb82ae74a1360c891d39dea267bb3eaf9a9a5ff 3210 openvswitch_2.10.7+ds1-0+deb10u3.dsc
+ 20f1e9784053a507831aa5aa11bb30bd4ae43c2a 5336632 openvswitch_2.10.7+ds1.orig.tar.gz
+ 64c73057263e6578050223346f32cb87d56a3c91 68272 openvswitch_2.10.7+ds1-0+deb10u3.debian.tar.xz
+ bfa1f5a2acf4ea20d2f0b0ce3f50e65d7be78ee3 2050664 openvswitch-common_2.10.7+ds1-0+deb10u3_amd64.deb
+ d236a496a2965febabd9800af9aef0760f87346c 7034796 openvswitch-dbg_2.10.7+ds1-0+deb10u3_amd64.deb
+ 5390f7ed8064242ed1fcc803e1a08e0bcebc9e9b 1456776 openvswitch-dev_2.10.7+ds1-0+deb10u3_amd64.deb
+ d164b3c2db97f888bf5731271d7d9ec359745fee 36060 openvswitch-pki_2.10.7+ds1-0+deb10u3_all.deb
+ ea2b7d9294dba30d97a4987739b50cf86215fc7b 51580 openvswitch-switch_2.10.7+ds1-0+deb10u3_amd64.deb
+ cda6af6d078c4500f110de13222e801ab22e45f4 39336 openvswitch-testcontroller_2.10.7+ds1-0+deb10u3_amd64.deb
+ 5e04042e099f3a82d82bbe39b88d57b301f36630 37768 openvswitch-vtep_2.10.7+ds1-0+deb10u3_amd64.deb
+ d7dc4177a6ca48a53d401b8875678de79e064236 14198 openvswitch_2.10.7+ds1-0+deb10u3_amd64.buildinfo
+ a95d83fe5c99b58c15635c7399dad8805a5fa310 39428 ovn-central_2.10.7+ds1-0+deb10u3_amd64.deb
+ 624d1c29ca93043daa182de92bc5a6a9d0832249 36076 ovn-controller-vtep_2.10.7+ds1-0+deb10u3_amd64.deb
+ cc4e209440c17fb790e33f5f05762c4d2f4ad1ff 36984 ovn-host_2.10.7+ds1-0+deb10u3_amd64.deb
+ 0d2c0c94e802d3a333880b340bcddecdf33f4184 123596 python-openvswitch_2.10.7+ds1-0+deb10u3_all.deb
+ a11c84b78eccef20816a007c56da7a1240c4142b 114660 python3-openvswitch_2.10.7+ds1-0+deb10u3_all.deb
+Checksums-Sha256:
+ de6a1585c85d7048b5e901c92dc11ccdbd4f505d3c7d3c755eeb1647dcb813c6 3210 openvswitch_2.10.7+ds1-0+deb10u3.dsc
+ 543290a8673e40f188c457609e430d66c8ac185b90fdaceac17f4c4d72c8d8c1 5336632 openvswitch_2.10.7+ds1.orig.tar.gz
+ efd04723fd2c173d8aaaeaaeb21caee577d538ff0ab7e5bd2b6c7ca01ba82d0e 68272 openvswitch_2.10.7+ds1-0+deb10u3.debian.tar.xz
+ 09a8af0229666da602faa25f846f1a13a243d4ee958e07621145bbe438b0fe95 2050664 openvswitch-common_2.10.7+ds1-0+deb10u3_amd64.deb
+ 1dbb610981dc8419881011161dda50edaa65b7d257963babd929bd498114ec2a 7034796 openvswitch-dbg_2.10.7+ds1-0+deb10u3_amd64.deb
+ a1f3ada3bd81bcaf677b17282e93a0ce127b80420b980231b8197ae88f5cafa9 1456776 openvswitch-dev_2.10.7+ds1-0+deb10u3_amd64.deb
+ a561b43f504a99275e8109b42751183f6ce6ec254afc0d4139294f73db710005 36060 openvswitch-pki_2.10.7+ds1-0+deb10u3_all.deb
+ f388dc59d43f19d722cc60944424ed7e39a79f896c567ea7ddfad898a911d166 51580 openvswitch-switch_2.10.7+ds1-0+deb10u3_amd64.deb
+ 2287c0c63dcb7dc78f69e7026f66257148ff0f310e51e644bb368921ff5fd87b 39336 openvswitch-testcontroller_2.10.7+ds1-0+deb10u3_amd64.deb
+ 348ba32a03c043a17ff65a1c7b7100c848657ee5e532adaf04e738e11c14391e 37768 openvswitch-vtep_2.10.7+ds1-0+deb10u3_amd64.deb
+ 228a553cdd1d4ca4b5ae8a8c6f3af4e18fb674356978b20e5f41837bdd32ec98 14198 openvswitch_2.10.7+ds1-0+deb10u3_amd64.buildinfo
+ a3836c96f52c8820833a839520fef8708341f42fd1ba1edfa74566440ee7268e 39428 ovn-central_2.10.7+ds1-0+deb10u3_amd64.deb
+ eb22bf4454c4fe818c9dc9cc33a8e296c777c1c29818d263532eb48449ddf3dc 36076 ovn-controller-vtep_2.10.7+ds1-0+deb10u3_amd64.deb
+ ad083fe2c46c4ae9151686bd78b9e62ee483fef7825e00d9abf369609c708c72 36984 ovn-host_2.10.7+ds1-0+deb10u3_amd64.deb
+ 3db8f49d57547872eaf48912924356faca51cf30b418f46c41f9dd5d347f58b1 123596 python-openvswitch_2.10.7+ds1-0+deb10u3_all.deb
+ 096a3e7ba5d29c5bbef6795ccd5a805140fe7afdc7c69dc4965948c02c8ec991 114660 python3-openvswitch_2.10.7+ds1-0+deb10u3_all.deb
+Files:
+ 44a7ebf581ea5d0089341f078e31773f 3210 net optional openvswitch_2.10.7+ds1-0+deb10u3.dsc
+ ed6e4f925f5cde795541bf6077b436d9 5336632 net optional openvswitch_2.10.7+ds1.orig.tar.gz
+ f16fd15963ab92fd9f0dd601aa45bfdc 68272 net optional openvswitch_2.10.7+ds1-0+deb10u3.debian.tar.xz
+ 0eaf586feb978c66d700e7f91ba77a6f 2050664 net optional openvswitch-common_2.10.7+ds1-0+deb10u3_amd64.deb
+ e91651b8dbd3d0a2a2ea2148358e1551 7034796 debug optional openvswitch-dbg_2.10.7+ds1-0+deb10u3_amd64.deb
+ 97abd193ae05b3db80106d685cdc6515 1456776 net optional openvswitch-dev_2.10.7+ds1-0+deb10u3_amd64.deb
+ 99d63883fcd3991ef9ba8f405fb32fa3 36060 net optional openvswitch-pki_2.10.7+ds1-0+deb10u3_all.deb
+ c180f8e37ee32536a89758ed9d90eb3f 51580 net optional openvswitch-switch_2.10.7+ds1-0+deb10u3_amd64.deb
+ 3e85dc64e9374ba4455daebad7d6d5ec 39336 net optional openvswitch-testcontroller_2.10.7+ds1-0+deb10u3_amd64.deb
+ 758de3633f27ab2e98c5d1713077f055 37768 net optional openvswitch-vtep_2.10.7+ds1-0+deb10u3_amd64.deb
+ 890afffaad9dc0365bfe9044fc2453fb 14198 net optional openvswitch_2.10.7+ds1-0+deb10u3_amd64.buildinfo
+ b8bacb895a93c84e6748db996df73bb0 39428 net optional ovn-central_2.10.7+ds1-0+deb10u3_amd64.deb
+ 41bbeae5233ba4d642af58194d2abcf7 36076 net optional ovn-controller-vtep_2.10.7+ds1-0+deb10u3_amd64.deb
+ 52758be9c6618f4f5ba24c79337d13ce 36984 net optional ovn-host_2.10.7+ds1-0+deb10u3_amd64.deb
+ 6723cf61c52ee4d72ea6666b53f0dcc2 123596 python optional python-openvswitch_2.10.7+ds1-0+deb10u3_all.deb
+ cd3fd7fe5a12ff369a0e8926e78c4782 114660 python optional python3-openvswitch_2.10.7+ds1-0+deb10u3_all.deb
+

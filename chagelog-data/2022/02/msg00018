@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 15 Feb 2022 00:10:04 CET
+Source: h2database
+Binary: libh2-java libh2-java-doc
+Architecture: source
+Version: 1.4.193-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libh2-java - H2 Database Engine
+ libh2-java-doc - H2 Database Engine (documentation)
+Checksums-Sha1:
+ b1265142ea7e024f85d371cf5afcbe13880e2e52 2345 h2database_1.4.193-1+deb9u1.dsc
+ 3f4c3bbafd05cdffd98d67d3c1e767440864cffc 2180412 h2database_1.4.193.orig.tar.xz
+ 344edfd0d9699484a3f3dacc6d9d596ed7f005a2 13548 h2database_1.4.193-1+deb9u1.debian.tar.xz
+ 744e29504815c4e724ddc2e0996dc1d2fd57e537 12159 h2database_1.4.193-1+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ a4aaac85c97950014a6534b222b1e69123805835130f7b50aece88c7684417b1 2345 h2database_1.4.193-1+deb9u1.dsc
+ 40c497c7088d2c978f5f2740c42c047a3d18788e6ea380a94e733504db6b356b 2180412 h2database_1.4.193.orig.tar.xz
+ 385aacfe093a27f3c89d9d57bf436b8bf41b6f8d8ce5048f24554a6c8db1314b 13548 h2database_1.4.193-1+deb9u1.debian.tar.xz
+ 20287ffccd92714818a5b506a191e266b41cb0d1ddfdfe421447bb504c22ba1d 12159 h2database_1.4.193-1+deb9u1_amd64.buildinfo
+Changes:
+ h2database (1.4.193-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Security researchers of JFrog Security and Ismail Aydemir discovered two
+     remote code execution vulnerabilities in the H2 Java SQL database engine
+     which can be exploited through various attack vectors, most notably through
+     the H2 Console and by loading custom classes from remote servers through
+     JNDI. The H2 console is a developer tool and not required by any
+     reverse-dependency in Debian. It has been disabled in (old)stable
+     releases. Database developers are advised to use at least version
+     2.1.210-1, currently available in Debian unstable.
+Files:
+ 67ad3f04ddc9c628ba544ab19f68a34f 2345 java optional h2database_1.4.193-1+deb9u1.dsc
+ 3d26b45742875ca3ec749f6a94702384 2180412 java optional h2database_1.4.193.orig.tar.xz
+ e156ee7960e4cbb784fac44b25160dc2 13548 java optional h2database_1.4.193-1+deb9u1.debian.tar.xz
+ 78f4d7363c355ca78a0a19cfd215c211 12159 java optional h2database_1.4.193-1+deb9u1_amd64.buildinfo
+

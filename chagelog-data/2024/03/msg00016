@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 15 Mar 2024 17:09:40 +0200
+Source: unadf
+Architecture: source
+Version: 0.7.11a-4+deb11u1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Closes: 838248
+Changes:
+ unadf (0.7.11a-4+deb11u1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Rebuild for buster-security.
+ .
+ unadf (0.7.11a-4+deb11u1) bullseye; urgency=medium
+ .
+   * CVE-2016-1243 / CVE-2016-1244 (Closes: #838248)
+Checksums-Sha1:
+ 9ba06c70d7512e628172258ffca5f4f6181e4491 1773 unadf_0.7.11a-4+deb11u1~deb10u1.dsc
+ 63c05f97302ff67f5d7ff2d9e33f9a66196f9578 209458 unadf_0.7.11a.orig.tar.gz
+ acf1ceb7cc6739cb677d24a60c8bece88a32fd5b 19512 unadf_0.7.11a-4+deb11u1~deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 30825d9562278e42ea7c56ca485a069577ed1c9b75d169c0ccc5db6f2f8bf64c 1773 unadf_0.7.11a-4+deb11u1~deb10u1.dsc
+ fa9e0e34b1b0f4f4287905a3d485e3bba498451af98d6c12be87ab3a2b436471 209458 unadf_0.7.11a.orig.tar.gz
+ a752213031c3cd886a4d71a9014688827fdc11d6a15d5eac77ce8ccba86b60b9 19512 unadf_0.7.11a-4+deb11u1~deb10u1.debian.tar.xz
+Files:
+ de53f580e6df1e1aaaaee9665899012a 1773 utils optional unadf_0.7.11a-4+deb11u1~deb10u1.dsc
+ 63c21eeb61e1473d8dd214e0b39cb819 209458 utils optional unadf_0.7.11a.orig.tar.gz
+ 00e10ad9294f250ba7bb54dfa710bda5 19512 utils optional unadf_0.7.11a-4+deb11u1~deb10u1.debian.tar.xz
+

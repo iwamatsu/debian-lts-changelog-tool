@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 26 Feb 2023 14:00:55 +0100
+Source: php7.3
+Architecture: source
+Version: 7.3.31-1~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1031368
+Changes:
+ php7.3 (7.3.31-1~deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-31631: Uncaught integer overflow.
+   * CVE-2023-0567: Malformatted BCrypt hashes that include a `$` within their
+     salt part trigger a buffer overread and may erroneously validate any
+     password as valid (closes: #1031368).
+   * CVE-2023-0568: 1-byte array overrun in common path resolve code (closes:
+     #1031368).
+   * CVE-2023-0662: DoS vulnerability when parsing multipart request body
+     (closes: #1031368).
+Checksums-Sha1:
+ 9ab3569f07ec12c1accda90df3f49b2c73528665 5867 php7.3_7.3.31-1~deb10u3.dsc
+ 3bacd2d5cf46598d7f935a3e4aa9de57d7794582 78788 php7.3_7.3.31-1~deb10u3.debian.tar.xz
+ 2ee7e96db893ce21a606ae122a4a32d21c72ff85 35708 php7.3_7.3.31-1~deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 8334c31f03d29a7016141cb168d7643abe3ea1068e6e54a42b051ab3ebc238bc 5867 php7.3_7.3.31-1~deb10u3.dsc
+ 5840abe340e7241c588f7c2465dbdf76ae4ee4796a60b2be799eee5583216082 78788 php7.3_7.3.31-1~deb10u3.debian.tar.xz
+ 6a121b87ceea63f40bc85cfb6f50f521d28b83b4802cd9a2aae4625cea5c807a 35708 php7.3_7.3.31-1~deb10u3_amd64.buildinfo
+Files:
+ b2a709b0213ba14aa5def512f966dfc7 5867 php optional php7.3_7.3.31-1~deb10u3.dsc
+ c96c7f74f13256c4d9cfe4cfacbbd121 78788 php optional php7.3_7.3.31-1~deb10u3.debian.tar.xz
+ 13158b878a07ba41e5b37af95a412f83 35708 php optional php7.3_7.3.31-1~deb10u3_amd64.buildinfo
+

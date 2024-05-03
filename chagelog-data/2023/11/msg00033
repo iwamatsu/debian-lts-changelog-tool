@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 Nov 2023 17:31:53 +0100
+Source: libde265
+Architecture: source
+Version: 1.0.11-0+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ libde265 (1.0.11-0+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix: CVE-2023-27102, CVE-2023-27103, CVE-2023-43887 and CVE-2023-47471.
+Checksums-Sha1:
+ a27ded9c53a3a73a0fd0ced726d43385756f68a8 2252 libde265_1.0.11-0+deb10u5.dsc
+ 8f1ab8a7b5c424e34811e3614c4d05fa174e03de 15244 libde265_1.0.11-0+deb10u5.debian.tar.xz
+ 29b97504fefe8f58eed0dda3ae71bc416873a9d4 11130 libde265_1.0.11-0+deb10u5_source.buildinfo
+Checksums-Sha256:
+ 94c6db0b45458a3372ab1791008c4aa2ded74c6bd9e8edc62de911e69007e0ab 2252 libde265_1.0.11-0+deb10u5.dsc
+ 546621317f10715c284555bd4cf1b80ef2b17d6225a126dcaa4fecefa3ac3a54 15244 libde265_1.0.11-0+deb10u5.debian.tar.xz
+ 5a0ba6635292591fc5aa3054344bf0e3fd02846e23aca5031dedc3fc8b61ea08 11130 libde265_1.0.11-0+deb10u5_source.buildinfo
+Files:
+ a5f4e1d989590d5ee9964314bc8ee226 2252 libs optional libde265_1.0.11-0+deb10u5.dsc
+ f42a8f42c4ca688d2b5ab29a7d8f3fb8 15244 libs optional libde265_1.0.11-0+deb10u5.debian.tar.xz
+ 366e073fa19f128a0299553eef4f9f88 11130 libs optional libde265_1.0.11-0+deb10u5_source.buildinfo
+

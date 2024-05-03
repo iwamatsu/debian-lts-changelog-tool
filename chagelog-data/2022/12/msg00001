@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 03 Dec 2022 01:48:03 +0530
+Source: vlc
+Architecture: source
+Version: 3.0.17.4-0+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ vlc (3.0.17.4-0+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix possible buffer overflow. (Fixes: CVE-2022-41325)
+Checksums-Sha1:
+ 4d3d4c8625932b0b3a9776d148f11c68fece02df 6513 vlc_3.0.17.4-0+deb10u2.dsc
+ ebcd9939103fda141267c5a8f1c603df4533218e 26567148 vlc_3.0.17.4.orig.tar.xz
+ b6121c98c1f0ce81134df0c951272d3444bd610b 195 vlc_3.0.17.4.orig.tar.xz.asc
+ 303124a4c8e73f3ab18d7029598af9bd19ffad90 65296 vlc_3.0.17.4-0+deb10u2.debian.tar.xz
+ a312a521bb62963566a3b71b8d656ed044a5aef7 9176 vlc_3.0.17.4-0+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 23fef543bec4a8bbc36dfe3cf49f9e0b3e900710ed5d578d5c378a6bb31b110e 6513 vlc_3.0.17.4-0+deb10u2.dsc
+ 8c5a62d88a4fb45c1b095cf10befef217dfa87aedcec5184b9e7d590b6dd4133 26567148 vlc_3.0.17.4.orig.tar.xz
+ f310f9eda5cca0fda31f90ddc95b615f6de7c648bbfeac3f1de5b9ee67e57bee 195 vlc_3.0.17.4.orig.tar.xz.asc
+ 2a5a4ca1a0766d7118ba7e135038a0af76afe6162c79b2eb5ce0b02fbfb6b45b 65296 vlc_3.0.17.4-0+deb10u2.debian.tar.xz
+ 4cf975b7dcf9e59a0b630758cdb6e48d614a95a3084d50a9b905861edd24f0bd 9176 vlc_3.0.17.4-0+deb10u2_source.buildinfo
+Files:
+ 797db113afd82f11d5d467111616df57 6513 video optional vlc_3.0.17.4-0+deb10u2.dsc
+ 951878d524e089bf4c80614c93c68c0c 26567148 video optional vlc_3.0.17.4.orig.tar.xz
+ 9b7a84bcce30151bbb767541aa2be258 195 video optional vlc_3.0.17.4.orig.tar.xz.asc
+ 8d789a83682aff42e85a77b1a24409af 65296 video optional vlc_3.0.17.4-0+deb10u2.debian.tar.xz
+ 43c2368448a67bec91d420f7c195b4fb 9176 video optional vlc_3.0.17.4-0+deb10u2_source.buildinfo
+

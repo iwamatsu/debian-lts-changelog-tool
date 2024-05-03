@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 13 May 2023 23:01:34 CEST
+Source: golang-websocket
+Architecture: source
+Version: 1.4.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ bab847670647a7c8b7f7bbf781e4caf38bd4f45d 2429 golang-websocket_1.4.0-1+deb10u1.dsc
+ 04d23fc4fb03d77faaf2fb252e18ffad15653ec0 50228 golang-websocket_1.4.0.orig.tar.gz
+ 245408c1e8fd445169ec5e10c1decfe194108351 7232 golang-websocket_1.4.0-1+deb10u1.debian.tar.xz
+ e9622f69f86806537741ef6f6ecde4b8acce1f52 6351 golang-websocket_1.4.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ dca6e6ee0f75a5679fcc7d341f8227d3e1bb572e5aea5ae6973b40083c983941 2429 golang-websocket_1.4.0-1+deb10u1.dsc
+ 2b5743c72bd0930c5a80e49c0138b5b7d27fa7c085efd0c86805cccfa7220c9d 50228 golang-websocket_1.4.0.orig.tar.gz
+ 3ce09f41f3a00b8abe8bd6530174be924a520027286fe06806565bbb82b1870a 7232 golang-websocket_1.4.0-1+deb10u1.debian.tar.xz
+ 392a33155c0d69e21e539f485890635a56cf79c8a0a387f6ce77163ea4421014 6351 golang-websocket_1.4.0-1+deb10u1_amd64.buildinfo
+Changes:
+ golang-websocket (1.4.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2020-27813: An integer overflow vulnerability exists with the length
+     of websocket frames received via a websocket connection. An attacker would
+     use this flaw to cause a denial of service attack on an HTTP Server allowing
+     websocket connections.
+Files:
+ 4d70de645581da69ea1c6b00156cf67a 2429 devel optional golang-websocket_1.4.0-1+deb10u1.dsc
+ 2cb0c26b0b541029d9c195424a6515de 50228 devel optional golang-websocket_1.4.0.orig.tar.gz
+ 1fff44b6282a73f71052d827b2ad0f2c 7232 devel optional golang-websocket_1.4.0-1+deb10u1.debian.tar.xz
+ 9c59cf5471ef4a64905adbb25ec7fb00 6351 devel optional golang-websocket_1.4.0-1+deb10u1_amd64.buildinfo
+

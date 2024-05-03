@@ -1,0 +1,59 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 19 Apr 2023 12:15:40 +0200
+Source: golang-1.11
+Architecture: source
+Version: 1.11.6-1+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Go Compiler Team <team+go-compiler@tracker.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 989492 991961
+Changes:
+ golang-1.11 (1.11.6-1+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Always set $USER when running the testsuite to avoid build failure
+     (e.g. after 'debuild' environment sanitization)
+   * CVE-2020-28367: Code injection in the go command with cgo allows
+     arbitrary code execution at build time via malicious gcc flags
+     specified via a #cgo directive.
+   * CVE-2021-38297: Go has a Buffer Overflow via large arguments in a
+     function invocation from a WASM module, when GOARCH=wasm GOOS=js is
+     used.
+   * CVE-2021-33196: In archive/zip, a crafted file count (in an archive's
+     header) can cause a NewReader or OpenReader panic. (Closes: #989492)
+   * CVE-2021-39293: This issue exists because of an incomplete fix for
+     CVE-2021-33196.
+   * CVE-2021-36221: Go has a race condition that can lead to a
+     net/http/httputil ReverseProxy panic upon an ErrAbortHandler
+     abort. (Closes: #991961)
+   * CVE-2021-41771: ImportedSymbols in debug/macho (for Open or OpenFat)
+     Accesses a Memory Location After the End of a Buffer, aka an
+     out-of-bounds slice situation.
+   * CVE-2021-44716: net/http allows uncontrolled memory consumption in the
+     header canonicalization cache via HTTP/2 requests.
+   * CVE-2021-44717: Go on UNIX allows write operations to an unintended
+     file or unintended network connection as a consequence of erroneous
+     closing of file descriptor 0 after file-descriptor exhaustion.
+   * CVE-2022-23772: Rat.SetString in math/big has an overflow that can
+     lead to Uncontrolled Memory Consumption.
+   * CVE-2022-23806: Curve.IsOnCurve in crypto/elliptic can incorrectly
+     return true in situations with a big.Int value that is not a valid
+     field element.
+   * CVE-2022-24921: regexp.Compile allows stack exhaustion via a deeply
+     nested expression.
+Checksums-Sha1:
+ 7431846099b5f624bb938698b13ea16e843497a5 2615 golang-1.11_1.11.6-1+deb10u5.dsc
+ bb077f1a37bf19e653a112ecd1d457717ff9c1a7 55344 golang-1.11_1.11.6-1+deb10u5.debian.tar.xz
+ 2e11e3da1f2b2c4646ca7686aebb5871fd74dd79 5839 golang-1.11_1.11.6-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 585be0f442a2ded7ab0c404ddb8b7d8065d7b0376cf642d1b1669ee96e207303 2615 golang-1.11_1.11.6-1+deb10u5.dsc
+ 2a325b693cf56a4783dfe81df5646a50d7cd0dea266e401395e973dd8d12b4d3 55344 golang-1.11_1.11.6-1+deb10u5.debian.tar.xz
+ 8a3b70c8f1c1142e75b44a574cd930c78489b0cb844c01d00c6b64191cfdd305 5839 golang-1.11_1.11.6-1+deb10u5_amd64.buildinfo
+Files:
+ 2c26f65d40d5cefa0a4102d041c572af 2615 devel optional golang-1.11_1.11.6-1+deb10u5.dsc
+ 1317f9272ea4b7b0a76b7e591fcb3489 55344 devel optional golang-1.11_1.11.6-1+deb10u5.debian.tar.xz
+ 4eb960654496da10ca42e5037b5ea5e8 5839 devel optional golang-1.11_1.11.6-1+deb10u5_amd64.buildinfo
+

@@ -1,0 +1,66 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 28 Nov 2022 11:39:40 +0000
+Source: frr
+Binary: frr frr-dbgsym frr-doc frr-pythontools frr-rpki-rtrlib frr-rpki-rtrlib-dbgsym frr-snmp frr-snmp-dbgsym
+Architecture: source amd64 all
+Version: 6.0.2-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: David Lamparter <equinox-debian@diac24.net>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ frr        - FRRouting suite of internet protocols (BGP, OSPF, IS-IS, ...)
+ frr-doc    - FRRouting suite - user manual
+ frr-pythontools - FRRouting suite - Python tools
+ frr-rpki-rtrlib - FRRouting suite - BGP RPKI support (rtrlib)
+ frr-snmp   - FRRouting suite - SNMP support
+Closes: 1021016
+Changes:
+ frr (6.0.2-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS security team.
+   * CVE-2022-37032: An out-of-bounds read in the BGP daemon
+     may have lead to a segmentation fault and denial of service.
+     (Closes: #1021016)
+Checksums-Sha1:
+ 7ea2ad9799910c544921df3ee47d6f21f88dfc2f 2660 frr_6.0.2-2+deb10u2.dsc
+ 6d79651f331938fec31e94aa0db6830c453975f7 4730302 frr_6.0.2.orig.tar.gz
+ a0e017a4339d3dc17658f8bb5d5ec3d260661a7d 20640 frr_6.0.2-2+deb10u2.debian.tar.xz
+ ec19915fbf43f15113cac3318741cd38f6ef753c 8399492 frr-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ 2fff7e07507a9d2cb1fa404a9ac84f44dd253c70 1063760 frr-doc_6.0.2-2+deb10u2_all.deb
+ 45816506dc71a8eb6e684f6df6822101aad8f874 18416 frr-pythontools_6.0.2-2+deb10u2_all.deb
+ 53b9cd6793af737c2b960217f9eaba991a5398d2 50724 frr-rpki-rtrlib-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ b10f2a575da0c71c89d7f22e49bc52f15a9f5d3e 19228 frr-rpki-rtrlib_6.0.2-2+deb10u2_amd64.deb
+ 74dd541d8e686caa60acb6f0a37b2c9b173faef3 158188 frr-snmp-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ f568c2bad2ccf495f8f7b53af963bc7e63b1596e 37004 frr-snmp_6.0.2-2+deb10u2_amd64.deb
+ 47b3a2d089db09c60c81ad0e5fa175114ec40291 11423 frr_6.0.2-2+deb10u2_amd64.buildinfo
+ 761610b37ba53efd00994f9a9e5b9f157a03f305 2013040 frr_6.0.2-2+deb10u2_amd64.deb
+Checksums-Sha256:
+ 56f3850dd9a86d4fe2fffac5ebd0e2a0c1ac26902fdcef3caef2be01375341ea 2660 frr_6.0.2-2+deb10u2.dsc
+ dc329a678b1819d5e5feb4fbdfb18b94cf06ae8ec8c1cd34d83e99342aa269ab 4730302 frr_6.0.2.orig.tar.gz
+ f56e7e546a4e5e18d35586f8a5e183bda095927ec45074584a755e061114e27a 20640 frr_6.0.2-2+deb10u2.debian.tar.xz
+ c32d06d1611432dd9aebaaccff20135765de41e360db255a953da719c4537b40 8399492 frr-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ ba6340fb6f3834de4204703103180821912a160e6ded73a2e43f4c19c28443a6 1063760 frr-doc_6.0.2-2+deb10u2_all.deb
+ b3c85a295daf66d25283adca373626f4f1c106a49b0174892676b874c0aca76b 18416 frr-pythontools_6.0.2-2+deb10u2_all.deb
+ e46d5851ce0008a5a393543964c22ad50fb6a475b77401a0464b38f137850b42 50724 frr-rpki-rtrlib-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ 8ca97ef0c2dc7aaf71387f5f08103dce28589b68defbd0d27042e359a4ed8d11 19228 frr-rpki-rtrlib_6.0.2-2+deb10u2_amd64.deb
+ f0a8a31b31d0acf4f7413783af61f31187986a32ef119079813bf29fb5af10db 158188 frr-snmp-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ 3be93d9a2a6fa56a8302b2d6add0f2f6979824af2f472a0de84611814e1d2f18 37004 frr-snmp_6.0.2-2+deb10u2_amd64.deb
+ 7da3c8473cd38b0a645e5a1adcbe98f9c27392286a8a1fdcad9828cc0020ae52 11423 frr_6.0.2-2+deb10u2_amd64.buildinfo
+ 70d7622ed0a45f901724c6f75b7ef48789f3ca421159a2faf11c355fc4a86d15 2013040 frr_6.0.2-2+deb10u2_amd64.deb
+Files:
+ 742468c6dbaad19827a2c60623b84bb6 2660 net optional frr_6.0.2-2+deb10u2.dsc
+ e991ce945d78e08eda6ebca53d85412e 4730302 net optional frr_6.0.2.orig.tar.gz
+ 952ddee48f5702a02061eaafce7ca5e5 20640 net optional frr_6.0.2-2+deb10u2.debian.tar.xz
+ 5e5247092dae80718c1e5f2a8180f7b5 8399492 debug optional frr-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ 6831ac606843c197c0be9de7ce865a5c 1063760 doc optional frr-doc_6.0.2-2+deb10u2_all.deb
+ 3c5cbbc8e01a36c7229c1edcf9ed30a6 18416 net optional frr-pythontools_6.0.2-2+deb10u2_all.deb
+ 911a81eb418c22711a356397946b203f 50724 debug optional frr-rpki-rtrlib-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ 48f30319eaf9794dd93114f0b973e976 19228 net optional frr-rpki-rtrlib_6.0.2-2+deb10u2_amd64.deb
+ c5cb4b1450b7e37b85660bc37aabdc27 158188 debug optional frr-snmp-dbgsym_6.0.2-2+deb10u2_amd64.deb
+ 2efae9a08d4d704394c818f78fb76d52 37004 net optional frr-snmp_6.0.2-2+deb10u2_amd64.deb
+ 014e6cb7da80bdf323a9c7d5bbc9d075 11423 net optional frr_6.0.2-2+deb10u2_amd64.buildinfo
+ 42fe20c0227feb25d0c7b0ab4b9d6a54 2013040 net optional frr_6.0.2-2+deb10u2_amd64.deb
+

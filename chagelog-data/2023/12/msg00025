@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 28 Dec 2023 22:12:50 +0100
+Source: xerces-c
+Architecture: source
+Version: 3.2.2+debian-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: William Blough <bblough@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 947431
+Changes:
+ xerces-c (3.2.2+debian-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2018-1311: Use-after-free on external DTD scan.  This replaces
+     RedHat's mitigation patch (which had a memory leak). (Closes: #947431)
+   * Fix CVE-2023-37536: Integer overflows in DFAContentModel class.
+   * Upstream tests: Cherry-pick upstream patch to fix NetAccessorTest to exit
+     with non-zero status in case of error.
+Checksums-Sha1:
+ 9e8cc686d1746a9c15666d6313263fa36c1dae0a 2289 xerces-c_3.2.2+debian-1+deb10u2.dsc
+ 6c25f097d4e45a731b61ba5745879dcc84d296e9 28728 xerces-c_3.2.2+debian-1+deb10u2.debian.tar.xz
+ f52018972f7a7151a0b203fe1b6788181b9f599b 11079 xerces-c_3.2.2+debian-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ b93e3dd39c14eeddb34c6b2fdc1a6a8830f7f4f05f17a3ca96404afc91d24a11 2289 xerces-c_3.2.2+debian-1+deb10u2.dsc
+ 716b87799c1796d28d499fc842b05155763e0d27e7a3e68b803cbb684db02f1f 28728 xerces-c_3.2.2+debian-1+deb10u2.debian.tar.xz
+ 739d3e9e68133172fad0ef013ee70b73b63a37ec4feea72fe0e709727ec2515d 11079 xerces-c_3.2.2+debian-1+deb10u2_amd64.buildinfo
+Files:
+ 6e753442c840a03f2e6152531b551c90 2289 libs optional xerces-c_3.2.2+debian-1+deb10u2.dsc
+ 138881bb7bdb8ae13b65b434a347d6c2 28728 libs optional xerces-c_3.2.2+debian-1+deb10u2.debian.tar.xz
+ 1472787ab198533e1a870ed3125758d3 11079 libs optional xerces-c_3.2.2+debian-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 05 Jan 2023 17:38:52 +0000
+Source: smarty3
+Binary: smarty3
+Architecture: source all
+Version: 3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Mike Gabriel <sunweaver@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ smarty3    -
+Closes: 1019897
+Changes:
+ smarty3 (3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2018-25047: Prevent a XSS vulnerability when generating "mailto:";
+     links. (Closes: #1019897)
+Checksums-Sha1:
+ 18ae8dcd8c599ffac143260c5c2e8ccd840869af 2193 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2.dsc
+ c4c8ebab667a96f6903eed401eecde17bb79ceac 197196 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1.orig.tar.xz
+ 3ad5dd34480104429e66fac3319cdad22717f4fd 10672 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2.debian.tar.xz
+ 6d66bcc45d5f20a26f7861e012a59b8fa974fadc 207380 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2_all.deb
+ 7e58e17ca5224eae0943e9f6485f43a38643ae68 6409 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 5930b1da82f762019859d8402d4123c5cac843cbdc53b8107b2463a269e0848c 2193 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2.dsc
+ ae3076bdcac90e7306f1a6c9edc121e46d68465a096e6df3e3d50c8913f337c9 197196 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1.orig.tar.xz
+ 4debac85fd184f45c9b0f5a2c513977bd7b7713d9f96a00351c7e69604673a03 10672 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2.debian.tar.xz
+ df355611d428de64cd59916826e5c81fb0cb497b60309b2634fae8781b0035f9 207380 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2_all.deb
+ be9d69c2c9d0e3125b051e6253f3927d8df408bf5a45f6c5639e0b7a3b5f0e22 6409 smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2_amd64.buildinfo
+Files:
+ 75dec52615fc083d40a75e713faf8a56 2193 web optional smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2.dsc
+ c8652d27cae90a80cf8d495ccf4a2ffd 197196 web optional smarty3_3.1.33+20180830.1.3a78a21f+selfpack1.orig.tar.xz
+ 870b3028d8b9c9c8192aa4069459e0f1 10672 web optional smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2.debian.tar.xz
+ cc86f99105caf6ea1e40cb2fdbc6af2b 207380 web optional smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2_all.deb
+ d554647f2cc77609b20f0661d5ff3127 6409 web optional smarty3_3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2_amd64.buildinfo
+

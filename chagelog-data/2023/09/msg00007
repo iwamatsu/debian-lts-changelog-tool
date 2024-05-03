@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 11 Sep 2023 12:40:50 -0700
+Source: node-cookiejar
+Binary: node-cookiejar
+Architecture: source all
+Version: 2.0.1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ node-cookiejar - simple persistent cookiejar system - Node.js module
+Changes:
+ node-cookiejar (2.0.1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-25901: Prevent a Regular Expression Denial of Service (ReDoS)
+     attack that was possible via passing a large cookie value to the
+     Cookie.parse function.
+Checksums-Sha1:
+ 3e2980c33e345935cd113eef85f4bc22587f84ac 2069 node-cookiejar_2.0.1-1+deb10u1.dsc
+ 460370c798ac7c6cfcd9070b2dff8cd27377870d 4689 node-cookiejar_2.0.1.orig.tar.gz
+ 8e9aecbfa1d8c4f170941ee9c4fc3404a67abbbf 3540 node-cookiejar_2.0.1-1+deb10u1.debian.tar.xz
+ e86953d601677a8dac8566b77a1ee56078d6443b 5620 node-cookiejar_2.0.1-1+deb10u1_all.deb
+ c0d002b7f6bbe0d6d99f8d00c57c5f68975ac0e9 5790 node-cookiejar_2.0.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 299342f95e7ba6b76135d3bfcec247d10bfea20541594e41bca1a99ba1059785 2069 node-cookiejar_2.0.1-1+deb10u1.dsc
+ 914c61038a7c5ece286a0519d3c62edd662f9c8250962b21a8b32a3343d6c2b3 4689 node-cookiejar_2.0.1.orig.tar.gz
+ e1cebdbc2ffda01aa60e3812a5944f53f0a4f36258812013725efccce7aaaefb 3540 node-cookiejar_2.0.1-1+deb10u1.debian.tar.xz
+ 8e59e0b532fd319406941385764f843fbd1769d0abec874fe9ed9ce1f0141b29 5620 node-cookiejar_2.0.1-1+deb10u1_all.deb
+ 27c37508b5318291fd7af6b4ae04da7b09f0c46d74792c07da203d4706735aa8 5790 node-cookiejar_2.0.1-1+deb10u1_amd64.buildinfo
+Files:
+ 9a03b05bdc215d6099884efc0c7b688b 2069 web extra node-cookiejar_2.0.1-1+deb10u1.dsc
+ 84d92de2a9815142cf15fff846422e04 4689 web extra node-cookiejar_2.0.1.orig.tar.gz
+ 7a566ef8feb70b4dca023721d45c618b 3540 web extra node-cookiejar_2.0.1-1+deb10u1.debian.tar.xz
+ 71a52d228d1b347a71293fcdc4f9301d 5620 web extra node-cookiejar_2.0.1-1+deb10u1_all.deb
+ d57d117fdead7adf1ecfb8a0eebe63e6 5790 web extra node-cookiejar_2.0.1-1+deb10u1_amd64.buildinfo
+

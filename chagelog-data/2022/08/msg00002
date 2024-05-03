@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 10 Aug 2022 15:12:17 +0200
+Source: libtirpc
+Architecture: source
+Version: 1.1.4-0.4+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1015873
+Changes:
+ libtirpc (1.1.4-0.4+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-46828: denial of service via file descriptor exhaustion.
+     Closes: #1015873.
+Checksums-Sha1:
+ 4a1e4121015636e2e1cc2316f8e2afad9c666719 1958 libtirpc_1.1.4-0.4+deb10u1.dsc
+ d85717035cb9bd6c45557a1eb1351d3af9a69ff7 510924 libtirpc_1.1.4.orig.tar.bz2
+ 75207e0411f2423ef1e8d0c5356cab9e07d4d429 15932 libtirpc_1.1.4-0.4+deb10u1.debian.tar.xz
+ 0dcedcb926518cf38aa0e830278dc21408e4e6ef 5883 libtirpc_1.1.4-0.4+deb10u1_source.buildinfo
+Checksums-Sha256:
+ a1b02be5cad7faba093b718231c2667f6a36145c858067114c125831ae827a4d 1958 libtirpc_1.1.4-0.4+deb10u1.dsc
+ 2ca529f02292e10c158562295a1ffd95d2ce8af97820e3534fe1b0e3aec7561d 510924 libtirpc_1.1.4.orig.tar.bz2
+ 1887c28ce220af733bf8c7badd7e0d22e54ecf76e3b649008e28abd011de3268 15932 libtirpc_1.1.4-0.4+deb10u1.debian.tar.xz
+ d2489377ed9e9292b2e93cb2c7b021c720d5566332e2e35850bcaae8adfe45f1 5883 libtirpc_1.1.4-0.4+deb10u1_source.buildinfo
+Files:
+ 1b25d83fb9307f9e30a85484d041d22f 1958 libs optional libtirpc_1.1.4-0.4+deb10u1.dsc
+ f5d2a623e9dfbd818d2f3f3a4a878e3a 510924 libs optional libtirpc_1.1.4.orig.tar.bz2
+ e2236c5b7c7dd2bdf08b1b0cd24119ae 15932 libs optional libtirpc_1.1.4-0.4+deb10u1.debian.tar.xz
+ 07a480ebe64620c2f098e975731240c1 5883 libs optional libtirpc_1.1.4-0.4+deb10u1_source.buildinfo
+

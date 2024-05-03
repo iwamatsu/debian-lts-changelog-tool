@@ -1,0 +1,29 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 15 Aug 2023 18:30:59 +0530
+Source: intel-microcode
+Architecture: source
+Version: 3.20230808.1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ intel-microcode (3.20230808.1~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Backport 3.20230808.1 to buster.
+Checksums-Sha1:
+ bea1ad29956548114d280e67df47b0596b012229 1850 intel-microcode_3.20230808.1~deb10u1.dsc
+ ae6369c7ef52a9c91171b8816b9652d067d889c5 7184360 intel-microcode_3.20230808.1~deb10u1.tar.xz
+ b96f6b2f454e76182a7426d05333930c12ea840b 6214 intel-microcode_3.20230808.1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ bac9c6154bd17276448d8f54720966778676d18ece2656c17353a25e2099c690 1850 intel-microcode_3.20230808.1~deb10u1.dsc
+ ad3a6a4ef969a5afed52825f91a20b94832dc6b8cbc5626f941cdc2a065f95b1 7184360 intel-microcode_3.20230808.1~deb10u1.tar.xz
+ d02683ad05fe16e1cab442ac89cbfcb437b8595e8c203e861b109b9fec59ad68 6214 intel-microcode_3.20230808.1~deb10u1_source.buildinfo
+Files:
+ 43c100c3c56ce5aed4eb4967b1e1213f 1850 non-free/admin standard intel-microcode_3.20230808.1~deb10u1.dsc
+ 20b8a7e5074e869044dbcf5d71d7efaa 7184360 non-free/admin standard intel-microcode_3.20230808.1~deb10u1.tar.xz
+ 09e401f730cdc02f68b3a9dc178edc56 6214 non-free/admin standard intel-microcode_3.20230808.1~deb10u1_source.buildinfo
+

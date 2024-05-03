@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 06 Dec 2022 23:51:04 +0530
+Source: node-log4js
+Architecture: source
+Version: 4.0.2-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ node-log4js (4.0.2-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to change default file modes from 0o644 to
+     0o600 for better security. (Fixes: CVE-2022-21704)
+Checksums-Sha1:
+ 7e21deeee9e5742b6d74519a949babffbcf9c384 3237 node-log4js_4.0.2-2+deb10u1.dsc
+ 7cf7b172f1ec564f0003b39ea302c5498fb98c8f 4935 node-log4js_4.0.2.orig-date-format.tar.gz
+ 55122b6536ea496b4b44893ee2608141d10d9916 3936 node-log4js_4.0.2.orig-flatted.tar.gz
+ e6e72d74f5dc39de8f538f65e00c36c18018e349 3174 node-log4js_4.0.2.orig-rfdc.tar.gz
+ 6771c9c750638e3ad9de93781d431a05514eeb2f 13231 node-log4js_4.0.2.orig-streamroller.tar.gz
+ e61cf245c28e13db2c0774adf1a07f13667d7c30 122935 node-log4js_4.0.2.orig.tar.gz
+ 1a8f19ff3824f5dc720b2ce2c8703331d6354c0d 5320 node-log4js_4.0.2-2+deb10u1.debian.tar.xz
+ 54a6fdf3e4407f1aef0395b694cf69524371a584 6351 node-log4js_4.0.2-2+deb10u1_source.buildinfo
+Checksums-Sha256:
+ eba9a0db6692ebc1f4b1d028a359093f799425bebb5fe86681a4f70f04385728 3237 node-log4js_4.0.2-2+deb10u1.dsc
+ 33487ba316c29c53639fd8ae3083f55dece23de69c2d360b26a1ad1e67ea55bd 4935 node-log4js_4.0.2.orig-date-format.tar.gz
+ f23e225b94d518a5ac9c3f81f38e7d8b03dac05f9c1669624563fc186e778ecf 3936 node-log4js_4.0.2.orig-flatted.tar.gz
+ 60852b89f86df8ae51fccfaef22aa92942a88bb9fc80da34735641886d6a190d 3174 node-log4js_4.0.2.orig-rfdc.tar.gz
+ ea7df68d7b7d34b003921271f2af55a00a5aa287d88d7654d339ec2ac22f108b 13231 node-log4js_4.0.2.orig-streamroller.tar.gz
+ 84b85a478f5dd51f0956b062db5d41e94bbd64128f9201c6d8d4803ae445d02b 122935 node-log4js_4.0.2.orig.tar.gz
+ db26a2cc480f1cb3e99dcbd6d6bbfef742aad3d77f4d5204916305df87b24b72 5320 node-log4js_4.0.2-2+deb10u1.debian.tar.xz
+ 632a237f7320f71101ea69a9e75e553b56b1289db567927a82af1a880bd3af80 6351 node-log4js_4.0.2-2+deb10u1_source.buildinfo
+Files:
+ c2333bc45c9e54f2c7c571325641815c 3237 javascript optional node-log4js_4.0.2-2+deb10u1.dsc
+ e7c1a818463aca185b3b454bbdaa535a 4935 javascript optional node-log4js_4.0.2.orig-date-format.tar.gz
+ 5a78c9e011b900affb643cfd8c67fdc4 3936 javascript optional node-log4js_4.0.2.orig-flatted.tar.gz
+ 5239ffd69a399136cf811c201f0a8f0c 3174 javascript optional node-log4js_4.0.2.orig-rfdc.tar.gz
+ 70f5ebf0780b7c739950a71fefdb9296 13231 javascript optional node-log4js_4.0.2.orig-streamroller.tar.gz
+ de9b27c0e5c2591852ddb71a43c7255d 122935 javascript optional node-log4js_4.0.2.orig.tar.gz
+ 9dc7efbfe6a53d9f8feee2853ba9ecde 5320 javascript optional node-log4js_4.0.2-2+deb10u1.debian.tar.xz
+ 8383bdb88715a72b33b752f8b03dbef2 6351 javascript optional node-log4js_4.0.2-2+deb10u1_source.buildinfo
+

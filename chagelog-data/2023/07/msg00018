@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 11 Jul 2023 01:15:17 +0200
+Source: symfony
+Architecture: source
+Version: 3.4.22+dfsg-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ symfony (3.4.22+dfsg-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2021-21424: The ability to enumerate users was possible without
+     relevant permissions due to different exception messages depending on
+     whether the user existed or not.  It was also possible to enumerate users
+     by using a timing attack, by comparing time elapsed when authenticating an
+     existing user and authenticating a non-existing user.  403s are now
+     returned whether the user exists or not if a user cannot switch to a user
+     or if the user does not exist.
+   * Fix CVE-2022-24894: The Symfony HTTP cache system acts as a reverse proxy:
+     it caches HTTP responses (including headers) and returns them to clients.
+     In a recent `AbstractSessionListener` change, the response might now contain
+     a `Set-Cookie header`.  If the Symfony HTTP cache system is enabled, this
+     header might be stored and returned to some other clients.  An attacker can
+     use this vulnerability to retrieve the victim's session.
+     The `HttpStore` constructor now takes a parameter containing a list of
+     private headers (by default `Set-Cookie`) that are removed from the HTTP
+     response headers.
+   * Fix CVE-2022-24895: When authenticating users Symfony by default
+     regenerates the session ID upon login, but preserves the rest of session
+     attributes.  CSRF tokens were not cleared upon login, which could enable
+     same-site attackers to bypass the CSRF protection mechanism by performing
+     an attack similar to a session-fixation.
+Checksums-Sha1:
+ e2c26132677a91e207033f9f0d5c752d63489239 6902 symfony_3.4.22+dfsg-2+deb10u2.dsc
+ 832d2ce7cc382f89f145732fb81e09fe85e18a52 54984 symfony_3.4.22+dfsg-2+deb10u2.debian.tar.xz
+ c08ee8f9f1414bc64842a93c1bd2497aa1c6e709 29712 symfony_3.4.22+dfsg-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ f54bfe1a9d761249b57539260b2b47661bce66a97e5b9ee7be4b72cabfde27fa 6902 symfony_3.4.22+dfsg-2+deb10u2.dsc
+ 0614de7f433afc4b4a23c5ce8b4dc30e331db51b7eca66d4c95f4e12bf31410d 54984 symfony_3.4.22+dfsg-2+deb10u2.debian.tar.xz
+ d3a823a7b6e3c0d17fe00693f6bef7d00099652c0b44fd360a6ddcb4a271a2f8 29712 symfony_3.4.22+dfsg-2+deb10u2_amd64.buildinfo
+Files:
+ 4f5353330600fd09bae91113398172c3 6902 php optional symfony_3.4.22+dfsg-2+deb10u2.dsc
+ 9f78f3aef698fb88f26d5022731d7407 54984 php optional symfony_3.4.22+dfsg-2+deb10u2.debian.tar.xz
+ 3d784991d4c7206318156f655d3b5508 29712 php optional symfony_3.4.22+dfsg-2+deb10u2_amd64.buildinfo
+

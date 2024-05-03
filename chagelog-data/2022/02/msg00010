@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 08 Feb 2022 10:06:16 +0100
+Source: connman
+Architecture: source
+Version: 1.33-3+deb9u3
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Alexander Sack <asac@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ connman (1.33-3+deb9u3) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-33833: stack-based buffer overflow in dnsproxy.
+   * CVE-2022-23096: buffer over-read in forward_dns_reply.
+   * CVE-2022-23097: buffer over-read in forward_dns_reply.
+   * CVE-2022-23098: infinite loop in dnsproxy.
+Checksums-Sha1:
+ 45e3c8ca76a04b02848d54221186c538aedd79bc 2362 connman_1.33-3+deb9u3.dsc
+ cd5fa114a3148f74953c5722022d36bb97e8d14a 958059 connman_1.33.orig.tar.gz
+ 9473e17ac3b4fc9d3f33603c9455ccb35dcd96ab 17652 connman_1.33-3+deb9u3.debian.tar.xz
+ 8156960c6175cc6469d2255196ab3b6a93bfc0e4 6955 connman_1.33-3+deb9u3_source.buildinfo
+Checksums-Sha256:
+ be23ab1cfbe4bb894c9534558d0dc82c7eba1f48696836ea4ca65ad16c214d28 2362 connman_1.33-3+deb9u3.dsc
+ 5a9abae1573fa367269df8bd92792de407fd15c7ac6c1448d07a24a5d6b5b831 958059 connman_1.33.orig.tar.gz
+ d3ef07919375943e85d215c696d40899572dfb4fa4ab861d5a20481fa7623471 17652 connman_1.33-3+deb9u3.debian.tar.xz
+ 4538cd9e56e930f987792aec255893ed7fbb305449ae23805e011128c7a6fac6 6955 connman_1.33-3+deb9u3_source.buildinfo
+Files:
+ 0f51ef1f60f615eb685c9c8288ff3ed7 2362 net optional connman_1.33-3+deb9u3.dsc
+ 48d3e878d31efd4854fc9b66e29622c1 958059 net optional connman_1.33.orig.tar.gz
+ 624d881f3ab9bce1f5b917207ba41b7a 17652 net optional connman_1.33-3+deb9u3.debian.tar.xz
+ b7f18994aeaec358aac48506aa170679 6955 net optional connman_1.33-3+deb9u3_source.buildinfo
+

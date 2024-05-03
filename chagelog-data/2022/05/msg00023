@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 17 May 2022 00:25:05 CEST
+Source: libxml2
+Binary: libxml2 libxml2-utils libxml2-utils-dbg libxml2-dev libxml2-dbg libxml2-doc python-libxml2 python-libxml2-dbg python3-libxml2 python3-libxml2-dbg
+Architecture: source
+Version: 2.9.4+dfsg1-2.2+deb9u7
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libxml2    - GNOME XML library
+ libxml2-dbg - Debugging symbols for the GNOME XML library
+ libxml2-dev - Development files for the GNOME XML library
+ libxml2-doc - Documentation for the GNOME XML library
+ libxml2-utils - XML utilities
+ libxml2-utils-dbg - XML utilities (debug extension)
+ python-libxml2 - Python bindings for the GNOME XML library
+ python-libxml2-dbg - Python bindings for the GNOME XML library (debug extension)
+ python3-libxml2 - Python3 bindings for the GNOME XML library
+ python3-libxml2-dbg - Python3 bindings for the GNOME XML library (debug extension)
+Checksums-Sha1:
+ 6f1d395eb4c614dca682ba507e4642ad5d050ea8 3045 libxml2_2.9.4+dfsg1-2.2+deb9u7.dsc
+ c51f678a54387500e7b212cd5d1968fa59080e04 43396 libxml2_2.9.4+dfsg1-2.2+deb9u7.debian.tar.xz
+ b380ac0af2d64d463e67f4d8ede5da451f688487 10826 libxml2_2.9.4+dfsg1-2.2+deb9u7_amd64.buildinfo
+Checksums-Sha256:
+ 46d0b6bef2d8e9cb9d4b1be2390913954ae6f6cc8d53959a45f24dda80ab4501 3045 libxml2_2.9.4+dfsg1-2.2+deb9u7.dsc
+ 19a100b02c40564bc0c51e5454846055aac9ac43845258b3cc5de7caf065de36 43396 libxml2_2.9.4+dfsg1-2.2+deb9u7.debian.tar.xz
+ 87c4a32abf6c0190ffd6d505135d436380e3ed07834a7efc243516e62248b106 10826 libxml2_2.9.4+dfsg1-2.2+deb9u7_amd64.buildinfo
+Changes:
+ libxml2 (2.9.4+dfsg1-2.2+deb9u7) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-29824: Felix Wilhelm discovered that libxml2 did not correctly
+     check for integer overflows or used wrong types for buffer sizes. This
+     could result in out-of-bounds writes or other memory errors when working on
+     large, multi-gigabyte buffers.
+Files:
+ 8cf493ab2be16b10ae833ad559823e51 3045 libs optional libxml2_2.9.4+dfsg1-2.2+deb9u7.dsc
+ e845086d623d6ed547fac466663526a1 43396 libs optional libxml2_2.9.4+dfsg1-2.2+deb9u7.debian.tar.xz
+ a430b2f1f4945228b0f36d94b5919eb9 10826 libs optional libxml2_2.9.4+dfsg1-2.2+deb9u7_amd64.buildinfo
+

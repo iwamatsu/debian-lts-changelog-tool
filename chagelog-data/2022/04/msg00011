@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 11 Apr 2022 16:18:48 CEST
+Source: usbguard
+Binary: libusbguard0 usbguard usbguard-applet-qt
+Architecture: source
+Version: 0.6.2+ds1-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Muri Nicanor <muri@immerda.ch>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libusbguard0 - USB device authorization policy framework - shared library
+ usbguard   - USB device authorization policy framework
+ usbguard-applet-qt - USB device authorization policy framework - qt applet
+Checksums-Sha1:
+ fe7262d103f3fb761fcf944b778c5fa4084aecf9 2498 usbguard_0.6.2+ds1-2+deb9u1.dsc
+ d9474c2513584e22c9b43a01cf11aa86b884e400 296424 usbguard_0.6.2+ds1.orig.tar.gz
+ 870372710ba981592484c8e11ac39cd705eae608 18848 usbguard_0.6.2+ds1-2+deb9u1.debian.tar.xz
+ 9eceeda3bcf4c76ab9c7cea6dd9a6739d7281973 16005 usbguard_0.6.2+ds1-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 83dacf6e4418baff8ee062fe9714419fe2fe85cdc8303d71b0f7d78e79e2b2b4 2498 usbguard_0.6.2+ds1-2+deb9u1.dsc
+ 8fa227797a983cd38e24baccb7713d08db5d532a134bbf6ef7d3dde36d480837 296424 usbguard_0.6.2+ds1.orig.tar.gz
+ 9c851ead92ac4a6f27dcdfc4d0eb55894925079289b12c49e32b350d925edcae 18848 usbguard_0.6.2+ds1-2+deb9u1.debian.tar.xz
+ f6d6db9515c1deaa101195d6709d87b73bb7acb1b2abe4912a6df5a55c1206b4 16005 usbguard_0.6.2+ds1-2+deb9u1_amd64.buildinfo
+Changes:
+ usbguard (0.6.2+ds1-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-25058: an unprivileged user could make USBGuard allow all USB
+     devices to be connected in the future.
+Files:
+ 981d9c4d4e16c1c2fb9f1c5ea7eb8a97 2498 utils optional usbguard_0.6.2+ds1-2+deb9u1.dsc
+ 769135593adaf1c04c34de3ac88ae368 296424 utils optional usbguard_0.6.2+ds1.orig.tar.gz
+ 53c6c0b2f1775cefb4bc1dc82acd4ee0 18848 utils optional usbguard_0.6.2+ds1-2+deb9u1.debian.tar.xz
+ c4a17c9fee39f19e3f728e52779303b2 16005 utils optional usbguard_0.6.2+ds1-2+deb9u1_amd64.buildinfo
+

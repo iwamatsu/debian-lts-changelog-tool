@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 11:53:28 CEST
+Source: restic
+Architecture: source
+Version: 0.9.4+ds-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 83e140e20417ec38e803fd54722e1c704de62d02 3079 restic_0.9.4+ds-2+deb10u1.dsc
+ 4eb82e7c9ae391295879a4f1a833f699d3d1685e 20804020 restic_0.9.4+ds.orig.tar.xz
+ 9a9ef41790636dcde500eefcbc7001ba4803ebe3 16492 restic_0.9.4+ds-2+deb10u1.debian.tar.xz
+ 21fd3b69450a5bf63ade01f36f1d2607c0910870 14077 restic_0.9.4+ds-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 4d13ab6fab08d8dcbdb3711eee53a9a5d7e283d83fd5c02f8154a927c0cbe331 3079 restic_0.9.4+ds-2+deb10u1.dsc
+ c064b10e12528a7f4e09e03e116b4f5e89c3c93a9667e52967c6b3eadebacd32 20804020 restic_0.9.4+ds.orig.tar.xz
+ 490101ba4d76f5691966c8aeb70bcfd7978923eb6342165892dd4590b6a871b9 16492 restic_0.9.4+ds-2+deb10u1.debian.tar.xz
+ 9da0a049c1acd37061995b50c57614f779778c34935bd5d1f8b28cdaf9cc051e 14077 restic_0.9.4+ds-2+deb10u1_amd64.buildinfo
+Changes:
+ restic (0.9.4+ds-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 619335a95b544040728f4206a73955ce 3079 utils optional restic_0.9.4+ds-2+deb10u1.dsc
+ 26f4cd8894fc29b80dbac1b443e73d3e 20804020 utils optional restic_0.9.4+ds.orig.tar.xz
+ d7dcbb31f16a083f3f000acc9c638eb5 16492 utils optional restic_0.9.4+ds-2+deb10u1.debian.tar.xz
+ b492cfb315618c841a37bbdc92f3d8ed 14077 utils optional restic_0.9.4+ds-2+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 24 Nov 2023 06:37:28 +0100
+Source: freeimage
+Architecture: source
+Version: 3.18.0+ds2-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ freeimage (3.18.0+ds2-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-21427: fix buffer overflow in PluginBMP with upstream patches.
+   * CVE-2020-21428: fix buffer overflow in PluginDDS with upstream patch.
+   * CVE-2020-22524: fix buffer overflow in PluginPFM with upstream patch.
+Checksums-Sha1:
+ 9542662f117ed02a3408918b79ce49a5213e11e6 2567 freeimage_3.18.0+ds2-1+deb10u2.dsc
+ bcaf9d1237298383ae2dd90c82a4a58f673fddca 27064 freeimage_3.18.0+ds2-1+deb10u2.debian.tar.xz
+ 4cbec29a904d44fceee764e390fa52671da3a522 8887 freeimage_3.18.0+ds2-1+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 042d5143752074add6a55b46795c5028bb1399ebf20ff3f918ff9c0858c54142 2567 freeimage_3.18.0+ds2-1+deb10u2.dsc
+ d2f8a3882b1be1212b2103bd5c90f0b5df2a7b575d6a08bc6618610b74a8b018 27064 freeimage_3.18.0+ds2-1+deb10u2.debian.tar.xz
+ 4a0c1d8448be60d86ad5582606fdf7f7bc14d4f5b72c269f207d67696056a8bb 8887 freeimage_3.18.0+ds2-1+deb10u2_source.buildinfo
+Files:
+ 7c97c9a463d1da4c89dc61148245fc29 2567 libs optional freeimage_3.18.0+ds2-1+deb10u2.dsc
+ 4660ff34458c64ae00dc8d2c9ddbac56 27064 libs optional freeimage_3.18.0+ds2-1+deb10u2.debian.tar.xz
+ e5f00a4b3f378d267313125bc97bd7cd 8887 libs optional freeimage_3.18.0+ds2-1+deb10u2_source.buildinfo
+

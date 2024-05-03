@@ -1,0 +1,129 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 07 Mar 2022 22:38:56 +0100
+Source: linux-latest
+Binary: linux-source linux-doc linux-perf linux-image-alpha-generic linux-headers-alpha-generic linux-image-alpha-generic-dbg linux-image-alpha-smp linux-headers-alpha-smp linux-image-alpha-smp-dbg linux-image-amd64 linux-headers-amd64 linux-image-amd64-dbg linux-image-rt-amd64 linux-headers-rt-amd64 linux-image-rt-amd64-dbg linux-image-arm64 linux-headers-arm64 linux-image-arm64-dbg linux-image-marvell linux-headers-marvell linux-image-marvell-dbg linux-image-armmp linux-headers-armmp linux-image-armmp-dbg linux-image-armmp-lpae linux-headers-armmp-lpae linux-image-armmp-lpae-dbg linux-image-parisc linux-headers-parisc linux-image-parisc-dbg linux-image-parisc64-smp linux-headers-parisc64-smp linux-image-parisc64-smp-dbg linux-image-686 linux-headers-686 linux-image-686-dbg linux-image-686-pae linux-headers-686-pae linux-image-686-pae-dbg linux-image-rt-686-pae linux-headers-rt-686-pae linux-image-rt-686-pae-dbg linux-image-m68k linux-headers-m68k linux-image-m68k-dbg
+ linux-image-4kc-malta linux-headers-4kc-malta linux-image-4kc-malta-dbg linux-image-5kc-malta linux-headers-5kc-malta linux-image-5kc-malta-dbg linux-image-octeon linux-headers-octeon linux-image-octeon-dbg linux-image-loongson-3 linux-headers-loongson-3 linux-image-loongson-3-dbg linux-image-powerpc linux-headers-powerpc linux-image-powerpc-dbg linux-image-powerpc-smp linux-headers-powerpc-smp linux-image-powerpc-smp-dbg linux-image-powerpc64 linux-headers-powerpc64 linux-image-powerpc64-dbg linux-image-powerpcspe linux-headers-powerpcspe linux-image-powerpcspe-dbg linux-image-powerpc64le linux-headers-powerpc64le linux-image-powerpc64le-dbg linux-image-s390x linux-headers-s390x linux-image-s390x-dbg linux-image-sh7751r linux-headers-sh7751r linux-image-sh7751r-dbg linux-image-sh7785lcr linux-headers-sh7785lcr linux-image-sh7785lcr-dbg linux-image-sparc64 linux-headers-sparc64 linux-image-sparc64-dbg linux-image-sparc64-smp linux-headers-sparc64-smp
+ linux-image-sparc64-smp-dbg linux-tools linux-image-586 linux-headers-586 linux-image-kirkwood linux-headers-kirkwood linux-image-orion5x linux-headers-orion5x
+ xen-linux-system-amd64
+Architecture: source
+Version: 80+deb9u16
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Description:
+ linux-doc  - Linux kernel specific documentation (meta-package)
+ linux-headers-4kc-malta - Header files for Linux 4kc-malta configuration (meta-package)
+ linux-headers-586 - Header files for Linux 586 configuration (dummy package)
+ linux-headers-5kc-malta - Header files for Linux 5kc-malta configuration (meta-package)
+ linux-headers-686 - Header files for Linux 686 configuration (meta-package)
+ linux-headers-686-pae - Header files for Linux 686-pae configuration (meta-package)
+ linux-headers-alpha-generic - Header files for Linux alpha-generic configuration (meta-package)
+ linux-headers-alpha-smp - Header files for Linux alpha-smp configuration (meta-package)
+ linux-headers-amd64 - Header files for Linux amd64 configuration (meta-package)
+ linux-headers-arm64 - Header files for Linux arm64 configuration (meta-package)
+ linux-headers-armmp - Header files for Linux armmp configuration (meta-package)
+ linux-headers-armmp-lpae - Header files for Linux armmp-lpae configuration (meta-package)
+ linux-headers-kirkwood - Header files for Linux kirkwood configuration (dummy package)
+ linux-headers-loongson-3 - Header files for Linux loongson-3 configuration (meta-package)
+ linux-headers-m68k - Header files for Linux m68k configuration (meta-package)
+ linux-headers-marvell - Header files for Linux marvell configuration (meta-package)
+ linux-headers-octeon - Header files for Linux octeon configuration (meta-package)
+ linux-headers-orion5x - Header files for Linux orion5x configuration (dummy package)
+ linux-headers-parisc - Header files for Linux parisc configuration (meta-package)
+ linux-headers-parisc64-smp - Header files for Linux parisc64-smp configuration (meta-package)
+ linux-headers-powerpc - Header files for Linux powerpc configuration (meta-package)
+ linux-headers-powerpc-smp - Header files for Linux powerpc-smp configuration (meta-package)
+ linux-headers-powerpc64 - Header files for Linux powerpc64 configuration (meta-package)
+ linux-headers-powerpc64le - Header files for Linux powerpc64le configuration (meta-package)
+ linux-headers-powerpcspe - Header files for Linux powerpcspe configuration (meta-package)
+ linux-headers-rt-686-pae - Header files for Linux rt-686-pae configuration (meta-package)
+ linux-headers-rt-amd64 - Header files for Linux rt-amd64 configuration (meta-package)
+ linux-headers-s390x - Header files for Linux s390x configuration (meta-package)
+ linux-headers-sh7751r - Header files for Linux sh7751r configuration (meta-package)
+ linux-headers-sh7785lcr - Header files for Linux sh7785lcr configuration (meta-package)
+ linux-headers-sparc64 - Header files for Linux sparc64 configuration (meta-package)
+ linux-headers-sparc64-smp - Header files for Linux sparc64-smp configuration (meta-package)
+ linux-image-4kc-malta - Linux for MIPS Malta (meta-package)
+ linux-image-4kc-malta-dbg - Debugging symbols for Linux 4kc-malta configuration (meta-package
+ linux-image-586 - Linux for older PCs (dummy package)
+ linux-image-5kc-malta - Linux for MIPS Malta (64-bit) (meta-package)
+ linux-image-5kc-malta-dbg - Debugging symbols for Linux 5kc-malta configuration (meta-package
+ linux-image-686 - Linux for older PCs (meta-package)
+ linux-image-686-dbg - Debugging symbols for Linux 686 configuration (meta-package)
+ linux-image-686-pae - Linux for modern PCs (meta-package)
+ linux-image-686-pae-dbg - Debugging symbols for Linux 686-pae configuration (meta-package)
+ linux-image-alpha-generic - Linux for Alpha (meta-package)
+ linux-image-alpha-generic-dbg - Debugging symbols for Linux alpha-generic configuration (meta-pac
+ linux-image-alpha-smp - Linux for Alpha SMP (meta-package)
+ linux-image-alpha-smp-dbg - Debugging symbols for Linux alpha-smp configuration (meta-package
+ linux-image-amd64 - Linux for 64-bit PCs (meta-package)
+ linux-image-amd64-dbg - Debugging symbols for Linux amd64 configuration (meta-package)
+ linux-image-arm64 - Linux for 64-bit ARMv8 machines (meta-package)
+ linux-image-arm64-dbg - Debugging symbols for Linux arm64 configuration (meta-package)
+ linux-image-armmp - Linux for ARMv7 multiplatform compatible SoCs (meta-package)
+ linux-image-armmp-dbg - Debugging symbols for Linux armmp configuration (meta-package)
+ linux-image-armmp-lpae - Linux for ARMv7 multiplatform compatible SoCs supporting LPAE (me
+ linux-image-armmp-lpae-dbg - Debugging symbols for Linux armmp-lpae configuration (meta-packag
+ linux-image-kirkwood - Linux for Marvell Kirkwood (dummy package)
+ linux-image-loongson-3 - Linux for Loongson 3A/3B (meta-package)
+ linux-image-loongson-3-dbg - Debugging symbols for Linux loongson-3 configuration (meta-packag
+ linux-image-m68k - Linux for Motorola MC68020+ family (meta-package)
+ linux-image-m68k-dbg - Debugging symbols for Linux m68k configuration (meta-package)
+ linux-image-marvell - Linux for Marvell Kirkwood/Orion (meta-package)
+ linux-image-marvell-dbg - Debugging symbols for Linux marvell configuration (meta-package)
+ linux-image-octeon - Linux for Octeon (meta-package)
+ linux-image-octeon-dbg - Debugging symbols for Linux octeon configuration (meta-package)
+ linux-image-orion5x - Linux for Marvell Orion (dummy package)
+ linux-image-parisc - Linux for 32-bit PA-RISC (meta-package)
+ linux-image-parisc-dbg - Debugging symbols for Linux parisc configuration (meta-package)
+ linux-image-parisc64-smp - Linux for multiprocessor 64-bit PA-RISC (meta-package)
+ linux-image-parisc64-smp-dbg - Debugging symbols for Linux parisc64-smp configuration (meta-pack
+ linux-image-powerpc - Linux for uniprocessor 32-bit PowerPC (meta-package)
+ linux-image-powerpc-dbg - Debugging symbols for Linux powerpc configuration (meta-package)
+ linux-image-powerpc-smp - Linux for multiprocessor 32-bit PowerPC (meta-package)
+ linux-image-powerpc-smp-dbg - Debugging symbols for Linux powerpc-smp configuration (meta-packa
+ linux-image-powerpc64 - Linux for 64-bit PowerPC (meta-package)
+ linux-image-powerpc64-dbg - Debugging symbols for Linux powerpc64 configuration (meta-package
+ linux-image-powerpc64le - Linux for Little-endian 64-bit PowerPC (meta-package)
+ linux-image-powerpc64le-dbg - Debugging symbols for Linux powerpc64le configuration (meta-packa
+ linux-image-powerpcspe - Linux for 32-bit PowerPC with SPE (instead of AltiVec) with SMP s
+ linux-image-powerpcspe-dbg - Debugging symbols for Linux powerpcspe configuration (meta-packag
+ linux-image-rt-686-pae - Linux for modern PCs (meta-package), PREEMPT_RT
+ linux-image-rt-686-pae-dbg - Debugging symbols for Linux rt-686-pae configuration (meta-packag
+ linux-image-rt-amd64 - Linux for 64-bit PCs (meta-package), PREEMPT_RT
+ linux-image-rt-amd64-dbg - Debugging symbols for Linux rt-amd64 configuration (meta-package)
+ linux-image-s390x - Linux for IBM zSeries (meta-package)
+ linux-image-s390x-dbg - Debugging symbols for Linux s390x configuration (meta-package)
+ linux-image-sh7751r - Linux for sh7751r (meta-package)
+ linux-image-sh7751r-dbg - Debugging symbols for Linux sh7751r configuration (meta-package)
+ linux-image-sh7785lcr - Linux for sh7785lcr (meta-package)
+ linux-image-sh7785lcr-dbg - Debugging symbols for Linux sh7785lcr configuration (meta-package
+ linux-image-sparc64 - Linux for uniprocessor 64-bit UltraSPARC (meta-package)
+ linux-image-sparc64-dbg - Debugging symbols for Linux sparc64 configuration (meta-package)
+ linux-image-sparc64-smp - Linux for multiprocessor 64-bit UltraSPARC (meta-package)
+ linux-image-sparc64-smp-dbg - Debugging symbols for Linux sparc64-smp configuration (meta-packa
+ linux-perf - Performance analysis tools for Linux (meta-package)
+ linux-source - Linux kernel source (meta-package)
+ linux-tools - Performance analysis tools for Linux (dummy package)
+ xen-linux-system-amd64 - Xen system with Linux for 64-bit PCs (dummy package)
+Changes:
+ linux-latest (80+deb9u16) stretch-security; urgency=high
+ .
+   * Update to 4.9.0-18
+   * linux-image: Add NEWS for unprivileged eBPF change
+Checksums-Sha1:
+ 6681b9a8a253b54624549bae3d5676cfac5741cc 9393 linux-latest_80+deb9u16.dsc
+ dbf1dc173820ee54cb4bf5ec88b287dfefb1aae2 17808 linux-latest_80+deb9u16.tar.xz
+ 5b40228ebf89f6adb49445de8bdaec08ed994cc3 8211 linux-latest_80+deb9u16_source.buildinfo
+Checksums-Sha256:
+ fe8132ad9d4acee172439b2e04b64bd3d86bdd97f751391c6044fc76b17f9852 9393 linux-latest_80+deb9u16.dsc
+ 0bf850b6903e2802cfbba62667bd12b2551319a1e817019ccbfe7dadc0220246 17808 linux-latest_80+deb9u16.tar.xz
+ dc1ebfe6d4f0730fd508585c7dd9a4bce83592c5ab9802c966bfa7608564fcd2 8211 linux-latest_80+deb9u16_source.buildinfo
+Files:
+ ab14104b51846d8da353ab0a8e1f21a8 9393 kernel optional linux-latest_80+deb9u16.dsc
+ d641cd17fe2f729c964c31e3e3a03ca9 17808 kernel optional linux-latest_80+deb9u16.tar.xz
+ cd5a067adf0a8692f6865ff5cda6c4ef 8211 kernel optional linux-latest_80+deb9u16_source.buildinfo
+

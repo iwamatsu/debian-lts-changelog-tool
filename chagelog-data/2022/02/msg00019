@@ -1,0 +1,41 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 14 Feb 2022 16:45:14 -0800
+Source: libxstream-java
+Binary: libxstream-java
+Architecture: source all
+Version: 1.4.11.1-1+deb9u5
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libxstream-java - Java library to serialize objects to XML and back again
+Changes:
+ libxstream-java (1.4.11.1-1+deb9u5) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-43859: Prevent a potential remote denial of service (DoS) attack
+     that could have consumed 100% of the CPU resources. Xstream now monitors
+     and accumulates the time it takes to add elements to collections and throws
+     an exception if a set threshold is exceeded.
+Checksums-Sha1:
+ 9a7b2d0b8e5a53f49ca26a5e267e3fc244ad5803 2435 libxstream-java_1.4.11.1-1+deb9u5.dsc
+ 958ef46115948865e5abd02b71cce149950dbc3d 445116 libxstream-java_1.4.11.1.orig.tar.xz
+ 6365ebb8b79e3f9fb526c7282b5b370a5ed6198d 14032 libxstream-java_1.4.11.1-1+deb9u5.debian.tar.xz
+ 1abe843f27a3e376b4757051d4145e18ad654bd0 544758 libxstream-java_1.4.11.1-1+deb9u5_all.deb
+ 34039fab5265c2a8987f2fd8061fe8804de97580 16414 libxstream-java_1.4.11.1-1+deb9u5_amd64.buildinfo
+Checksums-Sha256:
+ d092d6863f088567ed756f3fbcf3d5745975ab67e7dd5521aebcdc7dcc212c54 2435 libxstream-java_1.4.11.1-1+deb9u5.dsc
+ 24eb3173a9c4be2d30cdf7271336870c147e1bb0cee0bcc512d6198d7a12d038 445116 libxstream-java_1.4.11.1.orig.tar.xz
+ 9fce7203247f3b0272a5abc8f42d8807e40a9425843402271cde7623846cb901 14032 libxstream-java_1.4.11.1-1+deb9u5.debian.tar.xz
+ 1744553e278d864fdf46740d0a9f0a35b2dc5462d9fa531bdac16ec1f43e0759 544758 libxstream-java_1.4.11.1-1+deb9u5_all.deb
+ 079a64134416e5fe7c5cb8f0f8cf1d2ca8e4dc044c3e8413e18a51e0c21909ea 16414 libxstream-java_1.4.11.1-1+deb9u5_amd64.buildinfo
+Files:
+ b319c7a96371f09e71ef51218e49f6e4 2435 java optional libxstream-java_1.4.11.1-1+deb9u5.dsc
+ 57da21b324c393f8fb239e3f73626419 445116 java optional libxstream-java_1.4.11.1.orig.tar.xz
+ 576b7ad3c54cc27d9a7c8d13484e01bf 14032 java optional libxstream-java_1.4.11.1-1+deb9u5.debian.tar.xz
+ ff484ebe5b3dc381a5659af23d8323a1 544758 java optional libxstream-java_1.4.11.1-1+deb9u5_all.deb
+ 32ebefc30755a8d3274c7cf5e7d5cd0b 16414 java optional libxstream-java_1.4.11.1-1+deb9u5_amd64.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 08 Nov 2023 11:02:05 +0000
+Source: python-urllib3
+Architecture: source
+Version: 1.24.1-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1054226
+Changes:
+ python-urllib3 (1.24.1-1+deb10u2) buster-security; urgency=high
+ .
+   [ Sean Whitton ]
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-43803: Request body isn't stripped during cross-origin
+     redirects (Closes: #1054226).
+ .
+   [ Guilhem Moulin ]
+   * Use system 'six' in test/with_dummyserver/test_https.py too.
+   * Retroactively fix CVE-2018-25091.
+Checksums-Sha1:
+ e3345cb3ea8555cb542bf6963dfa95c36d4ac407 2544 python-urllib3_1.24.1-1+deb10u2.dsc
+ 5b9051e76c884d9ab9846c5139a961cd43c71b90 17096 python-urllib3_1.24.1-1+deb10u2.debian.tar.xz
+ 5a407d140508d64c6da24dcb286ee996c34b8d58 7029 python-urllib3_1.24.1-1+deb10u2_source.buildinfo
+Checksums-Sha256:
+ a45c9ed51f1bd979ae80d303ce348223b4c7396f3a7d062f5a1034fa5c3792fc 2544 python-urllib3_1.24.1-1+deb10u2.dsc
+ 7e3a4ce0904591f2e306607dc064bb8fac2b60542cc326f0353a07a4e568c7cc 17096 python-urllib3_1.24.1-1+deb10u2.debian.tar.xz
+ 545b8ff11b50e8445f8c5706470b40657ab89221f215a1d1ee746952bc7f6b05 7029 python-urllib3_1.24.1-1+deb10u2_source.buildinfo
+Files:
+ fea823e005731605eaa036b42fb43afb 2544 python optional python-urllib3_1.24.1-1+deb10u2.dsc
+ e1c95ba020f7c62dd51e10102736f8e8 17096 python optional python-urllib3_1.24.1-1+deb10u2.debian.tar.xz
+ f27af9e6f070ec9d3522ff33a17c2835 7029 python optional python-urllib3_1.24.1-1+deb10u2_source.buildinfo
+

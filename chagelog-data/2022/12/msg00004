@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 04 Dec 2022 10:35:52 +0100
+Source: jhead
+Architecture: source
+Version: 1:3.00-8+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Joachim Reichel <reichel@debian.org>
+Changed-By: Joachim Reichel <reichel@debian.org>
+Closes: 1022028 1023303 1024272
+Changes:
+ jhead (1:3.00-8+deb10u1) buster-security; urgency=medium
+ .
+   * New maintainer.
+   * Add patch fix_cve_2021_34055 to fix CVE-2021-34055 (Closes: #1024272).
+   * Add patch fix_cve_2022_41751 to fix CVE-2022-41751 (Closes: #1022028,
+     #1023303).
+Checksums-Sha1:
+ 4e2cecf109202dd5450f00cb6e6d2eb722c071b6 1819 jhead_3.00-8+deb10u1.dsc
+ 6bd3faa38cc884b5370e8e8f15bc10cbb706ec7a 69151 jhead_3.00.orig.tar.gz
+ 955eb0be6d097501a3a61f2d5fd06d3b11274187 10912 jhead_3.00-8+deb10u1.debian.tar.xz
+ 2ddaf68f1ef46dd89d497380b18d0b794d090ac1 5923 jhead_3.00-8+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c7be04be3a212861d6052716343e5f8d80ec5bac0fe72b1cfa08eb09a71a171b 1819 jhead_3.00-8+deb10u1.dsc
+ 88cc01da018e242fe2e05db73f91b6288106858dd70f27506c4989a575d2895e 69151 jhead_3.00.orig.tar.gz
+ 5eeccf0794babba2629e335f3553e51d1fc5be3edea6a73a67f31ba4f7bf3595 10912 jhead_3.00-8+deb10u1.debian.tar.xz
+ f4bd2e66c96743b2a2a8ed2e8f7020e0ce3c1b4a90f4c64ca421416a4019bd0f 5923 jhead_3.00-8+deb10u1_amd64.buildinfo
+Files:
+ 046c58a312fe07be2614fcc422f05dc4 1819 graphics optional jhead_3.00-8+deb10u1.dsc
+ 86cc05ad59d049c35963c7c1a5296801 69151 graphics optional jhead_3.00.orig.tar.gz
+ c42e92792683b7ed4bfe5d7bda0e47f4 10912 graphics optional jhead_3.00-8+deb10u1.debian.tar.xz
+ ebdc214cf2b0a654abda76f3c98706aa 5923 graphics optional jhead_3.00-8+deb10u1_amd64.buildinfo
+

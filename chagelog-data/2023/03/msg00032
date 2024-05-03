@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 Mar 2023 15:31:46 +0200
+Source: joblib
+Architecture: source
+Version: 0.13.0-2+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Yaroslav Halchenko <debian@onerussian.com>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 1020820
+Changes:
+ joblib (0.13.0-2+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Really fix CVE-2022-21797: (Closes: #1020820)
+Checksums-Sha1:
+ 0336b9a2252fa52c33dead50db218aeb71956124 2138 joblib_0.13.0-2+deb10u2.dsc
+ b5aeeef9012b8669cc423a2308437232fadd9714 8040 joblib_0.13.0-2+deb10u2.debian.tar.xz
+ 326ba38d45f1022a15399758f7b2ae33ae57d6cb 7693 joblib_0.13.0-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ c3d410260404c46740579b9dff56ffb6cbbf9dcd0137c153564a84297ddd47a2 2138 joblib_0.13.0-2+deb10u2.dsc
+ 9ecb2c960e57a0cf1af7504a1d5e810753812ccb21ad99907b611e15551ef49c 8040 joblib_0.13.0-2+deb10u2.debian.tar.xz
+ edaeae29e0dbaedc289b6af792573a17cdb43831d1760b76028eff168d347083 7693 joblib_0.13.0-2+deb10u2_amd64.buildinfo
+Files:
+ 943e70ceab10d294bec88d0fa98fdd68 2138 python optional joblib_0.13.0-2+deb10u2.dsc
+ 620b831eef50d10ea92e0798d705edd3 8040 python optional joblib_0.13.0-2+deb10u2.debian.tar.xz
+ a6b70156b073d688a029a328e059cdd9 7693 python optional joblib_0.13.0-2+deb10u2_amd64.buildinfo
+

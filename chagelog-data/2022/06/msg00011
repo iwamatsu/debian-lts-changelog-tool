@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 08 Jun 2022 20:24:24 +0200
+Source: mailman
+Binary: mailman
+Architecture: source
+Version: 1:2.1.23-1+deb9u8
+Distribution: stretch-security
+Urgency: high
+Maintainer: Mailman for Debian <pkg-mailman-hackers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ mailman    - Powerful, web-based mailing list manager
+Closes: 1000367 1001685
+Changes:
+ mailman (1:2.1.23-1+deb9u8) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-43331: a crafted URL to the Cgi/options.py user options page
+     can execute arbitrary JavaScript for XSS. (Closes: #1000367)
+   * CVE-2021-43332: the CSRF token for the Cgi/admindb.py admindb page
+     contains an encrypted version of the list admin password. This could
+     potentially be cracked by a moderator via an offline brute-force
+     attack. (Closes: #1000367)
+   * CVE-2021-44227: a list member or moderator can get a CSRF token and
+     craft an admin request (using that token) to set a new admin password
+     or make other changes. (Closes: #1001685)
+   * CVE-2021-44227 and CVE 2021-42097 regression fix. (Closes: #1001685)
+Checksums-Sha1:
+ c87e046651f46c02019a5c7227288ab16508e5ff 2153 mailman_2.1.23-1+deb9u8.dsc
+ 48363f10106b6c5d2fda7e2421cbe7a8e5420675 108200 mailman_2.1.23-1+deb9u8.debian.tar.xz
+ 96e3abaf158db7c714388a981514dfd0f9f5be4e 6581 mailman_2.1.23-1+deb9u8_amd64.buildinfo
+Checksums-Sha256:
+ c13e76a3b2ef36041dd53b093db8528e1a162f89de02a35d5412cc29f232ba9c 2153 mailman_2.1.23-1+deb9u8.dsc
+ f9b179a8eea970c6ae7aa5ffc77978af8f8925fcba06817943b3b062ddf3fbc2 108200 mailman_2.1.23-1+deb9u8.debian.tar.xz
+ 40efdbab14a52c563e9be46286783e03ba4cc3a554177b27b5c5ce6dd04e36bf 6581 mailman_2.1.23-1+deb9u8_amd64.buildinfo
+Files:
+ 36bf87e916fa879f9a8b025c3209379d 2153 mail optional mailman_2.1.23-1+deb9u8.dsc
+ 63a67dc99bf8a5de00c1b049be57f807 108200 mail optional mailman_2.1.23-1+deb9u8.debian.tar.xz
+ f30256b59b15c82bad79862ed0e0bb37 6581 mail optional mailman_2.1.23-1+deb9u8_amd64.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 18 Nov 2023 19:33:28 +0100
+Source: lwip
+Architecture: source
+Version: 2.0.3-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Samuel Thibault <sthibault@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 991646
+Changes:
+ lwip (2.0.3-3+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Import/adapt patch for CVE-2020-22283 from bullseye. (Closes: #991646)
+   * add debian/clean to be able to build twice in a row.
+Checksums-Sha1:
+ 9707031c5846e33bda0a1890a757bb05a9b2229c 1960 lwip_2.0.3-3+deb10u2.dsc
+ 68734733e12c853161ad2a33ee2f2939dad9f99c 2508892 lwip_2.0.3.orig.tar.xz
+ 8e2d9e171f42ff24afdd758f2084baded2ebb4ca 31048 lwip_2.0.3-3+deb10u2.debian.tar.xz
+ a4fcaa22bdae885c1cf09c9e2567a3dd93b5b900 6394 lwip_2.0.3-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ b429e9da42ef6f1a6854fa6a6c780e26559b29e524c33e203d63dbfce6ac9064 1960 lwip_2.0.3-3+deb10u2.dsc
+ ba17ac693d8cb5ed4b43cd5825c33bf765a286f560d9d0c69357c4e70348a70c 2508892 lwip_2.0.3.orig.tar.xz
+ 463f0e468723d6c47e327b6ce1e855d0589b128920c7131ec9b7590ad8b6cbf5 31048 lwip_2.0.3-3+deb10u2.debian.tar.xz
+ a9a39165b51708bd9d24114b0df57491a212c89a35387466cf40fa3ff9f947b6 6394 lwip_2.0.3-3+deb10u2_amd64.buildinfo
+Files:
+ 405f13f38a745f44eb5ed85a77113562 1960 libs optional lwip_2.0.3-3+deb10u2.dsc
+ 867978ff565f7cc487e9574ac2c874e1 2508892 libs optional lwip_2.0.3.orig.tar.xz
+ 393c544cb2deb92ddd9cbd34fb445283 31048 libs optional lwip_2.0.3-3+deb10u2.debian.tar.xz
+ 394b345ab1b1dd840af5b9c042d05717 6394 libs optional lwip_2.0.3-3+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 08 Oct 2023 22:41:41 +1300
+Source: request-tracker4
+Architecture: source
+Version: 4.4.3-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Andrew Ruthven <andrew@etc.gen.nz>
+Changed-By: Andrew Ruthven <andrew@etc.gen.nz>
+Closes: 1054516
+Changes:
+ request-tracker4 (4.4.3-2+deb10u3) buster-security; urgency=medium
+ .
+   * Apply upstream patch which fixes several security vulnerabilities
+     (Closes: #1054516).
+     - [CVE-2023-41259] Vulnerablility to unvalidated email headers in
+       incoming email and the mail-gateway REST interface.
+     - [CVE-2023-41260] Information leakage via response messages returned
+       from requests sent via the mail-gateway REST interface.
+   * Add upstream fix to tests for FTBFS due to expired certs.
+Checksums-Sha1:
+ b90573d9067c8de3ea1f3ce54904640e7fbfe42a 5524 request-tracker4_4.4.3-2+deb10u3.dsc
+ da1dc0cf0430bee9d58669bc53aea7ed39de6619 143800 request-tracker4_4.4.3-2+deb10u3.debian.tar.xz
+ a96176b9c8233e4cdb2d521e84cb114a07bdf5c8 19474 request-tracker4_4.4.3-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 2a35012ccb5cf3276f27f9779e1542aa0ccc5ac6008b8e2832c9c7336acb1b8d 5524 request-tracker4_4.4.3-2+deb10u3.dsc
+ eef5f11e1f89cf701aa81e1ddcf9dbd2aac961409d2af922e967dd41413df18b 143800 request-tracker4_4.4.3-2+deb10u3.debian.tar.xz
+ 98df61f8ba6f3aecec4d3462e805b6a389ce36f6366b6a454bbc5b61c826a1cf 19474 request-tracker4_4.4.3-2+deb10u3_amd64.buildinfo
+Files:
+ eb7e38c132197f2b64604e02fa583eb1 5524 misc optional request-tracker4_4.4.3-2+deb10u3.dsc
+ 2747ed855fe4733f33e915a769d45d50 143800 misc optional request-tracker4_4.4.3-2+deb10u3.debian.tar.xz
+ 78788087abe96b52f735ab790d28b3fc 19474 misc optional request-tracker4_4.4.3-2+deb10u3_amd64.buildinfo
+

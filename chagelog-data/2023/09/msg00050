@@ -1,0 +1,61 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 30 Sep 2023 14:05:49 CEST
+Source: jetty9
+Architecture: source
+Version: 9.4.16-0+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1a86a746a3b4323cfeeee203bca929da0c606854 2776 jetty9_9.4.16-0+deb10u3.dsc
+ 9cba53c059843027ebca50e1efddb56da8d091da 60636 jetty9_9.4.16-0+deb10u3.debian.tar.xz
+ 829988b427ba39202181fb18ecb03ea56415c6f3 17838 jetty9_9.4.16-0+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ a2e1de869bf33781c063aed30c9a6682e1958cfb5096d4afab70103cf30e2639 2776 jetty9_9.4.16-0+deb10u3.dsc
+ ed07f595331a2b08c195ecaef89d499f2d2e38410cfec60ca1c402029ca84000 60636 jetty9_9.4.16-0+deb10u3.debian.tar.xz
+ 45bfbf71cbbd27cf0f6cb109ce32733e0d43e02a06c914b8f6e8c9195cded39a 17838 jetty9_9.4.16-0+deb10u3_amd64.buildinfo
+Changes:
+ jetty9 (9.4.16-0+deb10u3) buster-security; urgency=high
+ .
+   * Team upload.
+   * The org.eclipse.jetty.servlets.CGI has been deprecated. It is potentially
+     unsafe to use it. The upstream developers of Jetty recommend to use Fast CGI
+     instead. See also CVE-2023-36479.
+   * Fix CVE-2023-26048:
+     Jetty is a java based web server and servlet engine. In affected versions
+     servlets with multipart support (e.g. annotated with `@MultipartConfig`)
+     that call `HttpServletRequest.getParameter()` or
+     `HttpServletRequest.getParts()` may cause `OutOfMemoryError` when the
+     client sends a multipart request with a part that has a name but no
+     filename and very large content. This happens even with the default
+     settings of `fileSizeThreshold=0` which should stream the whole part
+     content to disk.
+   * Fix CVE-2023-26049:
+     Nonstandard cookie parsing in Jetty may allow an attacker to smuggle
+     cookies within other cookies, or otherwise perform unintended behavior by
+     tampering with the cookie parsing mechanism.
+   * Fix CVE-2023-40167:
+     Prior to this version Jetty accepted the `+` character proceeding the
+     content-length value in a HTTP/1 header field. This is more permissive than
+     allowed by the RFC and other servers routinely reject such requests with
+     400 responses. There is no known exploit scenario, but it is conceivable
+     that request smuggling could result if jetty is used in combination with a
+     server that does not close the connection after sending such a 400
+     response.
+   * CVE-2023-36479:
+     Users of the CgiServlet with a very specific command structure may have the
+     wrong command executed. If a user sends a request to a
+     org.eclipse.jetty.servlets.CGI Servlet for a binary with a space in its
+     name, the servlet will escape the command by wrapping it in quotation
+     marks. This wrapped command, plus an optional command prefix, will then be
+     executed through a call to Runtime.exec. If the original binary name
+     provided by the user contains a quotation mark followed by a space, the
+     resulting command line will contain multiple tokens instead of one.
+Files:
+ 782354ea3405aaeb71fecb8fb9ad2693 2776 java optional jetty9_9.4.16-0+deb10u3.dsc
+ 1385fec977a157327d8798ec4e967d4e 60636 java optional jetty9_9.4.16-0+deb10u3.debian.tar.xz
+ 0e04433cb31fe23089a1836d0ab7c7a7 17838 java optional jetty9_9.4.16-0+deb10u3_amd64.buildinfo
+

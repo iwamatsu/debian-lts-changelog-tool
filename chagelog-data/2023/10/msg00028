@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 16 Oct 2023 22:25:34 CEST
+Source: tomcat9
+Architecture: source
+Version: 9.0.31-1~deb10u10
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 9cc8deeb78b3332be138dab5b230694b5b25da83 2893 tomcat9_9.0.31-1~deb10u10.dsc
+ 1a61953b58fb9b49164ad7d1897144fd3c18f503 62592 tomcat9_9.0.31-1~deb10u10.debian.tar.xz
+ 461d59f36ffe9352bbeab25778bd965e01335db0 14182 tomcat9_9.0.31-1~deb10u10_amd64.buildinfo
+Checksums-Sha256:
+ 5e434c9697a30d8e73c016c1669acace42b148984d60b9ebb12700a00c1b7a89 2893 tomcat9_9.0.31-1~deb10u10.dsc
+ 93b0b1ade6a84add6bee9818c4ce4dc9b07b6dc31c1bf80577ec6cca7798a45a 62592 tomcat9_9.0.31-1~deb10u10.debian.tar.xz
+ 2110189ec3991acc220f51bde5481fbffa4520c19500f00892bc183782203272 14182 tomcat9_9.0.31-1~deb10u10_amd64.buildinfo
+Changes:
+ tomcat9 (9.0.31-1~deb10u10) buster-security; urgency=high
+ .
+   * Team upload.
+   * A regression was discovered in the Http2UpgradeHandler class of Tomcat 9
+     introduced by the patch to fix CVE-2023-44487 (Rapid Reset Attack). A wrong
+     value for the overheadcount variable forced connections to close early.
+Files:
+ 3caf8ed7be4d8cb7ce02ef2a688fac22 2893 java optional tomcat9_9.0.31-1~deb10u10.dsc
+ 403793637886c1d4a4c87d1c1033c68b 62592 java optional tomcat9_9.0.31-1~deb10u10.debian.tar.xz
+ 748a083ccc0f61313351c0b457b4d032 14182 java optional tomcat9_9.0.31-1~deb10u10_amd64.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 15 Aug 2023 23:57:10 CEST
+Source: unrar-nonfree
+Architecture: source
+Version: 1:5.6.6-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Martin Meredith <mez@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 73430d145e2473cd2e30be51fc8bef351b57e93f 2257 unrar-nonfree_5.6.6-1+deb10u2.dsc
+ ca508d40553d663414d8d5454cbf4e71aa0ba410 226484 unrar-nonfree_5.6.6.orig.tar.gz
+ 11edc3919625dfef92b9be2f7d17588a0b99f7d9 12572 unrar-nonfree_5.6.6-1+deb10u2.debian.tar.xz
+ dd3277063041e362987ae9dfe2821f1fd3495807 6314 unrar-nonfree_5.6.6-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 10a14bfbdb7335a12349132e9c4a3965daf3c3e132122fa201ae20297f39dbb2 2257 unrar-nonfree_5.6.6-1+deb10u2.dsc
+ 5dbdd3cff955c4bc54dd50bf58120af7cb30dec0763a79ffff350f26f96c4430 226484 unrar-nonfree_5.6.6.orig.tar.gz
+ fc1d2f2407428d34530eb3898244e9f184e4a1fe11265ecc6f48292f18b2abc4 12572 unrar-nonfree_5.6.6-1+deb10u2.debian.tar.xz
+ 768081601c8407065383ba106031e981bd69de2889657428d02abed3f8e9d2cd 6314 unrar-nonfree_5.6.6-1+deb10u2_amd64.buildinfo
+Changes:
+ unrar-nonfree (1:5.6.6-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-48579:
+     It was discovered that UnRAR, an unarchiver for rar files, allows
+     extraction of files outside of the destination folder via symlink chains.
+Files:
+ 046bd9cf51f89d55050546153fca2f9b 2257 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u2.dsc
+ f54fdf142f0981ae1840a32fc9220e45 226484 non-free/utils optional unrar-nonfree_5.6.6.orig.tar.gz
+ ce648ff7f23d9b3a540331b56017546c 12572 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u2.debian.tar.xz
+ 229adafb82da3e83b3d7d59a1f44cd40 6314 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,69 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 24 Jan 2022 08:25:38 -0800
+Source: ipython
+Binary: python-ipython python-ipython-doc python3-ipython ipython ipython3
+Architecture: source all
+Version: 5.1.0-3+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ipython    - Enhanced interactive Python 2 shell
+ ipython3   - Enhanced interactive Python 3 shell
+ python-ipython - Enhanced interactive Python shell (Python 2 version)
+ python-ipython-doc - Enhanced interactive Python shell (documentation)
+ python3-ipython - Enhanced interactive Python shell (Python 3 version)
+Closes: 1004122
+Changes:
+ ipython (5.1.0-3+deb9u1) stretch-security; urgency=high
+ .
+   * CVE-2022-21699: Prevent an arbitrary code execution vulnerability
+     arising from IPython executing untrusted files in the current working
+     directory. According to upstream:
+ .
+       Almost all versions of IPython looks for configuration and profiles in
+       current working directory. Since IPython was developed before pip and
+       environments existed it was used a convenient way to load code/packages
+       in a project dependant way.
+ .
+       In 2022, it is not necessary anymore, and can lead to confusing behavior
+       where for example cloning a repository and starting IPython or loading a
+       notebook from any Jupyter-Compatible interface that has ipython set as a
+       kernel can lead to code execution.
+ .
+     To address this problem, the current working directory is not searched
+     anymore for profiles or configuration files. (Closes: #1004122)
+Checksums-Sha1:
+ e6b30f549f6fc1d285fe698828abfecccfbc5dc2 2735 ipython_5.1.0-3+deb9u1.dsc
+ 63b10894aabf846ee5fe144cb6e650d5c5503744 4945490 ipython_5.1.0.orig.tar.gz
+ 3386349b35f6679895f200274e6e32dfa0d582ab 6588 ipython_5.1.0-3+deb9u1.debian.tar.xz
+ a115ff8133a28da164a2e4a913fb8852639a7425 6000 ipython3_5.1.0-3+deb9u1_all.deb
+ 847e28767edb883373262ae8909ba6fbf2eea273 5990 ipython_5.1.0-3+deb9u1_all.deb
+ 902ebdfdec9f3d645f94c74c631e36eb2743db89 11876 ipython_5.1.0-3+deb9u1_amd64.buildinfo
+ 428784e4f6ebe3842e25824bb251c6f698dde46e 2972596 python-ipython-doc_5.1.0-3+deb9u1_all.deb
+ faba82cf85e5157ef0bb373d596f32a0c8ab4486 375500 python-ipython_5.1.0-3+deb9u1_all.deb
+ b37af62ec3a8ce1baa2c36733fc8f0da1fe3b209 375594 python3-ipython_5.1.0-3+deb9u1_all.deb
+Checksums-Sha256:
+ 3bb1314fefa261fd0276e2fcd0538dbf9ac1000319c3eb86243f7067c5126c73 2735 ipython_5.1.0-3+deb9u1.dsc
+ 7ef4694e1345913182126b219aaa4a0047e191af414256da6772cf249571b961 4945490 ipython_5.1.0.orig.tar.gz
+ 775947b712669c75736dde8e9c5c2d457dc0a1daf0603f2fcdcb1b2e77384a52 6588 ipython_5.1.0-3+deb9u1.debian.tar.xz
+ 5e42bf3737c2d5922b515070ded635bda7456f9e807041880ceb2078b3601a32 6000 ipython3_5.1.0-3+deb9u1_all.deb
+ 55e6d4a294751666ead6e98b8173c4ade27d1858f9c9d465c3bdbd2140924026 5990 ipython_5.1.0-3+deb9u1_all.deb
+ fc89e858a81b6bc3a55e2617f3462c2bc515c367cbd017e8448cf31a3716af2e 11876 ipython_5.1.0-3+deb9u1_amd64.buildinfo
+ 037c08e19382ce79868a88facbb30655ec8563a9ee0feb2fd839cca1c94d2b73 2972596 python-ipython-doc_5.1.0-3+deb9u1_all.deb
+ 2ce59130662f6e3a28e016f32de3cb5f8bdfeca156fb2eb964df620720c03905 375500 python-ipython_5.1.0-3+deb9u1_all.deb
+ 4f84338246d4b10d8c0efdf44636e57a6bb34e9f68dcef2f81ac40b20edcff8f 375594 python3-ipython_5.1.0-3+deb9u1_all.deb
+Files:
+ a9f9804fb3085b45845576cb76ec43cb 2735 python optional ipython_5.1.0-3+deb9u1.dsc
+ 47c8122420f65b58784cb4b9b4af35e3 4945490 python optional ipython_5.1.0.orig.tar.gz
+ f0e44910c3bc26b87b535e8f6a52f610 6588 python optional ipython_5.1.0-3+deb9u1.debian.tar.xz
+ e824793aafb1113b6d867053b8b44bfc 6000 interpreters optional ipython3_5.1.0-3+deb9u1_all.deb
+ ab7797e0654b8af6e91e3f829a216c2a 5990 interpreters optional ipython_5.1.0-3+deb9u1_all.deb
+ 98d8aa089180c53b8268486dbaedf756 11876 python optional ipython_5.1.0-3+deb9u1_amd64.buildinfo
+ ca9738c6e7e48adfd8d64ddbad41b240 2972596 doc optional python-ipython-doc_5.1.0-3+deb9u1_all.deb
+ 9c371cbc0a079c55d8d57db10466817b 375500 python optional python-ipython_5.1.0-3+deb9u1_all.deb
+ 857a911cd84d17f547272961fa2a629a 375594 python optional python3-ipython_5.1.0-3+deb9u1_all.deb
+

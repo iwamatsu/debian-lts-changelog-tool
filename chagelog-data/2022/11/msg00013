@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 13 Nov 2022 21:07:01 +0000
+Source: grub2
+Architecture: source
+Version: 2.06-3~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Changed-By: Steve McIntyre <93sam@debian.org>
+Changes:
+ grub2 (2.06-3~deb10u2) buster-security; urgency=medium
+ .
+   [ Steve McIntyre ]
+   * Pull in upstream patches to harden font and image handling -
+     CVE-2022-2601, CVE-2022-3775.
+   * Bump SBAT level to 3 for grub-efi packages.
+Checksums-Sha1:
+ 648eccdeac2eae7a79988b4dcee0a709699e04ab 7121 grub2_2.06-3~deb10u2.dsc
+ c9f93f1e195ec7a5a21d36a13b469788c0b29f0f 6581924 grub2_2.06.orig.tar.xz
+ 910db38472f2d654a4816a0c3b7b83415502850f 833 grub2_2.06.orig.tar.xz.asc
+ 326b8078c10443831fbba803db45d2879990ec44 1090964 grub2_2.06-3~deb10u2.debian.tar.xz
+ 6658df9db271ab82de0863d86714f851b4ff3834 15008 grub2_2.06-3~deb10u2_source.buildinfo
+Checksums-Sha256:
+ 39b32b59269a76adcfc1b3d34d121ccf8734df72fa57d77970aa825e20e26901 7121 grub2_2.06-3~deb10u2.dsc
+ b79ea44af91b93d17cd3fe80bdae6ed43770678a9a5ae192ccea803ebb657ee1 6581924 grub2_2.06.orig.tar.xz
+ b4a3a62a308e97537c21b88ba51174e792bfd77492675eef0cfd75a481e62b22 833 grub2_2.06.orig.tar.xz.asc
+ e38b6924e03cd02b6d08549aa8df9eeac2fcac764662973e26b32dcbf2be9884 1090964 grub2_2.06-3~deb10u2.debian.tar.xz
+ 5f64284cd700fb79d552d91457ddb6bfe13a1d24ed19240758c9c43587546e16 15008 grub2_2.06-3~deb10u2_source.buildinfo
+Files:
+ 8dcac2d5e25b63cb3983cc56fc0c0400 7121 admin optional grub2_2.06-3~deb10u2.dsc
+ cf0fd928b1e5479c8108ee52cb114363 6581924 admin optional grub2_2.06.orig.tar.xz
+ 68de7e4d2280d020bcd5a775f16f4827 833 admin optional grub2_2.06.orig.tar.xz.asc
+ ddb02a15b686588704b3fe69b5879b1a 1090964 admin optional grub2_2.06-3~deb10u2.debian.tar.xz
+ fc2b2ee18a00c9035af72aef6f0a9b68 15008 admin optional grub2_2.06-3~deb10u2_source.buildinfo
+

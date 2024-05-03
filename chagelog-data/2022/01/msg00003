@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 10 Jan 2022 22:05:25 +0100
+Source: vim
+Architecture: source
+Version: 2:8.0.0197-4+deb9u4
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Vim Maintainers <pkg-vim-maintainers@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ vim (2:8.0.0197-4+deb9u4) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2017-17087. Fix swap file permission issue.
+   * CVE-2019-20807. Prevent execution of arbitrary OS commands in
+                     restricted mode in rvim.
+   * CVE-2021-3778. Fix Heap-based Buffer Overflow with invalid
+                    utf-8 character.
+   * CVE-2021-3796. Fix heap Use-After-Free memory error.
+Checksums-Sha1:
+ d1d9f67a0936019c714513d8189e0439a3aa0e94 2889 vim_8.0.0197-4+deb9u4.dsc
+ a5d01be70806d3e516821eb8aab7495d3b7ff59e 177976 vim_8.0.0197-4+deb9u4.debian.tar.xz
+ aac3c8841f2cf86ac447b12257721a6d2512feff 8633 vim_8.0.0197-4+deb9u4_source.buildinfo
+Checksums-Sha256:
+ cc87873de636c7f888c512a36bdc5b252712881b667b6a05d2fd0c8775628000 2889 vim_8.0.0197-4+deb9u4.dsc
+ 42671fa29d984e9fa9a81e6f4a1874fd8ebb3a37c398ae4266a2e6f8e12f370e 177976 vim_8.0.0197-4+deb9u4.debian.tar.xz
+ fa8fd2b71122f6bf82326d9227a56963a6d68abfc4a1f3f2c3538ed9de7d0b39 8633 vim_8.0.0197-4+deb9u4_source.buildinfo
+Files:
+ 20faf7b94dfe85ca7330894262f89447 2889 editors optional vim_8.0.0197-4+deb9u4.dsc
+ 3c4220d657a54ff00655163c9e91d1b1 177976 editors optional vim_8.0.0197-4+deb9u4.debian.tar.xz
+ 8338c46149078aabe5cdc1dc1cb51b62 8633 editors optional vim_8.0.0197-4+deb9u4_source.buildinfo
+

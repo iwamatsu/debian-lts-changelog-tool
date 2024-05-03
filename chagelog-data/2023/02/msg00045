@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 24 Feb 2023 15:25:31 CET
+Source: freeradius
+Architecture: source
+Version: 3.0.17+dfsg-1.1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian FreeRADIUS Packaging Team <pkg-freeradius-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fac5ea6a70512073b8397fd216c1757681ca7cdc 3976 freeradius_3.0.17+dfsg-1.1+deb10u2.dsc
+ b267cb55df02e6bacde1b7fcffd24d955a663c42 1715328 freeradius_3.0.17+dfsg.orig.tar.xz
+ f4e37708120c3a4c92b9385e889667e58d78af4d 75792 freeradius_3.0.17+dfsg-1.1+deb10u2.debian.tar.xz
+ 667cb4570f961e0115530c8ba88c3e0821642137 20736 freeradius_3.0.17+dfsg-1.1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 97f3a78ddcaa9f0e5f5b77c6376b0f635ceb1197f74297d4ca810d49a984202e 3976 freeradius_3.0.17+dfsg-1.1+deb10u2.dsc
+ b97b447f4dcdf59c235ba6c44b4e8f3fb7da643b2375cd8d84d16fcb9c62fa90 1715328 freeradius_3.0.17+dfsg.orig.tar.xz
+ 38a945d93e47996d80d136a938a1b7983eb02904710c79ede23ebdcf7eb3eb63 75792 freeradius_3.0.17+dfsg-1.1+deb10u2.debian.tar.xz
+ dead556e378b642e02347a296f7a64fdc4f73f501a9e38abf177b8991786f689 20736 freeradius_3.0.17+dfsg-1.1+deb10u2_amd64.buildinfo
+Changes:
+ freeradius (3.0.17+dfsg-1.1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-41859:
+     In freeradius, the EAP-PWD function compute_password_element() leaks
+     information about the password which allows an attacker to substantially
+     reduce the size of an offline dictionary attack.
+   * CVE-2022-41860:
+     In freeradius, when an EAP-SIM supplicant sends an unknown SIM option, the
+     server will try to look that option up in the internal dictionaries. This
+     lookup will fail, but the SIM code will not check for that failure.
+     Instead, it will dereference a NULL pointer, and cause the server to crash.
+   * CVE-2022-41861:
+     A flaw was found in freeradius. A malicious RADIUS client or home server
+     can send a malformed attribute which can cause the server to crash.
+Files:
+ 09043952c9148dc6eaf6f6700e26ed49 3976 net optional freeradius_3.0.17+dfsg-1.1+deb10u2.dsc
+ a84894d70c8b1d7323d20b1430786442 1715328 net optional freeradius_3.0.17+dfsg.orig.tar.xz
+ 3bf9b1a3aad35a65a3e5e02110c44fe3 75792 net optional freeradius_3.0.17+dfsg-1.1+deb10u2.debian.tar.xz
+ 3db340316741703e3869a3eefefea5ff 20736 net optional freeradius_3.0.17+dfsg-1.1+deb10u2_amd64.buildinfo
+

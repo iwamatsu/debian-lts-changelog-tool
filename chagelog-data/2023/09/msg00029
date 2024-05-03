@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 22 Sep 2023 18:29:07 CEST
+Source: lldpd
+Architecture: source
+Version: 1.0.3-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Vincent Bernat <bernat@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 78f8ff87b4e2cf3c25a4268501c5af74c422bbe8 2245 lldpd_1.0.3-1+deb10u2.dsc
+ 89d65bef13ce081e23fa95a2161bfcf124221a50 11944 lldpd_1.0.3-1+deb10u2.debian.tar.xz
+ c5ebd85db7afb7bc9b1df56c4eb51f54463cb852 7771 lldpd_1.0.3-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 5d5a9c7651319b9c63e4a6492172eaf77bab4f76c3993396225d66be3d1a5bd1 2245 lldpd_1.0.3-1+deb10u2.dsc
+ e9be2b4a15f61d4286fb423d54982c85e569f1c4cd9d29abd13309d7a5ca7624 11944 lldpd_1.0.3-1+deb10u2.debian.tar.xz
+ abb6a2f330609e5851e8bea4651ade75a8eec3916c8fe9471582afeeb6e960fe 7771 lldpd_1.0.3-1+deb10u2_amd64.buildinfo
+Changes:
+ lldpd (1.0.3-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-41910:
+     Matteo Memelli discovered a flaw in lldp, an implementation of the IEEE
+     802.1ab protocol. By crafting a CDP PDU packet with specific
+     CDP_TLV_ADDRESSES TLVs, a malicious actor can remotely force the lldpd
+     daemon to perform an out-of-bounds read on heap memory.
+Files:
+ e1392ddeae075d36030cd4e406426689 2245 net optional lldpd_1.0.3-1+deb10u2.dsc
+ 35cd64ea16c5c446a5489f8e4ae6bf8f 11944 net optional lldpd_1.0.3-1+deb10u2.debian.tar.xz
+ 308449c916640ddcb6c6f639bd35493a 7771 net optional lldpd_1.0.3-1+deb10u2_amd64.buildinfo
+

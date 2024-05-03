@@ -1,0 +1,47 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 10 May 2023 21:04:02 +0200
+Source: postgresql-11
+Architecture: source
+Version: 11.20-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Christoph Berg <myon@debian.org>
+Changes:
+ postgresql-11 (11.20-0+deb10u1) buster-security; urgency=medium
+ .
+   * New upstream version.
+ .
+     + Prevent CREATE SCHEMA from defeating changes in search_path
+       (Report and fix by Alexander Lakhin, CVE-2023-2454)
+ .
+       Within a CREATE SCHEMA command, objects in the prevailing search_path,
+       as well as those in the newly-created schema, would be visible even
+       within a called function or script that attempted to set a secure
+       search_path.  This could allow any user having permission to create a
+       schema to hijack the privileges of a security definer function or
+       extension script.
+ .
+     + Enforce row-level security policies correctly after inlining a
+       set-returning function (Report by Wolfgang Walther, CVE-2023-2455)
+ .
+       If a set-returning SQL-language function refers to a table having
+       row-level security policies, and it can be inlined into a calling query,
+       those RLS policies would not get enforced properly in some cases
+       involving re-using a cached plan under a different role. This could
+       allow a user to see or modify rows that should have been invisible.
+Checksums-Sha1:
+ da69910501c1b9386e66e267f2615979f0620da8 3745 postgresql-11_11.20-0+deb10u1.dsc
+ c85859feeafd6d9f4bc9dd9064aff0af3345cf1e 20456483 postgresql-11_11.20.orig.tar.bz2
+ 3cf48c13c7d57769dee0e12f3300f96b3375a9c2 29104 postgresql-11_11.20-0+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ d5afb436da0171c8d48e59c084104c4addbdf0b39038e952754a6899573821df 3745 postgresql-11_11.20-0+deb10u1.dsc
+ 3d7c8882f64a7e98534a044257dfee7abad77a5b7da12508d85d722b98b5acce 20456483 postgresql-11_11.20.orig.tar.bz2
+ b48baa5a6ccd911a907bdcd2bf092bb1eea46dada7d55e153fb2c719115f021b 29104 postgresql-11_11.20-0+deb10u1.debian.tar.xz
+Files:
+ 88977508c14f6dfb9af10c6087d07d9c 3745 database optional postgresql-11_11.20-0+deb10u1.dsc
+ 05666c76d6c2e0fd6cc3b8e604f9c06d 20456483 database optional postgresql-11_11.20.orig.tar.bz2
+ 94ad0d65b55d5856787cfa388fa5916f 29104 database optional postgresql-11_11.20-0+deb10u1.debian.tar.xz
+

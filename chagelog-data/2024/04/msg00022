@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Apr 2024 23:04:31 +0300
+Source: ruby-rack
+Architecture: source
+Version: 2.0.6-3+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ruby-rack (2.0.6-3+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-25126: ReDoS in Content Type header parsing
+   * CVE-2024-26141: Reject Range headers which are too large
+   * CVE-2024-26146: ReDoS in Accept header parsing
+Checksums-Sha1:
+ 5e28bc3fc251e27c3b31faf4888166dbaedc3fed 2250 ruby-rack_2.0.6-3+deb10u4.dsc
+ bef6a13d81a8000634ea30dae30cb906d7a71f91 253423 ruby-rack_2.0.6.orig.tar.gz
+ a75e17e94b0e344a8663d74c4867f74af2482f23 14892 ruby-rack_2.0.6-3+deb10u4.debian.tar.xz
+Checksums-Sha256:
+ 84c4e4685dda3aee039db6a422aa793c81a473ed5ac0d8703dfa8f4aaa4ea7d6 2250 ruby-rack_2.0.6-3+deb10u4.dsc
+ 62c3a92e98a61fcb5423ff7f46726a17e48930c4ccc817daaaa93e9038922c5a 253423 ruby-rack_2.0.6.orig.tar.gz
+ 07f82a9595583218f78e12d9947245529eecf27a29c9c84e247b4bdf177a4401 14892 ruby-rack_2.0.6-3+deb10u4.debian.tar.xz
+Files:
+ 54b8831685e78544a4adcbbefbc7307f 2250 ruby optional ruby-rack_2.0.6-3+deb10u4.dsc
+ a089f87b15056562ce44645965ddbc97 253423 ruby optional ruby-rack_2.0.6.orig.tar.gz
+ ddac9f5d3c52fba170fba414434481d8 14892 ruby optional ruby-rack_2.0.6-3+deb10u4.debian.tar.xz
+

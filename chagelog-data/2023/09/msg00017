@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 28 Jul 2023 11:44:39 +0200
+Source: asmtools
+Binary: libasmtools-java
+Architecture: source all
+Version: 7.0-b09-2~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ libasmtools-java - OpenJDK AsmTools
+Changes:
+ asmtools (7.0-b09-2~deb10u1) buster-security; urgency=medium
+ .
+   * Backport to buster.
+   * Lower debhelper compat to 12.
+Checksums-Sha1:
+ 11d00c0eebd0ba19aca5536e5104c7fa31102b7c 1951 asmtools_7.0-b09-2~deb10u1.dsc
+ c7995fdd4b3dd8a0e10b0aafa173cfa3f929983e 131212 asmtools_7.0-b09.orig.tar.xz
+ 01d3c91204b046f61d2d4a967bdf9c82e57588e8 1788 asmtools_7.0-b09-2~deb10u1.debian.tar.xz
+ 89008ab17d01f8e1c5f07f4e5be61bb4d4b5db99 10981 asmtools_7.0-b09-2~deb10u1_amd64.buildinfo
+ 4f18de7bdd5e5034c1068a2947c7c64b1bafa721 800136 libasmtools-java_7.0-b09-2~deb10u1_all.deb
+Checksums-Sha256:
+ a3b8d71f6b743fe03ba2d7bde7ca59ce0c4c859c390398cdb7d893e8c08a2553 1951 asmtools_7.0-b09-2~deb10u1.dsc
+ ea9e0d911885a3a44064c76cdaa86f86f49c73dad408f57ed41016b4534d6528 131212 asmtools_7.0-b09.orig.tar.xz
+ da1072ac69caab2229b6140f84230f525a11eea2acb5405444b60615ebd40bd3 1788 asmtools_7.0-b09-2~deb10u1.debian.tar.xz
+ 122f6749d0f63b15a69f8b11ed86204233fc1f4975fa4cd57b697b56ca6ae450 10981 asmtools_7.0-b09-2~deb10u1_amd64.buildinfo
+ e7845411dca36a5a8df1c84038353dbee4ff58e55c7790b880a8ce5f2de4bc0c 800136 libasmtools-java_7.0-b09-2~deb10u1_all.deb
+Files:
+ cf865021ee57ca0f16903341cc25950b 1951 java optional asmtools_7.0-b09-2~deb10u1.dsc
+ 07fa8eaa5abfb9da770cb68b986850bc 131212 java optional asmtools_7.0-b09.orig.tar.xz
+ 40e069578780f4ecbc4cb65eea29b650 1788 java optional asmtools_7.0-b09-2~deb10u1.debian.tar.xz
+ d5ceeae0b2b726d9afe533321d774c9b 10981 java optional asmtools_7.0-b09-2~deb10u1_amd64.buildinfo
+ 4b057ff3e288193f8fad04562846c058 800136 java optional libasmtools-java_7.0-b09-2~deb10u1_all.deb
+

@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 10 Apr 2023 08:35:41 +0200
+Source: udisks2
+Architecture: source
+Version: 2.8.1-4+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1034124
+Changes:
+ udisks2 (2.8.1-4+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix regression disallowing specific mount options with value.
+     e.g errors=remount-ro. (Closes: #1034124)
+Checksums-Sha1:
+ 4b1f1d6c25c32e9ea8c0384883179c6787faad1e 3463 udisks2_2.8.1-4+deb10u2.dsc
+ 3352703b4fed7b17ea0ca8ca90b70dc501d6de6e 16968 udisks2_2.8.1-4+deb10u2.debian.tar.xz
+ cbf9c5fa57b5d37aa20638e0ca108e0a7851c2ff 17621 udisks2_2.8.1-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ f0957a6d42d0de9548227234af7320e44ada21f1b66837d4e3a461ffc714800a 3463 udisks2_2.8.1-4+deb10u2.dsc
+ 73e2c31e29aeae7046448d92e7df45a1e2fcbcbada52c3ce1a895dbb59d44fde 16968 udisks2_2.8.1-4+deb10u2.debian.tar.xz
+ 026a8cddb7bd5d8381704c51ff7c24e901b856758c9a24bc8f15bb851b64cd9d 17621 udisks2_2.8.1-4+deb10u2_amd64.buildinfo
+Files:
+ 115406b20f3c88af7282300de5b57404 3463 admin optional udisks2_2.8.1-4+deb10u2.dsc
+ 25962757ebb5263928ff6229e9468b8f 16968 admin optional udisks2_2.8.1-4+deb10u2.debian.tar.xz
+ 76f303fa42cc6aac6a7ae27dfcb9677c 17621 admin optional udisks2_2.8.1-4+deb10u2_amd64.buildinfo
+

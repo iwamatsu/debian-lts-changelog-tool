@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 03 Nov 2022 16:25:35 +0100
+Source: clickhouse
+Architecture: source
+Version: 18.16.1+ds-4+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Alexander GQ Gerasiov <gq@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1008216
+Changes:
+ clickhouse (18.16.1+ds-4+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2021-42387, CVE-2021-42388, CVE-2021-43304, CVE-2021-43305 by
+     apdapting upstream patch to this version. (Closes: #1008216)
+Checksums-Sha1:
+ ab9e3425668ab61c7df8827d6c81cdf3415dc7b6 3218 clickhouse_18.16.1+ds-4+deb10u1.dsc
+ 3fe955a9c61a54dd01ec777dcac70646b0519639 2623524 clickhouse_18.16.1+ds.orig.tar.xz
+ dbba44d5d76710d04bc2d14c7e36330181838685 20356 clickhouse_18.16.1+ds-4+deb10u1.debian.tar.xz
+ 5dc0461e5a017faee5a4bbaf744f3e22b47de9d6 12612 clickhouse_18.16.1+ds-4+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 0454cdc45459875c7b4bb6460da10e3fd82779cd0cb9094d7243e038d1e7fef7 3218 clickhouse_18.16.1+ds-4+deb10u1.dsc
+ afb86101964995a4a3a5e66fbe0b3b64159c6ce1751419419301d55f57618136 2623524 clickhouse_18.16.1+ds.orig.tar.xz
+ 9a338dbafeeec0e96f30950d249df7bb8e24c60029b49d8b127173453f27ec2c 20356 clickhouse_18.16.1+ds-4+deb10u1.debian.tar.xz
+ 443f3034e2316e87f3e98e6b27467ba9dc4b9e558acd39649654f094981e7eb1 12612 clickhouse_18.16.1+ds-4+deb10u1_source.buildinfo
+Files:
+ 748a8b06994f7479ea32f1d2e0bc9d95 3218 database optional clickhouse_18.16.1+ds-4+deb10u1.dsc
+ 8b5b223b6bfc95eb9fc0aeefb9d0798b 2623524 database optional clickhouse_18.16.1+ds.orig.tar.xz
+ 5af69e75321829b1e4b26b219e1b1336 20356 database optional clickhouse_18.16.1+ds-4+deb10u1.debian.tar.xz
+ 3323be95eea83604a475640cf4b82f92 12612 database optional clickhouse_18.16.1+ds-4+deb10u1_source.buildinfo
+

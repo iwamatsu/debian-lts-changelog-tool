@@ -1,0 +1,47 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 24 Jan 2022 18:03:02 +0100
+Source: apr
+Binary: libapr1 libapr1-dev libapr1-dbg
+Architecture: source amd64
+Version: 1.5.2-5+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libapr1    - Apache Portable Runtime Library
+ libapr1-dbg - Apache Portable Runtime Library - Debugging Symbols
+ libapr1-dev - Apache Portable Runtime Library - Development Headers
+Changes:
+ apr (1.5.2-5+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2017-12613
+     invalid date fields may result in out of bounds memory access
+Checksums-Sha1:
+ ca58b1365b0876500a969f230775372123bbdc5e 2302 apr_1.5.2-5+deb9u1.dsc
+ 6d757fcf7c687fc300c1066076f2e8380ff8cbc0 826885 apr_1.5.2.orig.tar.bz2
+ ffbe7eeb3c9135b70b64acd21729d9d2bf389748 213632 apr_1.5.2-5+deb9u1.debian.tar.xz
+ 689b06857a84c0715764e23e664662302754bf6c 7254 apr_1.5.2-5+deb9u1_amd64.buildinfo
+ dd55712cf770adce08630fef9b71601607879925 274414 libapr1-dbg_1.5.2-5+deb9u1_amd64.deb
+ fec1f5424fc65e76a2bc5282aa9de318a45522f9 677664 libapr1-dev_1.5.2-5+deb9u1_amd64.deb
+ 8790ba429139a35414a701ed57b9046b2289877c 96754 libapr1_1.5.2-5+deb9u1_amd64.deb
+Checksums-Sha256:
+ 4c93f1f7f250174a493001ca9052f06800878675403117e0fb3e13421dcce560 2302 apr_1.5.2-5+deb9u1.dsc
+ 7d03ed29c22a7152be45b8e50431063736df9e1daa1ddf93f6a547ba7a28f67a 826885 apr_1.5.2.orig.tar.bz2
+ b4898f802315b4d0ba693c07be0d56cde8545153c3dc4e982503b8471ff0dea0 213632 apr_1.5.2-5+deb9u1.debian.tar.xz
+ 7c1e138def218fd924847efb71a75f9c40345aeae93fe38c69f58204330946dc 7254 apr_1.5.2-5+deb9u1_amd64.buildinfo
+ bf90bd471663f36418b5379a2ee7eea781ae78f14276f3e74af1848f6404af96 274414 libapr1-dbg_1.5.2-5+deb9u1_amd64.deb
+ 842497f4a7384706f7349d0bccc03f8407d553ac3f1fe6c1ceee8d42b2dc0487 677664 libapr1-dev_1.5.2-5+deb9u1_amd64.deb
+ ea8bd7a751ff2557c3105773ff2558aea772f5a40663984dea3b15751f4f667b 96754 libapr1_1.5.2-5+deb9u1_amd64.deb
+Files:
+ 42212bd1de2ca34dcb8847e13d73f685 2302 libs optional apr_1.5.2-5+deb9u1.dsc
+ 4e9769f3349fe11fc0a5e1b224c236aa 826885 libs optional apr_1.5.2.orig.tar.bz2
+ 57656496081422d0913e869c58b76f58 213632 libs optional apr_1.5.2-5+deb9u1.debian.tar.xz
+ 1d57632fc7f055522aa632f2c9fa01e6 7254 libs optional apr_1.5.2-5+deb9u1_amd64.buildinfo
+ d7304f680e8d97839f50053524536a76 274414 debug extra libapr1-dbg_1.5.2-5+deb9u1_amd64.deb
+ 75ddedc0e773b7fd1afc9a18692c7bfa 677664 libdevel optional libapr1-dev_1.5.2-5+deb9u1_amd64.deb
+ 5e04a1c631c2996b972bf29244c02a8d 96754 libs optional libapr1_1.5.2-5+deb9u1_amd64.deb
+

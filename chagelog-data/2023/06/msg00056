@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Jun 2023 16:57:02 +0300
+Source: systemd
+Architecture: source
+Version: 241-7~deb10u10
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ systemd (241-7~deb10u10) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-3821: Buffer overrun in format_timespan().
+   * logind: Fix getting property OnExternalPower via D-Bus.
+   * Fix memory leak on daemon-reload.
+Checksums-Sha1:
+ 31a8cd9b78a555a1aa2d4e53de8c607dbcb89618 4950 systemd_241-7~deb10u10.dsc
+ 66378cd752881489006dde6ae5faab971af8c0e5 7640538 systemd_241.orig.tar.gz
+ 6939bbb916500fe6314c4068ba3ecbd89d749310 187636 systemd_241-7~deb10u10.debian.tar.xz
+Checksums-Sha256:
+ a3a53f8d6966cff56a75a7a0026e93c6aca2e86838f4271fee1be9eb0cca3336 4950 systemd_241-7~deb10u10.dsc
+ b2561a8e1d10a2c248253f0dda31a85dd6d69f2b54177de55e02cd1d2778316e 7640538 systemd_241.orig.tar.gz
+ 50eea7b07c8b989ab70c1ff672c84546026b6529115bb621c35dfec3e42ac76b 187636 systemd_241-7~deb10u10.debian.tar.xz
+Files:
+ 1fd01b8bc95cd2e84e57bfd1121f925c 4950 admin optional systemd_241-7~deb10u10.dsc
+ c5953c24c850b44fcf714326e567dc37 7640538 admin optional systemd_241.orig.tar.gz
+ e59141c1c96337319f52eb3ea344e3c2 187636 admin optional systemd_241-7~deb10u10.debian.tar.xz
+

@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 07 Jul 2023 17:24:05 +0100
+Source: ruby-doorkeeper
+Binary: ruby-doorkeeper
+Architecture: source all
+Version: 4.4.2-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ruby-doorkeeper - OAuth 2 provider for Rails and Grape
+Closes: 1038950
+Changes:
+ ruby-doorkeeper (4.4.2-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-34246: It was discovered that Doorkeeper automatically processed
+     authorization requests without user consent for public clients that have
+     been previously approved; public clients are inherently vulnerable to
+     impersonation as their identity cannot be assured. (Closes: #1038950)
+Checksums-Sha1:
+ 0ece4900e7f6654d22c3896a1a7483337eb538aa 2142 ruby-doorkeeper_4.4.2-1+deb10u1.dsc
+ 8aa946fc778687ede70bbda5772ce26498bc0e28 117423 ruby-doorkeeper_4.4.2.orig.tar.gz
+ 982d1c6bda97d41d9069b077d47b73c66041192a 4528 ruby-doorkeeper_4.4.2-1+deb10u1.debian.tar.xz
+ b2f71b1fad78854d4be91a4d165ed0340399cb6d 49596 ruby-doorkeeper_4.4.2-1+deb10u1_all.deb
+ 2578e0335a62b7d3a7f6a765dbbe1257197810b1 10247 ruby-doorkeeper_4.4.2-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 9d90d71e4274de3456c9c892135f5c54d96ba8e5ad8e1ef76554f6bc9b2377d7 2142 ruby-doorkeeper_4.4.2-1+deb10u1.dsc
+ fed606a0f01801bca3042c0b546b393c972fd7353785f1798f915e924bca7b99 117423 ruby-doorkeeper_4.4.2.orig.tar.gz
+ 838bb40df447299fd444da52ad1e872dcfe9f219958a14a119c150916f587e01 4528 ruby-doorkeeper_4.4.2-1+deb10u1.debian.tar.xz
+ 9c5c914a16eee4421078085e98b82b5c3d51f7a2007c87395676ea4d8754a0dc 49596 ruby-doorkeeper_4.4.2-1+deb10u1_all.deb
+ 91cfe3d541c81eb30dff4b9a1f9f082783a3508db08968e91703f2b8b004c065 10247 ruby-doorkeeper_4.4.2-1+deb10u1_amd64.buildinfo
+Files:
+ 4e5720f33fb6d3c52615004a3b9a8a22 2142 ruby optional ruby-doorkeeper_4.4.2-1+deb10u1.dsc
+ 5d6242a2044ee1bd17bb5db5ffe4cb93 117423 ruby optional ruby-doorkeeper_4.4.2.orig.tar.gz
+ 79ecbf460b8d5a1f2c4ec8309bdb40c9 4528 ruby optional ruby-doorkeeper_4.4.2-1+deb10u1.debian.tar.xz
+ 378682349a9bcf0b6ad6e5398731ddf4 49596 ruby optional ruby-doorkeeper_4.4.2-1+deb10u1_all.deb
+ 1500e951e0893146ed93c76db301e50f 10247 ruby optional ruby-doorkeeper_4.4.2-1+deb10u1_amd64.buildinfo
+

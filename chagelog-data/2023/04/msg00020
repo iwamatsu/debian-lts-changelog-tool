@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 20 Apr 2023 16:32:58 +0200
+Source: golang-1.11
+Architecture: source
+Version: 1.11.6-1+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Go Compiler Team <team+go-compiler@tracker.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ golang-1.11 (1.11.6-1+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Disable a few flaky tests on arm.
+Checksums-Sha1:
+ 4fc56b6a1762506d12b9f3f53e1702af81e25c89 2615 golang-1.11_1.11.6-1+deb10u7.dsc
+ 71aaf7ab5aa1dca6c846c7f392da36d1dc66627f 53688 golang-1.11_1.11.6-1+deb10u7.debian.tar.xz
+ 825c81771d236c0077f5fd836b90942347271d66 5839 golang-1.11_1.11.6-1+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 8f145cecce5f1e550fa8865f9ef41dd1848768dbe068acdd46fa6c3a1ffa9a2e 2615 golang-1.11_1.11.6-1+deb10u7.dsc
+ 4a6abefce22f79b3d8cf8fe8fe66c6300e4a4b8995e1172965fd9659017bb236 53688 golang-1.11_1.11.6-1+deb10u7.debian.tar.xz
+ c2614bda5a47602fa4ac3968f483b1b458c2a882a604544434c7605609acdbd2 5839 golang-1.11_1.11.6-1+deb10u7_amd64.buildinfo
+Files:
+ dc85381c83d85d3ba149cbaff1c13f98 2615 devel optional golang-1.11_1.11.6-1+deb10u7.dsc
+ 70f52eb27c7dcecf175c5851205052cc 53688 devel optional golang-1.11_1.11.6-1+deb10u7.debian.tar.xz
+ e20928fa6ba4be071df2c561f81971cb 5839 devel optional golang-1.11_1.11.6-1+deb10u7_amd64.buildinfo
+

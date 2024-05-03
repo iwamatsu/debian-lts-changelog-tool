@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 14 Jan 2022 18:35:01 +0100
+Source: lighttpd
+Architecture: source
+Version: 1.4.45-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian lighttpd maintainers <pkg-lighttpd-maintainers@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ lighttpd (1.4.45-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-19052: potential path traversal with specific configs.
+Checksums-Sha1:
+ 0877c8c9c6ad73cfed1a57cfab9720de0b1fda61 3192 lighttpd_1.4.45-1+deb9u1.dsc
+ 1adec9015a33937be49d51317f8b8fe1d45751d1 410624 lighttpd_1.4.45.orig.tar.xz
+ ee5b8637cbd56cdaa0bdbe5cfa5a6cc4ed6dd7e8 47972 lighttpd_1.4.45-1+deb9u1.debian.tar.xz
+ 90d5f2e2d1e17bed74f0cb9309ab9391bfdd52a5 7377 lighttpd_1.4.45-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ e4a58197af30e2fcc07a7520169419c8499567388b2c24320af30632f2daa89e 3192 lighttpd_1.4.45-1+deb9u1.dsc
+ 64f030fd3bf8036ff14cf8aa936266d59b708151fbf5822fd5fe6d8c9bb00d6e 410624 lighttpd_1.4.45.orig.tar.xz
+ 94d197265503e599fd410ec91377195b3eb425390dc6c4f8a4a6f993549fe728 47972 lighttpd_1.4.45-1+deb9u1.debian.tar.xz
+ 757241e4fc59417d45e40f8b1b660e831ffea6f81f323fe79a7896f383ddde1e 7377 lighttpd_1.4.45-1+deb9u1_source.buildinfo
+Files:
+ 8f117e47f032ddf45dcbbb960328f8ce 3192 httpd optional lighttpd_1.4.45-1+deb9u1.dsc
+ 40ca8a094ecfbe39e05550c352cd77a8 410624 httpd optional lighttpd_1.4.45.orig.tar.xz
+ c732727985eeb604eeaa5fc15beddcc4 47972 httpd optional lighttpd_1.4.45-1+deb9u1.debian.tar.xz
+ 7a80b19dbce38982a72cc824cef90ef0 7377 httpd optional lighttpd_1.4.45-1+deb9u1_source.buildinfo
+

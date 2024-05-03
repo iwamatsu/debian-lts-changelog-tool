@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri,  1 Jul 2022 14:01:36 CEST
+Source: isync
+Binary: isync
+Architecture: source
+Version: 1.2.1-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Nicolas Boullis <nboullis@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ isync      - IMAP and MailDir mailbox synchronizer
+Checksums-Sha1:
+ 913c257f82c00323829920d7611d2ff69ed3f0ab 2155 isync_1.2.1-2+deb9u1.dsc
+ 35a048dd15bd8779d3abb300c1e5ac84afb60e7f 281990 isync_1.2.1.orig.tar.gz
+ 1e60644fc6f2b901dd8e72e037bfeb37b35d98ec 11304 isync_1.2.1-2+deb9u1.debian.tar.xz
+ b32f11fe02171b6709d8710980212f41fe9aded0 6670 isync_1.2.1-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ e9c44516661bce7f7b2171db3dd11e3ebef99918c11cb434d2a5432a2fb5b19b 2155 isync_1.2.1-2+deb9u1.dsc
+ e716de28c9a08e624a035caae3902fcf3b511553be5d61517a133e03aa3532ae 281990 isync_1.2.1.orig.tar.gz
+ 07f5be83da39921fe01cf55feeca7a3c81797e95396297697a497de5420f8ee5 11304 isync_1.2.1-2+deb9u1.debian.tar.xz
+ f730495c062ea82a088ab5908b53b2e7a665388550f1c54db6645d62665aac47 6670 isync_1.2.1-2+deb9u1_amd64.buildinfo
+Changes:
+ isync (1.2.1-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-20247:
+     A flaw was found in mbsync. Validations of the mailbox names returned by
+     IMAP LIST/LSUB do not occur allowing a malicious or compromised server to
+     use specially crafted mailbox names containing '..' path components to
+     access data outside the designated mailbox on the opposite end of the
+     synchronization channel. The highest threat from this vulnerability is to
+     data confidentiality and integrity.
+   * Fix CVE-2021-3657:
+     A flaw was found in mbsync. Due to inadequate handling of extremely large
+     (>=2GiB) IMAP literals, malicious or compromised IMAP servers, and
+     hypothetically even external email senders, could cause several different
+     buffer overflows, which could conceivably be exploited for remote code
+     execution.
+   * Fix CVE-2021-3578:
+     A flaw was found in mbsync, where an unchecked pointer cast allows a
+     malicious or compromised server to write an arbitrary integer value past
+     the end of a heap-allocated structure by issuing an unexpected APPENDUID
+     response. This could be plausibly exploited for remote code execution on
+     the client.
+   * Build with -std=c99 in order to compile new code.
+Files:
+ 11c79c06ff8f0f7ea81c55d47a77dd99 2155 mail optional isync_1.2.1-2+deb9u1.dsc
+ 7ba1a07c7b487a3ab5fef54d0071f1dd 281990 mail optional isync_1.2.1.orig.tar.gz
+ 33af437e2369a0aa1acb8f18101f7daa 11304 mail optional isync_1.2.1-2+deb9u1.debian.tar.xz
+ 087fc447b23c0645e6dac568329c26cf 6670 mail optional isync_1.2.1-2+deb9u1_amd64.buildinfo
+

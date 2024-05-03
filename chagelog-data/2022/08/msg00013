@@ -1,0 +1,53 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 24 Aug 2022 10:14:57 +0200
+Source: open-vm-tools
+Binary: open-vm-tools open-vm-tools-dbgsym open-vm-tools-desktop open-vm-tools-desktop-dbgsym open-vm-tools-dev
+Architecture: source amd64
+Version: 2:10.3.10-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Bernd Zeimetz <bzed@debian.org>
+Changed-By: Bernd Zeimetz <bzed@debian.org>
+Description:
+ open-vm-tools - Open VMware Tools for virtual machines hosted on VMware (CLI)
+ open-vm-tools-desktop - Open VMware Tools for virtual machines hosted on VMware (GUI)
+ open-vm-tools-dev - Open VMware Tools for virtual machines hosted on VMware (developm
+Closes: 1018012
+Changes:
+ open-vm-tools (2:10.3.10-1+deb10u3) buster-security; urgency=high
+ .
+   * [a69beac] Properly check authorization on incoming guestOps requests
+     (Closes: #1018012, CVE-2022-31676)
+Checksums-Sha1:
+ 3e81b87bc43f444756b71e05804c33a4204985f4 2387 open-vm-tools_10.3.10-1+deb10u3.dsc
+ 8f1efa9c8f91c14e3dc671a7a2ebb6bc79d31725 2237520 open-vm-tools_10.3.10.orig.tar.xz
+ baf106b0ce18b6a8230a583ba72bd6d9d003f311 30700 open-vm-tools_10.3.10-1+deb10u3.debian.tar.xz
+ 8af9285b91d4dc2ab5b5bdafc3ca1741139b0a3f 2235872 open-vm-tools-dbgsym_10.3.10-1+deb10u3_amd64.deb
+ 9958e03cb1c244e2d54172984f4db784e561dd4c 1992636 open-vm-tools-desktop-dbgsym_10.3.10-1+deb10u3_amd64.deb
+ 8674302d005ae707163febac5d40049589663678 156488 open-vm-tools-desktop_10.3.10-1+deb10u3_amd64.deb
+ b91a30e2762774f6589e7d6c3c0e6a5ba838e74c 505640 open-vm-tools-dev_10.3.10-1+deb10u3_amd64.deb
+ ec659388a7ea3d3e5c87c15ce682a9060cf5adb9 17680 open-vm-tools_10.3.10-1+deb10u3_amd64.buildinfo
+ a1f73b17b5c2cb4271a036732b814c3926ee006f 568024 open-vm-tools_10.3.10-1+deb10u3_amd64.deb
+Checksums-Sha256:
+ 7b248c40ce13ae9fe95360c1f9ec264f0bc1775c43626747c1610cd834ee3cea 2387 open-vm-tools_10.3.10-1+deb10u3.dsc
+ bab779fcaba98fa118553cfd3f94d62881e8f69372b03c01838cda9c3e422dd9 2237520 open-vm-tools_10.3.10.orig.tar.xz
+ 9decb07b1fb629a89eda07cc9a2ee2428ff3990f7748f74de41eb6be282c1dff 30700 open-vm-tools_10.3.10-1+deb10u3.debian.tar.xz
+ b878b683dc911dc8a85a099327b24791adc23507a15a28a289125088aec256cc 2235872 open-vm-tools-dbgsym_10.3.10-1+deb10u3_amd64.deb
+ 65cf6c02da815d202107e6a19aed03b4eb896982e9d51ade468e82969f09ac06 1992636 open-vm-tools-desktop-dbgsym_10.3.10-1+deb10u3_amd64.deb
+ bce044e23b3ae694af7b2065bdb612589e7c1ea948580237b8ec7c6a483b0e06 156488 open-vm-tools-desktop_10.3.10-1+deb10u3_amd64.deb
+ 66d5d17029e339c6c4f31917f56ba1994154fcc147ca8138b204d181c6117c1c 505640 open-vm-tools-dev_10.3.10-1+deb10u3_amd64.deb
+ 78234d063199e138af02db9c1695fe2bae27d7e2b551f210c63fc5bbdd73f9b4 17680 open-vm-tools_10.3.10-1+deb10u3_amd64.buildinfo
+ f816c375fd7c2ef8e7f7eb48cb8358c354ac05c56f708724536f29d3e2fb0fc7 568024 open-vm-tools_10.3.10-1+deb10u3_amd64.deb
+Files:
+ e940c6637b156d06b6651b3a295986d6 2387 admin extra open-vm-tools_10.3.10-1+deb10u3.dsc
+ 077358c0961053ecada2a90e5df999c6 2237520 admin extra open-vm-tools_10.3.10.orig.tar.xz
+ fba6820dd9a2e1dab58257a887b77cb5 30700 admin extra open-vm-tools_10.3.10-1+deb10u3.debian.tar.xz
+ 74447bf88ef11046a7047d917234f3a8 2235872 debug optional open-vm-tools-dbgsym_10.3.10-1+deb10u3_amd64.deb
+ 7596a224856a47880e1cc3eee64a8f87 1992636 debug optional open-vm-tools-desktop-dbgsym_10.3.10-1+deb10u3_amd64.deb
+ c5e41946cf1dc378d818aa14ca180dfa 156488 admin extra open-vm-tools-desktop_10.3.10-1+deb10u3_amd64.deb
+ f3be39ee8189d3280a309ea358e392c6 505640 devel extra open-vm-tools-dev_10.3.10-1+deb10u3_amd64.deb
+ 24d1606353cf634fea6e1a1b4a9225eb 17680 admin extra open-vm-tools_10.3.10-1+deb10u3_amd64.buildinfo
+ 322fded16f49485665bbea2f73047beb 568024 admin extra open-vm-tools_10.3.10-1+deb10u3_amd64.deb
+

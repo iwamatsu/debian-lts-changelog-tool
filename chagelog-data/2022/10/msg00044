@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Oct 2022 14:03:00 +0200
+Source: distro-info-data
+Architecture: source
+Version: 0.41+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Benjamin Drung <bdrung@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ distro-info-data (0.41+deb10u6) buster-security; urgency=medium
+ .
+   * Update data to 0.55, without new columns:
+     - Correct release date of Debian 8 (jessie) to 2015-04-26
+     - Add dates for Ubuntu 23.04, Lunar Lobster (LP: #1993667)
+Checksums-Sha1:
+ 2f84833c5d646d98057808f19521f2851ef2214c 1070 distro-info-data_0.41+deb10u6.dsc
+ 6b474ebf328ca5a35ec4afd2087a8990c1c7a2ce 7516 distro-info-data_0.41+deb10u6.tar.xz
+ b5891163034189481be5f8fe6563aa02f42c6ef3 5464 distro-info-data_0.41+deb10u6_source.buildinfo
+Checksums-Sha256:
+ 7acbe10651418f0881adbf6348532b7e0b23d5efd01691633d0a4925d5ba3251 1070 distro-info-data_0.41+deb10u6.dsc
+ 02fd149a39c8fe8da341a02885bd154ae28e92814ddce3cb3f813b9fb37a5275 7516 distro-info-data_0.41+deb10u6.tar.xz
+ 56eaab931b5c14c299838d106b3a97408e30f58b76fc6aff744c0da45f7d9c40 5464 distro-info-data_0.41+deb10u6_source.buildinfo
+Files:
+ 25fd5403faecda0ff9b659ee9cd54ad1 1070 devel optional distro-info-data_0.41+deb10u6.dsc
+ d754cb192edc974d09ec76831b4bdb8f 7516 devel optional distro-info-data_0.41+deb10u6.tar.xz
+ d9435dbc9437a6e1f66bed6e50c6ed93 5464 devel optional distro-info-data_0.41+deb10u6_source.buildinfo
+

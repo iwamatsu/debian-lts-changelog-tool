@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 19 Sep 2022 11:38:06 +0200
+Source: e17
+Architecture: source
+Version: 0.22.4-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Pkg-e Team <pkg-e-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ e17 (0.22.4-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-37706: local privilege escalation in enlightenment_sys.
+Checksums-Sha1:
+ 1769decc1fcabcae3cc6e5fca39b007e93827ffb 2452 e17_0.22.4-2+deb10u1.dsc
+ 312ac7b1a65db38517b3b5b41487cf588732fe06 25656972 e17_0.22.4.orig.tar.xz
+ b3865d6eb342b13ee2d3d6be32b4a837f118da97 16576 e17_0.22.4-2+deb10u1.debian.tar.xz
+ 5ba22b059833307fd83d993422e9a13dc25b41cb 6938 e17_0.22.4-2+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 19b16b273a6cb79cb8a4645b5f45ee3e3aa98bcaf5b833d394cec6a5fbd8e569 2452 e17_0.22.4-2+deb10u1.dsc
+ 59f4997c8b59457142870e40f137bc08c9735c84368d32213dacf09c4342fe79 25656972 e17_0.22.4.orig.tar.xz
+ d0c087b2173d3de0758aebf560ae545bc77960e52d3221858120375820eea797 16576 e17_0.22.4-2+deb10u1.debian.tar.xz
+ c59893ca7007d920c639a0209868b3ce52e11f4e788fb448b0c929384ad979c0 6938 e17_0.22.4-2+deb10u1_source.buildinfo
+Files:
+ 8c4775e13a85eb66b246df92bb3f9c19 2452 x11 optional e17_0.22.4-2+deb10u1.dsc
+ 2444a699b4c995eb83c813aa555ca418 25656972 x11 optional e17_0.22.4.orig.tar.xz
+ bfd9f0237eec7bed70d0fc762d2e5658 16576 x11 optional e17_0.22.4-2+deb10u1.debian.tar.xz
+ f8718b3edf8cf35ae741f90778fff48b 6938 x11 optional e17_0.22.4-2+deb10u1_source.buildinfo
+

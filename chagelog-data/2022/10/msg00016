@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 10 Oct 2022 23:42:09 CEST
+Source: git
+Architecture: source
+Version: 1:2.20.1-2+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Gerrit Pape <pape@smarden.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ d082f5280e4ec8f68835ab217a50eca5514d1c84 3045 git_2.20.1-2+deb10u4.dsc
+ 4d13d6f363756758c89eb17430d5d1656455f0e5 648624 git_2.20.1-2+deb10u4.debian.tar.xz
+ 30ce8f5074a22ac600c4498c37a3c2887ac63ff2 8304 git_2.20.1-2+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 69ebfaebd3b3399b11aae11088889974a9f3df2fe59db7af9d7920347742717e 3045 git_2.20.1-2+deb10u4.dsc
+ f090130a1fb44a4ac3164cd0d851f55f385768afbb55b4fb50df14ac68269e5e 648624 git_2.20.1-2+deb10u4.debian.tar.xz
+ 96927a08f2fe5b35e24f50eda5190fd6d1a8d99c47b31ccf7cf9882332136f18 8304 git_2.20.1-2+deb10u4_source.buildinfo
+Changes:
+ git (1:2.20.1-2+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-40330:
+     git_connect_git in connect.c allows a repository path to contain a newline
+     character, which may result in unexpected cross-protocol requests, as
+     demonstrated by the git://localhost:1234/%0d%0a%0d%0aGET%20/%20HTTP/1.1
+     substring.
+   * Fix CVE-2021-21300:
+     In affected versions of Git a specially crafted repository that contains
+     symbolic links as well as files using a clean/smudge filter such as Git
+     LFS, may cause just-checked out script to be executed while cloning onto a
+     case-insensitive file system such as NTFS, HFS+ or APFS (i.e. the default
+     file systems on Windows and macOS).
+Files:
+ 4bfd751298e908659efc57593f796d96 3045 vcs optional git_2.20.1-2+deb10u4.dsc
+ 37a3e61267692be2a605a12ffe6ce624 648624 vcs optional git_2.20.1-2+deb10u4.debian.tar.xz
+ 9b2385c3951c54be62636cbb8b0a53f4 8304 vcs optional git_2.20.1-2+deb10u4_source.buildinfo
+

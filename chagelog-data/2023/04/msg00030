@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Apr 2023 21:03:02 +0200
+Source: libxml2
+Architecture: source
+Version: 2.9.4+dfsg1-7+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libxml2 (2.9.4+dfsg1-7+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * schemas: Fix null-pointer-deref in xmlSchemaCheckCOSSTDerivedOK
+   * CVE-2023-28484
+     Fix null deref in xmlSchemaFixupComplexType
+   * CVE-2023-29469
+     Hashing of empty dict strings isn't deterministic
+Checksums-Sha1:
+ 9d78d5449660f0fd7e0a80ad7ec676759e6d903e 3167 libxml2_2.9.4+dfsg1-7+deb10u6.dsc
+ ca9a4f7f1eab2b69ead6174885a5e6b1629ec956 2446412 libxml2_2.9.4+dfsg1.orig.tar.xz
+ 91592684437e477e4e4f33fe4c7abd0b3c15fd20 49836 libxml2_2.9.4+dfsg1-7+deb10u6.debian.tar.xz
+ 4fc35407ae54fd63a480895081f6f500989980a5 10734 libxml2_2.9.4+dfsg1-7+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ e89bdec872e1236bbc1b2ecb87a82a199a5dc36a4ddfe387d8b8324da8ba86c0 3167 libxml2_2.9.4+dfsg1-7+deb10u6.dsc
+ a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e 2446412 libxml2_2.9.4+dfsg1.orig.tar.xz
+ 39fc9c3e5949c175ac6ecc8016d641978c3edcebf5cb6c9512b0b61e449cd8c1 49836 libxml2_2.9.4+dfsg1-7+deb10u6.debian.tar.xz
+ ee3dbd74c9818c48baa35e64e4f8370be4ae6d77b637e920eceb26c0f4afa02f 10734 libxml2_2.9.4+dfsg1-7+deb10u6_amd64.buildinfo
+Files:
+ 722f58f3ed6c37cc3741f151e639797d 3167 libs optional libxml2_2.9.4+dfsg1-7+deb10u6.dsc
+ 3ced197721416e7e2f13b0f4e0f1185b 2446412 libs optional libxml2_2.9.4+dfsg1.orig.tar.xz
+ 303344b96a1649999653033b9e4ce4e6 49836 libs optional libxml2_2.9.4+dfsg1-7+deb10u6.debian.tar.xz
+ f9faf525962ed347fa83d251536c0386 10734 libs optional libxml2_2.9.4+dfsg1-7+deb10u6_amd64.buildinfo
+

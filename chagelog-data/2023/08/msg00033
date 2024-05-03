@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 17 Aug 2023 10:58:05 CEST
+Source: rar
+Binary: rar
+Architecture: source amd64
+Version: 2:6.20-0.1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Martin Meredith <mez@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ rar        - Archiver for .rar files
+Checksums-Sha1:
+ c281dd8eebae8bb6a8cf89baa4ad9ce185642f73 2129 rar_6.20-0.1~deb10u1.dsc
+ cc7e6e4cda8a5883eba71e6cabb3071c3ff20ba3 614188 rar_6.20.orig-amd64.tar.gz
+ b72a08442661b3c3142ad5294eea2db2ff5c98ea 627693 rar_6.20.orig.tar.gz
+ 8de6a2e027098173c956c1132e4ff183de4f3433 10952 rar_6.20-0.1~deb10u1.debian.tar.xz
+ 869a981cac052fcaf1d7f05e202fa8d927f46ff1 5621 rar_6.20-0.1~deb10u1_amd64.buildinfo
+ 840fcaf40cae976a8e880dd9ddcf544772d301fe 360612 rar_6.20-0.1~deb10u1_amd64.deb
+Checksums-Sha256:
+ d7c816c851aeb9681f346aeed0bac3859c5d9471fdc86b7b7e98b03bff261a57 2129 rar_6.20-0.1~deb10u1.dsc
+ a17df6b0460a285c558e493cc81ecd370af042861aa98ae081290d12f5d71967 614188 rar_6.20.orig-amd64.tar.gz
+ c27fd7cd95a915e232e0cb951c187788eb588628074d1513e36f9d2f4996ede9 627693 rar_6.20.orig.tar.gz
+ 31d0972ce5ca0a00bcd303eafcd9fd3d65cdb4037b9809b4834435dcea14592c 10952 rar_6.20-0.1~deb10u1.debian.tar.xz
+ e51f8ea9ea3f167d05a95f75030a7e9df4c56c7ac57cb6ba488f31e34beac454 5621 rar_6.20-0.1~deb10u1_amd64.buildinfo
+ 5ab8b7b962eea1213683834b7184088a4a7f6d28fd3d80762eae8a1ee7e283dc 360612 rar_6.20-0.1~deb10u1_amd64.deb
+Changes:
+ rar (2:6.20-0.1~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-30333:
+     The RAR archiver allows directory traversal to write to files during an
+     extract (aka unpack) operation, as demonstrated by creating a
+     ~/.ssh/authorized_keys file.
+Files:
+ 8942f2ead957203a1c662a8bde57d74a 2129 non-free/utils optional rar_6.20-0.1~deb10u1.dsc
+ 32af313cc0aa179a53a4e19ed00bfc84 614188 non-free/utils optional rar_6.20.orig-amd64.tar.gz
+ a5d07f98ddc8587e64adaca710b06b27 627693 non-free/utils optional rar_6.20.orig.tar.gz
+ 94252873b65ca7446344668719aca60a 10952 non-free/utils optional rar_6.20-0.1~deb10u1.debian.tar.xz
+ c7ca48d254363aa2f95a6f4c2985ccbc 5621 non-free/utils optional rar_6.20-0.1~deb10u1_amd64.buildinfo
+ 24a07aa6ff554d5331a8c86f4d92f2e2 360612 non-free/utils optional rar_6.20-0.1~deb10u1_amd64.deb
+

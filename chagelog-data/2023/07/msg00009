@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 08 Jul 2023 13:04:03 +0200
+Source: ocsinventory-server
+Architecture: source
+Version: 2.5+dfsg1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ ocsinventory-server (2.5+dfsg1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add patch to support php-cas fixed for CVE 2022 39369:
+     The CVE required a API-breaking change in php-cas.
+   * Update version constrain on php-cas to require fixed version.
+Checksums-Sha1:
+ bb17d8504c5bbd354a4aa25b28379f33d4155e06 2280 ocsinventory-server_2.5+dfsg1-1+deb10u1.dsc
+ 360d39af1525767a2793bffd9a85470477ca4a49 1135256 ocsinventory-server_2.5+dfsg1.orig.tar.xz
+ 48a004c0d06c2874ca7efcbf9a217efe12946f32 20692 ocsinventory-server_2.5+dfsg1-1+deb10u1.debian.tar.xz
+ d07cf3e1d338348be13d2bced51e06cbc382d9bb 7186 ocsinventory-server_2.5+dfsg1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 8e3e1ef7915fd1df942ed58192976b389956c2de3c5b9c1bc63cfdeac0594aaf 2280 ocsinventory-server_2.5+dfsg1-1+deb10u1.dsc
+ 1367514cb1ff48613b03815558b04e8598291b05ecbf52c5874922c251d38bbf 1135256 ocsinventory-server_2.5+dfsg1.orig.tar.xz
+ 5a5026b3c5ae606cfb2ce6a2973d3a3ba9a137b2a333af13553a07101f3c96c9 20692 ocsinventory-server_2.5+dfsg1-1+deb10u1.debian.tar.xz
+ aa6461a4f1ab807b7f800dff655dde869543f27cd5a7c5fd38beeee3cc0cc253 7186 ocsinventory-server_2.5+dfsg1-1+deb10u1_amd64.buildinfo
+Files:
+ 5fc99de86bac9c09ec8be7dca6f16c9e 2280 web optional ocsinventory-server_2.5+dfsg1-1+deb10u1.dsc
+ 57c7e945657decfca147b29823742b82 1135256 web optional ocsinventory-server_2.5+dfsg1.orig.tar.xz
+ 544c9914b06b666fd368a239b9489cc9 20692 web optional ocsinventory-server_2.5+dfsg1-1+deb10u1.debian.tar.xz
+ 215c12bcbadae2c165b34dd18964a9bc 7186 web optional ocsinventory-server_2.5+dfsg1-1+deb10u1_amd64.buildinfo
+

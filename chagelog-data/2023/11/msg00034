@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 Nov 2023 21:28:42 +0200
+Source: vlc
+Architecture: source
+Version: 3.0.20-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ vlc (3.0.20-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream release.
+     - CVE-2023-47359: Heap buffer overflow in the MMSH module.
+     - CVE-2023-47360: Integer underflow in the MMSH module.
+   * Remove sndio module, the version in buster is no longer detected.
+Checksums-Sha1:
+ 3abb83b999195696ab71c98af084eb6337ebc843 6450 vlc_3.0.20-0+deb10u1.dsc
+ b834516ab701bf6311980ed5d67b77c834fdebe7 25596392 vlc_3.0.20.orig.tar.xz
+ 6109c8b6a27aefbf71d0543d03b11715f83d68a5 195 vlc_3.0.20.orig.tar.xz.asc
+ fd642dc57e5c4dcc819815bb9b428616eb014941 64520 vlc_3.0.20-0+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 98bda3ae7c3bf63252ee9133bdd8a12ebe8f4aa0a396d94a9b43008a25396e33 6450 vlc_3.0.20-0+deb10u1.dsc
+ adc7285b4d2721cddf40eb5270cada2aaa10a334cb546fd55a06353447ba29b5 25596392 vlc_3.0.20.orig.tar.xz
+ 241ac2d9393d9158bd339dcc6c0b36c9c5bfb4327c9b025a1cf62dbbc6912aab 195 vlc_3.0.20.orig.tar.xz.asc
+ 60e5b6f41e06294b19b343b6a6e26d23872d8bbf35d3dac0d7faeefdf9c27a51 64520 vlc_3.0.20-0+deb10u1.debian.tar.xz
+Files:
+ 387769a50fd6d39e4bbe128aa65e3f23 6450 video optional vlc_3.0.20-0+deb10u1.dsc
+ e8337fcd2df92f3901dad091fb85f545 25596392 video optional vlc_3.0.20.orig.tar.xz
+ d54107096972149a57b76e29fd1db8a9 195 video optional vlc_3.0.20.orig.tar.xz.asc
+ 28360fbed75c75636e8bd285d82a597d 64520 video optional vlc_3.0.20-0+deb10u1.debian.tar.xz
+

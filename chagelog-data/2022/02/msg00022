@@ -1,0 +1,61 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 19 Feb 2022 16:03:45 +0100
+Source: twisted
+Binary: python3-twisted python3-twisted-bin python3-twisted-bin-dbg python-twisted-bin python-twisted-bin-dbg python-twisted-core python-twisted-conch python-twisted-mail python-twisted-names python-twisted-news python-twisted-runner python-twisted-runner-dbg python-twisted-web python-twisted-words twisted-doc python-twisted
+Architecture: source
+Version: 16.6.0-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ python-twisted - Event-based framework for internet applications (dependency packa
+ python-twisted-bin - Event-based framework for internet applications
+ python-twisted-bin-dbg - Event-based framework for internet applications (debug extension)
+ python-twisted-conch - twisted dummy package for Twisted SSH Implementation
+ python-twisted-core - Event-based framework for internet applications
+ python-twisted-mail - twisted dummy package for SMTP, IMAP and POP protocol implementat
+ python-twisted-names - twisted package for DNS protocol implementation
+ python-twisted-news - twisted dummy package for NNTP protocol implementation
+ python-twisted-runner - twisted dummy package for process management
+ python-twisted-runner-dbg - twisted dummy package for process management
+ python-twisted-web - twisted dummy package for HTTP protocol implementation
+ python-twisted-words - twisted dummy package for Chat and Instant Messaging
+ python3-twisted - Event-based framework for internet applications
+ python3-twisted-bin - Event-based framework for internet applications
+ python3-twisted-bin-dbg - Event-based framework for internet applications (debug extension)
+ twisted-doc - Official documentation of Twisted
+Changes:
+ twisted (16.6.0-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-10108: HTTP request splitting vulnerability. When presented
+     with two content-length headers, it ignored the first header. When the
+     second content-length value was set to zero, the request body was
+     interpreted as a pipelined request.
+   * CVE-2020-10109: HTTP request splitting vulnerability. When presented
+     with a content-length and a chunked encoding header, the
+     content-length took precedence and the remainder of the request body
+     was interpreted as a pipelined request.
+   * CVE-2022-21712: twisted exposes cookies and authorization headers when
+     following cross-origin redirects. This issue is present in the
+     `twisted.web.RedirectAgent` and `twisted.web.BrowserLikeRedirectAgent`
+     functions.
+Checksums-Sha1:
+ 74149a2826deda7854e08d352e53237e8b1ac2ad 3461 twisted_16.6.0-2+deb9u1.dsc
+ 57ea06c54e59c314f904870946c4a3586d7b86ea 2979747 twisted_16.6.0.orig.tar.bz2
+ e5b848d5833582187c5360e1af65538778e57692 29516 twisted_16.6.0-2+deb9u1.debian.tar.xz
+ 2e60c16be5c7d78945197ef4072d8eac7f7807ad 9094 twisted_16.6.0-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 9c5bdfaaee5de27bc30088f79b9c5bb5b2bd8f36971300c3c5bd012b10c9c9f4 3461 twisted_16.6.0-2+deb9u1.dsc
+ d0fe115ea7ef8cf632d05103de60356c6e992b2153d6830bdc4476f8accb1fca 2979747 twisted_16.6.0.orig.tar.bz2
+ e950eba08e985dc8fe4a8468aa8b42ecf9efbf87f595d8238abaef8734cf5ca7 29516 twisted_16.6.0-2+deb9u1.debian.tar.xz
+ e54e2a7013a3930b5bf9dc155dcef5704eeb6eaf41461b433332a80b9b9f8e7b 9094 twisted_16.6.0-2+deb9u1_amd64.buildinfo
+Files:
+ b72cfa45744bc09fb5b576d6769343d1 3461 python optional twisted_16.6.0-2+deb9u1.dsc
+ 54a88ffe773d5a83c91fcfe86044b094 2979747 python optional twisted_16.6.0.orig.tar.bz2
+ ab4ffcccca80b9a0df4a2ee6aef2b231 29516 python optional twisted_16.6.0-2+deb9u1.debian.tar.xz
+ ae8af3222313ed3fb9d567dc45346a6c 9094 python optional twisted_16.6.0-2+deb9u1_amd64.buildinfo
+

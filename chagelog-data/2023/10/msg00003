@@ -1,0 +1,26 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 02 Oct 2023 16:15:27 +0200
+Source: postgresql-11
+Architecture: source
+Version: 11.21-0+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Christoph Berg <myon@debian.org>
+Changes:
+ postgresql-11 (11.21-0+deb10u2) buster-security; urgency=medium
+ .
+   * Fix changelog of last upload, the original version mistakenly repeated the
+     information from 11.20.
+Checksums-Sha1:
+ 6dc4d5d94779531aff2aafd0f58d396497d164c3 3745 postgresql-11_11.21-0+deb10u2.dsc
+ 41ac1d973c0dd913835bef7626912f32d8d1acd4 29236 postgresql-11_11.21-0+deb10u2.debian.tar.xz
+Checksums-Sha256:
+ cbbcf6ec2132b4ca02aed8c454dd185ac76bef76ed9aa06eca563afa26626058 3745 postgresql-11_11.21-0+deb10u2.dsc
+ 5b958c4d17688a504788d0ab78cf5260fcf0fe05dab9a39266b8c9e60e8c0bdf 29236 postgresql-11_11.21-0+deb10u2.debian.tar.xz
+Files:
+ c53ebbf98b1c1daebb6f42422aed22c8 3745 database optional postgresql-11_11.21-0+deb10u2.dsc
+ 157daf956298175d0e687e0f02042ea7 29236 database optional postgresql-11_11.21-0+deb10u2.debian.tar.xz
+

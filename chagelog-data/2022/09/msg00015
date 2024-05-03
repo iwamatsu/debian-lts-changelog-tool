@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 12 Sep 2022 10:32:20 +0100
+Source: paramiko
+Built-For-Profiles: nocheck
+Architecture: source
+Version: 2.4.2-0.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Jeremy T. Bouse <jbouse@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ paramiko (2.4.2-0.1+deb10u1) buster-security; urgency=high
+ .
+   * CVE-2022-24302: Prevent a race condition between creation and subsequent
+     chmod in the write_private_key_file function which could have allowed
+     unauthorised information disclosures.
+   * Re-enable testsuite.
+Checksums-Sha1:
+ d1c326c770c6fa8a062a5edcfb325aab26f769b2 2554 paramiko_2.4.2-0.1+deb10u1.dsc
+ 7ab1e9aaf0b6eedb2098661d283f4d6f6d9c8963 1207299 paramiko_2.4.2.orig.tar.gz
+ d1dda55249b1c6c07ae699650bd9432109d5d390 9436 paramiko_2.4.2-0.1+deb10u1.debian.tar.xz
+ 0ad2a2a42cde3dbaf4265225a0ae1bf94bfc13c6 8380 paramiko_2.4.2-0.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d4f800d651dcfd7bdb7dfff81f02c915245bbeb0dbd7072119c644c8efcb56ea 2554 paramiko_2.4.2-0.1+deb10u1.dsc
+ a8975a7df3560c9f1e2b43dc54ebd40fd00a7017392ca5445ce7df409f900fcb 1207299 paramiko_2.4.2.orig.tar.gz
+ 99c90f0eb89f9cdfe72302f442431f96cbcfdc3bc97917ea9d69b7029488230a 9436 paramiko_2.4.2-0.1+deb10u1.debian.tar.xz
+ 2f5a8b4747ddfba770af71ddcc9087e836c3f0c56cf108fcd27d83cadc9c466b 8380 paramiko_2.4.2-0.1+deb10u1_amd64.buildinfo
+Files:
+ c22ced20500bff52ae5c75cefcffd331 2554 python optional paramiko_2.4.2-0.1+deb10u1.dsc
+ a476ea106177fe22e797428d54811aed 1207299 python optional paramiko_2.4.2.orig.tar.gz
+ 23091fbe808411fda4bbfaf9d7ae4a58 9436 python optional paramiko_2.4.2-0.1+deb10u1.debian.tar.xz
+ 0727a315011fa8a81ddcb1164f386405 8380 python optional paramiko_2.4.2-0.1+deb10u1_amd64.buildinfo
+

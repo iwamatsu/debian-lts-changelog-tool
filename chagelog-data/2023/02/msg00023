@@ -1,0 +1,30 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 20 Feb 2023 09:21:17 +0100
+Source: isc-dhcp
+Architecture: source
+Version: 4.4.1-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Changed-By: Bastian Blank <waldi@debian.org>
+Closes: 1022969
+Changes:
+ isc-dhcp (4.4.1-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload.
+   * Backport missing IPv6 address lifetime handling. (closes: #1022969)
+Checksums-Sha1:
+ 7da2e328eb32c46ae379b53fc83682c6e7cefba7 1948 isc-dhcp_4.4.1-2+deb10u3.dsc
+ 0714cf243f92125a649e5e5afefed46bf3ff3b3d 87992 isc-dhcp_4.4.1-2+deb10u3.debian.tar.xz
+ 14c842ffa6012cbbad2ebb2cb5de12590d365dd4 5958 isc-dhcp_4.4.1-2+deb10u3_source.buildinfo
+Checksums-Sha256:
+ dd83f6440c1c5774632d1ad12f936be9433bc257719f4c17a820ebf56d514923 1948 isc-dhcp_4.4.1-2+deb10u3.dsc
+ a84b16c1b6cfed22ebe8070fd0eea7c9ac4986bed7f5f08798314c79b20575e9 87992 isc-dhcp_4.4.1-2+deb10u3.debian.tar.xz
+ 28753cc243f4a5a73d51d8bdb1a80d6b22c953ea2ab5fa88c0567fd6474af67f 5958 isc-dhcp_4.4.1-2+deb10u3_source.buildinfo
+Files:
+ b4f2a0df56f4b242d1c04ae8e2e8b510 1948 net important isc-dhcp_4.4.1-2+deb10u3.dsc
+ baab21709b09942c8cd292de7d47afd1 87992 net important isc-dhcp_4.4.1-2+deb10u3.debian.tar.xz
+ e20e5a1932a0130249fb4f0b49491b35 5958 net important isc-dhcp_4.4.1-2+deb10u3_source.buildinfo
+

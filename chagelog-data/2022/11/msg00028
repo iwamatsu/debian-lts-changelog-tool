@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 20 Nov 2022 22:03:02 +0100
+Source: ntfs-3g
+Architecture: source
+Version: 1:2017.3.23AR.3-3+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ ntfs-3g (1:2017.3.23AR.3-3+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-40284
+     - Rejected zero-sized runs
+     - Avoided merging runlists with no runs
+Checksums-Sha1:
+ 9594ce0e35a6f2403815500a79f6aa59eaf43b05 2367 ntfs-3g_2017.3.23AR.3-3+deb10u3.dsc
+ 18a483bb91cb5cb532454ae5c4f18d71e5cd9b80 1277609 ntfs-3g_2017.3.23AR.3.orig.tar.gz
+ de677a47507870af1befb8568284200a8c927a26 40132 ntfs-3g_2017.3.23AR.3-3+deb10u3.debian.tar.xz
+ 9fa4f2c3fc71b8c5948620427f5f3231bb5bc9c2 8705 ntfs-3g_2017.3.23AR.3-3+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 628272bcda1754166ea558d54b877a277ad2999393411bd1c9653bacfaa5cd7a 2367 ntfs-3g_2017.3.23AR.3-3+deb10u3.dsc
+ a83fbd533259abd5b73dc37635cc003a697248375702ddcc39af129957a7564b 1277609 ntfs-3g_2017.3.23AR.3.orig.tar.gz
+ 978698d4d67021338b74ccca12fe82588a24487559ea48e97d5a395d632e1cd4 40132 ntfs-3g_2017.3.23AR.3-3+deb10u3.debian.tar.xz
+ 286fbf4de2981b9735ff767be2d5bc3d7019b3c319c3dfac4fa7cead02761384 8705 ntfs-3g_2017.3.23AR.3-3+deb10u3_amd64.buildinfo
+Files:
+ 81986d67e8ed4ae21e3daa3909fdf868 2367 otherosfs optional ntfs-3g_2017.3.23AR.3-3+deb10u3.dsc
+ 5202fb9d41b0db673b73da4ca9bb88b5 1277609 otherosfs optional ntfs-3g_2017.3.23AR.3.orig.tar.gz
+ ef25038f2b7fd603d46b551010edcbc8 40132 otherosfs optional ntfs-3g_2017.3.23AR.3-3+deb10u3.debian.tar.xz
+ 9034ebc8d4112ef2f03dad54217f1f0c 8705 otherosfs optional ntfs-3g_2017.3.23AR.3-3+deb10u3_amd64.buildinfo
+

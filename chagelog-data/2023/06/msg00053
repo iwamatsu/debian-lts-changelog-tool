@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 26 Jun 2023 06:41:46 +0200
+Source: c-ares
+Architecture: source
+Version: 1.14.0-1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Gregor Jasny <gjasny@googlemail.com>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ c-ares (1.14.0-1+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-32067:
+     Improve UDP packet handling in ares_process.c to prevent
+     a denial of service due to a malformed UDP packet.
+   * Fix CVE-2023-31130:
+     fix buffer underflow for certain IPv6 addresses in
+     inet_net_pton_ipv6(). Use our own IP conversion functions,
+     do not delegate to OS.
+Checksums-Sha1:
+ 30818e89485d06f6e393232b1a929b0d2da92365 1928 c-ares_1.14.0-1+deb10u3.dsc
+ 6928a381dbd16089e44dda900cf070d070e39d89 15512 c-ares_1.14.0-1+deb10u3.debian.tar.xz
+ 5265f2d638f0c88892b44855267b2fa5520ffb7e 6848 c-ares_1.14.0-1+deb10u3_source.buildinfo
+Checksums-Sha256:
+ 036037dead6d70cec6bf53a50e40d2a67e63a720701e56631780de18a7d380f2 1928 c-ares_1.14.0-1+deb10u3.dsc
+ 3b030dfcab11e166ad51f3bbf6d1d6c832898e66b64fd8d38095952de3622c5f 15512 c-ares_1.14.0-1+deb10u3.debian.tar.xz
+ c8e48ef9faca8114d432fa522db98e33a99d5c7e7cdc116e38954c6cff2d2fb8 6848 c-ares_1.14.0-1+deb10u3_source.buildinfo
+Files:
+ 8c92a520bbd6f44ba75277e0735122dd 1928 libs optional c-ares_1.14.0-1+deb10u3.dsc
+ 4f4b291d3590c1ac83c79d8015f069de 15512 libs optional c-ares_1.14.0-1+deb10u3.debian.tar.xz
+ 95b6be415fbb86022f7f07e40548339c 6848 libs optional c-ares_1.14.0-1+deb10u3_source.buildinfo
+

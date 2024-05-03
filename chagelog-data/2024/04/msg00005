@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 07 Apr 2024 00:33:55 +0200
+Source: util-linux
+Architecture: source
+Version: 2.33.1-0.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: LaMont Jones <lamont@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 826596 991619 1067849
+Changes:
+ util-linux (2.33.1-0.1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2021-37600: Potential integer overflow in ipcutils.c.
+     (Closes: #991619)
+   * Fix CVE-2024-28085: Escape sequence injection in wall(1).
+     (Closes: #1067849)
+   * Prerequisite for the CVE-2024-28085 fix: Backport upstream changes to use
+     fputs_careful() in order to handle UTF-8 characters. (Closes: #826596)
+   * d/rules: Build with --disable-use-tty-group to avoid installing wall(1)
+     setgid tty.
+Checksums-Sha1:
+ 1ea17f1caf109d1cf1533132bf25280bb96a44e5 3995 util-linux_2.33.1-0.1+deb10u1.dsc
+ f57232d9594d23e7c20b5728b24bf4e5d977accc 4650936 util-linux_2.33.1.orig.tar.xz
+ 6b67806088771b8a5a7afe96bc903893293d9f82 87368 util-linux_2.33.1-0.1+deb10u1.debian.tar.xz
+ df9b46e87434a28f0485d8507aa5c1c8e272bfc3 17216 util-linux_2.33.1-0.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ cb5ba81b8dfa3ddfe2995b640b2fbe6b35d9706b0185d8d03efe2e6238dcf361 3995 util-linux_2.33.1-0.1+deb10u1.dsc
+ c14bd9f3b6e1792b90db87696e87ec643f9d63efa0a424f092a5a6b2f2dbef21 4650936 util-linux_2.33.1.orig.tar.xz
+ a1f70741a39a31700a443f462a50c3a10b540256bdde1635e0afdb083507d0bf 87368 util-linux_2.33.1-0.1+deb10u1.debian.tar.xz
+ 738d7b3b07894b8c4500bc61e2b9cee982debbdda6e9d3896e7a4db83a3f70af 17216 util-linux_2.33.1-0.1+deb10u1_amd64.buildinfo
+Files:
+ aa472fe037d9136de4b59110afb1a4d8 3995 base required util-linux_2.33.1-0.1+deb10u1.dsc
+ 6fcfea2043b5ac188fd3eed56aeb5d90 4650936 base required util-linux_2.33.1.orig.tar.xz
+ d796a74e57a26b03f1cda0cd71c718bf 87368 base required util-linux_2.33.1-0.1+deb10u1.debian.tar.xz
+ 93e21c607cf5204e1947947105749ae1 17216 base required util-linux_2.33.1-0.1+deb10u1_amd64.buildinfo
+

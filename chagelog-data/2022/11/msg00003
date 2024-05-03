@@ -1,0 +1,54 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 07 Nov 2022 10:59:27 +0000
+Source: pixman
+Binary: libpixman-1-0 libpixman-1-0-dbgsym libpixman-1-0-udeb libpixman-1-dev
+Architecture: source amd64
+Version: 0.36.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libpixman-1-0 - pixel-manipulation library for X and cairo
+ libpixman-1-0-udeb - pixel-manipulation library for X and cairo (udeb)
+ libpixman-1-dev - pixel-manipulation library for X and cairo (development files)
+Closes: 1023427
+Changes:
+ pixman (0.36.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-44638: Prevent out-of-bounds write (aka heap-based buffer
+     overflow) in the rasterize_edges_8 function due to an integer overflow in
+     pixman_sample_floor_y. (Closes: #1023427)
+   * Add debian/.gitlab-ci.yml.
+   * Refresh debian/patches/test-increase-timeout.diff.
+Checksums-Sha1:
+ 27bd8c15d68681c9cb2a07e0d2b79fe6fc6c7a7c 2041 pixman_0.36.0-1+deb10u1.dsc
+ 60a931ae924f2a198db28a49b782229b210eaff9 881544 pixman_0.36.0.orig.tar.gz
+ 2edf2ab6b65e6b5fe891bb441a9db399395c0e0f 9641 pixman_0.36.0-1+deb10u1.diff.gz
+ e5505357eea635559ad6329c59478a370778d8b0 1920196 libpixman-1-0-dbgsym_0.36.0-1+deb10u1_amd64.deb
+ 11ae8bbb4298ae5584c8b1706408760ab792cbd5 225572 libpixman-1-0-udeb_0.36.0-1+deb10u1_amd64.udeb
+ 1cf5492d34344a40eae29620e47095710788952c 233960 libpixman-1-0_0.36.0-1+deb10u1_amd64.deb
+ f11064abac0c5d92b3c2afc347927b18b0d25fd9 250800 libpixman-1-dev_0.36.0-1+deb10u1_amd64.deb
+ 3abc5f654a4b59f0bdfd06b6a07c1448c6f8fb43 6547 pixman_0.36.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 46554fa3845d9ce94299a872ef54ca6326156c43f164ed7ae44990e51ef8a69e 2041 pixman_0.36.0-1+deb10u1.dsc
+ 1ca19c8d4d37682adfbc42741d24977903fec1169b4153ec05bb690d4acf9fae 881544 pixman_0.36.0.orig.tar.gz
+ 8aaa40dc9cb99e647ec14684db0b22d2a3b83e9b07bb614f4e8e31febf8b4016 9641 pixman_0.36.0-1+deb10u1.diff.gz
+ f8c514e4c809362df53cb35a4189e736f5fd76042ab3897ceb8c0aef6ed9b8d7 1920196 libpixman-1-0-dbgsym_0.36.0-1+deb10u1_amd64.deb
+ d652c4b6cf276e738f7fae20cce3bdb8d14ec2a1d10d9b75514c8088efa0be81 225572 libpixman-1-0-udeb_0.36.0-1+deb10u1_amd64.udeb
+ 0d14c2368011255f054f9a72ad53ba7605497a577bef77936f9e6ac4c0abd5ed 233960 libpixman-1-0_0.36.0-1+deb10u1_amd64.deb
+ aa10a43ef62ca7c287630f5fc2b7da71bc652329465a4193592a538107cfa4fd 250800 libpixman-1-dev_0.36.0-1+deb10u1_amd64.deb
+ 5bcc530defeea2bab21a6ff98afdcd51782f1181b814dc4fb3f4efb6a8af0f5e 6547 pixman_0.36.0-1+deb10u1_amd64.buildinfo
+Files:
+ 10d7fabdfe08e94b21e9acf35d109f03 2041 devel optional pixman_0.36.0-1+deb10u1.dsc
+ 552df0d7ccccfadd07ae3758cc9a057f 881544 devel optional pixman_0.36.0.orig.tar.gz
+ 712a1d178336e02873d618693e8065b4 9641 devel optional pixman_0.36.0-1+deb10u1.diff.gz
+ d78c0e8329ee2d2f5a99098dba3470dd 1920196 debug optional libpixman-1-0-dbgsym_0.36.0-1+deb10u1_amd64.deb
+ 71cd0ff43741ad1e0e621629dc8795d9 225572 debian-installer optional libpixman-1-0-udeb_0.36.0-1+deb10u1_amd64.udeb
+ 9f96fc795b352bffb8b39d684b0fcb56 233960 libs optional libpixman-1-0_0.36.0-1+deb10u1_amd64.deb
+ 2fecb8d79167463ab843ebc2d89caa71 250800 libdevel optional libpixman-1-dev_0.36.0-1+deb10u1_amd64.deb
+ 7f1bcd89ad8af6fa46538c56250a31e5 6547 devel optional pixman_0.36.0-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,51 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 07 Nov 2022 11:58:17 +0000
+Source: sudo
+Binary: sudo sudo-dbgsym sudo-ldap sudo-ldap-dbgsym
+Architecture: source amd64
+Version: 1.8.27-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Bdale Garbee <bdale@gag.com>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ sudo       - Provide limited super user privileges to specific users
+ sudo-ldap  - Provide limited super user privileges to specific users
+Changes:
+ sudo (1.8.27-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2021-23239: Prevent an issue where a local unprivileged user may have
+     been able to perform arbitrary directory-existence tests by exploiting a
+     race condition in sudoedit by replacing a user-controlled directory by a
+     symlink to an arbitrary path.
+Checksums-Sha1:
+ 2ebd76fb1f780148afcb1777b04a154aca8a7f47 1975 sudo_1.8.27-1+deb10u4.dsc
+ 9dd0d21ec02da8a4a8bf86f496c3e909cb6d1636 3293178 sudo_1.8.27.orig.tar.gz
+ 7089f5ea3b16ec0366461a15f6afe318234bdcbe 31832 sudo_1.8.27-1+deb10u4.debian.tar.xz
+ f75e498577f635839746de2ddb9c65d8588498f9 1234124 sudo-dbgsym_1.8.27-1+deb10u4_amd64.deb
+ 258893bd9e12f220b0fc82c90a19725d64155ece 1281396 sudo-ldap-dbgsym_1.8.27-1+deb10u4_amd64.deb
+ 6193b95e602b09fdf9fc7384c7229bfaec37bba0 1282600 sudo-ldap_1.8.27-1+deb10u4_amd64.deb
+ a6c4d9a91ab8aa25b7ffbd72340c73c696fdf4fb 7197 sudo_1.8.27-1+deb10u4_amd64.buildinfo
+ b6c788369262d9c8d402da9c407cb1b534f897a6 1244164 sudo_1.8.27-1+deb10u4_amd64.deb
+Checksums-Sha256:
+ 5c360201a76f9eba3678831758c6fce797c421b3d6a063bd7d6e36b78209c209 1975 sudo_1.8.27-1+deb10u4.dsc
+ 7beb68b94471ef56d8a1036dbcdc09a7b58a949a68ffce48b83f837dd33e2ec0 3293178 sudo_1.8.27.orig.tar.gz
+ 427851e6293e39c32ac9a50246c1773e12b13eb35307c77e241e546736cb466a 31832 sudo_1.8.27-1+deb10u4.debian.tar.xz
+ 916a4fc36bf05c940e7814adebc6793df7287c09162ed0e054a8e596d73d6669 1234124 sudo-dbgsym_1.8.27-1+deb10u4_amd64.deb
+ 0dc58194c9d0ff11b533272538d4f64ddbcc2db3d1a79d9217e9e027364a0899 1281396 sudo-ldap-dbgsym_1.8.27-1+deb10u4_amd64.deb
+ 1cfbdf908d54c6a1bcbfcf77ca49ecb8d756655a8127fa3615e3dbe0e9a3b650 1282600 sudo-ldap_1.8.27-1+deb10u4_amd64.deb
+ f1abd3eb3ea05403f7e57272d75a0ea250ec506d671b0b5b5644aae139074842 7197 sudo_1.8.27-1+deb10u4_amd64.buildinfo
+ 13eda69ebc37fc94e8a30a2351b218cbb1b57123c81ccd7eb818edfc60f51cc3 1244164 sudo_1.8.27-1+deb10u4_amd64.deb
+Files:
+ eb599659fc985dfec3cfda1d6778f767 1975 admin optional sudo_1.8.27-1+deb10u4.dsc
+ b5c184b13b6b5de32af630af2fd013fd 3293178 admin optional sudo_1.8.27.orig.tar.gz
+ 09d18b44027dd27eb5fbb042b826366b 31832 admin optional sudo_1.8.27-1+deb10u4.debian.tar.xz
+ 849ab0ae3770015f9972a823cf1baf89 1234124 debug optional sudo-dbgsym_1.8.27-1+deb10u4_amd64.deb
+ ac67b815da1501b38f2d21870afd2a2d 1281396 debug optional sudo-ldap-dbgsym_1.8.27-1+deb10u4_amd64.deb
+ b0123fbc4ac5452b686c7e7c69fd06b3 1282600 admin optional sudo-ldap_1.8.27-1+deb10u4_amd64.deb
+ 5ddc086d9d8b73a0c31e309681777daf 7197 admin optional sudo_1.8.27-1+deb10u4_amd64.buildinfo
+ 83e1dc7f7c79a128ccc8ceefe07413f4 1244164 admin optional sudo_1.8.27-1+deb10u4_amd64.deb
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 20 Jun 2023 23:38:30 CEST
+Source: wordpress
+Architecture: source
+Version: 5.0.19+dfsg1-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 8e834e5378c247ec002273e1428e6466acaee468 2632 wordpress_5.0.19+dfsg1-0+deb10u1.dsc
+ 7429361b9cd1d446bf6abdfa0f0750ff35d7a01b 7895576 wordpress_5.0.19+dfsg1.orig.tar.xz
+ 9b4bc6a344b454bdddecdda75418559a549e9a49 6819976 wordpress_5.0.19+dfsg1-0+deb10u1.debian.tar.xz
+ c4215935a0b836a359eddcb89cfdaba425f9d4eb 7693 wordpress_5.0.19+dfsg1-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 620ae088e7e520d5f462ec3c36f5b178d7493fd3f97ab5ef40bc62d0144d9004 2632 wordpress_5.0.19+dfsg1-0+deb10u1.dsc
+ 55822f80daf06b2de0dbcb3d9f01148f0d10a543d9af050c4fedfd87d239e9ea 7895576 wordpress_5.0.19+dfsg1.orig.tar.xz
+ 5bea9cc3aeeff0707c5e6f2ada303fbfb941031d9e8cfc79af880ae358c4b560 6819976 wordpress_5.0.19+dfsg1-0+deb10u1.debian.tar.xz
+ 65dcee079e616b19b5aebbe843515e3ed8d18ff3ab376aa269c43ad60c8722f1 7693 wordpress_5.0.19+dfsg1-0+deb10u1_amd64.buildinfo
+Changes:
+ wordpress (5.0.19+dfsg1-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-2745:
+     WordPress Core is vulnerable to Directory Traversal via the ‘wp_lang’ parameter.
+     This allows unauthenticated attackers to access and load arbitrary
+     translation files. In cases where an attacker is able to upload a crafted
+     translation file onto the site, such as via an upload form, this could be
+     also used to perform a Cross-Site Scripting attack.
+Files:
+ ccb456dbf19c80f95e149fe0c488ee39 2632 web optional wordpress_5.0.19+dfsg1-0+deb10u1.dsc
+ c3b90f2a9fed104118b923547f44adaa 7895576 web optional wordpress_5.0.19+dfsg1.orig.tar.xz
+ bf00ca4da6449880466c410eb1cef458 6819976 web optional wordpress_5.0.19+dfsg1-0+deb10u1.debian.tar.xz
+ d3cd04331d5e0891f61cbb227f81fa8e 7693 web optional wordpress_5.0.19+dfsg1-0+deb10u1_amd64.buildinfo
+

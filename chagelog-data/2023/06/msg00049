@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 21 Jun 2023 19:29:18 +0000
+Source: avahi
+Architecture: source
+Version: 0.7-4+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 984938
+Changes:
+ avahi (0.7-4+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS security team.
+   * CVE-2021-3468: the event used to signal the termination
+     of the client connection on the avahi Unix socket is not
+     correctly handled in the client_work function, allowing a
+     local attacker to trigger an infinite loop.
+     (Closes: #984938)
+Checksums-Sha1:
+ 708244a791aa3635384e94b8f2198cb68e4a5db5 3945 avahi_0.7-4+deb10u3.dsc
+ 5d80fd4971fc108873e61fc4b130bed3c98d1fc2 31768 avahi_0.7-4+deb10u3.debian.tar.xz
+ 467ef80cc84043d1ab9879e7d5a26b1d2768c12b 26620 avahi_0.7-4+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 95f583758743975445f70fab8bd23bfa3c77f07d633f1bb0c959550b0eb7578f 3945 avahi_0.7-4+deb10u3.dsc
+ f3721995f1bee80a8bb6346b1588f80149def6f2e199b289ee66aff2fe8d9c28 31768 avahi_0.7-4+deb10u3.debian.tar.xz
+ 4b5a76ebdba55225754a615772ae085731e5b4907e56e5b00f09b8452d00655b 26620 avahi_0.7-4+deb10u3_amd64.buildinfo
+Files:
+ 7323650be08b1806809260c0cb62710d 3945 net optional avahi_0.7-4+deb10u3.dsc
+ 4f7198c50434251d7c1daa807010e85b 31768 net optional avahi_0.7-4+deb10u3.debian.tar.xz
+ 69b50854671fe9b5283daf1877e1b3b9 26620 net optional avahi_0.7-4+deb10u3_amd64.buildinfo
+

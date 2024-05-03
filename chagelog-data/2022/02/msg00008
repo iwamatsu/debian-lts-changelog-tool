@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 06 Feb 2022 22:41:24 +0530
+Source: xterm
+Architecture: source
+Version: 327-2+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1004689
+Changes:
+ xterm (327-2+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to check for out-of-bounds condition while drawing
+     sixels, and quit that operation (reported by Nick Black).
+     (Fixes: CVE-2022-24130) (Closes: #1004689)
+Checksums-Sha1:
+ d7969cd7658244a3d960dba3268923ade3f5bcb6 2177 xterm_327-2+deb9u3.dsc
+ 4dffabe5662ee19611860b7d8284f237616d0b82 1240131 xterm_327.orig.tar.gz
+ e60245f3bd51aaab01113c2e4cd32a6b2a1fe44a 96372 xterm_327-2+deb9u3.debian.tar.xz
+ e3918336f8abae998e428403a71d472ba1afa268 6104 xterm_327-2+deb9u3_source.buildinfo
+Checksums-Sha256:
+ ab22b92c03990e3e9cef27dba03ed702522a36e4451f4ba0a344bbfa1fbc2e78 2177 xterm_327-2+deb9u3.dsc
+ 66fb2f6c35b342148f549c276b12a3aa3fb408e27ab6360ddec513e14376150b 1240131 xterm_327.orig.tar.gz
+ 2cb9f005acce6284eb282cec71fd33197fde10e352388626b1b84544a48152a9 96372 xterm_327-2+deb9u3.debian.tar.xz
+ 5ca193dff0df7100e21e58e7c8be09d8c7acf46e6d8a036ff59316d10f8ae068 6104 xterm_327-2+deb9u3_source.buildinfo
+Files:
+ 89ada524faf0a030b6de7caca1f96301 2177 x11 optional xterm_327-2+deb9u3.dsc
+ 3c32e931adcad44e64e57892e75d9e02 1240131 x11 optional xterm_327.orig.tar.gz
+ f524ecaad099f31940b4fdc523561146 96372 x11 optional xterm_327-2+deb9u3.debian.tar.xz
+ b5307d7b4c52de7777f12f9dc4bc21ec 6104 x11 optional xterm_327-2+deb9u3_source.buildinfo
+

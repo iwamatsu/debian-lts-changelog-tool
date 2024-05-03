@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 May 2022 23:02:02 +0200
+Source: atftp
+Binary: atftp atftpd
+Architecture: source amd64
+Version: 0.7.git20120829-3.1~deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Ludovic Drolez <ldrolez@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ atftp      - advanced TFTP client
+ atftpd     - advanced TFTP server
+Changes:
+ atftp (0.7.git20120829-3.1~deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-46671
+     add bound checks to prevent reading past the end of data
+Checksums-Sha1:
+ b6c2f99e558f2b628f6cce26725add746cd3b463 1987 atftp_0.7.git20120829-3.1~deb9u3.dsc
+ 6db7891546a5e19add6390c33ce82d2b1596c5ac 90982 atftp_0.7.git20120829.orig.tar.gz
+ 49a9b7d4be4145eccf4a753af59f9270e5921643 39173 atftp_0.7.git20120829-3.1~deb9u3.diff.gz
+ faea5b6e729a7b60d8066ce6156f3749d5414b6e 59620 atftp-dbgsym_0.7.git20120829-3.1~deb9u3_amd64.deb
+ 7ddd14819d1f6c9809d5612eb2693a1702ef8baa 7266 atftp_0.7.git20120829-3.1~deb9u3_amd64.buildinfo
+ 5522fcb2e36dc81f71530c3c1d229c8b2f8e255a 37292 atftp_0.7.git20120829-3.1~deb9u3_amd64.deb
+ 77d268d7dc0c83a51353085ccfd050fcab939601 71930 atftpd-dbgsym_0.7.git20120829-3.1~deb9u3_amd64.deb
+ 166ba02d0659190e508a0eb6bd602937d759f96c 68394 atftpd_0.7.git20120829-3.1~deb9u3_amd64.deb
+Checksums-Sha256:
+ 9f1ff701eb8a5552b01333451b83fd6677382cbd39454e154820b1cea9bf0bd0 1987 atftp_0.7.git20120829-3.1~deb9u3.dsc
+ d93a302ead76a0629feb061768df4393f9da02e3ffbf25eb10d281082ecf02d0 90982 atftp_0.7.git20120829.orig.tar.gz
+ 576770fbba1d09929fe78929934869f5c53ed290b786129238e71c27b5cb7e7b 39173 atftp_0.7.git20120829-3.1~deb9u3.diff.gz
+ af6cb7cd20031c94c3502573ee2bfbf9d25200c08d4edc94c1e73d1860c91b63 59620 atftp-dbgsym_0.7.git20120829-3.1~deb9u3_amd64.deb
+ c8ab6d8840fd9a12ace986a967d90b84c78103ed3437cb4dd25bf1d4475c515f 7266 atftp_0.7.git20120829-3.1~deb9u3_amd64.buildinfo
+ 5e3b0e20f6f1f06c30c6ada4f8416abbfc99aadda7913fb051b2200d422f17fb 37292 atftp_0.7.git20120829-3.1~deb9u3_amd64.deb
+ c3f9ba8e174a5822d696d97b4dbf2eabd87d031b8e7b9ffcf5a81cf002e2fc3c 71930 atftpd-dbgsym_0.7.git20120829-3.1~deb9u3_amd64.deb
+ ba065b2b284553e8188f81a32eb71c7bee865976c5aec3823bd7156a5d73c6c9 68394 atftpd_0.7.git20120829-3.1~deb9u3_amd64.deb
+Files:
+ b24419a89c2313905c31ea08280ec3c8 1987 net extra atftp_0.7.git20120829-3.1~deb9u3.dsc
+ f0cf6eb9e38cd7c789c0f953f20e1b69 90982 net extra atftp_0.7.git20120829.orig.tar.gz
+ b0a8eb9f8329a7d71d63633d4d875131 39173 net extra atftp_0.7.git20120829-3.1~deb9u3.diff.gz
+ 1d660361aa465e702d1c7f19599debb6 59620 debug extra atftp-dbgsym_0.7.git20120829-3.1~deb9u3_amd64.deb
+ 214a75b08191ab98c546b27615b54910 7266 net extra atftp_0.7.git20120829-3.1~deb9u3_amd64.buildinfo
+ af311f02a0e5c36deee99a8a7e9058fc 37292 net extra atftp_0.7.git20120829-3.1~deb9u3_amd64.deb
+ 6e494c05d2345290122c085614ebd4d7 71930 debug extra atftpd-dbgsym_0.7.git20120829-3.1~deb9u3_amd64.deb
+ b2b7b210784d394a73943392d28c1635 68394 net extra atftpd_0.7.git20120829-3.1~deb9u3_amd64.deb
+

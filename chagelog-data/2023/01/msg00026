@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 25 Jan 2023 14:39:24 +0100
+Source: glance
+Architecture: source
+Version: 2:17.0.0-5+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1029563
+Changes:
+ glance (2:17.0.0-5+deb10u1) buster-security; urgency=medium
+ .
+   * Switch the default shell for Glance to be /bin/sh to allow scp / rsync of
+     /var/lib/glance.
+   * CVE-2022-47951: vulnerability in VMDK image processing. By supplying a
+     specially created VMDK flat image which references a specific backing file
+     path, an authenticated user may convince systems to return a copy of that
+     file's contents from the server resulting in unauthorized access to
+     potentially sensitive data. Added upstream patch:
+     CVE-2022-47951-Enforce_image_safety_during_image_conversion.patch
+     (Closes: #1029563).
+Checksums-Sha1:
+ 5de7eb200b7d19b1f27453c5cb18dee044d468d8 4086 glance_17.0.0-5+deb10u1.dsc
+ 010033c159cd42719747c050de7145c5ff525a64 1419208 glance_17.0.0.orig.tar.xz
+ f4ccca813d3bd766c509cb541428fe3728ccc4b6 22040 glance_17.0.0-5+deb10u1.debian.tar.xz
+ d5b8823af099432c10bd13ad9861837d84179a68 17129 glance_17.0.0-5+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 6d2477356d833ab6dd50c1772d196fe149cf13ae7c3615efa73cf6578dc1eaea 4086 glance_17.0.0-5+deb10u1.dsc
+ dab83599dbc9158eb20e33fc946e3bad136af32acd157c62228ec3416db9c9a4 1419208 glance_17.0.0.orig.tar.xz
+ f32311438e898d73043dcd1d14ce280875f0c5e275336695f2b00bb27334aa9e 22040 glance_17.0.0-5+deb10u1.debian.tar.xz
+ d295885d0b17933a016ed89c016698eeec65326db38c68d183d4c02c5cc3160f 17129 glance_17.0.0-5+deb10u1_amd64.buildinfo
+Files:
+ 6566713f76e97c5d61eb322f7834191c 4086 net optional glance_17.0.0-5+deb10u1.dsc
+ 4cd30369e26959ab92257f97fcb38554 1419208 net optional glance_17.0.0.orig.tar.xz
+ 164db271671ccaff49356f7c99567dfe 22040 net optional glance_17.0.0-5+deb10u1.debian.tar.xz
+ 4bf91dd2c4b17e492f9a21b8744e8026 17129 net optional glance_17.0.0-5+deb10u1_amd64.buildinfo
+

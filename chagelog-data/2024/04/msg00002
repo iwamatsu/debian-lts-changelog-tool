@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 28 Mar 2024 19:03:02 +0100
+Source: libgd2
+Architecture: source
+Version: 2.2.5-5.2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: GD Team <team+gd@tracker.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libgd2 (2.2.5-5.2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-40812
+     fix for an out-of-bounds read due to lack of return value checks.
+   * CVE-2021-38115
+     fix for remote attackers to cause a denial of service because of
+     out-of-bounds read via a crafted TGA file
+   * CVE-2018-14553
+     fix for a NULL pointer dereference allowing attackers to crash an
+     application via a specific function call sequence
+Checksums-Sha1:
+ 4b0933155b11c7c031f9b18c029a55a1755272d8 2400 libgd2_2.2.5-5.2+deb10u1.dsc
+ 281af8e7e9c798d368caf8758b983c4d8c24d9ec 3326856 libgd2_2.2.5.orig.tar.gz
+ 969364ddba5f6dfce56f9332985e657665c94894 37380 libgd2_2.2.5-5.2+deb10u1.debian.tar.xz
+ 6bfcbd69413297f9791a4298d7124f9b831731b1 8542 libgd2_2.2.5-5.2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ b32b49e7f53f48312d289ef5a509245590d744d8125a3be765494cf809950842 2400 libgd2_2.2.5-5.2+deb10u1.dsc
+ 150e6952af874bbccb33cf0f87288b41a8fd54f0ce4cff914ef90a80ef9d0162 3326856 libgd2_2.2.5.orig.tar.gz
+ d33f0b1ad7f40ff30f67e08e792be647b6d79e2942ad412d873ac7d9ab241b13 37380 libgd2_2.2.5-5.2+deb10u1.debian.tar.xz
+ 05f3f87fa57995912c53f7a8109f86780018de8dc0a370c42a98b89a33111387 8542 libgd2_2.2.5-5.2+deb10u1_amd64.buildinfo
+Files:
+ 5d250651b979523f7849e8d9a3eacb99 2400 graphics optional libgd2_2.2.5-5.2+deb10u1.dsc
+ d851cf184ccb9272b728ccb938c25b25 3326856 graphics optional libgd2_2.2.5.orig.tar.gz
+ 8d199b7cc455cb50bd321ddff6529776 37380 graphics optional libgd2_2.2.5-5.2+deb10u1.debian.tar.xz
+ 8513249e44d087bdcfd219f2f129213d 8542 graphics optional libgd2_2.2.5-5.2+deb10u1_amd64.buildinfo
+

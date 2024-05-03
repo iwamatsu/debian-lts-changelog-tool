@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 19 Aug 2022 16:00:40 +0200
+Source: kicad
+Architecture: source
+Version: 5.0.2+dfsg1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Electronics Team <pkg-electronics-devel@alioth-lists.debian.net>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ kicad (5.0.2+dfsg1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Security Updates:
+     - CVE-2022-23803, CVE-2022-23804, CVE-2022-23946, CVE-2022-23947:
+       Resolve buffer overflows in the Gerber Viewer.
+       An attacker could provide a malicious Gerber or excellon file to trigger
+       to cause code execution on opening the file.
+Checksums-Sha1:
+ dcf931e01b06dd5def1ef2fefef4e7abffe1ee0c 4025 kicad_5.0.2+dfsg1-1+deb10u1.dsc
+ 1b6cf40cc2d3f2de50111c4ff17b9ac4aa339657 63495624 kicad_5.0.2+dfsg1.orig-doc.tar.xz
+ 1951d93d4dc1ce15f1a3d19aab1773b008eb8079 1659008 kicad_5.0.2+dfsg1.orig-i18n.tar.xz
+ e21a52ec6b2d24ce349edb43006b847a57d646a3 14202876 kicad_5.0.2+dfsg1.orig.tar.xz
+ 1eddfd2ba1aea6195a5d33fd1edde64c6dcc5fcc 71612 kicad_5.0.2+dfsg1-1+deb10u1.debian.tar.xz
+ 810bca72b2549ca363342c97d84b1209fef0c8cc 11757 kicad_5.0.2+dfsg1-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ d9af10b9dc8850243574e0e94b85a5e5dc589281c635896c391e4fb2d5b1955a 4025 kicad_5.0.2+dfsg1-1+deb10u1.dsc
+ 686561e8c5a17e304b4ca96b56639a316a3377d33f8fd3240c96d4177a92fc8a 63495624 kicad_5.0.2+dfsg1.orig-doc.tar.xz
+ a9fb995bd79e553f88b5094534a354cfd79b26814d29337e1338eb3eb51c562c 1659008 kicad_5.0.2+dfsg1.orig-i18n.tar.xz
+ 283d99295838b1ef95640be16a02a3f74bd02b82d6c02056894365d874972327 14202876 kicad_5.0.2+dfsg1.orig.tar.xz
+ 6e13aaa7a40465ed5a4b3c9025bf8fc5d0feb5e9bf01adcf68e46fc75dce12b6 71612 kicad_5.0.2+dfsg1-1+deb10u1.debian.tar.xz
+ 2b0aab80be2923ef0caa2e1c6faee1f5be820eea1d8faf630cd4e1b55bcda0c2 11757 kicad_5.0.2+dfsg1-1+deb10u1_source.buildinfo
+Files:
+ 2323a0c3e4f2ad3bae4f44a3c2d51bbe 4025 electronics optional kicad_5.0.2+dfsg1-1+deb10u1.dsc
+ 4c7cf79f2a4bf71c9bb305bff50a3ce4 63495624 electronics optional kicad_5.0.2+dfsg1.orig-doc.tar.xz
+ 69af8dafc647019e4982aea990697ba6 1659008 electronics optional kicad_5.0.2+dfsg1.orig-i18n.tar.xz
+ 32413e6508c6946f827c6d78ec9b5332 14202876 electronics optional kicad_5.0.2+dfsg1.orig.tar.xz
+ 4014bf78bca1a4409c310cee4438fe91 71612 electronics optional kicad_5.0.2+dfsg1-1+deb10u1.debian.tar.xz
+ 023122ba8c94818327bc578200a1d044 11757 electronics optional kicad_5.0.2+dfsg1-1+deb10u1_source.buildinfo
+

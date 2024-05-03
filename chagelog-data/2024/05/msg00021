@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 21 May 2024 22:00:06 +0200
+Source: bluez
+Architecture: source
+Version: 5.50-1.2~deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Bluetooth Maintainers <team+pkg-bluetooth@tracker.debian.org>
+Changed-By: Arturo Borrero Gonzalez <arturo@debian.org>
+Changes:
+ bluez (5.50-1.2~deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * CVE-2023-27349: Fix crash while handling unsupported events.
+     This vulnerability allows network-adjacent attackers to execute
+     arbitrary code via Bluetooth on affected installations of BlueZ.
+     User interaction is required to exploit this vulnerability in that
+     the target must connect to a malicious device. The specific flaw
+     exists within the handling of the AVRCP protocol. The issue results
+     from the lack of proper validation of user-supplied data, which can
+     result in a write past the end of an allocated buffer. An attacker
+     can leverage this vulnerability to execute code in the context of
+     root.
+Checksums-Sha1:
+ 72936f19e40ffb543ba657dcb6d739119cb300a3 2613 bluez_5.50-1.2~deb10u5.dsc
+ 602d67656176d98efa476d8f7de5418f34551a84 47008 bluez_5.50-1.2~deb10u5.debian.tar.xz
+ 4dbd22bd4ee48c610329969343342539fb79f26c 12485 bluez_5.50-1.2~deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 66c68f6ce7836c4acdb93e912fa53481f09c8c0bbd071c00581064292078df67 2613 bluez_5.50-1.2~deb10u5.dsc
+ 174a9d98aaf412f8ce51391c28c07e446eb51b7c477ed59774adac2f72e5b00d 47008 bluez_5.50-1.2~deb10u5.debian.tar.xz
+ c9d50f0cb1f2b65a618dc6ec80f452d13161b830f44612a66c9f2be597369dd5 12485 bluez_5.50-1.2~deb10u5_amd64.buildinfo
+Files:
+ cfefe7ad50790ce944ce2d1372e78561 2613 admin optional bluez_5.50-1.2~deb10u5.dsc
+ a1a8ac9c044a60e657df4befa8e70212 47008 admin optional bluez_5.50-1.2~deb10u5.debian.tar.xz
+ 608b9943033da7b7869421f8343d6dcc 12485 admin optional bluez_5.50-1.2~deb10u5_amd64.buildinfo
+

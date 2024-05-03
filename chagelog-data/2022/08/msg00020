@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 29 Aug 2022 01:54:10 +0200
+Source: linux-5.10
+Architecture: source
+Version: 5.10.136-1~deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-5.10 (5.10.136-1~deb10u2) buster-security; urgency=high
+ .
+   [ Bastian Blank ]
+   * Fix name of linux-signed packages
+   * Fix name of signed source in changelog
+Checksums-Sha1:
+ 5f8d0d54326711280dc9cdefe05f9eec6b73fedb 42421 linux-5.10_5.10.136-1~deb10u2.dsc
+ 033a2985745743d5346b7fca3423f29629365886 2770200 linux-5.10_5.10.136-1~deb10u2.debian.tar.xz
+ 4608ab2af59adb9384aabe2530cb56f9fff55bdc 13593 linux-5.10_5.10.136-1~deb10u2_source.buildinfo
+Checksums-Sha256:
+ dc1820a560476c8c0273d9c1ac4fcf89eb5e6145630ef59ae525af65f0b89f91 42421 linux-5.10_5.10.136-1~deb10u2.dsc
+ 0df1b9c82b2fd9e3646e9e4980d90413e61e5241893c808e63f698d567142828 2770200 linux-5.10_5.10.136-1~deb10u2.debian.tar.xz
+ ea59edc10d05e69ab10db61c81fa6ab146553ce1957d0bc192dba398b3d514e2 13593 linux-5.10_5.10.136-1~deb10u2_source.buildinfo
+Files:
+ d6c3968879efef91e53949eccd791075 42421 kernel optional linux-5.10_5.10.136-1~deb10u2.dsc
+ ba130abef229e1510835dbb250af4cec 2770200 kernel optional linux-5.10_5.10.136-1~deb10u2.debian.tar.xz
+ dfcef4b158e9491fcb328d78aa462cd5 13593 kernel optional linux-5.10_5.10.136-1~deb10u2_source.buildinfo
+

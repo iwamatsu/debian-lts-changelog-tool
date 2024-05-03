@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 23 Sep 2023 14:03:02 +0200
+Source: elfutils
+Architecture: source
+Version: 0.176-1.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Kurt Roeckx <kurt@roeckx.be>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ elfutils (0.176-1.1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-21047
+     The libcpu component suffers from denial-of-service vulnerability
+     caused by out-of-bounds write (CWE-787), off-by-one error (CWE-193)
+     and reachable assertion (CWE-617).
+Checksums-Sha1:
+ 60d9bade7956c7ffc9ae3ec04607ef9fdd5ffad1 2775 elfutils_0.176-1.1+deb10u1.dsc
+ 6511203cae7225ae780501834a7ccd234b14889a 8646075 elfutils_0.176.orig.tar.bz2
+ 6012c37ad5eeb16add7e5e1f0929c383ce0e00d4 455 elfutils_0.176.orig.tar.bz2.asc
+ 1c1a133de71b2c15abd66fdf8b11854aa71c422a 32544 elfutils_0.176-1.1+deb10u1.debian.tar.xz
+ 13dfe36c9c20fde7ee4c351ca1a124bd7cc87901 9577 elfutils_0.176-1.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 4793de664af842998d3f0a2b8dea987fc043d5e90fc2df924c372a3521628072 2775 elfutils_0.176-1.1+deb10u1.dsc
+ eb5747c371b0af0f71e86215a5ebb88728533c3a104a43d4231963f308cd1023 8646075 elfutils_0.176.orig.tar.bz2
+ 51474b579b25fc799de0777e241c83605427d2903f8d28524ef6af42f75931fd 455 elfutils_0.176.orig.tar.bz2.asc
+ 81d4da6aedc7114fd7e08f1d024cceea995df5291f355f39a54668c2110046fb 32544 elfutils_0.176-1.1+deb10u1.debian.tar.xz
+ 5e4a706653a1fed43a85916c09ed5f2d3006c0cf3360591a96eb0a006f32d7ea 9577 elfutils_0.176-1.1+deb10u1_amd64.buildinfo
+Files:
+ 07bcf96b614eb459f0f2e4564dc5ddb1 2775 libs optional elfutils_0.176-1.1+deb10u1.dsc
+ 077e4f49320cad82bf17a997068b1db9 8646075 libs optional elfutils_0.176.orig.tar.bz2
+ 5296badecd902a6bf8fc7eb778cea932 455 libs optional elfutils_0.176.orig.tar.bz2.asc
+ 18d008abac27ac169e11561a001fb37d 32544 libs optional elfutils_0.176-1.1+deb10u1.debian.tar.xz
+ 2e2ecb7cab94f32bbb87375e51b57f3c 9577 libs optional elfutils_0.176-1.1+deb10u1_amd64.buildinfo
+

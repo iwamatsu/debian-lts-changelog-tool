@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 Jan 2024 14:40:25 +0100
+Source: libspreadsheet-parsexlsx-perl
+Architecture: source
+Version: 0.27-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1061098
+Changes:
+ libspreadsheet-parsexlsx-perl (0.27-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-22368: Out-of-memory condition during parsing of a crafted
+     XLSX document.
+   * Fix CVE-2024-23525: XXE attacks due to missing ‘no_xxe’ option of
+     XML::Twig. (Closes: #1061098)
+Checksums-Sha1:
+ 849ba01f47ca5736b5119a0933b39dcf899aa8d3 2424 libspreadsheet-parsexlsx-perl_0.27-2+deb10u1.dsc
+ a9c633f7cea9b0cd4f6604ffaa6b25512c3a3da1 1147152 libspreadsheet-parsexlsx-perl_0.27.orig.tar.gz
+ fe83de6cee0d878e253a65d667cf070591d84e70 15976 libspreadsheet-parsexlsx-perl_0.27-2+deb10u1.debian.tar.xz
+ 0067c2ba5c6a68513ae26abd0a090e0e6fa2dc16 7118 libspreadsheet-parsexlsx-perl_0.27-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ cb3d1fc93cef0159b0d44dfc2572c313e3e3e6bfc05d6ef779080ad3e3cac3c8 2424 libspreadsheet-parsexlsx-perl_0.27-2+deb10u1.dsc
+ da4f1ab6e3dcb6322ae5ebfc7569d3272b70b27fdb206ee7fd6456097e4ff18c 1147152 libspreadsheet-parsexlsx-perl_0.27.orig.tar.gz
+ effa55ee1949b4955f793ed8f7412f31ae5bd6903e338ef6e92da17af9e34126 15976 libspreadsheet-parsexlsx-perl_0.27-2+deb10u1.debian.tar.xz
+ 33b94aadd1b22f5beb6ab1901891c26ae0246b7426ea939a9a054c883d166979 7118 libspreadsheet-parsexlsx-perl_0.27-2+deb10u1_amd64.buildinfo
+Files:
+ f19bc93028913db1740f53c84021d5ff 2424 perl optional libspreadsheet-parsexlsx-perl_0.27-2+deb10u1.dsc
+ d7ce39130e9969e6e1dc42461a138261 1147152 perl optional libspreadsheet-parsexlsx-perl_0.27.orig.tar.gz
+ 4b42671dd8e1987da3c0f73a8d29bef6 15976 perl optional libspreadsheet-parsexlsx-perl_0.27-2+deb10u1.debian.tar.xz
+ caa973a8838f0c3de666413f67332d34 7118 perl optional libspreadsheet-parsexlsx-perl_0.27-2+deb10u1_amd64.buildinfo
+

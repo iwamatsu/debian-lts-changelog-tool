@@ -1,0 +1,41 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 22 Apr 2024 07:23:29 -0300
+Source: samba
+Architecture: source
+Version: 2:4.9.5+dfsg-5+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Changes:
+ samba (2:4.9.5+dfsg-5+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+ .
+   [ Santiago Ruano Rincón ]
+   * CVE-2022-2127: Out-of-bounds read in winbind AUTH_CRAP
+   * CVE-2022-3437: Heimdal des/des3 heap-based buffer overflow
+   * CVE-2022-32742: Server memory information leak via SMB1
+   * CVE-2023-4091: Client can truncate files even with read-only permissions
+   * Add debian/salsa-ci.yml using lts-team/pipeline for buster
+   * Add debian/tests/smbclient-included-share-access
+ .
+   [ Lee Garrett ]
+   * CVE-2020-14318: Missing handle permissions check in SMB1/2/3 ChangeNotify
+   * CVE-2020-14323: Null pointer dereference flaw Winbind service
+   * CVE-2020-14383: An authenticated user could make the RPC server to crash
+Checksums-Sha1:
+ 166bea7c00fc6f0e9d4654fa06b644963921e630 3521 samba_4.9.5+dfsg-5+deb10u5.dsc
+ 35d2f879cf800976aebe1d032189c6da3916097b 300996 samba_4.9.5+dfsg-5+deb10u5.debian.tar.xz
+ b25481541c0f48517f13185fee3195d3154b1285 21658 samba_4.9.5+dfsg-5+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 76786797fbda963fddb8d55b647871037beb0e8604de153ab1d40d9723d1c02d 3521 samba_4.9.5+dfsg-5+deb10u5.dsc
+ d831dcd4708bf9e676ea1303ef402de16d22fb6a638ddcb851d84fe05a058d3c 300996 samba_4.9.5+dfsg-5+deb10u5.debian.tar.xz
+ bc4cde6388870bbbec393d1ccd4e857272275371fcd8710fd06f95cc64e817e8 21658 samba_4.9.5+dfsg-5+deb10u5_amd64.buildinfo
+Files:
+ 9c486c4193024d0078ea792c8822e72e 3521 net optional samba_4.9.5+dfsg-5+deb10u5.dsc
+ 4415c236f8fe831284739022cdd6570f 300996 net optional samba_4.9.5+dfsg-5+deb10u5.debian.tar.xz
+ 86b99cac5b713f3c67e9e8b2873238cc 21658 net optional samba_4.9.5+dfsg-5+deb10u5_amd64.buildinfo
+

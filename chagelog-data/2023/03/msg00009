@@ -1,0 +1,43 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 09 Mar 2023 16:55:03 +0100
+Source: wireless-regdb
+Architecture: source
+Version: 2022.04.08-2~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian kernel team <debian-kernel@lists.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ wireless-regdb (2022.04.08-2~deb10u1) buster-security; urgency=medium
+ .
+   [ Ben Hutchings ]
+   * Backport to buster:
+     - Revert "Remove support for loading through crda"
+     - Add my signature for regulatory.bin
+     - Revert "Add wireless-regdb-udeb package for use in the installer"
+     - Revert "Run scripts with Python 3"
+     - Add python-future to Build-Depends
+     - d/salsa-ci.yml: Set RELEASE to buster and disable reprotest
+     - Revert "d/wireless-regdb.postinst: Remove regular files installed by d-i"
+     - d/tests/control: Disable check-signatures test case
+ .
+   [ Tobias Frost ]
+   * Prepare package for the LTS Security Team
+Checksums-Sha1:
+ 2c88bcfbf7c1e0039db2e82bdbee870b0363ab06 2159 wireless-regdb_2022.04.08-2~deb10u1.dsc
+ d8f47782be2621f8de5f26cf143bef4e24a5a69f 26308 wireless-regdb_2022.04.08.orig.tar.xz
+ d24d72cdf2cc383e5914669c013ce6f02f324424 19876 wireless-regdb_2022.04.08-2~deb10u1.debian.tar.xz
+ d8c82f430ad8dbfcf5f33ff082938001977c3906 6447 wireless-regdb_2022.04.08-2~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 15126d0ae3606ed922dd2e4fed3de3b9758cffe89c5b71c4c7f9a908f58f0fea 2159 wireless-regdb_2022.04.08-2~deb10u1.dsc
+ 884ba2e3c1e8b98762b6dc25ff60b5ec75c8d33a39e019b3ed4aa615491460d3 26308 wireless-regdb_2022.04.08.orig.tar.xz
+ 2c6172e205e88b945ec14ce44c324ed885dc48a1cfbb07904d6b6d392c957c1b 19876 wireless-regdb_2022.04.08-2~deb10u1.debian.tar.xz
+ 059e8431dfa90873f18b27f53e001d6503347217bc9c1d5ff022aa74e4817e96 6447 wireless-regdb_2022.04.08-2~deb10u1_amd64.buildinfo
+Files:
+ dd1118633c278a971dbc1a5fa7eff465 2159 net optional wireless-regdb_2022.04.08-2~deb10u1.dsc
+ 902f51139e78a1d05bef76371ebc07fa 26308 net optional wireless-regdb_2022.04.08.orig.tar.xz
+ 212b4f9b9cfe4b5016191d8cddec0172 19876 net optional wireless-regdb_2022.04.08-2~deb10u1.debian.tar.xz
+ 56ac6e04ad0a5acc4545f8e90dbd16a5 6447 net optional wireless-regdb_2022.04.08-2~deb10u1_amd64.buildinfo
+

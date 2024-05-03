@@ -1,0 +1,59 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 19 Mar 2022 16:05:18 CET
+Source: bind9
+Binary: bind9 bind9utils bind9-doc host bind9-host libbind-dev libbind9-140 libdns162 libirs141 libisc160 liblwres141 libisccc140 libisccfg140 dnsutils lwresd libbind-export-dev libdns-export162 libdns-export162-udeb libisc-export160 libisc-export160-udeb libisccfg-export140 libisccc-export140 libisccc-export140-udeb libisccfg-export140-udeb libirs-export141 libirs-export141-udeb
+Architecture: source
+Version: 1:9.10.3.dfsg.P4-12.3+deb9u12
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian DNS Packaging <pkg-dns-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ bind9      - Internet Domain Name Server
+ bind9-doc  - Documentation for BIND
+ bind9-host - Version of 'host' bundled with BIND 9.X
+ bind9utils - Utilities for BIND
+ dnsutils   - Clients provided with BIND
+ host       - Transitional package
+ libbind-dev - Static Libraries and Headers used by BIND
+ libbind-export-dev - Development files for the exported BIND libraries
+ libbind9-140 - BIND9 Shared Library used by BIND
+ libdns-export162 - Exported DNS Shared Library
+ libdns-export162-udeb - Exported DNS library for debian-installer (udeb)
+ libdns162  - DNS Shared Library used by BIND
+ libirs-export141 - Exported IRS Shared Library
+ libirs-export141-udeb - Exported IRS library for debian-installer (udeb)
+ libirs141  - DNS Shared Library used by BIND
+ libisc-export160 - Exported ISC Shared Library
+ libisc-export160-udeb - Exported ISC library for debian-installer (udeb)
+ libisc160  - ISC Shared Library used by BIND
+ libisccc-export140 - Command Channel Library used by BIND
+ libisccc-export140-udeb - Command Channel Library used by BIND (udeb)
+ libisccc140 - Command Channel Library used by BIND
+ libisccfg-export140 - Exported ISC CFG Shared Library
+ libisccfg-export140-udeb - Exported ISC CFG library for debian-installer (udeb)
+ libisccfg140 - Config File Handling Library used by BIND
+ liblwres141 - Lightweight Resolver Library used by BIND
+ lwresd     - Lightweight Resolver Daemon
+Checksums-Sha1:
+ 6f5be04b8cc7ef7aacf608ebfc2508602a9a33cb 4041 bind9_9.10.3.dfsg.P4-12.3+deb9u12.dsc
+ f77886f94a279428dd25aefb738b2a1a209d6e95 107340 bind9_9.10.3.dfsg.P4-12.3+deb9u12.debian.tar.xz
+ a437de5dcc216238f1e2a9913fc293276ac9d9bb 21982 bind9_9.10.3.dfsg.P4-12.3+deb9u12_amd64.buildinfo
+Checksums-Sha256:
+ 5ff12528908ad5b9370ed9a0626fa6e7a88d015a6251ebecdcef2b43732e1ef7 4041 bind9_9.10.3.dfsg.P4-12.3+deb9u12.dsc
+ bf2681c1a6a0cf998d0eb7c882182bdc788402c2c24f41b5f3dd45940f769c61 107340 bind9_9.10.3.dfsg.P4-12.3+deb9u12.debian.tar.xz
+ 0b7c6aac33869021ef90fd33d77344783d9f9e252bd5ffabc5a028b5e9e1234d 21982 bind9_9.10.3.dfsg.P4-12.3+deb9u12_amd64.buildinfo
+Closes: 1007945
+Changes:
+ bind9 (1:9.10.3.dfsg.P4-12.3+deb9u12) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Regression update for CVE-2021-25220: Properly initialize variables before
+     using them. (Closes: #1007945)
+Files:
+ 70263db2acb282cedb94c231dfde6f13 4041 net optional bind9_9.10.3.dfsg.P4-12.3+deb9u12.dsc
+ 99a7a301874523ebf5d8b6f32db711d3 107340 net optional bind9_9.10.3.dfsg.P4-12.3+deb9u12.debian.tar.xz
+ 937135dd7031c90473c5ed8998238c06 21982 net optional bind9_9.10.3.dfsg.P4-12.3+deb9u12_amd64.buildinfo
+

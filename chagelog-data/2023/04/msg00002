@@ -1,0 +1,67 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 04 Apr 2023 17:10:03 +0100
+Source: ghostscript
+Binary: ghostscript ghostscript-dbg ghostscript-doc ghostscript-x libgs-dev libgs9 libgs9-common
+Architecture: source amd64 all
+Version: 9.27~dfsg-2+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ghostscript - interpreter for the PostScript language and for PDF
+ ghostscript-dbg - interpreter for the PostScript language and for PDF - Debug symbo
+ ghostscript-doc - interpreter for the PostScript language and for PDF - Documentati
+ ghostscript-x - interpreter for the PostScript language and for PDF - X11 support
+ libgs-dev  - interpreter for the PostScript language and for PDF - Development
+ libgs9     - interpreter for the PostScript language and for PDF - Library
+ libgs9-common - interpreter for the PostScript language and for PDF - common file
+Closes: 1033757
+Changes:
+ ghostscript (9.27~dfsg-2+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-28879: Prevent a potential a buffer-overflow vulnerability.
+     (Closes: #1033757)
+   * Move to Git & Salsa-based packaging:
+     - Add debian/.gitlab-ci.yml
+     - Disable a few (failing) tests in the CI system.
+Checksums-Sha1:
+ c8f5fa49ee6e27092926dd3097d137aea51c0ad3 2795 ghostscript_9.27~dfsg-2+deb10u7.dsc
+ ce6d3c89086a238ff6683e3a0fa3a71be7891d94 17723588 ghostscript_9.27~dfsg.orig.tar.xz
+ ebde7f609603b648160e0cdf030fc9b39cf8d4f6 127136 ghostscript_9.27~dfsg-2+deb10u7.debian.tar.xz
+ 80d1c1b5744f7264b1366bcaae691173fb10e4ec 16194648 ghostscript-dbg_9.27~dfsg-2+deb10u7_amd64.deb
+ 65808e424237a5cf05a217d0527c2de5d2b4ff9b 3522484 ghostscript-doc_9.27~dfsg-2+deb10u7_all.deb
+ 25e8c91d638a3bb2367f7f0956a02cfdcb40dbfc 90556 ghostscript-x_9.27~dfsg-2+deb10u7_amd64.deb
+ b5bd63afcd14f7f668656b5da9509e3f15002580 12369 ghostscript_9.27~dfsg-2+deb10u7_amd64.buildinfo
+ f28a70ec0a543bf981606c3fcef3adc71c6b828e 95344 ghostscript_9.27~dfsg-2+deb10u7_amd64.deb
+ b64e3f112fabe71a38827f9f40eba84aea83656c 73688 libgs-dev_9.27~dfsg-2+deb10u7_amd64.deb
+ 78b809e4ad1c3e7a7529a91c6c9af6be9ecd20d5 5135960 libgs9-common_9.27~dfsg-2+deb10u7_all.deb
+ 8ba91822f047ca9ac60d1be0547bc13e4a4d904e 2198372 libgs9_9.27~dfsg-2+deb10u7_amd64.deb
+Checksums-Sha256:
+ 6367fe0e37948c40abc6927ce5ae36f95c7471e5334689e68f1dabf29e9ef93e 2795 ghostscript_9.27~dfsg-2+deb10u7.dsc
+ b90d2117e93c63d774a5ab0a4d6a19c5dcbfd877462ee39a405262948e23ff9b 17723588 ghostscript_9.27~dfsg.orig.tar.xz
+ 5336b180c165c415d93077a78bc0ebfb73cc43577b0cafa6d718edccc182e4c9 127136 ghostscript_9.27~dfsg-2+deb10u7.debian.tar.xz
+ 5a2206bbbcdc31cf174d5da394fc81aca464af94abd75bfbae5cbb37631014fb 16194648 ghostscript-dbg_9.27~dfsg-2+deb10u7_amd64.deb
+ 88e5d702a514976bc58bdd9d578574530e35d70b0acc881148f07b5940bd2b9f 3522484 ghostscript-doc_9.27~dfsg-2+deb10u7_all.deb
+ 7329593153b9aecbd3c9cdc5801d0d44e8ffc9e52ee9ad477125c0850ced0c6d 90556 ghostscript-x_9.27~dfsg-2+deb10u7_amd64.deb
+ 60a9e2d3e417f87ec5466173755790b02291423b9853eadc419945447d827e36 12369 ghostscript_9.27~dfsg-2+deb10u7_amd64.buildinfo
+ 2ca92257073345c46b953d3b03f6d90c7abe6a1926bcc7e689dc833875df668a 95344 ghostscript_9.27~dfsg-2+deb10u7_amd64.deb
+ a55ea65d18abc09aeb344dbd8608889833a8f2b355ebbf11979600102858017f 73688 libgs-dev_9.27~dfsg-2+deb10u7_amd64.deb
+ e7d9ed07332cd439fc3e39172b4cb18545aec53eaf822414ee0c8006400a9ef2 5135960 libgs9-common_9.27~dfsg-2+deb10u7_all.deb
+ 3e43454ee26d162dc0e7e5a73d9bfe87ef91f992ce35095e992a12eb0d44ff34 2198372 libgs9_9.27~dfsg-2+deb10u7_amd64.deb
+Files:
+ d71866aa42aaf1a7a4873ba45754aaac 2795 text optional ghostscript_9.27~dfsg-2+deb10u7.dsc
+ 5fd2cef0eafc9482f96342344faf935f 17723588 text optional ghostscript_9.27~dfsg.orig.tar.xz
+ cb3c3dd1c736b5e1d0731ff88ae47e77 127136 text optional ghostscript_9.27~dfsg-2+deb10u7.debian.tar.xz
+ 9b82a010883be8afc781a8931e137e02 16194648 debug optional ghostscript-dbg_9.27~dfsg-2+deb10u7_amd64.deb
+ 56d8675ad1219d70ab920d144ffd8dbd 3522484 doc optional ghostscript-doc_9.27~dfsg-2+deb10u7_all.deb
+ a7e104c82ae4eddfb71b2e0a625af163 90556 text optional ghostscript-x_9.27~dfsg-2+deb10u7_amd64.deb
+ 0491ffb4dd4296744b4e3e47970cb11c 12369 text optional ghostscript_9.27~dfsg-2+deb10u7_amd64.buildinfo
+ 424ed84dd849a7456b4d70e6b93602b5 95344 text optional ghostscript_9.27~dfsg-2+deb10u7_amd64.deb
+ 13e33b3430b1cdcbe8c2512fc40078e2 73688 libdevel optional libgs-dev_9.27~dfsg-2+deb10u7_amd64.deb
+ 658cff6059444e40f0748507a225fa59 5135960 libs optional libgs9-common_9.27~dfsg-2+deb10u7_all.deb
+ 607aafdb4fcb342798a334330a3a31c4 2198372 libs optional libgs9_9.27~dfsg-2+deb10u7_amd64.deb
+

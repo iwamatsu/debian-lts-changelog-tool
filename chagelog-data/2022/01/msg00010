@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 Dec 2021 23:03:02 +0100
+Source: sphinxsearch
+Binary: sphinxsearch
+Architecture: source amd64
+Version: 2.2.11-1.1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Radu Spineanu <radu@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ sphinxsearch - Fast standalone full-text SQL search engine
+Changes:
+ sphinxsearch (2.2.11-1.1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-29050
+     Fix for arbitrary file reads by scattered file snippets
+Checksums-Sha1:
+ 9ca1f81e71a28cb1d180089baa9e138dbbce9fea 2073 sphinxsearch_2.2.11-1.1+deb9u1.dsc
+ 34e83f43de0e69e258bf749ea00348c60a51632a 3061998 sphinxsearch_2.2.11.orig.tar.gz
+ e540f8b0eb61623f4eab29c30d44319cb11a6919 17064 sphinxsearch_2.2.11-1.1+deb9u1.debian.tar.xz
+ 75c84b6a684906bf95b532c5f6790370478d6949 21642614 sphinxsearch-dbgsym_2.2.11-1.1+deb9u1_amd64.deb
+ 3701738122c64be9f329ee7e4f6d77cecf0f84aa 7638 sphinxsearch_2.2.11-1.1+deb9u1_amd64.buildinfo
+ a0184e582de719e9ed2a63448a15202994e1cc44 1945714 sphinxsearch_2.2.11-1.1+deb9u1_amd64.deb
+Checksums-Sha256:
+ bb74e30b087c490fc3431bbda328feddb14571a8a1b6a733c4d668824c5ce744 2073 sphinxsearch_2.2.11-1.1+deb9u1.dsc
+ 6662039f093314f896950519fa781bc87610f926f64b3d349229002f06ac41a9 3061998 sphinxsearch_2.2.11.orig.tar.gz
+ 101b9822a47c44e613a7f02777ac69c63e78339fa99dc5caf16b8a953d579a33 17064 sphinxsearch_2.2.11-1.1+deb9u1.debian.tar.xz
+ 7cc0f4c301dde46b6682b6b86838bff1d6cc34a208be66627cb2f2f3c72a1425 21642614 sphinxsearch-dbgsym_2.2.11-1.1+deb9u1_amd64.deb
+ 7dafc37f545716ce75011fc480a1a76337f7163504c2eb9e47ddcc59753a083a 7638 sphinxsearch_2.2.11-1.1+deb9u1_amd64.buildinfo
+ 4bf5f6958df8c1f97bf8808869d8161ec1541c16486adc90e2f5c93c703d5866 1945714 sphinxsearch_2.2.11-1.1+deb9u1_amd64.deb
+Files:
+ 9eedafa3681942070c6f965079b3afa2 2073 misc optional sphinxsearch_2.2.11-1.1+deb9u1.dsc
+ 5cac34f3d78a9d612ca4301abfcbd666 3061998 misc optional sphinxsearch_2.2.11.orig.tar.gz
+ 42815d2e74606c6c5f164786d7ebdbde 17064 misc optional sphinxsearch_2.2.11-1.1+deb9u1.debian.tar.xz
+ 42a5d4a807d5de84b0af9047aaec438b 21642614 debug extra sphinxsearch-dbgsym_2.2.11-1.1+deb9u1_amd64.deb
+ 07469a0c649d5e9d191fee009701471b 7638 misc optional sphinxsearch_2.2.11-1.1+deb9u1_amd64.buildinfo
+ 4f4c38eef5b9717c4ac7f323d4630a5a 1945714 misc optional sphinxsearch_2.2.11-1.1+deb9u1_amd64.deb
+

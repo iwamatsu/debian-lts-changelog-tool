@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 26 Mar 2024 19:03:02 +0100
+Source: libcaca
+Architecture: source
+Version: 0.99.beta19-2.1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Sam Hocevar <sho@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libcaca (0.99.beta19-2.1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-30498 + CVE-2021-30499
+     heap buffer overflow might lead to memory corruption
+Checksums-Sha1:
+ d824e508cc1162f93c0bb99f2480fc1ef5bd8e76 2415 libcaca_0.99.beta19-2.1+deb10u1.dsc
+ ed138f3717648692113145b99a80511178548010 1203495 libcaca_0.99.beta19.orig.tar.gz
+ 687d76a20cc20f329cf6866f01365032b872bddf 13736 libcaca_0.99.beta19-2.1+deb10u1.debian.tar.xz
+ 156cc0d48369213db41d9717233cc5abcab20616 13951 libcaca_0.99.beta19-2.1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d2bc3f91faf86cad07ad64e8f28818031c6974da5a93fe0aae28ec9fdb24b8b0 2415 libcaca_0.99.beta19-2.1+deb10u1.dsc
+ 128b467c4ed03264c187405172a4e83049342cc8cc2f655f53a2d0ee9d3772f4 1203495 libcaca_0.99.beta19.orig.tar.gz
+ 2fe008a1eccafd48dbb4917b7d5e11b08561b900e4b0162ef4acf72e9a53a21a 13736 libcaca_0.99.beta19-2.1+deb10u1.debian.tar.xz
+ d019bbb9ae2d96b9c455b7a8a2789c36404b2d22d217c47c7cf070d8ab3b2524 13951 libcaca_0.99.beta19-2.1+deb10u1_amd64.buildinfo
+Files:
+ 196403bddf89a462cde4a900d96c500e 2415 libs optional libcaca_0.99.beta19-2.1+deb10u1.dsc
+ a3d4441cdef488099f4a92f4c6c1da00 1203495 libs optional libcaca_0.99.beta19.orig.tar.gz
+ 95181b406e1ad5aaf8d95887feedda3b 13736 libs optional libcaca_0.99.beta19-2.1+deb10u1.debian.tar.xz
+ 0be3324197459e029d511f49bfd67ed2 13951 libs optional libcaca_0.99.beta19-2.1+deb10u1_amd64.buildinfo
+

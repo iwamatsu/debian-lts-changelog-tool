@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 17 Jan 2022 17:05:54 +0530
+Source: qtsvg-opensource-src
+Architecture: source
+Version: 5.7.1~20161021-2.1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 986798 1002991
+Changes:
+ qtsvg-opensource-src (5.7.1~20161021-2.1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to clamp parsed doubles to float representable
+     values. (Fixes: CVE-2021-3481) (Closes: #986798)
+   * Add patch to do stricter error checking when parsing
+     path nodes. (Fixes: CVE-2021-45930) (Closes: #1002991)
+Checksums-Sha1:
+ d4845c5256020452caeda918fc2e596ffcdbf34d 2916 qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1.dsc
+ e3729fc2e0e95ff855cdf6f015c9e48128230e43 1751180 qtsvg-opensource-src_5.7.1~20161021.orig.tar.xz
+ d0b48c75cb3d6169fc2425c1f3626ea5607a26b8 12816 qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1.debian.tar.xz
+ f3e728e0254dac669784866b56e3c3954934808e 6549 qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ c894063bc51c5abfc8c4d5660d2d3d278ed7a5778ab7d9c31b14426963f101cb 2916 qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1.dsc
+ e25f2c38f370c527eab8713b6102401ad5980ce506c0e7c85d22a4696c5a5011 1751180 qtsvg-opensource-src_5.7.1~20161021.orig.tar.xz
+ 1e8f6c0109217920e2b8609a9334468833d719fb5078e1f2db885724b03b5aab 12816 qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1.debian.tar.xz
+ 23544d5e6d41bca76fdb29002cf0f2b43c649dca6db95b645d571fe7458756ab 6549 qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1_source.buildinfo
+Files:
+ 32f2d8806699f8581af8198f481a037b 2916 libs optional qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1.dsc
+ c4f4a331b28eef3c33e87297c4b0875c 1751180 libs optional qtsvg-opensource-src_5.7.1~20161021.orig.tar.xz
+ d624a39a96256ecb414397f9c596e978 12816 libs optional qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1.debian.tar.xz
+ c69400cd291694f31e9c34a1489195e5 6549 libs optional qtsvg-opensource-src_5.7.1~20161021-2.1+deb9u1_source.buildinfo
+

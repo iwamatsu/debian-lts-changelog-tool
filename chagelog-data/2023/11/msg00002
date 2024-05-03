@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 05 Nov 2023 21:52:00 +0200
+Source: trafficserver
+Architecture: source
+Version: 8.1.7-0+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jean Baptiste Favre <debian@jbfavre.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ trafficserver (8.1.7-0+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-41752: s3_auth plugin exposes AWSAccessKeyId
+   * CVE-2023-44487: HTTP/2 Rapid Reset denial of service
+Checksums-Sha1:
+ 98573d2a0092528f4eac1cdcdd1c5d1e121d8359 2729 trafficserver_8.1.7-0+deb10u3.dsc
+ 1ec1f18838d33352cdf494e96284244984d085d7 7919920 trafficserver_8.1.7.orig.tar.xz
+ 956b4bc9967575623c182509aa1149f847587d69 53484 trafficserver_8.1.7-0+deb10u3.debian.tar.xz
+Checksums-Sha256:
+ c8d0dd47ce19d3b2c4560584637ff9e8b1ed5def751624b37e72d2d2fdd7ecfc 2729 trafficserver_8.1.7-0+deb10u3.dsc
+ c472f50f27193de9d516ea545242b80609d05abf19b04f6e43009f4555059b5a 7919920 trafficserver_8.1.7.orig.tar.xz
+ b60dee89fe47e46ab275eb94c35e84d3c2a8ef264d9d419f3949bc8062c4d2bc 53484 trafficserver_8.1.7-0+deb10u3.debian.tar.xz
+Files:
+ f5f77cae05ec1f57685dce4889958cdd 2729 web optional trafficserver_8.1.7-0+deb10u3.dsc
+ 3c495598c8068a3df19a19382b3b4089 7919920 web optional trafficserver_8.1.7.orig.tar.xz
+ 1826e08ee361f26d1c46e88aef63414b 53484 web optional trafficserver_8.1.7-0+deb10u3.debian.tar.xz
+

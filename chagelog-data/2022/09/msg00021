@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 15 Sep 2022 12:13:48 +0200
+Source: glib2.0
+Architecture: source
+Version: 2.58.3-2+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ glib2.0 (2.58.3-2+deb10u4) buster-security; urgency=medium
+ .
+   * CVE-2021-3800: information leak using CHARSETALIASDIR envvar.
+Checksums-Sha1:
+ 78b595a39813f9c058e32230cc09e37a0607d3b8 3334 glib2.0_2.58.3-2+deb10u4.dsc
+ 9499377d09ad52d94b4ab9f38c4040e9dce875e5 4863648 glib2.0_2.58.3.orig.tar.xz
+ 87c94f7e39ef48f9f85952cebb2a77896a7b7e0b 107716 glib2.0_2.58.3-2+deb10u4.debian.tar.xz
+ 55e5d9a6a32925f337efd5bf1b01f5578b912803 8256 glib2.0_2.58.3-2+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 8a2b7d98dd7f3e5ed4908d06d13b919989f1712e3a5e348be45e266fb72a2cb9 3334 glib2.0_2.58.3-2+deb10u4.dsc
+ 8f43c31767e88a25da72b52a40f3301fefc49a665b56dc10ee7cc9565cbe7481 4863648 glib2.0_2.58.3.orig.tar.xz
+ 2a62cdccabd2bdcac1015913599cf04966895fadd76424790a687652f7e53277 107716 glib2.0_2.58.3-2+deb10u4.debian.tar.xz
+ 67e6d9409358c1a139f907ea5a3ce27089798f5cb8cacd9e09ec7bfdf67394e5 8256 glib2.0_2.58.3-2+deb10u4_source.buildinfo
+Files:
+ 78b940369a5ab3a395497cb88dabc18d 3334 libs optional glib2.0_2.58.3-2+deb10u4.dsc
+ 8058c7bde846dcffe5fa453eca366d73 4863648 libs optional glib2.0_2.58.3.orig.tar.xz
+ 2d384cdac5f483e3e80544505c1b4788 107716 libs optional glib2.0_2.58.3-2+deb10u4.debian.tar.xz
+ 9a1e750471bb8027215af4ae058b3164 8256 libs optional glib2.0_2.58.3-2+deb10u4_source.buildinfo
+

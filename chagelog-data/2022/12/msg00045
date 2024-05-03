@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 24 Dec 2022 15:42:41 CET
+Source: libksba
+Architecture: source
+Version: 1.3.5-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 7ba9db66fba4a2a53b46be7bdc86d64eda542b36 2741 libksba_1.3.5-2+deb10u2.dsc
+ e4144279fbd10e7044b4c21229fb290f367252f6 14948 libksba_1.3.5-2+deb10u2.debian.tar.xz
+ 621416179fc8f02ece4184e16374e83b65f274f3 7216 libksba_1.3.5-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 5224c0002e08ea18a6ad8da4bfb064c5e887c0e7ea0fbef2e229f740efb0c021 2741 libksba_1.3.5-2+deb10u2.dsc
+ 914841ff8d892ba2c7ed8ceb09d04edaafd17595ca859fe6ac8d6b5438c3410b 14948 libksba_1.3.5-2+deb10u2.debian.tar.xz
+ 563dbf6c38a06b063bbe0fe1bc6e51f53c3df9ffb43511eb7c9671f29343659f 7216 libksba_1.3.5-2+deb10u2_amd64.buildinfo
+Changes:
+ libksba (1.3.5-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-47629:
+     An integer overflow flaw was discovered in the CRL signature parser in
+     libksba, an X.509 and CMS support library, which could result in denial of
+     service or the execution of arbitrary code.
+Files:
+ 7e2ed2543d58e486e96a6f411f7a19bf 2741 libs optional libksba_1.3.5-2+deb10u2.dsc
+ 95193263b04c26b971ce47288fc151ad 14948 libs optional libksba_1.3.5-2+deb10u2.debian.tar.xz
+ 43d1993029b28fe659fd0da814440ac5 7216 libs optional libksba_1.3.5-2+deb10u2_amd64.buildinfo
+

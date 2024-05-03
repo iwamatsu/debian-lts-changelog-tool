@@ -1,0 +1,54 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 24 Dec 2023 15:39:13 -0500
+Source: openssh
+Architecture: source
+Version: 1:7.9p1-10+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Closes: 995130
+Changes:
+ openssh (1:7.9p1-10+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Rename debian/.gitlab-ci.yml to debian/salsa-ci.yml and use
+     lts-team/pipeline recipe for buster in it.
+   * [CVE-2023-48795] ssh(1), sshd(8): implement protocol extensions to
+     thwart the so-called "Terrapin attack" discovered by Fabian Bäumer,
+     Marcus Brinkmann and Jörg Schwenk. This attack allows a MITM to effect
+     a limited break of the integrity of the early encrypted SSH transport
+     protocol by sending extra messages prior to the commencement of
+     encryption, and deleting an equal number of consecutive messages
+     immediately after encryption starts. A peer SSH client/server would
+     not be able to detect that messages were deleted.
+   * [CVE-2023-51385] ssh(1): if an invalid user or hostname that contained
+     shell metacharacters was passed to ssh(1), and a ProxyCommand,
+     LocalCommand directive or "match exec" predicate referenced the user
+     or hostname via %u, %h or similar expansion token, then an attacker
+     who could supply arbitrary user/hostnames to ssh(1) could potentially
+     perform command injection depending on what quoting was present in the
+     user-supplied ssh_config(5) directive. ssh(1) now bans most shell
+     metacharacters from user and hostnames supplied via the command-line.
+   * [CVE-2021-41617]: sshd(8) from OpenSSH 6.2 through 8.7 failed to
+     correctly initialise supplemental groups when executing an
+     AuthorizedKeysCommand or AuthorizedPrincipalsCommand, where a
+     AuthorizedKeysCommandUser or AuthorizedPrincipalsCommandUser directive
+     has been set to run the command as a different user. Instead these
+     commands would inherit the groups that sshd(8) was started with
+     (closes: #995130).
+Checksums-Sha1:
+ 413ad62f0a8020f242a0840031f2bf26d5c23bd2 2592 openssh_7.9p1-10+deb10u4.dsc
+ c6c7f6c1e3a6c94771d92acd341612885f782f70 181408 openssh_7.9p1-10+deb10u4.debian.tar.xz
+ 1d85c7b1363cef762126594edfcd17401f86ab49 18070 openssh_7.9p1-10+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ a57adf80b4f434f2e8aaf736e642761f30ab2c2bd1432b3e1e6bc824ae826962 2592 openssh_7.9p1-10+deb10u4.dsc
+ 3c9246796095b8cb8785b14ab4157f0cc0ab754e929327ff60cfba4e93213a67 181408 openssh_7.9p1-10+deb10u4.debian.tar.xz
+ 57beccdb92ae8ee5340af98c51ab7e08a85823e1cd7bc8758e9c8894cf769c0c 18070 openssh_7.9p1-10+deb10u4_amd64.buildinfo
+Files:
+ f2bec38b3041b1b570b59876e969e7e8 2592 net standard openssh_7.9p1-10+deb10u4.dsc
+ 8acdf241f3e0e1a7fc57318ad909b992 181408 net standard openssh_7.9p1-10+deb10u4.debian.tar.xz
+ dbc5d0d591c40a23f08d67924a81f01a 18070 net standard openssh_7.9p1-10+deb10u4_amd64.buildinfo
+

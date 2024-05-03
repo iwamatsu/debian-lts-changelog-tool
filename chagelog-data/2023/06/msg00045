@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 20 Jun 2023 22:46:54 +0200
+Source: opensc
+Architecture: source
+Version: 0.19.0-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenSC Maintainers <pkg-opensc-maint@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1037021
+Changes:
+ opensc (0.19.0-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2019-6502: Minor memory leak in src/tools/eidenv.c.
+   * Fix CVE-2021-42779: Heap use after free in sc_file_valid().
+   * Fix CVE-2021-42780: Use after return in insert_pin().
+   * Fix CVE-2021-42781: Heap buffer overflow in pkcs15-oberthur.c.
+   * Fix memory leaks in src/libopensc/pkcs15-oberthur.c.
+   * Fix CVE-2021-42782: Various stack buffer overflow vulnerabilities.
+   * Fix CVE-2023-2977: Buffer overrun vulnerability in pkcs15
+     cardos_have_verifyrc_package().  (Closes: #1037021)
+Checksums-Sha1:
+ 77811b9b3b4bdfb0ec683c11a25b0e4aa001a855 2159 opensc_0.19.0-1+deb10u2.dsc
+ 7e4e52c15407b5e1642418068ae52a38b01cdaec 1607290 opensc_0.19.0.orig.tar.gz
+ c8c140777bbe7aaff258fd27c54fd2fdc661264c 23224 opensc_0.19.0-1+deb10u2.debian.tar.xz
+ 4a4be69eefee23cb8e3f8e09e094632adf73551a 7927 opensc_0.19.0-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 40af612677e1b3159867f86273301509cf35573a414c0774218e50de4c601b8f 2159 opensc_0.19.0-1+deb10u2.dsc
+ c0b803ba36aac9b5fef7f249adb9dffaf3f298db85304531b6a0574519743cf2 1607290 opensc_0.19.0.orig.tar.gz
+ 9612c6fd65fc4911d039ea699928081b476c214b2ce0de48444a1f7c480c3485 23224 opensc_0.19.0-1+deb10u2.debian.tar.xz
+ f3b4c31fd173642f4546aa63f09e8c51e7b43579ba3c6b932db5419ec5bf15ed 7927 opensc_0.19.0-1+deb10u2_amd64.buildinfo
+Files:
+ 1b35f7f0fdeee7577a04c23cb9269ea1 2159 utils optional opensc_0.19.0-1+deb10u2.dsc
+ 6a37eb339fb3226da6dfb6b1c27d75a2 1607290 utils optional opensc_0.19.0.orig.tar.gz
+ 8bad5ba7e7fb596690fabaa1c56de53c 23224 utils optional opensc_0.19.0-1+deb10u2.debian.tar.xz
+ 0493c75c9f0718aaf300da7d8ca03ed3 7927 utils optional opensc_0.19.0-1+deb10u2_amd64.buildinfo
+

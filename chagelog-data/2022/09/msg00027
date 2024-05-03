@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 21 Sep 2022 13:10:32 +0200
+Source: mako
+Architecture: source
+Version: 1.0.7+ds1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ mako (1.0.7+ds1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-40023: denial of service via crafted regex.
+Checksums-Sha1:
+ acab228e7ad68578c518d029f685e4fe342f11d0 2348 mako_1.0.7+ds1-1+deb10u1.dsc
+ f8ffe7c994eb28d727afbc163351157485616c5d 273501 mako_1.0.7+ds1.orig.tar.gz
+ 30bf8966a4fa8bd21b6913ed3ffc8232f5f2ae7b 14256 mako_1.0.7+ds1-1+deb10u1.debian.tar.xz
+ 3f9d60d54a82fb84a59d4bf2c2e8fa7964331e7b 6363 mako_1.0.7+ds1-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 15e7b577d41bc3d98def911921457e2db6d52a332874baebf3f060c934a3033a 2348 mako_1.0.7+ds1-1+deb10u1.dsc
+ 503dc4cebb5d7227ac3bac5c6264bd16124e83354a3baee02edf45a254562c44 273501 mako_1.0.7+ds1.orig.tar.gz
+ 6e7020a1c150a12fc511635bccbb01fa4ef8fbf158bfb334c0811adec7de1f02 14256 mako_1.0.7+ds1-1+deb10u1.debian.tar.xz
+ bcc1721b18aa40da52b4af40011cdec80aa0072e4e6ac56d22f8cc424b0a6313 6363 mako_1.0.7+ds1-1+deb10u1_source.buildinfo
+Files:
+ 8d9eef58f625d6d624f4d4d9dc3a9365 2348 python optional mako_1.0.7+ds1-1+deb10u1.dsc
+ a0e862782ad9846b4d50bbbce914a8b2 273501 python optional mako_1.0.7+ds1.orig.tar.gz
+ 42a95dfd916d82f2e3fb23c222a70f80 14256 python optional mako_1.0.7+ds1-1+deb10u1.debian.tar.xz
+ e0b04e3092e30f118b4c2f74d2902501 6363 python optional mako_1.0.7+ds1-1+deb10u1_source.buildinfo
+

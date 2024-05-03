@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Jan 2023 13:28:36 +0100
+Source: lemonldap-ng
+Architecture: source
+Version: 2.0.2+ds-7+deb10u8
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ lemonldap-ng (2.0.2+ds-7+deb10u8) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-16093: Validity of the X.509 certificate is not checked by
+     default when connecting to remote LDAP backends, because the default
+     configuration of the Net::LDAPS module for Perl is used.
+   * Add d/NEWS entry warning users of a potential regression due to the fix
+     for the above (enforcing validation by default will breaks setups using a
+     self-signed certificate, for instance).
+   * CVE-2022-37186: Session destroyed on portal but still valid on handlers.
+Checksums-Sha1:
+ 3341ebb5600f446c48e13d3c80acda6b29b5a3a3 3878 lemonldap-ng_2.0.2+ds-7+deb10u8.dsc
+ c8a4da391a89d123ca29304638ab5a51ac764184 85076 lemonldap-ng_2.0.2+ds-7+deb10u8.debian.tar.xz
+ fd8ab6bceae25247bf1b0027f225222b9c5e58a8 18012 lemonldap-ng_2.0.2+ds-7+deb10u8_amd64.buildinfo
+Checksums-Sha256:
+ b19146ae180f45ca25940d1f0ac6624937ab3ccc7a6b8c96987d860a1b3e1f10 3878 lemonldap-ng_2.0.2+ds-7+deb10u8.dsc
+ 4bf384a5fbf732879f8a5c9ac0818a968f451cfa9b655ab9a3c31b1d1ac4c6e4 85076 lemonldap-ng_2.0.2+ds-7+deb10u8.debian.tar.xz
+ 18c14f49a2113b279bc6009cb4023c0f7a61139fa093e213ecddaebd1c24f0a2 18012 lemonldap-ng_2.0.2+ds-7+deb10u8_amd64.buildinfo
+Files:
+ 1c5c110f67fd5e731f467befc40ee256 3878 perl optional lemonldap-ng_2.0.2+ds-7+deb10u8.dsc
+ 194d7217bff9707af820d18f54a6d796 85076 perl optional lemonldap-ng_2.0.2+ds-7+deb10u8.debian.tar.xz
+ 514bb45470712cf67e3775eae0382e49 18012 perl optional lemonldap-ng_2.0.2+ds-7+deb10u8_amd64.buildinfo
+

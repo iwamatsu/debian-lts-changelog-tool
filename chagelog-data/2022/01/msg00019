@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 21 Jan 2022 19:45:18 +0100
+Source: golang-1.7
+Binary: golang-1.7-go golang-1.7-src golang-1.7-doc golang-1.7
+Architecture: source
+Version: 1.7.4-2+deb9u4
+Distribution: stretch-security
+Urgency: high
+Maintainer: Go Compiler Team <pkg-golang-devel@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ golang-1.7 - Go programming language compiler - metapackage
+ golang-1.7-doc - Go programming language - documentation
+ golang-1.7-go - Go programming language compiler, linker, compiled stdlib
+ golang-1.7-src - Go programming language - source files
+Closes: 989492 991961
+Changes:
+ golang-1.7 (1.7.4-2+deb9u4) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-36221: Go has a race condition that can lead to a
+     net/http/httputil ReverseProxy panic upon an ErrAbortHandler
+     abort. (Closes: #991961)
+   * CVE-2021-33196: in archive/zip, a crafted file count (in an archive's
+     header) can cause a NewReader or OpenReader panic. (Closes: #989492)
+   * CVE-2021-39293: follow-up fix to CVE-2021-33196
+   * CVE-2021-41771: ImportedSymbols in debug/macho (for Open or OpenFat)
+     accesses a Memory Location After the End of a Buffer, aka an
+     out-of-bounds slice situation.
+   * CVE-2021-44716: net/http allows uncontrolled memory consumption in the
+     header canonicalization cache via HTTP/2 requests.
+   * CVE-2021-44717: Go on UNIX allows write operations to an unintended
+     file or unintended network connection as a consequence of erroneous
+     closing of file descriptor 0 after file-descriptor exhaustion.
+Checksums-Sha1:
+ 0f3defa8ca07509d11c7e13df619f690930b6770 2487 golang-1.7_1.7.4-2+deb9u4.dsc
+ d8efba0006ca079a6fe9af93abcf4c2f98aefc0e 54124 golang-1.7_1.7.4-2+deb9u4.debian.tar.xz
+ 4169d98e4711318e05c2754c17306484444039e1 6140 golang-1.7_1.7.4-2+deb9u4_amd64.buildinfo
+Checksums-Sha256:
+ fca00b4d2ac4ec686471aea8e35db273d768d22af6ab596127219ead13c718f7 2487 golang-1.7_1.7.4-2+deb9u4.dsc
+ 4ab72edfe5116182ea5b19367e22147a6196af5d001e7d57aed8c76136f76bcb 54124 golang-1.7_1.7.4-2+deb9u4.debian.tar.xz
+ 7585a0b796c1b626b7e3a84f69b1e6ef50719ec74863b48d6c42f7d1aa58caee 6140 golang-1.7_1.7.4-2+deb9u4_amd64.buildinfo
+Files:
+ 239cd952bc4fed4944be21194f4b800f 2487 devel optional golang-1.7_1.7.4-2+deb9u4.dsc
+ e5830f1c7c698018432e11e46ab0c68a 54124 devel optional golang-1.7_1.7.4-2+deb9u4.debian.tar.xz
+ 74e8e0a163e08fed9a7a82ed4964634c 6140 devel optional golang-1.7_1.7.4-2+deb9u4_amd64.buildinfo
+

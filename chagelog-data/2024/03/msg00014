@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 14 Mar 2024 20:48:47 +0200
+Source: node-xml2js
+Architecture: source
+Version: 0.2.8-1.1+deb11u1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Closes: 1034148
+Changes:
+ node-xml2js (0.2.8-1.1+deb11u1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Rebuild for buster-security.
+ .
+ node-xml2js (0.2.8-1.1+deb11u1) bullseye; urgency=medium
+ .
+   * Team upload
+   * Add patch to prevent prototype pollution (Closes: #1034148, CVE-2023-0842)
+Checksums-Sha1:
+ 2731bbe28462f4781f19f75a132c6b80312c8166 2103 node-xml2js_0.2.8-1.1+deb11u1~deb10u1.dsc
+ 65182e243c4b8acfd751f123591d9dbe818debb5 12847 node-xml2js_0.2.8.orig.tar.gz
+ 95dc534505dc7ef99519ced2e62d2d4effd84190 3044 node-xml2js_0.2.8-1.1+deb11u1~deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 7b1bbec572a2f8707890fb19f81ad2de71b0a7aecbc41ca84df7f7abcde0a34b 2103 node-xml2js_0.2.8-1.1+deb11u1~deb10u1.dsc
+ c64e4df6526666d7e29bd8a7dc81eaae44ee359cc82f2f1329ce7c2ed3db10f5 12847 node-xml2js_0.2.8.orig.tar.gz
+ 63774a3644c91e72f3373a6073308bee9410f8b7af09b69f4a093033df60c53a 3044 node-xml2js_0.2.8-1.1+deb11u1~deb10u1.debian.tar.xz
+Files:
+ abf5583aa2ac565ddee3984175ea8fcb 2103 web extra node-xml2js_0.2.8-1.1+deb11u1~deb10u1.dsc
+ 42a30c204ec7db559cd0e6813061a0f4 12847 web extra node-xml2js_0.2.8.orig.tar.gz
+ 5e0d01cfe52ceaf9f23dd2642d6f9251 3044 web extra node-xml2js_0.2.8-1.1+deb11u1~deb10u1.debian.tar.xz
+

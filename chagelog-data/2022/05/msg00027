@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 20 May 2022 12:50:34 CEST
+Source: ark
+Binary: ark
+Architecture: source
+Version: 4:16.08.3-2+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ ark        - archive utility
+Checksums-Sha1:
+ 2b6fcce54533e16ad47d1d1040b220a9b2fb222e 2888 ark_16.08.3-2+deb9u1.dsc
+ b920a60cc20db2a98c885415d341d49bf4505c74 1293460 ark_16.08.3.orig.tar.xz
+ 23372e71f657658ab55df11cc3c131213328c306 8948 ark_16.08.3-2+deb9u1.debian.tar.xz
+ 25790c482beeee46a56d8cea9f74d2eff176eefa 21109 ark_16.08.3-2+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 972156e339cd0b8aa2cadf01893063ac575082f3898963856c76c5030b42d49f 2888 ark_16.08.3-2+deb9u1.dsc
+ c713f6afe0784229796e14ef6e67a1afb5f276a97651bd2a973eff22f8932c08 1293460 ark_16.08.3.orig.tar.xz
+ ea56ff1be46ab3b738ff18d960da773e9b64dab220f783b3cc51911d0bbe62ec 8948 ark_16.08.3-2+deb9u1.debian.tar.xz
+ 3fa6610e1511768ffcff01a9ea8fef27fd7f01805a3d7a17f270e3b557518ab4 21109 ark_16.08.3-2+deb9u1_amd64.buildinfo
+Changes:
+ ark (4:16.08.3-2+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix the following security vulnerabilities:
+     - CVE-2020-16116: a crafted archive can install files outside the
+       extraction directory via ../ directory traversal.
+     - CVE-2020-24654: a crafted TAR archive with symlinks can install files
+       outside the extraction directory.
+Files:
+ 55b9bc0c8207fc6e9688b51b98347aad 2888 kde optional ark_16.08.3-2+deb9u1.dsc
+ 6820a1ea9f3642b838db5b485ca77b25 1293460 kde optional ark_16.08.3.orig.tar.xz
+ cf4c04a0e8874b21041e74aef9e4499a 8948 kde optional ark_16.08.3-2+deb9u1.debian.tar.xz
+ 21121a6b9be1446b4353c953faa243f2 21109 kde optional ark_16.08.3-2+deb9u1_amd64.buildinfo
+

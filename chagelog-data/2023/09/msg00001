@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 04 Sep 2023 23:49:25 +0200
+Source: php7.3
+Architecture: source
+Version: 7.3.31-1~deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ php7.3 (7.3.31-1~deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-3823: Security issue with external entity loading in XML
+     without enabling it.
+   * Fix CVE-2023-3824: Buffer overflow and overread in phar_dir_read().
+Checksums-Sha1:
+ dffa1408ba3b7d49ec28d997e6761f51bdf1f4b6 5867 php7.3_7.3.31-1~deb10u5.dsc
+ d28bc2b7c42bd4174ac49dc43380b7d973e4280c 85436 php7.3_7.3.31-1~deb10u5.debian.tar.xz
+ 2f27030d0d4c865ce637cf5b031a360d9a556b19 35771 php7.3_7.3.31-1~deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 1520ac853bfd51745896a5de74b4463fd8d56e9be05f899c754d7c812b50f995 5867 php7.3_7.3.31-1~deb10u5.dsc
+ 43f0f91c49c0ca56fdb7041856ed57fa99d568d6b23a85e86bea1b2778a9ba5f 85436 php7.3_7.3.31-1~deb10u5.debian.tar.xz
+ 372b089561f342ea5a460ff6bdb9752187bb96898ffcd27ba0f6579d36e32556 35771 php7.3_7.3.31-1~deb10u5_amd64.buildinfo
+Files:
+ 99801b337fa817417d2e005d2f23bdaa 5867 php optional php7.3_7.3.31-1~deb10u5.dsc
+ b7fe18e10d3fc732599f9fa8ba77f2aa 85436 php optional php7.3_7.3.31-1~deb10u5.debian.tar.xz
+ b8ee850d1593652be7ae817677734626 35771 php optional php7.3_7.3.31-1~deb10u5_amd64.buildinfo
+

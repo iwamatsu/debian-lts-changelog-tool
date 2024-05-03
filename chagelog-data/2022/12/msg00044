@@ -1,0 +1,28 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 21 Dec 2022 01:44:41 +0100
+Source: linux-latest
+Architecture: source
+Version: 105+deb10u18
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-latest (105+deb10u18) buster-security; urgency=medium
+ .
+   * Update to 4.19.0-23
+Checksums-Sha1:
+ 1f62d8858448234532ab15f9db1c4c14a04fb2bb 11588 linux-latest_105+deb10u18.dsc
+ e7d3142af0d9c81a61e0c597b22173886c0d57bd 20848 linux-latest_105+deb10u18.tar.xz
+ a679c95eb37359bfe6aa537cef27291d05923758 8464 linux-latest_105+deb10u18_source.buildinfo
+Checksums-Sha256:
+ 9e7cedf9e4d8e905371bf1d5952ca4bcda2c78bad192641f3e3fc2ab518d1c4d 11588 linux-latest_105+deb10u18.dsc
+ 14f2b86c846fe75cea11d597a5a41b92a7b42992caf4f37bb9c7e96ac723a75a 20848 linux-latest_105+deb10u18.tar.xz
+ 0f68dbdca1b675c482f1af7b1a6e2563c521ca9a25cbe794664326cd35236666 8464 linux-latest_105+deb10u18_source.buildinfo
+Files:
+ ea8d46298440db0de52e2f503c9361e9 11588 kernel optional linux-latest_105+deb10u18.dsc
+ 90c7911326e3ee8e5d8c260773daf184 20848 kernel optional linux-latest_105+deb10u18.tar.xz
+ 010178a79c5da7c6ebe93da37b841b68 8464 kernel optional linux-latest_105+deb10u18_source.buildinfo
+

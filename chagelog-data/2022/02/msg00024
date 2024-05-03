@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 26 Feb 2022 14:59:03 +0100
+Source: ujson
+Architecture: source
+Version: 1.35-1+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Sandro Tosi <morph@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ ujson (1.35-1+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-45958: fix unchecked buffer overflows
+Checksums-Sha1:
+ 6b3cee54e64be746f5397fd19bb1ae13137fdb3d 2258 ujson_1.35-1+deb9u1.dsc
+ 566e2936c0fbd0132667fea735ee7096019a63e4 192027 ujson_1.35.orig.tar.gz
+ 006766258474b1ad370e787acdd32a46848fe35f 8296 ujson_1.35-1+deb9u1.debian.tar.xz
+ e1b7385c97f15f1eb6c6d29ae895441bfd372f6d 7728 ujson_1.35-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 60d6214c6d1dda503554954ed6b1c671794171d1b857c8472b6aba9640c9129c 2258 ujson_1.35-1+deb9u1.dsc
+ f66073e5506e91d204ab0c614a148d5aa938bdbf104751be66f8ad7a222f5f86 192027 ujson_1.35.orig.tar.gz
+ 2ed28958d8051e49ef806e896593d7b2dcc321c6798204b059c3e7161a9d70d9 8296 ujson_1.35-1+deb9u1.debian.tar.xz
+ 6c452080bdc3587361ee9486f84194e2993c5c1cfcc53abaa8d29120c074e25b 7728 ujson_1.35-1+deb9u1_source.buildinfo
+Files:
+ d72e5a0358832800e28a7f8ea631fa7b 2258 python optional ujson_1.35-1+deb9u1.dsc
+ 42f77b0cce686dfa4da2e68480b1dd24 192027 python optional ujson_1.35.orig.tar.gz
+ 7749f2d7b6a682694a5bbdf5832b4e4c 8296 python optional ujson_1.35-1+deb9u1.debian.tar.xz
+ f43c547a9e092fa4d933ccb8acf8a500 7728 python optional ujson_1.35-1+deb9u1_source.buildinfo
+

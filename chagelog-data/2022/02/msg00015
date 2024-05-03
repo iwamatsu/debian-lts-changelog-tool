@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 14 Feb 2022 00:21:26 CET
+Source: varnish
+Binary: varnish varnish-doc libvarnishapi1 libvarnishapi-dev
+Architecture: source
+Version: 5.0.0-7+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Varnish Package Maintainers <pkg-varnish-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libvarnishapi-dev - development files for Varnish
+ libvarnishapi1 - shared libraries for Varnish
+ varnish    - state of the art, high-performance web accelerator
+ varnish-doc - documentation for Varnish Cache
+Checksums-Sha1:
+ b05c048f698412d0552b0612bb242d65738c44a8 2655 varnish_5.0.0-7+deb9u3.dsc
+ 9f3da375479d55875258ecc526edde471a827a2e 22840 varnish_5.0.0-7+deb9u3.debian.tar.xz
+ 8f53aeffed24cd49bae3a4c1d7e8760e6bf79afd 9986 varnish_5.0.0-7+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 54308e99fff2d217b50fc81e281c7771a84b32fd7e5c6785b9704b45fca57a67 2655 varnish_5.0.0-7+deb9u3.dsc
+ fdaa54ae5888a4cde2577caf342c96368915f389ee112587882909e8bde0fbd1 22840 varnish_5.0.0-7+deb9u3.debian.tar.xz
+ 9e4a7c558275c072cbfffe432a3c4ad40a158788eba676dc297c95defc46fd5b 9986 varnish_5.0.0-7+deb9u3_amd64.buildinfo
+Changes:
+ varnish (5.0.0-7+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-23959:
+     In Varnish request smuggling can occur for HTTP/1 connections.
+Files:
+ efaff1034acea6da529dff7a582303d3 2655 web optional varnish_5.0.0-7+deb9u3.dsc
+ 2d967245d6765e5d5db65af9210626e7 22840 web optional varnish_5.0.0-7+deb9u3.debian.tar.xz
+ a426181ad5b8d2b0d1807ff1c98ab6d7 9986 web optional varnish_5.0.0-7+deb9u3_amd64.buildinfo
+

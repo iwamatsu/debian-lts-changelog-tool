@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 Oct 2023 18:19:14 CET
+Source: jetty9
+Architecture: source
+Version: 9.4.50-4+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 4c6b56a7ac350de3186eb3c538dbfb5d6062101f 2779 jetty9_9.4.50-4+deb10u1.dsc
+ 3804e02da535f6e62272ae6834bad323b74f17a9 81472 jetty9_9.4.50-4+deb10u1.debian.tar.xz
+ 36155f52e6dafed60af1d2dbc1036819fc032a98 17839 jetty9_9.4.50-4+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1c1fda24933ef2d4b88c158b8fede28f09231b334a68b0a30b2b717394511a23 2779 jetty9_9.4.50-4+deb10u1.dsc
+ 0c19525f38ad12114da0f3b91eb278390c863c9e48589d4798d9e5f866c49e9b 81472 jetty9_9.4.50-4+deb10u1.debian.tar.xz
+ 0069f49ed49e16c0d277945c7fc6ce732acef288e807b60d007b19b4d299cfb6 17839 jetty9_9.4.50-4+deb10u1_amd64.buildinfo
+Changes:
+ jetty9 (9.4.50-4+deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * Backport Jetty 9 version from Bookworm.
+   * Revert to compat level 12 and servlet-api 3.1.
+   * Fix CVE-2023-36478 and CVE-2023-44487:
+     Two remotely exploitable security vulnerabilities were discovered in Jetty
+     9, a Java based web server and servlet engine. The HTTP/2 protocol
+     implementation did not sufficiently verify if HPACK header values exceed
+     their size limit. Furthermore the HTTP/2 protocol allowed a denial of
+     service (server resource consumption) because request cancellation can
+     reset many streams quickly. This problem is also known as Rapid Reset
+     Attack.
+   * Fix CVE-2020-27218:
+     If GZIP request body inflation is enabled and requests from different
+     clients are multiplexed onto a single connection, and if an attacker can
+     send a request with a body that is received entirely but not consumed by
+     the application, then a subsequent request on the same connection will see
+     that body prepended to its body. The attacker will not see any data but may
+     inject data into the body of the subsequent request.
+Files:
+ 91c5e2625ebe6cdf4a98c331fc238137 2779 java optional jetty9_9.4.50-4+deb10u1.dsc
+ 537da7b127f4c3f17a22bab056338c90 81472 java optional jetty9_9.4.50-4+deb10u1.debian.tar.xz
+ 2faa413f0d64bf7a389ec565e3d910f3 17839 java optional jetty9_9.4.50-4+deb10u1_amd64.buildinfo
+

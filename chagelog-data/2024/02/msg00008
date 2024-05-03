@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 22 Feb 2024 12:54:16 +0000
+Source: iwd
+Architecture: source
+Version: 0.14-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Andreas Henriksson <andreas@fatal.se>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1064062
+Changes:
+ iwd (0.14-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-52161: Fix an authentication bypass issue whereby adversaries
+     could gain unauthorised access to a protected home (ie. non-WPA2-Enterprise
+     etc.) WiFi network. (Closes: #1064062)
+Checksums-Sha1:
+ ccd5d6d87ec6709497601a62aea083f74c86a429 1824 iwd_0.14-2+deb10u1.dsc
+ 7eda226ec077584ed081c2cf740b9c7dff094db7 700844 iwd_0.14.orig.tar.xz
+ be6822fcb08fb91c50192984fd1ab2e4d024562f 7252 iwd_0.14-2+deb10u1.debian.tar.xz
+ 270c953da2b6276580a0d5cee4e1611c26e2d33a 6727 iwd_0.14-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 80745f3ab93f7918103e43a8fadf06c97f7b286cd3a0527e6c571733548e6a3d 1824 iwd_0.14-2+deb10u1.dsc
+ c4258b5789a8074a2dfdc33ed5f02415b62ff1ce0b7cba636402883933d6a643 700844 iwd_0.14.orig.tar.xz
+ ed9d8d9e38c3a5a4058cf7c816f763adb22b1d762f77ca9e1d191520fd334022 7252 iwd_0.14-2+deb10u1.debian.tar.xz
+ c96c5251d7188f3bca625f0e6a04a182740d7a565f79fcf83874061efc1d5610 6727 iwd_0.14-2+deb10u1_amd64.buildinfo
+Files:
+ 1550bf4e6bc3bc4c1c1bcc3ca6d96231 1824 net optional iwd_0.14-2+deb10u1.dsc
+ 0f776b000a03fe1e8ec04fa16445754e 700844 net optional iwd_0.14.orig.tar.xz
+ f5f5fd7271e9f8e475d33d60b19c34ff 7252 net optional iwd_0.14-2+deb10u1.debian.tar.xz
+ 713140e74b508bae2e4678a5972c428b 6727 net optional iwd_0.14-2+deb10u1_amd64.buildinfo
+

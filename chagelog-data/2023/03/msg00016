@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 16 Mar 2023 21:40:55 +0000
+Source: imagemagick
+Architecture: source
+Version: 8:6.9.10.23+dfsg-2.1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1032998
+Changes:
+ imagemagick (8:6.9.10.23+dfsg-2.1+deb10u3) buster-security; urgency=medium
+ .
+   * Bug fix: "font issue since 8:6.9.10.23+dfsg-2.1+deb10u2", thanks to
+     Maxime Besson (Closes: #1032998). Revert policy.xml patch.
+Checksums-Sha1:
+ 4befd3377cbfdd19f1ed31450f53b578b8866fd1 5187 imagemagick_6.9.10.23+dfsg-2.1+deb10u3.dsc
+ 2946d42d9bed81b20f1d3b9a3ce5d8c56e9ce001 249172 imagemagick_6.9.10.23+dfsg-2.1+deb10u3.debian.tar.xz
+ 9e362b040757537aeb1d7cc0dbef91c3befc7ce3 11437 imagemagick_6.9.10.23+dfsg-2.1+deb10u3_source.buildinfo
+Checksums-Sha256:
+ b93b185547df580dc940473ec511ff3365b78aa31a9c235da0f088fc5a3298e8 5187 imagemagick_6.9.10.23+dfsg-2.1+deb10u3.dsc
+ 2d476d9abf8e32117fc09c6a1a655abc863943f5a2ef69999c01ae428e584ccd 249172 imagemagick_6.9.10.23+dfsg-2.1+deb10u3.debian.tar.xz
+ dd037bd95b57c5ef1b58759cb752ceffbe0e58b37719aa596e5b54c611c6118d 11437 imagemagick_6.9.10.23+dfsg-2.1+deb10u3_source.buildinfo
+Files:
+ 311631325d2bb085d97dbf139d59401e 5187 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u3.dsc
+ 1f3c81f1aa9c2a41af60603ca77ab66a 249172 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u3.debian.tar.xz
+ 1171272cf7ebd203b19522bea3ff6255 11437 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u3_source.buildinfo
+

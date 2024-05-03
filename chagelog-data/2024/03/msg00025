@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 23 Mar 2024 18:12:05 +0200
+Source: python3.7
+Architecture: source
+Version: 3.7.3-2+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ python3.7 (3.7.3-2+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-6597: tempfile.TemporaryDirectory failure to remove dir
+   * CVE-2024-0450: quoted-overlap zipbomb DoS
+Checksums-Sha1:
+ b252d6cd779e8e659214992cdcecdd6b9c81d104 3404 python3.7_3.7.3-2+deb10u7.dsc
+ e3584650a06ae2765da0678176deae9d133f1b3d 17108364 python3.7_3.7.3.orig.tar.xz
+ d3a4d93d007d909d44ced9faae5247c82cc63870 253612 python3.7_3.7.3-2+deb10u7.debian.tar.xz
+Checksums-Sha256:
+ 587d3af05bda31fcec4aca7157b73168f28ac5552d87eff0d2579b928ffddce3 3404 python3.7_3.7.3-2+deb10u7.dsc
+ da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318 17108364 python3.7_3.7.3.orig.tar.xz
+ b01fd29bf12e7e51f0210bce89fc99345e8887e1ba35318dfa0be1f07a29d0ab 253612 python3.7_3.7.3-2+deb10u7.debian.tar.xz
+Files:
+ e7600e5820ec412e937c9079d14970d1 3404 python optional python3.7_3.7.3-2+deb10u7.dsc
+ 93df27aec0cd18d6d42173e601ffbbfd 17108364 python optional python3.7_3.7.3.orig.tar.xz
+ d6e4f913f1eea1777d40941e351f601d 253612 python optional python3.7_3.7.3-2+deb10u7.debian.tar.xz
+

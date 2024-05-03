@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 03 Oct 2022 09:46:28 +0200
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2021a-0+deb10u7) buster-security; urgency=medium
+ .
+   * Cherry-pick patches from upstream (thanks Aurelien Jarno):
+     - 10-no-leap-second-2022-12-31.patch: update leap-seconds.list, new
+       expiration date on 28 June 2023.
+     - 11-palestine-dst3.patch: Palestine transitions are now Saturdays at
+       02:00. This means 2022 falls back 10-29 at 02:00, not 10-28 at 01:00.
+Checksums-Sha1:
+ 067dcf91dcb93666bca91178d7146733813ec665 2023 tzdata_2021a-0+deb10u7.dsc
+ 97d7c6683109951eae7bd3902bac4aa99da005c0 114484 tzdata_2021a-0+deb10u7.debian.tar.xz
+ 64a401dd38ed57da6c110e1e05a4e3fa8dd5bf40 5841 tzdata_2021a-0+deb10u7_source.buildinfo
+Checksums-Sha256:
+ c7464bc7872aa0b43653a38c1f131d31531bbb18d7ed3e34e3a47b2b62dc0801 2023 tzdata_2021a-0+deb10u7.dsc
+ 808028fadf6f8a2e3349c29c761ea3063571e1f286ac4e27460b0fbe87bd27a4 114484 tzdata_2021a-0+deb10u7.debian.tar.xz
+ 29ad14410996fbca77657f52853646965f9b828ace3ddfe33d35de41c3f41f34 5841 tzdata_2021a-0+deb10u7_source.buildinfo
+Files:
+ e90391929e882a8eee8258653d771a52 2023 localization required tzdata_2021a-0+deb10u7.dsc
+ 50075d91f4eb0a33185e5878654c2b72 114484 localization required tzdata_2021a-0+deb10u7.debian.tar.xz
+ 20a4b876c21613e8b1ee98e4a691a02a 5841 localization required tzdata_2021a-0+deb10u7_source.buildinfo
+

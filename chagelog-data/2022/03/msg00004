@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 07 Mar 2022 12:19:23 +0100
+Source: freecad
+Architecture: source
+Version: 0.16+dfsg2-3+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ freecad (0.16+dfsg2-3+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-45844: command injection when converting untrusted DWG files
+     to DXF and viceversa.
+Checksums-Sha1:
+ 14b20b6f2890bc79874c17f0d27fad68f520ad34 2929 freecad_0.16+dfsg2-3+deb9u1.dsc
+ 3c271f6c8e1d0dfa9ef53408719fbf9d328396bb 16789100 freecad_0.16+dfsg2.orig.tar.xz
+ 47762efdb39a1bfe921f7b185d7cb86cfb63a7fb 23904 freecad_0.16+dfsg2-3+deb9u1.debian.tar.xz
+ e7d2b4d3c6967324cb831a9e39a75e22920e405b 6524 freecad_0.16+dfsg2-3+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 9b3b4de678dc0729a6403491ec9a9e1d40a2654f28458c5975676b308b77b0b6 2929 freecad_0.16+dfsg2-3+deb9u1.dsc
+ f350308f9e5373e00bfb918fb71b6889af9f94a42f9f8e9b663edce3b71e413b 16789100 freecad_0.16+dfsg2.orig.tar.xz
+ 8be43a3aebc76ecc5518525d1c6fb5717e444504af8c6ff938e1fb317887495e 23904 freecad_0.16+dfsg2-3+deb9u1.debian.tar.xz
+ 2fafec0c269450986a4e096c85aa820504d70ed11c924261de81030eea0049db 6524 freecad_0.16+dfsg2-3+deb9u1_source.buildinfo
+Files:
+ c85b614a33095f2eb522e1e502a419e1 2929 science extra freecad_0.16+dfsg2-3+deb9u1.dsc
+ e2f9e92da7a60509ab7188b7f69bec89 16789100 science extra freecad_0.16+dfsg2.orig.tar.xz
+ c2947caf88f2571540e791a5faea8334 23904 science extra freecad_0.16+dfsg2-3+deb9u1.debian.tar.xz
+ d1cdb87f7abfbd8865a0f7abc8312af4 6524 science extra freecad_0.16+dfsg2-3+deb9u1_source.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 09 Mar 2022 16:40:26 +0100
+Source: tryton-server
+Architecture: source
+Version: 4.2.1-2+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Tryton Maintainers <maintainers@debian.tryton.org>
+Changed-By: Mathias Behrle <mathiasb@m9s.biz>
+Changes:
+ tryton-server (4.2.1-2+deb9u2) stretch-security; urgency=high
+ .
+   * This release contains fixes for XML parsing vulnerabilities:
+     https://discuss.tryton.org/t/security-release-for-issue11219-and-issue11244/5059
+     https://bugs.tryton.org/issue11219 (CVE-2022-26661)
+     https://bugs.tryton.org/issue11244 (CVE-2022-26662)
+Checksums-Sha1:
+ 9d689a90fafd9f1fc951e4c6ddd3c59616d8d6e5 2283 tryton-server_4.2.1-2+deb9u2.dsc
+ acb59596f8ced0742a754ac539dfec9e9bfd9a69 581536 tryton-server_4.2.1.orig.tar.gz
+ dcb5dc20eed7ac199a81d738ee9271dd9e70fbcb 44068 tryton-server_4.2.1-2+deb9u2.debian.tar.xz
+ bcaec739b637a892c18d87029220dc515a2db35b 5756 tryton-server_4.2.1-2+deb9u2_source.buildinfo
+Checksums-Sha256:
+ 43d95ee441e10f2f198dface7cf8493e52563c74b616bbba096310924e57442b 2283 tryton-server_4.2.1-2+deb9u2.dsc
+ 475e9e5b561c228a4c33ce6b0c0b26213f49b4feaf9fb8f43c1ae8e1f4ba52c6 581536 tryton-server_4.2.1.orig.tar.gz
+ 25af358197961d6eaadd5986dd29fc077e5e838ba92e558c39ddf5c48a5da9d6 44068 tryton-server_4.2.1-2+deb9u2.debian.tar.xz
+ 585a1528f3c10bc8e4f5827f76fc764f06d878eca61443636fd24b88e6c25e00 5756 tryton-server_4.2.1-2+deb9u2_source.buildinfo
+Files:
+ 9d0eb7a7d37c08213c45228792818943 2283 python optional tryton-server_4.2.1-2+deb9u2.dsc
+ ab3e92100e0229ca8a48f03f3dbc5a30 581536 python optional tryton-server_4.2.1.orig.tar.gz
+ ef6aa553c15275474e61dc620708f5ec 44068 python optional tryton-server_4.2.1-2+deb9u2.debian.tar.xz
+ e78066d80be5bea88b4588770211393a 5756 python optional tryton-server_4.2.1-2+deb9u2_source.buildinfo
+

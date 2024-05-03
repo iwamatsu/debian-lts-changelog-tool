@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  6 Jun 2022 14:35:42 CEST
+Source: glib2.0
+Binary: libglib2.0-0 libglib2.0-tests libglib2.0-udeb libglib2.0-bin libglib2.0-dev libglib2.0-0-dbg libglib2.0-data libglib2.0-doc libgio-fam
+Architecture: source
+Version: 2.50.3-2+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libgio-fam - GLib Input, Output and Streaming Library (fam module)
+ libglib2.0-0 - GLib library of C routines
+ libglib2.0-0-dbg - Debugging symbols for the GLib libraries
+ libglib2.0-bin - Programs for the GLib library
+ libglib2.0-data - Common files for GLib library
+ libglib2.0-dev - Development files for the GLib library
+ libglib2.0-doc - Documentation files for the GLib library
+ libglib2.0-tests - GLib library of C routines - installed tests
+ libglib2.0-udeb - GLib library of C routines - minimal runtime (udeb)
+Checksums-Sha1:
+ 6b2d318aa39f2c19a608746c37a525f90e1d5999 3429 glib2.0_2.50.3-2+deb9u3.dsc
+ 6a583e13bf5232d4dca9f968a23d89abb9acebd9 87720 glib2.0_2.50.3-2+deb9u3.debian.tar.xz
+ 7ce3ca43a3872763c2bef6ebdc3d4c32cca10f3a 10984 glib2.0_2.50.3-2+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 7e080dfb2f6aeb8db835c1aef845294665d99fd07f9494c4ff022cedb2bcd059 3429 glib2.0_2.50.3-2+deb9u3.dsc
+ c8c0b58d5cb5c510546bfbaa6289ac93417dbac6efeb289d938d816458a358c8 87720 glib2.0_2.50.3-2+deb9u3.debian.tar.xz
+ 2df98b6c307b7cf009439240290d758d0351c9f81ddc68e140621583209812b3 10984 glib2.0_2.50.3-2+deb9u3_amd64.buildinfo
+Changes:
+ glib2.0 (2.50.3-2+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-28153:
+     When g_file_replace() is used with G_FILE_CREATE_REPLACE_DESTINATION to
+     replace a path that is a dangling symlink, it incorrectly also creates the
+     target of the symlink as an empty file, which could conceivably have
+     security relevance if the symlink is attacker-controlled. (If the path is
+     a symlink to a file that already exists, then the contents of that file
+     correctly remain unchanged.)
+   * Fix CVE-2021-27218:
+     If g_byte_array_new_take() was called with a buffer of 4GB or more on a
+     64-bit platform, the length would be truncated modulo 2**32, causing
+     unintended length truncation.
+   * Fix CVE-2021-27219:
+     The function g_bytes_new has an integer overflow on 64-bit platforms due to
+     an implicit cast from 64 bits to 32 bits. The overflow could potentially
+     lead to memory corruption.
+Files:
+ c0e3a6596ec864aa54ccd5c421dc9339 3429 libs optional glib2.0_2.50.3-2+deb9u3.dsc
+ bbf0df279a55f4db2ce4acbf6008030b 87720 libs optional glib2.0_2.50.3-2+deb9u3.debian.tar.xz
+ 0b15066960587385e54ceb18a34ea132 10984 libs optional glib2.0_2.50.3-2+deb9u3_amd64.buildinfo
+

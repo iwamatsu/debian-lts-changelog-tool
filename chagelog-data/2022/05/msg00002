@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 29 Apr 2022 13:16:49 +0200
+Source: openvpn
+Architecture: source
+Version: 2.4.0-6+deb9u4
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Alberto Gonzalez Iniesta <agi@inittab.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ openvpn (2.4.0-6+deb9u4) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2017-12166: buffer overflow in key-method 1.
+   * CVE-2020-11810: connection drop upon packet injection.
+   * CVE-2020-15078: authentication bypass with deferred auth.
+   * CVE-2022-0547: authentication bypass with multiple deferred auth schemes.
+Checksums-Sha1:
+ 51d3d424360cd767127f7073d459d5623d42ea44 2095 openvpn_2.4.0-6+deb9u4.dsc
+ 7772eb3ddea45c3f894e6a534f3368369d3d0bc0 1409019 openvpn_2.4.0.orig.tar.gz
+ bd4f0231e88d5ff18c5d515ebc17b8ff1674595c 64364 openvpn_2.4.0-6+deb9u4.debian.tar.xz
+ ce1eb602c9ac3c4e4fd41f10702265534337de44 6617 openvpn_2.4.0-6+deb9u4_source.buildinfo
+Checksums-Sha256:
+ c2e75102a78073531dc7cb614a29a6ddba96cad7246a19a00741bb7b25cf3436 2095 openvpn_2.4.0-6+deb9u4.dsc
+ f21db525b3c03a9bbd0a7ab6d0e4fbaf8902f238bf53b8bc4e04f834e4e7caa4 1409019 openvpn_2.4.0.orig.tar.gz
+ 295235ceaa76a3c26d98ab51db30a035299238eb01d7a4f38f72e58f943a65f4 64364 openvpn_2.4.0-6+deb9u4.debian.tar.xz
+ 5f649c2a232c8cd0f8248fb868adb31830f15bbb1c17429326b0b624b14450ce 6617 openvpn_2.4.0-6+deb9u4_source.buildinfo
+Files:
+ 5c87500b4983fb76ef96e1da88258e55 2095 net optional openvpn_2.4.0-6+deb9u4.dsc
+ e4b3932000a17d782b72e094752619ec 1409019 net optional openvpn_2.4.0.orig.tar.gz
+ 3afadd06a9f440b7fa9501fd916a437e 64364 net optional openvpn_2.4.0-6+deb9u4.debian.tar.xz
+ 4b7375d1834ace40386e6c0b79dc2025 6617 net optional openvpn_2.4.0-6+deb9u4_source.buildinfo
+

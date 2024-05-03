@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 05 Mar 2024 17:43:32 +0000
+Source: libapache2-mod-auth-openidc
+Architecture: source
+Version: 2.3.10.2-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Moritz Schlarb <schlarbm@uni-mainz.de>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1064183
+Changes:
+ libapache2-mod-auth-openidc (2.3.10.2-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2024-24814: Missing input validation on mod_auth_openidc_session_chunks
+     cookie value made the server vulnerable to a Denial of Service (DoS)
+     attack. If an attacker manipulated the value of the OpenIDC cookie to a
+     very large integer like 99999999, the server struggled with the request for
+     a long time and finally returned a 500 error. Making a few requests of this
+     kind caused servers to become unresponsive, and so attackers could thereby
+     craft requests that would make the server work very hard and/or crash with
+     minimal effort. (Closes: #1064183)
+Checksums-Sha1:
+ b8e9a96d1bc7ac090549d1a46003a64b39effca1 2534 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4.dsc
+ bede99318fd540076dc2e2f2f80714ae1736b0bb 263825 libapache2-mod-auth-openidc_2.3.10.2.orig.tar.gz
+ e33d9e9aa68bfc4a6b9a9aff7a7dfb63bb09551f 18780 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4.debian.tar.xz
+ 139bc5c550b22d2f0dfead7c56d449aba16224b1 7634 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ ee11805597937d5e8c8a5673b9bc2a96beac086a3a5e6e0ba2a345c2a3f15f96 2534 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4.dsc
+ d72fd1131554225b9256a5d5f5e93ecce298ac8946c2511973ab07436902c641 263825 libapache2-mod-auth-openidc_2.3.10.2.orig.tar.gz
+ 9a90a160d04bcf4e283ec3154ec9886cc984d2a5c1c97219ea78e492ffc57a0c 18780 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4.debian.tar.xz
+ 470738e6bade0c95933bb5070fcd2ed6d1be27978c56c936610a6f99d27f14f4 7634 libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4_amd64.buildinfo
+Files:
+ fffa9a02b74acd0852a021bfc7860b2b 2534 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4.dsc
+ 6b81eb34bfc2baecd44bb3a775d27a1d 263825 httpd optional libapache2-mod-auth-openidc_2.3.10.2.orig.tar.gz
+ c27b32f63c3975d12057bf2fd1196461 18780 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4.debian.tar.xz
+ 585564795b0768a920c1251ce3ca21d9 7634 httpd optional libapache2-mod-auth-openidc_2.3.10.2-1+deb10u4_amd64.buildinfo
+

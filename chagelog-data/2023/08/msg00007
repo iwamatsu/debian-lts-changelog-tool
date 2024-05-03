@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 06 Aug 2023 13:34:56 +0300
+Source: pdfcrack
+Architecture: source
+Version: 0.16-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Joao Eriberto Mota Filho <eriberto@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ pdfcrack (0.16-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-22336: Stack overflow in the MD5 function.
+Checksums-Sha1:
+ ee22c398723907238004fb3da6d48afe585beed5 1865 pdfcrack_0.16-3+deb10u1.dsc
+ 63649066a26e91239a233ca8a189599793a131eb 34467 pdfcrack_0.16.orig.tar.gz
+ 7213e5bd459ab8454c14f7de6d724734f7423b6a 12784 pdfcrack_0.16-3+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ a0191b09764ccc4126ae3af768c9e0f14715cc7e923352e6528df32e9e87c445 1865 pdfcrack_0.16-3+deb10u1.dsc
+ 7865b203074ccfd5c612c8ce00c46ffcb4fabaa26154ce9304dfc668c7cb73ef 34467 pdfcrack_0.16.orig.tar.gz
+ bb4ba2046bb2541cc2ee1f02d6d4af9c6f33ede43a7ecbaa935dff1097eec5dd 12784 pdfcrack_0.16-3+deb10u1.debian.tar.xz
+Files:
+ ce462f013f01c1071200b3b2bb815d17 1865 utils optional pdfcrack_0.16-3+deb10u1.dsc
+ 1f7d74146a100c3679462d19feb1e931 34467 utils optional pdfcrack_0.16.orig.tar.gz
+ abc3bedbc3ee1348ddb880ad0f6ab7e9 12784 utils optional pdfcrack_0.16-3+deb10u1.debian.tar.xz
+

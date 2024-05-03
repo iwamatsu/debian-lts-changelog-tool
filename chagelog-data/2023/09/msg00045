@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Sep 2023 18:13:41 +0200
+Source: python-reportlab
+Architecture: source
+Version: 3.5.13-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ python-reportlab (3.5.13-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2019-19450: code injection in paraparser.py allows code execution.
+   * Fix CVE-2020-28463: Server-side Request Forgery (SSRF) via <img> tags.
+     New settings ‘trustedHosts’ and ‘trustedSchemes’ are added to explicitely
+     define an allowlist.
+Checksums-Sha1:
+ a55f97584a063ffd1ce42d1a59007727ce542cbd 2853 python-reportlab_3.5.13-1+deb10u2.dsc
+ ba62ac2907911bf930d829230e5cd2f725deeed5 18524 python-reportlab_3.5.13-1+deb10u2.debian.tar.xz
+ 30c3d6fcf0e94f0a382258118cb777656d51ad9e 12475 python-reportlab_3.5.13-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 54d49616d4d1d7fb5f81468311cbe99c7d37c13215918219cc0f94f536f3f0f2 2853 python-reportlab_3.5.13-1+deb10u2.dsc
+ f9fddf37278705d28dc4f465dd2dc73bd18727ed03bd3aa5f2b8d069247e05f8 18524 python-reportlab_3.5.13-1+deb10u2.debian.tar.xz
+ 7b42f22139799f551a9cf20fbf24bebf6c86fb3c13f10d829770c110511a1629 12475 python-reportlab_3.5.13-1+deb10u2_amd64.buildinfo
+Files:
+ 425a21500a820ef5ccaa08d723924d47 2853 python optional python-reportlab_3.5.13-1+deb10u2.dsc
+ 000f893280b671ee2fdbcc6ad8d34a99 18524 python optional python-reportlab_3.5.13-1+deb10u2.debian.tar.xz
+ 8b35c0c4755324456643e27831374471 12475 python optional python-reportlab_3.5.13-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Sep 2023 15:53:15 +0200
+Source: python-git
+Architecture: source
+Version: 2.1.11-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ python-git (2.1.11-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-41040: Blind local file inclusion.
+Checksums-Sha1:
+ 9fa243fa95625e4fe6027e5228433390751f8189 2459 python-git_2.1.11-1+deb10u2.dsc
+ c6b8d2ee23194a01fd15812a82619638249481ef 15152 python-git_2.1.11-1+deb10u2.debian.tar.xz
+ 4afe6e01dee79d62495c14f82dfa8a93b3b811c0 9398 python-git_2.1.11-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 5f122d7449894800e8a9f409ee31f0cddf5b6c7a8294b27de9e4e80692a4ba5c 2459 python-git_2.1.11-1+deb10u2.dsc
+ af89ed835e5112b45bd165f84368c2c41899f548fa1d0e1b0cd2f111d72ed454 15152 python-git_2.1.11-1+deb10u2.debian.tar.xz
+ 3d56ed4c8b39ef75157a56a69f3c4c0542371c8b7b702797c7a94b744313999d 9398 python-git_2.1.11-1+deb10u2_amd64.buildinfo
+Files:
+ 74385e7f0f6697e8d66754fa85372844 2459 python optional python-git_2.1.11-1+deb10u2.dsc
+ 55e6644aa1d3c100881dee0aae7f035f 15152 python optional python-git_2.1.11-1+deb10u2.debian.tar.xz
+ f161fc29176f779da5262c647e2d765f 9398 python optional python-git_2.1.11-1+deb10u2_amd64.buildinfo
+

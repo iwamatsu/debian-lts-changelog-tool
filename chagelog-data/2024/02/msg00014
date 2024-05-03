@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 27 Feb 2024 13:42:30 +0800
+Source: libgit2
+Architecture: source
+Version: 0.27.7+dfsg.1-0.2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Russell Sim <russell.sim@gmail.com>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1063416
+Changes:
+ libgit2 (0.27.7+dfsg.1-0.2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fix for CVE-2024-24577 (Closes: #1063416).
+Checksums-Sha1:
+ d5a069d022d913103eeeedfeeb05676e6c218142 2181 libgit2_0.27.7+dfsg.1-0.2+deb10u2.dsc
+ ea9136427d103c4dab23d52d9ec449a8f45418d1 28584 libgit2_0.27.7+dfsg.1-0.2+deb10u2.debian.tar.xz
+ 6930afcf1b3f4acd35316153715f38380d5b634c 6327 libgit2_0.27.7+dfsg.1-0.2+deb10u2_source.buildinfo
+Checksums-Sha256:
+ e3f3ffaea7a34a521a56b8c1dcdb76be80eb727f1e4e80416a64eae81bc25d00 2181 libgit2_0.27.7+dfsg.1-0.2+deb10u2.dsc
+ 98e459a484c60d590d0a18cdc26d345b52b19c1faad48122a2f2fba2348e968e 28584 libgit2_0.27.7+dfsg.1-0.2+deb10u2.debian.tar.xz
+ 4e3cc8eb537310aa0124c640f3b1d95d7d80e432a0b0f4b0d9df716f03e22228 6327 libgit2_0.27.7+dfsg.1-0.2+deb10u2_source.buildinfo
+Files:
+ bbe0353415a66bec18684e2da9f88141 2181 libs optional libgit2_0.27.7+dfsg.1-0.2+deb10u2.dsc
+ 3576c9c985bf0a8d485685ab62d08592 28584 libs optional libgit2_0.27.7+dfsg.1-0.2+deb10u2.debian.tar.xz
+ 8d7fd7e6c3455517cc87321d71aff4ca 6327 libs optional libgit2_0.27.7+dfsg.1-0.2+deb10u2_source.buildinfo
+

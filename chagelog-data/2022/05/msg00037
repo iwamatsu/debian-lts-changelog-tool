@@ -1,0 +1,49 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 26 May 2022 12:32:17 +0100
+Source: irssi
+Binary: irssi irssi-dev
+Architecture: source amd64
+Version: 1.0.7-1~deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Rhonda D'Vine <rhonda@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ irssi      - terminal based IRC client
+ irssi-dev  - terminal based IRC client - development files
+Closes: 931264
+Changes:
+ irssi (1.0.7-1~deb9u2) stretch-security; urgency=high
+ .
+   * Fix a use-after-free vulnerability in the handling of SASL usernames and
+     passwords. (Closes: #931264)
+Checksums-Sha1:
+ 777eec606dfc2be8d41f4cd4090866ef48929a02 2177 irssi_1.0.7-1~deb9u2.dsc
+ 0524e5f2d465e3b04a0227dac648a26e5c6d8286 1034188 irssi_1.0.7.orig.tar.xz
+ 0524e5f2d465e3b04a0227dac648a26e5c6d8286 1034188 irssi_1.0.7.orig.tar.xz.asc
+ 66441f739d8061e59b5ec9b82a9bb9a85efe5916 21172 irssi_1.0.7-1~deb9u2.debian.tar.xz
+ 22e7854d3cf8df5746e73b1ac5b8f4ffc09d75de 2945444 irssi-dbgsym_1.0.7-1~deb9u2_amd64.deb
+ 5f69f14c8eba0638c7ce8bdef5c0ad15f9c03ccc 454580 irssi-dev_1.0.7-1~deb9u2_amd64.deb
+ a5a47837d350df0212e3e124118b6fe652ab7ca9 7354 irssi_1.0.7-1~deb9u2_amd64.buildinfo
+ dbe09fcdc13b43ffccf69168d0fc32b3f2b9a095 1082026 irssi_1.0.7-1~deb9u2_amd64.deb
+Checksums-Sha256:
+ 1f9d32f0f835c3c02df6cf24ac6877ee0554a0f6bbcd2a66ee8112436d9ff870 2177 irssi_1.0.7-1~deb9u2.dsc
+ 1b386ca026aa1875c380fd00ef1d24b71fb87cdae39ef5349ecca16c4567feac 1034188 irssi_1.0.7.orig.tar.xz
+ 1b386ca026aa1875c380fd00ef1d24b71fb87cdae39ef5349ecca16c4567feac 1034188 irssi_1.0.7.orig.tar.xz.asc
+ 2789cb651d21d3c7883678fd6056a0ef5199018223278c1c531bd2735d6bdf26 21172 irssi_1.0.7-1~deb9u2.debian.tar.xz
+ 17b92b18a7edd49f91388843c65e1f715ef5c3f4bffeb065c2179388b248a00d 2945444 irssi-dbgsym_1.0.7-1~deb9u2_amd64.deb
+ 91c1c3348ca4878e664feaa7cb019fad0d56c9c126553add81e8d73b56c38659 454580 irssi-dev_1.0.7-1~deb9u2_amd64.deb
+ de2abe61cb17ad103168f465dd2fa8f86e0c0a955d852a1494a4bddea7173d0a 7354 irssi_1.0.7-1~deb9u2_amd64.buildinfo
+ 5a651002e47b5130b408ad7e1c1f2ed00761d011d89d56d31f26ece8cd6cc3cd 1082026 irssi_1.0.7-1~deb9u2_amd64.deb
+Files:
+ c3695a75415be0579c181e95880c5b64 2177 net optional irssi_1.0.7-1~deb9u2.dsc
+ 6ebf07a03b58f7af1296cd8fdbb3619f 1034188 net optional irssi_1.0.7.orig.tar.xz
+ 6ebf07a03b58f7af1296cd8fdbb3619f 1034188 net optional irssi_1.0.7.orig.tar.xz.asc
+ 0a7c003fbd910d86f851bb65088ce648 21172 net optional irssi_1.0.7-1~deb9u2.debian.tar.xz
+ 7fd268bf7f38e7c16352a8ba21ab364d 2945444 debug extra irssi-dbgsym_1.0.7-1~deb9u2_amd64.deb
+ bca7dd89d2dc28ff5140c98e30faefbd 454580 net optional irssi-dev_1.0.7-1~deb9u2_amd64.deb
+ ad344b827b1298fce801a6eb702be15c 7354 net optional irssi_1.0.7-1~deb9u2_amd64.buildinfo
+ 60ad4577c5453622b8addc4617c97b1b 1082026 net optional irssi_1.0.7-1~deb9u2_amd64.deb
+

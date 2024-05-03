@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 04 Jan 2024 21:53:23 +0000
+Source: tomcat9
+Architecture: source
+Version: 9.0.31-1~deb10u11
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1057082
+Changes:
+ tomcat9 (9.0.31-1~deb10u11) buster-security; urgency=high
+ .
+   * Team upload
+   * Fix CVE-2023-46589 (Closes: #1057082):
+     An Improper Input Validation vulnerability was found. Tomcat
+     did not correctly parse HTTP trailer headers. A trailer
+     header that exceeded the header size limit could cause Tomcat
+     to treat a single request as multiple requests leading
+     to the possibility of request smuggling when behind a reverse proxy.
+Checksums-Sha1:
+ 81f1e18509dc1c11cd949ba0cf475052f61f3209 2767 tomcat9_9.0.31-1~deb10u11.dsc
+ fc1be178e650d962ae1a2bd0e10f20be9b42be7c 66556 tomcat9_9.0.31-1~deb10u11.debian.tar.xz
+ feed30f47a59097b1ff1ab12659f2fcebb5cf95b 14058 tomcat9_9.0.31-1~deb10u11_amd64.buildinfo
+Checksums-Sha256:
+ dd2648ea8c85e61d02b56a2b94b94797876f7a89cbadb3ccb1f2a8ac4eeda51a 2767 tomcat9_9.0.31-1~deb10u11.dsc
+ 0099dc5cb5fce715c3887e86a6f9a5bafbdd2289d5e110ee955aab31419b44e6 66556 tomcat9_9.0.31-1~deb10u11.debian.tar.xz
+ 468e5b9e397c205b1cd7b52125f1cffc76925e58192745591512e2eea5930920 14058 tomcat9_9.0.31-1~deb10u11_amd64.buildinfo
+Files:
+ 17febc46eb537f9155d499bae53d2406 2767 java optional tomcat9_9.0.31-1~deb10u11.dsc
+ 287f6d6be7baa5f0b0ff6859822693d7 66556 java optional tomcat9_9.0.31-1~deb10u11.debian.tar.xz
+ 4a16d44daec0cd26d01c552e5ae327b9 14058 java optional tomcat9_9.0.31-1~deb10u11_amd64.buildinfo
+

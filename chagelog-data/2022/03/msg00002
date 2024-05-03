@@ -1,0 +1,107 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 06 Mar 2022 10:03:02 +0100
+Source: cyrus-sasl2
+Binary: sasl2-bin cyrus-sasl2-doc libsasl2-2 libsasl2-modules libsasl2-modules-db libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql libsasl2-modules-gssapi-mit libsasl2-dev libsasl2-modules-gssapi-heimdal
+Architecture: source all amd64
+Version: 2.1.27~101-g0780600+dfsg-3+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Cyrus SASL Team <pkg-cyrus-sasl2-debian-devel@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ cyrus-sasl2-doc - Cyrus SASL - documentation
+ libsasl2-2 - Cyrus SASL - authentication abstraction library
+ libsasl2-dev - Cyrus SASL - development files for authentication abstraction lib
+ libsasl2-modules - Cyrus SASL - pluggable authentication modules
+ libsasl2-modules-db - Cyrus SASL - pluggable authentication modules (DB)
+ libsasl2-modules-gssapi-heimdal - Pluggable Authentication Modules for SASL (GSSAPI)
+ libsasl2-modules-gssapi-mit - Cyrus SASL - pluggable authentication modules (GSSAPI)
+ libsasl2-modules-ldap - Cyrus SASL - pluggable authentication modules (LDAP)
+ libsasl2-modules-otp - Cyrus SASL - pluggable authentication modules (OTP)
+ libsasl2-modules-sql - Cyrus SASL - pluggable authentication modules (SQL)
+ sasl2-bin  - Cyrus SASL - administration programs for SASL users database
+Changes:
+ cyrus-sasl2 (2.1.27~101-g0780600+dfsg-3+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix _sasl_add_string
+   * CVE-2022-24407
+     Escape password for SQL insert/update commands
+Checksums-Sha1:
+ 690d8f7de3b533d1d9467ac1e2028fbbfd3f8f70 3385 cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2.dsc
+ 627ff1c0d62984d60f7f98d6b14f6c36d6a9b0d9 1143888 cyrus-sasl2_2.1.27~101-g0780600+dfsg.orig.tar.xz
+ b7e85ecb676696609d9cb90ebbd8c7a1f7d55ec8 96140 cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2.debian.tar.xz
+ a9c730279c7b4c975905e5325a0a50c39303ab88 109844 cyrus-sasl2-doc_2.1.27~101-g0780600+dfsg-3+deb9u2_all.deb
+ 6a8dd5af474f359bfdaa1a5d347b8273d75ceaa8 15653 cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.buildinfo
+ f6ff29b3070fcba781c00aff804a87c09342fe7b 140344 libsasl2-2-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ bf1190cdaca2d8ec056594d2748c60d4ecd0d7bc 104942 libsasl2-2_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ ad39b35ce20a8a760587717eb79ce4305d22e6c6 310698 libsasl2-dev_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 3013aeec0002a8f28c280716c7f647a853d731ef 51990 libsasl2-modules-db-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 14fb21375295bbba27059b8b505503bae0a3e53f 68480 libsasl2-modules-db_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 5ddb17df992cdabcf35f5d01cb59abae01aa29cc 210614 libsasl2-modules-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 3eab97b0fb9fe742729ffd1274b06c1525edf41d 39274 libsasl2-modules-gssapi-heimdal-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 438b4edea2b513faea937067593f5c432dd061b6 71718 libsasl2-modules-gssapi-heimdal_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 7c3b982c958d10be601624b164793c39ec28dcf2 123466 libsasl2-modules-gssapi-mit-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ c2f9846e4b3198bf81fa66edeca72f55fccaa716 90696 libsasl2-modules-gssapi-mit_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ b7dc2e9a9edd30c4e394564378f950059d53fc8f 29986 libsasl2-modules-ldap-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ c42343d12dcdc94ae1f9451c9fe47edc175cd3d4 67312 libsasl2-modules-ldap_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 0beb7eb9d589762c3b513d7a0ea6a3b45ddede7f 42816 libsasl2-modules-otp-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ c32172dc145d3cc992dbd4fbe84eab55c992b807 80344 libsasl2-modules-otp_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 021b0dcef6ba0bc746e97dbdcac98dd8c9a8fa09 40162 libsasl2-modules-sql-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ f48ad2c1146406d43cc7b1520746e96305fa7d38 69972 libsasl2-modules-sql_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 330dc5702c225068b04860e5d5e9fb56fb557294 102296 libsasl2-modules_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 7366c0e95d5fc59a42af892021da0d345a254976 263692 sasl2-bin-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ e2262a70af6c8b7c63374fafa28a933de0f5923e 162270 sasl2-bin_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+Checksums-Sha256:
+ b010c3150312ce7d89c2ab9fe987f4597f7fbc7aca932542fd49de76246bcbf4 3385 cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2.dsc
+ 69f34971f768e7ee6a6b647ec2d16a5a72a854ecd4602b019d5f79ba61063fdc 1143888 cyrus-sasl2_2.1.27~101-g0780600+dfsg.orig.tar.xz
+ 5ce0b4b096f05abcf27302cb0c18b1e692f8ed2f7846a4e3a55c8f21b2adf3e2 96140 cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2.debian.tar.xz
+ b90713ef515154bf38f9877dc02d3fd7afc59f6864531d430681a16ec03c3510 109844 cyrus-sasl2-doc_2.1.27~101-g0780600+dfsg-3+deb9u2_all.deb
+ 80c1e6572e1f0a525f658072a402cdd0b9cac24282c5a66fa6545b215a68c2e1 15653 cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.buildinfo
+ 069da24ec62983c3ea5f9ec11305167356ef8b3e19de7c83b0aa3079cce688d3 140344 libsasl2-2-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 6210e61a3d1305c270b3fc9bcf5cf03026e0efb22122d106eb078ba8709f8654 104942 libsasl2-2_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 904e97c85b32be009bc878ef30ce4cb6150a060d5f755bff7671e0b231e2356a 310698 libsasl2-dev_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 6dafb01b18113f81ca781585f8b9955b0a3f9214338991ddcef534b3140ef57e 51990 libsasl2-modules-db-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 847511fa45e2958d3a91335cad35f0098dc8d523d55941a7a60d6ccc4559c307 68480 libsasl2-modules-db_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 5088409de181a6cc454eda8df5a6170899dec016100629cc03d52cf8c95a7bfc 210614 libsasl2-modules-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ ef0651a81b71a2df98bcb701fa217b8db06ad9ec4af83dd65ce5a89f94487292 39274 libsasl2-modules-gssapi-heimdal-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 0fab9fccf6dad706cec0047f7f1ab5ba47e017f745155dc64db6189a67f3a00e 71718 libsasl2-modules-gssapi-heimdal_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 68bf592bb8db7fbe06530751724c55490d58dc370e85987fecee1e859913ec11 123466 libsasl2-modules-gssapi-mit-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 9178b272b4580f71045a38eea256f95a8b85e5717b4375597c5c3244586d0e8a 90696 libsasl2-modules-gssapi-mit_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 7e97b1eb83139a8f126eba0e4e253454b1732ed78cbfe7ec4c2ed8aef35b96ba 29986 libsasl2-modules-ldap-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 074126225ad460ae963cebf2ce2e1dcfa44c36153178940c709d9e5e904930d3 67312 libsasl2-modules-ldap_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ a3cd561e4364439d669096b9bffb2589e26abdeadb5f96fd55c3111984ab971d 42816 libsasl2-modules-otp-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 82304eb67a163635bf903508fecb32310cf816e27a0c4e1e442496d2e0444e9f 80344 libsasl2-modules-otp_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 6fa5da10f957be9f35e16e2cb6065f45002b8256a5231bee9d3f3e0f06bb5972 40162 libsasl2-modules-sql-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 272c5a6891d67b3dc082e414a711fb4817be0a9a22fd6401ba960fe0c6f3da28 69972 libsasl2-modules-sql_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 45dc3de2052e6556b883433151d388af63f5a0926330c7b129e38c4bf8a1b68b 102296 libsasl2-modules_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 0f0f17a760f188a554abd2819320893979883ff953726976b6db869e8afebcab 263692 sasl2-bin-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ d41b6f305e379c531e260349e846183882612c8d5c8ca12dbe0c89e3e17199d0 162270 sasl2-bin_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+Files:
+ 383aa517f7d5d762213d34a3251245ae 3385 libs standard cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2.dsc
+ 4ca5bf3e08c62df06c3a5ffadcd9ab13 1143888 libs standard cyrus-sasl2_2.1.27~101-g0780600+dfsg.orig.tar.xz
+ 5a630026332081ae910bb4c6e63edef8 96140 libs standard cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2.debian.tar.xz
+ fd7819f36b6eb8517223a9378b018150 109844 doc optional cyrus-sasl2-doc_2.1.27~101-g0780600+dfsg-3+deb9u2_all.deb
+ bb283dd126c22c122fe6a668f897c436 15653 libs standard cyrus-sasl2_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.buildinfo
+ b4aafc58c5f30468556eba9ba4fef393 140344 debug extra libsasl2-2-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 26885398fbe7b9de5809f88aafbbebbe 104942 libs standard libsasl2-2_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 86c8c08530b62e0db2881b9838b1aaaa 310698 libdevel optional libsasl2-dev_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 656e93a8e7753c2246ab41ed47a89efa 51990 debug extra libsasl2-modules-db-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 2bc550c3d0fb251e87f5c3930ccbeaad 68480 libs standard libsasl2-modules-db_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ db53f0db69bb546bc808edf582d40056 210614 debug extra libsasl2-modules-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 3eb62f94731709ad109e29f968d379c6 39274 debug extra libsasl2-modules-gssapi-heimdal-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 6fc18d6f4854acb803dd9f0920654f9e 71718 libs extra libsasl2-modules-gssapi-heimdal_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 65c5c94eed6a5494c77b22798d7df7c5 123466 debug extra libsasl2-modules-gssapi-mit-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ a58ff7005884d37924287d155d4ad43d 90696 libs extra libsasl2-modules-gssapi-mit_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 34724d23b974463281bba5012bbe25d7 29986 debug extra libsasl2-modules-ldap-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ f86f6ab2aa2b1cf5a222506e9fe8c334 67312 libs extra libsasl2-modules-ldap_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 78bba6be0978419dd8fefec69eb8e0bc 42816 debug extra libsasl2-modules-otp-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 47c8daac77bd4bd37500881a2291ca0e 80344 libs extra libsasl2-modules-otp_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 40e6dc6d555ea3f307e7a00421a1ec14 40162 debug extra libsasl2-modules-sql-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ c2dff5946a2937afbbf4f29af24970f0 69972 libs extra libsasl2-modules-sql_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 2e453c01636aa5e6994c76fb38a387e8 102296 libs optional libsasl2-modules_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ d22ee9b24d58f71f9028cf6b659dd8b4 263692 debug extra sasl2-bin-dbgsym_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+ 382cd89e7ae717ac0183be55602d21e4 162270 utils optional sasl2-bin_2.1.27~101-g0780600+dfsg-3+deb9u2_amd64.deb
+

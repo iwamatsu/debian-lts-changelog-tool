@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 07 Dec 2022 15:19:33 +0530
+Source: dlt-daemon
+Architecture: source
+Version: 2.18.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Aigars Mahinovs <aigarius@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 976228 1014534
+Changes:
+ dlt-daemon (2.18.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix buffer overflow in dlt_filter_load.
+     (Fixes CVE-2020-29394) (Closes: #976228)
+   * Add patch to check size of ring buffer.
+     (Fixes: CVE-2020-36244)
+   * Add patch to fix a double-free bug.
+     (Fixes: CVE-2022-31291) (Closes: #1014534)
+Checksums-Sha1:
+ 7bafe714b390db009b74e3ce8bbd0805a482169d 2122 dlt-daemon_2.18.0-1+deb10u1.dsc
+ a0e1ce75586474230f831921c9acb87bdd7b163d 6253370 dlt-daemon_2.18.0.orig.tar.gz
+ 5e75cc44de394dbee2e0f16c4bdd6d9c4e326afd 6408 dlt-daemon_2.18.0-1+deb10u1.debian.tar.xz
+ 34ee6f7ebfed8fd1cadc1b1e8988c1c4e324dd0b 7026 dlt-daemon_2.18.0-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ bf683b925b6f8dd55720bafc2bd2f95de6662f2213c6da0135c04b0bd41b0cc3 2122 dlt-daemon_2.18.0-1+deb10u1.dsc
+ c925e853c28ed2fcb5ee663032dee67b4aea3a0789cb25026cb59739162add08 6253370 dlt-daemon_2.18.0.orig.tar.gz
+ cb9d6a46b730243de6ef48ecb4b6103a3f1600ba15dcbe12e444d79b6f706c0a 6408 dlt-daemon_2.18.0-1+deb10u1.debian.tar.xz
+ 4b2d90c9a8c6bad9cca6c11964b0d3440d2599cfb317e2b7a734310a51672248 7026 dlt-daemon_2.18.0-1+deb10u1_source.buildinfo
+Files:
+ 5c330deb544acef180fc8218a50d7050 2122 libs optional dlt-daemon_2.18.0-1+deb10u1.dsc
+ 0c68620b3f0a9c54d04616bacc78f1ca 6253370 libs optional dlt-daemon_2.18.0.orig.tar.gz
+ 141991069e88f93970132c9729b16efd 6408 libs optional dlt-daemon_2.18.0-1+deb10u1.debian.tar.xz
+ 8d3b6417e9c59f7a062d088394d3f57c 7026 libs optional dlt-daemon_2.18.0-1+deb10u1_source.buildinfo
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 16 Feb 2023 22:27:07 +0100
+Source: golang-github-opencontainers-selinux
+Architecture: source
+Version: 1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 942027
+Changes:
+ golang-github-opencontainers-selinux (1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-16884: runc, as used in Docker and other products, allows
+     AppArmor and SELinux restriction bypass because
+     libcontainer/rootfs_linux.go incorrectly checks mount targets, and
+     thus a malicious Docker image can mount over a /proc
+     directory. (Closes: #942027)
+Checksums-Sha1:
+ 4a60d81ba3ba7673d805b149359df9dfa34efcd7 2592 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1.dsc
+ 36e0017082ad1c5e49fa2ea6f5ee2084009162d4 13864 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b.orig.tar.xz
+ 5a4d12dc150b2fc22afa5b1895cf2e8aec66fdc7 3284 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1.debian.tar.xz
+ 1355628d7026017317503541bfdb0d1d2ad74a72 5845 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1_all.buildinfo
+Checksums-Sha256:
+ 3f09f552e2f917e0818f9c6180bd36b5c2fbad8c00b70c57e5a49fb4a38882fc 2592 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1.dsc
+ 9ba66ee4fda33fe7f3fa276debf557134092fec87a90535b95cf3f7d9b517ebf 13864 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b.orig.tar.xz
+ 0a06032cffb94460f9f1f3762399cf3507b5cb29626ee95c7b3ce20efe72fc09 3284 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1.debian.tar.xz
+ 82874012202d6dec6d27a20c40ef0e9dc9e0bfbdddf8ac7de7f2f6c976ee034c 5845 golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1_all.buildinfo
+Files:
+ 1c117c3b4038a0f0368809bcc4f3c415 2592 devel extra golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1.dsc
+ 7a894c0448c0938e17d3221bb1aa81d7 13864 devel extra golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b.orig.tar.xz
+ b5986a625fb3fd865dae3eb2a4944c78 3284 devel extra golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1.debian.tar.xz
+ 1a121e71ade57c06c9bfc1a44d2d66f0 5845 devel extra golang-github-opencontainers-selinux_1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1_all.buildinfo
+

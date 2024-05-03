@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 22 Jan 2024 12:57:18 -0800
+Source: jinja2
+Architecture: source
+Version: 2.10-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1060748
+Changes:
+ jinja2 (2.10-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-22195: Fix an issue where it was possible to inject arbitrary HTML
+     attributes into the rendered HTML via the "xmlattr" filter, potentially
+     leading to a Cross-Site Scripting (XSS) attack. It may also have been
+     possible to bypass attribute validation checks if they were
+     blacklist-based. (Closes: #1060748)
+   * Actually run the testsuite, on both Python 2.x and Python 3.x.
+Checksums-Sha1:
+ a342700ac08e382e83b0ce44e4af9d1af6e95eba 2270 jinja2_2.10-2+deb10u1.dsc
+ 34b69e5caab12ee37b9df69df9018776c008b7b8 261631 jinja2_2.10.orig.tar.gz
+ 424e1b845ef2f1be45826dec9138ac8abd7679d8 9092 jinja2_2.10-2+deb10u1.debian.tar.xz
+ fe02072f43da0afed99084fa87b8654f066b3def 8648 jinja2_2.10-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 44e387409fa48b1e61b345e1870a6bc904f184d6c05196af536dea0d98e12b79 2270 jinja2_2.10-2+deb10u1.dsc
+ f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4 261631 jinja2_2.10.orig.tar.gz
+ 66ca1f9aa537e686f8bd1e928e7c6922953fab09231aeeb8d1afd05f2afec5c2 9092 jinja2_2.10-2+deb10u1.debian.tar.xz
+ cdf27f2ca79447fc9e996f2444be44ac4204ebb1349278cd198f487d6ecafef8 8648 jinja2_2.10-2+deb10u1_amd64.buildinfo
+Files:
+ 0d66ce98a8e9527a1be720be1422429b 2270 python optional jinja2_2.10-2+deb10u1.dsc
+ 61ef1117f945486472850819b8d1eb3d 261631 python optional jinja2_2.10.orig.tar.gz
+ 42b755f5aa655fcef3a8b4dcccdb17e1 9092 python optional jinja2_2.10-2+deb10u1.debian.tar.xz
+ 5e7fc39b579ffbc62f114e778ca26520 8648 python optional jinja2_2.10-2+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 17 Aug 2022 12:11:27 +0200
+Source: epiphany-browser
+Architecture: source
+Version: 3.32.1.2-3~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1009959
+Changes:
+ epiphany-browser (3.32.1.2-3~deb10u2) buster-security; urgency=medium
+ .
+   * CVE-2022-29536: buffer overflow write on pages with a long title, when
+     shortening it and adding ellipsis (Closes: #1009959).
+   * CVE-2021-45085, CVE-2021-45087, CVE-2021-45088: various XSS issues.
+   * Fix-memory-leak-in-ephy-about-handler.patch: prereq for the above.
+   * Revert-Revert-Remove-unsafe-process-model-and-proces.patch:
+     - stop using deprecated no-op WebKit API, fixes test failures.
+   * Remove-special-uri-scheme-ftp-handler.patch:
+     - don't register ftp protocol, no longer allowed in newer WebKit (no-op,
+       causes test failures).
+Checksums-Sha1:
+ d8dd3129235669818d61a7864491aa8007fe151e 2848 epiphany-browser_3.32.1.2-3~deb10u2.dsc
+ e06957dfc76e16e8fd3fa23ff51e485fa582634d 5473300 epiphany-browser_3.32.1.2.orig.tar.xz
+ 15be420294f23e4f0762db9363243737d973ecbc 89024 epiphany-browser_3.32.1.2-3~deb10u2.debian.tar.xz
+ bb6a3eb3a5e744bff1c1b2900f053dcb7d48470e 8079 epiphany-browser_3.32.1.2-3~deb10u2_source.buildinfo
+Checksums-Sha256:
+ 6eaf3071113a82dd4398d2d33716c603658f5cc7efda47cbf811e95b741d4a16 2848 epiphany-browser_3.32.1.2-3~deb10u2.dsc
+ a8284fb9bbc8b7914a154a8eac1598c8b59ae421e0d685146fb48198427926be 5473300 epiphany-browser_3.32.1.2.orig.tar.xz
+ dea105461e1a73aac5af4cb328fce100adc8f72aa373eb333f02180609923d77 89024 epiphany-browser_3.32.1.2-3~deb10u2.debian.tar.xz
+ 5b5759fe3307b5348714371147ea717fdabb8d24d5b0f56aa42434d0db4ffa47 8079 epiphany-browser_3.32.1.2-3~deb10u2_source.buildinfo
+Files:
+ 64096b647669d56f49d349a6b5c1a3b2 2848 gnome optional epiphany-browser_3.32.1.2-3~deb10u2.dsc
+ 93faec353e9f62519859e6164350fd5d 5473300 gnome optional epiphany-browser_3.32.1.2.orig.tar.xz
+ db7975e577e8837cb144fd57686eb11e 89024 gnome optional epiphany-browser_3.32.1.2-3~deb10u2.debian.tar.xz
+ 50686e1a05605f93248463bdc2e1569f 8079 gnome optional epiphany-browser_3.32.1.2-3~deb10u2_source.buildinfo
+

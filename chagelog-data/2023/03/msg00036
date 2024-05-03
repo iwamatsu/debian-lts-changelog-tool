@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 26 Mar 2023 14:03:02 +0200
+Source: duktape
+Architecture: source
+Version: 2.3.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian IoT Maintainers <debian-iot-maintainers@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ duktape (2.3.0-1+deb10u1) buster-security; urgency=high
+ .
+   * upload by the LTS Team.
+   * CVE-2021-46322
+     a SEGV issue was discovered when some stack limits are reached
+Checksums-Sha1:
+ 189607cf9bde59124a533d1c4db43cfb8bdaeb85 2216 duktape_2.3.0-1+deb10u1.dsc
+ 1d0edbb757b16f85bcf916b66c605103f736b4ff 997572 duktape_2.3.0.orig.tar.xz
+ ba1cc586125fccdd7c75208a5b3b86b73075dc40 7452 duktape_2.3.0-1+deb10u1.debian.tar.xz
+ 02c3ff74517ec4b88224d06e69608044c11cad15 6913 duktape_2.3.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ ba99b6ff5229adc110e5be2548e06383ce5311d06091b5285be480c8df1eaf35 2216 duktape_2.3.0-1+deb10u1.dsc
+ ed6e2f3ab2061628a7aeee27ccff16538ba6a151480cccf2e846bd061e45afe8 997572 duktape_2.3.0.orig.tar.xz
+ 723a6f299a4eaac573133744c55e275e4dce8cf239d9b63418717dcfb52dcacc 7452 duktape_2.3.0-1+deb10u1.debian.tar.xz
+ d677edf21caa96d86ebd00ff733a79ffc7f8c657ffae61e0f2a29950e6b18b85 6913 duktape_2.3.0-1+deb10u1_amd64.buildinfo
+Files:
+ 4407e3cb31faa15abcfa03357992d0e8 2216 interpreters optional duktape_2.3.0-1+deb10u1.dsc
+ 352105b39979fc766bbd0b3721e8c2b5 997572 interpreters optional duktape_2.3.0.orig.tar.xz
+ 15374bd2eba096576f0333cba4c8e0a2 7452 interpreters optional duktape_2.3.0-1+deb10u1.debian.tar.xz
+ 10e04f5dee03340de709d74c013f2959 6913 interpreters optional duktape_2.3.0-1+deb10u1_amd64.buildinfo
+

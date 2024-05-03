@@ -1,0 +1,41 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 23 Dec 2022 06:18:20 +0000
+Source: node-hawk
+Binary: node-hawk
+Architecture: source all
+Version: 6.0.1+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ node-hawk  - HTTP Hawk Authentication Scheme
+Changes:
+ node-hawk (6.0.1+dfsg-1+deb10u1) buster-security; urgency=high
+ .
+   * CVE-2022-29167: Prevent an issue where Hawk used a regular expression to
+     parse `Host` HTTP headers which was subject to regular expression DoS
+     attack. Each added character in the attacker's input increased the
+     computation time exponentially.
+   * Add new runtime dependency on node-url to satisfy patch for CVE-2022-29167.
+Checksums-Sha1:
+ 3606bb45abb12379df5bca6702695c6e9955e0fb 2066 node-hawk_6.0.1+dfsg-1+deb10u1.dsc
+ b27abdd6520eef5996ad2de25bb47eb66d73a2cf 105988 node-hawk_6.0.1+dfsg.orig.tar.xz
+ a8faadea8612230991d5780156e3884bc9962cff 4008 node-hawk_6.0.1+dfsg-1+deb10u1.debian.tar.xz
+ f1b6701e603bba07a693019c4c706f27317c58be 21724 node-hawk_6.0.1+dfsg-1+deb10u1_all.deb
+ 7ca6791fe0c837890d4f2c1bc60eda96f72a9e70 5788 node-hawk_6.0.1+dfsg-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 29ed3ba482d6ecc1c9d5618c8b2763bb40e6367062204711c38a43ea36197982 2066 node-hawk_6.0.1+dfsg-1+deb10u1.dsc
+ cc1d5d300cb7c491ff765de261c1da8d61bfd8e0cfed9947b3de5e6a0373f8b6 105988 node-hawk_6.0.1+dfsg.orig.tar.xz
+ e118b3ed70e8489da237eff1dca16f328f1e6aaa1cbf318a4da3cf90035240f8 4008 node-hawk_6.0.1+dfsg-1+deb10u1.debian.tar.xz
+ 974201bc8ec5821f534a08c42ec1d883eb9b35860d4ea6517f09b4ebb0a4b7f6 21724 node-hawk_6.0.1+dfsg-1+deb10u1_all.deb
+ 7e1ceab2ac295c7752a3ae2e3eac8a976c795b9fd44ef9c70ba3d8c4e32ee167 5788 node-hawk_6.0.1+dfsg-1+deb10u1_amd64.buildinfo
+Files:
+ 08847a645c983ef989926313fddc5bc4 2066 web optional node-hawk_6.0.1+dfsg-1+deb10u1.dsc
+ 0c2c27e43f456c68f2b54319a03b7b55 105988 web optional node-hawk_6.0.1+dfsg.orig.tar.xz
+ 54e0c1964b9ee2a3aaf48c2889d64ade 4008 web optional node-hawk_6.0.1+dfsg-1+deb10u1.debian.tar.xz
+ b77d4380ad2cd10d955c11d2c08528f9 21724 web optional node-hawk_6.0.1+dfsg-1+deb10u1_all.deb
+ 6ff2f94995110ad13884a48a6dd691b6 5788 web optional node-hawk_6.0.1+dfsg-1+deb10u1_amd64.buildinfo
+

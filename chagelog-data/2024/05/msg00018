@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 17 May 2024 12:43:53 -0300
+Source: bind9
+Architecture: source
+Version: 1:9.11.5.P4+dfsg-5.1+deb10u11
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian DNS Team <team+dns@tracker.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Changes:
+ bind9 (1:9.11.5.P4+dfsg-5.1+deb10u11) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+ .
+   [ Ola Lundqvist ]
+   * CVE-2023-50387 and CVE-2023-50868
+     Specific DNS answers could cause a denial-of-service
+     condition due to DNS validation taking a long time.
+     (CVE-2023-50387)
+     The same code change also addresses another problem:
+     preparing NSEC3 closest encloser proofs could exhaust
+     available CPU resources. (CVE-2023-50868)
+ .
+   [ Santiago Ruano Rincón ]
+   * Add debian/gbp.conf to match buster branches
+   * Correct the use of the debian revision in the newly added symbols in
+     libdns1104.symbols
+Checksums-Sha1:
+ ca3a80d45c3a051aa389bbf27d622b8914a28a66 3412 bind9_9.11.5.P4+dfsg-5.1+deb10u11.dsc
+ 1fe932467e38d44d5c1c919df062f40e1cd4934b 129528 bind9_9.11.5.P4+dfsg-5.1+deb10u11.debian.tar.xz
+ e486c50b4207671764ebd248f6cd417b2a52a1b8 20319 bind9_9.11.5.P4+dfsg-5.1+deb10u11_amd64.buildinfo
+Checksums-Sha256:
+ c37dd45da95aa0ab2a9110e34ab211290f1c704e15421b8dd54acded4bc82dae 3412 bind9_9.11.5.P4+dfsg-5.1+deb10u11.dsc
+ 80a56119058cc690838baafd839cab9baeee0abf50b9f3941ad29a6412b35194 129528 bind9_9.11.5.P4+dfsg-5.1+deb10u11.debian.tar.xz
+ 846ef91bf5f0724f5d85cb49f640876f205e202d1a5c5f7fac3a658f32b0c76c 20319 bind9_9.11.5.P4+dfsg-5.1+deb10u11_amd64.buildinfo
+Files:
+ 5074db48497432e162b080599586f66e 3412 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u11.dsc
+ 8ee299a667d196afa25c6ce4e2c5cc6b 129528 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u11.debian.tar.xz
+ 81a50e8f45da0018facbf628b3b81196 20319 net optional bind9_9.11.5.P4+dfsg-5.1+deb10u11_amd64.buildinfo
+

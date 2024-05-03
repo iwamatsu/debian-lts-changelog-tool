@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 10 Jul 2023 22:29:07 CEST
+Source: mediawiki
+Architecture: source
+Version: 1:1.31.16-1+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Kunal Mehta <legoktm@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 577f84fda48c96f8d0561f32ed69db491650d200 2281 mediawiki_1.31.16-1+deb10u5.dsc
+ 3f178911dc56ab2839c3a000e479b9f7eb13d248 117192 mediawiki_1.31.16-1+deb10u5.debian.tar.xz
+ 8925a12e5ab7bf879cafc1e2db09f0ea49b9eb1c 6884 mediawiki_1.31.16-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 01dc60081891d970b13d450044efa8e6974f2138542f7b2fcff6e19200e6def3 2281 mediawiki_1.31.16-1+deb10u5.dsc
+ 1d780f8f4eda3a0ad1aaa35912e1a9d3f9f18d9183a3d8c7d6cd7b2206cba479 117192 mediawiki_1.31.16-1+deb10u5.debian.tar.xz
+ dffeb1af21748ccbcb30b11b5bcbfe99dd69a0c22c9cd27c76be7b6615a0c69d 6884 mediawiki_1.31.16-1+deb10u5_amd64.buildinfo
+Changes:
+ mediawiki (1:1.31.16-1+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-47927:
+     A security issue was discovered in MediaWiki, a website engine for
+     collaborative work, which could result in information disclosure when
+     SQLite files are created within a data directory that has weak permissions.
+Files:
+ e26dd930277285d3d69ec5a68f4820c5 2281 web optional mediawiki_1.31.16-1+deb10u5.dsc
+ 24d808ea46b72c879ce3c9987f4859ef 117192 web optional mediawiki_1.31.16-1+deb10u5.debian.tar.xz
+ 1373a85df9e90c09fc298883921c1f2f 6884 web optional mediawiki_1.31.16-1+deb10u5_amd64.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 11 Oct 2023 22:03:02 +0200
+Source: libcue
+Architecture: source
+Version: 2.2.1-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libcue (2.2.1-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-43641
+     out-of-bounds array access might allow an attacker to execute code
+     as the exploited user
+Checksums-Sha1:
+ 68238e9d4fadeb0ef3a59879bb263b54aa0ddea5 2071 libcue_2.2.1-2+deb10u1.dsc
+ 0113fb38183da3c4924f5c30a47993fef976bed2 24177 libcue_2.2.1.orig.tar.gz
+ ff8cf5e26e556c00a912a977160b3791ca34195b 3628 libcue_2.2.1-2+deb10u1.debian.tar.xz
+ 2467d04036b4a61b21f9ae6d93f3226910128d38 7417 libcue_2.2.1-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d68382a8337e0bb3cde33938095bff2bb423411bd360e3d364ea086d4fbc91e7 2071 libcue_2.2.1-2+deb10u1.dsc
+ f27bc3ebb2e892cd9d32a7bee6d84576a60f955f29f748b9b487b173712f1200 24177 libcue_2.2.1.orig.tar.gz
+ 4740da0b4521f283b5c9641b60e23968dd670e40ff29188b3abdf289a5feba1a 3628 libcue_2.2.1-2+deb10u1.debian.tar.xz
+ 45cd53081ac760bff2fadcff54d933abe5da78fcf73ceb827a1b2e348da7c13b 7417 libcue_2.2.1-2+deb10u1_amd64.buildinfo
+Files:
+ 1fc5b11f6dc1c79442fd491fe9c5e71f 2071 libs optional libcue_2.2.1-2+deb10u1.dsc
+ 1dfe65751c3817c76a107bd5a0d924a3 24177 libs optional libcue_2.2.1.orig.tar.gz
+ b1ef005eb35509d6dcff2830903094d4 3628 libs optional libcue_2.2.1-2+deb10u1.debian.tar.xz
+ 58bcf3dfa8b42616ac993f7e083cd151 7417 libs optional libcue_2.2.1-2+deb10u1_amd64.buildinfo
+

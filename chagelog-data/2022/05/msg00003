@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Apr 2022 16:24:53 -0400
+Source: twisted
+Architecture: source
+Version: 16.6.0-2+deb9u3
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ twisted (16.6.0-2+deb9u3) stretch-security; urgency=medium
+ .
+   * Team upload, by the LTS Security Team.
+   * CVE-2022-24801: Correct several defects in HTTP request parsing that could
+     permit HTTP request smuggling: disallow signed Content-Length headers,
+     forbid illegal characters in chunked extensions, forbid 0x prefix to chunk
+     lengths, and only strip space and horizontal tab from header values.
+     - debian/patches/CVE-2022-24801-*.patch
+   * Patch: remove spurious test for illegal whitespace in xmlns, to allow
+     tests to pass, again.
+   * Patch: remove spurious test for parse_qs behaviour that changed in a
+     security update.
+Checksums-Sha1:
+ 760874fe1f78a5eb94e3e927578da65485dd3703 2884 twisted_16.6.0-2+deb9u3.dsc
+ 577bbd22d036e5e23da543be8a67b1d4e5fd06e4 34532 twisted_16.6.0-2+deb9u3.debian.tar.xz
+ 5319b6430fc5cf9f302754c8cda06c928bbd8efc 6779 twisted_16.6.0-2+deb9u3_source.buildinfo
+Checksums-Sha256:
+ f9368c2c1a16b1b621f5e2e313d0b651163b1a107722b51b8063d99774808b18 2884 twisted_16.6.0-2+deb9u3.dsc
+ 293818fd0c423e2160953992467b738f3a6484fea6eb56f7cd9e2becd341cdec 34532 twisted_16.6.0-2+deb9u3.debian.tar.xz
+ 9055bc019e5a09caf70c345d4c1704fc21caf974b69284e3aeab6ccf79e81ae6 6779 twisted_16.6.0-2+deb9u3_source.buildinfo
+Files:
+ f352ee51f49d43c30d57d9ebf0510e9b 2884 python optional twisted_16.6.0-2+deb9u3.dsc
+ 04acb1df3009b29998c2818dc1a5639c 34532 python optional twisted_16.6.0-2+deb9u3.debian.tar.xz
+ 7ae6d88f3ed3152ba7bcc06e39b3056f 6779 python optional twisted_16.6.0-2+deb9u3_source.buildinfo
+

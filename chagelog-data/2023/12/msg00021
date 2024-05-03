@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 27 Dec 2023 21:03:02 +0100
+Source: cjson
+Architecture: source
+Version: 1.7.10-1.1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Yanhao Mo <yanhaocs@gmail.com>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ cjson (1.7.10-1.1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-50471
+     segmentation violation in cJSON_InsertItemInArray()
+Checksums-Sha1:
+ 90f3a672b625569a6c897dd949ab7733aac9641d 2072 cjson_1.7.10-1.1+deb10u2.dsc
+ b2d4fa8e3e0917b9bf19fda38a086e2ed6cd121e 347063 cjson_1.7.10.orig.tar.gz
+ 441677c1441cb762ef48ec113c620df9178009ee 6720 cjson_1.7.10-1.1+deb10u2.debian.tar.xz
+ 12358012aa4759a16aa118e49c03720774b83530 7394 cjson_1.7.10-1.1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ ec643484cdcbb19329ebbb1f458bfd81d2aa7315e1bd422370a541b5a9e0ab24 2072 cjson_1.7.10-1.1+deb10u2.dsc
+ cc544fdd065f3dd19113f1d5ba5f61d696e0f810f291f4b585d1dec361b0188e 347063 cjson_1.7.10.orig.tar.gz
+ 29f2ae35180713f86806ea66b89716e5c2ceb79a1fde2482e649db47f90ca7ec 6720 cjson_1.7.10-1.1+deb10u2.debian.tar.xz
+ 0c73d77e412e6a1783c2247f23d55fcbddda70a0e5d049644fa010882f6d1701 7394 cjson_1.7.10-1.1+deb10u2_amd64.buildinfo
+Files:
+ d15bcaed689840b7b1c5bf00e19ee073 2072 libs optional cjson_1.7.10-1.1+deb10u2.dsc
+ f7ee1a04b7323440f1d7a58ea2c0c197 347063 libs optional cjson_1.7.10.orig.tar.gz
+ c87569517ab5c7631b790d1cb31147bb 6720 libs optional cjson_1.7.10-1.1+deb10u2.debian.tar.xz
+ 3d0a4a381afcfac13ba7a8a81006cff5 7394 libs optional cjson_1.7.10-1.1+deb10u2_amd64.buildinfo
+

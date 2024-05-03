@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Apr 2023 19:54:41 -0400
+Source: distro-info-data
+Architecture: source
+Version: 0.41+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Benjamin Drung <bdrung@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ distro-info-data (0.41+deb10u7) buster-security; urgency=medium
+ .
+   * Update data to 0.58, without new columns:
+     - Add Debian 14 "forky" with a vague creation date.
+     - Correct Ubuntu 23.04 release date to 2023-04-20.
+     - Tighten validate-csv-data heuristics, restricting Ubuntu EoLs to
+       Tue-Thursday.
+     - Document Ubuntu ESM overlap period (LP: #2003949)
+     - Add Ubuntu 23.10 Mantic Minotaur (LP: #2018028)
+     - Set the planned release date for Debian bookworm (and an EoL based on it).
+     - Adjust trixie's creation date to match bookworm's release.
+Checksums-Sha1:
+ 6cdf26991280ce7d182b231c9f6f36eb14f7f0a3 1070 distro-info-data_0.41+deb10u7.dsc
+ 1ad106d3e060747b547c857f3ecd1c8fe4821ac1 8016 distro-info-data_0.41+deb10u7.tar.xz
+ 93044235f243e27ed16c176e3f2c3ed3ee8747cf 5437 distro-info-data_0.41+deb10u7_source.buildinfo
+Checksums-Sha256:
+ 49c20566efa0481d0c662b4faeb3d528a3fcd589a46ee7c48f44dcd671ad1d6c 1070 distro-info-data_0.41+deb10u7.dsc
+ af4c5f1aa4917f024f7e2c7e76376d7ca618bbd2beaa69b121263dfb6ef361cc 8016 distro-info-data_0.41+deb10u7.tar.xz
+ c4c86f9a466a1d65d3c75b1d8eb0fc5a0988d5dbc14854abab0643d216fe6c57 5437 distro-info-data_0.41+deb10u7_source.buildinfo
+Files:
+ df400dc5fdd8107a868a75564c28a01d 1070 devel optional distro-info-data_0.41+deb10u7.dsc
+ 6ad25d87be57477b006cc5a5e3f9b304 8016 devel optional distro-info-data_0.41+deb10u7.tar.xz
+ b1165f6c66c076b86d28280ba5cdc177 5437 devel optional distro-info-data_0.41+deb10u7_source.buildinfo
+

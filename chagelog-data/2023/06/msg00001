@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu,  1 Jun 2023 18:36:29 CEST
+Source: netatalk
+Architecture: source
+Version: 3.1.12~ds-3+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 4e8843f93bc2f4ff6287dfe04a2197cf0460f405 2675 netatalk_3.1.12~ds-3+deb10u2.dsc
+ 39ecc6bf1cc8c8997294ee608c2452fddaa33d66 65264 netatalk_3.1.12~ds-3+deb10u2.debian.tar.xz
+ f2bfd6cba2547594b4d85459e36a005142ba12d4 10375 netatalk_3.1.12~ds-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 7e9b7554ca60a64bb9505ba41fd1d76ff452759c824f72276d2b099a0334cc8f 2675 netatalk_3.1.12~ds-3+deb10u2.dsc
+ d549635b923749054b0438b394ed334a898c67d8238a564f2c1b0f57b7180d66 65264 netatalk_3.1.12~ds-3+deb10u2.debian.tar.xz
+ f3f1ab925d02ff1d59f61b51dc216c7bf2131e3a736e4e29daecd53871e6ad79 10375 netatalk_3.1.12~ds-3+deb10u2_amd64.buildinfo
+Closes: 1036740
+Changes:
+ netatalk (3.1.12~ds-3+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-23121 regression: Input/Output error, malformed Appledouble.
+     (Closes: #1036740)
+Files:
+ eb7d8233103bc3d3ca5d6fa140272440 2675 net optional netatalk_3.1.12~ds-3+deb10u2.dsc
+ d9c0f2a4863f17ee60e140634905e540 65264 net optional netatalk_3.1.12~ds-3+deb10u2.debian.tar.xz
+ d9d908d43f63c6850f29a7bb96e87099 10375 net optional netatalk_3.1.12~ds-3+deb10u2_amd64.buildinfo
+

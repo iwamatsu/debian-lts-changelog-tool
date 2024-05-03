@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 11 Apr 2023 20:50:56 +0200
+Source: zabbix
+Architecture: source
+Version: 1:4.0.4+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 935027 966146 1014992 1014994
+Changes:
+ zabbix (1:4.0.4+dfsg-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport fix for CVE-2019-15132:
+     User enumeration vulnerabilty. (Closes: #935027)
+   * Apply fix for CVE-2022-24349, CVE-2022-24917, CVE-2022-24919:
+     Reflected XSSes in Zabbix Frontend.
+   * Backport fix for CVE-2020-15803. (Closes: #966146)
+     XSS in URL widget.
+   * Add upstream fix for CVE-2021-27927: CControllerAuthenticationUpdate
+     controller lacked a CSRF protection mechanism.
+   * Add upstream fix for CVE-2022-35229 (Closes: #1014992)
+     Reflected XSS in discovery page of Zabbix Frontend.
+   * Backport fix for CVE-2022-35230 (Closes: #1014994)
+     Reflected XSS in graphs page of Zabbix Frontend.
+Checksums-Sha1:
+ a42071a75b171202f3f818820f080c7297a9f138 2876 zabbix_4.0.4+dfsg-1+deb10u1.dsc
+ 3c6d9fd22d054a78a45425fd2e83b606a60c5f55 7880948 zabbix_4.0.4+dfsg.orig.tar.xz
+ 5acbccf51df869f0e30e7730ad76caba1f91ad9c 195804 zabbix_4.0.4+dfsg-1+deb10u1.debian.tar.xz
+ eb40b78eb225b4611ed65205341bbcd296cefa68 18544 zabbix_4.0.4+dfsg-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1a126880d3db229e9641ce3089fd6988ee4044407b1288f25dc862ce1919eb14 2876 zabbix_4.0.4+dfsg-1+deb10u1.dsc
+ be5a320928ee5cfc87fa50a3f3f8beebc6de24d449fe8cdd89c3762a0e84cb03 7880948 zabbix_4.0.4+dfsg.orig.tar.xz
+ 941fa98e77b1afe35649d4ed47b7a9c600a264da8b9e5c10c30ef9bebf223972 195804 zabbix_4.0.4+dfsg-1+deb10u1.debian.tar.xz
+ 8a5a04a8558dc9544e2b457db0c5138f6c10fcfeb2e27250367ee32f54288642 18544 zabbix_4.0.4+dfsg-1+deb10u1_amd64.buildinfo
+Files:
+ 3d6e859b45d55d87fbe52fd29c184731 2876 net optional zabbix_4.0.4+dfsg-1+deb10u1.dsc
+ 43c4a65f0d27ac1edff4f3b4e9a58f74 7880948 net optional zabbix_4.0.4+dfsg.orig.tar.xz
+ 7c52198da884a5b7ee4d4ef87967e11b 195804 net optional zabbix_4.0.4+dfsg-1+deb10u1.debian.tar.xz
+ 7be2dfe7c5bf14b7d63374a761fa9c1f 18544 net optional zabbix_4.0.4+dfsg-1+deb10u1_amd64.buildinfo
+

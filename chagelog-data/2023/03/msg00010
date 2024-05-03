@@ -1,0 +1,127 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 11 Mar 2023 15:05:45 +0000
+Source: imagemagick
+Architecture: source
+Version: 8:6.9.10.23+dfsg-2.1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: ImageMagick Packaging Team <pkg-gmagick-im-team@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1027164 1030767
+Changes:
+ imagemagick (8:6.9.10.23+dfsg-2.1+deb10u2) buster-security; urgency=high
+ .
+   [ Roberto C. Sánchez ]
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2020-19667: Stack-based buffer overflow and unconditional jump in
+     ReadXPMImage in coders/xpm.c
+   * Fix CVE-2020-25665: An out-of-bounds read in the PALM image coder in
+     WritePALMImage in coders/palm.c
+   * Fix CVE-2020-25666: Integer overflow is possible during simple math
+     calculations in HistogramCompare() in MagickCore/histogram.c
+   * Fix CVE-2020-25674: A for loop with an improper exit condition that can
+     allow an out-of-bounds READ via heap-buffer-overflow in WriteOnePNGImage
+     from coders/png.c
+   * Fix CVE-2020-25675: Undefined behavior in the form of integer overflow and
+     out-of-range values as a result of rounding calculations performed on
+     unconstrained pixel offsets in the CropImage() and CropImageToTiles()
+     routines of MagickCore/transform.c
+   * Fix CVE-2020-25676: Undefined behavior in the form of integer overflow and
+     out-of-range values as a result of rounding calculations performed on
+     unconstrained pixel offsets in CatromWeights(), MeshInterpolate(),
+     InterpolatePixelChannel(), InterpolatePixelChannels(), and
+     InterpolatePixelInfo(), which are all functions in /MagickCore/pixel.c
+   * Fix CVE-2020-27560: Division by Zero in OptimizeLayerFrames in
+     MagickCore/layer.c, which may cause a denial of service
+   * Fix CVE-2020-27750: Division by Zero in MagickCore/colorspace-private.h
+     and MagickCore/quantum.h, which may cause a denial of service
+   * Fix CVE-2020-27751: Undefined behavior in the form of values outside the
+     range of type `unsigned long long` as well as a shift exponent that is too
+     large for 64-bit type in MagickCore/quantum-export.c
+   * Fix CVE-2020-27754: In IntensityCompare() of /magick/quantize.c, there are
+     calls to PixelPacketIntensity() which could return overflowed values
+   * Fix CVE-2020-27756: In ParseMetaGeometry() of MagickCore/geometry.c, image
+     height and width calculations can lead to divide-by-zero conditions which
+     also lead to undefined behavior
+   * Fix CVE-2020-27757: A floating point math calculation in
+     ScaleAnyToQuantum() of /MagickCore/quantum-private.h could lead to
+     undefined behavior in the form of a value outside the range of type
+     unsigned long long
+   * Fix CVE-2020-27758: Undefined behavior in the form of values outside the
+     range of type `unsigned long long` in coders/txt.c
+   * Fix CVE-2020-27759: In IntensityCompare() of /MagickCore/quantize.c, a
+     double value was being casted to int and returned, which in some cases
+     caused a value outside the range of type `int` to be returned
+   * Fix CVE-2020-27760: In `GammaImage()` of /MagickCore/enhance.c, depending
+     on the `gamma` value, it's possible to trigger a divide-by-zero condition
+     when a crafted input file is processed
+   * Fix CVE-2020-27761: WritePALMImage() in /coders/palm.c used size_t casts
+     in several areas of a calculation which could lead to values outside the
+     range of representable type `unsigned long` undefined behavior when a
+     crafted input file was processed
+   * Fix CVE-2020-27762: Undefined behavior in the form of values outside the
+     range of type `unsigned char` in coders/hdr.c
+   * Fix CVE-2020-27763: Undefined behavior in the form of math division by
+     zero in MagickCore/resize.c
+   * Fix CVE-2020-27764, CVE-2020-27776: Out-of-range values under some
+     circumstances when a crafted input file is processed in
+     /MagickCore/statistic.c
+   * Fix CVE-2020-27765: Undefined behavior in the form of math division by
+     zero in MagickCore/segment.c when a crafted file is processed
+   * Fix CVE-2020-27774, CVE-2020-27766: Undefined behavior in the form of
+     values outside the range of type `unsigned long` and a too large shift for
+     64-bit type `ssize_t` in MagickCore/statistic.c
+   * Fix CVE-2020-27767: Undefined behavior in the form of values outside the
+     range of types `float` and `unsigned char` in MagickCore/quantum.h
+   * Fix CVE-2020-27768: An outside the range of representable values of type
+     `unsigned int` in MagickCore/quantum-private.h
+   * Fix CVE-2020-27769: An outside the range of representable values of type
+     `float` in MagickCore/quantize.c
+   * Fix CVE-2020-27770: Due to a missing check for 0 value of
+     `replace_extent`, it is possible for offset `p` to overflow in
+     SubstituteString()
+   * Fix CVE-2020-27771: In RestoreMSCWarning() of /coders/pdf.c there are
+     several areas where calls to GetPixelIndex() could result in values
+     outside the range of representable for the `unsigned char` type
+   * Fix CVE-2020-27772: Undefined behavior in the form of values outside the
+     range of type `unsigned int` in coders/bmp.c
+   * Fix CVE-2020-27773: Undefined behavior in the form of values outside the
+     range of type `unsigned char` or division by zero
+   * Fix CVE-2020-27775: Undefined behavior in the form of values outside the
+     range of type `unsigned char` in MagickCore/quantum.h
+   * Fix CVE-2020-29599: ImageMagick mishandles the -authenticate option, which
+     allows setting a password for password-protected PDF files. The
+     user-controlled password was not properly escaped/sanitized and it was
+     therefore possible to inject additional shell commands via
+     coders/pdf.c.
+   * Fix CVE-2021-3596: A NULL pointer dereference flaw in ReadSVGImage() in
+     coders/svg.c
+ .
+   [ Bastien Roucariès ]
+   * Fix CVE-2021-3574: executing a crafted TIFF file with the convert command,
+     ASAN detects memory leaks. (Closes: #1027164)
+   * Fix CVE-2021-20224: An integer overflow issue was discovered in ImageMagick's
+     ExportIndexQuantum() function in MagickCore/quantum-export.c.
+     Function calls could result in values outside the range of
+     representable for the 'unsigned char'.
+     When ImageMagick processes a crafted pdf file, this could
+     lead to an undefined behaviour or a crash.
+   * Mitigate CVE-2022-44267, CVE-2022-44268 by hardening policy.xml.
+     Forbid reading /etc directory.
+   * CVE-2022-44268, CVE-2022-44267: do not leak profiles.
+     (Closes: #1030767)
+Checksums-Sha1:
+ 9880bf3cb726ffd14527fd4861e5b4e17161cba9 5187 imagemagick_6.9.10.23+dfsg-2.1+deb10u2.dsc
+ c0f3b6edd4930d8d0d19c74a7a8f57020dd498c7 249248 imagemagick_6.9.10.23+dfsg-2.1+deb10u2.debian.tar.xz
+ 4a15f31624e6be93dbd31f54ce8630aee0ea4c26 11436 imagemagick_6.9.10.23+dfsg-2.1+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 8344a42815133862ce39e9959225d4dcbb0ced96c3016e4ddf53ae436607f269 5187 imagemagick_6.9.10.23+dfsg-2.1+deb10u2.dsc
+ 2fe292cd08ba1a342dea8a9a1f1fc5a4493c97c025484238a805bb1790051758 249248 imagemagick_6.9.10.23+dfsg-2.1+deb10u2.debian.tar.xz
+ d193480556784b4b718254936177e68711e9cbabd1da46056d8095eed464630b 11436 imagemagick_6.9.10.23+dfsg-2.1+deb10u2_source.buildinfo
+Files:
+ 806a745ce1695e213f84d4ee4198ac09 5187 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u2.dsc
+ 154d74af92f11b38899182dab22bf8d6 249248 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u2.debian.tar.xz
+ 7bae00e60f28fcdf22991076b8df24a7 11436 graphics optional imagemagick_6.9.10.23+dfsg-2.1+deb10u2_source.buildinfo
+

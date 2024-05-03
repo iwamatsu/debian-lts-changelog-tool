@@ -1,0 +1,67 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 03 Jun 2023 18:57:44 -0700
+Source: mariadb-10.3
+Binary: libmariadb-dev libmariadbclient-dev libmariadb-dev-compat libmariadb3 libmariadbd19 libmariadbd-dev mariadb-common mariadb-client-core-10.3 mariadb-client-10.3 mariadb-server-core-10.3 mariadb-server-10.3 mariadb-server mariadb-client mariadb-backup mariadb-plugin-connect mariadb-plugin-rocksdb mariadb-plugin-oqgraph mariadb-plugin-tokudb mariadb-plugin-mroonga mariadb-plugin-spider mariadb-plugin-gssapi-server mariadb-plugin-gssapi-client mariadb-plugin-cracklib-password-check mariadb-test mariadb-test-data
+Architecture: source
+Version: 1:10.3.39-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Otto Kekäläinen <otto@debian.org>
+Description:
+ libmariadb-dev - MariaDB database development files
+ libmariadb-dev-compat - MariaDB Connector/C, compatibility symlinks
+ libmariadb3 - MariaDB database client library
+ libmariadbclient-dev - MariaDB database development files (transitional package)
+ libmariadbd-dev - MariaDB embedded database, development files
+ libmariadbd19 - MariaDB embedded database, shared library
+ mariadb-backup - Backup tool for MariaDB server
+ mariadb-client - MariaDB database client (metapackage depending on the latest vers
+ mariadb-client-10.3 - MariaDB database client binaries
+ mariadb-client-core-10.3 - MariaDB database core client binaries
+ mariadb-common - MariaDB common metapackage
+ mariadb-plugin-connect - Connect storage engine for MariaDB
+ mariadb-plugin-cracklib-password-check - CrackLib Password Validation Plugin for MariaDB
+ mariadb-plugin-gssapi-client - GSSAPI authentication plugin for MariaDB client
+ mariadb-plugin-gssapi-server - GSSAPI authentication plugin for MariaDB server
+ mariadb-plugin-mroonga - Mroonga storage engine for MariaDB
+ mariadb-plugin-oqgraph - OQGraph storage engine for MariaDB
+ mariadb-plugin-rocksdb - RocksDB storage engine for MariaDB
+ mariadb-plugin-spider - Spider storage engine for MariaDB
+ mariadb-plugin-tokudb - TokuDB storage engine for MariaDB
+ mariadb-server - MariaDB database server (metapackage depending on the latest vers
+ mariadb-server-10.3 - MariaDB database server binaries
+ mariadb-server-core-10.3 - MariaDB database core server files
+ mariadb-test - MariaDB database regression test suite
+ mariadb-test-data - MariaDB database regression test suite - data files
+Closes: 1031773
+Changes:
+ mariadb-10.3 (1:10.3.39-0+deb10u1) buster-security; urgency=medium
+ .
+   * New upstream version 10.3.39. Includes security fixes for:
+     - CVE-2022-47015
+   * According to https://mariadb.org/about/#maintenance-policy this
+     was the last minor maintenance release for MariaDB 10.3 series
+   * Add patch to revert upstream libmariadb API change (Closes: #1031773)
+   * Make SysV init script explicit on its dependencies (Related: #1035949)
+Checksums-Sha1:
+ 971d2ebc5b88af89adfeafbd9260371860c6014c 4812 mariadb-10.3_10.3.39-0+deb10u1.dsc
+ 25972d22ed05249782141392f0893e71c7d549a9 74469177 mariadb-10.3_10.3.39.orig.tar.gz
+ 132f5f81287ff7face88efea2bcf1dc2f8eff870 833 mariadb-10.3_10.3.39.orig.tar.gz.asc
+ deea22fe772833fdf672721598d3677936390e63 230756 mariadb-10.3_10.3.39-0+deb10u1.debian.tar.xz
+ 28b06b789753aa7593249ced940bf9acb09abadb 9388 mariadb-10.3_10.3.39-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 1de6109f7add1c78acc27f684953b9ec9b1d3e72da0bd22884ac78545a41430c 4812 mariadb-10.3_10.3.39-0+deb10u1.dsc
+ 18bd51c847565af4da18748b052ab9bcbb569ab6e6766ca8da7dcca1f941f876 74469177 mariadb-10.3_10.3.39.orig.tar.gz
+ c7ae557f5d41c280da680be37e554c49d0512a28bda695cace61eab14ebe01d5 833 mariadb-10.3_10.3.39.orig.tar.gz.asc
+ 342c3969406ee6b4b9087e50d5c8b71b53a12eef195b9f797b4553a328c4e034 230756 mariadb-10.3_10.3.39-0+deb10u1.debian.tar.xz
+ 111cded55bae436ee3e9f39ac6f703455363db8e8f156e443b1dec866614caea 9388 mariadb-10.3_10.3.39-0+deb10u1_source.buildinfo
+Files:
+ fce867559417c510d530f9665ccdaea8 4812 database optional mariadb-10.3_10.3.39-0+deb10u1.dsc
+ 34e3cf6b6a4dbf3c7e90a9fca3716f44 74469177 database optional mariadb-10.3_10.3.39.orig.tar.gz
+ a98d45424940fe58448523d2d1a6032f 833 database optional mariadb-10.3_10.3.39.orig.tar.gz.asc
+ 087a928f41bb2ee658b116be4eda447c 230756 database optional mariadb-10.3_10.3.39-0+deb10u1.debian.tar.xz
+ 422147d10f069c750a72d133a93ce9df 9388 database optional mariadb-10.3_10.3.39-0+deb10u1_source.buildinfo
+

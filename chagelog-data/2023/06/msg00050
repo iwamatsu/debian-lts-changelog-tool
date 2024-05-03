@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 22 Jun 2023 00:45:34 CEST
+Source: hsqldb
+Architecture: source
+Version: 2.4.1-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 52bac78a2dad0492ddca606efee398d170144d3c 2264 hsqldb_2.4.1-2+deb10u2.dsc
+ b926a6509588ea0855f355661b9d411e9f667070 12316 hsqldb_2.4.1-2+deb10u2.debian.tar.xz
+ fc756d6130fdb8ccd39142a613c70e6b0c3a836f 11902 hsqldb_2.4.1-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ a84c9c57a5160238bd028331a95ec7bf82ade032feaea86ea32d78eaef5fc476 2264 hsqldb_2.4.1-2+deb10u2.dsc
+ ea217e101b31bb81518f6e1c5d1f9a97e2347780b5486b36b0f4ab2e32ca79d0 12316 hsqldb_2.4.1-2+deb10u2.debian.tar.xz
+ e9c15d04c0b6fb9bf8ea6559af4644804fe2e93f12ad29e7d8e8a444778b667e 11902 hsqldb_2.4.1-2+deb10u2_amd64.buildinfo
+Changes:
+ hsqldb (2.4.1-2+deb10u2) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2023-1183:
+     Gregor Kopf of Secfault Security GmbH discovered that HSQLDB, a Java SQL
+     database engine, allowed the execution of spurious scripting commands in
+     .script and .log files. Hsqldb supports a "SCRIPT" keyword which is
+     normally used to record the commands input by the database admin to output
+     such a script. In combination with LibreOffice, an attacker could craft an
+     odb containing a "database/script" file which itself contained a SCRIPT
+     command where the contents of the file could be written to a new file whose
+     location was determined by the attacker.
+Files:
+ 8823a9718ad60a5eb0079c585e8279f6 2264 libs optional hsqldb_2.4.1-2+deb10u2.dsc
+ 38ab13ba85fc1ac6fd6c17a5820f8a96 12316 libs optional hsqldb_2.4.1-2+deb10u2.debian.tar.xz
+ 9811450d134b432630e7027dd88dc506 11902 libs optional hsqldb_2.4.1-2+deb10u2_amd64.buildinfo
+

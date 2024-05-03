@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu,  4 Jan 2024 20:11:50 CET
+Source: netatalk
+Architecture: source
+Version: 3.1.12~ds-3+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 202b1bc88a08020c1eb2a7a76217dfd68be034c1 2675 netatalk_3.1.12~ds-3+deb10u5.dsc
+ ae705a4f48188f60b26b32f6476dbf36260536c8 69212 netatalk_3.1.12~ds-3+deb10u5.debian.tar.xz
+ be45005fe74d729af8d0654ccb1bd0d780797465 10388 netatalk_3.1.12~ds-3+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 1ed277198333e77b35ff3c19be8c77d9f8f316813c84e2aa947e55c818369290 2675 netatalk_3.1.12~ds-3+deb10u5.dsc
+ f9f887e4d0b8ea1c70d6b13bd6fdb51cb2d978c04a3460787b28dea4e5bb376c 69212 netatalk_3.1.12~ds-3+deb10u5.debian.tar.xz
+ 14d27770b181cd57f11914e985366ce923ca3fd08012e3a6bd5d406e8dbb9647 10388 netatalk_3.1.12~ds-3+deb10u5_amd64.buildinfo
+Changes:
+ netatalk (3.1.12~ds-3+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-22995:
+     Corentin BAYET, Etienne HELLUY-LAFONT and Luca MORO of Synacktiv discovered
+     a symlink redirection vulnerability in Netatalk, the Apple Filing Protocol
+     service. The create_appledesktop_folder function of netatalk can be used to
+     unsafely move files outside the shared volume using the "mv" system
+     utility. The create_appledesktop_folder function is called when netatalk is
+     configured to use the legacy AppleDouble v2 format of file system meta
+     data.
+     By using the features of another file sharing protocol, like SMB, an
+     attacker could abuse this primitive to create an arbitrary symbolic link
+     and move it outside the share. The attacker could then reuse the created
+     symlink to write arbitrary files on the targeted system. On the targeted
+     device where it was demonstrated, writing arbitrary files on the system
+     resulted in a remote code execution.
+Files:
+ b4128245441aa497d038fff2a5e3f7f8 2675 net optional netatalk_3.1.12~ds-3+deb10u5.dsc
+ 2a41b570b1d547502fee29f1a17daea3 69212 net optional netatalk_3.1.12~ds-3+deb10u5.debian.tar.xz
+ a45eef4a125606c38015f224565e7ae0 10388 net optional netatalk_3.1.12~ds-3+deb10u5_amd64.buildinfo
+

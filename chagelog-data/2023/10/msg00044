@@ -1,0 +1,28 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 26 Oct 2023 10:30:33 +0200
+Source: firefox-esr
+Architecture: source
+Version: 115.4.0esr-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (115.4.0esr-1~deb10u1) buster-security; urgency=medium
+ .
+   * Backport to buster.
+Checksums-Sha1:
+ 8ba7f87041feb195a1cc9409b65b653c49c50ebc 47169 firefox-esr_115.4.0esr-1~deb10u1.dsc
+ 2f8a3a758589c81478f176142309007abf6d84c9 176308 firefox-esr_115.4.0esr-1~deb10u1.debian.tar.xz
+ 96626fe5be0d20bfd097f898a02ba28e6667646c 7484 firefox-esr_115.4.0esr-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ 5e76cb4d23eb63899d9d6c19d60137a1be0e82e4c1aded18bf6dc61f1249eb39 47169 firefox-esr_115.4.0esr-1~deb10u1.dsc
+ 5480241044230049988d38778e2d49a84be4b77deea65d0252cccb2da255b3bc 176308 firefox-esr_115.4.0esr-1~deb10u1.debian.tar.xz
+ 448ae85831e6a3450b1f2d45ae876c8371f8b883f0e388a00f7702401852b9fd 7484 firefox-esr_115.4.0esr-1~deb10u1_source.buildinfo
+Files:
+ cbb6c9b5e1121ce148d2eac7ecfcdaec 47169 web optional firefox-esr_115.4.0esr-1~deb10u1.dsc
+ c6f36d1ca0b16fab943886bfc511cc02 176308 web optional firefox-esr_115.4.0esr-1~deb10u1.debian.tar.xz
+ 1edcbfb6bf3cf97ea68674a22c0e41d9 7484 web optional firefox-esr_115.4.0esr-1~deb10u1_source.buildinfo
+

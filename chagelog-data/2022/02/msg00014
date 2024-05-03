@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 06 Feb 2022 21:16:18 +0100
+Source: python2.7
+Architecture: source
+Version: 2.7.13-2+deb9u6
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ python2.7 (2.7.13-2+deb9u6) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-4189: Make ftplib not trust the PASV response.
+   * CVE-2021-3177: Replace snprintf with Python unicode
+                    formatting in ctypes param reprs.
+Checksums-Sha1:
+ 09739f2ee4a2519e0d50bacb01ff19b187c4253e 3354 python2.7_2.7.13-2+deb9u6.dsc
+ ef08753eb335e1a3f7730c7052258e95f38edf7f 316409 python2.7_2.7.13-2+deb9u6.diff.gz
+ fb7d74c507eebb17576ed0af2af89865b10c569a 9265 python2.7_2.7.13-2+deb9u6_source.buildinfo
+Checksums-Sha256:
+ 70c3bf66830fea637feb215f5b48a82e31790681a6522fd126c72da8f247d17d 3354 python2.7_2.7.13-2+deb9u6.dsc
+ 2439d4d9a2f1bda192eab5497d3dfa3360526fd9d33be8dc68175b3fa28b9ecc 316409 python2.7_2.7.13-2+deb9u6.diff.gz
+ 1fb221720957ea50b96aaa4dccbea6ea8f814222bc844810771d5faed6fc01fd 9265 python2.7_2.7.13-2+deb9u6_source.buildinfo
+Files:
+ b8b9834a5c23613be3851b411c5cd2cf 3354 python optional python2.7_2.7.13-2+deb9u6.dsc
+ bf5d496471ca79546e5a5c59446ae397 316409 python optional python2.7_2.7.13-2+deb9u6.diff.gz
+ 7403de23203916c13c0b5cefc1b98dff 9265 python optional python2.7_2.7.13-2+deb9u6_source.buildinfo
+

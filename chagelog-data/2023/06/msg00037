@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 13:30:59 CEST
+Source: etcd
+Architecture: source
+Version: 3.2.26+dfsg-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ e39003c0b15efca939cef75813cb247d69ac37b9 3872 etcd_3.2.26+dfsg-3+deb10u1.dsc
+ 34361315751680213f0f81eaedc3fecc5ce0f952 1003372 etcd_3.2.26+dfsg.orig.tar.xz
+ 5a055249351a435c799daaf751a9a0f49e73eb5e 24148 etcd_3.2.26+dfsg-3+deb10u1.debian.tar.xz
+ f8ea3f13e74fba8a9e0ac6bc2fafe44fdb3f5a06 13551 etcd_3.2.26+dfsg-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 9a6fcea84bcc3c17e08ab6cff0670ddad9e7144a56385d5b6f0bc54fd07214eb 3872 etcd_3.2.26+dfsg-3+deb10u1.dsc
+ b372c18626b884ce810cc1086a9eec7019967776e03d6b91151064398a4bb2fa 1003372 etcd_3.2.26+dfsg.orig.tar.xz
+ 72b2fae5724ab6f7f1f1c66b8fedc3cdef1dcb1105170e11d1cdc2b716be00e5 24148 etcd_3.2.26+dfsg-3+deb10u1.debian.tar.xz
+ 13eb80b31e432845835b44b8a8bc1961e2433ac4a56b4af533682feaf5c79778 13551 etcd_3.2.26+dfsg-3+deb10u1_amd64.buildinfo
+Changes:
+ etcd (3.2.26+dfsg-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ fce3655822d004477d82eb2d7c08aa75 3872 net optional etcd_3.2.26+dfsg-3+deb10u1.dsc
+ c0b93d28d7551fabc825b1678c95e2bd 1003372 net optional etcd_3.2.26+dfsg.orig.tar.xz
+ 1cbccc4e9c9d41f0e40ed548bf7e4e49 24148 net optional etcd_3.2.26+dfsg-3+deb10u1.debian.tar.xz
+ abe00b15593313f4fd28806f6af9ea0a 13551 net optional etcd_3.2.26+dfsg-3+deb10u1_amd64.buildinfo
+

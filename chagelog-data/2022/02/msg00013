@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 11 Feb 2022 16:12:52 +0100
+Source: debian-edu-config
+Architecture: source
+Version: 1.929+deb9u5
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Edu Developers <debian-edu@lists.debian.org>
+Changed-By: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Changes:
+ debian-edu-config (1.929+deb9u5) stretch-security; urgency=medium
+ .
+   * etc/apache2/mods-available/debian-edu-userdir.conf:
+     - White-space cleanup (tabs and spaces mixed).
+     - CVE-2021-20001: Disable built-in PHP engine.
+     - Add warning to not re-enable PHP interpretation in user dirs (with
+       reference to our README).
+   * README.public_html_with_PHP-CGI+suExec.md:
+     - Provide documentation on how to enable suExec support in https userdirs
+       (i.e. ~/public_html).
+   * debian/NEWS:
+     + Add file, inform about PHP being disabled in Apache2 user directories.
+Checksums-Sha1:
+ 97ab826e6408c5c2273d78c57dad3513b61dc2cc 1916 debian-edu-config_1.929+deb9u5.dsc
+ e3340bcd549845df050215f231d43620d9678229 388264 debian-edu-config_1.929+deb9u5.tar.xz
+ 94613fb6e1a4d04ddff6699f85e576cd5f0a2240 6190 debian-edu-config_1.929+deb9u5_source.buildinfo
+Checksums-Sha256:
+ 6501c220e3485a83e89deed16cd068d4878d1ab2fa769adc0b4946c2d7b6efa6 1916 debian-edu-config_1.929+deb9u5.dsc
+ d237a4dd9eb8585128985a7ec98e31aa41ad0707a7d2accc9ba330a01b4945c8 388264 debian-edu-config_1.929+deb9u5.tar.xz
+ 02e1a47e583e3118125bc7e47f4b8b34509f95ffcbbbc8377c12550af38f1d5f 6190 debian-edu-config_1.929+deb9u5_source.buildinfo
+Files:
+ fc87ea4914a8fd9084db6b3e9a2cf04c 1916 misc extra debian-edu-config_1.929+deb9u5.dsc
+ c71c47036feb76a37f2dd7a992ba3bac 388264 misc extra debian-edu-config_1.929+deb9u5.tar.xz
+ fa714a3615e6acb7ff69261d31427eae 6190 misc extra debian-edu-config_1.929+deb9u5_source.buildinfo
+

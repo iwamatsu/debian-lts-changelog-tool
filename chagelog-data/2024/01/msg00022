@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 25 Jan 2024 01:42:41 +0100
+Source: php-phpseclib
+Architecture: source
+Version: 2.0.30-2~deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ php-phpseclib (2.0.30-2~deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-48795 (terrapin attack): The SSH transport protocol with
+     certain OpenSSH extensions allows remote attackers to bypass integrity
+     checks such that some packets are omitted (from the extension negotiation
+     message), and a client and server may consequently end up with a
+     connection for which some security features have been downgraded or
+     disabled, aka a Terrapin attack.
+Checksums-Sha1:
+ 9773875ba11b74ea93ac1845c2ed667e00676f3a 2170 php-phpseclib_2.0.30-2~deb10u2.dsc
+ 59cc705f87d2a0e3b86a70913783d0ecfc502d81 18924 php-phpseclib_2.0.30-2~deb10u2.debian.tar.xz
+ dc59c46b556041e5f8fc51264ff06e233e7afcbe 7657 php-phpseclib_2.0.30-2~deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 4d415e4cb8a483a4e3877bef42954b33862a4b1179bc2c0ce6c51b579f718122 2170 php-phpseclib_2.0.30-2~deb10u2.dsc
+ 3842b5f35a21a9a570fbb899f138eaa030e1c4d349963428ecebb2ce84486830 18924 php-phpseclib_2.0.30-2~deb10u2.debian.tar.xz
+ f162198d5412eee510e2da1cdfbce0f0bcb67168a3be5aea301e98829c6514f9 7657 php-phpseclib_2.0.30-2~deb10u2_amd64.buildinfo
+Files:
+ a86e84f11beafbc2bf7bf0c0b270dd8f 2170 php optional php-phpseclib_2.0.30-2~deb10u2.dsc
+ c131ea24e9fc0bab968d66ad6e93db10 18924 php optional php-phpseclib_2.0.30-2~deb10u2.debian.tar.xz
+ ede9c5d6a8b62b7e66db431ca564bf5b 7657 php optional php-phpseclib_2.0.30-2~deb10u2_amd64.buildinfo
+

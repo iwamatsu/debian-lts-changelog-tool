@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 11 Oct 2022 04:00:05 +0530
+Source: isc-dhcp
+Architecture: source
+Version: 4.4.1-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian ISC DHCP Maintainers <isc-dhcp@packages.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1021320
+Changes:
+ isc-dhcp (4.4.1-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team. (Closes: #1021320)
+   * An option refcount overflow exists in dhcpd. (Fixes: CVE-2022-2928)
+   * DHCP memory leak. (Fixes: CVE-2022-2929)
+Checksums-Sha1:
+ 89547c2ac17c6204f7fe42f93b1687c67676f17a 2582 isc-dhcp_4.4.1-2+deb10u2.dsc
+ 2c52eac4eb3dc9a2ecde623b1a687fa0146a6ce9 1189920 isc-dhcp_4.4.1.orig.tar.gz
+ 5e427deb1ba8047849bd7f7fe81cf6c6d4ce2775 87940 isc-dhcp_4.4.1-2+deb10u2.debian.tar.xz
+ 2a35f4e2b79d7696b1203ecce47a1a897e1999e5 7170 isc-dhcp_4.4.1-2+deb10u2_source.buildinfo
+Checksums-Sha256:
+ a001445ed02f2d1790e0f60cf3a2ac25d5ca0fc5dea447e86c1a3c6628451eda 2582 isc-dhcp_4.4.1-2+deb10u2.dsc
+ c8e079dd4303ed121811b05c9f62a37669b2c8d91658d47a5ec58ec34e5a8247 1189920 isc-dhcp_4.4.1.orig.tar.gz
+ 11b1a27f3c7f8ac0aaeb95d05a1678030973cbbfc469ce8ccdb9dc9bb33b011e 87940 isc-dhcp_4.4.1-2+deb10u2.debian.tar.xz
+ aee77d75e35ece6696f2ad7a291fe05fcf84585e8890ee9db679beca8852b7fb 7170 isc-dhcp_4.4.1-2+deb10u2_source.buildinfo
+Files:
+ baa51a2ce56996d8d21a236ffb735dd3 2582 net important isc-dhcp_4.4.1-2+deb10u2.dsc
+ dbcba5108f659278200218ac0847ce3f 1189920 net important isc-dhcp_4.4.1.orig.tar.gz
+ acce5b61d890aaf2cefa39a752bf78de 87940 net important isc-dhcp_4.4.1-2+deb10u2.debian.tar.xz
+ 3c19b906a0d0d9dff0d88db46c2f4b0a 7170 net important isc-dhcp_4.4.1-2+deb10u2_source.buildinfo
+

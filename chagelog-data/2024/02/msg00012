@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 26 Feb 2024 01:04:02 +0100
+Source: gnutls28
+Architecture: source
+Version: 3.6.7-4+deb10u12
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1061046
+Changes:
+ gnutls28 (3.6.7-4+deb10u12) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-0553: Timing side-channel vulnerability inside RSA-PSK key
+     exchange. (Closes: #1061046)
+Checksums-Sha1:
+ 93a81798a4989074dbb540165dc2443133796eea 3114 gnutls28_3.6.7-4+deb10u12.dsc
+ c79bd09e9e4e51d64d115931e63301be8045e5bf 104752 gnutls28_3.6.7-4+deb10u12.debian.tar.xz
+ c818ac152fed1b14863385e79078d282227f522d 11437 gnutls28_3.6.7-4+deb10u12_amd64.buildinfo
+Checksums-Sha256:
+ cbf15d0135d5a7d3942204f90d16ff331355a203de9551d56ad3bc3045699758 3114 gnutls28_3.6.7-4+deb10u12.dsc
+ 6370a6cca2cd83b77362a1b609c584854b2fbc2a104c92ba9eed5db825f17234 104752 gnutls28_3.6.7-4+deb10u12.debian.tar.xz
+ 4709900ff9ad48da46e84d5b53965377c09af13a61da8c3d01e7525a583e8e13 11437 gnutls28_3.6.7-4+deb10u12_amd64.buildinfo
+Files:
+ be8afc7b54acec98eebbf44a4874c01e 3114 libs optional gnutls28_3.6.7-4+deb10u12.dsc
+ c202b38b0df7f36b34af791fcd15247f 104752 libs optional gnutls28_3.6.7-4+deb10u12.debian.tar.xz
+ 69579501fcb21378c5841fdc9d98c705 11437 libs optional gnutls28_3.6.7-4+deb10u12_amd64.buildinfo
+

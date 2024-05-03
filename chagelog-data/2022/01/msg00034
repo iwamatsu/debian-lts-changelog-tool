@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 31 Jan 2022 14:13:22 CET
+Source: apache-log4j1.2
+Binary: liblog4j1.2-java liblog4j1.2-java-doc
+Architecture: source
+Version: 1.2.17-7+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ liblog4j1.2-java - Logging library for java
+ liblog4j1.2-java-doc - Documentation for liblog4j1.2-java
+Checksums-Sha1:
+ f8ba11ee7c92f63a556b397a83d9b46b5f10457b 2500 apache-log4j1.2_1.2.17-7+deb9u2.dsc
+ fc245ca804bf03574a0c9e8064295884c0355dc5 27152 apache-log4j1.2_1.2.17-7+deb9u2.debian.tar.xz
+ 226ec7ccfc3b7f850747b5d237f14f4c8292953c 11753 apache-log4j1.2_1.2.17-7+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ 4894fec744f6e3b161904ce7f8e64108009681245359c3b3709e4edb17c213a8 2500 apache-log4j1.2_1.2.17-7+deb9u2.dsc
+ 56f2cd0c362a7301f10549b3d62abb17ac094caf1c5bc5f09415b2ac67ed0f16 27152 apache-log4j1.2_1.2.17-7+deb9u2.debian.tar.xz
+ 4acb845444bf83026c94bf6147280ab52e336389419f806e3ea3564ff63b8ccc 11753 apache-log4j1.2_1.2.17-7+deb9u2_amd64.buildinfo
+Changes:
+ apache-log4j1.2 (1.2.17-7+deb9u2) stretch-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2021-4104, CVE-2022-23302, CVE-2022-23305 and CVE-2022-23307.
+     Multiple security vulnerabilities have been discovered in
+     Apache Log4j 1.2 when it is configured to use JMSSink, JDBCAppender and
+     JMSAppender or Apache Chainsaw. Note that a possible attacker requires
+     write access to the Log4j configuration and the aforementioned features are
+     not enabled by default. In order to completely mitigate against these
+     vulnerabilities the related classes have been removed from the resulting
+     jar file.
+Files:
+ a0ef16a80a0b2a40de2b51957a4e0f86 2500 java optional apache-log4j1.2_1.2.17-7+deb9u2.dsc
+ 3b00ed5a4f7e552506ad16eb4758fc70 27152 java optional apache-log4j1.2_1.2.17-7+deb9u2.debian.tar.xz
+ c5b59495648793c2c30363b1b2952095 11753 java optional apache-log4j1.2_1.2.17-7+deb9u2_amd64.buildinfo
+

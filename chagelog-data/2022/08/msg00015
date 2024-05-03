@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 24 Aug 2022 18:23:44 +0200
+Source: exim4
+Architecture: source
+Version: 4.92-8+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ exim4 (4.92-8+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-37452: heap-based buffer overflow for the alias list in
+     host_name_lookup in host.c when sender_host_name is set.
+Checksums-Sha1:
+ 6beffaf41d8309bcb9dbfc0386191ca55e2bf4db 2855 exim4_4.92-8+deb10u7.dsc
+ 0e9e8550cde37f0c809d6703911a73a25d00cabe 497836 exim4_4.92-8+deb10u7.debian.tar.xz
+ 5b55ba08f7ec2127e8d8bf3a4dcf96f0e93504d3 10663 exim4_4.92-8+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 75ed27a7332c34d9d80c6891ce5bb9ced0b92c043bd3d03f01092edac182deee 2855 exim4_4.92-8+deb10u7.dsc
+ 1aab68acdef3dc1814096cb1ab10a0a9cc87ed3ccb1496cb39222cdcec150a06 497836 exim4_4.92-8+deb10u7.debian.tar.xz
+ 687d31062055f5700eb7fdc167ad0afa31f5c8b72e1d1531f57ad93066bc3303 10663 exim4_4.92-8+deb10u7_amd64.buildinfo
+Files:
+ 3b3b09cd8d9302a09011218db5b15255 2855 mail standard exim4_4.92-8+deb10u7.dsc
+ 22707e3937bf5a453287f85fa0ab23ab 497836 mail standard exim4_4.92-8+deb10u7.debian.tar.xz
+ 5498eeb8adb8a27fcbd7dbbcca0f711d 10663 mail standard exim4_4.92-8+deb10u7_amd64.buildinfo
+

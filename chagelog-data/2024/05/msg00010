@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu,  9 May 2024 23:28:54 CEST
+Source: libpgjava
+Architecture: source
+Version: 42.2.5-2+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 781eb60e4888e39fd7817a681aacc413a3f75d2f 2736 libpgjava_42.2.5-2+deb10u4.dsc
+ ca500b3da863bbe2083e84b32e814260cff95ee3 24784 libpgjava_42.2.5-2+deb10u4.debian.tar.xz
+ de7aaf886e9912df92f7ef86faf67967242f1839 14354 libpgjava_42.2.5-2+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 952b3ff093a1fbae761fa3c9447de8c2cea710497c8d71b200cb05f61e35b9f8 2736 libpgjava_42.2.5-2+deb10u4.dsc
+ d74b185498b719c033de2c845bc068d32d122295807f2d1c708e98e9dcb621b5 24784 libpgjava_42.2.5-2+deb10u4.debian.tar.xz
+ 79bd50bfaff7d6f3892f1c4f44482c10c2961d02e7745d74c8c65bdf5fd6e67a 14354 libpgjava_42.2.5-2+deb10u4_amd64.buildinfo
+Changes:
+ libpgjava (42.2.5-2+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2024-1597:
+     A possible SQL injection vulnerability was found in libpgjava, the
+     PostgreSQL JDBC Driver. It allows an attacker to inject SQL if using
+     PreferQueryMode=SIMPLE which is not the default mode. In the default mode
+     there is no vulnerability.
+Files:
+ 12dda815e1b5152129731f43c9dc52fa 2736 java optional libpgjava_42.2.5-2+deb10u4.dsc
+ 985b0e471e26587ec69a161ec5b4d8a4 24784 java optional libpgjava_42.2.5-2+deb10u4.debian.tar.xz
+ d0704334a1f33962dd54c9d8fe584c5c 14354 java optional libpgjava_42.2.5-2+deb10u4_amd64.buildinfo
+

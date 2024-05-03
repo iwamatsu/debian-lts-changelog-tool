@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 20 Mar 2023 10:09:01 +0100
+Source: sox
+Architecture: source
+Version: 14.4.2+git20190427-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 1032082
+Changes:
+ sox (14.4.2+git20190427-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix regression in wav-gsm decodeing introduced via fixing CVE-2021-33844.
+     (Closes: #1032082)
+Checksums-Sha1:
+ 3632cf95a827592f76e4f5af670e682365c4f158 2880 sox_14.4.2+git20190427-1+deb10u2.dsc
+ 5c2dc4b5aebb004a2651c3f01fc391118417f0ca 27400 sox_14.4.2+git20190427-1+deb10u2.debian.tar.xz
+ 51cc45a551357a50b44006e05d5f695280bcb19e 13884 sox_14.4.2+git20190427-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 912575a4895f893c06768ac89ad202f7c8f27713ea45138361d36346f2f30951 2880 sox_14.4.2+git20190427-1+deb10u2.dsc
+ 71097fd417b3fd0b8a2c6ad29db08d5f5d21b450338a3110102715f923c415d7 27400 sox_14.4.2+git20190427-1+deb10u2.debian.tar.xz
+ df450cb48ed2dde263e6ffb1291ad713c156cd4c97bd368c4b4c55cec30939d7 13884 sox_14.4.2+git20190427-1+deb10u2_amd64.buildinfo
+Files:
+ 313041385892f3196a3d3632b478e765 2880 sound optional sox_14.4.2+git20190427-1+deb10u2.dsc
+ d1fdea631467e7cff3fe96515b4d8e7d 27400 sound optional sox_14.4.2+git20190427-1+deb10u2.debian.tar.xz
+ ce42ce9becdc2e9c70fd5bc5e166d4de 13884 sound optional sox_14.4.2+git20190427-1+deb10u2_amd64.buildinfo
+

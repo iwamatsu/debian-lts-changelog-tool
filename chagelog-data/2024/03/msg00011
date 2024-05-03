@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 10 Mar 2024 18:33:59 CET
+Source: wordpress
+Architecture: source
+Version: 5.0.21+dfsg1-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 2f98e978597a37776cf2e76bcc5accc6ebb8e435 2635 wordpress_5.0.21+dfsg1-0+deb10u1.dsc
+ 4536ea1e85a4909c0089c611e7316882686354df 10577849 wordpress_5.0.21+dfsg1.orig.tar.gz
+ 700943fea12b4323f1c6d9b5212a75ff08c2a7ba 6820864 wordpress_5.0.21+dfsg1-0+deb10u1.debian.tar.xz
+ 50e5475fd4825a3136218d687b245eee9cf719d0 7719 wordpress_5.0.21+dfsg1-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ b28af27186223a1ea22cfa93728bdd927627d6955cab74e5eaf7c4ed655b761f 2635 wordpress_5.0.21+dfsg1-0+deb10u1.dsc
+ f0456559d1ae0a55f1c5ad52471d5b491d155086db1cb15ddb3891e444e44cc3 10577849 wordpress_5.0.21+dfsg1.orig.tar.gz
+ 3709d9d5934a1b7dcaed327a6af86c320e2dd17da39e1a39b49f64845e820395 6820864 wordpress_5.0.21+dfsg1-0+deb10u1.debian.tar.xz
+ 24aadc87412aa373bcd1829fe0e5b114a08d54a16cb4f7a49e7aa22c98572707 7719 wordpress_5.0.21+dfsg1-0+deb10u1_amd64.buildinfo
+Changes:
+ wordpress (5.0.21+dfsg1-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * New upstream version 5.0.21+dfsg1.
+   * Address security vulnerabilities fixed in Wordpress 6.4.3. No CVE have been
+     assigned yet.
+      - PHP File Upload bypass via Plugin Installer
+      - RCE POP Chains vulnerability
+Files:
+ b1313ea55f2446db84735830c5512917 2635 web optional wordpress_5.0.21+dfsg1-0+deb10u1.dsc
+ 8b18a6e1a46d1557dfbbe6685842fe53 10577849 web optional wordpress_5.0.21+dfsg1.orig.tar.gz
+ 0434ff89d8728dc46b796cba30fa2948 6820864 web optional wordpress_5.0.21+dfsg1-0+deb10u1.debian.tar.xz
+ f345ef67a6f5d600894de6aee90dc6c7 7719 web optional wordpress_5.0.21+dfsg1-0+deb10u1_amd64.buildinfo
+

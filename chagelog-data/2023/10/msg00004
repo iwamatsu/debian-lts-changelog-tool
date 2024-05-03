@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  2 Oct 2023 16:48:25 CEST
+Source: exim4
+Architecture: source
+Version: 4.92-8+deb10u8
+Distribution: buster-security
+Urgency: high
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 8879fbb1073187fa29c3965d85ab4f169bf38178 2771 exim4_4.92-8+deb10u8.dsc
+ 315680c3213775ddaf742d90d11ea2e0a6c88b50 500016 exim4_4.92-8+deb10u8.debian.tar.xz
+ ec3016ffa547144f3c722828e27e0cd61b367b3e 11688 exim4_4.92-8+deb10u8_amd64.buildinfo
+Checksums-Sha256:
+ 1254e1f182870850e4203e662e624faf39f08d04c1c331a6eb9911218a0e0c23 2771 exim4_4.92-8+deb10u8.dsc
+ 13b695f922f993da9286cdfad08dbcdde1a8ed6cf487e8ac065f842a6e1d626b 500016 exim4_4.92-8+deb10u8.debian.tar.xz
+ 442d921da5fb0e853e6b314aa43d7445b557e87139267fd40d93dabe0ee1aa1f 11688 exim4_4.92-8+deb10u8_amd64.buildinfo
+Changes:
+ exim4 (4.92-8+deb10u8) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Address SPA authenticator vulnerabilities (CVE-2023-42114, CVE-2023-42116)
+     - Auths: use uschar more in spa authenticator
+     - Auths: fix possible OOB write in SPA authenticator (CVE-2023-42116)
+     - Auths: fix possible OOB read in SPA authenticator (CVE-2023-42114)
+Files:
+ 8fbcc1278720269eeb1886d2a6484d1b 2771 mail standard exim4_4.92-8+deb10u8.dsc
+ 6e639b9c6f625ba546e53702a5a19478 500016 mail standard exim4_4.92-8+deb10u8.debian.tar.xz
+ 4b85f9242711ec9637214c3d9cbeaf8a 11688 mail standard exim4_4.92-8+deb10u8_amd64.buildinfo
+

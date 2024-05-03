@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Apr 2023 20:10:09 +0300
+Source: jruby
+Architecture: source
+Version: 9.1.17.0-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ jruby (9.1.17.0-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2017-17742, CVE-2019-16254: HTTP Response Splitting attacks
+     in the HTTP server of WEBrick.
+   * CVE-2019-16201: Regular Expression Denial of Service vulnerability
+     of WEBrick's Digest access authentication.
+   * CVE-2019-16255: Code injection vulnerability of Shell#[]
+     and Shell#test.
+   * CVE-2020-25613: HTTP Request Smuggling attack in WEBrick.
+   * CVE-2021-31810: Trusting FTP PASV responses vulnerability in Net::FTP.
+   * CVE-2021-32066: Net::IMAP did not raise an exception when StartTLS
+     fails with an an unknown response.
+   * CVE-2023-28755: Quadratic backtracking on invalid URI.
+   * CVE-2023-28756: The Time parser mishandled invalid strings that have
+     specific characters.
+Checksums-Sha1:
+ c6e6df97ee2e72def6a0b508b1be727d3254c144 3078 jruby_9.1.17.0-3+deb10u1.dsc
+ 3b1c96fa63efdd22070742d8a8e17a3afe3bd42a 8574514 jruby_9.1.17.0.orig.tar.gz
+ a176266577b2115affa0534a3661aa2021730e60 87420 jruby_9.1.17.0-3+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 85841b126b38977165b2263fa063b80ef145f4a48c43818950a60a166890cb9b 3078 jruby_9.1.17.0-3+deb10u1.dsc
+ b66d7c14f85075afdabb5ebf5950804c5a5d5c1d05ab833f580f04ee709b5773 8574514 jruby_9.1.17.0.orig.tar.gz
+ 87633c2fbec3afdfaa764eb9f9aa21c778dbcbd6100a03e0ecd01a1f6b6c6741 87420 jruby_9.1.17.0-3+deb10u1.debian.tar.xz
+Files:
+ e74c86956e7afe718b6180c92b32e999 3078 ruby optional jruby_9.1.17.0-3+deb10u1.dsc
+ 38fe13908af7fe67d32f0c62f4d42746 8574514 ruby optional jruby_9.1.17.0.orig.tar.gz
+ e45613a4a5cb0779782ab10235919610 87420 ruby optional jruby_9.1.17.0-3+deb10u1.debian.tar.xz
+

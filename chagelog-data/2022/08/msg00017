@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 Aug 2022 21:33:48 +0200
+Source: ndpi
+Architecture: source
+Version: 2.6-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Ludovico Cavedon <cavedon@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ ndpi (2.6-3+deb10u1) buster-security; urgency=medium
+ .
+   * [7ab9156] CVE-2020-15472: fix heap-based buffer over-read.
+                               in ndpi_search_h323.
+   * [f0e40e9] CVE-2020-15476: fix heap-based buffer over-read
+                               in ndpi_search_oracle.
+Checksums-Sha1:
+ 8a61f0f361990f19de59d373f142d37beb9726ea 2112 ndpi_2.6-3+deb10u1.dsc
+ dcf7f8b488b68d799d18169bc66954f88c95490f 18011656 ndpi_2.6.orig.tar.xz
+ 12afdf4298cb0ad6823b5a7fb82634382f747360 14556 ndpi_2.6-3+deb10u1.debian.tar.xz
+ 365577196244053b7a2ad73b523fa44d19eaf65f 6103 ndpi_2.6-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ e692f4222fd64545e299ae5174299f2a61202c9a776a906a7d55843d9bcd7e62 2112 ndpi_2.6-3+deb10u1.dsc
+ 7cc1e4c0711b22347b55009436ea8e625c8ffdb56197fc5675315b119de69554 18011656 ndpi_2.6.orig.tar.xz
+ 59a01376a3a96a3c141015a4d95d709c1270729b91c85132bbb4c3002e9c3a19 14556 ndpi_2.6-3+deb10u1.debian.tar.xz
+ a6d0eaccc19b6851dd53b64986e44a1fa2543bfc7ed2f3004d2d5bd6a45160a5 6103 ndpi_2.6-3+deb10u1_source.buildinfo
+Files:
+ 8fad7592b92202be1f30b9419b4379b7 2112 libs optional ndpi_2.6-3+deb10u1.dsc
+ cc6f742b7691c1cc7c48578b206b8174 18011656 libs optional ndpi_2.6.orig.tar.xz
+ 6c0ab92f6a163ae9cd23bbc7059873a6 14556 libs optional ndpi_2.6-3+deb10u1.debian.tar.xz
+ 52d0861907abd69780b01864e473ad67 6103 libs optional ndpi_2.6-3+deb10u1_source.buildinfo
+

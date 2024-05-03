@@ -1,0 +1,30 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 02 Jul 2023 13:47:46 +0200
+Source: yajl
+Architecture: source
+Version: 2.1.0-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: John Stamp <jstamp@users.sourceforge.net>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1039984
+Changes:
+ yajl (2.1.0-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Import upstream patch for CVE-2023-33460. (Closes: #1039984)
+Checksums-Sha1:
+ 9f34fe2a42bb6c06fb7a48d56080ab22f8ea9ec1 1980 yajl_2.1.0-3+deb10u1.dsc
+ 2bee9f731a80dbfb4b5bcfe3cea2b3abe130cef6 6024 yajl_2.1.0-3+deb10u1.debian.tar.xz
+ 74f9c9eb469319763ec449d6e2fa013f9f90347d 8175 yajl_2.1.0-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ feb8158e80f32e64e02f248941f4715fca423304df22618b7107cdd2d562a3d2 1980 yajl_2.1.0-3+deb10u1.dsc
+ b57abbd0e602d993f447d4c99cb724849bc07c8707205b7ecbc63f0983d7cc35 6024 yajl_2.1.0-3+deb10u1.debian.tar.xz
+ d497d6c05b887ed3e00699a29ad20dbe2fc73fea74fae8fdefbcfbcc8b3f2288 8175 yajl_2.1.0-3+deb10u1_amd64.buildinfo
+Files:
+ eb51a5ec30724999db4fd8fcd0ba9ed4 1980 libs optional yajl_2.1.0-3+deb10u1.dsc
+ 04e11676fb89c431962829e5ae378b55 6024 libs optional yajl_2.1.0-3+deb10u1.debian.tar.xz
+ 4af4b56de1f4e36ea26f933a8e0059df 8175 libs optional yajl_2.1.0-3+deb10u1_amd64.buildinfo
+

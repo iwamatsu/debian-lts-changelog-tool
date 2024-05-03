@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 20 Feb 2023 14:32:21 +0100
+Source: clamav
+Architecture: source
+Version: 0.103.8+dfsg-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ clamav (0.103.8+dfsg-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream release.
+     - CVE-2023-20032 (Possible RCE in the HFS+ file parser).
+     - CVE-2023-20052 (Possible information leak in the DMG file parser).
+   * Update symbols and clamav compatibility level.
+Checksums-Sha1:
+ 610559e9e3b33bdd99756aae2333ac072d576efd 2992 clamav_0.103.8+dfsg-0+deb10u1.dsc
+ 23abb9015972460c9ead147ed691e46e857ca1a3 7130804 clamav_0.103.8+dfsg.orig.tar.xz
+ 8fb848c8c76f538786adece9fa542ae5cfb471e6 219540 clamav_0.103.8+dfsg-0+deb10u1.debian.tar.xz
+ 1283a4a346f5ff9af30a8966dcde39969fc04a08 6069 clamav_0.103.8+dfsg-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 0b610f37d57897d80c18ed9302ed9798d3bf0c926ae8da3b35827be7cd2e83d4 2992 clamav_0.103.8+dfsg-0+deb10u1.dsc
+ e218adee2fb7e9eec4dbef04f25554cff65b771ea039f00136b2ed9a5b49fbba 7130804 clamav_0.103.8+dfsg.orig.tar.xz
+ 9e7bd7bfb6de0a0619484adcb4f4c46130525dbdd859e13d2fdba2b80ad365af 219540 clamav_0.103.8+dfsg-0+deb10u1.debian.tar.xz
+ aa9c9735a1426d84a479380b779d5e4b02ba8d07710e4986c9b90de87b7e19c6 6069 clamav_0.103.8+dfsg-0+deb10u1_source.buildinfo
+Files:
+ e73117ffa0d6365e30d63c336803913a 2992 utils optional clamav_0.103.8+dfsg-0+deb10u1.dsc
+ b36e464f39364dde17f77220a105c433 7130804 utils optional clamav_0.103.8+dfsg.orig.tar.xz
+ aaac55cd2d0dc246f5ed4cc467308f89 219540 utils optional clamav_0.103.8+dfsg-0+deb10u1.debian.tar.xz
+ 45e5e4f3e4ee820a93e8c0f8bda35e4a 6069 utils optional clamav_0.103.8+dfsg-0+deb10u1_source.buildinfo
+

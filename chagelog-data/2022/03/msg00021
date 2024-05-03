@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 16 Mar 2022 12:01:53 +0100
+Source: python-scrapy
+Architecture: source
+Version: 1.0.3-2+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ python-scrapy (1.0.3-2+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-41125: only use http basic auth on original domain.
+   * CVE-2022-0577: only pass cookies to original domain.
+Checksums-Sha1:
+ 2a9030724ee6c8533e586ed4a2db9e6d206fcbec 2302 python-scrapy_1.0.3-2+deb9u1.dsc
+ a09b73f35f4e49c831d6fa08e47736e5bc016789 948924 python-scrapy_1.0.3.orig.tar.gz
+ eddaeedc5fac4220d91a705d3b2d7ac58a1dc740 12188 python-scrapy_1.0.3-2+deb9u1.debian.tar.xz
+ 3f7ebd00dfe38e58497739cfa75255a98ee6a3bf 5788 python-scrapy_1.0.3-2+deb9u1_source.buildinfo
+Checksums-Sha256:
+ bc2596386873839400eefcbaef811fc7131529375a421cf10345d1d432ef28d2 2302 python-scrapy_1.0.3-2+deb9u1.dsc
+ 05d88f608ddf956cc152cbc90f2997d4181518d15742221b72a07aa7457cfe51 948924 python-scrapy_1.0.3.orig.tar.gz
+ 846dde3f29434e53ebcfa981276f6da3d8cc045475a2d2d619f1de9648ab4884 12188 python-scrapy_1.0.3-2+deb9u1.debian.tar.xz
+ 4591183f576ef7e70244b064b2a5b3fa90a79c3d3bc2ce40352cdae9b4a13143 5788 python-scrapy_1.0.3-2+deb9u1_source.buildinfo
+Files:
+ e7fb4c16f98f8c6bd1c56f76463083d8 2302 python optional python-scrapy_1.0.3-2+deb9u1.dsc
+ cefb981076a26112d6f9b76cb7e5ba7d 948924 python optional python-scrapy_1.0.3.orig.tar.gz
+ 47a19dedee139fe3abb993d2664eb858 12188 python optional python-scrapy_1.0.3-2+deb9u1.debian.tar.xz
+ 18ab93693b47754fb08780e9dc54867b 5788 python optional python-scrapy_1.0.3-2+deb9u1_source.buildinfo
+

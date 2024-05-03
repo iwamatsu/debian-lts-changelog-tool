@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 16 Oct 2023 13:34:24 +0100
+Source: nghttp2
+Architecture: source
+Version: 1.36.0-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 962145 1053769
+Changes:
+ nghttp2 (1.36.0-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fixes for CVE-2020-11080 (Closes: #962145).
+   * Backport upstream fix for CVE-2023-44487 (Closes: #1053769).
+   * Add three new symbols from backported fixes to libnghttp2-14.symbols.
+Checksums-Sha1:
+ b51a56365f60e189bb67270df3e323b8d600797f 2613 nghttp2_1.36.0-2+deb10u2.dsc
+ 081a5af9b5c578c4d0baa4156514ea9d1835d068 21216 nghttp2_1.36.0-2+deb10u2.debian.tar.xz
+ 0fd31dab64de5116e65c0b50a343c56a802367c2 6433 nghttp2_1.36.0-2+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 69305045b0175329199fa753a8765bf282aca5e63ec24cdba0b029fd37f7ade9 2613 nghttp2_1.36.0-2+deb10u2.dsc
+ 6053a648d033620d2274f45fdebdd05374768fb39ff3d3cd45ba9aafa47f0a32 21216 nghttp2_1.36.0-2+deb10u2.debian.tar.xz
+ 4611d6e4ef2edb74fc29784f4a9ccbdbe154f7671798a50ef54cb57d3fc7f3d7 6433 nghttp2_1.36.0-2+deb10u2_source.buildinfo
+Files:
+ 75275080ad6db9f5bdc05a373ed7e9e3 2613 httpd optional nghttp2_1.36.0-2+deb10u2.dsc
+ 2311e122d0caf5db44ed44949947bc8a 21216 httpd optional nghttp2_1.36.0-2+deb10u2.debian.tar.xz
+ 4a0c9c08fe207384c8d9b437c6f51756 6433 httpd optional nghttp2_1.36.0-2+deb10u2_source.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 25 May 2024 12:25:34 +0000
+Source: libreoffice
+Architecture: source
+Version: 1:6.1.5-3+deb10u12
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ libreoffice (1:6.1.5-3+deb10u12) buster-security; urgency=high
+ .
+   * Team upload by LTS security team.
+   * Fix CVE-2024-3044: Unchecked script execution in
+     Graphic on-click binding in affected LibreOffice
+     versions allowed an attacker to create a document
+     which without prompt will execute scripts built-into
+     LibreOffice on clicking a graphic.
+     Such scripts were previously deemed trusted
+     but are now deemed untrusted.
+Checksums-Sha1:
+ d5923e0ff586d6a529f972edad2258e7772545f5 27758 libreoffice_6.1.5-3+deb10u12.dsc
+ 58077e38859fab6567e654b3ded268635a165d44 10025768 libreoffice_6.1.5-3+deb10u12.debian.tar.xz
+ 6d648b0a188682d38257d92befba9a39c2a66403 45409 libreoffice_6.1.5-3+deb10u12_source.buildinfo
+Checksums-Sha256:
+ 9e3423a0d85cc81dc523bf3e002e184b777eb2131ebb4e6770da6d0f362ec6ec 27758 libreoffice_6.1.5-3+deb10u12.dsc
+ 4f05c0feb34263fe88fd835ed10e9ed81ab3e8e381acfac765dd556f98947c01 10025768 libreoffice_6.1.5-3+deb10u12.debian.tar.xz
+ 303940ae665df8190b2ab8b2749331e25c99f2b70cb1712139f1b06db37774b8 45409 libreoffice_6.1.5-3+deb10u12_source.buildinfo
+Files:
+ d714fa3d2a4e9a96da18af6f117f9496 27758 editors optional libreoffice_6.1.5-3+deb10u12.dsc
+ 242230381ad0b49437b012e7635c13b2 10025768 editors optional libreoffice_6.1.5-3+deb10u12.debian.tar.xz
+ bbd539526b190cb31f4a21562e877c02 45409 editors optional libreoffice_6.1.5-3+deb10u12_source.buildinfo
+

@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 31 May 2023 21:30:27 +0200
+Source: cups
+Architecture: source
+Version: 2.2.10-6+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ cups (2.2.10-6+deb10u7) buster-security; urgency=high
+ .
+   * CVE-2023-32324
+     A heap buffer overflow vulnerability would allow a remote attacker to
+     lauch a dos attack.
+Checksums-Sha1:
+ 14cc4a88cfc8ee152ad75656e612810f9077a8ec 3512 cups_2.2.10-6+deb10u7.dsc
+ d734d942907c38353f28046caf8f92a89f13d0f3 362272 cups_2.2.10-6+deb10u7.debian.tar.xz
+ d56199d5766a8a343fd20e5bd09799ef6ce98fbd 15859 cups_2.2.10-6+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 54c2fc46ea07d2bcc1259fdc97d18166b4f955a0b004748653a5ec0b3218043a 3512 cups_2.2.10-6+deb10u7.dsc
+ b79c71228ffc80293ae21f11a3f962cbf5ecf9471cfc1f8913007e9c24ba1073 362272 cups_2.2.10-6+deb10u7.debian.tar.xz
+ 810b4c27f1493050d7e50f8d49de5592ed685eeda519bd875cbaf8cb6e42096d 15859 cups_2.2.10-6+deb10u7_amd64.buildinfo
+Files:
+ 057d407d7c018fc591780ef8d996fc7b 3512 net optional cups_2.2.10-6+deb10u7.dsc
+ d4fa79707b92a34bf2c82c8b7443e94a 362272 net optional cups_2.2.10-6+deb10u7.debian.tar.xz
+ 02391a1f7a4f29c2d67bf8e14f30d873 15859 net optional cups_2.2.10-6+deb10u7_amd64.buildinfo
+

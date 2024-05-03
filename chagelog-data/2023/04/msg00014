@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 04 Apr 2023 17:09:31 +0200
+Source: protobuf
+Architecture: source
+Version: 3.6.1.3-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ protobuf (3.6.1.3-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2021-22569 (DoS in Java)
+   * Fix CVE-2021-22570 (NULL pointer dereference)
+   * Fix CVE-2022-1941 (memory DoS)
+Checksums-Sha1:
+ 6a1308971db86623588d9d42fd8a702130a1609d 2827 protobuf_3.6.1.3-2+deb10u1.dsc
+ 7c4940c41b55f3de8c2b53c289f9bd4e36200505 4490599 protobuf_3.6.1.3.orig.tar.gz
+ 9ec3cbed0479a40ab657c4be8f5ea13ea12b1bda 29992 protobuf_3.6.1.3-2+deb10u1.debian.tar.xz
+ bf5c652dd25e9f89af1e966b8f2eeb598d9061f0 17724 protobuf_3.6.1.3-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 044e7312400ce31e7ef2b3b4633b2bd13c61cae44b84d7668eff99aa4d8d1118 2827 protobuf_3.6.1.3-2+deb10u1.dsc
+ 73fdad358857e120fd0fa19e071a96e15c0f23bb25f85d3f7009abfd4f264a2a 4490599 protobuf_3.6.1.3.orig.tar.gz
+ 06261005de5daef0794715062011b8a499fbebe3909c21055aaa7ed7dc50df5d 29992 protobuf_3.6.1.3-2+deb10u1.debian.tar.xz
+ 8862b2aace3efb38ecaa04d7eafd3e94f4af863b8bb1fdd1526ac1f1e4651722 17724 protobuf_3.6.1.3-2+deb10u1_amd64.buildinfo
+Files:
+ 0add6c1f276bbc948b915e2391816f2f 2827 devel optional protobuf_3.6.1.3-2+deb10u1.dsc
+ df2b44d14d8745c06232d90f35845765 4490599 devel optional protobuf_3.6.1.3.orig.tar.gz
+ ad1144d748745e70f59dbd34b7a35625 29992 devel optional protobuf_3.6.1.3-2+deb10u1.debian.tar.xz
+ b459e153a21dccef0dfecf083ea8a244 17724 devel optional protobuf_3.6.1.3-2+deb10u1_amd64.buildinfo
+

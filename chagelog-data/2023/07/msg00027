@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 22 Jul 2023 18:03:02 +0200
+Source: gst-plugins-good1.0
+Architecture: source
+Version: 1.14.4-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of GStreamer packages <gst-plugins-good1.0@packages.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ gst-plugins-good1.0 (1.14.4-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-37327
+     SA-2023-0001: fix for integer overflow
+Checksums-Sha1:
+ af7311bc2364fc3e5cc5a6aee5761d05da150dc7 4031 gst-plugins-good1.0_1.14.4-1+deb10u3.dsc
+ 382f7e424437ea8a3d1d7701569eddea76b18375 3792524 gst-plugins-good1.0_1.14.4.orig.tar.xz
+ 4f195c6a461b106085e5fc85ba8e8d5661fb10f2 42828 gst-plugins-good1.0_1.14.4-1+deb10u3.debian.tar.xz
+ 29658b09092147c55399fef7c878f0e02dfda1db 21821 gst-plugins-good1.0_1.14.4-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ e5d1d16603c8cdc7bbeded7c37aa2ccc0dc200374a40294b7c51f68631985337 4031 gst-plugins-good1.0_1.14.4-1+deb10u3.dsc
+ 5f8b553260cb0aac56890053d8511db1528d53cae10f0287cfce2cb2acc70979 3792524 gst-plugins-good1.0_1.14.4.orig.tar.xz
+ 27a800d11aa44f2b558fd79ca87cd54bf66b06557030b204175b84ae5503d034 42828 gst-plugins-good1.0_1.14.4-1+deb10u3.debian.tar.xz
+ 0dca9c47d9d84634a6a8ba31874c0ae11fe9f7af97dc456c5d6d4ecec8158791 21821 gst-plugins-good1.0_1.14.4-1+deb10u3_amd64.buildinfo
+Files:
+ 48413f19ade4bf0c399f646ea5d876b8 4031 libs optional gst-plugins-good1.0_1.14.4-1+deb10u3.dsc
+ 6e3b247097366cf2639f22abfece7113 3792524 libs optional gst-plugins-good1.0_1.14.4.orig.tar.xz
+ a554e687c6e1b3951d5d0c8e0f3ffd58 42828 libs optional gst-plugins-good1.0_1.14.4-1+deb10u3.debian.tar.xz
+ cc63ba8f8fb28b25f675e0e093226758 21821 libs optional gst-plugins-good1.0_1.14.4-1+deb10u3_amd64.buildinfo
+

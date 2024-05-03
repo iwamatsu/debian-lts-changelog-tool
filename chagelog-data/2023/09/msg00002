@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue,  5 Sep 2023 23:47:54 CEST
+Source: aom
+Architecture: source
+Version: 1.0.0-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 9bc0c43ec2f4ae9c3d49ee15cffbe204b89eeaa2 2335 aom_1.0.0-3+deb10u1.dsc
+ b714a5117f48e9f979498e2726467c4beba06735 1896516 aom_1.0.0.orig.tar.xz
+ a9df5352f3f32869f160c89f1be8eb6204ea3398 24664 aom_1.0.0-3+deb10u1.debian.tar.xz
+ 0fa5b9e27657b9e4f2b166939f7119756cfc78e5 8368 aom_1.0.0-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 5f2e3145a154397766995a9e30404acc06eba1d217f58bc7c0edd8477f1bf17b 2335 aom_1.0.0-3+deb10u1.dsc
+ 4319eb3ef38abfabfdb3037cc3a7a47804ed5f58c96576876bbe0ac2a25bbcc6 1896516 aom_1.0.0.orig.tar.xz
+ f9d8938433c08d2525ea901322fd2ae801507586ea74d47debed04fe754c9485 24664 aom_1.0.0-3+deb10u1.debian.tar.xz
+ 2a08a3c389d797668b76257b839bc22c052479b025a0f0a7ed41470be8339b10 8368 aom_1.0.0-3+deb10u1_amd64.buildinfo
+Changes:
+ aom (1.0.0-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2020-36130, CVE-2020-36131, CVE-2020-36133, CVE-2020-36135,
+     CVE-2021-30473, CVE-2021-30474 and CVE-2021-30475.
+     Multiple security vulnerabilities have been discovered in aom, the AV1
+     Video Codec Library. Buffer overflows, use-after-free and NULL pointer
+     dereferences may cause a denial of service or other unspecified impact if a
+     malformed multimedia file is processed.
+Files:
+ 45361dc80978591b22963484153f87da 2335 video optional aom_1.0.0-3+deb10u1.dsc
+ 5dee2790ad0bcb6203b89066d8d2e840 1896516 video optional aom_1.0.0.orig.tar.xz
+ f1c0cfd6ac77948dddafab6b611dbe85 24664 video optional aom_1.0.0-3+deb10u1.debian.tar.xz
+ 49d882513e95fb2c349b7e7684c7eb52 8368 video optional aom_1.0.0-3+deb10u1_amd64.buildinfo
+

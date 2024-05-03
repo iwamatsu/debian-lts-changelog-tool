@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 13 Dec 2023 22:36:39 CET
+Source: rabbitmq-server
+Architecture: source
+Version: 3.8.2-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1c1afe2a0db6d2750423803f74353ceef27cb652 2825 rabbitmq-server_3.8.2-1+deb10u2.dsc
+ c08090eb1038c04cfe42f515ba002d14ca250f01 22600 rabbitmq-server_3.8.2-1+deb10u2.debian.tar.xz
+ d2573d4f4392526940759342da410892d1fdd32f 8221 rabbitmq-server_3.8.2-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 5f9def4973a6ece0e9bdf8663e6dc936d5e185b31c18e8d05d9e61f080e7f331 2825 rabbitmq-server_3.8.2-1+deb10u2.dsc
+ 990e595f1ed801259e0d8e253026c49bb3aceebeedb0d695f88e9de19698e9bf 22600 rabbitmq-server_3.8.2-1+deb10u2.debian.tar.xz
+ 0ed12f63e1ba777dc415cb8f826ce8d5c453af77f31c502a39101fc7879876ce 8221 rabbitmq-server_3.8.2-1+deb10u2_amd64.buildinfo
+Changes:
+ rabbitmq-server (3.8.2-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-46118:
+     RabbitMQ is a multi-protocol messaging and streaming broker. The HTTP API
+     did not enforce an HTTP request body limit, making it vulnerable for denial
+     of service (DoS) attacks with very large messages by an authenticated user
+     with sufficient credentials.
+Files:
+ cb7018db2ffea966e82618fd13251899 2825 net optional rabbitmq-server_3.8.2-1+deb10u2.dsc
+ 2e45abc56f594550ce812da6de532c63 22600 net optional rabbitmq-server_3.8.2-1+deb10u2.debian.tar.xz
+ 611d2d22ee7810a5295a7be4451368ff 8221 net optional rabbitmq-server_3.8.2-1+deb10u2_amd64.buildinfo
+

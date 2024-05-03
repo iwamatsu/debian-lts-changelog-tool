@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 01 Feb 2023 05:53:22 +0530
+Source: tmux
+Architecture: source
+Version: 2.8-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Romain Francoise <rfrancoise@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ tmux (2.8-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch so that evbuffer_new and bufferevent_new can both fail (when
+     malloc fails) and return NULL. (Fixes: CVE-2022-47016)
+Checksums-Sha1:
+ 4a88b4f79a322840bc64023bf415d1a25c449ea1 1958 tmux_2.8-3+deb10u1.dsc
+ 6a469769a242c95dc8aec443b436d4f8f279f517 491195 tmux_2.8.orig.tar.gz
+ 1cd12ef6c339ba42557915932a6b894a3800f89a 14804 tmux_2.8-3+deb10u1.debian.tar.xz
+ 51c8dc6715ce269d6465ea3d9ad65ee1d13181af 6132 tmux_2.8-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 823134c596fab1ac19e8ca303ce568c9e9db359a7b81db9d51e30904e1125111 1958 tmux_2.8-3+deb10u1.dsc
+ 7f6bf335634fafecff878d78de389562ea7f73a7367f268b66d37ea13617a2ba 491195 tmux_2.8.orig.tar.gz
+ 4166e421b57cdfb19e566efbfc8cebe096767cb92d77f195eee0b5740ea9909b 14804 tmux_2.8-3+deb10u1.debian.tar.xz
+ 274b2f7ba68c75f9ffa1745fec089c2d1d5759de04e06e71ac1f12be6bd1d181 6132 tmux_2.8-3+deb10u1_source.buildinfo
+Files:
+ a3d5827687a70f5bb89a694eecc77eb2 1958 admin optional tmux_2.8-3+deb10u1.dsc
+ 79ff2929a6422e45b490daa895cca4a2 491195 admin optional tmux_2.8.orig.tar.gz
+ 66296e5cbcb1b1e67f46ccc88354ffab 14804 admin optional tmux_2.8-3+deb10u1.debian.tar.xz
+ 1f1c0f5bb6999dad05673b7d688fb280 6132 admin optional tmux_2.8-3+deb10u1_source.buildinfo
+

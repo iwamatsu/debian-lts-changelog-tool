@@ -1,0 +1,66 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 29 Mar 2023 10:57:23 CEST
+Source: unbound
+Architecture: source
+Version: 1.9.0-2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 261f6a353ffe9495cff0b90d656890704e9aa3c9 3209 unbound_1.9.0-2+deb10u3.dsc
+ 7e5634216ecffd79f192f579d66916ffd4c2d2b8 35720 unbound_1.9.0-2+deb10u3.debian.tar.xz
+ 51de90d5fd6bfef833badd9be8de1f2e668950bd 11484 unbound_1.9.0-2+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 9d7e5f6590cdb52cda3d1f11c2a243ee4033370651dfe1dbca5716e217ca4bf6 3209 unbound_1.9.0-2+deb10u3.dsc
+ b8d43f47f38cc6cd891f99b170d0a372df695400a7eaa5b8702477c8f0682f0f 35720 unbound_1.9.0-2+deb10u3.debian.tar.xz
+ 68af9d45874b5b7c7a962b87a13996a0005e5cc44140e23dba732dbc9dd5b00e 11484 unbound_1.9.0-2+deb10u3_amd64.buildinfo
+Changes:
+ unbound (1.9.0-2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-3204:
+     A vulnerability named 'Non-Responsive Delegation Attack' (NRDelegation
+     Attack) has been discovered in various DNS resolving software. The
+     NRDelegation Attack works by having a malicious delegation with a
+     considerable number of non responsive nameservers. The attack starts by
+     querying a resolver for a record that relies on those unresponsive
+     nameservers. The attack can cause a resolver to spend a lot of
+     time/resources resolving records under a malicious delegation point where a
+     considerable number of unresponsive NS records reside. It can trigger high
+     CPU usage in some resolver implementations that continually look in the
+     cache for resolved NS records in that delegation. This can lead to degraded
+     performance and eventually denial of service in orchestrated attacks.
+     Unbound does not suffer from high CPU usage, but resources are still needed
+     for resolving the malicious delegation. Unbound will keep trying to resolve
+     the record until hard limits are reached. Based on the nature of the attack
+     and the replies, different limits could be reached. From now on Unbound
+     introduces fixes for better performance when under load, by cutting
+     opportunistic queries for nameserver discovery and DNSKEY prefetching and
+     limiting the number of times a delegation point can issue a cache lookup
+     for missing records.
+   * Fix CVE-2022-30698 and CVE-2022-30699:
+     NLnet Labs Unbound is vulnerable to a novel type of the "ghost domain
+     names" attack. The vulnerability works by targeting an Unbound instance.
+     Unbound is queried for a rogue domain name when the cached delegation
+     information is about to expire. The rogue nameserver delays the response so
+     that the cached delegation information is expired. Upon receiving the
+     delayed answer containing the delegation information, Unbound overwrites
+     the now expired entries. This action can be repeated when the delegation
+     information is about to expire making the rogue delegation information
+     ever-updating. From now on Unbound stores the start time for a query and
+     uses that to decide if the cached delegation information can be
+     overwritten.
+   * Fix CVE-2020-28935:
+     Unbound contains a local vulnerability that would allow for a local symlink
+     attack. When writing the PID file Unbound creates the file if it is not
+     there, or opens an existing file for writing. In case the file was already
+     present, it would follow symlinks if the file happened to be a symlink
+     instead of a regular file.
+Files:
+ 5e20d9806a2ce9be4e41ee8f4fc09ac3 3209 net optional unbound_1.9.0-2+deb10u3.dsc
+ 1780a70d9b191ac2af60e1bd31783c18 35720 net optional unbound_1.9.0-2+deb10u3.debian.tar.xz
+ dce5c64d60a113416f15bd5c84fa6b68 11484 net optional unbound_1.9.0-2+deb10u3_amd64.buildinfo
+

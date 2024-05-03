@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 01 Mar 2024 13:47:02 +0530
+Source: tiff
+Architecture: source
+Version: 4.1.0+git191117-2~deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Changes:
+ tiff (4.1.0+git191117-2~deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2023-3576, CVE-2023-52356
+Checksums-Sha1:
+ bd4a08144b4bb4ca389f5615b16cc4ed5269cc6a 2303 tiff_4.1.0+git191117-2~deb10u9.dsc
+ 59dc5e9fb25b55a62e6d4c2d74d42e68abeb120a 46040 tiff_4.1.0+git191117-2~deb10u9.debian.tar.xz
+ 8b2a9141bede1a0888e9163c58ff17ecc6bdca1d 12074 tiff_4.1.0+git191117-2~deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ b06ed60ad26cdafecac3a52eb201165cfe017890f21fe192358be22f409157b5 2303 tiff_4.1.0+git191117-2~deb10u9.dsc
+ dc9c3c9cd0a883670dc99f920f396ead717159240474ba7631ec9f7057e77133 46040 tiff_4.1.0+git191117-2~deb10u9.debian.tar.xz
+ a95d60b78a058e8353ff34a3a0ae111e76b093dd729799c34758f76e2d0b8c35 12074 tiff_4.1.0+git191117-2~deb10u9_amd64.buildinfo
+Files:
+ bd7975b724617f8fceaeb521782f8da1 2303 libs optional tiff_4.1.0+git191117-2~deb10u9.dsc
+ f11f8fa22889d701e30447c4ee0ed0c1 46040 libs optional tiff_4.1.0+git191117-2~deb10u9.debian.tar.xz
+ 0c9c642a1999c3df6d28c5f835f93d29 12074 libs optional tiff_4.1.0+git191117-2~deb10u9_amd64.buildinfo
+

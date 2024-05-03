@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 28 Nov 2023 03:35:04 +0100
+Source: mediawiki
+Architecture: source
+Version: 1:1.31.16-1+deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Kunal Mehta <legoktm@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ mediawiki (1:1.31.16-1+deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-3550: Namespaces used in XML files are not validated, so
+     if the instance administrator allows XML file uploads, then a remote
+     attacker with a low-privileged user account can gain unprivileged access.
+   * Fix CVE-2023-45362: diff-multi-sameuser (aka “X intermediate revisions by
+     the same user not shown”) ignores username suppression, which is an
+     information leak.
+   * Fix CVE-2023-45363: denial of service vulnerability (unbounded loop and
+     RequestTimeoutException) when querying pages redirected to other variants
+     with redirects and converttitles set.
+Checksums-Sha1:
+ 8c864b0c782b46263b85147ce356c7562014ee20 2130 mediawiki_1.31.16-1+deb10u7.dsc
+ 63aa3a84e9618307a6ad9a1a67a14e44385c5403 122364 mediawiki_1.31.16-1+deb10u7.debian.tar.xz
+ b6d3ac7b0df1f179c7b4a0b53ae102ac6bb5787d 6741 mediawiki_1.31.16-1+deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 5a11b50f1b1e66d5ac234499a2c34ba0bd581f1b13058de63070d85b3d1c9870 2130 mediawiki_1.31.16-1+deb10u7.dsc
+ 2ce725e9bdde623c4b93bb15b0a0786d9601468faa9d8b0d4f19fc63c91bd129 122364 mediawiki_1.31.16-1+deb10u7.debian.tar.xz
+ 608af6d00d4584bd5056f21ec70172f986fed4cdead7d844c3873a9754d7dc0d 6741 mediawiki_1.31.16-1+deb10u7_amd64.buildinfo
+Files:
+ c5408339266f2263b3d22f019a377bed 2130 web optional mediawiki_1.31.16-1+deb10u7.dsc
+ e40673fe08cf57c06391df7fc2d3910c 122364 web optional mediawiki_1.31.16-1+deb10u7.debian.tar.xz
+ 9da323102c53183d01a5cac1b08cee71 6741 web optional mediawiki_1.31.16-1+deb10u7_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 Oct 2023 11:39:24 +0200
+Source: distro-info
+Architecture: source
+Version: 0.21+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Benjamin Drung <bdrung@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ distro-info (0.21+deb10u1) buster-security; urgency=medium
+ .
+   * Non-security LTS update, enabling distro-info-data updates:
+     - Handle currently unknown columns in CSV data.
+     - Make the Python module version PEP440 compliant.
+     - Update tests for distro-info-data 41+deb10u8, which adjusted Ubuntu
+       10.04 and 12.04's EoL
+     - Change test unknown eol-server dates to use Ubuntu 12.10, which won't
+       get ESM data in the future, if we include extra distro-info-data
+       columns.
+Checksums-Sha1:
+ 428902ff18e7dd81566ccc8e72a2854f397a451f 1575 distro-info_0.21+deb10u1.dsc
+ 3c3c928f8239a2e6c0ebad585ee24afea24185e4 29656 distro-info_0.21+deb10u1.tar.xz
+ 068b45abe1d23aa89c4d96c1f22f2ee40cfbe1b6 7080 distro-info_0.21+deb10u1_source.buildinfo
+Checksums-Sha256:
+ bdc6270d704ccb99058a33099dbffaa3acb95e547449bf63af1d2d6330e30508 1575 distro-info_0.21+deb10u1.dsc
+ 570fb05817efb1be56bad13b60548d7acda1624a64cf27f6941f5576d2fdeffd 29656 distro-info_0.21+deb10u1.tar.xz
+ 9b07b7cc15fcabd369c61cde44293a63d5610ce125e28684219971a0a9632bcc 7080 distro-info_0.21+deb10u1_source.buildinfo
+Files:
+ b8807f8b5527df04ba1acb2943a04cd6 1575 devel optional distro-info_0.21+deb10u1.dsc
+ 07b6fee7d07f1cdd751f91abf3125e42 29656 devel optional distro-info_0.21+deb10u1.tar.xz
+ 0e9b0b080c162cf61596129832f504dc 7080 devel optional distro-info_0.21+deb10u1_source.buildinfo
+

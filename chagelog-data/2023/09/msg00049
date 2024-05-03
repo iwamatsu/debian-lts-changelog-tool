@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Sep 2023 21:20:27 +0200
+Source: cups
+Architecture: source
+Version: 2.2.10-6+deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Closes: 1051953
+Changes:
+ cups (2.2.10-6+deb10u9) buster-security; urgency=high
+ .
+   * CVE-2023-4504
+     Postscript parsing heap-based buffer overflow
+   * CVE-2023-32360 (Closes: #1051953)
+     authentication issue
+Checksums-Sha1:
+ 8d15643dd87fdf9e1aa20cf01138f1fb9efcb43e 3512 cups_2.2.10-6+deb10u9.dsc
+ 60b067906a7d949da9e029ce0bc53fa5f01ac2b3 363656 cups_2.2.10-6+deb10u9.debian.tar.xz
+ e1afd1b6da2b0bc4f3fcff3512083dc1a578282f 15859 cups_2.2.10-6+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ 501b80b81799bd17447b4faa11bdd575d6361191298db0a98c822574a638ff24 3512 cups_2.2.10-6+deb10u9.dsc
+ f2452f6914b27380f316c1c984bd69c6eec2a2460a88907f032d1cbc3c09cf12 363656 cups_2.2.10-6+deb10u9.debian.tar.xz
+ 1b22c045d1a74920ed997ac2312e614567068eb0aa1544a11fab0635f8134135 15859 cups_2.2.10-6+deb10u9_amd64.buildinfo
+Files:
+ 299b612067cca03363072e03c54f615a 3512 net optional cups_2.2.10-6+deb10u9.dsc
+ 8e9211ec6eab7f8f7db0a7f4485e3581 363656 net optional cups_2.2.10-6+deb10u9.debian.tar.xz
+ 2dbdbfeefdf4ec08283fb61342fb8574 15859 net optional cups_2.2.10-6+deb10u9_amd64.buildinfo
+

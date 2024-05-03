@@ -1,0 +1,67 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Apr 2022 22:03:02 +0200
+Source: libarchive
+Binary: libarchive-dev libarchive13 libarchive-tools bsdtar bsdcpio
+Architecture: source all amd64
+Version: 3.2.2-2+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Libarchive Maintainers <ah-libarchive@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ bsdcpio    - transitional dummy package for moving bsdcpio to libarchive-tools
+ bsdtar     - transitional dummy package for moving bsdtar to libarchive-tools
+ libarchive-dev - Multi-format archive and compression library (development files)
+ libarchive-tools - FreeBSD implementations of 'tar' and 'cpio' and other archive too
+ libarchive13 - Multi-format archive and compression library (shared library)
+Changes:
+ libarchive (3.2.2-2+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-31566
+     symbolic links incorrectly followed when changing modes, times, ACL
+     and flags of a file while extracting an archive
+   * CVE-2021-23177
+     extracting a symlink with ACLs modifies ACLs of target
+   * CVE-2019-19221
+     out-of-bounds read because of an incorrect mbrtowc or mbtowc call
+   * manual dh_auto_test run PASSed
+Checksums-Sha1:
+ 3b0cb0615c8541f1b28657919733d259c87e816e 2644 libarchive_3.2.2-2+deb9u3.dsc
+ ccf14e3b4ec7c6b242cf07062dd40e82a17485a5 5458241 libarchive_3.2.2.orig.tar.gz
+ 7381d2489e09b8de6f3cc27911aefb7325666c26 24564 libarchive_3.2.2-2+deb9u3.debian.tar.xz
+ 04850b5ad72c2cf0b1c5b3367b640f54acdc81b1 12232 bsdcpio_3.2.2-2+deb9u3_all.deb
+ c150b409896ea3b3e2b60ba9fdd35cee2abcd4b7 12228 bsdtar_3.2.2-2+deb9u3_all.deb
+ 8f499986a106952cc704f2e72fd3249ff620f396 478850 libarchive-dev_3.2.2-2+deb9u3_amd64.deb
+ 862bb93ceb3ffca4023de8418d4f36557a9eb49a 90702 libarchive-tools-dbgsym_3.2.2-2+deb9u3_amd64.deb
+ 4808dbb5bc5bb75863695885fca7220c5b4aa9fd 73570 libarchive-tools_3.2.2-2+deb9u3_amd64.deb
+ 13e32bec32b577fe7453adbc8dfad3a286d03476 841318 libarchive13-dbgsym_3.2.2-2+deb9u3_amd64.deb
+ 66b3e41975cd41c01953f14b935cca4c5d410f78 294846 libarchive13_3.2.2-2+deb9u3_amd64.deb
+ b83dfb6752be4bd1ac97bce8d54ac4bae6e147df 8440 libarchive_3.2.2-2+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ cf6aefa7547e169526580127e0da2b8c1e0854a0b67c3688a92dddf1b3583a16 2644 libarchive_3.2.2-2+deb9u3.dsc
+ 691c194ee132d1f0f7a42541f091db811bc2e56f7107e9121be2bc8c04f1060f 5458241 libarchive_3.2.2.orig.tar.gz
+ 0be520d3383b9a875870bc76031f75d772dc6e2c8eb593e918043f4d469251a4 24564 libarchive_3.2.2-2+deb9u3.debian.tar.xz
+ 4cb4c049bdc8db53153d4e4546da4bcd67d33494eb5b87e14900fb36169cfde5 12232 bsdcpio_3.2.2-2+deb9u3_all.deb
+ ac24bd21f35f0eb04cd95240d5f78c4e09bf667d1c58ec4b2b6a960553c47469 12228 bsdtar_3.2.2-2+deb9u3_all.deb
+ 2da9fea537d873bce8bf119a2dfe6f5dd14eb6e76b55843a2fba83beffc87591 478850 libarchive-dev_3.2.2-2+deb9u3_amd64.deb
+ d6fdcdb5364aa8438c85275cb773f1acc6f0ec5bad68a98f34af752bd4c2bcbd 90702 libarchive-tools-dbgsym_3.2.2-2+deb9u3_amd64.deb
+ 19f6d84588a45695e8a460d9f65784a7503017e340ce4957e14548b458305958 73570 libarchive-tools_3.2.2-2+deb9u3_amd64.deb
+ 844b2572c4563bf0b9eda89c38688e87b57cf58503d969c35f14b38b9bb3bf19 841318 libarchive13-dbgsym_3.2.2-2+deb9u3_amd64.deb
+ 69e99da3f9899dfadab0bec63832f2bf022158a3243bad4cbbf2e43160329094 294846 libarchive13_3.2.2-2+deb9u3_amd64.deb
+ b9f4988d761512b8cdc57c5c9691f64e413677a8447736e56e24874688c0c828 8440 libarchive_3.2.2-2+deb9u3_amd64.buildinfo
+Files:
+ da6bbfa71fa9e07c9b303d504dbe19bb 2644 libs optional libarchive_3.2.2-2+deb9u3.dsc
+ 1ec00b7dcaf969dd2a5712f85f23c764 5458241 libs optional libarchive_3.2.2.orig.tar.gz
+ 16b3656aee5a97475c0c6049170c8a07 24564 libs optional libarchive_3.2.2-2+deb9u3.debian.tar.xz
+ afa54b541ba3d3e9a029d55ba4969e26 12232 oldlibs extra bsdcpio_3.2.2-2+deb9u3_all.deb
+ be4892344eaf0a5599425f4061ed1dd3 12228 oldlibs extra bsdtar_3.2.2-2+deb9u3_all.deb
+ 0d8c5785909cc1a8490c0180c19513a5 478850 libdevel optional libarchive-dev_3.2.2-2+deb9u3_amd64.deb
+ ef509169dd2343dca8dfcc338887a925 90702 debug extra libarchive-tools-dbgsym_3.2.2-2+deb9u3_amd64.deb
+ a5a580a59e465cb9811d2c526ee11dfc 73570 utils optional libarchive-tools_3.2.2-2+deb9u3_amd64.deb
+ 035565ceb6591022e3ba57cf059bcce8 841318 debug extra libarchive13-dbgsym_3.2.2-2+deb9u3_amd64.deb
+ c0fc00a8d1781df7ba383f27e664e04d 294846 libs optional libarchive13_3.2.2-2+deb9u3_amd64.deb
+ 78cde8f8c88c53ddd1aafcacc52e73c3 8440 libs optional libarchive_3.2.2-2+deb9u3_amd64.buildinfo
+

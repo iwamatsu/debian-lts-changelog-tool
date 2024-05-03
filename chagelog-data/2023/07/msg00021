@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 13 Jul 2023 22:15:51 +0200
+Source: lemonldap-ng
+Architecture: source
+Version: 2.0.2+ds-7+deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ lemonldap-ng (2.0.2+ds-7+deb10u9) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport AuthBasic upstream test.
+   * Fix incorrect backport of upstream fix for CVE-2021-20874.
+   * Fix CVE-2023-28862: Weak session ID generation in the AuthBasic handler
+     and incorrect failure handling during a password check allow attackers to
+     bypass 2FA verification.  (Any plugin that tries to deny session creation
+     after the store step does not deny an AuthBasic session.)
+Checksums-Sha1:
+ b0f9fa9336b503fef963f04abdebfe1445f695f3 3878 lemonldap-ng_2.0.2+ds-7+deb10u9.dsc
+ 13e89cf10e936784ab01687fee44646bbb38ea92 90232 lemonldap-ng_2.0.2+ds-7+deb10u9.debian.tar.xz
+ ce1d29ca45650ef02560af61278eb6ef972f2974 18025 lemonldap-ng_2.0.2+ds-7+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ 8cca9244868635af227c525262a7d28e2ad8f9518e91d857456374eaf914d2fd 3878 lemonldap-ng_2.0.2+ds-7+deb10u9.dsc
+ b3ecd711f68c0c5317d0d024b7dbb52692c77a142acbea429ecfdaab6596d4fe 90232 lemonldap-ng_2.0.2+ds-7+deb10u9.debian.tar.xz
+ f5acf676b2d3cbc1a293f3483b7c20f3cea9a4eb55fe85c2ed3c7d21a4af4968 18025 lemonldap-ng_2.0.2+ds-7+deb10u9_amd64.buildinfo
+Files:
+ 3b144c86619bc6790bbcb48367f18b90 3878 perl optional lemonldap-ng_2.0.2+ds-7+deb10u9.dsc
+ c6396b048997d4505dc62d2be4f99007 90232 perl optional lemonldap-ng_2.0.2+ds-7+deb10u9.debian.tar.xz
+ 879eb17a2f9f9ba8ae00ac5348d79717 18025 perl optional lemonldap-ng_2.0.2+ds-7+deb10u9_amd64.buildinfo
+

@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 30 Jan 2023 18:31:10 +0100
+Source: modsecurity-crs
+Architecture: source
+Version: 3.2.3-0+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alberto Gonzalez Iniesta <agi@inittab.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 924352 992000 1021137
+Changes:
+ modsecurity-crs (3.2.3-0+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * New upstream release packaged as backporting fixes is not feasible.
+     - Security fixes:
+       - CVE-2018-16384 (Closes: #924352)
+       - CVE-2021-35368 (Closes: #992000)
+       - CVE-2022-39955, CVE-2022-39956, CVE-2022-39957 and CVE-2022-39958
+         (Closes: #1021137)
+     - Cherry-pick upstream fix for CVE-2020-22669
+     - Patches droped, as already included in the new version:
+       CVE-2021-35368.patch, CVE-2019-13464.patch
+   * Add a Breaks: relation to older libapache2-mod-security2, as a recent
+     update is required for CVE-2022-39956. See also DLA-3283-1.
+   * Add postinst/postrm: reload apache2, if apache2 and mod_security2 is
+     enabled.
+Checksums-Sha1:
+ 6371b5b2b3dd2d53c03bd7424a63018354d3f205 1804 modsecurity-crs_3.2.3-0+deb10u3.dsc
+ 5a4420c6881c46b474eef7dedafa785217bdd099 293222 modsecurity-crs_3.2.3.orig.tar.gz
+ 74814d5e5bc8a3a193c5d7a1d083acd75dcbd630 6312 modsecurity-crs_3.2.3-0+deb10u3.debian.tar.xz
+ f6bf090060fc24b9f2b92f7ed8046358e8de619a 5591 modsecurity-crs_3.2.3-0+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 5afec64aa40c269ee06c7d8c4e48c51c0983f98adae48d142684e54840a15e63 1804 modsecurity-crs_3.2.3-0+deb10u3.dsc
+ 6cf46d40e8cf8ff00a5c1ef80cd2fcac35b988b698738b42becbc812308a1b02 293222 modsecurity-crs_3.2.3.orig.tar.gz
+ 683d8ec71917a48874ca4664c6f3fab5853d5f56d17dd6ce19900e5fa0e63efb 6312 modsecurity-crs_3.2.3-0+deb10u3.debian.tar.xz
+ 5f1abc5f533ed1a49c6127eb4f859c5f86ff23dd9f6df8b21a1c8b10204dacda 5591 modsecurity-crs_3.2.3-0+deb10u3_amd64.buildinfo
+Files:
+ 2972c7be5644ecf754e12f7c9f206eab 1804 httpd optional modsecurity-crs_3.2.3-0+deb10u3.dsc
+ f3299d91585d170a6b29034ed1a17c83 293222 httpd optional modsecurity-crs_3.2.3.orig.tar.gz
+ da757cf9f990bbc88989608f322ecebc 6312 httpd optional modsecurity-crs_3.2.3-0+deb10u3.debian.tar.xz
+ 9bdd471e9072dc77ffb1ef3e305a6f54 5591 httpd optional modsecurity-crs_3.2.3-0+deb10u3_amd64.buildinfo
+

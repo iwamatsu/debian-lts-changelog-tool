@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 May 2023 21:04:46 +0200
+Source: sssd
+Architecture: source
+Version: 1.16.3-3.2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian SSSD Team <pkg-sssd-devel@alioth-lists.debian.net>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 919051 931432 992710
+Changes:
+ sssd (1.16.3-3.2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-16838: When the Group Policy Objects (GPO) are not readable by
+     SSSD due to a too strict permission settings on the server side, SSSD
+     allows all authenticated users to login instead of denying access.
+     (Closes: #931432)
+     A new boolean setting ‘ad_gpo_ignore_unreadable’ is introduced for
+     environments where attributes in the groupPolicyContainer are not readable
+     and changing the permissions on the GPO objects is not possible.  See
+     sssd-ad(5).
+   * CVE-2019-3811: If a user was configured with no home directory set,
+     sssd(8) returns ‘/’ (i.e., the root directory) instead of the empty string
+     (meaning no home directory).  This could impact services that restrict the
+     user's filesystem access to within their home directory through chroot()
+     or similar. (Closes: #919051)
+   * CVE-2021-3621: sssctl(8) is vulnerable to shell command injection via the
+     ‘logs-fetch’ and ‘cache-expire’ subcommands. (Closes: #992710)
+   * CVE-2022-4254: libsss_certmap does not sanitize certificate data used in
+     LDAP filters.
+Checksums-Sha1:
+ f02139876442b8a04cd12a688e09a658e93a8aa7 4953 sssd_1.16.3-3.2+deb10u1.dsc
+ 4a2512a59930c79d416d74b62e6bd580c874824f 6217114 sssd_1.16.3.orig.tar.gz
+ be843fe27dd6193902296c43d017a3159a1bf690 124032 sssd_1.16.3-3.2+deb10u1.diff.gz
+ 9fafd3d53c16dd3e056203a4420d77fbefa2db62 30528 sssd_1.16.3-3.2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 0da20c5e7c985c3902e86e23bd5906d73c9a743b98b6da104ff365721dfd605b 4953 sssd_1.16.3-3.2+deb10u1.dsc
+ ee5d17a0c663c09819cbab9364085b9e57faeca02406cc30efe14cc0cfc04ec4 6217114 sssd_1.16.3.orig.tar.gz
+ f74afca25c5261375ca3105067d062e10857e6ecacdefdd73218592f961f691f 124032 sssd_1.16.3-3.2+deb10u1.diff.gz
+ 1eec1ceabc71fa855c54952285c386ffbb28b5f875c457749cf02b96a3effa75 30528 sssd_1.16.3-3.2+deb10u1_amd64.buildinfo
+Files:
+ 0890a26fc1419c13f857e9b12857864c 4953 utils optional sssd_1.16.3-3.2+deb10u1.dsc
+ af4288c9d1f9953e3b3b6e0b165a5ece 6217114 utils optional sssd_1.16.3.orig.tar.gz
+ ada5e4e4bb132c9fc47e3edac6a2268c 124032 utils optional sssd_1.16.3-3.2+deb10u1.diff.gz
+ 969415b31cbc216dc6684f139905af41 30528 utils optional sssd_1.16.3-3.2+deb10u1_amd64.buildinfo
+

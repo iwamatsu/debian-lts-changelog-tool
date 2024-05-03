@@ -1,0 +1,30 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 16 Feb 2022 12:36:15 -0600
+Source: drupal7
+Architecture: source
+Version: 7.52-2+deb9u18
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Gunnar Wolf <gwolf@debian.org>
+Changed-By: Gunnar Wolf <gwolf@debian.org>
+Changes:
+ drupal7 (7.52-2+deb9u18) stretch-security; urgency=medium
+ .
+   * Fix a regression caused by jQuery ui position() backport: was not
+     checking for possible "undefined" value in options
+   * SA-CORE-2022-003: Fix improper input validation in Drupal's form API
+Checksums-Sha1:
+ 0e2f420dadfa6885d405f5f4ceda9b7b8189409f 1276 drupal7_7.52-2+deb9u18.dsc
+ 28a7b0dde7e1a59a5c8417c6b44cd18c9c879a43 230124 drupal7_7.52-2+deb9u18.debian.tar.xz
+ 1745adfee9779eb13781be07f24d422d29ffd2b6 9002 drupal7_7.52-2+deb9u18_source.buildinfo
+Checksums-Sha256:
+ fe613b3026cc49940f6619c37d2ca22d62130c787965c60634552b63fc693e0d 1276 drupal7_7.52-2+deb9u18.dsc
+ 4cbaa0accdd1a2623066f52b68333c7a8324d5f75a3ce146719786b7299899f2 230124 drupal7_7.52-2+deb9u18.debian.tar.xz
+ 341754d0e1f762708e26a83459396456349399b1020d7f57874092ed1c479468 9002 drupal7_7.52-2+deb9u18_source.buildinfo
+Files:
+ 33e5362bcaf436be4e365aabfc6c8659 1276 web extra drupal7_7.52-2+deb9u18.dsc
+ 4ab90c85f546062391b5b97a29e26652 230124 web extra drupal7_7.52-2+deb9u18.debian.tar.xz
+ f8a7f90dd86a0e45534f4ea32973cbb5 9002 web extra drupal7_7.52-2+deb9u18_source.buildinfo
+

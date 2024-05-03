@@ -1,0 +1,81 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 24 Sep 2023 16:28:18 +0000
+Source: exempi
+Architecture: source
+Version: 2.5.0-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Michael Biebl <biebl@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ exempi (2.5.0-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2020-18651: A Buffer Overflow vulnerability
+     in function ID3_Support::ID3v2Frame::getFrameValue
+     allows remote attackers to cause a denial of service
+   * Fix CVE-2020-18652: A Buffer Overflow vulnerability in
+     WEBP_Support.cpp allows remote attackers to cause a
+     denial of service
+   * Fix as per bulletin APSB21-65:
+     - CVE-2021-36045: an out-of-bounds read vulnerability
+       that could lead to disclosure of arbitrary memory.
+     - CVE-2021-36046: a memory corruption vulnerability,
+       potentially resulting in arbitrary code execution
+       in the context of the current use
+     - CVE-2021-36047: an Improper Input Validation
+       vulnerability potentially resulting in arbitrary
+       code execution in the context of the current use
+     - CVE-2021-36048:  Improper Input Validation
+       vulnerability potentially resulting in arbitrary
+       code execution in the context of the current user
+     - CVE-2021-36050: a buffer overflow vulnerability
+       potentially resulting in arbitrary code execution
+       in the context of the current user
+     - CVE-2021-36051: a buffer overflow vulnerability
+       potentially resulting in arbitrary code execution
+       in the context of the current user
+     - CVE-2021-36052: a memory corruption vulnerability,
+       potentially resulting in arbitrary code execution
+       in the context of the current user
+     - CVE-2021-36053: an out-of-bounds read vulnerability
+       that could lead to disclosure of arbitrary memory
+     - CVE-2021-36054: a buffer overflow vulnerability potentially
+       resulting in local application denial of service
+     - CVE-2021-36055: a use-after-free vulnerability that could
+       result in arbitrary code execution
+     - CVE-2021-36056: a buffer overflow vulnerability potentially
+       resulting in arbitrary code execution in the context of
+       the current user.
+     - CVE-2021-36057: a write-what-where condition vulnerability
+       caused during the application's memory allocation process.
+       This may cause the memory management functions to become
+       mismatched resulting in local application denial of service
+       in the context of the current user.
+     - CVE-2021-36058: an Integer Overflow vulnerability potentially
+       resulting in application-level denial of service in the
+       context of the current user.
+     - CVE-2021-36064: a Buffer Underflow vulnerability which
+       could result in arbitrary code execution in the context
+       of the current user
+     - CVE-2021-39847: a stack-based buffer overflow vulnerability
+       potentially resulting in arbitrary code execution in the
+       context of the current user.
+Checksums-Sha1:
+ e3b1ebb120bce4451cbe30343db2bd1ee0d0b356 2019 exempi_2.5.0-2+deb10u1.dsc
+ 2461c1149187350c1b174e23b188e7884a32ec66 3658187 exempi_2.5.0.orig.tar.bz2
+ 0bfcaa4448dbb1468bfda2fba623c45e1d842dc3 24764 exempi_2.5.0-2+deb10u1.debian.tar.xz
+ 5a6893e0e54255c9db6aa9ff76620fe721ac2b57 6859 exempi_2.5.0-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 11eaf44dd0dffd2297eb7ee71539747ea1a512fc90fe995b9644260c671aa87a 2019 exempi_2.5.0-2+deb10u1.dsc
+ dc82fc24c0540a44a63fa4ad21775d24e00e63f1dedd3e2ae6f7aa27583b711b 3658187 exempi_2.5.0.orig.tar.bz2
+ f21789861ed70f67a28f3f55b07fc8c320c6520ac0a9e780de617272ad4b13e5 24764 exempi_2.5.0-2+deb10u1.debian.tar.xz
+ 43179da11ea590f3b4ca7dfe940ed4aea84f1bc1270cb4d23ed8dfe6cdb49744 6859 exempi_2.5.0-2+deb10u1_amd64.buildinfo
+Files:
+ 57367ff0c0fefdaac717c27362f7af96 2019 libs optional exempi_2.5.0-2+deb10u1.dsc
+ e0976661e4a09b6206228c8b8b447b53 3658187 libs optional exempi_2.5.0.orig.tar.bz2
+ dab78a617ec80049be71cff7da62691b 24764 libs optional exempi_2.5.0-2+deb10u1.debian.tar.xz
+ 3e1476e47f63f61a716963fd91943142 6859 libs optional exempi_2.5.0-2+deb10u1_amd64.buildinfo
+

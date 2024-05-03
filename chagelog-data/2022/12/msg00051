@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 01:51:59 +0100
+Source: node-loader-utils
+Architecture: source
+Version: 1.1.0-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ node-loader-utils (1.1.0-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-37601: Prototype pollution vulnerability via the name variable in
+     parseQuery.js.
+Checksums-Sha1:
+ 16e406e7bfcb6941647c827476fb90fa2496599f 2203 node-loader-utils_1.1.0-2+deb10u1.dsc
+ 40009d8e0f6db30c17b39ae0af32b78d84c00a62 33244 node-loader-utils_1.1.0.orig.tar.gz
+ 567212f05c312e689e2d36166cc1e1c5a08ff987 3432 node-loader-utils_1.1.0-2+deb10u1.debian.tar.xz
+ 00e6db647f2e1687eb198c0f590326d9411f067f 7268 node-loader-utils_1.1.0-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 606685dbb1ed30d4f844c4aa86e60b4a7f38218b6030b96f534d25cbd12af699 2203 node-loader-utils_1.1.0-2+deb10u1.dsc
+ 2a82a6282bb9da0bc30b73909c445c860301e5c6dedfce03fe04a4524d6c186d 33244 node-loader-utils_1.1.0.orig.tar.gz
+ a1137e9bd830db1d7aec6291559817d6fb8908fd8a9b2db090ef6805084b89f1 3432 node-loader-utils_1.1.0-2+deb10u1.debian.tar.xz
+ fc793919a06678cfe78bb26bfbcb75260e895b1f92ae6f57ac866a5fd25adbea 7268 node-loader-utils_1.1.0-2+deb10u1_amd64.buildinfo
+Files:
+ 98b143fe326db5c55df1620e6d35bd33 2203 javascript optional node-loader-utils_1.1.0-2+deb10u1.dsc
+ 8f1143ee583a0fe593a9f67b6cde6d9d 33244 javascript optional node-loader-utils_1.1.0.orig.tar.gz
+ a493916720ee9b4752031f1f44c185e5 3432 javascript optional node-loader-utils_1.1.0-2+deb10u1.debian.tar.xz
+ ee093b224e904ede939e1b69091d5557 7268 javascript optional node-loader-utils_1.1.0-2+deb10u1_amd64.buildinfo
+

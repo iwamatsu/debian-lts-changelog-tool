@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 27 Jul 2023 16:07:38 +0200
+Source: libmail-dkim-perl
+Architecture: source
+Version: 0.54-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Magnus Holmgren <holmgren@debian.org>
+Changed-By: Sven Bartscher <kritzefitz@debian.org>
+Closes: 1039489
+Changes:
+ libmail-dkim-perl (0.54-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport fix for a bug that compares i and d tags case sensitive when
+     t=s is set on the DKIM key and causes spurious fails of legitimate
+     messages. (Closes: #1039489)
+Checksums-Sha1:
+ fda34e7877356477104b63db96d694c853db1c5d 2188 libmail-dkim-perl_0.54-1+deb10u1.dsc
+ c9200ab75cb670e5da942272e98b9c9ab1e81513 160493 libmail-dkim-perl_0.54.orig.tar.gz
+ 1bf13731b0997ad8c6ea03e486ad18d4a74a3655 5728 libmail-dkim-perl_0.54-1+deb10u1.debian.tar.xz
+ 990761b13e350d03d72c96584ebee52bde348cd7 6353 libmail-dkim-perl_0.54-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d369797a73ff85f07795aaf906dce21a2b8b641643f603be1efc4c4d1f2562f2 2188 libmail-dkim-perl_0.54-1+deb10u1.dsc
+ b72f78c80f7aa1bdb2a80986b45f9225a8fa0b7c91644590b102a78eb31c3dca 160493 libmail-dkim-perl_0.54.orig.tar.gz
+ c447b81e0d9498afdc06cb55f9ed3027ed4be15630ed5da090251e5e33be161b 5728 libmail-dkim-perl_0.54-1+deb10u1.debian.tar.xz
+ 09504bb9d0c3a5c402154575e878f26dcd7f0aa486bf7eee9066f6436b924bf3 6353 libmail-dkim-perl_0.54-1+deb10u1_amd64.buildinfo
+Files:
+ 4936b770b0323f1b2aab6c9c4c93a91d 2188 perl optional libmail-dkim-perl_0.54-1+deb10u1.dsc
+ 7f65cb291545aa10fa9d0d87d0e8d1d2 160493 perl optional libmail-dkim-perl_0.54.orig.tar.gz
+ 627d50eda19050bcc76a81d2c857c6a3 5728 perl optional libmail-dkim-perl_0.54-1+deb10u1.debian.tar.xz
+ 3a5c3135ee97af063afd8f03ac6271d4 6353 perl optional libmail-dkim-perl_0.54-1+deb10u1_amd64.buildinfo
+

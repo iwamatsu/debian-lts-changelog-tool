@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  7 Aug 2023 00:05:18 CEST
+Source: openimageio
+Architecture: source
+Version: 2.0.5~dfsg0-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 6ab36c86003b80b2d5a867bf68878880af873076 2961 openimageio_2.0.5~dfsg0-1+deb10u2.dsc
+ df942ee6b726b8c921f99f6783439bc344a48a54 44432 openimageio_2.0.5~dfsg0-1+deb10u2.debian.tar.xz
+ 450371e8e86cdddeea48e0126244d728a11a968d 27127 openimageio_2.0.5~dfsg0-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ ff6f2e125e1f2ebd3a1e418af0f38f698581c1cf48fa3bd096ad3f00860e0bce 2961 openimageio_2.0.5~dfsg0-1+deb10u2.dsc
+ 7389d0990de124787bd20dd10929a8a2f148a28187cce03a7f773ee3d62dfc4f 44432 openimageio_2.0.5~dfsg0-1+deb10u2.debian.tar.xz
+ 702cac6b785210485d7e213c6ac61bd93b1b54668538100ddb075dc17bc35795 27127 openimageio_2.0.5~dfsg0-1+deb10u2_amd64.buildinfo
+Changes:
+ openimageio (2.0.5~dfsg0-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-41649, CVE-2022-41684, CVE-2022-41794, CVE-2022-41837,
+     CVE-2023-24472 and CVE-2023-36183.
+     Multiple security vulnerabilties have been discovered in OpenImageIO, a
+     library for reading and writing images. Buffer overflows and out-of-bounds
+     read and write programming errors may lead to a denial of service
+     (application crash) or the execution of arbitrary code if a malformed image
+     file is processed.
+Files:
+ fbea5904e86130cc9e12fd2f557adda7 2961 libs optional openimageio_2.0.5~dfsg0-1+deb10u2.dsc
+ 108c527bb65d45c86a8e1fd76c584fff 44432 libs optional openimageio_2.0.5~dfsg0-1+deb10u2.debian.tar.xz
+ 9b2cd52b7e36a5c2cc044b64e79be3d4 27127 libs optional openimageio_2.0.5~dfsg0-1+deb10u2_amd64.buildinfo
+

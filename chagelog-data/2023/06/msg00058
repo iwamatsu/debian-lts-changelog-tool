@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Jun 2023 21:03:57 +0300
+Source: python3.7
+Architecture: source
+Version: 3.7.3-2+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ python3.7 (3.7.3-2+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2015-20107: The mailcap module did not add escape characters
+     into commands discovered in the system mailcap file.
+   * CVE-2020-10735: Prevent DoS with very large int.
+   * CVE-2021-3426: Remove the pydoc getfile feature which
+     could be abused to read arbitrary files on the disk.
+   * CVE-2021-3733: Regular Expression Denial of Service in urllib's
+     AbstractBasicAuthHandler class.
+   * CVE-2021-3737: Infinite loop in the HTTP client code.
+   * CVE-2021-4189: Make ftplib not trust the PASV response.
+   * CVE-2022-45061: Quadratic time in the IDNA decoder.
+Checksums-Sha1:
+ ae989b10bca0c7ab347c1d649008c864338b0c76 3404 python3.7_3.7.3-2+deb10u5.dsc
+ e3584650a06ae2765da0678176deae9d133f1b3d 17108364 python3.7_3.7.3.orig.tar.xz
+ 2bce3e56d3467da122d8ac6fef55a1002632eba4 240848 python3.7_3.7.3-2+deb10u5.debian.tar.xz
+Checksums-Sha256:
+ 3391b216d88264dbc3cb357495e9488bfe53602bc9c857d81aae180554b0ebb2 3404 python3.7_3.7.3-2+deb10u5.dsc
+ da60b54064d4cfcd9c26576f6df2690e62085123826cff2e667e72a91952d318 17108364 python3.7_3.7.3.orig.tar.xz
+ c01dc42ccca8f1fa0087dfaba9347e31c163e8a147c45dda81172869887945c3 240848 python3.7_3.7.3-2+deb10u5.debian.tar.xz
+Files:
+ 8fca8701c20c644f81969bde8cfa3b27 3404 python optional python3.7_3.7.3-2+deb10u5.dsc
+ 93df27aec0cd18d6d42173e601ffbbfd 17108364 python optional python3.7_3.7.3.orig.tar.xz
+ 3ace96d9e70b03dc0279f94969b799f7 240848 python optional python3.7_3.7.3-2+deb10u5.debian.tar.xz
+

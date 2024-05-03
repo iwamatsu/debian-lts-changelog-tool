@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 15 Aug 2023 20:53:51 +0530
+Source: open-vm-tools
+Architecture: source
+Version: 2:10.3.10-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Bernd Zeimetz <bzed@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1037546
+Changes:
+ open-vm-tools (2:10.3.10-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to remove some authentication types which were deprecated
+     long ago. (Fixes: CVE-2023-20867) (Closes: #1037546)
+Checksums-Sha1:
+ 4bbae909289f33c7976492db35c0942638b27d42 2387 open-vm-tools_10.3.10-1+deb10u4.dsc
+ 8f1efa9c8f91c14e3dc671a7a2ebb6bc79d31725 2237520 open-vm-tools_10.3.10.orig.tar.xz
+ cbe155d4a59e9fa542f84e5f122955bcffa0e337 48280 open-vm-tools_10.3.10-1+deb10u4.debian.tar.xz
+ 26d9473ae69d45ef80ef9acb819c18c012236516 6208 open-vm-tools_10.3.10-1+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 3369e25afbea56730e9f1c7f2fcf18108d5576f954027868bdeb5c7482a17f57 2387 open-vm-tools_10.3.10-1+deb10u4.dsc
+ bab779fcaba98fa118553cfd3f94d62881e8f69372b03c01838cda9c3e422dd9 2237520 open-vm-tools_10.3.10.orig.tar.xz
+ c27782df1dcd0889af1b02f00272377e1905d8f66298584a14bdc6df79a36d0f 48280 open-vm-tools_10.3.10-1+deb10u4.debian.tar.xz
+ 28b765c61027af982349968d74b3a5fd6b3d3f4198514711c508aca9d61b1e1a 6208 open-vm-tools_10.3.10-1+deb10u4_source.buildinfo
+Files:
+ fbfc4b054a6116614049a2368181af5b 2387 admin extra open-vm-tools_10.3.10-1+deb10u4.dsc
+ 077358c0961053ecada2a90e5df999c6 2237520 admin extra open-vm-tools_10.3.10.orig.tar.xz
+ 6b08a4f2f3d5f0ff1b3768ff2509500d 48280 admin extra open-vm-tools_10.3.10-1+deb10u4.debian.tar.xz
+ b65c939b6ecb36a0cbd6e136682afbdc 6208 admin extra open-vm-tools_10.3.10-1+deb10u4_source.buildinfo
+

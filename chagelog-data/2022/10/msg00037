@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 28 Oct 2022 07:20:14 +0530
+Source: ruby-sinatra
+Architecture: source
+Version: 2.0.5-4+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1014717
+Changes:
+ ruby-sinatra (2.0.5-4+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS security team.
+   * CVE-2022-29970: Validate that any expanded paths match the allowed
+     "public_dir" when serving static files. (Closes: #1014717)
+     - This is taken, as is, from 1.4.7-5+deb9u1 upload by Chris Lamb.
+Checksums-Sha1:
+ a71a547e74b75abe186d46326362ee07e4885d6c 3003 ruby-sinatra_2.0.5-4+deb10u1.dsc
+ 6cd71a285b77eaaf6fb84df61dd6ce7685c929cc 490580 ruby-sinatra_2.0.5.orig.tar.gz
+ 31ae4bc829e49aa5f4dbe9649d1f1fd18c4d907e 7272 ruby-sinatra_2.0.5-4+deb10u1.debian.tar.xz
+ e5310e3002c8d7447d7647d252b55b01b20ba57b 14607 ruby-sinatra_2.0.5-4+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 901a7d5c08ac54adea6397bd935cf8b01af055701a65605d56290fa1b0ce569e 3003 ruby-sinatra_2.0.5-4+deb10u1.dsc
+ 423c9d6cbbc89e53652c390a9908927058c30952bfdf19c5b083bfce2890fe8a 490580 ruby-sinatra_2.0.5.orig.tar.gz
+ 68a4dbda8339cdaf12216be45f38d655efcb933cca43da5a33447cafe0733f71 7272 ruby-sinatra_2.0.5-4+deb10u1.debian.tar.xz
+ 7fe1dd654f96ff67ada71b6b89acc9d96da64c6b806a9068106cb74c9173824b 14607 ruby-sinatra_2.0.5-4+deb10u1_source.buildinfo
+Files:
+ ba2db795f139f86135786a1e7034d462 3003 ruby optional ruby-sinatra_2.0.5-4+deb10u1.dsc
+ 02263f5234d50fede1f50c102123d702 490580 ruby optional ruby-sinatra_2.0.5.orig.tar.gz
+ 233e3b422393829083f065a8809309c0 7272 ruby optional ruby-sinatra_2.0.5-4+deb10u1.debian.tar.xz
+ 129f78289bcbf187c379ed0661a5de94 14607 ruby optional ruby-sinatra_2.0.5-4+deb10u1_source.buildinfo
+

@@ -1,0 +1,55 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 31 Mar 2022 22:24:52 CEST
+Source: wireshark
+Binary: wireshark-common wireshark wireshark-qt wireshark-gtk tshark wireshark-dev wireshark-doc libwireshark11 libwsutil9 libwsutil-dev libwscodecs2 libwireshark-data libwireshark-dev libwiretap8 libwiretap-dev
+Architecture: source
+Version: 2.6.20-0+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Balint Reczey <rbalint@ubuntu.com>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libwireshark-data - network packet dissection library -- data files
+ libwireshark-dev - network packet dissection library -- development files
+ libwireshark11 - network packet dissection library -- shared library
+ libwiretap-dev - network packet capture library -- development files
+ libwiretap8 - network packet capture library -- shared library
+ libwscodecs2 - network packet dissection codecs library -- shared library
+ libwsutil-dev - network packet dissection utilities library -- development files
+ libwsutil9 - network packet dissection utilities library -- shared library
+ tshark     - network traffic analyzer - console version
+ wireshark  - network traffic analyzer - meta-package
+ wireshark-common - network traffic analyzer - common files
+ wireshark-dev - network traffic analyzer - development tools
+ wireshark-doc - network traffic analyzer - documentation
+ wireshark-gtk - network traffic analyzer - GTK+ version
+ wireshark-qt - network traffic analyzer - Qt version
+Checksums-Sha1:
+ 61d1d9b6e7124c78c05679b5159f57b5895bbf9b 3709 wireshark_2.6.20-0+deb9u3.dsc
+ 9c5efc3c756ac0b0cf89a4500f09e46463e70b5b 94192 wireshark_2.6.20-0+deb9u3.debian.tar.xz
+ 31088e910821a76b93b744e964f0999c36ac7959 26113 wireshark_2.6.20-0+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ bd49559b335412202ce6bbb2264a5fb0eea977274e3552191ac8748ba32e01f8 3709 wireshark_2.6.20-0+deb9u3.dsc
+ 747b8677410fc1611ab695ce758e72e0261789777eb6202c8102f05c1e0de596 94192 wireshark_2.6.20-0+deb9u3.debian.tar.xz
+ 97c48301d4e26f5dd0f517ea420c1c9a515816e54f2a558b81ed9d1468e9e451 26113 wireshark_2.6.20-0+deb9u3_amd64.buildinfo
+Changes:
+ wireshark (2.6.20-0+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix the following CVE:
+   * CVE-2021-4181: Crash in the Sysdig Event dissector.
+   * CVE-2021-4184: Infinite loop in the BitTorrent DHT dissector.
+   * CVE-2021-4185: Infinite loop in the RTMPT dissector.
+   * CVE-2021-22191: Improper URL handling in Wireshark.
+   * CVE-2022-0581: Crash in the CMS protocol dissector.
+   * CVE-2022-0582: Unaligned access in the CSN.1 protocol dissector.
+   * CVE-2022-0583: Crash in the PVFS protocol dissector.
+   * CVE-2022-0585: Large loops in multiple protocol dissectors.
+   * CVE-2022-0586: Infinite loop in RTMPT protocol dissector.
+Files:
+ ce3cdb69468ed26b9be258d59ddd53ee 3709 net optional wireshark_2.6.20-0+deb9u3.dsc
+ 145e02cfe2fc833c00837dc0dcd546b2 94192 net optional wireshark_2.6.20-0+deb9u3.debian.tar.xz
+ 61c499c3e310895bedfc8b4772115d1f 26113 net optional wireshark_2.6.20-0+deb9u3_amd64.buildinfo
+

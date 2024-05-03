@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 22 Feb 2023 22:58:57 CET
+Source: asterisk
+Architecture: source
+Version: 1:16.28.0~dfsg-0+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fcc2ff98e3d446751477d62c3434ca3af6eb240a 4397 asterisk_16.28.0~dfsg-0+deb10u2.dsc
+ 55f67f186f8438aceb93ea470d9fffcf87d6d2ac 6838752 asterisk_16.28.0~dfsg-0+deb10u2.debian.tar.xz
+ 109ecfe9d4ded4cfb069d1e2cac3c9551d0dbc4f 28791 asterisk_16.28.0~dfsg-0+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ efe6a1b3a3b6bb55710826a90a244165c78e6416dd264739b37feb359d563aa6 4397 asterisk_16.28.0~dfsg-0+deb10u2.dsc
+ 809275fdaa5f7d641ec064a65c4fc072bc05127e965b4a1b89c7afa89526987b 6838752 asterisk_16.28.0~dfsg-0+deb10u2.debian.tar.xz
+ ab9f6fae51fd8bc47127086ae2f22b7677886c7a489d9df79edfe2c42e0d42e3 28791 asterisk_16.28.0~dfsg-0+deb10u2_amd64.buildinfo
+Changes:
+ asterisk (1:16.28.0~dfsg-0+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-23537, CVE-2022-23547, CVE-2022-31031, CVE-2022-37325,
+     CVE-2022-39244, CVE-2022-39269, CVE-2022-42705, CVE-2022-42706.
+     Multiple security vulnerabilities have been discovered in Asterisk, an Open
+     Source Private Branch Exchange. Buffer overflows and other programming
+     errors could be exploited for launching a denial of service attack or the
+     execution of arbitrary code.
+Files:
+ e99ff4e5851bca95d500008be83cb0cf 4397 comm optional asterisk_16.28.0~dfsg-0+deb10u2.dsc
+ f39f7e682e6d922241dd9226b64d382d 6838752 comm optional asterisk_16.28.0~dfsg-0+deb10u2.debian.tar.xz
+ be27f5db4bea7e8c951d63faf3e88417 28791 comm optional asterisk_16.28.0~dfsg-0+deb10u2_amd64.buildinfo
+

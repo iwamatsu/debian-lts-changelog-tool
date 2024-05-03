@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 11 Feb 2024 15:44:47 +0100
+Source: openvswitch
+Architecture: source
+Version: 2.10.7+ds1-0+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ openvswitch (2.10.7+ds1-0+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add patch enabling building within the packaging git repository.
+   * Import upstream patch for CVE-2023-5366.
+     - Cherry-pick additional patch adjust-segment-boundary.patch
+       to fix test suite for the patch for this CVE.
+     - Cherry-pick fix-testcase-ipv6-ND-dependency.patch to fix
+       new test ipv6-ND-dependency (added by the previous patch)
+Checksums-Sha1:
+ 8e827cfc9d230bb2c92b7937dd9592a0bd989598 3210 openvswitch_2.10.7+ds1-0+deb10u5.dsc
+ e5599629f7d7e76ebf0694c660a12d241ba47f97 75744 openvswitch_2.10.7+ds1-0+deb10u5.debian.tar.xz
+ 83ddbbeef12225d95a78ca1a1fbfbd99c1fbdec2 14279 openvswitch_2.10.7+ds1-0+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 9eb874694d6fd5941a73e9cae06b5aa2fb0e426bf42c1b63a5ab51177f4c2400 3210 openvswitch_2.10.7+ds1-0+deb10u5.dsc
+ 4ff53a8f49cacf00414dc17c63d68b6c75d13722d2c22c866a0fb140cf9d3221 75744 openvswitch_2.10.7+ds1-0+deb10u5.debian.tar.xz
+ 747178567b737d4a525785a75efed71bcfb263436bc0651b31a419eb66614d1e 14279 openvswitch_2.10.7+ds1-0+deb10u5_amd64.buildinfo
+Files:
+ 492af7a70bec1e8602fafe1828e37ca4 3210 net optional openvswitch_2.10.7+ds1-0+deb10u5.dsc
+ a0f9fa5304392405d373d1480972f3dc 75744 net optional openvswitch_2.10.7+ds1-0+deb10u5.debian.tar.xz
+ 347856ef19fab90981ccead14fda3363 14279 net optional openvswitch_2.10.7+ds1-0+deb10u5_amd64.buildinfo
+

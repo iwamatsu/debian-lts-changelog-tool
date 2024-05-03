@@ -1,0 +1,62 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 21 Apr 2023 20:15:13 CEST
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 54cbba01e563375dbedcf5c610a651e2243575c8 2845 curl_7.64.0-4+deb10u6.dsc
+ 778f48aabc388fc378f45ce007027b7e4503b625 62540 curl_7.64.0-4+deb10u6.debian.tar.xz
+ be6352b67e66c04c988892b340e1321888cdd158 11986 curl_7.64.0-4+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ ce14e22c43f23f505624b39b8bc0225ecd6ee8dbdd84ac5bd47cd9df5779648e 2845 curl_7.64.0-4+deb10u6.dsc
+ 63c961ed2d37600d6cd904dd5723409af60c0e9483341c9c1de39bf6da62f550 62540 curl_7.64.0-4+deb10u6.debian.tar.xz
+ b565378b6dc4612d2436462ee824da88ea7c7b13d546821f8377d6863e6ea551 11986 curl_7.64.0-4+deb10u6_amd64.buildinfo
+Changes:
+ curl (7.64.0-4+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-27533:
+     A vulnerability in input validation exists in curl during
+     communication using the TELNET protocol may allow an attacker to pass on
+     maliciously crafted user name and "telnet options" during server
+     negotiation. The lack of proper input scrubbing allows an attacker to send
+     content or perform option negotiation without the application's intent.
+     This vulnerability could be exploited if an application allows user input,
+     thereby enabling attackers to execute arbitrary code on the system.
+   * Fix CVE-2023-27535:
+     An authentication bypass vulnerability exists in libcurl in the FTP
+     connection reuse feature that can result in wrong credentials being used
+     during subsequent transfers. Previously created connections are kept in a
+     connection pool for reuse if they match the current setup. However, certain
+     FTP settings such as CURLOPT_FTP_ACCOUNT, CURLOPT_FTP_ALTERNATIVE_TO_USER,
+     CURLOPT_FTP_SSL_CCC, and CURLOPT_USE_SSL were not included in the
+     configuration match checks, causing them to match too easily. This could
+     lead to libcurl using the wrong credentials when performing a transfer,
+     potentially allowing unauthorized access to sensitive information.
+   * CVE-2023-27536:
+     An authentication bypass vulnerability exists in libcurl in the
+     connection reuse feature which can reuse previously established connections
+     with incorrect user permissions due to a failure to check for changes in
+     the CURLOPT_GSSAPI_DELEGATION option. This vulnerability affects
+     krb5/kerberos/negotiate/GSSAPI transfers and could potentially result in
+     unauthorized access to sensitive information. The safest option is to not
+     reuse connections if the CURLOPT_GSSAPI_DELEGATION option has been changed.
+   * Fix CVE-2023-27538:
+     An authentication bypass vulnerability exists in libcurl where it
+     reuses a previously established SSH connection despite the fact that an SSH
+     option was modified, which should have prevented reuse. libcurl maintains a
+     pool of previously used connections to reuse them for subsequent transfers
+     if the configurations match. However, two SSH settings were omitted from
+     the configuration check, allowing them to match easily, potentially leading
+     to the reuse of an inappropriate connection.
+Files:
+ 677d9195c2b3e5c5094a20980b4da7db 2845 web optional curl_7.64.0-4+deb10u6.dsc
+ ae6d2e0428d4f65adce2e25451124d38 62540 web optional curl_7.64.0-4+deb10u6.debian.tar.xz
+ 13d7574641451c1097f77800625b120d 11986 web optional curl_7.64.0-4+deb10u6_amd64.buildinfo
+

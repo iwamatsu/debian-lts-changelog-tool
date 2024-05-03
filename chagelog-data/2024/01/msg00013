@@ -1,0 +1,89 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 13 Jan 2024 11:05:46 +0530
+Source: kodi
+Binary: kodi kodi-addons-dev kodi-bin kodi-bin-dbgsym kodi-data kodi-eventclients-common kodi-eventclients-dev kodi-eventclients-kodi-send kodi-eventclients-ps3 kodi-eventclients-wiiremote kodi-eventclients-wiiremote-dbgsym kodi-repository-kodi
+Architecture: source amd64 all
+Version: 2:17.6+dfsg1-4+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ kodi       - Open Source Home Theatre (executable binaries)
+ kodi-addons-dev - Open Source Home Theatre (Addons Dev package)
+ kodi-bin   - Open Source Home Theatre (architecture-dependent files)
+ kodi-data  - Open Source Home Theatre (arch-independent data package)
+ kodi-eventclients-common - Open Source Home Theatre (Event Client Common package)
+ kodi-eventclients-dev - Open Source Home Theatre (Event Client Dev package)
+ kodi-eventclients-kodi-send - Open Source Home Theatre (Event Client Kodi-SEND package)
+ kodi-eventclients-ps3 - Open Source Home Theatre (Event Client PS3 package)
+ kodi-eventclients-wiiremote - Open Source Home Theatre (Event Client WII Remote support package
+ kodi-repository-kodi - Open Source Home Theatre (official addons repository feed)
+Changes:
+ kodi (2:17.6+dfsg1-4+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * Fix CVE-2017-5982, CVE-2021-42917, CVE-2023-23082, CVE-2023-30207
+Checksums-Sha1:
+ 7070685dafb1cdffceeb083d0aa593519abd07a9 5255 kodi_17.6+dfsg1-4+deb10u1.dsc
+ 6843449c4d26cc97950b3dd93161b66be63d9945 369621 kodi_17.6+dfsg1.orig-libdvdnav-5-0-3.tar.bz2
+ 3cda64c06ca9b617d976c490651db4391a162e1f 394885 kodi_17.6+dfsg1.orig-libdvdread-5-0-3.tar.bz2
+ 08f0d3cbe066a515d13c7445475f23be233bf21c 246480 kodi_17.6+dfsg1.orig-webinterface-default.tar.xz
+ 7acfc7646b2202a8fc8310d1bad14139332b97b0 20277044 kodi_17.6+dfsg1.orig.tar.xz
+ 2a2c5c493cd2187b266b2bf76e4d491d26bab38f 113048 kodi_17.6+dfsg1-4+deb10u1.debian.tar.xz
+ f69c97d65a554fbb018990bde97701ca78221725 99376 kodi-addons-dev_17.6+dfsg1-4+deb10u1_amd64.deb
+ 1850afe26fe22ac8a3f453eee7255ffd9e2f4458 133258644 kodi-bin-dbgsym_17.6+dfsg1-4+deb10u1_amd64.deb
+ 6d7766baabd351d5ce81b6cfa98bbebcbf9fb494 6276916 kodi-bin_17.6+dfsg1-4+deb10u1_amd64.deb
+ 6fc651269b00e51dae06cf7d22109dc5f05fc8ac 17779068 kodi-data_17.6+dfsg1-4+deb10u1_all.deb
+ 8c8c8a2ff6339e0e674ad94c6e01acddc187d36d 50904 kodi-eventclients-common_17.6+dfsg1-4+deb10u1_all.deb
+ 3125ef1ae26afd1c6170eac18ead0dadd7c959c8 37148 kodi-eventclients-dev_17.6+dfsg1-4+deb10u1_all.deb
+ d749f56a2169ee7668e5173c35366f2a3ec1976b 30180 kodi-eventclients-kodi-send_17.6+dfsg1-4+deb10u1_all.deb
+ 6d54bd82f3518759dc3fed84c7b8558cebdd16b8 31368 kodi-eventclients-ps3_17.6+dfsg1-4+deb10u1_all.deb
+ 18c595486682317a711db6d11eea4aa7a55ac11a 176216 kodi-eventclients-wiiremote-dbgsym_17.6+dfsg1-4+deb10u1_amd64.deb
+ e81aa911568b475cacf1694024595fffb260f27b 48016 kodi-eventclients-wiiremote_17.6+dfsg1-4+deb10u1_amd64.deb
+ 02ddf89d5368099b3e8e6c2bf9b76078356af7f2 54904 kodi-repository-kodi_17.6+dfsg1-4+deb10u1_all.deb
+ 245994df459bd68b901d7e821f26a1ade47056b9 26992 kodi_17.6+dfsg1-4+deb10u1_amd64.buildinfo
+ 4e8bed05a044c2b9e3a7b5787b6f18dfe8543adb 32668 kodi_17.6+dfsg1-4+deb10u1_amd64.deb
+Checksums-Sha256:
+ a4e50b21631df24b495041be287e8b25301acd630d19ad8d99ae391d61db3b04 5255 kodi_17.6+dfsg1-4+deb10u1.dsc
+ 3ff45551e81378e994c5a2381962d35282570e303fa16357ecb98f6fb616fd3c 369621 kodi_17.6+dfsg1.orig-libdvdnav-5-0-3.tar.bz2
+ 321cdf2dbdc83c96572bc583cd27d8c660ddb540ff16672ecb28607d018ed82b 394885 kodi_17.6+dfsg1.orig-libdvdread-5-0-3.tar.bz2
+ 693fa280d5f5622b1d197332d37124fbc8dbde80204d25b6a7a3bf8d85fcfb0f 246480 kodi_17.6+dfsg1.orig-webinterface-default.tar.xz
+ 961be0e9ba1ea715c2b887fbf37d5b6a31f3b4ab1e0eb15fd201ae3410254cea 20277044 kodi_17.6+dfsg1.orig.tar.xz
+ 618b5d7201197c0bfe3f6ca5a9bc10fcf8133ab8ced302b97e8479503b2c63dc 113048 kodi_17.6+dfsg1-4+deb10u1.debian.tar.xz
+ 0affe688aba2682bb8f91da5715b0f798512283b8754c3158ef48ba652a11023 99376 kodi-addons-dev_17.6+dfsg1-4+deb10u1_amd64.deb
+ c13c60c0d9fd7a58724e951485f9c8e308a4c07c26cd70dfb8d4c87ee1c14866 133258644 kodi-bin-dbgsym_17.6+dfsg1-4+deb10u1_amd64.deb
+ 0fceaecb24fbe18cf5215a728ebd9dfcdabd6d1b364b70863542dcc81a2b3494 6276916 kodi-bin_17.6+dfsg1-4+deb10u1_amd64.deb
+ dcc1b88c8f6c76eaffbfdc901e1bff2982b68961d7818825f82b0525f4cd889a 17779068 kodi-data_17.6+dfsg1-4+deb10u1_all.deb
+ 60501753559f6b51f10edb834c0c5f50673f917680902f3c8ae98fcbf3db7432 50904 kodi-eventclients-common_17.6+dfsg1-4+deb10u1_all.deb
+ f887dddc62ce89cb3c0c254975060e7eb4bf71dab96fc13b5a7bc2096f925bed 37148 kodi-eventclients-dev_17.6+dfsg1-4+deb10u1_all.deb
+ d8e91cebebbd483aa1b972c6cbb5380a52f4fc95b93a2ece87675b0b393708f1 30180 kodi-eventclients-kodi-send_17.6+dfsg1-4+deb10u1_all.deb
+ e511e899cda9c653ab1a613347772a118a41975fd5a515db08a84a30d61f5357 31368 kodi-eventclients-ps3_17.6+dfsg1-4+deb10u1_all.deb
+ 108402aa906b80fba66e40abf4ea46f973eaabcde3941f803130f4fda26ce917 176216 kodi-eventclients-wiiremote-dbgsym_17.6+dfsg1-4+deb10u1_amd64.deb
+ f136c978ed072b2e06a156ca0b9a30b308c115c3a865c7db359fada1428c88d3 48016 kodi-eventclients-wiiremote_17.6+dfsg1-4+deb10u1_amd64.deb
+ 77f3e4264bb822b85568db6b2a4b4676ac140ca30ed95186990466cacaa3ee21 54904 kodi-repository-kodi_17.6+dfsg1-4+deb10u1_all.deb
+ 10a670981dd7881161bebbd9e00c1217dfc2b0c62800a9ae30aa3e4ba599cf9b 26992 kodi_17.6+dfsg1-4+deb10u1_amd64.buildinfo
+ 67480710db00fb7caf16652aa61c1a9c1e11cd4104140768b758196e0d893837 32668 kodi_17.6+dfsg1-4+deb10u1_amd64.deb
+Files:
+ 0b28988459310adc1802dafd6916b43a 5255 video optional kodi_17.6+dfsg1-4+deb10u1.dsc
+ 0b8eb73603514a9c39444c2235cdb45c 369621 video optional kodi_17.6+dfsg1.orig-libdvdnav-5-0-3.tar.bz2
+ b7b7d2a782087ed2a913263087083715 394885 video optional kodi_17.6+dfsg1.orig-libdvdread-5-0-3.tar.bz2
+ 7cfcb00a22c55c023966ce7d9abc1f4a 246480 video optional kodi_17.6+dfsg1.orig-webinterface-default.tar.xz
+ 1f1ffaec902a36386759d3ed6ab020fe 20277044 video optional kodi_17.6+dfsg1.orig.tar.xz
+ 8413d8d9107e7a5114358e23cc3aca94 113048 video optional kodi_17.6+dfsg1-4+deb10u1.debian.tar.xz
+ e7c172a148e79d010070e95d133d4fc1 99376 libdevel optional kodi-addons-dev_17.6+dfsg1-4+deb10u1_amd64.deb
+ e315a62bf355edf92f2b4d8b8f32d9dc 133258644 debug optional kodi-bin-dbgsym_17.6+dfsg1-4+deb10u1_amd64.deb
+ e5900b3f251314865a3a866cd90451f8 6276916 video optional kodi-bin_17.6+dfsg1-4+deb10u1_amd64.deb
+ 3b43431a6ff2f6ad928e3fad482c83cf 17779068 video optional kodi-data_17.6+dfsg1-4+deb10u1_all.deb
+ a5a880520db8b44c41dd818e7fcbcad5 50904 video optional kodi-eventclients-common_17.6+dfsg1-4+deb10u1_all.deb
+ 21c5dc7c18a1d82359e74723d6d7f11a 37148 libdevel optional kodi-eventclients-dev_17.6+dfsg1-4+deb10u1_all.deb
+ 057d2abc1a1086ce62ce8006d22538e0 30180 video optional kodi-eventclients-kodi-send_17.6+dfsg1-4+deb10u1_all.deb
+ ea8d6fe0878d85c3f3f137c8ce1f063b 31368 video optional kodi-eventclients-ps3_17.6+dfsg1-4+deb10u1_all.deb
+ 6550c45950a3ebd222339a038c91df3f 176216 debug optional kodi-eventclients-wiiremote-dbgsym_17.6+dfsg1-4+deb10u1_amd64.deb
+ 0de973805bc504bb373fbf67731f1cca 48016 video optional kodi-eventclients-wiiremote_17.6+dfsg1-4+deb10u1_amd64.deb
+ b8050d7c0582198756cb61d9e17f484c 54904 video optional kodi-repository-kodi_17.6+dfsg1-4+deb10u1_all.deb
+ 4168743d28e308a3d72ca043344118ba 26992 video optional kodi_17.6+dfsg1-4+deb10u1_amd64.buildinfo
+ 1805a43e5e76d61cfc991e88906fc73e 32668 video optional kodi_17.6+dfsg1-4+deb10u1_amd64.deb
+

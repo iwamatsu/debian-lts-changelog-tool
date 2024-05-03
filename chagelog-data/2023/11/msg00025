@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 Nov 2023 18:24:46 +0100
+Source: cryptojs
+Architecture: source
+Version: 3.1.2+dfsg-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1055525
+Changes:
+ cryptojs (3.1.2+dfsg-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-46233: Default PBKDF2 settings are 1000 times weaker than
+     specified in 1993 and 1.3M times weaker than OWASP's current
+     recommendations.
+     The default settings are now changed to use SHA256 with 250k iterations
+     (closes: #1055525).
+Checksums-Sha1:
+ 8c2ea5ed93c5f9febd37c388cfdda7dfa5340209 1948 cryptojs_3.1.2+dfsg-2+deb10u1.dsc
+ b205a9ae4e237baad5e175a5b0a10d1b60ef1812 30200 cryptojs_3.1.2+dfsg.orig.tar.xz
+ e7190dac9280908c9eaa3f19f2ebfaaaea4e5270 4592 cryptojs_3.1.2+dfsg-2+deb10u1.debian.tar.xz
+ de4c13f5ae0248d2ee649b19c46bff79e99f229b 7079 cryptojs_3.1.2+dfsg-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 710c242d088990b77c846add75daaecbabec7326daa67d5ec6a84664e419744d 1948 cryptojs_3.1.2+dfsg-2+deb10u1.dsc
+ e9bdcd97bc9a7de6cd4f0a8f8239163030aca651a175ee88c3859e04f05d284b 30200 cryptojs_3.1.2+dfsg.orig.tar.xz
+ e28e5332611a03b71bbe5ebd052e52c21046a37f45fea1fc1b5f74191a065bf8 4592 cryptojs_3.1.2+dfsg-2+deb10u1.debian.tar.xz
+ 37d22b4b0999e37555e2f05d9d4cea99c7d77a73e1554080e546f7b44a1d4687 7079 cryptojs_3.1.2+dfsg-2+deb10u1_amd64.buildinfo
+Files:
+ ee72b68ffda4b5229b93cecb0c35506e 1948 web extra cryptojs_3.1.2+dfsg-2+deb10u1.dsc
+ 259988b3b083a9642c587e82b1bc9c47 30200 web extra cryptojs_3.1.2+dfsg.orig.tar.xz
+ 54a54e766d2c49f1ffbe07ef0a303ab3 4592 web extra cryptojs_3.1.2+dfsg-2+deb10u1.debian.tar.xz
+ 33b0c5dc083ee10c4fe5252fa729a3df 7079 web extra cryptojs_3.1.2+dfsg-2+deb10u1_amd64.buildinfo
+

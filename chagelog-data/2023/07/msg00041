@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 31 Jul 2023 21:39:33 +0300
+Source: tiff
+Architecture: source
+Version: 4.1.0+git191117-2~deb10u8
+Distribution: buster-security
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ tiff (4.1.0+git191117-2~deb10u8) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-2908: NULL pointer dereference in tif_dir.c
+   * CVE-2023-3316: NULL pointer dereference in TIFFClose()
+   * CVE-2023-3618: Buffer overflow in tiffcrop
+   * CVE-2023-25433: Buffer overflow in tiffcrop
+   * CVE-2023-26965: Use after free in tiffcrop
+   * CVE-2023-26966: Buffer overflow in uv_encode()
+   * CVE-2023-38288: Integer overflow in tiffcp
+   * CVE-2023-38289: Integer overflow in raw2tiff
+Checksums-Sha1:
+ f7ad1012f327531de7bd7441db2a9c59224660fd 2274 tiff_4.1.0+git191117-2~deb10u8.dsc
+ 19d0d4f42a336cc73060a9c40c21ac45a23d4d41 1533524 tiff_4.1.0+git191117.orig.tar.xz
+ 570b1f441d0db38b62e04030d9479db086564048 45552 tiff_4.1.0+git191117-2~deb10u8.debian.tar.xz
+Checksums-Sha256:
+ fe9bb494ce22d6a3533dd76560369da547572b28265e234ad91891d7c210f17b 2274 tiff_4.1.0+git191117-2~deb10u8.dsc
+ 67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42 1533524 tiff_4.1.0+git191117.orig.tar.xz
+ a60b7afdcd7ffc49ca79fa685a473c2cd5ad6677d5443dac9792b1cce88f5ffd 45552 tiff_4.1.0+git191117-2~deb10u8.debian.tar.xz
+Files:
+ 7a8a79988cb6b8d33e0e7e78b5ab233a 2274 libs optional tiff_4.1.0+git191117-2~deb10u8.dsc
+ f51040d3436eedde9d3ba7d166754c3e 1533524 libs optional tiff_4.1.0+git191117.orig.tar.xz
+ 02377c66c264b95c30a4c7dfc57a421c 45552 libs optional tiff_4.1.0+git191117-2~deb10u8.debian.tar.xz
+

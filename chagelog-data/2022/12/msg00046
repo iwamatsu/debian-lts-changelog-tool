@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 25 Dec 2022 23:43:33 CET
+Source: mbedtls
+Architecture: source
+Version: 2.16.9-0~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: James Cowgill <jcowgill@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ e3e31cdc4ae691e711f16ae45b6e4eacbc67291b 2400 mbedtls_2.16.9-0~deb10u1.dsc
+ 696b997ff8d97f1ec2b502fa8446cf40000e9d5e 2668292 mbedtls_2.16.9.orig.tar.gz
+ 95ea88df7fe807404f498adf9267d6dc34461258 19072 mbedtls_2.16.9-0~deb10u1.debian.tar.xz
+ 3d843d3006cb162b0e7b8a87da3f8545d0870354 10998 mbedtls_2.16.9-0~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 678e0879d1854d46e194b64c00ec71cb68cc92d5dc7212ac27c80788dcb984d5 2400 mbedtls_2.16.9-0~deb10u1.dsc
+ fc17ff7d8c11d08f23ae2800a18269408ad2c24ea6bb8b9363e41a01c2425697 2668292 mbedtls_2.16.9.orig.tar.gz
+ 2006cbc7118c68688fe14ccc15672fd5b6b3538a9b81f906f30607a597e95346 19072 mbedtls_2.16.9-0~deb10u1.debian.tar.xz
+ 8c37eb68ccb94b8760a22bfb78f39f819014f1939d1847ed1640fae4e28f2be4 10998 mbedtls_2.16.9-0~deb10u1_amd64.buildinfo
+Changes:
+ mbedtls (2.16.9-0~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-16910, CVE-2019-18222, CVE-2020-10932, CVE-2020-10941,
+     CVE-2020-16150, CVE-2020-36421, CVE-2020-36422, CVE-2020-36423,
+     CVE-2020-36424, CVE-2020-36425, CVE-2020-36426, CVE-2020-36475,
+     CVE-2020-36476, CVE-2020-36478, CVE-2021-24119, CVE-2021-43666,
+     CVE-2021-44732, CVE-2022-35409.
+     Multiple security vulnerabilities have been discovered in mbedtls,
+     a lightweight crypto and SSL/TLS library, which may allow attackers to
+     obtain sensitive information like the RSA private key or cause a
+     denial of service (application or server crash).
+Files:
+ b81e4775bb422b82d3463cd5115939c0 2400 libs optional mbedtls_2.16.9-0~deb10u1.dsc
+ 82ae1332c2e9e917be6eb8e1ed27ecbc 2668292 libs optional mbedtls_2.16.9.orig.tar.gz
+ 099679cefd86b2c18f1f7e2410b8f0d2 19072 libs optional mbedtls_2.16.9-0~deb10u1.debian.tar.xz
+ fbe0663945621fa04a0ab4a28059ff3c 10998 libs optional mbedtls_2.16.9-0~deb10u1_amd64.buildinfo
+

@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 19 Sep 2023 18:39:19 CEST
+Source: libyang
+Architecture: source
+Version: 0.16.105+really1.0-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: David Lamparter <equinox-debian@diac24.net>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fa498e1692e7f2321b3608abd077622f4546dd54 2513 libyang_0.16.105+really1.0-0+deb10u1.dsc
+ 60bcf84282cc042f395c072ffc63c59690485ef3 1667054 libyang_0.16.105+really1.0.orig.tar.gz
+ 7277f9d81b38c055b8be848d0ef0c7ac6f713f19 11608 libyang_0.16.105+really1.0-0+deb10u1.debian.tar.xz
+ 05dae28f20187b13e53b71268fde017406a071c2 9524 libyang_0.16.105+really1.0-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 28c671651812dcf5998d3ba728f85cea7b5f45a2cb2085b4ae86b63df4b7205f 2513 libyang_0.16.105+really1.0-0+deb10u1.dsc
+ 1b736443d2c69b5d7a71ac412655e6edab0647b18f35f7bf504b0a24e06cb046 1667054 libyang_0.16.105+really1.0.orig.tar.gz
+ ba734d90e3400959ed42abfa0b422cba36f70ca4a0fc4316ba345a15d1c67074 11608 libyang_0.16.105+really1.0-0+deb10u1.debian.tar.xz
+ 7ea6fb5ed4e2878186ab2471adbe5062ec40007bed03a30643260685f1d3668f 9524 libyang_0.16.105+really1.0-0+deb10u1_amd64.buildinfo
+Changes:
+ libyang (0.16.105+really1.0-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Backport Bullseye version of libyang to facilitate security update of frr.
+   * Fix CVE-2019-20391, CVE-2019-20392, CVE-2019-20393, CVE-2019-20394,
+     CVE-2019-20395, CVE-2019-20396, CVE-2019-20397, CVE-2019-20398.
+     Multiple flaws were found in libyang, a parser toolkit for IETF YANG data
+     modeling. Double frees, invalid memory access and Null pointer dereferences
+     may cause a denial of service or potentially code execution.
+Files:
+ 0eadbc40ceffd6d7bf9b4356cb735b4c 2513 libs optional libyang_0.16.105+really1.0-0+deb10u1.dsc
+ c37ad4e8f112508347a423a274107d23 1667054 libs optional libyang_0.16.105+really1.0.orig.tar.gz
+ 9e7cfeb739351f12435f8a8ead49d6f7 11608 libs optional libyang_0.16.105+really1.0-0+deb10u1.debian.tar.xz
+ 0803ecfd2e8f8bd2a02783a99636e70a 9524 libs optional libyang_0.16.105+really1.0-0+deb10u1_amd64.buildinfo
+

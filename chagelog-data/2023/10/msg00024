@@ -1,0 +1,55 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 11 Oct 2023 17:17:28 +0200
+Source: tomcat9
+Architecture: source
+Version: 9.0.31-1~deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Changes:
+ tomcat9 (9.0.31-1~deb10u9) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2023-45648: Request smuggling. Tomcat did not correctly parse HTTP
+     trailer headers. A specially crafted, invalid trailer header could cause
+     Tomcat to treat a single request as multiple requests leading to the
+     possibility of request smuggling when behind a reverse proxy.
+   * Fix CVE-2023-44487: DoS caused by HTTP/2 frame overhead (Rapid Reset Attack)
+   * Fix CVE-2023-42795: Information Disclosure. When recycling various internal
+     objects, including the request and the response, prior to re-use by the
+     next request/response, an error could cause Tomcat to skip some parts of
+     the recycling process leading to information leaking from the current
+     request/response to the next.
+   * Fix CVE-2023-41080: Open redirect. If the ROOT (default) web application
+     is configured to use FORM authentication then it is possible that a
+     specially crafted URL could be used to trigger a redirect to an URL of the
+     attackers choice.
+   * Fix CVE-2023-28709: Denial of Service. If non-default HTTP connector
+     settings were used such that the maxParameterCount could be reached using
+     query string parameters and a request was submitted that supplied exactly
+     maxParameterCount parameters in the query string, the limit for uploaded
+     request parts could be bypassed with the potential for a denial of service
+     to occur.
+   * Fix CVE-2023-24998: Denial of service. Tomcat uses a packaged renamed copy
+     of Apache Commons FileUpload to provide the file upload functionality
+     defined in the Jakarta Servlet specification. Apache Tomcat was, therefore,
+     also vulnerable to the Commons FileUpload vulnerability CVE-2023-24998 as
+     there was no limit to the number of request parts processed. This resulted
+     in the possibility of an attacker triggering a DoS with a malicious upload
+     or series of uploads.
+Checksums-Sha1:
+ be1a91127c925bff9398b028187863142d1c5028 2889 tomcat9_9.0.31-1~deb10u9.dsc
+ 7acc59a6b065a01a67723034c0f70456e2d497ac 62172 tomcat9_9.0.31-1~deb10u9.debian.tar.xz
+ e56bca45da057f26e09edb562eb3885217b9c7a5 13947 tomcat9_9.0.31-1~deb10u9_source.buildinfo
+Checksums-Sha256:
+ 21cdf39eedeb61f5a130ce1574276e585f3aae1997006c48a0238b12fc426e5f 2889 tomcat9_9.0.31-1~deb10u9.dsc
+ 503843444c894b47be1193c63beb9cdcbcaab5d0188cef4d9db5d30c29a320cd 62172 tomcat9_9.0.31-1~deb10u9.debian.tar.xz
+ b6c2c35a3b388028fc3e1c0bc8eb2e3f56d441cf85c76de973e81aa6e61a1d3b 13947 tomcat9_9.0.31-1~deb10u9_source.buildinfo
+Files:
+ 09847a3187230748fd3924f119c1e97b 2889 java optional tomcat9_9.0.31-1~deb10u9.dsc
+ 11b612d951f3cfc26a864cb7a989ff0f 62172 java optional tomcat9_9.0.31-1~deb10u9.debian.tar.xz
+ b71a7e2c32258ef92522fcbf98be3552 13947 java optional tomcat9_9.0.31-1~deb10u9_source.buildinfo
+

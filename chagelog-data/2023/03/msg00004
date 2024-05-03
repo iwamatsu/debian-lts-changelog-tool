@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 05 Mar 2023 15:55:28 +0530
+Source: libapache2-mod-auth-mellon
+Architecture: source
+Version: 0.14.2-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Thijs Kinkhorst <thijs@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 931265 991730
+Changes:
+ libapache2-mod-auth-mellon (0.14.2-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix open redirect.
+     (Fixes: CVE-2019-13038) (Closes: #931265)
+   * Add patch to prevent redirect to URLs that begin with '///',
+     (Fixes: CVE-2021-3639) (Closes: #991730)
+Checksums-Sha1:
+ 1538ca0ff0247423fb00ecb9e5eddc8b41fe8512 2129 libapache2-mod-auth-mellon_0.14.2-1+deb10u1.dsc
+ 35d4359487fb97e9982b501ef3581b49bf985888 950737 libapache2-mod-auth-mellon_0.14.2.orig.tar.gz
+ f83f104cc411e2b72ad55fd54e0ed3db92b4fa43 4840 libapache2-mod-auth-mellon_0.14.2-1+deb10u1.debian.tar.xz
+ 6d9b7dd941a85f25e34b878a1ec904cef60463a1 7558 libapache2-mod-auth-mellon_0.14.2-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ d7b8d8ae5b4136c733d0736bf829d2a9fc116e6ee61e6e56be5fa493676d826d 2129 libapache2-mod-auth-mellon_0.14.2-1+deb10u1.dsc
+ 8290ba57394fb7c551b9902c32bded8711f9656e2d36e351618b952f2c162afc 950737 libapache2-mod-auth-mellon_0.14.2.orig.tar.gz
+ 1dffe3332898e75cb299ab83f153c4dc701b0f98aa5cc3672104e5c2abd5c0d5 4840 libapache2-mod-auth-mellon_0.14.2-1+deb10u1.debian.tar.xz
+ 57a3d5fce4472544bb096ebf37cd3d38d1208400cd1b62a0f38c25559033d22c 7558 libapache2-mod-auth-mellon_0.14.2-1+deb10u1_source.buildinfo
+Files:
+ ea8ccd6b7da9ae9e12e7526c7e89f0c7 2129 web optional libapache2-mod-auth-mellon_0.14.2-1+deb10u1.dsc
+ 0fe222274967a0db57cd86a03b915a6f 950737 web optional libapache2-mod-auth-mellon_0.14.2.orig.tar.gz
+ b6b723308dcb1c4d1c76bf6bdebca44c 4840 web optional libapache2-mod-auth-mellon_0.14.2-1+deb10u1.debian.tar.xz
+ 7088062a60d771743972e3251d9c8a0a 7558 web optional libapache2-mod-auth-mellon_0.14.2-1+deb10u1_source.buildinfo
+

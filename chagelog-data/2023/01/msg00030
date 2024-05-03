@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 27 Jan 2023 17:23:38 +0100
+Source: libapache-session-ldap-perl
+Architecture: source
+Version: 0.4-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ libapache-session-ldap-perl (0.4-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-36658: Validity of the X.509 certificate is not checked by
+     default when connecting to remote LDAP backends, because the default
+     configuration of the Net::LDAPS module for Perl is used.
+     This upload changes the default behavior to require X.509 validation
+     against the distribution bundle /etc/ssl/certs/ca-certificates.crt.
+     Previous behavior can reverted by setting `ldapVerify => "none"` when
+     initializing the Apache::Session::LDAP object.
+Checksums-Sha1:
+ dece0be5c078f8d2fe4443bf8b51532e27e7a174 2259 libapache-session-ldap-perl_0.4-1+deb10u1.dsc
+ 0c90bb47f5a023a81579bfb56b409205f820831b 3902 libapache-session-ldap-perl_0.4.orig.tar.gz
+ 97014f580d41b9badd367e00b48b6d19bdd37fec 3568 libapache-session-ldap-perl_0.4-1+deb10u1.debian.tar.xz
+ 82ae00a98693ccedd35a20fb2e748d6daebf3c3b 5836 libapache-session-ldap-perl_0.4-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ e5c6087ac1b395e3f16a5efd3fa5671b8b8b228658c75f502b00f19f48ea769f 2259 libapache-session-ldap-perl_0.4-1+deb10u1.dsc
+ 394ad609a12d4f8290cb96797cc7251b614664a2cc28be8da9ac9d53df62dadc 3902 libapache-session-ldap-perl_0.4.orig.tar.gz
+ 6a2c5c9d934bbea7a91d0d7d1f399fb4f1cb3f3b14b0852da4ac94c340d6b5b8 3568 libapache-session-ldap-perl_0.4-1+deb10u1.debian.tar.xz
+ 4bab8b15d0413b7391ccb8509a392c2a5107e2e8770a6367e982958349536307 5836 libapache-session-ldap-perl_0.4-1+deb10u1_amd64.buildinfo
+Files:
+ c13e2c967223ffedfdc45ed5b7b9d1d6 2259 perl optional libapache-session-ldap-perl_0.4-1+deb10u1.dsc
+ 491e6389ef71822c0eeda7fe4019a569 3902 perl optional libapache-session-ldap-perl_0.4.orig.tar.gz
+ 093c0cf8772564c36d71894b22e92077 3568 perl optional libapache-session-ldap-perl_0.4-1+deb10u1.debian.tar.xz
+ 48afad144f34e4de77904b08efe471c0 5836 perl optional libapache-session-ldap-perl_0.4-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:44:29 CEST
+Source: g10k
+Architecture: source
+Version: 0.5.7-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 06e54e0844ce9d429ef28de2bfc66a1efbe637be 2594 g10k_0.5.7-1+deb10u1.dsc
+ 39b178397ecd70d0286f1ec26e111cd724283747 366396 g10k_0.5.7.orig.tar.xz
+ 65fbdc73aea86b8b15affc19f0cd0e7794ef9381 10804 g10k_0.5.7-1+deb10u1.debian.tar.xz
+ 541c150e445b1a0adbe81d46e200a6f1655cf124 7405 g10k_0.5.7-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ e40006b2889a58fa70b457026282e5eddf2cda97fa3d3f55e766f160a4d1ef25 2594 g10k_0.5.7-1+deb10u1.dsc
+ 420d45385d2b2814a87c4c7af97831213e3eecff67583630c9d164a2b3edf9ea 366396 g10k_0.5.7.orig.tar.xz
+ ff7f5930441eb4cc6d053dc8cbca99cfe88db04690f03a25ff6b2a1999d1094f 10804 g10k_0.5.7-1+deb10u1.debian.tar.xz
+ 3babff3d33d59a981bb6c9147d7a245e7ab56d49bdc93966a85ed9e59955ee60 7405 g10k_0.5.7-1+deb10u1_amd64.buildinfo
+Changes:
+ g10k (0.5.7-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 2100f09d5f3ecb00df81131012f83d21 2594 devel optional g10k_0.5.7-1+deb10u1.dsc
+ 1664f2d5d699bdf6b1d7b852bf434768 366396 devel optional g10k_0.5.7.orig.tar.xz
+ edc91f521825335ca84ff0a3adcfabcd 10804 devel optional g10k_0.5.7-1+deb10u1.debian.tar.xz
+ d58880b17b663ab4008bdd475273cde5 7405 devel optional g10k_0.5.7-1+deb10u1_amd64.buildinfo
+

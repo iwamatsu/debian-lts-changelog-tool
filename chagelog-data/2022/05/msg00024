@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 18 May 2022 05:38:30 +0530
+Source: needrestart
+Architecture: source
+Version: 2.11-3+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1011154
+Changes:
+ needrestart (2.11-3+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to anchor interpreter regex to prevent local
+     privilege escalation. (Fixes: CVE-2022-30688) (Closes: #1011154)
+Checksums-Sha1:
+ bef4726274e36d761a319af7cffd4a7d2d4b58f2 1822 needrestart_2.11-3+deb9u2.dsc
+ 142e9c1346881704fcf83367e93ab0c2f326f023 52156 needrestart_2.11.orig.tar.gz
+ d7dd4d90c786166a0aca0c998e7decc428dd0a9e 8520 needrestart_2.11-3+deb9u2.debian.tar.xz
+ 25a663f85197cce0864b281fc9c67414f53e0587 6080 needrestart_2.11-3+deb9u2_source.buildinfo
+Checksums-Sha256:
+ 962fa8fb10408832a6dbe77d5f457f6765efdb6840cf90587c2f309ddc7a934e 1822 needrestart_2.11-3+deb9u2.dsc
+ 5c7c322e551ae5de9442ac4915d6c9bc47303a22bc8fb234b953d4a158e65777 52156 needrestart_2.11.orig.tar.gz
+ 5e4d2b09fe1193817f37eff248e11d02a326de38aaae63321dabc69a123c2c76 8520 needrestart_2.11-3+deb9u2.debian.tar.xz
+ 9fba92ef5d859255280cb88c183e15bbf721e20f3954cab127ff47ec53a1a8b6 6080 needrestart_2.11-3+deb9u2_source.buildinfo
+Files:
+ 253fd4a7dff401fa7d399530f5f988f0 1822 admin optional needrestart_2.11-3+deb9u2.dsc
+ cd1836542e17e774f47d7ab78398ae05 52156 admin optional needrestart_2.11.orig.tar.gz
+ 2b6c3a016b4c744d8c2cd5075f12729b 8520 admin optional needrestart_2.11-3+deb9u2.debian.tar.xz
+ 03ece5b289597cfc3e7ad2efca8bb9f4 6080 admin optional needrestart_2.11-3+deb9u2_source.buildinfo
+

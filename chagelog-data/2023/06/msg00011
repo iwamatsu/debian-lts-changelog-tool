@@ -1,0 +1,62 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 06 Jun 2023 13:18:31 -0700
+Source: ruby2.5
+Binary: libruby2.5 libruby2.5-dbgsym ruby2.5 ruby2.5-dbgsym ruby2.5-dev ruby2.5-doc
+Built-For-Profiles: nocheck
+Architecture: source amd64 all
+Version: 2.5.5-3+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libruby2.5 - Libraries necessary to run Ruby 2.5
+ ruby2.5    - Interpreter of object-oriented scripting language Ruby
+ ruby2.5-dev - Header files for compiling extension modules for the Ruby 2.5
+ ruby2.5-doc - Documentation for Ruby 2.5
+Changes:
+ ruby2.5 (2.5.5-3+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-28755 & CVE-2023-28756: Two regular expression Denial of Service
+     (ReDoS) issues were discovered: the first in the URI component, and the
+     second in the Time module. Each of these issues could have resulted in a
+     dramatic increase in execution time given malicious input.
+   * Add "test/rubygems/test_gem_remote_fetcher.rb" to the known-to-fail
+     autopkgtests, as it relies on a now-expired SSL certificate.
+Checksums-Sha1:
+ cf203432fbbee1239d78711df89e4515d1cd945b 2453 ruby2.5_2.5.5-3+deb10u5.dsc
+ c477ffe8f8ed605036df6c8892bd3c800b8e9722 10208264 ruby2.5_2.5.5.orig.tar.xz
+ 7e49e270e9f2d5659d64553deace1ceca965d772 136592 ruby2.5_2.5.5-3+deb10u5.debian.tar.xz
+ 43991b645824068d0d303df2433b09abfe30be8f 6224028 libruby2.5-dbgsym_2.5.5-3+deb10u5_amd64.deb
+ a814995311fbfc90a9e41524111756c98f543315 3440452 libruby2.5_2.5.5-3+deb10u5_amd64.deb
+ 6e546359c98e38731c46b433711cd708a15dce2d 5172 ruby2.5-dbgsym_2.5.5-3+deb10u5_amd64.deb
+ 6d7c1979a4469f75b84e29da99434583afcb8b3f 415620 ruby2.5-dev_2.5.5-3+deb10u5_amd64.deb
+ 6c3496b822579026a553ca679c902069b4a5276e 2150816 ruby2.5-doc_2.5.5-3+deb10u5_all.deb
+ 580db5accc9451909edecf988cb5738f5e3d1312 8250 ruby2.5_2.5.5-3+deb10u5_amd64.buildinfo
+ 0f62267f6b5e65fae53ecf4b951f8681c5ddfb93 400512 ruby2.5_2.5.5-3+deb10u5_amd64.deb
+Checksums-Sha256:
+ 23b68d26574f618f09c7c8b30617d4ed8cbd85545572bfe4f6e55b8dacb79bdf 2453 ruby2.5_2.5.5-3+deb10u5.dsc
+ a49a222bbeeeb0191ae043a509cd05137869f971a33fef74d3c0aaae95170877 10208264 ruby2.5_2.5.5.orig.tar.xz
+ ed2b8dd784e13baed75a9d5570899c73a93b1d18da5550fd00b345090c83ede3 136592 ruby2.5_2.5.5-3+deb10u5.debian.tar.xz
+ 708120e0de1a46f02289f02138d4da28109f9ba1e32ecd676bfd8971900f22fb 6224028 libruby2.5-dbgsym_2.5.5-3+deb10u5_amd64.deb
+ 5982a4698d20f9fda8634c158335e0325f121d332fd9c96794b6612d32260c8f 3440452 libruby2.5_2.5.5-3+deb10u5_amd64.deb
+ c548f4ec35814d4bbf2c07fe9cc86b604888614190f0db38b6e4d0747bee2af7 5172 ruby2.5-dbgsym_2.5.5-3+deb10u5_amd64.deb
+ 5c795e7dee2abe29004c86b6300264770cf3771e0942e81191cb5ffb7f92e65a 415620 ruby2.5-dev_2.5.5-3+deb10u5_amd64.deb
+ 90405e3a9bbbb1ec1cecb0c31cd819e0f5db485041711c098c3ccd16d851bfd1 2150816 ruby2.5-doc_2.5.5-3+deb10u5_all.deb
+ bae00e5112376270ca51b88d4e86aab468904e386205e5c558b828f743fc2048 8250 ruby2.5_2.5.5-3+deb10u5_amd64.buildinfo
+ fc657c9a3718b5294819732982eb4560d7b6bbb683bfea3e4716c265a45727c8 400512 ruby2.5_2.5.5-3+deb10u5_amd64.deb
+Files:
+ cf9cd1050aae30b4f8db445d90ec505c 2453 ruby optional ruby2.5_2.5.5-3+deb10u5.dsc
+ 9a1922884905ac8be7ddf8de1408472d 10208264 ruby optional ruby2.5_2.5.5.orig.tar.xz
+ e40a4ddea52a14e056dad1e538865043 136592 ruby optional ruby2.5_2.5.5-3+deb10u5.debian.tar.xz
+ d91867d40a3cca1c26795506a1ee0425 6224028 debug optional libruby2.5-dbgsym_2.5.5-3+deb10u5_amd64.deb
+ 010e37aa20972ed3c507412bc8cd99d0 3440452 libs optional libruby2.5_2.5.5-3+deb10u5_amd64.deb
+ 6d5981deac7e385cb42ba2a1c20a19c1 5172 debug optional ruby2.5-dbgsym_2.5.5-3+deb10u5_amd64.deb
+ 803f8ecf5bfb2787e1018a84cca91bcc 415620 ruby optional ruby2.5-dev_2.5.5-3+deb10u5_amd64.deb
+ 871e3e75c31a840fbca1c6a596f8cec4 2150816 doc optional ruby2.5-doc_2.5.5-3+deb10u5_all.deb
+ 2736408543f9201cc5dc66cba24078b0 8250 ruby optional ruby2.5_2.5.5-3+deb10u5_amd64.buildinfo
+ dbb69c21362fac3d4fc51b55ed503e25 400512 ruby optional ruby2.5_2.5.5-3+deb10u5_amd64.deb
+

@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 04 Sep 2022 21:55:16 +0200
+Source: pcs
+Architecture: source
+Version: 0.10.1-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Changed-By: Valentin Vidic <vvidic@debian.org>
+Changes:
+ pcs (0.10.1-2+deb10u1) buster-security; urgency=high
+ .
+   * d/patches: add fix for CVE-2022-1049
+Checksums-Sha1:
+ 256edea0145842422958382f44d4d6e5041013bf 2192 pcs_0.10.1-2+deb10u1.dsc
+ e933ccad637141fc4814890d82c5d274cee45b32 1543718 pcs_0.10.1.orig.tar.gz
+ 6da49f52e5a32e9398f2b716ca655132c2feff5f 166556 pcs_0.10.1-2+deb10u1.debian.tar.xz
+ beb6e956ab70b02402c76d1b7b39e4bfed434078 6923 pcs_0.10.1-2+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 016832a8dadc7330a43d0f75aa538ffea62e09506220e5ef8dc56495e7239764 2192 pcs_0.10.1-2+deb10u1.dsc
+ 61d36fc96c05a4724b76f45216a483e514c9da5b486ba77e906ae45722592cf2 1543718 pcs_0.10.1.orig.tar.gz
+ c621dc384298849aa990cc027712f9a1d6eb9b14c557914e4273ad2b52beadd9 166556 pcs_0.10.1-2+deb10u1.debian.tar.xz
+ 8aea519fc77163d2951fc845a9e4bd59d35e95024a53b06c600fd2e07d2d728c 6923 pcs_0.10.1-2+deb10u1_source.buildinfo
+Files:
+ 9222bc71db53999c37ce1c27d36ceb68 2192 admin optional pcs_0.10.1-2+deb10u1.dsc
+ 4c7af40096b89752e7fdcea636e9b8b9 1543718 admin optional pcs_0.10.1.orig.tar.gz
+ 17daac52a88b60e4293e920b59d9c6d7 166556 admin optional pcs_0.10.1-2+deb10u1.debian.tar.xz
+ 284b0d649f7934bf03fc12f5ec43250d 6923 admin optional pcs_0.10.1-2+deb10u1_source.buildinfo
+

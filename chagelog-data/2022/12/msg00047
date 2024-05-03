@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 29 Dec 2022 09:23:26 +0100
+Source: multipath-tools
+Architecture: source
+Version: 0.7.9-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian DM Multipath Team <team+linux-blocks@tracker.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1022742
+Changes:
+ multipath-tools (0.7.9-3+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fixes for CVE-2022-41973 and CVE-2022-41974.
+    (Closes: #1022742)
+Checksums-Sha1:
+ f4b31604919d959b821b68b428b09e5d5596759a 2660 multipath-tools_0.7.9-3+deb10u2.dsc
+ 189bc5b2d150413211b7dd69b23850b712c8c010 419298 multipath-tools_0.7.9.orig.tar.gz
+ a359bad968af5589d1ea37540a45c53133439744 43872 multipath-tools_0.7.9-3+deb10u2.debian.tar.xz
+ 0bd3feab3f30a6d17c63db39f3e0c54d13d8d80b 8671 multipath-tools_0.7.9-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ a488b6bc88d917aac198e643bb06ee7f64be4d1ed58a5af8b4504c0cabab89ec 2660 multipath-tools_0.7.9-3+deb10u2.dsc
+ 5537996bc053d059f28343ce00b5d722a0ff42aac28110a5429a67259fb50c12 419298 multipath-tools_0.7.9.orig.tar.gz
+ 99232c43d6abc2a13e93d0183dfd82286f8191ca2e86863c1aa1fc3dd2e95556 43872 multipath-tools_0.7.9-3+deb10u2.debian.tar.xz
+ 6f469844c4e2c7fed4e0dd2380cb48c78bd71762247c8e7f7bea4afb9d42b228 8671 multipath-tools_0.7.9-3+deb10u2_amd64.buildinfo
+Files:
+ 249aa07d1694b97b980c179f6681ef2b 2660 admin optional multipath-tools_0.7.9-3+deb10u2.dsc
+ de10966b84d62874f078526d18bd6c23 419298 admin optional multipath-tools_0.7.9.orig.tar.gz
+ 14f1eab5e094e6ee20673d80e6b19b79 43872 admin optional multipath-tools_0.7.9-3+deb10u2.debian.tar.xz
+ 63ea9206da1a24d3cf20f00dc3bad512 8671 admin optional multipath-tools_0.7.9-3+deb10u2_amd64.buildinfo
+

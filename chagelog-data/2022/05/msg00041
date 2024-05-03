@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 23 May 2022 22:03:02 +0200
+Source: cups
+Binary: libcups2 libcupsimage2 libcupscgi1 libcupsmime1 libcupsppdc1 cups cups-core-drivers cups-daemon cups-client cups-ipp-utils libcups2-dev libcupsimage2-dev cups-bsd cups-common cups-server-common cups-ppdc
+Architecture: source
+Version: 2.2.1-8+deb9u8
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ cups       - Common UNIX Printing System(tm) - PPD/driver support, web interfa
+ cups-bsd   - Common UNIX Printing System(tm) - BSD commands
+ cups-client - Common UNIX Printing System(tm) - client programs (SysV)
+ cups-common - Common UNIX Printing System(tm) - common files
+ cups-core-drivers - Common UNIX Printing System(tm) - PPD-less printing
+ cups-daemon - Common UNIX Printing System(tm) - daemon
+ cups-ipp-utils - Common UNIX Printing System(tm) - IPP developer/admin utilities
+ cups-ppdc  - Common UNIX Printing System(tm) - PPD manipulation utilities
+ cups-server-common - Common UNIX Printing System(tm) - server common files
+ libcups2   - Common UNIX Printing System(tm) - Core library
+ libcups2-dev - Common UNIX Printing System(tm) - Development files CUPS library
+ libcupscgi1 - Common UNIX Printing System(tm) - CGI library
+ libcupsimage2 - Common UNIX Printing System(tm) - Raster image library
+ libcupsimage2-dev - Common UNIX Printing System(tm) - Development files CUPS image li
+ libcupsmime1 - Common UNIX Printing System(tm) - MIME library
+ libcupsppdc1 - Common UNIX Printing System(tm) - PPD manipulation library
+Changes:
+ cups (2.2.1-8+deb9u8) stretch-security; urgency=medium
+ .
+   * CVE-2022-26691
+     Fix certificate comparison.
+     (Thanks to Zdenek Dohnal <zdohnal@redhat.com> for the patch)
+Checksums-Sha1:
+ addefe6e814ec344dbd2fc7e77f7a35ef2bfc392 3522 cups_2.2.1-8+deb9u8.dsc
+ 80d00096ace2da2c0cbc0f8c160f8f84adece9b0 9486635 cups_2.2.1.orig.tar.gz
+ 1186d9fdd66afdb7b3fe703309c1cd08a831ddf2 369172 cups_2.2.1-8+deb9u8.debian.tar.xz
+ 3cdb833c167f235b318e535ef6635dbb7190c155 17275 cups_2.2.1-8+deb9u8_amd64.buildinfo
+Checksums-Sha256:
+ a5d944381ec4f577e3e81b65a687b598dd328afaf01dcdf19d5b76a374680bc7 3522 cups_2.2.1-8+deb9u8.dsc
+ 83b8730aa977cc055e7410df6a3a682548994c113994ca630a16513017e419d5 9486635 cups_2.2.1.orig.tar.gz
+ c46e3a4dee101758332f0e8593af28e9f22b5ff9032c676961e23d29b9b0f254 369172 cups_2.2.1-8+deb9u8.debian.tar.xz
+ beb8cdc1dbe0cdef769ac9f7dae2813d5a9964f5a190f5dbe2c83eee1745b1e6 17275 cups_2.2.1-8+deb9u8_amd64.buildinfo
+Files:
+ 6dd621fb612cec62ac2ef675144a3122 3522 net optional cups_2.2.1-8+deb9u8.dsc
+ a94da2a1e9dbdccb4f3836a38a431931 9486635 net optional cups_2.2.1.orig.tar.gz
+ 8a1a76008b299690a2c803b787dd511a 369172 net optional cups_2.2.1-8+deb9u8.debian.tar.xz
+ 2cc6efc7b72c5fbd020de258a8f51a4f 17275 net optional cups_2.2.1-8+deb9u8_amd64.buildinfo
+

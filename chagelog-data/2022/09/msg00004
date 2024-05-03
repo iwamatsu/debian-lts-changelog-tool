@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 27 Aug 2022 12:16:16 +0530
+Source: ruby-rack
+Architecture: source
+Version: 2.0.6-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ ruby-rack (2.0.6-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-30122: Prevent a Denial of Service (DoS) vulnerability in the HTTP
+     multipart parsing.
+   * CVE-2022-30123: Prevent a potential shell escape sequence injection
+     vulnerability caused through the logging system.
+Checksums-Sha1:
+ 8286f2ffafbd1abb3329a7d98f3f969873194320 2276 ruby-rack_2.0.6-3+deb10u1.dsc
+ bef6a13d81a8000634ea30dae30cb906d7a71f91 253423 ruby-rack_2.0.6.orig.tar.gz
+ 3e6a0390a306e4d220138a1acdd08f8893520d74 8228 ruby-rack_2.0.6-3+deb10u1.debian.tar.xz
+ fa40762b2aeab831b645c1dae4e78ddafe6b866c 14069 ruby-rack_2.0.6-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ dd6eb64f42577da5767352f308a76cc9a624765a8c1fb50250fa4dd58ac1c94a 2276 ruby-rack_2.0.6-3+deb10u1.dsc
+ 62c3a92e98a61fcb5423ff7f46726a17e48930c4ccc817daaaa93e9038922c5a 253423 ruby-rack_2.0.6.orig.tar.gz
+ b291640215434e321867c565edac0bc5e5b4f71dc47f78a54a7c052325e178f4 8228 ruby-rack_2.0.6-3+deb10u1.debian.tar.xz
+ 32d1a431d7f788780303140c10e5dc6e3e2f2ba95be0815a676c03e6fb37efd7 14069 ruby-rack_2.0.6-3+deb10u1_source.buildinfo
+Files:
+ 1bb4017099e9151e31c35df6fe1f71c2 2276 ruby optional ruby-rack_2.0.6-3+deb10u1.dsc
+ a089f87b15056562ce44645965ddbc97 253423 ruby optional ruby-rack_2.0.6.orig.tar.gz
+ 7599c65bdb5cc406f3adc551ffed3fa2 8228 ruby optional ruby-rack_2.0.6-3+deb10u1.debian.tar.xz
+ f1706c24190ac3fcbeb387efe3b9c14f 14069 ruby optional ruby-rack_2.0.6-3+deb10u1_source.buildinfo
+

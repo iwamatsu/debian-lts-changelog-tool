@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 08 Aug 2023 04:35:25 +0200
+Source: linux
+Architecture: source
+Version: 4.19.289-2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux (4.19.289-2) buster-security; urgency=high
+ .
+   * [x86] Add mitigations for Gather Data Sampling (GDS) (CVE-2022-40982)
+     - init: Provide arch_cpu_finalize_init()
+     - x86/cpu: Switch to arch_cpu_finalize_init()
+     - ARM: cpu: Switch to arch_cpu_finalize_init()
+     - init: Remove check_bugs() leftovers
+     - init: Invoke arch_cpu_finalize_init() earlier
+     - init, x86: Move mem_encrypt_init() into arch_cpu_finalize_init()
+     - x86/fpu: Remove cpuinfo argument from init functions
+     - x86/fpu: Mark init functions __init
+     - x86/fpu: Move FPU initialization into arch_cpu_finalize_init()
+     - x86/speculation: Add Gather Data Sampling mitigation
+     - x86/speculation: Add force option to GDS mitigation
+     - x86/speculation: Add Kconfig option for GDS
+     - KVM: Add GDS_NO support to KVM
+     - x86/xen: Fix secondary processors' FPU initialization
+     - Documentation/x86: Fix backwards on/off logic about YMM support
+   * [x86] cpu: Avoid ABI change for GDS mitigations
+Checksums-Sha1:
+ af302b97597bf0f5baaa7defa0a69c322346d3a5 191175 linux_4.19.289-2.dsc
+ a9bfe3a2218fc84d528b97528af8c303c4fd5865 2665716 linux_4.19.289-2.debian.tar.xz
+ 7d9a1687e041c1f62cbb687d49b3dc6955b90d3c 47716 linux_4.19.289-2_source.buildinfo
+Checksums-Sha256:
+ 347672501fc1cc8fa1bfe0473667cf4415f80b7e1461f305500c53aa722a4244 191175 linux_4.19.289-2.dsc
+ e8753ea8ae7a08d1abedfafc95f52e01d24189e969858a6a432f1a8854f63e43 2665716 linux_4.19.289-2.debian.tar.xz
+ 7c8b03d79c418d0427998182f975f97e7e7f989c0d23f12fa08746285290d07d 47716 linux_4.19.289-2_source.buildinfo
+Files:
+ 30fa07be65c9bfdf08cf8dcbf1bc8081 191175 kernel optional linux_4.19.289-2.dsc
+ 0f83c0ba471448602d8659dda411e828 2665716 kernel optional linux_4.19.289-2.debian.tar.xz
+ 5abb8b00b3000ff9c4cf7ff5e0e41eaa 47716 kernel optional linux_4.19.289-2_source.buildinfo
+

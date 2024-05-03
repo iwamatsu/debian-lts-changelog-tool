@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 21 Jan 2024 20:52:36 +0000
+Source: sudo
+Architecture: source
+Version: 1.8.27-1+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Bdale Garbee <bdale@gag.com>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ sudo (1.8.27-1+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-7090: A flaw was found in sudo in the handling of
+     ipa_hostname, where ipa_hostname from /etc/sssd/sssd.conf
+     was not propagated in sudo. Therefore, it leads to
+     privilege mismanagement vulnerability in applications,
+     where client hosts retain privileges even after retracting them.
+   * Fix CVE-2023-28486: Sudo did not escape control characters
+     in log messages.
+   * Fix CVE-2023-28487: Sudo did not escape control characters
+     in sudoreplay output.
+   * Regenerate parsers from yacc file.
+Checksums-Sha1:
+ f81098a53d4605f9728cea84dea603ad85bff44b 2076 sudo_1.8.27-1+deb10u6.dsc
+ d2c734d175011f7543af56e0e3a0fe51760c2c2d 57864 sudo_1.8.27-1+deb10u6.debian.tar.xz
+ 0c10c2b4c3744bbc4e2e277e93ca811184c2634e 7292 sudo_1.8.27-1+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 94bea5798bd24d5c6fefce3b31f71a2aa74a7e4fbfb3cb9814ae5ac0574e6b90 2076 sudo_1.8.27-1+deb10u6.dsc
+ 7761a4d673b9aad65f65db653821fa28fec5f33b1c99ee990d716da8ee1e9564 57864 sudo_1.8.27-1+deb10u6.debian.tar.xz
+ d026ce4513e56aef061ae913a25bfbead39aa5587c2cb5d041827ab0a14821eb 7292 sudo_1.8.27-1+deb10u6_amd64.buildinfo
+Files:
+ 6e3efffe305f95e2fddaf7fe90fbebeb 2076 admin optional sudo_1.8.27-1+deb10u6.dsc
+ 4d6642f65350b37f13524f785263f907 57864 admin optional sudo_1.8.27-1+deb10u6.debian.tar.xz
+ 221a7a95c092b8ea1a62845f77594def 7292 admin optional sudo_1.8.27-1+deb10u6_amd64.buildinfo
+

@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 16 Oct 2023 02:02:58 +0300
+Source: poppler
+Architecture: source
+Version: 0.71.0-5+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ poppler (0.71.0-5+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-23804: Stack overflow in XRef::readXRefTable()
+   * CVE-2022-37050: Crash in PDFDoc::savePageAs()
+   * CVE-2022-37051: Crash in the pdfunite tool
+Checksums-Sha1:
+ 76b08b7d379c6c3700ae17afa8781a79f5598f4e 3322 poppler_0.71.0-5+deb10u3.dsc
+ b748621566779788894b7b321fe4f3c6d52dd3c1 1480852 poppler_0.71.0.orig.tar.xz
+ 4ed90d9ab108b2b819d021ffa00858f8c985d089 45324 poppler_0.71.0-5+deb10u3.debian.tar.xz
+Checksums-Sha256:
+ baa1cface75621b86c576b0f3324492aa76758aa0bb3a6ace1d520a060677ebd 3322 poppler_0.71.0-5+deb10u3.dsc
+ badbecd2dddf63352fd85ec08a9c2ed122fdadacf2a34fcb4cc227c4d01f2cf9 1480852 poppler_0.71.0.orig.tar.xz
+ da246f2e592c70b95809f180604da90b8ab08bce05923b5bde633a21f90aed7e 45324 poppler_0.71.0-5+deb10u3.debian.tar.xz
+Files:
+ 12722ca1a48ef0c69e8d148ce49f0fad 3322 devel optional poppler_0.71.0-5+deb10u3.dsc
+ b505011e49e922c83f3ffb57ab40bc28 1480852 devel optional poppler_0.71.0.orig.tar.xz
+ ce762e54f111104c2312f9857dd85a9f 45324 devel optional poppler_0.71.0-5+deb10u3.debian.tar.xz
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 29 Aug 2022 13:53:39 CEST
+Source: maven-shared-utils
+Architecture: source
+Version: 3.3.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 6fd129a67df654a399c5c2967c9407f737248201 2535 maven-shared-utils_3.3.0-1+deb10u1.dsc
+ 56d7890696c253da39ef7dc878098965ccd487c0 119656 maven-shared-utils_3.3.0.orig.tar.xz
+ 4847807d8f6a38b3efc1a8e8a2cbdba9dfd0d1f9 6372 maven-shared-utils_3.3.0-1+deb10u1.debian.tar.xz
+ c1496f4c670ecff86e74849380d837e7ff3934ed 16083 maven-shared-utils_3.3.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ efc122f0368e26f7ce7d5a68467581774759440cc81a73c02de0ea27ca403f30 2535 maven-shared-utils_3.3.0-1+deb10u1.dsc
+ 11b00155d894a7e5f2bd4a0f81ca2b34236496019fdf9492aa458355fd16d674 119656 maven-shared-utils_3.3.0.orig.tar.xz
+ 6bdcf16bdaf6a8cf646f2c3a3a09470fc610b3408aed963316ce4f3c1c22568b 6372 maven-shared-utils_3.3.0-1+deb10u1.debian.tar.xz
+ be6475afbcca08eb235951e7f4478a01d2daad6673d0274780f2e05361ab5abc 16083 maven-shared-utils_3.3.0-1+deb10u1_amd64.buildinfo
+Changes:
+ maven-shared-utils (3.3.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-29599: Apache Maven maven-shared-utils, the Commandline class
+     can emit double-quoted strings without proper escaping, allowing shell
+     injection attacks.
+Files:
+ 50ad7767a3ef04b183d4327109f5b71c 2535 java optional maven-shared-utils_3.3.0-1+deb10u1.dsc
+ e8986bb1ea7745c6bbf4dca7a2f8443a 119656 java optional maven-shared-utils_3.3.0.orig.tar.xz
+ 5ab45b2505061eb2aae247a2266b838b 6372 java optional maven-shared-utils_3.3.0-1+deb10u1.debian.tar.xz
+ 590f87ba8d0f9a7877f3dd4bebd72cf6 16083 java optional maven-shared-utils_3.3.0-1+deb10u1_amd64.buildinfo
+

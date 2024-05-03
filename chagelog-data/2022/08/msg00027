@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 26 Aug 2022 22:03:02 +0200
+Source: net-snmp
+Architecture: source
+Version: 5.7.3+dfsg-5+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Net-SNMP Packaging Team <pkg-net-snmp-devel@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ net-snmp (5.7.3+dfsg-5+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * snmpd_fix_bounds_checking: CVE-2022-24805, CVE-2022-24809
+   * snmpd_recover_set_status: CVE-2022-24806, CVE-2022-24807, CVE-2022-24808,
+     CVE-2022-24810
+   * patches based on the backports of Craig Small to Bullseye
+Checksums-Sha1:
+ 873e7735717408455052ec3fadc199bab6948bc6 3159 net-snmp_5.7.3+dfsg-5+deb10u3.dsc
+ ebbbc5e9fc5006edd3e62d595366497592d964a2 3371224 net-snmp_5.7.3+dfsg.orig.tar.xz
+ 0e5a1e7f32dd7a24a6951273c0e3d0404839aea1 85240 net-snmp_5.7.3+dfsg-5+deb10u3.debian.tar.xz
+ ba6a1166ec85fb2d8ddc388fa291f998d753ee1b 12332 net-snmp_5.7.3+dfsg-5+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 80b5a1f6633568924e68dd6fb83e12d090377282ea316200fd2cfb4d6e8e6314 3159 net-snmp_5.7.3+dfsg-5+deb10u3.dsc
+ 073eb05b926a9d23a2eba3270c4e52dd94c0aa27e8b7cf7f1a4e59a4d3da3fb5 3371224 net-snmp_5.7.3+dfsg.orig.tar.xz
+ 12dfbe8fc0941c637a0524e9d4677d57b17cb9d721cb4d0c8d4706896709a33d 85240 net-snmp_5.7.3+dfsg-5+deb10u3.debian.tar.xz
+ 3f7d4447154188556196f58ac98ad6e044243ee65031cdb0a5218fc497ee7749 12332 net-snmp_5.7.3+dfsg-5+deb10u3_amd64.buildinfo
+Files:
+ b58fb800fa423c6d82f8299c7c8a69fb 3159 net optional net-snmp_5.7.3+dfsg-5+deb10u3.dsc
+ 6391ae27eb1ae34ff5530712bb1c4209 3371224 net optional net-snmp_5.7.3+dfsg.orig.tar.xz
+ c15cfe4e2d5005fac462f3c499fb0f50 85240 net optional net-snmp_5.7.3+dfsg-5+deb10u3.debian.tar.xz
+ b653cbb8573b8249bf819f5c3522a3bf 12332 net optional net-snmp_5.7.3+dfsg-5+deb10u3_amd64.buildinfo
+

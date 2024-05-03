@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Apr 2023 18:50:25 +0300
+Source: wireshark
+Architecture: source
+Version: 2.6.20-0+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Balint Reczey <rbalint@ubuntu.com>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ wireshark (2.6.20-0+deb10u6) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-1161: ISO 15765 dissector crash.
+   * CVE-2023-1992: RPCoRDMA dissector crash.
+   * CVE-2023-1993: LISP dissector large loop vulnerability.
+   * CVE-2023-1994: GQUIC dissector crash.
+Checksums-Sha1:
+ bd46d3eb69233fab3d70ff4758ec46e603586a92 3565 wireshark_2.6.20-0+deb10u6.dsc
+ 2e4295eeba3f54134c1f37a6e931e0f4a67c0487 28805496 wireshark_2.6.20.orig.tar.xz
+ 65c91e606dcc7ec73911972d7b219c2a8e94a6c8 101468 wireshark_2.6.20-0+deb10u6.debian.tar.xz
+Checksums-Sha256:
+ ec2ac9105f586a3c182f8fa786498db21ea6a553b5a15aad6abe60f9e82a28db 3565 wireshark_2.6.20-0+deb10u6.dsc
+ a97a5f3934ef09b93236f7dbc97a162c0348667cbc9dd68291473b8f7b276c60 28805496 wireshark_2.6.20.orig.tar.xz
+ 4fc28955672bc46a189c8c6711f7b1105fd9551a193454d0a7c0954c5aa85e00 101468 wireshark_2.6.20-0+deb10u6.debian.tar.xz
+Files:
+ 20e90a4a7b3743c3492ac39e4bbf9c2e 3565 net optional wireshark_2.6.20-0+deb10u6.dsc
+ ac4f79c6878703634797e041fd136a98 28805496 net optional wireshark_2.6.20.orig.tar.xz
+ 0d6d5367b2bc0b1a46537dca510ec22b 101468 net optional wireshark_2.6.20-0+deb10u6.debian.tar.xz
+

@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Sep 2022 23:08:59 +0200
+Source: libhttp-daemon-perl
+Architecture: source
+Version: 6.01-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ libhttp-daemon-perl (6.01-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-31081
+     improved Content-Length: handling in HTTP-header
+Checksums-Sha1:
+ 2129acf1319986fb8bea5545176c11e69393a02e 2389 libhttp-daemon-perl_6.01-3+deb10u1.dsc
+ d3b7614d4b3be4b61d26011efe90026c955102a4 18628 libhttp-daemon-perl_6.01.orig.tar.gz
+ 2a2cc5e3d6e0d569bddea8005cb4ce311aac477f 10228 libhttp-daemon-perl_6.01-3+deb10u1.debian.tar.xz
+ 4dd7195cc3026773ef05630b22b43fc6f9b38072 6048 libhttp-daemon-perl_6.01-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ b0fa577cd40e51593bb60399c16bbfd842ba04c40c498cfc6e8e7a6ff4e52d58 2389 libhttp-daemon-perl_6.01-3+deb10u1.dsc
+ 43fd867742701a3f9fcc7bd59838ab72c6490c0ebaf66901068ec6997514adc2 18628 libhttp-daemon-perl_6.01.orig.tar.gz
+ 53c1190a499cad3537d7644d3cc5fd738e60ab9946092113f1a24dc2da61592a 10228 libhttp-daemon-perl_6.01-3+deb10u1.debian.tar.xz
+ e052aaaffb2c21bc23d5c6a064ac1fa7f763b88975ded5ac36d49846f7d8e52a 6048 libhttp-daemon-perl_6.01-3+deb10u1_amd64.buildinfo
+Files:
+ 93bd189050e7af3d242469c4009fcd0f 2389 perl optional libhttp-daemon-perl_6.01-3+deb10u1.dsc
+ ed0ae02d25d7f1e89456d4d69732adc2 18628 perl optional libhttp-daemon-perl_6.01.orig.tar.gz
+ 726b29eb6e97ea2d78e59a4a990fa63d 10228 perl optional libhttp-daemon-perl_6.01-3+deb10u1.debian.tar.xz
+ 0beee634d306a403a7489c5d6db0c16a 6048 perl optional libhttp-daemon-perl_6.01-3+deb10u1_amd64.buildinfo
+

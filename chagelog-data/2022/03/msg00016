@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 09 Mar 2022 17:02:09 +0100
+Source: tryton-proteus
+Architecture: source
+Version: 4.2.0-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Tryton Maintainers <maintainers@debian.tryton.org>
+Changed-By: Mathias Behrle <mathiasb@m9s.biz>
+Changes:
+ tryton-proteus (4.2.0-1+deb9u1) stretch-security; urgency=high
+ .
+   * This release contains fixes for XML parsing vulnerabilities:
+     https://discuss.tryton.org/t/security-release-for-issue11219-and-issue11244/5059
+     https://bugs.tryton.org/issue11219 (CVE-2022-26661)
+     https://bugs.tryton.org/issue11244 (CVE-2022-26662)
+Checksums-Sha1:
+ 78ffa83d58e4b696d52adb374f29981a62fa8742 2093 tryton-proteus_4.2.0-1+deb9u1.dsc
+ 0d3bb9b5b129cdfb9d5907b9d9a3532a143d8327 37393 tryton-proteus_4.2.0.orig.tar.gz
+ d0d40a95c2f0c0ebe65c49df34254a3196106cef 26968 tryton-proteus_4.2.0-1+deb9u1.debian.tar.xz
+ e73fc3451f5bed6634546827042e993d448241da 5760 tryton-proteus_4.2.0-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 36130671cc8efa808808139ad5a6abda2a0601a4a6e2ec9ac65b77d21dc9defd 2093 tryton-proteus_4.2.0-1+deb9u1.dsc
+ f84f6f469b579f200032cd7e287c40aaaf32ffa0f9a3de4fbf0ecfccfcafc675 37393 tryton-proteus_4.2.0.orig.tar.gz
+ 32e2ec986a39f722c132b741eccea6becb19e5fdd80d7b0119cddcec839bce01 26968 tryton-proteus_4.2.0-1+deb9u1.debian.tar.xz
+ 80d44b9d3d7591bedbce9ff8e9896185b1f05303ecced673aa7da879aae9532e 5760 tryton-proteus_4.2.0-1+deb9u1_source.buildinfo
+Files:
+ 839381fd01b9b2df4d943b08eb2eccf7 2093 python optional tryton-proteus_4.2.0-1+deb9u1.dsc
+ 53fdb65a513db22cf26c9e43d62ae5ea 37393 python optional tryton-proteus_4.2.0.orig.tar.gz
+ d0fd1be70e9a03400da06f6f5e1e8fd7 26968 python optional tryton-proteus_4.2.0-1+deb9u1.debian.tar.xz
+ 5b97437eecd5d66162d42c7391dd38d4 5760 python optional tryton-proteus_4.2.0-1+deb9u1_source.buildinfo
+

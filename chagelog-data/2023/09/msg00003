@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 07 Sep 2023 11:19:57 -0700
+Source: memcached
+Binary: memcached memcached-dbgsym
+Built-For-Profiles: nocheck
+Architecture: source amd64
+Version: 1.5.6-1.1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Guillaume Delacour <gui@iroqwa.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ memcached  - high-performance memory object caching system
+Changes:
+ memcached (1.5.6-1.1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-48571: Prevent a potential Denial of Service (DoS) attack that
+     could have been caused by a crash when handling multi-packet uploads in UDP
+     mode. Deployments of memcached that only use TCP are likely unaffected by
+     this issue.
+Checksums-Sha1:
+ 85a87f29bf017444c68809e1b2149f1da0ff1785 1980 memcached_1.5.6-1.1+deb10u1.dsc
+ ca35929e74b132c2495a6957cfdc80556337fb90 452038 memcached_1.5.6.orig.tar.gz
+ cec73ef4aa8c078f63259fe744ae2f7536faf620 14804 memcached_1.5.6-1.1+deb10u1.debian.tar.xz
+ dd16497f3032a9557cf4af3e9f2a6b7f8eed2596 255848 memcached-dbgsym_1.5.6-1.1+deb10u1_amd64.deb
+ bffbe7cf8faaf538fd19e633cac78adaf5fe13f2 6381 memcached_1.5.6-1.1+deb10u1_amd64.buildinfo
+ 878b89ed8b0e0fbd00c12efc37a4b71d9bb60de8 123060 memcached_1.5.6-1.1+deb10u1_amd64.deb
+Checksums-Sha256:
+ 2a62c705cc92f8ce413732639a8fcb9e074756ca299b00873877c907d09feba2 1980 memcached_1.5.6-1.1+deb10u1.dsc
+ 9675ee859d7d81f7a950f190a6812720b26f08228d356044ec517d4d5af25f03 452038 memcached_1.5.6.orig.tar.gz
+ d83569ffad7d331c83512bc93db1c0148548dc6eac5fe80f5b4f5f14dfbc7596 14804 memcached_1.5.6-1.1+deb10u1.debian.tar.xz
+ 7db89d34556def8c8496d77054e2ba76dd6aacb21cfb7dad54cafa897d7a2501 255848 memcached-dbgsym_1.5.6-1.1+deb10u1_amd64.deb
+ b9c1fca2f7824ca733243831c3ae087e51457b46fb4624e75addedc95ecd8e04 6381 memcached_1.5.6-1.1+deb10u1_amd64.buildinfo
+ 6ddf92b6167b20648053ffc133cae49e6beb43ccd341db6f82800be224eb177b 123060 memcached_1.5.6-1.1+deb10u1_amd64.deb
+Files:
+ c3c3d73f137dd744bcc3b92a7ccfcfa6 1980 web optional memcached_1.5.6-1.1+deb10u1.dsc
+ c795b34a5ed02305f9ecfeb747e5e1f7 452038 web optional memcached_1.5.6.orig.tar.gz
+ 0e27a4b2cd98e4e09a7f1f5d14b82b17 14804 web optional memcached_1.5.6-1.1+deb10u1.debian.tar.xz
+ d11dfe26b15ba04cb5e0c5723633ac1c 255848 debug optional memcached-dbgsym_1.5.6-1.1+deb10u1_amd64.deb
+ 58801e5fa89c47a3dd6cb60cb878a90e 6381 web optional memcached_1.5.6-1.1+deb10u1_amd64.buildinfo
+ ffaa83b06b6024aa987f9c328dcce445 123060 web optional memcached_1.5.6-1.1+deb10u1_amd64.deb
+

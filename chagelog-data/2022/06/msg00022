@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 26 Jun 2022 12:03:02 +0200
+Source: blender
+Binary: blender blender-data blender-dbg
+Architecture: source all amd64
+Version: 2.79.b+dfsg0-1~deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ blender    - Very fast and versatile 3D modeller/renderer
+ blender-data - Very fast and versatile 3D modeller/renderer - data package
+ blender-dbg - Very fast and versatile 3D modeller/renderer - debug package
+Changes:
+ blender (2.79.b+dfsg0-1~deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-0546
+     out-of-bounds heap access due to missing checks in the image loader
+     could result in denial of service, memory corruption or potentially
+     code execution
+   * CVE-2022-0545
+     integer overflow while processing 2d images might result in a
+     write-what-where vulnerability or an out-of-bounds read vulnerability
+     which could leak sensitive information or achieve code execution
+   * CVE-2022-0544
+     Crafted DDS image files could create an integer underflow in the
+     DDS loader which leads to an out-of-bounds read and might leak
+     sensitive information.
+Checksums-Sha1:
+ df978b70894df9016d124f2b3b8b7f4850c9756d 3096 blender_2.79.b+dfsg0-1~deb9u2.dsc
+ b38747179d834a4d629becf43dd3fb3ed689a843 34602744 blender_2.79.b+dfsg0.orig.tar.xz
+ ca4c5b092aa2bf309f49b825712484bbaeb4f5a2 224748 blender_2.79.b+dfsg0-1~deb9u2.debian.tar.xz
+ 6e6ee91aa973f80e95b7b5fe52b6281298b3e6af 12305648 blender-data_2.79.b+dfsg0-1~deb9u2_all.deb
+ 4f0e8dc50913a7a225579fc5f9a3d278ab61cef4 247118992 blender-dbg_2.79.b+dfsg0-1~deb9u2_amd64.deb
+ 9388418b7436f2fde46b741463e871d411f9ab43 18915 blender_2.79.b+dfsg0-1~deb9u2_amd64.buildinfo
+ ed21e97156da4257f3f519c1a18a99c8649caf44 26731580 blender_2.79.b+dfsg0-1~deb9u2_amd64.deb
+Checksums-Sha256:
+ 6c73aa992b2db2f0ee240c8d6dc7f53a3eeae265c3e49d490e47c6e479facb0c 3096 blender_2.79.b+dfsg0-1~deb9u2.dsc
+ 3e35b69b2a71c8333c24fc4a74a96745e25e780cd310b5e4bbc001f856be1dd2 34602744 blender_2.79.b+dfsg0.orig.tar.xz
+ a215773c02c6b049bb3881abff2fb5b4c66d023379a55497d5d57e2f45ff4c7f 224748 blender_2.79.b+dfsg0-1~deb9u2.debian.tar.xz
+ c9c6d565ac3077eade814ea6b521b2bd159ca0e60aad8bafd0ad9290b8be3569 12305648 blender-data_2.79.b+dfsg0-1~deb9u2_all.deb
+ 9fad03886940834eefbe058450708343fb6c4a229eb6b83b7c25bee43658c886 247118992 blender-dbg_2.79.b+dfsg0-1~deb9u2_amd64.deb
+ 19fda33d626561d3412f34718c941263cec0f93446be68f0f72881300c467d1c 18915 blender_2.79.b+dfsg0-1~deb9u2_amd64.buildinfo
+ 3956bd0f5e32e8b3a7e655f93b802cbe786c48fc312ffab1ad18cea5843e55e7 26731580 blender_2.79.b+dfsg0-1~deb9u2_amd64.deb
+Files:
+ 128d2ffa4bc82e28e7dfc80312076a39 3096 graphics optional blender_2.79.b+dfsg0-1~deb9u2.dsc
+ 7b6499fe1489df9fc46f442d4591b3df 34602744 graphics optional blender_2.79.b+dfsg0.orig.tar.xz
+ 951042d1ff2487b4391c6e764b9dc0de 224748 graphics optional blender_2.79.b+dfsg0-1~deb9u2.debian.tar.xz
+ 315b9f0647ebfbb0a3f2dc48b18ac009 12305648 graphics optional blender-data_2.79.b+dfsg0-1~deb9u2_all.deb
+ 80d7d3e7cac6c11e79d0d9fe81afab42 247118992 debug extra blender-dbg_2.79.b+dfsg0-1~deb9u2_amd64.deb
+ 3c5896729ef74add4a27d6610536749f 18915 graphics optional blender_2.79.b+dfsg0-1~deb9u2_amd64.buildinfo
+ 9f77c8c941770d97e5cc491ab4c85440 26731580 graphics optional blender_2.79.b+dfsg0-1~deb9u2_amd64.deb
+

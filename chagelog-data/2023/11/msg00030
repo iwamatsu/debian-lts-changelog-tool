@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 26 Nov 2023 22:55:02 +0200
+Source: gst-plugins-bad1.0
+Architecture: source
+Version: 1.14.4-1+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of GStreamer packages <gst-plugins-bad1.0@packages.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ gst-plugins-bad1.0 (1.14.4-1+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-44446
+     mxfdemux: Store GstMXFDemuxEssenceTrack in their own fixed allocation
+Checksums-Sha1:
+ c184fc22af4d14fbb24e0a1da5af7f89f49b6c41 4984 gst-plugins-bad1.0_1.14.4-1+deb10u5.dsc
+ e9900e00807df2e9a6e1cfd5e8405ae7f9262ac0 4678032 gst-plugins-bad1.0_1.14.4.orig.tar.xz
+ 960f6ef93771a9bfc93b6e880d0801ede6109b79 40032 gst-plugins-bad1.0_1.14.4-1+deb10u5.debian.tar.xz
+ 739ec7b492c801e9d6fbf37172c489791d05459b 31616 gst-plugins-bad1.0_1.14.4-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 559af4db99a71884a388ede94a72b388d0d8fbc5ba306c002cd3558537375861 4984 gst-plugins-bad1.0_1.14.4-1+deb10u5.dsc
+ 910b4e0e2e897e8b6d06767af1779d70057c309f67292f485ff988d087aa0de5 4678032 gst-plugins-bad1.0_1.14.4.orig.tar.xz
+ ef1f7b392baabf752518cf4a8878775fc87e1f8f4557ea0083c5b600cdd1fea1 40032 gst-plugins-bad1.0_1.14.4-1+deb10u5.debian.tar.xz
+ afee2200e92e5f145b3af3cdebf91542f5257de75bfa85cf737e47ccf246b226 31616 gst-plugins-bad1.0_1.14.4-1+deb10u5_amd64.buildinfo
+Files:
+ fcd84c421d4077800d40c8c6e275d51e 4984 libs extra gst-plugins-bad1.0_1.14.4-1+deb10u5.dsc
+ 5d20a91d027708abcf924f6c1279dd25 4678032 libs extra gst-plugins-bad1.0_1.14.4.orig.tar.xz
+ 62af0742a3c80eb100ee58f8ebc3965e 40032 libs extra gst-plugins-bad1.0_1.14.4-1+deb10u5.debian.tar.xz
+ f81c0ad9a00b69d5e7013331b56db9d5 31616 libs extra gst-plugins-bad1.0_1.14.4-1+deb10u5_amd64.buildinfo
+

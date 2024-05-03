@@ -1,0 +1,70 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Dec 2022 19:03:02 +0100
+Source: mplayer
+Binary: mencoder mencoder-dbgsym mplayer mplayer-dbgsym mplayer-doc mplayer-gui mplayer-gui-dbgsym
+Architecture: source amd64 all
+Version: 2:1.3.0-8+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ mencoder   - MPlayer's Movie Encoder
+ mplayer    - movie player for Unix-like systems
+ mplayer-doc - documentation for MPlayer
+ mplayer-gui - movie player for Unix-like systems (GUI variant)
+Changes:
+ mplayer (2:1.3.0-8+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Backport the following commits:
+     d19ea1ce173e95c31b0e8acbe471ea26c292be2b (CVE-2022-38850)
+     58db9292a414ebf13a2cacdb3ffa967fb9036935 (CVE-2022-38851)
+     2f6e69e59e2614acdde5505b049c48f80a3d0eb7 (CVE-2022-38855)
+     92e0d0b1a04dfdd4ac741e0d07005e3ece2c92ca (CVE-2022-38858)
+     62fe0c63cf4fba91efd29bbc85309280e1a99a47 (CVE-2022-38860)
+     2622e7fbe3605a2f3b4f74900197fefeedc0d2e1 (CVE-2022-38861)
+     b5e745b4bfab2835103a060094fae3c6cc1ba17d (CVE-2022-38863)
+     36546389ef9fb6b0e0540c5c3f212534c34b0e94 (CVE-2022-38864)
+     33d9295663c37a37216633d7e3f07e7155da6144 (CVE-2022-38865)
+     373517da3bb5781726565eb3114a2697b13f00f2 (CVE-2022-38866)
+     (based on the patch from Moritz for Bullseye)
+Checksums-Sha1:
+ e13bfa4ecc12234c13ebcec0e8da482d494b0c1b 3516 mplayer_1.3.0-8+deb10u1.dsc
+ 26a52b0e713c9cf140c56b14711f9df28a772a11 5199400 mplayer_1.3.0.orig.tar.xz
+ b4a30b9b3e8375c8bb0cadeade05e32424e8b567 46612 mplayer_1.3.0-8+deb10u1.debian.tar.xz
+ 69d19da9cffa2df81199b29042ea6273937b6fe1 2931816 mencoder-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ 61fa5e26a603a1569bcc2e56427e92095b18ee85 855884 mencoder_1.3.0-8+deb10u1_amd64.deb
+ afc77273428b308ec913e252aa26c1ecc6dcba13 3760788 mplayer-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ 5022ffea73ca1fd139eabcf638c70747c86a1125 1332628 mplayer-doc_1.3.0-8+deb10u1_all.deb
+ 9965e3c096cb6810287772b838bd37d19b40c347 4321320 mplayer-gui-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ e5c94c2bd3cacc9b5157faa499b1781222230751 1352924 mplayer-gui_1.3.0-8+deb10u1_amd64.deb
+ 704bb4d86ae4c95f17fad0da15cc00d442087999 21235 mplayer_1.3.0-8+deb10u1_amd64.buildinfo
+ d5bf8bda2c5a331f6abc3aa5507ff9e111798a42 2312612 mplayer_1.3.0-8+deb10u1_amd64.deb
+Checksums-Sha256:
+ 1decf0a38f9f2af17ad63b6d0f14a4968704059e74ef055936a1ba3c3e54ea24 3516 mplayer_1.3.0-8+deb10u1.dsc
+ e836081b1afa0069dcf4a55fce7aad40bf1f1e66ff8993c51e4b7ff790c8355c 5199400 mplayer_1.3.0.orig.tar.xz
+ 4559698d30bb51de71f0352af14be931edff8a395783651892f4958bfdab2154 46612 mplayer_1.3.0-8+deb10u1.debian.tar.xz
+ dd73ab7a835382b42b39b066be601ac340e4d5feed4be5d991f3512e2ca6a8e9 2931816 mencoder-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ 4058f0c5cbf1051879da4e3bf27f8c4463ca5777704e2b8b9ec8dfd69da52294 855884 mencoder_1.3.0-8+deb10u1_amd64.deb
+ c34a983f680ed7d487c1c50803eabd0758c1dc9e845a376b03480465e73ef38f 3760788 mplayer-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ c0b6915ce27fa584c7fcaa5ccf0704e3d435434474c4bb151292a2a026411c71 1332628 mplayer-doc_1.3.0-8+deb10u1_all.deb
+ ab07cffed3d5ac37ec73b997f4c0d68ca884cdb2aa02a3d603b04d4020e3ded2 4321320 mplayer-gui-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ 025cc19388e732517adf703364201f0463b1342cb5d3203a66cd2423ad4bbb0e 1352924 mplayer-gui_1.3.0-8+deb10u1_amd64.deb
+ cd1315b766fd62934f578a1b965ca0bd280a778bdd3d0911ccd847b5d2c8b39e 21235 mplayer_1.3.0-8+deb10u1_amd64.buildinfo
+ ca71cd8320d64b3c6915771b1247ad50154b8da98b1c5bd5c35efeb16e687e5c 2312612 mplayer_1.3.0-8+deb10u1_amd64.deb
+Files:
+ 1e13d677f77ca5ad1d605ba38f1ddd21 3516 video optional mplayer_1.3.0-8+deb10u1.dsc
+ a337a4e5e209663f700fc204ec01533f 5199400 video optional mplayer_1.3.0.orig.tar.xz
+ fe80714e9f8d4a9b00182221a96c2708 46612 video optional mplayer_1.3.0-8+deb10u1.debian.tar.xz
+ e89bdba797836e71283f6053e4b59f6f 2931816 debug optional mencoder-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ 402b15787cbc67c4ea4a3b3d54f3ae09 855884 video optional mencoder_1.3.0-8+deb10u1_amd64.deb
+ 8973a0e1b55a988a9a8a75509ca6b4ea 3760788 debug optional mplayer-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ 8703cb7425c2940dfc988e75499adccb 1332628 doc optional mplayer-doc_1.3.0-8+deb10u1_all.deb
+ b147855bf1648251391c608ee57b6eec 4321320 debug optional mplayer-gui-dbgsym_1.3.0-8+deb10u1_amd64.deb
+ a51d632d105563021970ebfc3f2ff1d8 1352924 video optional mplayer-gui_1.3.0-8+deb10u1_amd64.deb
+ a414e1f4dc7462d6706dd6ea1dda6509 21235 video optional mplayer_1.3.0-8+deb10u1_amd64.buildinfo
+ 3a6fb07343a3bb6ef9774595a6c37edb 2312612 video optional mplayer_1.3.0-8+deb10u1_amd64.deb
+

@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 26 Sep 2022 06:17:50 +0200
+Source: dovecot
+Architecture: source
+Version: 1:2.3.4.1-5+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Dovecot Maintainers <dovecot@packages.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ dovecot (1:2.3.4.1-5+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-30550: fix handling passdbs with identical driver/args.
+   * CVE-2021-33515: fix STARTTLS command injection vulnerability.
+Checksums-Sha1:
+ c33ce58594e3f7ded7d2c2019be5a13b1d35fde2 3375 dovecot_2.3.4.1-5+deb10u7.dsc
+ c542ee828968a4dc7b0b0aaae6d45783ffdb24cc 562132 dovecot_2.3.4.1-5+deb10u7.debian.tar.xz
+ d132a4a159f6a79fc5a669df8246466d7611c61c 8395 dovecot_2.3.4.1-5+deb10u7_source.buildinfo
+Checksums-Sha256:
+ 1f5d3a2add712d4fa11a50ae928afb8343ad6f984b5ee816745435c61139746c 3375 dovecot_2.3.4.1-5+deb10u7.dsc
+ 57da52b47081036c56c4ad5cbf618cd7d540abbc98c56153e47887130d76ec4b 562132 dovecot_2.3.4.1-5+deb10u7.debian.tar.xz
+ 782b67371091b07c28141ba7c8fc804d393b702a3b14a5fb12511d9de965b2f1 8395 dovecot_2.3.4.1-5+deb10u7_source.buildinfo
+Files:
+ feafd15bd53c391afd2d97b1aa383b80 3375 mail optional dovecot_2.3.4.1-5+deb10u7.dsc
+ 95570b703a0b03b818181fd5a2e1e310 562132 mail optional dovecot_2.3.4.1-5+deb10u7.debian.tar.xz
+ 873b899505a5ff638feb47e6c4c8c311 8395 mail optional dovecot_2.3.4.1-5+deb10u7_source.buildinfo
+

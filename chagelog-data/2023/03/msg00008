@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 08 Mar 2023 22:39:52 +0000
+Source: shim-signed
+Architecture: source
+Version: 1.39~1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian EFI Team <debian-efi@lists.debian.org>
+Changed-By: Steve McIntyre <93sam@debian.org>
+Changes:
+ shim-signed (1.39~1+deb10u1) buster-security; urgency=medium
+ .
+   * Build against new signed binaries corresponding to 15.7-1~deb10u1
+     Pulls multiple bugfixes in for the signed version:
+     + Make sbat_var.S parse right with buggy gcc/binutils
+     + Enable NX support at build time, as required by policy for signing
+       new shim binaries.
+   * Update build-dep on shim-unsigned to use 15.7-1~deb10u1
+   * Block Debian grub binaries with sbat < 4 (see #1024617)
+     + Update Depends on grub2-common to match.
+   * postinst/postrm: make config_item() more robust
+Checksums-Sha1:
+ f878ba7725af8a68dfc1b1264a383ef40c06d0c8 1855 shim-signed_1.39~1+deb10u1.dsc
+ 21e14878f3c09508dbddb13e35d224b57123c780 568008 shim-signed_1.39~1+deb10u1.tar.xz
+ 27a26baddb6e3925fa710929cfb41e91c82e3b8f 5652 shim-signed_1.39~1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ a77034920aaf10825433141e949b32f4b99a96b08870a80d87f4fd10d6b0d468 1855 shim-signed_1.39~1+deb10u1.dsc
+ 50f6eeea1605327a6c8d30277b18eb78ff09eea3123f8c63faf9eb1a6d7fbcd6 568008 shim-signed_1.39~1+deb10u1.tar.xz
+ ceb59ac3b821a82656f14a7901169dbe0a6b04a257cfb8e106aa2e92036319ca 5652 shim-signed_1.39~1+deb10u1_source.buildinfo
+Files:
+ 9eeb9786e5fb72d0a077038c73ca6273 1855 utils optional shim-signed_1.39~1+deb10u1.dsc
+ 4cc43d9bec5f368910e58bdd9a76ec9c 568008 utils optional shim-signed_1.39~1+deb10u1.tar.xz
+ fb4fbeff1ff1141cad7fcd5de713fb90 5652 utils optional shim-signed_1.39~1+deb10u1_source.buildinfo
+

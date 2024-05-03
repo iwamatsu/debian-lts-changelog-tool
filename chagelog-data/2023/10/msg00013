@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 05 Oct 2023 14:39:20 +0100
+Source: qemu
+Architecture: source
+Version: 1:3.1+dfsg-8+deb10u11
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1029155
+Changes:
+ qemu (1:3.1+dfsg-8+deb10u11) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-24165: Use-after-free race could lead to the execution of
+     arbitrary code.
+   * CVE-2023-0330: A DMA-MMIO reentrancy problem in the lsi53c895a device
+     may lead to memory corruption bugs like stack overflow or
+     use-after-free. (Closes: #1029155).
+   * CVE-2023-3180: The function virtio_crypto_sym_op_helper, part of the
+     implementation of qemu's virtual crypto device, does not check that
+     the values of 'src_len' and 'dst_len' are the same.  This could lead
+     to a heap buffer overflow.
+Checksums-Sha1:
+ 13bb2abc09e394b8246513251fd87b7d26c4037c 6521 qemu_3.1+dfsg-8+deb10u11.dsc
+ 215cfb335bdcb321817ee4cacf16e8e619dc67bf 145104 qemu_3.1+dfsg-8+deb10u11.debian.tar.xz
+ de13a8d82f120936a7a08ae2e16f5dba04772f06 15462 qemu_3.1+dfsg-8+deb10u11_source.buildinfo
+Checksums-Sha256:
+ 860db8af4a3dde04d74e57c0a6cdaccd00f313dd6afc331617879916c5bc7702 6521 qemu_3.1+dfsg-8+deb10u11.dsc
+ 0b3bc555dde608d1fb7bd51f4631a8c2692f0633e59eb3f547b2690817859d93 145104 qemu_3.1+dfsg-8+deb10u11.debian.tar.xz
+ 1caa151df1a1718500ad8075ba758338e25f3c3218b164f4c7239b1385ade428 15462 qemu_3.1+dfsg-8+deb10u11_source.buildinfo
+Files:
+ f277b4f8c6f5cad6db436da0454a3677 6521 otherosfs optional qemu_3.1+dfsg-8+deb10u11.dsc
+ d3bad46744ff22c29eb342b068d70864 145104 otherosfs optional qemu_3.1+dfsg-8+deb10u11.debian.tar.xz
+ 0277a2b4c99ff54f495a29f5993f3f41 15462 otherosfs optional qemu_3.1+dfsg-8+deb10u11_source.buildinfo
+

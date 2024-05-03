@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 11 Aug 2023 19:09:29 +0000
+Source: libreoffice
+Architecture: source
+Version: 1:6.1.5-3+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ libreoffice (1:6.1.5-3+deb10u9) buster-security; urgency=medium
+ .
+   * Team upload by the LTS team
+   * CVE-2022-3874: Libreoffice may be configured to add an empty
+     entry to the Java class path.
+     This may lead to run arbitrary Java code from the
+     current directory.
+   * CVE-2023-0950: Improper Validation of Array Index vulnerability in the
+     spreadsheet component allows an attacker to craft a
+     spreadsheet document that will cause an array index
+     underflow when loaded. In the affected versions of LibreOffice
+     certain malformed spreadsheet formulas, such as AGGREGATE,
+     could be created with less parameters passed to the formula
+     interpreter than it expected, leading to an array index
+     underflow, in which case there is a risk that arbitrary
+     code could be executed.
+Checksums-Sha1:
+ 5d91a7d4a20514bb7f3e51712e8911109ee4abe8 27751 libreoffice_6.1.5-3+deb10u9.dsc
+ 1e79c5a0a34d93734b4f7ed7a75c91e644f63f0e 9998300 libreoffice_6.1.5-3+deb10u9.debian.tar.xz
+ 412c393a7373f1774f891577fd251360f160e19c 108556 libreoffice_6.1.5-3+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ 94eef0b00aa050bf169bd1450df393cf292b065e8ce0a1be5bb4f40371a7e27b 27751 libreoffice_6.1.5-3+deb10u9.dsc
+ e3d43686ddac6653fae4056a53ef7fade40e62d793c6169617f4b53d27a1991b 9998300 libreoffice_6.1.5-3+deb10u9.debian.tar.xz
+ 8ee42a9cc404068c236db246b175c50f2694ef02a3f974fb4892da06821463c0 108556 libreoffice_6.1.5-3+deb10u9_amd64.buildinfo
+Files:
+ 8d9bc422e345b328f1b3ae9c3c8f3dac 27751 editors optional libreoffice_6.1.5-3+deb10u9.dsc
+ 8e453d22d9d8c8e83939813823511a38 9998300 editors optional libreoffice_6.1.5-3+deb10u9.debian.tar.xz
+ 46cfbc9f00faaf36a29c5843e94d9a59 108556 editors optional libreoffice_6.1.5-3+deb10u9_amd64.buildinfo
+

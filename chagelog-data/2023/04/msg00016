@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 18 Apr 2023 23:36:00 CEST
+Source: asterisk
+Architecture: source
+Version: 1:16.28.0~dfsg-0+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1672858ecd6a66255fff6436d9ca890e5b31fa2d 4397 asterisk_16.28.0~dfsg-0+deb10u3.dsc
+ 772055eb4ace0f489628d40941f16b8a799d16f5 6836816 asterisk_16.28.0~dfsg-0+deb10u3.debian.tar.xz
+ 150a202a01f40d38f458f24ae59893d3e21f5e84 28792 asterisk_16.28.0~dfsg-0+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 2ebf924dc7f1f2f38bf7aebea0f02232cb5613d56373d9ac3ba7b9900021bb4c 4397 asterisk_16.28.0~dfsg-0+deb10u3.dsc
+ 5dc46f3c3e48f2c0e7e548423829f58f22661658cea6a1f72410316ea7a990dd 6836816 asterisk_16.28.0~dfsg-0+deb10u3.debian.tar.xz
+ 61e6890f00cbcb38bf53f9eba4ab55f2f04455d3f0ef9cab2b555f98f7d31e30 28792 asterisk_16.28.0~dfsg-0+deb10u3_amd64.buildinfo
+Changes:
+ asterisk (1:16.28.0~dfsg-0+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-27585:
+     A flaw was found in Asterisk, an Open Source Private Branch Exchange. A
+     buffer overflow vulnerability affects users that use PJSIP DNS resolver.
+     This vulnerability is related to CVE-2022-24793. The difference is that
+     this issue is in parsing the query record `parse_query()`, while the issue
+     in CVE-2022-24793 is in `parse_rr()`. A workaround is to disable DNS
+     resolution in PJSIP config (by setting `nameserver_count` to zero) or use
+     an external resolver implementation instead.
+Files:
+ 28e52b2865918cba1d59ca96e1d2ec00 4397 comm optional asterisk_16.28.0~dfsg-0+deb10u3.dsc
+ c7776fc1914220ec693a2048d1b3d774 6836816 comm optional asterisk_16.28.0~dfsg-0+deb10u3.debian.tar.xz
+ 155beb206086919aded863e1e1293d5c 28792 comm optional asterisk_16.28.0~dfsg-0+deb10u3_amd64.buildinfo
+

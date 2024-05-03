@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 Nov 2023 11:19:08 +0000
+Source: zbar
+Architecture: source
+Version: 0.22-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1051724
+Changes:
+ zbar (0.22-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix two security bug (Closes: #1051724):
+     - Fix CVE-2023-40889: A heap-based buffer o verflow existed
+       in the qr_reader_match_centers function.
+       Specially crafted QR codes may lead to information disclosure
+       and/or arbitrary code execution. To trigger this
+       vulnerability, an attacker can digitally input the
+       malicious QR code, or prepare it to be physically scanned
+       by the vulnerable scanner.
+     - Fix CVE-2023-40890: A stack overflow was present in lookup_sequence
+       function of ZBar 0.23.90. Specially crafted QR codes may lead
+       to information disclosure and/or arbitrary code execution.
+       To trigger this vulnerability, an attacker can digitally input
+       the malicious QR code, or prepare it to be physically scanned
+       by the vulnerable scanner.
+Checksums-Sha1:
+ 39093d8b88426134be6bd1b7202547624fc89a0d 2514 zbar_0.22-1+deb10u1.dsc
+ dcb7e74e1e1e40b127924d526be0a4b87c0e128b 959505 zbar_0.22.orig.tar.gz
+ 599fa129b551524b86951ebdb4c99a7dbc2cdc1a 11520 zbar_0.22-1+deb10u1.debian.tar.xz
+ 95ffdd5bf2a83491bc36e56c05eff1f24056dad9 21478 zbar_0.22-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 684fbfee9161c10fcea5a1253ddad54af8ca67b68026934110b809c908baacb9 2514 zbar_0.22-1+deb10u1.dsc
+ 248ac4573a6d3ff533756a26fa16acea47f23dd1c9eb8ef05fc03d88c6069bd4 959505 zbar_0.22.orig.tar.gz
+ 617b9307a43238c7d26cdb5dcddb172805346c5717b76c6a011199284e15e8f2 11520 zbar_0.22-1+deb10u1.debian.tar.xz
+ df333b0c652d7fa716a680107d302f2ba47d9cfc154ec9c09fcc8ca8ba561398 21478 zbar_0.22-1+deb10u1_amd64.buildinfo
+Files:
+ 697a77d79ea5cc994a08046777365367 2514 libs optional zbar_0.22-1+deb10u1.dsc
+ 25ee5ca0176b41d72c5564cc43d5e6f0 959505 libs optional zbar_0.22.orig.tar.gz
+ 6206448a5498cfd4e3b47d69077ab09b 11520 libs optional zbar_0.22-1+deb10u1.debian.tar.xz
+ 46a93e40ff5708371130827f54b95968 21478 libs optional zbar_0.22-1+deb10u1_amd64.buildinfo
+

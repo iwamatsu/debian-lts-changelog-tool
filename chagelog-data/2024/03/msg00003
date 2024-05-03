@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 05 Mar 2024 12:14:11 +0100
+Source: phpseclib
+Architecture: source
+Version: 1.0.19-3~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ phpseclib (1.0.19-3~deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-27354: An attacker can construct a malformed certificate
+     containing an extremely large prime to cause a denial of service.
+   * Fix CVE-2024-27355: When processing the ASN.1 object identifier of a
+     certificate, a sub identifier may be provided that leads to a denial of
+     service.
+   * d/autoload.php.tpl: Adjust dependency loading for consistency with
+     1.0.19-3+deb11u2.
+Checksums-Sha1:
+ 82acbad8dc41dc2d84fd94c056b6a22a77db376b 2126 phpseclib_1.0.19-3~deb10u3.dsc
+ c95eb9496508d6cadb38af2ada5f221f161754c3 170036 phpseclib_1.0.19-3~deb10u3.debian.tar.xz
+ 05dc4deef75285baf7db01cc7f6b1e1e583d50cb 7629 phpseclib_1.0.19-3~deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ b62394ae7666a272b0e66f1b4af40f9540f41661a76eecaf8239e8f0430caa15 2126 phpseclib_1.0.19-3~deb10u3.dsc
+ e8a0f466d1bdcbb8088d9f66239240622443a3682af3d53da3472a3b4aa288a7 170036 phpseclib_1.0.19-3~deb10u3.debian.tar.xz
+ e51e1f66194ee38f6e5fb1d09977e2c1b734b290eff102dca4c035a8ebb8b1f9 7629 phpseclib_1.0.19-3~deb10u3_amd64.buildinfo
+Files:
+ a072088afd62d64fd8e351c1746270cd 2126 php optional phpseclib_1.0.19-3~deb10u3.dsc
+ 4bc76eae669c7737f186e9aca566ceb3 170036 php optional phpseclib_1.0.19-3~deb10u3.debian.tar.xz
+ 12288970d639e2a22b11c00eae0b8e5e 7629 php optional phpseclib_1.0.19-3~deb10u3_amd64.buildinfo
+

@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 23 Jan 2022 23:56:00 +0530
+Source: aide
+Architecture: source
+Version: 0.16-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Aide Maintainers <pkg-aide-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ aide (0.16-1+deb9u1) stretch-security; urgency=high
+ .
+   * Apply backported patch to fix heap-based buffer
+     overflow in base64 functions. (CVE-2021-45417)
+Checksums-Sha1:
+ 491ea3048d1e04f2d9197502b9a2f368f570741c 2384 aide_0.16-1+deb9u1.dsc
+ b97f65bb12701a42baa2cce45b41ed6367a70734 391009 aide_0.16.orig.tar.gz
+ fbe37b812b8535f0cf8711b91f6bc70b49a496ea 80268 aide_0.16-1+deb9u1.debian.tar.xz
+ 3065975511ee545e84a52fb02924cde848264428 6516 aide_0.16-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 8c80ed959b93f76d95f17c803f528fdb1a3408243f806109554a1e2fa23bf01b 2384 aide_0.16-1+deb9u1.dsc
+ a81c53a131c4fd130b169b3a26ac35386a2f6e1e014f12807524cc273ed97345 391009 aide_0.16.orig.tar.gz
+ c8436254e5c0acfa511ec37dfc586e1ea8235ff75dfcede321e9524fd33ba832 80268 aide_0.16-1+deb9u1.debian.tar.xz
+ 9fc70c9e0e05819eb4bdb2f5309442671438be6228368510e019c9a4dbcd9115 6516 aide_0.16-1+deb9u1_source.buildinfo
+Files:
+ f2fe212d986250fa3b61599e650b2931 2384 admin optional aide_0.16-1+deb9u1.dsc
+ 25c616f67c667acd4088747ae7f6a9a3 391009 admin optional aide_0.16.orig.tar.gz
+ 6f8a1ca8e1cba6d3df0c04f74bfb405b 80268 admin optional aide_0.16-1+deb9u1.debian.tar.xz
+ babd378452fcb76d387419bcc28988dc 6516 admin optional aide_0.16-1+deb9u1_source.buildinfo
+

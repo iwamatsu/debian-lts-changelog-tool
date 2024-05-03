@@ -1,0 +1,56 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 24 Apr 2023 06:08:15 +0200
+Source: 389-ds-base
+Architecture: source
+Version: 1.4.0.21-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@alioth-lists.debian.net>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ 389-ds-base (1.4.0.21-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-4091: double free of the virtual attribute context in
+                    persistent search.
+   * CVE-2022-0918: an unauthenticated attacker with network access to
+                    the LDAP port
+                    can cause a denial of service.
+   * CVE-2022-0996: expired password was still allowed to access the database.
+   * CVE-2022-2850: possible NULL pointer dereference leading to a denial of
+                    service.
+   * CVE-2021-3652: importing an asterisk as password hashes enables successful
+                    authentication with any password, allowing attackers to
+                    access accounts with disabled passwords.
+   * CVE-2021-3514: an authenticated attacker can crash 389-ds-base using a
+                    specially crafted query in sync_repl client, due to a NULL
+                    pointer dereference.
+   * CVE-2019-14824:deref plugin vulnerability lets authenticated attackers
+                    access private attributes, like password hashes, using the
+                    'search' permission.
+   * CVE-2019-10224:vulnerability that may disclose sensitive information,
+                    including the Directory Manager password, when executing
+                    dscreate and dsconf commands in verbose mode.and dsconf
+                    commands in verbose mode and recording the terminal standard
+                    error output.
+   * CVE-2019-3883: SSL/TLS requests do not enforce ioblocktimeout limit, leading
+                    to DoS vulnerability by hanging all workers with hanging LDAP
+                    requests.
+Checksums-Sha1:
+ afe31edc81eb356f1a60cee407030be566956382 2861 389-ds-base_1.4.0.21-1+deb10u1.dsc
+ 0da4dd27166f637ec4ded2237edb9a29b6c5bada 9040466 389-ds-base_1.4.0.21.orig.tar.bz2
+ 846ec2af3d22404fc4600e8592108046c7f50d38 456012 389-ds-base_1.4.0.21-1+deb10u1.debian.tar.xz
+ c6ad9e105967b4a93dc26bc30d50cd741f0bde93 8835 389-ds-base_1.4.0.21-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 096052071d315949e99f7cbf7e4bf7dce230cc302b29c23aa37b7161c8d3371e 2861 389-ds-base_1.4.0.21-1+deb10u1.dsc
+ 597b958a5f22dfda4f3b5e975c69a23c1e3818779fa5d0008ebedbd2ca55a1e1 9040466 389-ds-base_1.4.0.21.orig.tar.bz2
+ 5d479ab84174c1dd765367b131b268324f342c677e19878782dbf8f7e624f07f 456012 389-ds-base_1.4.0.21-1+deb10u1.debian.tar.xz
+ d81588555dcd1527125995da401c8962913e46bfe18a938484843f6a0ed128d0 8835 389-ds-base_1.4.0.21-1+deb10u1_source.buildinfo
+Files:
+ 5c3e14f2f657b853f93d642cd8aac949 2861 net optional 389-ds-base_1.4.0.21-1+deb10u1.dsc
+ ca85333e9f3525ff7751b8ea28185e86 9040466 net optional 389-ds-base_1.4.0.21.orig.tar.bz2
+ 1028e539872169efdf01900ea573c123 456012 net optional 389-ds-base_1.4.0.21-1+deb10u1.debian.tar.xz
+ c8bb43dd70daa773b3202e01fb39e2d2 8835 net optional 389-ds-base_1.4.0.21-1+deb10u1_source.buildinfo
+

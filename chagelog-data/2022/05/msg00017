@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 12 May 2022 21:01:36 -0400
+Source: lrzip
+Architecture: source
+Version: 0.631-1+deb9u3
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ lrzip (0.631-1+deb9u3) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-28044: Resolve a potential heap corruption.
+Checksums-Sha1:
+ 7f183e6c99f1ed2971355f05eaf05c7b596ce61d 1254 lrzip_0.631-1+deb9u3.dsc
+ a244712f8cf2c583f7ccf85f19b78a6e5cdb13f7 21188 lrzip_0.631-1+deb9u3.debian.tar.xz
+ 8d047c1e8d338119b47d2a56cb0424a367d8c69d 5218 lrzip_0.631-1+deb9u3_source.buildinfo
+Checksums-Sha256:
+ 38c5a18d34212b560f604f1679dae05ac2596f83fb710cc1d34fcac5316d56f7 1254 lrzip_0.631-1+deb9u3.dsc
+ 5f6c03cc50f0c8675cda658bafbb4f7ff190ecc2280fbbc6581e057788113719 21188 lrzip_0.631-1+deb9u3.debian.tar.xz
+ e633dffbea6f45dcfa90ccb5727919fe85e20591b0d6cc18caafd198ea345258 5218 lrzip_0.631-1+deb9u3_source.buildinfo
+Files:
+ cf960695ced37913a17839a273dbc89c 1254 utils optional lrzip_0.631-1+deb9u3.dsc
+ 5242080ea9cf225867cb97c275f5a419 21188 utils optional lrzip_0.631-1+deb9u3.debian.tar.xz
+ 31609a24b0454f67eded7c15098e6af3 5218 utils optional lrzip_0.631-1+deb9u3_source.buildinfo
+

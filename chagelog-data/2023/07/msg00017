@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 11 Jul 2023 19:13:09 +0200
+Source: yajl
+Architecture: source
+Version: 2.1.0-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: John Stamp <jstamp@users.sourceforge.net>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1040036
+Changes:
+ yajl (2.1.0-3+deb10u2) buster-security; urgency=medium
+ .
+   [Tobias Frost]
+   * Non-maintainer upload by the LTS Security Team.
+   * Cherry pick John's CVE fixes from 2.1.0-4
+   * Fix for CVE-2023-33460 was incomplete, also fix the second memory leak.
+ .
+   [John Stamp]
+   * Patch CVE-2017-16516 and CVE-2022-24795 (Closes: #1040036)
+Checksums-Sha1:
+ 81cfa50512d940752c0a4d2c93e20be1d351490f 1980 yajl_2.1.0-3+deb10u2.dsc
+ 4617217f38b4b705b9e214c9095ad91c5698bc87 7256 yajl_2.1.0-3+deb10u2.debian.tar.xz
+ 0dfa3c1b94dcf93edc8ad0fa590d63e4bf53a4ba 8175 yajl_2.1.0-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 3db9d159783812644e21a81b21244a4dca68a00b8a542376446c945cf65bbc2a 1980 yajl_2.1.0-3+deb10u2.dsc
+ 3e563d22ba6c1a8f38e830dc2a84ee50bf30a29ef0c7f492cac219e6be3b3b6d 7256 yajl_2.1.0-3+deb10u2.debian.tar.xz
+ fe85270071abf5547af42ecdbaff9620aeaa4d716e8175f154a3032af90c743d 8175 yajl_2.1.0-3+deb10u2_amd64.buildinfo
+Files:
+ 051ea89f63c5c765bb29bc49efb6fb83 1980 libs optional yajl_2.1.0-3+deb10u2.dsc
+ b21ac08714432a63b2aa8201a04d36f6 7256 libs optional yajl_2.1.0-3+deb10u2.debian.tar.xz
+ 6c447581722a4df3cb8a577153e2a389 8175 libs optional yajl_2.1.0-3+deb10u2_amd64.buildinfo
+

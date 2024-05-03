@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 11 Feb 2022 10:34:30 +0100
+Source: pgbouncer
+Architecture: source
+Version: 1.7.2-2+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ pgbouncer (1.7.2-2+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-3935: prevent SQL injection if cert connections are
+     intercepted.
+Checksums-Sha1:
+ 209af7195ee9d6e45fb66f316bec83a004eba9c1 2223 pgbouncer_1.7.2-2+deb9u1.dsc
+ d9bb29da15d90713e2399af3ebf5019da5cbe2d6 462374 pgbouncer_1.7.2.orig.tar.gz
+ b7686458b0f4cc2c1f973ad079aaa3580989910b 10248 pgbouncer_1.7.2-2+deb9u1.debian.tar.xz
+ 1598d21d056c99c1393e2e1c8f6248a98d1c6cc4 5836 pgbouncer_1.7.2-2+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 124c6005d9d7da419b10308aa71d3c2ba4ee1a418afc538ca91b862e5c3b29b3 2223 pgbouncer_1.7.2-2+deb9u1.dsc
+ de36b318fe4a2f20a5f60d1c5ea62c1ca331f6813d2c484866ecb59265a160ba 462374 pgbouncer_1.7.2.orig.tar.gz
+ 19d67dddc2c4459c61f2a39b0c067875160409689a19e909c812b14d517311bb 10248 pgbouncer_1.7.2-2+deb9u1.debian.tar.xz
+ 7b185fb324e529b7c9db17262ad6bc9ed8e0248c31c9d3b4d598df19415bea15 5836 pgbouncer_1.7.2-2+deb9u1_source.buildinfo
+Files:
+ fa4b0397df1c09a5be7a8fd68bd1ff05 2223 database optional pgbouncer_1.7.2-2+deb9u1.dsc
+ 16552367448d80ab2a81eeff825f7006 462374 database optional pgbouncer_1.7.2.orig.tar.gz
+ 13790a390d398ced72cc154547d77442 10248 database optional pgbouncer_1.7.2-2+deb9u1.debian.tar.xz
+ 873c8291c3fc8e5fb66e82091ab8143d 5836 database optional pgbouncer_1.7.2-2+deb9u1_source.buildinfo
+

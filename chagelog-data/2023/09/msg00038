@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 25 Sep 2023 21:48:23 CEST
+Source: netatalk
+Architecture: source
+Version: 3.1.12~ds-3+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Netatalk team <pkg-netatalk-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 589f640019c38a7efae79b9012f812294522e0f3 2675 netatalk_3.1.12~ds-3+deb10u4.dsc
+ c813909d572c0bacdee959fd2301da035945bb1f 68448 netatalk_3.1.12~ds-3+deb10u4.debian.tar.xz
+ 694d2a4c594d4b3bc94d022239d1b60bf182c272 10388 netatalk_3.1.12~ds-3+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 66df47fde9153270040a6e8b400ea93cd1ecaa0a7ca3cf86054140b487642663 2675 netatalk_3.1.12~ds-3+deb10u4.dsc
+ a0133f71ec004080686c27634372dba0fcbfc1194ad952085255a8f8ae592e0e 68448 netatalk_3.1.12~ds-3+deb10u4.debian.tar.xz
+ 1ea5ed60658cfbc4b08426fc957f2155a7043be00dcbd798a0b4c2f9ce991dda 10388 netatalk_3.1.12~ds-3+deb10u4_amd64.buildinfo
+Changes:
+ netatalk (3.1.12~ds-3+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Florent Saudel and Arnaud Gatignol discovered a Type Confusion
+     vulnerability in the Spotlight RPC functions in afpd in Netatalk. When
+     parsing Spotlight RPC packets, one encoded data structure is a key-value
+     style dictionary where the keys are character strings, and the values can
+     be any of the supported types in the underlying protocol. Due to a lack of
+     type checking in callers of the dalloc_value_for_key() function, which
+     returns the object associated with a key, a malicious actor may be able to
+     fully control the value of the pointer and theoretically achieve Remote
+     Code Execution on the host.
+Files:
+ b7d719d3e6bd84a2252f9874f8339526 2675 net optional netatalk_3.1.12~ds-3+deb10u4.dsc
+ f42e6ec5bbffe96cd144268042dd3646 68448 net optional netatalk_3.1.12~ds-3+deb10u4.debian.tar.xz
+ a12450c1f919bab95a8c5a7c6649435f 10388 net optional netatalk_3.1.12~ds-3+deb10u4_amd64.buildinfo
+

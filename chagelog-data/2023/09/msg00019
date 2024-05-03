@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 27 Jul 2023 14:42:27 +0200
+Source: testng7
+Binary: libtestng7-java
+Architecture: source all
+Version: 7.5-2~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libtestng7-java - testing framework for Java
+Changes:
+ testng7 (7.5-2~deb10u1) buster-security; urgency=medium
+ .
+   * Rebuild for buster. Needed by latest OpenJDK 17 LTS releases.
+   * Revert to debhelper-compat = 12.
+   * Build-Depend on libjsr305-java.
+Checksums-Sha1:
+ 4b3aab542b91d834711239cfe21e2a4d52a18563 2231 testng7_7.5-2~deb10u1.dsc
+ 5659a31f86c421ce44257cb3afa90af277d21006 784094 testng7_7.5.orig.tar.gz
+ e794806633bb04bf28538a1301c75248ba08e3c8 6344 testng7_7.5-2~deb10u1.debian.tar.xz
+ 2593ffba03161c2bdc13a40c0e985205f7890bc1 886176 libtestng7-java_7.5-2~deb10u1_all.deb
+ 23226726b0c019400c8bf6eb73c2c789ec741bca 13939 testng7_7.5-2~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 233d38c4f8bf0a81b7ead77a9fdf27fedb8314e734a904ca16c9f3f0e639b761 2231 testng7_7.5-2~deb10u1.dsc
+ 6408b07da5dcc451d7fa3257f7aa432c7380d2a572e1463b132635e1e5d4173f 784094 testng7_7.5.orig.tar.gz
+ 4d63124781472e90ed3ccf409178b75072aab65746a4e433a3fc032c11c23e59 6344 testng7_7.5-2~deb10u1.debian.tar.xz
+ c27bde4b777ad6e079556b0571782522dc8d16ca827c98a109090a8149724b87 886176 libtestng7-java_7.5-2~deb10u1_all.deb
+ d27701d31c0d0a2fa0d03d0309c995a1222a5a25837328b94405c09011726f1e 13939 testng7_7.5-2~deb10u1_amd64.buildinfo
+Files:
+ 14bc8bbd01f4dbcd8499786bfcdd22f6 2231 java optional testng7_7.5-2~deb10u1.dsc
+ 8949cf3dcdb5273623dd62f3fe80b5cb 784094 java optional testng7_7.5.orig.tar.gz
+ c1160c3a81e648056b01f932b84c4115 6344 java optional testng7_7.5-2~deb10u1.debian.tar.xz
+ 0967b2ca1c1ae54e9f069173fe398a95 886176 java optional libtestng7-java_7.5-2~deb10u1_all.deb
+ a9b8e0988aa47d25a96c6be803e0fa10 13939 java optional testng7_7.5-2~deb10u1_amd64.buildinfo
+

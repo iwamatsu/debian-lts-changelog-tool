@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 09 May 2022 17:13:22 -0400
+Source: kicad
+Architecture: source
+Version: 4.0.5+dfsg1-4+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Georges Khaznadar <georgesk@debian.org>
+Changed-By: Stefano Rivera <stefanor@debian.org>
+Changes:
+ kicad (4.0.5+dfsg1-4+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Security Updates:
+     - CVE-2022-23803, CVE-2022-23804, CVE-2022-23946, CVE-2022-23947:
+       Resolve buffer overflows in the Gerber Viewer.
+       An attacker could provide a malicious Gerber or excellon file to trigger
+       to cause code execution on opening the file.
+Checksums-Sha1:
+ 5bebc9781940b6d6f3d34e71d8b9d1a2bcdbfb01 3818 kicad_4.0.5+dfsg1-4+deb9u1.dsc
+ 83d8f556e73b2fd1c70846e35de6b6ae6f054839 42764508 kicad_4.0.5+dfsg1.orig-doc.tar.xz
+ 750626156aec56600261851d9a21f602de623f3f 1189360 kicad_4.0.5+dfsg1.orig-i18n.tar.xz
+ 78d57c1275dca5d16777d0df6eb804a6e04bfd82 48754112 kicad_4.0.5+dfsg1.orig-libraries.tar.xz
+ 3cbaf84ae3202476ffe7a554a452767c730927b8 8434892 kicad_4.0.5+dfsg1.orig.tar.xz
+ 02131e0b26090fc894e9cc52c4c36ad38c55b63d 69204 kicad_4.0.5+dfsg1-4+deb9u1.debian.tar.xz
+ f1296146292543fb59dd35054706431429b877b4 11569 kicad_4.0.5+dfsg1-4+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 88aa0115bd39ec9d89b14bf82e42f415899ec594ab13ed0726b29f3e7d31837d 3818 kicad_4.0.5+dfsg1-4+deb9u1.dsc
+ 2f9ac8296cbce0ffebcca254d99d486fd04fed12cad6c268f35aceda03321350 42764508 kicad_4.0.5+dfsg1.orig-doc.tar.xz
+ 3f952cef15af37af7cf745fa9e3b4d0aaace407c329e66b63931249870491b45 1189360 kicad_4.0.5+dfsg1.orig-i18n.tar.xz
+ 6d36a3391139cb5c36492b2f1bc6df5f1ad640b6f39b034157228f44e63b6d1e 48754112 kicad_4.0.5+dfsg1.orig-libraries.tar.xz
+ 7e263e251bbc2a6accb52fa9ba62139e3582a96448b58c06932576c951008c5e 8434892 kicad_4.0.5+dfsg1.orig.tar.xz
+ 2fa65c1270f188f017b29b5c20a190968d1bb157654b357d757d7f391c2bb278 69204 kicad_4.0.5+dfsg1-4+deb9u1.debian.tar.xz
+ 5e01f25332a47b5607ec87d87ed0cf9cf1f16e6a1fecc6093864e0e72d2c01ed 11569 kicad_4.0.5+dfsg1-4+deb9u1_source.buildinfo
+Files:
+ 20c664c7b13bb0ea27169de116cbbfd6 3818 electronics optional kicad_4.0.5+dfsg1-4+deb9u1.dsc
+ 9475aa32ab850d92450a2f41e3d5c634 42764508 electronics optional kicad_4.0.5+dfsg1.orig-doc.tar.xz
+ d26df0f5a9cf3099c42798d6d1aa31c7 1189360 electronics optional kicad_4.0.5+dfsg1.orig-i18n.tar.xz
+ 38f4dc5b7f30bd590c632844f3dea93a 48754112 electronics optional kicad_4.0.5+dfsg1.orig-libraries.tar.xz
+ b71bf1afc58b375de74b310103452d0b 8434892 electronics optional kicad_4.0.5+dfsg1.orig.tar.xz
+ 99fd6a5cefa6ac902ac967ff408d9722 69204 electronics optional kicad_4.0.5+dfsg1-4+deb9u1.debian.tar.xz
+ c2249e8f9690093393f360ca8f92c5c9 11569 electronics optional kicad_4.0.5+dfsg1-4+deb9u1_source.buildinfo
+

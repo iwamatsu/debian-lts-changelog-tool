@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 31 Jan 2023 22:02:19 +0200
+Source: libstb
+Architecture: source
+Version: 0.0~git20180212.15.e6afb9c-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Yangfl <mmyangfl@gmail.com>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libstb (0.0~git20180212.15.e6afb9c-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2018-16981: Heap-based buffer overflow in stbi__out_gif_code().
+   * CVE-2019-13217: Heap buffer overflow in the Vorbis start_decoder().
+   * CVE-2019-13218: Division by zero in the Vorbis predict_point().
+   * CVE-2019-13219: NULL pointer dereference in the Vorbis get_window().
+   * CVE-2019-13220: Uninitialized stack variables in the Vorbis
+     start_decoder().
+   * CVE-2019-13221: Buffer overflow in the Vorbis compute_codewords().
+   * CVE-2019-13222: Out-of-bounds read of a global buffer in the Vorbis
+     draw_line().
+   * CVE-2019-13223: Reachable assertion in the Vorbis lookup1_values().
+   * CVE-2021-28021: Buffer overflow in stbi__extend_receive().
+   * CVE-2021-37789: Heap-based buffer overflow in stbi__jpeg_load().
+   * CVE-2021-42715: The HDR loader parsed truncated end-of-file RLE
+     scanlines as an infinite sequence of zero-length runs.
+   * CVE-2022-28041: Integer overflow in stbi__jpeg_decode_block_prog_dc().
+   * CVE-2022-28042: Heap-based use-after-free in stbi__jpeg_huff_decode().
+Checksums-Sha1:
+ 5b67bd09bec77f2aff71b281c7d3bd9696b71b0d 2033 libstb_0.0~git20180212.15.e6afb9c-1+deb10u1.dsc
+ c9623a4569783da9bc9e649a63052f7f2bc869a6 1326637 libstb_0.0~git20180212.15.e6afb9c.orig.tar.gz
+ bd6fc7269e0b060a961d0d1facc38fa6ccfce11d 14304 libstb_0.0~git20180212.15.e6afb9c-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 3fd7c442f236c81502224e0579a081f6fd920c41abfc68813e0e10cf8d439ad2 2033 libstb_0.0~git20180212.15.e6afb9c-1+deb10u1.dsc
+ b9bef733704658e78239b156550066cd4253a5fa1b4cbf09a1a2a39f3f3ceb3a 1326637 libstb_0.0~git20180212.15.e6afb9c.orig.tar.gz
+ f6e9ee110ce2445e2c18f1b9e61920e896c1f2d1edbd712230341fee5173ff36 14304 libstb_0.0~git20180212.15.e6afb9c-1+deb10u1.debian.tar.xz
+Files:
+ 0db5eebc049de1b701161f9000786cdf 2033 libs optional libstb_0.0~git20180212.15.e6afb9c-1+deb10u1.dsc
+ fd60dac95c93b25abfee43ae7db6b99e 1326637 libs optional libstb_0.0~git20180212.15.e6afb9c.orig.tar.gz
+ 19b20d695ebf90477e6e21e68c9797b6 14304 libs optional libstb_0.0~git20180212.15.e6afb9c-1+deb10u1.debian.tar.xz
+

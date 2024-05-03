@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 16 Aug 2023 09:39:45 CEST
+Source: unrar-nonfree
+Binary: libunrar-dev libunrar5 unrar
+Architecture: source amd64
+Version: 1:5.6.6-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Martin Meredith <mez@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libunrar-dev - Unarchiver for .rar files (non-free version) - development files
+ libunrar5  - Unarchiver for .rar files (non-free version) - shared library
+ unrar      - Unarchiver for .rar files (non-free version)
+Checksums-Sha1:
+ 66f3ff177bc9a9162951a54dbfc95412afa6b40e 2257 unrar-nonfree_5.6.6-1+deb10u3.dsc
+ ca508d40553d663414d8d5454cbf4e71aa0ba410 226484 unrar-nonfree_5.6.6.orig.tar.gz
+ 42ecdc45adec8a6660e9ad28e686251743333614 12608 unrar-nonfree_5.6.6-1+deb10u3.debian.tar.xz
+ 51f143bd9921cad5ed90114786adcec24113b164 175528 libunrar-dev_5.6.6-1+deb10u3_amd64.deb
+ 8d17842a379a134ad4416cf0dc9962c7461798a8 117720 libunrar5_5.6.6-1+deb10u3_amd64.deb
+ d8e8f4036707a4d7edff360a32178d1af8c8fd4b 6314 unrar-nonfree_5.6.6-1+deb10u3_amd64.buildinfo
+ cc526c665f302c12fddee82aef3915b4fa9d61f3 112224 unrar_5.6.6-1+deb10u3_amd64.deb
+Checksums-Sha256:
+ 4cdbe7e9d3c6fd650e472d2115bb2bc63dbcc17993bc92eeaae3b96b2beafe58 2257 unrar-nonfree_5.6.6-1+deb10u3.dsc
+ 5dbdd3cff955c4bc54dd50bf58120af7cb30dec0763a79ffff350f26f96c4430 226484 unrar-nonfree_5.6.6.orig.tar.gz
+ c6b23ae00b4e8cbe1df894d14512fa9bdbac5d7e19a2d5251a61985ca4d18741 12608 unrar-nonfree_5.6.6-1+deb10u3.debian.tar.xz
+ f34e7ad3dc5ae4138308ecdcfef9c9aef94ac9fc38384a7ecf1e43e0789d85f6 175528 libunrar-dev_5.6.6-1+deb10u3_amd64.deb
+ f4f5b543df91647aef82f28b7d876ccab6e3e1ebda5809ca62b2007840830617 117720 libunrar5_5.6.6-1+deb10u3_amd64.deb
+ b5ebc9d821a76a400c62c3f49049bd093328d3f2f2328b31de8bea192bb1d36b 6314 unrar-nonfree_5.6.6-1+deb10u3_amd64.buildinfo
+ f99d5dddfa4dfc998833f66c9600a8a8b6acb82dd77c7d1484ddd39f7a12b900 112224 unrar_5.6.6-1+deb10u3_amd64.deb
+Changes:
+ unrar-nonfree (1:5.6.6-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild for buster-security. Include amd64 binaries this time.
+Files:
+ 30ecbb145635488d588b21f69e8ebd8a 2257 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u3.dsc
+ f54fdf142f0981ae1840a32fc9220e45 226484 non-free/utils optional unrar-nonfree_5.6.6.orig.tar.gz
+ fd1277d42e7b7bc820eb9634104ad4cc 12608 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u3.debian.tar.xz
+ 7ee62f2b9643adffb2c52db578e0a7f1 175528 non-free/libdevel optional libunrar-dev_5.6.6-1+deb10u3_amd64.deb
+ 721a02d276b2fc8140e193533ec5444d 117720 non-free/libs optional libunrar5_5.6.6-1+deb10u3_amd64.deb
+ 707dc6babea85468d59508184a9297d4 6314 non-free/utils optional unrar-nonfree_5.6.6-1+deb10u3_amd64.buildinfo
+ 704d08a4fc876fbee19c925420935e97 112224 non-free/utils optional unrar_5.6.6-1+deb10u3_amd64.deb
+

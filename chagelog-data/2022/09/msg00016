@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 13 Sep 2022 09:14:43 +0100
+Source: connman
+Architecture: source
+Version: 1.36-2.1~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Alexander Sack <asac@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1016976
+Changes:
+ connman (1.36-2.1~deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-32292: Prevent an issue where remote attackers able to send HTTP
+     requests to the gweb component were able to exploit a heap-based buffer
+     overflow in the received_data function to execute code. (Closes: #1016976)
+   * CVE-2022-32293: Prevent a man-in-the-middle attack against a WISPR HTTP
+     query which could be used to trigger a use-after-free in WISPR handling,
+     leading to crashes or even code execution. (Closes: #1016976)
+Checksums-Sha1:
+ 40888354403736ecb002488420cfe7fc2321ac6c 2222 connman_1.36-2.1~deb10u3.dsc
+ 99ec92561ea2b233d3566a868ebf90f6f1843f90 19012 connman_1.36-2.1~deb10u3.debian.tar.xz
+ 4302e1c853d9f474fe4fa23e99d35bfc7e80b551 10214 connman_1.36-2.1~deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ dfff024fa7872ae6d8ef000005b8dd4d34c4be71041504ac2086b04ef95cc0ca 2222 connman_1.36-2.1~deb10u3.dsc
+ 85ad32982125563175ae22bc71b82608db471bec5f25e1bc101512fe0fa2ef0a 19012 connman_1.36-2.1~deb10u3.debian.tar.xz
+ b7283a2da19ab2e694bc9b97c62ecd9d98b6f9851bd5c4a6f88b3ccee89adccc 10214 connman_1.36-2.1~deb10u3_amd64.buildinfo
+Files:
+ 992838b8d16d96ea718d2b73ce4f4475 2222 net optional connman_1.36-2.1~deb10u3.dsc
+ 368439464457705a5288d87c6862d6c8 19012 net optional connman_1.36-2.1~deb10u3.debian.tar.xz
+ b684a99c65571d663c703484426bb5ea 10214 net optional connman_1.36-2.1~deb10u3_amd64.buildinfo
+

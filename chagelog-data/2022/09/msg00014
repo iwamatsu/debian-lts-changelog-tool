@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 11 Sep 2022 10:49:32 +0200
+Source: zlib
+Architecture: source
+Version: 1:1.2.11.dfsg-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Mark Brown <broonie@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1016710
+Changes:
+ zlib (1:1.2.11.dfsg-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-37434: heap buffer overflow via large gzip header extra
+     field (Closes: #1016710).
+Checksums-Sha1:
+ 02b757f94fefc323d9cd3287de1138a89427a694 2619 zlib_1.2.11.dfsg-1+deb10u2.dsc
+ 1b7f6963ccfb7262a6c9d88894d3a30ff2bf2e23 370248 zlib_1.2.11.dfsg.orig.tar.gz
+ db381c19c0c926d886765ad0e771827f3a06b88e 23772 zlib_1.2.11.dfsg-1+deb10u2.debian.tar.xz
+ 48c08af28f7059ecb8a80651aa418017ab5db28a 7848 zlib_1.2.11.dfsg-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 6166bc693b849b1547e0870b91186c43c9cc5187c9a6eb0b44f9b293d687efd9 2619 zlib_1.2.11.dfsg-1+deb10u2.dsc
+ 80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899 370248 zlib_1.2.11.dfsg.orig.tar.gz
+ dd1c6fa2c25e23499713ac7e891d4c1218676240855c8d24604b9ae7c8eea2cf 23772 zlib_1.2.11.dfsg-1+deb10u2.debian.tar.xz
+ f654a7d1844f918ce6a564afe42fa36887e68323291162203ddeb8e858028014 7848 zlib_1.2.11.dfsg-1+deb10u2_amd64.buildinfo
+Files:
+ 170a4186910657f58567602fd9fd9640 2619 libs optional zlib_1.2.11.dfsg-1+deb10u2.dsc
+ 2950b229ed4a5e556ad6581580e4ab2c 370248 libs optional zlib_1.2.11.dfsg.orig.tar.gz
+ c51701258f555124537ee37d12601cd8 23772 libs optional zlib_1.2.11.dfsg-1+deb10u2.debian.tar.xz
+ 5202926e7ca8e811d898eee5e638ed92 7848 libs optional zlib_1.2.11.dfsg-1+deb10u2_amd64.buildinfo
+

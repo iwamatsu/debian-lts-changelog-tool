@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 11 Mar 2023 18:03:02 +0100
+Source: mpv
+Architecture: source
+Version: 0.29.1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ mpv (0.29.1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-19824
+     use after free allows execution of arbitrary code
+Checksums-Sha1:
+ 82a3260d7ad43ac21d40efa3fe8a5234dae72e37 3032 mpv_0.29.1-1+deb10u1.dsc
+ 83f2bc0eb5a8bec9a9d5efc7de0e19a442238ac5 3059503 mpv_0.29.1.orig.tar.gz
+ 841e0a36a3baad9ca52acebc12c355ff6cdab457 107940 mpv_0.29.1-1+deb10u1.debian.tar.xz
+ 4e27e24e9597f46c67a9a10620b4bb80bbae27fa 18617 mpv_0.29.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 9a8962bcc31ed5916beda14bf64b7e8f69c8591d6a01bc3e7e778f05b47892b7 3032 mpv_0.29.1-1+deb10u1.dsc
+ f9f9d461d1990f9728660b4ccb0e8cb5dce29ccaa6af567bec481b79291ca623 3059503 mpv_0.29.1.orig.tar.gz
+ 655e4269f1d5ddc2edbe82ad0bb357b209f27889307f509238d5f20400ff3a5f 107940 mpv_0.29.1-1+deb10u1.debian.tar.xz
+ 0d8ed4bf8ddd7c7224d90e464e6d5cf1d1f7b116d085f8cae9ef0de3e7d27082 18617 mpv_0.29.1-1+deb10u1_amd64.buildinfo
+Files:
+ afdf106135b0f4413ab343f4ae952b8c 3032 video optional mpv_0.29.1-1+deb10u1.dsc
+ 2cd070c6aed980786177b7cb5b73664b 3059503 video optional mpv_0.29.1.orig.tar.gz
+ b6d5cd96b1fafbe4e2b6f75f42fb65c4 107940 video optional mpv_0.29.1-1+deb10u1.debian.tar.xz
+ daf88872c8146a1bc7b03641ad3295b7 18617 video optional mpv_0.29.1-1+deb10u1_amd64.buildinfo
+

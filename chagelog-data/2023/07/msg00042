@@ -1,0 +1,56 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 28 Jul 2023 23:08:21 +0200
+Source: linux-5.10
+Architecture: source
+Version: 5.10.179-3~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-5.10 (5.10.179-3~deb10u1) buster-security; urgency=high
+ .
+   * Rebuild for buster
+ .
+ linux (5.10.179-3) bullseye-security; urgency=high
+ .
+   [ Salvatore Bonaccorso ]
+   * [x86] microcode/AMD: Load late on both threads too
+   * [x86] cpu/amd: Move the errata checking functionality up
+   * [x86] cpu/amd: Add a Zenbleed fix (CVE-2023-20593)
+   * netfilter: nftables: statify nft_parse_register()
+   * netfilter: nf_tables: validate registers coming from userspace.
+   * netfilter: nf_tables: hold mutex on netns pre_exit path
+   * netfilter: nf_tables: incorrect error path handling with NFT_MSG_NEWRULE
+     (CVE-2023-3390)
+   * Ignore ABI changes for nft_parse_register (dropped with 08a01c11a5bb
+     ("netfilter: nftables: statify nft_parse_register()"))
+ .
+   [ Ben Hutchings ]
+   * netfilter: nf_tables: fix chain binding transaction logic (CVE-2023-3610)
+ .
+ linux (5.10.179-2) bullseye-security; urgency=high
+ .
+   * ipv6: rpl: Fix Route of Death. (CVE-2023-2156)
+   * netfilter: nf_tables: do not ignore genmask when looking up chain by id
+     (CVE-2023-31248)
+   * netfilter: nf_tables: prevent OOB access in nft_byteorder_eval
+     (CVE-2023-35001)
+Checksums-Sha1:
+ 71f44e40dc9b02e255e3d58895e12d5b0f1db68e 42421 linux-5.10_5.10.179-3~deb10u1.dsc
+ 23b58f3129701cf2ac429c6060dda22c8d370840 121861696 linux-5.10_5.10.179.orig.tar.xz
+ 9ced044e2286240d4241986e1c132bee30eaaf0d 2851332 linux-5.10_5.10.179-3~deb10u1.debian.tar.xz
+ 5c3a936824a0a999053f8bad6965ceed8d9e3a44 13596 linux-5.10_5.10.179-3~deb10u1_source.buildinfo
+Checksums-Sha256:
+ 18b7d25c59a1d443580e720ee823d1701342bde8086ddc034ca8aabf03b3bac3 42421 linux-5.10_5.10.179-3~deb10u1.dsc
+ 68071d7ce42fe90639946c2024bf1147a36b69833e8a0132874b9db1ca378666 121861696 linux-5.10_5.10.179.orig.tar.xz
+ 5d2c044e9cbcd6f996ad71a6e0bd8642926d55cf827ddb885191dbe8b11344f7 2851332 linux-5.10_5.10.179-3~deb10u1.debian.tar.xz
+ 037e361e8fdc34598325c4ef5c49a04020d406d6bc79c4bdb609de0c1b1cf514 13596 linux-5.10_5.10.179-3~deb10u1_source.buildinfo
+Files:
+ cbd76836c006d0fdd8dad2ee9ad38ab8 42421 kernel optional linux-5.10_5.10.179-3~deb10u1.dsc
+ f5bce98b7f5eecb3e80d4cef5c89141f 121861696 kernel optional linux-5.10_5.10.179.orig.tar.xz
+ 4d6665949d036ef61e571f1595f90e8c 2851332 kernel optional linux-5.10_5.10.179-3~deb10u1.debian.tar.xz
+ 97a188d20d6bf6c61b3defa9ed41684a 13596 kernel optional linux-5.10_5.10.179-3~deb10u1_source.buildinfo
+

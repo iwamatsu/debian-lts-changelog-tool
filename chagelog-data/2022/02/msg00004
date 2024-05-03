@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 03 Feb 2022 18:34:23 +0100
+Source: ansible
+Binary: ansible
+Architecture: source
+Version: 2.2.1.0-2+deb9u3
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Lee Garrett <debian@rocketjump.eu>
+Changed-By: Lee Garrett <debian@rocketjump.eu>
+Description:
+ ansible    - Configuration management, deployment, and task execution system
+Changes:
+ ansible (2.2.1.0-2+deb9u3) stretch-security; urgency=medium
+ .
+   * Fix CVE-2019-10206:
+     ansible-playbook -k and ansible cli tools, all versions 2.8.x before 2.8.4,
+     all 2.7.x before 2.7.13 and all 2.6.x before 2.6.19, prompt passwords by
+     expanding them from templates as they could contain special characters.
+     Passwords should be wrapped to prevent templates trigger and exposing them.
+   * Fix CVE-2019-14856:
+     This fixes a regression introduced by the fix of CVE-2019-10206.
+   * Fix CVE-2020-10684:
+     A flaw was found in Ansible Engine, all versions 2.7.x, 2.8.x and 2.9.x
+     prior to 2.7.17, 2.8.9 and 2.9.6 respectively, when using ansible_facts as
+     a subkey of itself and promoting it to a variable when inject is enabled,
+     overwriting the ansible_facts after the clean. An attacker could take
+     advantage of this by altering the ansible_facts, such as ansible_hosts,
+     users and any other key data which would lead into privilege escalation
+     or code injection.
+Checksums-Sha1:
+ 517f812d6e7c9064b3a9b4e4a3f93dfd7e877415 2675 ansible_2.2.1.0-2+deb9u3.dsc
+ 585fa5aef8bcd418393ee71fe432ef18467ba953 36116 ansible_2.2.1.0-2+deb9u3.debian.tar.xz
+ a77e8d76fa021f13e13d21d1e051e554c2d47e3d 7744 ansible_2.2.1.0-2+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ fb6e9c25a9c7b9a7fb776f70e40cfcfc1842c7959ff8cb9964f29caf9852fbf5 2675 ansible_2.2.1.0-2+deb9u3.dsc
+ 9a19609c8b656f5e21ca55f41fcce4483740de646cd70585ca3269134184bfde 36116 ansible_2.2.1.0-2+deb9u3.debian.tar.xz
+ b9e1dc8cda4e39d66a54f8fc8f168737f4218a02f14af7c0f549e3f177b73ee5 7744 ansible_2.2.1.0-2+deb9u3_amd64.buildinfo
+Files:
+ 8751f27e9e3d493a4bd8277b5a12c85e 2675 admin optional ansible_2.2.1.0-2+deb9u3.dsc
+ 127721a106ebcfd24d2b3f1ade28fca5 36116 admin optional ansible_2.2.1.0-2+deb9u3.debian.tar.xz
+ 8a0d719c372af7052a01f6ced8ffd609 7744 admin optional ansible_2.2.1.0-2+deb9u3_amd64.buildinfo
+

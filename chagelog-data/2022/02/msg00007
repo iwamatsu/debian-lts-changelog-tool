@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 06 Feb 2022 14:26:34 +0530
+Source: libphp-adodb
+Architecture: source
+Version: 5.20.9-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Cameron Dale <camrdale@gmail.com>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1004376
+Changes:
+ libphp-adodb (5.20.9-1+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the ELTS team.
+   * Add patch to prevent auth bypass with PostgreSQL
+     connections. (Fixes: CVE-2021-3850) (Closes: #1004376)
+Checksums-Sha1:
+ 8f33186eb3cf27486cb48ecfe50118bd4eacb8c6 2045 libphp-adodb_5.20.9-1+deb9u1.dsc
+ a16778eac4142b847511d26e1fa09000ef43af9b 464257 libphp-adodb_5.20.9.orig.tar.gz
+ 35eb341c78918a7a1472dadb2b940e8a839e212f 13308 libphp-adodb_5.20.9-1+deb9u1.debian.tar.xz
+ 737d7d8bb86128eabb5c3c37a6a7be504d9872f7 6671 libphp-adodb_5.20.9-1+deb9u1_source.buildinfo
+Checksums-Sha256:
+ afd4e24a1094c0fe0145737563ab9daf73bfe98451fc353488bf9b646588c08c 2045 libphp-adodb_5.20.9-1+deb9u1.dsc
+ 7948fa04e50aa8a4a228fc0d1f32bd4182c4834b7c20708fdef223d01996e19b 464257 libphp-adodb_5.20.9.orig.tar.gz
+ 16ec47f1cebe7940f98fd7b44bb76304c0d7198cd2f3e271dec27f129116de24 13308 libphp-adodb_5.20.9-1+deb9u1.debian.tar.xz
+ f68b05db6614733e992a0a1f2fe8db799faae6eb36d9774a53a96d8251e7bf08 6671 libphp-adodb_5.20.9-1+deb9u1_source.buildinfo
+Files:
+ 2ba06f75c55bc6f3d2345c1eb66d0a57 2045 php optional libphp-adodb_5.20.9-1+deb9u1.dsc
+ 4f1dc4d2442b66679fb9c50c30311e7f 464257 php optional libphp-adodb_5.20.9.orig.tar.gz
+ 36c830eb1bd6b101719d79b42c7b459f 13308 php optional libphp-adodb_5.20.9-1+deb9u1.debian.tar.xz
+ 187dc00b815ec31630c907876e144134 6671 php optional libphp-adodb_5.20.9-1+deb9u1_source.buildinfo
+

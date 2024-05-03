@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 23 Jan 2022 19:18:54 +0100
+Source: pillow
+Architecture: source
+Version: 4.0.0-4+deb9u4
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ pillow (4.0.0-4+deb9u4) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-22815: improper buffer initialization.
+   * CVE-2022-22816: buffer over-read.
+   * CVE-2022-22817: improper sanitization leading to code execution.
+   * Make test suite errors fatal.
+Checksums-Sha1:
+ f1191176b535327540e4b5fc3c25b7f30b6a8d96 2782 pillow_4.0.0-4+deb9u4.dsc
+ f4b7d1211b2ca6e09e6d4ea8e91ab64f69dd1326 7854072 pillow_4.0.0.orig.tar.xz
+ 2658ebf8c57b5964cb6082449bc3a0420e4918ff 51244 pillow_4.0.0-4+deb9u4.debian.tar.xz
+ d02f10e9f0e78483e808f6d5e9360390290fb224 6274 pillow_4.0.0-4+deb9u4_source.buildinfo
+Checksums-Sha256:
+ be2e21618dca230d5ed25667af7813d46b9b3e968a0987d4429667fce9bbdbb5 2782 pillow_4.0.0-4+deb9u4.dsc
+ d68b6e6777de6824b3345540038372c451021bd14ac0dd04da2d89ef88c7f870 7854072 pillow_4.0.0.orig.tar.xz
+ d30f6c6f2e5785e5b1de8653cb51626e675713453e66b2fbfb713544c361c988 51244 pillow_4.0.0-4+deb9u4.debian.tar.xz
+ b33ec208383b1294e034b29bc653cd35baf664c710e219587cfe19713444891a 6274 pillow_4.0.0-4+deb9u4_source.buildinfo
+Files:
+ 768144c25d95aedefe7d51d21ee89e00 2782 python optional pillow_4.0.0-4+deb9u4.dsc
+ 4052cca60a7445ef1dc6d9d61522606b 7854072 python optional pillow_4.0.0.orig.tar.xz
+ 96e92b61e4ca86dccff2c061d1e05cab 51244 python optional pillow_4.0.0-4+deb9u4.debian.tar.xz
+ 031fe80ad6fd737b3f3d1fa54a4e358b 6274 python optional pillow_4.0.0-4+deb9u4_source.buildinfo
+

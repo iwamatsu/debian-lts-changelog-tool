@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 23 Feb 2023 19:27:45 +0200
+Source: binwalk
+Architecture: source
+Version: 2.1.2~git20180830+dfsg1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ binwalk (2.1.2~git20180830+dfsg1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2022-4510: Code execution through crafted PFS filesystem.
+Checksums-Sha1:
+ bb29733f6feebc587836b3d421119e0f00a33b3a 2258 binwalk_2.1.2~git20180830+dfsg1-1+deb10u1.dsc
+ 6a1dcaf98c5ae6b06f7be77df64b44e3b81a2627 243528 binwalk_2.1.2~git20180830+dfsg1.orig.tar.xz
+ 111f098374545b1a50a6f8f263e2781ab99b06eb 7348 binwalk_2.1.2~git20180830+dfsg1-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 90da6902d09992f6299e236ee137d3361845af09deb5d176b21fb661ee0fc322 2258 binwalk_2.1.2~git20180830+dfsg1-1+deb10u1.dsc
+ 277388db7fb2f60ce01b7e68ef47fce75cef4c7dedc6b8674bb6846aca9500a5 243528 binwalk_2.1.2~git20180830+dfsg1.orig.tar.xz
+ 184861db5b8def4e9e6118bca0704f414cfdc2553b2d707c889249974d54d3bd 7348 binwalk_2.1.2~git20180830+dfsg1-1+deb10u1.debian.tar.xz
+Files:
+ dd05598276a560b0b7f57b295164eb8e 2258 devel optional binwalk_2.1.2~git20180830+dfsg1-1+deb10u1.dsc
+ 66f79d1e2480ec33442fff1f3248e719 243528 devel optional binwalk_2.1.2~git20180830+dfsg1.orig.tar.xz
+ fe1d55ffe6d8d5862c1262b15dccac31 7348 devel optional binwalk_2.1.2~git20180830+dfsg1-1+deb10u1.debian.tar.xz
+

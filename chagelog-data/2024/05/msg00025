@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 30 May 2024 17:01:41 +0300
+Source: gst-plugins-base1.0
+Architecture: source
+Version: 1.14.4-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Maintainers of GStreamer packages <gst-plugins-base1.0@packages.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ gst-plugins-base1.0 (1.14.4-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-4453: Integer overflow in the EXIF metadata parser
+Checksums-Sha1:
+ 903eead0a09619bf31743b0468ec545231189f12 4123 gst-plugins-base1.0_1.14.4-2+deb10u3.dsc
+ 204ad46dca52230adb80bd96fcad923555251af2 3703232 gst-plugins-base1.0_1.14.4.orig.tar.xz
+ 117f022f3615a11ff7ba71b4e258aefbc3d28f53 46980 gst-plugins-base1.0_1.14.4-2+deb10u3.debian.tar.xz
+Checksums-Sha256:
+ 295bf49a8d061df0a0577b2dad27cbcf18d2638b6fe55a8a1c77fc1e0caaf407 4123 gst-plugins-base1.0_1.14.4-2+deb10u3.dsc
+ ca6139490e48863e7706d870ff4e8ac9f417b56f3b9e4b3ce490c13b09a77461 3703232 gst-plugins-base1.0_1.14.4.orig.tar.xz
+ 9f3a2e761cc04c3bcc3d725728f491579148b2113f272f5f2ff0efeea073391e 46980 gst-plugins-base1.0_1.14.4-2+deb10u3.debian.tar.xz
+Files:
+ db60035765805eac840643ce1627dc36 4123 libs optional gst-plugins-base1.0_1.14.4-2+deb10u3.dsc
+ 4dbe20c1bf44191c2b8833234df5cb2a 3703232 libs optional gst-plugins-base1.0_1.14.4.orig.tar.xz
+ 73e1a6a268a48c7541567ef1b24f299e 46980 libs optional gst-plugins-base1.0_1.14.4-2+deb10u3.debian.tar.xz
+

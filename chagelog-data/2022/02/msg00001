@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 01 Feb 2022 19:18:01 +0100
+Source: apache2
+Architecture: source
+Version: 2.4.25-3+deb9u12
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ apache2 (2.4.25-3+deb9u12) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-44790: A buffer overflow in mod_lua may result in denial of service
+                     or potentially the execution of arbitrary code.
+   * CVE-2021-44224: When operating as a forward proxy, Apache was depending on
+                     the setup suspectible to denial of service or Server Side
+                     Request forgery.
+Checksums-Sha1:
+ 564927155f74804af8afa559441aa5c42d7989ab 2990 apache2_2.4.25-3+deb9u12.dsc
+ bab47e7073fa47c303a4de845c876356f279f196 823332 apache2_2.4.25-3+deb9u12.debian.tar.xz
+ 70d4a5091711ebd9a4114dc3ac4a112894affb9f 7414 apache2_2.4.25-3+deb9u12_source.buildinfo
+Checksums-Sha256:
+ a14d530736588cd4eb60f6c0a949788a32ce790cf94cd542f6b3bda0952cba73 2990 apache2_2.4.25-3+deb9u12.dsc
+ 1700b4984ebdb9d49a8d09190aabd7efbd8ccefbec47c5562212d3871aa11416 823332 apache2_2.4.25-3+deb9u12.debian.tar.xz
+ f5ee2a0223d6032898793ef9c2971da4e655b3e805c0784cf8fc9d7c8e5a6962 7414 apache2_2.4.25-3+deb9u12_source.buildinfo
+Files:
+ 348d5d3378d114f8d0b4f38127a5a1f5 2990 httpd optional apache2_2.4.25-3+deb9u12.dsc
+ 4cb87c8c3c4e525b1bc5afd5740b04a3 823332 httpd optional apache2_2.4.25-3+deb9u12.debian.tar.xz
+ e8fe0947ac125c41f3f3b2fc7b189cf7 7414 httpd optional apache2_2.4.25-3+deb9u12_source.buildinfo
+

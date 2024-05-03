@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  8 Jan 2024 23:33:44 CET
+Source: squid
+Architecture: source
+Version: 4.6-1+deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Luigi Gangitano <luigi@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ e7191cebbe0973bc09479db101a23715bc95b0ec 2825 squid_4.6-1+deb10u9.dsc
+ 9070313b6a228832b25a1a5140f829704dd87a8d 88364 squid_4.6-1+deb10u9.debian.tar.xz
+ 2ce2e676365e1464ce987d048bcef65b4be1998c 10758 squid_4.6-1+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ 23dd9f3c9f48a6529adcc192c9a0ee271739ee72961ff858dea6d5e6426b54d9 2825 squid_4.6-1+deb10u9.dsc
+ 91ad398b9834ec2a8ff8d25fc89a5cc93ae6b2ebd17fca6c0a6a6299f952d97f 88364 squid_4.6-1+deb10u9.debian.tar.xz
+ f47749e0f307dde02c8a423ed5b607fae491228f42c1aaf4a2661b41521652ce 10758 squid_4.6-1+deb10u9_amd64.buildinfo
+Changes:
+ squid (4.6-1+deb10u9) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-50269, CVE-2023-49286, CVE-2023-49285, CVE-2023-46847,
+     CVE-2023-46846.
+   * Several security vulnerabilities have been discovered in Squid, a full
+     featured web proxy cache. Due to programming errors in Squid's HTTP request
+     parsing, remote attackers may be able to execute a denial of service attack
+     by sending large X-Forwarded-For header or trigger a stack buffer overflow
+     while performing HTTP Digest authentication. Other issues facilitate
+     request smuggling past a firewall or a denial of service against Squid's
+     Helper process management.
+     In regard to CVE-2023-46728: Please note that support for the Gopher
+     protocol has simply been removed in future Squid versions. There is no fix
+     available. We recommend to reject all gopher URL requests instead.
+Files:
+ 31b56d70e698162efcc697d0b4fac2a2 2825 web optional squid_4.6-1+deb10u9.dsc
+ 7de107420507030a927bb43873b36cf3 88364 web optional squid_4.6-1+deb10u9.debian.tar.xz
+ 4207a169505bc8de8dfdf93832adbae2 10758 web optional squid_4.6-1+deb10u9_amd64.buildinfo
+

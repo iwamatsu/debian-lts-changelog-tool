@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 14 Dec 2023 14:28:50 +0000
+Source: bluez
+Architecture: source
+Version: 5.50-1.2~deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Bluetooth Maintainers <team+pkg-bluetooth@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1057914
+Changes:
+ bluez (5.50-1.2~deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * CVE-2023-45866: Fix an issue where Bluetooth Human Interface Devices
+     (HID) hosts in BlueZ may have permitted an unauthenticated peripheral
+     to initiate and establish encrypted connections and accept keyboard
+     reports, potentially permitting injection of HID messages despite no
+     user actually authorising such access. (Closes: #1057914)
+Checksums-Sha1:
+ 00c83209038fcaa5c83172f1f3d391c01dea0ce6 2588 bluez_5.50-1.2~deb10u4.dsc
+ 57c6a51a02a0f155ed7e82ecec3e5e0f51cfb501 46128 bluez_5.50-1.2~deb10u4.debian.tar.xz
+ 198c45a1676e92b3a12bdcd85c01151c899caccc 12448 bluez_5.50-1.2~deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 68a7f6e54b18689af050123556af6b8504ee8b84362c29f3cfff78448cfb5e4c 2588 bluez_5.50-1.2~deb10u4.dsc
+ ec171fa2da6b976aeb74f81601e8627c0a2d55e8278bde623859f5d9f73145b7 46128 bluez_5.50-1.2~deb10u4.debian.tar.xz
+ e9fce8702de4ee7ef657a06abd6f2da8e94a2236a43c2e0cab67b9404f67d00a 12448 bluez_5.50-1.2~deb10u4_amd64.buildinfo
+Files:
+ ff46094e328456d9f7d64a54e7370d50 2588 admin optional bluez_5.50-1.2~deb10u4.dsc
+ 8cffede09cbebdd2fe2634b126428a21 46128 admin optional bluez_5.50-1.2~deb10u4.debian.tar.xz
+ 669777604035954e88f487ea61a30f55 12448 admin optional bluez_5.50-1.2~deb10u4_amd64.buildinfo
+

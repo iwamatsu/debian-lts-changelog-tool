@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 25 Feb 2024 16:03:02 +0100
+Source: engrampa
+Architecture: source
+Version: 1.20.2-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ engrampa (1.20.2-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-52138
+     fix for path traversal vulnerability
+Checksums-Sha1:
+ 58effeb857e6d210259aa90040b98dc6a07a1995 2489 engrampa_1.20.2-1+deb10u1.dsc
+ 6932cb5d6068beecee0c4bed959ee63c13af247d 1083196 engrampa_1.20.2.orig.tar.xz
+ 10cfacc24cb174e8a3fb7f89000dc5f318cbb087 8492 engrampa_1.20.2-1+deb10u1.debian.tar.xz
+ 2206252bdf7d1cdfa85fb2ea370720c72a36c9b5 17259 engrampa_1.20.2-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ fc0062bbd8bc66945b5c4db54fae4ec929f276add8e10e8df804f538f5bb3eec 2489 engrampa_1.20.2-1+deb10u1.dsc
+ 267b8354c1f6a1e669ef2e2b68f7e6189f2fc14ab4ee1a99d3901021947da939 1083196 engrampa_1.20.2.orig.tar.xz
+ 5b2e63358df54c71ab91b6f8a26839d697e643995c6642cba8664e3c43d9ccff 8492 engrampa_1.20.2-1+deb10u1.debian.tar.xz
+ bb2c7f28e8896efa119e00ea341e80c14f7ad0f9d602606ef9a001f0054b3c96 17259 engrampa_1.20.2-1+deb10u1_amd64.buildinfo
+Files:
+ 50e0509489f3d55171c033047cc8de76 2489 x11 optional engrampa_1.20.2-1+deb10u1.dsc
+ 7aa2329068a1e3d5607eb6b149601eab 1083196 x11 optional engrampa_1.20.2.orig.tar.xz
+ f96aeacf4d96cdbe9d9df5d16021b4e7 8492 x11 optional engrampa_1.20.2-1+deb10u1.debian.tar.xz
+ e067d6e4d4bab6ea1feb5eb10bc07124 17259 x11 optional engrampa_1.20.2-1+deb10u1_amd64.buildinfo
+

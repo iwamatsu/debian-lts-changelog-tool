@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 06 Feb 2023 13:00:39 -0800
+Source: graphite-web
+Binary: graphite-web
+Architecture: source all
+Version: 1.1.4-3+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Graphite Group <team+debian-graphite-team@tracker.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ graphite-web - Enterprise Scalable Realtime Graphing
+Closes: 1026992
+Changes:
+ graphite-web (1.1.4-3+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-4728, CVE-2022-4729 & CVE-2022-4730: Prevent a series of
+     cross-site scripting (XSS) vulnerabilties that could have been exploited
+     remotely. Issues existed in the Cookie Handler, Template Name Handler and
+     Absolute Time Range Handler components. (Closes: #1026992)
+Checksums-Sha1:
+ ec965bb776b59dbaf212e286b8f431b385a52ead 2285 graphite-web_1.1.4-3+deb10u2.dsc
+ c781b4811e45833dc66f8522b6cda6a282b0001e 1173039 graphite-web_1.1.4.orig.tar.gz
+ 245b95b3c6907e5d1e2012ef6b6b23bf4a8e3793 229348 graphite-web_1.1.4-3+deb10u2.debian.tar.xz
+ 827a360c0f78c5a4250f721a553d55b58defeea0 949680 graphite-web_1.1.4-3+deb10u2_all.deb
+ f9cbb950f0ee6445a1bc489875c2df70b5f4cb81 7426 graphite-web_1.1.4-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 6ec4d701f20450542949d8478dd68dab0990d09ad53d5dda2bccc2e8bde6e465 2285 graphite-web_1.1.4-3+deb10u2.dsc
+ 4430929f954998d77aa0a61246c62d64a00a2f9464320f9a462294dd3448e522 1173039 graphite-web_1.1.4.orig.tar.gz
+ f004900bac3c834bbce058f9344c52c1a09ce067d2ab79be98e9d202be802574 229348 graphite-web_1.1.4-3+deb10u2.debian.tar.xz
+ b29eeb8240ac9fe0164cdcc950aa8c01a29d1fe02a8081d8261464f398b38568 949680 graphite-web_1.1.4-3+deb10u2_all.deb
+ b5db190f3e7ad20902662fe64d3b3592a658223bccfa931dff2570a5a62fae38 7426 graphite-web_1.1.4-3+deb10u2_amd64.buildinfo
+Files:
+ 3fa8cb5be507087f7a8da85696f38df7 2285 web extra graphite-web_1.1.4-3+deb10u2.dsc
+ 984d709fc6cb7c7e49adcf1484d692aa 1173039 web extra graphite-web_1.1.4.orig.tar.gz
+ 93775d6f16353fb241c2acd7aae74e28 229348 web extra graphite-web_1.1.4-3+deb10u2.debian.tar.xz
+ ff89c8f5ce8839229613f11ed50ce18e 949680 web extra graphite-web_1.1.4-3+deb10u2_all.deb
+ 6b4e6dfb7aba35550b2a49a72d81cc19 7426 web extra graphite-web_1.1.4-3+deb10u2_amd64.buildinfo
+

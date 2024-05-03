@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 31 Jan 2023 19:26:31 +0200
+Source: fig2dev
+Architecture: source
+Version: 1:3.2.7a-5+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Roland Rosenfeld <roland@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ fig2dev (1:3.2.7a-5+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2020-21529: Stack buffer overflow in bezier_spline().
+   * CVE-2020-21531: Global buffer overflow in conv_pattern_index().
+   * CVE-2020-21532: Global buffer overflow in setfigfont().
+   * CVE-2020-21676: Stack-based buffer overflow in genpstrx_text().
+   * CVE-2021-32280: NULL pointer dereference in compute_closed_spline().
+Checksums-Sha1:
+ 6bdc1e4a9c59a55e1e2b0a31e81a7904f6c11e5a 2264 fig2dev_3.2.7a-5+deb10u5.dsc
+ 279af6b65f95f0543c3bed6658096f28b738b40e 507288 fig2dev_3.2.7a.orig.tar.xz
+ f9d8652e116c377c4d8ac07f7bb1d81c0d019d89 234600 fig2dev_3.2.7a-5+deb10u5.debian.tar.xz
+Checksums-Sha256:
+ 9a73860b0072759c30684e25e907fabb01b9999b7a80950720faaa0de57400f6 2264 fig2dev_3.2.7a-5+deb10u5.dsc
+ bda219a15efcdb829e6cc913a4174f5a4ded084bf91565c783733b34a89bfb28 507288 fig2dev_3.2.7a.orig.tar.xz
+ 9da7b9815083a63619354476ee1376d8a38691bdb9e40ab26117a46a8e459e05 234600 fig2dev_3.2.7a-5+deb10u5.debian.tar.xz
+Files:
+ 0e508fe12a4620436ee03857e20dbf73 2264 graphics optional fig2dev_3.2.7a-5+deb10u5.dsc
+ 7988476d461552ccfb163b3b16a6161c 507288 graphics optional fig2dev_3.2.7a.orig.tar.xz
+ 4018edeeb651486a57b883d3de9c4563 234600 graphics optional fig2dev_3.2.7a-5+deb10u5.debian.tar.xz
+

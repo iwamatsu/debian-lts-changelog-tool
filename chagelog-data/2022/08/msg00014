@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 18 Aug 2022 22:52:22 +0200
+Source: linux-5.10
+Architecture: source
+Version: 5.10.136-1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-5.10 (5.10.136-1~deb10u1) buster-security; urgency=high
+ .
+   [ Ben Hutchings ]
+   * Rebuild for buster:
+     - Disable building linux-libc-dev and unversioned tools packages
+     - Disable building installer udebs and remove build-dependency on
+       kernel-wedge
+     - Disable building linux-compiler-gcc-8-*
+     - Revert "Enable BTF for amd64, arm64"
+ .
+   [ Bastian Blank ]
+   * Build signed template if versioned package name
+Checksums-Sha1:
+ 309d3b0c41cbd765f2d718fdf5cf8efafc347247 42421 linux-5.10_5.10.136-1~deb10u1.dsc
+ aeb8bbac548d4ae34558fccb87d46820a0e5e053 121732284 linux-5.10_5.10.136.orig.tar.xz
+ 21035eb62a0e5cc11f0d3c896c54d3cc142b69e0 1509168 linux-5.10_5.10.136-1~deb10u1.debian.tar.xz
+ cc42edcca28653e4ca88ea90d15ccaca35684c7f 13593 linux-5.10_5.10.136-1~deb10u1_source.buildinfo
+Checksums-Sha256:
+ 3de074943cc3807e959b1b4bf7a9be363a0a09d1a68106e00ace575b7d10de4f 42421 linux-5.10_5.10.136-1~deb10u1.dsc
+ 0abead57defda6ebb0c0750e12d73c907291b5d8baf174b2c8363151777519dd 121732284 linux-5.10_5.10.136.orig.tar.xz
+ 4c2f0130cc88d33c26239d33c97d250739cbd80b8a6713fdfb3cd011d2f91361 1509168 linux-5.10_5.10.136-1~deb10u1.debian.tar.xz
+ 11d9abc5bc95c6330e66ddffe0a8b286da6b24a77e0383be9097a8a50cfeca85 13593 linux-5.10_5.10.136-1~deb10u1_source.buildinfo
+Files:
+ 84eb2f1896d14322753c2fc4907ad07f 42421 kernel optional linux-5.10_5.10.136-1~deb10u1.dsc
+ ceb38ed101225859f56fd3e33598bdce 121732284 kernel optional linux-5.10_5.10.136.orig.tar.xz
+ 63e7ea0a04e162f91893bc765f78efe0 1509168 kernel optional linux-5.10_5.10.136-1~deb10u1.debian.tar.xz
+ 0c547184c5641bddc0d2e7af0eb8a349 13593 kernel optional linux-5.10_5.10.136-1~deb10u1_source.buildinfo
+

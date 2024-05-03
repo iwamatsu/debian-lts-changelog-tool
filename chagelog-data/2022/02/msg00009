@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 07 Feb 2022 21:30:48 +0100
+Source: zabbix
+Binary: zabbix-agent zabbix-frontend-php zabbix-java-gateway zabbix-proxy-mysql zabbix-proxy-pgsql zabbix-proxy-sqlite3 zabbix-server-mysql zabbix-server-pgsql
+Architecture: source
+Version: 1:3.0.32+dfsg-0+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ zabbix-agent - network monitoring solution - agent
+ zabbix-frontend-php - network monitoring solution - PHP front-end
+ zabbix-java-gateway - network monitoring solution - Java gateway
+ zabbix-proxy-mysql - network monitoring solution - proxy (using MySQL)
+ zabbix-proxy-pgsql - network monitoring solution - proxy (using PostgreSQL)
+ zabbix-proxy-sqlite3 - network monitoring solution - proxy (using SQLite3)
+ zabbix-server-mysql - network monitoring solution - server (using MySQL)
+ zabbix-server-pgsql - network monitoring solution - server (using PostgreSQL)
+Changes:
+ zabbix (1:3.0.32+dfsg-0+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-23134: after the initial setup process, some steps of
+     setup.php file are reachable not only by super-administrators, but by
+     unauthenticated users as well. Malicious actor can pass step checks
+     and potentially change the configuration of Zabbix Frontend.
+Checksums-Sha1:
+ 6fffb04fbb3cff390401997876b989acf1cccd03 2902 zabbix_3.0.32+dfsg-0+deb9u2.dsc
+ 07c833bf13efb099c4bcb2b975f5cd17bdc01d77 194356 zabbix_3.0.32+dfsg-0+deb9u2.debian.tar.xz
+ eeb2197b0bfff8e347ec9094b8a8b6ce2b17f3d1 13017 zabbix_3.0.32+dfsg-0+deb9u2_amd64.buildinfo
+Checksums-Sha256:
+ 15a207233e26b03056b34d2406ca04ff43cfe68a7dddfea73e45344f73f132d7 2902 zabbix_3.0.32+dfsg-0+deb9u2.dsc
+ 74384efb7343774268f4a6f1826593c69e1e02d7d466bd10930ccc9f7aa39009 194356 zabbix_3.0.32+dfsg-0+deb9u2.debian.tar.xz
+ b4da130bfd59b37579f2533c4d297844156a71c7f14f797f8911780cefeac56c 13017 zabbix_3.0.32+dfsg-0+deb9u2_amd64.buildinfo
+Files:
+ 71360636c95019d582c66eb8197429ed 2902 net optional zabbix_3.0.32+dfsg-0+deb9u2.dsc
+ d6a2b81bde629e70e8088af2158233a3 194356 net optional zabbix_3.0.32+dfsg-0+deb9u2.debian.tar.xz
+ e4756c0e80dd450ac9facfc184dfa08b 13017 net optional zabbix_3.0.32+dfsg-0+deb9u2_amd64.buildinfo
+

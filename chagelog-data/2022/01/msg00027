@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 13 Jan 2022 20:37:29 +0100
+Source: policykit-1
+Architecture: source
+Version: 0.105-18+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Salvatore Bonaccorso <carnil@debian.org>
+Changes:
+ policykit-1 (0.105-18+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the Security Team.
+   * Local Privilege Escalation in polkit's pkexec (CVE-2021-4034)
+Checksums-Sha1:
+ adceae590004a5352fd9e9c27b2c4647699df83e 3078 policykit-1_0.105-18+deb9u2.dsc
+ 347c34a72e5b0e2b20c6b81bdb82ee736a900e87 45336 policykit-1_0.105-18+deb9u2.debian.tar.xz
+ ce0fd8e9b70cfef5aba2c4e2cc9e60218745eb0c 6106 policykit-1_0.105-18+deb9u2_source.buildinfo
+Checksums-Sha256:
+ 45063ccb7e89b41d534d9df853893704f15368f0216f7b84500040e5afae71d6 3078 policykit-1_0.105-18+deb9u2.dsc
+ 82a0ead5481db4672978e75766a87dfb0caf1b589338f2e8918547034482c02b 45336 policykit-1_0.105-18+deb9u2.debian.tar.xz
+ a44b926b302fa97edfcd0499280a650df9a001aa951123ee85b062342adc701f 6106 policykit-1_0.105-18+deb9u2_source.buildinfo
+Files:
+ 506af471ed6eaa67538155551fab3599 3078 admin optional policykit-1_0.105-18+deb9u2.dsc
+ 82fc89601441b23ae681b2697fe82467 45336 admin optional policykit-1_0.105-18+deb9u2.debian.tar.xz
+ fbf7a7ba70e48f59d8ae27e8e28584c3 6106 admin optional policykit-1_0.105-18+deb9u2_source.buildinfo
+

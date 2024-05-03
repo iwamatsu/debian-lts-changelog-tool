@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 21 Aug 2022 23:51:58 CEST
+Source: jetty9
+Architecture: source
+Version: 9.4.16-0+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ af26bd5c47d45a8c48e2974328a8762bd4ca7974 2776 jetty9_9.4.16-0+deb10u2.dsc
+ 8d01acf7203cb7ca42cc08c81aaaf5b886e1a993 50180 jetty9_9.4.16-0+deb10u2.debian.tar.xz
+ 66a8948ad0e2a4724edd34462ad5f35c72df1057 17787 jetty9_9.4.16-0+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 67d80c7b9cd80c30dc76b226073c05cffd8470ad68bd773fe3c04ab0446476af 2776 jetty9_9.4.16-0+deb10u2.dsc
+ bc47cecf0b9ffc412fe8980816bb9bf99282a253a1b58dd21dd8ab61a8cd16f1 50180 jetty9_9.4.16-0+deb10u2.debian.tar.xz
+ 221a96e4f477cee0cb4ba357e4478d334b13cd68ff2be9b61d84d1375aa286ac 17787 jetty9_9.4.16-0+deb10u2_amd64.buildinfo
+Changes:
+ jetty9 (9.4.16-0+deb10u2) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2022-2047:
+     In Eclipse Jetty the parsing of the authority segment of an http scheme
+     URI, the Jetty HttpURI class improperly detects an invalid input as a
+     hostname. This can lead to failures in a Proxy scenario.
+   * Fix CVE-2022-2048:
+     In Eclipse Jetty HTTP/2 server implementation, when encountering an invalid
+     HTTP/2 request, the error handling has a bug that can wind up not properly
+     cleaning up the active connections and associated resources. This can lead
+     to a Denial of Service scenario where there are no enough resources left to
+     process good requests.
+Files:
+ 2cdad2035bb316328385e07abca82aea 2776 java optional jetty9_9.4.16-0+deb10u2.dsc
+ e6598f14fc090e7e96feda26724ef6fa 50180 java optional jetty9_9.4.16-0+deb10u2.debian.tar.xz
+ 8fcde6775b1c1535058a3bb4b00251de 17787 java optional jetty9_9.4.16-0+deb10u2_amd64.buildinfo
+

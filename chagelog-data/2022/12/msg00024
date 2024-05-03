@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 11 Dec 2022 13:30:15 +0100
+Source: node-eventsource
+Architecture: source
+Version: 0.2.1-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ node-eventsource (0.2.1-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-1650: Exposure of Sensitive Information (such as cookie &
+     authorisation headers) to an Unauthorized Actor.
+Checksums-Sha1:
+ 19b854004e9912a63f3e473e48869389d5039476 2117 node-eventsource_0.2.1-1+deb10u1.dsc
+ d409b028691935bf93146d5130a65c8a92dad404 70921 node-eventsource_0.2.1.orig.tar.gz
+ 54f0e17a43c4e31c65ad1737ae4fdd3e145e9e37 4384 node-eventsource_0.2.1-1+deb10u1.debian.tar.xz
+ 1c479ef7482ca4a9350e72095b63c7557a38dade 5867 node-eventsource_0.2.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3bf916eb416aace0856048e2216f699c16fde6731a65827a18fb864982ce4d5f 2117 node-eventsource_0.2.1-1+deb10u1.dsc
+ 96a21ca18a4a2b8baec46712a582130ab893634ebc41dee31486d03df4a00f55 70921 node-eventsource_0.2.1.orig.tar.gz
+ 7a8780d179e72f1a8f7172f603171de80f6e1612b705cdb42eccec12c6420a7b 4384 node-eventsource_0.2.1-1+deb10u1.debian.tar.xz
+ 7f74a78416644acc9b5dd0646e680475797a36f3fc5be0bab8b260dca47215e0 5867 node-eventsource_0.2.1-1+deb10u1_amd64.buildinfo
+Files:
+ 42aed45226679b557df4693aab14f37d 2117 web extra node-eventsource_0.2.1-1+deb10u1.dsc
+ 7afecec6bb52b0d98a497ed9706f67d2 70921 web extra node-eventsource_0.2.1.orig.tar.gz
+ ef07518ec4edd2e38a30a063882ae8d9 4384 web extra node-eventsource_0.2.1-1+deb10u1.debian.tar.xz
+ 12c50dd1a5a40b9d4b8e58c40328e6cb 5867 web extra node-eventsource_0.2.1-1+deb10u1_amd64.buildinfo
+

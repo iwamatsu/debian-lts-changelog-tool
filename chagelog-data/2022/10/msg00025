@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 18 Oct 2022 10:07:37 +0200
+Source: node-xmldom
+Binary: node-xmldom
+Architecture: source all
+Version: 0.1.27+ds-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Yadd <yadd@debian.org>
+Description:
+ node-xmldom - Standard XML DOM (Level2 CORE) implementation in pure javascript
+Closes: 1021618
+Changes:
+ node-xmldom (0.1.27+ds-1+deb10u1) buster-security; urgency=medium
+ .
+   * Team upload
+   * Fix prototype pollution (Closes: #1021618, CVE-2022-37616)
+Checksums-Sha1:
+ 45dc384de309fc4e01c1793bbc307dd55f4c8993 2081 node-xmldom_0.1.27+ds-1+deb10u1.dsc
+ 2e98a28dba29753a15935e0363efbe1daa9eb8ac 77140 node-xmldom_0.1.27+ds.orig.tar.xz
+ 6b94472e39efd3a4641f93dd7f2283404e46b9e9 3964 node-xmldom_0.1.27+ds-1+deb10u1.debian.tar.xz
+ 77c3690205f8e2cfdf970c4914451a0df25ff642 21240 node-xmldom_0.1.27+ds-1+deb10u1_all.deb
+ b716b1421eccd9ee1f379bcd2169eeba8520d0b7 5870 node-xmldom_0.1.27+ds-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 43b361a6f740995719214c1ee4ad59daec2fbd6fea28434144811b758f3eae60 2081 node-xmldom_0.1.27+ds-1+deb10u1.dsc
+ e53ffea0b8c84231017e83c5ad8f1da937ee418dcac874ccb2f53793eb5a37b9 77140 node-xmldom_0.1.27+ds.orig.tar.xz
+ 2a11425c95498d71bd0e500e2c6d100ce770621c1abfe8eb7dc957d8bb5b013b 3964 node-xmldom_0.1.27+ds-1+deb10u1.debian.tar.xz
+ c88eab32162d439d9c64b2c9360348cbc2b15f589a81b317c3ab5e12f6ed071f 21240 node-xmldom_0.1.27+ds-1+deb10u1_all.deb
+ 948ff79f06319c808046d333cded7fa63442d8693f4f54701c73971e4b47a475 5870 node-xmldom_0.1.27+ds-1+deb10u1_amd64.buildinfo
+Files:
+ be04e4070a879290b209e046bc3afd8c 2081 javascript optional node-xmldom_0.1.27+ds-1+deb10u1.dsc
+ 08b93aeba07714751807dca73db255a5 77140 javascript optional node-xmldom_0.1.27+ds.orig.tar.xz
+ 1c1fb382eb365ad8ad15bf63242c733b 3964 javascript optional node-xmldom_0.1.27+ds-1+deb10u1.debian.tar.xz
+ 9d7a061fe3e6f5f80d5efb0ab170411b 21240 javascript optional node-xmldom_0.1.27+ds-1+deb10u1_all.deb
+ 4aa1b38c4b1e6ee420308d1991206125 5870 javascript optional node-xmldom_0.1.27+ds-1+deb10u1_amd64.buildinfo
+

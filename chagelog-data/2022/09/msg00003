@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 27 Aug 2022 10:16:11 +0530
+Source: flac
+Architecture: source
+Version: 1.3.2-3+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1006339
+Changes:
+ flac (1.3.2-3+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to exit at EOS in verify mode.
+     (Fixes: CVE-2021-0561) (Closes: #1006339)
+Checksums-Sha1:
+ 231176c94ff72aa58f2e85f95848985547536b30 2293 flac_1.3.2-3+deb10u2.dsc
+ 2bdbb56b128a780a5d998e230f2f4f6eb98f33ee 776192 flac_1.3.2.orig.tar.xz
+ 706263f927d3d1c51cd1a9c18de54c64e9840ee0 18876 flac_1.3.2-3+deb10u2.debian.tar.xz
+ e18587702879a74d223e05a8c26f218850134614 6124 flac_1.3.2-3+deb10u2_source.buildinfo
+Checksums-Sha256:
+ cb56753241f7129742b3e7b4747fbef41db4ba5f35b5e493235bd67dc549c2f8 2293 flac_1.3.2-3+deb10u2.dsc
+ 91cfc3ed61dc40f47f050a109b08610667d73477af6ef36dcad31c31a4a8d53f 776192 flac_1.3.2.orig.tar.xz
+ c701aba8df32363b6c2b78443cf51962085a31a8ec7357c8867c871465932058 18876 flac_1.3.2-3+deb10u2.debian.tar.xz
+ d59a7527050ff57c58fdc9a1cedb93bf7feea0fe297cadba7b58a963eca141fb 6124 flac_1.3.2-3+deb10u2_source.buildinfo
+Files:
+ f0522d4837da5ae21b1c71d7821354cb 2293 sound optional flac_1.3.2-3+deb10u2.dsc
+ 454f1bfa3f93cc708098d7890d0499bd 776192 sound optional flac_1.3.2.orig.tar.xz
+ de9eef7dd3cb347a93b8017986478480 18876 sound optional flac_1.3.2-3+deb10u2.debian.tar.xz
+ 7ddcdb316f2ef4ddcc149f92d6c5bf0c 6124 sound optional flac_1.3.2-3+deb10u2_source.buildinfo
+

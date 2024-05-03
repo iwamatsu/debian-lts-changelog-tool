@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon,  2 May 2022 19:32:20 CEST
+Source: jackson-databind
+Binary: libjackson2-databind-java libjackson2-databind-java-doc
+Architecture: source
+Version: 2.8.6-1+deb9u10
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libjackson2-databind-java - fast and powerful JSON library for Java -- data binding
+ libjackson2-databind-java-doc - Documentation for jackson-databind
+Checksums-Sha1:
+ 2f73119977699782c665d3d493d7ee84892910a7 2701 jackson-databind_2.8.6-1+deb9u10.dsc
+ 0fc5221bfc262df2fb5d6cddaadfb572408e31ef 15996 jackson-databind_2.8.6-1+deb9u10.debian.tar.xz
+ add5314bce9a96aeac08a3f984645cddce37b0d6 17217 jackson-databind_2.8.6-1+deb9u10_amd64.buildinfo
+Checksums-Sha256:
+ 523649882de712741a7e9ac7a0e7bb911fa3361562120058bc70e5889036959c 2701 jackson-databind_2.8.6-1+deb9u10.dsc
+ 0f50a5a610615b14f254cd1ec4f9430ccbb9c9a020b2c86b97cd27542e3043ad 15996 jackson-databind_2.8.6-1+deb9u10.debian.tar.xz
+ 4d892ab2b855f1491a697db4e40b436427dfe230f6288152a40251fcc49704bf 17217 jackson-databind_2.8.6-1+deb9u10_amd64.buildinfo
+Changes:
+ jackson-databind (2.8.6-1+deb9u10) stretch-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2020-36518:
+      - Fix CVE-2020-36518: Java StackOverflow exception and denial of service
+        via a large depth of nested objects.
+Files:
+ bc2bc4bdb2811b695bf4e41cf2342196 2701 java optional jackson-databind_2.8.6-1+deb9u10.dsc
+ 4da0d893571e992b1e9fe20ade0cfa4e 15996 java optional jackson-databind_2.8.6-1+deb9u10.debian.tar.xz
+ 4fc2638a70c59232afd0ac5daee7ec0c 17217 java optional jackson-databind_2.8.6-1+deb9u10_amd64.buildinfo
+

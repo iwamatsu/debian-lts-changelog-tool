@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 11 Jul 2023 10:49:48 CEST
+Source: erlang
+Architecture: source
+Version: 1:22.2.7+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ a30c634f728a30d1013c5d444b05f98b83ae28e4 5283 erlang_22.2.7+dfsg-1+deb10u1.dsc
+ a255d682363b12fdb0bc49e4dfd4421e7d00a9d2 44730312 erlang_22.2.7+dfsg.orig.tar.xz
+ ee19d4cee5f8a27b7294e6c8927603362fa80868 66668 erlang_22.2.7+dfsg-1+deb10u1.debian.tar.xz
+ 3a204b10c4269564bc1102c287d9b055e39bda48 29453 erlang_22.2.7+dfsg-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 7496731ed883b53b41e524eeca1889afe6c48ce79c68bb91c0eaa867bd85bd93 5283 erlang_22.2.7+dfsg-1+deb10u1.dsc
+ ec6aafac17189386ecb526a1d3b1a94f089a0c59674a39c2a01aad3446028622 44730312 erlang_22.2.7+dfsg.orig.tar.xz
+ 5812ef80060a50a61ff4ab7e333efd0a75d0378b23dddaaec6ef52b68382fd5a 66668 erlang_22.2.7+dfsg-1+deb10u1.debian.tar.xz
+ 245b174522fab5864bb761111f5f87d9ffcf9d53ffaee5767f29d11752876f4c 29453 erlang_22.2.7+dfsg-1+deb10u1_amd64.buildinfo
+Changes:
+ erlang (1:22.2.7+dfsg-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * New upstream release.
+   * Backport version 22.2.7 with patches for CVE-2022-37026 applied.
+   * Fix CVE-2022-37026:
+     A Client Authentication Bypass vulnerability has been discovered in the
+     concurrent, real-time, distributed functional language Erlang. Impacted are
+     those who are running an ssl/tls/dtls server using the ssl application
+     either directly or indirectly via other applications. Note that the
+     vulnerability only affects servers that request client certification, that
+     is sets the option {verify, verify_peer}.
+Files:
+ dff13fdbc336d5556a5e226710967af1 5283 interpreters optional erlang_22.2.7+dfsg-1+deb10u1.dsc
+ 7aa9b1fdb7c2af586708ee9e359c4e17 44730312 interpreters optional erlang_22.2.7+dfsg.orig.tar.xz
+ 997e790a38b707edc12c007666db2718 66668 interpreters optional erlang_22.2.7+dfsg-1+deb10u1.debian.tar.xz
+ aac6713fec959fecc954c43091e656fe 29453 interpreters optional erlang_22.2.7+dfsg-1+deb10u1_amd64.buildinfo
+

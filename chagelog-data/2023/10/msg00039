@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 22 Oct 2023 21:17:30 +0300
+Source: krb5
+Architecture: source
+Version: 1.17-3+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Sam Hartman <hartmans@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ krb5 (1.17-3+deb10u6) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-36054: Freeing of uninitialized pointer in kadm_rpc_xdr.c
+Checksums-Sha1:
+ 0080db263ab8796388516ca16d3b2d41bee129d4 3573 krb5_1.17-3+deb10u6.dsc
+ 0c404b081db9c996c581f636ce450ee28778f338 8761763 krb5_1.17.orig.tar.gz
+ 1efb3973c0d36e273b7aa47ed03664a9cf246232 106540 krb5_1.17-3+deb10u6.debian.tar.xz
+Checksums-Sha256:
+ dea8ef397ce66648f536cde896f43d08b517bdeb5a9cabfb2d8ca204589e92c2 3573 krb5_1.17-3+deb10u6.dsc
+ 5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5 8761763 krb5_1.17.orig.tar.gz
+ b53cbc5d05b756301905ddd7a1b726ca6eecb9a5d9c9dab7cf49455228d82958 106540 krb5_1.17-3+deb10u6.debian.tar.xz
+Files:
+ e903e43b0ba92c9c2a9eea7598eb9516 3573 net optional krb5_1.17-3+deb10u6.dsc
+ 3b729d89eb441150e146780c4138481b 8761763 net optional krb5_1.17.orig.tar.gz
+ 16b90e8e3534fee87f3fd908d33f18ec 106540 net optional krb5_1.17-3+deb10u6.debian.tar.xz
+

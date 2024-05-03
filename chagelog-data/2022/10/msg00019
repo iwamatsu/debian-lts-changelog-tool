@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 11 Oct 2022 23:47:45 CEST
+Source: mediawiki
+Architecture: source
+Version: 1:1.31.16-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Kunal Mehta <legoktm@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 1bb7047f5b69f3b9d50f67f6cebb73358b696790 2534 mediawiki_1.31.16-1+deb10u4.dsc
+ 7c1054e71ace76dbc7f5a0d747b55ef8eb49bdd1 116872 mediawiki_1.31.16-1+deb10u4.debian.tar.xz
+ e127b40bac9929803237ba2b2a4853c8ab6d08cd 6856 mediawiki_1.31.16-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ f2b253c5c7f3bfe5de7aa6afe7c046479c225e3407199daf741cbb34c973569c 2534 mediawiki_1.31.16-1+deb10u4.dsc
+ d2824278c4194daaaa86238df8102fd9b2d1d4729de23acf1082a4f2258ffd76 116872 mediawiki_1.31.16-1+deb10u4.debian.tar.xz
+ 690fe28f2451d5045e2f65aa6462a1c20ac7fa836b99e57f9730b9f702b6cbbd 6856 mediawiki_1.31.16-1+deb10u4_amd64.buildinfo
+Changes:
+ mediawiki (1:1.31.16-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-41767: reassignEdits doesn't update results in an IP range
+     check on Special:Contributions
+   * Fix CVE-2022-41765: HTMLUserTextField exposes existence of hidden users
+Files:
+ 31600ec0a864d2d4254fa762b1f1b0cd 2534 web optional mediawiki_1.31.16-1+deb10u4.dsc
+ bfcf3caa21cd3cc9fd7595e85e671f0b 116872 web optional mediawiki_1.31.16-1+deb10u4.debian.tar.xz
+ 0537215bd34cf5074a910e147a4e63c1 6856 web optional mediawiki_1.31.16-1+deb10u4_amd64.buildinfo
+

@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Apr 2024 22:40:02 +0200
+Source: qtbase-opensource-src
+Architecture: source
+Version: 5.11.3+dfsg1-1+deb10u6
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ qtbase-opensource-src (5.11.3+dfsg1-1+deb10u6) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-32763
+     fix QTextLayout buffer overflow due to crafted SVG file
+   * CVE-2023-24607
+     fix denial of service via a crafted string when the SQL ODBC driver
+     plugin is used
+   * fix regression caused by patch for CVE-2023-24607
+   * CVE-2023-32762
+     prevent incorrect parsing of the strict-transport-security (HSTS) header
+   * CVE-2023-51714
+     fix incorrect HPack integer overflow check.
+   * CVE-2023-38197
+     fix infinite loop in recursive entity expansion
+   * CVE-2023-37639
+     fix crash of application in QXmlStreamReader due to crafted XML string
+   * CVE-2023-33285
+     fix buffer overflow in QDnsLookup
+   * backport of QByteArray::compare() needed for CVE-2023-32762
+   * add new symbol to libqt5core5a.symbols
+Checksums-Sha1:
+ eed94415f36f6042bbc0129da0c06ab128f536a3 5336 qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6.dsc
+ c76bdc29e663609699abc2d81a4b395a315ddf0e 256028 qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6.debian.tar.xz
+ 613f8ca38de697f3dedacb4b04a209387547308f 11826 qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6_source.buildinfo
+Checksums-Sha256:
+ 7a9b313bbac1295e87b8f90d12e5e1edc482a68fdf67d4d976b0bab5d3397152 5336 qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6.dsc
+ 0dc40387f0edec85d2f6a77c813d1d9b1fa82c658bb7b8906d14c0a54368c8cf 256028 qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6.debian.tar.xz
+ c0e43a6958b491dde07195b9ef97be58e6e39f2d3c721c4d28962ee5f2b91021 11826 qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6_source.buildinfo
+Files:
+ c5d3ba7aa05da0b3f94651f5d27d8df3 5336 libs optional qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6.dsc
+ fe28b132219a312f35c324614aea0376 256028 libs optional qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6.debian.tar.xz
+ 096977f8345813c0ade6feab66e758db 11826 libs optional qtbase-opensource-src_5.11.3+dfsg1-1+deb10u6_source.buildinfo
+

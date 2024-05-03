@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 24 May 2022 15:28:43 +0200
+Source: dpkg
+Binary: dpkg libdpkg-dev dpkg-dev libdpkg-perl dselect
+Architecture: source
+Version: 1.18.26
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Changed-By: Guillem Jover <guillem@debian.org>
+Description:
+ dpkg       - Debian package management system
+ dpkg-dev   - Debian package development tools
+ dselect    - Debian package management front-end
+ libdpkg-dev - Debian package management static library
+ libdpkg-perl - Dpkg perl modules
+Changes:
+ dpkg (1.18.26) stretch-security; urgency=medium
+ .
+   [ Guillem Jover ]
+   * Perl modules:
+     - Dpkg::Source::Archive: Prevent directory traversal for in-place extracts.
+       Reported by Max Justicz <max@justi.cz>. Fixes CVE-2022-1664.
+     - Document textdomain() and ngettext() replacement functions in
+       Dpkg::Gettext POD.
+ .
+   [ Updated man pages translations ]
+   * German (Helge Kreutzmann).
+Checksums-Sha1:
+ 32a873e555a27ada821d21739d78fd7a0063b8e0 2048 dpkg_1.18.26.dsc
+ e11a4b04bf5e986adf631145bde3d3cc589783f6 4529136 dpkg_1.18.26.tar.xz
+ f4915d5727eee4d637c99a2ad6ad0c5d0d093dcd 7844 dpkg_1.18.26_amd64.buildinfo
+Checksums-Sha256:
+ 263e1dfe67164601ae0416d3361cc3aad5ab93a8280fc9175a01059ca807442c 2048 dpkg_1.18.26.dsc
+ a72d6bf530bd8fd17c011187aa34c8c01de8ff1eea2b47b377d09a39988d08d4 4529136 dpkg_1.18.26.tar.xz
+ d63853bc0417b86377552eb08f2e7b464d59d71541bf5d3bd0238406fdd8f86d 7844 dpkg_1.18.26_amd64.buildinfo
+Files:
+ 442ea35b1246990824e5d878a5ef32e9 2048 admin required dpkg_1.18.26.dsc
+ 1d26d24f0ccec5d9824635c0bec759fe 4529136 admin required dpkg_1.18.26.tar.xz
+ ecd8011ff717adc54625316bddf6e01d 7844 admin required dpkg_1.18.26_amd64.buildinfo
+

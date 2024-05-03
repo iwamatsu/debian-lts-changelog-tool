@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 16 Jan 2022 22:24:46 +0530
+Source: wordpress
+Architecture: source
+Version: 4.7.22+dfsg-0+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1003243
+Changes:
+ wordpress (4.7.22+dfsg-0+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * New upstream version 4.7.22+dfsg. (Closes: #1003243)
+     - CVE-2022-21662 - Stored XSS through authenticated users.
+     - CVE-2022-21663 - Authenticated Object Injection in Multisites.
+     - CVE-2022-21661 - WordPress: SQL Injection through WP_Query.
+     - CVE-2022-21664 - SQL injection due to improper sanitization
+                        in WP_Meta_Query.
+Checksums-Sha1:
+ db3c88586eea0001925b6b502894bed35a1f47e2 2603 wordpress_4.7.22+dfsg-0+deb9u1.dsc
+ 73019e1d4c2d0b0e5e819dd0baa900d13174d650 6246444 wordpress_4.7.22+dfsg.orig.tar.xz
+ 062e08c8ac9fdf41eaf190407994b878a9afacef 6783620 wordpress_4.7.22+dfsg-0+deb9u1.debian.tar.xz
+ 2fb5db8596d634886ba79eab9964d57ac1cf278c 6191 wordpress_4.7.22+dfsg-0+deb9u1_source.buildinfo
+Checksums-Sha256:
+ e50be7bd7264f3da1f6f8d0f650cb7d6cc468f4c07bcbda83a7ee859284bdc61 2603 wordpress_4.7.22+dfsg-0+deb9u1.dsc
+ 2a229e43021b8ea84aafb5ff224cdea7527cdddfe8d863c2a9a2c829c3c46d3d 6246444 wordpress_4.7.22+dfsg.orig.tar.xz
+ 8d1ceb79d5d3b48b9139490731c8ae5ed015fd3d1b8e41589bfa12adeaafef41 6783620 wordpress_4.7.22+dfsg-0+deb9u1.debian.tar.xz
+ b3aef85b979e8d427228fb9cbb77f7ec20c3c3438a1d08ba37358b9c3515e1f6 6191 wordpress_4.7.22+dfsg-0+deb9u1_source.buildinfo
+Files:
+ 05dc352957579b6ac486743e6b828961 2603 web optional wordpress_4.7.22+dfsg-0+deb9u1.dsc
+ 9b072d47a2c7824b423bdb43cafc0c47 6246444 web optional wordpress_4.7.22+dfsg.orig.tar.xz
+ f2668b3fe6172d7eff22b5152ef4db52 6783620 web optional wordpress_4.7.22+dfsg-0+deb9u1.debian.tar.xz
+ 0dafcd3bfc0594b6fd00c8b2b3a9f7e1 6191 web optional wordpress_4.7.22+dfsg-0+deb9u1_source.buildinfo
+

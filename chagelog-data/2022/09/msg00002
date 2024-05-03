@@ -1,0 +1,152 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 02 Jul 2022 18:06:35 +0530
+Source: qemu
+Binary: qemu qemu-block-extra qemu-block-extra-dbgsym qemu-guest-agent qemu-guest-agent-dbgsym qemu-kvm qemu-system qemu-system-arm qemu-system-arm-dbgsym qemu-system-common qemu-system-common-dbgsym qemu-system-data qemu-system-gui qemu-system-gui-dbgsym qemu-system-mips qemu-system-mips-dbgsym qemu-system-misc qemu-system-misc-dbgsym qemu-system-ppc qemu-system-ppc-dbgsym qemu-system-sparc qemu-system-sparc-dbgsym qemu-system-x86 qemu-system-x86-dbgsym qemu-user qemu-user-binfmt qemu-user-dbgsym qemu-user-static qemu-user-static-dbgsym qemu-utils qemu-utils-dbgsym
+Architecture: source amd64 all
+Version: 1:3.1+dfsg-8+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ qemu       - fast processor emulator, dummy package
+ qemu-block-extra - extra block backend modules for qemu-system and qemu-utils
+ qemu-guest-agent - Guest-side qemu-system agent
+ qemu-kvm   - QEMU Full virtualization on x86 hardware
+ qemu-system - QEMU full system emulation binaries
+ qemu-system-arm - QEMU full system emulation binaries (arm)
+ qemu-system-common - QEMU full system emulation binaries (common files)
+ qemu-system-data - QEMU full system emulation (data files)
+ qemu-system-gui - QEMU full system emulation binaries (user interface and audio sup
+ qemu-system-mips - QEMU full system emulation binaries (mips)
+ qemu-system-misc - QEMU full system emulation binaries (miscellaneous)
+ qemu-system-ppc - QEMU full system emulation binaries (ppc)
+ qemu-system-sparc - QEMU full system emulation binaries (sparc)
+ qemu-system-x86 - QEMU full system emulation binaries (x86)
+ qemu-user  - QEMU user mode emulation binaries
+ qemu-user-binfmt - QEMU user mode binfmt registration for qemu-user
+ qemu-user-static - QEMU user mode emulation binaries (static version)
+ qemu-utils - QEMU utilities
+Changes:
+ qemu (1:3.1+dfsg-8+deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Security Team.
+   * Fix CVE-2020-13253 CVE-2020-27617 CVE-2020-25723 CVE-2020-25625
+     CVE-2020-25624 CVE-2020-25085 CVE-2020-15469 CVE-2020-15859
+     CVE-2020-25084 CVE-2020-28916 CVE-2020-29130 CVE-2020-29443
+     CVE-2021-20181 CVE-2021-20221 CVE-2021-3392 CVE-2021-3409
+     CVE-2021-3416 CVE-2021-20203 CVE-2021-20255 CVE-2021-20257
+     CVE-2021-3713 CVE-2021-3682 CVE-2021-3527 CVE-2021-3594
+     CVE-2021-3595 CVE-2021-3593 CVE-2021-3748 CVE-2021-3748
+     CVE-2021-3930 CVE-2021-20196 CVE-2022-26354
+Checksums-Sha1:
+ 221aef978cc67a1b4d36efd30eb72496a8aedda0 6509 qemu_3.1+dfsg-8+deb10u9.dsc
+ b6a6c31d146b13e14af253d6dc25f16ccad7d060 8705368 qemu_3.1+dfsg.orig.tar.xz
+ 4ec9c17bb2df8f1712cf21f444fd56121658a69a 136136 qemu_3.1+dfsg-8+deb10u9.debian.tar.xz
+ 89180ec8f00287c130b62bce8b906816611cd5cf 338352 qemu-block-extra-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 893910b48f3d704ca30a35c03fa83960a091af2d 119940 qemu-block-extra_3.1+dfsg-8+deb10u9_amd64.deb
+ 777c55c754de334ea088c91285af97be6a99c6c3 675900 qemu-guest-agent-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ cf150aa538b573053238aca5f35fd3210ff15053 256560 qemu-guest-agent_3.1+dfsg-8+deb10u9_amd64.deb
+ 069fffd984f83cde8df25ed365f541d3c8e2ceb9 73012 qemu-kvm_3.1+dfsg-8+deb10u9_amd64.deb
+ 7156cb608da8cf8e5e04b07db80d7307a33235dd 48941268 qemu-system-arm-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 63e4041a3685e0280a2e51bb889a144fafe52bfa 6582980 qemu-system-arm_3.1+dfsg-8+deb10u9_amd64.deb
+ e98d03be71cfde743e41e18dbdd3246c42e3107e 1757884 qemu-system-common-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ d44cfb7071f48ca0b1431c9d7fce0ee303e30a49 990292 qemu-system-common_3.1+dfsg-8+deb10u9_amd64.deb
+ fa2fd92d504abbe7f7b6a7ff77dc30e5b8ebed27 191944 qemu-system-data_3.1+dfsg-8+deb10u9_all.deb
+ 089f6b480aeaa60194373cb616eb7f878d798145 279708 qemu-system-gui-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ b40e8be5888ea11f0997f0ebdcdf08f6b65f389a 99816 qemu-system-gui_3.1+dfsg-8+deb10u9_amd64.deb
+ 34a407e0c7ca7b38b55ccc1a9b151050f412cb89 87042224 qemu-system-mips-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 4a8ed3cb75bb70f19498187e7b3ea8720faae920 11232568 qemu-system-mips_3.1+dfsg-8+deb10u9_amd64.deb
+ 4e24543d5582de1a6d5a9f0d97e502b78f0d5e37 247899620 qemu-system-misc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 0adaaa8538d8e41a400bee4a7dcce8eb4a401f1b 24479928 qemu-system-misc_3.1+dfsg-8+deb10u9_amd64.deb
+ 74c1873995b954649881ecbd3c85b57383111320 41138036 qemu-system-ppc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ ab33f07ad6dcd45d405d3f2c41f093a82f7018fa 5869128 qemu-system-ppc_3.1+dfsg-8+deb10u9_amd64.deb
+ 4a7d39ca4a2257ca813f6958130818490a2145aa 29036868 qemu-system-sparc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 4bbc3237072cc38961f4274402ac2fe5f4bab39e 4205428 qemu-system-sparc_3.1+dfsg-8+deb10u9_amd64.deb
+ 47b065b503a1a2a1e07b4e9b0e5a83881fa4eab4 42062856 qemu-system-x86-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ cda1f0baa16fddcebad49fe42d2749e32e72b824 5879904 qemu-system-x86_3.1+dfsg-8+deb10u9_amd64.deb
+ 5dd72a83f8b8c42e0a8a2c77b9a9401f6f4350b6 72172 qemu-system_3.1+dfsg-8+deb10u9_amd64.deb
+ 6178d77280e72ae62762c10bf0730225d0c16d51 2648 qemu-user-binfmt_3.1+dfsg-8+deb10u9_amd64.deb
+ 6d6bcd57f6ecaabe150503ef86bd7242b8a40858 138714040 qemu-user-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 7ea883d27061e5733a1a83ca6ba5f3eabc69ef71 151648424 qemu-user-static-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ a9fd15c350ea82728e4804f1e4c26f98c2032cfa 21087008 qemu-user-static_3.1+dfsg-8+deb10u9_amd64.deb
+ 4da003036f35945a25bc7ee2dfe359844a74aae2 9988704 qemu-user_3.1+dfsg-8+deb10u9_amd64.deb
+ 8cd1a960baecb3c33b0a2a675cc48bb7c83fa09a 11399628 qemu-utils-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 4f4f5c566d925f7aa21e6346ff0fca7046ed15bd 966992 qemu-utils_3.1+dfsg-8+deb10u9_amd64.deb
+ 6f0eff4553617de36514ec258b2a4cb56eafe5cd 30468 qemu_3.1+dfsg-8+deb10u9_amd64.buildinfo
+ 5ffda1f97dc762dd6f96fe9832e24b11b224278c 71428 qemu_3.1+dfsg-8+deb10u9_amd64.deb
+Checksums-Sha256:
+ c05a72d6abd9a651fe4fcb50aa58e2169414b2c403e381cb3f12f9e48a197033 6509 qemu_3.1+dfsg-8+deb10u9.dsc
+ 2f277942759dd3eed21f7e00edfeab52b4f58d6f2f22d4f7e1a8aa4dc54c80d7 8705368 qemu_3.1+dfsg.orig.tar.xz
+ f2594dab5dd28bdf0f66629ac1a2b27b84a9685978257fc808818ade4431f0dd 136136 qemu_3.1+dfsg-8+deb10u9.debian.tar.xz
+ b106543f88981a0b1f2aff4c6d706cd49375f19d9ba10a9ea34f5318ebf1107d 338352 qemu-block-extra-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ c7eff247f1b6d805ade11d7bb6c4cec57ea49f776583fb8facb0f05722fd5cf1 119940 qemu-block-extra_3.1+dfsg-8+deb10u9_amd64.deb
+ 911668fbae75f13d80c2e97dc5932cb1df3d176bdd9ead9796dbe0a9a4fee9ee 675900 qemu-guest-agent-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 24cf80980094a758267bae7666fdb89f343901094af46ccdb8c86b5bfe4fad6a 256560 qemu-guest-agent_3.1+dfsg-8+deb10u9_amd64.deb
+ f7bc010209747d17a03009b97668ba0722825323821fd95545534c9e2090551f 73012 qemu-kvm_3.1+dfsg-8+deb10u9_amd64.deb
+ d0f79e8fd9e1632b37daff38500e0bcd31c085bf977090f09a8a79677299551e 48941268 qemu-system-arm-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 8f0f57ccf553c066187c85d465002f2348ab88810a984949de7203b71ecb9ce1 6582980 qemu-system-arm_3.1+dfsg-8+deb10u9_amd64.deb
+ fa79550582127cd34c335836bc8bb2c361ff0044e772bd2d0971da229ddcc00c 1757884 qemu-system-common-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ b339a6c4a8f0a2f651deb49289213feb352410a76e7bb72a6b4b491899492c65 990292 qemu-system-common_3.1+dfsg-8+deb10u9_amd64.deb
+ 1830d96168367c5a0901b793373f410d4f4ceb3469427638fc097978890de4d6 191944 qemu-system-data_3.1+dfsg-8+deb10u9_all.deb
+ 1743e5aa6e152096924da3a3ca89268c6059a06e69ee54c2f6461267e0ac9193 279708 qemu-system-gui-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 410a379263212667ce20ff8258664383f73215ccbe0bb03bdf44be5e2d689f69 99816 qemu-system-gui_3.1+dfsg-8+deb10u9_amd64.deb
+ 836df58e553ea52249d52995aa0dfa626292b2053074d6f7db42a7c804f17cab 87042224 qemu-system-mips-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ dd852a7d4cb5761f0cc3b3783ca31c6b18779adac0abe7627002a5fdca74e9b8 11232568 qemu-system-mips_3.1+dfsg-8+deb10u9_amd64.deb
+ a35ce166326444b4b545d488d8d6f081e7e0a813ca17912dea47ed5e37bf364d 247899620 qemu-system-misc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 1b98d46f985eee151186e3ab7ed304f74d6f5146605a7587d66cd716a1f5be43 24479928 qemu-system-misc_3.1+dfsg-8+deb10u9_amd64.deb
+ 73364696b4b724a0578bb4d76ba5bdd7d89ec28456953979c8275865d9f83294 41138036 qemu-system-ppc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ e0f986d9b5a4bd5d391ddbbf988bcad7ac8271502cc9cd7fd65487cf19baddad 5869128 qemu-system-ppc_3.1+dfsg-8+deb10u9_amd64.deb
+ 71264e293e632d22a313e7a1799572398304e1fc59fdcf8532073e85f4edf893 29036868 qemu-system-sparc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ cdd3ae1dafc507494bbaf3efffea8f7baf871828bc16040e10c2058cb0b14713 4205428 qemu-system-sparc_3.1+dfsg-8+deb10u9_amd64.deb
+ 8e7e80156070ff09c7b7dea885756bf8949afb97129895c203c0d98d950574b8 42062856 qemu-system-x86-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 4c47edd4a664be40df71096eb3b61c5b357e497931e484fb91c1f4f7ba81f48a 5879904 qemu-system-x86_3.1+dfsg-8+deb10u9_amd64.deb
+ 44d1c8a4954cd8b92f093b237520c6b2289bb249ea6e5556fea4a655c9eac91e 72172 qemu-system_3.1+dfsg-8+deb10u9_amd64.deb
+ 52914d9355a908bac0513a93feb7b80b288e23a7d69e67f8402246d2ef768fdf 2648 qemu-user-binfmt_3.1+dfsg-8+deb10u9_amd64.deb
+ 233c9474905572b0842d08dd719e483508282030ec862ac86b2d796267abaf15 138714040 qemu-user-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ e5d1f8056f4676e548617c5c271524f9db8097f961d481c8ea78bc2bde3e254e 151648424 qemu-user-static-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 1196d213d415966b74aa4516107e259ed0b1a5cfb4011ff740aaa0ef9e064185 21087008 qemu-user-static_3.1+dfsg-8+deb10u9_amd64.deb
+ 6b078159252742a63d3be516f44b20a1072358db71e25a2d040194140561e797 9988704 qemu-user_3.1+dfsg-8+deb10u9_amd64.deb
+ 8207ec947429581a770e54042ef7f97f4a00698dbe2c4e25b70c69e69c4032d1 11399628 qemu-utils-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ f11d5ea63b8d438ba783cc52131dec4f7f1716da530b3c9133831cdbc080a608 966992 qemu-utils_3.1+dfsg-8+deb10u9_amd64.deb
+ 3fd94e8e44e2dff71ad59d85c6241047c9d999a7d388a13b1aa51b9b08171600 30468 qemu_3.1+dfsg-8+deb10u9_amd64.buildinfo
+ 1f18ab3607761db4ecca2877e6d9b819eb3518d6cb9d36d52bcfd42553aa89cb 71428 qemu_3.1+dfsg-8+deb10u9_amd64.deb
+Files:
+ 69b702ca4169ec68936179a9f39db8c3 6509 otherosfs optional qemu_3.1+dfsg-8+deb10u9.dsc
+ b17f33786c89d547150490811a40f0b2 8705368 otherosfs optional qemu_3.1+dfsg.orig.tar.xz
+ 9ee85bb585188b388f647edaf951ae65 136136 otherosfs optional qemu_3.1+dfsg-8+deb10u9.debian.tar.xz
+ 4c898df726222d9e8d1d461e86512b15 338352 debug optional qemu-block-extra-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 78a113f9d2f9b71ed2e760653fc993e9 119940 otherosfs optional qemu-block-extra_3.1+dfsg-8+deb10u9_amd64.deb
+ 5404a7de2c976b0675089fe35c980bd5 675900 debug optional qemu-guest-agent-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 5e6a598213d7cd7a691a09a2de1a180f 256560 otherosfs optional qemu-guest-agent_3.1+dfsg-8+deb10u9_amd64.deb
+ 8aaa1ba0124ffea6901550b8da4b53c1 73012 otherosfs optional qemu-kvm_3.1+dfsg-8+deb10u9_amd64.deb
+ 92102f1a231ae60ec4731dfc78998f56 48941268 debug optional qemu-system-arm-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ c9f7a99b5b98df378e5db86f19d67e89 6582980 otherosfs optional qemu-system-arm_3.1+dfsg-8+deb10u9_amd64.deb
+ 4133726b9749ef672f5263457c7ebc45 1757884 debug optional qemu-system-common-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 8f96f165407caeadbafb9311ec022b3c 990292 otherosfs optional qemu-system-common_3.1+dfsg-8+deb10u9_amd64.deb
+ 2663a0aa9534722d0c83b58c23dc55d1 191944 otherosfs optional qemu-system-data_3.1+dfsg-8+deb10u9_all.deb
+ 3fb734005015286aeca3f0ee2465de2b 279708 debug optional qemu-system-gui-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 5284d86ae2ff0bcf4a0a4ab28e7d2f05 99816 otherosfs optional qemu-system-gui_3.1+dfsg-8+deb10u9_amd64.deb
+ 7d60bc26cf1d08c48668551602798877 87042224 debug optional qemu-system-mips-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ df3bb71aa52e993a7ee3c173e2cf2738 11232568 otherosfs optional qemu-system-mips_3.1+dfsg-8+deb10u9_amd64.deb
+ c89c4fbe01bbd3e34eb7776fe2ba9b3a 247899620 debug optional qemu-system-misc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 8be4eb64ae451b96531a9f52dbdf7aec 24479928 otherosfs optional qemu-system-misc_3.1+dfsg-8+deb10u9_amd64.deb
+ 05de2737c80571688ac6cf7c8e4800fd 41138036 debug optional qemu-system-ppc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ ec4e3ffef6c4db45052b2f03602769f6 5869128 otherosfs optional qemu-system-ppc_3.1+dfsg-8+deb10u9_amd64.deb
+ 2cc623f02a59696b56a0dde51d3e6573 29036868 debug optional qemu-system-sparc-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ eef768ab05d971d2d0fe18ea623dbdcf 4205428 otherosfs optional qemu-system-sparc_3.1+dfsg-8+deb10u9_amd64.deb
+ cd3e500588fcf6e56c147b3c59abe2c4 42062856 debug optional qemu-system-x86-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 84b5e21a40c737f8af08bf33d970d400 5879904 otherosfs optional qemu-system-x86_3.1+dfsg-8+deb10u9_amd64.deb
+ 48a4c3424eb15da3977e343e7c607df7 72172 otherosfs optional qemu-system_3.1+dfsg-8+deb10u9_amd64.deb
+ 05c7c05b3a11d35bdc3dc551359acc94 2648 otherosfs optional qemu-user-binfmt_3.1+dfsg-8+deb10u9_amd64.deb
+ ee13ea83fcc9c825283e755862bec6f1 138714040 debug optional qemu-user-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 4eaca7081692e6e91ae680e3d316f889 151648424 debug optional qemu-user-static-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ e01e685cddcfe53905e4709764959c70 21087008 otherosfs optional qemu-user-static_3.1+dfsg-8+deb10u9_amd64.deb
+ 1635f048cc5373549dfc48a14a344e84 9988704 otherosfs optional qemu-user_3.1+dfsg-8+deb10u9_amd64.deb
+ 8d9f93c5b33aa9badb1b023b4c399cfe 11399628 debug optional qemu-utils-dbgsym_3.1+dfsg-8+deb10u9_amd64.deb
+ 9ff5ec689c6c8f3ed3bd4ac2e61b2da2 966992 otherosfs optional qemu-utils_3.1+dfsg-8+deb10u9_amd64.deb
+ fbed7d33bcc597dfca212d4b75a1ccbc 30468 otherosfs optional qemu_3.1+dfsg-8+deb10u9_amd64.buildinfo
+ 682cb00d2ae4d5427fcb228c9f878a61 71428 oldlibs optional qemu_3.1+dfsg-8+deb10u9_amd64.deb
+

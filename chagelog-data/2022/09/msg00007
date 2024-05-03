@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 06 Sep 2022 21:33:08 +0200
+Source: linux-5.10
+Architecture: source
+Version: 5.10.136-1~deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Closes: 1018752
+Changes:
+ linux-5.10 (5.10.136-1~deb10u3) buster-security; urgency=high
+ .
+   [ Salvatore Bonaccorso ]
+   * certs: Rotate to use the "Debian Secure Boot Signer 2022 - linux"
+     certificate (Closes: #1018752)
+ .
+   [ Ben Hutchings ]
+   * d/bin/gencontrol_signed.py: Fix source package name in Built-Using field
+Checksums-Sha1:
+ be8f073f0da6d84e2267b5212ff46dc25683c479 42421 linux-5.10_5.10.136-1~deb10u3.dsc
+ d81808cce170cca3d5660249dc3bb00cb13a7c3d 2770728 linux-5.10_5.10.136-1~deb10u3.debian.tar.xz
+ d0effbff2429c91c1c17ca818343d71cf153451b 13593 linux-5.10_5.10.136-1~deb10u3_source.buildinfo
+Checksums-Sha256:
+ 5868b059e1e5f819170251584a57dfd464d7ae744c434ad9058a295e18808df9 42421 linux-5.10_5.10.136-1~deb10u3.dsc
+ 65e157792d617a50e00e31e41eaa89a056866e28e25cb4976541668e7b677d0a 2770728 linux-5.10_5.10.136-1~deb10u3.debian.tar.xz
+ 7df862fc775e6be5020456edda310c875e6f069f0e930ed34ad923c341d4becd 13593 linux-5.10_5.10.136-1~deb10u3_source.buildinfo
+Files:
+ 153926be66eee4fa23abab00208a9934 42421 kernel optional linux-5.10_5.10.136-1~deb10u3.dsc
+ b1559bd2618534c01b20fcca86b70e2b 2770728 kernel optional linux-5.10_5.10.136-1~deb10u3.debian.tar.xz
+ 45188f7cd018ac2f03ee236fb49d7bb4 13593 kernel optional linux-5.10_5.10.136-1~deb10u3_source.buildinfo
+

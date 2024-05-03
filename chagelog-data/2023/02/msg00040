@@ -1,0 +1,49 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 22 Feb 2023 23:16:53 +0100
+Source: node-url-parse
+Architecture: source
+Version: 1.2.0-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 985110 991577
+Changes:
+ node-url-parse (1.2.0-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-27515: Using backslash in the protocol is valid in the browser,
+     while url-parse thinks it’s a relative path.  An application that validates
+     a url using url-parse might pass a malicious link.  (Closes: #985110)
+   * CVE-2021-3664: url-parse mishandles certain uses of a single (back) slash
+     such as https:\ & https:/ and interprets the URI as a relative path.
+     Browsers accept a single backslash after the protocol, and treat it as a
+     normal slash, while url-parse sees it as a relative path.
+     (Closes: #991577)
+   * CVE-2022-0512: Incorrect handling of username and password can lead to
+     authorization bypass.
+   * CVE-2022-0639: A specially crafted URL with empty userinfo and no host can
+     be used to bypass authorization checks.
+   * CVE-2022-0686: A URL with a specified but empty port can be used to bypass
+     authorization checks.
+   * CVE-2022-0691: Leading control characters are not removed.  This allows an
+     attacker to bypass hostname checks and makes the `extractProtocol` method
+     return false positives.
+Checksums-Sha1:
+ 3e13f3698d3118bb7748a4266042c42b83177f9e 2267 node-url-parse_1.2.0-2+deb10u2.dsc
+ 5035b5f85d852f09cde2a15da57d19cd9a83eb49 13319 node-url-parse_1.2.0.orig.tar.gz
+ e341f33889efe9ecd903a5ea5e1ab695a3208481 32884 node-url-parse_1.2.0-2+deb10u2.debian.tar.xz
+ 85f493f8ebd1eb53023b183915516154536d787c 14592 node-url-parse_1.2.0-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 42e25a45a65f82291f7e10ed67987ce960afc589348f5ab0e9139987e042ed4f 2267 node-url-parse_1.2.0-2+deb10u2.dsc
+ 64bd52bb140708863daf43751aae91e5b56b67efd08ad156be6b6c3f0ecf4ff2 13319 node-url-parse_1.2.0.orig.tar.gz
+ c7ce7b114b3b246fab74c3a3a9cfff7e35a27689d903c93f5a591d233d6d54b7 32884 node-url-parse_1.2.0-2+deb10u2.debian.tar.xz
+ e2c4b3672287a77793fee2f4424e5da8593b07cd91a47cd27c1c6b2fc6b65bac 14592 node-url-parse_1.2.0-2+deb10u2_amd64.buildinfo
+Files:
+ 80cab9f46b1cf932becc364838930c63 2267 javascript optional node-url-parse_1.2.0-2+deb10u2.dsc
+ b15502c5921ee699a3344a0eae0494a6 13319 javascript optional node-url-parse_1.2.0.orig.tar.gz
+ 8c4de9f8c31c1da1fca50a1cd4fce35f 32884 javascript optional node-url-parse_1.2.0-2+deb10u2.debian.tar.xz
+ 7f836e13e8aaa6179db23a9a7134d9c8 14592 javascript optional node-url-parse_1.2.0-2+deb10u2_amd64.buildinfo
+

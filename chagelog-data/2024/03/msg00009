@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 09 Mar 2024 20:25:46 +0200
+Source: tar
+Architecture: source
+Version: 1.30+dfsg-6+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Bdale Garbee <bdale@gag.com>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ tar (1.30+dfsg-6+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-39804: Incorrectly handling of extension attributes
+     in PAX archives
+Checksums-Sha1:
+ a0444b74da367c177d2a46f1d23445ae40c8b63a 2027 tar_1.30+dfsg-6+deb10u1.dsc
+ 158e3f52799147ef1938846379a581f0bd812a2a 1883220 tar_1.30+dfsg.orig.tar.xz
+ 42f4671f8eafc0e8f8bd9dddf69081607cc373f5 22864 tar_1.30+dfsg-6+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ e113c87abc8a1e252b4b7e5cfe9e5d9c3621eeb9acd950f02cf8ed6fe5a3f2f3 2027 tar_1.30+dfsg-6+deb10u1.dsc
+ c02f3747ffe02017878303dde8b78e79cd220364c5e8048cf92320232e38912d 1883220 tar_1.30+dfsg.orig.tar.xz
+ ac217f71b5f978a57a2bdc10b8da236f22931c6941a73b060f7c4ba9f7c5277b 22864 tar_1.30+dfsg-6+deb10u1.debian.tar.xz
+Files:
+ 91766fcd5396a957f9cc76e2177010bf 2027 utils required tar_1.30+dfsg-6+deb10u1.dsc
+ 2e4a182a1d5974a264011983305abe09 1883220 utils required tar_1.30+dfsg.orig.tar.xz
+ 9a513ce4cacbe5938d3b54451e04da93 22864 utils required tar_1.30+dfsg-6+deb10u1.debian.tar.xz
+

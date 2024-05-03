@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 03 Dec 2022 02:27:18 +0530
+Source: libpgjava
+Architecture: source
+Version: 42.2.5-2+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ libpgjava (42.2.5-2+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to fix createTempFile vulnerability on unix like
+     systems where temporary files can be read by other users
+     on the system. (Fixes: CVE-2022-41946)
+Checksums-Sha1:
+ 83ec34ecea161e8732716135b314668ae0e10b61 2614 libpgjava_42.2.5-2+deb10u3.dsc
+ fcebf49b3048c9a661a399e76a4e73fa769cdb23 1372434 libpgjava_42.2.5.orig.tar.gz
+ 135c4cc15700b29b2d61ed7cc1f43ff120d205c8 21708 libpgjava_42.2.5-2+deb10u3.debian.tar.xz
+ 0c4153bd441824a3f6fbe0816349b25812d2d391 6153 libpgjava_42.2.5-2+deb10u3_source.buildinfo
+Checksums-Sha256:
+ ce1a09f47b82f468524d8890f241e68f786218296d8901c75194c87ecf86f785 2614 libpgjava_42.2.5-2+deb10u3.dsc
+ cb4873b0b0194ca7a5ac47033dd6dbe7b2798b98573ec810b8b7c4792ffe51b2 1372434 libpgjava_42.2.5.orig.tar.gz
+ 85f6e8cdb5172d3a5656df3ef05ad3fdd3645b0d20ff4195e6bc069cb58a4283 21708 libpgjava_42.2.5-2+deb10u3.debian.tar.xz
+ 6093edf5ac2e7b77c12bf04acdfafc7f58ed73924a0e10d0a5dc979feeb8285e 6153 libpgjava_42.2.5-2+deb10u3_source.buildinfo
+Files:
+ e509dface60563034c93ddcf2edfd2e7 2614 java optional libpgjava_42.2.5-2+deb10u3.dsc
+ 26f2739929269bf6e7b3f687d1e7f242 1372434 java optional libpgjava_42.2.5.orig.tar.gz
+ 0023294b50791ede2da454439fa66cd3 21708 java optional libpgjava_42.2.5-2+deb10u3.debian.tar.xz
+ 95853c6c385095a02f4a4cdb54a3714a 6153 java optional libpgjava_42.2.5-2+deb10u3_source.buildinfo
+

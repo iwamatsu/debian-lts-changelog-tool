@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 28 Nov 2022 15:33:21 +0100
+Source: twisted
+Architecture: source
+Version: 18.9.0-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Changes:
+ twisted (18.9.0-3+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * SECURITY UPDATE: HTML injection through invalid HTTP host header
+     - debian/patches/CVE-2022-39348.patch: HTML-escape host header
+     - CVE-2022-39348
+Checksums-Sha1:
+ 10ce1d42a8a31907957f946c8e48e6581c4bb9a3 3048 twisted_18.9.0-3+deb10u2.dsc
+ 9dae1ef0978a4fad8d5143d782580553375adab5 3088398 twisted_18.9.0.orig.tar.bz2
+ c6cbeb876584966582cd372e8814c311d02a3048 52768 twisted_18.9.0-3+deb10u2.debian.tar.xz
+ d051b3402ff0cafd7559386768843aaa62df628a 13451 twisted_18.9.0-3+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ cbd9723de3216481e59633794b9974aa606d03eeb93db6756d95e21135f85d20 3048 twisted_18.9.0-3+deb10u2.dsc
+ 294be2c6bf84ae776df2fc98e7af7d6537e1c5e60a46d33c3ce2a197677da395 3088398 twisted_18.9.0.orig.tar.bz2
+ d8a6c5ee7d84f473a64d46c3e6c02738bb222a350dff14b92cb63fa815ef6691 52768 twisted_18.9.0-3+deb10u2.debian.tar.xz
+ db6e03a69a3208b479afc08a93a05ecb4dfaa02b45cb4c981a96c310738ae241 13451 twisted_18.9.0-3+deb10u2_amd64.buildinfo
+Files:
+ fc94f95724269509488f42fca45d637c 3048 python optional twisted_18.9.0-3+deb10u2.dsc
+ 20fe2ec156e6e45b0b0d2ff06d9e828f 3088398 python optional twisted_18.9.0.orig.tar.bz2
+ bc14c66115eafba43056375dbb3707d2 52768 python optional twisted_18.9.0-3+deb10u2.debian.tar.xz
+ 22c3be517f57076fd75d7476c0c9057e 13451 python optional twisted_18.9.0-3+deb10u2_amd64.buildinfo
+

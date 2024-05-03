@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 29 Aug 2022 01:54:10 +0200
+Source: linux-signed-5.10-arm64
+Architecture: source
+Version: 5.10.136+1~deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-signed-5.10-arm64 (5.10.136+1~deb10u2) buster-security; urgency=high
+ .
+   * Sign kernel from linux-5.10 5.10.136-1~deb10u2
+ .
+   [ Bastian Blank ]
+   * Fix name of linux-signed packages
+   * Fix name of signed source in changelog
+Checksums-Sha1:
+ cab50f264fced389cfc637207eaf219951a6e07f 3000 linux-signed-5.10-arm64_5.10.136+1~deb10u2.dsc
+ 3618a07c22fb125b4656ddf627afc0d9daf06f51 2529096 linux-signed-5.10-arm64_5.10.136+1~deb10u2.tar.xz
+Checksums-Sha256:
+ 9b4e330fefe51db249e95d466ae38ec5990d361c6d9063aa64b38df20a5078e6 3000 linux-signed-5.10-arm64_5.10.136+1~deb10u2.dsc
+ 41a130ab15a3fa968182e63730621f046e8ca6f564949aebf981617dc130c449 2529096 linux-signed-5.10-arm64_5.10.136+1~deb10u2.tar.xz
+Files:
+ c3848d85acb916de0fac52d565189368 3000 kernel optional linux-signed-5.10-arm64_5.10.136+1~deb10u2.dsc
+ 6aab4f690e77e54cc6079901d84b42b8 2529096 kernel optional linux-signed-5.10-arm64_5.10.136+1~deb10u2.tar.xz
+

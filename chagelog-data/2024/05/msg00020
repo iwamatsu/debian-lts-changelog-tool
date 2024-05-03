@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 24 May 2024 22:36:21 +0000
+Source: apache2
+Architecture: source
+Version: 2.4.59-1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ apache2 (2.4.59-1~deb10u1) buster-security; urgency=medium
+ .
+   [ Yadd ]
+   * Team upload
+   * New upstream version 2.4.59 (Closes: CVE-2019-17567, CVE-2023-31122,
+     CVE-2023-38709, CVE-2023-45802, CVE-2024-24795, CVE-2024-27316)
+   * Update test framework
+   * Drop old patches
+   * Update patches
+ .
+   [ Bastien Roucariès ]
+   * Break against fossil
+Checksums-Sha1:
+ 8a912097817d7bc33990fa7f0dbffc62c82b63c8 3603 apache2_2.4.59-1~deb10u1.dsc
+ 7a118baaed0f2131e482f93f5057038ca6c021be 9843252 apache2_2.4.59.orig.tar.gz
+ 837cdf46898d962c4c05642745566249fc91e52b 833 apache2_2.4.59.orig.tar.gz.asc
+ b1ef5772edc74f2d68f0e0acc4a7e7487f723d05 816476 apache2_2.4.59-1~deb10u1.debian.tar.xz
+ d1111af41e13e7a4b25054913e5e67918fb5083b 12200 apache2_2.4.59-1~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 573fdc1aac407151b2ba3d83f4666298b23193fdfec15f0e761353f83a496b06 3603 apache2_2.4.59-1~deb10u1.dsc
+ e4ec4ce12c6c8f5a794dc2263d126cb1d6ef667f034c4678ec945d61286e8b0f 9843252 apache2_2.4.59.orig.tar.gz
+ 0ad3f670b944ebf08c81544bc82fae9496e88d96840cd0612d8cdeaa073eb06d 833 apache2_2.4.59.orig.tar.gz.asc
+ 6fb00dbf31c8f169ce7281ff641bb683a1f2889cd0dc6c0284c1efe3b21d2c36 816476 apache2_2.4.59-1~deb10u1.debian.tar.xz
+ 341c8e426e3b1aae84c3dc97d34467d11424ab7fc53ae98f9d8b3d81aa805ebb 12200 apache2_2.4.59-1~deb10u1_amd64.buildinfo
+Files:
+ 9c00ceae55000c2e301f1e3376be88ff 3603 httpd optional apache2_2.4.59-1~deb10u1.dsc
+ c39d28e0777bc95631cb49958fdb6601 9843252 httpd optional apache2_2.4.59.orig.tar.gz
+ 3c342b3dcc0fe227a1fffdf9997987d0 833 httpd optional apache2_2.4.59.orig.tar.gz.asc
+ 8e09a8bbc86ee980d18d3c587f83782f 816476 httpd optional apache2_2.4.59-1~deb10u1.debian.tar.xz
+ cbddc8abf08a54624d784670f2806532 12200 httpd optional apache2_2.4.59-1~deb10u1_amd64.buildinfo
+

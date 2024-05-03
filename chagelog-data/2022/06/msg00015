@@ -1,0 +1,48 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 20 Jun 2022 12:21:20 CEST
+Source: vim
+Binary: vim-common vim-gui-common vim-runtime vim-doc vim-tiny vim vim-gtk vim-gtk3 vim-nox vim-athena vim-gnome xxd
+Architecture: source
+Version: 2:8.0.0197-4+deb9u7
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Vim Maintainers <pkg-vim-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ vim        - Vi IMproved - enhanced vi editor
+ vim-athena - Vi IMproved - enhanced vi editor - with Athena GUI
+ vim-common - Vi IMproved - Common files
+ vim-doc    - Vi IMproved - HTML documentation
+ vim-gnome  - Vi IMproved - enhanced vi editor (dummy package)
+ vim-gtk    - Vi IMproved - enhanced vi editor - with GTK2 GUI
+ vim-gtk3   - Vi IMproved - enhanced vi editor - with GTK3 GUI
+ vim-gui-common - Vi IMproved - Common GUI files
+ vim-nox    - Vi IMproved - enhanced vi editor - with scripting languages suppo
+ vim-runtime - Vi IMproved - Runtime files
+ vim-tiny   - Vi IMproved - enhanced vi editor - compact version
+ xxd        - tool to make (or reverse) a hex dump
+Checksums-Sha1:
+ 17e51b386b666c9fac5fcc1285f7acced6891cda 3040 vim_8.0.0197-4+deb9u7.dsc
+ 063e18f38c7e7f419ebccd4e3ba3e39a99cc9c5d 191352 vim_8.0.0197-4+deb9u7.debian.tar.xz
+ 036cf973092629802a6079f9c0a84c6eca1577c5 21688 vim_8.0.0197-4+deb9u7_amd64.buildinfo
+Checksums-Sha256:
+ cad984aaa08f6558077c6ca86805c04509f6407b759476dbc3df36f1401e8a6b 3040 vim_8.0.0197-4+deb9u7.dsc
+ d372e61b7a01e6ea3592ebce83e20f0a8bc8417b84560a0124677a411336f074 191352 vim_8.0.0197-4+deb9u7.debian.tar.xz
+ 512b4ac0c46ca8f67941016f4495dd5646e472786210d1025490a04a577cf6e6 21688 vim_8.0.0197-4+deb9u7_amd64.buildinfo
+Changes:
+ vim (2:8.0.0197-4+deb9u7) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-1720, CVE-2022-1851, CVE-2022-1898, CVE-2022-1968,
+     CVE-2022-0943, CVE-2021-3903, CVE-2022-0417, CVE-2022-2124, CVE-2022-2126.
+     Multiple security vulnerabilities have been discovered in vim, an enhanced
+     vi editor. Buffer overflows, out-of-bounds reads and use-after-free may
+     lead to a denial-of-service (application crash) or other unspecified
+     impact.
+Files:
+ 24d76628469c21bfa8096d2c92948a4b 3040 editors optional vim_8.0.0197-4+deb9u7.dsc
+ c97d52322924c992ad11a390962cdac6 191352 editors optional vim_8.0.0197-4+deb9u7.debian.tar.xz
+ e45e6cbb0d9a7a89fa77a2314085a226 21688 editors optional vim_8.0.0197-4+deb9u7_amd64.buildinfo
+

@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 25 Jun 2023 20:26:28 +0300
+Source: owslib
+Architecture: source
+Version: 0.17.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ owslib (0.17.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-27476: The XML parser did not disable entity resolution,
+     which could lead to arbitrary file reads from an attacker-controlled
+     XML payload.
+Checksums-Sha1:
+ 2ffc68381b8ce1692e8238a27b4bc644bd389df9 2307 owslib_0.17.1-1+deb10u1.dsc
+ 0d2a076a397df46cb6afd983891be230444e64db 898961 owslib_0.17.1.orig.tar.gz
+ 2471523aad58ada6df2de605107bb35032ccf802 7540 owslib_0.17.1-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ bd85e9839b8e2383312675160c00ec616328a1019d35ec4a8139dbe466dadbd4 2307 owslib_0.17.1-1+deb10u1.dsc
+ ee39cfa8711e78d29b10929d17b9a142e4d836c23f46cc888203e35316b76332 898961 owslib_0.17.1.orig.tar.gz
+ 817b770b8e3488c1ac1fdc970c4916adee9266452ef4bcfaaa13376a40dad2ae 7540 owslib_0.17.1-1+deb10u1.debian.tar.xz
+Files:
+ bd6209bf4415ae841969f80db87aef16 2307 python optional owslib_0.17.1-1+deb10u1.dsc
+ a7259beed43944959b9c5050545e95cc 898961 python optional owslib_0.17.1.orig.tar.gz
+ 25a0ab53633a6058cdbc6b65502e8a15 7540 python optional owslib_0.17.1-1+deb10u1.debian.tar.xz
+

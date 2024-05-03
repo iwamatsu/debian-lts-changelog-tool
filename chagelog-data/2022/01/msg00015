@@ -1,0 +1,257 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 18 Jan 2022 19:04:17 CET
+Source: nvidia-graphics-drivers
+Binary: nvidia-driver nvidia-alternative nvidia-kernel-support nvidia-kernel-dkms nvidia-kernel-source xserver-xorg-video-nvidia nvidia-legacy-check nvidia-driver-bin libnvidia-cfg1 nvidia-driver-libs nvidia-driver-libs-i386 nvidia-driver-libs-nonglvnd nvidia-driver-libs-nonglvnd-i386 libglvnd0-nvidia libopengl0-glvnd-nvidia libglx0-glvnd-nvidia libglx-nvidia0 libgl1-glvnd-nvidia-glx libgl1-nvidia-glvnd-glx libgl1-nvidia-glx libnvidia-glcore libegl1-glvnd-nvidia libegl1-nvidia libegl-nvidia0 libgles1-glvnd-nvidia libgles1-nvidia libgles-nvidia1 libgles2-glvnd-nvidia libgles2-nvidia libgles-nvidia2 libnvidia-eglcore nvidia-egl-common nvidia-egl-icd nvidia-vdpau-driver nvidia-vulkan-common nvidia-vulkan-icd nvidia-nonglvnd-vulkan-common nvidia-nonglvnd-vulkan-icd nvidia-smi libnvidia-ml1 nvidia-cuda-mps libcuda1 libcuda1-i386 libnvidia-compiler libnvidia-fatbinaryloader libnvidia-ptxjitcompiler1 libnvcuvid1 libnvidia-encode1 libnvidia-ifr1 libnvidia-fbc1 nvidia-opencl-common
+ nvidia-opencl-icd nvidia-libopencl1
+ nvidia-detect
+Architecture: source amd64
+Version: 390.144-1~deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ libcuda1   - NVIDIA CUDA Driver Library${nvidia:VariantDesc}
+ libcuda1-i386 - NVIDIA CUDA 32-bit runtime library${nvidia:VariantDesc}
+ libegl-nvidia0 - NVIDIA binary EGL library${nvidia:VariantDesc}
+ libegl1-glvnd-nvidia - Vendor neutral GL dispatch library -- libEGL
+ libegl1-nvidia - NVIDIA binary EGL library (non-GLVND variant)${nvidia:VariantDesc
+ libgl1-glvnd-nvidia-glx - Vendor neutral GL dispatch library -- libGL
+ libgl1-nvidia-glvnd-glx - NVIDIA binary OpenGL/GLX library (GLVND variant)${nvidia:VariantD
+ libgl1-nvidia-glx - NVIDIA binary OpenGL/GLX library (non-GLVND variant)${nvidia:Vari
+ libgles-nvidia1 - NVIDIA binary OpenGL|ES 1.x library${nvidia:VariantDesc}
+ libgles-nvidia2 - NVIDIA binary OpenGL|ES 2.x library${nvidia:VariantDesc}
+ libgles1-glvnd-nvidia - NVIDIA binary OpenGL|ES 1.x GLVND stub library
+ libgles1-nvidia - NVIDIA binary OpenGL|ES 1.x library (transitional)${nvidia:Varian
+ libgles2-glvnd-nvidia - NVIDIA binary OpenGL|ES 2.x GLVND stub library
+ libgles2-nvidia - NVIDIA binary OpenGL|ES 2.x library (transitional)${nvidia:Varian
+ libglvnd0-nvidia - Vendor neutral GL dispatch library -- libGLdispatch
+ libglx-nvidia0 - NVIDIA binary GLX library${nvidia:VariantDesc}
+ libglx0-glvnd-nvidia - Vendor neutral GL dispatch library -- libGLX
+ libnvcuvid1 - NVIDIA CUDA Video Decoder runtime library${nvidia:VariantDesc}
+ libnvidia-cfg1 - NVIDIA binary OpenGL/GLX configuration library${nvidia:VariantDes
+ libnvidia-compiler - NVIDIA runtime compiler library${nvidia:VariantDesc}
+ libnvidia-eglcore - NVIDIA binary EGL core libraries${nvidia:VariantDesc}
+ libnvidia-encode1 - NVENC Video Encoding runtime library${nvidia:VariantDesc}
+ libnvidia-fatbinaryloader - NVIDIA FAT binary loader${nvidia:VariantDesc}
+ libnvidia-fbc1 - NVIDIA OpenGL-based Framebuffer Capture runtime library${nvidia:V
+ libnvidia-glcore - NVIDIA binary OpenGL/GLX core libraries${nvidia:VariantDesc}
+ libnvidia-ifr1 - NVIDIA OpenGL-based Inband Frame Readback runtime library${nvidia
+ libnvidia-ml1 - NVIDIA Management Library (NVML) runtime library${nvidia:VariantD
+ libnvidia-ptxjitcompiler1 - NVIDIA PTX JIT Compiler${nvidia:VariantDesc}
+ libopengl0-glvnd-nvidia - Vendor neutral GL dispatch library -- libOpenGL
+ nvidia-alternative - allows the selection of NVIDIA as GLX provider${nvidia:VariantDes
+ nvidia-cuda-mps - NVIDIA CUDA Multi Process Service (MPS)
+ nvidia-detect - NVIDIA GPU detection utility
+ nvidia-driver - NVIDIA metapackage${nvidia:VariantDesc}
+ nvidia-driver-bin - NVIDIA driver support binaries${nvidia:VariantDesc}
+ nvidia-driver-libs - NVIDIA metapackage (OpenGL/GLX/EGL/GLES libraries)${nvidia:Varian
+ nvidia-driver-libs-i386 - NVIDIA metapackage (OpenGL/GLX/EGL/GLES 32-bit libraries)${nvidia
+ nvidia-driver-libs-nonglvnd - NVIDIA metapackage (non-GLVND OpenGL/GLX/EGL/GLES libraries)${nvi
+ nvidia-driver-libs-nonglvnd-i386 - NVIDIA metapackage (non-GLVND OpenGL/EGL etc. 32-bit libraries)${
+ nvidia-egl-common - NVIDIA binary EGL driver - common files
+ nvidia-egl-icd - NVIDIA EGL installable client driver (ICD)
+ nvidia-kernel-dkms - NVIDIA binary kernel module DKMS source${nvidia:VariantDesc}
+ nvidia-kernel-source - NVIDIA binary kernel module source${nvidia:VariantDesc}
+ nvidia-kernel-support - NVIDIA binary kernel module support files${nvidia:VariantDesc}
+ nvidia-legacy-check - check for NVIDIA GPUs requiring a legacy driver
+ nvidia-libopencl1 - NVIDIA OpenCL ICD Loader library
+ nvidia-nonglvnd-vulkan-common - NVIDIA Vulkan driver - common files (non-GLVND variant)
+ nvidia-nonglvnd-vulkan-icd - NVIDIA Vulkan ICD (non-GLVND variant)${nvidia:VariantDesc}
+ nvidia-opencl-common - NVIDIA OpenCL driver - common files
+ nvidia-opencl-icd - NVIDIA OpenCL installable client driver (ICD)${nvidia:VariantDesc
+ nvidia-smi - NVIDIA System Management Interface${nvidia:VariantDesc}
+ nvidia-vdpau-driver - Video Decode and Presentation API for Unix - NVIDIA driver${nvidi
+ nvidia-vulkan-common - NVIDIA Vulkan driver - common files
+ nvidia-vulkan-icd - NVIDIA Vulkan installable client driver (ICD)${nvidia:VariantDesc
+ xserver-xorg-video-nvidia - NVIDIA binary Xorg driver${nvidia:VariantDesc}
+Checksums-Sha1:
+ 065658310a8d281ce10c6f5ea634c6bcfd1df0dc 8088 nvidia-graphics-drivers_390.144-1~deb9u1.dsc
+ 8e5378c8ba77c77cfdb09bd08c9ca184a0404ecd 84965827 nvidia-graphics-drivers_390.144.orig-amd64.tar.gz
+ 8b18262058cdac5fe52621db2ce8134c39b7a888 30092440 nvidia-graphics-drivers_390.144.orig-armhf.tar.gz
+ 178198f0ea69f18dd1053e9bee3dbffdb1ffb295 49171898 nvidia-graphics-drivers_390.144.orig-i386.tar.gz
+ 3f836f33d6b23ee99b86f4bf346f54557238b1f5 138 nvidia-graphics-drivers_390.144.orig.tar.gz
+ 948717bad2b4f1c44cfb4ab163c34d2f904ad05d 185308 nvidia-graphics-drivers_390.144-1~deb9u1.debian.tar.xz
+ 5daab57e7de4cf6667eefc15e7c0a255d8c81896 1867038 libcuda1_390.144-1~deb9u1_amd64.deb
+ 3ccfcb990ee672b7542e2a1ad75bd7c523d91a59 368828 libegl-nvidia0_390.144-1~deb9u1_amd64.deb
+ d08431a8d736cc377a7310eaf345fcb728be1f5f 220258 libegl1-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 747677c8078bb47621e2b4cf6fffa8ad8980928d 201240 libegl1-nvidia_390.144-1~deb9u1_amd64.deb
+ 9357112dada997b489ef23c66c77b22ae3e24b33 272494 libgl1-glvnd-nvidia-glx_390.144-1~deb9u1_amd64.deb
+ f11f078a2d2bbdc9d956b8b3cff07116a8b07a5d 349558 libgl1-nvidia-glvnd-glx_390.144-1~deb9u1_amd64.deb
+ c2fa6429d8de78283395e99f66c8854cfe9699a6 607996 libgl1-nvidia-glx_390.144-1~deb9u1_amd64.deb
+ 75f87b3c14ce4b9e95c607a3b0d856221c53a750 212514 libgles-nvidia1_390.144-1~deb9u1_amd64.deb
+ 18fd069a36a4e05f0e34532d338465a9f97de0ad 222186 libgles-nvidia2_390.144-1~deb9u1_amd64.deb
+ 928c47db26d6671ed9e5203dc4d733c62a160276 202056 libgles1-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 71f3f2ecade64cca60e71b6543af6f5901df3b03 194004 libgles1-nvidia_390.144-1~deb9u1_amd64.deb
+ 814b6ad1191b0bb67e65744908e3540b6ecc2b35 206962 libgles2-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 34baae78e1e98c088de35dabf268e8edcd13186b 194020 libgles2-nvidia_390.144-1~deb9u1_amd64.deb
+ 68b8ef5fff112c1eefd4038bab72579cd1eb5933 249560 libglvnd0-nvidia_390.144-1~deb9u1_amd64.deb
+ 088e746ce80014dda73179c002773fdb5845c8e9 450356 libglx-nvidia0_390.144-1~deb9u1_amd64.deb
+ 442e48b05e591db2eefc72c6e48959be04e7da0f 221214 libglx0-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 70f93c0bd7dbfcfa1666e8ed989e4bdd6501682f 834274 libnvcuvid1_390.144-1~deb9u1_amd64.deb
+ 3fdbb1f0ee243773fa55258bcd82aac83374dc53 257316 libnvidia-cfg1_390.144-1~deb9u1_amd64.deb
+ 0db3f65b4863d0abc06a8e5e28d5d268e6eac5e2 11594796 libnvidia-compiler_390.144-1~deb9u1_amd64.deb
+ 44167d9581d29300aed1d61360b49ab4646cdfff 6755770 libnvidia-eglcore_390.144-1~deb9u1_amd64.deb
+ f5e6bc415f5942fe4239d9562c2630ceb2e0b6bf 239420 libnvidia-encode1_390.144-1~deb9u1_amd64.deb
+ 5e904fd2e114aa38d5dc706ebd7f67f1ca020239 313028 libnvidia-fatbinaryloader_390.144-1~deb9u1_amd64.deb
+ 3304b032f0e8456aa98f18c6d3773d0d706892cf 228280 libnvidia-fbc1_390.144-1~deb9u1_amd64.deb
+ 8b3abe0df5fdc906bde8d07344dc284ee9a29f0d 6810294 libnvidia-glcore_390.144-1~deb9u1_amd64.deb
+ 105e80a3bef8027ad60745362bb7f20427bb6a2b 255924 libnvidia-ifr1_390.144-1~deb9u1_amd64.deb
+ 1fc8c40969cf05e0b258ca86ef70143f0f3959d9 606640 libnvidia-ml1_390.144-1~deb9u1_amd64.deb
+ fb6ca2b0fbe9d66ad2257828ffa1257a68ccc4ca 3843870 libnvidia-ptxjitcompiler1_390.144-1~deb9u1_amd64.deb
+ 6f5b665517c9ad4379a3076e3f0c44b2961f6d1a 219842 libopengl0-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 1740e93293a76b70ad078c4d5695b6bf71cc324e 195924 nvidia-alternative_390.144-1~deb9u1_amd64.deb
+ fd534be322610b1cb238e2fda9be2c46dfab9da6 226672 nvidia-cuda-mps_390.144-1~deb9u1_amd64.deb
+ 8fb2e3e470844dc800e4e123017730ecf50e6084 197208 nvidia-detect_390.144-1~deb9u1_amd64.deb
+ fc7db92d40940155dd6ae4bf6d287907274ccacc 279602 nvidia-driver-bin_390.144-1~deb9u1_amd64.deb
+ 5581dd468b774b2b58d767c5775745f7860f3294 194134 nvidia-driver-libs-nonglvnd_390.144-1~deb9u1_amd64.deb
+ 76ae8e92f5049b63466ae516333f4d11a854bbdf 194118 nvidia-driver-libs_390.144-1~deb9u1_amd64.deb
+ bc23276eb6fc53759345c7aa61313d6dff897ab6 495798 nvidia-driver_390.144-1~deb9u1_amd64.deb
+ 2c0072f56e349c16d3cc1655b7d57d1603e7b938 194236 nvidia-egl-common_390.144-1~deb9u1_amd64.deb
+ abaea49c25a66e6301250ec735c846f70745b58b 193958 nvidia-egl-icd_390.144-1~deb9u1_amd64.deb
+ abd1f79f8b2ae0e0cb25ed304308b69c0db8d563 22586 nvidia-graphics-drivers_390.144-1~deb9u1_amd64.buildinfo
+ 9d251a500724a69bb92ad6c8b03892428ea0e440 9986406 nvidia-kernel-dkms_390.144-1~deb9u1_amd64.deb
+ 25cfec561c0789752394fe0b3e04b3b658db6ba2 10037208 nvidia-kernel-source_390.144-1~deb9u1_amd64.deb
+ abbd0fa2fe1138c19640342a74b4b93ee8c8e4b7 194820 nvidia-kernel-support_390.144-1~deb9u1_amd64.deb
+ 4d4036db214417545f8d52b1db431a2e349b82d9 199966 nvidia-legacy-check_390.144-1~deb9u1_amd64.deb
+ 06c317560d3f06b67c27632f5dd7744d6df0549e 202666 nvidia-libopencl1_390.144-1~deb9u1_amd64.deb
+ 69f44fb9747cc40c5763a704986dec95811e5b37 194228 nvidia-nonglvnd-vulkan-common_390.144-1~deb9u1_amd64.deb
+ b925178f51a0e22437a961208a5d012a9dac1098 193964 nvidia-nonglvnd-vulkan-icd_390.144-1~deb9u1_amd64.deb
+ 695372405d939b66ebe0de7951de05803c0040e1 194196 nvidia-opencl-common_390.144-1~deb9u1_amd64.deb
+ 4e74ae0f01215fceb3cfc5598ba757d41a530be5 1928452 nvidia-opencl-icd_390.144-1~deb9u1_amd64.deb
+ f06a73c311cb92782d63271fe3cdf0160886a878 378048 nvidia-smi_390.144-1~deb9u1_amd64.deb
+ 6c335a8f2563ac8bf08b8e7889e6d2e945c1d0e5 841812 nvidia-vdpau-driver_390.144-1~deb9u1_amd64.deb
+ 92919511f7bb15a957dd2fc3cbebe13584a044d4 194230 nvidia-vulkan-common_390.144-1~deb9u1_amd64.deb
+ 50aeccef58e8ecefe41d6b8b38a58c6657f3ef0f 193936 nvidia-vulkan-icd_390.144-1~deb9u1_amd64.deb
+ 1ab82c7da9bb6f65195d4221ff91f5d08787cb9c 2529742 xserver-xorg-video-nvidia_390.144-1~deb9u1_amd64.deb
+Checksums-Sha256:
+ 4dd10bd4b46faedcd5239e402903ea756c1052c82a9b38561acc2008d8dc609a 8088 nvidia-graphics-drivers_390.144-1~deb9u1.dsc
+ 5aefc4a52a251107aced4f308123ed5b41d231e8e75110c45e83edff40acc220 84965827 nvidia-graphics-drivers_390.144.orig-amd64.tar.gz
+ c93672634d10128503ecc2f77241359fd9fa88c37d3e0e5dffc5cc37acd608fd 30092440 nvidia-graphics-drivers_390.144.orig-armhf.tar.gz
+ 440af47b18863ffaf80eb7b258c9fbe9da03a19e4b02ea0f986ed657bdf5bd13 49171898 nvidia-graphics-drivers_390.144.orig-i386.tar.gz
+ d2c4228b841f02a02b4859eb0a29f03b617098ae9b7c3c0bc80b5b5f4ca91580 138 nvidia-graphics-drivers_390.144.orig.tar.gz
+ 221ff7a18e0f0cc978f99adc01cf5732c6959f1949cb7fe09994ff3f0df1987c 185308 nvidia-graphics-drivers_390.144-1~deb9u1.debian.tar.xz
+ 9931ffed86929f0678531d977c98c2a80a5e9f0ab085bae281bb9495d36fc7cf 1867038 libcuda1_390.144-1~deb9u1_amd64.deb
+ da142023b5f29fe69a0c575399f6d5c4da13a77964e6ae1505b76a74b3b666b1 368828 libegl-nvidia0_390.144-1~deb9u1_amd64.deb
+ db69d504f495cc6af79229b1c1788bb9677f9b0f7c35eaa0d651f3c13fc36d75 220258 libegl1-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ a1b537af3b9d5263461cd56d0c2171e6f1f65b46decf383033bad43d947a07f9 201240 libegl1-nvidia_390.144-1~deb9u1_amd64.deb
+ 56f1e41acf90b625061fb210542ab361ff0e63eeb9649ef723f6da656b8473ca 272494 libgl1-glvnd-nvidia-glx_390.144-1~deb9u1_amd64.deb
+ c29b6934cfe68c335dcdeb6cbcc6523e9a7ec637f721c5cbea56d3e8926779a0 349558 libgl1-nvidia-glvnd-glx_390.144-1~deb9u1_amd64.deb
+ aebee69e1c26edb6ba782657877b56684d45706cc948626fe7950e7c80cdfe4d 607996 libgl1-nvidia-glx_390.144-1~deb9u1_amd64.deb
+ e2335eaa8781b9d123d012268118b6207852f2f9f2db46701156b1cb878d2393 212514 libgles-nvidia1_390.144-1~deb9u1_amd64.deb
+ f2162a7e03b093e5e4ca3a2261c4e696fe530d5e982dc69c6062c60a83aab74e 222186 libgles-nvidia2_390.144-1~deb9u1_amd64.deb
+ 3b7167b96e57b89dc2a630059342f36b154eba850bef702304938f6a15112296 202056 libgles1-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 07d05e12322427d372a81977b880fba44aa98cd47f94b85b3c2807735ba149ae 194004 libgles1-nvidia_390.144-1~deb9u1_amd64.deb
+ 5da0db2b274b306837cd512dea43fb45f5a167ae5ff5c3ebd082943678b7214d 206962 libgles2-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 579c222254abb5c2753f94ef1830a1768c4dd9398cfbd1626e99f869096d112a 194020 libgles2-nvidia_390.144-1~deb9u1_amd64.deb
+ 43124b043b05836edf6bb2f7bca3aabd126e904226505ce9ff2ed1481019674b 249560 libglvnd0-nvidia_390.144-1~deb9u1_amd64.deb
+ 9eef469dc4f4381431afb37270c048a07d5a18047f969ba2eb50d87df33cf202 450356 libglx-nvidia0_390.144-1~deb9u1_amd64.deb
+ 45c91afe052fdcff8933251c293e3d08874435efdf57dd795753ba09fd9ee38d 221214 libglx0-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 63b4ce24bd5fe887cd7358e387c3c020c6115d8f2871fdab76124da16f163b01 834274 libnvcuvid1_390.144-1~deb9u1_amd64.deb
+ 9da003a05f32428b5fc3c7a37cad0887f5315d748c15b7b52788e309614c8c8b 257316 libnvidia-cfg1_390.144-1~deb9u1_amd64.deb
+ a5f7425c508b51c3fbb94c76e9f5db741b4df09725ed0a937dac2333c3c21b69 11594796 libnvidia-compiler_390.144-1~deb9u1_amd64.deb
+ c3a8292f2e8d7444cf4259eaf6534e56bff54f28e2283646a61f61eacd83568d 6755770 libnvidia-eglcore_390.144-1~deb9u1_amd64.deb
+ 4ba6ab4f1084f5e09836635e2c8ba17a5eef00210b264d387bd3d2e9adef3595 239420 libnvidia-encode1_390.144-1~deb9u1_amd64.deb
+ d8886d5b4674c221b20b1558d9c20f4e6c6479590a533bf53d1aa10fb4114d5b 313028 libnvidia-fatbinaryloader_390.144-1~deb9u1_amd64.deb
+ 071b14ab35acdf944a34f7d0bdc53922dc74cf58843c9eabd19578281da9c001 228280 libnvidia-fbc1_390.144-1~deb9u1_amd64.deb
+ e615f5d48e498f5e46ab83672d7f3214a6abb460ac872c1cd6cbf4866d1ee254 6810294 libnvidia-glcore_390.144-1~deb9u1_amd64.deb
+ 3b6a8bb40df915b8591640c63cf2e1cf7c586e15331b1b9028ec5d413540f3e3 255924 libnvidia-ifr1_390.144-1~deb9u1_amd64.deb
+ 71086d79b16bb29758fd96fb008755275949fa5e4d32702bbd05b0fb40cfbde8 606640 libnvidia-ml1_390.144-1~deb9u1_amd64.deb
+ 99a14370724afd53fe836e29ff042762efe1970076ec7dc213b7a63a737543d7 3843870 libnvidia-ptxjitcompiler1_390.144-1~deb9u1_amd64.deb
+ 0a8d2c0a3e6aed3b2f54ab417ec8533a99c303ad299a656d2d6f4c1371cca7fe 219842 libopengl0-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ b7f33c54319f7726cd388e50916c1007a0ce79946863caf0a0b93b91488650ee 195924 nvidia-alternative_390.144-1~deb9u1_amd64.deb
+ ab646425204a3a8c19a5378641f6675895231f35466c13c9933c232e41ceefe2 226672 nvidia-cuda-mps_390.144-1~deb9u1_amd64.deb
+ c3e40854e116fbb1195e3100714922476ac0a687904a859abd49830c9ae9b128 197208 nvidia-detect_390.144-1~deb9u1_amd64.deb
+ 19a519f02db0128c5ab247f03657764db898468fe1597661f4100c2484e4ea29 279602 nvidia-driver-bin_390.144-1~deb9u1_amd64.deb
+ cfe44b84ee510855c660d54f6520e5539ea6e6b159fae6e48e0e54ea3e653072 194134 nvidia-driver-libs-nonglvnd_390.144-1~deb9u1_amd64.deb
+ c404eb41eae9fb9c819a34b712dafb17eadaed0c88d943bc598f0a50c5c5f595 194118 nvidia-driver-libs_390.144-1~deb9u1_amd64.deb
+ b98f077a064ccbfb53b503de77a1797d113a03c8dac04cf8d1008859b71eec46 495798 nvidia-driver_390.144-1~deb9u1_amd64.deb
+ 0c6f07c76b814ef42d95ba814345243ddabdaacbf552c6e5f5003152f1e88fb0 194236 nvidia-egl-common_390.144-1~deb9u1_amd64.deb
+ 992149a4355c204a9eba52fd1c5a0040fb3b761b35e71e34e6b08ea2975e5af5 193958 nvidia-egl-icd_390.144-1~deb9u1_amd64.deb
+ 69e1c0ca201184bfa0d1e891e929570f2fa06c61e1b6a838d22d52b4eddb2a77 22586 nvidia-graphics-drivers_390.144-1~deb9u1_amd64.buildinfo
+ d75589b36dadb872ba78da09d21de4a6b5fe70cc668d8eef32497d461df8922f 9986406 nvidia-kernel-dkms_390.144-1~deb9u1_amd64.deb
+ 0715b87e3dfa1c975cb87fe9a1e2c05c77113d60ed091bb332ce33ee9f4ec304 10037208 nvidia-kernel-source_390.144-1~deb9u1_amd64.deb
+ 090a94f3375b4130ed8e8795572e93e52f329c2896196390e944a6d48fcc76b1 194820 nvidia-kernel-support_390.144-1~deb9u1_amd64.deb
+ 28d0ec45c8dad73518990f699683be726c28e7f93d9ed6a905d561122568227a 199966 nvidia-legacy-check_390.144-1~deb9u1_amd64.deb
+ df64e9f1f1f3c682057180246da7c3fdceed02f481e098890b7d0fe91e876966 202666 nvidia-libopencl1_390.144-1~deb9u1_amd64.deb
+ d0d6e304381615e9900e3f91e45986cf08b299bcd51d40e97434d4f6c14b9cc3 194228 nvidia-nonglvnd-vulkan-common_390.144-1~deb9u1_amd64.deb
+ 2e1c842d08a67d92c1141ddfff32955fc061f702553b3434918ec0ca344e18a7 193964 nvidia-nonglvnd-vulkan-icd_390.144-1~deb9u1_amd64.deb
+ 0d06f7043b29e2e47637e444fa96d66f9863894672c813f68a4cd2ff9dd6320f 194196 nvidia-opencl-common_390.144-1~deb9u1_amd64.deb
+ 99731f223caa473c25f3bce779a02bf4c12e3ba44ca2eafc32ed87880baa5bb5 1928452 nvidia-opencl-icd_390.144-1~deb9u1_amd64.deb
+ e46026806f8d4259826a7382871492fb6bff30e9f51b197a5347d840886750be 378048 nvidia-smi_390.144-1~deb9u1_amd64.deb
+ 365da19bb628780eb7a1f74403cf9920a1364743f19a298fc5888cd6696474ba 841812 nvidia-vdpau-driver_390.144-1~deb9u1_amd64.deb
+ aa9bc3f71febbef179f38b95b7c5ab6da00a575844f43acd6422b67ef8b55d24 194230 nvidia-vulkan-common_390.144-1~deb9u1_amd64.deb
+ d5f860326bfc053ab4bc605ab1406bfaa4270029a2895bcf3d0dfdace4d7c80b 193936 nvidia-vulkan-icd_390.144-1~deb9u1_amd64.deb
+ 1ca842c03da4bcf30eee718aa7f97a86b789d627d33c8e15f7627ddc2fc4ef6e 2529742 xserver-xorg-video-nvidia_390.144-1~deb9u1_amd64.deb
+Changes:
+ nvidia-graphics-drivers (390.144-1~deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-1076, CVE-2021-1093, CVE-2021-1094, CVE-2021-1095
+     and CVE-2021-1056.
+     Multiple security vulnerabilities have been discovered in the
+     NVIDIA binary driver and libraries that provide optimized
+     hardware acceleration which may lead to denial of service,
+     information disclosure, or data corruption.
+Files:
+ b55bc7776c2ee316f61747fa1de17d5b 8088 non-free/libs optional nvidia-graphics-drivers_390.144-1~deb9u1.dsc
+ 84e94bb93887c3009d10969fcc930cef 84965827 non-free/libs optional nvidia-graphics-drivers_390.144.orig-amd64.tar.gz
+ ecf0cd7cede042ffa57dfd31b2f7935e 30092440 non-free/libs optional nvidia-graphics-drivers_390.144.orig-armhf.tar.gz
+ da3fcfe953ec9d61db25ea9ef232bb64 49171898 non-free/libs optional nvidia-graphics-drivers_390.144.orig-i386.tar.gz
+ 8efe4ba7b0605eb592fb0b7ba58043c4 138 non-free/libs optional nvidia-graphics-drivers_390.144.orig.tar.gz
+ 7a720d961ebb7bdd12eae9962fdfcd4b 185308 non-free/libs optional nvidia-graphics-drivers_390.144-1~deb9u1.debian.tar.xz
+ c0a5534a4a8bef64b9f6d97359842136 1867038 non-free/libs optional libcuda1_390.144-1~deb9u1_amd64.deb
+ 1e7d7e7b8863eaa9bc9a8b17fcba593d 368828 non-free/libs optional libegl-nvidia0_390.144-1~deb9u1_amd64.deb
+ dfbda7f390246fc3e0175c9c0e4bb420 220258 non-free/libs optional libegl1-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ e865fe7e6245085624ae3a8f5b0baa9b 201240 non-free/libs optional libegl1-nvidia_390.144-1~deb9u1_amd64.deb
+ d35d13ca2ab4b1e010431f35cf648983 272494 non-free/libs optional libgl1-glvnd-nvidia-glx_390.144-1~deb9u1_amd64.deb
+ 081bcd49c2a2b3c424e38c86f0d4476c 349558 non-free/libs optional libgl1-nvidia-glvnd-glx_390.144-1~deb9u1_amd64.deb
+ 366d16efbea1bacd9632c330e0154b89 607996 non-free/libs optional libgl1-nvidia-glx_390.144-1~deb9u1_amd64.deb
+ 542b5175be072e13b170dad1b0c48b4f 212514 non-free/libs optional libgles-nvidia1_390.144-1~deb9u1_amd64.deb
+ 8ba1e56a04dc203c70e77f37ffa55ff2 222186 non-free/libs optional libgles-nvidia2_390.144-1~deb9u1_amd64.deb
+ 16efc3e56965fc6e3a5f7a6c8b65009b 202056 non-free/libs optional libgles1-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 7ad9a395460a02e9fed1277855198c8d 194004 non-free/oldlibs optional libgles1-nvidia_390.144-1~deb9u1_amd64.deb
+ e3f32c781a266adff654f70900b16214 206962 non-free/libs optional libgles2-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 0451b0417359332607fb5787365959b0 194020 non-free/oldlibs optional libgles2-nvidia_390.144-1~deb9u1_amd64.deb
+ 4c668f0ba35dc344d825f1da55abea5d 249560 non-free/libs optional libglvnd0-nvidia_390.144-1~deb9u1_amd64.deb
+ 8536a00b1436fdf10e395a61c0e27628 450356 non-free/libs optional libglx-nvidia0_390.144-1~deb9u1_amd64.deb
+ 83da2613ba0d09b943a9f929e1da853f 221214 non-free/libs optional libglx0-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 510df6e2e16c37b8f984779106f06907 834274 non-free/libs optional libnvcuvid1_390.144-1~deb9u1_amd64.deb
+ 3415a2103e55ad86ff98dc46fb135870 257316 non-free/libs optional libnvidia-cfg1_390.144-1~deb9u1_amd64.deb
+ ca0b52ebb37069302dc28ceaaf018f5b 11594796 non-free/libs optional libnvidia-compiler_390.144-1~deb9u1_amd64.deb
+ d4aa32efa2b61dd98d15220abf18b698 6755770 non-free/libs optional libnvidia-eglcore_390.144-1~deb9u1_amd64.deb
+ 2cd1f3f4f796358a60ad77788fc3cfe4 239420 non-free/libs optional libnvidia-encode1_390.144-1~deb9u1_amd64.deb
+ 74f41f0ec424d46e884118cc2513a467 313028 non-free/libs optional libnvidia-fatbinaryloader_390.144-1~deb9u1_amd64.deb
+ 7fbbccb732813e3e43684d2131426c11 228280 non-free/libs optional libnvidia-fbc1_390.144-1~deb9u1_amd64.deb
+ a857c144d56b24b0540a3a0debfe9b86 6810294 non-free/libs optional libnvidia-glcore_390.144-1~deb9u1_amd64.deb
+ 1b127d7e73b5e18238d74c2fb35339b1 255924 non-free/libs optional libnvidia-ifr1_390.144-1~deb9u1_amd64.deb
+ cfeb485db547b9256ef94a45fe98f5ff 606640 non-free/libs optional libnvidia-ml1_390.144-1~deb9u1_amd64.deb
+ 9d5c3d34abea14e08d7c5031f3ab67e3 3843870 non-free/libs optional libnvidia-ptxjitcompiler1_390.144-1~deb9u1_amd64.deb
+ e3a3d501db8f4755323313de994b22ab 219842 non-free/libs optional libopengl0-glvnd-nvidia_390.144-1~deb9u1_amd64.deb
+ 5c1596c431d9cef9ec40fb8a1ed7973d 195924 non-free/libs optional nvidia-alternative_390.144-1~deb9u1_amd64.deb
+ 6dad3b2e7bd4a03118a14957490296da 226672 non-free/utils optional nvidia-cuda-mps_390.144-1~deb9u1_amd64.deb
+ d11b1de0a769b4fdef52217dcb3d8b6d 197208 non-free/x11 optional nvidia-detect_390.144-1~deb9u1_amd64.deb
+ 760e4a8f3c82dde1191557d28a8faf53 279602 non-free/x11 optional nvidia-driver-bin_390.144-1~deb9u1_amd64.deb
+ 26a44ce352162aea94f7fccac21c8f4e 194134 non-free/libs optional nvidia-driver-libs-nonglvnd_390.144-1~deb9u1_amd64.deb
+ be2608d7f94dcd2624ab14210c0bbd88 194118 non-free/libs optional nvidia-driver-libs_390.144-1~deb9u1_amd64.deb
+ f084af07bf2763de774f533e934d8d86 495798 non-free/x11 optional nvidia-driver_390.144-1~deb9u1_amd64.deb
+ bd1ca5daa4f3faea1d5016297c30de6b 194236 non-free/libs optional nvidia-egl-common_390.144-1~deb9u1_amd64.deb
+ 64fe8910a8750e22f467d1d8081980a8 193958 non-free/libs optional nvidia-egl-icd_390.144-1~deb9u1_amd64.deb
+ 5940550e8875134d996efdfd3480605b 22586 non-free/libs optional nvidia-graphics-drivers_390.144-1~deb9u1_amd64.buildinfo
+ 4134d6ee5cec9d13d4b1ae3960b15f7c 9986406 non-free/kernel optional nvidia-kernel-dkms_390.144-1~deb9u1_amd64.deb
+ be93ac1c066afbab2475d67a55b84ed0 10037208 non-free/kernel optional nvidia-kernel-source_390.144-1~deb9u1_amd64.deb
+ 8f4c1679c2816b410bf4102692fd5760 194820 non-free/kernel optional nvidia-kernel-support_390.144-1~deb9u1_amd64.deb
+ c5afdcfd5a551d39eaa0171b5663ff5b 199966 non-free/libs optional nvidia-legacy-check_390.144-1~deb9u1_amd64.deb
+ 4ff5ae9340cc642a2222daea7c26b94c 202666 non-free/libs optional nvidia-libopencl1_390.144-1~deb9u1_amd64.deb
+ 756e55a87c1b750e46d36972e8c2b0ef 194228 non-free/libs optional nvidia-nonglvnd-vulkan-common_390.144-1~deb9u1_amd64.deb
+ 2fa0a08681b5458b601a0cae5aae30f1 193964 non-free/libs optional nvidia-nonglvnd-vulkan-icd_390.144-1~deb9u1_amd64.deb
+ 605c4b81015832de2d27545279d1c85a 194196 non-free/libs optional nvidia-opencl-common_390.144-1~deb9u1_amd64.deb
+ f5b69dcfc8b2fb7f98c8888f136a1ad0 1928452 non-free/libs optional nvidia-opencl-icd_390.144-1~deb9u1_amd64.deb
+ 8001a4a1e51dab54b9348f935bc6a390 378048 non-free/utils optional nvidia-smi_390.144-1~deb9u1_amd64.deb
+ 2673dd2058ea49289d5ce1b0c9e283aa 841812 non-free/video optional nvidia-vdpau-driver_390.144-1~deb9u1_amd64.deb
+ 460cdc3efa3cb3cb0cf44209ebe15e12 194230 non-free/libs optional nvidia-vulkan-common_390.144-1~deb9u1_amd64.deb
+ 17426fe14477b1cbd434940a60526b51 193936 non-free/libs optional nvidia-vulkan-icd_390.144-1~deb9u1_amd64.deb
+ 562c941ff31c61b0dd94da2c8624d002 2529742 non-free/x11 optional xserver-xorg-video-nvidia_390.144-1~deb9u1_amd64.deb
+

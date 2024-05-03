@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 05 Dec 2022 00:20:50 +0100
+Source: node-fetch
+Architecture: source
+Version: 1.7.3-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ node-fetch (1.7.3-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-0235: Exposure of Sensitive Information to an Unauthorized Actor,
+     such as cookie header leak to a 3rd party site or through protocol
+     downgrade.
+Checksums-Sha1:
+ b402aba9157dc3cc248e03af544a2b6c0f1fc675 2041 node-fetch_1.7.3-1+deb10u1.dsc
+ 7e2fcb977776bc7ff2b125b5d1f1d5a860480ae2 19172 node-fetch_1.7.3.orig.tar.gz
+ e24a4e6c3d8f832c737657df32360b346143beec 4532 node-fetch_1.7.3-1+deb10u1.debian.tar.xz
+ 8316c31e380dfaf6594b8cc1f1f69fd4161fcbac 5810 node-fetch_1.7.3-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1568993fbfd9de342f2d7664155f7200b77da5be7055603cc8f9d159e22fcff1 2041 node-fetch_1.7.3-1+deb10u1.dsc
+ 2fec4a10841573ec9ed7d95f72bfe8ce833aa9d995e6af993ff6a0ae056d7a72 19172 node-fetch_1.7.3.orig.tar.gz
+ 01d22a05ff5f2886c9682a375ad50f55751db7b9ca9727ae4c40fc7f8afbf953 4532 node-fetch_1.7.3-1+deb10u1.debian.tar.xz
+ b1e5a5c195ffd59228b4e456761338ee40322a732bb66865e1dd27b87c173318 5810 node-fetch_1.7.3-1+deb10u1_amd64.buildinfo
+Files:
+ ef81e008c915de2cc353b1abae7d613a 2041 javascript optional node-fetch_1.7.3-1+deb10u1.dsc
+ 4c5c3fb6db3ba389a153fb86087d053b 19172 javascript optional node-fetch_1.7.3.orig.tar.gz
+ af7da99c1b1e23bc0c9866947228805f 4532 javascript optional node-fetch_1.7.3-1+deb10u1.debian.tar.xz
+ 0a1fa5b78a4997459e32a941b35f6ce4 5810 javascript optional node-fetch_1.7.3-1+deb10u1_amd64.buildinfo
+

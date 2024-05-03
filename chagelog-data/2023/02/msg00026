@@ -1,0 +1,55 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 20 Feb 2023 15:22:12 CET
+Source: nss
+Architecture: source
+Version: 2:3.42.1-1+deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 532be164a626ce554833bd436a0b77fb4a12980d 2346 nss_3.42.1-1+deb10u6.dsc
+ 6c7adec20c592881aaf802bdcb92c68972251f0e 204436 nss_3.42.1-1+deb10u6.debian.tar.xz
+ a8cef25bc073cf53ebc11b2844ede36bae8814a2 7058 nss_3.42.1-1+deb10u6_amd64.buildinfo
+Checksums-Sha256:
+ 56e375356737c19e6d1bd6d3d7a37a2aaec84634f31af603458dd544edc45f0d 2346 nss_3.42.1-1+deb10u6.dsc
+ 65de9b02bed0b63d2b5e7e61e61aebf426cfd64143c01b6d659af4543aa99d10 204436 nss_3.42.1-1+deb10u6.debian.tar.xz
+ 63e80a7f6f117ee43d16c557785657e39dc0014fbeb46ae128d47f6c3d0c109e 7058 nss_3.42.1-1+deb10u6_amd64.buildinfo
+Changes:
+ nss (2:3.42.1-1+deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2020-6829, CVE-2020-12400, CVE-2020-12401, CVE-2020-12403 and
+     CVE-2023-0767.
+     Multiple security vulnerabilities have been discovered in nss, the
+     Network Security Service libraries.
+     CVE-2020-6829:
+     When performing EC scalar point multiplication, the wNAF point
+     multiplication algorithm was used; which leaked partial information about
+     the nonce used during signature generation. Given an electro-magnetic trace
+     of a few signature generations, the private key could have been computed.
+     CVE-2020-12400:
+     When converting coordinates from projective to affine, the modular
+     inversion was not performed in constant time, resulting in a possible
+     timing-based side channel attack.
+     CVE-2020-12401:
+     During ECDSA signature generation, padding applied in the nonce designed to
+     ensure constant-time scalar multiplication was removed, resulting in
+     variable-time execution dependent on secret data.
+     CVE-2020-12403:
+     A flaw was found in the way CHACHA20-POLY1305 was implemented in NSS in
+     versions before 3.55. When using multi-part Chacha20, it could cause
+     out-of-bounds reads. This issue was fixed by explicitly disabling
+     multi-part ChaCha20 (which was not functioning correctly) and strictly
+     enforcing tag length.
+     CVE-2023-0767:
+     Christian Holler discovered that incorrect handling of PKCS 12 Safe Bag
+     attributes may result in execution of arbitrary code if a specially crafted
+     PKCS 12 certificate bundle is processed.
+Files:
+ 3a3f635f89e36c4fae969335af2fea36 2346 libs optional nss_3.42.1-1+deb10u6.dsc
+ 5ca76950032697c23e8632e985574881 204436 libs optional nss_3.42.1-1+deb10u6.debian.tar.xz
+ 800f0ba286dc92b934d32d55e23902b3 7058 libs optional nss_3.42.1-1+deb10u6_amd64.buildinfo
+

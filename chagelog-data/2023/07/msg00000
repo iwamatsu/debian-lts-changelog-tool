@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 02 Jul 2023 12:09:14 +0200
+Source: yajl
+Architecture: source
+Version: 2.1.0-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: John Stamp <jstamp@users.sourceforge.net>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1039984
+Changes:
+ yajl (2.1.0-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Import upstream patch for CVE-2023-33460. (Closes: #1039984)
+Checksums-Sha1:
+ 3c7cf303cf723f76911463a8815a1a0268cf8f15 2029 yajl_2.1.0-2+deb10u1.dsc
+ 29ce2b9695ae93e1b0b349a22cea8067f25a9025 83997 yajl_2.1.0.orig.tar.gz
+ 22af412e3fa6acf2c6cdb4b687b590b0911ad80e 5912 yajl_2.1.0-2+deb10u1.debian.tar.xz
+ 1d902d126a120f3d896b80b24c1f0888c126c735 8179 yajl_2.1.0-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ fa2ab46d7e1cf2512ccdb84351f03593174fb3da47fa2df45bfdf52d0c23a110 2029 yajl_2.1.0-2+deb10u1.dsc
+ 3fb73364a5a30efe615046d07e6db9d09fd2b41c763c5f7d3bfb121cd5c5ac5a 83997 yajl_2.1.0.orig.tar.gz
+ a53cf042a6dc73d0693761f9a34faa12123702d554c45566ca92d9fc205c71a8 5912 yajl_2.1.0-2+deb10u1.debian.tar.xz
+ 9ef0f41c7f12b0a5db27bda4ea45ccb35b98e24f4bf5fc6c60540a34ce790812 8179 yajl_2.1.0-2+deb10u1_amd64.buildinfo
+Files:
+ 240246b3d71a8d594c7557ad360792a7 2029 libs optional yajl_2.1.0-2+deb10u1.dsc
+ 6887e0ed7479d2549761a4d284d3ecb0 83997 libs optional yajl_2.1.0.orig.tar.gz
+ e39e66b45d9e0f4a739af131988f133d 5912 libs optional yajl_2.1.0-2+deb10u1.debian.tar.xz
+ 68a298800cca8ad16f34072825ae7769 8179 libs optional yajl_2.1.0-2+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,75 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 23 Jun 2022 08:35:44 +0100
+Source: request-tracker4
+Binary: request-tracker4 rt4-clients rt4-standalone rt4-fcgi rt4-apache2 rt4-db-postgresql rt4-db-mysql rt4-db-sqlite rt4-doc-html
+Architecture: source all
+Version: 4.4.1-3+deb9u4
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Request Tracker Group <pkg-request-tracker-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ request-tracker4 - extensible trouble-ticket tracking system
+ rt4-apache2 - Apache 2 specific files for request-tracker4
+ rt4-clients - mail gateway and command-line interface to request-tracker4
+ rt4-db-mysql - MySQL database backend for request-tracker4
+ rt4-db-postgresql - PostgreSQL database backend for request-tracker4
+ rt4-db-sqlite - SQLite database backend for request-tracker4
+ rt4-doc-html - HTML documentation for request-tracker4
+ rt4-fcgi   - External FastCGI support for request-tracker4
+ rt4-standalone - Standalone web server support for request-tracker4
+Closes: 995175
+Changes:
+ request-tracker4 (4.4.1-3+deb9u4) stretch-security; urgency=high
+ .
+   * CVE-2021-38562: Fix an issue where a sensitive information could have
+     been revealed by way of a timing attack on the authentication system.
+     (Closes: #995175)
+Checksums-Sha1:
+ 0a98681d07adfbbc3f00629ea47bccb8f9ddb851 5498 request-tracker4_4.4.1-3+deb9u4.dsc
+ 3d4f9fa07e52981f4ab7ce9c7a4a788a8d84d94e 1132767 request-tracker4_4.4.1.orig-third-party-source.tar.gz
+ a3c7aa5398af4f53c947b4bee8c91cecd5beb432 9057212 request-tracker4_4.4.1.orig.tar.gz
+ 57e1cb83369ddf4a500102555da3da62051e060e 84708 request-tracker4_4.4.1-3+deb9u4.debian.tar.xz
+ 9ed2113704bc26b8c4261c39d5893271f769eff4 4267852 request-tracker4_4.4.1-3+deb9u4_all.deb
+ 31624a22f339fa6baf694f909ed98efef00a87f4 18673 request-tracker4_4.4.1-3+deb9u4_amd64.buildinfo
+ 953f03dec32345548b7525bd42e235dc84af7cdf 20828 rt4-apache2_4.4.1-3+deb9u4_all.deb
+ 59c5de8aa8578ecb4052a947cc7827f35b64f054 53188 rt4-clients_4.4.1-3+deb9u4_all.deb
+ d352c3947049ad07fc5deb2af5bfb6f396015693 20096 rt4-db-mysql_4.4.1-3+deb9u4_all.deb
+ 828c6da14507db790b6ed527b67d50af3deaefa2 20082 rt4-db-postgresql_4.4.1-3+deb9u4_all.deb
+ a32b7ac56befb410878d89369519a517d8c96e54 20196 rt4-db-sqlite_4.4.1-3+deb9u4_all.deb
+ 074c0cb16dab09db24c6403f5d078d598753a2e1 2049876 rt4-doc-html_4.4.1-3+deb9u4_all.deb
+ 6456da7dff74680067da9284294b565a6109708e 22600 rt4-fcgi_4.4.1-3+deb9u4_all.deb
+ afc3a3d1ba2f3bf9298b14a3cbd66445a67d6d00 19570 rt4-standalone_4.4.1-3+deb9u4_all.deb
+Checksums-Sha256:
+ 4189939cd2b98ed79d8132e04f995c017cd2b61202a4ac871d588e222fe2556a 5498 request-tracker4_4.4.1-3+deb9u4.dsc
+ 5cdc9d979a44ac53aa67e2ddecc17477dbe53fa8be8b4147b5f9a3b83cabdaf8 1132767 request-tracker4_4.4.1.orig-third-party-source.tar.gz
+ f87329911020e01b39948070aec2bd7abf0c81641f0cf2f25e01c690a19f24f5 9057212 request-tracker4_4.4.1.orig.tar.gz
+ c9d447451a15443d06792b48875c10f93273a421992e6009cc6d32a08da0e4b1 84708 request-tracker4_4.4.1-3+deb9u4.debian.tar.xz
+ d18be554ad635cc030210ccc18b8d8d8c2a7a3ff7e11f89eceba1b32a5998832 4267852 request-tracker4_4.4.1-3+deb9u4_all.deb
+ 691674d0f0c4aa79dec8a8d847c9e4d315ed5164fd774b16259a86a767a18bc1 18673 request-tracker4_4.4.1-3+deb9u4_amd64.buildinfo
+ 6ceb371a31dd6c83bb0624fc2f1815f299d71c8443c04528d1ceda5829086ca6 20828 rt4-apache2_4.4.1-3+deb9u4_all.deb
+ d80e653a70adf664cf0a5c341b4939671ea5d4605655be2d9134f3a1cf2b1dc3 53188 rt4-clients_4.4.1-3+deb9u4_all.deb
+ 4721b65e045b5da1753585b10943389d7e8653b4d29c6318f66f8cfa2fa4d501 20096 rt4-db-mysql_4.4.1-3+deb9u4_all.deb
+ fe01a691cd13986fc33d60be305952f0874ff2af3038b3e5fa2d03c6f962081d 20082 rt4-db-postgresql_4.4.1-3+deb9u4_all.deb
+ 6b2ebac62c5ca5442ff67dc01e3bfb42ebe6933f77840bcd267151f1864cb925 20196 rt4-db-sqlite_4.4.1-3+deb9u4_all.deb
+ 893eae8b03d25fc129393f5b9fd5052bcfcf0a786f9c6ce2d3f9f4d9291c91e1 2049876 rt4-doc-html_4.4.1-3+deb9u4_all.deb
+ a4a69a4db17edcf1a91303f56020e75dd184f4b867b19aa09961e56ff843ccc3 22600 rt4-fcgi_4.4.1-3+deb9u4_all.deb
+ 217abdbab3fe017e1129b0928874b5cca81df1c92c878a48f35ec541923e5e07 19570 rt4-standalone_4.4.1-3+deb9u4_all.deb
+Files:
+ 446dbf424faf4317a5eab40e19d562d2 5498 misc optional request-tracker4_4.4.1-3+deb9u4.dsc
+ 8b0d4487be2741b20083de3ac199cc72 1132767 misc optional request-tracker4_4.4.1.orig-third-party-source.tar.gz
+ 3587522b92a02d3866e07dc9361ca1e2 9057212 misc optional request-tracker4_4.4.1.orig.tar.gz
+ c6478b73e1ea31be67c04ae2bcbf6b5c 84708 misc optional request-tracker4_4.4.1-3+deb9u4.debian.tar.xz
+ bcc4d1284f3cf389d3de19c71ec8c385 4267852 misc optional request-tracker4_4.4.1-3+deb9u4_all.deb
+ dfc60ac51413743ec17fdc61ddd95a98 18673 misc optional request-tracker4_4.4.1-3+deb9u4_amd64.buildinfo
+ 9d68e8567e98b2225b43a09dbeffe815 20828 misc optional rt4-apache2_4.4.1-3+deb9u4_all.deb
+ a782f909540e29423c4abd2feb4153c3 53188 misc optional rt4-clients_4.4.1-3+deb9u4_all.deb
+ 810e64940f319b444d9e894a031fd87f 20096 misc optional rt4-db-mysql_4.4.1-3+deb9u4_all.deb
+ 8ffeb1c2d5c5a6e8c2b6fb928a784d30 20082 misc optional rt4-db-postgresql_4.4.1-3+deb9u4_all.deb
+ ae55011141987c11227eb0c0d07efa31 20196 misc optional rt4-db-sqlite_4.4.1-3+deb9u4_all.deb
+ 2c15ad13603d65b56198a35a76383ecb 2049876 doc optional rt4-doc-html_4.4.1-3+deb9u4_all.deb
+ e9a6873349b554ccd226cb9aad730d41 22600 misc optional rt4-fcgi_4.4.1-3+deb9u4_all.deb
+ 80b998eecbf084a7156c7d720864f379 19570 misc optional rt4-standalone_4.4.1-3+deb9u4_all.deb
+

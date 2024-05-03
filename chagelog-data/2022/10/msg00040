@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 28 Oct 2022 23:03:02 +0200
+Source: openvswitch
+Architecture: source
+Version: 2.10.7+ds1-0+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ openvswitch (2.10.7+ds1-0+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-32166
+     Due to a heap buffer over-read an attacker might crash the software,
+     modify memory or even remote execute code.
+Checksums-Sha1:
+ c4d0ce299b21198b4f180f39279adcaea5fde5a3 3369 openvswitch_2.10.7+ds1-0+deb10u2.dsc
+ fa65c12ace8002f51f0c280e7519b986a0d2478b 3871520 openvswitch_2.10.7+ds1.orig.tar.xz
+ 24b4e80f402221dff5a1e4cc2f994a8f302cf8c6 66968 openvswitch_2.10.7+ds1-0+deb10u2.debian.tar.xz
+ 8d87352ccfb69fdd6c95aedf4233ac99cc0bde40 14405 openvswitch_2.10.7+ds1-0+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 2944806ad5f4fc032a9eba0796aa91fdef8459494e16bb429842f0c31cbdf208 3369 openvswitch_2.10.7+ds1-0+deb10u2.dsc
+ 42c705fe12bee854250738b1fa975ee0e3934ce9cbc3a3ea80777066aca15fac 3871520 openvswitch_2.10.7+ds1.orig.tar.xz
+ 86dfc0b80e180fc12548bd9584fab279d24befdfe170c5d668d337e6e09327fc 66968 openvswitch_2.10.7+ds1-0+deb10u2.debian.tar.xz
+ dc43255bc9ce186c190b37a6d6ecbdeac941725969b849c09ce3741c61f84f8a 14405 openvswitch_2.10.7+ds1-0+deb10u2_amd64.buildinfo
+Files:
+ 9a011a842399a518bff4cb52efd1a199 3369 net optional openvswitch_2.10.7+ds1-0+deb10u2.dsc
+ 972d6239c7af468809d7383f510d0fac 3871520 net optional openvswitch_2.10.7+ds1.orig.tar.xz
+ ca3d417584cb53534ab5d3fe2771a32a 66968 net optional openvswitch_2.10.7+ds1-0+deb10u2.debian.tar.xz
+ fd2e07d858291e8656ced78169c32c8a 14405 net optional openvswitch_2.10.7+ds1-0+deb10u2_amd64.buildinfo
+

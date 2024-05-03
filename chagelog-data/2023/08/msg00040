@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 22 Aug 2023 15:23:39 +0200
+Source: w3m
+Architecture: source
+Version: 0.5.3-37+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Tatsuya Kinoshita <tats@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1019599
+Changes:
+ w3m (0.5.3-37+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-38223: There is an out-of-bounds write in checkType located
+     in etc.c in w3m 0.5.3. It can be triggered by sending a crafted HTML
+     file to the w3m binary. It allows an attacker to cause Denial of
+     Service or possibly have unspecified other impact. (closes: #1019599)
+Checksums-Sha1:
+ e0d11f5e760163e30ad767594061f45e9fc84a39 2027 w3m_0.5.3-37+deb10u1.dsc
+ 444b6c8cf7094ee95f8e9de96b37f814b9d83237 2202328 w3m_0.5.3.orig.tar.gz
+ 416c349d93ec7dc840ac85f40c17fcca59dbda3c 199640 w3m_0.5.3-37+deb10u1.debian.tar.xz
+ 6a76f3c34df48c55a5848a04f09d4b966738b14a 7792 w3m_0.5.3-37+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c33296d17db6956f64ca37585fda57c6a7cbbf338821758422c74b7efa220234 2027 w3m_0.5.3-37+deb10u1.dsc
+ e994d263f2fd2c22febfbe45103526e00145a7674a0fda79c822b97c2770a9e3 2202328 w3m_0.5.3.orig.tar.gz
+ aaeae2c0a51c48b5d589151df86cf89a51c07b5f766ce5707e7ffa671329bb65 199640 w3m_0.5.3-37+deb10u1.debian.tar.xz
+ b9ddc72625709b1396aae2828ff67518f39361fe71fa77a68340ae4f29fdc283 7792 w3m_0.5.3-37+deb10u1_amd64.buildinfo
+Files:
+ 290e52841843dd3e8b7effa8cf5134f9 2027 web optional w3m_0.5.3-37+deb10u1.dsc
+ 1b845a983a50b8dec0169ac48479eacc 2202328 web optional w3m_0.5.3.orig.tar.gz
+ 64031f1a860dfa171bc00f9fa8f6686c 199640 web optional w3m_0.5.3-37+deb10u1.debian.tar.xz
+ 17e88d8db5ad1f682f3f0479f2c1f26f 7792 web optional w3m_0.5.3-37+deb10u1_amd64.buildinfo
+

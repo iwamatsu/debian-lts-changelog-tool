@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 20 Jul 2023 03:38:56 +0200
+Source: pandoc
+Architecture: source
+Version: 2.2.1-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Haskell Group <debian-haskell@lists.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1041976
+Changes:
+ pandoc (2.2.1-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix upstream test suite and make sure it is run at build time (cf.
+     #1010179).
+   * Fix CVE-2023-35936 and CVE-2023-38745: Arbitrary file write vulnerability
+     via specially crafted image element in the input when generating files
+     using the `--extract-media` option or outputting to PDF format. (Closes:
+     #1041976)
+Checksums-Sha1:
+ 978895df9ac4163a58e2b5af79e603dc77396582 6208 pandoc_2.2.1-3+deb10u1.dsc
+ 377b217923c9a1e985a703150f45b2d3ecd7db6b 9001475 pandoc_2.2.1.orig.tar.gz
+ e00a6c84f5b72b87c74f9a73737a17cdd950dfd7 54504 pandoc_2.2.1-3+deb10u1.debian.tar.xz
+ 36a73c45b1434893175c8363a2be3ed47488eca7 18364 pandoc_2.2.1-3+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 3924cb6ae34b8f554d48d6e71303c2cdfb7f7cb9cb6df38bf297888cfac7b812 6208 pandoc_2.2.1-3+deb10u1.dsc
+ fe037f5fbb62fb27e7b1dbddfbd0aa45ea6e9fcdaff1f2203f7484c245b211b7 9001475 pandoc_2.2.1.orig.tar.gz
+ 4c92854b99a1fd0d5a269e0572f5c1d8451421e1723f6db63f1aa4b02bdc0fbf 54504 pandoc_2.2.1-3+deb10u1.debian.tar.xz
+ c5e171665c8643cb5448f26345c970c3e7a029adaaf17f7569c397ce57b2f015 18364 pandoc_2.2.1-3+deb10u1_amd64.buildinfo
+Files:
+ 5e58b929fc5343d66abd3dc1c60366c1 6208 text optional pandoc_2.2.1-3+deb10u1.dsc
+ f1da8f031e9e012eed07eb1d80e2585d 9001475 text optional pandoc_2.2.1.orig.tar.gz
+ b678954ce265ac4b265d1c2c02c14799 54504 text optional pandoc_2.2.1-3+deb10u1.debian.tar.xz
+ 2dce71ab27f50ea0532c2c404dcc0c30 18364 text optional pandoc_2.2.1-3+deb10u1_amd64.buildinfo
+

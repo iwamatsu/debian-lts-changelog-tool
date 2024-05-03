@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 25 Oct 2022 19:16:37 CEST
+Source: tomcat9
+Architecture: source
+Version: 9.0.31-1~deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 5e310f0dda3d43c0e8885d3b3dd9a3f64983edfb 2889 tomcat9_9.0.31-1~deb10u7.dsc
+ 53f715283bdc346875702c3d8bd3193463b6c4f0 48640 tomcat9_9.0.31-1~deb10u7.debian.tar.xz
+ 262fa5c4c05527e6315c6fa44de5d948afb60577 14119 tomcat9_9.0.31-1~deb10u7_amd64.buildinfo
+Checksums-Sha256:
+ 6003197265a34435bdd2c45de8650fc1035a3771150ec8cf982126a78d9e3e1a 2889 tomcat9_9.0.31-1~deb10u7.dsc
+ 764c25638458e15da3907a08df9f2cc950b915615501c8e4e7f5d6e8e65a1eac 48640 tomcat9_9.0.31-1~deb10u7.debian.tar.xz
+ 5d82b91b02097df2fbc181e644625b13129418fd55db8f306a2bb0bec19cd962 14119 tomcat9_9.0.31-1~deb10u7_amd64.buildinfo
+Changes:
+ tomcat9 (9.0.31-1~deb10u7) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2021-43980:
+     The simplified implementation of blocking reads and writes introduced in
+     Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing
+     (but extremely hard to trigger) concurrency bug that could cause client
+     connections to share an Http11Processor instance resulting in responses, or
+     part responses, to be received by the wrong client.
+   * Fix CVE-2022-23181:
+     The fix for bug CVE-2020-9484 introduced a time of check, time of use
+     vulnerability into Apache Tomcat that allowed a local attacker to perform
+     actions with the privileges of the user that the Tomcat process is using.
+     This issue is only exploitable when Tomcat is configured to persist sessions
+     using the FileStore.
+   * Fix CVE-2022-29885:
+     The documentation of Apache Tomcat for the EncryptInterceptor incorrectly
+     stated it enabled Tomcat clustering to run over an untrusted network. This
+     was not correct. While the EncryptInterceptor does provide confidentiality
+     and integrity protection, it does not protect against all risks associated
+     with running over any untrusted network, particularly DoS risks.
+Files:
+ eb186423a8dba99ae0af8f648b186c7c 2889 java optional tomcat9_9.0.31-1~deb10u7.dsc
+ 7d45a194628e7c2f2becdd26bf50190d 48640 java optional tomcat9_9.0.31-1~deb10u7.debian.tar.xz
+ eb45aa8bb6c48910ebcba3918bf92960 14119 java optional tomcat9_9.0.31-1~deb10u7_amd64.buildinfo
+

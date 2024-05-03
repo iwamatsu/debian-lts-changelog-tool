@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 29 Apr 2022 23:03:02 +0200
+Source: tinyxml
+Binary: libtinyxml2.6.2v5 libtinyxml2.6.2v5-dbg libtinyxml-dev libtinyxml-doc
+Architecture: source amd64 all
+Version: 2.6.2-4+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Felix Geyer <fgeyer@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libtinyxml-dev - TinyXml library - header and static library
+ libtinyxml-doc - TinyXml library - documentation files
+ libtinyxml2.6.2v5 - C++ XML parsing library
+ libtinyxml2.6.2v5-dbg - TinyXml library - debug files
+Changes:
+ tinyxml (2.6.2-4+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Import fix for CVE-2021-42260.
+     - Add CVE-2021-42260.patch
+Checksums-Sha1:
+ ce1ee41aa8684618a521e8789ba78736771546ba 2256 tinyxml_2.6.2-4+deb9u1.dsc
+ cba3f50dd657cb1434674a03b21394df9913d764 210124 tinyxml_2.6.2.orig.tar.gz
+ 2a83116671db1670b9e417f4d130a80cf679efb4 4796 tinyxml_2.6.2-4+deb9u1.debian.tar.xz
+ 87cd8b8b342c75450439d1da3f6ac8d66735b9ae 52304 libtinyxml-dev_2.6.2-4+deb9u1_amd64.deb
+ 476fc6a35b099ac12c57174b7db119ccf21d5622 86026 libtinyxml-doc_2.6.2-4+deb9u1_all.deb
+ 60a5694336233040f8e65c372198f7c73b0158f4 148992 libtinyxml2.6.2v5-dbg_2.6.2-4+deb9u1_amd64.deb
+ a2dbd914b355f6acba6432b70188cf2737ac183b 37066 libtinyxml2.6.2v5_2.6.2-4+deb9u1_amd64.deb
+ f7475f1dfdbd392c531adf4d1e1a724a11b252ff 6939 tinyxml_2.6.2-4+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ dc9da67f390b2da6ec96a84513b14c3be19f265db1d8ba1e3fec91ed29f1c0a2 2256 tinyxml_2.6.2-4+deb9u1.dsc
+ 15bdfdcec58a7da30adc87ac2b078e4417dbe5392f3afb719f9ba6d062645593 210124 tinyxml_2.6.2.orig.tar.gz
+ a7a5e70c91063685f45be07fde2b3eeedaf6ca7a30e63d981a6c275ab1d2be38 4796 tinyxml_2.6.2-4+deb9u1.debian.tar.xz
+ fc3df7cf501fabd8f78e0c03e6756dba1c228cf73d92502aa074fa107d0ab707 52304 libtinyxml-dev_2.6.2-4+deb9u1_amd64.deb
+ ccf16aa4eef2a648f41a79d12d076e0dca9a6736f849ed6cd961cf6d6069fc64 86026 libtinyxml-doc_2.6.2-4+deb9u1_all.deb
+ 92f5567c7df06ec8b07681c9d30171665bc18f16cd7d9e8fb5735ac7ca54af99 148992 libtinyxml2.6.2v5-dbg_2.6.2-4+deb9u1_amd64.deb
+ c670ef71924d1f77a6d597b8afe703e0278ff41cc3d0656ccf8864be5db4054a 37066 libtinyxml2.6.2v5_2.6.2-4+deb9u1_amd64.deb
+ 96a6d1e94de9dcc30be6ba52f99706f4d0440a14a3dfbd8a72de0e1d13c1e4df 6939 tinyxml_2.6.2-4+deb9u1_amd64.buildinfo
+Files:
+ 08a28a82269e3bef2c11b326409ec80f 2256 libs optional tinyxml_2.6.2-4+deb9u1.dsc
+ c1b864c96804a10526540c664ade67f0 210124 libs optional tinyxml_2.6.2.orig.tar.gz
+ 0e2b85701d10393599cab3122cb5ffe5 4796 libs optional tinyxml_2.6.2-4+deb9u1.debian.tar.xz
+ f60f7e7a001846081190238b4ed10977 52304 libdevel optional libtinyxml-dev_2.6.2-4+deb9u1_amd64.deb
+ 40e3022db2d92ba8a4eb326655372065 86026 doc extra libtinyxml-doc_2.6.2-4+deb9u1_all.deb
+ b2da6ef243668c7336e3de45029bde53 148992 debug extra libtinyxml2.6.2v5-dbg_2.6.2-4+deb9u1_amd64.deb
+ 348908894ff869169e3c943f797055df 37066 libs optional libtinyxml2.6.2v5_2.6.2-4+deb9u1_amd64.deb
+ 7412996951128e28cbf9f775dc30c759 6939 libs optional tinyxml_2.6.2-4+deb9u1_amd64.buildinfo
+

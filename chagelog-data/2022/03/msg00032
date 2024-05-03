@@ -1,0 +1,49 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 21 Mar 2022 11:13:38 +0000
+Source: paramiko
+Binary: paramiko-doc python-paramiko python3-paramiko
+Architecture: source all
+Version: 2.0.0-1+deb9u2
+Distribution: stretch-security
+Urgency: high
+Maintainer: Jeremy T. Bouse <jbouse@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ paramiko-doc - Make ssh v2 connections with Python (Documentation)
+ python-paramiko - Make ssh v2 connections (Python 2)
+ python3-paramiko - Make ssh v2 connections (Python 3)
+Closes: 1008012
+Changes:
+ paramiko (2.0.0-1+deb9u2) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-24302: Prevent a race condition during the creation of private
+     keys which could have let to unauthorised information disclosure.
+     (Closes: #1008012)
+Checksums-Sha1:
+ 3f7e5838e8d072c0afe01c0c74c09a34468b457b 2393 paramiko_2.0.0-1+deb9u2.dsc
+ 6d6b30935eb49dba976fab62b8189b60e29aa817 273791 paramiko_2.0.0.orig.tar.gz
+ 302621c31a1fe01aae00ae1ba881cd537eae53b4 9820 paramiko_2.0.0-1+deb9u2.debian.tar.xz
+ 11198f56d43a425cf11ad886c2daf1c120698f0a 664262 paramiko-doc_2.0.0-1+deb9u2_all.deb
+ b91bdc9f2674d9ea9dec9c087f8c09a7b2218de4 8752 paramiko_2.0.0-1+deb9u2_amd64.buildinfo
+ ddfb8e5a85f023a254537b2c81b0c7f40d2c3a33 112100 python-paramiko_2.0.0-1+deb9u2_all.deb
+ 469b4599dcd9ec3494542d07f9c839230dac2c4e 112202 python3-paramiko_2.0.0-1+deb9u2_all.deb
+Checksums-Sha256:
+ 567b4903b9e9c09330229d0c04b5fec6dc0a63eab146537d26c37a2a8f00edeb 2393 paramiko_2.0.0-1+deb9u2.dsc
+ acf3866621794d68ce42bd5bcb769b6f9ff7e362cc1064e1b1af4185cdc4ed3b 273791 paramiko_2.0.0.orig.tar.gz
+ 0730a163cd022487c82e51f3ee2a2c1af5c86b3ffa4bd04d647f76c0abb12f42 9820 paramiko_2.0.0-1+deb9u2.debian.tar.xz
+ dd35da6977ecc53140fdc371ae39a05ba748ac113e5d6b113cf8b6f0d9ea2153 664262 paramiko-doc_2.0.0-1+deb9u2_all.deb
+ 28e4455acd056b755374682b06b8f17d6c4715a2ec2717fc661d6f1f550f4d77 8752 paramiko_2.0.0-1+deb9u2_amd64.buildinfo
+ 22f7f3678a3e87d2695d859989cf893a355647d88a7f0303a73ee93943c7e433 112100 python-paramiko_2.0.0-1+deb9u2_all.deb
+ 3ce14f3317ec41bfa7fa1eeca687f1cf0e4c9ad901b934f3cb670c0abd9e863c 112202 python3-paramiko_2.0.0-1+deb9u2_all.deb
+Files:
+ 77bbf0162993db4eb6d5ef9b072cc7d1 2393 python optional paramiko_2.0.0-1+deb9u2.dsc
+ 2fa5d3d4e1d6c79b2c2c99c237045649 273791 python optional paramiko_2.0.0.orig.tar.gz
+ 7b9c9a0c71b3652567cff2a2fe58bbc5 9820 python optional paramiko_2.0.0-1+deb9u2.debian.tar.xz
+ d6d88d298cd41cafcbb21c11e57e3439 664262 doc optional paramiko-doc_2.0.0-1+deb9u2_all.deb
+ ed358674bbc6306e265919f34663d229 8752 python optional paramiko_2.0.0-1+deb9u2_amd64.buildinfo
+ d8e25ad8a86859ea810089b2b9b241db 112100 python optional python-paramiko_2.0.0-1+deb9u2_all.deb
+ 2d893660892d94657a7e52e0d24242bf 112202 python optional python3-paramiko_2.0.0-1+deb9u2_all.deb
+

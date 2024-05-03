@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 28 Aug 2023 05:00:07 +0530
+Source: clamav
+Architecture: source
+Version: 0.103.9+dfsg-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ clamav (0.103.9+dfsg-0+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream version 0.103.9+dfsg.
+     - CVE-2023-20197: possible denial of service vulnerability in the
+       HFS+ file parser.
+   * Update symbols file.
+Checksums-Sha1:
+ 4e210090cb154140f0b60a35d3deca97e1e7baf6 3027 clamav_0.103.9+dfsg-0+deb10u1.dsc
+ e28512583f61ae7746f5a99f25665328ef5dbe4d 10782589 clamav_0.103.9+dfsg.orig.tar.bz2
+ dda19c8e345c74ed3c35fbcad27e93d4d9af7c1b 219596 clamav_0.103.9+dfsg-0+deb10u1.debian.tar.xz
+ cc35898c9cfcd028c09bbaba218a0058de31c9fe 6356 clamav_0.103.9+dfsg-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 50d748c26f97b475b621bc3a49016ac1cd98514c6375527e2f77894836f61280 3027 clamav_0.103.9+dfsg-0+deb10u1.dsc
+ 9e76829b593e3db821f799ef747816a3ec7715600cb872baa52a66ea4418be84 10782589 clamav_0.103.9+dfsg.orig.tar.bz2
+ 192ae706e8d613a558357c8e80dbb196da9f7e69aebd33df9f8ac07caa24ddd0 219596 clamav_0.103.9+dfsg-0+deb10u1.debian.tar.xz
+ b5ad9366c2bf4af99bd37a6d353b12e5a1f6139d0734bd720eef92864e619abe 6356 clamav_0.103.9+dfsg-0+deb10u1_source.buildinfo
+Files:
+ c16ff8842766620b104c2aacad46332b 3027 utils optional clamav_0.103.9+dfsg-0+deb10u1.dsc
+ 3a4225892a392694a6cfe815ad9b109f 10782589 utils optional clamav_0.103.9+dfsg.orig.tar.bz2
+ 3543850d0ee84feedb9a075c67d251e8 219596 utils optional clamav_0.103.9+dfsg-0+deb10u1.debian.tar.xz
+ bec56f69634dc3d6fe88b767650fd393 6356 utils optional clamav_0.103.9+dfsg-0+deb10u1_source.buildinfo
+

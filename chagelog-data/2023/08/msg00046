@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 22 Aug 2023 16:16:06 +0200
+Source: tryton-server
+Binary: tryton-server tryton-server-doc
+Architecture: source all
+Version: 5.0.4-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Tryton Maintainers <team+tryton-team@tracker.debian.org>
+Changed-By: Mathias Behrle <mathiasb@m9s.biz>
+Description:
+ tryton-server - Tryton Application Platform (Server)
+ tryton-server-doc - Tryton Application Platform (Server Documentation)
+Changes:
+ tryton-server (5.0.4-2+deb10u2) buster-security; urgency=high
+ .
+   * Add 05_enforce_record_rules.patch.
+     This patch fixes the information disclosure leak when reading from
+     function fields with record rules
+     https://discuss.tryton.org/t/security-release-for-issue-12428/6397
+Checksums-Sha1:
+ a865fdf1d3ef853fe3b77bb69a2f2dad7f288e34 2680 tryton-server_5.0.4-2+deb10u2.dsc
+ 8a16c1a6fd6e2af3416282f1bfc80c9b71f34e42 32668 tryton-server_5.0.4-2+deb10u2.debian.tar.xz
+ cbe1a38193618719bad4b2811218f1148c6e28b7 146404 tryton-server-doc_5.0.4-2+deb10u2_all.deb
+ 5cc0166626d1a9f134c965f4ed45c824ce74cae9 402160 tryton-server_5.0.4-2+deb10u2_all.deb
+ 50c9ea578abfdbd19af77c03c6896a4a5c8ce640 8265 tryton-server_5.0.4-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ cc8c9ebbed16892bb5e090c1988a1b0ee3d3e54b7460820eb05233de9f008211 2680 tryton-server_5.0.4-2+deb10u2.dsc
+ a930c0714a07b9af95035e64ffef36e7387259ed989d75617e744f9fa1043a26 32668 tryton-server_5.0.4-2+deb10u2.debian.tar.xz
+ 2713ff6e5f2f0e1d989f6341394897dc09a69050f438b61745ff42bc11ab4cae 146404 tryton-server-doc_5.0.4-2+deb10u2_all.deb
+ 8e37706d6d4fd31d214384156ce87a8f74735c5b75bd6ce2ff7696d986f77d93 402160 tryton-server_5.0.4-2+deb10u2_all.deb
+ 1da0ee524e2175932056a1e0cc460c01b3cf6ac7bd1957101b2b19252b8b47bd 8265 tryton-server_5.0.4-2+deb10u2_amd64.buildinfo
+Files:
+ 5f36efb30f77c442494be14b19f8e2f2 2680 python optional tryton-server_5.0.4-2+deb10u2.dsc
+ cbce09c9b07ac13ba8ecd97db9afed58 32668 python optional tryton-server_5.0.4-2+deb10u2.debian.tar.xz
+ 7c671a9e2e4b056be52a5f6da7072e8b 146404 doc optional tryton-server-doc_5.0.4-2+deb10u2_all.deb
+ b214e55bfd335fee6f1dc654dc29418b 402160 python optional tryton-server_5.0.4-2+deb10u2_all.deb
+ f852e155f6bff5e32644b6928f610dee 8265 python optional tryton-server_5.0.4-2+deb10u2_amd64.buildinfo
+

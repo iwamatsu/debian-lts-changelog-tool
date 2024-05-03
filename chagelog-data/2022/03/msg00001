@@ -1,0 +1,80 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 06 Mar 2022 10:03:02 +0100
+Source: tiff
+Binary: libtiff5 libtiffxx5 libtiff5-dev libtiff-tools libtiff-opengl libtiff-doc
+Architecture: source all amd64
+Version: 4.0.8-2+deb9u8
+Distribution: stretch-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libtiff-doc - TIFF manipulation and conversion documentation
+ libtiff-opengl - TIFF manipulation and conversion tools
+ libtiff-tools - TIFF manipulation and conversion tools
+ libtiff5   - Tag Image File Format (TIFF) library
+ libtiff5-dev - Tag Image File Format library (TIFF), development files
+ libtiffxx5 - Tag Image File Format (TIFF) library -- C++ interface
+Changes:
+ tiff (4.0.8-2+deb9u8) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-22844
+     out-of-bounds read in _TIFFmemcpy in certain situations involving a
+     custom tag and 0x0200 as the second word of the DE field.
+   * CVE-2022-0562
+     Null source pointer passed as an argument to memcpy() function within
+     TIFFReadDirectory(). This could result in a Denial of Service via
+     crafted TIFF files.
+   * CVE-2022-0561
+     Null source pointer passed as an argument to memcpy() function within
+     TIFFFetchStripThing(). This could result in a Denial of Service via
+     crafted TIFF files.
+Checksums-Sha1:
+ 418d3318b2a52b13e147b21efde6cfd8e0c45426 2344 tiff_4.0.8-2+deb9u8.dsc
+ 88717c97480a7976c94d23b6d9ed4ac74715267f 2065574 tiff_4.0.8.orig.tar.gz
+ ce158182dea9f9ecd5f78a2f9528931252c77287 39936 tiff_4.0.8-2+deb9u8.debian.tar.xz
+ f9bd7d2d8eecd4786afbd3f3afd2c032635a73a9 396494 libtiff-doc_4.0.8-2+deb9u8_all.deb
+ 6285abac84b56d58eab89d7c1b238483a5dfc879 14186 libtiff-opengl-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ 441f1db2ab356aedd09c92981a50ecf77e7dd618 101112 libtiff-opengl_4.0.8-2+deb9u8_amd64.deb
+ 182c775dc0a3f9c57cd55bfbc054629089ecb535 352640 libtiff-tools-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ c6e5f65bcaa53c942de7d99c9b7b818d1fef3a34 282346 libtiff-tools_4.0.8-2+deb9u8_amd64.deb
+ 0550a8a8fae00eb6b040259960c5cd53b3c1da8c 373646 libtiff5-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ fd64fc6aa5a074e0483c50b0c74c1681b32f3567 361662 libtiff5-dev_4.0.8-2+deb9u8_amd64.deb
+ c89ef20c432af14ce27cfa9d5a78ef7933597abe 239382 libtiff5_4.0.8-2+deb9u8_amd64.deb
+ ffef9227cedf52fd73831590505d7da6b25142ce 21040 libtiffxx5-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ d44e9e3b68aa4756a6326a346e91de930783f9c5 96378 libtiffxx5_4.0.8-2+deb9u8_amd64.deb
+ 06eb10557855fa0f85a1f4599e92af380542caad 11171 tiff_4.0.8-2+deb9u8_amd64.buildinfo
+Checksums-Sha256:
+ b6891d6cc3c96a7f927e11907a34cf2db752afb259c2ddefe816eb0cbcebc27e 2344 tiff_4.0.8-2+deb9u8.dsc
+ 59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910 2065574 tiff_4.0.8.orig.tar.gz
+ 4585efd4fe8341e58faa8b562d0f8357b674145583727f44cebdded3163c3b19 39936 tiff_4.0.8-2+deb9u8.debian.tar.xz
+ 1ce3c5a51f91a11e5f336f6abd5a967c763f253b22bedaa438cb366ead902510 396494 libtiff-doc_4.0.8-2+deb9u8_all.deb
+ c8bfc8f80b724da0f9fb875c3a12bd9eaeb603e210bb79f79d52e98304ca8dad 14186 libtiff-opengl-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ 7b29fc525870db832f9c8af228ff6ceba35afc3323aa58eba1d4e268856cc51e 101112 libtiff-opengl_4.0.8-2+deb9u8_amd64.deb
+ 66ded15fe4350069335882d699f25d4c5c68d758c824a6ecb515bfc4c764069a 352640 libtiff-tools-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ b521dce9ccc8548ef9c193091311fe044f73217010e91755b64cdb43887cbedd 282346 libtiff-tools_4.0.8-2+deb9u8_amd64.deb
+ fb209ead149d390a1efcbe64ab7074e7c78380fc323b6fd90f311c2f8ec601aa 373646 libtiff5-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ ae9780ba9fa54855d9c04b9e1afd4ca3c51749f898ece073af2851eccfdbe2c7 361662 libtiff5-dev_4.0.8-2+deb9u8_amd64.deb
+ 18d7b937f8c9976554c02fd6e18cc84c6b36ae088bb9b23509324999b2e72c93 239382 libtiff5_4.0.8-2+deb9u8_amd64.deb
+ 465376703dd5782581b4b5f00fc6c1054a3a5c4c5a0c615c4d0ff7a624ffcc78 21040 libtiffxx5-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ 8c43800ba8da0ed22161898cbce2d300907e83f983041c11015a4e784a3253c5 96378 libtiffxx5_4.0.8-2+deb9u8_amd64.deb
+ 97780890d48a922a240c1fd19ea097e59fb980fc88144e606d04d003f4f421f2 11171 tiff_4.0.8-2+deb9u8_amd64.buildinfo
+Files:
+ 26f4b2bc723fa35c7d04b2f217cffb45 2344 libs optional tiff_4.0.8-2+deb9u8.dsc
+ 2a7d1c1318416ddf36d5f6fa4600069b 2065574 libs optional tiff_4.0.8.orig.tar.gz
+ 4b068481c015f7303f6e2ac7046ec22b 39936 libs optional tiff_4.0.8-2+deb9u8.debian.tar.xz
+ ecf757fb73a8bfddc77e75544b9a265a 396494 doc optional libtiff-doc_4.0.8-2+deb9u8_all.deb
+ 3a2956f0f7c324a04cf675cc56d5924d 14186 debug extra libtiff-opengl-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ 520778abf65f0b69a0c8590dba1eadbf 101112 graphics optional libtiff-opengl_4.0.8-2+deb9u8_amd64.deb
+ 5592506a0c62afde7aa87fa0507b3843 352640 debug extra libtiff-tools-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ e29cbb3ff7ef671298305fe4f73c88bd 282346 graphics optional libtiff-tools_4.0.8-2+deb9u8_amd64.deb
+ 20220460bd2195aafd07fb949b232ae7 373646 debug extra libtiff5-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ 785ec492c38f748c6e8006fbd7e8af26 361662 libdevel optional libtiff5-dev_4.0.8-2+deb9u8_amd64.deb
+ 39899bb3cc7b4eb4488b92a6b4543fb7 239382 libs optional libtiff5_4.0.8-2+deb9u8_amd64.deb
+ d179b718e5785f7b807d5d7f6273807e 21040 debug extra libtiffxx5-dbgsym_4.0.8-2+deb9u8_amd64.deb
+ de3c5b47cfe8312258712079e5a549bb 96378 libs optional libtiffxx5_4.0.8-2+deb9u8_amd64.deb
+ 42f2f7b8087b532913377904cd4f71c0 11171 libs optional tiff_4.0.8-2+deb9u8_amd64.buildinfo
+

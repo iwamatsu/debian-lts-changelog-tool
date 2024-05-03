@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 30 Sep 2023 13:52:33 +0300
+Source: gerbv
+Architecture: source
+Version: 2.7.0-1+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Electronics Team <pkg-electronics-devel@alioth-lists.debian.net>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ gerbv (2.7.0-1+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-40393: RS-274X format aperture macro variables out-of-bounds write
+   * CVE-2021-40394: RS-274X aperture macro outline primitive integer overflow
+   * CVE-2023-4508: Out-of-bounds memory access when referencing external files
+Checksums-Sha1:
+ 55ac0fb8a181f7205cf1f3372556e7ac5a403bc0 2045 gerbv_2.7.0-1+deb10u3.dsc
+ 1e39330f247bf2f6f1f790dfce12d7c59175e531 5269869 gerbv_2.7.0.orig.tar.gz
+ 69d0486edb3f38a5086e5207c6e60d122e5e437b 22628 gerbv_2.7.0-1+deb10u3.debian.tar.xz
+Checksums-Sha256:
+ 5888ddb29d7c1d0172b4712e3fc294f6200b10fdcc725a923f4d697a22cb1dce 2045 gerbv_2.7.0-1+deb10u3.dsc
+ 5f33d48cce45004986a99c8b05d1f85f533a9775353228c02844beb764cde3bb 5269869 gerbv_2.7.0.orig.tar.gz
+ 78fb0d4411b5d46eccd6fca768d9ec39824f2b286ef67b1ecb734771c81935b0 22628 gerbv_2.7.0-1+deb10u3.debian.tar.xz
+Files:
+ fdef38d9dd23bd8e2a186bdc2e2dbc67 2045 electronics optional gerbv_2.7.0-1+deb10u3.dsc
+ 1409c7fd027dea3f56e2a7a6bee599bf 5269869 electronics optional gerbv_2.7.0.orig.tar.gz
+ fc93a17534cde297e2f4e32ac2c35467 22628 electronics optional gerbv_2.7.0-1+deb10u3.debian.tar.xz
+

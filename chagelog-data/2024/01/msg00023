@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 25 Jan 2024 19:29:21 CET
+Source: xorg-server
+Architecture: source
+Version: 2:1.20.4-1+deb10u13
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ ab256fba31529f0d6f6bbd75aca290b119faa7f8 4337 xorg-server_1.20.4-1+deb10u13.dsc
+ b4964b7014e3de7b5e29bdb64d2e9544f6ec4909 173611 xorg-server_1.20.4-1+deb10u13.diff.gz
+ e324a401852f8666046e488eaf6eeb69ca0a5c90 17815 xorg-server_1.20.4-1+deb10u13_amd64.buildinfo
+Checksums-Sha256:
+ 259b151cca01bf2a06bf5c125434d4b623a7ef93ef58e007f243187bb0ee4edd 4337 xorg-server_1.20.4-1+deb10u13.dsc
+ 36e4bbeaef4d87c4be3e4917b1b290a35d184b0e730175539cf48211d0dc64e6 173611 xorg-server_1.20.4-1+deb10u13.diff.gz
+ 79e4a99f06ffb850ed69ec33b2bf87c35145f34a078411cc5c8d09eb33d3fe3c 17815 xorg-server_1.20.4-1+deb10u13_amd64.buildinfo
+Changes:
+ xorg-server (2:1.20.4-1+deb10u13) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Xi: require a pointer and keyboard device for XIAttachToMaster
+   * dix: allocate enough space for logical button maps (CVE-2023-6816)
+   * dix: Allocate sufficient xEvents for our DeviceStateNotify (CVE-2024-0229)
+   * dix: fix DeviceStateNotify event calculation (CVE-2024-0229)
+   * Xi: when creating a new ButtonClass, set the number of buttons
+     (CVE-2024-0229)
+   * Xi: flush hierarchy events after adding/removing master devices
+     (CVE-2024-21885)
+   * Xi: do not keep linked list pointer during recursion (CVE-2024-21886)
+   * dix: when disabling a master, float disabled slaved devices too
+     (CVE-2024-21886)
+   * ephyr,xwayland: Use the proper private key for cursor
+   * glx: Call XACE hooks on the GLX buffer
+   * dix: Fix use after free in input device shutdown
+Files:
+ e46b432c59a40b4a36f9fd3bbcac7e2b 4337 x11 optional xorg-server_1.20.4-1+deb10u13.dsc
+ b71330a9122457573eddeac4e1099173 173611 x11 optional xorg-server_1.20.4-1+deb10u13.diff.gz
+ 40ec15ba9325ecf591a9b23a7e4afe25 17815 x11 optional xorg-server_1.20.4-1+deb10u13_amd64.buildinfo
+

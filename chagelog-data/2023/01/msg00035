@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Jan 2023 18:18:31 +0100
+Source: dojo
+Architecture: source
+Version: 1.14.2+dfsg1-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 970000 1014785
+Changes:
+ dojo (1.14.2+dfsg1-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2020-4051: Cross-site scripting (XSS) vulnerability in the Editor's
+     LinkDialog plugin (closes: #970000).
+   * CVE-2021-23450: Prototype pollution vulnerability via the setObject()
+     function (closes: #1014785).
+Checksums-Sha1:
+ 4346bc6c5d201334d8b52099510ca615cd92b50e 2411 dojo_1.14.2+dfsg1-1+deb10u3.dsc
+ a074e48d5e54715339107dd285c1c8faaa94beef 33910890 dojo_1.14.2+dfsg1.orig.tar.gz
+ 77c0676179b9b88173d3f39dd1f9ce4e40dfd90f 18636 dojo_1.14.2+dfsg1-1+deb10u3.debian.tar.xz
+ 562dd988af3e487385715e391a8400d2acf025de 12202 dojo_1.14.2+dfsg1-1+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 8ecac9f2b3c721b5024fd52c943ce43f4d1d72e185da09eaedc34818641e17c6 2411 dojo_1.14.2+dfsg1-1+deb10u3.dsc
+ be2de52239390eb5181746ad5af4417af71f85d306722f7bff62e924e03d5632 33910890 dojo_1.14.2+dfsg1.orig.tar.gz
+ aa7d2a60549239973cb9f4dc4fdeaadbfae421da9032ba7111975c50f2e157be 18636 dojo_1.14.2+dfsg1-1+deb10u3.debian.tar.xz
+ dee4e12fe7487cf133e725b87f16ecc54bf6a48001d7e1ff5f33eb14f19b20f7 12202 dojo_1.14.2+dfsg1-1+deb10u3_amd64.buildinfo
+Files:
+ 1409c69db48bc8d44926a1f8d1d849ac 2411 javascript optional dojo_1.14.2+dfsg1-1+deb10u3.dsc
+ 5b4e54e4d55060253a6084926ad7e478 33910890 javascript optional dojo_1.14.2+dfsg1.orig.tar.gz
+ eed0aa760ab5c966f21337126bf221de 18636 javascript optional dojo_1.14.2+dfsg1-1+deb10u3.debian.tar.xz
+ c4235e6d7ad8bdeaf2206c864404e9c3 12202 javascript optional dojo_1.14.2+dfsg1-1+deb10u3_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 20 May 2023 16:08:13 CEST
+Source: texlive-bin
+Architecture: source
+Version: 2018.20181218.49446-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian TeX Maintainers <debian-tex-maint@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fe0cbd1f853e8c85c7767bf0f80fd8450aae6723 3607 texlive-bin_2018.20181218.49446-1+deb10u1.dsc
+ 5d60d6d1a91b8cfffd94d0724caca78d77668a64 21264524 texlive-bin_2018.20181218.49446.orig.tar.xz
+ 06318e224ed73b2e46b4dbecf1511d63cc8fb971 1005692 texlive-bin_2018.20181218.49446-1+deb10u1.debian.tar.xz
+ 50d87ccedc20a802db34d7e9e8c3ee3999fcdb61 18278 texlive-bin_2018.20181218.49446-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c77a3c4482732d8e0f08b67fa6014b4e0a33ca1f8cdbd5dd98dfe9ab30f67c66 3607 texlive-bin_2018.20181218.49446-1+deb10u1.dsc
+ 8afcf62be6632b012dd21512bdd1f29e0d37ba14080548959222d454882ca5c5 21264524 texlive-bin_2018.20181218.49446.orig.tar.xz
+ cf804af42b75a413427a37acfdf8324f4815979cf92a19b8839c1b0df375c939 1005692 texlive-bin_2018.20181218.49446-1+deb10u1.debian.tar.xz
+ 8fedb54e90c3bf58af57fd0b985e74d453bf186a412e68f9187eb9d8cf316ccd 18278 texlive-bin_2018.20181218.49446-1+deb10u1_amd64.buildinfo
+Changes:
+ texlive-bin (2018.20181218.49446-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-32700:
+     Max Chernoff discovered that improperly secured shell-escape in LuaTeX may
+     result in arbitrary shell command execution, even with shell escape
+     disabled, if specially crafted tex files are processed.
+Files:
+ 90deb8e70b558098075cb7eabad647a6 3607 tex optional texlive-bin_2018.20181218.49446-1+deb10u1.dsc
+ be03f007a1da5d1dcfe07710f4310a17 21264524 tex optional texlive-bin_2018.20181218.49446.orig.tar.xz
+ 711b468d74e2fd415d0566c33ba87de7 1005692 tex optional texlive-bin_2018.20181218.49446-1+deb10u1.debian.tar.xz
+ 28ef7730901d3430e6bd911565b6843b 18278 tex optional texlive-bin_2018.20181218.49446-1+deb10u1_amd64.buildinfo
+

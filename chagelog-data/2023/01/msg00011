@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 14 Jan 2023 18:19:36 +0100
+Source: net-snmp
+Architecture: source
+Version: 5.7.3+dfsg-5+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Net-SNMP Packaging Team <pkg-net-snmp-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1024020
+Changes:
+ net-snmp (5.7.3+dfsg-5+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-44792: A NULL dereference in handle_ipDefaultTTL() could allow a
+     remote attacker (with write access) to crash the instance via a crafted
+     UDP packet, resulting in Denial of Service. (Closes: #1024020)
+   * CVE-2022-44793: A NULL dereference in handle_ipv6IpForwarding() could
+     allow a remote attacker (with write access) to crash the instance via a
+     crafted UDP packet, resulting in Denial of Service. (Closes: #1024020)
+Checksums-Sha1:
+ 8464f03bab6233cd56f32f917674aa73df26aacf 3000 net-snmp_5.7.3+dfsg-5+deb10u4.dsc
+ 835174da528331bd050d365cfbbfd4dec83d7d22 86536 net-snmp_5.7.3+dfsg-5+deb10u4.debian.tar.xz
+ 0d0a92a991a855751082e3fbfe6b5493a0413c03 12229 net-snmp_5.7.3+dfsg-5+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 6bf084041546f2ca12e8ef122efeaa655275d8b1415e1a427976e7d69357d11a 3000 net-snmp_5.7.3+dfsg-5+deb10u4.dsc
+ b99894218523936004d0f0e13418e5d90a4dfefd6eee6bdcbd5943f6a11042bc 86536 net-snmp_5.7.3+dfsg-5+deb10u4.debian.tar.xz
+ e938ae7c2085005b32f10f7e9317e580bedfbc5994709a09b140a68822a122af 12229 net-snmp_5.7.3+dfsg-5+deb10u4_amd64.buildinfo
+Files:
+ 8e9216708960e1c9efdec15d3b40a312 3000 net optional net-snmp_5.7.3+dfsg-5+deb10u4.dsc
+ 856d7b12176415e37cdb414aeaac9901 86536 net optional net-snmp_5.7.3+dfsg-5+deb10u4.debian.tar.xz
+ e6110cec95b474b2d1c8f689734678e0 12229 net optional net-snmp_5.7.3+dfsg-5+deb10u4_amd64.buildinfo
+

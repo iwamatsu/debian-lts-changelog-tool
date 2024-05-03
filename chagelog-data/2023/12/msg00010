@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 16 Dec 2023 16:57:23 +0100
+Source: intel-microcode
+Binary: intel-microcode
+Architecture: source amd64
+Version: 3.20231114.1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Description:
+ intel-microcode - Processor microcode firmware for Intel CPUs
+Closes: 1055962
+Changes:
+ intel-microcode (3.20231114.1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * No-change upload of the bullseye version, rebuilt for buster (LTS),
+     fixing CVE-2023-23583 (Closes: #1055962)
+     See changelog entry from November 16th 2023 or DSA-5563-1 for details
+     about the security vulnerability.
+Checksums-Sha1:
+ e6063e55cb84b37f080807886b4476f5be035326 1821 intel-microcode_3.20231114.1~deb10u1.dsc
+ dcab82d32fd7faf6697f753b6d9a14c67f4a0781 6792632 intel-microcode_3.20231114.1~deb10u1.tar.xz
+ 334ce8840bfe1215e20c168c4d9468283e11eebe 5688 intel-microcode_3.20231114.1~deb10u1_amd64.buildinfo
+ b2105ab7679ce564b100de7d507e344935d571ca 6120188 intel-microcode_3.20231114.1~deb10u1_amd64.deb
+Checksums-Sha256:
+ 4c71f53bc3dd9617681117e4bb38124f1a6f19053d5630598b25498754aba0f1 1821 intel-microcode_3.20231114.1~deb10u1.dsc
+ 113f91e76ade1da2094f6b924d4adc38c271255ec8d104718bd5ed00e3a1872d 6792632 intel-microcode_3.20231114.1~deb10u1.tar.xz
+ 7ab9a50215a633e3c553b5fcfcd39dcf5a77398b8a2324a98bdb814780295c2c 5688 intel-microcode_3.20231114.1~deb10u1_amd64.buildinfo
+ 2f77678e739f704a2a53d38520f4115afc5c552ee12f0b3e09b4d54a6411fd87 6120188 intel-microcode_3.20231114.1~deb10u1_amd64.deb
+Files:
+ e27ba406815aa5cf28fd321841f2d3ae 1821 non-free/admin standard intel-microcode_3.20231114.1~deb10u1.dsc
+ 2407b021328beb18330cbead67717477 6792632 non-free/admin standard intel-microcode_3.20231114.1~deb10u1.tar.xz
+ 483c7fec0979f02b683fa0c650766708 5688 non-free/admin standard intel-microcode_3.20231114.1~deb10u1_amd64.buildinfo
+ f09471c94fbeba8942f1803444c1ce1f 6120188 non-free/admin standard intel-microcode_3.20231114.1~deb10u1_amd64.deb
+

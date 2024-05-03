@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 30 Sep 2022 06:08:49 +0530
+Source: gdal
+Architecture: source
+Version: 2.4.0+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ gdal (2.4.0+dfsg-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-45943: heap-based buffer overflow in PCIDSK::CPCIDSKFile
+     ReadFromFile.
+   * CVE-2019-17545: double free in OGRExpatRealloc.
+Checksums-Sha1:
+ 33e79b87a48b9e834f49961b5c67cf847790a1a9 3510 gdal_2.4.0+dfsg-1+deb10u1.dsc
+ b1d2c5c1e9d9d8903199bb94de78d00e6f906f04 9527148 gdal_2.4.0+dfsg.orig.tar.xz
+ 7124bf2328f60e5868dc4535e7d6370993c9dee8 215544 gdal_2.4.0+dfsg-1+deb10u1.debian.tar.xz
+ 2322b63bb2064ae613a7b41aa0787019ab50a40f 7264 gdal_2.4.0+dfsg-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 603c15055f44502237366e7fb60227a086b9a4206ea0d6e318f1fcbbec05f42b 3510 gdal_2.4.0+dfsg-1+deb10u1.dsc
+ ad90a095018fc603f2c9f445da4a858d22caa019216ece765afb165ab0991427 9527148 gdal_2.4.0+dfsg.orig.tar.xz
+ 50bfee45aee3521c1cb67423e1fb8bdeabecd60c431104b74d52a9d00a0e4c2c 215544 gdal_2.4.0+dfsg-1+deb10u1.debian.tar.xz
+ 6cc9198e2d3569259115bf53b437c2b9118d3be90431d1fe6a517b0604b4449e 7264 gdal_2.4.0+dfsg-1+deb10u1_source.buildinfo
+Files:
+ a0ce3f4a42893bd8edb0fcbccdc680f1 3510 science optional gdal_2.4.0+dfsg-1+deb10u1.dsc
+ 5de861366fcdf2b419eed766252ef94a 9527148 science optional gdal_2.4.0+dfsg.orig.tar.xz
+ 6a15dcbc5c68158212cdc1a3735d9b5d 215544 science optional gdal_2.4.0+dfsg-1+deb10u1.debian.tar.xz
+ c4217ebd890ebc128441405fa50a46df 7264 science optional gdal_2.4.0+dfsg-1+deb10u1_source.buildinfo
+

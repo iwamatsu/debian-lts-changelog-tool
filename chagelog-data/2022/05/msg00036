@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 26 May 2022 11:41:13 +0100
+Source: python-django
+Binary: python-django python3-django python-django-common python-django-doc
+Architecture: source
+Version: 1:1.10.7-2+deb9u17
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-django - High-level Python web development framework (Python 2 version)
+ python-django-common - High-level Python web development framework (common)
+ python-django-doc - High-level Python web development framework (documentation)
+ python3-django - High-level Python web development framework (Python 3 version)
+Closes: 953102
+Changes:
+ python-django (1:1.10.7-2+deb9u17) stretch-security; urgency=high
+ .
+   * Upload from the LTS security team to sync with Debian buster:
+ .
+     - CVE-2020-9402: Django 1.11 before 1.11.29, 2.2 before 2.2.11, and 3.0
+       before 3.0.4 allows SQL Injection if untrusted data is used as a
+       tolerance parameter in GIS functions and aggregates on Oracle. By passing
+       a suitably crafted tolerance to GIS functions and aggregates on Oracle,
+       it was potentially possible to break escaping and inject malicious SQL.
+       (Closes: #953102)
+Checksums-Sha1:
+ c8f01e1019b313bb79f7d635da5f57e0eed4df0c 2824 python-django_1.10.7-2+deb9u17.dsc
+ b318902cd9a0806fa2e2bd1a3e8144e20de34778 58068 python-django_1.10.7-2+deb9u17.debian.tar.xz
+ f0a8351c49da92105aa93c070344b2b0c5ca26a1 9566 python-django_1.10.7-2+deb9u17_amd64.buildinfo
+Checksums-Sha256:
+ 2c9ac6f882273ecc200433f568cd1b8aa67da7a58a7631d7e2c5d926375d747a 2824 python-django_1.10.7-2+deb9u17.dsc
+ 55a33af662d3cfacb4d30751e94f9cb41c8a24aef37b40e1755d7d683f2dbc22 58068 python-django_1.10.7-2+deb9u17.debian.tar.xz
+ a2bc95b7faa697dc7b816e2e9b82d0c2ae9234f2ebe8a489830214ffb6455da3 9566 python-django_1.10.7-2+deb9u17_amd64.buildinfo
+Files:
+ 9febd39cd5ac66f582f8b866faf0885b 2824 python optional python-django_1.10.7-2+deb9u17.dsc
+ 7352e30160dc4eea93f25c86a971e89a 58068 python optional python-django_1.10.7-2+deb9u17.debian.tar.xz
+ 12e943f4ea048cca76fe85071b6e2878 9566 python optional python-django_1.10.7-2+deb9u17_amd64.buildinfo
+

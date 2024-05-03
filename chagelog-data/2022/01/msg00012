@@ -1,0 +1,52 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 17 Jan 2022 10:24:16 +0000
+Source: uriparser
+Binary: liburiparser1 liburiparser-dev liburiparser-doc
+Architecture: source amd64 all
+Version: 0.8.4-1+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Jörg Frings-Fürst <debian@jff.email>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ liburiparser-dev - development files for uriparser
+ liburiparser-doc - documentation files for uriparser
+ liburiparser1 - URI parsing library compliant with RFC 3986
+Changes:
+ uriparser (0.8.4-1+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-46141: Prevent some invalid free operations in the
+     uriFreeUriMembers and uriMakeOwner functions.
+   * CVE-2021-46142: Prevent invalid free operations in the
+     uriNormalizeSyntax function.
+Checksums-Sha1:
+ 3344443dd3231de16cd1afb56e8c97ee4277a675 2111 uriparser_0.8.4-1+deb9u3.dsc
+ 7a1948c20bed54b04dad0e1d7d2fa8f80fc7b2b3 358408 uriparser_0.8.4.orig.tar.bz2
+ e14352c4a54142f9dc804303ce2392f71be70f6c 9164 uriparser_0.8.4-1+deb9u3.debian.tar.xz
+ 67d53fe46fe0e85a8ca0ac7b9701c8eb0f51fed4 17318 liburiparser-dev_0.8.4-1+deb9u3_amd64.deb
+ 1bce7e19f92d7d8d450fff7141fb95b947f7205d 126258 liburiparser-doc_0.8.4-1+deb9u3_all.deb
+ 68a2600ba8cad22c9139c874dcaa4cc58a301d14 100730 liburiparser1-dbgsym_0.8.4-1+deb9u3_amd64.deb
+ b04552784b4f73c66f6b272af963f51a2877472c 42408 liburiparser1_0.8.4-1+deb9u3_amd64.deb
+ b00a218b79071c3445f1859d5487c79c8d4486c7 12667 uriparser_0.8.4-1+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 58dc1220567284af7d05cf4867f232f907d9b6c0eccd946c96b66676893aa073 2111 uriparser_0.8.4-1+deb9u3.dsc
+ ce7ccda4136974889231e8426a785e7578e66a6283009cfd13f1b24a5e657b23 358408 uriparser_0.8.4.orig.tar.bz2
+ ec14c2e579543734b18390329e1d1f9a2c9b6cbc00939e3ecba96b0e612ee248 9164 uriparser_0.8.4-1+deb9u3.debian.tar.xz
+ 3bfc5ee005150922329b95b5b5b08fb3a7a8aad434d495ce76f33b6b169076d2 17318 liburiparser-dev_0.8.4-1+deb9u3_amd64.deb
+ 70c5dbbad50e811eccb9d99311caf8c028d88a5813f8a5dba7e9d18b96382963 126258 liburiparser-doc_0.8.4-1+deb9u3_all.deb
+ 8cbd105deec2a6247a77e0ed10381d16b09a12a12ead83d95ffedc9f71329e18 100730 liburiparser1-dbgsym_0.8.4-1+deb9u3_amd64.deb
+ 675748a5c0f65e391f1ef7a011da1d5cab6d1a7417bc2ca0d11622c368a578a8 42408 liburiparser1_0.8.4-1+deb9u3_amd64.deb
+ 2d33265906165d85de21989df85d6d3c993548b61763535ec2972e375cbdf7cf 12667 uriparser_0.8.4-1+deb9u3_amd64.buildinfo
+Files:
+ c8a5191e995704845ea47740caf7639b 2111 libs optional uriparser_0.8.4-1+deb9u3.dsc
+ 9aabdc3611546f553f4af372167de6d6 358408 libs optional uriparser_0.8.4.orig.tar.bz2
+ fa0de2ec9a8dcd7910288fdb7d6d44fb 9164 libs optional uriparser_0.8.4-1+deb9u3.debian.tar.xz
+ a68792af569381faa9b05f375c50d8e8 17318 libdevel optional liburiparser-dev_0.8.4-1+deb9u3_amd64.deb
+ 4bc2d85877e1bac44acc8e7c647ac347 126258 doc optional liburiparser-doc_0.8.4-1+deb9u3_all.deb
+ 2b0cfbe6f308b1f1e70aa034265eabff 100730 debug extra liburiparser1-dbgsym_0.8.4-1+deb9u3_amd64.deb
+ fadd32287bb69f55ecb4e69863b7f1bb 42408 libs optional liburiparser1_0.8.4-1+deb9u3_amd64.deb
+ a8a38cbd57dff8572b7f6c1a41b17a50 12667 libs optional uriparser_0.8.4-1+deb9u3_amd64.buildinfo
+

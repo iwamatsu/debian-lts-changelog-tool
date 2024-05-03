@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 27 Feb 2024 13:44:35 +0000
+Source: wpa
+Architecture: source
+Version: 2:2.7+git20190128+0c1e29f-6+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian wpasupplicant Maintainers <wpa@packages.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1064061
+Changes:
+ wpa (2:2.7+git20190128+0c1e29f-6+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-52160: Prevent a potential authentication bypass vulnerability in
+     the PEAP protocol implementation. For an attack to have been successful,
+     wpa_supplicant must have been configured to not verify the network's TLS
+     certificate during Phase 1 of the authentication cycle; a eap_peap_decrypt
+     vulnerability could have been used to skip Phase 2 authentication by
+     sending an EAP-TLV Success packet instead of starting Phase 2.
+     (Closes: #1064061)
+Checksums-Sha1:
+ 6c12f476a069141ddc75ab889c2678c5c2f7885e 2561 wpa_2.7+git20190128+0c1e29f-6+deb10u4.dsc
+ 63799ab5b3cbd53a690bab9f9ddda4d8ab059c83 2286436 wpa_2.7+git20190128+0c1e29f.orig.tar.xz
+ 020241810ddbc37180ddcbec0c691ae4bc0d9e89 113852 wpa_2.7+git20190128+0c1e29f-6+deb10u4.debian.tar.xz
+ 8e22f61310e4d57ed029d6850c3d73d2eaa5296e 15658 wpa_2.7+git20190128+0c1e29f-6+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 4f24d8123c7dba512caa5f3e4c11c64f200eadac6922efcdfd3d51f71b0d43e3 2561 wpa_2.7+git20190128+0c1e29f-6+deb10u4.dsc
+ 4732f6dc4f2402347a37adea7f127ffce88ae3b27afc816b67f5b51199bd139e 2286436 wpa_2.7+git20190128+0c1e29f.orig.tar.xz
+ 4fbd4e7c12cf589c672b67be32518092d6c0d84d3130b26e26495ef541bd0ee1 113852 wpa_2.7+git20190128+0c1e29f-6+deb10u4.debian.tar.xz
+ bd9f02f724ce8de904a64535f8cb190e18d51ae2f188c3d6f081b424e1a6feb7 15658 wpa_2.7+git20190128+0c1e29f-6+deb10u4_amd64.buildinfo
+Files:
+ 08ecb9dfe2c8b69aa350b80f187767e1 2561 net optional wpa_2.7+git20190128+0c1e29f-6+deb10u4.dsc
+ 64f7dd7528079b006de5a5883ae05abd 2286436 net optional wpa_2.7+git20190128+0c1e29f.orig.tar.xz
+ f97083aa77ba32747f921ee3944eb0d4 113852 net optional wpa_2.7+git20190128+0c1e29f-6+deb10u4.debian.tar.xz
+ 6aa13fa87a44608feef384715017a4d8 15658 net optional wpa_2.7+git20190128+0c1e29f-6+deb10u4_amd64.buildinfo
+

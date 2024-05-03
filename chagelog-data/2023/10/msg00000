@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 01 Oct 2023 12:28:40 +0200
+Source: libvpx
+Architecture: source
+Version: 1.7.0-3+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ libvpx (1.7.0-3+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-5217
+   * CVE-2023-44488
+Checksums-Sha1:
+ e3b4727cf24789066c78560e299cd74c62b7b6e3 2293 libvpx_1.7.0-3+deb10u2.dsc
+ fb3d4b80596d1e3b1a7f53757d63e7d2b3eeb7c9 2679797 libvpx_1.7.0.orig.tar.gz
+ 29e90a315c3c8c5980cea43f98ec8a7dec99aa56 15556 libvpx_1.7.0-3+deb10u2.debian.tar.xz
+ f1eb3c80bf11fbb48f107f62a12bf50e810b2746 5873 libvpx_1.7.0-3+deb10u2_source.buildinfo
+Checksums-Sha256:
+ b98fde7e56c7cb46c2381df29371ea0f07c27c1642c74face4af4783f3799f29 2293 libvpx_1.7.0-3+deb10u2.dsc
+ 1fec931eb5c94279ad219a5b6e0202358e94a93a90cfb1603578c326abfc1238 2679797 libvpx_1.7.0.orig.tar.gz
+ aa09c6ae1fb96b3f6ab2d14513cc70d75f5c1a6c2ac00fdf789a718b3194ebee 15556 libvpx_1.7.0-3+deb10u2.debian.tar.xz
+ 19067733ce33f03096f654003b62c2bcb65670cc24b3ef6e1aee99936c1b5ee6 5873 libvpx_1.7.0-3+deb10u2_source.buildinfo
+Files:
+ 0724c905e940934313913f4f83a640c6 2293 video optional libvpx_1.7.0-3+deb10u2.dsc
+ 193346f9aec0726145e51db732417cd2 2679797 video optional libvpx_1.7.0.orig.tar.gz
+ fb1fa68bbe06176c4e33639b5cf5dae9 15556 video optional libvpx_1.7.0-3+deb10u2.debian.tar.xz
+ 7851f39317cbf56abd3180a60fef3e21 5873 video optional libvpx_1.7.0-3+deb10u2_source.buildinfo
+

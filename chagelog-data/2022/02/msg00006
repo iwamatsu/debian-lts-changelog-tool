@@ -1,0 +1,69 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 03 Feb 2022 14:52:57 -0800
+Source: ldns
+Binary: libldns2 libldns-dev ldnsutils python-ldns
+Architecture: source amd64
+Version: 1.7.0-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian DNS Packaging <pkg-dns-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ldnsutils  - ldns library for DNS programming
+ libldns-dev - ldns library for DNS programming
+ libldns2   - ldns library for DNS programming
+ python-ldns - Python bindings for the ldns library for DNS programming
+Closes: 882014 882015
+Changes:
+ ldns (1.7.0-1+deb9u1) stretch-security; urgency=high
+ .
+   * CVE-2020-19860: When ldns version 1.7.1 verified a zone file, the
+     ldns_rr_new_frm_str_internal function had a heap out of bounds read
+     vulnerability. An attacker could have potentially leaked information on the
+     heap by constructing a zone file payload.
+   * CVE-2020-19861: When a zone file in ldns was parsed, the function
+     ldns_nsec3_salt_data was too trusting of the length value obtained from the
+     zone file. This could have caused heap overflow information leakage.
+   * CVE-2017-1000231: A double-free vulnerability in parse.c could have
+     resulted in an attack vector. (Closes: #882015)
+   * CVE-2017-1000232: A double-free vulnerability within str2host.c
+     could have resulted in an attack vector. (Closes: #882014)
+Checksums-Sha1:
+ 7a347fc2e372e4c77f7c1d62671924f91c4f0e9e 2113 ldns_1.7.0-1+deb9u1.dsc
+ ceeeccf8a27e61a854762737f6ee02f44662c1b8 1304424 ldns_1.7.0.orig.tar.gz
+ e8c624cd19e2a84de5cea9c240bdb10ce48afd39 12080 ldns_1.7.0-1+deb9u1.debian.tar.xz
+ f0d171fe59ffefa4ebbe44642c13352892f83c0f 8910 ldns_1.7.0-1+deb9u1_amd64.buildinfo
+ 70e679463e9c8e4a042eba0247721fc6a8faa958 473948 ldnsutils-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ c1013dc42c75af442bfa94bb4a3c4dc51b66bdf1 157052 ldnsutils_1.7.0-1+deb9u1_amd64.deb
+ efa11132a1533042f737bea1541e40eda0d5dbb0 333772 libldns-dev_1.7.0-1+deb9u1_amd64.deb
+ 6712328bb11eb9d0ec306c8be5029d4d1fdb12e3 383108 libldns2-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ 77e0ec3ab1dd9fc5880a9a747417390f3e8f220a 157972 libldns2_1.7.0-1+deb9u1_amd64.deb
+ fe13e97edab6755d613a65dc5735fe5fef70cf4e 601902 python-ldns-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ 216a508e9642d927afdc9fc3f8a8e30096ca6744 215324 python-ldns_1.7.0-1+deb9u1_amd64.deb
+Checksums-Sha256:
+ d46fbc006628d6e14d7517fb72f25d971f3b1636b282a5f4f613fee0b7d149f3 2113 ldns_1.7.0-1+deb9u1.dsc
+ c19f5b1b4fb374cfe34f4845ea11b1e0551ddc67803bd6ddd5d2a20f0997a6cc 1304424 ldns_1.7.0.orig.tar.gz
+ 7bad1cb92ab577d4e60fd4f821afaf78f31736b9d6492cc58872eb703f7d8208 12080 ldns_1.7.0-1+deb9u1.debian.tar.xz
+ 1cfd72586ede1a647c20aec5dc2da14bc41d72ad2dec8841b8adcd3df365422d 8910 ldns_1.7.0-1+deb9u1_amd64.buildinfo
+ 87686cc2707bf9f449d5cbdf449b179b6e4762666b30391ec266d7c6b040c706 473948 ldnsutils-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ c600e8113e5080fdc90adec7ad4c62270d384bcfd04293b2ddf76832412fed9d 157052 ldnsutils_1.7.0-1+deb9u1_amd64.deb
+ 512ee98993bd669bf8a484c3627039bb901cb4aad90a8ce677c06006171df95f 333772 libldns-dev_1.7.0-1+deb9u1_amd64.deb
+ 0e803622786954e2ff094266492926c14924b9e03fff6462912cdb0e073a9f9d 383108 libldns2-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ c5f1c98c1e997ceec5b12bce3c4e280c9cb274fb483559cf3d90ee3809eef011 157972 libldns2_1.7.0-1+deb9u1_amd64.deb
+ e893b08b83d745ef4f6a9be72bafafc530f1aed479ac8ceb0660f7a65a8bbd43 601902 python-ldns-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ faf8467ac889fc91da04cdabdeb521c23ca564031870c8a2e44c58fa75b5c9ee 215324 python-ldns_1.7.0-1+deb9u1_amd64.deb
+Files:
+ 82c43417378c3deb4fdeaabd68b35d4a 2113 net extra ldns_1.7.0-1+deb9u1.dsc
+ 74b75c9ba69fb3af2a0c26244ecfd9f6 1304424 net extra ldns_1.7.0.orig.tar.gz
+ e45b9e9bef6fa8c2d70e29269a6bb137 12080 net extra ldns_1.7.0-1+deb9u1.debian.tar.xz
+ 5322b010773fff9ee54498ec5854cf4f 8910 net extra ldns_1.7.0-1+deb9u1_amd64.buildinfo
+ 88914a8e96602bc481819b312782ccb9 473948 debug extra ldnsutils-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ 5fdd54fa6fe7318815437cc2424b244d 157052 net extra ldnsutils_1.7.0-1+deb9u1_amd64.deb
+ d30459201f9e18f61977d08ce94152b5 333772 libdevel extra libldns-dev_1.7.0-1+deb9u1_amd64.deb
+ 4aa06ab64e067478c4a4b4169167f580 383108 debug extra libldns2-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ a1342a98eb566024673babbc19fc06c4 157972 libs extra libldns2_1.7.0-1+deb9u1_amd64.deb
+ e170668af430eaa0c5eba224933d3882 601902 debug extra python-ldns-dbgsym_1.7.0-1+deb9u1_amd64.deb
+ 129cf625a9608f4cde06ae01392f0290 215324 python extra python-ldns_1.7.0-1+deb9u1_amd64.deb
+

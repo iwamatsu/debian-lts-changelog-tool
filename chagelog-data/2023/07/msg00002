@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 05 Jul 2023 16:02:33 -0400
+Source: golang-yaml.v2
+Architecture: source
+Version: 2.2.2-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Roberto C. Sánchez <roberto@debian.org>
+Changes:
+ golang-yaml.v2 (2.2.2-1+deb10u1) buster-security; urgency=medium
+ .
+   [ Roberto C. Sánchez ]
+   * Non-maintainer upload by the LTS team.
+ .
+   [ Scarlett Moore ]
+   * Add patch to add logic to catch cases of alias abuse.
+     (Fixes: CVE-2021-4235)
+   * Add patch to improve heuristics preventing CPU/memory abuse.
+     (Fixes: CVE-2022-3064)
+Checksums-Sha1:
+ e269d58df8988a70d54e82ebab3c8a81494c0d00 2301 golang-yaml.v2_2.2.2-1+deb10u1.dsc
+ 153ef6d5479c73c30052f2a9c6877be66812d48a 70656 golang-yaml.v2_2.2.2.orig.tar.gz
+ 2d28f195152e3fff8a6972c78a70d9250b4c0bad 7432 golang-yaml.v2_2.2.2-1+deb10u1.debian.tar.xz
+ 4604fc4abc78c1128400c52ac6450bbb3cda785b 6026 golang-yaml.v2_2.2.2-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ c2b2c6d7d0e12cf8fc7a501443e2a5ae23c76f7d809d0105c3a4762e914f88a1 2301 golang-yaml.v2_2.2.2-1+deb10u1.dsc
+ 42c3e4ef9eca2860d22b3c6c5582c6c13fb4b417e5ebc1acc56ee5e2c4ddcaff 70656 golang-yaml.v2_2.2.2.orig.tar.gz
+ 820fe7e47791d1971797e76e589b02b2989ad8227838b0a6bbb8905e60572ead 7432 golang-yaml.v2_2.2.2-1+deb10u1.debian.tar.xz
+ 767e1df6a944b41f47bbb6d132dbde65e27eb2cc1147353a7fc16c99151f9211 6026 golang-yaml.v2_2.2.2-1+deb10u1_amd64.buildinfo
+Files:
+ 650e2bb5c228b0241d1011eacc9075c5 2301 devel optional golang-yaml.v2_2.2.2-1+deb10u1.dsc
+ d6f6163b289957b4fcab6d2e70756090 70656 devel optional golang-yaml.v2_2.2.2.orig.tar.gz
+ b0c10258cf448cfef9eb491b9341d5d4 7432 devel optional golang-yaml.v2_2.2.2-1+deb10u1.debian.tar.xz
+ a539b88e01f4de8ed249c435a2b0dfb8 6026 devel optional golang-yaml.v2_2.2.2-1+deb10u1_amd64.buildinfo
+

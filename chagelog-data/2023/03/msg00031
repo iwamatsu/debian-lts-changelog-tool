@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 29 Mar 2023 22:21:33 +0000
+Source: json-smart
+Architecture: source
+Version: 2.2-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1033474
+Changes:
+ json-smart (2.2-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-1370: stack overflow due to excessive recursion
+     When reaching a ‘[‘ or ‘{‘ character in the JSON input, the code
+     parses an array or an object respectively. It was discovered that the
+     code does not have any limit to the nesting of such arrays or
+     objects. Since the parsing of nested arrays and objects is done
+     recursively, nesting too many of them can cause a stack exhaustion
+     (stack overflow) and crash the software. (Closes: #1033474)
+   * CVE-2021-31684: Fix indexOf
+     A vulnerability was discovered in the indexOf function of
+     JSONParserByteArray in JSON Smart versions 1.3 and 2.4
+     which causes a denial of service (DOS)
+     via a crafted web request.
+Checksums-Sha1:
+ d2b964319b6af7b5872a4c1f195d9cdc8e0152b6 2098 json-smart_2.2-2+deb10u1.dsc
+ f0c43af8a511588667e1303db1121a63b49c8410 59112 json-smart_2.2.orig.tar.gz
+ 021fb7e556f072043536705d6a264ddebe9cc7e4 6068 json-smart_2.2-2+deb10u1.debian.tar.xz
+ a4c291f47fcce4cd70ff9f779a5bde6f8c8c7c2c 13184 json-smart_2.2-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 0ff2e2498d0103fe031d3c313a4386465d82672e10a0a1312a7cde64cd8ba109 2098 json-smart_2.2-2+deb10u1.dsc
+ ce68b5b0e51babe4bee19a9b56ceb6737e099ca669acd5da500bf011e9ac7150 59112 json-smart_2.2.orig.tar.gz
+ f4c30776d8611ef637ba4baff4f364d80d76b3625508065febf123b84eae164b 6068 json-smart_2.2-2+deb10u1.debian.tar.xz
+ cd4a11890e3af9194f8c1126dd266a827be60e5623f636799c070b783ad90b2c 13184 json-smart_2.2-2+deb10u1_amd64.buildinfo
+Files:
+ c9336fe198ca23e143b45a7317bdce17 2098 java optional json-smart_2.2-2+deb10u1.dsc
+ 4bbc546dc5563dfe957837a70269c43a 59112 java optional json-smart_2.2.orig.tar.gz
+ 9601bd7ea0016b448ca6bf0c87bba71c 6068 java optional json-smart_2.2-2+deb10u1.debian.tar.xz
+ 9bb437306d6743d90d3910c7cad9ae3b 13184 java optional json-smart_2.2-2+deb10u1_amd64.buildinfo
+

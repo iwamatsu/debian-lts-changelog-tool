@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:21:32 CEST
+Source: hub
+Architecture: source
+Version: 2.7.0~ds1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 4bcbb7bf9804e0041d68dee79e42e18ca3b06166 2596 hub_2.7.0~ds1-1+deb10u1.dsc
+ 351b837725b13ef6dc1b5ce1ac3386de49ca366d 113540 hub_2.7.0~ds1.orig.tar.xz
+ 4bf491f038c3e2d59890673a0c434af9c5a80bcf 5004 hub_2.7.0~ds1-1+deb10u1.debian.tar.xz
+ f67b28eb5c4155558cfe9e0f5285ba12afbf4db8 9046 hub_2.7.0~ds1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 818f986d35e0f6b7b8da857b6fbd4af6f9768f3c93d24731a21f4b7bef37d288 2596 hub_2.7.0~ds1-1+deb10u1.dsc
+ 6e4d62331689eeda920c8cb48ff0ee63c67c69c7f3f15497e6b0c0c479d2cb10 113540 hub_2.7.0~ds1.orig.tar.xz
+ 311e3100567732c487546399be9963198c381358fd88f45551d4b0c119c4a420 5004 hub_2.7.0~ds1-1+deb10u1.debian.tar.xz
+ 07267c5ff3c01dd15693128735acba530805842ef84e673a5a361877aa1324c1 9046 hub_2.7.0~ds1-1+deb10u1_amd64.buildinfo
+Changes:
+ hub (2.7.0~ds1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 7c0e90768cf826b5ad561cbb0a299b89 2596 net optional hub_2.7.0~ds1-1+deb10u1.dsc
+ 2936e8bb40a9e59c3effc57a2e71cea3 113540 net optional hub_2.7.0~ds1.orig.tar.xz
+ ad60e9b66561cd86cba1817c8e8fc425 5004 net optional hub_2.7.0~ds1-1+deb10u1.debian.tar.xz
+ 6ca06e8793b18d2be3a0cb37f7bde78f 9046 net optional hub_2.7.0~ds1-1+deb10u1_amd64.buildinfo
+

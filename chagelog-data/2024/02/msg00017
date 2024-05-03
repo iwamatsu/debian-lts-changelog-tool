@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Feb 2024 20:27:18 +0200
+Source: gsoap
+Architecture: source
+Version: 2.8.75-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Mattias Ellert <mattias.ellert@physics.uu.se>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ gsoap (2.8.75-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-13574: WS-Security plugin denial-of-service
+   * CVE-2020-13575: WS-Addressing plugin denial-of-service
+   * CVE-2020-13576: WS-Addressing plugin code execution
+   * CVE-2020-13577: WS-Security plugin denial-of-service
+   * CVE-2020-13578: WS-Security plugin denial-of-service
+Checksums-Sha1:
+ 5885f466a7e616f890639f1626c483255607368d 2116 gsoap_2.8.75-1+deb10u1.dsc
+ 97cd30f577dc69d4c8579660a6c38ab737ef0b72 5469630 gsoap_2.8.75.orig.tar.gz
+ 7ec33af2c2e9764175aae98a4213f8f0386fbe40 14572 gsoap_2.8.75-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 80ffb5941a4fd305cb4f5f0c80178681e85660f430b0e07edc43532a63bedfca 2116 gsoap_2.8.75-1+deb10u1.dsc
+ 5ce266aeca3b7c3e34b515ccb234c3fbe4cd4b9fb234d9c71358854522ef8d1c 5469630 gsoap_2.8.75.orig.tar.gz
+ 9f925cda5f992c395972a1528bccc8db327c2e033a9f330b43a61f417246bd9a 14572 gsoap_2.8.75-1+deb10u1.debian.tar.xz
+Files:
+ 17f30d927b65486833216b506e6330ed 2116 devel optional gsoap_2.8.75-1+deb10u1.dsc
+ a70dcc12dd074f700f8e8f4bdf7c987b 5469630 devel optional gsoap_2.8.75.orig.tar.gz
+ 7fbf1bba6cf090a7f0dff7e95ead7059 14572 devel optional gsoap_2.8.75-1+deb10u1.debian.tar.xz
+

@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 04 Dec 2022 22:22:22 +0530
+Source: clamav
+Architecture: source
+Version: 0.103.7+dfsg-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ clamav (0.103.7+dfsg-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Import 0.103.7
+     - Update symbol file.
+Checksums-Sha1:
+ c3e61d4a23baa5d337c55493279ce744148b65b1 3021 clamav_0.103.7+dfsg-0+deb10u1.dsc
+ f0708e3df3a432def23c384d28fb3a4628efcfd5 7136624 clamav_0.103.7+dfsg.orig.tar.xz
+ 992b9057cc09ec6147c1b722eda1a3e48b172929 219244 clamav_0.103.7+dfsg-0+deb10u1.debian.tar.xz
+ 72fd777675fc3e9ccb7cd4d6e0e7bbf310d10f93 6541 clamav_0.103.7+dfsg-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 63fd2a430824456672e1006fb46dd35ec4df265ca96d62a810590a9686be43c9 3021 clamav_0.103.7+dfsg-0+deb10u1.dsc
+ 13150a37ed95f0c80f907f8861a354b44879564090c4ae47c38358a653149274 7136624 clamav_0.103.7+dfsg.orig.tar.xz
+ 427591347a133d345b06aa4b7aa9224126fc8f0e1955f94dd0ed26128d2afd9d 219244 clamav_0.103.7+dfsg-0+deb10u1.debian.tar.xz
+ 6b94478514275e7ab58e1d86fb16d9c5755f10864592ab2c9cd2afb189be792c 6541 clamav_0.103.7+dfsg-0+deb10u1_source.buildinfo
+Files:
+ a17c418ceffdc0546cfa2c4529416bb1 3021 utils optional clamav_0.103.7+dfsg-0+deb10u1.dsc
+ 3a474fd45363084c331c54a237d28e68 7136624 utils optional clamav_0.103.7+dfsg.orig.tar.xz
+ d53448db0f05b0905668f5ceea727d75 219244 utils optional clamav_0.103.7+dfsg-0+deb10u1.debian.tar.xz
+ f7ea1d0597edecd326d7bec1407fe865 6541 utils optional clamav_0.103.7+dfsg-0+deb10u1_source.buildinfo
+

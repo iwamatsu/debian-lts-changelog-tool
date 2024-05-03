@@ -1,0 +1,31 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 24 Mar 2023 12:39:02 +0100
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb10u10
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ tzdata (2021a-0+deb10u10) buster-security; urgency=medium
+ .
+   * Update DST rules for Greenland
+   * Update DST rules for Egypt
+   * Update DST rules for Morocco
+   * Update DST rules for Palestine
+Checksums-Sha1:
+ 1668c8336d66ecc061313275976e34bee2a37a74 2071 tzdata_2021a-0+deb10u10.dsc
+ 2d7c270b8023076c2086372e178a76fed8f49b0d 122884 tzdata_2021a-0+deb10u10.debian.tar.xz
+ 449f4802de1bf47879de8b26618ddbb8e7edd82a 5845 tzdata_2021a-0+deb10u10_source.buildinfo
+Checksums-Sha256:
+ b1e9f40310065275618eab96b3f64800fa9574665682ed37bb9b055f31464711 2071 tzdata_2021a-0+deb10u10.dsc
+ b9669552330f3654f84a7079b56d1b1f856f9022a802d5a7f9c9148ae1645999 122884 tzdata_2021a-0+deb10u10.debian.tar.xz
+ 36625954c00a64c7ad919e61f7a653839e86073c06e437bc8ba0de2b6557c171 5845 tzdata_2021a-0+deb10u10_source.buildinfo
+Files:
+ 39683222d0f9fde0daf51f97959af963 2071 localization required tzdata_2021a-0+deb10u10.dsc
+ e288cdfe7fa55b341c55cba483c72759 122884 localization required tzdata_2021a-0+deb10u10.debian.tar.xz
+ 76e6fd6bb0fee285000d1d46121a70bc 5845 localization required tzdata_2021a-0+deb10u10_source.buildinfo
+

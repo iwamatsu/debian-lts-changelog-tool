@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 01 May 2023 00:56:52 +0200
+Source: openvswitch
+Architecture: source
+Version: 2.10.7+ds1-0+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1034042
+Changes:
+ openvswitch (2.10.7+ds1-0+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-1668: Remote traffic denial of service via crafted packets with
+     IP proto 0. (Closes: #1034042)
+Checksums-Sha1:
+ 3c651a61f751f0fa6f9f0dc849d9fd6046886358 3210 openvswitch_2.10.7+ds1-0+deb10u4.dsc
+ 849f463dd097f9771b9eb97d9408188e77d38d97 72040 openvswitch_2.10.7+ds1-0+deb10u4.debian.tar.xz
+ d8159312f6195686c737224a6da271fe9122ad37 14255 openvswitch_2.10.7+ds1-0+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 9ee16ea9bee3b88ace30f6c307d90a7b37e9fb403b687aca23d2aaa6e45beec5 3210 openvswitch_2.10.7+ds1-0+deb10u4.dsc
+ 9f7daf1d39643318ae3213c45737a53f5b1a33aa014e9803ceca65bfe60d5ead 72040 openvswitch_2.10.7+ds1-0+deb10u4.debian.tar.xz
+ 92e1b6cb14cb6a318f3c21c1d28e47c5e95104cf7805dcf4e4b23165d620c83b 14255 openvswitch_2.10.7+ds1-0+deb10u4_amd64.buildinfo
+Files:
+ 0f8938d31107eb96a0558285dab424f3 3210 net optional openvswitch_2.10.7+ds1-0+deb10u4.dsc
+ bdb3c5bebdc28d777a84d3ba040f0ee4 72040 net optional openvswitch_2.10.7+ds1-0+deb10u4.debian.tar.xz
+ 5c700bc8fd266629af1ec42f39de4459 14255 net optional openvswitch_2.10.7+ds1-0+deb10u4_amd64.buildinfo
+

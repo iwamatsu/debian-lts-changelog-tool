@@ -1,0 +1,52 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 18 Jun 2022 17:34:24 +0200
+Source: ntfs-3g
+Binary: ntfs-3g ntfs-3g-dbg ntfs-3g-dev libntfs-3g871 ntfs-3g-udeb
+Architecture: source
+Version: 1:2016.2.22AR.1+dfsg-1+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ libntfs-3g871 - read/write NTFS driver for FUSE (runtime library)
+ ntfs-3g    - read/write NTFS driver for FUSE
+ ntfs-3g-dbg - read/write NTFS driver for FUSE (debug)
+ ntfs-3g-dev - read/write NTFS driver for FUSE (development)
+ ntfs-3g-udeb - read/write NTFS driver for FUSE (udeb)
+Closes: 1011770
+Changes:
+ ntfs-3g (1:2016.2.22AR.1+dfsg-1+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team. (Closes: #1011770)
+   * CVE-2022-30783: an invalid return code in fuse_kern_mount enables
+     intercepting of libfuse-lite protocol traffic between NTFS-3G and the
+     kernel when using libfuse-lite.
+   * CVE-2022-30784: a crafted NTFS image can cause heap exhaustion in
+     ntfs_get_attribute_value.
+   * CVE-2022-30785: a file handle created in fuse_lib_opendir, and later
+     used in fuse_lib_readdir, enables arbitrary memory read and write
+     operations when using libfuse-lite.
+   * CVE-2022-30786: a crafted NTFS image can cause a heap-based buffer
+     overflow in ntfs_names_full_collate.
+   * CVE-2022-30787: an integer underflow in fuse_lib_readdir enables
+     arbitrary memory read operations when using libfuse-lite.
+   * CVE-2022-30788: a crafted NTFS image can cause a heap-based buffer
+     overflow in ntfs_mft_rec_alloc.
+   * CVE-2022-30789: a crafted NTFS image can cause a heap-based buffer
+     overflow in ntfs_check_log_client_array.
+Checksums-Sha1:
+ 97413a33b10f05886c74a10ddf1c53e83cd3a812 2311 ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3.dsc
+ 0a31be877365936024f4dac949dea3b8fdd81e6e 40012 ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3.debian.tar.xz
+ bc3ef507908e134a90961563cfade8abd1014e10 7997 ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 7e716a87f2b54d468c460676c136cf3fe2fad36bd0d5ee91cc17e0f89e67be21 2311 ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3.dsc
+ c41274c69df900db225e9e7208ee59b5ae8fb4c046255de37977ec69c97cb9f0 40012 ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3.debian.tar.xz
+ 5fdd243196a03bde3b8f4974f5226d28715fb40534405ac63cdaae7cc6dec106 7997 ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3_amd64.buildinfo
+Files:
+ 2fd76b388d559338b82f9cf9a5d4ff35 2311 otherosfs optional ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3.dsc
+ 9cebd0e938f7c4321947de30dbd17ae3 40012 otherosfs optional ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3.debian.tar.xz
+ 7c1a1072037fed33493616acad683c96 7997 otherosfs optional ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u3_amd64.buildinfo
+

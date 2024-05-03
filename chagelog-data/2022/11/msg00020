@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 17 Nov 2022 11:28:23 +0100
+Source: joblib
+Architecture: source
+Version: 0.13.0-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Yaroslav Halchenko <debian@onerussian.com>
+Changed-By: Dominik George <natureshadow@debian.org>
+Closes: 1020820
+Changes:
+ joblib (0.13.0-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-21797: Fix arbitrary code execution.
+     (Closes: #1020820)
+Checksums-Sha1:
+ 9b9965f92be0528e52bbf7f563e72ad60aecda0f 1602 joblib_0.13.0-2+deb10u1.dsc
+ 4d837c6896fa0d0557ab1258b8aa54bb0a783e5d 317194 joblib_0.13.0.orig.tar.gz
+ ee8f764a2bbc32f070b8ea389f37dcccb80d2f9c 6844 joblib_0.13.0-2+deb10u1.debian.tar.xz
+ e80f2e4047a738f273c34025cdf5d7c6a0922bcc 7425 joblib_0.13.0-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ a78ba0a4ceb013118ce4e9c75974c75b81f31e153119b8c97b1acf2d5f61e54d 1602 joblib_0.13.0-2+deb10u1.dsc
+ 8c09564a90584e6abd145753ba917fc22bb1b512235a7a1303f338f49b671e33 317194 joblib_0.13.0.orig.tar.gz
+ 9c25113902978dd823a1f79335a17dde746cb8a5bd002ad54973f463d2e03e15 6844 joblib_0.13.0-2+deb10u1.debian.tar.xz
+ a5bb4cfa64a063ba91bc1e4d5863ba37e269c7c760c9b9842c9b454fc1cd1762 7425 joblib_0.13.0-2+deb10u1_amd64.buildinfo
+Files:
+ a7a85f801668d62bb470cf210b1ca3f3 1602 python optional joblib_0.13.0-2+deb10u1.dsc
+ 2729d32d1f8f5747d9d25aa2678cca75 317194 python optional joblib_0.13.0.orig.tar.gz
+ 675455dac648115feae3989d8971eab8 6844 python optional joblib_0.13.0-2+deb10u1.debian.tar.xz
+ ca5c8fc25e7726959a5e896ab9d606ae 7425 python optional joblib_0.13.0-2+deb10u1_amd64.buildinfo
+

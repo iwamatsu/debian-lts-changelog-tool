@@ -1,0 +1,48 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 31 Mar 2023 12:47:45 +0100
+Source: xrdp
+Binary: xrdp xrdp-dbgsym
+Architecture: source amd64
+Version: 0.9.9-1+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Remote Maintainers <debian-remote@lists.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ xrdp       - Remote Desktop Protocol (RDP) server
+Closes: 1025879
+Changes:
+ xrdp (0.9.9-1+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-23480: Prevent a series of potential buffer overflow
+     vulnerabilities in the devredir_proc_client_devlist_announce_req()
+     function. (Closes: #1025879)
+   * CVE-2022-23481: Fix an out of bounds read vulnerability in the
+     xrdp_caps_process_confirm_active() function. (Closes: #1025879)
+   * CVE-2022-23482: Fix an out of bounds read vulnerability in the
+     xrdp_sec_process_mcs_data_CS_CORE() function. (Closes: #1025879)
+Checksums-Sha1:
+ 6011a43d6280314efbc618d01562342db29774b8 2275 xrdp_0.9.9-1+deb10u3.dsc
+ 4d797be6e270305273806fe42d80a6e746f4c818 1866532 xrdp_0.9.9.orig.tar.gz
+ 937bed5228bc1b3048361ca32f790f6ddf289095 33224 xrdp_0.9.9-1+deb10u3.debian.tar.xz
+ 96ae60b33b3f1791e34e7db5f37ca96e6cb72e86 843116 xrdp-dbgsym_0.9.9-1+deb10u3_amd64.deb
+ 8a3f6807c41b9390964b7bcb138381e1180bc393 7753 xrdp_0.9.9-1+deb10u3_amd64.buildinfo
+ f52fddbbf68fa885df7f64c3922f7fcf6badc1c7 435472 xrdp_0.9.9-1+deb10u3_amd64.deb
+Checksums-Sha256:
+ de829df7ee90b0e07a657b69aa570447c782800b00685cf6b0371d52053c1442 2275 xrdp_0.9.9-1+deb10u3.dsc
+ 8edf33346a8b3718a828d2c998ac1a036ea707e7f02b47092c8ae20dd71a9362 1866532 xrdp_0.9.9.orig.tar.gz
+ 5fc834895a27d87c76b63d1978c544855cb50b4045d7e1f10d57e91db57c40aa 33224 xrdp_0.9.9-1+deb10u3.debian.tar.xz
+ c10f41a75a0345bf136765113722da0d4f63b1c983ee3fa46ceb334ea834d918 843116 xrdp-dbgsym_0.9.9-1+deb10u3_amd64.deb
+ cf08d542d4987d70e33f8eda14b47c21b784ad946650764a86a6f3ba99d8e7f5 7753 xrdp_0.9.9-1+deb10u3_amd64.buildinfo
+ c7e6f5a744cbf95a01d76000a38d6bc85d169549b475504b9d4025cb0a44a8a1 435472 xrdp_0.9.9-1+deb10u3_amd64.deb
+Files:
+ f4b91ebbd3df2354026c1c9f694258d6 2275 net optional xrdp_0.9.9-1+deb10u3.dsc
+ d2f57182036c3f69dcaca0dfed4aaa6b 1866532 net optional xrdp_0.9.9.orig.tar.gz
+ d9551b81efb7aa5c8112bdacef0dd5fe 33224 net optional xrdp_0.9.9-1+deb10u3.debian.tar.xz
+ 2cc1f112ebe49943f611e2454b5ba6f4 843116 debug optional xrdp-dbgsym_0.9.9-1+deb10u3_amd64.deb
+ 7300dece3fb013065559d31b583c8671 7753 net optional xrdp_0.9.9-1+deb10u3_amd64.buildinfo
+ 1b530ed91fba0ca5fdc1dd471aab7c08 435472 net optional xrdp_0.9.9-1+deb10u3_amd64.deb
+

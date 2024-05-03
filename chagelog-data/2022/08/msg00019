@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 28 Aug 2022 22:23:41 CEST
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ e5a44f48de731eba256c36c4a44bf6f1aba95ba8 2845 curl_7.64.0-4+deb10u3.dsc
+ fe36e6dd5f1f0f463dee94fc0ae38755ad823d9d 54192 curl_7.64.0-4+deb10u3.debian.tar.xz
+ 08067e788f3bd0b8b4a3645ae198fa8dd40509b9 11957 curl_7.64.0-4+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ a3290e63b54991d6261f982c87230d36898b858b2f9bfe5f08e67a07d8c817ad 2845 curl_7.64.0-4+deb10u3.dsc
+ e102815f3a4901e4e5c884a419bbecc35e45bfbddd9741a61106d187677680e6 54192 curl_7.64.0-4+deb10u3.debian.tar.xz
+ a808e2e85e057f63319ac0354e2215164636f8a6c9dee73a2f55aa61adc3a650 11957 curl_7.64.0-4+deb10u3_amd64.buildinfo
+Changes:
+ curl (7.64.0-4+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-22898, CVE-2021-22924, CVE-2021-22946, CVE-2021-22947
+     CVE-2022-22576, CVE-2022-27776, CVE-2022-27781, CVE-2022-32206,
+     CVE-2022-32208, CVE-2022-27782.
+   * Multiple security vulnerabilities have been discovered in cURL, an URL
+     transfer library. These flaws may allow remote attackers to obtain
+     sensitive information, leak authentication or cookie header data or
+     facilitate a denial of service attack.
+Files:
+ aa5210a8c0659c841144ce603a45081c 2845 web optional curl_7.64.0-4+deb10u3.dsc
+ 5610795e665aaf254f7704f3d97df436 54192 web optional curl_7.64.0-4+deb10u3.debian.tar.xz
+ 5f6294a8fb765f07e77f51cc7118a7c3 11957 web optional curl_7.64.0-4+deb10u3_amd64.buildinfo
+

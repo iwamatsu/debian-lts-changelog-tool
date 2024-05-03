@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 13 May 2022 09:54:21 -0700
+Source: adminer
+Binary: adminer
+Architecture: source all
+Version: 4.2.5-3+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Chris Lamb <lamby@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ adminer    - Web-based database administration tool
+Changes:
+ adminer (4.2.5-3+deb9u3) stretch-security; urgency=high
+ .
+   * CVE-2021-43008: Prevent an issue whereby an attacker could have performed
+     an Arbitrary File Read on the remote server by requesting Adminer connect
+     to a remote MySQL database which returned a "LOAD DATA LOCAL INFILE" MySQL
+     command.
+Checksums-Sha1:
+ f97d3aee71225291d6a7ea220da2466eb0479716 1809 adminer_4.2.5-3+deb9u3.dsc
+ 05db4eb98bf092afe04052733612c2841ad97317 409762 adminer_4.2.5.orig.tar.bz2
+ 3ea82c25845a2a5c55d34f77121f2760dbb346df 3512 adminer_4.2.5-3+deb9u3.debian.tar.xz
+ c614f39cb4e45e92dc385d6f9782f8f783627b06 386768 adminer_4.2.5-3+deb9u3_all.deb
+ 8d1359f427b0dd7b879852e05bd747dc865566f8 5838 adminer_4.2.5-3+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ 9fe511e54a4abc4cd35c32c58e59b8e8a40840c7619252f31c3b5f68f0d8b8c2 1809 adminer_4.2.5-3+deb9u3.dsc
+ 69a177ba87ed0cf8d7633799248511d1c7d4cffb66c9a5742795e1de506f1946 409762 adminer_4.2.5.orig.tar.bz2
+ 64583e42414b9697e3fed731499b07026c17e1931a5f81762ae48ea303ac0b51 3512 adminer_4.2.5-3+deb9u3.debian.tar.xz
+ 6c7a7a2cbf4559a05370167be33e53d9ac4ae942c676f4c10d55f9771763cf3f 386768 adminer_4.2.5-3+deb9u3_all.deb
+ 8a9cf0577fffb07daf8af852936c0b691136fb3215330c9b86b187fe1f9a39b4 5838 adminer_4.2.5-3+deb9u3_amd64.buildinfo
+Files:
+ 0ea2a92d7660174de40fdce3fa423c98 1809 web extra adminer_4.2.5-3+deb9u3.dsc
+ e4b85ffc6b5b674b83daadd9e9d23cfd 409762 web extra adminer_4.2.5.orig.tar.bz2
+ 6c285db0f964ba2bf558d1d5f10b6bf8 3512 web extra adminer_4.2.5-3+deb9u3.debian.tar.xz
+ 048c90ce5835ec6ecf13f3a1a311df86 386768 web extra adminer_4.2.5-3+deb9u3_all.deb
+ 5b8aba7c30daa8f059cc5926acefccb5 5838 web extra adminer_4.2.5-3+deb9u3_amd64.buildinfo
+

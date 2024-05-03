@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 06 Jun 2022 17:14:17 +0100
+Source: php-horde-mime-viewer
+Binary: php-horde-mime-viewer
+Architecture: source all
+Version: 2.2.1-1+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Horde Maintainers <pkg-horde-hackers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ php-horde-mime-viewer - ${phppear:summary}
+Changes:
+ php-horde-mime-viewer (2.2.1-1+deb9u1) stretch-security; urgency=high
+ .
+   * CVE-2022-26874: Prevent an XSS vulnerability due to a relaxed matching
+     rules in XSLT documents.
+Checksums-Sha1:
+ e85b5c349030f238d70b549f80ad830beaca2342 2127 php-horde-mime-viewer_2.2.1-1+deb9u1.dsc
+ 2f9e40e355ce04ac5e104ff1a3b40d4de3deff89 409809 php-horde-mime-viewer_2.2.1.orig.tar.gz
+ 0cec8ee5a9ae28215d4f2bcf000d889b0b13b7c8 3816 php-horde-mime-viewer_2.2.1-1+deb9u1.debian.tar.xz
+ bddad5c9588e331acf0d02d737a6579d0434755a 219592 php-horde-mime-viewer_2.2.1-1+deb9u1_all.deb
+ 0df2a493be84e5af5f417ec4b4c1d54bb570395e 6565 php-horde-mime-viewer_2.2.1-1+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ f3d7c7b56a653a7f5e2a933a57b937be1c8d25d5941b4bb6e883bf64bf861cd0 2127 php-horde-mime-viewer_2.2.1-1+deb9u1.dsc
+ 34c49d9745451347067248963d1edf51bbd627a2aad9b2b88293535a8a82f8f4 409809 php-horde-mime-viewer_2.2.1.orig.tar.gz
+ b82eb18272b3144604870298c081ccd53449c11896acd040e1ed5bfacb27c31a 3816 php-horde-mime-viewer_2.2.1-1+deb9u1.debian.tar.xz
+ b75623b2d29794c8090d8794c0261c49eef4f4b9969f07f5a81342362f3e60a4 219592 php-horde-mime-viewer_2.2.1-1+deb9u1_all.deb
+ b823ee1e2b7fc1b06bc96772e7445c9446603f50ba6f1649da8d5256a73369c6 6565 php-horde-mime-viewer_2.2.1-1+deb9u1_amd64.buildinfo
+Files:
+ c11cf45e89fc5f41b43f68b1dbebf23a 2127 php extra php-horde-mime-viewer_2.2.1-1+deb9u1.dsc
+ 6d633b7860b36c64256aaae6a711e092 409809 php extra php-horde-mime-viewer_2.2.1.orig.tar.gz
+ 8b6d4f22bd22615e0e9a376663c0bbfe 3816 php extra php-horde-mime-viewer_2.2.1-1+deb9u1.debian.tar.xz
+ 2bf2d53152a29da145eede386afee2cc 219592 php extra php-horde-mime-viewer_2.2.1-1+deb9u1_all.deb
+ a1501120997a1381df9d067ce107de05 6565 php extra php-horde-mime-viewer_2.2.1-1+deb9u1_amd64.buildinfo
+

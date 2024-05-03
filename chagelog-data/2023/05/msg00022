@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 16 May 2023 00:54:33 +0200
+Source: sqlparse
+Architecture: source
+Version: 0.2.4-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Andrii Senkovych <andrii@senkovych.com>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1034615
+Changes:
+ sqlparse (0.2.4-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-30608: ReDoS (Regular Expression Denial of Service) vulnerability
+     in the SQL parser. (Closes: #1034615)
+Checksums-Sha1:
+ 8093926fb8785ab86e58219f313b9b8ffd3002e6 2506 sqlparse_0.2.4-1+deb10u1.dsc
+ 7def27ec3131bd36818e61416b7e4074e1400b8e 61614 sqlparse_0.2.4.orig.tar.gz
+ 433faaa99feadc9cf59381a7e0e2fc2441d3066c 7476 sqlparse_0.2.4-1+deb10u1.debian.tar.xz
+ 51a817083e9861be4e7da32de2feab7e374edb02 9378 sqlparse_0.2.4-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ f8830cb438e61f47dd6b6b57eed73e2f791ad40e9c3749b50cda4bd92f153cba 2506 sqlparse_0.2.4-1+deb10u1.dsc
+ ce028444cfab83be538752a2ffdb56bc417b7784ff35bb9a3062413717807dec 61614 sqlparse_0.2.4.orig.tar.gz
+ 69d1db396eae9e2b12692ebf6f3c1e01b062b27243e0283e27b74097f3f9fabd 7476 sqlparse_0.2.4-1+deb10u1.debian.tar.xz
+ ec8b1b35b552a4d789db9c21305715930662dd2a61aa3eb85f1c2be1ba4f2c8a 9378 sqlparse_0.2.4-1+deb10u1_amd64.buildinfo
+Files:
+ 8230a23c3ebd0f625bdaa06c42a71bfb 2506 python optional sqlparse_0.2.4-1+deb10u1.dsc
+ 8f753105167f35ea94ae6387e8af152f 61614 python optional sqlparse_0.2.4.orig.tar.gz
+ ba480ea307a6cd37de61fb398e1ebc2a 7476 python optional sqlparse_0.2.4-1+deb10u1.debian.tar.xz
+ 5631d9a90150e68b3500112a57859615 9378 python optional sqlparse_0.2.4-1+deb10u1_amd64.buildinfo
+

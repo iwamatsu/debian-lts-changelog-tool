@@ -1,0 +1,51 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 10 Jan 2023 15:35:29 +0000
+Source: ruby-sinatra
+Binary: ruby-rack-protection ruby-sinatra ruby-sinatra-contrib
+Architecture: source all
+Version: 2.0.5-4+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ ruby-rack-protection - Protects against typical web attacks for Rack apps
+ ruby-sinatra - Ruby web-development dressed in a DSL
+ ruby-sinatra-contrib - collection of useful extensions to the Sinatra web framework
+Closes: 1025125
+Changes:
+ ruby-sinatra (2.0.5-4+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS security team.
+     - Remove existing debian/gbp.conf.
+     - Add debian/.gitlab-ci.yml and disable piuparts testing.
+   * CVE-2022-45442: Fix a reflected file download (RFD) attack in the
+     Content-Disposition HTTP header which was being incorrectly derived from a
+     potentially user-supplied filename. (Closes: #1025125)
+Checksums-Sha1:
+ 7f9344aae500a475dc9daeae7b5358c8df889b4b 2974 ruby-sinatra_2.0.5-4+deb10u2.dsc
+ 6cd71a285b77eaaf6fb84df61dd6ce7685c929cc 490580 ruby-sinatra_2.0.5.orig.tar.gz
+ c138a5e591883007f4129d06d0d5d2df5cd176f7 8264 ruby-sinatra_2.0.5-4+deb10u2.debian.tar.xz
+ 33a3c71cac169702797b71f7c5d834d0a1981b21 36768 ruby-rack-protection_2.0.5-4+deb10u2_all.deb
+ 4c43f56792f37d4987660e77548dbf823bb3b5c9 50972 ruby-sinatra-contrib_2.0.5-4+deb10u2_all.deb
+ 5dd97e679e843a5486a8512780de089c7ddb1b83 337604 ruby-sinatra_2.0.5-4+deb10u2_all.deb
+ deea0ddb9c815d22c0dfaaffd35d0ee0c85f09f5 12219 ruby-sinatra_2.0.5-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 2afcf35e6a1d328fe3419f0fc4847becf250f9f3ba0399faa871c70b88a37d9d 2974 ruby-sinatra_2.0.5-4+deb10u2.dsc
+ 423c9d6cbbc89e53652c390a9908927058c30952bfdf19c5b083bfce2890fe8a 490580 ruby-sinatra_2.0.5.orig.tar.gz
+ 89b246c4eef1e2aa5543c6b1490be752cd2d52cf461b70b2a7493cd0b1c67c2e 8264 ruby-sinatra_2.0.5-4+deb10u2.debian.tar.xz
+ eaf4d5d76025fdc1753daab51a52c27361755d3e9ee04fb86a449e05cb08ffc7 36768 ruby-rack-protection_2.0.5-4+deb10u2_all.deb
+ 82057341b2e356e5b04dd55655bc38bd0375c9298c818888dbdbb1d2a0cbdd60 50972 ruby-sinatra-contrib_2.0.5-4+deb10u2_all.deb
+ b087d1b3c7aa73349868d3c6d85b1e5590e3b8b3deaadd8f818c99260fe06dbb 337604 ruby-sinatra_2.0.5-4+deb10u2_all.deb
+ ef6e3b7a43950d2eeb008c051e6cdbc5d0c1dcbade1b3846fac2c50d99e6f54a 12219 ruby-sinatra_2.0.5-4+deb10u2_amd64.buildinfo
+Files:
+ f521ef1f750d66d714be623763e82192 2974 ruby optional ruby-sinatra_2.0.5-4+deb10u2.dsc
+ 02263f5234d50fede1f50c102123d702 490580 ruby optional ruby-sinatra_2.0.5.orig.tar.gz
+ 46a890520ab3c48cccd49dfe155d44a3 8264 ruby optional ruby-sinatra_2.0.5-4+deb10u2.debian.tar.xz
+ 2de251555be12c3b643b737423d56095 36768 ruby optional ruby-rack-protection_2.0.5-4+deb10u2_all.deb
+ 0a70070d2f85ea82fffb791bc9a88b22 50972 ruby optional ruby-sinatra-contrib_2.0.5-4+deb10u2_all.deb
+ 4087e732c5f279806618f47beb7262c0 337604 ruby optional ruby-sinatra_2.0.5-4+deb10u2_all.deb
+ bd494ef98090c3e644134887e1159b7c 12219 ruby optional ruby-sinatra_2.0.5-4+deb10u2_amd64.buildinfo
+

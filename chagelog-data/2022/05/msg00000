@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun,  1 May 2022 22:18:02 CEST
+Source: ghostscript
+Binary: ghostscript ghostscript-x ghostscript-doc libgs9 libgs9-common libgs-dev ghostscript-dbg
+Architecture: source
+Version: 9.26a~dfsg-0+deb9u9
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ ghostscript - interpreter for the PostScript language and for PDF
+ ghostscript-dbg - interpreter for the PostScript language and for PDF - Debug symbo
+ ghostscript-doc - interpreter for the PostScript language and for PDF - Documentati
+ ghostscript-x - interpreter for the PostScript language and for PDF - X11 support
+ libgs-dev  - interpreter for the PostScript language and for PDF - Development
+ libgs9     - interpreter for the PostScript language and for PDF - Library
+ libgs9-common - interpreter for the PostScript language and for PDF - common file
+Checksums-Sha1:
+ a627ace435524a1f3b661ed78527727b7e8e3f4b 3048 ghostscript_9.26a~dfsg-0+deb9u9.dsc
+ ec6a72a27c7ad804dd5bd8c2653803a08e1ece4f 136912 ghostscript_9.26a~dfsg-0+deb9u9.debian.tar.xz
+ 2ead1cb80d78a1da0a6da5e53a5a1f36bffcaef9 13640 ghostscript_9.26a~dfsg-0+deb9u9_amd64.buildinfo
+Checksums-Sha256:
+ 5c2f28b7cbc54326e552e90af59c7a1796f89c6d08333486914af3bf020e37d4 3048 ghostscript_9.26a~dfsg-0+deb9u9.dsc
+ 9a557727d21f6cb76ac326d958e8dff3bf0e82cef82d7f561bb7ea5229e99cf3 136912 ghostscript_9.26a~dfsg-0+deb9u9.debian.tar.xz
+ 820aecb739c7e7b99dc5e6dfd3cbce5e5ff7780cb3d7f81679be5b84ffe915bc 13640 ghostscript_9.26a~dfsg-0+deb9u9_amd64.buildinfo
+Changes:
+ ghostscript (9.26a~dfsg-0+deb9u9) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-25059:
+     It was discovered that some privileged Postscript operators remained
+     accessible from various places. For instance a specially crafted PostScript
+     file could use this flaw in order to have access to the file system outside
+     of the constrains imposed by -dSAFER. This problem exists because of an
+     incomplete fix for CVE-2019-3839.
+Files:
+ 91d08a7ff5156528eb3bff3e4fc387c8 3048 text optional ghostscript_9.26a~dfsg-0+deb9u9.dsc
+ 28104949f66573361b5a73f703697971 136912 text optional ghostscript_9.26a~dfsg-0+deb9u9.debian.tar.xz
+ e500df10e355a7e8f35d434889a4a8b4 13640 text optional ghostscript_9.26a~dfsg-0+deb9u9_amd64.buildinfo
+

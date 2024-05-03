@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 12 Dec 2023 22:01:44 +0100
+Source: debian-security-support
+Architecture: source
+Version: 1:10+2023.13.12
+Distribution: buster-security
+Urgency: medium
+Maintainer: Holger Levsen <holger@debian.org>
+Changed-By: Holger Levsen <holger@debian.org>
+Closes: 1053109
+Changes:
+ debian-security-support (1:10+2023.13.12) buster-security; urgency=medium
+ .
+   [ Sylvain Beucler ]
+   * security-support-limited: add gnupg1, see #982258.
+ .
+   [ Markus Koschany ]
+   * Add pluxml to security-support-ended.deb10.
+ .
+   [ Emilio Pozuelo Monfort ]
+   * Add webkit2gtk to security-support-ended.deb10
+   * Move webkit2gtk into security-support-limited.
+ .
+   [ Santiago Ruano Rincón ]
+   * Mark samba support limited to non-AD DC uses cases. Closes: #1053109.
+ .
+   [ Markus Koschany ]
+   * EOL Tor for Buster.
+Checksums-Sha1:
+ ad03bca107167f00385e10f74c71c27a031fccbc 1871 debian-security-support_10+2023.13.12.dsc
+ dfd6f83e2886968818afbc2c2fa83c754036286f 31384 debian-security-support_10+2023.13.12.tar.xz
+ d69f0b9ec1dc4c36e049859ef836334f833dfd6f 6491 debian-security-support_10+2023.13.12_source.buildinfo
+Checksums-Sha256:
+ 954e39a4c77f0fe12a64d22773d203eff341b7fbc797c247df4a93eb9afe8eec 1871 debian-security-support_10+2023.13.12.dsc
+ e5443efd7b3a2d01b674ce6ac248e9a398b6c193130e9aa415daa41786f77974 31384 debian-security-support_10+2023.13.12.tar.xz
+ fcffd6cc5e31987a409933053db2e2e45fa338557e3fc863fe66d5330cdad62e 6491 debian-security-support_10+2023.13.12_source.buildinfo
+Files:
+ aecfe4ea15787126f84521ca772dd97d 1871 admin optional debian-security-support_10+2023.13.12.dsc
+ faba522065b88354b672703a36921d84 31384 admin optional debian-security-support_10+2023.13.12.tar.xz
+ 9c6ec7c3da4c4c6cfaf5025f9e09942b 6491 admin optional debian-security-support_10+2023.13.12_source.buildinfo
+

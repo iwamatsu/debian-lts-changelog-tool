@@ -1,0 +1,98 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 20 Oct 2023 16:17:09 +0100
+Source: zookeeper
+Binary: libzookeeper-java libzookeeper-java-doc libzookeeper-mt-dev libzookeeper-mt2 libzookeeper-mt2-dbgsym libzookeeper-st-dev libzookeeper-st2 libzookeeper-st2-dbgsym python-zookeeper python-zookeeper-dbgsym zookeeper zookeeper-bin zookeeper-bin-dbgsym zookeeperd
+Architecture: source all amd64
+Version: 3.4.13-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libzookeeper-java - Core Java libraries for zookeeper
+ libzookeeper-java-doc - API Documentation for zookeeper
+ libzookeeper-mt-dev - Development files for multi threaded zookeeper C bindings
+ libzookeeper-mt2 - Multi threaded C bindings for zookeeper
+ libzookeeper-st-dev - Development files for single threaded zookeeper C bindings
+ libzookeeper-st2 - Single threaded C bindings for zookeeper
+ python-zookeeper - Python bindings for zookeeper
+ zookeeper  - High-performance coordination service for distributed application
+ zookeeper-bin - Command line utilities for zookeeper
+ zookeeperd - Init control scripts for zookeeper
+Closes: 1054224
+Changes:
+ zookeeper (3.4.13-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team:
+ .
+     - CVE-2023-44981: Prevent a potential authorisation bypass vulnerability.
+       If SASL Quorum Peer authentication was enabled (via
+       quorum.auth.enableSasl), authorisation was performed by verifying that
+       the instance part in the SASL authentication ID was listed in the zoo.cfg
+       server list. However, this value is optional, and, if missing (such as in
+       'eve@EXAMPLE.COM'), the authorisation check will be skipped. As a result,
+       an arbitrary endpoint could join the cluster and begin propagating
+       counterfeit changes to the leader, essentially giving it complete
+       read-write access to the data tree. (Closes: #1054224)
+ .
+   * Remove existing debian/gbp.conf and add a debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ b7403e1ca3c1e4baf9b45790f5f859db7d07d300 3047 zookeeper_3.4.13-2+deb10u1.dsc
+ 8d1fed2574e8645060154fcffdf7918ea5858377 1970528 zookeeper_3.4.13.orig.tar.xz
+ 5c8b0918d60021a093facd97db9daa29075d816e 70596 zookeeper_3.4.13-2+deb10u1.debian.tar.xz
+ f2ba6834918fafa17711947be8424b1e6424f82c 685848 libzookeeper-java-doc_3.4.13-2+deb10u1_all.deb
+ e8d4d8f42478b31cf55b909c10c519e9df25aee6 1385472 libzookeeper-java_3.4.13-2+deb10u1_all.deb
+ 654a6b053d2fa6991477a93786b26d813eca1e5e 62728 libzookeeper-mt-dev_3.4.13-2+deb10u1_amd64.deb
+ 8e699124cd6394f56ae3580a30b19b71ce69590f 133436 libzookeeper-mt2-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ f926a7a1fbd9f5f42efc152f7b540c4a32fef2e5 46904 libzookeeper-mt2_3.4.13-2+deb10u1_amd64.deb
+ 797cb89d280c29174b932a4496a2b090f8f180e0 60096 libzookeeper-st-dev_3.4.13-2+deb10u1_amd64.deb
+ 2bda0cd3d02fa94f0b89eb6ae6e900988f9996e9 125316 libzookeeper-st2-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ b779ecb8b440140aac6cae03a99fb0579cf5d85f 44664 libzookeeper-st2_3.4.13-2+deb10u1_amd64.deb
+ e45e0ddca526e6e5ec3978fadc89d13c69dfa9ba 36120 python-zookeeper-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 6bce308e173c5d2945a1b65b4b88643460dd2211 30012 python-zookeeper_3.4.13-2+deb10u1_amd64.deb
+ ac4f415724cf14513db987a5a21200af9dd6b1b1 628204 zookeeper-bin-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ d4c73d7c20f2dc2cc9737ae92aad93685d9a9c77 66288 zookeeper-bin_3.4.13-2+deb10u1_amd64.deb
+ 03bf85c191c01de1c78e0939d9ca5c03ddc5c94e 117224 zookeeper_3.4.13-2+deb10u1_all.deb
+ 18d696af4a3fa0f6d59772a0f6dd76d793e590de 17941 zookeeper_3.4.13-2+deb10u1_amd64.buildinfo
+ 9b81af949d39820d9049d3128ff8346b1fef3105 14944 zookeeperd_3.4.13-2+deb10u1_all.deb
+Checksums-Sha256:
+ 39cbbd15f638978c8e3ab9005a442097cc82664745184d866b1a41b3fd3c39bc 3047 zookeeper_3.4.13-2+deb10u1.dsc
+ 4f303a575a3e981d5ef8fe43a4fec157f320841a502eff96ae7cda902c278d2f 1970528 zookeeper_3.4.13.orig.tar.xz
+ 579d24c0313da799168e4acb594cd1eebece8fdc23c4fae0a7be159bb6e97a0a 70596 zookeeper_3.4.13-2+deb10u1.debian.tar.xz
+ 074c5b681c79e2597e87dbf41805254b0345fed923fc898c64123efff34dae97 685848 libzookeeper-java-doc_3.4.13-2+deb10u1_all.deb
+ 772673eb81470a4b033c20a129fc13cc7a554217cafb7554065ee2fa8fbc2edd 1385472 libzookeeper-java_3.4.13-2+deb10u1_all.deb
+ 0351c8f9b44b3843e532e6b882e3ca3d7ae3f0c5d509d6bb370f3d52993a8695 62728 libzookeeper-mt-dev_3.4.13-2+deb10u1_amd64.deb
+ 2a742c5e994ce7796edd8e6d105717990ea4a8565360d6caca804ec4020128be 133436 libzookeeper-mt2-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ beda4dcd8f5a1d1ec3d556e1653819c5b18a147fb1d201bdcb2f16c90597257d 46904 libzookeeper-mt2_3.4.13-2+deb10u1_amd64.deb
+ c006f0a18774e059deb15819a2d36db240281781c11074575e11f84033a9c1eb 60096 libzookeeper-st-dev_3.4.13-2+deb10u1_amd64.deb
+ deec039489bb82d222a6583b10a3407b88bfbe5ba3221e717ab5a483e3982e67 125316 libzookeeper-st2-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 77727b3e5773e1745098bdffcbde74e5e9dc0ab5c3bc585ee14c8fa491b7b620 44664 libzookeeper-st2_3.4.13-2+deb10u1_amd64.deb
+ 850316db926eba718b633bf69a4df062d3474e83a575b09215b336ac1246197f 36120 python-zookeeper-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 75c03fb7d2b74e57a61942a13c561f8b1e62b907efe87ba94d5eeef731fed140 30012 python-zookeeper_3.4.13-2+deb10u1_amd64.deb
+ f63da82afd67f2091170043963ddcf7a8ed22cfd0ed3ecc47a1f86c7b11ad6e6 628204 zookeeper-bin-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ b939c1f2a09d09ea4e5a362ab7abb128cae2a2b7b9134bd4427cf134fe06f9de 66288 zookeeper-bin_3.4.13-2+deb10u1_amd64.deb
+ c7f78bc87be3f7304a9ca34815b934d513a3f0ed244b17607596af706ae9028c 117224 zookeeper_3.4.13-2+deb10u1_all.deb
+ 5de3a904fd24c5388d08b781eb30625cf1ef0cae33adb281354d03726b5a8550 17941 zookeeper_3.4.13-2+deb10u1_amd64.buildinfo
+ f8b17e1d9942036c59ca0c3c72fc20511a6adb9009d5a42f9078aa38a27a9363 14944 zookeeperd_3.4.13-2+deb10u1_all.deb
+Files:
+ 84a6c91f2fdd18079b1c90136654a703 3047 java optional zookeeper_3.4.13-2+deb10u1.dsc
+ a9fc5be7cbdeef5fb41bb87d58ce41bd 1970528 java optional zookeeper_3.4.13.orig.tar.xz
+ b67d1ce6864d48d6dc993908ffc11186 70596 java optional zookeeper_3.4.13-2+deb10u1.debian.tar.xz
+ 2b046583f8b9bd78bec7895c3289c7e8 685848 doc optional libzookeeper-java-doc_3.4.13-2+deb10u1_all.deb
+ fc584caa3dcce90e3ad62b1f32f7ae8a 1385472 java optional libzookeeper-java_3.4.13-2+deb10u1_all.deb
+ a1f8b321f5b0c406d1e10347d98cfddb 62728 libdevel optional libzookeeper-mt-dev_3.4.13-2+deb10u1_amd64.deb
+ e1e8d7009030a132b6a8c4c3a63e339e 133436 debug optional libzookeeper-mt2-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 0f35aac9d03e644ed086eeda8e477fb4 46904 libs optional libzookeeper-mt2_3.4.13-2+deb10u1_amd64.deb
+ 41f4e34bcecbff930aa78e8538ccfcc7 60096 libdevel optional libzookeeper-st-dev_3.4.13-2+deb10u1_amd64.deb
+ 0743edfd735054f37bf243e3187b55bc 125316 debug optional libzookeeper-st2-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 1d73fd750c7b6347ec26cdef8de495ae 44664 libs optional libzookeeper-st2_3.4.13-2+deb10u1_amd64.deb
+ c6f28a38dcc10f36e17bbcf3eb24db4b 36120 debug optional python-zookeeper-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 8b262825c46a671dc40bd29720d3c481 30012 python optional python-zookeeper_3.4.13-2+deb10u1_amd64.deb
+ 8a0904378bd099da5954cb7ca3a906f7 628204 debug optional zookeeper-bin-dbgsym_3.4.13-2+deb10u1_amd64.deb
+ 3009d5f92f6e4fbad2edd6a18a456382 66288 misc optional zookeeper-bin_3.4.13-2+deb10u1_amd64.deb
+ 3526d48a1e58f0cc5ede37b6e9866998 117224 java optional zookeeper_3.4.13-2+deb10u1_all.deb
+ b3a8926a5f8f6e850f9b2f38a1cd484a 17941 java optional zookeeper_3.4.13-2+deb10u1_amd64.buildinfo
+ c19933e7a8a64e9ff8752766235eb212 14944 java optional zookeeperd_3.4.13-2+deb10u1_all.deb
+

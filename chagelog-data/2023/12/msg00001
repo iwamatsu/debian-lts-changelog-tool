@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 03 Dec 2023 09:46:50 +0100
+Source: amanda
+Architecture: source
+Version: 1:3.5.1-2+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jose M Calhariz <calhariz@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1021017 1029829 1055253
+Changes:
+ amanda (1:3.5.1-2+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Apply upstream fix for CVE-2022-37703 - information disclosure
+     vulnerability. (Closes: #1021017)
+   * Apply upstream fix for CVE-2022-37705 - local privilege escalation
+     (Closes: #1029829)
+   * Backport fix for CVE-2023-30577. (Closes: #1055253)
+Checksums-Sha1:
+ e281da6534113c67b5ab24479ef8d1fff68b70d2 2216 amanda_3.5.1-2+deb10u2.dsc
+ 7a1cfb15cf509166774b4de6106865cfc8f89a54 46520 amanda_3.5.1-2+deb10u2.debian.tar.xz
+ ee4325a05fc2fae047d67d1955c9ea2b32a859e8 14867 amanda_3.5.1-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ b8e0cffef983f547ac069f9e061ea7bd542c12eecb0be4837c471f1f29fa851f 2216 amanda_3.5.1-2+deb10u2.dsc
+ ad42be9affaca47d0c98184ced2db77e4f8dfd6f878e25a9c03ca14c960334c9 46520 amanda_3.5.1-2+deb10u2.debian.tar.xz
+ 08a49508bfb92fb28e71983ca74ad73ecb12607901bbc5e2d5b7bceb319f70f8 14867 amanda_3.5.1-2+deb10u2_amd64.buildinfo
+Files:
+ 329b433491fbd68055271312a94d7625 2216 utils optional amanda_3.5.1-2+deb10u2.dsc
+ 7b804e10b6f6b17eb6bf69e95c9938b6 46520 utils optional amanda_3.5.1-2+deb10u2.debian.tar.xz
+ ccfd5ef59f6457465f29a7af28c096d2 14867 utils optional amanda_3.5.1-2+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 21:14:05 +0100
+Source: node-xmldom
+Architecture: source
+Version: 0.1.27+ds-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1024736
+Changes:
+ node-xmldom (0.1.27+ds-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2022-39353: xmldom parses XML that is not well-formed because it
+     contains multiple top level elements, and adds all root nodes to the
+     childNodes collection of the Document, without reporting any error or
+     throwing. (Closes: #1024736)
+   * CVE-2021-21366: xmldom does not correctly preserve system identifiers,
+     FPIs or namespaces when repeatedly parsing and serializing maliciously
+     crafted documents.
+Checksums-Sha1:
+ 7ae43011419f17af7c837c2e4da61c74fde7733a 2084 node-xmldom_0.1.27+ds-1+deb10u2.dsc
+ e32dd7505ce4e0d70ec72b01e8ba486c719452e3 10268 node-xmldom_0.1.27+ds-1+deb10u2.debian.tar.xz
+ e890fd933ea29587290f770580870e7350b47f60 5852 node-xmldom_0.1.27+ds-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 6c7caa9cb553f18877f5881413c9530d8231eeaff8801102586df45713b56507 2084 node-xmldom_0.1.27+ds-1+deb10u2.dsc
+ 0241692cedcbc10c7064d60182de5d19fb8d1cfdacdda08db4d9aeaffa0fa6d2 10268 node-xmldom_0.1.27+ds-1+deb10u2.debian.tar.xz
+ 56270c2faa674b24a99ec9e6383f307d5aef15e334269536af8b83752195f411 5852 node-xmldom_0.1.27+ds-1+deb10u2_amd64.buildinfo
+Files:
+ c0065a718c48285df53a8dddb6d7fd3f 2084 javascript optional node-xmldom_0.1.27+ds-1+deb10u2.dsc
+ a534934731076d8ab464155c65660310 10268 javascript optional node-xmldom_0.1.27+ds-1+deb10u2.debian.tar.xz
+ ae8a6efb00acc28f4afebb882fb077c1 5852 javascript optional node-xmldom_0.1.27+ds-1+deb10u2_amd64.buildinfo
+

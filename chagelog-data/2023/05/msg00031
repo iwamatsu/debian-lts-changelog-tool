@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 27 May 2023 12:26:22 +0200
+Source: sysstat
+Architecture: source
+Version: 12.0.3-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Robert Luberda <robert@debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1036294
+Changes:
+ sysstat (12.0.3-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-33204: incomplete fix for CVE-2022-39377. (Closes: #1036294)
+Checksums-Sha1:
+ 4c2e13d7befb399d6369827b06f8239d248753b0 1953 sysstat_12.0.3-2+deb10u2.dsc
+ 2b3029fc89a4448d1479c8b25a50df0610a93530 35316 sysstat_12.0.3-2+deb10u2.debian.tar.xz
+ 222f141903fd84ff57a7f68825b4de78dfb77891 5695 sysstat_12.0.3-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 12aa218a28bdc791f9ecd0766616ae31266d9951218f5340d40e8a0266bb60ef 1953 sysstat_12.0.3-2+deb10u2.dsc
+ e040e79458fca324863013b8abf6b04d8bcf45b03fa51adf6aaeaa8c39e3ca37 35316 sysstat_12.0.3-2+deb10u2.debian.tar.xz
+ a6c1f77b642acb08c35f39930c4356ce298cd58db5f1182b663b91fdfe4514ba 5695 sysstat_12.0.3-2+deb10u2_amd64.buildinfo
+Files:
+ f2b0a7ef3ccf5f0e0b4ecc4ec918edce 1953 admin optional sysstat_12.0.3-2+deb10u2.dsc
+ 0ab23408cbb795b8f8ca38f79b068936 35316 admin optional sysstat_12.0.3-2+deb10u2.debian.tar.xz
+ 496de43e4ef6db1b0cd9d61d0d4a366b 5695 admin optional sysstat_12.0.3-2+deb10u2_amd64.buildinfo
+

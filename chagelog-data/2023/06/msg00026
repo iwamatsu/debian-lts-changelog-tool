@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 11:59:54 CEST
+Source: gobuster
+Architecture: source
+Version: 2.0.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alexander Fischer <mirar@chaosmail.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 9d2fba86069267e60338ed09c173763f2869972c 2234 gobuster_2.0.1-1+deb10u1.dsc
+ bacb8f0ea04647023a2a115c9c3ade86db64fb54 18776 gobuster_2.0.1.orig.tar.gz
+ d5ae62b06400507cfbdb66523e623c0c4c0ca131 2692 gobuster_2.0.1-1+deb10u1.debian.tar.xz
+ a8046c9c03074f1b163c3c5475b7af954b5fc0db 6396 gobuster_2.0.1-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 1cd048d179416244f374e40f87c4cb05d94e29fe36d81688546dc9ecc8bb89e5 2234 gobuster_2.0.1-1+deb10u1.dsc
+ 2409acffe1fa46424a1de465bca1d3d026bdaba9a7e6bccc1d934f7ae51c24e0 18776 gobuster_2.0.1.orig.tar.gz
+ f1c88773f52f666b900ad23fb2892f45f30cca9eb8e6be54e0995be2f74ca527 2692 gobuster_2.0.1-1+deb10u1.debian.tar.xz
+ 0088b2688580e1b30ec041cb4215c1591cadb1d013ae6554982009a1627554ce 6396 gobuster_2.0.1-1+deb10u1_amd64.buildinfo
+Changes:
+ gobuster (2.0.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ a15e07fbb18436310154704925798fe6 2234 utils optional gobuster_2.0.1-1+deb10u1.dsc
+ 6ccb5618bb1d15f1f478410d8b2137d8 18776 utils optional gobuster_2.0.1.orig.tar.gz
+ cf3da050459697fa20b534edbddb049b 2692 utils optional gobuster_2.0.1-1+deb10u1.debian.tar.xz
+ 84cefcf14c54c036e007494535684f34 6396 utils optional gobuster_2.0.1-1+deb10u1_amd64.buildinfo
+

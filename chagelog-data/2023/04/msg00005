@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 05 Apr 2023 17:53:12 +0100
+Source: grunt
+Binary: grunt
+Architecture: source all
+Version: 1.0.1-8+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ grunt      - JavaScript task runner/build system/maintainer tool
+Changes:
+ grunt (1.0.1-8+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-1537: file.copy operations in GruntJS were vulnerable to a TOCTOU
+     ("Time-of-check to time-of-use") race condition that could have led to
+     arbitrary file writes in GitHub repositories. This could have then led to
+     local privilege escalation if a lower-privileged user had write access to
+     both source and destination directories, as the lower-privileged user could
+     have created a symlink to the GruntJS user's ~/.bashrc configuration file
+     (etc).
+Checksums-Sha1:
+ 7478032eeed54b85fd9fd7cff447917a1502f057 2666 grunt_1.0.1-8+deb10u2.dsc
+ 3f03e4378f7d5918de432175d9104bc4d66ec0b5 48954 grunt_1.0.1.orig.tar.gz
+ 5c32a247f97cb519984d71e25a7310a99524cffe 6056 grunt_1.0.1-8+deb10u2.debian.tar.xz
+ 588ee444c1210e389eefc9552aab1462a84667c7 24432 grunt_1.0.1-8+deb10u2_all.deb
+ 5b253f34c8765264db121b6324390583d666311d 10974 grunt_1.0.1-8+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ d05d93c27839909432d009aef78892ef1a4be832d797e67b53051ccd7c31ec0c 2666 grunt_1.0.1-8+deb10u2.dsc
+ 71ad5366879caeacd55fdf75faa1b1ee2eb9a28ec95f2601a4902c42dc1200a4 48954 grunt_1.0.1.orig.tar.gz
+ 972e43ed091d61235e097173f04d4d907099f4ee6bf8e9841e74e9a8d970598b 6056 grunt_1.0.1-8+deb10u2.debian.tar.xz
+ 51f2bab80e7d5874c51f6cb71b7e1104dde8c7561709e2cd89202aed2b19357c 24432 grunt_1.0.1-8+deb10u2_all.deb
+ cc77bcb42b6f4e2f2fd7e47020cd4cdfa8447050f275531d7195a1f37398f9cc 10974 grunt_1.0.1-8+deb10u2_amd64.buildinfo
+Files:
+ 90bbda806d4657797ad1b39f09297d99 2666 javascript optional grunt_1.0.1-8+deb10u2.dsc
+ dc6e1c7575c3e9640ab3a3c2faff3c80 48954 javascript optional grunt_1.0.1.orig.tar.gz
+ b7769b590c01b4ee0e1e0d4733285f7a 6056 javascript optional grunt_1.0.1-8+deb10u2.debian.tar.xz
+ b33ad8afd67a8c0419a79297f01f015b 24432 javascript optional grunt_1.0.1-8+deb10u2_all.deb
+ feea5adbe1e07c731e3c598ed809d39a 10974 javascript optional grunt_1.0.1-8+deb10u2_amd64.buildinfo
+

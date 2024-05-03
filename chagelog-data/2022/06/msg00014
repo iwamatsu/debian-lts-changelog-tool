@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 19 Jun 2022 23:46:11 CEST
+Source: cyrus-imapd
+Binary: cyrus-common cyrus-doc cyrus-imapd cyrus-pop3d cyrus-admin cyrus-murder cyrus-replication cyrus-nntpd cyrus-caldav cyrus-clients cyrus-dev libcyrus-imap-perl
+Architecture: source
+Version: 2.5.10-3+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Cyrus Team <pkg-cyrus-imapd-debian-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ cyrus-admin - Cyrus mail system - administration tools
+ cyrus-caldav - Cyrus mail system - CalDAV and CardDAV support
+ cyrus-clients - Cyrus mail system - test clients
+ cyrus-common - Cyrus mail system - common files
+ cyrus-dev  - Cyrus mail system - developer files
+ cyrus-doc  - Cyrus mail system - documentation files
+ cyrus-imapd - Cyrus mail system - IMAP support
+ cyrus-murder - Cyrus mail system - proxies and aggregator
+ cyrus-nntpd - Cyrus mail system - NNTP support
+ cyrus-pop3d - Cyrus mail system - POP3 support
+ cyrus-replication - Cyrus mail system - replication
+ libcyrus-imap-perl - Interface to Cyrus imap client imclient library
+Checksums-Sha1:
+ be43b4ad184eae7ecc097bf4c2e8eb61bd76544d 3288 cyrus-imapd_2.5.10-3+deb9u3.dsc
+ 172c06e4e4fe6919023b672ff9ed6263dd9a4491 88960 cyrus-imapd_2.5.10-3+deb9u3.debian.tar.xz
+ fab61814b640e782d2db15b053e82de7cb18afae 15890 cyrus-imapd_2.5.10-3+deb9u3_amd64.buildinfo
+Checksums-Sha256:
+ a0975d77b65c2db8e0ba738f5dc1dcc22255de198b8a17a5a82c50525a8b1177 3288 cyrus-imapd_2.5.10-3+deb9u3.dsc
+ 760acba905b5a6f23c4953dcd9dd979b6d32448d9e08d4fa89ab9ac23c76efc0 88960 cyrus-imapd_2.5.10-3+deb9u3.debian.tar.xz
+ 39eb9d051adefe71af300a8a93c65f3ec0ab5a5fa50b3a34682d5fffa274496f 15890 cyrus-imapd_2.5.10-3+deb9u3_amd64.buildinfo
+Changes:
+ cyrus-imapd (2.5.10-3+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-18928:
+     Cyrus IMAP allows privilege escalation because an HTTP request may be
+     interpreted in the authentication context of an unrelated previous request
+     that arrived over the same connection.
+   * Fix CVE-2021-33582:
+     Cyrus IMAP allows remote attackers to cause a denial of service
+     (multiple-minute daemon hang) via input that is mishandled during
+     hash-table interaction. Because there are many insertions into a single
+     bucket, strcmp becomes slow.
+Files:
+ a87816cc53b5589a3cf163fbfe89bbdf 3288 mail extra cyrus-imapd_2.5.10-3+deb9u3.dsc
+ 13c0c8c7d24e8c3310f408678896dfe4 88960 mail extra cyrus-imapd_2.5.10-3+deb9u3.debian.tar.xz
+ e018ad692623ed0e26d8327ced14d995 15890 mail extra cyrus-imapd_2.5.10-3+deb9u3_amd64.buildinfo
+

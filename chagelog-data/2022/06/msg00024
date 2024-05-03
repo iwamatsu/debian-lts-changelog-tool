@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 27 Jun 2022 00:13:31 CEST
+Source: ublock-origin
+Binary: ublock-origin-doc webext-ublock-origin webext-ublock-origin-firefox webext-ublock-origin-chromium
+Architecture: source all
+Version: 1.42.0+dfsg-1~deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Mozilla Extension Maintainers <pkg-mozext-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Description:
+ ublock-origin-doc - lightweight and efficient ads, malware, trackers blocker (docs)
+ webext-ublock-origin - transitional package
+ webext-ublock-origin-chromium - lightweight and efficient ads, malware, trackers blocker (Chromiu
+ webext-ublock-origin-firefox - lightweight and efficient ads, malware, trackers blocker (Firefox
+Checksums-Sha1:
+ 08a705919a9cf17fbd33bf76f11ddba82ae0ebb4 2505 ublock-origin_1.42.0+dfsg-1~deb9u1.dsc
+ f10a1e33676e70e7222d033e7e5c67cbe5abb7df 15705088 ublock-origin_1.42.0+dfsg.orig.tar.xz
+ a739ad0375758c8f6cf78097ec44d21736f9978c 39852 ublock-origin_1.42.0+dfsg-1~deb9u1.debian.tar.xz
+ 9e359cab98cb18d7b7064e1dfcfb56912cce40f1 5697288 ublock-origin-doc_1.42.0+dfsg-1~deb9u1_all.deb
+ 68081b4fb55d0cb0e65a0ae2f6e4d8397046a4de 7715 ublock-origin_1.42.0+dfsg-1~deb9u1_amd64.buildinfo
+ fb3be62ee3108ac9eddaee40ea8da489f90f8a2e 2054464 webext-ublock-origin-chromium_1.42.0+dfsg-1~deb9u1_all.deb
+ c85445c605b145fdc2a9124a3896d8e313f93e1a 2054304 webext-ublock-origin-firefox_1.42.0+dfsg-1~deb9u1_all.deb
+ 916ba41251f41451f2bd9d102edb4933c6b03be4 53034 webext-ublock-origin_1.42.0+dfsg-1~deb9u1_all.deb
+Checksums-Sha256:
+ b8d77ac26f437fa15990e4822f62ca585eec576bde98ccd5a54ad0a48c637915 2505 ublock-origin_1.42.0+dfsg-1~deb9u1.dsc
+ b51792acce8810aa8074771ab319afe8116dbc2bb726020218daadc59d1f77fc 15705088 ublock-origin_1.42.0+dfsg.orig.tar.xz
+ 53c5c7d21a91970ef4731e1ba0e50f7194f85f72976497e34f283e8345361b69 39852 ublock-origin_1.42.0+dfsg-1~deb9u1.debian.tar.xz
+ 58fdf18f816acd997594058aebc7a66357aa0615327629fe54998870f1effe3c 5697288 ublock-origin-doc_1.42.0+dfsg-1~deb9u1_all.deb
+ 7d7a978b6107c6eb0ccd4c3a01d38100a0cfcd0c7821180ab851810642a3f715 7715 ublock-origin_1.42.0+dfsg-1~deb9u1_amd64.buildinfo
+ a732970e2c780ff54d5467397e365a1a2d0c9d12f14e82989b55fd627b504c61 2054464 webext-ublock-origin-chromium_1.42.0+dfsg-1~deb9u1_all.deb
+ 253a5fbf9325879661c534ecbafa44a01fd9a7e38d964c90525c082135583dcc 2054304 webext-ublock-origin-firefox_1.42.0+dfsg-1~deb9u1_all.deb
+ 4ddfeb4d895b1296dbe8d36820751508fda68f5a3cb3fed8b71ba85d5f725150 53034 webext-ublock-origin_1.42.0+dfsg-1~deb9u1_all.deb
+Changes:
+ ublock-origin (1.42.0+dfsg-1~deb9u1) stretch-security; urgency=high
+ .
+   * Fix CVE-2021-36773:
+     uBlock supported an arbitrary depth of parameter nesting for strict
+     blocking, which allows crafted web sites to cause a denial of service
+     (unbounded recursion that can trigger memory consumption and a loss of all
+     blocking functionality).
+   * Switch to debhelper 12.
+Files:
+ aa8428d8bd2e45f15daf96bee52a7b82 2505 web optional ublock-origin_1.42.0+dfsg-1~deb9u1.dsc
+ cbd2aeb68a0b7253f40b128a432d7945 15705088 web optional ublock-origin_1.42.0+dfsg.orig.tar.xz
+ 9c1bbd069d42c0fe90bb0a1fd7c1fdef 39852 web optional ublock-origin_1.42.0+dfsg-1~deb9u1.debian.tar.xz
+ 239f9f60417dad814a56f89bf1b7671b 5697288 doc optional ublock-origin-doc_1.42.0+dfsg-1~deb9u1_all.deb
+ cdcb3cf9d3a71f58504569db26432b4e 7715 web optional ublock-origin_1.42.0+dfsg-1~deb9u1_amd64.buildinfo
+ 251614ccd02209a657db2b4ad9b1c23f 2054464 web optional webext-ublock-origin-chromium_1.42.0+dfsg-1~deb9u1_all.deb
+ ceec7b02e6346fced43a89431a8e048c 2054304 web optional webext-ublock-origin-firefox_1.42.0+dfsg-1~deb9u1_all.deb
+ f29daa8509c4658b3e224f3d93d59855 53034 oldlibs optional webext-ublock-origin_1.42.0+dfsg-1~deb9u1_all.deb
+

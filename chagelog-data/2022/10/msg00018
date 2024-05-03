@@ -1,0 +1,46 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 11 Oct 2022 08:03:36 -0700
+Source: twig
+Binary: php-twig php-twig-doc
+Architecture: source all
+Version: 2.6.2-2+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ php-twig   - Flexible, fast, and secure template engine for PHP
+ php-twig-doc - Twig template engine documentation
+Closes: 1020991
+Changes:
+ twig (2.6.2-2+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS security team.
+   * CVE-2022-39261: Prevent an arbitrary file read vulnerability that was
+     caused by insufficient validation of template names in 'source' and
+     'include' statements. (Closes: #1020991)
+   * Add debian/.gitlab-ci.yml
+Checksums-Sha1:
+ 96d3cc5783253f1001edaccb58b4167d75bc7ef1 2223 twig_2.6.2-2+deb10u1.dsc
+ c1e2aafac4f22bd547e443eb781d4dda0d8421f9 230864 twig_2.6.2.orig.tar.gz
+ 73fe9da1d513e1f558d2c4f569110297d50bfb72 9920 twig_2.6.2-2+deb10u1.debian.tar.xz
+ 605f6e476ca3f61e614a14c1d00d882324c6208d 141516 php-twig-doc_2.6.2-2+deb10u1_all.deb
+ d515cbb81d2b512b8272e3a1e344041ef4d0de92 101632 php-twig_2.6.2-2+deb10u1_all.deb
+ e393b5a314a2a8a9a6641c4279c9f9c06b524092 9259 twig_2.6.2-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d8764543e98742e9bb7f4e39cdf3fc1e0b7ff0a301d4942d2ef1ffc807fa531c 2223 twig_2.6.2-2+deb10u1.dsc
+ afb6eb4d100e26bb32db0f788adffb4f563318199a0d180dbdf90ae7791134ae 230864 twig_2.6.2.orig.tar.gz
+ 0313a1677ec05909e86e0913405c4ab392a166af5394405d067f84d6c86fdee1 9920 twig_2.6.2-2+deb10u1.debian.tar.xz
+ 243b5351ff3635b3b740d1873d4273fa6a7462a3db4d61968f1968e3f6380517 141516 php-twig-doc_2.6.2-2+deb10u1_all.deb
+ 94bc5c0f38e82f20aabf0a99e78ab0297d7cb99fcfbb24d57abc99b97924d550 101632 php-twig_2.6.2-2+deb10u1_all.deb
+ 0c47b2eb5214e4cf5d531cdb0f2ee2a7803549d939032209ec2707715ba42602 9259 twig_2.6.2-2+deb10u1_amd64.buildinfo
+Files:
+ 600e51d86fcf978cc36a245fdd688e01 2223 php optional twig_2.6.2-2+deb10u1.dsc
+ 1e456af78f787053a108bdc237c912ec 230864 php optional twig_2.6.2.orig.tar.gz
+ 4f142c8c86155937ae117de626576ae3 9920 php optional twig_2.6.2-2+deb10u1.debian.tar.xz
+ 3f593106762e223c229ebb3486dc0e21 141516 doc optional php-twig-doc_2.6.2-2+deb10u1_all.deb
+ 4171391e2b04beca494d56a125148955 101632 php optional php-twig_2.6.2-2+deb10u1_all.deb
+ ce49ae3d940b87257fa4bd147e897d21 9259 php optional twig_2.6.2-2+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,32 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 30 Sep 2022 05:43:40 +0530
+Source: node-thenify
+Architecture: source
+Version: 3.3.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ node-thenify (3.3.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add patch to remove eval. (Fixes: CVE-2020-7677)
+Checksums-Sha1:
+ 32f1d1ccb60c76f28b3522ed437c1ff654b24584 2100 node-thenify_3.3.0-1+deb10u1.dsc
+ a5767b5871151ca033aebf45fad545bcb1ecff77 4511 node-thenify_3.3.0.orig.tar.gz
+ d7f62edb7e072794da9f14c0c9a2049f3b6cc0a5 3652 node-thenify_3.3.0-1+deb10u1.debian.tar.xz
+ f3538ccdd13ef734f0aa24ba8795d3e7fa306498 6322 node-thenify_3.3.0-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 0497029fa9f618eef68d55c2ec08888ef2b9a11ff028bc43db884a2120952679 2100 node-thenify_3.3.0-1+deb10u1.dsc
+ b9a289810ed7bfe7ad7238f19ce185d4f2377fbcedc139cc659be757850ee2c7 4511 node-thenify_3.3.0.orig.tar.gz
+ 0c166bb83f1117515071d1cf4a5c6b83b25544fe57bca6be2e81734be2765bb9 3652 node-thenify_3.3.0-1+deb10u1.debian.tar.xz
+ 9691df5ab88f7c5f51a29852463fabff4fccc9595b65bdefca7a79a165a426db 6322 node-thenify_3.3.0-1+deb10u1_source.buildinfo
+Files:
+ 0ab0c616285944bcbbaade405f514740 2100 javascript optional node-thenify_3.3.0-1+deb10u1.dsc
+ 5abcb48082cf8002f73fe0e86e02ad4f 4511 javascript optional node-thenify_3.3.0.orig.tar.gz
+ 48dff44ac35ca70f2398accdf313b495 3652 javascript optional node-thenify_3.3.0-1+deb10u1.debian.tar.xz
+ 8d0afe1090b185047ffd5e3baf3aa6f2 6322 javascript optional node-thenify_3.3.0-1+deb10u1_source.buildinfo
+

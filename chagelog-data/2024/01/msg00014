@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 05 Jan 2024 21:06:15 +0000
+Source: subunit
+Architecture: source
+Version: 1.3.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian OpenStack <openstack-devel@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ subunit (1.3.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Work around 'short read' race that create FTBFS
+     in unreleated packages
+Checksums-Sha1:
+ fb0ee28dd67e260cbe159860ac3ce142ae51499d 2788 subunit_1.3.0-1+deb10u1.dsc
+ 7022281748dfda07aef8f0847801ffb7600e5d32 111347 subunit_1.3.0.orig.tar.gz
+ e6e43ab04f35f3965094f13a97a9c32fc935c4d3 174716 subunit_1.3.0-1+deb10u1.debian.tar.xz
+ 5ab1d54c81398ca2fafcae5067ad120ccd34399a 10262 subunit_1.3.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 7293ab4d0180478034ade157eea674f4a3db8df27eb5f40a47acc9733aae6be8 2788 subunit_1.3.0-1+deb10u1.dsc
+ 6f234df05fe04f851eb72a3c0ab7e72a4af7b6a956089f4609bafb45e595ba10 111347 subunit_1.3.0.orig.tar.gz
+ a9362439a4f5ebfa1c55eeaad6f0020c208f2ecb1434371431cf76f049b6ee94 174716 subunit_1.3.0-1+deb10u1.debian.tar.xz
+ 827760fdee714d874bb7da1353061a52bca46d6feed81273d62e5a8acdca7429 10262 subunit_1.3.0-1+deb10u1_amd64.buildinfo
+Files:
+ 6fa1e01dc06449b356fc7b4ba1e93fff 2788 devel optional subunit_1.3.0-1+deb10u1.dsc
+ 2fedc415d703a8ea4489056a6970bb8e 111347 devel optional subunit_1.3.0.orig.tar.gz
+ be2cb7fa06d00a5a0d18e375bfac0adc 174716 devel optional subunit_1.3.0-1+deb10u1.debian.tar.xz
+ 7407657fcae79d19e9e76362c751b9de 10262 devel optional subunit_1.3.0-1+deb10u1_amd64.buildinfo
+

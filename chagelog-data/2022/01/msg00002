@@ -1,0 +1,45 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 05 Jan 2022 12:22:29 +0100
+Source: clamav
+Architecture: source
+Version: 0.103.4+dfsg-0+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 972974 973619 987861
+Changes:
+ clamav (0.103.4+dfsg-0+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream release.
+   * Update symbols file.
+   * Refresh patches.
+   * Backport some changes from the buster update:
+   * Add clamonacc.8.
+   * Remove clamav user on purge (Closes: #987861).
+   * Remove freshclam.dat on purge.
+   * Remove deprecated option SafeBrowsing from debconf templates.
+   * Handle new clamd.conf options.
+   * Update apparmor profile for freshclam. Thanks to Michael Borgelt.
+     (Closes: #972974)
+   * Update apparmor profile for clamd. Thanks to Stefano Callegari.
+     (Closes: #973619).
+Checksums-Sha1:
+ 32703b1b64f3d2a8843a6365077fb1a81bc93eb8 3063 clamav_0.103.4+dfsg-0+deb9u1.dsc
+ 20d685a2186a7fb0622dce8a400247ff1e84e7a6 7119704 clamav_0.103.4+dfsg.orig.tar.xz
+ 39ba8035dbb8670f34f474b60a2465c1f0399b1d 219940 clamav_0.103.4+dfsg-0+deb9u1.debian.tar.xz
+ 13da485cc98e6f666887e05c658bb0d038a8aa3d 5892 clamav_0.103.4+dfsg-0+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 903841beb18cafe9c53bb56b610324a16825afb605d98e96a0c99f25f0a988a9 3063 clamav_0.103.4+dfsg-0+deb9u1.dsc
+ e65195bf34b438a72e02a7b70681898d06128fb8d88f8e9fd13c9b6b4cc4430c 7119704 clamav_0.103.4+dfsg.orig.tar.xz
+ cbcded08b9b8d3f7670272d345d19ea6ae5ad5986ef78c875f4b7aeaf2a25513 219940 clamav_0.103.4+dfsg-0+deb9u1.debian.tar.xz
+ e077d5cb489ede84b46cb77b6ee565863a1ecb774f8d7f8c89854347c22986e7 5892 clamav_0.103.4+dfsg-0+deb9u1_source.buildinfo
+Files:
+ a054ce6419493db84a7398da85b55a37 3063 utils optional clamav_0.103.4+dfsg-0+deb9u1.dsc
+ eb8d51ea36b0818a37bea43b5cbbcb31 7119704 utils optional clamav_0.103.4+dfsg.orig.tar.xz
+ a7d036672ac86c83915aa23367c73e01 219940 utils optional clamav_0.103.4+dfsg-0+deb9u1.debian.tar.xz
+ 99a92bca9884e2be647d611f6f497d1c 5892 utils optional clamav_0.103.4+dfsg-0+deb9u1_source.buildinfo
+

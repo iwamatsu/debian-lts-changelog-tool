@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 27 Feb 2022 11:58:22 +0100
+Source: gif2apng
+Architecture: source
+Version: 1.9+srconly-2+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Khalid El Fathi <khalid@elfathi.fr>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ gif2apng (1.9+srconly-2+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-45909: heap based buffer overflow in the DecodeLZW
+   * CVE-2021-45910: heap-based buffer overflow within the main function
+   * CVE-2021-45911: heap based buffer overflow in processing of delays
+                     in the main function
+Checksums-Sha1:
+ 28edcabbf97f5b5cf7271feae4d1fba0d9109bb9 2005 gif2apng_1.9+srconly-2+deb9u1.dsc
+ 3fb4e34cf6fcf4b28b51577e2ab31cc8d2619ffa 8669 gif2apng_1.9+srconly.orig.tar.gz
+ cc7b8a40d7b15cdafbe03b766d3c91b7267970ee 9056 gif2apng_1.9+srconly-2+deb9u1.debian.tar.xz
+ ebcd9ecf16bd37bd39d729212ec8189b2fc51471 6653 gif2apng_1.9+srconly-2+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 0bd5f106ec3ada53d2dca7b02404e26b9eb08f9ca4794f0a971ece1a2d7cde4e 2005 gif2apng_1.9+srconly-2+deb9u1.dsc
+ 8e941d83e9f1133d38f3d2999e726673a8a5d86999c1c201d616345d6c24bc6e 8669 gif2apng_1.9+srconly.orig.tar.gz
+ d171d4a3cb9799729dae687a3073aa3d22a941f4cbe02ec225a2402fc636630f 9056 gif2apng_1.9+srconly-2+deb9u1.debian.tar.xz
+ 369c0b360da56cdd30d11e1065c0a8d257fcac27cf9232f43fd0821017ac3eb6 6653 gif2apng_1.9+srconly-2+deb9u1_source.buildinfo
+Files:
+ f2323698e5bd2369e256b1990ef325ef 2005 graphics optional gif2apng_1.9+srconly-2+deb9u1.dsc
+ c679ba49e3331f0501ea6b89763aa604 8669 graphics optional gif2apng_1.9+srconly.orig.tar.gz
+ 750523ad6eebfcde2aebca3b2ba18ca4 9056 graphics optional gif2apng_1.9+srconly-2+deb9u1.debian.tar.xz
+ 421fa53a4699406a0a26c5211a4c8c2b 6653 graphics optional gif2apng_1.9+srconly-2+deb9u1_source.buildinfo
+

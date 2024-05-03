@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 12 Aug 2023 19:58:29 +0000
+Source: libreoffice
+Architecture: source
+Version: 1:6.1.5-3+deb10u10
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ libreoffice (1:6.1.5-3+deb10u10) buster-security; urgency=medium
+ .
+   * CVE-2023-2255: Improper access control in editor components of
+     LibreOffice allowed an attacker to craft
+     a document that would cause external links to be loaded without prompt.
+     In the affected versions of LibreOffice documents
+     that used "floating frames"
+     linked to external files, would load the contents of those frames
+     without prompting the user for permission to do so.
+     This was inconsistent with the treatment of other linked
+     content in LibreOffice.
+Checksums-Sha1:
+ b151c61ef4af4c79a33d926c180296ff153e2f6e 27758 libreoffice_6.1.5-3+deb10u10.dsc
+ 65e0627c816b277c1e2d6e47e4e87cf8d327fc39 10007024 libreoffice_6.1.5-3+deb10u10.debian.tar.xz
+ 8dfb06c1308305c7c792a338b5bde0026d44c9f6 109178 libreoffice_6.1.5-3+deb10u10_amd64.buildinfo
+Checksums-Sha256:
+ 82c416ef896ae4881b252ec62f98f90a413bddd676553ed8f79e1fa8b42c49ee 27758 libreoffice_6.1.5-3+deb10u10.dsc
+ 5ec4065e48af5d5f9c3c7e29cb22ab0c9411f92133845ffb77c0fd6587fb50df 10007024 libreoffice_6.1.5-3+deb10u10.debian.tar.xz
+ 1de097c276df7dce9f64949e7c5e3a496dc7fca04dd3397061365f7cbc89121a 109178 libreoffice_6.1.5-3+deb10u10_amd64.buildinfo
+Files:
+ dfeeec646cb2cfde9ec5bc03c5a1af2e 27758 editors optional libreoffice_6.1.5-3+deb10u10.dsc
+ c2a92576f735c2495e26a2f681581e2b 10007024 editors optional libreoffice_6.1.5-3+deb10u10.debian.tar.xz
+ fd128acf81b70ce44861fbfae310700a 109178 editors optional libreoffice_6.1.5-3+deb10u10_amd64.buildinfo
+

@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 12:18:40 CEST
+Source: gopass
+Architecture: source
+Version: 1.2.0-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alexandre Viau <aviau@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 73fc96d716a4d4226430f83e83616dc14868834d 2312 gopass_1.2.0-2+deb10u1.dsc
+ ab367a7e5d99000a440563d122c4ef1327159d11 30205 gopass_1.2.0.orig.tar.gz
+ b5cfd551ca3eecfe91988b5433c7e4cfd179b78d 2692 gopass_1.2.0-2+deb10u1.debian.tar.xz
+ 2fc727a7190290853ba7d203110752c554d44ab4 6978 gopass_1.2.0-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ e2a50b88a3d63b7ea43ec164ab560f3f3fcf5fe521d2cf016c83243bd3ea3879 2312 gopass_1.2.0-2+deb10u1.dsc
+ 863c982fcdfd2acda0f3fc968730d54adbd6fad43a0ac7350ba8825bc345a4ad 30205 gopass_1.2.0.orig.tar.gz
+ a0e987c69a826082597ca03f4401e289bd9ac2f9f5907ed92045e838222cf64d 2692 gopass_1.2.0-2+deb10u1.debian.tar.xz
+ 37c3c2890bca50064ed21904cf25183c7c7ab5f161cf71fe9d5d4f5d97a1895a 6978 gopass_1.2.0-2+deb10u1_amd64.buildinfo
+Changes:
+ gopass (1.2.0-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ da913034815bd493d760079f3ecc0f5e 2312 admin optional gopass_1.2.0-2+deb10u1.dsc
+ be7e422e203bda10349ed7790fa1810b 30205 admin optional gopass_1.2.0.orig.tar.gz
+ 08acc2f25d8ac2bf70729fe80b5b6889 2692 admin optional gopass_1.2.0-2+deb10u1.debian.tar.xz
+ d80857447899c26c0a8b89adef5e38aa 6978 admin optional gopass_1.2.0-2+deb10u1_amd64.buildinfo
+

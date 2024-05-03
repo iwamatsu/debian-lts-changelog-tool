@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 05 Oct 2023 11:18:55 +0200
+Source: libxpm
+Architecture: source
+Version: 1:3.5.12-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ libxpm (1:3.5.12-1+deb10u2) buster-security; urgency=medium
+ .
+   * Add check to avoid triggering CVE-2023-43786 in libX11.
+   * Add check to avoid triggering CVE-2023-43787 in libX11.
+   * CVE-2023-43788: out of bounds read in XpmCreateXpmImageFromBuffer
+   * CVE-2023-43789: out of bounds read on XPM with corrupted colormap
+Checksums-Sha1:
+ 23a6d1a71bd9ecc682755c50faf4d275f8e734da 2122 libxpm_3.5.12-1+deb10u2.dsc
+ c837dfca61080a40031a3d9a83ea284acb619ab7 529302 libxpm_3.5.12.orig.tar.gz
+ 3402258322d882b1a1b3bf172394c781eb2e7cce 16828 libxpm_3.5.12-1+deb10u2.debian.tar.xz
+ 7761c3880b8fc0c2ca9e98a977fcd3bbcfa01127 6669 libxpm_3.5.12-1+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 9f0872713d7a6bcfbf51d9c8e1969bad66d29c24fac7207bf1351b8dc21cce1c 2122 libxpm_3.5.12-1+deb10u2.dsc
+ 2523acc780eac01db5163267b36f5b94374bfb0de26fc0b5a7bee76649fd8501 529302 libxpm_3.5.12.orig.tar.gz
+ b8e137edeeb96beb59f1fa09c7a25ff9d4af9cf2f9040f483ecc7bf7386897ee 16828 libxpm_3.5.12-1+deb10u2.debian.tar.xz
+ bef77158b08f5cad0e3cf3acd687231dc45154c1b6680fa46a60c3e511b0cba7 6669 libxpm_3.5.12-1+deb10u2_source.buildinfo
+Files:
+ 21cbbdcfd1601af2fd29f3546601e84a 2122 x11 optional libxpm_3.5.12-1+deb10u2.dsc
+ b286c884b11b5a0b4371175c5327141f 529302 x11 optional libxpm_3.5.12.orig.tar.gz
+ 672882b14a07791d324e83788651deb1 16828 x11 optional libxpm_3.5.12-1+deb10u2.debian.tar.xz
+ fc3aff1474fa285b9123c4f86b9a74dd 6669 x11 optional libxpm_3.5.12-1+deb10u2_source.buildinfo
+

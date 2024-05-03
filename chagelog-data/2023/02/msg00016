@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 14 Feb 2023 18:32:03 CET
+Source: haproxy
+Architecture: source
+Version: 1.8.19-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian HAProxy Maintainers <haproxy@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 5d3a371cd0d30ab4b528b06a2699adb838fc19b5 2445 haproxy_1.8.19-1+deb10u4.dsc
+ c41fc9969eb072a92d9f6b5d0aeeaaa7f8573f19 73436 haproxy_1.8.19-1+deb10u4.debian.tar.xz
+ 416f911f07f5b886b749fd6d95a83ae0e746b60e 8863 haproxy_1.8.19-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 9b1a8bdafa2620b7394fab1b077e5844051cb3526c0188268c5c4f1c78687f96 2445 haproxy_1.8.19-1+deb10u4.dsc
+ 6111a6124361a4a54ccc2bd80d4d658990e37135bfd0f8514624b482eb0b9544 73436 haproxy_1.8.19-1+deb10u4.debian.tar.xz
+ a5a67781f627c794268a4d3777650e5bc0b609aba3f89e731e9f397d1c502c34 8863 haproxy_1.8.19-1+deb10u4_amd64.buildinfo
+Changes:
+ haproxy (1.8.19-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-25725:
+     A security vulnerability was discovered in HAProxy, a fast and reliable
+     load balancing reverse proxy, which may result in denial of service, or
+     bypass of access controls and routing rules via specially crafted requests.
+Files:
+ a4bafc8176acfdfe29857b6cef1cf2a4 2445 net optional haproxy_1.8.19-1+deb10u4.dsc
+ a07f1db5212b41482e6862dc8c6965e2 73436 net optional haproxy_1.8.19-1+deb10u4.debian.tar.xz
+ f47d3ede9b7a95509fee2fc1981abbe3 8863 net optional haproxy_1.8.19-1+deb10u4_amd64.buildinfo
+

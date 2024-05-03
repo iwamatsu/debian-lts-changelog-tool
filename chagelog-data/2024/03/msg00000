@@ -1,0 +1,28 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 15 Feb 2024 22:21:34 +0000
+Source: linux-signed-5.10-i386
+Architecture: source
+Version: 5.10.209+2~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-signed-5.10-i386 (5.10.209+2~deb10u1) buster-security; urgency=high
+ .
+   * Sign kernel from linux-5.10 5.10.209-2~deb10u1
+ .
+   * Rebuild for buster:
+     - Change ABI number to 0.deb10.28
+Checksums-Sha1:
+ ccef37ec706a4241d86f33803178809c5f9be9e2 2955 linux-signed-5.10-i386_5.10.209+2~deb10u1.dsc
+ 480eca5fb2a5d9ffd7188569097b95512569bf81 3844288 linux-signed-5.10-i386_5.10.209+2~deb10u1.tar.xz
+Checksums-Sha256:
+ e93de5202378acdfdbb4338be21c9d8b49b8ecdb12669132cd96d1a42465c637 2955 linux-signed-5.10-i386_5.10.209+2~deb10u1.dsc
+ 1fd4af7149087457a2c99d853c795f4fa433db91181eb51b07daef915449f0b4 3844288 linux-signed-5.10-i386_5.10.209+2~deb10u1.tar.xz
+Files:
+ fd4bffa0ebfe4f807b5c09f76c3fc6f1 2955 kernel optional linux-signed-5.10-i386_5.10.209+2~deb10u1.dsc
+ 7a11a579e9bb932d1ce940bf1d524331 3844288 kernel optional linux-signed-5.10-i386_5.10.209+2~deb10u1.tar.xz
+

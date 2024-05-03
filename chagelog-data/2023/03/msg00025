@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 25 Mar 2023 16:47:22 +0100
+Source: runc
+Architecture: source
+Version: 1.0.0~rc6+dfsg1-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 942026 988768
+Changes:
+ runc (1.0.0~rc6+dfsg1-3+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2019-16884: runc, as used in Docker and other products, allows
+     AppArmor and SELinux restriction bypass because
+     libcontainer/rootfs_linux.go incorrectly checks mount targets, and
+     thus a malicious Docker image can mount over a /proc
+     directory. (Closes: #942026)
+   * CVE-2019-19921: runc has Incorrect Access Control leading to
+     Escalation of Privileges, related to libcontainer/rootfs_linux.go. To
+     exploit this, an attacker must be able to spawn two containers with
+     custom volume-mount configurations, and be able to run custom
+     images. (This vulnerability does not affect Docker due to an
+     implementation detail that happens to block the attack.)
+   * CVE-2021-30465: runc allows a Container Filesystem Breakout via
+     Directory Traversal. To exploit the vulnerability, an attacker must be
+     able to create multiple containers with a fairly specific mount
+     configuration. The problem occurs via a symlink-exchange attack that
+     relies on a race condition. (Closes: #988768)
+   * CVE-2022-29162: `runc exec --cap` created processes with non-empty
+     inheritable Linux process capabilities, creating an atypical Linux
+     environment and enabling programs with inheritable file capabilities
+     to elevate those capabilities to the permitted set during
+     execve(2). This bug did not affect the container security sandbox as
+     the inheritable set never contained more capabilities than were
+     included in the container's bounding set.
+   * CVE-2023-27561: CVE-2019-19921 was re-introduced by the fix for
+     CVE-2021-30465.
+Checksums-Sha1:
+ 5f51683793c04924de913216b6b6de375aec7cd3 2825 runc_1.0.0~rc6+dfsg1-3+deb10u1.dsc
+ 74938608cf6912bbc837a2bf0036bc5e5aa16682 23516 runc_1.0.0~rc6+dfsg1-3+deb10u1.debian.tar.xz
+ 993aa04099de3bbba134227e437504e16b81da21 7876 runc_1.0.0~rc6+dfsg1-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ ee5e3c99803c77bf323df01afb0dcc7138b1313482d97d4a12b4f2b59048867f 2825 runc_1.0.0~rc6+dfsg1-3+deb10u1.dsc
+ 5b77f022dc760517c1cd3f5185a7c21df7e622d67c4bd30ee3041f310cebc315 23516 runc_1.0.0~rc6+dfsg1-3+deb10u1.debian.tar.xz
+ 0323ef5da1b3891d3c1050de718549963e4c4d0c3e93ecf98a4f1f96625788b8 7876 runc_1.0.0~rc6+dfsg1-3+deb10u1_source.buildinfo
+Files:
+ 48bf6d34d6bbf4f20e852d2c8a024bb0 2825 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u1.dsc
+ 30f15ebb090d2f2f8a997f64c402e72a 23516 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u1.debian.tar.xz
+ 012c125c0577f45ad8c6efb0383d69a4 7876 devel optional runc_1.0.0~rc6+dfsg1-3+deb10u1_source.buildinfo
+

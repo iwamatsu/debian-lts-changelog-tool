@@ -1,0 +1,71 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 26 Jan 2022 18:03:02 +0100
+Source: graphicsmagick
+Binary: graphicsmagick libgraphicsmagick-q16-3 libgraphicsmagick1-dev libgraphicsmagick++-q16-12 libgraphicsmagick++1-dev libgraphics-magick-perl graphicsmagick-imagemagick-compat graphicsmagick-libmagick-dev-compat graphicsmagick-dbg
+Architecture: source amd64 all
+Version: 1.3.30+hg15796-1~deb9u5
+Distribution: stretch-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ graphicsmagick - collection of image processing tools
+ graphicsmagick-dbg - format-independent image processing - debugging symbols
+ graphicsmagick-imagemagick-compat - image processing tools providing ImageMagick interface
+ graphicsmagick-libmagick-dev-compat - image processing libraries providing ImageMagick interface
+ libgraphics-magick-perl - format-independent image processing - perl interface
+ libgraphicsmagick++-q16-12 - format-independent image processing - C++ shared library
+ libgraphicsmagick++1-dev - format-independent image processing - C++ development files
+ libgraphicsmagick-q16-3 - format-independent image processing - C shared library
+ libgraphicsmagick1-dev - format-independent image processing - C development files
+Changes:
+ graphicsmagick (1.3.30+hg15796-1~deb9u5) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2020-12672
+     Fix for a heap-based buffer overflow in ReadMNGImage() in coders/png.c.
+Checksums-Sha1:
+ 82a7ec3d05d7f7e09395827d018d0418dc82857d 3029 graphicsmagick_1.3.30+hg15796-1~deb9u5.dsc
+ e2a3a50bb3c609f4625b6a2a38de46357b881fe6 27390756 graphicsmagick_1.3.30+hg15796.orig.tar.xz
+ 9e7d05eb9dd72adf568df45599d6888453d298ff 159660 graphicsmagick_1.3.30+hg15796-1~deb9u5.debian.tar.xz
+ d1dbd23b688d373f0499ff44648f17bf2fe1ffdc 3422174 graphicsmagick-dbg_1.3.30+hg15796-1~deb9u5_amd64.deb
+ df5e3a5b8c7f51fe86a2ce7c67ffe4b9e7ff0c68 51312 graphicsmagick-imagemagick-compat_1.3.30+hg15796-1~deb9u5_all.deb
+ 0d81950236b1a1b00844c5b16dc96e33c743107e 54732 graphicsmagick-libmagick-dev-compat_1.3.30+hg15796-1~deb9u5_all.deb
+ 22472f39e6c22b9a5833a5e758287e6b4ceee82d 12053 graphicsmagick_1.3.30+hg15796-1~deb9u5_amd64.buildinfo
+ afb336d81ad5a53fc89273da15d8b3c87fe07af8 954104 graphicsmagick_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 6e32c089c8a9027e18bcba5a1c2961a387518be1 97920 libgraphics-magick-perl_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 6df9cd5aaa22b108f7d2b3226ec8aadd884d1e14 146170 libgraphicsmagick++-q16-12_1.3.30+hg15796-1~deb9u5_amd64.deb
+ a54a52065f42064714d674fb091ae8339efefefc 332414 libgraphicsmagick++1-dev_1.3.30+hg15796-1~deb9u5_amd64.deb
+ e1c5273da1ba2eef30f0c54d9e322d474981e5f3 1177882 libgraphicsmagick-q16-3_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 681700b6668727f4647368d9ceb135dfb852b43c 1412212 libgraphicsmagick1-dev_1.3.30+hg15796-1~deb9u5_amd64.deb
+Checksums-Sha256:
+ 40347f7012b45aed808f40c7a3c4d1aafd69ce10652de988ac245dccee38b6eb 3029 graphicsmagick_1.3.30+hg15796-1~deb9u5.dsc
+ b6748d7368f686c346c90b9077699568d1b60a25e820b7fe2d68168bad4c80b7 27390756 graphicsmagick_1.3.30+hg15796.orig.tar.xz
+ dd41b177471f572d3a970b304bf1caff6efdc0eba5e938a31d317f077d345bea 159660 graphicsmagick_1.3.30+hg15796-1~deb9u5.debian.tar.xz
+ 968ac9729f6f0cc83903373be35bc4cc41f415f2aa04bc64fe40c908fb19d785 3422174 graphicsmagick-dbg_1.3.30+hg15796-1~deb9u5_amd64.deb
+ cd3b63ad8c1d9a4a6bd7a7e51064bf497c515339540d31840b12127d7d3ae835 51312 graphicsmagick-imagemagick-compat_1.3.30+hg15796-1~deb9u5_all.deb
+ df9112bed1cc5fea0892843f4cd2f064380692a1bb1cd03148dbcaa28a0c6298 54732 graphicsmagick-libmagick-dev-compat_1.3.30+hg15796-1~deb9u5_all.deb
+ 30b54cafcc84369db623dc92e012c8fc2036a1a16b19620b411704a1a057ee58 12053 graphicsmagick_1.3.30+hg15796-1~deb9u5_amd64.buildinfo
+ 76218d8d2c677812f6b9fe0a25c3e3c81baf9fa33237b2b4394180b0744d1f46 954104 graphicsmagick_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 25ba245c2dda1c5bdf158f79d45e0ff397b2c7477b76d38c34280e97750e49d3 97920 libgraphics-magick-perl_1.3.30+hg15796-1~deb9u5_amd64.deb
+ ba5d18029d9aee36bbad435d13f0a555f029b30cc1a3f9a27a41341d20c7509a 146170 libgraphicsmagick++-q16-12_1.3.30+hg15796-1~deb9u5_amd64.deb
+ f8e62f623c6ba7d78b68439c5d1ed77dce2ba599d9dcf0354b5d4295a3b2c3ca 332414 libgraphicsmagick++1-dev_1.3.30+hg15796-1~deb9u5_amd64.deb
+ a9ece4d304f1b96f48a09e3cee5c7dc2d07b105d8995c7d3e32bcaea8bdc10f7 1177882 libgraphicsmagick-q16-3_1.3.30+hg15796-1~deb9u5_amd64.deb
+ f18ae0628d1f1a0c6dc7ceb417d67661f06888955d75743dc6c6c7e84e63813b 1412212 libgraphicsmagick1-dev_1.3.30+hg15796-1~deb9u5_amd64.deb
+Files:
+ 436223a4a166a0375f8571a261bcd12e 3029 graphics optional graphicsmagick_1.3.30+hg15796-1~deb9u5.dsc
+ a03ab1fdd46b33ad7d45a56289ec7ba2 27390756 graphics optional graphicsmagick_1.3.30+hg15796.orig.tar.xz
+ 5323bf64028d9027fbe7a8c8d5ec6ea3 159660 graphics optional graphicsmagick_1.3.30+hg15796-1~deb9u5.debian.tar.xz
+ 4274f80f4b2321b8c88f58d206941c03 3422174 debug optional graphicsmagick-dbg_1.3.30+hg15796-1~deb9u5_amd64.deb
+ f094c43739f16a2fb48ccdd09287d5c1 51312 graphics optional graphicsmagick-imagemagick-compat_1.3.30+hg15796-1~deb9u5_all.deb
+ 2b69d3d59883483556df1bd641370c8c 54732 graphics optional graphicsmagick-libmagick-dev-compat_1.3.30+hg15796-1~deb9u5_all.deb
+ 075b9cf6694259f7600c46426f59017f 12053 graphics optional graphicsmagick_1.3.30+hg15796-1~deb9u5_amd64.buildinfo
+ b766555c8c5b85381fdfc95b59035fd1 954104 graphics optional graphicsmagick_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 0243b06ef6e6f469b2b778985e7ab9ed 97920 perl optional libgraphics-magick-perl_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 876d3e654faeff8130da8be5f0115a06 146170 libs optional libgraphicsmagick++-q16-12_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 4140964df096091edaacf1d03cf3a258 332414 libdevel optional libgraphicsmagick++1-dev_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 72985c773c5f6604a31c2fc22aaf16a5 1177882 libs optional libgraphicsmagick-q16-3_1.3.30+hg15796-1~deb9u5_amd64.deb
+ 3e045655c93488f8e71983db923ba49b 1412212 libdevel optional libgraphicsmagick1-dev_1.3.30+hg15796-1~deb9u5_amd64.deb
+

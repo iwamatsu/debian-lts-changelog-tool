@@ -1,0 +1,71 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 02 Aug 2023 09:33:01 +0100
+Source: bouncycastle
+Binary: libbcmail-java libbcmail-java-doc libbcpg-java libbcpg-java-doc libbcpkix-java libbcpkix-java-doc libbcprov-java libbcprov-java-doc
+Architecture: source all
+Version: 1.60-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libbcmail-java - Bouncy Castle generators/processors for S/MIME and CMS
+ libbcmail-java-doc - Bouncy Castle generators/processors for S/MIME and CMS (Documenta
+ libbcpg-java - Bouncy Castle generators/processors for OpenPGP
+ libbcpg-java-doc - Bouncy Castle generators/processors for OpenPGP (Documentation)
+ libbcpkix-java - Bouncy Castle Java API for PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP,
+ libbcpkix-java-doc - Bouncy Castle Java API for PKIX, CMS, EAC, TSP, PKCS... (Document
+ libbcprov-java - Bouncy Castle Java Cryptographic Service Provider
+ libbcprov-java-doc - Bouncy Castle Java Cryptographic Service Provider (Documentation)
+Closes: 1040050
+Changes:
+ bouncycastle (1.60-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-33201: Prevent a protential LDAP injection vulnerability. During
+     the certificate validation process, bouncycastle used the certificate's
+     "Subject Name" into an LDAP search filter without any escaping.
+     (Closes: #1040050)
+   * Add debian/.gitlab-ci.yml and disable (failing) reprotest job.
+Checksums-Sha1:
+ 98af64619b7080922e105124d2d91309a7e983af 2570 bouncycastle_1.60-1+deb10u1.dsc
+ 03949e14e25cfd0282139401134a3552165a133d 13000548 bouncycastle_1.60.orig.tar.xz
+ 540225b6cdd659efc273939e82c57e9fd0946a47 11192 bouncycastle_1.60-1+deb10u1.debian.tar.xz
+ 5165562c0393a30b52464ecd2b5e28a32fe39a8d 13129 bouncycastle_1.60-1+deb10u1_amd64.buildinfo
+ 3bdb05704d91efd927b92815ab8e676bed21c1cf 316352 libbcmail-java-doc_1.60-1+deb10u1_all.deb
+ d0e6ce2116054c89c2402b800b6fafea90b4045b 136680 libbcmail-java_1.60-1+deb10u1_all.deb
+ a11019b1500e0f1432c84c1ba82be86fd956fc95 423796 libbcpg-java-doc_1.60-1+deb10u1_all.deb
+ bcade04249591935124627226406c9944825b4d7 300816 libbcpg-java_1.60-1+deb10u1_all.deb
+ 9ddc6d813b7494b153b37fa5199c8f1a6dbbb5ac 614916 libbcpkix-java-doc_1.60-1+deb10u1_all.deb
+ 8247b9b0bd156c1fc4a4cf209a23a7b321946bae 658604 libbcpkix-java_1.60-1+deb10u1_all.deb
+ 7560e3d605e4eb143645cec596d43e76e99e48c0 2546428 libbcprov-java-doc_1.60-1+deb10u1_all.deb
+ d00a31084c65ca08adce5c0664b7479606b0b116 3258892 libbcprov-java_1.60-1+deb10u1_all.deb
+Checksums-Sha256:
+ 2f227048aed66953f269c1f029f0e079413d93991fb55c3977e8c8ce2e5f3390 2570 bouncycastle_1.60-1+deb10u1.dsc
+ 08a72eaf66cdaf5ea38f8186d800e1746057bc3ee0771eceb186a479dcaf82a4 13000548 bouncycastle_1.60.orig.tar.xz
+ 7cd1200a5beabb90a4e0bb1154f65802def49faabf6e96c092e5081ef583e5b7 11192 bouncycastle_1.60-1+deb10u1.debian.tar.xz
+ fd695878c26500b32ac0472d4621f8e31b9ae34abe5477843779f53b90b95b5e 13129 bouncycastle_1.60-1+deb10u1_amd64.buildinfo
+ 2280e1dd7a14156e2f430cfab861be80f67be0547197af4c3fdcc55f9dfa4028 316352 libbcmail-java-doc_1.60-1+deb10u1_all.deb
+ 7cd396185c6f70fb4cd94641e432266308bfd3bd279d4151a51c5b6b29edf1b8 136680 libbcmail-java_1.60-1+deb10u1_all.deb
+ 3b0148a61596eb41ad17e0953119aa36b7b916c7e5bee9bb84a9ad0d98d32482 423796 libbcpg-java-doc_1.60-1+deb10u1_all.deb
+ c57a1d220bcc2bb262ec648348c21c28ceac2b805d25c340026a2886c156a88c 300816 libbcpg-java_1.60-1+deb10u1_all.deb
+ e7a1724a4e8492d4f6ef900bbff166a3d46dc7377cfb6d38f8cc5d39a3663d05 614916 libbcpkix-java-doc_1.60-1+deb10u1_all.deb
+ 54c078ccb51324fd83844e6abaab0891d75db2e2105ea762289f9c77589f646f 658604 libbcpkix-java_1.60-1+deb10u1_all.deb
+ b68eefa3270d83c8e1519b4e87470e8bfc12d2388e3817aac830735328fc7c2e 2546428 libbcprov-java-doc_1.60-1+deb10u1_all.deb
+ 615a157eb5b38f366b12e77bc0c12bb81de8380209d681477e1c4e3e9ae1cbd2 3258892 libbcprov-java_1.60-1+deb10u1_all.deb
+Files:
+ 46da4b740bdfbf6f93adbcafed69ca1c 2570 java optional bouncycastle_1.60-1+deb10u1.dsc
+ cb48234715436cb5555771d8cc89db41 13000548 java optional bouncycastle_1.60.orig.tar.xz
+ 03d8fb6dc6c9c277c0c01b872816b759 11192 java optional bouncycastle_1.60-1+deb10u1.debian.tar.xz
+ bb59fb327a868e705f57e374b6ef1395 13129 java optional bouncycastle_1.60-1+deb10u1_amd64.buildinfo
+ 2f6a104d063fc66e4e8c246e36aff36a 316352 doc optional libbcmail-java-doc_1.60-1+deb10u1_all.deb
+ d83a4324811ece40fae3adc8fa7229ba 136680 java optional libbcmail-java_1.60-1+deb10u1_all.deb
+ 96eeb5f0361e0276c779590b59d39f0c 423796 doc optional libbcpg-java-doc_1.60-1+deb10u1_all.deb
+ 79e594a2920ccbbc545c5c4a7b26c08b 300816 java optional libbcpg-java_1.60-1+deb10u1_all.deb
+ 66f47a76f97fc2cc93b9b1e157cd686d 614916 doc optional libbcpkix-java-doc_1.60-1+deb10u1_all.deb
+ 7958b238e3e1400a6723d701aef9e04e 658604 java optional libbcpkix-java_1.60-1+deb10u1_all.deb
+ b19b97bde5ec827020100413860cf2bf 2546428 doc optional libbcprov-java-doc_1.60-1+deb10u1_all.deb
+ 1d767853a537b2a65b989232487f440b 3258892 java optional libbcprov-java_1.60-1+deb10u1_all.deb
+

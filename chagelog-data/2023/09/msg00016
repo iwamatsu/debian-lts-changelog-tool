@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 18 Sep 2023 12:11:16 +0200
+Source: libwebp
+Architecture: source
+Version: 0.6.1-2+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jeff Breidenbach <jab@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ libwebp (0.6.1-2+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-4863: heap buffer overflow.
+   * libwebp6.symbols: add missing version for WebPPlaneDistortion.
+   * libwebpmux3.symbols: fix library SONAME.
+Checksums-Sha1:
+ 5ccbd0a17175990d1abf8f13c2b9ba9be3b17d89 2078 libwebp_0.6.1-2+deb10u3.dsc
+ a906ee1ba8a5da0f9c6d3f1fd17af1ed183e774f 3554290 libwebp_0.6.1.orig.tar.gz
+ 3bce7fb50d0281b2cceb83960c915c577a203ae8 18220 libwebp_0.6.1-2+deb10u3.debian.tar.xz
+ 90b1c0e9d27cc4a303b097d582eb417b1618f2ba 5877 libwebp_0.6.1-2+deb10u3_source.buildinfo
+Checksums-Sha256:
+ d33d618fcc46af0c4360cae3b3234fda69efc52945e8b123896bc81814026139 2078 libwebp_0.6.1-2+deb10u3.dsc
+ a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4 3554290 libwebp_0.6.1.orig.tar.gz
+ 62f1b5c78a7e236e3c07c06f5ca68ae37b5b436baaccae2ebe9c3775895f0f4e 18220 libwebp_0.6.1-2+deb10u3.debian.tar.xz
+ 3bad7af69e4d165a230f3963bcb1eee8ba3d975c325c28210144aa61a743ce50 5877 libwebp_0.6.1-2+deb10u3_source.buildinfo
+Files:
+ 6b1e412313ce412b8951d8542fbe5e22 2078 libs optional libwebp_0.6.1-2+deb10u3.dsc
+ 1c3099cd2656d0d80d3550ee29fc0f28 3554290 libs optional libwebp_0.6.1.orig.tar.gz
+ 61a1a4054c33f5d31dda969c68f824e9 18220 libs optional libwebp_0.6.1-2+deb10u3.debian.tar.xz
+ 85e5cd7522aa80aa3435c43fcb9a7c72 5877 libs optional libwebp_0.6.1-2+deb10u3_source.buildinfo
+

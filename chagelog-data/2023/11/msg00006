@@ -1,0 +1,73 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 07 Nov 2023 14:50:52 +0100
+Source: postgresql-11
+Architecture: source
+Version: 11.22-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Christoph Berg <myon@debian.org>
+Changes:
+ postgresql-11 (11.22-0+deb10u1) buster-security; urgency=medium
+ .
+   * New upstream version.
+ .
+     * This is expected to be the last PostgreSQL release in the 11.X series.
+       Users are encouraged to update to a newer release branch soon.
+ .
+     * Fix handling of unknown-type arguments in DISTINCT "any" aggregate
+       functions (Tom Lane)
+ .
+       This error led to a text-type value being interpreted as an unknown-type
+       value (that is, a zero-terminated string) at runtime.  This could result
+       in disclosure of server memory following the text value.
+ .
+       The PostgreSQL Project thanks Jingzhou Fu for reporting this problem.
+       (CVE-2023-5868)
+ .
+     * Detect integer overflow while computing new array dimensions
+       (Tom Lane)
+ .
+       When assigning new elements to array subscripts that are outside the
+       current array bounds, an undetected integer overflow could occur in edge
+       cases.  Memory stomps that are potentially exploitable for arbitrary
+       code execution are possible, and so is disclosure of server memory.
+ .
+       The PostgreSQL Project thanks Pedro Gallegos for reporting this problem.
+       (CVE-2023-5869)
+ .
+     * Prevent the pg_signal_backend role from signalling background workers
+       and autovacuum processes (Noah Misch, Jelte Fennema-Nio)
+ .
+       The documentation says that pg_signal_backend
+       cannot issue signals to superuser-owned processes.  It was able to
+       signal these background processes, though, because they advertise a
+       role OID of zero.  Treat that as indicating superuser ownership.
+       The security implications of cancelling one of these process types
+       are fairly small so far as the core code goes (we'll just start
+       another one), but extensions might add background workers that are
+       more vulnerable.
+ .
+       Also ensure that the is_superuser parameter is set correctly in such
+       processes.  No specific security consequences are known for that
+       oversight, but it might be significant for some extensions.
+ .
+       The PostgreSQL Project thanks Hemanth Sandrana and Mahendrakar
+       Srinivasarao for reporting this problem. (CVE-2023-5870)
+ .
+   * Rebase debian/patches/libpgport-pkglibdir.
+Checksums-Sha1:
+ a41711e7190f86aea25363dcd762b11078bd0e56 3745 postgresql-11_11.22-0+deb10u1.dsc
+ 7dde93beb9d4663f2a062cf4eb1b05f452e00528 20482994 postgresql-11_11.22.orig.tar.bz2
+ e3c97cd7fe9cb6604a019932c034ca34651ac80e 29868 postgresql-11_11.22-0+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ ba35d186c00e553a253e54038c48521d80a5cf2f0c3b40a6d6fce70ad4b49810 3745 postgresql-11_11.22-0+deb10u1.dsc
+ 2cb7c97d7a0d7278851bbc9c61f467b69c094c72b81740b751108e7892ebe1f0 20482994 postgresql-11_11.22.orig.tar.bz2
+ 93e1ae7d4a32f10a2e2ea82a11a0fa0cfdb964c1a126f54aff7f174ec3e4c880 29868 postgresql-11_11.22-0+deb10u1.debian.tar.xz
+Files:
+ d11c8a1d580ea942c65d78d2b4c4442d 3745 database optional postgresql-11_11.22-0+deb10u1.dsc
+ 6e7d050f23e35ec20d76297a6d4ce30d 20482994 database optional postgresql-11_11.22.orig.tar.bz2
+ b637ebd74761977c2682e65e4b25946f 29868 database optional postgresql-11_11.22-0+deb10u1.debian.tar.xz
+

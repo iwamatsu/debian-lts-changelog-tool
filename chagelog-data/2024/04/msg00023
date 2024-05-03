@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 29 Apr 2024 13:47:00 +0100
+Source: emacs
+Architecture: source
+Version: 1:26.1+1-3.2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Rob Browning <rlb@defaultvalue.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1067630
+Changes:
+ emacs (1:26.1+1-3.2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-30203, CVE-2024-30204 & CVE-2024-30205 (Closes: #1067630).
+Checksums-Sha1:
+ 5a6a04d71166ee76fb7d6406ad1b999de2c07ccf 3568 emacs_26.1+1-3.2+deb10u5.dsc
+ 035b0b0e7922d7ed0d40466ef8ea18fae0e1e920 120596 emacs_26.1+1-3.2+deb10u5.debian.tar.xz
+ 05bc307f582b4a35ab3f17aa8527d7048ecbf632 18551 emacs_26.1+1-3.2+deb10u5_source.buildinfo
+Checksums-Sha256:
+ 70c7ae028df94dc99db99673718d4cf9f324299e792246ebb4960623d057ba01 3568 emacs_26.1+1-3.2+deb10u5.dsc
+ acf3098b060b4ac624d8475283375e663b30c4f45b36b63f7f231c7e086c2bde 120596 emacs_26.1+1-3.2+deb10u5.debian.tar.xz
+ 1961e3d7b50d0fe16b4be2847baa13c7a5648e412a348aad899adadd17d044dd 18551 emacs_26.1+1-3.2+deb10u5_source.buildinfo
+Files:
+ 871904e809ed618b831095ed0dc9973b 3568 editors optional emacs_26.1+1-3.2+deb10u5.dsc
+ 9cb4bac6076699bfa6b7c043983b9224 120596 editors optional emacs_26.1+1-3.2+deb10u5.debian.tar.xz
+ 76d88c7773c402e84ad40d437701394b 18551 editors optional emacs_26.1+1-3.2+deb10u5_source.buildinfo
+

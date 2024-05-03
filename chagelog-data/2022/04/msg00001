@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 28 Mar 2022 15:28:29 +0530
+Source: asterisk
+Binary: asterisk asterisk-modules asterisk-dahdi asterisk-vpb asterisk-voicemail asterisk-voicemail-imapstorage asterisk-voicemail-odbcstorage asterisk-ooh323 asterisk-mp3 asterisk-mysql asterisk-mobile asterisk-doc asterisk-dev asterisk-config
+Architecture: source
+Version: 1:13.14.1~dfsg-2+deb9u6
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ asterisk   - Open Source Private Branch Exchange (PBX)
+ asterisk-config - Configuration files for Asterisk
+ asterisk-dahdi - DAHDI devices support for the Asterisk PBX
+ asterisk-dev - Development files for Asterisk
+ asterisk-doc - Source code documentation for Asterisk
+ asterisk-mobile - Bluetooth phone support for the Asterisk PBX
+ asterisk-modules - loadable modules for the Asterisk PBX
+ asterisk-mp3 - MP3 playback support for the Asterisk PBX
+ asterisk-mysql - MySQL database protocol support for the Asterisk PBX
+ asterisk-ooh323 - H.323 protocol support for the Asterisk PBX - ooH323c
+ asterisk-voicemail - simple voicemail support for the Asterisk PBX
+ asterisk-voicemail-imapstorage - IMAP voicemail storage support for the Asterisk PBX
+ asterisk-voicemail-odbcstorage - ODBC voicemail storage support for the Asterisk PBX
+ asterisk-vpb - VoiceTronix devices support for the Asterisk PBX
+Changes:
+ asterisk (1:13.14.1~dfsg-2+deb9u6) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2019-13161, CVE-2019-18610, CVE-2019-18790, CVE-2019-18976,
+     CVE-2020-28242
+Checksums-Sha1:
+ dbadd4ef20098565b0e57cb3d9b884bea9dbba99 4137 asterisk_13.14.1~dfsg-2+deb9u6.dsc
+ 49ece824d3c5ed4d89af9d3f4f5d210a1446c82f 158380 asterisk_13.14.1~dfsg-2+deb9u6.debian.tar.xz
+ d35fd92bbdcd3b6e7d38d8fbdf3431955ad69e07 28187 asterisk_13.14.1~dfsg-2+deb9u6_amd64.buildinfo
+Checksums-Sha256:
+ f6ceeed2bfbb9f4297e96e69c968680f9a285477f7e511052fddc217211d3d32 4137 asterisk_13.14.1~dfsg-2+deb9u6.dsc
+ d8a9d33bd3d9b0f838fccdfa4da68ab78d7d572466c928fe5ee36fc52993f5fc 158380 asterisk_13.14.1~dfsg-2+deb9u6.debian.tar.xz
+ d36809a77928432d9e87b433bb968563a0b351644e23cf9c2c3cedc883bfcdd5 28187 asterisk_13.14.1~dfsg-2+deb9u6_amd64.buildinfo
+Files:
+ 143553919ef62cfe152f6c045bae803c 4137 comm optional asterisk_13.14.1~dfsg-2+deb9u6.dsc
+ 2a7187b344b7bec1b85186ea8168b546 158380 comm optional asterisk_13.14.1~dfsg-2+deb9u6.debian.tar.xz
+ ebb24f847df5467c5adc6f04a4dfd60f 28187 comm optional asterisk_13.14.1~dfsg-2+deb9u6_amd64.buildinfo
+

@@ -1,0 +1,70 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 04 Oct 2023 12:05:06 +0200
+Source: libyang
+Binary: libyang-cpp-dev libyang-cpp1 libyang-cpp1-dbgsym libyang-dev libyang-tools libyang-tools-dbgsym libyang1 libyang1-dbgsym yang-tools
+Architecture: source amd64 all
+Version: 1.0.225-1.1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: David Lamparter <equinox-debian@diac24.net>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Description:
+ libyang-cpp-dev - parser toolkit for IETF YANG data modeling - C++ development file
+ libyang-cpp1 - parser toolkit for IETF YANG data modeling - C++ runtime
+ libyang-dev - parser toolkit for IETF YANG data modeling - development files
+ libyang-tools - parser toolkit for IETF YANG data modeling - executable tools
+ libyang1   - parser toolkit for IETF YANG data modeling - runtime
+ yang-tools - parser toolkit for IETF YANG data modeling [dummy package]
+Changes:
+ libyang (1.0.225-1.1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Backport to buster.
+   * Make libyang1 break/replace libyang0.16, as one version of that library
+     shipped libyang.so.1.
+   * debian/control: bump minimum debhelper build-dep to match d/compat.
+Checksums-Sha1:
+ 41f0ea60474fd21842c433e0ea79a2b29460235f 2378 libyang_1.0.225-1.1~deb10u1.dsc
+ 60bcf84282cc042f395c072ffc63c59690485ef3 1667054 libyang_1.0.225.orig.tar.gz
+ b15ed0ddcff3d33bd9be7e2d72ac5c3ee921db00 13288 libyang_1.0.225-1.1~deb10u1.debian.tar.xz
+ 9ec86a500adadda8b74f9b6cd5d699c73531c027 20056 libyang-cpp-dev_1.0.225-1.1~deb10u1_amd64.deb
+ 26e2fcb3f1bb7e486e6a64097f5b98f7683ef1bb 1422676 libyang-cpp1-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ ca64f9b81714af6cd2a12f489cf5eceb40c1a208 63908 libyang-cpp1_1.0.225-1.1~deb10u1_amd64.deb
+ e603a8e57bc099501beaae218d87837a1a74ed79 72092 libyang-dev_1.0.225-1.1~deb10u1_amd64.deb
+ 7625165a0b72f1426d21feb09a74743fe7ecb506 104120 libyang-tools-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ 28c2cb0baefc7b1e50eb83b35388c93ade1741a8 82908 libyang-tools_1.0.225-1.1~deb10u1_amd64.deb
+ 01b8e41b1e33c3c451e961fb086c63ded02868af 1421672 libyang1-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ 40dafa83e3ef87b61d86c4dbe63ed6682645e981 452712 libyang1_1.0.225-1.1~deb10u1_amd64.deb
+ d7b99e72054eac873aea6241134f61763d12db68 9397 libyang_1.0.225-1.1~deb10u1_amd64.buildinfo
+ efbdf95bcc9954f623a037604b450515915a0889 8104 yang-tools_1.0.225-1.1~deb10u1_all.deb
+Checksums-Sha256:
+ f5fbcf337e694fa7e63a7883655143eabe10ea4070689d1978c71eaeb4038b63 2378 libyang_1.0.225-1.1~deb10u1.dsc
+ 1b736443d2c69b5d7a71ac412655e6edab0647b18f35f7bf504b0a24e06cb046 1667054 libyang_1.0.225.orig.tar.gz
+ d0a26b0f205cd11a24e3b555864c3d32d5e19e67498b337eecceb693e22cbf92 13288 libyang_1.0.225-1.1~deb10u1.debian.tar.xz
+ a61f443781b074af0f15d7b8443c8ce424c31be1232ccbf8583a23485591ea84 20056 libyang-cpp-dev_1.0.225-1.1~deb10u1_amd64.deb
+ eae90ade2373ce055ff05fed4dea4c0259bb7fb69d203768b2636402bd87932c 1422676 libyang-cpp1-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ 6a28b80372c5fd5a7dd9a2acd9fcfefb1c2651f3f5afe91455c84402e20775ea 63908 libyang-cpp1_1.0.225-1.1~deb10u1_amd64.deb
+ 07834ab50a1f1d54487864cb761fc87d039d6915423dc8f42714f759465917be 72092 libyang-dev_1.0.225-1.1~deb10u1_amd64.deb
+ 5a26af02700d4010604932e69d27a28f1f63af215f91c90126ad00de7d1d8a90 104120 libyang-tools-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ 7876c70e3753b18782d2a162581847ba1b59094138cdfcd58c37f866e539b0b6 82908 libyang-tools_1.0.225-1.1~deb10u1_amd64.deb
+ ff174826dd23e58e23beefaf87e8716efca9ee0560ded157775c13e06843d01b 1421672 libyang1-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ aeb89e3c45efc32b27c1990f972a1b5ee49d0fda159423580ca64c3773fd4812 452712 libyang1_1.0.225-1.1~deb10u1_amd64.deb
+ bf0938150b09dc6740366102d6e5250c5f87dde298c6283a978294557ea530bb 9397 libyang_1.0.225-1.1~deb10u1_amd64.buildinfo
+ 8feb579d2cae8daf7c457b7ce8ab4d9e9572dd4627f6a49b3852171d0523f5bd 8104 yang-tools_1.0.225-1.1~deb10u1_all.deb
+Files:
+ e5dbae9d0ae9ef563dd9c267348ed1e2 2378 libs optional libyang_1.0.225-1.1~deb10u1.dsc
+ c37ad4e8f112508347a423a274107d23 1667054 libs optional libyang_1.0.225.orig.tar.gz
+ 31a78982e12069a23e516ce5d2344108 13288 libs optional libyang_1.0.225-1.1~deb10u1.debian.tar.xz
+ ee8a71cf8a56e96a304881c6e5ac96fd 20056 libdevel optional libyang-cpp-dev_1.0.225-1.1~deb10u1_amd64.deb
+ 2057cc26515672e11dcdf86147215cc4 1422676 debug optional libyang-cpp1-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ 59b1f7f952643e99ec9d0045317ebce6 63908 libs optional libyang-cpp1_1.0.225-1.1~deb10u1_amd64.deb
+ 364863cb4dd9a0e91b6c3e35a0ad4905 72092 libdevel optional libyang-dev_1.0.225-1.1~deb10u1_amd64.deb
+ 13d5e048feff990d56c018297a83bae3 104120 debug optional libyang-tools-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ 764f50feeb5ec789e5387304de67ff4a 82908 devel optional libyang-tools_1.0.225-1.1~deb10u1_amd64.deb
+ 357285617e0fb7277da9e8aadef34072 1421672 debug optional libyang1-dbgsym_1.0.225-1.1~deb10u1_amd64.deb
+ e35681aeb01dd80c8d7f4fe88a8f50b9 452712 libs optional libyang1_1.0.225-1.1~deb10u1_amd64.deb
+ 4c7582e88829ac1fb317df3d14a0b332 9397 libs optional libyang_1.0.225-1.1~deb10u1_amd64.buildinfo
+ 869750e0a48f1d82d0e2a61c4cc37ecb 8104 oldlibs optional yang-tools_1.0.225-1.1~deb10u1_all.deb
+

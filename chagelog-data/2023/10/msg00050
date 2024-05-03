@@ -1,0 +1,28 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 Oct 2023 21:29:53 +0100
+Source: h2o
+Architecture: source
+Version: 2.2.5+dfsg2-2+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Apollon Oikonomopoulos <apoikos@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Changes:
+ h2o (2.2.5+dfsg2-2+deb10u2) buster-security; urgency=medium
+ .
+   * Fix HTTP/2 rapid reset DDOS attack. CVE-2023-44487.
+Checksums-Sha1:
+ 44556f2f98271e2e2e22c43cb4ef14e46ea5ba97 2610 h2o_2.2.5+dfsg2-2+deb10u2.dsc
+ dbd7326d40fc6a22cc0fc2ed2aeee59f6c74d5c0 16980 h2o_2.2.5+dfsg2-2+deb10u2.debian.tar.xz
+ b8c4ba85d23e482d8262ee222b15be83f6027d85 7843 h2o_2.2.5+dfsg2-2+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 0b23f29571f766cd0d29cc9e4625bd85ec01e572e6b0831859bd9692d67f5f1b 2610 h2o_2.2.5+dfsg2-2+deb10u2.dsc
+ 6bd58b4a7569508bc48795e6883facf01b285411682377a2305cc97d075756d1 16980 h2o_2.2.5+dfsg2-2+deb10u2.debian.tar.xz
+ 26df1cc228ff599e660d10202807445d18e210810556aec55c07c340fd4c9937 7843 h2o_2.2.5+dfsg2-2+deb10u2_source.buildinfo
+Files:
+ 509f2d782e6cccae27f8a2476b80bc47 2610 httpd optional h2o_2.2.5+dfsg2-2+deb10u2.dsc
+ 03df1a8e8366673a149d7b16ab7058c6 16980 httpd optional h2o_2.2.5+dfsg2-2+deb10u2.debian.tar.xz
+ 0f118e6248c5a8aaf99c587e6485063e 7843 httpd optional h2o_2.2.5+dfsg2-2+deb10u2_source.buildinfo
+

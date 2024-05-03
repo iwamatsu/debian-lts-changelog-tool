@@ -1,0 +1,56 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 28 Dec 2023 22:49:40 CET
+Source: asterisk
+Architecture: source
+Version: 1:16.28.0~dfsg-0+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 79db372fb940e706fc3ac25880bcc2cf905a83cf 4397 asterisk_16.28.0~dfsg-0+deb10u4.dsc
+ 18b58311b36d03f407db0064ea9ccea790bbf9a7 6867956 asterisk_16.28.0~dfsg-0+deb10u4.debian.tar.xz
+ f1c2145eee1dc2673cfb450c6d907dec21c0cb96 28820 asterisk_16.28.0~dfsg-0+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ e275610beebe0e10b5f33ee8fb1509a215ad65e473cabff6db8bd241b99b976a 4397 asterisk_16.28.0~dfsg-0+deb10u4.dsc
+ 10faf1747ccd95565cc0ce4d814ca2b779dbd9ee6ed27d98b49abd806e9a8641 6867956 asterisk_16.28.0~dfsg-0+deb10u4.debian.tar.xz
+ 13393c72acbc6a0e9a9452491eb824fc7670fea2d5da6fb4e8b1ab64ccb2726d 28820 asterisk_16.28.0~dfsg-0+deb10u4_amd64.buildinfo
+Changes:
+ asterisk (1:16.28.0~dfsg-0+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-37457:
+     The 'update' functionality of the PJSIP_HEADER dialplan function can exceed
+     the available buffer space for storing the new value of a header. By doing
+     so this can overwrite memory or cause a crash. This is not externally
+     exploitable, unless dialplan is explicitly written to update a header based
+     on data from an outside source. If the 'update' functionality is not used
+     the vulnerability does not occur.
+   * Fix CVE-2023-38703:
+     PJSIP is a free and open source multimedia communication library written in
+     C with high level API in C, C++, Java, C#, and Python languages. SRTP is a
+     higher level media transport which is stacked upon a lower level media
+     transport such as UDP and ICE. Currently a higher level transport is not
+     synchronized with its lower level transport that may introduce a
+     use-after-free issue. This vulnerability affects applications that have
+     SRTP capability (`PJMEDIA_HAS_SRTP` is set) and use underlying media
+     transport other than UDP. This vulnerability’s impact may range from
+     unexpected application termination to control flow hijack/memory
+     corruption.
+   * Fix CVE-2023-49294:
+     It is possible to read any arbitrary file even when the `live_dangerously`
+     option is not enabled.
+   * Fix CVE-2023-49786:
+     Asterisk is susceptible to a DoS due to a race condition in the hello
+     handshake phase of the DTLS protocol when handling DTLS-SRTP for media
+     setup. This attack can be done continuously, thus denying new DTLS-SRTP
+     encrypted calls during the attack. Abuse of this vulnerability may lead to
+     a massive Denial of Service on vulnerable Asterisk servers for calls that
+     rely on DTLS-SRTP.
+Files:
+ 21366c1a9ddb35048d5e3fbdebe6ed2f 4397 comm optional asterisk_16.28.0~dfsg-0+deb10u4.dsc
+ 7d339bbea58ec7f0d6a968d940823a23 6867956 comm optional asterisk_16.28.0~dfsg-0+deb10u4.debian.tar.xz
+ 35b01548b55180915df44daab5958533 28820 comm optional asterisk_16.28.0~dfsg-0+deb10u4_amd64.buildinfo
+

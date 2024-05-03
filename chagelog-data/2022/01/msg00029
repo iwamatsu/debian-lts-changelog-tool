@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 25 Jan 2022 18:03:02 +0100
+Source: lrzsz
+Binary: lrzsz
+Architecture: source amd64
+Version: 0.12.21-8+deb9u1
+Distribution: stretch-security
+Urgency: high
+Maintainer: Martin A. Godisch <godisch@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ lrzsz      - Tools for zmodem/xmodem/ymodem file transfer
+Changes:
+ lrzsz (0.12.21-8+deb9u1) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2018-10195
+     possible sz data leak
+     (original patch from the Fedora project)
+Checksums-Sha1:
+ 3d1756d3f44225c4c7b6afb7e21f5b8c0c1282b9 1899 lrzsz_0.12.21-8+deb9u1.dsc
+ 1189f17ec758c3a6ea55e36dfb68f35b97ec3c2d 287790 lrzsz_0.12.21.orig.tar.gz
+ 89bcf106ff99f7d02cc21b41a2b51155bd92abd6 22520 lrzsz_0.12.21-8+deb9u1.debian.tar.xz
+ 73e4b28bd86f33f900baf17059a1df2cd09a0eba 5338 lrzsz_0.12.21-8+deb9u1_amd64.buildinfo
+ cc30eb35329451f93688343d9c0d6091cbb95b31 87778 lrzsz_0.12.21-8+deb9u1_amd64.deb
+Checksums-Sha256:
+ 532617ae3b2b72f6984a524f53cb2c835d0381c760a953c0e660fe9201403670 1899 lrzsz_0.12.21-8+deb9u1.dsc
+ 3262e5df47b108d33e184ff3bf5af14ddca1ac15118ac4ed9171a57c1593ae00 287790 lrzsz_0.12.21.orig.tar.gz
+ 94d20f9b3b41e0e942b333fb50ed86d7abd239485215f4eabdd3ca3ee075de3c 22520 lrzsz_0.12.21-8+deb9u1.debian.tar.xz
+ 9fc94be55d3e5e6c720b507b34653f73063e8c5264a439c3f6997a66d2be305f 5338 lrzsz_0.12.21-8+deb9u1_amd64.buildinfo
+ f1f5c4efcbc55d3a11c386816827e0f260b731205011489f00a5dd2947dc7d78 87778 lrzsz_0.12.21-8+deb9u1_amd64.deb
+Files:
+ 80353ed6d0b89bf005b0f7d79e1fdcf4 1899 comm optional lrzsz_0.12.21-8+deb9u1.dsc
+ 4213d6395af60768c8ba2627189cc356 287790 comm optional lrzsz_0.12.21.orig.tar.gz
+ 3a76800f623a021d4fc36c9aa9c37e1f 22520 comm optional lrzsz_0.12.21-8+deb9u1.debian.tar.xz
+ 7437563bbe85524d59981af0e4b5ec86 5338 comm optional lrzsz_0.12.21-8+deb9u1_amd64.buildinfo
+ a000aaa0b43f70ee9bcaf41c8c78b6c4 87778 comm optional lrzsz_0.12.21-8+deb9u1_amd64.deb
+

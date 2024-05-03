@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 13:12:10 CEST
+Source: packer
+Architecture: source
+Version: 1.3.4+dfsg-4+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 04ee3d7c0bf1f012c93c91b6c96b605e7582267a 4052 packer_1.3.4+dfsg-4+deb10u1.dsc
+ fdf739ceb5fd94bf5b20b2fa059b538452dc8098 707648 packer_1.3.4+dfsg.orig.tar.xz
+ 063757b7fa788c97a44691c06d61f05b04ba3dd4 20396 packer_1.3.4+dfsg-4+deb10u1.debian.tar.xz
+ 8cd399af202836683ccd18a513e1f7ba42fc89a7 11256 packer_1.3.4+dfsg-4+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 6fb1bc039359318a9d91734d82d28c11e8ad54145297101999ce4360d0b1ead2 4052 packer_1.3.4+dfsg-4+deb10u1.dsc
+ bcb6112d3afc6be25089f27cba741b143b8436fb842dc433e5170fe5b58ad9fd 707648 packer_1.3.4+dfsg.orig.tar.xz
+ 10f716f6356851f80fe0dbf8a2442f47a099f468d76a03f3ce7036a872886d27 20396 packer_1.3.4+dfsg-4+deb10u1.debian.tar.xz
+ 727536914dc44b1709b6252283211f8741511b098924c49db43516a60b4aa1d1 11256 packer_1.3.4+dfsg-4+deb10u1_amd64.buildinfo
+Changes:
+ packer (1.3.4+dfsg-4+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+Files:
+ 050b9d55bff6bf077cabfd5b295ac1b6 4052 utils optional packer_1.3.4+dfsg-4+deb10u1.dsc
+ 8fbd72679de98cf372d05ad9be2293c0 707648 utils optional packer_1.3.4+dfsg.orig.tar.xz
+ 9589518c4a96e23aed22209e2c6f1ec3 20396 utils optional packer_1.3.4+dfsg-4+deb10u1.debian.tar.xz
+ c7433fd428c1facafb28fdeef9d6950a 11256 utils optional packer_1.3.4+dfsg-4+deb10u1_amd64.buildinfo
+

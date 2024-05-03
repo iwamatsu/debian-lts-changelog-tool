@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 11 May 2023 13:12:55 +0200
+Source: webkit2gtk
+Architecture: source
+Version: 2.38.6-0+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian WebKit Maintainers <pkg-webkit-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ webkit2gtk (2.38.6-0+deb10u1) buster-security; urgency=medium
+ .
+   * New upstream stable update.
+   * CVE-2022-0108: information disclosure via iframes.
+   * CVE-2022-32885: memory corruption leading to arbitrary code execution.
+   * CVE-2023-27932: Same Origin Policy bypass.
+   * CVE-2023-27954: information disclosure.
+   * CVE-2023-28205: arbitrary code execution.
+   * debian/patches/fix-jscast-undeclared-error.patch:
+     - Fix a build issue in JavaScriptCore.
+Checksums-Sha1:
+ 7191a4ab0832d4a96d545cafaa4daaecd5e59031 3765 webkit2gtk_2.38.6-0+deb10u1.dsc
+ 4dfb3d96f621fc633ff347e083e429893551fb26 32541320 webkit2gtk_2.38.6.orig.tar.xz
+ 005b09d56893618970f19ba22aa363ac9aec1a68 80304 webkit2gtk_2.38.6-0+deb10u1.debian.tar.xz
+ daec1de6a37c5dac5d3b695aa03e98eafd87faf6 7083 webkit2gtk_2.38.6-0+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 92f2934f7fb3d15882cf4e63764936e7e36bb6c330cd946987c145c76723c577 3765 webkit2gtk_2.38.6-0+deb10u1.dsc
+ 1c614c9589389db1a79ea9ba4293bbe8ac3ab0a2234cac700935fae0724ad48b 32541320 webkit2gtk_2.38.6.orig.tar.xz
+ 2d141586d11abb7f39ec40aeae6334386e05ab10bf071dabd3a0a353f07ea9d9 80304 webkit2gtk_2.38.6-0+deb10u1.debian.tar.xz
+ e63c81bdedfc7c52f67019b59c9097981d7e72b0a8b246ae02b59c77cb8b0ab5 7083 webkit2gtk_2.38.6-0+deb10u1_source.buildinfo
+Files:
+ 0f6d2a706aeea2803ad013f1dfe091f5 3765 web optional webkit2gtk_2.38.6-0+deb10u1.dsc
+ a50290fdc80842b1ae8be1e1147b5679 32541320 web optional webkit2gtk_2.38.6.orig.tar.xz
+ 6d445e9360b13100856befa21cae3897 80304 web optional webkit2gtk_2.38.6-0+deb10u1.debian.tar.xz
+ de8f707bd0ec7b88fc5efde9e73198f9 7083 web optional webkit2gtk_2.38.6-0+deb10u1_source.buildinfo
+

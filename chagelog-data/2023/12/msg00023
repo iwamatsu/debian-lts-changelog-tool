@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 30 Dec 2023 15:10:00 +0100
+Source: tinyxml
+Architecture: source
+Version: 2.6.2-4+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Felix Geyer <fgeyer@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1059315
+Changes:
+ tinyxml (2.6.2-4+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2023-34194 / CVE-2023-40462: Reachable assertion (and application
+     exit) via a crafted XML document with a '\0' located after whitespace.
+     (Closes: #1059315)
+Checksums-Sha1:
+ 70711d859f391c173efea91315adda3440ba6a7b 2101 tinyxml_2.6.2-4+deb10u2.dsc
+ bbf93d0a2473191e4984f78d426c816834e1d6c4 5324 tinyxml_2.6.2-4+deb10u2.debian.tar.xz
+ 32965840868d589c5df283af9e95f3453779d5e4 6527 tinyxml_2.6.2-4+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 452302d134f215b051b3a9c2eb45b0e717ff40a124f2b0136c547c6f5fbbf2f2 2101 tinyxml_2.6.2-4+deb10u2.dsc
+ bc929803b61bf57ff86df5c9e7743c26e03ee54bbd9ee897e57f246227d5c275 5324 tinyxml_2.6.2-4+deb10u2.debian.tar.xz
+ 0bf2897db407e882cc22ee180d906b5ce0000abbd567919e64d17575c840a1f5 6527 tinyxml_2.6.2-4+deb10u2_amd64.buildinfo
+Files:
+ d5fa01909851f7397877e34c2c0650ac 2101 libs optional tinyxml_2.6.2-4+deb10u2.dsc
+ 5521a6accfd8efcb8d6c57ff6b42df97 5324 libs optional tinyxml_2.6.2-4+deb10u2.debian.tar.xz
+ f7f6d518493760f3ea632d8949764706 6527 libs optional tinyxml_2.6.2-4+deb10u2_amd64.buildinfo
+

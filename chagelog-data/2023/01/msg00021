@@ -1,0 +1,69 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 24 Jan 2023 21:42:47 +0100
+Source: libde265
+Binary: libde265-0 libde265-0-dbgsym libde265-dev libde265-examples libde265-examples-dbgsym
+Architecture: source amd64
+Version: 1.0.3-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Description:
+ libde265-0 - Open H.265 video codec implementation
+ libde265-dev - Open H.265 video codec implementation - development files
+ libde265-examples - Open H.265 video codec implementation - examples
+Closes: 1025816 1027179 1029357 1029397
+Changes:
+ libde265 (1.0.3-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add patches:
+     - reject_reference_pics_from_different_sps.patch
+     - use_sps_from_the_image.patch
+     - recycle_sps_if_possible.patch
+   * Cherry-pick additional patches from upstream:
+     check-4-negative-Q-value.patch
+     CVE-2022-43245-fix-asan-wildpointer-apply_sao_internal.patch
+   * Add patch "fix-invalid-memory-access.patch" to avoid out-of-bound
+     array access leading to crashes.
+   * Add patch CVE-2020-21596-global-buffer-overflow.patch
+   * Add patch to avoid use-after-free problems.
+   * Cumulative, the patches are fixing:
+     CVE-2020-21596, CVE-2020-21597, CVE-2020-21598, CVE-2022-43235,
+     CVE-2022-43236, CVE-2022-43237, CVE-2022-43238, CVE-2022-43239,
+     CVE-2022-43240, CVE-2022-43241, CVE-2022-43242, CVE-2022-43243,
+     CVE-2022-43244, CVE-2022-43245, CVE-2022-43248, CVE-2022-43249,
+     CVE-2022-43250, CVE-2022-43252, CVE-2022-43253, CVE-2022-47655.
+     (Closes: #1029357, #1029397, #1025816, #1027179)
+    * Amend changelog of 1.0.3-1+deb10u1, as it turned out that the
+      fix for CVE 2020-51999 and CVE 2021-36408 fixed other issues too.
+Checksums-Sha1:
+ 010330351af8e21d9ea2f1b7e2ea9e500bf62d57 2245 libde265_1.0.3-1+deb10u2.dsc
+ 07fdafb387c8827aed39ad1f25db614ef3c87c12 18592 libde265_1.0.3-1+deb10u2.debian.tar.xz
+ 9e4b3e16af10d14a518245a83223764be85bf83f 4398000 libde265-0-dbgsym_1.0.3-1+deb10u2_amd64.deb
+ fd1c26d7ed0e0f5fc720c1d6e0c5cdfe9df9e7e2 242900 libde265-0_1.0.3-1+deb10u2_amd64.deb
+ a46ce989c63a3c410a9c7a123a1558aabaa76d9b 13448 libde265-dev_1.0.3-1+deb10u2_amd64.deb
+ 162b18c0e6394b7ee37676240b1bd3bc74407aa8 1166644 libde265-examples-dbgsym_1.0.3-1+deb10u2_amd64.deb
+ 31203bb8aaad96edcd31a79dbbf4d69f3c03c8af 23940 libde265-examples_1.0.3-1+deb10u2_amd64.deb
+ bf4b8c7f1ab14c5aaf7e1b132e9fe12d27a6d528 13601 libde265_1.0.3-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 675033f0f818aef63970828aff50cabcd34a0ffadfdd4b75f81d4ddbafaa9c30 2245 libde265_1.0.3-1+deb10u2.dsc
+ 6fd670753c6f639bd31b7bb1cdfa220bb70a83cb96b5a74d375c985025f35cd8 18592 libde265_1.0.3-1+deb10u2.debian.tar.xz
+ b88e88b14a61899626956cb189d26687ef404c1593170c0e812e1cf6dced8318 4398000 libde265-0-dbgsym_1.0.3-1+deb10u2_amd64.deb
+ cd8c49418af6ec553ee1260572348ad6e8fd3de9a73d5ea6873a0cb8617a57c6 242900 libde265-0_1.0.3-1+deb10u2_amd64.deb
+ d4ed19ad06abbbc4ddb6297520d2b40d5fe606d28ce6f117e44ef7d275c8744e 13448 libde265-dev_1.0.3-1+deb10u2_amd64.deb
+ 57edce0f43038635e85b4fa12bf71323a9a2bbfad5d3cbbb0cf9fc8caf5a7bd0 1166644 libde265-examples-dbgsym_1.0.3-1+deb10u2_amd64.deb
+ 6bc6b5e95ebbc5d36b3a3566e74061f7f2aab6d7bca7faa3886aa1238a38dcb7 23940 libde265-examples_1.0.3-1+deb10u2_amd64.deb
+ e846391719c0b4e0e52081f1ac11c7675f20ef46af147f3b7a8e3b53f53cc283 13601 libde265_1.0.3-1+deb10u2_amd64.buildinfo
+Files:
+ 551fe59ee64e2311eb98f718f628abe0 2245 libs optional libde265_1.0.3-1+deb10u2.dsc
+ efbe568420f1a52b44a1f0b0275f2452 18592 libs optional libde265_1.0.3-1+deb10u2.debian.tar.xz
+ dfc3e5b31cedaab5f6bcc26536ac94aa 4398000 debug optional libde265-0-dbgsym_1.0.3-1+deb10u2_amd64.deb
+ 6ebf8754e4362c7339cb0a6018cf2637 242900 libs optional libde265-0_1.0.3-1+deb10u2_amd64.deb
+ 09c281312d9b59ad1c47ae475a0b6296 13448 libdevel optional libde265-dev_1.0.3-1+deb10u2_amd64.deb
+ 68e3be80c07471d6aca394e415feb6b9 1166644 debug optional libde265-examples-dbgsym_1.0.3-1+deb10u2_amd64.deb
+ b5a3ebaa0899519b392d9e3d64de3e7a 23940 video optional libde265-examples_1.0.3-1+deb10u2_amd64.deb
+ 8bde75b6569ada8620543d9a100054d8 13601 libs optional libde265_1.0.3-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,41 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 10 Oct 2022 18:32:10 +0200
+Source: connman
+Architecture: source
+Version: 1.36-2.1~deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alexander Sack <asac@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1004935
+Changes:
+ connman (1.36-2.1~deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * dnsproxy: Simplify udp_server_event()
+   * dnsproxy: Validate input data before using them (CVE-2022-23096,
+     CVE-2022-23097) (Closes: #1004935)
+   * dnsproxy: Avoid 100 % busy loop in TCP server case (CVE-2022-23098)
+     (Closes: #1004935)
+   * dnsproxy: Keep timeout in TCP case even after connection is established
+     (CVE-2022-23098) (Closes: #1004935)
+   * Replace broken refcounting in the CVE-2022-32293 backport with the patches
+     from bullseye.
+Checksums-Sha1:
+ 9ede0e7a46a27c34bb62c7c37c64b1ebab815539 2222 connman_1.36-2.1~deb10u4.dsc
+ 8f29df34231c214c06ee6eca9ed7c233212b8d12 692616 connman_1.36.orig.tar.xz
+ 431de48928dd09d33e4be23461368473e06809c8 21260 connman_1.36-2.1~deb10u4.debian.tar.xz
+ 4531ffb330a2e6fddb63a98be16f671a0c728c3a 7100 connman_1.36-2.1~deb10u4_source.buildinfo
+Checksums-Sha256:
+ 7c3bac9195dfb133a02b91b40ab16629310d1211acc64c68c2ebb73dad7f792d 2222 connman_1.36-2.1~deb10u4.dsc
+ c789db41cc443fa41e661217ea321492ad59a004bebcd1aa013f3bc10a6e0074 692616 connman_1.36.orig.tar.xz
+ 585781d46a98d3cabbc853004b7510616dcd97899f4c86348cb8370f4949fac1 21260 connman_1.36-2.1~deb10u4.debian.tar.xz
+ 49c882c3a192ae387ce5c797995fec0ef8445ca763a8d633eb3f846a0faa509d 7100 connman_1.36-2.1~deb10u4_source.buildinfo
+Files:
+ 1df6d9cfd0dea300bf924b21effacb5f 2222 net optional connman_1.36-2.1~deb10u4.dsc
+ dae77d9c904d2c223ae849e32079d57e 692616 net optional connman_1.36.orig.tar.xz
+ ddbd9f21e85c2792a3be172e4056b29d 21260 net optional connman_1.36-2.1~deb10u4.debian.tar.xz
+ 3d11d7ef4f9da8f789b6edd0f26ae295 7100 net optional connman_1.36-2.1~deb10u4_source.buildinfo
+

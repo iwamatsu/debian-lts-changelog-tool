@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 27 May 2022 11:18:49 +0200
+Source: clamav
+Architecture: source
+Version: 0.103.6+dfsg-0+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ clamav (0.103.6+dfsg-0+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream release.
+   * Update symbols file.
+Checksums-Sha1:
+ 71beb1060d15a4a15917c3b144e54835aa0c73b1 3063 clamav_0.103.6+dfsg-0+deb9u1.dsc
+ 6212705bf2cb168a55f76ae4cab31fa40909aed8 7135300 clamav_0.103.6+dfsg.orig.tar.xz
+ 6dcb66cf1cf535d34de8584d3a204ca88e9fab9a 219968 clamav_0.103.6+dfsg-0+deb9u1.debian.tar.xz
+ 1108c9d51a408b903faa1d1410f489d926a36629 6009 clamav_0.103.6+dfsg-0+deb9u1_source.buildinfo
+Checksums-Sha256:
+ c4dfdcee61eecc0c04e9c7d590b5b8ded6c49d0794bbb6660769881f6d7bb4e7 3063 clamav_0.103.6+dfsg-0+deb9u1.dsc
+ b1c740636772259addbca9901a27bb92213970eaba820db472b3cfe328b5a0b2 7135300 clamav_0.103.6+dfsg.orig.tar.xz
+ f59d6a86898ff6f866058f517d4a90d482668eca2a13992796cdba852cea5cbe 219968 clamav_0.103.6+dfsg-0+deb9u1.debian.tar.xz
+ 4a412ba7d15d3d3bb21a07317fd0e7ff46b05d0fd3067bcb7e51dd4dbe5de8bd 6009 clamav_0.103.6+dfsg-0+deb9u1_source.buildinfo
+Files:
+ 71aa4fdde97ea11d2a6cb36f1dd2a74d 3063 utils optional clamav_0.103.6+dfsg-0+deb9u1.dsc
+ ef852aa3917ceb5647361da21c8830a3 7135300 utils optional clamav_0.103.6+dfsg.orig.tar.xz
+ 5f6d53f8ae36f4a7a46dc993dbb944e1 219968 utils optional clamav_0.103.6+dfsg-0+deb9u1.debian.tar.xz
+ db158a3ea1f328e319e2bdc44265579f 6009 utils optional clamav_0.103.6+dfsg-0+deb9u1_source.buildinfo
+

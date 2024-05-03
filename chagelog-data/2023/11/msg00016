@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 22 Nov 2023 19:05:59 CET
+Source: gnutls28
+Architecture: source
+Version: 3.6.7-4+deb10u11
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ ee85d93231e41d4b6a7450ce4576f9af01802758 3265 gnutls28_3.6.7-4+deb10u11.dsc
+ 59850cdf9cb59c2fa97bc0957db540fbd222c822 103904 gnutls28_3.6.7-4+deb10u11.debian.tar.xz
+ c22cb5aeec0d3a2ecf016ed9461c4ff35b543598 11580 gnutls28_3.6.7-4+deb10u11_amd64.buildinfo
+Checksums-Sha256:
+ 973b459a8c0fa5019354b1d903f727f505aea77ca9e1a250dea3ad5f9eea2797 3265 gnutls28_3.6.7-4+deb10u11.dsc
+ 81e40a799a93438cdf14cd01ab1c73b4841d7d524cf018a9e764911af13a05af 103904 gnutls28_3.6.7-4+deb10u11.debian.tar.xz
+ 8d295b184b730271830fc3d11d2d1c2cf219b41b23054061a3e7e11806ea667f 11580 gnutls28_3.6.7-4+deb10u11_amd64.buildinfo
+Changes:
+ gnutls28 (3.6.7-4+deb10u11) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-5981:
+     A vulnerability was found in GnuTLS, a secure communications library, which
+     may facilitate a timing attack to compromise a cryptographic system. The
+     response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ
+     from response times of ciphertexts with correct PKCS#1 v1.5 padding. Only
+     TLS ciphertext processing is affected.
+Files:
+ 852b85ee2868bbb0896562a74c078c74 3265 libs optional gnutls28_3.6.7-4+deb10u11.dsc
+ f9c0ea533c01de485d6fef1405593b61 103904 libs optional gnutls28_3.6.7-4+deb10u11.debian.tar.xz
+ 4520b7eca1f8864a839583fb79221a8d 11580 libs optional gnutls28_3.6.7-4+deb10u11_amd64.buildinfo
+

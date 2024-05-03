@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 17 Oct 2023 14:02:55 CEST
+Source: axis
+Architecture: source
+Version: 1.4-28+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 83a407b9f25de5d085bc4ba23d1cace861e02b12 2380 axis_1.4-28+deb10u1.dsc
+ d8151a6efda52eed409db865bd3602f1ed247b2b 5295544 axis_1.4.orig.tar.gz
+ 1f7529a23d0837832943aa4667a14f7eba522134 14264 axis_1.4-28+deb10u1.debian.tar.xz
+ 4c9a1c0ca912e37fcc7f9b2fdbc00fafc6a063b4 9709 axis_1.4-28+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 38e606908d7878ab2b3a6a04f34af85803e0b378345fc718858f23c52ef308ea 2380 axis_1.4-28+deb10u1.dsc
+ 9c6fd085bf83c76162c186ef755b05bb3cca68ab5ff66d47dcf69efda072ab74 5295544 axis_1.4.orig.tar.gz
+ 7b8cfe0952d6266fb0042ce19dc1e6abd80dc3bef62fcf97f88990dceafc202c 14264 axis_1.4-28+deb10u1.debian.tar.xz
+ c0a27b101c33544f9b2f21decd99f667ee248fbc813dee9f35c90d4b38f035b3 9709 axis_1.4-28+deb10u1_amd64.buildinfo
+Changes:
+ axis (1.4-28+deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * Fix CVE-2023-40743.
+   * Revert to compat level 12.
+Files:
+ 404355f6edd89c2afc7c424d0d2ec6ee 2380 java optional axis_1.4-28+deb10u1.dsc
+ 6fd3b673a4de3609394f492748b1f3f1 5295544 java optional axis_1.4.orig.tar.gz
+ 72214c6d247cdaeb2ceb18d70207cbb4 14264 java optional axis_1.4-28+deb10u1.debian.tar.xz
+ f81ea96ad9fa3db9c3b99de8a02ad599 9709 java optional axis_1.4-28+deb10u1_amd64.buildinfo
+

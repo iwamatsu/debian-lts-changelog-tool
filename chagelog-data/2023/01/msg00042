@@ -1,0 +1,42 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 30 Jan 2023 05:46:25 +0530
+Source: ruby-rack
+Architecture: source
+Version: 2.0.6-3+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 963477 1029832
+Changes:
+ ruby-rack (2.0.6-3+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team. (Closes: #1029832)
+   * Add patch to use Dir.entries instead of Dir[glob] to prevent
+     user-specified glob metacharactersfix. (Fixes: CVE-2020-8161)
+   * When parsing cookies, only decode the values. Patch utils to fix
+     cookie parsing. (Fixes: CVE-2020-8184) (Closes: #963477)
+   * Add patch to fix ReDoS in Rack::Utils.get_byte_ranges.
+     (Fixes: CVE-2022-44570)
+   * Add patch to fix ReDoS vulnerability in multipart parser.
+     (Fixes: CVE-2022-44571)
+   * Add patch to forbid control characters in attributes.
+     (Fixes: CVE-2022-44572)
+Checksums-Sha1:
+ c4eda6e98bc1a0fa8a5e1db1a93f28f09154437a 2279 ruby-rack_2.0.6-3+deb10u2.dsc
+ bef6a13d81a8000634ea30dae30cb906d7a71f91 253423 ruby-rack_2.0.6.orig.tar.gz
+ c2d4a17c9b95e401d8ed97819ffdf4468e927997 10624 ruby-rack_2.0.6-3+deb10u2.debian.tar.xz
+ d2d316c79d381f4e3f1c745ceb2a01b38656d126 14208 ruby-rack_2.0.6-3+deb10u2_source.buildinfo
+Checksums-Sha256:
+ 739f22771d16203a825c08c1435c811aa6fba6f9338412d85aef5757e73338c5 2279 ruby-rack_2.0.6-3+deb10u2.dsc
+ 62c3a92e98a61fcb5423ff7f46726a17e48930c4ccc817daaaa93e9038922c5a 253423 ruby-rack_2.0.6.orig.tar.gz
+ 2561d11094805271c144ab13df18335d7eb579cb06161dd5da248fc6e8be30e1 10624 ruby-rack_2.0.6-3+deb10u2.debian.tar.xz
+ 4a5607603be82284943e949bcc6b8db591de077ebc6f2d27b4ba204d8be0e824 14208 ruby-rack_2.0.6-3+deb10u2_source.buildinfo
+Files:
+ 9cfc601b818d35d8cf7a1aaca80bea4d 2279 ruby optional ruby-rack_2.0.6-3+deb10u2.dsc
+ a089f87b15056562ce44645965ddbc97 253423 ruby optional ruby-rack_2.0.6.orig.tar.gz
+ 34a4bf7a89dc3459db879a3d1e72129a 10624 ruby optional ruby-rack_2.0.6-3+deb10u2.debian.tar.xz
+ cc1a9a8d2047aca428ecbc38b1ce2cf4 14208 ruby optional ruby-rack_2.0.6-3+deb10u2_source.buildinfo
+

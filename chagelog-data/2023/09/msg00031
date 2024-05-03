@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 24 Sep 2023 18:39:31 CEST
+Source: libapache-mod-jk
+Architecture: source
+Version: 1:1.2.46-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ cf1501bf60a8e0975a8e677b1744a514f664cab8 2329 libapache-mod-jk_1.2.46-1+deb10u2.dsc
+ a18c3a8a218d11ea220e6f8a9ae3cdd89dd96e1e 3252837 libapache-mod-jk_1.2.46.orig.tar.gz
+ 96304415d0dde0ca0f89f51dc8338f9ef5d71d49 61536 libapache-mod-jk_1.2.46-1+deb10u2.debian.tar.xz
+ d9bfdb821d8c9815a544f992f6a45385a79c6c46 7428 libapache-mod-jk_1.2.46-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ cf0b430236d6a32d94f62865c2ac0617c636c368a1e996a4211a32894ad6c1d6 2329 libapache-mod-jk_1.2.46-1+deb10u2.dsc
+ 7e1d520e1d1dacd042087ae52be7aae47a093b93cf26931827724aa8ab66cbe9 3252837 libapache-mod-jk_1.2.46.orig.tar.gz
+ 3bd04752be19df07e7f2437c0c29d2a795623d2ae4f23abb5bfb380e7e705591 61536 libapache-mod-jk_1.2.46-1+deb10u2.debian.tar.xz
+ 35b94c021f8b30d76d43d4a74355e74bbd5dae7f9e3bc478210da75da416e09c 7428 libapache-mod-jk_1.2.46-1+deb10u2_amd64.buildinfo
+Changes:
+ libapache-mod-jk (1:1.2.46-1+deb10u2) buster-security; urgency=high
+ .
+   * Fix CVE-2023-41081:
+     The mod_jk component of Apache Tomcat Connectors, an Apache 2 module to
+     forward requests from Apache to Tomcat, in some circumstances, such as when
+     a configuration included "JkOptions +ForwardDirectories" but the
+     configuration did not provide explicit mounts for all possible proxied
+     requests, mod_jk would use an implicit mapping and map the request to the
+     first defined worker. Such an implicit mapping could result in the
+     unintended exposure of the status worker and/or bypass security constraints
+     configured in httpd. As of this security update, the implicit mapping
+     functionality has been removed and all mappings must now be via explicit
+     configuration. This issue affects Apache Tomcat Connectors (mod_jk only).
+Files:
+ d40b3a645f88677d712ce8a874f9891f 2329 httpd optional libapache-mod-jk_1.2.46-1+deb10u2.dsc
+ 2f48f513a7bc0790c5473ac0f9cb6d3c 3252837 httpd optional libapache-mod-jk_1.2.46.orig.tar.gz
+ 574f5bef8cefca71995fd83478c2dd04 61536 httpd optional libapache-mod-jk_1.2.46-1+deb10u2.debian.tar.xz
+ 4b37a8713f2adf95305296fcbad3a0e6 7428 httpd optional libapache-mod-jk_1.2.46-1+deb10u2_amd64.buildinfo
+

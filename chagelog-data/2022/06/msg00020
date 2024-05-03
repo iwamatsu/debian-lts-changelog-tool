@@ -1,0 +1,58 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 25 Jun 2022 22:03:02 +0200
+Source: libsndfile
+Binary: libsndfile1-dev libsndfile1 sndfile-programs libsndfile1-dbg sndfile-programs-dbg
+Architecture: source amd64
+Version: 1.0.27-3+deb9u3
+Distribution: stretch-security
+Urgency: high
+Maintainer: Erik de Castro Lopo <erikd@mega-nerd.com>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libsndfile1 - Library for reading/writing audio files
+ libsndfile1-dbg - debugging symbols for libsndfile
+ libsndfile1-dev - Development files for libsndfile; a library for reading/writing a
+ sndfile-programs - Sample programs that use libsndfile
+ sndfile-programs-dbg - debugging symbols for sndfile-programs
+Changes:
+ libsndfile (1.0.27-3+deb9u3) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-4156
+     heap out-of-bounds read
+   * CVE-2017-12562
+     Fix heap buffer overflows when writing strings in psf_binheader_writef
+     to prevent remote attackers causing a remote denial of service.
+Checksums-Sha1:
+ aef3dbcfdb336edce202a09636560396057440e2 2512 libsndfile_1.0.27-3+deb9u3.dsc
+ e112d4937352d1722b06911b00c79e9bce15095c 1192337 libsndfile_1.0.27.orig.tar.gz
+ f5a218eb13363f3bdfb2aca6a8bce06d1422719b 18068 libsndfile_1.0.27-3+deb9u3.debian.tar.xz
+ 7fa27565f9fdc71022d5b12d614a1e5bdb61aac5 459128 libsndfile1-dbg_1.0.27-3+deb9u3_amd64.deb
+ f1a6e67a7e2ff7e5d4c7013919f6f18271134cef 361784 libsndfile1-dev_1.0.27-3+deb9u3_amd64.deb
+ 67d98f7185766d784c86ca2beca886ce6373d0bf 248256 libsndfile1_1.0.27-3+deb9u3_amd64.deb
+ cb6d356eed69f543ca1fea886cf2de96da2228fc 7620 libsndfile_1.0.27-3+deb9u3_amd64.buildinfo
+ d063b7c2cae425e44cb53512743191ada34f0c51 160508 sndfile-programs-dbg_1.0.27-3+deb9u3_amd64.deb
+ 2b192a5c00de7ef2e2e75cfb919d3ba6262a20f1 126862 sndfile-programs_1.0.27-3+deb9u3_amd64.deb
+Checksums-Sha256:
+ b979073f0fa4d15e62b1b6fde981f92ebc63c0c352f3c77f7603330124bb6924 2512 libsndfile_1.0.27-3+deb9u3.dsc
+ a391952f27f4a92ceb2b4c06493ac107896ed6c76be9a613a4731f076d30fac0 1192337 libsndfile_1.0.27.orig.tar.gz
+ 6bc2a5781ad91a772489405ecf3ee9d558e8b260ae0810f97d0d2a3615502927 18068 libsndfile_1.0.27-3+deb9u3.debian.tar.xz
+ 72994c1371dac1e7001414552eeae9d171bdc5e311b23133edd44a6c9dafac8b 459128 libsndfile1-dbg_1.0.27-3+deb9u3_amd64.deb
+ 6188ad9bd21d37d35c121fd8148115de5ebe3cb4abb4781340797dd45431341d 361784 libsndfile1-dev_1.0.27-3+deb9u3_amd64.deb
+ ea30dfa94a491e2a53dddf59b48cfec851067e452f06ad23489e47d740d7e84a 248256 libsndfile1_1.0.27-3+deb9u3_amd64.deb
+ 1a3287f2ba8e8017df1f85c3b9d551b4e22e22a7be2d15cec3c4b0ba7c9149ce 7620 libsndfile_1.0.27-3+deb9u3_amd64.buildinfo
+ 2255ccf17d154ba391e4dd937b52ec3d4177d3c7a1989ae44a643f8425998437 160508 sndfile-programs-dbg_1.0.27-3+deb9u3_amd64.deb
+ 378cf960351bae63357de22121bf6e3f6d4798c205458c4d1c2aa554b5aeb15d 126862 sndfile-programs_1.0.27-3+deb9u3_amd64.deb
+Files:
+ e992a09e66160d8739f2f0137ade2ee5 2512 devel optional libsndfile_1.0.27-3+deb9u3.dsc
+ fd1d97c6077f03b5d984d7956ffedb7a 1192337 devel optional libsndfile_1.0.27.orig.tar.gz
+ fb269c742c82b357fe8cb4b2e76ecf76 18068 devel optional libsndfile_1.0.27-3+deb9u3.debian.tar.xz
+ 2b42e8e3e612a4f2a3e212c9653ada19 459128 debug extra libsndfile1-dbg_1.0.27-3+deb9u3_amd64.deb
+ e52bc9374d46851e56f8d932df5125cd 361784 libdevel optional libsndfile1-dev_1.0.27-3+deb9u3_amd64.deb
+ 63227aeaf587b2be0e020025103ffccb 248256 libs optional libsndfile1_1.0.27-3+deb9u3_amd64.deb
+ 03e91ec57d3f23c948684a78b2d439a5 7620 devel optional libsndfile_1.0.27-3+deb9u3_amd64.buildinfo
+ 0d40a7f9f82da28cccf84c49ac1434e1 160508 debug extra sndfile-programs-dbg_1.0.27-3+deb9u3_amd64.deb
+ c0e1cc74e4376b366213c6faaf399181 126862 utils optional sndfile-programs_1.0.27-3+deb9u3_amd64.deb
+

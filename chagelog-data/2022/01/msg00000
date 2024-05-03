@@ -1,0 +1,46 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 28 Dec 2021 19:46:10 +0100
+Source: salt
+Binary: salt-common salt-master salt-minion salt-syndic salt-ssh salt-doc salt-cloud salt-api salt-proxy
+Architecture: source
+Version: 2016.11.2+ds-1+deb9u10
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Salt Team <pkg-salt-team@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Description:
+ salt-api   - Generic, modular network access system
+ salt-cloud - public cloud VM management system
+ salt-common - shared libraries that salt requires for all packages
+ salt-doc   - additional documentation for salt, the distributed remote executi
+ salt-master - remote manager to administer servers via salt
+ salt-minion - client package for salt, the distributed remote execution system
+ salt-proxy - Proxy client package for salt stack
+ salt-ssh   - remote manager to administer servers via Salt SSH
+ salt-syndic - master-of-masters for salt, the distributed remote execution syst
+Changes:
+ salt (2016.11.2+ds-1+deb9u10) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE 2020-16846 regression: salt-ssh master key initialization fails
+   * CVE 2021-3197 regression: valid parameters are discarded for the
+     SSHClient
+   * CVE 2020-28243 follow-up: prevent argument injection in restartcheck
+   * CVE 2021-25282 regression: pillar_roots.write cannot write to subdirs
+   * CVE 2021-25284 regression: the 'cmd.run' function crashes if passing
+     tuple arg
+Checksums-Sha1:
+ 26c96a40d2c47d04f5d77d0a1ef6b5d8f7f20d12 2756 salt_2016.11.2+ds-1+deb9u10.dsc
+ 152b3d0d615a4489ab4475b0cf038ad59cd03bf4 56580 salt_2016.11.2+ds-1+deb9u10.debian.tar.xz
+ 9a9e7a8da12e20eab104c91f61fa89c9de81cd69 9616 salt_2016.11.2+ds-1+deb9u10_all.buildinfo
+Checksums-Sha256:
+ bf86e459ee3d5cc284dced7acef3d12173efc542d64fa82096e925809da8f5b3 2756 salt_2016.11.2+ds-1+deb9u10.dsc
+ 8c87ce3bb783769e3c23a9e50996ac4e84329bbff6ac73488709cb483801e80e 56580 salt_2016.11.2+ds-1+deb9u10.debian.tar.xz
+ 81a14db3f1b11415ee6c2f6b97376707264543b57dde467e85268217e6b7b00e 9616 salt_2016.11.2+ds-1+deb9u10_all.buildinfo
+Files:
+ 94a33b31903a2e33282d343d97eeae40 2756 admin extra salt_2016.11.2+ds-1+deb9u10.dsc
+ c5e532e49af85b7756114d4ca0ef500e 56580 admin extra salt_2016.11.2+ds-1+deb9u10.debian.tar.xz
+ e3f0ead4fa9843fa9a959da704ee2906 9616 admin extra salt_2016.11.2+ds-1+deb9u10_all.buildinfo
+

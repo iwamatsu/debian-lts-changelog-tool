@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 27 May 2024 10:39:18 +0100
+Source: python-pymysql
+Architecture: source
+Version: 0.9.3-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1071628
+Changes:
+ python-pymysql (0.9.3-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-36039: Prevent a potential SQL injection attack if the program was
+     used with untrusted JSON input as keys were not escaped by the escape_dict
+     routine. (Closes: #1071628)
+   * Add debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ ae7412428399398ca6200334601f00e95403405c 2464 python-pymysql_0.9.3-1+deb10u1.dsc
+ 26207ac507e7b9593816d9b060e52d7a9a9d2eec 86715 python-pymysql_0.9.3.orig.tar.gz
+ dd1a00ccd0193a6180d4fba99da45a0be803e5ae 6724 python-pymysql_0.9.3-1+deb10u1.debian.tar.xz
+ 64a96bc29660cb64595107213334cef4e26900a3 10310 python-pymysql_0.9.3-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 80d475807b9a373f5c9c7fc49ccf77fc2688b572f7b5f6994a4757cde10bc7c6 2464 python-pymysql_0.9.3-1+deb10u1.dsc
+ 5a85599a69b51db185f9447ba5034501482496e481574bce972c7dcb5abe1d57 86715 python-pymysql_0.9.3.orig.tar.gz
+ accd36fa79dadb1f18ad7a856622c2c9e69e8e2845b2fa575311b9923ffa25ce 6724 python-pymysql_0.9.3-1+deb10u1.debian.tar.xz
+ 0a42929c2ed8da9b32f07f44cb94beffeb0dcb659f3a8c6af0ea639ed7204fd9 10310 python-pymysql_0.9.3-1+deb10u1_amd64.buildinfo
+Files:
+ 93e3c8421a40202aea5b5c1e2dcac4bc 2464 python optional python-pymysql_0.9.3-1+deb10u1.dsc
+ 7afad735628571b6fffd74086ce451b7 86715 python optional python-pymysql_0.9.3.orig.tar.gz
+ 0857db6b154a2c3ad5243ef47914aeed 6724 python optional python-pymysql_0.9.3-1+deb10u1.debian.tar.xz
+ cfcd030dd5d77d7bfe6f507775aa7f4b 10310 python optional python-pymysql_0.9.3-1+deb10u1_amd64.buildinfo
+

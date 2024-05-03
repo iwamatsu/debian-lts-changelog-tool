@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 04 Apr 2022 13:40:24 +0200
+Source: qemu
+Architecture: source
+Version: 1:2.8+dfsg-6+deb9u17
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ qemu (1:2.8+dfsg-6+deb9u17) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2021-3593: out-of-bounds read or memory disclosure in udp6_input.
+   * CVE-2021-3748: use-after-free in the virtio-net device.
+   * CVE-2021-3930: off-by-one in the SCSI device leading to denial of service.
+   * CVE-2021-20196: null pointer dereference in the floppy disk emulation.
+   * CVE-2022-26354: invalid elements left in the virtqueue in vhost-vsock.
+Checksums-Sha1:
+ e9c2a136dab3e6cb59a4fa4337461adb915127fa 5908 qemu_2.8+dfsg-6+deb9u17.dsc
+ fa9150a6c78c7758900878011d0ff62831695f1c 7040728 qemu_2.8+dfsg.orig.tar.xz
+ aa2fc562d6f404981ba2d8514349f06ab421b1ed 206408 qemu_2.8+dfsg-6+deb9u17.debian.tar.xz
+ 35f41b1955346b8e95d5b692f23a09b1cc1e7bf7 6204 qemu_2.8+dfsg-6+deb9u17_source.buildinfo
+Checksums-Sha256:
+ 2b98c9f337a1f58ff47a7f75e4d0a13942806d1148da99bb965a197004378696 5908 qemu_2.8+dfsg-6+deb9u17.dsc
+ 780abde8ee1f3847bf96b2ae2515ba68bda20734ece3d1017ca6128b3b2a97a6 7040728 qemu_2.8+dfsg.orig.tar.xz
+ 051b942fb80445f60eb38d592cf4c6fe2ccaaec08fc3a384a2e89e85d43c29fe 206408 qemu_2.8+dfsg-6+deb9u17.debian.tar.xz
+ 7645fbb56ede0422a159103c69418dacccd0bd2f251dfe5162d480162d7059c9 6204 qemu_2.8+dfsg-6+deb9u17_source.buildinfo
+Files:
+ abfa1b12e1683733b59a87db56c92108 5908 otherosfs optional qemu_2.8+dfsg-6+deb9u17.dsc
+ 998051c35e5a70e0bbab382e1046e674 7040728 otherosfs optional qemu_2.8+dfsg.orig.tar.xz
+ a07f717d9352165e02c5d6b40d4026ab 206408 otherosfs optional qemu_2.8+dfsg-6+deb9u17.debian.tar.xz
+ 018498d4993b314f95c7e146dc3740fa 6204 otherosfs optional qemu_2.8+dfsg-6+deb9u17_source.buildinfo
+

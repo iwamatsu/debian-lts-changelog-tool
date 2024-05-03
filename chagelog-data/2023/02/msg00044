@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 24 Feb 2023 09:25:01 +0200
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u5
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ curl (7.64.0-4+deb10u5) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-23916: HTTP multi-header compression denial of service
+Checksums-Sha1:
+ 8b452b3977b82ae6513d0f4d7a197679db6ee3bb 2694 curl_7.64.0-4+deb10u5.dsc
+ 5911d4400e988ae52368f2266a5f84378983dbde 4032645 curl_7.64.0.orig.tar.gz
+ 99257d865a35341499a83e0782a7f10ccccfe609 59568 curl_7.64.0-4+deb10u5.debian.tar.xz
+Checksums-Sha256:
+ 9fa77b013454b7b5ef6ba5a77451cb13bd2d66c1b239f707afa556c24c745ed7 2694 curl_7.64.0-4+deb10u5.dsc
+ cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5 4032645 curl_7.64.0.orig.tar.gz
+ 3b5f383b1307c7bf6369110b9fa11b9c549312c5f06cc101e5448bdce829b7d8 59568 curl_7.64.0-4+deb10u5.debian.tar.xz
+Files:
+ 53434fb3b305b6dea1c54505f0048cf9 2694 web optional curl_7.64.0-4+deb10u5.dsc
+ a026740d599a32bcbbe6e70679397899 4032645 web optional curl_7.64.0.orig.tar.gz
+ dd857e2713212a0fa5e29d0ace6e3916 59568 web optional curl_7.64.0-4+deb10u5.debian.tar.xz
+

@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 28 Nov 2022 10:33:54 CET
+Source: ini4j
+Architecture: source
+Version: 0.5.4-1~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ c95ec7bfec36b1823102bb259327f06a6310b0c9 2153 ini4j_0.5.4-1~deb10u1.dsc
+ 78c366083332bce65b67210256076fdbd71c77a7 150900 ini4j_0.5.4.orig.tar.xz
+ 743529c83e6e0a3dbdc0579749d7a1db3b6e95d6 4508 ini4j_0.5.4-1~deb10u1.debian.tar.xz
+ a7e882ff3c241dec47deba38e2a3075044dcfb87 13011 ini4j_0.5.4-1~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 0539486d4b002c8a0faf80e212d186ef9da755caaaad48f6cad30e8ada965942 2153 ini4j_0.5.4-1~deb10u1.dsc
+ 0194ee19e98c0350ef4723ab748a0cc98964cf28008b5bb90c92ba501665243c 150900 ini4j_0.5.4.orig.tar.xz
+ 22c7ea65e2d7f3a876f4e9f908428fd142c18e5bd9c0cc5dccbe4a250d370afa 4508 ini4j_0.5.4-1~deb10u1.debian.tar.xz
+ 7e6f1212aca85fa6643c79634ddbd78c72beeb9f4e0545f67aa0c4b9d4440a8b 13011 ini4j_0.5.4-1~deb10u1_amd64.buildinfo
+Changes:
+ ini4j (0.5.4-1~deb10u1) buster-security; urgency=high
+ .
+   * Team upload.
+   * Backport ini4j from Bullseye to address CVE-2022-41404: An issue in the
+     fetch() method in the BasicProfile class of org.ini4j before v0.5.4 allows
+     attackers to cause a Denial of Service (DoS) via unspecified vectors.
+   * Revert to debhelper-compat = 12.
+Files:
+ d7427b4ea1f9aca36f2473dac36d7b9d 2153 java optional ini4j_0.5.4-1~deb10u1.dsc
+ 30ec2f2179c3e820f204ce10eb5870c4 150900 java optional ini4j_0.5.4.orig.tar.xz
+ 994227c8502225c863f0abadad80773c 4508 java optional ini4j_0.5.4-1~deb10u1.debian.tar.xz
+ 587b3048ff127227e6ba2db49f898c5b 13011 java optional ini4j_0.5.4-1~deb10u1_amd64.buildinfo
+

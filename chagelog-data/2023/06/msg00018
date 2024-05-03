@@ -1,0 +1,51 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 13 Jun 2023 09:32:18 CEST
+Source: golang-go.crypto
+Architecture: source
+Version: 1:0.0~git20181203.505ab14-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 458c0524f70ac837141f61a11ec1cd8d510eaf31 2544 golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1.dsc
+ c5dc0db612ce40637e991f2adeb8c44489bf568e 1433388 golang-go.crypto_0.0~git20181203.505ab14.orig.tar.xz
+ 3ce81fe08cd0f5a65c5690f20427010239d4074d 11580 golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1.debian.tar.xz
+ 5b6336b48382220aa8cef82b3095a12252db87cf 6437 golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ d21836c268830cb0cea6a439f5887910b7bb0ab0f13d58adf99ee47867c4e153 2544 golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1.dsc
+ 3a0ac2725ad17fd25b269519ef6665d2a5ae566d00efdaa57cef96ea1979e254 1433388 golang-go.crypto_0.0~git20181203.505ab14.orig.tar.xz
+ 948c4573710691a76f84c744c19a9fe37b643b32b3fa0f78d7c28f46a749ac20 11580 golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1.debian.tar.xz
+ f2eb9478094889c0834d057d84cbef42f13e19c2fab71d94172c2345d4ee5b6b 6437 golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1_amd64.buildinfo
+Changes:
+ golang-go.crypto (1:0.0~git20181203.505ab14-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2019-11840:
+     An issue was discovered in supplementary Go cryptography libraries, aka
+     golang-googlecode-go-crypto. If more than 256 GiB of keystream is
+     generated, or if the counter otherwise grows greater than 32 bits, the
+     amd64 implementation will first generate incorrect output, and then cycle
+     back to previously generated keystream. Repeated keystream bytes can lead
+     to loss of confidentiality in encryption applications, or to predictability
+     in CSPRNG applications.
+   * Fix CVE-2019-11841:
+     A message-forgery issue was discovered in
+     crypto/openpgp/clearsign/clearsign.go in supplementary Go cryptography
+     libraries. The "Hash" Armor Header specifies the message digest
+     algorithm(s) used for the signature. Since the library skips Armor Header
+     parsing in general, an attacker can not only embed arbitrary Armor Headers,
+     but also prepend arbitrary text to cleartext messages without invalidating
+     the signatures.
+   * Fix CVE-2020-9283:
+     golang.org/x/crypto allows a panic during signature verification in the
+     golang.org/x/crypto/ssh package. A client can attack an SSH server that accepts
+     public keys. Also, a server can attack any SSH client.
+Files:
+ 4d3c438da45e75b73168821e4719a096 2544 devel optional golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1.dsc
+ b01319c83dab7577167c57644bd15617 1433388 devel optional golang-go.crypto_0.0~git20181203.505ab14.orig.tar.xz
+ b9e4ad2b670c85f3fb1e7804f928b49b 11580 devel optional golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1.debian.tar.xz
+ d0ada1c9f647b314bb993716babef086 6437 devel optional golang-go.crypto_0.0~git20181203.505ab14-1+deb10u1_amd64.buildinfo
+

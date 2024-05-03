@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 23 Mar 2024 20:55:36 +0200
+Source: python2.7
+Architecture: source
+Version: 2.7.16-2+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ python2.7 (2.7.16-2+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-0450: quoted-overlap zipbomb DoS
+Checksums-Sha1:
+ 38e4e430171e2378c94266c416682879cd954c25 3362 python2.7_2.7.16-2+deb10u4.dsc
+ e824c633a59fa2ca1dc2123de855007e64f9de98 17431748 python2.7_2.7.16.orig.tar.gz
+ 7c628e8d9852ebb221d182507f955488c080d80e 331877 python2.7_2.7.16-2+deb10u4.diff.gz
+Checksums-Sha256:
+ 2368bdba0dd8c10066ebb5eb092a6191d381dc3ce1c65ee811b0aca7c928a9e0 3362 python2.7_2.7.16-2+deb10u4.dsc
+ 01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5 17431748 python2.7_2.7.16.orig.tar.gz
+ 9cb6366a7a6959e449f68876c1c9f7db7e70df380e59a79901cbb57ed5eda18e 331877 python2.7_2.7.16-2+deb10u4.diff.gz
+Files:
+ ba43c3cfc8692ccbbf1a1bbcd3a37d67 3362 python optional python2.7_2.7.16-2+deb10u4.dsc
+ f1a2ace631068444831d01485466ece0 17431748 python optional python2.7_2.7.16.orig.tar.gz
+ 9592a0343250a549323a6c1fe236176c 331877 python optional python2.7_2.7.16-2+deb10u4.diff.gz
+

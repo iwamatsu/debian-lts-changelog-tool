@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 26 Jan 2023 19:25:15 +0100
+Source: modsecurity-apache
+Architecture: source
+Version: 2.9.3-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Alberto Gonzalez Iniesta <agi@inittab.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1029329
+Changes:
+ modsecurity-apache (2.9.3-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team
+ .
+   [ Ervin Hegedus ]
+   * Added multipart_part_headers.patch
+ .
+   [ Tobias Frost ]
+   * Pull updated upstream version of multipart_part_headers.patch and
+     rename it to reflect the CVE it fixes (CVE-2022-48279) and update the
+     recommended configuration accordingly.
+   * Import upstream patch for CVE-2023-24021 (Closes: #1029329)
+Checksums-Sha1:
+ 9c94ccbeffaf77a0daa76dcee8ad2b2851f050d8 1968 modsecurity-apache_2.9.3-1+deb10u2.dsc
+ a8dd7c1841e47cf95329e564342127c87a685322 14844 modsecurity-apache_2.9.3-1+deb10u2.debian.tar.xz
+ b76cb0b10b63e35b26cb0ea176249778c2a9e07e 7653 modsecurity-apache_2.9.3-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 9d2b82a2a9648267ab84227fc408a28a0ba01cb95cab1e566e6fabe781be844a 1968 modsecurity-apache_2.9.3-1+deb10u2.dsc
+ af193482356929ad3a1989575f4733e9211c2ad1d450646918af36f057519155 14844 modsecurity-apache_2.9.3-1+deb10u2.debian.tar.xz
+ 4d95ae25e67313907b873b0eb07586563bd73b7e19b88b8b62f9ecdab8e72a28 7653 modsecurity-apache_2.9.3-1+deb10u2_amd64.buildinfo
+Files:
+ 00751a1d0592eca578decd14655aaa7a 1968 httpd optional modsecurity-apache_2.9.3-1+deb10u2.dsc
+ 87d4ad869c170312b07d2fc87de04f35 14844 httpd optional modsecurity-apache_2.9.3-1+deb10u2.debian.tar.xz
+ f0db32a7073419ca8a011273c72b6b3e 7653 httpd optional modsecurity-apache_2.9.3-1+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 10 Nov 2022 13:34:36 +0100
+Source: exiv2
+Architecture: source
+Version: 0.25-4+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Closes: 876893
+Changes:
+ exiv2 (0.25-4+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-3756: Potentital integer overflow in QuickTime component
+   * Fix CVE-2017-11683: Reachable assertion, DoS through crafted input
+     (Closes: #876893)
+   * Fix CVE-2020-19716: Buffer overflow, DoS
+Checksums-Sha1:
+ cb21b95679ab0f8c8641f5831ec75e3cdf2a11c1 1733 exiv2_0.25-4+deb10u3.dsc
+ adb8ffe63916e7c27bda9792e690d1330ec7273d 5434325 exiv2_0.25.orig.tar.gz
+ 15f7182344f0965d6e0e1e11436df6050c91ac5a 32452 exiv2_0.25-4+deb10u3.debian.tar.xz
+ cb264b015d0cd5c0bba3af4a4632bcd5ae24707b 9146 exiv2_0.25-4+deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 1a9395cb15b9b876a12df46abb78cbabb2b236ab6a847da16ec9dd29405dda57 1733 exiv2_0.25-4+deb10u3.dsc
+ c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4 5434325 exiv2_0.25.orig.tar.gz
+ 5e1a193f2ced7732a2a29c861bbfb8644a117f96d19217e84fcccd5050a37fc9 32452 exiv2_0.25-4+deb10u3.debian.tar.xz
+ 960fff194b8848f417ae5327673172f3d61b40bafe921c2511940835913cdb56 9146 exiv2_0.25-4+deb10u3_amd64.buildinfo
+Files:
+ 46ef1237170951cac932b1f44e86889b 1733 graphics optional exiv2_0.25-4+deb10u3.dsc
+ 258d4831b30f75a01e0234065c6c2806 5434325 graphics optional exiv2_0.25.orig.tar.gz
+ 17dd925a5a2fc011388150dd1629f96b 32452 graphics optional exiv2_0.25-4+deb10u3.debian.tar.xz
+ b40209c82ef54da9a87dd3a91259180a 9146 graphics optional exiv2_0.25-4+deb10u3_amd64.buildinfo
+

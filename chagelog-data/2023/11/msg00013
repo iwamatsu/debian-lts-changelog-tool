@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 20 Nov 2023 16:23:43 +0200
+Source: gimp
+Architecture: source
+Version: 2.10.8-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ gimp (2.10.8-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-30067: Out-of-memory with crafted XCF file.
+   * CVE-2023-44442: PSD file parsing buffer overflow.
+   * CVE-2023-44444: PSP file parsing buffer overflow.
+Checksums-Sha1:
+ 28820b3ce811116ac4060f9b75e761785af36508 3459 gimp_2.10.8-2+deb10u1.dsc
+ fb694b0cda834e7b7924e9ba09b764b5c46fe93c 31954568 gimp_2.10.8.orig.tar.bz2
+ e5ea7d9a42a0afd7c9a1751ff509e71a618820de 43916 gimp_2.10.8-2+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ a3b7b665bf9251c6622921d9b0b3aac8380eded18a56e19ab490f8d9af60caed 3459 gimp_2.10.8-2+deb10u1.dsc
+ d849c1cf35244938ae82e521b92b720ab48b8e9ed092d5de92c2464ef5244b9b 31954568 gimp_2.10.8.orig.tar.bz2
+ e3f27875802d07f5177f240f5c478eee871da3d5b0d1141169817ecdf71473b5 43916 gimp_2.10.8-2+deb10u1.debian.tar.xz
+Files:
+ 4fa110cd1c24ac8b7ec152067b828743 3459 graphics optional gimp_2.10.8-2+deb10u1.dsc
+ b020e441bc8c5a9bd3061d2126119821 31954568 graphics optional gimp_2.10.8.orig.tar.bz2
+ 42f28c3646f3d4b0f1e4b765e93b243f 43916 graphics optional gimp_2.10.8-2+deb10u1.debian.tar.xz
+

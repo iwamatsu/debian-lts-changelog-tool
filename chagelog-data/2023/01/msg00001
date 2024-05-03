@@ -1,0 +1,51 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 05 Jan 2023 16:59:24 +0000
+Source: libetpan
+Binary: libetpan-dev libetpan-doc libetpan20 libetpan20-dbgsym
+Architecture: source amd64 all
+Version: 1.9.3-2+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Ricardo Mones <mones@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ libetpan-dev - mail handling library - development files
+ libetpan-doc - mail handling library - API documentation
+ libetpan20 - mail handling library
+Closes: 1025120
+Changes:
+ libetpan (1.9.3-2+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-4121: Fix a potential null pointer dereference vulnerability in
+     mailimap_mailbox_data_status_free. (Closes: #1025120)
+Checksums-Sha1:
+ 5fb773e69ff5284b14f3c155e7f3aa3dbb41f9b5 2154 libetpan_1.9.3-2+deb10u2.dsc
+ 1f9ea3098a954ca2f8e6ffc9d2702d242bec3c82 1354830 libetpan_1.9.3.orig.tar.gz
+ 58a712c0b02ee22176bc727f168b6ed5346b2a8c 24204 libetpan_1.9.3-2+deb10u2.debian.tar.xz
+ d052c8bbbfb63763440d18acad366425adb97bb4 388536 libetpan-dev_1.9.3-2+deb10u2_amd64.deb
+ a23792dbb655d48d41eaecb3dd05adc6722c6846 98252 libetpan-doc_1.9.3-2+deb10u2_all.deb
+ 453833d6b46fa94c4264b34ba635816d56812eae 1348900 libetpan20-dbgsym_1.9.3-2+deb10u2_amd64.deb
+ 4684d71a1d582510f03578a2a08e485e335cfdc5 308340 libetpan20_1.9.3-2+deb10u2_amd64.deb
+ ffcfa948300e225e1514d5286ce4935235815cb8 8113 libetpan_1.9.3-2+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ c0cec192ac6c7065b586da8917a7c1a7f398c27253ce1bf542d06eb613b7e2dc 2154 libetpan_1.9.3-2+deb10u2.dsc
+ 2adf0b33937ff63027e3f418beb636576d2db3d4d9a995a9580bd85aa3965841 1354830 libetpan_1.9.3.orig.tar.gz
+ edfac302f7ee716334651f0fcd219ea834b4230c6f7b842120dce498e87e164a 24204 libetpan_1.9.3-2+deb10u2.debian.tar.xz
+ 05dc479705111efb6146f764c35d65491f72651a82370be3d645d5b413bb8499 388536 libetpan-dev_1.9.3-2+deb10u2_amd64.deb
+ 976a7abf651fe57c3977c2499877aefb9c3e737119e7c6e7d9f2900d570ef982 98252 libetpan-doc_1.9.3-2+deb10u2_all.deb
+ ad10d62a9e754b148198efdc57eac4946b9b7bd21480bb977570bb066a29509c 1348900 libetpan20-dbgsym_1.9.3-2+deb10u2_amd64.deb
+ af82af42c5522a6c8ac3bf54fcaf8b4d76855cd545185fcd97d51d7e5c9bb2e3 308340 libetpan20_1.9.3-2+deb10u2_amd64.deb
+ aaa7a9fcd1148e4ca86ee7a96b8066cd439989e2245c8078c394d73a40672ac5 8113 libetpan_1.9.3-2+deb10u2_amd64.buildinfo
+Files:
+ 8d310bb17b59ddbb6e9edbb8f95bfddc 2154 mail optional libetpan_1.9.3-2+deb10u2.dsc
+ eab480c647f666bf32f9ebd9ebdd1241 1354830 mail optional libetpan_1.9.3.orig.tar.gz
+ 09813ba3601a49946d71ac92ff24316b 24204 mail optional libetpan_1.9.3-2+deb10u2.debian.tar.xz
+ 7cfce046369767f513046eca451b98c9 388536 libdevel optional libetpan-dev_1.9.3-2+deb10u2_amd64.deb
+ c6e6701054630843edc0db6650532e40 98252 doc optional libetpan-doc_1.9.3-2+deb10u2_all.deb
+ 20c19dc1c6ca36e82aa7eab0e01474e6 1348900 debug optional libetpan20-dbgsym_1.9.3-2+deb10u2_amd64.deb
+ 43d18a5cdf0e4aa0c425c22b4380f30c 308340 libs optional libetpan20_1.9.3-2+deb10u2_amd64.deb
+ 69355277fd98fec9d8ed932613a594c4 8113 mail optional libetpan_1.9.3-2+deb10u2_amd64.buildinfo
+

@@ -1,0 +1,58 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 14 Apr 2022 16:31:41 +0100
+Source: python-django
+Binary: python-django python3-django python-django-common python-django-doc
+Built-For-Profiles: nocheck
+Architecture: source all
+Version: 1:1.10.7-2+deb9u16
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-django - High-level Python web development framework (Python 2 version)
+ python-django-common - High-level Python web development framework (common)
+ python-django-doc - High-level Python web development framework (documentation)
+ python3-django - High-level Python web development framework (Python 3 version)
+Closes: 1009677
+Changes:
+ python-django (1:1.10.7-2+deb9u16) stretch-security; urgency=high
+ .
+   * Upload from the LTS security team:
+ .
+     - CVE-2022-28346: Potential SQL injection in QuerySet.annotate(),
+       aggregate(), and extra().
+ .
+       QuerySet.annotate(), aggregate(), and extra() methods were subject to SQL
+       injection in column aliases, using a suitably crafted dictionary, with
+       dictionary expansion, as the **kwargs passed to these methods.
+ .
+     See <https://www.djangoproject.com/weblog/2022/apr/11/security-releases/>
+     for more information. (Closes: #1009677)
+Checksums-Sha1:
+ 1bd69a62a483ece0c7b2e1e21808a1503ae1c0dc 2824 python-django_1.10.7-2+deb9u16.dsc
+ e6a27d063a1af8ca20a038aea13d221ab0db199d 57452 python-django_1.10.7-2+deb9u16.debian.tar.xz
+ 62006d5e10bb67d06c27fff34661e4c086579167 1516988 python-django-common_1.10.7-2+deb9u16_all.deb
+ d44033f94595b952bfdf8bbb490acafe38bda49b 2538974 python-django-doc_1.10.7-2+deb9u16_all.deb
+ 63b06ac692c4aa0475e584bc1a643f72d4fa9113 907606 python-django_1.10.7-2+deb9u16_all.deb
+ cf62de8be33b6353e923f1e0396f219c856c0eb1 9570 python-django_1.10.7-2+deb9u16_amd64.buildinfo
+ 409d2704dc899816d30ddcf1c1cdb27afce016f8 889338 python3-django_1.10.7-2+deb9u16_all.deb
+Checksums-Sha256:
+ 9aecb9b2b47bafcfe0787ba2d4465e84b2848a6a946f52399e9f2aa62d75f16a 2824 python-django_1.10.7-2+deb9u16.dsc
+ 671c89fe8b84ffc2a8630b46dc8e9372530edff784993aa698e774161bc74ac4 57452 python-django_1.10.7-2+deb9u16.debian.tar.xz
+ 8383d99606a4361a9432add4f156721b533a944f0afd2e256046e5efc4cf0d35 1516988 python-django-common_1.10.7-2+deb9u16_all.deb
+ d4bc205e83d8f43cc10e1f81ae06b2d90127f72bcd2ee7a0cc82cbf28167a05e 2538974 python-django-doc_1.10.7-2+deb9u16_all.deb
+ 555ad2925379d6acc2706622a3580e36b67b2751f6f8c76accc37878d66cf60b 907606 python-django_1.10.7-2+deb9u16_all.deb
+ 9a307c919fd91afcb9b39fdb71f271d8dda8a584ddb4b56efe3e69b25b831bcb 9570 python-django_1.10.7-2+deb9u16_amd64.buildinfo
+ 700cb9b6b0d1982844ea9b1a48769b64b8c47bfe0c08c5e68a39c21cccd63a79 889338 python3-django_1.10.7-2+deb9u16_all.deb
+Files:
+ 2aa43a2a19d7f0d9d101512ed692c126 2824 python optional python-django_1.10.7-2+deb9u16.dsc
+ f68b2db0af504ef6e89e55c619c9aaf0 57452 python optional python-django_1.10.7-2+deb9u16.debian.tar.xz
+ 87fbdf1b4b2be5f5140ef76593fd403e 1516988 python optional python-django-common_1.10.7-2+deb9u16_all.deb
+ e478d6b86f56587131b0281c90e8d5d2 2538974 doc optional python-django-doc_1.10.7-2+deb9u16_all.deb
+ a6f8aa3f5de90b360872317ff24d3e56 907606 python optional python-django_1.10.7-2+deb9u16_all.deb
+ c885d064550155fbb93b29abe7298570 9570 python optional python-django_1.10.7-2+deb9u16_amd64.buildinfo
+ 867d25c393e22f3c090cf08827dd81bb 889338 python optional python3-django_1.10.7-2+deb9u16_all.deb
+

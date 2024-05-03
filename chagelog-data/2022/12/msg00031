@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 15 Dec 2022 10:39:10 +0100
+Source: php7.3
+Architecture: source
+Version: 7.3.31-1~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ php7.3 (7.3.31-1~deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-21707: invalid parsing of encoded null character.
+   * CVE-2022-31625: invalid free in posgresql extension.
+   * CVE-2022-31626: buffer overflow in mysqlnd driver.
+   * CVE-2022-31628: infinite loop in the phar uncompressor.
+   * CVE-2022-31629: secure cookie poisoning.
+   * CVE-2022-37454: buffer overflow in Keccak XKCP SHA-3.
+Checksums-Sha1:
+ e1e420b2e4f5a851d1bee6e29128f6440ffb7c0c 5867 php7.3_7.3.31-1~deb10u2.dsc
+ ab51270c59e0b7b71d832c783118808cd318ed11 12142912 php7.3_7.3.31.orig.tar.xz
+ 450b762bc87c50187ab7f5f7dd16bfbb8258b8b5 850 php7.3_7.3.31.orig.tar.xz.asc
+ ad5c2b9a512ea889587ba650f906b76b205b8257 74944 php7.3_7.3.31-1~deb10u2.debian.tar.xz
+ bfe31584ae7944ff9b85a72b07ec000f2fb0b074 6110 php7.3_7.3.31-1~deb10u2_source.buildinfo
+Checksums-Sha256:
+ 896fd78fc69008813587cb5582a7cfa805b31845963cc636f00f22c4b75e8876 5867 php7.3_7.3.31-1~deb10u2.dsc
+ d1aa8f44595d01ac061ff340354d95e146d6152f70e799b44d6b8654fb45cbcc 12142912 php7.3_7.3.31.orig.tar.xz
+ 320a207f7746a637ea68f3302ee81327ea7d8ff1bbaa525809590020f4253ff2 850 php7.3_7.3.31.orig.tar.xz.asc
+ da1964753d1e1b9b58d8b25ea911c785f03cd3da589fcf386081e5ece6333f96 74944 php7.3_7.3.31-1~deb10u2.debian.tar.xz
+ 3b4410d8ac069c1538fc0ca4fe1b70a16f10b14e7bd21f4b4b530adf412c4f1d 6110 php7.3_7.3.31-1~deb10u2_source.buildinfo
+Files:
+ 2eb73623947a48f978ca4bb5b76d02ea 5867 php optional php7.3_7.3.31-1~deb10u2.dsc
+ 16e5a72f33e44895d9f9e7f88a82be18 12142912 php optional php7.3_7.3.31.orig.tar.xz
+ 1f2e0333231cb499870c799dda2f26b6 850 php optional php7.3_7.3.31.orig.tar.xz.asc
+ a1cba38785069273cdaf4d5387bdab34 74944 php optional php7.3_7.3.31-1~deb10u2.debian.tar.xz
+ e74d17488d31423b851745e5f237bec4 6110 php optional php7.3_7.3.31-1~deb10u2_source.buildinfo
+

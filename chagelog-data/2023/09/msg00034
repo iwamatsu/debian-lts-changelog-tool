@@ -1,0 +1,26 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 14 Sep 2023 12:04:06 +0100
+Source: flac
+Architecture: source
+Version: 1.3.2-3+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ flac (1.3.2-3+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add CVE-2020-22219.patch.
+Checksums-Sha1:
+ 66f6dc1fc18b3b174b3d1a55d2cbdc99811db2e5 2264 flac_1.3.2-3+deb10u3.dsc
+ 9ecaec052c24f6654e398d40f4360e097b4810a7 20836 flac_1.3.2-3+deb10u3.debian.tar.xz
+Checksums-Sha256:
+ 325d1dddd8eb6b050390bedb1ef8d843a153d621fd57e672dbb501259701ad4d 2264 flac_1.3.2-3+deb10u3.dsc
+ 5d9765237931be997025f6f7e949a7256c460971acfd997ed913707dd9fd0609 20836 flac_1.3.2-3+deb10u3.debian.tar.xz
+Files:
+ c67250a12c9ddaca2779b017261759ac 2264 sound optional flac_1.3.2-3+deb10u3.dsc
+ 19699665f098f042f74d8343640c4e69 20836 sound optional flac_1.3.2-3+deb10u3.debian.tar.xz
+

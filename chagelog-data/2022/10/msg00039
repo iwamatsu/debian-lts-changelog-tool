@@ -1,0 +1,79 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 27 Oct 2022 11:16:22 -0700
+Source: python-django
+Binary: python-django python-django-common python-django-doc python3-django
+Built-For-Profiles: nocheck
+Architecture: source all
+Version: 1:1.11.29-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ python-django - High-level Python web development framework (Python 2 version)
+ python-django-common - High-level Python web development framework (common)
+ python-django-doc - High-level Python web development framework (documentation)
+ python3-django - High-level Python web development framework (Python 3 version)
+Closes: 969367 981562 983090 1014541
+Changes:
+ python-django (1:1.11.29-1+deb10u2) buster-security; urgency=high
+ .
+   * CVE-2020-24583: Fix incorrect permissions on intermediate-level directories
+     on Python 3.7+. FILE_UPLOAD_DIRECTORY_PERMISSIONS mode was not applied to
+     intermediate-level directories created in the process of uploading files
+     and to intermediate-level collected static directories when using the
+     collectstatic management command. You should review and manually fix
+     permissions on existing intermediate-level directories. (Closes: #969367)
+ .
+   * CVE-2020-24584: Correct permission escalation vulnerability in
+     intermediate-level directories of the file system cache. On Python 3.7 and
+     above, the intermediate-level directories of the file system cache had the
+     system's standard umask rather than 0o077 (no group or others permissions).
+     (Closes: #969367)
+ .
+   * CVE-2021-3281: Fix a potential directory-traversal exploit via
+     archive.extract(). The django.utils.archive.extract() function, used by
+     startapp --template and startproject --template, allowed directory
+     traversal via an archive with absolute paths or relative paths with dot
+     segments. (Closes: #981562)
+ .
+   * CVE-2021-23336: Prevent a web cache poisoning attack via "parameter
+     cloaking". Django contains a copy of urllib.parse.parse_qsl() which was
+     added to backport some security fixes. A further security fix has been
+     issued recently such that parse_qsl() no longer allows using ";" as a query
+     parameter separator by default. (Closes: #983090)
+ .
+   * CVE-2022-34265: The Trunc() and Extract() database functions were subject
+     to a potential SQL injection attach if untrusted data was used as a value
+     for the "kind" or "lookup_name" parameters. Applications that constrain the
+     choice to a known safe list were unaffected. (Closes: #1014541)
+Checksums-Sha1:
+ 30615e8b8fb1d8009d7838e04904796d0338ae07 3294 python-django_1.11.29-1+deb10u2.dsc
+ e71620c18c985d8f5381bd87c02dbd23f1f48dd0 7977916 python-django_1.11.29.orig.tar.gz
+ d37c5ab84d21f06f670746f9b1fce3e5105c4b5e 35592 python-django_1.11.29-1+deb10u2.debian.tar.xz
+ aa02641eea98385772b87957349b2ae1c7cf51e7 1539012 python-django-common_1.11.29-1+deb10u2_all.deb
+ 4d0ee8650b98b34ab2383d7ad856b1e520ee795e 2647144 python-django-doc_1.11.29-1+deb10u2_all.deb
+ 121542bd1bbca84dce87d2989257e7d4fc74491f 918968 python-django_1.11.29-1+deb10u2_all.deb
+ 3bf54f758e4e951c24ee64761032ab072435886a 8850 python-django_1.11.29-1+deb10u2_amd64.buildinfo
+ 9b4d4e76aca3811ff910e03abf04b03716bad523 918904 python3-django_1.11.29-1+deb10u2_all.deb
+Checksums-Sha256:
+ cd69ce40e3ef88292eb6c3cf18843e82fe573cc1423f6a595a7d9cd25b545655 3294 python-django_1.11.29-1+deb10u2.dsc
+ 4200aefb6678019a0acf0005cd14cfce3a5e6b9b90d06145fcdd2e474ad4329c 7977916 python-django_1.11.29.orig.tar.gz
+ 2dcff672f2dcdd4e20c002b99de76656bc9b7d9253d7e28003abddc1fd67b3e4 35592 python-django_1.11.29-1+deb10u2.debian.tar.xz
+ eea6b768bc1b57205334eed2b23921b66cd793840e45c1ad1b3c68c3f234f263 1539012 python-django-common_1.11.29-1+deb10u2_all.deb
+ bc7036e206e8e48ed57be8034ea75a01688d2ebce5b055706769a6fece0a389b 2647144 python-django-doc_1.11.29-1+deb10u2_all.deb
+ f8ca79e96419b2f69b12a0755d4d08801895d74a42ab0614d1c38af8f5026a22 918968 python-django_1.11.29-1+deb10u2_all.deb
+ d0425c17ee92d6d17d0db4bcc4c0768db6b6676c1b960a8fe21d8ecdafb96d9f 8850 python-django_1.11.29-1+deb10u2_amd64.buildinfo
+ 0e0220c2202a4650884a6a3e1ea407df6e73338ea3691cc0018b0b992b438d7f 918904 python3-django_1.11.29-1+deb10u2_all.deb
+Files:
+ 99be0e0315060954ea20b30409dde9f9 3294 python optional python-django_1.11.29-1+deb10u2.dsc
+ e725953dfc63ea9e3b5b0898a8027bd7 7977916 python optional python-django_1.11.29.orig.tar.gz
+ d8387458970f24dbb3ae008fb55553a2 35592 python optional python-django_1.11.29-1+deb10u2.debian.tar.xz
+ 41cebd4e9ecc186e8eee86a0e2a286d0 1539012 python optional python-django-common_1.11.29-1+deb10u2_all.deb
+ 4272b557b38487f35d99880af2c548bf 2647144 doc optional python-django-doc_1.11.29-1+deb10u2_all.deb
+ 99cceb245b71d4d8cf01f896c9a1f3e1 918968 python optional python-django_1.11.29-1+deb10u2_all.deb
+ 849d90f46b395746e0143ad8f92fabe0 8850 python optional python-django_1.11.29-1+deb10u2_amd64.buildinfo
+ 83d82e44272d7c8ad9a83ba5a655e534 918904 python optional python3-django_1.11.29-1+deb10u2_all.deb
+

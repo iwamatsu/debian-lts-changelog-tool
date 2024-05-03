@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 12 Sep 2023 06:11:09 +0200
+Source: orthanc
+Architecture: source
+Version: 1.5.6+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Closes: 1040597
+Changes:
+ orthanc (1.5.6+dfsg-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2023-33466.patch: Implementation of File System Write Protection
+     This patch introduces a critical security enhancement by backporting
+     the RestApiWriteToFileSystemEnabled option to Orthanc in Debian Buster.
+     With this update, Orthanc is now safeguarded against potential arbitrary
+     file system writes by authenticated users, as indicated by CVE-2023-33466.
+     .
+     The previous behavior, which posed a security risk, can still be reinstated
+     by configuring the RestApiWriteToFileSystemEnabled variable to "true"
+     within the /etc/orthanc/orthanc.json file. (Closes: #1040597)
+Checksums-Sha1:
+ 681d75bb917af032a84b2db878b9bcb8f5266d16 2408 orthanc_1.5.6+dfsg-1+deb10u1.dsc
+ 203da85868cea3ec5e6f0878546921f9bb79c048 761152 orthanc_1.5.6+dfsg.orig.tar.xz
+ 3c8e80cf582fc275c066c69e5b7da2d0f25ce9f6 1798592 orthanc_1.5.6+dfsg-1+deb10u1.debian.tar.xz
+ d5eda372a499b380bf7198c3ac558ef7688dd9f4 7751 orthanc_1.5.6+dfsg-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ b763f95d500a7995b749ab081e375acd68deacf2d6df5b93b0b1a6f011dfe345 2408 orthanc_1.5.6+dfsg-1+deb10u1.dsc
+ a9eca22af6623b763ff9434132b80d44ee0fc0ae2baa8f59ce16bf1164441561 761152 orthanc_1.5.6+dfsg.orig.tar.xz
+ 829f6c01bfbc8b795ee815044e966bc09eb9a542ccf833aed63b57dba755f83f 1798592 orthanc_1.5.6+dfsg-1+deb10u1.debian.tar.xz
+ 5263f52d37fe28d2228306174b7fffa1e9106496dd1f41f729781bd4bba2e617 7751 orthanc_1.5.6+dfsg-1+deb10u1_source.buildinfo
+Files:
+ cd604d901d916793995f93d34e673323 2408 science optional orthanc_1.5.6+dfsg-1+deb10u1.dsc
+ f521d24c1c80a2ca980be3b9f227a8e4 761152 science optional orthanc_1.5.6+dfsg.orig.tar.xz
+ 4a1fe0f67ea6112395508c21b598b03b 1798592 science optional orthanc_1.5.6+dfsg-1+deb10u1.debian.tar.xz
+ f62783b2fe42a8fe04ea094637cd751f 7751 science optional orthanc_1.5.6+dfsg-1+deb10u1_source.buildinfo
+

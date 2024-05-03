@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 01 Feb 2024 13:35:20 +0000
+Source: man-db
+Architecture: source
+Version: 2.8.5-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Colin Watson <cjwatson@debian.org>
+Changed-By: Colin Watson <cjwatson@debian.org>
+Closes: 926450 948238 1061870
+Changes:
+ man-db (2.8.5-2+deb10u1) buster-security; urgency=medium
+ .
+   * AppArmor: Allow man_filter to write to cat pages (closes: #926450,
+     #948238).
+   * sandbox: Allow getrandom (closes: #1061870).
+Checksums-Sha1:
+ 7c81cff0647544e449c49f8149e6b80ba7158c23 2335 man-db_2.8.5-2+deb10u1.dsc
+ 0a0b509457e4594101245cba53c6d412d02ae471 1787244 man-db_2.8.5.orig.tar.xz
+ 86a304f714b57830df2c6ebdba8e69f1197de8d4 833 man-db_2.8.5.orig.tar.xz.asc
+ 4f91adba787396ccece1eabc6389b4ae81aa535c 261156 man-db_2.8.5-2+deb10u1.debian.tar.xz
+ cc672232368c21873f6c8720eb4caca1c13fd1f5 7899 man-db_2.8.5-2+deb10u1_source.buildinfo
+Checksums-Sha256:
+ ef8a693fc2bf3f5e3427e1d224c25171dc69d3d9526544f978ea8f37bcbfd2a3 2335 man-db_2.8.5-2+deb10u1.dsc
+ b64d52747534f1fe873b2876eb7f01319985309d5d7da319d2bc52ba1e73f6c1 1787244 man-db_2.8.5.orig.tar.xz
+ cf7f90cfd405a4f84fb3342227bf1f1702704142ca45b9e8b466c60e1260c474 833 man-db_2.8.5.orig.tar.xz.asc
+ b0bbabd316a64ef0ee9fbdd836dad54b1e81707a0beb8801b8b60ca667231c4b 261156 man-db_2.8.5-2+deb10u1.debian.tar.xz
+ 4b882ed147d979ddd2272d0be2c5a2e044cb4a0595b2a27c9aaaf50cfd831d21 7899 man-db_2.8.5-2+deb10u1_source.buildinfo
+Files:
+ 29c247dda4b3a22eec16d349f83bd75f 2335 doc important man-db_2.8.5-2+deb10u1.dsc
+ c5c6c3434be14a5527d43b5ad0f09a13 1787244 doc important man-db_2.8.5.orig.tar.xz
+ 689be83f7d786e8e3fc50ed0ca8d4eb3 833 doc important man-db_2.8.5.orig.tar.xz.asc
+ 7ca8fbff8bf8c68d71611859a2e2a45d 261156 doc important man-db_2.8.5-2+deb10u1.debian.tar.xz
+ 49d342fabbda0bc209d05bcbfc1feac8 7899 doc important man-db_2.8.5-2+deb10u1_source.buildinfo
+

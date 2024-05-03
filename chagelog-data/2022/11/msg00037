@@ -1,0 +1,51 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 28 Nov 2022 11:08:30 +0000
+Source: gerbv
+Binary: gerbv gerbv-dbgsym
+Architecture: source amd64
+Version: 2.7.0-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Electronics Team <pkg-electronics-devel@alioth-lists.debian.net>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ gerbv      - Gerber file viewer (only RS 274 X format)
+Changes:
+ gerbv (2.7.0-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team:
+ .
+     - CVE-2021-40401: A use-after-free vulnerability existed in the RS-274X
+       aperture definition tokenization functionality. A specially-crafted
+       gerber file could have lead to code execution.
+ .
+     - CVE-2021-40403: An information disclosure vulnerability existed in the
+       pick-and-place rotation parsing functionality. A specially-crafted
+       pick-and-place file can exploit the missing initialization of a structure
+       in order to leak memory contents.
+ .
+   * Add debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ 0a1459dd9965af1a5e65824bea501bbb563508fb 2045 gerbv_2.7.0-1+deb10u2.dsc
+ 1e39330f247bf2f6f1f790dfce12d7c59175e531 5269869 gerbv_2.7.0.orig.tar.gz
+ 004ab40a912739fd012c1f3e5da6dc4f09727f4e 20876 gerbv_2.7.0-1+deb10u2.debian.tar.xz
+ 228f2030a8811473ecb0ba74e56c42176c7b1ab8 424132 gerbv-dbgsym_2.7.0-1+deb10u2_amd64.deb
+ c858e9ac8bad1af6a938a7a024d957507125aa51 11215 gerbv_2.7.0-1+deb10u2_amd64.buildinfo
+ 662de5da1ea69792c8ea49a32a5e94b8a210ebd3 1747856 gerbv_2.7.0-1+deb10u2_amd64.deb
+Checksums-Sha256:
+ 6e6c1ef7549d4db4ba2bece4e5dd99de1319b2b952b81703e2b99dfd97d07444 2045 gerbv_2.7.0-1+deb10u2.dsc
+ 5f33d48cce45004986a99c8b05d1f85f533a9775353228c02844beb764cde3bb 5269869 gerbv_2.7.0.orig.tar.gz
+ 248c5bc71e82e6ec0235ea2b278641ca520417657fc4e33315c3f6cc457f818e 20876 gerbv_2.7.0-1+deb10u2.debian.tar.xz
+ 7cd6c21ff7fd1fd6db842a4bf3c67efd5b9367b861f67b51036b065c82921249 424132 gerbv-dbgsym_2.7.0-1+deb10u2_amd64.deb
+ ced7ddc0bbd589d24f2e84466d262c9eee54cc038f58a93ed951d8ce2b6968a9 11215 gerbv_2.7.0-1+deb10u2_amd64.buildinfo
+ f4a7493283042150b661506500fee9c3eacf3f67f25a03191b913ef415acf407 1747856 gerbv_2.7.0-1+deb10u2_amd64.deb
+Files:
+ 3d282bf0574abc31dfa9f733e7876bb3 2045 electronics optional gerbv_2.7.0-1+deb10u2.dsc
+ 1409c7fd027dea3f56e2a7a6bee599bf 5269869 electronics optional gerbv_2.7.0.orig.tar.gz
+ 90e69af91d1a503784fb5da93a969260 20876 electronics optional gerbv_2.7.0-1+deb10u2.debian.tar.xz
+ 21d64c56143052fa8f140bf07cf5c8b9 424132 debug optional gerbv-dbgsym_2.7.0-1+deb10u2_amd64.deb
+ 627e7f085ddb6beac3c7e5fd3b0859b3 11215 electronics optional gerbv_2.7.0-1+deb10u2_amd64.buildinfo
+ 4a108e0e3a7aeb400dd7bec9ea147bf3 1747856 electronics optional gerbv_2.7.0-1+deb10u2_amd64.deb
+

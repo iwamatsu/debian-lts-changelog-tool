@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 07 Dec 2023 09:25:52 +0100
+Source: tzdata
+Architecture: source
+Version: 2021a-0+deb10u12
+Distribution: buster-security
+Urgency: medium
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1036104 1057185 1057186
+Changes:
+ tzdata (2021a-0+deb10u12) buster-security; urgency=medium
+ .
+   * Cherry-pick patches from upstream (thanks Aurelien Jarno)
+     - 25-no-leap-second-on-2023-12-31.patch: Update leap-seconds.list from
+       upstream. The new expiration date is 28 June 2024.  Closes: #1057185,
+       #1057186.
+     - 26-egypt-dst-fix.patch: Fix a typo in the Egypt change introduced in
+       tzdata 2021a-0+deb10u10.  Closes: #1036104.
+Checksums-Sha1:
+ b26e96e5a8c0c7db8d69f76302cf4f2799651599 2071 tzdata_2021a-0+deb10u12.dsc
+ 85992aeab85dd57f7afff6e833ffb56e74826f03 125736 tzdata_2021a-0+deb10u12.debian.tar.xz
+ df87bebdb09b556c3c69794148064c21861ba09f 5901 tzdata_2021a-0+deb10u12_source.buildinfo
+Checksums-Sha256:
+ 96ba5768928acf5539b110a6042ae81c6796f32ac97f3fb58127af3a97288a14 2071 tzdata_2021a-0+deb10u12.dsc
+ 56d68937d3a1a2172d61674bd0a696ea6a2a2c8a134ac2fba0b1b94c7a9ed541 125736 tzdata_2021a-0+deb10u12.debian.tar.xz
+ 22d164b33603c55047c4ee3cfabda3e762025bdb4b5b574aca4db12cac91aa29 5901 tzdata_2021a-0+deb10u12_source.buildinfo
+Files:
+ a1126b2bfa5ddd0427da9187d7194e78 2071 localization required tzdata_2021a-0+deb10u12.dsc
+ 5492608ed2575e60f4d20f87a02e61ea 125736 localization required tzdata_2021a-0+deb10u12.debian.tar.xz
+ 4201f8dbfa0c6d30849bd1c1005a4886 5901 localization required tzdata_2021a-0+deb10u12_source.buildinfo
+

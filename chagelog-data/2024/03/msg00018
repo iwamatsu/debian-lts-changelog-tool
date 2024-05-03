@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 18 Mar 2024 14:39:21 +0200
+Source: postgresql-11
+Architecture: source
+Version: 11.22-0+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ postgresql-11 (11.22-0+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-0985: REFRESH MATERIALIZED VIEW CONCURRENTLY privilege escalation
+Checksums-Sha1:
+ c070b9134a8cd022be5bc108308084fff81ebcb7 3745 postgresql-11_11.22-0+deb10u2.dsc
+ 7dde93beb9d4663f2a062cf4eb1b05f452e00528 20482994 postgresql-11_11.22.orig.tar.bz2
+ 409e8edf9eb54308d5a46a9fc1acaaf277ea456f 31264 postgresql-11_11.22-0+deb10u2.debian.tar.xz
+Checksums-Sha256:
+ 69cdceb7d5dff9b822b5c84c08454e93b1528c5086c250eaa6a5c28a6e34cee5 3745 postgresql-11_11.22-0+deb10u2.dsc
+ 2cb7c97d7a0d7278851bbc9c61f467b69c094c72b81740b751108e7892ebe1f0 20482994 postgresql-11_11.22.orig.tar.bz2
+ addff5d61239c7f376b0378cc5ba99d164f5e08c30a71958bcab9711f6f804e5 31264 postgresql-11_11.22-0+deb10u2.debian.tar.xz
+Files:
+ 93003c7fe92fe42fe4ac06b11c5db172 3745 database optional postgresql-11_11.22-0+deb10u2.dsc
+ 6e7d050f23e35ec20d76297a6d4ce30d 20482994 database optional postgresql-11_11.22.orig.tar.bz2
+ 55e2fb4afaedc8bc86c419774ddd4d94 31264 database optional postgresql-11_11.22-0+deb10u2.debian.tar.xz
+

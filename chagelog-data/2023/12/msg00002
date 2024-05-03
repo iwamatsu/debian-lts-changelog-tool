@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 03 Dec 2023 16:31:37 +0100
+Source: ncurses
+Architecture: source
+Version: 6.1+20181013-2+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1034372
+Changes:
+ ncurses (6.1+20181013-2+deb10u5) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2021-39537: Heap-based buffer overflow in _nc_captoinfo().
+   * Mitigate CVE-2023-29491: Configure with `--disable-root-environ` (changed
+     to match the behavior of the `--disable-setuid-environ` flag introduced in
+     the 20230423 patchlevel) in order to disallow loading of custom terminfo
+     entries in setuid/setgid programs. (Closes: #1034372)
+   * d/libtinfo5.symbols, d/libtinfo6.symbols: Add new exported symbol
+     _nc_env_access (exposed by the new configure flag).
+Checksums-Sha1:
+ c97d5de1c961184c1b1365cbe20526693110168a 3914 ncurses_6.1+20181013-2+deb10u5.dsc
+ 92cb3564db935932f4e80cbd9f800921f0ef1709 64164 ncurses_6.1+20181013-2+deb10u5.debian.tar.xz
+ ed715d5d03850806fe63ecf0d9b89164450ad527 16159 ncurses_6.1+20181013-2+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 69ec0fb487636ca83f5f85501188f5df982efd5396390a7e78746012b14d9bdf 3914 ncurses_6.1+20181013-2+deb10u5.dsc
+ 8fdb752c13ffc01fe09803a2b862783d769b320992816dbf79f863194eb1f80f 64164 ncurses_6.1+20181013-2+deb10u5.debian.tar.xz
+ 30310637946395cc88fd24a48fe2a50a0eb6790b3cd218572b279e24215f5782 16159 ncurses_6.1+20181013-2+deb10u5_amd64.buildinfo
+Files:
+ b6659f22156f08ff81d5d0ac88ccc908 3914 libs required ncurses_6.1+20181013-2+deb10u5.dsc
+ d28a5089d6db379bf6f3688d76089a8f 64164 libs required ncurses_6.1+20181013-2+deb10u5.debian.tar.xz
+ 402b9ee1eb34cdd7f1127d2974df8421 16159 libs required ncurses_6.1+20181013-2+deb10u5_amd64.buildinfo
+

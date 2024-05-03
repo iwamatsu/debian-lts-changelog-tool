@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 18 May 2022 22:46:54 +0200
+Source: openldap
+Binary: slapd slapd-smbk5pwd ldap-utils libldap-2.4-2 libldap-common libldap-2.4-2-dbg libldap2-dev slapd-dbg
+Architecture: source
+Version: 2.4.44+dfsg-5+deb9u9
+Distribution: stretch-security
+Urgency: high
+Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Changed-By: Dominik George <natureshadow@debian.org>
+Description:
+ ldap-utils - OpenLDAP utilities
+ libldap-2.4-2 - OpenLDAP libraries
+ libldap-2.4-2-dbg - Debugging information for OpenLDAP libraries
+ libldap-common - OpenLDAP common files for libraries
+ libldap2-dev - OpenLDAP development libraries
+ slapd      - OpenLDAP server (slapd)
+ slapd-dbg  - Debugging information for the OpenLDAP server (slapd)
+ slapd-smbk5pwd - Keeps Samba and Kerberos passwords in sync within slapd.
+Changes:
+ openldap (2.4.44+dfsg-5+deb9u9) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix back-sql injection in filter values. (ITS#9815) (CVE-2022-29155)
+Checksums-Sha1:
+ d53bcaef2a09f493b5467118c9bacdd358a73168 2452 openldap_2.4.44+dfsg-5+deb9u9.dsc
+ dcecd9d299fc8564cfaeb15e2ba35c79ff0aec66 175392 openldap_2.4.44+dfsg-5+deb9u9.debian.tar.xz
+ 3901a07cbd622ccd74ca0bb7717aea82183095e4 10506 openldap_2.4.44+dfsg-5+deb9u9_amd64.buildinfo
+Checksums-Sha256:
+ 0942f85c96a9c4d7fe66776ab007353af00e73e5d9fad70c74c073ab008fcaf1 2452 openldap_2.4.44+dfsg-5+deb9u9.dsc
+ 58b91f6f73be4eeea080f6c70898400a253a9a7bd0d7dee0ae930068401d0b13 175392 openldap_2.4.44+dfsg-5+deb9u9.debian.tar.xz
+ ce757f92c43bc6eaa5ecb77dc7f7e9f1fcb4e627de6fa419f65d5e650740404f 10506 openldap_2.4.44+dfsg-5+deb9u9_amd64.buildinfo
+Files:
+ c3c9ae59e8391a5ac4d3f5ab46163eb1 2452 net optional openldap_2.4.44+dfsg-5+deb9u9.dsc
+ a63a2ed0b65e303af84d0122bf905127 175392 net optional openldap_2.4.44+dfsg-5+deb9u9.debian.tar.xz
+ 2f43eb1a4607d35c2f165060df479143 10506 net optional openldap_2.4.44+dfsg-5+deb9u9_amd64.buildinfo
+

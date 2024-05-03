@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 26 Oct 2022 18:38:19 CEST
+Source: wordpress
+Architecture: source
+Version: 5.0.18+dfsg1-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Craig Small <csmall@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ fe8a718eeac2af5d5ba12a6ff1e6df2be4a1f757 2632 wordpress_5.0.18+dfsg1-0+deb10u1.dsc
+ 2553087438bab7b2337207e39e2960d4ec65a8bd 7894692 wordpress_5.0.18+dfsg1.orig.tar.xz
+ 37d9faecc2f8df9c1e22540d1df8202278309d32 6819872 wordpress_5.0.18+dfsg1-0+deb10u1.debian.tar.xz
+ bb16aa8ef31cc7082831cebee39baf2e5413dfb6 7685 wordpress_5.0.18+dfsg1-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ afc4ea99d0d9b6b56aa855fb88bbe458bd235b46806db51593f1130c6af4f982 2632 wordpress_5.0.18+dfsg1-0+deb10u1.dsc
+ d5a70ebc42bf952314d184cb9d54ee625c2a0087ddc2128999e81f78e68234c1 7894692 wordpress_5.0.18+dfsg1.orig.tar.xz
+ 67eb4bd026279d345674002f733c5f6be82d4da9d6d30f335256773f21bfb161 6819872 wordpress_5.0.18+dfsg1-0+deb10u1.debian.tar.xz
+ dd4e773775ad1ae2ee28f8474745e8a55f9b54c2802a6e84be5f66ca317ea43a 7685 wordpress_5.0.18+dfsg1-0+deb10u1_amd64.buildinfo
+Changes:
+ wordpress (5.0.18+dfsg1-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Security release:
+     Several security vulnerabilities have been discovered in Wordpress, a
+     popular content management framework. Possible SQL injection and cross-site
+     scripting (XSS) flaws may allow a remote attacker to execute arbitrary code
+     or facilitate the injection of client-side scripts.
+Files:
+ cb777c488f6870212a420c30870ed459 2632 web optional wordpress_5.0.18+dfsg1-0+deb10u1.dsc
+ 1178ae60416bf8fbb7e0be9c6e94430c 7894692 web optional wordpress_5.0.18+dfsg1.orig.tar.xz
+ 3e7d4bcdebcab90a1f40fe0f88baafad 6819872 web optional wordpress_5.0.18+dfsg1-0+deb10u1.debian.tar.xz
+ ff859a6fb40aac95e4058537881ae8cc 7685 web optional wordpress_5.0.18+dfsg1-0+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 10 Aug 2022 14:59:38 +0200
+Source: gnutls28
+Architecture: source
+Version: 3.6.7-4+deb10u9
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ gnutls28 (3.6.7-4+deb10u9) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-2509: double free in gnutls_pkcs7_verify.
+   * CVE-2021-4209: null pointer dereference in wrap_nettle_hash_fast.
+Checksums-Sha1:
+ 40585c4e26d56365ca47beb64fe4f421d4d9c8f2 3357 gnutls28_3.6.7-4+deb10u9.dsc
+ 71f73b9829e44c947bb668b25b8b2e594a065345 8153728 gnutls28_3.6.7.orig.tar.xz
+ 5911d8f00c70e65d27f8d5244c37ae3b04b6cae7 534 gnutls28_3.6.7.orig.tar.xz.asc
+ c6509ba8f94ce562deea565f9cf45a87d69aa3e2 101608 gnutls28_3.6.7-4+deb10u9.debian.tar.xz
+ 0a5a45d5dc9ea111d61aa476f992afff320470c5 11373 gnutls28_3.6.7-4+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ bc4954d8b78c14bf78547265d89e573b17435d22395573d619fa544f19917fee 3357 gnutls28_3.6.7-4+deb10u9.dsc
+ 5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2 8153728 gnutls28_3.6.7.orig.tar.xz
+ a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0 534 gnutls28_3.6.7.orig.tar.xz.asc
+ 671898a1a3def18fd4d6b06944a53b8d77f4ec3bd620e3c8538070351f2308cd 101608 gnutls28_3.6.7-4+deb10u9.debian.tar.xz
+ 4a930af8f2ab14d5d210ac672c3de32329e792159fa8c9d870beb491839d467d 11373 gnutls28_3.6.7-4+deb10u9_amd64.buildinfo
+Files:
+ 5a8b02a0dd53f3be97db5c2d4eb4fb2e 3357 libs optional gnutls28_3.6.7-4+deb10u9.dsc
+ c4ac669c500df939d4fbfea722367929 8153728 libs optional gnutls28_3.6.7.orig.tar.xz
+ 13b4d4d680c451c29129191ae9250529 534 libs optional gnutls28_3.6.7.orig.tar.xz.asc
+ fd3281f9b1412583606390d732466d76 101608 libs optional gnutls28_3.6.7-4+deb10u9.debian.tar.xz
+ b94d33baa342691ead23509e90b5c002 11373 libs optional gnutls28_3.6.7-4+deb10u9_amd64.buildinfo
+

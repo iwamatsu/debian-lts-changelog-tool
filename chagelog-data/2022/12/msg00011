@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 05 Dec 2022 21:30:34 +0100
+Source: cgal
+Architecture: source
+Version: 4.13-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Joachim Reichel <reichel@debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 985671
+Changes:
+ cgal (4.13-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix Nef file parsing vulnerabilities: (Closes: #985671)
+     CVE-2020-28601 CVE-2020-28602 CVE-2020-28603 CVE-2020-28604
+     CVE-2020-28605 CVE-2020-28606 CVE-2020-28607 CVE-2020-28608
+     CVE-2020-28609 CVE-2020-28610 CVE-2020-28611 CVE-2020-28612
+     CVE-2020-28613 CVE-2020-28614 CVE-2020-28615 CVE-2020-28616
+     CVE-2020-28617 CVE-2020-28618 CVE-2020-28619 CVE-2020-28620
+     CVE-2020-28621 CVE-2020-28622 CVE-2020-28623 CVE-2020-28624
+     CVE-2020-28625 CVE-2020-28626 CVE-2020-28627 CVE-2020-28628
+     CVE-2020-28629 CVE-2020-28630 CVE-2020-28631 CVE-2020-28632
+     CVE-2020-28633 CVE-2020-28634 CVE-2020-28635 CVE-2020-28636
+     CVE-2020-35628 CVE-2020-35629 CVE-2020-35630 CVE-2020-35631
+     CVE-2020-35632 CVE-2020-35633 CVE-2020-35634 CVE-2020-35635
+     CVE-2020-35636
+Checksums-Sha1:
+ 663a04533d78070b503ded288d55fe69b61d23a7 2320 cgal_4.13-1+deb10u1.dsc
+ b9defdf21b55995e10ff9fd715d6b731260e6ef4 15367120 cgal_4.13.orig.tar.xz
+ 9880250a34bc5565cc381b9ff9723c67e3625315 19768 cgal_4.13-1+deb10u1.debian.tar.xz
+ ae4168647b2f9f6e034505656b2d22919c962196 15993 cgal_4.13-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 99ab58c9abf6d1475edca156462f5dc484ca0d0eba524beccc84602fa2d5c693 2320 cgal_4.13-1+deb10u1.dsc
+ 3e3dd7a64febda58be54c3cbeba329ab6a73b72d4d7647ba4931ecd1fad0e3bc 15367120 cgal_4.13.orig.tar.xz
+ 345eb5c9bd15500c4d5a26174187b4a808622d4ef5bd0c9bb4a42f8458af3ae5 19768 cgal_4.13-1+deb10u1.debian.tar.xz
+ 93b0984cbacf02ab06658f96623997558a049ccbb812e8fc1ee85d69d6bb7186 15993 cgal_4.13-1+deb10u1_amd64.buildinfo
+Files:
+ 5dbec85f1b3aa327a5102dac18b81c86 2320 libs optional cgal_4.13-1+deb10u1.dsc
+ 63a248572cdba7cedd1595ac5a81f865 15367120 libs optional cgal_4.13.orig.tar.xz
+ 1a6d5759a0da9271e5cb5bce052d3acc 19768 libs optional cgal_4.13-1+deb10u1.debian.tar.xz
+ 8ee67229cb480f4e4c1a4e7eab45b694 15993 libs optional cgal_4.13-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 06 Mar 2023 14:31:07 +0100
+Source: kopanocore
+Architecture: source
+Version: 8.7.0-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Giraffe Maintainers <pkg-giraffe-maintainers@alioth-lists.debian.net>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Closes: 1016973
+Changes:
+ kopanocore (8.7.0-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2019-19907: out of bounds read.
+   * CVE-2022-26562: authentication bypass. Patch from Andreas Rönnquist
+     (closes: #1016973).
+Checksums-Sha1:
+ 40cbe6b65e70b610c98a050a5c0aa4960bebaa3f 3862 kopanocore_8.7.0-3+deb10u1.dsc
+ 4da41e49b5ca5d5ca9ce99c16f8da99fe2d5dfdf 1819108 kopanocore_8.7.0.orig.tar.xz
+ dfd87fa2538b90aeaf6bc63022dfd3f93de7f44d 46464 kopanocore_8.7.0-3+deb10u1.debian.tar.xz
+ 0cc9941bb426404c1959c56d67219dd1f7aa1f93 6913 kopanocore_8.7.0-3+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 1593075b68db487f2b977c46f1dbf985834bf409bad691f2cc4ee99e825ae13d 3862 kopanocore_8.7.0-3+deb10u1.dsc
+ 3b5b0543efdf19a6bdee966af63ed8a981fa34a4b070664b1f328eb291b058fc 1819108 kopanocore_8.7.0.orig.tar.xz
+ 702808fd2aef3dc2a1c5c1f2fcec205780796e4f4b720e12f2e5aaea3d42ff7e 46464 kopanocore_8.7.0-3+deb10u1.debian.tar.xz
+ e0beee226695e6e81ed03b90b44552741eec35ac852d782e14d783686b9c58bd 6913 kopanocore_8.7.0-3+deb10u1_source.buildinfo
+Files:
+ 2d129bcd9f1b28f0af7b50ab042b44ba 3862 mail optional kopanocore_8.7.0-3+deb10u1.dsc
+ bf07cd642b5fbae436b82cbd97769ca9 1819108 mail optional kopanocore_8.7.0.orig.tar.xz
+ 49f2fe0f7bb85c71591c1d6cb6a6d404 46464 mail optional kopanocore_8.7.0-3+deb10u1.debian.tar.xz
+ 7271c952edbc29bb15b33132894d380f 6913 mail optional kopanocore_8.7.0-3+deb10u1_source.buildinfo
+

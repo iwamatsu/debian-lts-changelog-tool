@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 10 Apr 2023 19:25:15 CEST
+Source: keepalived
+Architecture: source
+Version: 1:2.0.10-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Alexander Wirt <formorer@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ c7dd711134944af2d6aa962959391501344f5421 2237 keepalived_2.0.10-1+deb10u1.dsc
+ c0b62f6d20a4a322e4bd67b4ae447bb842c28c4c 927631 keepalived_2.0.10.orig.tar.gz
+ 383661019839fe11ce1efe56bc191731c60b4050 10696 keepalived_2.0.10-1+deb10u1.debian.tar.xz
+ 1c05f28ce57abedff3d718a4b89ced005b109b6a 8613 keepalived_2.0.10-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ fbe1d6899a499eb2d47c271a7dfa1d8e9cb01b0b2a8d4d0e5afda97dbf223023 2237 keepalived_2.0.10-1+deb10u1.dsc
+ 40e0e55afed9ca313d621a9c5878579696fafb5504dab521aadaf20ba6e7f597 927631 keepalived_2.0.10.orig.tar.gz
+ 161cd098c5ce5846e76f425571edf97af88c3a73fff5b81c5d86c6f709c0936b 10696 keepalived_2.0.10-1+deb10u1.debian.tar.xz
+ 0def562b1a54e4968d462b16cffbc91acd3a659e0d44cd239588be9167d10e85 8613 keepalived_2.0.10-1+deb10u1_amd64.buildinfo
+Changes:
+ keepalived (1:2.0.10-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-44225: A flaw was found in keepalived, a failover and
+     monitoring daemon for LVS clusters, where an improper authentication
+     vulnerability allows an unprivileged user to change properties that could
+     lead to an access-control bypass.
+Files:
+ 8b466b9d4377452553c46fb06359aae3 2237 admin optional keepalived_2.0.10-1+deb10u1.dsc
+ ac93d7eb5b69a9fbf7494fcf27b39ccf 927631 admin optional keepalived_2.0.10.orig.tar.gz
+ 9cedce3ee3670693b9b6d601de67ba6f 10696 admin optional keepalived_2.0.10-1+deb10u1.debian.tar.xz
+ 16833c0d6775c96cc4e42daee194bc4a 8613 admin optional keepalived_2.0.10-1+deb10u1_amd64.buildinfo
+

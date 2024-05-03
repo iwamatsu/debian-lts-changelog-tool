@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 31 Jan 2024 17:32:13 +0100
+Source: python-asyncssh
+Architecture: source
+Version: 1.12.2-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Closes: 1059007
+Changes:
+ python-asyncssh (1.12.2-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * d/patches/fix-CVE-2023-48795.patch: Added.
+     - Mitigate the Terrapin attack CVE-2023-48795 (closes: #1059007).
+Checksums-Sha1:
+ d704800783de41cee3e3d4fb75853b176f7cf088 2316 python-asyncssh_1.12.2-1+deb10u1.dsc
+ a5ee14e5909b52fac4c690b8d3ac45acde0e809c 323084 python-asyncssh_1.12.2.orig.tar.gz
+ 74c4001b240d721f214a1ddfc1da48ad6d66d6ee 10920 python-asyncssh_1.12.2-1+deb10u1.debian.tar.xz
+ f2e4beccc8f0a6e8bba745651a1caff300b11eee 8271 python-asyncssh_1.12.2-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 16520b770eb7a3139ea5e8afb4a5d348c6d9f55b9085be3ebe53c1f72b9f741d 2316 python-asyncssh_1.12.2-1+deb10u1.dsc
+ 26479bbcfadb787e16caa7e5c89ba629a55125fa0115b8fbb7602142c6b12282 323084 python-asyncssh_1.12.2.orig.tar.gz
+ 323668fe462b7df9249260f03b57a1111a0516d275d2709e77dc421622719158 10920 python-asyncssh_1.12.2-1+deb10u1.debian.tar.xz
+ 191f898f6b7395e76301d8f9f8ba9581cb4fa6c3269ee54637e0dce4743d0b9a 8271 python-asyncssh_1.12.2-1+deb10u1_amd64.buildinfo
+Files:
+ efa35cfbaf47e70157b19ea9942e9022 2316 python optional python-asyncssh_1.12.2-1+deb10u1.dsc
+ 792ebf2fbe82081f3d80396904303474 323084 python optional python-asyncssh_1.12.2.orig.tar.gz
+ 01d5d0aa764465bfc18d61328518dda2 10920 python optional python-asyncssh_1.12.2-1+deb10u1.debian.tar.xz
+ d0391f190e94aef489b8ec9afa36827e 8271 python optional python-asyncssh_1.12.2-1+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 03 Feb 2022 22:49:48 +0530
+Source: strongswan
+Architecture: source
+Version: 5.5.1-4+deb9u6
+Distribution: stretch-security
+Urgency: high
+Maintainer: strongSwan Maintainers <pkg-swan-devel@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Changes:
+ strongswan (5.5.1-4+deb9u6) stretch-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * SECURITY UPDATE: Incorrect Handling of Early EAP-Success Messages
+     - debian/patches/CVE-2021-45079.patch: enforce failure if MSK
+       generation fails in src/libcharon/plugins/eap_gtc/eap_gtc.c,
+       src/libcharon/plugins/eap_md5/eap_md5.c,
+       src/libcharon/plugins/eap_radius/eap_radius.c,
+       src/libcharon/sa/eap/eap_method.h,
+       src/libcharon/sa/ikev2/authenticators/eap_authenticator.c.
+     - CVE-2021-45079
+Checksums-Sha1:
+ 76f9f726c4194849e750b3c954fcbda8adb4271c 3730 strongswan_5.5.1-4+deb9u6.dsc
+ 7d400eb501ac9e41eb889199891457003baa284c 4636854 strongswan_5.5.1.orig.tar.bz2
+ a6197fbe747adb0e03e4d385cec3acb5c6278736 134388 strongswan_5.5.1-4+deb9u6.debian.tar.xz
+ c930c895c684862b692dacd0f203dd777370b90f 8055 strongswan_5.5.1-4+deb9u6_source.buildinfo
+Checksums-Sha256:
+ ade2b807ad0558387615665fe076a301a727d9957bef8f709986d51bf02a9588 3730 strongswan_5.5.1-4+deb9u6.dsc
+ 720b301991f77bdedd8d551a956f52e2d11686a0ec18e832094f86cf2b842ab7 4636854 strongswan_5.5.1.orig.tar.bz2
+ 818cd6d41a930ec4ecc646437e2b4ebd9ed1904c36b01347f8696d44e3fec1e2 134388 strongswan_5.5.1-4+deb9u6.debian.tar.xz
+ cda9dac9b92b1dc1ad41709dc8590564a36de53702709e140769f8af28f2f9d4 8055 strongswan_5.5.1-4+deb9u6_source.buildinfo
+Files:
+ bd28eadbfa32cded5173ef0b148b67cf 3730 net optional strongswan_5.5.1-4+deb9u6.dsc
+ 4eba9474f7dc6c8c8d7037261358e68d 4636854 net optional strongswan_5.5.1.orig.tar.bz2
+ a5f1d8485e16bebc53a563773bb3f80c 134388 net optional strongswan_5.5.1-4+deb9u6.debian.tar.xz
+ a59bc12b91474922fc57666db29e3df3 8055 net optional strongswan_5.5.1-4+deb9u6_source.buildinfo
+

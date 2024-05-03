@@ -1,0 +1,27 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 Jan 2023 20:53:57 +0200
+Source: sofia-sip
+Architecture: source
+Version: 1.12.11+20110422.1-2.1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Ron Lee <ron@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ sofia-sip (1.12.11+20110422.1-2.1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-22741: Missing message length and attributes length checks
+     when handling STUN packages.
+Checksums-Sha1:
+ 016550a94da51254112ce84c63b278f25f6445a4 2405 sofia-sip_1.12.11+20110422.1-2.1+deb10u2.dsc
+ a172618bc02135284631d45227fd6a4a87d43ea9 27806 sofia-sip_1.12.11+20110422.1-2.1+deb10u2.diff.gz
+Checksums-Sha256:
+ f114bc555bee62eedaa7a89e2940c50a10dbd48574bf90a5f29afcc1f96df18e 2405 sofia-sip_1.12.11+20110422.1-2.1+deb10u2.dsc
+ 54e473008d8030e3c891feed411be546c7305326e065e76fd3d2982256362703 27806 sofia-sip_1.12.11+20110422.1-2.1+deb10u2.diff.gz
+Files:
+ 077fc5a59e62e2d28f1d6765a89aeda0 2405 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u2.dsc
+ d37d993aec9a353243cf3851dbd8926d 27806 net optional sofia-sip_1.12.11+20110422.1-2.1+deb10u2.diff.gz
+

@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 07 Oct 2023 17:54:21 +0200
+Source: gnome-boxes
+Architecture: source
+Version: 3.30.3-2+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ gnome-boxes (3.30.3-2+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport fix for freeRDP2 > 2.0.0
+   * Ensure that updated freerdp2-dev is picked up.
+Checksums-Sha1:
+ f50b0f81f4f4c148f19a5c979c43f43ef1ce5c03 2614 gnome-boxes_3.30.3-2+deb10u1.dsc
+ fd860f91f5b4d60be65db55c0cc239398cbb1c94 1198224 gnome-boxes_3.30.3.orig.tar.xz
+ e05ff32a7651dbfee09222c7704bb49f125df8d3 6640 gnome-boxes_3.30.3-2+deb10u1.debian.tar.xz
+ 3ec8d6e421e05868ff6363c5a2d002d26e86bd91 22314 gnome-boxes_3.30.3-2+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 8cfdcda4fbb93ed05c3bb294bebed2bf1efa3c73a8b03dbdfd75a230dccd5d0d 2614 gnome-boxes_3.30.3-2+deb10u1.dsc
+ 7ab8eabdfda7b89b80fd6125ea1427fbcc5f376a0a2e40bfff5f5b3521973429 1198224 gnome-boxes_3.30.3.orig.tar.xz
+ 71699d59a5c0bfb1f584135b1fc3c3617021162c67e5b97c06b395021aa24c98 6640 gnome-boxes_3.30.3-2+deb10u1.debian.tar.xz
+ 933ba9c86b13143b0e307c629aff6f0f68eedb62959acc0219664235719e9112 22314 gnome-boxes_3.30.3-2+deb10u1_amd64.buildinfo
+Files:
+ 30b55ce29f24e628c79d22ae72a7ac01 2614 gnome optional gnome-boxes_3.30.3-2+deb10u1.dsc
+ 4ad9b64d85dc19a23df8d53ceebb7533 1198224 gnome optional gnome-boxes_3.30.3.orig.tar.xz
+ a449c1c58ed3a0f01d9d4d8fd7691f68 6640 gnome optional gnome-boxes_3.30.3-2+deb10u1.debian.tar.xz
+ 38aa84c09f6f7aa77d4f518a01f7a19c 22314 gnome optional gnome-boxes_3.30.3-2+deb10u1_amd64.buildinfo
+

@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 04 Oct 2022 19:34:15 +0200
+Source: nodejs
+Architecture: source
+Version: 10.24.0~dfsg-1~deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ nodejs (10.24.0~dfsg-1~deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix test suite failures (expired certificate; testing as root)
+   * CVE-2021-22930, CVE-2021-22940: use after free attack where an
+     attacker might be able to exploit the memory corruption, to change
+     process behavior.
+   * CVE-2021-22939: if the Node.js https API was used incorrectly and
+     "undefined" was in passed for the "rejectUnauthorized" parameter, no
+     error was returned and connections to servers with an expired
+     certificate would have been accepted.
+   * CVE-2022-21824: due to the formatting logic of the "console.table()"
+     function it was not safe to allow user controlled input to be passed
+     to the "properties" parameter while simultaneously passing a plain
+     object with at least one property as the first parameter, which could
+     be "__proto__".
+   * CVE-2022-32212: OS Command Injection vulnerability due to an
+     insufficient IsAllowedHost check that can easily be bypassed because
+     IsIPAddress does not properly check if an IP address is invalid before
+     making DBS requests allowing rebinding attacks.
+Checksums-Sha1:
+ 12040fbc8b320dc55d0019b51725be2b77561ffd 3032 nodejs_10.24.0~dfsg-1~deb10u2.dsc
+ 9531e225d78ab87a2a9256ef6e369063c32d9f10 111872 nodejs_10.24.0~dfsg-1~deb10u2.debian.tar.xz
+ dfaf6996c02f26db006299f89e87d66dbac332cf 8616 nodejs_10.24.0~dfsg-1~deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 9c3e1e8011da8ef7fcd1639ee810cfad566bb79a3abd659c34cb4bcd358217fb 3032 nodejs_10.24.0~dfsg-1~deb10u2.dsc
+ 06e9c1a0e8ff9e648ac3bdc1878b954ec961e779665bf3dc84f7f8c2981955d3 111872 nodejs_10.24.0~dfsg-1~deb10u2.debian.tar.xz
+ b1d53f8554a95232e7396235b83a9a364f0331e6699fed2dec9bfcd9bf616d2a 8616 nodejs_10.24.0~dfsg-1~deb10u2_amd64.buildinfo
+Files:
+ a3b063bcba714dccc48899f5597c2341 3032 javascript optional nodejs_10.24.0~dfsg-1~deb10u2.dsc
+ efb1b92f28f32d3bc5c638c10a7e4ced 111872 javascript optional nodejs_10.24.0~dfsg-1~deb10u2.debian.tar.xz
+ f3187b54dc647aed41456da47b739884 8616 javascript optional nodejs_10.24.0~dfsg-1~deb10u2_amd64.buildinfo
+

@@ -1,0 +1,50 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 May 2022 23:03:02 +0200
+Source: zipios++
+Binary: libzipios++-dev libzipios++0v5 libzipios++-doc
+Architecture: source amd64 all
+Version: 0.1.5.9+cvs.2007.04.28-6+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Description:
+ libzipios++-dev - small C++ library for reading zip files (development)
+ libzipios++-doc - small C++ library for reading zip files (documents)
+ libzipios++0v5 - small C++ library for reading zip files (library)
+Changes:
+ zipios++ (0.1.5.9+cvs.2007.04.28-6+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2019-13453
+     Fix denial of services caused by malformed zip archives.
+Checksums-Sha1:
+ 350eab28edae6407adbae053c4a1442192177633 2429 zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1.dsc
+ d0eb05a9fcaae018d9566a4c4a9979d8c915c70d 501625 zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz
+ e3a437f2c11a6257cf11fd1fe3b4226fc674ef0f 6348 zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1.debian.tar.xz
+ 0ce643aed640b8bc73eec10f113eaba39bf85781 142060 libzipios++-dev_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 32c035136ae295f0f5654ad595072b00d6eadeda 246042 libzipios++-doc_0.1.5.9+cvs.2007.04.28-6+deb9u1_all.deb
+ b4a344dc527275936f4aa66a9c2c407380882b7f 616656 libzipios++0v5-dbgsym_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 859f0d4a3c0de50f1347e4efbf184eb78dde6548 53210 libzipios++0v5_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ c83c25eb65f0f0beafae6c59e048e225adea234c 8314 zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.buildinfo
+Checksums-Sha256:
+ 8db3a9f546a7bb26f5e76fa6dbb7554794d3676cfde9099f1039e304e43b43d8 2429 zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1.dsc
+ 1bfa998110b351c0b5252ba5bf821b1e93e88a7152708a05c5b5a7adb320066e 501625 zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz
+ a3c60c30ed8e836c36526fca452b9a2b6b83ca6c39dd15bde62f6e76d007db03 6348 zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1.debian.tar.xz
+ 1aae5df1da7d4b8a3de146ae4dd7d09e1e185ed564e98482cf9dbf10144582a8 142060 libzipios++-dev_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 46bb21885012ea4b68f1efd1b2ee2350db43bb98e50c626f6d6dcc896ecd516f 246042 libzipios++-doc_0.1.5.9+cvs.2007.04.28-6+deb9u1_all.deb
+ ca814fb61afb7e872873bbc95bd1066aa0d9bea0fec60d99d9724ea1b79501d4 616656 libzipios++0v5-dbgsym_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 8758fc6b09f7c81ef6c38976a7a9707a2b4f17b76debd3981e81331aea77fe73 53210 libzipios++0v5_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 13460a79a01c18610e258a43f92a30a5a2899efa9c717cb6c2d96aa701862524 8314 zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.buildinfo
+Files:
+ 4993648009e2bd72724708fd1a3bb24a 2429 devel optional zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1.dsc
+ cb321973d3ab5f39ee0df77ef0af7929 501625 devel optional zipios++_0.1.5.9+cvs.2007.04.28.orig.tar.gz
+ a0ee78f1a477124ccb2f2e430ff28633 6348 devel optional zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1.debian.tar.xz
+ 7f26eedf1f43685f43bdf3b0957fb366 142060 libdevel optional libzipios++-dev_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 06154f5ab270f1f1d06d4497bd3b456f 246042 doc optional libzipios++-doc_0.1.5.9+cvs.2007.04.28-6+deb9u1_all.deb
+ c41f3a5a383dc8e3cc6b93539608def4 616656 debug extra libzipios++0v5-dbgsym_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ 45d750178d0d6f8ae52c613ba2cc79ac 53210 libs optional libzipios++0v5_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.deb
+ ce59cf34a11cf306d2130c1229d9b605 8314 devel optional zipios++_0.1.5.9+cvs.2007.04.28-6+deb9u1_amd64.buildinfo
+

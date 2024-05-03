@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 28 Jan 2023 14:22:59 +0530
+Source: tiff
+Architecture: source
+Version: 4.1.0+git191117-2~deb10u6
+Distribution: buster-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 1029653
+Changes:
+ tiff (4.1.0+git191117-2~deb10u6) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Add patch to correct simple copy paste error in tiffcrop.
+     (Fixes: CVE-2022-48281) (Closes: #1029653)
+Checksums-Sha1:
+ 3eac33926bd15ae8594de3dfa844a94ec53e710b 2303 tiff_4.1.0+git191117-2~deb10u6.dsc
+ 19d0d4f42a336cc73060a9c40c21ac45a23d4d41 1533524 tiff_4.1.0+git191117.orig.tar.xz
+ a234d7931bbf2ffdba2985f29566186894250881 40408 tiff_4.1.0+git191117-2~deb10u6.debian.tar.xz
+ 78ad7b9adf3968362a6692646a1c621f4acb25ff 6270 tiff_4.1.0+git191117-2~deb10u6_source.buildinfo
+Checksums-Sha256:
+ cfae550d5c75a647fa26ecacd9dbe00fd0332353c5fe986f072e1557175ab7f2 2303 tiff_4.1.0+git191117-2~deb10u6.dsc
+ 67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42 1533524 tiff_4.1.0+git191117.orig.tar.xz
+ 4a763002fe0241f1548f78fe48a11b535fa0131cd4025df7c520bdfb7532f00c 40408 tiff_4.1.0+git191117-2~deb10u6.debian.tar.xz
+ 59f3e5803ff74f0aca0236bcc72b7305597c14a5af43a2601c2abb00c46aff65 6270 tiff_4.1.0+git191117-2~deb10u6_source.buildinfo
+Files:
+ 0e87aa015dd79656d1b238ab3c71aa75 2303 libs optional tiff_4.1.0+git191117-2~deb10u6.dsc
+ f51040d3436eedde9d3ba7d166754c3e 1533524 libs optional tiff_4.1.0+git191117.orig.tar.xz
+ 02cf6ee1db868076cb6226e25b324f97 40408 libs optional tiff_4.1.0+git191117-2~deb10u6.debian.tar.xz
+ 48188f7e320f737bdc544873141174c9 6270 libs optional tiff_4.1.0+git191117-2~deb10u6_source.buildinfo
+

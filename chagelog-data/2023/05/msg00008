@@ -1,0 +1,165 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 02 May 2023 10:57:53 -0700
+Source: avahi
+Binary: avahi-autoipd avahi-autoipd-dbgsym avahi-daemon avahi-daemon-dbgsym avahi-discover avahi-dnsconfd avahi-dnsconfd-dbgsym avahi-ui-utils avahi-ui-utils-dbgsym avahi-utils avahi-utils-dbgsym gir1.2-avahi-0.6 libavahi-client-dev libavahi-client3 libavahi-client3-dbgsym libavahi-common-data libavahi-common-dev libavahi-common3 libavahi-common3-dbgsym libavahi-compat-libdnssd-dev libavahi-compat-libdnssd1 libavahi-compat-libdnssd1-dbgsym libavahi-core-dev libavahi-core7 libavahi-core7-dbgsym libavahi-glib-dev libavahi-glib1 libavahi-glib1-dbgsym libavahi-gobject-dev libavahi-gobject0 libavahi-gobject0-dbgsym libavahi-ui-gtk3-0 libavahi-ui-gtk3-0-dbgsym libavahi-ui-gtk3-dev python-avahi
+Architecture: source amd64 all
+Version: 0.7-4+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ avahi-autoipd - Avahi IPv4LL network address configuration daemon
+ avahi-daemon - Avahi mDNS/DNS-SD daemon
+ avahi-discover - Service discover user interface for avahi
+ avahi-dnsconfd - Avahi DNS configuration tool
+ avahi-ui-utils - Avahi GTK+ utilities
+ avahi-utils - Avahi browsing, publishing and discovery utilities
+ gir1.2-avahi-0.6 - GObject introspection data for Avahi
+ libavahi-client-dev - Development files for the Avahi client library
+ libavahi-client3 - Avahi client library
+ libavahi-common-data - Avahi common data files
+ libavahi-common-dev - Development files for the Avahi common library
+ libavahi-common3 - Avahi common library
+ libavahi-compat-libdnssd-dev - Development headers for the Avahi Apple Bonjour compatibility lib
+ libavahi-compat-libdnssd1 - Avahi Apple Bonjour compatibility library
+ libavahi-core-dev - Development files for Avahi's embeddable mDNS/DNS-SD library
+ libavahi-core7 - Avahi's embeddable mDNS/DNS-SD library
+ libavahi-glib-dev - Development headers for the Avahi GLib integration library
+ libavahi-glib1 - Avahi GLib integration library
+ libavahi-gobject-dev - Development headers for the Avahi GObject library
+ libavahi-gobject0 - Avahi GObject library
+ libavahi-ui-gtk3-0 - Avahi GTK+ User interface library for GTK3
+ libavahi-ui-gtk3-dev - Development headers for the Avahi GTK+ User interface library
+ python-avahi - Python utility package for Avahi
+Closes: 1034594
+Changes:
+ avahi (0.7-4+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS security team.
+   * CVE-2023-1981: Fix an local Denial of Service (DoS) vulnerability
+     where the avahi-daemon process could have been crashed over the DBus
+     message bus. (Closes: #1034594)
+Checksums-Sha1:
+ 8248e1589b8a2509a2752cfe3f0b85c2dc37f4bb 3920 avahi_0.7-4+deb10u2.dsc
+ 8a062878968c0f8e083046429647ad33b122542f 1333400 avahi_0.7.orig.tar.gz
+ bf4031c8e389365d830f991d15960f56d6ea4f3f 31252 avahi_0.7-4+deb10u2.debian.tar.xz
+ 7cb8ac9ac8d6e8556da1c9e91ee53152de9c0e57 43776 avahi-autoipd-dbgsym_0.7-4+deb10u2_amd64.deb
+ af3283edbc8846a7485bcbd0cfc7937a2c5f5ce1 54960 avahi-autoipd_0.7-4+deb10u2_amd64.deb
+ c26c356656a907f66a795ab3536f3b132c76f021 146172 avahi-daemon-dbgsym_0.7-4+deb10u2_amd64.deb
+ 959a183249054f0449897187b68965ac41a7bb49 93264 avahi-daemon_0.7-4+deb10u2_amd64.deb
+ 6d452d86ceeebe50c36dc275b76f244b9e870bda 42608 avahi-discover_0.7-4+deb10u2_all.deb
+ c7bfbfb274503290c25263a4d3ded76dcfce3ea1 15212 avahi-dnsconfd-dbgsym_0.7-4+deb10u2_amd64.deb
+ 436131561e03359d437aac2784e611e888968da8 46600 avahi-dnsconfd_0.7-4+deb10u2_amd64.deb
+ d95deddbe15f7cf2e2ebc0ecc46e06150e91810e 12944 avahi-ui-utils-dbgsym_0.7-4+deb10u2_amd64.deb
+ f11a619ea58275c8472a011023145bce4db8a012 43420 avahi-ui-utils_0.7-4+deb10u2_amd64.deb
+ 5e3df19f507ce1d1cdfe7f0e549af912058ea293 64764 avahi-utils-dbgsym_0.7-4+deb10u2_amd64.deb
+ 61953a479d54a3e49d3dbd4e32877ae92085bbdd 57088 avahi-utils_0.7-4+deb10u2_amd64.deb
+ 4b69e245023950479dc021fe6ac101cc80600f8e 26570 avahi_0.7-4+deb10u2_amd64.buildinfo
+ d4973d7a6a38ad456b62a84d0b58fba4a9d57dcf 39036 gir1.2-avahi-0.6_0.7-4+deb10u2_amd64.deb
+ 9af7ab0901b56f028a698420f4be8f22ab8531d4 68692 libavahi-client-dev_0.7-4+deb10u2_amd64.deb
+ 325983f7226d4022311cd5ad2ae3b2c0c8024558 69956 libavahi-client3-dbgsym_0.7-4+deb10u2_amd64.deb
+ 0b542ed325144de5fbf69eb0b43e45c690d9f91a 58264 libavahi-client3_0.7-4+deb10u2_amd64.deb
+ b254a67ecc53776bdb5ac0873f3170fc92ca9e69 122356 libavahi-common-data_0.7-4+deb10u2_amd64.deb
+ 9df3d03a8483e8d45d27e805100624af63c4461d 69380 libavahi-common-dev_0.7-4+deb10u2_amd64.deb
+ 32134a1d6fc64148de53dd106c616b3c102a4b6b 51964 libavahi-common3-dbgsym_0.7-4+deb10u2_amd64.deb
+ e89bfee0c2f4ed5adec2b02e72270e3d4a6ccae7 54548 libavahi-common3_0.7-4+deb10u2_amd64.deb
+ 7378ea81263f33dbc2c6fc3ca683a5df80bf83ca 64172 libavahi-compat-libdnssd-dev_0.7-4+deb10u2_amd64.deb
+ 6954817c5b3346286d64c1379408aafc77642edd 40872 libavahi-compat-libdnssd1-dbgsym_0.7-4+deb10u2_amd64.deb
+ 4642a29435218a2b278e11d4f087a6532cee73c5 49132 libavahi-compat-libdnssd1_0.7-4+deb10u2_amd64.deb
+ 9fe70a204bf3339dd379b1f37de5ae95134e8ad6 137256 libavahi-core-dev_0.7-4+deb10u2_amd64.deb
+ 831d424acb31a80b2022e384078b993c63df1247 306464 libavahi-core7-dbgsym_0.7-4+deb10u2_amd64.deb
+ 3d277d9ee48a6efbf5c60104eb546f6ed1489c1b 115284 libavahi-core7_0.7-4+deb10u2_amd64.deb
+ bdd07889947a02e0b8fc0c8ad4dfe042a32a8f1a 42788 libavahi-glib-dev_0.7-4+deb10u2_amd64.deb
+ b1434f78452d6039a30304dfdca348aeb9a66f3e 16216 libavahi-glib1-dbgsym_0.7-4+deb10u2_amd64.deb
+ dd4c2e4b01d50de1b1bdfd1e61452e211575c35e 40252 libavahi-glib1_0.7-4+deb10u2_amd64.deb
+ d45424cde9cbcb70e7d4bfbf26ec3382f8bde088 57356 libavahi-gobject-dev_0.7-4+deb10u2_amd64.deb
+ 5d2b9cde0c874013a874a5d7962930d148624573 61908 libavahi-gobject0-dbgsym_0.7-4+deb10u2_amd64.deb
+ 48df71004d07b83d4d5ced6ffc2a37ccbf3770fd 50000 libavahi-gobject0_0.7-4+deb10u2_amd64.deb
+ a3acd9e7041e2f5d619121d195d7ab6ff6713a1d 56580 libavahi-ui-gtk3-0-dbgsym_0.7-4+deb10u2_amd64.deb
+ e3dce45eaed3d1644846a2498e9174aa4576ca40 51944 libavahi-ui-gtk3-0_0.7-4+deb10u2_amd64.deb
+ 701c0b3268d7bf97e680d619e1b7cee69a7f9f90 52536 libavahi-ui-gtk3-dev_0.7-4+deb10u2_amd64.deb
+ ba39dfe7d35a3a8b9daa46958dcd301d1df35348 40872 python-avahi_0.7-4+deb10u2_amd64.deb
+Checksums-Sha256:
+ 42ef397c9c0bdffb954270057b002648d33c5b4f68d0f701b6699704b253190a 3920 avahi_0.7-4+deb10u2.dsc
+ 57a99b5dfe7fdae794e3d1ee7a62973a368e91e414bd0dfa5d84434de5b14804 1333400 avahi_0.7.orig.tar.gz
+ 785ba45c2b8ea78118edec35260ff8b1097a5d46ddd41ccf1bb069d3e86f640a 31252 avahi_0.7-4+deb10u2.debian.tar.xz
+ b35df5d13f7d632ac9dc60cb899b55a45a039b51add2ad484e61dd5adebb8779 43776 avahi-autoipd-dbgsym_0.7-4+deb10u2_amd64.deb
+ b96b18ab608cfa6df44ecb1ba8a91369e7c1ea64dc1ce4c965917ad47f177082 54960 avahi-autoipd_0.7-4+deb10u2_amd64.deb
+ d592504f35be3bc8a934cefdc3050b3fd18c90f17ab60014d8deec43ed5879bc 146172 avahi-daemon-dbgsym_0.7-4+deb10u2_amd64.deb
+ 2cd6a97a618ac149d830fd82a0144a8f5e935e3990f573c3cd5d2cd1e5029fef 93264 avahi-daemon_0.7-4+deb10u2_amd64.deb
+ 99a373af8b5a81ab7670c1c2303b922d1377a67ea79c13f04c7ea01f2f7e88e1 42608 avahi-discover_0.7-4+deb10u2_all.deb
+ b6275b5f67dd9e321d77d32319f63f23f1815f08d811c6412662cf3805bbe32e 15212 avahi-dnsconfd-dbgsym_0.7-4+deb10u2_amd64.deb
+ 9efb89894971793ac5a86d96d3b8332877835357782f52942b0b6beae135fdc3 46600 avahi-dnsconfd_0.7-4+deb10u2_amd64.deb
+ a499ab7e8bd0b7d0d7da79ba49606fbd923f9d3096378a1cf02052334d135863 12944 avahi-ui-utils-dbgsym_0.7-4+deb10u2_amd64.deb
+ 440b777b2c52cb56e1787fb5c81b3fc089570305d332d717f649c6e81d2fa3e0 43420 avahi-ui-utils_0.7-4+deb10u2_amd64.deb
+ 803f3610018c6870a6861889e2c9df507b24ac1041380233a3fc6d103d07b666 64764 avahi-utils-dbgsym_0.7-4+deb10u2_amd64.deb
+ 9defd71fbae06c88ffad5c09680e33ad381e4a6df976a94b10d99377c63525bc 57088 avahi-utils_0.7-4+deb10u2_amd64.deb
+ a19fbe38ed0ee0ec720cd51a3c606497e91f19e00859db41c5e5eeba8623323f 26570 avahi_0.7-4+deb10u2_amd64.buildinfo
+ e00f42c313b12e51750821b56c3c46e43a83fc07d43518887ef15b2015dce915 39036 gir1.2-avahi-0.6_0.7-4+deb10u2_amd64.deb
+ a916087bb24a69bf4636500fc3bf218a40f76fa6716ae2fd312aa377f1d0b61c 68692 libavahi-client-dev_0.7-4+deb10u2_amd64.deb
+ 0d36bb3a97e6b23fa7e67d934de24ed63d3087affd75bc7a3631443016d53491 69956 libavahi-client3-dbgsym_0.7-4+deb10u2_amd64.deb
+ b35bf4ad3f1826c77ffc3d48688810f9027809ac35180f002d6a05bab3fe0c8a 58264 libavahi-client3_0.7-4+deb10u2_amd64.deb
+ 90a9b2100193e9e202f11a311026127de892f00719e7b0ba070838abb663beae 122356 libavahi-common-data_0.7-4+deb10u2_amd64.deb
+ 690c91c1bcf3af7b59dd2c975395987e485ac5dd89ca85c156d85b0517abd065 69380 libavahi-common-dev_0.7-4+deb10u2_amd64.deb
+ 3b6fd1dc3ee43f464c46e0f897dfa339db76d914793f7ecf642ee927a2ca3ab5 51964 libavahi-common3-dbgsym_0.7-4+deb10u2_amd64.deb
+ bcbad6321fb2a74b05d6485dd2f4edc492dff650d6a448a52dfef71e6482ece8 54548 libavahi-common3_0.7-4+deb10u2_amd64.deb
+ 8d4cf20f8fbd771019f794e664f08a9340414dca204df1055ad8f81a8a462141 64172 libavahi-compat-libdnssd-dev_0.7-4+deb10u2_amd64.deb
+ 7fc91dfe692464aeed827d2909520f930683384db24ffa6d5d9594c6cb56b23a 40872 libavahi-compat-libdnssd1-dbgsym_0.7-4+deb10u2_amd64.deb
+ b0c73d7f4fd5c24a2ad000ae9ccc53605159036773e6e5b5b0f8c7db801f6ad7 49132 libavahi-compat-libdnssd1_0.7-4+deb10u2_amd64.deb
+ 456ebcc2c774b0eb72f7bf0d6f22d495b3a240da91c557ba389c306d001282a9 137256 libavahi-core-dev_0.7-4+deb10u2_amd64.deb
+ 13743805b704da07c54c1cde302423051e573a03468bfcc8a7c36d971a62995d 306464 libavahi-core7-dbgsym_0.7-4+deb10u2_amd64.deb
+ 666ce5aca9f5b03b2b84fde22c6e68f4f9d88d08101855dd9001e1426e00acbc 115284 libavahi-core7_0.7-4+deb10u2_amd64.deb
+ 3f87dbad0c5493e60b69a6b348e496dc30ad2da3c5a668b838ed00fd45210878 42788 libavahi-glib-dev_0.7-4+deb10u2_amd64.deb
+ 622ec5ef156c6bd6b9b1aafe473bf79c255f9a094bf4a1c750c3d4abf8701906 16216 libavahi-glib1-dbgsym_0.7-4+deb10u2_amd64.deb
+ 00961b630771880ee09371e1ddc03f64f99ec8980c3530cae0009bfa7ddad6d7 40252 libavahi-glib1_0.7-4+deb10u2_amd64.deb
+ 9268786df8cbc91acebc5f7a6898728b0ed96fb70b056322c289d770940913d8 57356 libavahi-gobject-dev_0.7-4+deb10u2_amd64.deb
+ 2a838c9e19e6f923cda57b7b5a6600cfe524d0aa50ff9fc88c865f35f4af2f87 61908 libavahi-gobject0-dbgsym_0.7-4+deb10u2_amd64.deb
+ 24ba18b888783e0090a5b4112258b6ca318375b0b113de8b813539a5a3e9b038 50000 libavahi-gobject0_0.7-4+deb10u2_amd64.deb
+ 5257ee44ea4377ca1fd4762c47874363794a89ea13d02643408bc4c351f0ec90 56580 libavahi-ui-gtk3-0-dbgsym_0.7-4+deb10u2_amd64.deb
+ 30ee533c3aa2c61578379ce9cebd3095017d384edbee585b80daaba9a089b12f 51944 libavahi-ui-gtk3-0_0.7-4+deb10u2_amd64.deb
+ f232613027e9354183498863ba857eebc2b60cf51d316e7e0fe471be2bcb19e8 52536 libavahi-ui-gtk3-dev_0.7-4+deb10u2_amd64.deb
+ ce2c685fa406184a8ba613b018c6b29816e990d13b7832dca76ff9061d78d1f7 40872 python-avahi_0.7-4+deb10u2_amd64.deb
+Files:
+ b9c195b5050f386164bb03595120a089 3920 net optional avahi_0.7-4+deb10u2.dsc
+ d76c59d0882ac6c256d70a2a585362a6 1333400 net optional avahi_0.7.orig.tar.gz
+ cae5a18318a3b680e81a949d0f1013a4 31252 net optional avahi_0.7-4+deb10u2.debian.tar.xz
+ 19ff0e39afed017c71118408f480c651 43776 debug optional avahi-autoipd-dbgsym_0.7-4+deb10u2_amd64.deb
+ 3af8209e5cff0621947c3bc49a57073b 54960 net optional avahi-autoipd_0.7-4+deb10u2_amd64.deb
+ c6c7b6d95ca965cf15b0e927cc6f2cd9 146172 debug optional avahi-daemon-dbgsym_0.7-4+deb10u2_amd64.deb
+ 8426391e228f36f5ad387b6e75d703b0 93264 net optional avahi-daemon_0.7-4+deb10u2_amd64.deb
+ 0ed043a6a2f5ebc12eb44496129e220d 42608 net optional avahi-discover_0.7-4+deb10u2_all.deb
+ 6cc46b8f82c8427361ce491c4ffe2cd3 15212 debug optional avahi-dnsconfd-dbgsym_0.7-4+deb10u2_amd64.deb
+ 4b3933bfbe4e22b4ac28d3dbcd4177fc 46600 net optional avahi-dnsconfd_0.7-4+deb10u2_amd64.deb
+ eeab8700874f4e84630d8e528dd86587 12944 debug optional avahi-ui-utils-dbgsym_0.7-4+deb10u2_amd64.deb
+ 5182de99ac993dfbf7e8b3fb0be00012 43420 utils optional avahi-ui-utils_0.7-4+deb10u2_amd64.deb
+ f7920f9be88910f5b29c5defe78caa35 64764 debug optional avahi-utils-dbgsym_0.7-4+deb10u2_amd64.deb
+ 704da8931c3b130b6512d2d38d163a70 57088 net optional avahi-utils_0.7-4+deb10u2_amd64.deb
+ 3f32bb338d0d07325147a320d08a8d65 26570 net optional avahi_0.7-4+deb10u2_amd64.buildinfo
+ eb8d2309c71eacd8629cead84d78baa6 39036 introspection optional gir1.2-avahi-0.6_0.7-4+deb10u2_amd64.deb
+ 4148b5b290e5067b0ab2fa8022bb8aab 68692 libdevel optional libavahi-client-dev_0.7-4+deb10u2_amd64.deb
+ dfee436068555d0b652fa3aa7b6044c9 69956 debug optional libavahi-client3-dbgsym_0.7-4+deb10u2_amd64.deb
+ d38dcd1ebdd672d5862cafc4eb804466 58264 libs optional libavahi-client3_0.7-4+deb10u2_amd64.deb
+ 4183a56513af2f5d77683a4e6e5dffdd 122356 libs optional libavahi-common-data_0.7-4+deb10u2_amd64.deb
+ 2709eedab19d3c7549ff4cb54bdb287e 69380 libdevel optional libavahi-common-dev_0.7-4+deb10u2_amd64.deb
+ 1281a1691445909739307b14c44253f9 51964 debug optional libavahi-common3-dbgsym_0.7-4+deb10u2_amd64.deb
+ bc30aeb6d89ca09202a9d15a8f8230df 54548 libs optional libavahi-common3_0.7-4+deb10u2_amd64.deb
+ 6b458c6f85fbf3c7ab0ea272c0cbadd9 64172 libdevel optional libavahi-compat-libdnssd-dev_0.7-4+deb10u2_amd64.deb
+ d00599f10f3f867dabad5ae2e8505cea 40872 debug optional libavahi-compat-libdnssd1-dbgsym_0.7-4+deb10u2_amd64.deb
+ a511e6a19ffa17544d8e39e3c11419ea 49132 libs optional libavahi-compat-libdnssd1_0.7-4+deb10u2_amd64.deb
+ ed0aa66dbf5c0e6ca797fc077bcfd81d 137256 libdevel optional libavahi-core-dev_0.7-4+deb10u2_amd64.deb
+ 041c6f494cda4308c2178834b53c8fd3 306464 debug optional libavahi-core7-dbgsym_0.7-4+deb10u2_amd64.deb
+ d5c85c3485ccf7071afeaa554dc3feb9 115284 libs optional libavahi-core7_0.7-4+deb10u2_amd64.deb
+ 8d4695e71eec2c39bcac583e47f37c48 42788 libdevel optional libavahi-glib-dev_0.7-4+deb10u2_amd64.deb
+ a3cf1aaf6627a2f70e3f7c17fea8caab 16216 debug optional libavahi-glib1-dbgsym_0.7-4+deb10u2_amd64.deb
+ 0c59fe024e7958e27ae54a016c303e66 40252 libs optional libavahi-glib1_0.7-4+deb10u2_amd64.deb
+ 648a30950087facb5702177dfa72534c 57356 libdevel optional libavahi-gobject-dev_0.7-4+deb10u2_amd64.deb
+ c8f8a9cd8ad5c2785f5f25dc48a5e329 61908 debug optional libavahi-gobject0-dbgsym_0.7-4+deb10u2_amd64.deb
+ 88d7366a92eeb7ca3f6d5f51702d13d1 50000 libs optional libavahi-gobject0_0.7-4+deb10u2_amd64.deb
+ 887bb316bb29d2fb422ae63ba6333b0d 56580 debug optional libavahi-ui-gtk3-0-dbgsym_0.7-4+deb10u2_amd64.deb
+ d1d56dd0d46a84a6d7d032b87e4c051c 51944 libs optional libavahi-ui-gtk3-0_0.7-4+deb10u2_amd64.deb
+ 07c95ddef55235bffb6ffb938c7304b3 52536 libdevel optional libavahi-ui-gtk3-dev_0.7-4+deb10u2_amd64.deb
+ 14c8912eba5bfb159ec01075e7b13da4 40872 python optional python-avahi_0.7-4+deb10u2_amd64.deb
+

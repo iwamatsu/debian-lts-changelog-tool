@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 02 Apr 2022 22:42:44 +0200
+Source: zlib
+Architecture: source
+Version: 1:1.2.8.dfsg-5+deb9u1
+Distribution: stretch-security
+Urgency: medium
+Maintainer: Mark Brown <broonie@debian.org>
+Changed-By: Anton Gladky <gladk@debian.org>
+Closes: 1008265
+Changes:
+ zlib (1:1.2.8.dfsg-5+deb9u1) stretch-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-25032: Fix a bug that can crash deflate on some input
+     when using Z_FIXED (Closes: #1008265)
+Checksums-Sha1:
+ 5ef95c5147b3be74d1142d9bd666d7ef6b34c503 2608 zlib_1.2.8.dfsg-5+deb9u1.dsc
+ c7c723de179c0d1f3c9d59646a398649b16206b7 361943 zlib_1.2.8.dfsg.orig.tar.gz
+ 003fa25ba8502c81b6e97e6e1d753c7ef3c71d2a 22192 zlib_1.2.8.dfsg-5+deb9u1.debian.tar.xz
+ 9dffb20365284e070daa4dc6fcbd58d40e748be5 7175 zlib_1.2.8.dfsg-5+deb9u1_source.buildinfo
+Checksums-Sha256:
+ 634f74b7bc5d44bb24fee4c830fed51ac71d34894f9d25ff956f561aab5dca7f 2608 zlib_1.2.8.dfsg-5+deb9u1.dsc
+ 2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f 361943 zlib_1.2.8.dfsg.orig.tar.gz
+ cb5d867789b4ebcc2d70fcec02aeab5c9f42c8d55aa3c2677a517de9f3a90e5f 22192 zlib_1.2.8.dfsg-5+deb9u1.debian.tar.xz
+ 8d632da11be90a70f4645f13ddaab76f91eca3eebec9756dbc1f52bf89288dea 7175 zlib_1.2.8.dfsg-5+deb9u1_source.buildinfo
+Files:
+ d7bc4dbb76b0853fc111c039cc63dd0d 2608 libs optional zlib_1.2.8.dfsg-5+deb9u1.dsc
+ b752e88a9717131354bd07aa1e1c505d 361943 libs optional zlib_1.2.8.dfsg.orig.tar.gz
+ 097495cea1f64a3bb9d3959486c7d827 22192 libs optional zlib_1.2.8.dfsg-5+deb9u1.debian.tar.xz
+ d2930d086598d2e1d616c3bef6a56a4c 7175 libs optional zlib_1.2.8.dfsg-5+deb9u1_source.buildinfo
+

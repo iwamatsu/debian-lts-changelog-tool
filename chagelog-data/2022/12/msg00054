@@ -1,0 +1,47 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 31 Dec 2022 11:43:01 +0000
+Source: exuberant-ctags
+Binary: exuberant-ctags exuberant-ctags-dbgsym
+Architecture: source amd64
+Version: 1:5.9~svn20110310-12+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Colin Watson <cjwatson@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ exuberant-ctags - build tag file indexes of source code definitions
+Closes: 1026995
+Changes:
+ exuberant-ctags (1:5.9~svn20110310-12+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2022-4515: A flaw was found in the way exubertant-ctags handled
+     the "-o" command-line option which specifies the tag filename. A crafted
+     tag filename specified in the command line or in the configuration file
+     could have resulted in arbitrary command execution because the
+     externalSortTags() in sort.c calls the system(3) function in an unsafe way.
+     (Closes: #1026995)
+Checksums-Sha1:
+ e6feedb741c4d75d85a34863e0f17e0fcf23785a 2035 exuberant-ctags_5.9~svn20110310-12+deb10u1.dsc
+ 8d2a9214b26e2b9046f9264ade2f2a528eaf6e23 497076 exuberant-ctags_5.9~svn20110310.orig.tar.gz
+ fe57b1b27d37e357eee556575335d7c79e5cfb4f 15140 exuberant-ctags_5.9~svn20110310-12+deb10u1.debian.tar.xz
+ f90398b61ab92e089a61776aa9be58e3a7eb9fa3 337032 exuberant-ctags-dbgsym_5.9~svn20110310-12+deb10u1_amd64.deb
+ 0c2fd10dde8f0b9eb14e996b0e40cd32c4518130 6000 exuberant-ctags_5.9~svn20110310-12+deb10u1_amd64.buildinfo
+ a1e43ebc9d98797037cd5aa34ef19dfdc0f857e6 147536 exuberant-ctags_5.9~svn20110310-12+deb10u1_amd64.deb
+Checksums-Sha256:
+ bbda26842fd01e733986f0f38ec36f4b6699dcf98449efda66366edd2959da91 2035 exuberant-ctags_5.9~svn20110310-12+deb10u1.dsc
+ 7348e21502454a1331c58d5eec5c18a546395acd5628599a7a55dc77b48ffd2f 497076 exuberant-ctags_5.9~svn20110310.orig.tar.gz
+ 993493553376e3d406addcc1bc8e80ec35d48d4baa8d02ad9316512fb072ab88 15140 exuberant-ctags_5.9~svn20110310-12+deb10u1.debian.tar.xz
+ 4ad613ada20f0d4111e4d9b937ccfd78f71f57976703baf86607ef8ec98408fa 337032 exuberant-ctags-dbgsym_5.9~svn20110310-12+deb10u1_amd64.deb
+ 6fa4cb463586b96806bdfaa6645ff966f2a072883ef49ccebd0b9661c36f56a5 6000 exuberant-ctags_5.9~svn20110310-12+deb10u1_amd64.buildinfo
+ bc41278fedb3512631492cd886f2e36503b53266b10a5ee4b2941943777ad905 147536 exuberant-ctags_5.9~svn20110310-12+deb10u1_amd64.deb
+Files:
+ 19a2ace4a9e4101692f84fbfedca0696 2035 editors optional exuberant-ctags_5.9~svn20110310-12+deb10u1.dsc
+ d029eb7f61bf18e70fee603019ae829e 497076 editors optional exuberant-ctags_5.9~svn20110310.orig.tar.gz
+ 8f455dabd579f41d21c6933a42f18bed 15140 editors optional exuberant-ctags_5.9~svn20110310-12+deb10u1.debian.tar.xz
+ 51c058abc84fb3d2ecd04fc356972ea4 337032 debug optional exuberant-ctags-dbgsym_5.9~svn20110310-12+deb10u1_amd64.deb
+ 7e390e83789df4b522d6abd5dc795123 6000 editors optional exuberant-ctags_5.9~svn20110310-12+deb10u1_amd64.buildinfo
+ 2c0df173b2c0921c074b9600705530ae 147536 editors optional exuberant-ctags_5.9~svn20110310-12+deb10u1_amd64.deb
+

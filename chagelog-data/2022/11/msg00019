@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 17 Nov 2022 10:43:52 CET
+Source: asterisk
+Architecture: source
+Version: 1:16.28.0~dfsg-0+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 402d00376ebf9aa4a9acba02f91c75e039ea1874 4397 asterisk_16.28.0~dfsg-0+deb10u1.dsc
+ dac917eb5c7a9793498542683e479610d5c46b10 7253400 asterisk_16.28.0~dfsg.orig.tar.xz
+ 29701d73d0b1c69690e1e72588f20e426b7707cb 6648672 asterisk_16.28.0~dfsg-0+deb10u1.debian.tar.xz
+ 6b5ab775e92bf3e4c6ff0940dc4d840659803bea 28762 asterisk_16.28.0~dfsg-0+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ f22fbaf725e1fa45cca8e9dd7e6f314efa7b03ae626e9861dc72d6461f2dff75 4397 asterisk_16.28.0~dfsg-0+deb10u1.dsc
+ eacda3502664072c4e44283f090326c23e9e8298ec7eac91e22b7ab2968fa782 7253400 asterisk_16.28.0~dfsg.orig.tar.xz
+ 30314c4d4e9ee98e3462fae1cd1fc809d333f776edb58a85e600c52f7e433554 6648672 asterisk_16.28.0~dfsg-0+deb10u1.debian.tar.xz
+ 7e894093f012f9e59b1a03bafaa9ff90c355071be02055e38e4aea58c1e155e0 28762 asterisk_16.28.0~dfsg-0+deb10u1_amd64.buildinfo
+Changes:
+ asterisk (1:16.28.0~dfsg-0+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-32558, CVE-2021-32686, CVE-2021-37706, CVE-2021-43299,
+     CVE-2021-43300, CVE-2021-43301, CVE-2021-43302, CVE-2021-43303,
+     CVE-2021-43804, CVE-2021-43845, CVE-2021-46837, CVE-2022-21722,
+     CVE-2022-21723, CVE-2022-23608, CVE-2022-24763, CVE-2022-24764,
+     CVE-2022-24786, CVE-2022-24792, CVE-2022-24793, CVE-2022-26498,
+     CVE-2022-26499, CVE-2022-26651
+Files:
+ 60434413058a70df152431df2de20702 4397 comm optional asterisk_16.28.0~dfsg-0+deb10u1.dsc
+ 9815629148c12dcf764853a15c507525 7253400 comm optional asterisk_16.28.0~dfsg.orig.tar.xz
+ 4ca1cb1f98f25734b11913763b579cbb 6648672 comm optional asterisk_16.28.0~dfsg-0+deb10u1.debian.tar.xz
+ 20fb3265cdfe75074f216a368780c851 28762 comm optional asterisk_16.28.0~dfsg-0+deb10u1_amd64.buildinfo
+

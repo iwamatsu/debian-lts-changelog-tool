@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 29 Jun 2023 23:30:27 +0200
+Source: cups
+Architecture: source
+Version: 2.2.10-6+deb10u8
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ cups (2.2.10-6+deb10u8) buster-security; urgency=high
+ .
+   * CVE-2023-34241
+     use-after-free in cupsdAcceptClient()
+Checksums-Sha1:
+ eb89db1f96de2614578685698a71a33245585e63 3512 cups_2.2.10-6+deb10u8.dsc
+ 9a50b2cf3423e63f23a3c436738b6e3a90b9219b 362600 cups_2.2.10-6+deb10u8.debian.tar.xz
+ c3017ce066edfe0d592d57e8541f272968fd80d2 15859 cups_2.2.10-6+deb10u8_amd64.buildinfo
+Checksums-Sha256:
+ 91fa5be7cc6443669c8a2c3fc9cadd6e1cd4d2ef4b35091d18324bbef7bf1f28 3512 cups_2.2.10-6+deb10u8.dsc
+ 58e4af7efb0d475a0ed4b38bdd197e1b941c21ec3a3da57586db0245226725bc 362600 cups_2.2.10-6+deb10u8.debian.tar.xz
+ 01fe85e72d7aa543e060fd38e8f1482368467898877a27c4a48e67705ce289b2 15859 cups_2.2.10-6+deb10u8_amd64.buildinfo
+Files:
+ 51631db7ac1b2108fd0638a592c3abfd 3512 net optional cups_2.2.10-6+deb10u8.dsc
+ 5811cd1d0bc53cd6ecd3b5413f91431a 362600 net optional cups_2.2.10-6+deb10u8.debian.tar.xz
+ 588512f2641eaa2645f0add7acb4f423 15859 net optional cups_2.2.10-6+deb10u8_amd64.buildinfo
+

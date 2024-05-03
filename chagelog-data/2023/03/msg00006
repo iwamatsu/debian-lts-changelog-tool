@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 05 Mar 2023 17:12:24 +0530
+Source: ruby-sidekiq
+Architecture: source
+Version: 5.2.3+dfsg-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Utkarsh Gupta <utkarsh@debian.org>
+Closes: 987354 1004193
+Changes:
+ ruby-sidekiq (5.2.3+dfsg-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Add pessimistic regexp on queue name input to avoid XSS.
+     (Fixes: CVE-2021-30151) (Closes: #987354)
+   * Add patch to validate days parameter to avoid possible
+     DoS in Web UI. (Fixes: CVE-2022-23837) (Closes: #1004193)
+Checksums-Sha1:
+ 6ad194994a66dfa75011fe408b8f232bdd9da24a 2541 ruby-sidekiq_5.2.3+dfsg-1+deb10u1.dsc
+ 6c68e476af228b872dcc6955f357baf500048b35 130844 ruby-sidekiq_5.2.3+dfsg.orig.tar.xz
+ 212eebf25edbf4ccc23ed20ea49d2ddfa5b6d3a5 5296 ruby-sidekiq_5.2.3+dfsg-1+deb10u1.debian.tar.xz
+ aecae09828b0f0b18ffec9fb8e16d61d390f9d7c 15411 ruby-sidekiq_5.2.3+dfsg-1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 69d88112eca3358b42c9ecd7d4ac4b93a11338ded6d9e7e5a6393b3b6f81eec1 2541 ruby-sidekiq_5.2.3+dfsg-1+deb10u1.dsc
+ c09ae73b5fc350e9a05773f1f9a9b7e9ec6386a091877152d7459e212e9be930 130844 ruby-sidekiq_5.2.3+dfsg.orig.tar.xz
+ 814a530e83bf82ebc92e3aeeed281f38949a28913209799c54f8ae5812c5b43e 5296 ruby-sidekiq_5.2.3+dfsg-1+deb10u1.debian.tar.xz
+ 99902fd75744deb78f1137bdef0979608aec2bd25f5262fc465d56378800b7d3 15411 ruby-sidekiq_5.2.3+dfsg-1+deb10u1_source.buildinfo
+Files:
+ 83bfd227a8d71dc36a333b146bb6adda 2541 ruby optional ruby-sidekiq_5.2.3+dfsg-1+deb10u1.dsc
+ 6eb825ff2b091bc5a67faa1a914eccae 130844 ruby optional ruby-sidekiq_5.2.3+dfsg.orig.tar.xz
+ 8189aa4718af0ea62f6260f62a3fd614 5296 ruby optional ruby-sidekiq_5.2.3+dfsg-1+deb10u1.debian.tar.xz
+ ba1bae77cfbd86917bfb11554a770f02 15411 ruby optional ruby-sidekiq_5.2.3+dfsg-1+deb10u1_source.buildinfo
+

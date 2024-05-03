@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 11 Oct 2023 12:40:37 +0200
+Source: curl
+Architecture: source
+Version: 7.64.0-4+deb10u7
+Distribution: buster-security
+Urgency: medium
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ curl (7.64.0-4+deb10u7) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * CVE-2023-38546: cookie injection
+   * CVE-2023-28321: IDN wildcard match
+Checksums-Sha1:
+ 6b61b2e722915a90c6c23d992381f6eadb9cfef4 2694 curl_7.64.0-4+deb10u7.dsc
+ 5911d4400e988ae52368f2266a5f84378983dbde 4032645 curl_7.64.0.orig.tar.gz
+ 2f50a17fe7d10ac9e771b54c492bf329d06a72df 65944 curl_7.64.0-4+deb10u7.debian.tar.xz
+ cec07951cb85304c3b25fcab17dd68045c421261 6089 curl_7.64.0-4+deb10u7_source.buildinfo
+Checksums-Sha256:
+ c7fef95314f6348b0aec80b8b3cc6c01f0a77e1ad66851832e4121c756ae22e3 2694 curl_7.64.0-4+deb10u7.dsc
+ cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5 4032645 curl_7.64.0.orig.tar.gz
+ 33782f62c3574883547d9075abb07fadb82224c2dea56146c060343faf89d4e4 65944 curl_7.64.0-4+deb10u7.debian.tar.xz
+ 15e8616c040cd4665a721f15974eeaeee9089657c07516e434da1b8d8eec1139 6089 curl_7.64.0-4+deb10u7_source.buildinfo
+Files:
+ 04fca99e8cbce35a765f1060d9e2d204 2694 web optional curl_7.64.0-4+deb10u7.dsc
+ a026740d599a32bcbbe6e70679397899 4032645 web optional curl_7.64.0.orig.tar.gz
+ 262ec595523e16894ad54b4d542010a1 65944 web optional curl_7.64.0-4+deb10u7.debian.tar.xz
+ 4eac28b14765cdcf44a9f1f12afb46e1 6089 web optional curl_7.64.0-4+deb10u7_source.buildinfo
+

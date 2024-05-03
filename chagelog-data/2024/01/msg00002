@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri,  5 Jan 2024 21:33:16 CET
+Source: exim4
+Architecture: source
+Version: 4.92-8+deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ f66d0f8fec602f0cc55096873362ad7921a30499 2771 exim4_4.92-8+deb10u9.dsc
+ 04098d0138983ba77c2558d572194f8f7bfce9da 502516 exim4_4.92-8+deb10u9.debian.tar.xz
+ 62f9c7a16a16f311cfd60be0ad800ae3f21bab87 11688 exim4_4.92-8+deb10u9_amd64.buildinfo
+Checksums-Sha256:
+ cd969a571aad42392216fee12a5f668b855e37e113338eceb12b93d88a8eae87 2771 exim4_4.92-8+deb10u9.dsc
+ 22f0de4fa4006050928c27b3f621f5fd05f332ac44f28b742c1064281d254398 502516 exim4_4.92-8+deb10u9.debian.tar.xz
+ 89b1ef1cc0e3d98e00c3de0cbe68a717208124bd660c6c84a273afef00fb882e 11688 exim4_4.92-8+deb10u9_amd64.buildinfo
+Changes:
+ exim4 (4.92-8+deb10u9) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2023-51766:
+     It was discovered that Exim, a mail transport agent, can be induced to
+     accept a second message embedded as part of the body of a first message in
+     certain configurations where PIPELINING or CHUNKING on incoming connections
+     is offered.
+Files:
+ b40e087099a9f091c962c01483ed6dfb 2771 mail standard exim4_4.92-8+deb10u9.dsc
+ dd55ae2b5e1356abe5f32a16af2799c7 502516 mail standard exim4_4.92-8+deb10u9.debian.tar.xz
+ fed8230e3f06e05cb7a05f2c86235f5d 11688 mail standard exim4_4.92-8+deb10u9_amd64.buildinfo
+

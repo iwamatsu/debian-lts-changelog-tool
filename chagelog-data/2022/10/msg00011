@@ -1,0 +1,53 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 07 Oct 2022 10:17:02 -0700
+Source: knot-resolver
+Binary: knot-resolver knot-resolver-dbgsym knot-resolver-doc knot-resolver-module-http
+Architecture: source amd64 all
+Version: 3.2.1-3+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: knot-resolver packagers <knot-resolver@packages.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Description:
+ knot-resolver - caching, DNSSEC-validating DNS resolver
+ knot-resolver-doc - Documentation for Knot Resolver
+ knot-resolver-module-http - HTTP/2 module for Knot Resolver
+Changes:
+ knot-resolver (3.2.1-3+deb10u1) buster-security; urgency=high
+ .
+   * CVE-2022-4018: Prevent an issue where remote attackers could cause
+     a denial of service via CPU consumption by exploiting algorithmic
+     complexity; during an attack, an authoritative server would return large
+     nameserver or address sets.
+   * Mark one of the autopkgtests as "flaky"; we want to still run it.
+   * Add debian/.gitlab-ci.yml, but don't test piuparts.
+Checksums-Sha1:
+ af81efe974c23d58c58ca1a401cc362e4f51b274 2780 knot-resolver_3.2.1-3+deb10u1.dsc
+ 8daafc6261cfbb448840a6c020f77ea1b3869a30 1765912 knot-resolver_3.2.1.orig.tar.xz
+ f80d095f037fe6b3555a31f83f160ec933163548 405912 knot-resolver_3.2.1-3+deb10u1.debian.tar.xz
+ 33f7b11fe8cce8f752c67fd15e3ae65531f834f0 859888 knot-resolver-dbgsym_3.2.1-3+deb10u1_amd64.deb
+ 4a1622e685433bdab28f5ab7d47899dd5bc91840 279796 knot-resolver-doc_3.2.1-3+deb10u1_all.deb
+ 999b550539ff467feff685c1cb1229a32efa8fd0 129928 knot-resolver-module-http_3.2.1-3+deb10u1_all.deb
+ b68a53fcbcba4b5029506bf80d95125235453965 9962 knot-resolver_3.2.1-3+deb10u1_amd64.buildinfo
+ ae5ffdf3a0751210ca97875da91b7f90d9ad0aac 251032 knot-resolver_3.2.1-3+deb10u1_amd64.deb
+Checksums-Sha256:
+ 09057f5a3004700c0350f458d632d9d4033c736e0f314f5b85db821a84629b01 2780 knot-resolver_3.2.1-3+deb10u1.dsc
+ d1396888ec3a63f19dccdf2b7dbcb0d16a5d8642766824b47f4c21be90ce362b 1765912 knot-resolver_3.2.1.orig.tar.xz
+ 14bbd497dd66ea004377e35b775d72eae43ef1a3a1a8c8f8c675b7cfa710d828 405912 knot-resolver_3.2.1-3+deb10u1.debian.tar.xz
+ 9b9a8fdefc26201d3bb0d6a4783d712602e0d55fd8a5a5691476b7bc5b2717ad 859888 knot-resolver-dbgsym_3.2.1-3+deb10u1_amd64.deb
+ 57c86d664da97eef77476e374839a4fb032048b36ff5b9106f4a34c6c0b79ac8 279796 knot-resolver-doc_3.2.1-3+deb10u1_all.deb
+ 4c6a204942ecba9e9fb48ec2e63f1b4f6630f2adcee7847b915ae43b6020332b 129928 knot-resolver-module-http_3.2.1-3+deb10u1_all.deb
+ 00d46907eebb15d6f6b571b2140c370c348afce1677f5e2494f2d510e1329047 9962 knot-resolver_3.2.1-3+deb10u1_amd64.buildinfo
+ 17d8e286530e56a963749b6e69757ed415828999b6b751d999bc2d50df4834b6 251032 knot-resolver_3.2.1-3+deb10u1_amd64.deb
+Files:
+ 9a5c86d45498eaebae15de7fa672c7df 2780 net optional knot-resolver_3.2.1-3+deb10u1.dsc
+ 1d25643e39d48664ff1ae6505fe6fe04 1765912 net optional knot-resolver_3.2.1.orig.tar.xz
+ 2af13ebcafd629bdb4e54e3aeaed92cb 405912 net optional knot-resolver_3.2.1-3+deb10u1.debian.tar.xz
+ 8c56aaebac70c3de9b4bb2e0bfd35f94 859888 debug optional knot-resolver-dbgsym_3.2.1-3+deb10u1_amd64.deb
+ 6c533466815c8298a9b0bb3bd95ed3ba 279796 doc optional knot-resolver-doc_3.2.1-3+deb10u1_all.deb
+ 8c5038dac078fa300618cd98cbc55dee 129928 net optional knot-resolver-module-http_3.2.1-3+deb10u1_all.deb
+ 9b057a802982ba7aa0b803c873bd170d 9962 net optional knot-resolver_3.2.1-3+deb10u1_amd64.buildinfo
+ 2792e0df590b1eca393c38703a701f88 251032 net optional knot-resolver_3.2.1-3+deb10u1_amd64.deb
+

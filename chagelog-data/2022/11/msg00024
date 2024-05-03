@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 16 Nov 2022 17:28:39 +0100
+Source: phpseclib
+Architecture: source
+Version: 1.0.19-3~deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Changes:
+ phpseclib (1.0.19-3~deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport stable 1.x branch to buster (includes CVE backport, full test
+     suite import, and bug fixes)
+Checksums-Sha1:
+ 922d93a374d23494418a679e0fca34178f8f3123 2123 phpseclib_1.0.19-3~deb10u1.dsc
+ 8d782b0d6bce2a54a419b77994191ac78a1cc212 340356 phpseclib_1.0.19.orig.tar.gz
+ de3627af862c69f5cf43571a28b51908b876c0f7 16104 phpseclib_1.0.19-3~deb10u1.debian.tar.xz
+ 6c3516dd8bf23b8e74212fef0ed27ac41f7fe5c3 7312 phpseclib_1.0.19-3~deb10u1_all.buildinfo
+Checksums-Sha256:
+ 98b8403ca458c691f96c64d7e78d1e7ea98ad8f1402e27fdb730ec2fb06a4205 2123 phpseclib_1.0.19-3~deb10u1.dsc
+ 9f4920b632e87af5a312ed22ec528813c649ee47bae507c1562d1382fa19f29e 340356 phpseclib_1.0.19.orig.tar.gz
+ d7df066cb0c3ed7a3a4be7db03e8ddff6cceb12a34754e73edc3e666e69ea0aa 16104 phpseclib_1.0.19-3~deb10u1.debian.tar.xz
+ 66ea456b34c0a8135fa1dc9e123f9b89a649481c159977882bc6ee2a1d4eee6c 7312 phpseclib_1.0.19-3~deb10u1_all.buildinfo
+Files:
+ c852296cd116e8fff57335343e481b1a 2123 php optional phpseclib_1.0.19-3~deb10u1.dsc
+ 5a2b2fecf8c216d9b85133cbb5796588 340356 php optional phpseclib_1.0.19.orig.tar.gz
+ f2f7a66768dbe48f48a46d16456788d6 16104 php optional phpseclib_1.0.19-3~deb10u1.debian.tar.xz
+ e67a1765dba7661382070ecd0bd02870 7312 php optional phpseclib_1.0.19-3~deb10u1_all.buildinfo
+

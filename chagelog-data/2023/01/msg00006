@@ -1,0 +1,56 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 10 Jan 2023 15:33:04 +0100
+Source: exiv2
+Architecture: source
+Version: 0.25-4+deb10u4
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Closes: 876893 885981 886006 903813 910060 913272 913273 915135 932467 946341 987277 992705 992706
+Changes:
+ exiv2 (0.25-4+deb10u4) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2017-11591 (Closes: #876893)
+   * Fix CVE-2017-14859, CVE-2017-14862, CVE-2017-14864
+   * Fix CVE-2017-17669 (Closes: #886006)
+   * Fix CVE-2017-18005 (Closes: #885981)
+   * Fix CVE-2018-8976 (Closes: #903813)
+   * Fix CVE-2018-17581 (Closes: #910060)
+   * Fix CVE-2018-19107 (Closes: #913273)
+     + Also fixes CVE-2018-19108 (Closes: #913272)
+   * Fix CVE-2018-19535 (Closes: #915135)
+   * Fix CVE-2018-20097
+   * Fix CVE-2019-13110
+   * Fix CVE-2019-13112
+   * Fix CVE-2019-13114
+   * Fix CVE-2019-13504 (Closes: #932467)
+     + Also fixes CVE-2019-14369 and CVE-2019-14370
+   * Fix CVE-2019-17402 (Closes: #946341)
+   * Fix CVE-2020-18771
+   * Fix CVE-2021-29458 (Closes: #987277)
+     + This is a more complete fix of duplicate CVE-2021-31292
+   * Fix CVE-2021-32815 (Closes: #992705)
+   * Fix CVE-2021-34334 (Closes: #992706)
+   * Fix CVE-2021-37620
+   * Fix CVE-2021-37621
+   * Fix CVE-2021-37622
+Checksums-Sha1:
+ 592d36adfd2630112709996822a2d44d3d722160 2269 exiv2_0.25-4+deb10u4.dsc
+ adb8ffe63916e7c27bda9792e690d1330ec7273d 5434325 exiv2_0.25.orig.tar.gz
+ fd9a9a798252ddded2057ac7a8b2c9d6175ad4b8 45888 exiv2_0.25-4+deb10u4.debian.tar.xz
+ f901c68d0b4b81f1962e70c1d748c0be3b5bd816 9423 exiv2_0.25-4+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 054521d1e73a8d1f15604624a7d5815f0be201267730901e8fbdbd111dd1c76e 2269 exiv2_0.25-4+deb10u4.dsc
+ c80bfc778a15fdb06f71265db2c3d49d8493c382e516cb99b8c9f9cbde36efa4 5434325 exiv2_0.25.orig.tar.gz
+ 74a5d7cc5a96400a1e42d5f5aeb00a603b802ca7e84ea7aa1f63555782c6947a 45888 exiv2_0.25-4+deb10u4.debian.tar.xz
+ 62afc192f1a6132ca49b5549fb325c115fc5afd71718d80fb924ee416dda61a2 9423 exiv2_0.25-4+deb10u4_amd64.buildinfo
+Files:
+ 57d0610f488c9b8a604a8efde0f3b7b5 2269 graphics optional exiv2_0.25-4+deb10u4.dsc
+ 258d4831b30f75a01e0234065c6c2806 5434325 graphics optional exiv2_0.25.orig.tar.gz
+ 641381cb52360a1bc12fef71d58d1585 45888 graphics optional exiv2_0.25-4+deb10u4.debian.tar.xz
+ d94a86f94465f6e58148dd625d8aa44b 9423 graphics optional exiv2_0.25-4+deb10u4_amd64.buildinfo
+

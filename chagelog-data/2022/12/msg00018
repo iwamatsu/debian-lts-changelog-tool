@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 08 Dec 2022 10:51:09 +0100
+Source: leptonlib
+Architecture: source
+Version: 1.76.0-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jeff Breidenbach <jab@debian.org>
+Changed-By: Helmut Grohne <helmut@subdivi.de>
+Changes:
+ leptonlib (1.76.0-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2022-38266
+Checksums-Sha1:
+ ae5f7fb1209680a87c8e599b8bd82c8d13c3c8df 1976 leptonlib_1.76.0-1+deb10u2.dsc
+ 5b93531f6f7e5b6c6870c9fba743008a77a93e4e 12436958 leptonlib_1.76.0.orig.tar.gz
+ 2be8419aa8c844270129349cc134ec5b1e31da47 9600 leptonlib_1.76.0-1+deb10u2.debian.tar.xz
+ c6a116e3331c978121ba300c440d134b308d614f 7533 leptonlib_1.76.0-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 1cfe3aaa20f976a76ad1065b033b61cebb597715e60436b54109679ef5018a6e 1976 leptonlib_1.76.0-1+deb10u2.dsc
+ 5e9a33b7ce33ab39fb03cee5a7ec353b044670176303265d7c64d51539616857 12436958 leptonlib_1.76.0.orig.tar.gz
+ 7f48b6e88f08de0ab7b3e99660af69ce06d3a654824852558c05d0c56ed9e27f 9600 leptonlib_1.76.0-1+deb10u2.debian.tar.xz
+ b5a419f9a7dccfa860f6371ba42fffb5b16a7ddd193cf7703bedf2be8d571766 7533 leptonlib_1.76.0-1+deb10u2_amd64.buildinfo
+Files:
+ c64397786413884136cf555272a6e753 1976 graphics optional leptonlib_1.76.0-1+deb10u2.dsc
+ a263a5e4f7e8f8a661fb121a265d2d20 12436958 graphics optional leptonlib_1.76.0.orig.tar.gz
+ 4b6cd02a7d8e6d0eb1b64781b3ddd81f 9600 graphics optional leptonlib_1.76.0-1+deb10u2.debian.tar.xz
+ e73de32c90d6a95edb3ddb975756a3c3 7533 graphics optional leptonlib_1.76.0-1+deb10u2_amd64.buildinfo
+
