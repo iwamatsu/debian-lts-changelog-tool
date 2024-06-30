@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Jun 2024 23:56:44 CEST
+Source: tryton-client
+Architecture: source
+Version: 5.0.5-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Tryton Maintainers <team+tryton-team@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 6786df5e7faf0dcfd554ed5497a81d7ce6495eac 2377 tryton-client_5.0.5-1+deb10u1.dsc
+ 463361d685973bb6809c0f5e63281828bf22a9a8 587036 tryton-client_5.0.5.orig.tar.gz
+ 86abb32f6ad2dfe676fa6c7547905bea27aa1234 19984 tryton-client_5.0.5-1+deb10u1.debian.tar.xz
+ 7a68451f30ffaf8edf6aedec6112070b9113a515 11791 tryton-client_5.0.5-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 0a0dd102052cb4a20a9e11e8c6b9810f90f8ed3da26dba7766bb64312ce2a405 2377 tryton-client_5.0.5-1+deb10u1.dsc
+ f8bb722ceaf8d46cec799315ac5999ac08c07e1b8b714e0783c472ed3f23f5a5 587036 tryton-client_5.0.5.orig.tar.gz
+ de483065bdd12218f5988b2805f18754a8039d53094426f23f0a9362eb056740 19984 tryton-client_5.0.5-1+deb10u1.debian.tar.xz
+ 60a4817aff44de4c78546da1bdf32ac721c60ea9c907b6d33a3fa1b3a1fc014b 11791 tryton-client_5.0.5-1+deb10u1_amd64.buildinfo
+Changes:
+ tryton-client (5.0.5-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix possible denial of service:
+     Cédric Krier has found that trytond accepts compressed content from
+     unauthenticated requests which makes it vulnerable to zip bomb attacks.
+     This patch allows only to send gzip content within a session.
+Files:
+ 5657dad217d740b732b3d6da11698e53 2377 python optional tryton-client_5.0.5-1+deb10u1.dsc
+ 9eeab52f20a4bad291c9cadb03b49f40 587036 python optional tryton-client_5.0.5.orig.tar.gz
+ 690779d9449f722daebc5b2fb3ecf19b 19984 python optional tryton-client_5.0.5-1+deb10u1.debian.tar.xz
+ 6b95dd31d7411c4d9da44884d6ae7d27 11791 python optional tryton-client_5.0.5-1+deb10u1_amd64.buildinfo
+

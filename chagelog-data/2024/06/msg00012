@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 19 Jun 2024 11:57:13 -0700
+Source: composer
+Architecture: source
+Version: 1.8.4-1+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1073125 1073126
+Changes:
+ composer (1.8.4-1+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-35241: Prevent a command-line injection vulnerability in the
+     'status', 'reinstall' and 'remove' functionality where packages installed
+     via Git that used maliciously-crafted branch names could have been used to
+     execute arbitrary shell commands. (Closes: #1073125)
+   * CVE-2024-35242: Prevent a command-line injection vulnerability in the
+     'install' functionality where packages installed via Hg or Git that used
+     maliciously-crafted branch names could have been used to execute arbitrary
+     shell commands. (Closes: #1073126)
+Checksums-Sha1:
+ bc7638ea1ab7650bc8f7907d21c86e4b78fa4c5a 2331 composer_1.8.4-1+deb10u4.dsc
+ d202319631cd905aa3b701c1e50a5c5254c2c1ca 406561 composer_1.8.4.orig.tar.gz
+ 49c6cb05f0bdb0172e96808424b32203b7dbc0a3 425976 composer_1.8.4-1+deb10u4.debian.tar.xz
+ e4b492eb5992d78bf8c58e12b9616123e72d032f 9516 composer_1.8.4-1+deb10u4_amd64.buildinfo
+Checksums-Sha256:
+ 0a026327ad177bf4ed2097d37f19cbeaed88ac4fb6f61a014ae026bf8e0a6662 2331 composer_1.8.4-1+deb10u4.dsc
+ 288ab33c8f11f0db4b5883d4a115a8ead8ef1a74c924f3accadc61d220ca22de 406561 composer_1.8.4.orig.tar.gz
+ 9eb0486fbf18e04e155e310204a57d7529a150d5361f9fd136aa74221177c1b8 425976 composer_1.8.4-1+deb10u4.debian.tar.xz
+ 68908f137bb8efd45c6539fc4132c158096bb5123a970176e6d8c005a579d1b4 9516 composer_1.8.4-1+deb10u4_amd64.buildinfo
+Files:
+ 0fd43448b528e21759e5d46ccef0cac3 2331 php optional composer_1.8.4-1+deb10u4.dsc
+ 0fb0249cc1047048c91fa1c7c6d706a4 406561 php optional composer_1.8.4.orig.tar.gz
+ 841e7610fbd7cea610b976cddcfe1e42 425976 php optional composer_1.8.4-1+deb10u4.debian.tar.xz
+ 522a3930ba12a3b1b03ccfb13bdb7da8 9516 php optional composer_1.8.4-1+deb10u4_amd64.buildinfo
+

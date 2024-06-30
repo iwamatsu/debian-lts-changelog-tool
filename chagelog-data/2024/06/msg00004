@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 14 Jun 2024 18:54:08 -0300
+Source: atril
+Architecture: source
+Version: 1.20.3-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Closes: 1060751 1061522
+Changes:
+ atril (1.20.3-1+deb10u2) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+ .
+   [ Utkarsh Gupta ]
+   * Fix path traversal and arbitrary file write vulnerability when extracting
+     files (CVE-2023-52076) (Closes: #1061522)
+ .
+   [ Santiago Ruano Rincón ]
+   * Add debian/gbp.conf to make debian/buster as default debian branch
+   * Disable support for comics, vulnerable to CVE-2023-51698 (Closes: #1060751)
+Checksums-Sha1:
+ c48fdd0472e05704bdc6e70ba39fec23c0c1db3f 2505 atril_1.20.3-1+deb10u2.dsc
+ e9ec82f89515acf6a8256fba31fc9a214758de12 1366912 atril_1.20.3.orig.tar.xz
+ 5b95af54b137b0a26659959f0775a02ee005d193 23104 atril_1.20.3-1+deb10u2.debian.tar.xz
+ b2edf98e1c1ee7a30e7b36baddc0cc50fb44781f 23225 atril_1.20.3-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 5b015cd390aa76debc31150436d0f29265f1d8b8a2decbe733b26f4d4bcb0eba 2505 atril_1.20.3-1+deb10u2.dsc
+ 17f6e3caa9a80263c5dabd9ffd2955d4e3617aedb8b1fbb4c7fe1d7d5e0cbd91 1366912 atril_1.20.3.orig.tar.xz
+ e1b873bc70ebde62430ffe6638ab4f6d0755564ecaf5844daaded600c81d5ec4 23104 atril_1.20.3-1+deb10u2.debian.tar.xz
+ eec9dff782eebfa2b62bf988bf93e35510ffe717a7632609a8039b4566f7ec4c 23225 atril_1.20.3-1+deb10u2_amd64.buildinfo
+Files:
+ 9d641cec0c44768595657a3044b69c4b 2505 x11 optional atril_1.20.3-1+deb10u2.dsc
+ 8149302410e2ee73ef83fa78fabc9a47 1366912 x11 optional atril_1.20.3.orig.tar.xz
+ e3c52a7aa0a0ecb1b42ce2f7237628bb 23104 x11 optional atril_1.20.3-1+deb10u2.debian.tar.xz
+ 8a6d725c3d109b0372e1aff7347de922 23225 x11 optional atril_1.20.3-1+deb10u2_amd64.buildinfo
+

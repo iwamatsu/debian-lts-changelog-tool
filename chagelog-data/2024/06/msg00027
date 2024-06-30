@@ -1,0 +1,45 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 18 Mar 2024 23:34:27 +0100
+Source: pdns-recursor
+Binary: pdns-recursor pdns-recursor-dbgsym
+Architecture: source amd64
+Version: 4.1.11-1+deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: pdns-recursor packagers <pdns-recursor@packages.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Description:
+ pdns-recursor - PowerDNS Recursor
+Closes: 964103 972159
+Changes:
+ pdns-recursor (4.1.11-1+deb10u2) buster; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * debian/patches/CVE-2020-14196.patch: Added (CVE-2020-14196).
+     - Add patch to enforce 'webserver-allow-from' ACL (closes: #964103).
+   * debian/patches/CVE-2020-25829.patch: Added (CVE-2020-25829).
+     - Add patch to fix DoS (closes: #972159).
+Checksums-Sha1:
+ 2ea7dd83210c6bbc566c2e37079e00c4d112dd87 2400 pdns-recursor_4.1.11-1+deb10u2.dsc
+ c6fc345f2f1db854b08fac5a218652f37066e53d 1239986 pdns-recursor_4.1.11.orig.tar.bz2
+ 0263d2fe48d2bbd5f67fef5a5895156449f200b7 27640 pdns-recursor_4.1.11-1+deb10u2.debian.tar.xz
+ 2d629b1c443c9056cefecf4236dd17966f49e132 28225032 pdns-recursor-dbgsym_4.1.11-1+deb10u2_amd64.deb
+ c88bd4a0e3b0120ad7f8cb8bfd5e213392876b07 7364 pdns-recursor_4.1.11-1+deb10u2_amd64.buildinfo
+ baed4972b1e43e32fced360d3c39ac33fc7c41a6 1457096 pdns-recursor_4.1.11-1+deb10u2_amd64.deb
+Checksums-Sha256:
+ 57372edbf183d14da424508fd661c5115223ef85d368e55a5f52b94204440b21 2400 pdns-recursor_4.1.11-1+deb10u2.dsc
+ 9ec7d52b545d3ea4498b17ea5433a686aa0d82e882608dcdcea9a116a3f4d670 1239986 pdns-recursor_4.1.11.orig.tar.bz2
+ e18852b5f75fddfcf36c3d002fc98bc9ad40acc2f065b01e1755c2ca53c577e0 27640 pdns-recursor_4.1.11-1+deb10u2.debian.tar.xz
+ cff02d2204b111b10a2ae87caaf5208088b10a6a8834bb225a49a6fa68ea90d8 28225032 pdns-recursor-dbgsym_4.1.11-1+deb10u2_amd64.deb
+ 02838712e9ca8794f9a8f8bc550d799f27b78073581e7c6396eb2558ae1860b9 7364 pdns-recursor_4.1.11-1+deb10u2_amd64.buildinfo
+ 6f2dc6dccabe32b9eedfed581e4286506f6adc6fd10680f97234ac49f8064f33 1457096 pdns-recursor_4.1.11-1+deb10u2_amd64.deb
+Files:
+ 296e5118b5ad571a219261a913967819 2400 net optional pdns-recursor_4.1.11-1+deb10u2.dsc
+ a798da5c9c01e5626d6260317d3aad82 1239986 net optional pdns-recursor_4.1.11.orig.tar.bz2
+ 222ead94c1c57abb5fd817156023915f 27640 net optional pdns-recursor_4.1.11-1+deb10u2.debian.tar.xz
+ 56fe4b3707eeaa4129b92dca1758f7d8 28225032 debug optional pdns-recursor-dbgsym_4.1.11-1+deb10u2_amd64.deb
+ 41455aff15cd53c9578d3b7ff0b5a088 7364 net optional pdns-recursor_4.1.11-1+deb10u2_amd64.buildinfo
+ 878640a7882b050722e48a7d81eedd42 1457096 net optional pdns-recursor_4.1.11-1+deb10u2_amd64.deb
+

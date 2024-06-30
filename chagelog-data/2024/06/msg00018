@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 26 Jun 2024 15:16:59 +0800
+Source: git
+Architecture: source
+Version: 1:2.20.1-2+deb10u9
+Distribution: buster-security
+Urgency: high
+Maintainer: Gerrit Pape <pape@smarden.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1034835 1071160
+Changes:
+ git (1:2.20.1-2+deb10u9) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport commit 9cf8547320, a follow-up fix for CVE-2019-1387.
+   * Backport upstream fixes for CVE-2023-25652, CVE-2023-25815,
+     CVE-2023-29007, CVE-2024-32002, CVE-2024-32004, CVE-2024-32021,
+     CVE-2024-32465 (Closes: #1034835, #1071160).
+Checksums-Sha1:
+ aecfe39b9a55061ea60b28ea27f89b3f9c260643 2931 git_2.20.1-2+deb10u9.dsc
+ c8e3166a1dc57f660326e201aa725021ad963e9f 718244 git_2.20.1-2+deb10u9.debian.tar.xz
+ 2e936f3f1c50ec5f71f3e607ce2688512e44d8a4 7656 git_2.20.1-2+deb10u9_source.buildinfo
+Checksums-Sha256:
+ 86ee4f7889868282fc7ea8a0b441afb352a7f74cb309a2f1dbeee2509556804e 2931 git_2.20.1-2+deb10u9.dsc
+ 8b9586ac186b1a715d430c5e937c592eda0d5b052ad8c340930c8684b94dc4b7 718244 git_2.20.1-2+deb10u9.debian.tar.xz
+ a9a8f41d836c5bb3ddd2eeb5a569512a557d10c04b9dd9dafbfad088b98f5b88 7656 git_2.20.1-2+deb10u9_source.buildinfo
+Files:
+ d4c0e5eede78f8944e4efb6dccb6955c 2931 vcs optional git_2.20.1-2+deb10u9.dsc
+ 78b2c75e63b3fa404ae62a6ea56dc35a 718244 vcs optional git_2.20.1-2+deb10u9.debian.tar.xz
+ 961d2a95e2ff6f3560370f75a851b823 7656 vcs optional git_2.20.1-2+deb10u9_source.buildinfo
+

@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Jun 2024 23:21:00 CEST
+Source: gunicorn
+Architecture: source
+Version: 19.9.0-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Chris Lamb <lamby@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 5060669a7f6af04652ff86c58021d5dbc3d6c5a8 2403 gunicorn_19.9.0-1+deb10u1.dsc
+ 9b207d44abca9ba0ba818c738faf497c8657a4d2 401755 gunicorn_19.9.0.orig.tar.gz
+ 86de0523a5d7a1f5d6d16c64939cc1e73d5ff20e 20040 gunicorn_19.9.0-1+deb10u1.debian.tar.xz
+ 5e32aec95be2ce3a8ed63db6f9a2fe408a4ad8c0 8019 gunicorn_19.9.0-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ b39b69e1410b9b042286c97e7237f263066a667b395e58618b5f393d656ce8e2 2403 gunicorn_19.9.0-1+deb10u1.dsc
+ d593aa13812eadc1f5cffe4a81ccdcbcb25528e5418af1b5138e88fd8c0c2a31 401755 gunicorn_19.9.0.orig.tar.gz
+ f4154a5b08967ef3d7ca2aeca7c01da36658f87cc2e9db105d8871c8805b80ce 20040 gunicorn_19.9.0-1+deb10u1.debian.tar.xz
+ ca03551011d7a3152c49f5577d02a0efe6cc1f79d5c465ccade7e1d12b7428bd 8019 gunicorn_19.9.0-1+deb10u1_amd64.buildinfo
+Changes:
+ gunicorn (19.9.0-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2024-1135:
+     Gunicorn fails to properly validate Transfer-Encoding headers, leading to
+     HTTP Request Smuggling (HRS) vulnerabilities. By crafting requests with
+     conflicting Transfer-Encoding headers, attackers can bypass security
+     restrictions and access restricted endpoints. This issue is due to
+     Gunicorn's handling of Transfer-Encoding headers, where it incorrectly
+     processes requests with multiple, conflicting Transfer-Encoding headers,
+     treating them as chunked regardless of the final encoding specified. This
+     vulnerability allows for a range of attacks including cache poisoning,
+     session manipulation, and data exposure.
+Files:
+ 4be37e4e9a7f16afb4d5c1aadc5d72f2 2403 httpd optional gunicorn_19.9.0-1+deb10u1.dsc
+ 202af42999278fc91809971dc84088f4 401755 httpd optional gunicorn_19.9.0.orig.tar.gz
+ b835fa4c78f5ec9aa5ba5a991f6cb8e8 20040 httpd optional gunicorn_19.9.0-1+deb10u1.debian.tar.xz
+ 057922e472f2746fd76a1645da01fa98 8019 httpd optional gunicorn_19.9.0-1+deb10u1_amd64.buildinfo
+

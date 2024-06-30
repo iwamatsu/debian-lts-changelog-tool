@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 11 Jun 2024 22:16:49 +0200
+Source: cups
+Architecture: source
+Version: 2.2.10-6+deb10u10
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ cups (2.2.10-6+deb10u10) buster-security; urgency=high
+ .
+   * CVE-2024-35235
+     fix domain socket handling
+Checksums-Sha1:
+ 277efca0d5eb245965bd8972843369e426396233 3516 cups_2.2.10-6+deb10u10.dsc
+ cf5f01554a29f9ec868e1d6430419eb57ed38b16 364560 cups_2.2.10-6+deb10u10.debian.tar.xz
+ 42440dc402da5fd20a0755e5a5c8afe18f5e082f 9747 cups_2.2.10-6+deb10u10_source.buildinfo
+Checksums-Sha256:
+ d848ffb8d98486b7ba6ef567a2ed3febf5dd0ec7bb13b3f101fc450055bb0e7b 3516 cups_2.2.10-6+deb10u10.dsc
+ 30df7951a5751cbbbee7bdc7dc386be8f80e057ef04712f74fc00b2d128900f4 364560 cups_2.2.10-6+deb10u10.debian.tar.xz
+ a7db1a262f0882869282676acb55a5dd151a7cb33757e489af1bef7fa451db35 9747 cups_2.2.10-6+deb10u10_source.buildinfo
+Files:
+ 3459d0c84c5d0afc192c82ad9aee3e8f 3516 net optional cups_2.2.10-6+deb10u10.dsc
+ dfeb4bbae42207eafe362b582edec227 364560 net optional cups_2.2.10-6+deb10u10.debian.tar.xz
+ 3fcaf4c18e1a7d05889a247ff70bab78 9747 net optional cups_2.2.10-6+deb10u10_source.buildinfo
+

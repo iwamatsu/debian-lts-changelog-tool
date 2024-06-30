@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 14 Jun 2024 21:09:08 +0000
+Source: sendmail
+Architecture: source
+Version: 8.15.2-14~deb10u2
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1059386
+Changes:
+ sendmail (8.15.2-14~deb10u2) buster-security; urgency=medium
+ .
+   * LTS Team upload
+   * Fix CVE-2023-51765 (Closes: #1059386):
+     sendmail allowed SMTP smuggling in certain configurations.
+     Remote attackers can use a published exploitation
+     technique to inject e-mail messages with a spoofed
+     MAIL FROM address, allowing bypass of an SPF protection
+     mechanism. This occurs because sendmail supports
+     <LF>.<CR><LF> but some other popular e-mail servers
+     do not. This is resolved with 'o' in srv_features.
+   * Enable _FFR_REJECT_NUL_BYTE for rejecting mail that
+     include NUL byte
+Checksums-Sha1:
+ e067f952d2a735cf5f10417e340583b54700053a 2597 sendmail_8.15.2-14~deb10u2.dsc
+ 5801d4b06f4e38ef228a5954a44d17636eaa5a16 2207417 sendmail_8.15.2.orig.tar.gz
+ 5d2e0e0e3fceaf7d9f83a25bc38c27662dd70c99 423464 sendmail_8.15.2-14~deb10u2.debian.tar.xz
+ 63ef1baee253ffe0be04fcd4d8e4ed47b0099b9e 10484 sendmail_8.15.2-14~deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ 7a32946f45bcb298c89183de38362743c64d80752b5d4eab7423fd1311e7a3f6 2597 sendmail_8.15.2-14~deb10u2.dsc
+ 24f94b5fd76705f15897a78932a5f2439a32b1a2fdc35769bb1a5f5d9b4db439 2207417 sendmail_8.15.2.orig.tar.gz
+ 4705dcabc8d1554882da2e63b1d1e2677ec6580e8fa908e5e34cd962abb30cf3 423464 sendmail_8.15.2-14~deb10u2.debian.tar.xz
+ b31b2329c2a2e9af438d1d63e8792d7d28007c1e233dc08bfa571b0fc0d292ca 10484 sendmail_8.15.2-14~deb10u2_amd64.buildinfo
+Files:
+ b09401fd9d5db936ec711c87a59438a1 2597 mail optional sendmail_8.15.2-14~deb10u2.dsc
+ a824fa7dea4d3341efb6462ccd816f00 2207417 mail optional sendmail_8.15.2.orig.tar.gz
+ edddf5c0997a495b6997471ae2947aaa 423464 mail optional sendmail_8.15.2-14~deb10u2.debian.tar.xz
+ 4693678a5d3bde67d4eb60f30f54a51a 10484 mail optional sendmail_8.15.2-14~deb10u2_amd64.buildinfo
+

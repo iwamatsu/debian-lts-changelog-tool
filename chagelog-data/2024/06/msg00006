@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 16 Jun 2024 21:55:29 +0300
+Source: libvpx
+Architecture: source
+Version: 1.7.0-3+deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libvpx (1.7.0-3+deb10u3) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-5197: Integer overflows
+Checksums-Sha1:
+ 5e8837aeb7ee7f87b0e750a96abd815f98241106 2293 libvpx_1.7.0-3+deb10u3.dsc
+ fb3d4b80596d1e3b1a7f53757d63e7d2b3eeb7c9 2679797 libvpx_1.7.0.orig.tar.gz
+ c8c90aa35d917d9fb3ce8a37e717a2f442ca0adb 19184 libvpx_1.7.0-3+deb10u3.debian.tar.xz
+Checksums-Sha256:
+ e965f41237673ff1fa2977a6e90a3c65a960222c766fa329421e163268e1d0dd 2293 libvpx_1.7.0-3+deb10u3.dsc
+ 1fec931eb5c94279ad219a5b6e0202358e94a93a90cfb1603578c326abfc1238 2679797 libvpx_1.7.0.orig.tar.gz
+ c50202f1df3370f5921785e266be147a5056b8199684216baee24923e7849248 19184 libvpx_1.7.0-3+deb10u3.debian.tar.xz
+Files:
+ b15362f5eb5191221e8a349759e167d1 2293 video optional libvpx_1.7.0-3+deb10u3.dsc
+ 193346f9aec0726145e51db732417cd2 2679797 video optional libvpx_1.7.0.orig.tar.gz
+ ffaac47a16fc0caca1bff060d7589c5f 19184 video optional libvpx_1.7.0-3+deb10u3.debian.tar.xz
+

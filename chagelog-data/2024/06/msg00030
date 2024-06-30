@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 29 Jun 2024 10:52:35 +0800
+Source: org-mode
+Architecture: source
+Version: 9.1.14+dfsg-3+deb10u3
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Emacsen team <debian-emacsen@lists.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1074136
+Changes:
+ org-mode (9.1.14+dfsg-3+deb10u3) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fix for CVE-2024-39331 (Closes: #1074136).
+Checksums-Sha1:
+ 805c5a0ddcdc162b884710a595aba2ac5a5b3498 2052 org-mode_9.1.14+dfsg-3+deb10u3.dsc
+ 351b6ce1c97acbceb2e6e773a278db58c38a2a04 16264 org-mode_9.1.14+dfsg-3+deb10u3.debian.tar.xz
+ 978372b61da2b7d1ebd64d69c3810cbe406713b0 6236 org-mode_9.1.14+dfsg-3+deb10u3_source.buildinfo
+Checksums-Sha256:
+ 43d2c1e014e6531728c51db97f2af3c5d3c76694c884ce8b1b9e23be416fe0d4 2052 org-mode_9.1.14+dfsg-3+deb10u3.dsc
+ a04b526b9c420b48d875ee3803d4b2210dbd79eb831ce776422ca5ec2051b07e 16264 org-mode_9.1.14+dfsg-3+deb10u3.debian.tar.xz
+ d27fbbaae84538a0c3945fab22b0699ab6eee7cb83c1ab71759cfc8a490f5162 6236 org-mode_9.1.14+dfsg-3+deb10u3_source.buildinfo
+Files:
+ dc07a0f2f8a3bc4a8e2aaed64280ad4e 2052 lisp optional org-mode_9.1.14+dfsg-3+deb10u3.dsc
+ 57ac12107c267d126fb696b915f43ad7 16264 lisp optional org-mode_9.1.14+dfsg-3+deb10u3.debian.tar.xz
+ a84dcaa7908775edebfa7fffe93c4bc6 6236 lisp optional org-mode_9.1.14+dfsg-3+deb10u3_source.buildinfo
+

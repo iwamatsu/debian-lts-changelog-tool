@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 21 Jun 2024 21:27:45 CEST
+Source: netty
+Architecture: source
+Version: 1:4.1.33-1+deb10u5
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 17f9776c5bc840a68b9d6f208fe77c0cda3d812f 2617 netty_4.1.33-1+deb10u5.dsc
+ 9b35ee39d22a438c6cbf877d0f76124bbef56406 89792 netty_4.1.33-1+deb10u5.debian.tar.xz
+ 3ec82da55d03e903042fac55547d73c98b309fb0 14591 netty_4.1.33-1+deb10u5_amd64.buildinfo
+Checksums-Sha256:
+ 932b6133475d8b8e8238ba8f8b7d3f1717270a329da9a709accfd1fd4648db7e 2617 netty_4.1.33-1+deb10u5.dsc
+ d96f9f88fafb5162d0acf722a366f34e893d37dd89eb9b84847053eb41c4d1d5 89792 netty_4.1.33-1+deb10u5.debian.tar.xz
+ f7d9d39b935ee9adff67e12921ef60c93ec2333c479c4dabdafe1c358fcf3bf9 14591 netty_4.1.33-1+deb10u5_amd64.buildinfo
+Changes:
+ netty (1:4.1.33-1+deb10u5) buster-security; urgency=high
+ .
+   * Team upload.
+   * Julien Viet discovered that Netty, a Java NIO client/server socket
+     framework, was vulnerable to allocation of resources without limits or
+     throttling due to the accumulation of data in the HttpPostRequestDecoder.
+     This would allow an attacker to cause a denial of service.
+Files:
+ c62824e3cfc68f73e07b811619d6a698 2617 java optional netty_4.1.33-1+deb10u5.dsc
+ a5c63a0f0571eaeb5836095a53b26d8f 89792 java optional netty_4.1.33-1+deb10u5.debian.tar.xz
+ 4b96a983ed6b1322ff6971478098fb7f 14591 java optional netty_4.1.33-1+deb10u5_amd64.buildinfo
+

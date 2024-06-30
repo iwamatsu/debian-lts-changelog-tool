@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 11 Jun 2024 21:30:35 +0300
+Source: nano
+Architecture: source
+Version: 3.2-3+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Jordi Mallach <jordi@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ nano (3.2-3+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-5742: Emergency file symlink attack
+Checksums-Sha1:
+ 79030c4119ace2263e46abb61017a921a83e2105 2244 nano_3.2-3+deb10u1.dsc
+ 723128dc1eade35a24a57c1d60d954b5cf308654 1514744 nano_3.2.orig.tar.xz
+ 604282c0a405e353af56f7923eb2611774e7f40d 833 nano_3.2.orig.tar.xz.asc
+ 61061e9092c9450b20457be032775436e3ed37d0 34820 nano_3.2-3+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ d21cdcdd1a3abf54deb8c2ce541e1a10c4c5c6ab702fce4036238aca57e43812 2244 nano_3.2-3+deb10u1.dsc
+ d12773af3589994b2e4982c5792b07c6240da5b86c5aef2103ab13b401fe6349 1514744 nano_3.2.orig.tar.xz
+ dc2685ad9bce1a78413bf198f6f71f058f696d9474d2cd84ce09dcb385a519e3 833 nano_3.2.orig.tar.xz.asc
+ 7d0367abcd2d937c1dab34362f4b4ce8c33802305af6eb19b7896e97cfe0f261 34820 nano_3.2-3+deb10u1.debian.tar.xz
+Files:
+ b642daae1a814e099d75a4ca2f8c648e 2244 editors optional nano_3.2-3+deb10u1.dsc
+ 2606dc0dc31a088f16c7d603b42d23d0 1514744 editors optional nano_3.2.orig.tar.xz
+ 41da6373ed64e5537d3ac22a00fd5746 833 editors optional nano_3.2.orig.tar.xz.asc
+ 8a153c68a4aa7ea0689705c6bb0517e5 34820 editors optional nano_3.2-3+deb10u1.debian.tar.xz
+

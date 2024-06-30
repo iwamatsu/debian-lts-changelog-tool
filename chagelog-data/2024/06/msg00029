@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 26 Jun 2024 21:22:32 +0300
+Source: dcmtk
+Architecture: source
+Version: 3.6.4-2.1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ dcmtk (3.6.4-2.1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-41687: Incorrect freeing of memory
+   * CVE-2021-41688: Incorrect freeing of memory
+   * CVE-2021-41689: NULL pointer dereference
+   * CVE-2021-41690: Incorrect freeing of memory
+   * CVE-2022-2121: NULL pointer dereference
+   * CVE-2022-43272: Memory leak in single process mode
+   * CVE-2024-28130: Segmentation faults due to incorrect typecast
+   * CVE-2024-34508: Segmentation fault via invalid DIMSE message
+   * CVE-2024-34509: Segmentation fault via invalid DIMSE message
+Checksums-Sha1:
+ df2f37a77d5bc357e480411e0d2645a3ef1045e7 2276 dcmtk_3.6.4-2.1+deb10u1.dsc
+ 8f624eb609f2771f304cf4372a39a86d577f03f5 6402734 dcmtk_3.6.4.orig.tar.gz
+ 7e7d8c99fa94006b09f5db68928b232063d78859 46924 dcmtk_3.6.4-2.1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 46d517fb9f23a7ea2917d5c97d8f65ef89ffe60454b39dc45ed8f900f2647b90 2276 dcmtk_3.6.4-2.1+deb10u1.dsc
+ a93ff354fae091689a0740a1000cde7d4378fdf733aef9287a70d7091efa42c0 6402734 dcmtk_3.6.4.orig.tar.gz
+ 28ac4258ea7dea60aa46c6ac46b9397212f3c4b4c3928bf84c56f46bb0d59e1e 46924 dcmtk_3.6.4-2.1+deb10u1.debian.tar.xz
+Files:
+ fd42def1e103c1d5284313da3a141e1a 2276 science optional dcmtk_3.6.4-2.1+deb10u1.dsc
+ 97597439a2ae7a39086066318db5f3bc 6402734 science optional dcmtk_3.6.4.orig.tar.gz
+ 87b40be6ea21f0c8badca80d73b679ee 46924 science optional dcmtk_3.6.4-2.1+deb10u1.debian.tar.xz
+

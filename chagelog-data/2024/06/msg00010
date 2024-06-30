@@ -1,0 +1,36 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 17 Jun 2024 23:48:38 +0200
+Source: php7.3
+Architecture: source
+Version: 7.3.31-1~deb10u7
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Changes:
+ php7.3 (7.3.31-1~deb10u7) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2024-5458:
+     Due to a code logic error, filtering functions such as filter_var when
+     validating URLs (FILTER_VALIDATE_URL) for certain types of URLs the
+     function will result in invalid user information (username + password part
+     of URLs) being treated as valid user information. This may lead to the
+     downstream code accepting invalid URLs as valid and parsing them
+     incorrectly. The problem is related to CVE-2020-7071, but affects IPv6 host
+     parts.
+Checksums-Sha1:
+ 9a02746ba263cff35adc9d0f618390503d210177 5774 php7.3_7.3.31-1~deb10u7.dsc
+ 72a709063f13e4639729ebad27e937b885e99df9 88240 php7.3_7.3.31-1~deb10u7.debian.tar.xz
+ b8c6a5a0583f27a9689713fdca2713ff4febdf1c 14665 php7.3_7.3.31-1~deb10u7_source.buildinfo
+Checksums-Sha256:
+ 73980a331e35057b5325b3fb5f85d616286f603122ff5fce2a9dd8a8cd53fbe5 5774 php7.3_7.3.31-1~deb10u7.dsc
+ 54a61d282eee61599400be8cf7eb8eff3474ad8be20e84ba22aa9d80fef3907a 88240 php7.3_7.3.31-1~deb10u7.debian.tar.xz
+ b2fdc7ed954ef00b54575a53940fda95f6c62156102ef720a8526baa94048641 14665 php7.3_7.3.31-1~deb10u7_source.buildinfo
+Files:
+ ea9c8e33cfea433f6e87dea2974cd904 5774 php optional php7.3_7.3.31-1~deb10u7.dsc
+ deab91efaaf82c146d5a593fcb9b4d46 88240 php optional php7.3_7.3.31-1~deb10u7.debian.tar.xz
+ 2409566d0a59a701370c9435906c2ea0 14665 php optional php7.3_7.3.31-1~deb10u7_source.buildinfo
+

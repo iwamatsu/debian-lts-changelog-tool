@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 27 Jun 2024 22:33:21 +0200
+Source: libmojolicious-perl
+Architecture: source
+Version: 8.12+dfsg-1.1~deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Arturo Borrero Gonzalez <arturo@debian.org>
+Changes:
+ libmojolicious-perl (8.12+dfsg-1.1~deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * libmojolicious-perl: include fix for CVE-2020-36829.
+     This vulnerability is a timing attacks that allow an attacker to guess
+     the length of a secret string.
+Checksums-Sha1:
+ 83b0ff18aae318df315e208bcad361ad862a5f7d 2410 libmojolicious-perl_8.12+dfsg-1.1~deb10u1.dsc
+ 929118d84d6f716ba9d76c6f244bd468f53a4b2a 565428 libmojolicious-perl_8.12+dfsg.orig.tar.xz
+ ebd66f171022fefec21653aeb4cc3465820f4494 16436 libmojolicious-perl_8.12+dfsg-1.1~deb10u1.debian.tar.xz
+ 85684e360a2b49574d978a1453c0012642f6fec4 5832 libmojolicious-perl_8.12+dfsg-1.1~deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ ef2f6ad26fba7a7a51de206889d1ed4c6cb77c45d73c825351fef1effc0c27a6 2410 libmojolicious-perl_8.12+dfsg-1.1~deb10u1.dsc
+ ee987f7c2e83587603f3fd59567dc01cdf662b8aa6213a453a3527a51de68c25 565428 libmojolicious-perl_8.12+dfsg.orig.tar.xz
+ 7b5f88b1c8d2afc045333ad79ee66b12d8a71e201dcace96ca9ae83d2a3c0c58 16436 libmojolicious-perl_8.12+dfsg-1.1~deb10u1.debian.tar.xz
+ b645bfb3286efecb06291e06d66e49e4b4e887a4de25fecbd6ece84ba4776715 5832 libmojolicious-perl_8.12+dfsg-1.1~deb10u1_amd64.buildinfo
+Files:
+ a4210e672eb4644e93e8535ef5962c4b 2410 perl optional libmojolicious-perl_8.12+dfsg-1.1~deb10u1.dsc
+ 23b43dfb9e7d2fa0e54d587c4996af78 565428 perl optional libmojolicious-perl_8.12+dfsg.orig.tar.xz
+ d4d0b2848180a5343c0588ac21100acf 16436 perl optional libmojolicious-perl_8.12+dfsg-1.1~deb10u1.debian.tar.xz
+ 3cb015facebfcb6b79e8680d1ccc52a3 5832 perl optional libmojolicious-perl_8.12+dfsg-1.1~deb10u1_amd64.buildinfo
+

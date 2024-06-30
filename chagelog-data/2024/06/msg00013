@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 17 Jun 2024 19:31:44 +0000
+Source: sendmail
+Architecture: source
+Version: 8.15.2-14~deb10u3
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ sendmail (8.15.2-14~deb10u3) buster-security; urgency=medium
+ .
+   * LTS Team upload
+   * Enable rejecting mail that include NUL byte by default.
+Checksums-Sha1:
+ 2cc4608b5b4649225bebe0c70b0a73c79086ca84 2597 sendmail_8.15.2-14~deb10u3.dsc
+ b85cad0c1d7ac21db1b9241c23c223451a7d866f 424004 sendmail_8.15.2-14~deb10u3.debian.tar.xz
+ 267f212d0e8d3ae848c4e239598636a9a7e60217 10484 sendmail_8.15.2-14~deb10u3_amd64.buildinfo
+Checksums-Sha256:
+ 40dd2abfb36b7b7537205043f19c7f6f0d17965967ea2dbd550d10347dc8fba4 2597 sendmail_8.15.2-14~deb10u3.dsc
+ 075cf168c899822c3ca1e524b136dd0592634939c7bac91a064b19021ce1c717 424004 sendmail_8.15.2-14~deb10u3.debian.tar.xz
+ 3587a10d9bb44d73b8074538258e8f3e47b1025654bce1ae1d69c6e8aaf30aab 10484 sendmail_8.15.2-14~deb10u3_amd64.buildinfo
+Files:
+ e59af9523119a9e92bf41538f2f88674 2597 mail optional sendmail_8.15.2-14~deb10u3.dsc
+ 1a46ab20df16e003b5a3550ea1c556aa 424004 mail optional sendmail_8.15.2-14~deb10u3.debian.tar.xz
+ c2767d9f1f70ab39ba0e9a3b67d6a67a 10484 mail optional sendmail_8.15.2-14~deb10u3_amd64.buildinfo
+

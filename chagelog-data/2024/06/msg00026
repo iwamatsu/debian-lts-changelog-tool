@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 27 Jun 2024 17:26:37 CEST
+Source: dlt-daemon
+Architecture: source
+Version: 2.18.0-1+deb10u2
+Distribution: buster-security
+Urgency: high
+Maintainer: Aigars Mahinovs <aigarius@debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 133fe09a8e849546ca46826fea2cc64a00c044a5 2244 dlt-daemon_2.18.0-1+deb10u2.dsc
+ 9a69725297b73649dd06cfbbdfe77ab45b4caf81 8532 dlt-daemon_2.18.0-1+deb10u2.debian.tar.xz
+ 800e62976c6096099d033c16e6c946a037100f58 11072 dlt-daemon_2.18.0-1+deb10u2_amd64.buildinfo
+Checksums-Sha256:
+ fff7e86fd80534787695b99e6984a70001cbbdabde337c238854b1460c3007ed 2244 dlt-daemon_2.18.0-1+deb10u2.dsc
+ 6f149de3e672744422f773543b4bca5255a9f1a5b95960de585f328e31d4f33b 8532 dlt-daemon_2.18.0-1+deb10u2.debian.tar.xz
+ 50114014d7443f2bd9a202f1372dbc1cc1a6486f9eca36c6d95eaf525431af94 11072 dlt-daemon_2.18.0-1+deb10u2_amd64.buildinfo
+Changes:
+ dlt-daemon (2.18.0-1+deb10u2) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2022-39836: heap-buffer over-read
+   * Fix CVE-2022-39837: NULL pointer dereference
+   * Fix CVE-2023-26257: Dynamic memory is not released
+   * Fix CVE-2023-36321: buffer overflow
+Files:
+ 32b1d8712ac2c982692ce07cdac4c2ba 2244 libs optional dlt-daemon_2.18.0-1+deb10u2.dsc
+ 0ef9defbb84123f64ccba379e51fe735 8532 libs optional dlt-daemon_2.18.0-1+deb10u2.debian.tar.xz
+ d2a85e637b08d8c821aeb7a2f646b600 11072 libs optional dlt-daemon_2.18.0-1+deb10u2_amd64.buildinfo
+

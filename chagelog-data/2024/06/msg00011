@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 19 Jun 2024 11:31:13 -0700
+Source: libndp
+Architecture: source
+Version: 1.6-1+deb10u1
+Distribution: buster-security
+Urgency: high
+Maintainer: Andrew Ayer <agwa@andrewayer.name>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1072366
+Changes:
+ libndp (1.6-1+deb10u1) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-5564: Prevent a vulnerability where a local malicious user could
+     cause a buffer overflow in NetworkManager by sending a malformed IPv6
+     router advertisement packet. This issue existed because libndp was not
+     correctly validating route length information. (Closes: #1072366)
+Checksums-Sha1:
+ cda16b7ed3016e7e7a671c2dbe869e2865ea70fe 2083 libndp_1.6-1+deb10u1.dsc
+ 300e63fcf69f6239dc6c5f82770437d5ffbc2dd4 364406 libndp_1.6.orig.tar.gz
+ 9ad13fa4dd1e781f79f161de5889f09eb178e350 4060 libndp_1.6-1+deb10u1.debian.tar.xz
+ 23ca301e2fd9cd1a3e976badf96dfced5bbc3f80 6339 libndp_1.6-1+deb10u1_amd64.buildinfo
+Checksums-Sha256:
+ 09ce8d5014e179747cf1d0eff2ee0698bb4551dba2bb0d598a3905a1eed87e91 2083 libndp_1.6-1+deb10u1.dsc
+ 0c7dfa84e013bd5e569ef2c6292a6f72cfaf14f4ff77a77425e52edc33ffac0e 364406 libndp_1.6.orig.tar.gz
+ cc65be747329bdf6334a34c216328ef0eb80e95d30e2f620ac3481780ef23aab 4060 libndp_1.6-1+deb10u1.debian.tar.xz
+ ead5b7a7419fa783726512d3dd22b1d45d792c8c9edc87e8403a3bb5c1054d8d 6339 libndp_1.6-1+deb10u1_amd64.buildinfo
+Files:
+ a4c2e15695785e8487bf338ef3e6c946 2083 net optional libndp_1.6-1+deb10u1.dsc
+ 1e54d26bcb4a4110bc3f90c5dd04f1a7 364406 net optional libndp_1.6.orig.tar.gz
+ 7d5b07c710a445c68165819264225158 4060 net optional libndp_1.6-1+deb10u1.debian.tar.xz
+ 387fe50d43998d32bb2c108031ff8724 6339 net optional libndp_1.6-1+deb10u1_amd64.buildinfo
+

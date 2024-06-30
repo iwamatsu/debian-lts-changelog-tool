@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 30 Jun 2024 21:33:14 +0200
+Source: edk2
+Architecture: source
+Version: 0~20181115.85588389-3+deb10u4
+Distribution: buster-security
+Urgency: high
+Maintainer: Debian QEMU Team <pkg-qemu-devel@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Changes:
+ edk2 (0~20181115.85588389-3+deb10u4) buster-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Disable the built-in Shell when SecureBoot is enabled, CVE-2023-48733.
+     Thanks to Mate Kukri. LP: #2040137.
+     - Backport support for GetSetupMode() and IsSecureBootEnabled():
+       + 0001-SecurityPkg-Create-SecureBootVariableLib.patch
+       + 0002-ArmVirtPkg-add-SecureBootVariableLib-class-resolutio.patch
+       + 0003-OvmfPkg-add-SecureBootVariableLib-class-resolution.patch
+       + 0004-SecurityPkg-SecureBootVariableLib-Added-newly-suppor.patch
+       + 0005-EmulatorPkg-add-SecureBootVariableLib-class-resoluti.patch
+     - Disable the built-in Shell when SecureBoot is enabled:
+       + Disable-the-Shell-when-SecureBoot-is-enabled.patch
+     - d/tests: Drop the boot-to-shell tests for images w/ Secure Boot active.
+Checksums-Sha1:
+ 0175509a9a2c9504880e8b6912c028f40b37dd59 2496 edk2_0~20181115.85588389-3+deb10u4.dsc
+ a3631f74b41d621b3c4a854617fc208b7587a8a7 24051192 edk2_0~20181115.85588389.orig.tar.xz
+ 8c497d5edbff1951356a1b222e771f2d1947c41d 37900 edk2_0~20181115.85588389-3+deb10u4.debian.tar.xz
+ e9759b4b00f56e85a9be885eca5e984353c67616 6317 edk2_0~20181115.85588389-3+deb10u4_source.buildinfo
+Checksums-Sha256:
+ 7d959d0abdf4e6eadad09dc7e5c00a164082042659e7cd356916de5684bda34f 2496 edk2_0~20181115.85588389-3+deb10u4.dsc
+ ac2b30bffbba2a7de1df04d9f27a2dc867453ca2bd4b49c41d20e8360eb66180 24051192 edk2_0~20181115.85588389.orig.tar.xz
+ 16c18fb868b29fd8b2e56a43418a02d787c4826a1bf0d6be9b9daa1c2ad85569 37900 edk2_0~20181115.85588389-3+deb10u4.debian.tar.xz
+ ec4443e4850dd129f250628175293bd63e25c11c08b543927b169d50b52fe30b 6317 edk2_0~20181115.85588389-3+deb10u4_source.buildinfo
+Files:
+ ef8ecf688d0cd814e5b8595cd599ba97 2496 misc optional edk2_0~20181115.85588389-3+deb10u4.dsc
+ d54c6a3ca325db2fe9ef3a61b316353e 24051192 misc optional edk2_0~20181115.85588389.orig.tar.xz
+ f03ae78afe38a85fdb689bba9fbaa7e9 37900 misc optional edk2_0~20181115.85588389-3+deb10u4.debian.tar.xz
+ a4f2f575c27f39953e01e2ffdb76106b 6317 misc optional edk2_0~20181115.85588389-3+deb10u4_source.buildinfo
+

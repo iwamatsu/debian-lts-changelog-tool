@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 14 Jun 2024 22:33:21 +0300
+Source: plasma-workspace
+Architecture: source
+Version: 4:5.14.5.1-1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ plasma-workspace (4:5.14.5.1-1+deb10u1) buster-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-36041: ksmserver: Unauthorized users can access session manager
+Checksums-Sha1:
+ c0061f692db8a3fe56ec45d8615ae82808764fee 5198 plasma-workspace_5.14.5.1-1+deb10u1.dsc
+ 83f79003074707cdf7188f29f1b739d6379a8581 4683004 plasma-workspace_5.14.5.1.orig.tar.xz
+ f82161595d562fd3de4ce077275a21c80f23993f 774 plasma-workspace_5.14.5.1.orig.tar.xz.asc
+ 7f3e987ecd2907a6939835f991c48cf8298f1148 41236 plasma-workspace_5.14.5.1-1+deb10u1.debian.tar.xz
+Checksums-Sha256:
+ 5233c7a19def711c04faadb51ab8269d63d453834d409f0f9b6833f883f70835 5198 plasma-workspace_5.14.5.1-1+deb10u1.dsc
+ b0019036fd17fa17534f8fd73b00d520a110bfccbfbb8112cbba69e45d8686be 4683004 plasma-workspace_5.14.5.1.orig.tar.xz
+ 0a22cd3755ddb74a752ea882a2c398fe8153fbfc2544b3ea8c32d8b1cd4b321e 774 plasma-workspace_5.14.5.1.orig.tar.xz.asc
+ 97d38e31938993fd418e195156a92785cf4537ecfc4fc86487b23c40e2bb3e78 41236 plasma-workspace_5.14.5.1-1+deb10u1.debian.tar.xz
+Files:
+ 038a43bd25ffce6e5af3f8292677c817 5198 kde optional plasma-workspace_5.14.5.1-1+deb10u1.dsc
+ 6161de2fd5297b3a5d1db3a1298bee51 4683004 kde optional plasma-workspace_5.14.5.1.orig.tar.xz
+ 4b8521b8ec1c155fa050c90e2811f754 774 kde optional plasma-workspace_5.14.5.1.orig.tar.xz.asc
+ fabcbd37bc799a5ed9f8621ec0c92560 41236 kde optional plasma-workspace_5.14.5.1-1+deb10u1.debian.tar.xz
+
