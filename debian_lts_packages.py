@@ -250,9 +250,9 @@ class DebianLTSPackages:
 
         distribution_sec = f'{distribution}-security'
         sql = f"""SELECT name, version, upload_date, upload_time, upload_info
-                  FROM package_data WHERE upload_date >= ? and upload_date <= ? and distribution IN (?, ?) 
+                  FROM package_data WHERE datetime(upload_date || " " || update_time) >= datetime(?) and datetime(upload_date || " " || update_time) <= datetime(?) and distribution IN (?, ?)
                   ORDER BY name ASC, upload_date DESC;"""
-        cur.execute(sql, (date_from_date, date_to_date, distribution, distribution_sec))
+        cur.execute(sql, (date_from, date_to, distribution, distribution_sec))
         with open(output_file, mode='a') as f:
             for fetch_data in cur.fetchall():
                 f.write(self.get_changelog_data_main(fetch_data[4]))
