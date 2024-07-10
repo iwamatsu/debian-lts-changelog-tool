@@ -206,8 +206,6 @@ class DebianLTSPackages:
             return
 
         cur = self.sql_conn.cursor()
-        # ' -> ''
-        text_data = text_data.replace("'", "''")
 
         sql_cmd = f"""INSERT INTO
                     package_data (name, version, update_date, update_time, upload_date, upload_time, distribution, upload_info, file_path) 
