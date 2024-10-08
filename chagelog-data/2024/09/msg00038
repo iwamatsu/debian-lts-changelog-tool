@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 17 Sep 2024 17:09:30 -0700
+Source: mariadb-10.5
+Architecture: source
+Version: 1:10.5.26-0+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Otto Kekäläinen <otto@debian.org>
+Closes: 1063738
+Changes:
+ mariadb-10.5 (1:10.5.26-0+deb11u2) bullseye-security; urgency=medium
+ .
+   * Make compile_time_assert compatible with x32 (Closes: #1063738)
+Checksums-Sha1:
+ f49d0ef280c7006e8f419e87a283525498f6d555 4814 mariadb-10.5_10.5.26-0+deb11u2.dsc
+ 62e0c1ba3ab392c97a33216f4ecdfd1424790103 230564 mariadb-10.5_10.5.26-0+deb11u2.debian.tar.xz
+ dbcc6cccb020c6cd7cdc231c4ca78bf6333b92e0 9073 mariadb-10.5_10.5.26-0+deb11u2_source.buildinfo
+Checksums-Sha256:
+ 3c64b6ab89fa29be72b9fe608a8c2bec27284ee5c2b43d98a21c5febbdc95b95 4814 mariadb-10.5_10.5.26-0+deb11u2.dsc
+ abfc63f8475718e28a84672fa9be404b60b04e26644b2e20ee777106b9c9e3ae 230564 mariadb-10.5_10.5.26-0+deb11u2.debian.tar.xz
+ 280461e32aa45fec4ca6b73124206900e543d95d6bcd509365ccdf299ce7bd37 9073 mariadb-10.5_10.5.26-0+deb11u2_source.buildinfo
+Files:
+ 5ec5ec99ad6584526514e84d949496e1 4814 database optional mariadb-10.5_10.5.26-0+deb11u2.dsc
+ 26c612c579a38c214f7f897f33529347 230564 database optional mariadb-10.5_10.5.26-0+deb11u2.debian.tar.xz
+ b5b1291eca85f1e67f5c6d579a43a59a 9073 database optional mariadb-10.5_10.5.26-0+deb11u2_source.buildinfo
+

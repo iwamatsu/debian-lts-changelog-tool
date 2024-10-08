@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 07 Sep 2024 17:38:59 +0300
+Source: amanda
+Architecture: source
+Version: 1:3.5.1-7+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Jose M Calhariz <calhariz@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ amanda (1:3.5.1-7+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-37703: Directory existence disclosure
+   * CVE-2022-37704: Privilege escalation in rundump
+   * CVE-2022-37705: Privilege escalation in runtar
+   * CVE-2023-30577: Privilege escalation in runtar
+Checksums-Sha1:
+ 0840b8d40f775e48aaa9c529c6683a70979f3ce6 2218 amanda_3.5.1-7+deb11u1.dsc
+ a92fa595ad525e3cc86565a81353220c146a0ac4 5239952 amanda_3.5.1.orig.tar.gz
+ f06c76f7a664a68f42502f56f3ea97cc0d1f1f8f 50616 amanda_3.5.1-7+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 27b582a4d9afcbb4d16a9452f7a062cfb46e4e7227ddea9bd1a0a6a05a389452 2218 amanda_3.5.1-7+deb11u1.dsc
+ 6cb9a13fb7a09970d288ddb2c380e7165c5fe38b85bc761ca7ffe334bc5c534b 5239952 amanda_3.5.1.orig.tar.gz
+ b8c7626f97dbc23a64886e931e7247be8cb3c07e0d029ff26c6c99ac966aea1a 50616 amanda_3.5.1-7+deb11u1.debian.tar.xz
+Files:
+ 998c4c56ec6ccfd2aa5718157e3be1e0 2218 utils optional amanda_3.5.1-7+deb11u1.dsc
+ a780f158cbbacfb017ce4a519120b772 5239952 utils optional amanda_3.5.1.orig.tar.gz
+ 5923f64fd737f0397e82e086e0cd65b3 50616 utils optional amanda_3.5.1-7+deb11u1.debian.tar.xz
+

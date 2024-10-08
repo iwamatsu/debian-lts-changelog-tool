@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 31 Aug 2024 00:36:04 -0700
+Source: galera-4
+Architecture: source
+Version: 26.4.20-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Otto Kekäläinen <otto@debian.org>
+Changes:
+ galera-4 (26.4.20-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream release 26.4.20. Includes multiple bug fixes, see
+     https://github.com/codership/documentation/blob/master/release-notes/release-notes-galera-26.4.20.txt
+     https://github.com/codership/documentation/blob/master/release-notes/release-notes-galera-26.4.19.txt
+   * Adopt gbp.conf from 'debian/latest' but adapt it for 'debian/11-bullseye'
+   * Salsa CI: Update and unify with debian/latest and debian/bookworm
+Checksums-Sha1:
+ 5bad1abe7189169cc1e4e1607dc3556b3ed08365 2409 galera-4_26.4.20-0+deb11u1.dsc
+ a9c1cc5387fd500ad0a65147462a8aff41765c04 1551246 galera-4_26.4.20.orig.tar.gz
+ 7c26ae90c04882e6a2203daa23f06ed3a6b738a4 833 galera-4_26.4.20.orig.tar.gz.asc
+ e353688f1d4518c5c717b78d0d1f5fbbd860a64f 19568 galera-4_26.4.20-0+deb11u1.debian.tar.xz
+ 9fb6f256ba885f6bd2a6a4697ab1afff45f24884 6895 galera-4_26.4.20-0+deb11u1_source.buildinfo
+Checksums-Sha256:
+ c122dc4575ff63e0e311eb76a85a32fc766d3c2fef8e4fcbdfdff50d02df8500 2409 galera-4_26.4.20-0+deb11u1.dsc
+ 0fbcdac2be95f56fb5f947851d614fb6c2aa3ac0b4d62b39e2d0c4c2db84a093 1551246 galera-4_26.4.20.orig.tar.gz
+ bd6ba7417752fcdd005bb7e4e43030833b197dbd8e46dbb7924180e08912771f 833 galera-4_26.4.20.orig.tar.gz.asc
+ e08fec9da576d97ece22377d7435232d58ea204bc391dc5cb14a476f9bac1b8f 19568 galera-4_26.4.20-0+deb11u1.debian.tar.xz
+ 246c7386ad0f977e1073b3f27d32ffab1d9ae8c7c6d14aad92afc357d3f19ec2 6895 galera-4_26.4.20-0+deb11u1_source.buildinfo
+Files:
+ 6d1f0e5f6ed77306073b3677a713e52e 2409 database optional galera-4_26.4.20-0+deb11u1.dsc
+ 0082dbc5f8acd9efba94d98d1230c426 1551246 database optional galera-4_26.4.20.orig.tar.gz
+ 03868d004a4f046c5eea233611e426f3 833 database optional galera-4_26.4.20.orig.tar.gz.asc
+ 288303d969952f2a9bb024938e1613b0 19568 database optional galera-4_26.4.20-0+deb11u1.debian.tar.xz
+ ef5799d6231d30920813dece345ee81b 6895 database optional galera-4_26.4.20-0+deb11u1_source.buildinfo
+

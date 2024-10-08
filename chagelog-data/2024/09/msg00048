@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Sep 2024 03:21:32 +0300
+Source: ruby-httparty
+Architecture: source
+Version: 0.18.1-2+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ruby-httparty (0.18.1-2+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-22049: multipart/form-data request tampering
+Checksums-Sha1:
+ d1b87651ae64d31332585631bb6b398fcb382d11 2221 ruby-httparty_0.18.1-2+deb11u1.dsc
+ 43a19ac075d50f88ea48cbeaffbfeefb571d51e7 97813 ruby-httparty_0.18.1.orig.tar.gz
+ 675d6b97c59c04124b36c1de535e013ef9911a25 7420 ruby-httparty_0.18.1-2+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ e6ade7eb623d36f4ef06a1bbb1b31ba1ea800c37d08e9e8b8b34bdb3169c3e57 2221 ruby-httparty_0.18.1-2+deb11u1.dsc
+ 0efacf470273e7efb238ceb01ed451e6e8b59190cf7ab23a469683ea83f20cb7 97813 ruby-httparty_0.18.1.orig.tar.gz
+ 928abd06018474e8f81264df6447a4a8bb8156c277d392ed97f8bac9857220ce 7420 ruby-httparty_0.18.1-2+deb11u1.debian.tar.xz
+Files:
+ a961afcf305c89fc63681b77f330f0b9 2221 ruby optional ruby-httparty_0.18.1-2+deb11u1.dsc
+ 28e93017cf7860551681ec5d14cd6f6d 97813 ruby optional ruby-httparty_0.18.1.orig.tar.gz
+ 30e9e67126c89d9b6dedd63fa49d8a87 7420 ruby optional ruby-httparty_0.18.1-2+deb11u1.debian.tar.xz
+

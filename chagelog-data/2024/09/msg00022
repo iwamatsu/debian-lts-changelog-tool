@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 04 Sep 2024 17:40:50 +0200
+Source: ruby-sinatra
+Architecture: source
+Version: 2.0.8.1-2+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Jochen Sprickerhof <jspricke@debian.org>
+Closes: 1014717 1070953
+Changes:
+ ruby-sinatra (2.0.8.1-2+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Sruthi Chandran ]
+   * Fix CVE-2022-45442, CVE-2022-29970 (Closes: #1014717)
+ .
+   [ Jochen Sprickerhof ]
+   * Drop test with bytes=IV-LXVI (Closes: #1070953)
+Checksums-Sha1:
+ 390026bae2a8729d0468296f59ff0a1324ab39f5 2960 ruby-sinatra_2.0.8.1-2+deb11u1.dsc
+ 9c36d9786a90cdb09b75a571024835576a0403ab 507102 ruby-sinatra_2.0.8.1.orig.tar.gz
+ e685c56f4309b23616abd39d9ac409804447145f 9708 ruby-sinatra_2.0.8.1-2+deb11u1.debian.tar.xz
+ c23fa253e5455f09d90e7162ef1fa97ca71862f1 6680 ruby-sinatra_2.0.8.1-2+deb11u1_source.buildinfo
+Checksums-Sha256:
+ a4a3eaef7bffade8f8d60a7ffa1531c21a4b0a72fd81542b70c775308d8a6578 2960 ruby-sinatra_2.0.8.1-2+deb11u1.dsc
+ a5783ecd2e07c103981cebf3451080894cdb22d508c78825a1b12a158e6854df 507102 ruby-sinatra_2.0.8.1.orig.tar.gz
+ 33df85b1c63ec88dc379b686c8de2c217b4f01badd0f305e4015e6d990e30a00 9708 ruby-sinatra_2.0.8.1-2+deb11u1.debian.tar.xz
+ 163204fc3a2483fd25a923f85436fbad408416ad3b6d0b5f6891448a2580b390 6680 ruby-sinatra_2.0.8.1-2+deb11u1_source.buildinfo
+Files:
+ 2a045c40f3c0fe47cf43dc7cdb8acf8e 2960 ruby optional ruby-sinatra_2.0.8.1-2+deb11u1.dsc
+ 60f834193916496020b84a08284797fb 507102 ruby optional ruby-sinatra_2.0.8.1.orig.tar.gz
+ 9d91c9a06304c71b30146eb3b5af0c7e 9708 ruby optional ruby-sinatra_2.0.8.1-2+deb11u1.debian.tar.xz
+ bc9dc92677d7f3853896d2943a19ebe8 6680 ruby optional ruby-sinatra_2.0.8.1-2+deb11u1_source.buildinfo

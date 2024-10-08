@@ -1,0 +1,40 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 26 Aug 2024 16:28:06 +0100
+Source: python-html-sanitizer
+Architecture: source
+Version: 1.9.1-2+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1070710
+Changes:
+ python-html-sanitizer (1.9.1-2+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-34078: Prevent an issue where specially-crafted HTML could escape
+     sanitisation if the default "keep_typographic_whitespace=False" value was
+     set. Some Unicode characters normalise to chevrons, which allowed
+     specially-crafted HTML to escape sanitization. (Closes: #1070710)
+   * Add continuous integration support:
+     - Add a debian/.gitlab-ci.yml.
+     - Update .gitlab-ci.yml to use the default, non-LTS, CI pipeline for now.
+     - Allow reprotest failures in CI pipeline.
+Checksums-Sha1:
+ 1babe1e2c641d9106ce3d0db299681f673049115 2136 python-html-sanitizer_1.9.1-2+deb11u1.dsc
+ fe0d99d4904e8df34b9d222f0840ac2d35c286b4 14449 python-html-sanitizer_1.9.1.orig.tar.gz
+ ce1051b151cedb450f944ae8ea056d7d729aedbd 4792 python-html-sanitizer_1.9.1-2+deb11u1.debian.tar.xz
+ 1d50f87e8cfaa2d1618219b13eb360e47d113e34 6844 python-html-sanitizer_1.9.1-2+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 1491e29318725f412ec41778678a1282310effb95005b60c6922891050efa0d9 2136 python-html-sanitizer_1.9.1-2+deb11u1.dsc
+ 14cd9318e54c5d94871e9bd9aaf6ce5dadfb70406ba4c7ea30b80680be13617d 14449 python-html-sanitizer_1.9.1.orig.tar.gz
+ ddec43d4e8b3a89d0db01bc4fa94b304e110ccbf5b570132eb7b3a3655a7f67c 4792 python-html-sanitizer_1.9.1-2+deb11u1.debian.tar.xz
+ a9fa1f6a048aa8010c57801922e3f8fd121e75816fee4c99a2ab34a396de0ed1 6844 python-html-sanitizer_1.9.1-2+deb11u1_amd64.buildinfo
+Files:
+ c2add125ce321f210c045afa4e640586 2136 python optional python-html-sanitizer_1.9.1-2+deb11u1.dsc
+ 5f6d55cc4abdbf3c657fd8d474ef26a9 14449 python optional python-html-sanitizer_1.9.1.orig.tar.gz
+ af6dbbd6e9a0c3aec30eca7763a2c6e0 4792 python optional python-html-sanitizer_1.9.1-2+deb11u1.debian.tar.xz
+ 8bb30045eceddb1878eb79bccd2ed523 6844 python optional python-html-sanitizer_1.9.1-2+deb11u1_amd64.buildinfo
+

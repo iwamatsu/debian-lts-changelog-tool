@@ -1,0 +1,68 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 16 Aug 2024 14:26:45 +0200
+Source: nbconvert
+Architecture: source
+Version: 5.6.1-3+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Changes:
+ nbconvert (5.6.1-3+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2021-32862: When using nbconvert to generate an HTML version of a
+     user-controllable notebook, it is possible to inject arbitrary HTML which
+     may lead to cross-site scripting (XSS) vulnerabilities if these HTML
+     notebooks are served by a web server without tight Content-Security-Policy
+     (e.g., nbviewer):
+     + GHSL-2021-1013: XSS in notebook.metadata.language_info.pygments_lexer;
+     + GHSL-2021-1014: XSS in notebook.metadata.title;
+     + GHSL-2021-1015: XSS in notebook.metadata.widgets;
+     + GHSL-2021-1016: XSS in notebook.cell.metadata.tags;
+     + GHSL-2021-1017: XSS in output data text/html cells;
+     + GHSL-2021-1018: XSS in output data image/svg+xml cells;
+     + GHSL-2021-1019: XSS in notebook.cell.output.svg_filename;
+     + GHSL-2021-1020: XSS in output data text/markdown cells;
+     + GHSL-2021-1021: XSS in output data application/javascript cells;
+     + GHSL-2021-1022: XSS in output.metadata.filenames image/png and
+       image/jpeg;
+     + GHSL-2021-1023: XSS in output data image/png and image/jpeg cells;
+     + GHSL-2021-1024: XSS in output.metadata.width/height image/png and
+       image/jpeg;
+     + GHSL-2021-1025: XSS in output data application/vnd.jupyter.widget-state+
+       json cells;
+     + GHSL-2021-1026: XSS in output data application/vnd.jupyter.widget-view+
+       json cells;
+     + GHSL-2021-1027: XSS in raw cells; and
+     + GHSL-2021-1028: XSS in markdown cells.
+   * Some of these vulnerabilities, namely GHSL-2021-1017, -1020, -1021, and
+     -1028, are actually design decisions where text/html, text/markdown,
+     application/javascript and markdown cells should allow for arbitrary
+     JavaScript code execution.  These vulnerabilities are therefore left open
+     by default, but users can opt-out and strip down all JavaScript elements
+     via a new HTMLExporter option `sanitize_html`.
+   * Convert input to string prior to escape HTML.
+   * Replace base64.encodestring() with .encodebytes() for python 3.9
+     compatibility.
+   * DEP-8: Skip test_default_config which is failing since jupyter-core
+     security update.
+   * d/control: Add python3-lxml to python3-nbconvert's Depends field.
+Checksums-Sha1:
+ ad0184957193731ddc919537bf1bbbb4ba7b8d88 2773 nbconvert_5.6.1-3+deb11u1.dsc
+ f4bf8d3f54499398f4f8171bb0a94b6ac0dff0e5 653048 nbconvert_5.6.1.orig.tar.gz
+ 884594f2ce61e44dbb66ae1c3945760c2dede95e 17112 nbconvert_5.6.1-3+deb11u1.debian.tar.xz
+ 3bf019d922a7d02ffae507e4e79bf6ec6bf1e38f 10969 nbconvert_5.6.1-3+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 2596cbe48d1fd8fedb76a23462a621800213fc71699661cb4f72642349378aee 2773 nbconvert_5.6.1-3+deb11u1.dsc
+ 444adfbedfe1f63da86fc74f1f2f317e2555a679b81676b08bf1508142d8010b 653048 nbconvert_5.6.1.orig.tar.gz
+ 0bac197670d91656f371021d205a3f9fe2200aac0250311342e434c242458b7b 17112 nbconvert_5.6.1-3+deb11u1.debian.tar.xz
+ 563982883355d43747d6085a58537f668179c467ce5fc60d598fc1f2c1f43a10 10969 nbconvert_5.6.1-3+deb11u1_amd64.buildinfo
+Files:
+ b9d7d2f0a778ffb81d63f2f944f54c65 2773 python optional nbconvert_5.6.1-3+deb11u1.dsc
+ 579bfeb4ef5e361ff36c523c403528e8 653048 python optional nbconvert_5.6.1.orig.tar.gz
+ a2ad755503405e945425727cebe9cb1d 17112 python optional nbconvert_5.6.1-3+deb11u1.debian.tar.xz
+ b18c75a67059b2a8b29ae1f36645705e 10969 python optional nbconvert_5.6.1-3+deb11u1_amd64.buildinfo
+

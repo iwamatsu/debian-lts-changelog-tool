@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 27 Sep 2024 20:11:18 +0200
+Source: python-asyncssh
+Architecture: source
+Version: 2.5.0-0.1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Closes: 1055999 1056000 1059007
+Changes:
+ python-asyncssh (2.5.0-0.1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * debian/patches/CVE-2023-46445-and-CVE-2023-46446.patch: Add patch to fix
+     CVE-2023-46445 and CVE-2023-46446 (Rogue Session Attack, Rogue Extension
+     Negotiation):
+     - Put additional restrictions on when messages are accepted during the
+       SSH handshake to avoid message injection attacks from a rogue client
+       or server (closes: #1055999, #1056000).
+   * debian/patches/CVE-2023-48795.patch: Add patch to fix CVE-2023-48795.
+     - Implement "strict kex" support and other countermeasures to protect
+       against the Terrapin Attack described in CVE-2023-48795
+       (closes: #1059007).
+Checksums-Sha1:
+ d3cf235a8005d1fe3a2546b410dedc19be1555e1 2443 python-asyncssh_2.5.0-0.1+deb11u1.dsc
+ 008224035562be86418dc126b18065cbb1889fb2 410782 python-asyncssh_2.5.0.orig.tar.gz
+ 5f594308bfa331670841e79af589e07b5081e9d3 14488 python-asyncssh_2.5.0-0.1+deb11u1.debian.tar.xz
+ d22c7c288bec70a17fb2b8081e18c80ed1f2028e 8799 python-asyncssh_2.5.0-0.1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 2804aefbcafd266427c70dca6f1e8c224204d5748261c4c26caabdcde14898e1 2443 python-asyncssh_2.5.0-0.1+deb11u1.dsc
+ 21368857bd72b5c507344efb302f4445c6872d4451e1cc65241b53ea676bd54f 410782 python-asyncssh_2.5.0.orig.tar.gz
+ e8e9dcb1fa52d4d5bb0e326cfb9933cd304f8f9c0b6cd3d04dd5c8770c6c7bea 14488 python-asyncssh_2.5.0-0.1+deb11u1.debian.tar.xz
+ 3e96aa676aec97f3dfee8398e8749d23bcc59fc5799dcf5bb7395159dbd46b05 8799 python-asyncssh_2.5.0-0.1+deb11u1_amd64.buildinfo
+Files:
+ 19603943d30de93c6fa17fbe307d3abe 2443 python optional python-asyncssh_2.5.0-0.1+deb11u1.dsc
+ e867c57b149fd047b0525bc258cef372 410782 python optional python-asyncssh_2.5.0.orig.tar.gz
+ ac10a187893abb9137f80d2a5c26987c 14488 python optional python-asyncssh_2.5.0-0.1+deb11u1.debian.tar.xz
+ 0a5e617dae73620d856f163ddd5e2061 8799 python optional python-asyncssh_2.5.0-0.1+deb11u1_amd64.buildinfo
+

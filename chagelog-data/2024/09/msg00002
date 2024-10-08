@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 25 Aug 2024 22:05:15 +0300
+Source: systemd
+Architecture: source
+Version: 247.3-7+deb11u6
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ systemd (247.3-7+deb11u6) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-7008: Don't accept records of DNSSEC-signed domains
+     when they have no signature.
+   * CVE-2023-50387: DNSSEC denial of service (CPU consumption)
+   * CVE-2023-50868: DNSSEC denial of service (CPU consumption)
+Checksums-Sha1:
+ 14aa130a44083a3d62ef78971a0475ce14d120eb 5199 systemd_247.3-7+deb11u6.dsc
+ 9bad8622d0198406e6570ca7c54de0eac47e468e 9895385 systemd_247.3.orig.tar.gz
+ f730e1f7528c3945048631a25fb487b4ccfdf81f 200308 systemd_247.3-7+deb11u6.debian.tar.xz
+Checksums-Sha256:
+ 2a42912fd6641d80851ecba3231fa912e1ae73b684c89d39ab54ef454b2bf5a9 5199 systemd_247.3-7+deb11u6.dsc
+ 2869986e219a8dfc96cc0dffac66e0c13bb70a89e16b85a3948876c146cfa3e0 9895385 systemd_247.3.orig.tar.gz
+ c9de4ff5649076c430ae1eb655b5d3ccd74a295431ca8fcf416e91b453fa37f9 200308 systemd_247.3-7+deb11u6.debian.tar.xz
+Files:
+ 049a2a79b3e765090f3b97741172f298 5199 admin optional systemd_247.3-7+deb11u6.dsc
+ 5be57c584847b161c67577f2d997903a 9895385 admin optional systemd_247.3.orig.tar.gz
+ 8204010d4f5911665f1f0a746f3cd452 200308 admin optional systemd_247.3-7+deb11u6.debian.tar.xz
+

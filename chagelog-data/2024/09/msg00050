@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Sep 2024 18:38:59 +0300
+Source: ruby-rails-html-sanitizer
+Architecture: source
+Version: 1.3.0-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ruby-rails-html-sanitizer (1.3.0-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-23517: Inefficient Regular Expression Complexity
+   * CVE-2022-23518: XSS in data URIs
+   * CVE-2022-23519: XSS vulnerability
+   * CVE-2022-23520: XSS vulnerability
+   * CVE-2022-32209: XSS vulnerability
+   * Bump dependency on ruby-loofah due to new functionality used
+     by the above fixes.
+Checksums-Sha1:
+ d203ed00a492ffc04fc1e434c47978b53d67842a 2325 ruby-rails-html-sanitizer_1.3.0-1+deb11u1.dsc
+ 0299be532576c062138bd0773e1ecf345411f163 12936 ruby-rails-html-sanitizer_1.3.0.orig.tar.gz
+ 46c6284d703799ad59446cde45cccc760e834713 5980 ruby-rails-html-sanitizer_1.3.0-1+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 7becdc44db6fc5a8ded0e5ba1b1d17f7e17e0610d412150b327af18cf85c25f6 2325 ruby-rails-html-sanitizer_1.3.0-1+deb11u1.dsc
+ 5db2676eec0b14c3d405c516b5867852264f90f196d9a9fd262111dcd9666eb8 12936 ruby-rails-html-sanitizer_1.3.0.orig.tar.gz
+ ca5e96adf50f59c8407010404bc618c09ecb38d636bd7def23ae77536d045328 5980 ruby-rails-html-sanitizer_1.3.0-1+deb11u1.debian.tar.xz
+Files:
+ 862351934c55905767cdb6793c53f954 2325 ruby optional ruby-rails-html-sanitizer_1.3.0-1+deb11u1.dsc
+ 435817b1d754880299fb0a044f17a050 12936 ruby optional ruby-rails-html-sanitizer_1.3.0.orig.tar.gz
+ 7ecd86ae17ab3a92eac54fe87f5e4e5b 5980 ruby optional ruby-rails-html-sanitizer_1.3.0-1+deb11u1.debian.tar.xz
+

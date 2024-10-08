@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 Sep 2024 23:45:05 +0200
+Source: cups-filters
+Architecture: source
+Version: 1.28.7-1+deb11u3
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Closes: 1082820 1082827
+Changes:
+ cups-filters (1.28.7-1+deb11u3) bullseye-security; urgency=high
+ .
+   * CVE-2024-47076 (Closes: #1082827)
+     cfGetPrinterAttributes5(): Validate response attributes before return
+   * CVE-2024-47176 (Closes: #1082820)
+     Default BrowseRemoteProtocols should not include "cups" protocol
+Checksums-Sha1:
+ e7cdd8f34e287d363a45b4d9821ad3050c222724 3042 cups-filters_1.28.7-1+deb11u3.dsc
+ 09e348495a3905fdae5cb9ef0bf4ff7e2e44cb94 85428 cups-filters_1.28.7-1+deb11u3.debian.tar.xz
+ 3960f2221468054ceab4b458be4e0fbcb87ad286 14485 cups-filters_1.28.7-1+deb11u3_amd64.buildinfo
+Checksums-Sha256:
+ 9caa2877dacea475f933636760bf789724647cae134b62632042924922d33108 3042 cups-filters_1.28.7-1+deb11u3.dsc
+ 16226b81ba700a43223817fc396f5aed78bdebff7c7f5a06b234c266ae8df191 85428 cups-filters_1.28.7-1+deb11u3.debian.tar.xz
+ ccf6f7cd319929d6fba8d90ad79dc83b24888e395990dce42e5ccf5130f0f493 14485 cups-filters_1.28.7-1+deb11u3_amd64.buildinfo
+Files:
+ c5ea785a5ed205a3d2e9a24a92f86f3c 3042 net optional cups-filters_1.28.7-1+deb11u3.dsc
+ d1cf10d7bef33f30c4bd10b40495c2d0 85428 net optional cups-filters_1.28.7-1+deb11u3.debian.tar.xz
+ 0acd42164f2fc9e1166823857d130537 14485 net optional cups-filters_1.28.7-1+deb11u3_amd64.buildinfo
+

@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 04 Sep 2024 21:37:52 +0200
+Source: nsis
+Architecture: source
+Version: 3.06.1-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Thomas Gaugler <thomas@dadie.net>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Closes: 1040880
+Changes:
+ nsis (3.06.1-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Cherry-pick upstream commits from 3.08-3+deb12u1 to fix CVE-2023-37378
+     (closes: #1040880).
+Checksums-Sha1:
+ ea4081878c5088923baec7db2a23d889ec9fe5a2 2169 nsis_3.06.1-1+deb11u1.dsc
+ 525d763d08a8c69d5541d5b025adc56907b4c5de 1771333 nsis_3.06.1.orig.tar.bz2
+ 66934f3e09ff831582437e91ae8828efba044aa4 24628 nsis_3.06.1-1+deb11u1.debian.tar.xz
+ 5b8b7d13bbd2982e1ed61e1be2ab878083689adb 9131 nsis_3.06.1-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 65711c7a23fde7538141c53768156ea95e1a1439e81f38ee3845d5fd3e14fc95 2169 nsis_3.06.1-1+deb11u1.dsc
+ 9b5d68bf1874a7b393432410c7e8c376f174d2602179883845d2508152153ff0 1771333 nsis_3.06.1.orig.tar.bz2
+ 92365ccc78c421cdb2d676c150ee0786f256d62391a3e18365299031b7ab659d 24628 nsis_3.06.1-1+deb11u1.debian.tar.xz
+ aea7907accbff86df2afd5affeeae759c0ce814fafc8ed5f3d109a7c1702cb94 9131 nsis_3.06.1-1+deb11u1_amd64.buildinfo
+Files:
+ dcdd476b779b56d61e423400eafc092c 2169 devel optional nsis_3.06.1-1+deb11u1.dsc
+ 39babc3198350747adf2c466130b28fc 1771333 devel optional nsis_3.06.1.orig.tar.bz2
+ 93e03b4528b7b49e0464af0a03528fa5 24628 devel optional nsis_3.06.1-1+deb11u1.debian.tar.xz
+ eb5cd3fecd315443826965beb0f09a36 9131 devel optional nsis_3.06.1-1+deb11u1_amd64.buildinfo
+

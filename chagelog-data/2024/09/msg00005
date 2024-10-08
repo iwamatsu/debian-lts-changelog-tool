@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 04 Aug 2022 16:02:24 +0200
+Source: python-oslo.utils
+Architecture: source
+Version: 4.6.1-0+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Changes:
+ python-oslo.utils (4.6.1-0+deb11u1) bullseye-security; urgency=high
+ .
+   * New upstream release.
+   * Note that this point release is needed in order to have CVE-2024-32498
+     fixes in Nova, Glance and Cinder to work properly.
+Checksums-Sha1:
+ 072ba2907816c9eff99d4df80dd353e358f96fe6 2888 python-oslo.utils_4.6.1-0+deb11u1.dsc
+ ae1edc955debcbdc039487c5c7987392228bc444 69036 python-oslo.utils_4.6.1.orig.tar.xz
+ 42e4922721832bbb8ed1607f7125e827f81f0a00 4688 python-oslo.utils_4.6.1-0+deb11u1.debian.tar.xz
+ b7abb7c12f524b938a4a27af7ffc69fed0141189 12248 python-oslo.utils_4.6.1-0+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 9409776f3c2c7833f7ae0b404c66e32ab92921aa882414eca9f2d8352f92129d 2888 python-oslo.utils_4.6.1-0+deb11u1.dsc
+ f2f9554dd8b97590b9e75fabd5602e0c68fc843896982d93a19a56a82af78e28 69036 python-oslo.utils_4.6.1.orig.tar.xz
+ f60e078121322e305dee98ade23e03efd0f6a910fe477caccbc780469121e523 4688 python-oslo.utils_4.6.1-0+deb11u1.debian.tar.xz
+ 6dd0dd86f2ca55827a4c41a73ee75c65a648dab6f7006cd4d9a0695d13204120 12248 python-oslo.utils_4.6.1-0+deb11u1_amd64.buildinfo
+Files:
+ feb7fc8ea5ffbd916a9157542283a094 2888 python optional python-oslo.utils_4.6.1-0+deb11u1.dsc
+ 52970b12a351e65d52b115a66d4c9627 69036 python optional python-oslo.utils_4.6.1.orig.tar.xz
+ cbd0ebb484a1c4ada84763d1cacf484d 4688 python optional python-oslo.utils_4.6.1-0+deb11u1.debian.tar.xz
+ 31dc6efa2f26bd85157a204245262cb2 12248 python optional python-oslo.utils_4.6.1-0+deb11u1_amd64.buildinfo
+

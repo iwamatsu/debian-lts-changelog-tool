@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Sep 2024 14:21:23 +0300
+Source: ruby-loofah
+Architecture: source
+Version: 2.7.0+dfsg-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ruby-loofah (2.7.0+dfsg-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-23514: slow regex attribute check with crass parser
+   * CVE-2022-23515: XSS with "image/svg+xml" in data URIs
+   * CVE-2022-23516: Uncontrolled CDATA recursion
+   * Provide scrub_uri_attribute for ruby-rails-html-sanitizer.
+Checksums-Sha1:
+ 40fd59320290acc1cc1755b3f090331465814387 2242 ruby-loofah_2.7.0+dfsg-1+deb11u1.dsc
+ 9b640033c040c3a28dccf729276e3ec20c55fd41 23012 ruby-loofah_2.7.0+dfsg.orig.tar.xz
+ 0fb9bbcba69d535892963229bfb3bb0487306a57 6264 ruby-loofah_2.7.0+dfsg-1+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 1dc712b1abab940e5b5ae959f1f69a7dbd52ef726290f41a360cd29c44fffc73 2242 ruby-loofah_2.7.0+dfsg-1+deb11u1.dsc
+ ab46f086b5b1786abe3f511db37a46bec836cf33cebd2b6f9c4baf7cad6910c0 23012 ruby-loofah_2.7.0+dfsg.orig.tar.xz
+ 762da3a7d2c9094bd10a6105172b747536908480134c1ea592ffc6211661494d 6264 ruby-loofah_2.7.0+dfsg-1+deb11u1.debian.tar.xz
+Files:
+ 887ce4cd853df744b6aaf39e4d9be07b 2242 ruby optional ruby-loofah_2.7.0+dfsg-1+deb11u1.dsc
+ 851d1b9bd41c9c900cd1014a795760a6 23012 ruby optional ruby-loofah_2.7.0+dfsg.orig.tar.xz
+ 472df9500970d9f22d8e63de3288551f 6264 ruby optional ruby-loofah_2.7.0+dfsg-1+deb11u1.debian.tar.xz
+

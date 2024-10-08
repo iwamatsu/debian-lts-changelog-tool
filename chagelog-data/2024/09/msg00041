@@ -1,0 +1,28 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 24 Sep 2024 12:24:16 +0200
+Source: linux-6.1
+Architecture: source
+Version: 6.1.106-3~deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-6.1 (6.1.106-3~deb11u3) bullseye-security; urgency=medium
+ .
+   * Re-upload to generate signed packages
+Checksums-Sha1:
+ 89f20e59ec7c7a7ed552b540a4b980820807003e 48528 linux-6.1_6.1.106-3~deb11u3.dsc
+ 2456be69f8ef76a808bca6279862b8a9bdd8a48c 1631532 linux-6.1_6.1.106-3~deb11u3.debian.tar.xz
+ af0786961402e064f14e1769e61f3084798ec3f5 6363 linux-6.1_6.1.106-3~deb11u3_source.buildinfo
+Checksums-Sha256:
+ 7a717f76569f7aa5bf377d081d13ffc953bbadaee17c954e59fe4f3c03254939 48528 linux-6.1_6.1.106-3~deb11u3.dsc
+ 004f39648036580ce726cc3ed5ee10f16d165cf228329c4674e71a927bbb2803 1631532 linux-6.1_6.1.106-3~deb11u3.debian.tar.xz
+ f19f9393ef301761d599009fd5924691dfefbca86482b3a8c1cc4de71708b243 6363 linux-6.1_6.1.106-3~deb11u3_source.buildinfo
+Files:
+ b6f855de6398b282cdddb56819763f9d 48528 kernel optional linux-6.1_6.1.106-3~deb11u3.dsc
+ accafaaf0c5792531d69786075b5e28a 1631532 kernel optional linux-6.1_6.1.106-3~deb11u3.debian.tar.xz
+ 634ca5ff94db3890bdb9c0a83fbb9e70 6363 kernel optional linux-6.1_6.1.106-3~deb11u3_source.buildinfo
+

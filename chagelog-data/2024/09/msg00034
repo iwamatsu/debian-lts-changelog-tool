@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 16 Sep 2024 07:04:04 +0300
+Source: php-twig
+Architecture: source
+Version: 2.14.3-1+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ php-twig (2.14.3-1+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-45411: Possible sandbox bypass
+Checksums-Sha1:
+ f048e7691d8de22affaab578f88b69429bd398be 3014 php-twig_2.14.3-1+deb11u3.dsc
+ 8f4fcb568a448d20a77c8fda6327a7dd8e55e785 291017 php-twig_2.14.3.orig.tar.gz
+ b1de124fb138e722349fca7d8ad2797327d65806 18924 php-twig_2.14.3-1+deb11u3.debian.tar.xz
+Checksums-Sha256:
+ 4d6f3b09ce1dbb1f142a933bf40343bfbabd315a334b19464fe385489da8bcb6 3014 php-twig_2.14.3-1+deb11u3.dsc
+ fd396c89e57ea45f237803c237efe349d6ee7d5cae76bbbbf40ae5a2cffada53 291017 php-twig_2.14.3.orig.tar.gz
+ 5a8ddf4b476a049d81ea3f64d7063ac583ec84bf52b73a4511944406c2e071a8 18924 php-twig_2.14.3-1+deb11u3.debian.tar.xz
+Files:
+ adabdb7c4e02b11c8d9eb27c8b1e8f47 3014 php optional php-twig_2.14.3-1+deb11u3.dsc
+ b79293fceb92f79b94b53c74e69640eb 291017 php optional php-twig_2.14.3.orig.tar.gz
+ 15d8aca0b203a81dfc66448cb50cd265 18924 php optional php-twig_2.14.3-1+deb11u3.debian.tar.xz
+

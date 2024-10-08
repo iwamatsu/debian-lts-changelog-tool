@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 17 Aug 2024 08:08:46 +0800
+Source: git
+Architecture: source
+Version: 1:2.30.2-1+deb11u3
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1034835 1071160
+Changes:
+ git (1:2.30.2-1+deb11u3) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport commit 9cf8547320, a follow-up fix for CVE-2019-1387.
+   * Backport upstream fixes for CVE-2023-25652, CVE-2023-25815,
+     CVE-2023-29007, CVE-2024-32002, CVE-2024-32004, CVE-2024-32021,
+     CVE-2024-32465 (Closes: #1034835, #1071160).
+Checksums-Sha1:
+ 82d21157aef458ee813ae98eedf387f22c1a5f5d 2907 git_2.30.2-1+deb11u3.dsc
+ 5ca907e08b960d5a0171d29670afe4814bcee975 711960 git_2.30.2-1+deb11u3.debian.tar.xz
+ ea8bf406222459c3f0d40bc227febef2d0fd28f3 8021 git_2.30.2-1+deb11u3_source.buildinfo
+Checksums-Sha256:
+ 672900e73a5f7ddd1fad2b44db65046c863c3ffa76aecd4a430be370e99a6f5b 2907 git_2.30.2-1+deb11u3.dsc
+ 0cfa77116c7174aa5c7cf3ee243132e7d899e5129c791c12b5298e085f3cbe52 711960 git_2.30.2-1+deb11u3.debian.tar.xz
+ a8499ff4d0c747d316accdf96a27b6a691e73a5f85831763c0690625bce12726 8021 git_2.30.2-1+deb11u3_source.buildinfo
+Files:
+ c103bbd51e82a5402aa5929da3a81875 2907 vcs optional git_2.30.2-1+deb11u3.dsc
+ 133cda1eeff3534440690c1fa41262db 711960 vcs optional git_2.30.2-1+deb11u3.debian.tar.xz
+ 52137fc28d167162d0b01efc26ff5e4f 8021 vcs optional git_2.30.2-1+deb11u3_source.buildinfo
+

@@ -1,0 +1,84 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 14 Sep 2024 11:29:46 +0000
+Source: nodejs
+Architecture: source
+Version: 12.22.12~dfsg-1~deb11u5
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@alioth-lists.debian.net>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ nodejs (12.22.12~dfsg-1~deb11u5) bullseye-security; urgency=medium
+ .
+   * Non maintainer upload by LTS team
+ .
+   [Jérémy Lal]
+   * Fix test suite
+ .
+   [Bastien Roucariès]
+   * Fix CVE-2023-30589: The llhttp parser in the http module
+     does not strictly use the CRLF sequence to delimit HTTP requests.
+     This can lead to HTTP Request Smuggling (HRS).
+     The CR character (without LF) is sufficient to delimit
+     HTTP header fields in the llhttp parser. According to RFC7230
+     section 3, only the CRLF sequence should delimit each header-field
+   * Fix CVE-2023-30590: clarify behavior of DH generateKeys
+   * Fix CVE-2023-32559: A privilege escalation vulnerability exists
+     in the experimental policy mechanism.
+     The use of the deprecated API `process.binding()` can bypass
+     the policy mechanism by requiring internal modules and
+     eventually take advantage of `process.binding('spawn_sync')`
+     run arbitrary code, outside of the limits defined in
+     a `policy.json` file
+   * Fix CVE-2023-46809: fix OpenSSL Marvin Attack.
+   * Fix CVE-2024-22019: A vulnerability in Node.js HTTP servers
+     allowed an attacker to send a specially crafted HTTP request
+     with chunked encoding, leading to resource exhaustion and
+     denial of service (DoS). The server reads an unbounded number
+     of bytes from a single connection, exploiting the lack of
+     limitations on chunk extension bytes.
+   * Fix CVE-2024-22025: A vulnerability in Node.js has been identified,
+     allowing for a Denial of Service (DoS) attack through resource
+     exhaustion when using the fetch() function to retrieve content from an
+     untrusted URL. The vulnerability stems from the fact that the fetch()
+     function in Node.js always decodes Brotli, making it possible for an
+     attacker to cause resource exhaustion when fetching content from an
+     untrusted URL. An attacker controlling the URL passed into fetch() can
+     exploit this vulnerability to exhaust memory, potentially leading to
+     process termination, depending on the system configuration.
+   * Fix CVE-2024-27982: Do not allow OBS fold in headers by default
+     A critical vulnerability was found in the http server, where
+     malformed headers can lead to HTTP request smuggling.
+     Specifically, if a space is placed before a
+     content-length header, it is not interpreted correctly, enabling
+     attackers to smuggle in a second request within the body of the first.
+   * Fix CVE-2024-27983: ensure to close stream when destroying session
+     An attacker can make the Node.js HTTP/2 server completely unavailable
+     by sending a small amount of HTTP/2 frames packets with a few
+     HTTP/2 frames inside. It is possible to leave some data in nghttp2
+     memory after reset when headers with HTTP/2 CONTINUATION frame are
+     sent to the server and then a TCP connection is abruptly closed by
+     the client triggering the Http2Session destructor while header
+     frames are still being processed (and stored in memory) causing
+     a race condition.
+Checksums-Sha1:
+ 744481e1ff46ff3606ad2a1e1785031d811c5140 3505 nodejs_12.22.12~dfsg-1~deb11u5.dsc
+ 1fef218bb8d9f06059919565b50cc122dc10cebb 87112 nodejs_12.22.12~dfsg.orig-types-node.tar.xz
+ 502cfe0a9691d3974ca79e9f82aa4eed6eb24380 19005908 nodejs_12.22.12~dfsg.orig.tar.xz
+ 34e4edfc3e7c666dc0425e2ff5c988cd021864b4 172576 nodejs_12.22.12~dfsg-1~deb11u5.debian.tar.xz
+ 904391484e54be019f5c84cdd45b128880e11db6 11108 nodejs_12.22.12~dfsg-1~deb11u5_amd64.buildinfo
+Checksums-Sha256:
+ 72b805f0043fb356dc8c942f91eb5d0ea295ecaa25e8d0d691ee1ca9facf08ca 3505 nodejs_12.22.12~dfsg-1~deb11u5.dsc
+ e640dd32d922eed23cd5dabf56600cfd335ea5ce3c756dc96024adebf94555f8 87112 nodejs_12.22.12~dfsg.orig-types-node.tar.xz
+ 06f8eb29e52d5eb720c4ae2316b3c1b71efb12aa73bf27138f1cc776a7315aff 19005908 nodejs_12.22.12~dfsg.orig.tar.xz
+ 156fe3906209e30c6fe144bb09a6c3d7ba6275b9b224cf88aca4b2c3de0de39e 172576 nodejs_12.22.12~dfsg-1~deb11u5.debian.tar.xz
+ 7fe8ff791a54b06c24d8971c491db31c1a2c3cb6b6c211a7b1573186ceb410c4 11108 nodejs_12.22.12~dfsg-1~deb11u5_amd64.buildinfo
+Files:
+ 132010986e3666850091ded9060d21d3 3505 javascript optional nodejs_12.22.12~dfsg-1~deb11u5.dsc
+ b3dc69de461763b2918b81ef426fe0ff 87112 javascript optional nodejs_12.22.12~dfsg.orig-types-node.tar.xz
+ effb4e471c3cf4c7184d357a38985c56 19005908 javascript optional nodejs_12.22.12~dfsg.orig.tar.xz
+ 36febbb08c606053f8c29b32c0a34325 172576 javascript optional nodejs_12.22.12~dfsg-1~deb11u5.debian.tar.xz
+ 7dfabe5d62f242f2ca77896d29a06d34 11108 javascript optional nodejs_12.22.12~dfsg-1~deb11u5_amd64.buildinfo
+

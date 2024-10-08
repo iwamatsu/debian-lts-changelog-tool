@@ -1,0 +1,85 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 Sep 2024 02:28:35 +0200
+Source: unbound
+Binary: libunbound-dev libunbound8 libunbound8-dbgsym python3-unbound python3-unbound-dbgsym unbound unbound-anchor unbound-anchor-dbgsym unbound-dbgsym unbound-host unbound-host-dbgsym
+Architecture: source amd64
+Version: 1.13.1-1+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Description:
+ libunbound-dev - static library, header files, and docs for libunbound
+ libunbound8 - library implementing DNS resolution and validation
+ python3-unbound - library implementing DNS resolution and validation (Python3 bindi
+ unbound    - validating, recursive, caching DNS resolver
+ unbound-anchor - utility to securely fetch the root DNS trust anchor
+ unbound-host - reimplementation of the 'host' command
+Changes:
+ unbound (1.13.1-1+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2024-43168:
+     A heap-buffer-overflow flaw was found in the cfg_mark_ports function within
+     Unbound's config_file.c, which can lead to memory corruption. This issue
+     could allow an attacker with local access to provide specially crafted
+     input, potentially causing the application to crash or allowing arbitrary
+     code execution. This could result in a denial of service or unauthorized
+   * Fix: CVE-2024-43167:
+     A NULL pointer dereference flaw was found in the ub_ctx_set_fwd function in
+     Unbound. This issue could allow an attacker who can invoke specific
+     sequences of API calls to cause a segmentation fault. When certain API
+     functions such as ub_ctx_set_fwd and ub_ctx_resolvconf are called in a
+     particular order, the program attempts to read from a NULL pointer,
+     leading to a crash. This issue can result in a denial of service by causing
+Checksums-Sha1:
+ 757fa8e6243d21454970419e6cf579f04c94902a 2796 unbound_1.13.1-1+deb11u3.dsc
+ 561522b06943f6d1c33bd78132db1f7020fc4fd1 5976957 unbound_1.13.1.orig.tar.gz
+ aaab0a78943458fadbb987361bf83dfc4d3554ad 45516 unbound_1.13.1-1+deb11u3.debian.tar.xz
+ 514c9e98f4ff9095cb36a6616a27c3d335b34261 587892 libunbound-dev_1.13.1-1+deb11u3_amd64.deb
+ d165520a8c962b0a170cda6203a27a55fea169eb 1423192 libunbound8-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ c85715b6253128b059b72e9bfe3663ff7db99a0c 507804 libunbound8_1.13.1-1+deb11u3_amd64.deb
+ 6d865ecf79fa1b47313f92b614c23d326d26f7c2 163828 python3-unbound-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 247b777fc4e231d65789945b3ca61e304455ee81 190308 python3-unbound_1.13.1-1+deb11u3_amd64.deb
+ 8ab96e4297f53230f0b5e21e92edacdefbedc811 72684 unbound-anchor-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ b2fe22872038c05c09a6dd4308de1b861f60680a 170272 unbound-anchor_1.13.1-1+deb11u3_amd64.deb
+ 3de54d521aec32982862f3bf5d8ef6be2c7c4890 5499836 unbound-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 82fe91e1e26c8bd9f022378e2e3b1867f122c91b 127348 unbound-host-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 5ce1dc77c2bebfa6c4c06fe6ecf7aa6ec6385d35 186216 unbound-host_1.13.1-1+deb11u3_amd64.deb
+ 99a9587fa1c36ba0e4d13385564812f49f45c01f 10939 unbound_1.13.1-1+deb11u3_amd64.buildinfo
+ 569565f197a88d83a92abb1195cb2b063f398e4d 873224 unbound_1.13.1-1+deb11u3_amd64.deb
+Checksums-Sha256:
+ 26d7d1e3478053c196aeefa0b1470ec33a1e77a2ffe374bec7e2f585b2164901 2796 unbound_1.13.1-1+deb11u3.dsc
+ 8504d97b8fc5bd897345c95d116e0ee0ddf8c8ff99590ab2b4bd13278c9f50b8 5976957 unbound_1.13.1.orig.tar.gz
+ d19c27a80a176b5eb3396a83fc47e02a33536b23a5f73b5c50651ad47e13fda9 45516 unbound_1.13.1-1+deb11u3.debian.tar.xz
+ 5161d6f9c6e56c172c0b628e0d9020fbb8c920f98c698142767fdd73a61db119 587892 libunbound-dev_1.13.1-1+deb11u3_amd64.deb
+ a287d33e4094f2275f4a15a049a3058d4169ab2967d71858c26f78ad76e1f677 1423192 libunbound8-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 3bc97bedacfa692d0c8ea295eb77ce280122c54f6f34cb71aabb5b4b9f8be9be 507804 libunbound8_1.13.1-1+deb11u3_amd64.deb
+ aaf9add27db9d276373d61f14f04d7b30e62b5238059093951d495a75f69631f 163828 python3-unbound-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ f1268575ebd4db91aa114456c3c7b4eef788692159e3e3af8b466ed266051a62 190308 python3-unbound_1.13.1-1+deb11u3_amd64.deb
+ 79fcf5891f86bb868aaf0ea1ec2152dcdc59a22ff8a99181f1a5644a0d74bc8e 72684 unbound-anchor-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 1864ceb5259a79ebf3ecc8fe36029221e6ac86a04f7b14f24b6231395115314a 170272 unbound-anchor_1.13.1-1+deb11u3_amd64.deb
+ 69bc0c84688425f863de1f38e44676c1f613179ec8e80fa820803a2a0bd059cc 5499836 unbound-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 40efd2a1d194a3ec39d76fbbc3024de2ad40deada9e666b412406957f0bf162b 127348 unbound-host-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 9880f1e2478ab03b2ba5e07d093cf4b93817a26bfe49439b06dd3be8ef9775be 186216 unbound-host_1.13.1-1+deb11u3_amd64.deb
+ 92ed14ed52cabd92c24775bfcb057d6092c15fa15efe1250f875bf5a190e830a 10939 unbound_1.13.1-1+deb11u3_amd64.buildinfo
+ e05b160f9098d367fbdf189bda25245557b5c31683e89fb7013b2d4eb51ced20 873224 unbound_1.13.1-1+deb11u3_amd64.deb
+Files:
+ 0dd3f9c66271ad14fb5fb342aa8a1aa1 2796 net optional unbound_1.13.1-1+deb11u3.dsc
+ 0cd660a40d733acc6e7cce43731cac62 5976957 net optional unbound_1.13.1.orig.tar.gz
+ 788cac111405dc31fe7a0c80db5e65cf 45516 net optional unbound_1.13.1-1+deb11u3.debian.tar.xz
+ 34107817f6d6e3261ee03bda55fbedef 587892 libdevel optional libunbound-dev_1.13.1-1+deb11u3_amd64.deb
+ b14fdeb158cbff5859a87be3afa2b6a1 1423192 debug optional libunbound8-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 5df348e554724029f7a8add0cb8c86d1 507804 libs optional libunbound8_1.13.1-1+deb11u3_amd64.deb
+ 3aaf0e06d4949d4945f43fec8ef264f7 163828 debug optional python3-unbound-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 7c9164bf62e7022b7859e3b791c2f133 190308 python optional python3-unbound_1.13.1-1+deb11u3_amd64.deb
+ 6237d2452a3b9e2e44e4a4a5fc10635e 72684 debug optional unbound-anchor-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 96ee1b94768a2887649697941a05ac7f 170272 net optional unbound-anchor_1.13.1-1+deb11u3_amd64.deb
+ 68a8499366b4d891b2ec5e95be0f4474 5499836 debug optional unbound-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ c75e18a34c4327ce17334b88c423668a 127348 debug optional unbound-host-dbgsym_1.13.1-1+deb11u3_amd64.deb
+ 15860e03d048b66a423216759251e8fc 186216 net optional unbound-host_1.13.1-1+deb11u3_amd64.deb
+ 4766ff506deb5455a4dfc654a64f5b67 10939 net optional unbound_1.13.1-1+deb11u3_amd64.buildinfo
+ a8f5008ad6b9636b249536b3815b2ccc 873224 net optional unbound_1.13.1-1+deb11u3_amd64.deb
+

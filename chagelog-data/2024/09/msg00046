@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 27 Sep 2024 15:50:42 +0300
+Source: nghttp2
+Architecture: source
+Version: 1.43.0-1+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Tomasz Buchert <tomasz@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ nghttp2 (1.43.0-1+deb11u2) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-28182: unbounded number of HTTP/2 CONTINUATION frames DoS
+   * nghttp2_option_set_stream_reset_rate_limit was added in
+     1.43.0-1+deb11u1, add to debian/libnghttp2-14.symbols
+Checksums-Sha1:
+ e7d078f61d979a8ff9d805229d124e48c57a821c 2555 nghttp2_1.43.0-1+deb11u2.dsc
+ cf95821d4f5afe5b69911eb98fb1f4681c8c86d0 4521786 nghttp2_1.43.0.orig.tar.bz2
+ 1105da2c034eb8e691be977c30f1e5c884b5672e 23484 nghttp2_1.43.0-1+deb11u2.debian.tar.xz
+Checksums-Sha256:
+ 13ad116ef14dc9e3da1b3aa3b1f2645e2dcf44e153564a5ec26f5df5d91cd854 2555 nghttp2_1.43.0-1+deb11u2.dsc
+ 556f24653397c71ebb8270b3c5e5507f0893e6eac2c6eeda6be2ecf6e1f50f62 4521786 nghttp2_1.43.0.orig.tar.bz2
+ 52cd263f1db0a02edf21322251d7a444eb2fce158bbcaf23e26bf25c6051fd83 23484 nghttp2_1.43.0-1+deb11u2.debian.tar.xz
+Files:
+ c0b98b0aa4413644a64ff5d3eb1586f5 2555 httpd optional nghttp2_1.43.0-1+deb11u2.dsc
+ d7d7d01fd9c5d30c2960ae4349e6b6b7 4521786 httpd optional nghttp2_1.43.0.orig.tar.bz2
+ 1cda591c4ad6a61d6373536066ba8df1 23484 httpd optional nghttp2_1.43.0-1+deb11u2.debian.tar.xz
+

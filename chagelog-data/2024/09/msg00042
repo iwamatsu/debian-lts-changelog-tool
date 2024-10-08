@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 24 Sep 2024 16:38:08 +0300
+Source: booth
+Architecture: source
+Version: 1.0-237-gdd88847-2+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian HA Maintainers <debian-ha-maintainers@alioth-lists.debian.net>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ booth (1.0-237-gdd88847-2+deb11u2) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-3049: wrong hmac might be accepted
+Checksums-Sha1:
+ 8f12ac46798c452fc4d38f75e2fa7c5915508042 2422 booth_1.0-237-gdd88847-2+deb11u2.dsc
+ 78d13252e45cf8be918b9d32668b203f64d24cd6 146646 booth_1.0-237-gdd88847.orig.tar.gz
+ 59ae8778106c20f880a44c4dee09f012b8eafb2d 9276 booth_1.0-237-gdd88847-2+deb11u2.debian.tar.xz
+Checksums-Sha256:
+ 9e0e966500e90081164947b5d41270885c17df84e47c52058b7e47adf7267614 2422 booth_1.0-237-gdd88847-2+deb11u2.dsc
+ ed72bfea71e42f0559c9ed502021bd96f112fd638041ad937d4ad4d9bec87c2c 146646 booth_1.0-237-gdd88847.orig.tar.gz
+ dbbcc4bc8c12404697b6669af2e706de98d54e03a7618289ebe4385dcac24602 9276 booth_1.0-237-gdd88847-2+deb11u2.debian.tar.xz
+Files:
+ 8fe14397226c573053b8de814903339b 2422 admin optional booth_1.0-237-gdd88847-2+deb11u2.dsc
+ 933d4d3bfe8ce8adc05d5670e97f6269 146646 admin optional booth_1.0-237-gdd88847.orig.tar.gz
+ 09d2e276a3b5a7404160779ad9bab9c3 9276 admin optional booth_1.0-237-gdd88847-2+deb11u2.debian.tar.xz
+

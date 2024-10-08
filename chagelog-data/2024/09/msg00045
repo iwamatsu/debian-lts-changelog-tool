@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 Sep 2024 16:41:35 +0300
+Source: trafficserver
+Architecture: source
+Version: 8.1.11+ds-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Jean Baptiste Favre <debian@jbfavre.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ trafficserver (8.1.11+ds-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream release.
+     - CVE-2023-38522: Incomplete field name check allows request smuggling
+     - CVE-2024-35161: Incomplete check for chunked trailer section allows
+       request smuggling
+     - CVE-2024-35296: Invalid Accept-Encoding can force forwarding requests
+Checksums-Sha1:
+ 0cd4d79c40af8ae840a4070a521584bf02701ee2 2757 trafficserver_8.1.11+ds-0+deb11u1.dsc
+ b4cd0c6872cc1d06681ae60c7234f0761ddd3645 7928992 trafficserver_8.1.11+ds.orig.tar.xz
+ 2b938d64698553d33f14b304e130fa642e67276c 45968 trafficserver_8.1.11+ds-0+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 404e9bb45e229847a1d72bcca9d81980f07738cef0e7ee250a89348ef05f7a3f 2757 trafficserver_8.1.11+ds-0+deb11u1.dsc
+ 54f04e36d35b86e488d2a0b592d773358737cb2f959e1bb1668d34cd374cbbd4 7928992 trafficserver_8.1.11+ds.orig.tar.xz
+ 5428b4afd16840cb24934532ee7d5f104c715ac370fbcff1535e9c11b33d90b1 45968 trafficserver_8.1.11+ds-0+deb11u1.debian.tar.xz
+Files:
+ 30a477d0e713411c1a7aa0c80d34b902 2757 web optional trafficserver_8.1.11+ds-0+deb11u1.dsc
+ 82a87c06577dcec03a0d5d6a38bc899c 7928992 web optional trafficserver_8.1.11+ds.orig.tar.xz
+ 4f1ab69b1b0125151db22af5de8295cd 45968 web optional trafficserver_8.1.11+ds-0+deb11u1.debian.tar.xz
+

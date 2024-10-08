@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 03 Sep 2024 16:12:16 +0300
+Source: libxml2
+Architecture: source
+Version: 2.9.10+dfsg-6.7+deb11u5
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libxml2 (2.9.10+dfsg-6.7+deb11u5) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2016-3709: HTML 4 parser cross-site scripting
+   * CVE-2022-2309: Parser NULL pointer dereference
+Checksums-Sha1:
+ 2d43fa68d6a1ccf232d3d5ebc38ab9c11ee906c3 2704 libxml2_2.9.10+dfsg-6.7+deb11u5.dsc
+ 2578c0817feae47d78c4f987c7a2a32f87d89517 2503560 libxml2_2.9.10+dfsg.orig.tar.xz
+ 6876534ce88cf3b6f9fea247a2c05694cea10375 43140 libxml2_2.9.10+dfsg-6.7+deb11u5.debian.tar.xz
+Checksums-Sha256:
+ 77bca4aa4cc6543ca08e1a96a81441ae23ca363b57c82fd5d58341e646d82350 2704 libxml2_2.9.10+dfsg-6.7+deb11u5.dsc
+ 65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0 2503560 libxml2_2.9.10+dfsg.orig.tar.xz
+ ce3a1e4fa6c173de6638a74a122b28fff367b352a2c4bc26002fead5c0feeca7 43140 libxml2_2.9.10+dfsg-6.7+deb11u5.debian.tar.xz
+Files:
+ a295445eaa2b0528090065180cdbcec4 2704 libs optional libxml2_2.9.10+dfsg-6.7+deb11u5.dsc
+ 4fb60521425df67f453b3c1ff0efbc1c 2503560 libs optional libxml2_2.9.10+dfsg.orig.tar.xz
+ acdc92b6bfd5498fa784f46535b2c05c 43140 libs optional libxml2_2.9.10+dfsg-6.7+deb11u5.debian.tar.xz
+

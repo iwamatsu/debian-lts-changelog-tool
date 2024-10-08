@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 05 Sep 2024 19:38:29 +0300
+Source: bluez
+Architecture: source
+Version: 5.55-3.1+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Bluetooth Maintainers <team+pkg-bluetooth@tracker.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ bluez (5.55-3.1+deb11u2) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-3658: adapter: Fix storing discoverable setting
+   * CVE-2021-41229: Memory leak in the SDP protocol
+   * CVE-2021-43400: Use-after-free on client disconnect
+   * CVE-2022-0204: GATT heap overflow
+   * CVE-2022-39176: Proximate attackers could obtain sensitive information
+   * CVE-2022-39177: Proximate attackers could cause denial of service
+   * CVE-2023-27349: AVRCP crash while handling unsupported events.
+   * CVE-2023-50229: Phone Book Access profile Heap-based Buffer Overflow
+   * CVE-2023-50230: Phone Book Access profile Heap-based Buffer Overflow
+Checksums-Sha1:
+ 78f3eb4ffd8fd076a81b882f4996a4ae77769a46 2761 bluez_5.55-3.1+deb11u2.dsc
+ 2ca9225aa8e5af87713ca18e16200d26537c6820 1700208 bluez_5.55.orig.tar.xz
+ f72a455cbc16177ac2d0df4073e5acb954769fcc 46296 bluez_5.55-3.1+deb11u2.debian.tar.xz
+Checksums-Sha256:
+ 34d809c769955f83773f536e43399a53b18031bc6396b43db12f012ce16a5292 2761 bluez_5.55-3.1+deb11u2.dsc
+ f06520e1e48bddc88db1a5c5a60ee97b36b47409c352352374bf07a594400ac4 1700208 bluez_5.55.orig.tar.xz
+ 649ac0d777afbb5ef56f5955a9e075527ade6d265709ec948ef570c87f0ecf2b 46296 bluez_5.55-3.1+deb11u2.debian.tar.xz
+Files:
+ f7f3522163c427f1d3e4584a7998c9b8 2761 admin optional bluez_5.55-3.1+deb11u2.dsc
+ e7c87deadb74346f77a61ebee70bf375 1700208 admin optional bluez_5.55.orig.tar.xz
+ 6823e9f5c44f4cc32efc39d5215adad4 46296 admin optional bluez_5.55-3.1+deb11u2.debian.tar.xz
+

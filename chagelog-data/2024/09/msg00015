@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 21 Jun 2024 15:46:47 +0200
+Source: glance
+Architecture: source
+Version: 2:21.1.0-1+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1074761
+Changes:
+ glance (2:21.1.0-1+deb11u2) bullseye-security; urgency=high
+ .
+   * CVE-2024-32498: Arbitrary file access through custom QCOW2 external data.
+     Add upstream patch (Closes: #1074761):
+     - CVE-2024-32498_train-ish-backport.patch
+   * (build-)depends on oslo.utils >= 4.6.1.
+Checksums-Sha1:
+ 6f4282236284cd8d2ffaac7f799878fe9b448430 3844 glance_21.1.0-1+deb11u2.dsc
+ efd0cb587e82a6642230ddd7510966500e41b718 1473800 glance_21.1.0.orig.tar.xz
+ 7c5d6738db63a40cbc874aacc477cce1efd66e65 25632 glance_21.1.0-1+deb11u2.debian.tar.xz
+ 77d557cc2751e93cedb0764b9359d9d32ababa46 18488 glance_21.1.0-1+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ bc4edf17d2d5bf61e4db1f10c9a9932ebc81aa0b803d27d04f6debdba3ecf9a8 3844 glance_21.1.0-1+deb11u2.dsc
+ dd6e2c20956ab64ea5e0468e23e38229be75b03df9fc34d8a82e6ad1e2b36a96 1473800 glance_21.1.0.orig.tar.xz
+ b5b7efa9c45f7536d8782b32c97487ddcb10196314bb524d5125856955554b0d 25632 glance_21.1.0-1+deb11u2.debian.tar.xz
+ e06a48099de94da7410e931b2a0498f7cfa54f376d48aad74c29ad6728390f9c 18488 glance_21.1.0-1+deb11u2_amd64.buildinfo
+Files:
+ ef71186eb56646174c3c88a0b6970192 3844 net optional glance_21.1.0-1+deb11u2.dsc
+ ebfff3be74da2a14c86edc84a9788ed7 1473800 net optional glance_21.1.0.orig.tar.xz
+ fcc30590d71da84192aaabd9adb45112 25632 net optional glance_21.1.0-1+deb11u2.debian.tar.xz
+ 08574c658055243d9ec92b88ba6f52eb 18488 net optional glance_21.1.0-1+deb11u2_amd64.buildinfo
+

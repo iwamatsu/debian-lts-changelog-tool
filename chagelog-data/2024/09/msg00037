@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 07 Sep 2024 14:44:07 -0700
+Source: mariadb-10.5
+Architecture: source
+Version: 1:10.5.26-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Changed-By: Otto Kekäläinen <otto@debian.org>
+Closes: 1015293
+Changes:
+ mariadb-10.5 (1:10.5.26-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream version 10.5.26. Includes fixes for several severe regressions
+     as noted at https://mariadb.com/kb/en/mariadb-10-5-26-release-notes/
+   * This release includes upstream version 10.5.25, with fixes for regressions
+     as noted at https://mariadb.com/kb/en/mariadb-10-5-25-release-notes/ as well
+     as security issue:
+     - CVE-2024-21096
+   * Upstream MariaDB 10.5.25 included a fix for certain INSERT statements
+     which modified the wrong row leading to inconsistent data  (Closes: #1015293)
+   * Add NEWS item to explain new `mariadb-dump` option `--sandbox`
+   * Fix failing build by including wsrep_sst_backup man page
+Checksums-Sha1:
+ efee67d34508b227a56b31993ee222e8385726a6 4814 mariadb-10.5_10.5.26-0+deb11u1.dsc
+ 5b3e361aa690c15d33550c589ac3e9e1327b079c 116566259 mariadb-10.5_10.5.26.orig.tar.gz
+ 00499e6d72e8e90c45bdff39fb8de9418876544c 833 mariadb-10.5_10.5.26.orig.tar.gz.asc
+ d1958a9fdb3fd41b3a52c56c206adf2baa838189 229964 mariadb-10.5_10.5.26-0+deb11u1.debian.tar.xz
+ 7fa6d4884afb6c4623dae9db93e2b9835956e70a 9073 mariadb-10.5_10.5.26-0+deb11u1_source.buildinfo
+Checksums-Sha256:
+ 2eb82b93bded15866e9cf319c5dc2c0503628f1f6bf818ece1cd488bf77ab6d2 4814 mariadb-10.5_10.5.26-0+deb11u1.dsc
+ dd5f99a1d30ae47365fc18b1deeff6dc0ab38ac84e7d9fd9c8c04ff6b01961f1 116566259 mariadb-10.5_10.5.26.orig.tar.gz
+ 37da13e92ea9ccb6a948eb6d3dc8b226084c21b36397cdbdcf72d9f96c4286fb 833 mariadb-10.5_10.5.26.orig.tar.gz.asc
+ 1b7c802bcf7f1cad24d7522fcb45b6a99e02c526f79ecfb227d89887b9e8204a 229964 mariadb-10.5_10.5.26-0+deb11u1.debian.tar.xz
+ b508c0df550511cc2ca0e6a072f5ba0a20edf1914831cb420cd09f7ea6ca1479 9073 mariadb-10.5_10.5.26-0+deb11u1_source.buildinfo
+Files:
+ 621e4eb3aa837d91cbdb5feee1f49113 4814 database optional mariadb-10.5_10.5.26-0+deb11u1.dsc
+ 90fe7ae88a1a455df41a1fdf6e74980e 116566259 database optional mariadb-10.5_10.5.26.orig.tar.gz
+ 795f6254d22c7e55c4fdd825da223ce2 833 database optional mariadb-10.5_10.5.26.orig.tar.gz.asc
+ 8a3e7d111699f08a1af1277d1e5f5065 229964 database optional mariadb-10.5_10.5.26-0+deb11u1.debian.tar.xz
+ 47737f03a6d19aedea48a7c26d9e3865 9073 database optional mariadb-10.5_10.5.26-0+deb11u1_source.buildinfo
+

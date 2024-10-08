@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 16 Jun 2024 17:42:49 +0000
+Source: pymongo
+Architecture: source
+Version: 3.11.0-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ pymongo (3.11.0-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * QA upload
+   * Fix CVE-2024-5629: An out-of-bounds read in the
+     'bson' module allowed deserialization of malformed BSON
+     provided by a Server to raise an exception which may
+     contain arbitrary application memory
+Checksums-Sha1:
+ dc593b0f663ed4fe811072bb96e4a4c203bf0472 2482 pymongo_3.11.0-1+deb11u1.dsc
+ 8117d0ccddfb8947c58e6d3d4b037c12b6c2297a 773027 pymongo_3.11.0.orig.tar.gz
+ 1ae3b113957946faf0ce92b378754bbf5cd7df47 7616 pymongo_3.11.0-1+deb11u1.debian.tar.xz
+ a9d5e626fb73b292f9b9e8a4032bf487fcd018d3 10309 pymongo_3.11.0-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 4edf53c8d889a902408dea45cecfabb4a4db73b2ed0f4cd214382b50679266f2 2482 pymongo_3.11.0-1+deb11u1.dsc
+ 0492725a6cd25c3f30ad00caa741a50d906070b7e7ec030c516a1c75003118cb 773027 pymongo_3.11.0.orig.tar.gz
+ 5ba16c8e6dd3eec8f8728cab3dbb754e86466135cedea09d45d02b10fda5c1f8 7616 pymongo_3.11.0-1+deb11u1.debian.tar.xz
+ f9f73c0644cdf914e4b9687ecb352a58ee81f63c0ec44631279df5b8f2a40988 10309 pymongo_3.11.0-1+deb11u1_amd64.buildinfo
+Files:
+ 6f2364316dab5b7bd270556051cfa7a1 2482 python optional pymongo_3.11.0-1+deb11u1.dsc
+ 2a9377f24ee9cbd5f479d936567b0a63 773027 python optional pymongo_3.11.0.orig.tar.gz
+ 870d1ade0f946c29b2bd4f4d01314f8d 7616 python optional pymongo_3.11.0-1+deb11u1.debian.tar.xz
+ 17d48e4579b6ac266f75fe88de8ae467 10309 python optional pymongo_3.11.0-1+deb11u1_amd64.buildinfo
+

@@ -1,0 +1,50 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 30 Sep 2024 18:06:04 -0300
+Source: debian-security-support
+Architecture: source
+Version: 1:11+2024.09.30
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Holger Levsen <holger@debian.org>
+Changed-By: Santiago Ruano Rincón <santiagorr@riseup.net>
+Closes: 1063756
+Changes:
+ debian-security-support (1:11+2024.09.30) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+ .
+   [ Moritz Muehlenhoff ]
+   * Mark pdns-recursor as EOLed in Bullseye
+   * Mark slurm-wlm as EOLed in Bullseye
+   * Mark libreswan as EOLed in Bullseye
+ .
+   [ Sylvain Beucler ]
+   * Mark phppgadmin as EOLed in bullseye
+   * Mark pytest-salt-factories as EOLed in bullseye
+   * Mark pytest-testinfra as EOLed in bullseye
+   * Mark salt as EOLed in bullseye
+   * Mark gpac as EOLed in bullseye
+ .
+   [ Holger Levsen ]
+   * Mark snort as unsupported in bullseye. Closes: #1063756
+ .
+   [ Santiago Ruano Rincón ]
+   * Mark iotjs as EOLed in bullseye
+   * Add wpewebkit to the bullseye ended support list
+   * Mark python2.7 ecosystem, including cython, jython, pypy and
+     python-stdlib-extensions as EOL'ed in bullseye
+Checksums-Sha1:
+ adb7c14445d762ed7002aaaae9df3641bc655c80 1298 debian-security-support_11+2024.09.30.dsc
+ 67f5436e83782a37009fcd6e374f48934925796b 31684 debian-security-support_11+2024.09.30.tar.xz
+ 45604f6c87874ca8945b737c1215e7f017125acd 6486 debian-security-support_11+2024.09.30_amd64.buildinfo
+Checksums-Sha256:
+ 8f0a6c67e537bec9310e90bdbe4baf23df51f2d53be2d5ed535546289582c4c1 1298 debian-security-support_11+2024.09.30.dsc
+ af2558dd52e1237baa1717204eafd30bf9eb36615e76cb9293a4a95cd59ff593 31684 debian-security-support_11+2024.09.30.tar.xz
+ 38a3e091aaa3056f792fef3ba435207258ee14348dfe859596101e8f1c6ba9be 6486 debian-security-support_11+2024.09.30_amd64.buildinfo
+Files:
+ 63647911048b960f3e49eea7457083f5 1298 admin optional debian-security-support_11+2024.09.30.dsc
+ 9bd53854623d33fcbd8e3034b5fc9d32 31684 admin optional debian-security-support_11+2024.09.30.tar.xz
+ 2f2b5fac6ce9bfbc1bff19ad58eba32c 6486 admin optional debian-security-support_11+2024.09.30_amd64.buildinfo
+

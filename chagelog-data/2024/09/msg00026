@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 07 Sep 2024 21:00:55 +0300
+Source: aom
+Architecture: source
+Version: 1.0.0.errata1-3+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ aom (1.0.0.errata1-3+deb11u2) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-5171: Integer overflows
+Checksums-Sha1:
+ b5e05b28dfb355844b6bc3a94a7474fdf51c499d 2256 aom_1.0.0.errata1-3+deb11u2.dsc
+ a3e432cdd2f8b399be6b8c7399ce2d3242990340 1898808 aom_1.0.0.errata1.orig.tar.xz
+ 03b00f41e5c9f60bbf1090c2349885e794f0d0d7 27692 aom_1.0.0.errata1-3+deb11u2.debian.tar.xz
+Checksums-Sha256:
+ d3a9daaace3b4990fdbf81dc13ebe056b21a052338fd2f1e723fdb404784a6a8 2256 aom_1.0.0.errata1-3+deb11u2.dsc
+ 1dd501c622d871acf31fb942bd3b73a00883fc10f7c498fec97b22c858ca415f 1898808 aom_1.0.0.errata1.orig.tar.xz
+ 2e58c34c4617544c5c84ec3bdf658c463d03ea4c2a67d0ceadf1772dc3d672dd 27692 aom_1.0.0.errata1-3+deb11u2.debian.tar.xz
+Files:
+ 41f662080f96c7037c06c03d44b85ca0 2256 video optional aom_1.0.0.errata1-3+deb11u2.dsc
+ a86870176602a9c12473b28784b8ad05 1898808 video optional aom_1.0.0.errata1.orig.tar.xz
+ cd85d9e4928b3f9906ce00e50cfb1323 27692 video optional aom_1.0.0.errata1-3+deb11u2.debian.tar.xz
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 25 Sep 2024 19:56:03 +0300
+Source: puredata
+Architecture: source
+Version: 0.51.4-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ puredata (0.51.4-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-47480: Terminate if canceling setuid() privilege fails
+Checksums-Sha1:
+ f2470e7aace9b3f36c7a115f705db8c584365072 2548 puredata_0.51.4-1+deb11u1.dsc
+ ec83d76bc1f6224b4b999803a650154e0f1a5616 10043573 puredata_0.51.4.orig.tar.gz
+ 4c3ef35a019dda1da5ebe561de2b28e08f8e0511 32700 puredata_0.51.4-1+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 131f10600583c82e31df5e019e9729f34a9b0ae34c0ee9aacfecd98a612400dd 2548 puredata_0.51.4-1+deb11u1.dsc
+ 52591f18316e9f2471ca21c3d6b41c56336e0615ec40a093232e95cc230bfcc1 10043573 puredata_0.51.4.orig.tar.gz
+ 9a78524e63a83a71c3f592ed4d55f0e6f3a37588964de0881cedb4d099e3d132 32700 puredata_0.51.4-1+deb11u1.debian.tar.xz
+Files:
+ 3b70585cafc180c1c8401456b37705fe 2548 sound optional puredata_0.51.4-1+deb11u1.dsc
+ 485e74e29ecb92574fff0098b981e97e 10043573 sound optional puredata_0.51.4.orig.tar.gz
+ cf087a5bc88fec117f05a42ff9488047 32700 sound optional puredata_0.51.4-1+deb11u1.debian.tar.xz
+

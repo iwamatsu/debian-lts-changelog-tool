@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 09 Sep 2024 11:40:08 +0100
+Source: python-jwcrypto
+Architecture: source
+Version: 0.8.0-1+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian FreeIPA Team <pkg-freeipa-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1065688
+Changes:
+ python-jwcrypto (0.8.0-1+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-28102: Prevent a potential denial of service (DoS) attack that
+     could have resulted from passing in a malicious JWE token with a high
+     compression ratio. When the server processed this token, it would have
+     consumed a lot of memory and processing time. (Closes: #1065688)
+   * Add debian/.gitlab-ci.yml.
+Checksums-Sha1:
+ f66a15e2c744e474c91091ca786d3c4a5d7d0cd3 2102 python-jwcrypto_0.8.0-1+deb11u1.dsc
+ 7a2787ab68091bc6856971edeeb223f1b3080e1c 81782 python-jwcrypto_0.8.0.orig.tar.gz
+ 42f99431846786431b31b682797d737159c883f2 3664 python-jwcrypto_0.8.0-1+deb11u1.debian.tar.xz
+ 45592c41d0d6bb3a106d56207c633557329deb91 6829 python-jwcrypto_0.8.0-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ aca73fc6c4fc80cf35139d4ab7a552ce9e24f60e2b538b37e96ee7b1d5a95900 2102 python-jwcrypto_0.8.0-1+deb11u1.dsc
+ 94530781fd73a50b9c10780e11df633b36688f229d9cb3be52169aa7d0b6d166 81782 python-jwcrypto_0.8.0.orig.tar.gz
+ bb4f4588ed8f8bd0c1ccad56b8d6aac7dd6663799061db274e22f68180ec8bd3 3664 python-jwcrypto_0.8.0-1+deb11u1.debian.tar.xz
+ 6d55dbddde30f31c732ccab47f32dcc56c93a1031f63963f0c0df69dca44631c 6829 python-jwcrypto_0.8.0-1+deb11u1_amd64.buildinfo
+Files:
+ 3146114f0d7d5e0a68b1387560a755fc 2102 python optional python-jwcrypto_0.8.0-1+deb11u1.dsc
+ 204923cb9466c59ac50f3d51ae307d21 81782 python optional python-jwcrypto_0.8.0.orig.tar.gz
+ 420532afa2e0850d9b53eefbe555b525 3664 python optional python-jwcrypto_0.8.0-1+deb11u1.debian.tar.xz
+ 415255d5c5d023998d596b6e061eeee1 6829 python optional python-jwcrypto_0.8.0-1+deb11u1_amd64.buildinfo
+

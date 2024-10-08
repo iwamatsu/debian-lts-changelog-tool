@@ -1,0 +1,55 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 02 Sep 2024 20:43:37 +0200
+Source: frr
+Architecture: source
+Version: 7.5.1-1.1+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: David Lamparter <equinox-debian@diac24.net>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1008010 1016978 1055852 1079649
+Changes:
+ frr (7.5.1-1.1+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * fix autopkgtest.
+     - enable allow-std-error on py-frr-reload, to avoid a new warning
+       emitted by the test.
+     - stop frr after running py-frr-reload, otherwise autopkgtest breaks
+       networking for subsequent steps, e.g when using pbuilder.
+   * d/clean: Remove generated files on rebuild.
+   * Backport fixed for several buffer overflow vulnerabilties:
+     CVE-2022-26125, CVE-2022-26126, CVE-2022-26127 (Closes: #1008010)
+     CVE-2022-26128, CVE-2022-26129
+   * Enabling patching of the fuzz test vectors with quilt
+     - Add patch to build system disabling handling the fuzz testvectors.
+     - Introduce the fuzz testvectors as patch, as upstream shipped it only
+       compressed and we need to patch it, otherwise the fix for CVE-2022-26125
+       would break the tests.
+   * CVE-2022-37035 - Racy use after free (Closes: #1016978)
+   * CVE-2023-38406 - "flowspec overflow."
+   * CVE-2023-38407 - Buffer overread (Closes: #1055852)
+   * Backport fixes for several vulnerabilties:
+     - DoS (crash) CVE-2023-46752, CVE-2023-46753, CVE-2023-47234, CVE-2023-47235
+       (Also filed in #1055852), CVE-2024-31948 and
+     - CVE-2024-31949 - DoS causing an infinite loop
+   * CVE-2024-44070 - missing length check of remaining stream before using TLV
+     value. (Closes: #1079649)
+Checksums-Sha1:
+ 8ed97a7943d1fc738fc4fa0bfdeee689f70bf512 2635 frr_7.5.1-1.1+deb11u3.dsc
+ df0412615ee0096265fe33f1afdd3457e4adbcd8 4155040 frr_7.5.1.orig.tar.xz
+ 4fe9411352bd8ae654b17572a5b32026fb6d2833 115292 frr_7.5.1-1.1+deb11u3.debian.tar.xz
+ 94ce6c7dc8a4a569593b2b506126ccba14172dc6 11808 frr_7.5.1-1.1+deb11u3_amd64.buildinfo
+Checksums-Sha256:
+ 8f36dfee26c338e29dec5e9b91464919ac361a8924d273b16c066d55dfdb8998 2635 frr_7.5.1-1.1+deb11u3.dsc
+ baa7b90b2ee07dce86dff88d7dabdf1b69783a47a4830f5a6827c6236081efe4 4155040 frr_7.5.1.orig.tar.xz
+ 7bbe84c232b94aa84b5a8d46adee46b2c0633334144e095f587e1aa08194d282 115292 frr_7.5.1-1.1+deb11u3.debian.tar.xz
+ be564857e01f33239516cad9f0a30bc610745c17fe523b6d647a7089c4bd215b 11808 frr_7.5.1-1.1+deb11u3_amd64.buildinfo
+Files:
+ 366429cb599f121b22c9823cf47d8e91 2635 net optional frr_7.5.1-1.1+deb11u3.dsc
+ 7b8361498c5234f78639c53bb9f96225 4155040 net optional frr_7.5.1.orig.tar.xz
+ 2208f7e444e3b82f32008da891464d3f 115292 net optional frr_7.5.1-1.1+deb11u3.debian.tar.xz
+ 93fe1d68f8f19377f378a6eea5cb7c0f 11808 net optional frr_7.5.1-1.1+deb11u3_amd64.buildinfo
+

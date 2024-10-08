@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 11 Jul 2024 01:03:28 +0200
+Source: nova
+Architecture: source
+Version: 2:22.4.0-1~deb11u5
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1076774
+Changes:
+ nova (2:22.4.0-1~deb11u5) bullseye-security; urgency=medium
+ .
+   * Updated CVE-2024-32498 from git.
+   * CVE-2024-40767: Regression VMDK/qcow arbitrary file access (CVE-2024-40767)
+     Added upstream patches (Closes: #1076774):
+     - CVE-2024-40767_1_port_format_inspector_tests_from_glance_antelope.patch
+     - CVE-2024-40767_2_Reproduce_iso_regression_with_deep_format_inspection_antelope.patch
+     - CVE-2024-40767_3_Add-iso-file-format-inspector_antelope.patch
+     - CVE-2024-40767_4_Change-force_format-strategy-to-catch-mismatches_antelope.patch
+   * Added qemu-utils as build-depends to run new tests.
+Checksums-Sha1:
+ 291f3e41217c935accd41e5fce5c0eea913a3b50 5354 nova_22.4.0-1~deb11u5.dsc
+ 3fe981f6d8420fc811540b3fb04e5d78e3c8da7b 5914864 nova_22.4.0.orig.tar.xz
+ 63c07aea19b80d5c99b5ab5c02dfb52fea5ea763 106484 nova_22.4.0-1~deb11u5.debian.tar.xz
+ 7a83af602f7a0b4979cc74772ebaebfa1ad4c955 24293 nova_22.4.0-1~deb11u5_amd64.buildinfo
+Checksums-Sha256:
+ 4cb2a91069e798fc27224afa0eca8ea328bc5d9fcaede2139b524faf8db644e1 5354 nova_22.4.0-1~deb11u5.dsc
+ a9c2b19beb0d9b21bee968dddbc0a2f572dd373ce5b5ceda51c1ca15bc3e7581 5914864 nova_22.4.0.orig.tar.xz
+ 7658c80c96a7b660bdd08c7123708759a3b4bdae8db196ac69144eebbdfbd788 106484 nova_22.4.0-1~deb11u5.debian.tar.xz
+ 51475825586f970affeecef154b6fa2615d7efc5a51235cdcc8555eb2327f940 24293 nova_22.4.0-1~deb11u5_amd64.buildinfo
+Files:
+ 363fc2f2737cce0a65480d6f34917599 5354 net optional nova_22.4.0-1~deb11u5.dsc
+ 9789822c4dba167f15d9b8369d3c0efa 5914864 net optional nova_22.4.0.orig.tar.xz
+ f5b91dd19df06530fdaca4375cea4bbb 106484 net optional nova_22.4.0-1~deb11u5.debian.tar.xz
+ 43fe10e1e757dcda198b6a5e4565c874 24293 net optional nova_22.4.0-1~deb11u5_amd64.buildinfo
+

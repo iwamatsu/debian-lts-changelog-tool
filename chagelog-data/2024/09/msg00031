@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 11 Sep 2024 16:40:27 +0200
+Source: linux-6.1
+Architecture: source
+Version: 6.1.106-3~deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Changes:
+ linux-6.1 (6.1.106-3~deb11u2) bullseye-security; urgency=medium
+ .
+   * Fix build-dependency on "pahole | dwarves" to be just "dwarves", since
+     stable buildds always try to use the first alternative
+Checksums-Sha1:
+ d9d1a03bd46e457dffc15b3c741a6465bd445230 48528 linux-6.1_6.1.106-3~deb11u2.dsc
+ f46f9eaf0bc0e278244e9b0cff659b524aa84009 1631296 linux-6.1_6.1.106-3~deb11u2.debian.tar.xz
+ e620975b335a663a997a023591c47b187293cc9e 6363 linux-6.1_6.1.106-3~deb11u2_source.buildinfo
+Checksums-Sha256:
+ 41f1542175505dd0851c033dff56a10bf5fa61755fbc25c73fa3d0e760a19c3a 48528 linux-6.1_6.1.106-3~deb11u2.dsc
+ 626e72038a52a36588d09875834e6d5cde9776ebbeb87b03e2526d71e50bc81a 1631296 linux-6.1_6.1.106-3~deb11u2.debian.tar.xz
+ af2b7edc5cb01e691e05816dea7108490f34ace3bfb121a7dbebf1f2f3f96019 6363 linux-6.1_6.1.106-3~deb11u2_source.buildinfo
+Files:
+ 84e390ae51056699cb36b7557ea6770c 48528 kernel optional linux-6.1_6.1.106-3~deb11u2.dsc
+ de80141715e1e5c7fc8163c481ecbf85 1631296 kernel optional linux-6.1_6.1.106-3~deb11u2.debian.tar.xz
+ 39cc17c00271b405dd834eb98e20ce32 6363 kernel optional linux-6.1_6.1.106-3~deb11u2_source.buildinfo
+

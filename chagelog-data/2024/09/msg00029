@@ -1,0 +1,59 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 09 Sep 2024 15:17:23 +0100
+Source: redis
+Built-For-Profiles: nocheck
+Architecture: source
+Version: 5:6.0.16-1+deb11u3
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Chris Lamb <lamby@debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1032279 1034613 1054225
+Changes:
+ redis (5:6.0.16-1+deb11u3) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team:
+ .
+     - CVE-2023-45145: On startup, Redis began listening on a Unix socket before
+       adjusting its permissions to the user-provided configuration. If a
+       permissive umask(2) was used, this created a race condition that enabled,
+       during a short period of time, another process to establish an otherwise
+       unauthorized connection. (Closes: #1054225)
+ .
+     - CVE-2023-28856: Authenticated users could have used the HINCRBYFLOAT
+       command to create an invalid hash field that would have crashed the Redis
+       server on access. (Closes: #1034613)
+ .
+     - CVE-2023-25155: Authenticated users issuing specially crafted
+       `SRANDMEMBER`, `ZRANDMEMBER`, and `HRANDFIELD` commands can trigger an
+       integer overflow, resulting in a runtime assertion and termination of the
+       Redis server process. (Closes: #1032279)
+ .
+     - CVE-2022-36021:  Authenticated users can use string matching commands
+       (like `SCAN` or `KEYS`) with a specially crafted pattern to trigger a
+       denial-of-service attack on Redis, causing it to hang and consume 100%
+       CPU time.
+ .
+     - CVE-2022-24834: A specially-crafted Lua script executing in Redis could
+       have triggered a heap overflow in the cjson and cmsgpack libraries and
+       result in heap corruption and potentially remote code execution. The
+       problem exists in all versions of Redis with Lua scripting support and
+       affects only authenticated/authorised users.
+Checksums-Sha1:
+ 1f3cc326665792c11866e560fee67337080c6704 2296 redis_6.0.16-1+deb11u3.dsc
+ 381b94558450b967c0f6fa1e66497523f3c5da76 2307243 redis_6.0.16.orig.tar.gz
+ 11992e69cf876d4f0913e2f3f73e1904a4ff7aef 38220 redis_6.0.16-1+deb11u3.debian.tar.xz
+ 43b50eeafa5dca9abba0f70826601c7de61c8786 7886 redis_6.0.16-1+deb11u3_amd64.buildinfo
+Checksums-Sha256:
+ c4f91247d0afb804b69a2ff018f5cd3f063cf1fd61c1ba115900425522220439 2296 redis_6.0.16-1+deb11u3.dsc
+ 8bea58a468bb67bedc92d8c2e44c170e42e6ea02527cbc5d233e92e8d78d1b99 2307243 redis_6.0.16.orig.tar.gz
+ d0aad99a43604aef2408762eb22f7c222ca6ff8d4bd2c68cc867ca7b36af7506 38220 redis_6.0.16-1+deb11u3.debian.tar.xz
+ 06ef2f445457ef3df85c8f90d4ec68b9ccc73dc03db69582577aad55986bce5d 7886 redis_6.0.16-1+deb11u3_amd64.buildinfo
+Files:
+ 9ed677dececf449647b2346521194fae 2296 database optional redis_6.0.16-1+deb11u3.dsc
+ cc0f506796970cf1454ee898e2bf7698 2307243 database optional redis_6.0.16.orig.tar.gz
+ 91ba05e3b1e56c1d9b6bbe7661b7b9b0 38220 database optional redis_6.0.16-1+deb11u3.debian.tar.xz
+ f28e601a4f9ba9178ec220f8fb26c5d6 7886 database optional redis_6.0.16-1+deb11u3_amd64.buildinfo
+

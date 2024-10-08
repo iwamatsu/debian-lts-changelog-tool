@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 03 Jul 2024 23:03:37 +0100
+Source: shim-signed
+Architecture: source
+Version: 1.44~1+deb10u1
+Distribution: buster-security
+Urgency: medium
+Maintainer: Debian EFI Team <debian-efi@lists.debian.org>
+Changed-By: Steve McIntyre <93sam@debian.org>
+Changes:
+ shim-signed (1.44~1+deb10u1) buster-security; urgency=medium
+ .
+   * Build against new signed binaries corresponding to 15.8-1~deb10u1
+   * Update build-dep on shim-unsigned to use 15.8-1~deb10u1
+   * NOTE: this will block use of older grub binaries with sbat < 4
+     + Update Depends on grub2-common to match.
+   * Multiple packaging updates backported:
+     + Add Romanian translation for debconf templates (thanks to
+       Remus-Gabriel Chelu)
+     + Stop recommending secureboot-db, we don't have that package
+     + Tweak dependencies using substvars (thanks for help from Fabian
+       Grünbichler)
+Checksums-Sha1:
+ 56522352e137a5047d9cdfae4ee3533c5cfbdac6 1958 shim-signed_1.44~1+deb10u1.dsc
+ eb17341cd6ca2ef3823c150a191925de50683377 821572 shim-signed_1.44~1+deb10u1.tar.xz
+ 87e002cdab932ac82182957d22c0922702b8751b 5791 shim-signed_1.44~1+deb10u1_source.buildinfo
+Checksums-Sha256:
+ 03b7f8c74b79cae58ea29c86c65969984b9d79a6dad88d8c4a33aaddfb70e552 1958 shim-signed_1.44~1+deb10u1.dsc
+ b180124de5230479a4fff69d4805f374c68ecbf6a89d6fc43f2a77de31c0f4a2 821572 shim-signed_1.44~1+deb10u1.tar.xz
+ c80bd52df9fc80bbd064b77005e40e93b94e709bf6345c5c640c66426251d18c 5791 shim-signed_1.44~1+deb10u1_source.buildinfo
+Files:
+ 22c83d3d355845162d4e6411359e7748 1958 utils optional shim-signed_1.44~1+deb10u1.dsc
+ bc890f63409d08a19a6e3b9679c29a98 821572 utils optional shim-signed_1.44~1+deb10u1.tar.xz
+ 945182ffa0c28088f8086ea2eed5c1c0 5791 utils optional shim-signed_1.44~1+deb10u1_source.buildinfo
+

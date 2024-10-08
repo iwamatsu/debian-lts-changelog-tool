@@ -1,0 +1,78 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 29 Sep 2024 15:21:34 +0300
+Source: wireshark
+Architecture: source
+Version: 3.4.16-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Balint Reczey <balint@balintreczey.hu>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ wireshark (3.4.16-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * New upstream release.
+     - CVE-2021-4181: Sysdig Event dissector crash
+     - CVE-2021-4182: RFC 7468 dissector crash
+     - CVE-2021-4184: BitTorrent DHT dissector infinite loop
+     - CVE-2021-4185: RTMPT dissector infinite loop
+     - CVE-2021-4186: Gryphon dissector crash
+     - CVE-2021-4190: Kafka dissector large loop DoS
+     - CVE-2022-0581: CMS protocol dissector crash
+     - CVE-2022-0582: CSN.1 protocol dissector unaligned access
+     - CVE-2022-0583: PVFS protocol dissector crash
+     - CVE-2022-0585: Large loops in multiple dissectors
+     - CVE-2022-0586: RTMPT protocol dissector infinite loop
+     - CVE-2022-3190: F5 Ethernet Trailer dissector infinite loop
+   * CVE-2022-4344: Kafka protocol dissector memory exhaustion
+   * CVE-2022-4345: Infinite loops in the BPv6, OpenFlow, and Kafka
+     protocol dissectors
+   * CVE-2023-0411: Excessive loops in the BPv6, NCP and RTPS
+     protocol dissectors
+   * CVE-2023-0412: TIPC dissector crash
+   * CVE-2023-0413: Dissection engine bug DoS
+   * CVE-2023-0415: iSCSI dissector crash
+   * CVE-2023-0416: GNW dissector crash
+   * CVE-2023-0417: NFS dissector memory leak
+   * CVE-2023-0666: RTPS parsing heap overflow
+   * CVE-2023-0667: MSMMS dissector buffer overflow
+   * CVE-2023-0668: IEEE C37.118 Synchrophasor dissector crash
+   * CVE-2023-1161: ISO 15765 dissector crash
+   * CVE-2023-1992: RPCoRDMA dissector crash
+   * CVE-2023-1993: LISP dissector large loop
+   * CVE-2023-1994: GQUIC dissector crash
+   * CVE-2023-2855: Candump log parser crash
+   * CVE-2023-2856: VMS TCPIPtrace file parser crash
+   * CVE-2023-2858: NetScaler file parser crash
+   * CVE-2023-2879: GDSDB dissector infinite loop
+   * CVE-2023-2906: CP2179 dissector crash
+   * CVE-2023-2952: XRA dissector infinite loop
+   * CVE-2023-3648: Kafka dissector crash
+   * CVE-2023-3649: iSCSI dissector crash
+   * CVE-2023-4511: BT SDP dissector infinite loop
+   * CVE-2023-4512: CBOR dissector crash
+   * CVE-2023-4513: BT SDP dissector memory leak
+   * CVE-2023-6175: NetScreen file parser crash
+   * CVE-2024-0208: GVCP dissector crash
+   * CVE-2024-0209: IEEE 1609.2 dissector crash
+   * CVE-2024-0211: DOCSIS dissector crash
+   * CVE-2024-2955: T.38 dissector crash
+   * CVE-2024-4853: Editcap byte chopping crash
+   * CVE-2024-4854: MONGO dissector infinite loop
+   * CVE-2024-8250: NTLMSSP dissector crash
+   * CVE-2024-8645: SPRT dissector crash
+Checksums-Sha1:
+ cf50fb0b16484cdbc67d5f0692a84dfea2117466 3558 wireshark_3.4.16-0+deb11u1.dsc
+ fe00bcdfd464780052d0d2c6e0c2358215aa939b 31089940 wireshark_3.4.16.orig.tar.xz
+ c8f4cc97339efca89266c9990f30f6d9d187dec5 118296 wireshark_3.4.16-0+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 95ed6b03595e8cd3e451b8047e321eb6a99c4f7abbee3cda356b8987135b2edc 3558 wireshark_3.4.16-0+deb11u1.dsc
+ 4542234ffb812a97292cea05cfb5d76f81c462b0ed7131c5ef2e0393dc3b8267 31089940 wireshark_3.4.16.orig.tar.xz
+ d5ecd884c82b49fbfd7aef18eb4e11de2c092502d0cb2361f990c05b1689920c 118296 wireshark_3.4.16-0+deb11u1.debian.tar.xz
+Files:
+ dddf355ea74684f33e12d86c944d5f72 3558 net optional wireshark_3.4.16-0+deb11u1.dsc
+ 13c17760a61dcc4444d1d046dc01afab 31089940 net optional wireshark_3.4.16.orig.tar.xz
+ 2ecbe585633a8283e36040f593ff9240 118296 net optional wireshark_3.4.16-0+deb11u1.debian.tar.xz
+

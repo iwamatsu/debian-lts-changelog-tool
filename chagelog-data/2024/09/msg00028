@@ -1,0 +1,80 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 08 Sep 2024 16:11:08 +0000
+Source: cacti
+Architecture: source
+Version: 1.2.16+ds1-2+deb11u4
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Cacti Maintainer <pkg-cacti-maint@lists.alioth.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ cacti (1.2.16+ds1-2+deb11u4) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2022-41444: Cross Site Scripting (XSS) vulnerability
+     via crafted POST request to graphs_new.php.
+   * Fix CVE-2024-25641: Fix an arbitrary file write vulnerability,
+     exploitable through the “Package Import” feature. Cacti allowed
+     authenticated users having the “Import Templates”
+     permission to execute arbitrary PHP code on the web server
+   * Fix CVE-2024-31443: some of the data stored in `form_save()`
+     function in `data_queries.php` is not thoroughly
+     checked and is used to concatenate the HTML statement
+     in `grow_right_pane_tree()` function from `lib/html.php`,
+     finally resulting in cross-site scripting (XSS)
+   * Fix CVE-2024-31444: some of the data stored in
+     `automation_tree_rules_form_save()` function in
+     `automation_tree_rules.php` is not thoroughly checked and
+     is used to concatenate the HTML statement in `form_confirm()`
+     function from `lib/html.php` , finally resulting
+     in cross-site scripting (XSS).
+   * Fix CVE-2024-31445: A SQL injection vulnerability in
+     `automation_get_new_graphs_sql` function of `api_automation.php`
+     allows authenticated users to exploit these SQL injection
+     vulnerabilities to perform privilege escalation
+     and remote code execution (RCE).
+   * Fix CVE-2024-31458: some of the data stored in `form_save()`
+     function in `graph_template_inputs.php` is
+     not thoroughly checked and is used to concatenate the SQL statement in
+     `draw_nontemplated_fields_graph_item()` function from
+     `lib/html_form_templates.php`, finally resulting in SQL injection.
+   * Fix CVE-2024-31459:  file inclusion issue in the `lib/plugin.php` file.
+     Combined with SQL injection vulnerabilities, remote code execution (RCE)
+     can be implemented. There is a file inclusion issue with the
+     `api_plugin_hook()` function in the `lib/plugin.php` file,
+     which reads the plugin_hooks and plugin_config tables in database.
+     The read data is directly used to concatenate the file path which
+     is used for file inclusion.
+   * Fix CVE-2024-34340: type juggling vulnerability
+     Cacti calls `compat_password_hash` when users set their
+     password. `compat_password_hash` use `password_hash` if there is it,
+     else use `md5`. When verifying password, it calls
+     `compat_password_verify`. In `compat_password_verify`,
+     `password_verify` is called if there is it, else use
+     `md5`. `password_verify` and `password_hash` are supported on PHP <
+     5.5.0, following PHP manual. The vulnerability is in
+     `compat_password_verify`. Md5-hashed user input is compared with
+     correct password in database by `$md5 == $hash`. It is a loose
+     comparison, not `===`.
+   * Add salsa CI.
+Checksums-Sha1:
+ e79f0667dc692c5da27664d3cedc5e3198332ccb 2525 cacti_1.2.16+ds1-2+deb11u4.dsc
+ a69b61a006c30aaea6e0d2dd23981c48dfb7cc2b 13562956 cacti_1.2.16+ds1.orig-docs-source.tar.gz
+ e130e91a789af3125d276c5a9022b915cbaea822 7423308 cacti_1.2.16+ds1.orig.tar.gz
+ 0b6787911ab595fbe843b1f33e6f2617405f9e8c 90608 cacti_1.2.16+ds1-2+deb11u4.debian.tar.xz
+ b56ba6f5404f2684e7413296048356001b0f92b8 6604 cacti_1.2.16+ds1-2+deb11u4_amd64.buildinfo
+Checksums-Sha256:
+ d527111ccfc6075f2c6230470849a3e5575ed0986ab2a3b588e252dca2434bb9 2525 cacti_1.2.16+ds1-2+deb11u4.dsc
+ ce2d29621353ef096a8844ddedb96cc4cd5d2e11a6a26f1022cecbb2a4583fcd 13562956 cacti_1.2.16+ds1.orig-docs-source.tar.gz
+ 2084865fda2f2f6ae0286cce87d9d9886e49a0b3c105228d99226cc027384511 7423308 cacti_1.2.16+ds1.orig.tar.gz
+ a1209cd02b41a82ea633e9004ece7ed93fd59ae6e90a4832e91e145a9333ec97 90608 cacti_1.2.16+ds1-2+deb11u4.debian.tar.xz
+ 3e0a84d316175ac4b144119ca583497093d69d316dda55df900b573983f269e0 6604 cacti_1.2.16+ds1-2+deb11u4_amd64.buildinfo
+Files:
+ 4a35f0ced81046bcab420633a41c33cd 2525 web optional cacti_1.2.16+ds1-2+deb11u4.dsc
+ 203a2ac99af6ea4a209e505647b398d8 13562956 web optional cacti_1.2.16+ds1.orig-docs-source.tar.gz
+ 29b74097553ab9693820a1e71fc67083 7423308 web optional cacti_1.2.16+ds1.orig.tar.gz
+ ee8071be30790aaed7cfd2047d60ba4b 90608 web optional cacti_1.2.16+ds1-2+deb11u4.debian.tar.xz
+ 9d506e89c3e73f1adab58bcc29ef8f26 6604 web optional cacti_1.2.16+ds1-2+deb11u4_amd64.buildinfo
+

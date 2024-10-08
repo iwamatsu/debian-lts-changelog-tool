@@ -1,0 +1,118 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 12 Sep 2024 20:14:43 -0400
+Source: ring
+Architecture: source
+Version: 20210112.2.b757bac~ds1-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Roberto C. Sánchez <roberto@debian.org>
+Changes:
+ ring (20210112.2.b757bac~ds1-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS team.
+   * d/gbp.conf: set debian-branch
+   * d/.gitlab-ci.yml: add CI setup
+   * CVE-2021-32686
+     The embedded copy of pjproject is affected by this CVE.
+     A race condition between callback and destroy, due to the accepted socket
+     having no group lock. Additionally, the SSL socket parent/listener may get
+     destroyed during handshake. Both issues were reported to happen
+     intermittently in heavy load TLS connections. They cause a crash, resulting
+     in a denial of service.
+   * CVE-2021-37706
+     The embedded copy of pjproject is affected by this CVE.
+     If the incoming STUN message contains an ERROR-CODE attribute, the header
+     length is not checked before performing a subtraction operation, potentially
+     resulting in an integer underflow scenario. This issue affects all users
+     that use STUN. A malicious actor located within the victim's network may
+     forge and send a specially crafted UDP (STUN) message that could remotely
+     execute arbitrary code on the victim’s machine.
+   * CVE-2021-43299, CVE-2021-43300, CVE-2021-43301, CVE-2021-43302 and
+     CVE-2021-43303
+     The embedded copy of pjproject is affected by these CVEs.
+     An attacker-controlled 'filename' argument may cause a buffer overflow since
+     it is copied to a fixed-size stack buffer without any size validation.
+   * CVE-2021-43804
+     The embedded copy of pjproject is affected by this CVE.
+     In affected versions if the incoming RTCP BYE message contains a reason's
+     length, this declared length is not checked against the actual received
+     packet size, potentially resulting in an out-of-bound read access.
+   * CVE-2021-43845
+     The embedded copy of pjproject is affected by this CVE.
+     If incoming RTCP XR message contain block, the data field is not checked
+     against the received packet size, potentially resulting in an out-of-bound
+     read access.
+   * CVE-2022-21722
+     The embedded copy of pjproject is affected by this CVE.
+     There are various cases where it is possible that certain incoming RTP/RTCP
+     packets can potentially cause out-of-bound read access.
+   * CVE-2022-21723
+     The embedded copy of pjproject is affected by this CVE.
+     Parsing an incoming SIP message that contains a malformed multipart can
+     potentially cause out-of-bound read access.
+   * CVE-2022-23537
+     The embedded copy of pjproject is affected by this CVE.
+     Buffer overread is possible when parsing a specially crafted STUN message
+     with unknown attribute.
+   * CVE-2022-23547
+     The embedded copy of pjproject is affected by this CVE.
+     Possible buffer overread when parsing a certain STUN message.
+   * CVE-2022-23608
+     The embedded copy of pjproject is affected by this CVE.
+     When in a dialog set (or forking) scenario, a hash key shared by multiple
+     UAC dialogs can potentially be prematurely freed when one of the dialogs is
+     destroyed . The issue may cause a dialog set to be registered in the hash
+     table multiple times (with different hash keys) leading to undefined
+     behavior such as dialog list collision which eventually leading to endless
+     loop.
+   * CVE-2022-24754
+     The embedded copy of pjproject is affected by this CVE.
+     There is a stack-buffer overflow vulnerability which only impacts PJSIP
+     users who accept hashed digest credentials (credentials with data_type
+     `PJSIP_CRED_DATA_DIGEST`).
+   * CVE-2022-24763
+     The embedded copy of pjproject is affected by this CVE.
+     A denial-of-service vulnerability affects PJSIP users that consume PJSIP's
+     XML parsing in their apps.
+   * CVE-2022-24764
+     The embedded copy of pjproject is affected by this CVE.
+     A stack buffer overflow vulnerability affects PJSUA2 users or users that
+     call the API `pjmedia_sdp_print(), pjmedia_sdp_media_print()`.
+   * CVE-2022-24793
+     The embedded copy of pjproject is affected by this CVE.
+     A buffer overflow vulnerability in affects applications that use PJSIP DNS
+     resolution.
+   * CVE-2022-31031
+     The embedded copy of pjproject is affected by this CVE.
+     A stack buffer overflow vulnerability affects PJSIP users that use STUN in
+     their applications, either by: setting a STUN server in their account/media
+     config in PJSUA/PJSUA2 level, or directly using `pjlib-util/stun_simple`
+     API.
+   * CVE-2022-39244.patch
+     The embedded copy of pjproject is affected by this CVE.
+     The PJSIP parser, PJMEDIA RTP decoder, and PJMEDIA SDP parser are affeced
+     by a buffer overflow vulnerability. Users connecting to untrusted clients
+     are at risk.
+   * CVE-2023-27585
+     The embedded copy of pjproject is affected by this CVE.
+     A buffer overflow vulnerability affects applications that use PJSIP DNS
+     resolver.
+Checksums-Sha1:
+ 868abfa659447207224f67d3b9fae6cdc2e104ec 2994 ring_20210112.2.b757bac~ds1-1+deb11u1.dsc
+ 57d0bb13b5799bb1639cb5790231ed3c6747538a 112050224 ring_20210112.2.b757bac~ds1.orig.tar.gz
+ 44f9b22ac664df9e0452855accd8b1d7c0070d78 36396 ring_20210112.2.b757bac~ds1-1+deb11u1.debian.tar.xz
+ 2b751e6d1c31d287eddb326cb6db89bafee9728d 26556 ring_20210112.2.b757bac~ds1-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 6b4941c38ec72dff8bf71d6976d6cd07e3e576896bba3235463264b1424ca7b3 2994 ring_20210112.2.b757bac~ds1-1+deb11u1.dsc
+ 17e3f6fb6a61cffdce49c4ccd12c65f414d47bde94b80ba08a0124c004899a3f 112050224 ring_20210112.2.b757bac~ds1.orig.tar.gz
+ a87de78feb4fd936c5c40b0b9c4d0310f22b99c26451481e4162bcb508b2f93b 36396 ring_20210112.2.b757bac~ds1-1+deb11u1.debian.tar.xz
+ afeef21564855e3c34958161a229c50be814afd7c958c6e5845aabe0fabb39a8 26556 ring_20210112.2.b757bac~ds1-1+deb11u1_amd64.buildinfo
+Files:
+ 9f0c7b004e484f540bea47bc179a1fdb 2994 comm optional ring_20210112.2.b757bac~ds1-1+deb11u1.dsc
+ 7725eca0941c818b8daf5e2ea7a8202e 112050224 comm optional ring_20210112.2.b757bac~ds1.orig.tar.gz
+ 98ded42497e436379374fb75d1f7a703 36396 comm optional ring_20210112.2.b757bac~ds1-1+deb11u1.debian.tar.xz
+ c9d4ce67311842a12904a9a088c8f052 26556 comm optional ring_20210112.2.b757bac~ds1-1+deb11u1_amd64.buildinfo
+

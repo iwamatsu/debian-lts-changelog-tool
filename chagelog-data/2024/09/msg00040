@@ -1,0 +1,40 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 17 Sep 2024 03:07:40 +0200
+Source: expat
+Architecture: source
+Version: 2.2.10-2+deb11u6
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1063238 1080149 1080150 1080152
+Changes:
+ expat (2.2.10-2+deb11u6) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2023-52425: Denial of Service (resource consumption) when parsing
+     a large token for which multiple buffer fills are needed.
+     (Closes: #1063238)
+   * Fix CVE-2024-45490: xmlparse.c does not reject a negative length for
+     XML_ParseBuffer(), which may cause memory corruption or code execution.
+     (Closes: #1080149)
+   * Fix CVE-2024-45491: Integer overflow for nDefaultAtts on 32-bit platforms.
+     (Closes: #1080150)
+   * Fix CVE-2024-45492: Integer overflow for m_groupSize on 32-bit platforms.
+     (Closes: #1080152)
+   * Run upstream test suite at build time.
+Checksums-Sha1:
+ 8c1bbe253db356f97ddc52280db9ea4f673b3f47 2020 expat_2.2.10-2+deb11u6.dsc
+ ac24b7866455082b20c477a59b39cd120f997a54 67904 expat_2.2.10-2+deb11u6.debian.tar.xz
+ ab25db20f160b282126e3d24d52529971437feb8 9007 expat_2.2.10-2+deb11u6_amd64.buildinfo
+Checksums-Sha256:
+ 7227fe4cce0d7b0d43bab1d5662cf060fbd8fabe9e82a36827a9265a29ee2a5a 2020 expat_2.2.10-2+deb11u6.dsc
+ 74ea952e8094b333125dde907c29618724946cef660828d1f48d1bfc3bef574d 67904 expat_2.2.10-2+deb11u6.debian.tar.xz
+ 56b89075da5cc8046dfff5cc62ad2697d352b2eeb8e5070fc562c1a3502dc399 9007 expat_2.2.10-2+deb11u6_amd64.buildinfo
+Files:
+ 41dc6b80f547f2bd8e6f0274072891aa 2020 text optional expat_2.2.10-2+deb11u6.dsc
+ 7dfc9002e7b79a65a583c86d21acf9e6 67904 text optional expat_2.2.10-2+deb11u6.debian.tar.xz
+ db9e5ddcdb8bf876706c782558daf934 9007 text optional expat_2.2.10-2+deb11u6_amd64.buildinfo
+

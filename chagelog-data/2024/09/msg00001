@@ -1,0 +1,63 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 10 Aug 2024 11:18:44 +0200
+Source: ruby2.7
+Architecture: source
+Version: 2.7.4-1+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Sylvain Beucler <beuc@debian.org>
+Closes: 1009957 1024799 1038408 1067802 1069966 1069968
+Changes:
+ ruby2.7 (2.7.4-1+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix testsuite
+     * Update test certificates.
+     * Update tests for new tzdata.
+     * Update tests for Git CVE 2022-39253.
+     * Backport assert_linear_performance.
+   * CVE-2021-33621: the cgi gem allows HTTP response splitting. This is
+     relevant to applications that use untrusted user input either to
+     generate an HTTP response or to create a CGI::Cookie object.
+     (Closes: #1024799)
+   * CVE-2022-28739: buffer over-read occurs in String-to-Float conversion,
+     including Kernel#Float and String#to_f. (Closes: #1009957)
+   * CVE-2023-28755: a ReDoS issue was discovered in the URI component. The
+     URI parser mishandles invalid URLs that have specific characters. It
+     causes an increase in execution time for parsing strings to URI
+     objects. (Closes: #1038408)
+   * CVE-2023-36617: follow-up fix for CVE-2023-28755.
+   * CVE-2023-28756: a ReDoS issue was discovered in the Time
+     component. The Time parser mishandles invalid URLs that have specific
+     characters. It causes an increase in execution time for parsing
+     strings to Time objects. (Closes: #1038408)
+   * CVE-2024-27280: a buffer-overread issue was discovered in
+     StringIO. The ungetbyte and ungetc methods on a StringIO can read past
+     the end of a string, and a subsequent call to StringIO.gets may return
+     the memory value. (Closes: #1069966)
+   * CVE-2024-27281: when parsing .rdoc_options (used for configuration in
+     RDoc) as a YAML file, object injection and resultant remote code
+     execution are possible because there are no restrictions on the
+     classes that can be restored. (When loading the documentation cache,
+     object injection and resultant remote code execution are also possible
+     if there were a crafted cache.) (Closes: #1067802)
+   * CVE-2024-27282: if attacker-supplied data is provided to the Ruby
+     regex compiler, it is possible to extract arbitrary heap data relative
+     to the start of the text, including pointers and sensitive strings.
+     (Closes: #1069968)
+Checksums-Sha1:
+ 4c3a7485c508d9194347096c07066dd6cc9bd9b3 2509 ruby2.7_2.7.4-1+deb11u2.dsc
+ 22e8e173809005d33be63d0d19ff14b9b1548582 134748 ruby2.7_2.7.4-1+deb11u2.debian.tar.xz
+ bf0635e4329fb652bb756b8b28212b3a3ee31ba5 7002 ruby2.7_2.7.4-1+deb11u2_all.buildinfo
+Checksums-Sha256:
+ ef09b1a9d5c87660caff4834e559c5e312331d3749149d444a2d487cf89b2a1d 2509 ruby2.7_2.7.4-1+deb11u2.dsc
+ e03a8ab7e3c5a3cdd5d8bf788a8e9fae2a58f546922400a5160078232e8ee240 134748 ruby2.7_2.7.4-1+deb11u2.debian.tar.xz
+ 0b99e04d756c32823d8183975b144cc80a5e2fcb7d325f9980c9947fd601b524 7002 ruby2.7_2.7.4-1+deb11u2_all.buildinfo
+Files:
+ 54fe77beef24932a9c8bcfdd8020b79a 2509 ruby optional ruby2.7_2.7.4-1+deb11u2.dsc
+ c04f9a67bc6ed17cd008bdfdcf6c7834 134748 ruby optional ruby2.7_2.7.4-1+deb11u2.debian.tar.xz
+ a2c15928984b130900cd25ec4f2393a5 7002 ruby optional ruby2.7_2.7.4-1+deb11u2_all.buildinfo
+

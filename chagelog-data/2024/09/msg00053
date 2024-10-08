@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 Sep 2024 23:45:05 +0200
+Source: cups
+Architecture: source
+Version: 2.3.3op2-3+deb11u9
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ cups (2.3.3op2-3+deb11u9) bullseye-security; urgency=medium
+ .
+   * CVE-2024-47175
+     Fix CVE and upstream also added some extra hardening to patch
+     - validate URIs, attribute names, and capabilities
+       in cups/ppd-cache.c, scheduler/ipp.c
+     - sanitize make and model in cups/ppd-cache.c
+     - PPDize preset and template names in cups/ppd-cache.c
+     - quote PPD localized strings in  cups/ppd-cache.c
+     - fix warnings in cups/ppd-cache.c
+Checksums-Sha1:
+ e2348d676d0ef2b4707030331ea52c54ab2e4f70 3412 cups_2.3.3op2-3+deb11u9.dsc
+ 4718df2bb5537e800a50d19a033e25e8a76f085a 353784 cups_2.3.3op2-3+deb11u9.debian.tar.xz
+ 0878c53e1c530f4d1d244da0c6f3a3605d8c7079 14386 cups_2.3.3op2-3+deb11u9_amd64.buildinfo
+Checksums-Sha256:
+ 09a8f0ccbb4892a8d0b06d7c92b8f94461e4c8cad8edbd86f30924c082dacd97 3412 cups_2.3.3op2-3+deb11u9.dsc
+ 98653afef9f252a8c7eea1764f4d29f789866d1aedc14abefc155b544b4fce00 353784 cups_2.3.3op2-3+deb11u9.debian.tar.xz
+ 11d7e19605b61a33426d447f4f9ce4f4d29bf669e8e883e8587e91491f41cd2c 14386 cups_2.3.3op2-3+deb11u9_amd64.buildinfo
+Files:
+ 08da62ab30738baac99598c1cae8acdd 3412 net optional cups_2.3.3op2-3+deb11u9.dsc
+ 65150d745f11f504273497355aec81f4 353784 net optional cups_2.3.3op2-3+deb11u9.debian.tar.xz
+ 44d8a1e8030fedd1ea08fb50adbd7b2f 14386 net optional cups_2.3.3op2-3+deb11u9_amd64.buildinfo
+

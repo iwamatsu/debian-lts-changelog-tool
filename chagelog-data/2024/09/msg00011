@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 25 Aug 2024 09:35:42 +0800
+Source: ruby-nokogiri
+Architecture: source
+Version: 1.11.1+dfsg-2+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1009787
+Changes:
+ ruby-nokogiri (1.11.1+dfsg-2+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fix for CVE-2022-24836 (Closes: #1009787).
+Checksums-Sha1:
+ 1c8a7f2a412179a91ae7a2fdb9b79149c68550ea 2415 ruby-nokogiri_1.11.1+dfsg-2+deb11u1.dsc
+ e40194bd593670d451d6c5ded86fc409f193cb03 489000 ruby-nokogiri_1.11.1+dfsg.orig.tar.xz
+ 2f986450395cc2f895c2e964ec29a0d0fba85384 10696 ruby-nokogiri_1.11.1+dfsg-2+deb11u1.debian.tar.xz
+ d1463139f29375f39e18feea7af4ce4074bef6a1 6971 ruby-nokogiri_1.11.1+dfsg-2+deb11u1_source.buildinfo
+Checksums-Sha256:
+ dde1d07085d6bd6d746ca8aa52eeae33098cc8fce4e2fbfcdbd2473379a4ce3a 2415 ruby-nokogiri_1.11.1+dfsg-2+deb11u1.dsc
+ 270bb62261c867a7197d8b235bd4874cbdb745af7d5dbb0cdded5a6dd21515fa 489000 ruby-nokogiri_1.11.1+dfsg.orig.tar.xz
+ 80e1bcc6a42675fa23d51fe8dbfd27821abfae62dd2b52c6bba127c36c3381c9 10696 ruby-nokogiri_1.11.1+dfsg-2+deb11u1.debian.tar.xz
+ bfb75fb63161579d60f6a2bc1848a578662d5f92ab7a2075592f2c31503775d4 6971 ruby-nokogiri_1.11.1+dfsg-2+deb11u1_source.buildinfo
+Files:
+ ebc42647c9e52ec0c52a75a92554ae95 2415 ruby optional ruby-nokogiri_1.11.1+dfsg-2+deb11u1.dsc
+ f473ff119553545478d07f1f37533f0b 489000 ruby optional ruby-nokogiri_1.11.1+dfsg.orig.tar.xz
+ 49b3724c9ba435ed9dbad8d3fb33f916 10696 ruby optional ruby-nokogiri_1.11.1+dfsg-2+deb11u1.debian.tar.xz
+ 7a11281714327aa8388d6d5adf33c283 6971 ruby optional ruby-nokogiri_1.11.1+dfsg-2+deb11u1_source.buildinfo
+

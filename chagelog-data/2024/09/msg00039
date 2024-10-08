@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 15 Sep 2024 19:03:02 +0200
+Source: tinyproxy
+Architecture: source
+Version: 1.10.0-5+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Mike Gabriel <sunweaver@debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ tinyproxy (1.10.0-5+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-49606
+     Fix use after free issue in header parsing of GTTP connections.
+   * CVE-2022-40468
+     Fix potential leak of left-over heap data.
+Checksums-Sha1:
+ b7a94dc35194432ca176ae126c2909a1f9065954 2423 tinyproxy_1.10.0-5+deb11u1.dsc
+ c69fccde7aabd89434f94789a156847edde9aa28 176060 tinyproxy_1.10.0.orig.tar.xz
+ 15f7441ee6a8d6ec3232cf86ebe4611802b28a6a 163 tinyproxy_1.10.0.orig.tar.xz.asc
+ b5fc8438806d43faf34b324f3eeda2ca43bc40f4 26364 tinyproxy_1.10.0-5+deb11u1.debian.tar.xz
+ 606565321e8f0f7eee13c0b90383155838b2b94b 6076 tinyproxy_1.10.0-5+deb11u1_source.buildinfo
+Checksums-Sha256:
+ 621d31eb7e5bf34ab46a86f617a11033ae590a41553c4e43fe3c3a81fddf95fc 2423 tinyproxy_1.10.0-5+deb11u1.dsc
+ 59be87689c415ba0d9c9bc6babbdd3df3b372d60b21e526b118d722dbc995682 176060 tinyproxy_1.10.0.orig.tar.xz
+ f150b37b28ccbfb6cff2f2d06272b25c1917693fc9651f2a8d111921baaab5e7 163 tinyproxy_1.10.0.orig.tar.xz.asc
+ 480af06bfef48d16e62b7cea554ada568de7296cf8b616730aa3cdf77ad72eca 26364 tinyproxy_1.10.0-5+deb11u1.debian.tar.xz
+ f5957a4a9d62a162fc4d29658a37b5fb3b083beac252d0e673b1aa402e70b3e5 6076 tinyproxy_1.10.0-5+deb11u1_source.buildinfo
+Files:
+ f4dc1f44d5029c0d6110ddf5d290c9a6 2423 web optional tinyproxy_1.10.0-5+deb11u1.dsc
+ 3a1321e4942abb9b6cb370e7c2a3c59e 176060 web optional tinyproxy_1.10.0.orig.tar.xz
+ 5a87054b9664e488de033fac39c40ba8 163 web optional tinyproxy_1.10.0.orig.tar.xz.asc
+ 51cf45318a8bd82d1f7b7a2328e7abb7 26364 web optional tinyproxy_1.10.0-5+deb11u1.debian.tar.xz
+ 71bb8ac8b26827777e79bfeec6892bc3 6076 web optional tinyproxy_1.10.0-5+deb11u1_source.buildinfo
+

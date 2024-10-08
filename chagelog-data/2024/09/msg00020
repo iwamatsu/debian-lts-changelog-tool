@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 03 Sep 2024 01:30:49 +0200
+Source: gnutls28
+Architecture: source
+Version: 3.7.1-5+deb11u6
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1067463 1067464
+Changes:
+ gnutls28 (3.7.1-5+deb11u6) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-28834 (Minerva attack): side-channel in the deterministic
+     ECDSA. (Closes: #1067464)
+   * Fix CVE-2024-28835: certtool(1) crash when verifying a certificate chain
+     with more than 16 certificates. (Closes: #1067463)
+   * Fix memory leak in src/serv.c:listener_free() when a connected client
+     disappears.
+   * Fix segfault in lib/tls13/early_data.c:_gnutls13_recv_end_of_early_data().
+   * Fix potential segfault in lib/tls13/finished.c:_gnutls13_recv_finished().
+Checksums-Sha1:
+ 4f14557a74496a134993c148c01bf4792f747863 3522 gnutls28_3.7.1-5+deb11u6.dsc
+ 3574ddfbc10fd871d62a86f7f9b985f62a944790 109212 gnutls28_3.7.1-5+deb11u6.debian.tar.xz
+ aae7ee581634d31e3747c94b8622937b12a9f824 14083 gnutls28_3.7.1-5+deb11u6_amd64.buildinfo
+Checksums-Sha256:
+ 39849c7a4973f6b4daf89bdcce49956613b8321140934d288dfdb129bcc2be6a 3522 gnutls28_3.7.1-5+deb11u6.dsc
+ 90bba2ee9e3d6ce7c711bef1a7dded19a3037279df43b1e53633e02845252d73 109212 gnutls28_3.7.1-5+deb11u6.debian.tar.xz
+ e8b344fc59085ada49d27cc910a29fbe838e3946f02080cfdf02294c5f8445e0 14083 gnutls28_3.7.1-5+deb11u6_amd64.buildinfo
+Files:
+ 7f12ea471f9b5aac5aa404d395e8a9c7 3522 libs optional gnutls28_3.7.1-5+deb11u6.dsc
+ 4cd28caa0f36ba86037b104ea99b7b98 109212 libs optional gnutls28_3.7.1-5+deb11u6.debian.tar.xz
+ 10bc33287060e8ea5089da8ac467ddc5 14083 libs optional gnutls28_3.7.1-5+deb11u6_amd64.buildinfo
+

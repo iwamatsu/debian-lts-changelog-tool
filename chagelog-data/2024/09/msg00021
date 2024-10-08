@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 04 Sep 2024 23:45:10 +0200
+Source: setuptools
+Architecture: source
+Version: 52.0.0-4+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Changes:
+ setuptools (52.0.0-4+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * debian/patches/CVE-2022-40897.patch: Fix CVE-2022-40897.
+     - Limit the amount of whitespace to search/backtrack to prevent a ReDoS.
+       Add a test to check the vulnerability.
+   * debian/patches/CVE-2024-6345.patch: Fix CVE-2024-6345.
+     - Replace the unsafe use of os.system to fix a possible remote code
+       execution by supplying malicious URLs in a package index or via the
+       command line.
+Checksums-Sha1:
+ b7bb3bf93616c9b9cd2206b91748901a276c425d 2085 setuptools_52.0.0-4+deb11u1.dsc
+ cadd5f8369b607d2535c30826600533ed6a7648b 2051850 setuptools_52.0.0.orig.tar.gz
+ 24974ab6f92122b5fbf87ffa7a47810454e30ff4 16820 setuptools_52.0.0-4+deb11u1.debian.tar.xz
+ 05394f8f7143c99428278765848d8c7ddb3e4fff 8401 setuptools_52.0.0-4+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 0d22bab041b1aa9b0ffd60a3133c9e6dd5996e42c9c7c111da6141f71b4f7a88 2085 setuptools_52.0.0-4+deb11u1.dsc
+ fb3a1ee622509550dbf1d419f241296169d7f09cb1eb5b1736f2f10965932b96 2051850 setuptools_52.0.0.orig.tar.gz
+ b462793147855ad0bb3ee62b853c8d8c21305f8b576d0edd83ac6c621fcccfda 16820 setuptools_52.0.0-4+deb11u1.debian.tar.xz
+ 7fc0f6e402fd6f781a54d93bc3555bdcdccc5e77e9cb9fae53d4631aa66e0866 8401 setuptools_52.0.0-4+deb11u1_amd64.buildinfo
+Files:
+ f5ff242f57465e0b14898e758330beb3 2085 python optional setuptools_52.0.0-4+deb11u1.dsc
+ ea7e8c5295323ad56594607e999e2c98 2051850 python optional setuptools_52.0.0.orig.tar.gz
+ a1de4ea52acca56400eef217d7ff4183 16820 python optional setuptools_52.0.0-4+deb11u1.debian.tar.xz
+ c9a984b4ef2cb84bc685193097b3064f 8401 python optional setuptools_52.0.0-4+deb11u1_amd64.buildinfo
+

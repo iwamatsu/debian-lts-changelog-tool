@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 26 Sep 2024 12:00:47 +0300
+Source: mediawiki
+Architecture: source
+Version: 1:1.35.13-1+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Kunal Mehta <legoktm@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ mediawiki (1:1.35.13-1+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-51704: privileged XSS in the user rights log
+Checksums-Sha1:
+ b8b80829d9f1348ce733c3a9b36a79af67319268 2390 mediawiki_1.35.13-1+deb11u3.dsc
+ fc6a0092fc13601b40cf223a9679aecb334fab41 52025948 mediawiki_1.35.13.orig.tar.gz
+ b3e2fe47c3e14e21cead561df099f99e5b79dc05 195 mediawiki_1.35.13.orig.tar.gz.asc
+ 86e0271d3d1220b25f1e4f87f9bf4702dc94d569 102900 mediawiki_1.35.13-1+deb11u3.debian.tar.xz
+Checksums-Sha256:
+ a97ff94f81d729e43c5d1d1bb957be8c1ff0e4e8c4d386c5d4bef4f54f0b27c9 2390 mediawiki_1.35.13-1+deb11u3.dsc
+ 2a9700ce193db1932db7be3e1bfddf135d622d4399ba6bd6d0570e451db63b61 52025948 mediawiki_1.35.13.orig.tar.gz
+ 08755b8c39509e75b0326d13d52e834decdce93ed3efc48b689f7615860d2c58 195 mediawiki_1.35.13.orig.tar.gz.asc
+ c473bba741e81762deb8d8a5568183b95ecf7b7734c52df77e9dec744c4505d0 102900 mediawiki_1.35.13-1+deb11u3.debian.tar.xz
+Files:
+ 34f340af4af123f7197ed12b543c3259 2390 web optional mediawiki_1.35.13-1+deb11u3.dsc
+ 5a860e14a8fac89a5964fa9c1695041e 52025948 web optional mediawiki_1.35.13.orig.tar.gz
+ 5b4f4d652eb606eaf059b91b4e3e467b 195 web optional mediawiki_1.35.13.orig.tar.gz.asc
+ ef81120a9ed509f5dc7ac7a771c8d9f7 102900 web optional mediawiki_1.35.13-1+deb11u3.debian.tar.xz
+

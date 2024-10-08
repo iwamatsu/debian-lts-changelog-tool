@@ -1,0 +1,44 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 15 May 2023 09:36:50 +0200
+Source: cinder
+Architecture: source
+Version: 2:17.4.0-1~deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Changed-By: Thomas Goirand <zigo@debian.org>
+Closes: 1035961 1074763
+Changes:
+ cinder (2:17.4.0-1~deb11u2) bullseye-security; urgency=medium
+ .
+   * CVE-2023-2088: Unauthorized volume access through deleted volume
+     attachments. Applied upstream patch: Reject unsafe delete attachment calls
+     (Closes: #1035961).
+   * Above patch temporarily disabled until breackage is fixed.
+   * Add add-params-thin_provisioning-equal-one.patch.
+   * CVE-2024-32498: Arbitrary file access through custom QCOW2 external data.
+     Add upstream patch (Closes: #1074763):
+     - CVE-2024-32498_0_1_Use_the_json_format_output_of_qemu-img_info.patch
+     - CVE-2024-32498_1_Check_for_external_qcow2_data_file.patch
+   * Fix cinder-common.config.in reading glance_api_servers.
+   * Build-depends on qemu-utils to be able to run additional tests.
+   * (build-)depends on oslo.utils >= 4.6.1, needed for the CVE fix.
+   * Correctly calls manage_glance_api_servers() in config script.
+Checksums-Sha1:
+ e352fba084b1ac4cbf885e45a2cb45672c98d4b9 4468 cinder_17.4.0-1~deb11u2.dsc
+ ee10e8f77ed52785352ce99e3c5108a9a3ab698f 3957656 cinder_17.4.0.orig.tar.xz
+ a18bfdb99604ec722a0c009d8e2c5ee1947bc8d7 76716 cinder_17.4.0-1~deb11u2.debian.tar.xz
+ 33e2308bbbea53d8dd4004a18709a6efabe5a890 19694 cinder_17.4.0-1~deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 0106ba215b5b4ebf0e388b0d41ebf97a281f67af8c0be4665401b7c761a99d06 4468 cinder_17.4.0-1~deb11u2.dsc
+ 60abbc0a151b7e3290883fbdb22fd599d4b6b3e53211b04572bcf4fc36648770 3957656 cinder_17.4.0.orig.tar.xz
+ 9f7ebc030a58c7fa0f0feeb431fef285ec4db3704b2283cb6735c9dd8706e41c 76716 cinder_17.4.0-1~deb11u2.debian.tar.xz
+ 3675fc3cfe15311f4ee1c12a979bb77ddad1792cbe770e33ec54e1b4abf48da9 19694 cinder_17.4.0-1~deb11u2_amd64.buildinfo
+Files:
+ 988484e4dfb5fdbc6100257a03c7ce8d 4468 net optional cinder_17.4.0-1~deb11u2.dsc
+ bcbc27523307b80af9f7ac971b03ad5c 3957656 net optional cinder_17.4.0.orig.tar.xz
+ cd0964876011e9dcd8e8bc5b8e3a5313 76716 net optional cinder_17.4.0-1~deb11u2.debian.tar.xz
+ a5cd72387a1f7ae139d2a675127c99fb 19694 net optional cinder_17.4.0-1~deb11u2_amd64.buildinfo
+

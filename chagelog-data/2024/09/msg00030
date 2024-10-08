@@ -1,0 +1,127 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 01 Sep 2024 18:12:56 +0200
+Binary: linux-config-6.1 linux-doc-6.1 linux-headers-6.1.0-0.deb11.25-686 linux-headers-6.1.0-0.deb11.25-686-pae linux-headers-6.1.0-0.deb11.25-common linux-headers-6.1.0-0.deb11.25-common-rt linux-headers-6.1.0-0.deb11.25-rt-686-pae linux-image-6.1-686-dbg linux-image-6.1-686-pae-dbg linux-image-6.1-i386-signed-template linux-image-6.1-rt-686-pae-dbg linux-image-6.1.0-0.deb11.25-686-dbg linux-image-6.1.0-0.deb11.25-686-pae-dbg linux-image-6.1.0-0.deb11.25-686-pae-unsigned linux-image-6.1.0-0.deb11.25-686-unsigned linux-image-6.1.0-0.deb11.25-rt-686-pae-dbg linux-image-6.1.0-0.deb11.25-rt-686-pae-unsigned linux-kbuild-6.1 linux-kbuild-6.1-dbgsym linux-source-6.1 linux-support-6.1.0-0.deb11.25
+Source: linux-6.1
+Architecture: all i386 source
+Version: 6.1.106-3~deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Changed-By: Ben Hutchings <benh@debian.org>
+Description: 
+ linux-config-6.1 - Debian kernel configurations for Linux 6.1
+ linux-doc-6.1 - Linux kernel specific documentation for version 6.1
+ linux-headers-6.1.0-0.deb11.25-686 - Header files for Linux 6.1.0-0.deb11.25-686
+ linux-headers-6.1.0-0.deb11.25-686-pae - Header files for Linux 6.1.0-0.deb11.25-686-pae
+ linux-headers-6.1.0-0.deb11.25-common - Common header files for Linux 6.1.0-0.deb11.25
+ linux-headers-6.1.0-0.deb11.25-common-rt - Common header files for Linux 6.1.0-0.deb11.25-rt
+ linux-headers-6.1.0-0.deb11.25-rt-686-pae - Header files for Linux 6.1.0-0.deb11.25-rt-686-pae
+ linux-image-6.1-686-dbg - Debugging symbols for Linux 686 configuration (meta-package)
+ linux-image-6.1-686-pae-dbg - Debugging symbols for Linux 686-pae configuration (meta-package)
+ linux-image-6.1-i386-signed-template - Template for signed linux-image packages for i386
+ linux-image-6.1-rt-686-pae-dbg - Debugging symbols for Linux rt-686-pae configuration (meta-packag
+ linux-image-6.1.0-0.deb11.25-686-dbg - Debug symbols for linux-image-6.1.0-0.deb11.25-686
+ linux-image-6.1.0-0.deb11.25-686-pae-dbg - Debug symbols for linux-image-6.1.0-0.deb11.25-686-pae
+ linux-image-6.1.0-0.deb11.25-686-pae-unsigned - Linux 6.1 for modern PCs
+ linux-image-6.1.0-0.deb11.25-686-unsigned - Linux 6.1 for older PCs
+ linux-image-6.1.0-0.deb11.25-rt-686-pae-dbg - Debug symbols for linux-image-6.1.0-0.deb11.25-rt-686-pae
+ linux-image-6.1.0-0.deb11.25-rt-686-pae-unsigned - Linux 6.1 for modern PCs, PREEMPT_RT
+ linux-kbuild-6.1 - Kbuild infrastructure for Linux 6.1
+ linux-source-6.1 - Linux kernel source for version 6.1 with Debian patches
+ linux-support-6.1.0-0.deb11.25 - Support files for Linux 6.1
+Changes:
+ linux-6.1 (6.1.106-3~deb11u1) bullseye-security; urgency=high
+ .
+   * Rebuild for bullseye:
+     - Disable building linux-libc-dev and unversioned tools packages
+     - Disable building installer udebs and remove build-dependency on
+       kernel-wedge
+     - Disable building linux-compiler-gcc-10-*
+     - d/salsa-ci.yml: Set RELEASE to bullseye
+     - d/salsa-ci.yml: Support suffixed source package names
+     - lintian: Update source package names in overrides
+     - Set ABI to 0.deb11.25
+Checksums-Sha1: 
+ 891aa463aa12235ee6b9d44cd3e8884de3024fc8 48567 linux-6.1_6.1.106-3~deb11u1.dsc
+ 2209481df42178ea9005c46324907c50ff0e85f2 137667544 linux-6.1_6.1.106.orig.tar.xz
+ b457035df12cbcc59f4634dc7e4e993e4109bad2 1631296 linux-6.1_6.1.106-3~deb11u1.debian.tar.xz
+ ba5b2c4c94c78fc7283fbba7e27efe52d05c12c7 6258 linux-6.1_6.1.106-3~deb11u1_source.buildinfo
+ 31e6aa046248923a0f4214132d5bb29b0c7b8c5a 18846 linux-6.1_6.1.106-3~deb11u1_i386.buildinfo
+ 2e83fbcdcff33af0340c6153d9e27913fe6d2f07 1044252 linux-config-6.1_6.1.106-3~deb11u1_i386.deb
+ 8f5675bfe9849ab318d88a97e7df9c9d8b6cb980 36509972 linux-doc-6.1_6.1.106-3~deb11u1_all.deb
+ 2f944554de4963fca49a6c6eef8d548a78b3c1e2 1405072 linux-headers-6.1.0-0.deb11.25-686-pae_6.1.106-3~deb11u1_i386.deb
+ b18132b6f02cc49fdeda9de4a9dd68e332b5f60f 1405400 linux-headers-6.1.0-0.deb11.25-686_6.1.106-3~deb11u1_i386.deb
+ aaaf9a09496c945b7652aaf649c13f3ebb744420 8420608 linux-headers-6.1.0-0.deb11.25-common-rt_6.1.106-3~deb11u1_all.deb
+ 78666f6b2ddddba712726568c07847d3fd723f47 10072636 linux-headers-6.1.0-0.deb11.25-common_6.1.106-3~deb11u1_all.deb
+ 8b60928f36ed64c0156a0ecbd1278b9dab0b8db3 1404864 linux-headers-6.1.0-0.deb11.25-rt-686-pae_6.1.106-3~deb11u1_i386.deb
+ 8dce2a821a4e8b64904e0091cefee59cfd8c65f4 1336 linux-image-6.1-686-dbg_6.1.106-3~deb11u1_i386.deb
+ 29e3ab726a577ba2ff43385ac0525fe4101ee8e6 1332 linux-image-6.1-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ ba1cf5818bf82d8eeb7343d71e001507719ecbc8 1598520 linux-image-6.1-i386-signed-template_6.1.106-3~deb11u1_i386.deb
+ 164414c268d8651a8615c6a1efd60c8ab1241f1c 1340 linux-image-6.1-rt-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ b2da738ec27f0fa3f840cbfa5d527e76dda8e518 771360632 linux-image-6.1.0-0.deb11.25-686-dbg_6.1.106-3~deb11u1_i386.deb
+ 640ffe1a023f88a0c185e1c57c24c4eac0f7cfa0 773994460 linux-image-6.1.0-0.deb11.25-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ f5aa6fca3a3efc554e5d6a07930b09dbabd611cc 49366176 linux-image-6.1.0-0.deb11.25-686-pae-unsigned_6.1.106-3~deb11u1_i386.deb
+ 368f0db8df4ac848ac41b0b7b380d7f1bd4320ac 49151372 linux-image-6.1.0-0.deb11.25-686-unsigned_6.1.106-3~deb11u1_i386.deb
+ 4548e09f8d1e4835ecd9b6a83dc9050f5eb307c6 779965228 linux-image-6.1.0-0.deb11.25-rt-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 5c1d61af32363e8e5435747889cbf83959670bef 49526820 linux-image-6.1.0-0.deb11.25-rt-686-pae-unsigned_6.1.106-3~deb11u1_i386.deb
+ 1eb88c6fc3ba10db8f1fb7d4189abd05caf4cc79 974196 linux-kbuild-6.1-dbgsym_6.1.106-3~deb11u1_i386.deb
+ 71ecf9083e7c466ffbcc478899b3f9af7f47d5fb 1150836 linux-kbuild-6.1_6.1.106-3~deb11u1_i386.deb
+ 810c27a0e673585e5a0824b335ec4c8cdb4678b6 138563048 linux-source-6.1_6.1.106-3~deb11u1_all.deb
+ b8ec599b62d9bbce727a85258f3009cc14e5331c 933408 linux-support-6.1.0-0.deb11.25_6.1.106-3~deb11u1_all.deb
+Checksums-Sha256: 
+ 5e510e68d30826a68ac4f063e5c3f054c8c7808714e43ecdd2c4ff3b1810012c 48567 linux-6.1_6.1.106-3~deb11u1.dsc
+ d8127412c3c371a9e4dfabe5fdf5ac2ad3a38782fe5645cdb3e12bcf327fcdfc 137667544 linux-6.1_6.1.106.orig.tar.xz
+ c6cac86140736e1d661949080db0ebbd2cd4a5025b4cf5fa488e7ace7fc91d55 1631296 linux-6.1_6.1.106-3~deb11u1.debian.tar.xz
+ d4a9120206965fd2da95da1acb071383e06c4157de13ddadfd0d0985d5d78412 6258 linux-6.1_6.1.106-3~deb11u1_source.buildinfo
+ 89f4f001af0eaf4db3115e70289ae350d05790f9dad069ff97e8bddb47e0974b 18846 linux-6.1_6.1.106-3~deb11u1_i386.buildinfo
+ 73a0270cff76436ce9b0cab096e87a6c345e47771513e15ee18758cffbe75651 1044252 linux-config-6.1_6.1.106-3~deb11u1_i386.deb
+ fdc4d64265167ed8a8026aa4012c14f1831123594337456344b6c271acea6a99 36509972 linux-doc-6.1_6.1.106-3~deb11u1_all.deb
+ f6eb0cb5db1391d3a2aa70f3310abf415215da1d72b623114b3105993eea4ef3 1405072 linux-headers-6.1.0-0.deb11.25-686-pae_6.1.106-3~deb11u1_i386.deb
+ ab5d29d52f3a78db48e3391b79bcf97465335e57caa32401a35b9fed2ea74ff8 1405400 linux-headers-6.1.0-0.deb11.25-686_6.1.106-3~deb11u1_i386.deb
+ 66389f25d2038faf2520e70401cb2dcd1c40e10f59f428814b41a6f78a728f9f 8420608 linux-headers-6.1.0-0.deb11.25-common-rt_6.1.106-3~deb11u1_all.deb
+ 502902906f233ad0316b32a53ff0486afaee56cc3274b60e6a27d05159e89165 10072636 linux-headers-6.1.0-0.deb11.25-common_6.1.106-3~deb11u1_all.deb
+ c237d7748bb5e6e504e23d6d8e2f54a35e259f09201409a27784220d3dfc6b5c 1404864 linux-headers-6.1.0-0.deb11.25-rt-686-pae_6.1.106-3~deb11u1_i386.deb
+ 8c23709e7d477ded96d623b5f31e7c578565e254e9363415a0d737a7e9094404 1336 linux-image-6.1-686-dbg_6.1.106-3~deb11u1_i386.deb
+ a0ca2925ade02d2abc10ed789e0bb2fc4efc01e60eb0da3d94f3f3f8255263a4 1332 linux-image-6.1-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 5657fe0c56fd644ee43fde8e2ec90b13c9802711281ec405d9f40ac32aba239d 1598520 linux-image-6.1-i386-signed-template_6.1.106-3~deb11u1_i386.deb
+ 139726a6ad130cfe294cb17c242b673fbf127d292d3edbf6fceb28be2ded8271 1340 linux-image-6.1-rt-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 925fe794ebc51915ab58155e7eca93cf3f8e68a0bbe12ac6776c83aeaad44477 771360632 linux-image-6.1.0-0.deb11.25-686-dbg_6.1.106-3~deb11u1_i386.deb
+ 55f4c32d5f30693a44a0ea96c07f7d77a8ef8ee95114c905d9ce24729d737160 773994460 linux-image-6.1.0-0.deb11.25-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 08df2fdd9cd7fa22c9f45f4d5ad56fdda889e3dc0f6e7779bcb506628c34d255 49366176 linux-image-6.1.0-0.deb11.25-686-pae-unsigned_6.1.106-3~deb11u1_i386.deb
+ 7b6fe0393196acf8ff3c4eab8aa616fb6582292c2fc7cf16f7cbbea99eb970bb 49151372 linux-image-6.1.0-0.deb11.25-686-unsigned_6.1.106-3~deb11u1_i386.deb
+ 3244e6f577e642149d1b920675ffed92999d4314887407fd425ca685c499ea22 779965228 linux-image-6.1.0-0.deb11.25-rt-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 5d9092c522e18fc06876ac819e9de3d2af64efad6e9a5dd2c8d57e1dea41ec5f 49526820 linux-image-6.1.0-0.deb11.25-rt-686-pae-unsigned_6.1.106-3~deb11u1_i386.deb
+ c1ba2563cdb7814db6ce421a72ab391072efe6445cd093583aafb9302535073f 974196 linux-kbuild-6.1-dbgsym_6.1.106-3~deb11u1_i386.deb
+ 527b0254159933a675b84799e324ae9357e91ddcfc00af11f0674e4f0e579ce9 1150836 linux-kbuild-6.1_6.1.106-3~deb11u1_i386.deb
+ 614bb184881b3d21bc9d7818baeb44b133c90a1a080dd6ed759a48cfc2dc4455 138563048 linux-source-6.1_6.1.106-3~deb11u1_all.deb
+ 26ce6a9aff8bb5b3db743a646c2f316acfd4707fe12adf273bc3016950429331 933408 linux-support-6.1.0-0.deb11.25_6.1.106-3~deb11u1_all.deb
+Files: 
+ a836da91914fa70b9354547f9e10b93a 48567 kernel optional linux-6.1_6.1.106-3~deb11u1.dsc
+ 74f3ff0bfb7061bfb5142b9c499e59b5 137667544 kernel optional linux-6.1_6.1.106.orig.tar.xz
+ b1e779a01b609d69fe2b43bca6361f9e 1631296 kernel optional linux-6.1_6.1.106-3~deb11u1.debian.tar.xz
+ 07bcc0853d7413b8944615262894ea6f 6258 kernel optional linux-6.1_6.1.106-3~deb11u1_source.buildinfo
+ be8a634de2e91405679c4f62432d6648 18846 kernel optional linux-6.1_6.1.106-3~deb11u1_i386.buildinfo
+ 22c7e137fb58aaa0ca59affb789bd193 1044252 kernel optional linux-config-6.1_6.1.106-3~deb11u1_i386.deb
+ 57d958049d7404101d88f5b0d3f61ee3 36509972 doc optional linux-doc-6.1_6.1.106-3~deb11u1_all.deb
+ 6b418aac432f48701cf341f6d0b6d665 1405072 kernel optional linux-headers-6.1.0-0.deb11.25-686-pae_6.1.106-3~deb11u1_i386.deb
+ f686fc1d7b008b2a5d58d88fcc19f9d8 1405400 kernel optional linux-headers-6.1.0-0.deb11.25-686_6.1.106-3~deb11u1_i386.deb
+ bb951103e5e43155b454571c09e586df 8420608 kernel optional linux-headers-6.1.0-0.deb11.25-common-rt_6.1.106-3~deb11u1_all.deb
+ 5f25d8852182d2e9f053f471b2ff49cf 10072636 kernel optional linux-headers-6.1.0-0.deb11.25-common_6.1.106-3~deb11u1_all.deb
+ adec09ab8b9506d9d2fd06550fac347e 1404864 kernel optional linux-headers-6.1.0-0.deb11.25-rt-686-pae_6.1.106-3~deb11u1_i386.deb
+ aa0da3169ee0bfe3963c4712655002bd 1336 kernel optional linux-image-6.1-686-dbg_6.1.106-3~deb11u1_i386.deb
+ 5219c16a5ca963fa052ae7177632cc9b 1332 kernel optional linux-image-6.1-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 2f8de4138eff84eb89fc271de1806784 1598520 kernel optional linux-image-6.1-i386-signed-template_6.1.106-3~deb11u1_i386.deb
+ f7be90ae621835fd6dcceef9e76b57db 1340 kernel optional linux-image-6.1-rt-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 48bd2ec32c3c3f62e6591a6fd5e59cc8 771360632 debug optional linux-image-6.1.0-0.deb11.25-686-dbg_6.1.106-3~deb11u1_i386.deb
+ d0579b45f0e34fe9fde34cf41b607a49 773994460 debug optional linux-image-6.1.0-0.deb11.25-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 410ad65f41e44338383c6a801b3653c8 49366176 kernel optional linux-image-6.1.0-0.deb11.25-686-pae-unsigned_6.1.106-3~deb11u1_i386.deb
+ 57f0901b2912db354eb34234a15a75a2 49151372 kernel optional linux-image-6.1.0-0.deb11.25-686-unsigned_6.1.106-3~deb11u1_i386.deb
+ 5289d35394c4a8c53d1fcffa44e2a754 779965228 debug optional linux-image-6.1.0-0.deb11.25-rt-686-pae-dbg_6.1.106-3~deb11u1_i386.deb
+ 53a6c628841aff9001d571744da7739d 49526820 kernel optional linux-image-6.1.0-0.deb11.25-rt-686-pae-unsigned_6.1.106-3~deb11u1_i386.deb
+ 34c6b04bca856fc91b403e9ce12e519d 974196 debug optional linux-kbuild-6.1-dbgsym_6.1.106-3~deb11u1_i386.deb
+ 2218a05253afe54cf4c853348fbcc267 1150836 kernel optional linux-kbuild-6.1_6.1.106-3~deb11u1_i386.deb
+ 6f6e4c3e832d35e50a27e0003be4e40e 138563048 kernel optional linux-source-6.1_6.1.106-3~deb11u1_all.deb
+ 5820455e4bb66fe7c873e5e2f4a4db93 933408 devel optional linux-support-6.1.0-0.deb11.25_6.1.106-3~deb11u1_all.deb
+

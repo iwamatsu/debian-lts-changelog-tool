@@ -1,0 +1,30 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 04 Sep 2024 09:21:25 +0200
+Source: firefox-esr
+Architecture: source
+Version: 115.15.0esr-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (115.15.0esr-1~deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream release.
+   * Fixes for mfsa2024-41, also known as:
+     CVE-2024-8381, CVE-2024-8382, CVE-2024-8383, CVE-2024-8384.
+Checksums-Sha1:
+ 66b9dd2b2f1aed1c9d7b119fc989f2f69f3dfff7 40713 firefox-esr_115.15.0esr-1~deb11u1.dsc
+ ad4d8036346e9f8dd688f16c9c626510f5588e74 175084 firefox-esr_115.15.0esr-1~deb11u1.debian.tar.xz
+ 29cbaebdd609c3b4c2272f8c126dd177906132e1 8606 firefox-esr_115.15.0esr-1~deb11u1_source.buildinfo
+Checksums-Sha256:
+ 8693cdbbcbcb9e8e5607ce3856513491797dc49c94e69935f57c816891380a0a 40713 firefox-esr_115.15.0esr-1~deb11u1.dsc
+ 3518aee784104b09479166f29dfc2f7dacc8311f900e569780fab7bda96108a3 175084 firefox-esr_115.15.0esr-1~deb11u1.debian.tar.xz
+ f334294a86e6f6db5baf068556f22d9f320e38031f968e75588e69b2e0a82758 8606 firefox-esr_115.15.0esr-1~deb11u1_source.buildinfo
+Files:
+ c6124a72fe5058da783b6c3b8b8449e4 40713 web optional firefox-esr_115.15.0esr-1~deb11u1.dsc
+ ce597eb6f6c0573a7413d2b1c7de4149 175084 web optional firefox-esr_115.15.0esr-1~deb11u1.debian.tar.xz
+ 954cae60c66225b1296f740b7a2deeb0 8606 web optional firefox-esr_115.15.0esr-1~deb11u1_source.buildinfo
+

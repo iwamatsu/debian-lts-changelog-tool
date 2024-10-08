@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 26 Aug 2024 16:47:21 +0100
+Source: libtommath
+Architecture: source
+Version: 1.2.0-6+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Rakudo Maintainers <pkg-rakudo-devel@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ libtommath (1.2.0-6+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-36328: Prevent a series of integer overflow vulnerabilties that
+   * could have led attackers to execute arbitrary code and/or cause a denial of
+     service (DoS).
+   * Continuous integration changes:
+     * Add a debian/.gitlab-ci.yml.
+     * Update .gitlab-ci.yml to use the default, non-LTS, CI pipeline for now.
+     * Add blhc failures in CI workflow.
+Checksums-Sha1:
+ f85d8b37f673c1eb8c478b77411a0a3d4832568f 2258 libtommath_1.2.0-6+deb11u1.dsc
+ f0a9bcf805b6eb2ba3606bcb70989517eef58635 622120 libtommath_1.2.0.orig.tar.xz
+ 64d46c883203f6a0381088a912fac0a5d6de0993 21632 libtommath_1.2.0-6+deb11u1.debian.tar.xz
+ 3089a172f927fe468eeda37bb0b53104b9ab9a21 9992 libtommath_1.2.0-6+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 489b6b4429e257800e04f40977b49c962d996099fb852b6725b70ee195ae1b71 2258 libtommath_1.2.0-6+deb11u1.dsc
+ b7c75eecf680219484055fcedd686064409254ae44bc31a96c5032843c0e18b1 622120 libtommath_1.2.0.orig.tar.xz
+ 667f354f24a39783b3b394f8ed5d28e2e241f7a4b487a81ecd4f71ab345dc527 21632 libtommath_1.2.0-6+deb11u1.debian.tar.xz
+ bc890c192fb720330d496cc26afb3c7bc6b0e9da056f2fc2fe1303db822dc592 9992 libtommath_1.2.0-6+deb11u1_amd64.buildinfo
+Files:
+ e0dc81c6c4a420ac23442328a35037a6 2258 libs optional libtommath_1.2.0-6+deb11u1.dsc
+ 159523e41d528ce72a0ce4ac3eabe274 622120 libs optional libtommath_1.2.0.orig.tar.xz
+ 40494ddaecf708b0cfc06bd82be89a68 21632 libs optional libtommath_1.2.0-6+deb11u1.debian.tar.xz
+ 5ce549c8a4c978539fb86f5a01a580db 9992 libs optional libtommath_1.2.0-6+deb11u1_amd64.buildinfo
+

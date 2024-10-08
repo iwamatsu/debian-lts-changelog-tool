@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 02 Sep 2024 17:56:22 +0300
+Source: calibre
+Architecture: source
+Version: 5.12.0+dfsg-1+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Calibre maintainer team <team+calibre@tracker.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ calibre (5.12.0+dfsg-1+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-44686: Regular Expression Denial of Service
+   * CVE-2023-46303: HTML Input: Don't add resources that exist outside
+     the document root by default
+Checksums-Sha1:
+ 420c7578e795b1d9a50c4da7ea6cdf2f6b7dfc14 3345 calibre_5.12.0+dfsg-1+deb11u3.dsc
+ 2d9af9c4e62aa10627ac7bcfcd40290677a02c80 37022796 calibre_5.12.0+dfsg.orig.tar.xz
+ 32c82f3a0904e58acf9daa922b0ce63b21ab6e8a 4414608 calibre_5.12.0+dfsg-1+deb11u3.debian.tar.xz
+Checksums-Sha256:
+ ab9234f1caedc5afb9560595aa82ecbfe0d3d44088d83d4ef867bef5f8fe37f5 3345 calibre_5.12.0+dfsg-1+deb11u3.dsc
+ e754c9d805f25fe33ef7ea621710517c0f5115282847797ba3373de6829e09ae 37022796 calibre_5.12.0+dfsg.orig.tar.xz
+ 8e117a1be686302a55636867e1aa68ae9f331149333464bb6fc6cdf3628098cd 4414608 calibre_5.12.0+dfsg-1+deb11u3.debian.tar.xz
+Files:
+ 519ec5d1774ab35e9da4d40afbdd941e 3345 text optional calibre_5.12.0+dfsg-1+deb11u3.dsc
+ e13f3410b2075059028bcacf814278bd 37022796 text optional calibre_5.12.0+dfsg.orig.tar.xz
+ adad5e1e635245158f199a0811a79b12 4414608 text optional calibre_5.12.0+dfsg-1+deb11u3.debian.tar.xz
+

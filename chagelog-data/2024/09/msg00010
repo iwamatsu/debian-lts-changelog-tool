@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 02 Sep 2024 23:24:24 +0300
+Source: ruby-tzinfo
+Architecture: source
+Version: 1.2.6-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ruby-tzinfo (1.2.6-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-31163: path traversal allowed TZInfo::Timezone.get
+     to load arbitrary files
+Checksums-Sha1:
+ 1902b15002255c41789ab3c0f226b6953be6b092 2116 ruby-tzinfo_1.2.6-1+deb11u1.dsc
+ fba6cbfaf74b29d19dcf408e54b4ec1bc23a335c 151623 ruby-tzinfo_1.2.6.orig.tar.gz
+ d6d4304234999e7010a3fac92652e0146e00ab6f 4692 ruby-tzinfo_1.2.6-1+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 408278d8e1dbfc49840d1e9f0318e853f93dc556cc8654e7d13bfabbf09b9799 2116 ruby-tzinfo_1.2.6-1+deb11u1.dsc
+ 608047e98865356edb02b3df014f99d8418035bac0d0ce520c19729c7f4b1910 151623 ruby-tzinfo_1.2.6.orig.tar.gz
+ c070c0035ac8d1afa6014d9ce62d204d8e867826c0486cbd3b7bfc0614017a2b 4692 ruby-tzinfo_1.2.6-1+deb11u1.debian.tar.xz
+Files:
+ 3a336f2bc6ced027feb68d09ddf9aab1 2116 ruby optional ruby-tzinfo_1.2.6-1+deb11u1.dsc
+ 2c0590337e895f46c126b78cca41595a 151623 ruby optional ruby-tzinfo_1.2.6.orig.tar.gz
+ 5c17042f0be2af2066f4fd68722efad2 4692 ruby optional ruby-tzinfo_1.2.6-1+deb11u1.debian.tar.xz
+

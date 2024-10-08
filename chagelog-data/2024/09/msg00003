@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 27 Aug 2024 23:13:42 +0200
+Source: dovecot
+Architecture: source
+Version: 1:2.3.13+dfsg1-2+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Dovecot Maintainers <dovecot@packages.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1078876 1078877
+Changes:
+ dovecot (1:2.3.13+dfsg1-2+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Fix CVE-2024-23184: Having a large number of address headers (From, To,
+     Cc, Bcc, etc.) could become excessively CPU intensive. (Closes: #1078876)
+   * Fix CVE-2024-23185: Very large headers can cause resource exhaustion when
+     parsing message. (Closes: #1078877)
+Checksums-Sha1:
+ 77565ec89bc6fb2b53746f890ead3368927c9efd 3998 dovecot_2.3.13+dfsg1-2+deb11u2.dsc
+ 5e7f9a892fe9fbf5108bf521b045bcbca3077168 1591484 dovecot_2.3.13+dfsg1.orig-pigeonhole.tar.gz
+ 252dc597e8c4b4b0c016916415fec0f80be2facb 7456073 dovecot_2.3.13+dfsg1.orig.tar.gz
+ f3e4b27f65b3facc51098ff25b9f29a3cc7ff71f 866 dovecot_2.3.13+dfsg1.orig.tar.gz.asc
+ fa54aeff12a6c46a4aaf654f2d5c7f2b889ae157 78760 dovecot_2.3.13+dfsg1-2+deb11u2.debian.tar.xz
+ dd92ddf58a46fcd213d06e7c11dbe17727fc0390 18833 dovecot_2.3.13+dfsg1-2+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 3691fa0d6145462b8e096add9a430a762b37d181d4e4024c2ad700e6d831da39 3998 dovecot_2.3.13+dfsg1-2+deb11u2.dsc
+ 9bbd31b3d0b3ae75060b961b6a8911f7371b0938630913f12604d97d05c912ff 1591484 dovecot_2.3.13+dfsg1.orig-pigeonhole.tar.gz
+ a3f875b80ec11a452480690108660030978c94fa8e796ad6d943a874b496f1c4 7456073 dovecot_2.3.13+dfsg1.orig.tar.gz
+ ef7653e5b866759bd94a94e758080025007bd502052705144ad8eae10e898f94 866 dovecot_2.3.13+dfsg1.orig.tar.gz.asc
+ 5eb7f78883a45934d15109e5dcc6571a2de75bcc420762df41a2fe530a796b93 78760 dovecot_2.3.13+dfsg1-2+deb11u2.debian.tar.xz
+ a774e418950c838f918417e6a2be0730b5bdcdf4fc41a6a72222750ae0c7a146 18833 dovecot_2.3.13+dfsg1-2+deb11u2_amd64.buildinfo
+Files:
+ c048d23c47e6ce8f4dda36ef7667a15c 3998 mail optional dovecot_2.3.13+dfsg1-2+deb11u2.dsc
+ 06c2a85ac954d975d55dd559267f5277 1591484 mail optional dovecot_2.3.13+dfsg1.orig-pigeonhole.tar.gz
+ f512bf1a4dac9ac994fddfb6bc5068ff 7456073 mail optional dovecot_2.3.13+dfsg1.orig.tar.gz
+ 6b2ac5dcaf0c24d3541077cd773cd498 866 mail optional dovecot_2.3.13+dfsg1.orig.tar.gz.asc
+ 41cfda893051f91112afeb28d9b9e8d7 78760 mail optional dovecot_2.3.13+dfsg1-2+deb11u2.debian.tar.xz
+ c63dca7830601fadb2ad2ff638673ab6 18833 mail optional dovecot_2.3.13+dfsg1-2+deb11u2_amd64.buildinfo
+
