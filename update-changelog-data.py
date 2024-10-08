@@ -5,6 +5,7 @@ Get the package Changelog from the email in debian-lts-changes ML
 and save it to the chagelog-data directory.
 """
 
+import sys
 import argparse
 from debian_lts_packages import DebianLTSPackages
 
