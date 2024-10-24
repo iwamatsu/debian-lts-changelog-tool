@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 21 Oct 2024 14:17:45 +0200
+Source: openjdk-17
+Architecture: source
+Version: 17.0.13+11-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: OpenJDK Team <openjdk-17@packages.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ openjdk-17 (17.0.13+11-1~deb11u1) bullseye-security; urgency=medium
+ .
+   * Backport to bullseye.
+Checksums-Sha1:
+ 6d23285dddf2470d462b2bd214f2868a5b3e06c2 4624 openjdk-17_17.0.13+11-1~deb11u1.dsc
+ 963d08e242ea43318a36d8b950f71a9e3cf2bf84 616792 openjdk-17_17.0.13+11.orig-googletest.tar.xz
+ a136153d929f122dce6d7d8cd2a526edab36191e 63484420 openjdk-17_17.0.13+11.orig.tar.xz
+ 0e74aa6be33436f60d34702e9e906a47ade402b7 203904 openjdk-17_17.0.13+11-1~deb11u1.debian.tar.xz
+ e069add162cd0c14e246ac816ec112f2e952c737 9008 openjdk-11_11.0.25+9-1~deb10u1_source.buildinfo
+ 8c75696922a3107eebb40cc3bfa614e650cfee74 8129 openjdk-17_17.0.13+11-1~deb11u1_source.buildinfo
+Checksums-Sha256:
+ 4316ee8b096bf8da148837d0d997bb66276e26aafea6884b232888fe41d6a64d 4624 openjdk-17_17.0.13+11-1~deb11u1.dsc
+ db220ce29459378d5fd0d725da4379cac15f0158962e018b862fdb10b460a1ee 616792 openjdk-17_17.0.13+11.orig-googletest.tar.xz
+ 495b0a3ef7f93f039cde68fa744fabfabd9377afec5493d6e4eac942360166c7 63484420 openjdk-17_17.0.13+11.orig.tar.xz
+ 6aba57d3a29538c5e456cfd6efa81442e00e24f2e7a65343cc02ac7c917d8dde 203904 openjdk-17_17.0.13+11-1~deb11u1.debian.tar.xz
+ 1321c2da26de9eab16af8280095764eaa5c70f88ab305b2286c239cf50fc7b37 9008 openjdk-11_11.0.25+9-1~deb10u1_source.buildinfo
+ 3c28159795f0f1c068a2a766ed78dfae8880b1aad26eb71f64b54c10043475f3 8129 openjdk-17_17.0.13+11-1~deb11u1_source.buildinfo
+Files:
+ 00cb078f02778bcc225a1959263c64a3 4624 java optional openjdk-17_17.0.13+11-1~deb11u1.dsc
+ de5c55b8e5bce1324d6baa80dc60ef28 616792 java optional openjdk-17_17.0.13+11.orig-googletest.tar.xz
+ b22db205486b4ea7c5ff57aa0722ab6c 63484420 java optional openjdk-17_17.0.13+11.orig.tar.xz
+ a37399b48d22d96f766c31ada63d7ca3 203904 java optional openjdk-17_17.0.13+11-1~deb11u1.debian.tar.xz
+ 4f9cff9a411b65bd4c887c10c8330145 9008 java optional openjdk-11_11.0.25+9-1~deb10u1_source.buildinfo
+ 90711c01e10a7d3a9e1317da6c218a72 8129 java optional openjdk-17_17.0.13+11-1~deb11u1_source.buildinfo
+

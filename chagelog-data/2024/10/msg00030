@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 22 Oct 2024 15:47:22 -0700
+Source: libheif
+Architecture: source
+Version: 1.11.0-1+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Changes:
+ libheif (1.11.0-1+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-41311: Prevent a potential out-of-bounds read vulnerability
+     caused by insufficient checks in ImageOverlay::parse(), where an overlay
+     image with forged offsets could have led to undefined behaviour.
+Checksums-Sha1:
+ 16318b893971419df6189d4192f5c8b4805937df 2315 libheif_1.11.0-1+deb11u1.dsc
+ def98b8c83861b6e4f3cdf6d3b57c9aaf3408923 1680855 libheif_1.11.0.orig.tar.gz
+ 02919ca889d1e88e1ee3758751024685d03c055e 9032 libheif_1.11.0-1+deb11u1.debian.tar.xz
+ e02d122a02b9e17beed3a9879f6b14f1f977cad0 11233 libheif_1.11.0-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 6964af49fd534c2f9ab58887e9e0b1ea75fc475e834b1e4fb3d119c6d73560ed 2315 libheif_1.11.0-1+deb11u1.dsc
+ c550938f56ff6dac83702251a143f87cb3a6c71a50d8723955290832d9960913 1680855 libheif_1.11.0.orig.tar.gz
+ efec96b88fe05fbc59e75dadc3709180808e96dbcb5374e7992870d819808b19 9032 libheif_1.11.0-1+deb11u1.debian.tar.xz
+ 638d78c300b3927a7daf8ea933530a479ec59c5281ce82b90567a43a098cecb2 11233 libheif_1.11.0-1+deb11u1_amd64.buildinfo
+Files:
+ d318f198002a6edbe0835d88ea3fe51b 2315 libs optional libheif_1.11.0-1+deb11u1.dsc
+ 1927b1507d33eaf2b8714239d9dbbde8 1680855 libs optional libheif_1.11.0.orig.tar.gz
+ 437117c1119f998886fdd705791a6c0c 9032 libs optional libheif_1.11.0-1+deb11u1.debian.tar.xz
+ c0c23e8d2d22550074db1d1faa7d48b5 11233 libs optional libheif_1.11.0-1+deb11u1_amd64.buildinfo
+

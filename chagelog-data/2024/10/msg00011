@@ -1,0 +1,57 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 28 Sep 2024 13:36:47 +0000
+Source: libreoffice
+Architecture: source
+Version: 1:7.0.4-4+deb11u11
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian LibreOffice Maintainers <debian-openoffice@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ libreoffice (1:7.0.4-4+deb11u11) bullseye-security; urgency=medium
+ .
+   * LTS team upload
+   * Fix CVE-2024-7788:
+     Various file formats used by libreoffice are based on
+     the zip file format.
+     In cases of corruption of the underlying zip's central
+     directory, LibreOffice offers a "repair mode" which will
+     attempt to recover the zip file structure by scanning for
+     secondary local file headers in the zip to reconstruct
+     the document.
+     Prior to this fix, in the case of digitally signed zip
+     files, an attacker could construct a document which,
+     when repaired, reported a signature status not valid
+     for the recovered file.
+     Previously if verification failed the user could
+     choose to ignore the failure and enable the macros anyway.
+     Repair document mode has to be inherently tolerant,
+     so now in fixed versions all signatures are implied
+     to be invalid in recovery mode.
+Checksums-Sha1:
+ ed3770833d9602b5d99279b565d5816c321e91f6 31349 libreoffice_7.0.4-4+deb11u11.dsc
+ cdbd0cc8c305db165d117e12de86c93e98d6e7c3 110142616 libreoffice_7.0.4.orig-helpcontent2.tar.xz
+ 12a5024b20272d8e20d6d503bfbb46c35b6c4d1e 176691588 libreoffice_7.0.4.orig-translations.tar.xz
+ 8ffff9e324ec3b72ef521cfaea9600b783d0c53c 236477520 libreoffice_7.0.4.orig.tar.xz
+ 66cea38b1450e5527dba5f074733ac937e0bc029 833 libreoffice_7.0.4.orig.tar.xz.asc
+ c38362de227893afd06b40b225aca90d3514c825 19540176 libreoffice_7.0.4-4+deb11u11.debian.tar.xz
+ 00ad70d0010cad41906708d72e1485539de2dad2 38160 libreoffice_7.0.4-4+deb11u11_source.buildinfo
+Checksums-Sha256:
+ 663e348a5fd1f2b2ab482333a3bf1ccf686b476c284eae3e4c6789dc21d19fda 31349 libreoffice_7.0.4-4+deb11u11.dsc
+ 8311462f214e27841ba4970bbae518b9a4b2088380877b8dff5e2005587357c1 110142616 libreoffice_7.0.4.orig-helpcontent2.tar.xz
+ 28d7421771af20a310983dec5c64da8103eb6a159e098c6e5f1a1c1e6731e146 176691588 libreoffice_7.0.4.orig-translations.tar.xz
+ 9fa9d2cc8d02f12b1f302b93056d5c0ff986090a6f309bafa506ba53779f2abd 236477520 libreoffice_7.0.4.orig.tar.xz
+ 773a0034f2f4a26e3e285ac605e704df6d90b06722af64b95e42ea4452a34b91 833 libreoffice_7.0.4.orig.tar.xz.asc
+ 42cf4d1d7f0f152302d623a7d4b6d4e9b6b0da3ecec07fef29d8d08133911249 19540176 libreoffice_7.0.4-4+deb11u11.debian.tar.xz
+ 6bb9a0009bcb1334411d5d261f183d3ad05f23e5dd076d95c8619a7e26f41397 38160 libreoffice_7.0.4-4+deb11u11_source.buildinfo
+Files:
+ b69ed63eede0398bf5fb304e8f8e793b 31349 editors optional libreoffice_7.0.4-4+deb11u11.dsc
+ f76a9b75c5b2e334751b3bda4c3bce9c 110142616 editors optional libreoffice_7.0.4.orig-helpcontent2.tar.xz
+ ec39192b68eabc0b56405a96f31bc165 176691588 editors optional libreoffice_7.0.4.orig-translations.tar.xz
+ cad93ef2c87928b5a2971ae7e6474fe1 236477520 editors optional libreoffice_7.0.4.orig.tar.xz
+ 95f6830c549f3393ac49f0c743ba9a20 833 editors optional libreoffice_7.0.4.orig.tar.xz.asc
+ fd3e825b1cb478cc93eb9a90436b8cf8 19540176 editors optional libreoffice_7.0.4-4+deb11u11.debian.tar.xz
+ 12995db33d0f29254dbf686ed2a37a61 38160 editors optional libreoffice_7.0.4-4+deb11u11_source.buildinfo
+

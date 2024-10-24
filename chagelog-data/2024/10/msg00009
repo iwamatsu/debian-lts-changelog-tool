@@ -1,0 +1,28 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 08 Oct 2024 12:51:04 +0200
+Source: firefox-esr
+Architecture: source
+Version: 128.3.0esr-1~deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (128.3.0esr-1~deb11u2) bullseye-security; urgency=medium
+ .
+   * Skip dwz for libfreeblpriv, which is causing FTBFS on arm64.
+Checksums-Sha1:
+ ec0df5efdc167d6ba461c08e2cfc025892a23a60 41165 firefox-esr_128.3.0esr-1~deb11u2.dsc
+ 66c266c115f845d06a138580d52025798bc689f6 170504 firefox-esr_128.3.0esr-1~deb11u2.debian.tar.xz
+ 95297db05c94980160a2bfa3e6d420234c34660e 8578 firefox-esr_128.3.0esr-1~deb11u2_source.buildinfo
+Checksums-Sha256:
+ 8dea1e78a3b64b9da1d53a7d36760f6b3d90917fc6aa54da752361f2341662d4 41165 firefox-esr_128.3.0esr-1~deb11u2.dsc
+ 12e8e431fdff99e2d0c65cff798cd1e4823786812caa8967f2f2c9691b57a4bb 170504 firefox-esr_128.3.0esr-1~deb11u2.debian.tar.xz
+ 3c683ba22c42c5f864efda05ffa8ad2015dfcb986605329db543eb949be21178 8578 firefox-esr_128.3.0esr-1~deb11u2_source.buildinfo
+Files:
+ f66aebb5d309295c442e640244fce7de 41165 web optional firefox-esr_128.3.0esr-1~deb11u2.dsc
+ 03c879e5bc90124f71b0a5ba545d59e8 170504 web optional firefox-esr_128.3.0esr-1~deb11u2.debian.tar.xz
+ 34de817bbd85ac65f59f63909920e416 8578 web optional firefox-esr_128.3.0esr-1~deb11u2_source.buildinfo
+

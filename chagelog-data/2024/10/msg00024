@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 21 Oct 2024 14:21:02 +0200
+Source: openjdk-11
+Architecture: source
+Version: 11.0.25+9-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: OpenJDK Team <openjdk-11@packages.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ openjdk-11 (11.0.25+9-1~deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Backport to bullseye.
+   * Disable tests, jtreg7 is not available on bullseye.
+Checksums-Sha1:
+ 06c52cc429b90d24f70ffd487b3f8655a64ad731 4388 openjdk-11_11.0.25+9-1~deb11u1.dsc
+ e73b1fb34df2984eab835eaf760d3631dcffb2c5 69745420 openjdk-11_11.0.25+9.orig.tar.xz
+ 6f443a688b81b6c12d8299bf93be756104a6be89 168328 openjdk-11_11.0.25+9-1~deb11u1.debian.tar.xz
+ 9239c50fa9dda517225e04e5360f63a1aefefaa1 9008 openjdk-11_11.0.25+9-1~deb11u1_source.buildinfo
+Checksums-Sha256:
+ 2603488a184573a0206e2368b0ce1bcdae5cde1f20d4f7ebf271331303a7cb51 4388 openjdk-11_11.0.25+9-1~deb11u1.dsc
+ 8c67eb837c197757284042ebf8dae5dd638b535afd2baf72ff46fedf42e7fdd3 69745420 openjdk-11_11.0.25+9.orig.tar.xz
+ 5ec2fa450a10d51680639296661dc6d206fd987fc8fc92a24a8175069a8d79ad 168328 openjdk-11_11.0.25+9-1~deb11u1.debian.tar.xz
+ b8b5342659e116162a8def0d9e69edcb9649e4e25aa4476e60a336e37ff3c8a4 9008 openjdk-11_11.0.25+9-1~deb11u1_source.buildinfo
+Files:
+ d91dca364c53be2e7ca11ac2293817bc 4388 java optional openjdk-11_11.0.25+9-1~deb11u1.dsc
+ 6f0bfa944beefd776e124f1566e5b919 69745420 java optional openjdk-11_11.0.25+9.orig.tar.xz
+ 934ab9fb5c71c700d9b7e1f879bf52fd 168328 java optional openjdk-11_11.0.25+9-1~deb11u1.debian.tar.xz
+ 02e8c77091bb2ceb5c92f9f10f96bb53 9008 java optional openjdk-11_11.0.25+9-1~deb11u1_source.buildinfo
+

@@ -1,0 +1,28 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 04 Oct 2024 10:56:19 +0200
+Source: firefox-esr
+Architecture: source
+Version: 128.3.0esr-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (128.3.0esr-1~deb11u1) bullseye-security; urgency=medium
+ .
+   * Backport to bullseye.
+Checksums-Sha1:
+ 124ee2aef04a4535bce6d51f5997e066d7fd7463 41165 firefox-esr_128.3.0esr-1~deb11u1.dsc
+ ee2b3a14907111331498ecdff032da26f2e1cd8d 170512 firefox-esr_128.3.0esr-1~deb11u1.debian.tar.xz
+ 2ee0550b7639b0dd69dbd23ab0e10a96182395ec 8578 firefox-esr_128.3.0esr-1~deb11u1_source.buildinfo
+Checksums-Sha256:
+ e789a11aaa02996933d2428d5989e837d0f77cd4704dc08d07198e6474a3701e 41165 firefox-esr_128.3.0esr-1~deb11u1.dsc
+ e1fae3de6bbdf27bccc4856fd3549959a691e113ba651ebf7296a123ca8cb431 170512 firefox-esr_128.3.0esr-1~deb11u1.debian.tar.xz
+ 0639bdb65e5f04546e91ee069e2140112ecac835c61209ad49ce7c4766a690df 8578 firefox-esr_128.3.0esr-1~deb11u1_source.buildinfo
+Files:
+ 43fd5b77c548c31f72312e6dcb8334a2 41165 web optional firefox-esr_128.3.0esr-1~deb11u1.dsc
+ af5cf69f2d998f373ccae584165f1dc8 170512 web optional firefox-esr_128.3.0esr-1~deb11u1.debian.tar.xz
+ d6d83b8c1afa8ccb8fcbc7de30c4f645 8578 web optional firefox-esr_128.3.0esr-1~deb11u1_source.buildinfo
+

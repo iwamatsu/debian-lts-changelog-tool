@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 20 Oct 2024 16:03:02 +0200
+Source: asterisk
+Architecture: source
+Version: 1:16.28.0~dfsg-0+deb11u5
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ asterisk (1:16.28.0~dfsg-0+deb11u5) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-42365
+     Fix privilege escalation, remote code execution and/or
+     blind server-side request forgery with arbitrary protocol.
+   * CVE-2024-42491
+     Fix handling of malformed Contact or Record-Route URI in an incoming
+     SIP request, which can cause Asterisk to crash when res_resolver_unbound
+     is used
+   * fix minor privilege escalation in systemd.patch
+     (Thanks to Niels Galjaard)
+     (-> https://salsa.debian.org/pkg-voip-team/asterisk/
+                       -/commit/0617fd6e42767ffef40aae56d6675c8234ba5081)
+     (-> https://alioth-lists.debian.net/pipermail/pkg-voip-maintainers/
+                       2024-July/038664.html)
+Checksums-Sha1:
+ a9576716d86c86fe5d049dd28d5253e53e72df72 4367 asterisk_16.28.0~dfsg-0+deb11u5.dsc
+ 5a45e9184694bfe17159cda89c62f12b98ffb8d2 6873200 asterisk_16.28.0~dfsg-0+deb11u5.debian.tar.xz
+ 4c06e2dd1c35bde174b4fe08d7c30086135c2536 29280 asterisk_16.28.0~dfsg-0+deb11u5_amd64.buildinfo
+Checksums-Sha256:
+ b6acb1164da955f40c7fdadcf832a68c0ab7d9d9f3e61d0d873497a83b2aa61e 4367 asterisk_16.28.0~dfsg-0+deb11u5.dsc
+ 3aee917b00c94652573fae3de62ba1814b26afb7f79924b77212a4dfda0ad6e4 6873200 asterisk_16.28.0~dfsg-0+deb11u5.debian.tar.xz
+ 890e61366565c88d4656b96d86ab003349245e3b3f7264c7d8b61176fa747bf2 29280 asterisk_16.28.0~dfsg-0+deb11u5_amd64.buildinfo
+Files:
+ 5128772a7266e61c16495f91c5894941 4367 comm optional asterisk_16.28.0~dfsg-0+deb11u5.dsc
+ 9464da58b8a93983efedc6473081f1c1 6873200 comm optional asterisk_16.28.0~dfsg-0+deb11u5.debian.tar.xz
+ 3a6f91b7a85cb2a614dbe9ccc1b4a552 29280 comm optional asterisk_16.28.0~dfsg-0+deb11u5_amd64.buildinfo
+

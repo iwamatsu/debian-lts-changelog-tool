@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sat, 19 Oct 2024 16:45:04 +0200
+Source: php-horde-mime-viewer
+Architecture: source
+Version: 2.2.4+debian0-2~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Horde Maintainers <team+debian-horde-team@tracker.debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Changes:
+ php-horde-mime-viewer (2.2.4+debian0-2~deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backporting new upstream release to LTS.
+     - This fixes CVE-2022-26874 - XSS via an OpenOffice Document.
+     - Between 2.2.2 and 2.2.4, there are no other upstream changes beside the
+       fix for the vulnerabilty.
+     - The other changes are packaging improvements, see below for details
+Checksums-Sha1:
+ cb2693ad69d3b9bcccdc167f79d299abc9de99ae 2208 php-horde-mime-viewer_2.2.4+debian0-2~deb11u1.dsc
+ 618421a20a4ac53dc2961646c08d2f4e1e976611 459674 php-horde-mime-viewer_2.2.4+debian0.orig.tar.gz
+ c114bde1b8e2d0b68b32e6327456306db76811c3 6016 php-horde-mime-viewer_2.2.4+debian0-2~deb11u1.debian.tar.xz
+ 217879b44b783f17eda3a10f39af9fb21c473e13 6943 php-horde-mime-viewer_2.2.4+debian0-2~deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 4c14727c1a72182cc7ede916f1c630ef3bdd27b0b7788ac4c9719dd7f126b3fb 2208 php-horde-mime-viewer_2.2.4+debian0-2~deb11u1.dsc
+ cbbb84c3bd2d5b816cb11bfd8290feb3ff17e9707b346bf39df62b5a6af51492 459674 php-horde-mime-viewer_2.2.4+debian0.orig.tar.gz
+ a1c7b9984877825766ff906c5194b25ec7f53a39084e033eaf45b11c7e7beec9 6016 php-horde-mime-viewer_2.2.4+debian0-2~deb11u1.debian.tar.xz
+ 02249bd12a214bc1fd3994b7a1fa8bab23e61fcad8e047e32f1ac2f4056a2ebe 6943 php-horde-mime-viewer_2.2.4+debian0-2~deb11u1_amd64.buildinfo
+Files:
+ 8a8c0394d04b037c45381a587ac2e384 2208 php optional php-horde-mime-viewer_2.2.4+debian0-2~deb11u1.dsc
+ 5c774c69dd096dc8bdb8ca99eb9fa7c2 459674 php optional php-horde-mime-viewer_2.2.4+debian0.orig.tar.gz
+ 4f9d18e4381bbc9c1a40fe8dcaf9355f 6016 php optional php-horde-mime-viewer_2.2.4+debian0-2~deb11u1.debian.tar.xz
+ d916441a1a828c157f300ae269ad7e42 6943 php optional php-horde-mime-viewer_2.2.4+debian0-2~deb11u1_amd64.buildinfo
+

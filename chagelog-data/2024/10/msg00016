@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 14 Oct 2024 19:47:44 +0200
+Source: php7.4
+Architecture: source
+Version: 7.4.33-1+deb11u6
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1072885
+Changes:
+ php7.4 (7.4.33-1+deb11u6) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2022-4900: Setting the environment variable PHP_CLI_SERVER_WORKERS
+     to a large value leads to a heap buffer overflow.
+   * Fix CVE-2024-5458: Filter bypass in filter_var (FILTER_VALIDATE_URL).
+     Closes: #1072885
+   * Fix CVE-2024-8925: Erroneous parsing of multipart form data.
+   * Fix CVE-2024-8927: `cgi.force_redirect` configuration is bypassable due to
+     the environment variable collision.
+   * Fix CVE-2024-9026: Logs from childrens may be altered.
+   * d/gbp.config: Adjust debian-branch and set pristine-tar=False.
+Checksums-Sha1:
+ dde8cc251df0c680b1ba2d8dd6033ee83cd3ff37 5695 php7.4_7.4.33-1+deb11u6.dsc
+ f3fcb69ab395f1294e2fc2ffaab46d2b42fe2609 90936 php7.4_7.4.33-1+deb11u6.debian.tar.xz
+ 387408b2854604bd8251ce6a98b94606a093b972 35490 php7.4_7.4.33-1+deb11u6_amd64.buildinfo
+Checksums-Sha256:
+ 91d6ca58c00b530bd42f4c1c6266d435356987fd58b60ff66ebc55e23286f653 5695 php7.4_7.4.33-1+deb11u6.dsc
+ fa54cc54b065f0c1dac3e104262c6d1ca7e10bd2cdf901f4c8d366426ae63580 90936 php7.4_7.4.33-1+deb11u6.debian.tar.xz
+ 5d49c601911acfd927809ab2c93335955b0498da1bc8b9472759337b825dc861 35490 php7.4_7.4.33-1+deb11u6_amd64.buildinfo
+Files:
+ 6bfcef62eeb072a5ea686cc52a9579b4 5695 php optional php7.4_7.4.33-1+deb11u6.dsc
+ cbecaa5b34e5b42db45c1fe7e58ce292 90936 php optional php7.4_7.4.33-1+deb11u6.debian.tar.xz
+ 180d406cd366e5fd72f3383a896249b9 35490 php optional php7.4_7.4.33-1+deb11u6_amd64.buildinfo
+

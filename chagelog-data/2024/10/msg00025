@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 21 Oct 2024 15:27:44 +0200
+Source: ffmpeg
+Architecture: source
+Version: 7:4.3.8-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ ffmpeg (7:4.3.8-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream release, fixes CVE-2024-7055.
+   * Backport patches for CVE-2024-31578 and CVE-2023-49502.
+Checksums-Sha1:
+ 8abece4447b9cec1acc8a2b36da374b18a7a4890 5439 ffmpeg_4.3.8-0+deb11u1.dsc
+ aa8393a0884ca8f31990eb49bc4ef431f161a824 9408540 ffmpeg_4.3.8.orig.tar.xz
+ 4968bb9a328dcc55a7a8bac2c6d156dae8efffc5 520 ffmpeg_4.3.8.orig.tar.xz.asc
+ 702b7a43778e8aabc0499e024c992a08addae38c 90340 ffmpeg_4.3.8-0+deb11u1.debian.tar.xz
+ 936b18be535128d90709e9e8ae77c9fd2b1c5076 6603 ffmpeg_4.3.8-0+deb11u1_source.buildinfo
+Checksums-Sha256:
+ b4c8bda0dee0fc3aa66ced002f2187cc7bc837b989321c7b92ef05624023663a 5439 ffmpeg_4.3.8-0+deb11u1.dsc
+ 103fd01f78c596c4c974ddf180dabaf149a86d234988895a0e566a5ff4afa444 9408540 ffmpeg_4.3.8.orig.tar.xz
+ eea561b9783180aee595fc26204cde6b504b1d8611fec745f76c87dae45514b7 520 ffmpeg_4.3.8.orig.tar.xz.asc
+ 0996cf224d71c542212979eabafc11ca0e9bb35c4a94397b39206f84b9eeeeaa 90340 ffmpeg_4.3.8-0+deb11u1.debian.tar.xz
+ a130a498bc6d9d05489207b41ca9dd26b390a4463e86eb7a7e0fe41e36565f27 6603 ffmpeg_4.3.8-0+deb11u1_source.buildinfo
+Files:
+ 4c057dd417af166cbd04549f5a14094f 5439 video optional ffmpeg_4.3.8-0+deb11u1.dsc
+ 972daa21affad280e534574e9c0656a2 9408540 video optional ffmpeg_4.3.8.orig.tar.xz
+ 2aa267d0ae0e9204e8d581c7be5e368f 520 video optional ffmpeg_4.3.8.orig.tar.xz.asc
+ 7fba192089703cf4217aad65d69d3c16 90340 video optional ffmpeg_4.3.8-0+deb11u1.debian.tar.xz
+ c05e680323d5a0d66c4154556f12ec16 6603 video optional ffmpeg_4.3.8-0+deb11u1_source.buildinfo
+

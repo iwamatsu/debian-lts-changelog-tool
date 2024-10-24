@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 06 Oct 2024 16:17:58 +0300
+Source: libgsf
+Architecture: source
+Version: 1.14.47-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libgsf (1.14.47-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-36474: directory integer overflow
+   * CVE-2024-42415: sector allocation table integer overflow
+Checksums-Sha1:
+ a57af3596678fe0da0d4ac1448965e3f136dd0fe 2301 libgsf_1.14.47-1+deb11u1.dsc
+ 5c8e7d2b5a1f525971fc318a6ea78fdf1083a31e 691448 libgsf_1.14.47.orig.tar.xz
+ c0ccf5a4c7ff814d2024d8ba92904eec6c62a736 15160 libgsf_1.14.47-1+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 571381afcf7abf6edba3a5212ba6178d93bfa0da1f60a21dc8486e552b1081cd 2301 libgsf_1.14.47-1+deb11u1.dsc
+ d188ebd3787b5375a8fd38ee6f761a2007de5e98fa0cf5623f271daa67ba774d 691448 libgsf_1.14.47.orig.tar.xz
+ b3703f7ed332204b0d07ddd80385549e3d340c34aacdac3e030427419ea4aca4 15160 libgsf_1.14.47-1+deb11u1.debian.tar.xz
+Files:
+ 1d2767ba1d5040338773f1e4ad34382c 2301 libs optional libgsf_1.14.47-1+deb11u1.dsc
+ 20bf9933128210d7a9f920a34198d22f 691448 libs optional libgsf_1.14.47.orig.tar.xz
+ 09ff458323e3f076e34755d48c01fce0 15160 libs optional libgsf_1.14.47-1+deb11u1.debian.tar.xz
+

@@ -1,0 +1,48 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 13 Oct 2024 16:05:55 +0000
+Source: docker.io
+Architecture: source
+Version: 20.10.5+dfsg1-1+deb11u3
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1084993
+Changes:
+ docker.io (20.10.5+dfsg1-1+deb11u3) bullseye-security; urgency=high
+ .
+   * LTS Team upload
+   * Fix CVE-2024-41110: Authz zero length regression
+     A security vulnerability has been detected in Docker Engine,
+     which could allow an attacker
+     to bypass authorization plugins (AuthZ) under specific
+     circumstances. The base likelihood of this being exploited is low.
+     (Closes: #1084993)
+   * Disable git checkout test that fail under bullseye-security
+Checksums-Sha1:
+ 10d5a2cb2a570661c753f6ecefe5d78326eddc6d 7526 docker.io_20.10.5+dfsg1-1+deb11u3.dsc
+ d1ab61e0356d5fb1fd86ef4c61ea3effe221b129 1962992 docker.io_20.10.5+dfsg1.orig-cli.tar.xz
+ be29876119d415634bb0aa329701b199378da39f 629972 docker.io_20.10.5+dfsg1.orig-libnetwork.tar.xz
+ 49b6bb014e53681a9d29e936a2bdbead1b80668e 721180 docker.io_20.10.5+dfsg1.orig-swarmkit.tar.xz
+ a01994a09bfcdb83b5a5c4366866e4c4cb855a64 2251340 docker.io_20.10.5+dfsg1.orig.tar.xz
+ 0352db28ae090e75ca1795423e5b48f4440872b4 51716 docker.io_20.10.5+dfsg1-1+deb11u3.debian.tar.xz
+ 942eb3d36974f540dea02781eac1a1e637b8221f 25960 docker.io_20.10.5+dfsg1-1+deb11u3_amd64.buildinfo
+Checksums-Sha256:
+ 856269d2cf01358c3ada8a34c9e62923c26544d3dd9489862d288e9c3830cbde 7526 docker.io_20.10.5+dfsg1-1+deb11u3.dsc
+ 641bc3d2f9e6c8d7350cedb12dc0373d63544d77c89e3f4fde996fe4d0b0eeb9 1962992 docker.io_20.10.5+dfsg1.orig-cli.tar.xz
+ 867d69e8f4839141a12c977445cfc2ac501884ea81c281fcc34dd47bd2ddfba2 629972 docker.io_20.10.5+dfsg1.orig-libnetwork.tar.xz
+ 8d81f18cc0c5ca0a66af18a429da04ce1bde1685585a6153e82ad57e0fec07c9 721180 docker.io_20.10.5+dfsg1.orig-swarmkit.tar.xz
+ 5069d5f23992bf972dec5f1bcbba7638281f102ee87ec00004dabcbbc7a1f647 2251340 docker.io_20.10.5+dfsg1.orig.tar.xz
+ d2f751758b4379111968440e0a894fecf8a9c013667cf6fec5f2ecd992e80713 51716 docker.io_20.10.5+dfsg1-1+deb11u3.debian.tar.xz
+ 95d9f6e9bc4ec2855b86c40aed5a1757989cf4d60308d82180678a6f8bac1048 25960 docker.io_20.10.5+dfsg1-1+deb11u3_amd64.buildinfo
+Files:
+ b2ffeefa07aee512a15f4d8993b57a6a 7526 admin optional docker.io_20.10.5+dfsg1-1+deb11u3.dsc
+ c830a574ec8c6cf806848a2b368eff1d 1962992 admin optional docker.io_20.10.5+dfsg1.orig-cli.tar.xz
+ 53e8ff9c4089d51366a012c89e863bb9 629972 admin optional docker.io_20.10.5+dfsg1.orig-libnetwork.tar.xz
+ 7a91fb6b945095c4c46a5f6819c97373 721180 admin optional docker.io_20.10.5+dfsg1.orig-swarmkit.tar.xz
+ c3733e88907a86c8bd0921f5e941e462 2251340 admin optional docker.io_20.10.5+dfsg1.orig.tar.xz
+ ce4688af2931ddbe0a43e7302de348eb 51716 admin optional docker.io_20.10.5+dfsg1-1+deb11u3.debian.tar.xz
+ 6c773772da84c89ac15b7b4d432f777a 25960 admin optional docker.io_20.10.5+dfsg1-1+deb11u3_amd64.buildinfo
+

@@ -1,0 +1,41 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 04 Oct 2024 15:21:08 +0000
+Source: apache2
+Architecture: source
+Version: 2.4.62-1~deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1079172 1079206
+Changes:
+ apache2 (2.4.62-1~deb11u2) bullseye-security; urgency=medium
+ .
+   * Fix CVE-2024-38474 regression:
+     Better question mark tracking to avoid UnsafeAllow3F
+     (Closes: #1079172)
+   * Fix CVE-2024-39884 regression:
+     Trust strings from configuration in mod_proxy
+     (Closes: #1079206)
+   * Add myself as maintainer with Yadd agreement
+Checksums-Sha1:
+ ba1dcb6e1a2df59ba68733af47caeafa573916dd 3603 apache2_2.4.62-1~deb11u2.dsc
+ 60fd03e9558c240293372953d9fe01bf74896bb6 9872432 apache2_2.4.62.orig.tar.gz
+ 198dd91f2a30797a1804043c70923b11a9b9ebf3 833 apache2_2.4.62.orig.tar.gz.asc
+ dbcb514e32302e0bc20e6eace2210ab842a3d0ab 818588 apache2_2.4.62-1~deb11u2.debian.tar.xz
+ 764c6dbb7a00a6ba2ae56a9477ab78cc0fc4d062 12640 apache2_2.4.62-1~deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 0e159ab59a1c41563276692d5b866897f80d8f5736b69ab1c5c5e25d1c78d9e2 3603 apache2_2.4.62-1~deb11u2.dsc
+ 3e2404d762a2da03560d7ada379ba1599d32f04a0d70ad6ff86f44325f2f062d 9872432 apache2_2.4.62.orig.tar.gz
+ 7765403a937dacb562a0eb15ed11ba85f703d10c6bb8b5630591d18876975963 833 apache2_2.4.62.orig.tar.gz.asc
+ 67415b5c61f0d17ea13fafb281a197eef595b6842d670ca57f94ce1b78dd1559 818588 apache2_2.4.62-1~deb11u2.debian.tar.xz
+ 05a4b9953fa8711f68299839d5a25eb200d71bc90cd45952ed018abf0294da3d 12640 apache2_2.4.62-1~deb11u2_amd64.buildinfo
+Files:
+ cf840e065fd101e98f771db0be4188ad 3603 httpd optional apache2_2.4.62-1~deb11u2.dsc
+ 9edaa3bce9534184d505e57d2832b365 9872432 httpd optional apache2_2.4.62.orig.tar.gz
+ 84aecb3166133e56a8cc6d784fc9be64 833 httpd optional apache2_2.4.62.orig.tar.gz.asc
+ 3911c608b5ce015ba4d5e65091ec3539 818588 httpd optional apache2_2.4.62-1~deb11u2.debian.tar.xz
+ 71a74c55a2e92468d4c862d074f87610 12640 httpd optional apache2_2.4.62-1~deb11u2_amd64.buildinfo
+

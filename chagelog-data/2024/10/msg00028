@@ -1,0 +1,37 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 22 Oct 2024 10:37:24 -0300
+Source: python-sql
+Architecture: source
+Version: 1.2.1-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Tryton Maintainers <team+tryton-team@tracker.debian.org>
+Changed-By: Santiago Ruano Rincón <santiago@freexian.com>
+Changes:
+ python-sql (1.2.1-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2024-9774: Escape non expressions for unary operators.
+     Thanks to Mathias Behrle <mathiasb@m9s.biz>.
+   * Add d/salsa-ci.yml using lts-team bullseye recipe.
+Checksums-Sha1:
+ 92faaae8f757e6e2e50a080cdd30bce5b3f2371e 1759 python-sql_1.2.1-1+deb11u1.dsc
+ 8bb3cfbca4ea0c370d71d09123661732812d836f 32202 python-sql_1.2.1.orig.tar.gz
+ abc633b10b04f8e8bdb5f0e5bc314c7ecf8f779d 506 python-sql_1.2.1.orig.tar.gz.asc
+ 75567497697bd69b7c4dd22c67445cacbb73d268 26136 python-sql_1.2.1-1+deb11u1.debian.tar.xz
+ 346bf894e46f03865b445e3988755b8042ee3df7 6133 python-sql_1.2.1-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 10ae83eae978b1ae5ee2057c8fa2e3e8cca27f426f4f8542aa856f67e82b96e9 1759 python-sql_1.2.1-1+deb11u1.dsc
+ 306999bd311fbf50804d76f346655af0a6ff18881ce46c1329256fee40f492c0 32202 python-sql_1.2.1.orig.tar.gz
+ e11066ab9bffce1fa23c0c691169ac38d522b0ea4ae4c46f5a7bd7fa8750fee6 506 python-sql_1.2.1.orig.tar.gz.asc
+ 693984672e9f7ccd052a8de8c504e38aeab8af3662e670cce53b80f678afa7b2 26136 python-sql_1.2.1-1+deb11u1.debian.tar.xz
+ 5daab9c71e1acf2cf34d54c003d0d152d26e7cd580cd217ccf188aa4d0241935 6133 python-sql_1.2.1-1+deb11u1_amd64.buildinfo
+Files:
+ 946538845cc33af635fe27c486bece8b 1759 python optional python-sql_1.2.1-1+deb11u1.dsc
+ f5347b69e55c4719be878c2324de394e 32202 python optional python-sql_1.2.1.orig.tar.gz
+ cdbb46d78afd63af65d008e51a3e348e 506 python optional python-sql_1.2.1.orig.tar.gz.asc
+ fa4f0fe4a8c855b796c2cc0819abe3a3 26136 python optional python-sql_1.2.1-1+deb11u1.debian.tar.xz
+ fba77d61204f4bf73f37e3a87d563ad4 6133 python optional python-sql_1.2.1-1+deb11u1_amd64.buildinfo
+

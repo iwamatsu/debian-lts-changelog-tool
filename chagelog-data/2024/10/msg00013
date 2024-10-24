@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 13 Oct 2024 12:40:04 +0000
+Source: python-reportlab
+Architecture: source
+Version: 3.5.59-2+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Matthias Klose <doko@debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ python-reportlab (3.5.59-2+deb11u1) bullseye-security; urgency=high
+ .
+   * Team upload
+   * Fix CVE-2023-33733
+     Reportlab was vulnerable to Remote Code Execution (RCE)
+     via crafted PDF file.
+   * Add SalsaCI
+Checksums-Sha1:
+ e03c6c9796f96f9f496b235153855121b24077a5 2374 python-reportlab_3.5.59-2+deb11u1.dsc
+ de2ae57fd31153951283eace9aa3abd151c1ad3e 2904089 python-reportlab_3.5.59.orig.tar.gz
+ eed6118fa2130d12fd7ec2b9c2228a8510049cd0 17728 python-reportlab_3.5.59-2+deb11u1.debian.tar.xz
+ 4140260ec3f2f0ac7a4c9c77351b793fa0e0873d 10618 python-reportlab_3.5.59-2+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 767be70276153a3e3435d6101f9d5e6d6655853505b020065de2a1dbc1b01a45 2374 python-reportlab_3.5.59-2+deb11u1.dsc
+ a755cca2dcf023130b03bb671670301a992157d5c3151d838c0b68ef89894536 2904089 python-reportlab_3.5.59.orig.tar.gz
+ 8b9b6cd3e0420b8e347001bff2fef31dd5e9d5b1064fb10f1e43baae2cbfe1fe 17728 python-reportlab_3.5.59-2+deb11u1.debian.tar.xz
+ 308b8784a2dd5f8c205581e219e71dd3860aee58d58f4d1bcf9f8d04dac2a5cf 10618 python-reportlab_3.5.59-2+deb11u1_amd64.buildinfo
+Files:
+ fc985b57df73103c0f859616708892eb 2374 python optional python-reportlab_3.5.59-2+deb11u1.dsc
+ 838741f007ba5f7bfd9dc7d4d4569438 2904089 python optional python-reportlab_3.5.59.orig.tar.gz
+ 8562c7617db62cb41be3c170f5bbc1e0 17728 python optional python-reportlab_3.5.59-2+deb11u1.debian.tar.xz
+ 6956b520f5e006d4db46da3a94e69434 10618 python optional python-reportlab_3.5.59-2+deb11u1_amd64.buildinfo
+

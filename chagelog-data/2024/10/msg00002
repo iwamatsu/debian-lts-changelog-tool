@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 03 Oct 2024 17:08:18 +0300
+Source: e2fsprogs
+Architecture: source
+Version: 1.46.2-2+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Theodore Y. Ts'o <tytso@mit.edu>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ e2fsprogs (1.46.2-2+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2022-1304: e2fsck out-of-bounds read/write
+Checksums-Sha1:
+ f23db793f770bd3b88ff6c0936cca5cd42cd6290 3103 e2fsprogs_1.46.2-2+deb11u1.dsc
+ cfaf65ecdfb71cbb424d4cce13b436da4a079dff 9496954 e2fsprogs_1.46.2.orig.tar.gz
+ feafeda9c3804e870726e9812df44bdbb64a6146 488 e2fsprogs_1.46.2.orig.tar.gz.asc
+ dda1bf6393c1962c47dc6e8066d56e805fef4f79 93408 e2fsprogs_1.46.2-2+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 18f4d571c97a50bf4f5139e707320b49973e1bd2131b38442784bacc8e080fd4 3103 e2fsprogs_1.46.2-2+deb11u1.dsc
+ f79f26b4f65bdc059fca12e1ec6a3040c3ce1a503fb70eb915bee71903815cd5 9496954 e2fsprogs_1.46.2.orig.tar.gz
+ 948552550f23a9e0223cecb51b5b85258c9d94895a20bce1180fce770628a55f 488 e2fsprogs_1.46.2.orig.tar.gz.asc
+ 48b50e91479754043fe442c0bdd4ba7cddc8e5b2ff0b93ca001b1a6b05067b80 93408 e2fsprogs_1.46.2-2+deb11u1.debian.tar.xz
+Files:
+ 4418bf8c53c2cd81e174a0b45d7649d3 3103 admin required e2fsprogs_1.46.2-2+deb11u1.dsc
+ e8ef5fa3b72557be5e9fe564a25da6eb 9496954 admin required e2fsprogs_1.46.2.orig.tar.gz
+ cc53a1867cb8b23f1c74453ddf9110d9 488 admin required e2fsprogs_1.46.2.orig.tar.gz.asc
+ aa1cc92536351fb2609e03a529c9def9 93408 admin required e2fsprogs_1.46.2-2+deb11u1.debian.tar.xz
+

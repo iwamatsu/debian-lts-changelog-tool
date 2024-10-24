@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 16 Oct 2024 22:07:11 +0300
+Source: python-cryptography
+Architecture: source
+Version: 3.3.2-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Tristan Seligmann <mithrandi@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ python-cryptography (3.3.2-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-23931: Memory corruption with immutable objects
+   * CVE-2023-49083: NULL dereference when loading PKCS7 certificates
+Checksums-Sha1:
+ 10d74cf3e1ca6db586ab6dd2634b28409fbb230e 3260 python-cryptography_3.3.2-1+deb11u1.dsc
+ eb8be696115458f9368432525e9cae11d0f6bebf 539883 python-cryptography_3.3.2.orig.tar.gz
+ 212cc382d2fed2a70b00e0fb2dd72f3b59de7c63 488 python-cryptography_3.3.2.orig.tar.gz.asc
+ df1f2e05775f94aa0da32b9bcaff724b8302670a 13252 python-cryptography_3.3.2-1+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 8361021fdb98e0bf788e8f108105d6d3c44eb55ebcd7b00a35bd214d5afce702 3260 python-cryptography_3.3.2-1+deb11u1.dsc
+ 5a60d3780149e13b7a6ff7ad6526b38846354d11a15e21068e57073e29e19bed 539883 python-cryptography_3.3.2.orig.tar.gz
+ 4e662a721607429b6d233c140d0884e367b7d9de6867de92e90ded52f9267930 488 python-cryptography_3.3.2.orig.tar.gz.asc
+ fc96b30a5cf0e619018ccce21fcd14d4992ea24b040560dc5fea5a5a2f60a09c 13252 python-cryptography_3.3.2-1+deb11u1.debian.tar.xz
+Files:
+ c773d3bf3b5e1f5e037868ce4d0e6a42 3260 python optional python-cryptography_3.3.2-1+deb11u1.dsc
+ e2ce2ec8a63965fad351f36ed70fde4b 539883 python optional python-cryptography_3.3.2.orig.tar.gz
+ cbcb0cccb5b2b5879764251ae4f8dcb0 488 python optional python-cryptography_3.3.2.orig.tar.gz.asc
+ cde49d82a64f2f1d73c8d9bcdcd716aa 13252 python optional python-cryptography_3.3.2-1+deb11u1.debian.tar.xz
+

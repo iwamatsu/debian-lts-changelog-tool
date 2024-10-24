@@ -1,0 +1,73 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 30 Sep 2024 18:44:08 +0200
+Source: zabbix
+Architecture: source
+Version: 1:5.0.44+dfsg-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1014992 1014994 1026847 1053877 1055175 1078553
+Changes:
+ zabbix (1:5.0.44+dfsg-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non maintainer upload by the LTS team.
+   * Updating to latest upstream LTS release of the 5.0.x series.
+     - Updating patches that do no longer apply.
+     - This upload addresses, with potential effects:
+       CVE-2022-23132 - bypass file permissions check
+       CVE-2022-23133 - Cross-site Scripting (XSS)
+       CVE-2022-24349 - Cross-site Scripting (XSS)
+       CVE-2022-24917 - Cross-site Scripting (XSS)
+       CVE-2022-24918 - Cross-site Scripting (XSS)
+       CVE-2022-24919 - Cross-site Scripting (XSS)
+       CVE-2022-35229 - Cross-site Scripting (XSS) (Closes: #1014992)
+       CVE-2022-35230 - Cross-site Scripting (XSS) (Closes: #1014994)
+       CVE-2022-43515 - Improper input validation  (Closes: #1026847)
+       Closes: #1055175:
+         CVE-2023-29449 - Resource Exhaustion
+         CVE-2023-29450 - Accessing local files
+         CVE-2023-29454 - Persistent XSS
+         CVE-2023-29455 - Reflected XSS
+         CVE-2023-29456 - Inefficient URL schema validation
+         CVE-2023-29457 - Insufficient validation of Action form input fields
+         CVE-2023-29458 - Denial of Service
+       Closes: #1053877:
+         CVE-2023-32721 - Stored XSS
+         CVE-2023-32722 - buffer overflow, potential for RCE
+         CVE-2023-32724 - Remote code execution
+       CVE-2023-32726 - Possible buffer overread
+       CVE-2023-32727 - Code execution by authenticated, privileged user
+       Closes: #1078553:
+         CVE-2024-22114 - Information disclosure to unprivileged user
+         CVE-2024-22116 - Code execution by authenticated, privileged user
+         CVE-2024-22122 - AT(GSM) Command Injection
+         CVE-2024-22123 - Information disclosure
+         CVE-2024-36460 - Front-end audit log shows passwords in plaintext
+         CVE-2024-36461 - Remote Code Excetution by users
+       CVE-2024-22119 - Stored XSS
+   * Enable salsa CI for LTS
+   * Remove config.guess and config.sub in d/clean.
+   * d/rules: usr/share/zabbix/local/app/ is no longer shipped, but needed for
+     symlinking to /var/lib/zabbix/appü later, so create it during the build.
+Checksums-Sha1:
+ 43134c30a14d2f4a72c58bc7fd7cf9eea3f2ad3e 3211 zabbix_5.0.44+dfsg-1+deb11u1.dsc
+ c8509938e7e57c902d8ac64bfbe3e4a33481e74d 11122040 zabbix_5.0.44+dfsg.orig-templates.tar.xz
+ db172a8421b91acd8de08a388e5c9881a013dee5 12136496 zabbix_5.0.44+dfsg.orig.tar.xz
+ ffa014d096b2780c9e20b9848471f514b6051ffa 207312 zabbix_5.0.44+dfsg-1+deb11u1.debian.tar.xz
+ d7816d1effcc4da27b92cf3e9318452c635f4f05 18155 zabbix_5.0.44+dfsg-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ cd7ed0b34d2b967196e231a19fb7f21ae991b704d620534a1f605816c3b987af 3211 zabbix_5.0.44+dfsg-1+deb11u1.dsc
+ d86702cee875dfccd4bbd8923dd0acef58678f2d8ef406f4c0c07b12eddbf858 11122040 zabbix_5.0.44+dfsg.orig-templates.tar.xz
+ 1e54bc6e0fac46eae79fa4236fa980c721dd75e86f45869bb71d551b480d1b05 12136496 zabbix_5.0.44+dfsg.orig.tar.xz
+ 251ccff45aa6af5c0664b416892385185ba1db5a3f3204b7b9e50da69e69dc0c 207312 zabbix_5.0.44+dfsg-1+deb11u1.debian.tar.xz
+ 4f8f1f859aaf448c47da301b7ca1589f71c4a46f70c42d0e5e27c375e67cf7a4 18155 zabbix_5.0.44+dfsg-1+deb11u1_amd64.buildinfo
+Files:
+ 01e5eddb51df5586ce1080d15adafe27 3211 net optional zabbix_5.0.44+dfsg-1+deb11u1.dsc
+ 01f56c2836ab620f9b428287d9e274ac 11122040 net optional zabbix_5.0.44+dfsg.orig-templates.tar.xz
+ 9cebc231530feb1e81ba6fbc485f6a85 12136496 net optional zabbix_5.0.44+dfsg.orig.tar.xz
+ ed957bd9a45a5eed3c6406e922cfddd9 207312 net optional zabbix_5.0.44+dfsg-1+deb11u1.debian.tar.xz
+ 24ec6a79359e73ccf2e721949736f345 18155 net optional zabbix_5.0.44+dfsg-1+deb11u1_amd64.buildinfo
+

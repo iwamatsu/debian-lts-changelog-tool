@@ -1,0 +1,39 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Mon, 14 Oct 2024 11:57:47 -0700
+Source: libapache-mod-jk
+Architecture: source
+Version: 1:1.2.48-1+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1082713
+Changes:
+ libapache-mod-jk (1:1.2.48-1+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2024-46544: An issue with incorrect default permissions could have
+     allowed local users to view and modify shared memory containing mod_jk's
+     configuration, which may have potentially led to information disclosure
+     and/or a denial of service attack. (Closes: #1082713)
+Checksums-Sha1:
+ 63154764e64c50105aaceeda45873214e4fa0475 2425 libapache-mod-jk_1.2.48-1+deb11u2.dsc
+ d5cec3b63d6b2e21b5ffc0e43102f85a177ddd89 3665280 libapache-mod-jk_1.2.48.orig.tar.gz
+ 2a90717c43d82ffa88ea981a8ce1cd0f411fa9bb 873 libapache-mod-jk_1.2.48.orig.tar.gz.asc
+ 757504f4afc85b84e2147bea3a4aca8acf7f74d9 61936 libapache-mod-jk_1.2.48-1+deb11u2.debian.tar.xz
+ 336911659661fc5e85647cc6ae4a2b8bd5e6b17f 10343 libapache-mod-jk_1.2.48-1+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 5e1d7cc3062254e69c9e5493f92585c9211f6b15cb70e353bf04a74f5b555df5 2425 libapache-mod-jk_1.2.48-1+deb11u2.dsc
+ cb1b360ba0a12b2dbec119b60f561e9f657ed75df8188e5d902534b56b908e97 3665280 libapache-mod-jk_1.2.48.orig.tar.gz
+ 8190505db050b865fcd86801d37e560fa5c8364adcc973fe686a64c8a22e32c1 873 libapache-mod-jk_1.2.48.orig.tar.gz.asc
+ b44fd2bb5a3491b411a5e057741dacf71f157cee8345aac82491c2ed689324ad 61936 libapache-mod-jk_1.2.48-1+deb11u2.debian.tar.xz
+ 645d36f80c61a134599764d224aab66d7c4a8342ab5e6f894abd7c786873f4d9 10343 libapache-mod-jk_1.2.48-1+deb11u2_amd64.buildinfo
+Files:
+ f0169b6bf6c569e44a42602d55e1840f 2425 httpd optional libapache-mod-jk_1.2.48-1+deb11u2.dsc
+ 2a268c9867e808ff1c2c815030c05ad7 3665280 httpd optional libapache-mod-jk_1.2.48.orig.tar.gz
+ 15002a565cc46e52c70419ba24b28f3c 873 httpd optional libapache-mod-jk_1.2.48.orig.tar.gz.asc
+ 513baeb5e270ac94aa682db9ecdd997a 61936 httpd optional libapache-mod-jk_1.2.48-1+deb11u2.debian.tar.xz
+ 6c0a644953fe63d194a3f8993740c81a 10343 httpd optional libapache-mod-jk_1.2.48-1+deb11u2_amd64.buildinfo
+

@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 22 Oct 2024 15:31:37 +0800
+Source: ghostscript
+Architecture: source
+Version: 9.53.3~dfsg-7+deb11u8
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Changes:
+ ghostscript (9.53.3~dfsg-7+deb11u8) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Apply backport of upstream fixes for CVE-2024-29508.
+Checksums-Sha1:
+ 857e101d50bbe131d55398be9610e41fbd12c3f1 2746 ghostscript_9.53.3~dfsg-7+deb11u8.dsc
+ 9ce4415e5f37d858b5eb4d11040cf4079f2129c6 23948068 ghostscript_9.53.3~dfsg.orig.tar.xz
+ 286bd371f708fb3cbe21a6c31954e53c6133697c 130716 ghostscript_9.53.3~dfsg-7+deb11u8.debian.tar.xz
+ 20e207db138cba0fdf16cae53688aeb615b4ec89 8481 ghostscript_9.53.3~dfsg-7+deb11u8_source.buildinfo
+Checksums-Sha256:
+ e7dc79130ba794890beaea1e063036eed1a4d4ef919244d2c9ba0428ca929a32 2746 ghostscript_9.53.3~dfsg-7+deb11u8.dsc
+ 678f99fc6cca9a224f49891b8db5d9a325b8b3fbbffa9f29d44bac9f54603f3d 23948068 ghostscript_9.53.3~dfsg.orig.tar.xz
+ 503bc866900c9dc45085e3e138912216b82928bbdefe5e7731d59e3736f60a09 130716 ghostscript_9.53.3~dfsg-7+deb11u8.debian.tar.xz
+ 55c214697dff3ad5a10c89e702a8f1df61f28c4c19baacbeb624f98df14d1f3f 8481 ghostscript_9.53.3~dfsg-7+deb11u8_source.buildinfo
+Files:
+ 6c65505367f7f22f8d16c0da72b0d9c7 2746 text optional ghostscript_9.53.3~dfsg-7+deb11u8.dsc
+ 653da2a0bebf9949634c137da72d1e26 23948068 text optional ghostscript_9.53.3~dfsg.orig.tar.xz
+ d4706bbfd44d6c759eabb7d5cfa53586 130716 text optional ghostscript_9.53.3~dfsg-7+deb11u8.debian.tar.xz
+ 1304455c1eacfe209121f6f703ffbc39 8481 text optional ghostscript_9.53.3~dfsg-7+deb11u8_source.buildinfo
+

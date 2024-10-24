@@ -1,0 +1,31 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 22 Oct 2024 23:01:58 +0300
+Source: dmitry
+Architecture: source
+Version: 1.3a-1.1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Runa Sandvik <runa.sandvik@gmail.com>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ dmitry (1.3a-1.1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2017-7938: stack-based buffer overflow
+   * CVE-2020-14931: stack-based buffer overflow
+   * CVE-2024-31837: format-string vulnerability
+Checksums-Sha1:
+ a1cc2b74f6d8a6ba3dcaf9e169b726ae9b4e4acd 1735 dmitry_1.3a-1.1+deb11u1.dsc
+ ed242375b5629270593795e6de45c61d3953bdda 130691 dmitry_1.3a.orig.tar.gz
+ 6ba0751f1ffce5cf6fff4b48b32b6b840ee27ff7 5090 dmitry_1.3a-1.1+deb11u1.diff.gz
+Checksums-Sha256:
+ ad443ae329cd0c4399e209a692e485aa9bd0ca3d939194ddfb363d0851769502 1735 dmitry_1.3a-1.1+deb11u1.dsc
+ f335321a092cdc708f3222ce732299289b799602076f22e1942ed152b0f17e43 130691 dmitry_1.3a.orig.tar.gz
+ 67d3255e573156bac7422972acab474eeb282079125b830641c589679681de80 5090 dmitry_1.3a-1.1+deb11u1.diff.gz
+Files:
+ dd942d4e26336a747c643e9b5baa7b17 1735 net extra dmitry_1.3a-1.1+deb11u1.dsc
+ 8d578ba16de34b5cbebf6b767181b00d 130691 net extra dmitry_1.3a.orig.tar.gz
+ ae259dd8e31a1d4dda1337e808b2b853 5090 net extra dmitry_1.3a-1.1+deb11u1.diff.gz
+

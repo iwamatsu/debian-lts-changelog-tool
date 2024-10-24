@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 20 Oct 2024 23:53:39 +0200
+Source: perl
+Architecture: source
+Version: 5.32.1-4+deb11u4
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Niko Tyni <ntyni@debian.org>
+Changed-By: Guilhem Moulin <guilhem@debian.org>
+Closes: 1015985 1035109
+Changes:
+ perl (5.32.1-4+deb11u4) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * Fix CVE-2020-16156: CPAN.pm: Bypass of verification of signatures in
+     CHECKSUMS files. (Closes: #1015985)
+   * Fix CVE-2023-31484: CPAN.pm does not verify TLS certificates when
+     downloading distributions over HTTPS. (Closes: #1035109)
+Checksums-Sha1:
+ aff1054c0e8cf3cb16fee3069e2a10795bdcbda5 2893 perl_5.32.1-4+deb11u4.dsc
+ 54a6edeb0ad3b9a0afe089d85e5e743b730b18c5 871331 perl_5.32.1.orig-regen-configure.tar.gz
+ 1fb4f710d139da1e1a3e1fa4eaba201fcaa8e18e 12610988 perl_5.32.1.orig.tar.xz
+ 1a9f3ec534dceb86f90304bcce61fed77438ebe3 170428 perl_5.32.1-4+deb11u4.debian.tar.xz
+ fd060fab4a837106e4932e82eb8f0217f2406085 8238 perl_5.32.1-4+deb11u4_amd64.buildinfo
+Checksums-Sha256:
+ 57ac45e316fd4a82e476883c3326f9df7f27ed6ff07cc4541a0600b503742695 2893 perl_5.32.1-4+deb11u4.dsc
+ 1d179b41283f12ad83f9758430f6ddc49bdf20db5c396aeae7e51ebb4e4afd29 871331 perl_5.32.1.orig-regen-configure.tar.gz
+ 57cc47c735c8300a8ce2fa0643507b44c4ae59012bfdad0121313db639e02309 12610988 perl_5.32.1.orig.tar.xz
+ 3fd8c90c0b5a8d4efeb2f2cb03d4c83d9fff90e223d3d1d385754a44cf59f597 170428 perl_5.32.1-4+deb11u4.debian.tar.xz
+ 9ec83b2dcf52af6b5d0bed191c0c7b94d76b692650ca81b7230ee135fd9b039b 8238 perl_5.32.1-4+deb11u4_amd64.buildinfo
+Files:
+ 545ad3b7ed280a4e714087b3c047b315 2893 perl standard perl_5.32.1-4+deb11u4.dsc
+ 377ac050e8c90f3361fec97d91e96469 871331 perl standard perl_5.32.1.orig-regen-configure.tar.gz
+ 7f104064b906ad8c7329ca5e409a32d7 12610988 perl standard perl_5.32.1.orig.tar.xz
+ 518675f386a529d452a35ea6d2346d1a 170428 perl standard perl_5.32.1-4+deb11u4.debian.tar.xz
+ a2684307248dd394e289f00e35ab12bd 8238 perl standard perl_5.32.1-4+deb11u4_amd64.buildinfo
+

@@ -1,0 +1,35 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Thu, 10 Oct 2024 19:08:21 +0200
+Source: firefox-esr
+Architecture: source
+Version: 128.3.1esr-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ firefox-esr (128.3.1esr-1~deb11u1) bullseye-security; urgency=medium
+ .
+   [ Mike Hommey ]
+   * debian/rules: Exclude -g from CXXFLAGS too. It's handled by the upstream
+     build system, and leaving it there breaks the build on 32-bits platforms
+     because the debug info is just too large to handle for the address space.
+     That's how it was before the changes in 128.3.1esr-1 anyways.
+ .
+   [ Emilio Pozuelo Monfort ]
+   * Backport to bullseye.
+Checksums-Sha1:
+ 7e861477fd9fbc9958be6033978b436ba5304441 41134 firefox-esr_128.3.1esr-1~deb11u1.dsc
+ 669c120a2640d4052c7fd8f0e0241f5b10dde9cc 174712 firefox-esr_128.3.1esr-1~deb11u1.debian.tar.xz
+ 2f63cf2c15850729ec2cc2c371ce9537ba0a519e 8578 firefox-esr_128.3.1esr-1~deb11u1_source.buildinfo
+Checksums-Sha256:
+ 198c1dc5bddb1282bcfaa0998d951e7add530a4ed5d26b110bf07d889de13add 41134 firefox-esr_128.3.1esr-1~deb11u1.dsc
+ 4715f9050944f678fa6065610c910123844b5828bfe9cab887af833233d71de3 174712 firefox-esr_128.3.1esr-1~deb11u1.debian.tar.xz
+ 5a66ee65e87820792a79c133b1b92fdad3bf01502bb2c8a0acabdeee5ef06dd3 8578 firefox-esr_128.3.1esr-1~deb11u1_source.buildinfo
+Files:
+ 12fa7d9fdbd162f1b34f17d8d6fe1134 41134 web optional firefox-esr_128.3.1esr-1~deb11u1.dsc
+ b16b310930d30c86e6e34f5794866423 174712 web optional firefox-esr_128.3.1esr-1~deb11u1.debian.tar.xz
+ 632d09d1c5fcd28398909ca85792c1af 8578 web optional firefox-esr_128.3.1esr-1~deb11u1_source.buildinfo
+
