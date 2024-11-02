@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 29 Oct 2024 01:47:13 CET
+Source: exim4
+Architecture: source
+Version: 4.94.2-7+deb11u4
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Exim4 Maintainers <pkg-exim4-maintainers@lists.alioth.debian.org>
+Changed-By: Markus Koschany <apo@debian.org>
+Checksums-Sha1:
+ 3d39e4e5b1ed659cc83c6aa4050057ed9697dc98 2837 exim4_4.94.2-7+deb11u4.dsc
+ 3b597e92c60642abe07e47ec5087bfbf793cd256 500032 exim4_4.94.2-7+deb11u4.debian.tar.xz
+ f8b30f643e815fbb3c28b6cceacc57878887ac28 12195 exim4_4.94.2-7+deb11u4_amd64.buildinfo
+Checksums-Sha256:
+ f9e6bb28545d3bfd4db1a08b305927951e64a1e6c64f9861d382e832dc1a4c5b 2837 exim4_4.94.2-7+deb11u4.dsc
+ 64c77e09f93062121b4823866cb38d6b5334c1dff7b23692230268a0b48630c7 500032 exim4_4.94.2-7+deb11u4.debian.tar.xz
+ 464fa29225e0927263005d1298f74d1178f38f30229e069cc5508c68971b91b0 12195 exim4_4.94.2-7+deb11u4_amd64.buildinfo
+Changes:
+ exim4 (4.94.2-7+deb11u4) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team.
+   * Fix CVE-2021-38371, CVE-2022-3559, CVE-2023-42117, CVE-2023-42119:
+     Multiple potential security vulnerabilities have been addressed in exim4, a
+     mail transport agent. These issues may allow remote attackers to disclose
+     sensitive information or execute arbitrary code but only if Exim4 is run
+     behind or with untrusted proxy servers or DNS resolvers. If your
+     proxy-protocol proxy or DNS resolver are trustworthy, you are not affected.
+Files:
+ 98929e8639d10987ab5aae9f2dccfb57 2837 mail standard exim4_4.94.2-7+deb11u4.dsc
+ b3c6048de06afe12f4ea578943ca1a4d 500032 mail standard exim4_4.94.2-7+deb11u4.debian.tar.xz
+ 98b4dc022d87c475a1c8dd01899c0584 12195 mail standard exim4_4.94.2-7+deb11u4_amd64.buildinfo
+

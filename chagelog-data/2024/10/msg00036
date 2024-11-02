@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 27 Oct 2024 12:03:02 +0100
+Source: xorg-server
+Architecture: source
+Version: 2:1.20.11-1+deb11u14
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Changed-By: Thorsten Alteholz <debian@alteholz.de>
+Changes:
+ xorg-server (2:1.20.11-1+deb11u14) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-9632
+     xkb: Fix buffer overflow in _XkbSetCompatMap()
+Checksums-Sha1:
+ afa82b3b4d49389c23b620737eb49f86a759d949 4661 xorg-server_1.20.11-1+deb11u14.dsc
+ 6fcf2b28bcbf0589f9e703655bc0948e92829e8c 190506 xorg-server_1.20.11-1+deb11u14.diff.gz
+ 4e9eb43dbec9a77350b6f5a55c73c56a5ce218dc 18020 xorg-server_1.20.11-1+deb11u14_amd64.buildinfo
+Checksums-Sha256:
+ 54d41db073ebcd827d61fa0d8738257ba36c254cb25ac6031fb2fd65a7a806a3 4661 xorg-server_1.20.11-1+deb11u14.dsc
+ 676b025d0af5223f26422876015b0c3142f2ecd1fe4a4e11e6426c6cb54674c0 190506 xorg-server_1.20.11-1+deb11u14.diff.gz
+ 62d5f52feb71a92a837263c5d7302ff0ff5e9dda3e09010c4114d8258bc21bb5 18020 xorg-server_1.20.11-1+deb11u14_amd64.buildinfo
+Files:
+ f8af2be47f7d62ffc64b179bb9afa1cf 4661 x11 optional xorg-server_1.20.11-1+deb11u14.dsc
+ 5888033b7273b713b8f4567c50e55f76 190506 x11 optional xorg-server_1.20.11-1+deb11u14.diff.gz
+ 8dc3330433c7f1017325a1e6071ffb11 18020 x11 optional xorg-server_1.20.11-1+deb11u14_amd64.buildinfo
+

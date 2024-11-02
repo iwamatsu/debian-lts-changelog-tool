@@ -1,0 +1,38 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 12 Oct 2024 13:25:50 +0200
+Source: nss
+Architecture: source
+Version: 2:3.61-1+deb11u4
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Changed-By: Arturo Borrero Gonzalez <arturo@debian.org>
+Changes:
+ nss (2:3.61-1+deb11u4) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Security Team.
+   * d/tests: add smoke-test autopkgtest
+   * d/tests: add certutil-basic-workflow autopkgtest
+   * debian: add salsa-ci.yaml file
+   * nss: add patch for CVE-2024-0743
+   * nss: add patch for CVE-2024-6602
+   * nss: add patch for CVE-2024-6609
+   * nss: disable build of GTEST
+Checksums-Sha1:
+ 3f506f1cb7561aeea58f9280eeecec28433df5de 2226 nss_3.61-1+deb11u4.dsc
+ 26ffe516cb4b374f765c0818cca03afe09e15292 82034245 nss_3.61.orig.tar.gz
+ 8763ade8ef865423072515ec8b12e6912faf45a1 27360 nss_3.61-1+deb11u4.debian.tar.xz
+ 3816f59908fa0d79a5ff815dfe83097a641ae9ae 7424 nss_3.61-1+deb11u4_amd64.buildinfo
+Checksums-Sha256:
+ bbe3d6dbd1e78f0f1f5b90dd301fff33763ad7e6292ffffeed4318444c682441 2226 nss_3.61-1+deb11u4.dsc
+ 312e2d804b34ccf0fec70b57cf8cd6ac853f8ced60df53e30ebb0a7bcd0e1370 82034245 nss_3.61.orig.tar.gz
+ 9470c531d9853554b5ee457536f0acbae9013aa0fd2925ff2ba7443b238b0166 27360 nss_3.61-1+deb11u4.debian.tar.xz
+ c65c95f2ac488e214c04306bc034c4abc58ac8f91f0782ece7befeb04a8dd305 7424 nss_3.61-1+deb11u4_amd64.buildinfo
+Files:
+ db90a0b3dccceb63cc054ed7a8d9ad29 2226 libs optional nss_3.61-1+deb11u4.dsc
+ e07573e1c0e1e5bef7c05075f8dfa46d 82034245 libs optional nss_3.61.orig.tar.gz
+ c16ec1418ab4502d324a7cc7b640152f 27360 libs optional nss_3.61-1+deb11u4.debian.tar.xz
+ 7308dc370ab53ba8d8294ef3613b3f57 7424 libs optional nss_3.61-1+deb11u4_amd64.buildinfo
+

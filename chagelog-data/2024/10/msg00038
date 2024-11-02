@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 31 Oct 2024 12:02:42 +0800
+Source: openssl
+Architecture: source
+Version: 1.1.1n-0+deb11u6
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1055473 1061582 1068658 1072113 1074487 1085378
+Changes:
+ openssl (1.1.1n-0+deb11u6) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fixes for
+     - CVE-2023-5678 (denial of service w/ excessively long X9.42 DH keys)
+       (Closes: #1055473)
+     - CVE-2024-0727 (denial of service on null field in PKCS12 file)
+       (Closes: #1061582)
+     - CVE-2024-2511 (denial of service when SSL_OP_NO_TICKET with TLSv1.3)
+       (Closes: #1068658)
+     - CVE-2024-4741 (use after free with SSL_free_buffers)
+       (Closes: #1072113)
+     - CVE-2024-5535 (crash or buffer overread in SSL_select_next_proto)
+       (Closes: #1074487)
+     - CVE-2024-9143 (out-of-bounds access w/ certain elliptic curve APIs)
+       (Closes: #1085378).
+Checksums-Sha1:
+ 027ea400876e0332c657c614d5b13b62fc7152ab 2692 openssl_1.1.1n-0+deb11u6.dsc
+ 209638cca789de0122e9cb37f37d25589967d165 157932 openssl_1.1.1n-0+deb11u6.debian.tar.xz
+ 38141170ceb51bbe743058e1fe1a0cea770ce23c 6229 openssl_1.1.1n-0+deb11u6_source.buildinfo
+Checksums-Sha256:
+ ef3289a356939f761cc21bf6ad529034c5c00375dc8180631c5f05aa05160602 2692 openssl_1.1.1n-0+deb11u6.dsc
+ 0551645c5479454e6e8866c1a904b2ec528a586c8768702a3f1b2939fb7ca7a2 157932 openssl_1.1.1n-0+deb11u6.debian.tar.xz
+ 2b61c3d6831ebb24ce006ef0bfbb3f02b121c6848535bb95ae2da7224e7aa3bf 6229 openssl_1.1.1n-0+deb11u6_source.buildinfo
+Files:
+ a75aa9612ae324be7783b1aa1208aed7 2692 utils optional openssl_1.1.1n-0+deb11u6.dsc
+ 1b4a6be9a2e6b50d969606b98dd8905a 157932 utils optional openssl_1.1.1n-0+deb11u6.debian.tar.xz
+ 146226b29badfe06b83e4cff09825280 6229 utils optional openssl_1.1.1n-0+deb11u6_source.buildinfo
+

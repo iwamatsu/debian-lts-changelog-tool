@@ -1,0 +1,44 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 29 Oct 2024 13:45:33 +0100
+Source: python-git
+Architecture: source
+Version: 3.1.14-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Closes: 1027163 1043503
+Changes:
+ python-git (3.1.14-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+ .
+   [ Sylvain Beucler ]
+   * CVE-2022-24439: Remote Code Execution (RCE) due to improper user input
+     validation, which makes it possible to inject a maliciously crafted
+     remote URL into the clone command. Exploiting this vulnerability is
+     possible because the library makes external calls to git without
+     sufficient sanitization of input arguments. (Closes: #1027163)
+   * CVE-2023-40267: Follow-up fix for CVE-2022-24439. (Closes: 1043503)
+ .
+   [ Daniel Leidert ]
+   * CVE-2023-41040: Blind local file inclusion.
+   * Adjust patches for CVE-2022-24439 and CVE-2023-40267.
+Checksums-Sha1:
+ 14a13129df454776e73185522159e74ca2821453 2457 python-git_3.1.14-1+deb11u1.dsc
+ c1ada3a86243ad5f2871394a0d6d54a7f8f069bc 171534 python-git_3.1.14.orig.tar.gz
+ 977d2fd2f55e2a04ce431da8606e7b4da3ce69a9 13672 python-git_3.1.14-1+deb11u1.debian.tar.xz
+ 6e40bf8e1aeff10f155fcdc8ee8a875bea83900c 9022 python-git_3.1.14-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 65f8f5e966b258fdcdd570e21be3c6ada3aed0de48353ff7adb4ba3feec738a3 2457 python-git_3.1.14-1+deb11u1.dsc
+ be27633e7509e58391f10207cd32b2a6cf5b908f92d9cd30da2e514e1137af61 171534 python-git_3.1.14.orig.tar.gz
+ 99fb0a79993f2d2eebd7aa63f0dd09b37c483e52ca82a6c7518ddaa8427ee54d 13672 python-git_3.1.14-1+deb11u1.debian.tar.xz
+ fdf5456c8601c6635872e6d590e92abc094932fea9ab245f47dc22ed7314a860 9022 python-git_3.1.14-1+deb11u1_amd64.buildinfo
+Files:
+ e2436dc8d5d57e8d529e4c482e2503de 2457 python optional python-git_3.1.14-1+deb11u1.dsc
+ 8d4a922cb32ce13b5c91fee1e4ecd84c 171534 python optional python-git_3.1.14.orig.tar.gz
+ 36b83ad09cb6f4871e5d9b244f160bda 13672 python optional python-git_3.1.14-1+deb11u1.debian.tar.xz
+ 5eaa4b9de5ab1774902e684643cf4283 9022 python optional python-git_3.1.14-1+deb11u1_amd64.buildinfo
+

@@ -1,0 +1,42 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 29 Oct 2024 21:04:14 +0000
+Source: texlive-bin
+Architecture: source
+Version: 2020.20200327.54578-7+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1036470 1064517
+Changes:
+ texlive-bin (2020.20200327.54578-7+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS team
+   * Fix CVE-2023-32668: A document (compiled with the default settings)
+     was allowed to make arbitrary network requests.
+     This occurs because full access to the socket library was
+     permitted by default, as stated in the documentation.
+     (Closes: #1036470)
+   * Fix CVE-2024-25262: A heap buffer overflow was found via
+     the function ttfLoadHDMX:ttfdump. This vulnerability
+     allows attackers to cause a Denial of Service (DoS)
+     via supplying a crafted TTF file.
+     (Closes: #1064517)
+Checksums-Sha1:
+ 8aa3ef8cd69bcc96cd29073c21a40a394130fdfe 3259 texlive-bin_2020.20200327.54578-7+deb11u2.dsc
+ 1ba15117a4e1882633361af248579649d2fa64c3 22550748 texlive-bin_2020.20200327.54578.orig.tar.xz
+ d5d28e4f7d4eab00a0472e51e8ac5e2101015bb2 64972 texlive-bin_2020.20200327.54578-7+deb11u2.debian.tar.xz
+ e48bba317a82da0354eafbc9ba36bce21b471485 15691 texlive-bin_2020.20200327.54578-7+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 0fb84290ed325f6afb58ebc84ce9a347879b483ce6efdbf0c6af67fffb2455b2 3259 texlive-bin_2020.20200327.54578-7+deb11u2.dsc
+ 91a19700462b2c52d4b2aa3e16ca4972c6a14868988537d8338607ee7278f80c 22550748 texlive-bin_2020.20200327.54578.orig.tar.xz
+ e78c716eaa671fbbf0dd30f3205b95defc056dd4b867bc36a1c32be40c1e4f86 64972 texlive-bin_2020.20200327.54578-7+deb11u2.debian.tar.xz
+ 70f37ec0c9cdd5da6e8faed0dbc4f4e2c583c84851698ae0fc088a56e53d96e2 15691 texlive-bin_2020.20200327.54578-7+deb11u2_amd64.buildinfo
+Files:
+ 47ae315e338df393fd790314b13f37e7 3259 tex optional texlive-bin_2020.20200327.54578-7+deb11u2.dsc
+ c5dc37a260c1a76c75b4663c009f18af 22550748 tex optional texlive-bin_2020.20200327.54578.orig.tar.xz
+ a8a6f89ab029cbd81bc0785e192c0b73 64972 tex optional texlive-bin_2020.20200327.54578-7+deb11u2.debian.tar.xz
+ ec9e2400e7a18a20dfdd735c925aeb1d 15691 tex optional texlive-bin_2020.20200327.54578-7+deb11u2_amd64.buildinfo
+

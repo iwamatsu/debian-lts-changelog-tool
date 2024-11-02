@@ -1,0 +1,36 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Fri, 25 Oct 2024 10:58:56 -0300
+Source: activemq
+Architecture: source
+Version: 5.16.1-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Changed-By: Santiago Ruano Rincón <santiagorr@riseup.net>
+Closes: 1054909
+Changes:
+ activemq (5.16.1-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2023-46604: The Java OpenWire protocol marshaller is vulnerable to
+     Remote Code Execution (Closes: #1054909)
+   * CVE-2022-41678: Potential arbitrary code execution via Jolokia
+   * Add d/salsa-ci.yml using lts-team bullseye recipe
+Checksums-Sha1:
+ 9f4cbb15cd9361eb87de7ee6a38e317495a231d8 2900 activemq_5.16.1-1+deb11u1.dsc
+ 0c721998a736d026fbb0fbb1541682c1a91033d6 2789828 activemq_5.16.1.orig.tar.xz
+ 26ed538c934b84230c5f1d20009709ee777cdcd6 20420 activemq_5.16.1-1+deb11u1.debian.tar.xz
+ 638cb0f40daf0b295be097538afb4b916b12da73 16177 activemq_5.16.1-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ eb2135def2180773409e60b7a9dff8e6704c094deac7fb271967d87f9f6b997e 2900 activemq_5.16.1-1+deb11u1.dsc
+ 9d4adaf8cc0b96389ca3beae5e49479d44a0e9cd5e021b261f07578277ccefce 2789828 activemq_5.16.1.orig.tar.xz
+ 79bc62fad673bb8614468bbcfa02f692c848c3aaa75efd3e6c20bb7d2ca4f3a4 20420 activemq_5.16.1-1+deb11u1.debian.tar.xz
+ 2a4dda36f0c219d1a1e040d08ae1a0d81297f683d6f8768b4c3a1b9209807c43 16177 activemq_5.16.1-1+deb11u1_amd64.buildinfo
+Files:
+ 92e6f4d6f9f2538d4862e8d42fa34e8a 2900 java optional activemq_5.16.1-1+deb11u1.dsc
+ 52d84aeae891e3f540b87cd3776b0aab 2789828 java optional activemq_5.16.1.orig.tar.xz
+ 4994e9057b2a8b7a1736d9b8985892b6 20420 java optional activemq_5.16.1-1+deb11u1.debian.tar.xz
+ 29b3a580c3d4e1eb01fbc98a963292ff 16177 java optional activemq_5.16.1-1+deb11u1_amd64.buildinfo
+
