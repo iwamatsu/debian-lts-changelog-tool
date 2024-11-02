@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 02 Nov 2024 17:02:37 +0100
+Source: thunderbird
+Architecture: source
+Version: 1:128.4.0esr-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Carsten Schoenert <c.schoenert@t-online.de>
+Changed-By: Carsten Schoenert <c.schoenert@t-online.de>
+Changes:
+ thunderbird (1:128.4.0esr-1~deb11u1) bullseye-security; urgency=medium
+ .
+   * Rebuild for bullseye-security
+   * [a3737c1] Rebuild patch queue from patch-queue branch
+     Added patch:
+     debian-hacks/Adjust-our-gfx-skia-moz.build-patch-to-upstream-changes.patch
+   * [c06f0d6] d/control: Switch to clang-16/llvm-16
+   * [7b04e3f] d/rules: Extend PATH to use *llvm-16* environment
+Checksums-Sha1:
+ 2ddb6fb2add74123fda5fb7ee39e5505e2a9e7d6 8499 thunderbird_128.4.0esr-1~deb11u1.dsc
+ e0f9fa21a152ec59d2968bcc10ea78e32621ea94 548592 thunderbird_128.4.0esr-1~deb11u1.debian.tar.xz
+Checksums-Sha256:
+ 27208f23312125093289248fa50cd5210aae9947c720f4e29039db42fd6f5ddb 8499 thunderbird_128.4.0esr-1~deb11u1.dsc
+ 7de03c18b2bd540dc388ddb407b106e8dc21db85b50f0101f0de8ff992d32350 548592 thunderbird_128.4.0esr-1~deb11u1.debian.tar.xz
+Files:
+ 53905d17d8146726be8b450c6ff0baf8 8499 mail optional thunderbird_128.4.0esr-1~deb11u1.dsc
+ ff44f333e4a27631e674de52de5cd945 548592 mail optional thunderbird_128.4.0esr-1~deb11u1.debian.tar.xz
+
