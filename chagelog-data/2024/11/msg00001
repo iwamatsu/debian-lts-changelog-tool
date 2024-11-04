@@ -1,0 +1,48 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 03 Nov 2024 12:59:56 +0800
+Source: openssl
+Architecture: source
+Version: 1.1.1w-0+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+Changed-By: Sean Whitton <spwhitton@spwhitton.name>
+Closes: 1055473 1061582 1068658 1072113 1074487 1085378
+Changes:
+ openssl (1.1.1w-0+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * Backport upstream fixes for
+     - CVE-2023-5678 (denial of service w/ excessively long X9.42 DH keys)
+       (Closes: #1055473)
+     - CVE-2024-0727 (denial of service on null field in PKCS12 file)
+       (Closes: #1061582)
+     - CVE-2024-2511 (denial of service when SSL_OP_NO_TICKET with TLSv1.3)
+       (Closes: #1068658)
+     - CVE-2024-4741 (use after free with SSL_free_buffers)
+       (Closes: #1072113)
+     - CVE-2024-5535 (crash or buffer overread in SSL_select_next_proto)
+       (Closes: #1074487)
+     - CVE-2024-9143 (out-of-bounds access w/ certain elliptic curve APIs)
+       (Closes: #1085378).
+Checksums-Sha1:
+ d2b8b161e38fbd2c4936f0cb199c6e361c5288a5 2692 openssl_1.1.1w-0+deb11u2.dsc
+ 76fbf3ca4370e12894a408ef75718f32cdab9671 9893384 openssl_1.1.1w.orig.tar.gz
+ bca277263dfe1d951360eefda6c5eb01edc36462 833 openssl_1.1.1w.orig.tar.gz.asc
+ 2eec47b926a7192bc09d9a1d7c5bb23934fcaf2d 101116 openssl_1.1.1w-0+deb11u2.debian.tar.xz
+ 3609602ee8e4b9e3292b89428030377dab092698 6229 openssl_1.1.1w-0+deb11u2_source.buildinfo
+Checksums-Sha256:
+ b9cb4be37fb38d0a670cb734893e71c5df9edd03ffa8f638d4b2975cccf64033 2692 openssl_1.1.1w-0+deb11u2.dsc
+ cf3098950cb4d853ad95c0841f1f9c6d3dc102dccfcacd521d93925208b76ac8 9893384 openssl_1.1.1w.orig.tar.gz
+ 5e5c3694cda755231c0438ac3c96af00d7510abd7b916d79c51bb979567040db 833 openssl_1.1.1w.orig.tar.gz.asc
+ d9a98897c8b9b2cefa79c58cd01af4559a516b0f682ecfbfbb1132f450584458 101116 openssl_1.1.1w-0+deb11u2.debian.tar.xz
+ 332510c96f8ca1faf019480c5f4b28f294d9cf724e35276b5a33b5e16a4d9f37 6229 openssl_1.1.1w-0+deb11u2_source.buildinfo
+Files:
+ 2daaa5f1fcb5e1eaf06d24e7d7f966b0 2692 utils optional openssl_1.1.1w-0+deb11u2.dsc
+ 3f76825f195e52d4b10c70040681a275 9893384 utils optional openssl_1.1.1w.orig.tar.gz
+ 89d454a3aab2163ba2dda93510ea8089 833 utils optional openssl_1.1.1w.orig.tar.gz.asc
+ 7c18cebea6db58292b25345676d608ef 101116 utils optional openssl_1.1.1w-0+deb11u2.debian.tar.xz
+ 7cf67b265d4a3390cd18e1d157c72dd2 6229 utils optional openssl_1.1.1w-0+deb11u2_source.buildinfo
+
