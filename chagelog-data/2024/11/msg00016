@@ -1,0 +1,37 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 14 Nov 2024 12:33:05 +0100
+Source: needrestart
+Architecture: source
+Version: 3.5-4+deb11u4
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Changed-By: Salvatore Bonaccorso <carnil@debian.org>
+Changes:
+ needrestart (3.5-4+deb11u4) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Security Team.
+   * Address local privilege escalation vulnerabilities from any unprivileged
+     user to root (CVE-2024-48990, CVE-2024-48992, CVE-2024-48991,
+     CVE-2024-11003):
+     - core: prevent race condition on /proc/$PID/exec evaluation
+     - interp: do not set PYTHONPATH environment variable to prevent a LPE
+     - interp: do not set RUBYLIB environment variable to prevent a LPE
+     - interp: chdir into empty directory to prevent python parsing arbitrary
+       files
+     - interp: drop usage of Module::ScanDeps to prevent LPE
+   * debian/control: Drop Depends on libmodule-scandeps-perl
+Checksums-Sha1:
+ 0fbf01ea2cb573ddf23eafffc3a92cc4ae7b1333 1954 needrestart_3.5-4+deb11u4.dsc
+ b4ded0313f657486da140975853eac831b2d9410 15012 needrestart_3.5-4+deb11u4.debian.tar.xz
+ 36fdfa273f8c4c9af859f38a8e3aba5d2a0492ec 6244 needrestart_3.5-4+deb11u4_source.buildinfo
+Checksums-Sha256:
+ 50eea0535a190653ffa906ba03da7ddc54861ebcbf77c371c7970c941a3139be 1954 needrestart_3.5-4+deb11u4.dsc
+ b9cad5f5937d694840b539dd92ce33fd81e5326368d4c851ed8b83d34b143bfb 15012 needrestart_3.5-4+deb11u4.debian.tar.xz
+ 58579fdcb23a7684dd206bab5eefb2d8c79a8bb86eaf7f54ca9055300a6717df 6244 needrestart_3.5-4+deb11u4_source.buildinfo
+Files:
+ 9d3aab2070034e63580eb6dfc5b3bea1 1954 admin optional needrestart_3.5-4+deb11u4.dsc
+ 9873080b8477c7921b5bd46e8354c4f6 15012 admin optional needrestart_3.5-4+deb11u4.debian.tar.xz
+ 133d8577edf783bf16968131ae9c3e54 6244 admin optional needrestart_3.5-4+deb11u4_source.buildinfo

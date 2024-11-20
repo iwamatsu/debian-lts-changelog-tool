@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 05 Nov 2024 13:07:00 -0800
+Source: libheif
+Architecture: source
+Version: 1.11.0-1+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Changed-By: Chris Lamb <lamby@debian.org>
+Closes: 1032101 1035607
+Changes:
+ libheif (1.11.0-1+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Debian LTS team.
+   * CVE-2023-0996: Fix an issue in the strided image data parsing code whereby
+     an attacker could use a specially-crafted image file to cause a buffer
+     overflow via a memcpy call. (Closes: #1032101)
+   * CVE-2023-29659: Prevent an issue where a floating point exception /
+     segfault could have been exploited by a specially-crafted image through the
+     the Fraction::round() function. (Closes: #1035607)
+Checksums-Sha1:
+ 47e9984d02840d7f3a259b13be732bcca6cca037 2318 libheif_1.11.0-1+deb11u2.dsc
+ def98b8c83861b6e4f3cdf6d3b57c9aaf3408923 1680855 libheif_1.11.0.orig.tar.gz
+ e525fb0c8687fec033e51bc1d6ab1e3d8cbcfaf9 10040 libheif_1.11.0-1+deb11u2.debian.tar.xz
+ 2a460fd16b9df1e30166d904362af63e166b6177 11233 libheif_1.11.0-1+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 04a37ce8ab7320d0cfc9e3b396236e6da5c4509134310d728bffca5df1ab0fd6 2318 libheif_1.11.0-1+deb11u2.dsc
+ c550938f56ff6dac83702251a143f87cb3a6c71a50d8723955290832d9960913 1680855 libheif_1.11.0.orig.tar.gz
+ 3570d7047912ce44f9341dc1b0c61d8b6fc0467312c61fd84bb957395e9c734c 10040 libheif_1.11.0-1+deb11u2.debian.tar.xz
+ 2479a2563d3d1d625ee56bf326f0eecf0de05a0b0c23bc5a1673c21c4617da29 11233 libheif_1.11.0-1+deb11u2_amd64.buildinfo
+Files:
+ 8a44c1202dc678492905739aa54dd768 2318 libs optional libheif_1.11.0-1+deb11u2.dsc
+ 1927b1507d33eaf2b8714239d9dbbde8 1680855 libs optional libheif_1.11.0.orig.tar.gz
+ 4fe5d7fac2c18cc9558d62b57d5fca0b 10040 libs optional libheif_1.11.0-1+deb11u2.debian.tar.xz
+ 8bcaf317d5b206fc5722d8d25ce29b6b 11233 libs optional libheif_1.11.0-1+deb11u2_amd64.buildinfo
+

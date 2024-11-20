@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Thu, 14 Nov 2024 17:21:36 +0100
+Source: unbound
+Architecture: source
+Version: 1.13.1-1+deb11u4
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: unbound packagers <unbound@packages.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Closes: 1083282
+Changes:
+ unbound (1.13.1-1+deb11u4) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * d/patches/CVE-2024-8508.patch: Fix CVE-2024-8508.
+     When handling replies with very large RRsets that unbound needs to perform
+     name compression for, it can spend a considerable time applying name
+     compression to downstream replies, potentially leading to degraded
+     performance and eventually denial of service in well orchestrated attacks
+     (closes: #1083282).
+   * d/patches/update-root-hints.patch: Update addresses for b.root-servers.net.
+   * d/patches/allow-small-keys-in-tests.patch: Allow small key sizes for tests.
+   * d/patches/disable-remote-control-in-tests-with-two-instances.patch: Disable
+     the remote control port in tests which require two instances to avoid the
+     binding conflict.
+Checksums-Sha1:
+ f6f3fe5c2ddf9ff6b842e2ba8596b8cc34ffccd9 2878 unbound_1.13.1-1+deb11u4.dsc
+ 561522b06943f6d1c33bd78132db1f7020fc4fd1 5976957 unbound_1.13.1.orig.tar.gz
+ e644d21310c1c81b9a40b2c44faf5f4fcb433804 49156 unbound_1.13.1-1+deb11u4.debian.tar.xz
+ ccc211f824f79174e6393878ad74e028146652de 10955 unbound_1.13.1-1+deb11u4_amd64.buildinfo
+Checksums-Sha256:
+ 9c3f338914a6d4a6d96ad86c3c5e9e9ef7d573fa633b38b90a127d8e175052f5 2878 unbound_1.13.1-1+deb11u4.dsc
+ 8504d97b8fc5bd897345c95d116e0ee0ddf8c8ff99590ab2b4bd13278c9f50b8 5976957 unbound_1.13.1.orig.tar.gz
+ 33078338d9bfe196d4667a0fee7e78002975a987563b832585f5800aabff7cb7 49156 unbound_1.13.1-1+deb11u4.debian.tar.xz
+ 83565fb10c331f9d0ce09b0806d534afd357c1b6bc34bcf995f9eece21dac8c7 10955 unbound_1.13.1-1+deb11u4_amd64.buildinfo
+Files:
+ 5479b928aed084372057153ff5f426b2 2878 net optional unbound_1.13.1-1+deb11u4.dsc
+ 0cd660a40d733acc6e7cce43731cac62 5976957 net optional unbound_1.13.1.orig.tar.gz
+ eb3711d9b5a704133fbf744ec4721d8e 49156 net optional unbound_1.13.1-1+deb11u4.debian.tar.xz
+ a7ae538f69467a5d2806ef7b3f071009 10955 net optional unbound_1.13.1-1+deb11u4_amd64.buildinfo
+

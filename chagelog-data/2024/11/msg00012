@@ -1,0 +1,63 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 15 Nov 2024 22:59:52 +0100
+Source: icinga2
+Architecture: source
+Version: 2.12.3-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Changed-By: Daniel Leidert <dleidert@debian.org>
+Closes: 991494 1087384
+Changes:
+ icinga2 (2.12.3-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * d/patches/CVE-2021-32739.patch: Fix for CVE-2021-32739 (closes: #991494).
+     - From version 2.4.0 through version 2.12.4, a vulnerability exists that
+       may allow privilege escalation for authenticated API users. With a
+       read-only user's credentials, an attacker can view most attributes of
+       all config objects including `ticket_salt` of `ApiListener`. This salt
+       is enough to compute a ticket for every possible common name (CN). A
+       ticket, the master node's certificate, and a self-signed certificate are
+       enough to successfully request the desired certificate from Icinga. That
+       certificate may in turn be used to steal an endpoint or API user's
+       identity.
+   * d/patches/CVE-2021-32743.patch: Fix for CVE-2021-32743 (closes: #991494).
+     - In versions prior to 2.11.10 and from version 2.12.0 through version
+       2.12.4, some of the Icinga 2 features that require credentials for
+       external services expose those credentials through the API to
+       authenticated API users with read permissions for the corresponding
+       object types. An attacker who obtains these credentials can impersonate
+       Icinga to these services and add, modify and delete information there.
+   * d/patches/CVE-2021-37698-1.patch, d/patches/CVE-2021-37698-2.patch,
+     d/patches/CVE-2021-37698-3.patch, d/patches/CVE-2021-37698-4.patch,
+     d/patches/CVE-2021-37698-5.patch: Set of fixes for CVE-2021-37698.
+     - In versions 2.5.0 through 2.13.0, ElasticsearchWriter, GelfWriter,
+       InfluxdbWriter and Influxdb2Writer do not verify the server's certificate
+       despite a certificate authority being specified. Icinga 2 instances which
+       connect to any of the mentioned time series databases (TSDBs) using TLS
+       over a spoofable infrastructure should change the credentials (if any)
+       used by the TSDB writer feature to authenticate against the TSDB.
+   * d/patches/CVE-2024-49369.patch: Fix for CVE-2024-49369 (closes: #1087384).
+     - The TLS certificate validation in all Icinga 2 versions starting from
+       2.4.0 was flawed, allowing an attacker to impersonate both trusted
+       cluster nodes as well as any API users that use TLS client certificates
+       for authentication (ApiUser objects with the client_cn attribute set).
+Checksums-Sha1:
+ 7c7eb837e41f85508f2517db35524c96db5e26ae 2815 icinga2_2.12.3-1+deb11u1.dsc
+ 2cbcb9e1dd85613c8452235bdacd0eac347b0f69 7534454 icinga2_2.12.3.orig.tar.gz
+ 17dd813b0789bf3d85c5a7cb9711816debb756cc 31608 icinga2_2.12.3-1+deb11u1.debian.tar.xz
+ a36454fbeb7470cb18e62ceed53e973850e6d125 16853 icinga2_2.12.3-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 96fc7a2efa0a7eb4da5e73bd166303578a4907b37e729a43404b2cbeb5d9dc54 2815 icinga2_2.12.3-1+deb11u1.dsc
+ 56387d5e047df04fd91fdb8db3124eb09325c7377fbcaa11ef063147db816dfb 7534454 icinga2_2.12.3.orig.tar.gz
+ 52ce85f455e7a113902a8e55a966953ee89d2269b16840a45a5cfbf7f0a73af0 31608 icinga2_2.12.3-1+deb11u1.debian.tar.xz
+ fc395e4774a6ad6cbcc505727e8f184b239f34dc877af55b89ee6f42bc47381b 16853 icinga2_2.12.3-1+deb11u1_amd64.buildinfo
+Files:
+ 1607add7254ab5aba74b2c0e12774c8b 2815 admin optional icinga2_2.12.3-1+deb11u1.dsc
+ 341fe79c19bc4f79e64e602af09fa0eb 7534454 admin optional icinga2_2.12.3.orig.tar.gz
+ 0aa3b5c68aabb3206abe678e4ba29c62 31608 admin optional icinga2_2.12.3-1+deb11u1.debian.tar.xz
+ d270929399aea0fc5fd63e551463627b 16853 admin optional icinga2_2.12.3-1+deb11u1_amd64.buildinfo
+

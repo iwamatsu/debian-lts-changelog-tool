@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 16 Nov 2024 16:57:02 +0100
+Source: libmodule-scandeps-perl
+Architecture: source
+Version: 1.30-1+deb11u1
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Changed-By: Salvatore Bonaccorso <carnil@debian.org>
+Changes:
+ libmodule-scandeps-perl (1.30-1+deb11u1) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the Security Team.
+   * use three-argument open() (CVE-2024-10224)
+   * replace 'eval "..."' constructs (CVE-2024-10224)
+   * fix parsing of "use if ..."
+Checksums-Sha1:
+ 0fecaad1136974434461082ae7a6364d7bbb5c70 2514 libmodule-scandeps-perl_1.30-1+deb11u1.dsc
+ 5ee123acd28e36d63eba52b85ce7730291697b09 55893 libmodule-scandeps-perl_1.30.orig.tar.gz
+ d59fe0567b7449b0e1695ac91bea4e6005de0dd1 8368 libmodule-scandeps-perl_1.30-1+deb11u1.debian.tar.xz
+ 26a8e6b88bb103bcd9349b7103f9186e777795e5 6263 libmodule-scandeps-perl_1.30-1+deb11u1_source.buildinfo
+Checksums-Sha256:
+ 06acc7ab5f1216d67ea2b4cb29228f8de2cf72cdf68158efbef7271012e44d8f 2514 libmodule-scandeps-perl_1.30-1+deb11u1.dsc
+ 839bba3c7609b46aed90317467387bca604fc715669780bacea92ff86128a141 55893 libmodule-scandeps-perl_1.30.orig.tar.gz
+ 09e4c47c264b9ed9b89ff6769a6b958ab1c917311b3cc9e09809af4bc63ed15f 8368 libmodule-scandeps-perl_1.30-1+deb11u1.debian.tar.xz
+ b4947d5fe652334e4a9323279f5e0745e9e1c80164ffa74f334b9cd897db2452 6263 libmodule-scandeps-perl_1.30-1+deb11u1_source.buildinfo
+Files:
+ 224d383acfc3919467973a7b258e03f5 2514 perl optional libmodule-scandeps-perl_1.30-1+deb11u1.dsc
+ 5f7d7e36ecb61afc082508e6daa4ae41 55893 perl optional libmodule-scandeps-perl_1.30.orig.tar.gz
+ 2814037a13341d92b2e49aa37bde9419 8368 perl optional libmodule-scandeps-perl_1.30-1+deb11u1.debian.tar.xz
+ 17a0a6e836434efc33f5dad168601add 6263 perl optional libmodule-scandeps-perl_1.30-1+deb11u1_source.buildinfo

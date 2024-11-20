@@ -1,0 +1,34 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 30 Sep 2024 19:45:41 -0300
+Source: curl
+Architecture: source
+Version: 7.74.0-1.3+deb11u14
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Changed-By: Aquila Macedo Costa <aquilamacedo@riseup.net>
+Changes:
+ curl (7.74.0-1.3+deb11u14) bullseye-security; urgency=medium
+ .
+   * Team upload.
+   * Import patch for CVE-2024-8096
+     - CVE-2024-8096: When the TLS backend is GnuTLS, curl may incorrectly
+       handle OCSP stapling. If the OCSP status reports an error other than
+       "revoked" (e.g., "unauthorized"), it is not treated as a bad certificate,
+       potentially allowing invalid certificates to be considered valid.
+   * d/p/CVE-2024-8096.patch: Backport patch.
+Checksums-Sha1:
+ 60bbbe09adea97b0a2d7290cbb1e3bfadbfb8652 2732 curl_7.74.0-1.3+deb11u14.dsc
+ d3f878a1dc6c93f759c02f6f93e82765743678ea 77932 curl_7.74.0-1.3+deb11u14.debian.tar.xz
+ 7dd49047a7df8e9af986f7418e9aee7fa55dabbb 13191 curl_7.74.0-1.3+deb11u14_amd64.buildinfo
+Checksums-Sha256:
+ 155a55d8cdd8fc88356ad0d10cdd1a336c658be1274349a3e23d92f156d2e04c 2732 curl_7.74.0-1.3+deb11u14.dsc
+ 547bb0223f05ebeea75276e51c85ad3784c0403cc5873d7dd04107b8628ac551 77932 curl_7.74.0-1.3+deb11u14.debian.tar.xz
+ cf2d8fd15ebb20abcdc33d282283b0ddfe04e60bd0f0f668de0b5f7002e8ae8b 13191 curl_7.74.0-1.3+deb11u14_amd64.buildinfo
+Files:
+ 54ec94aca2fde0df13048020d289f626 2732 web optional curl_7.74.0-1.3+deb11u14.dsc
+ 50d6fde28a306e3dab2cc58d8fcd3dfb 77932 web optional curl_7.74.0-1.3+deb11u14.debian.tar.xz
+ 248f43b372813f3ff4bfe2c7ef1002bc 13191 web optional curl_7.74.0-1.3+deb11u14_amd64.buildinfo
+

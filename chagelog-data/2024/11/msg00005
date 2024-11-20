@@ -1,0 +1,33 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 06 Nov 2024 21:11:12 +0100
+Source: pypy3
+Architecture: source
+Version: 7.3.5+dfsg-2+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Stefano Rivera <stefanor@debian.org>
+Changed-By: Andrej Shadura <andrewsh@debian.org>
+Changes:
+ pypy3 (7.3.5+dfsg-2+deb11u3) bullseye-security; urgency=medium
+ .
+   * Security patches to the standard library:
+     - Apply cPython upstream security fix for CVE-2023-24329:
+       Strip C0 control and space characters in urlsplit.
+     - Apply cPython upstream security fix for CVE-2023-40217:
+       Avoid bypass TLS of handshake protections on closed sockets.
+     - Apply cPython upstream security fix for CVE-2023-6597:
+       tempfile.TemporaryDirectory: fix symlink bug in cleanup.
+     - Apply cPython upstream security fix for CVE-2024-0450:
+       Protect zipfile from "quoted-overlap" zipbomb.
+Checksums-Sha1:
+ 442537c3a2bc021b42a85729f094c5588632a309 2103 pypy3_7.3.5+dfsg-2+deb11u3.dsc
+ ea9f82a5cb7aa5d5798863734b53a8df201aac66 59912 pypy3_7.3.5+dfsg-2+deb11u3.debian.tar.xz
+Checksums-Sha256:
+ f808ef8b8e2ce6a919b87bf9b1c3a9e5f9d43648533e2166ffbe234e103bc026 2103 pypy3_7.3.5+dfsg-2+deb11u3.dsc
+ 3638b9b7b8fcd2db9124ad60880dd414a574a14cca4f602a917a7e5e34c52efd 59912 pypy3_7.3.5+dfsg-2+deb11u3.debian.tar.xz
+Files:
+ 1b188687ac055aae8e1efdfe45119863 2103 python optional pypy3_7.3.5+dfsg-2+deb11u3.dsc
+ b50f1bd3ad840c4acfae967a59039fe1 59912 python optional pypy3_7.3.5+dfsg-2+deb11u3.debian.tar.xz
+

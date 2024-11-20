@@ -1,0 +1,38 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 17 Nov 2024 09:51:20 +0100
+Source: smarty3
+Architecture: source
+Version: 3.1.39-2+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Mike Gabriel <sunweaver@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1019897 1033964 1072530
+Changes:
+ smarty3 (3.1.39-2+deb11u2) bullseye-security; urgency=high
+ .
+   * Non-maintainer upload by the LTS Security Team.
+   * CVE-2018-25047 - XSS / injection of arbitrary JavaScript code.
+     (Closes: #1019897)
+   * CVE-2023-28447 - JavaScript injection (Closes: #1033964)
+   * CVE-2024-35226 - PHP Code injection by untrusted template authors
+     (Closes: #1072530)
+   * Add simple autopkgtests for the three CVEs.
+Checksums-Sha1:
+ 0af7d0194f16f47036b0e890bc2812bdf052cbd7 2009 smarty3_3.1.39-2+deb11u2.dsc
+ 29e48338fca86c78d910fbe3bb8d31145597d610 264604 smarty3_3.1.39.orig.tar.gz
+ d3b68afc5fe697822184200eb071dc6d8509b4ba 14140 smarty3_3.1.39-2+deb11u2.debian.tar.xz
+ f98f75084dde8aec924bec2325e9fb2edeaef329 6732 smarty3_3.1.39-2+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ 74a9b3e2612c6af13f5d019706d2442560d39915a664ceecf9790eafb0c35b13 2009 smarty3_3.1.39-2+deb11u2.dsc
+ d89ed84ed9bdf2697df9fb867acb03514ddafc8322e1b31860168adec91e70c2 264604 smarty3_3.1.39.orig.tar.gz
+ 4ea56f51f4620564a1eb40a3dd80227fd54c81030e5a2c1622809e306429657a 14140 smarty3_3.1.39-2+deb11u2.debian.tar.xz
+ f1f56a2efad89379fd834ac41703b3f8480ff2e3f8e18104a4a1636314d62678 6732 smarty3_3.1.39-2+deb11u2_amd64.buildinfo
+Files:
+ 9afc6be387d768ff6edb742be55ec56f 2009 web optional smarty3_3.1.39-2+deb11u2.dsc
+ b2c0e57209c893ceebc2997025d50bb5 264604 web optional smarty3_3.1.39.orig.tar.gz
+ 1f4f8ae1712e4239aff783021d33121d 14140 web optional smarty3_3.1.39-2+deb11u2.debian.tar.xz
+ 18a91316a55c66506250b2cb163da27d 6732 web optional smarty3_3.1.39-2+deb11u2_amd64.buildinfo
+

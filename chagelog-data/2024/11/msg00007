@@ -1,0 +1,35 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 11 Nov 2024 21:44:16 +0200
+Source: libarchive
+Architecture: source
+Version: 3.4.3-2+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Peter Pentchev <roam@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ libarchive (3.4.3-2+deb11u2) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2021-36976: RAR reader use-after-free
+   * CVE-2022-26280: ZIP reader out-of-bounds-read
+   * CVE-2022-36227: archive_write NULL dereference
+   * CVE-2024-20696: RAR reader out-of-bounds write
+Checksums-Sha1:
+ cf49c80b13bf8f8ebc217c393b8e244eb41de19b 2543 libarchive_3.4.3-2+deb11u2.dsc
+ 53f1400ac71778d14615a66f89e04403548fae76 4811508 libarchive_3.4.3.orig.tar.xz
+ b56d21a38824b2997fe0cb600df4c802b608377a 833 libarchive_3.4.3.orig.tar.xz.asc
+ 53432998c9be97c54be5a5bceb505ae0ac07e93a 34096 libarchive_3.4.3-2+deb11u2.debian.tar.xz
+Checksums-Sha256:
+ c30eda83b4f3bb2078e5cb7b34f1cb9f7a3498da27773e1994ae5a1fe717a524 2543 libarchive_3.4.3-2+deb11u2.dsc
+ 0bfc3fd40491768a88af8d9b86bf04a9e95b6d41a94f9292dbc0ec342288c05f 4811508 libarchive_3.4.3.orig.tar.xz
+ e43bdc701140383c9e4d90070a684026c05407c95b8fa26a71b20f19a704df89 833 libarchive_3.4.3.orig.tar.xz.asc
+ 55450a7faf78dbe6675194af39122bf59e53c26e6714324dd9e391d7c3d22519 34096 libarchive_3.4.3-2+deb11u2.debian.tar.xz
+Files:
+ 7b872da0d48a83316d5a2900c9f5e608 2543 libs optional libarchive_3.4.3-2+deb11u2.dsc
+ 4b216ea3015ecf8ae555a2026f9a6b73 4811508 libs optional libarchive_3.4.3.orig.tar.xz
+ 74a851a5f2d12379fcd0205526805919 833 libs optional libarchive_3.4.3.orig.tar.xz.asc
+ 1c221ec087932210454f8ad740923ac4 34096 libs optional libarchive_3.4.3-2+deb11u2.debian.tar.xz
+

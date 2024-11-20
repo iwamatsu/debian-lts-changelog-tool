@@ -1,0 +1,86 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 12 Nov 2024 15:12:10 +0100
+Source: postgresql-13
+Architecture: source
+Version: 13.17-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Christoph Berg <myon@debian.org>
+Changes:
+ postgresql-13 (13.17-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream version 13.17.
+ .
+     + Ensure cached plans are marked as dependent on the calling role when RLS
+       applies to a non-top-level table reference (Nathan Bossart)
+ .
+       If a CTE, subquery, sublink, security invoker view, or coercion
+       projection in a query references a table with row-level security
+       policies, we neglected to mark the resulting plan as potentially
+       dependent on which role is executing it.  This could lead to later query
+       executions in the same session using the wrong plan, and then returning
+       or hiding rows that should have been hidden or returned instead.
+ .
+       The PostgreSQL Project thanks Wolfgang Walther for reporting this
+       problem. (CVE-2024-10976)
+ .
+     + Make libpq discard error messages received during SSL or GSS protocol
+       negotiation (Jacob Champion)
+ .
+       An error message received before encryption negotiation is completed
+       might have been injected by a man-in-the-middle, rather than being real
+       server output.  Reporting it opens the door to various security hazards;
+       for example, the message might spoof a query result that a careless user
+       could mistake for correct output.  The best answer seems to be to
+       discard such data and rely only on libpq's own report of the connection
+       failure.
+ .
+       The PostgreSQL Project thanks Jacob Champion for reporting this problem.
+       (CVE-2024-10977)
+ .
+     + Fix unintended interactions between SET SESSION AUTHORIZATION and SET
+       ROLE (Tom Lane)
+ .
+       The SQL standard mandates that SET SESSION AUTHORIZATION have a
+       side-effect of doing SET ROLE NONE.  Our implementation of that was
+       flawed, creating more interaction between the two settings than
+       intended. Notably, rolling back a transaction that had done SET SESSION
+       AUTHORIZATION would revert ROLE to NONE even if that had not been the
+       previous state, so that the effective user ID might now be different
+       from what it had been before the transaction.  Transiently setting
+       session_authorization in a function SET clause had a similar effect. A
+       related bug was that if a parallel worker inspected
+       current_setting('role'), it saw none even when it should see something
+       else.
+ .
+       The PostgreSQL Project thanks Tom Lane for reporting this problem.
+       (CVE-2024-10978)
+ .
+     + Prevent trusted PL/Perl code from changing environment variables
+       (Andrew Dunstan, Noah Misch)
+ .
+       The ability to manipulate process environment variables such as PATH
+       gives an attacker opportunities to execute arbitrary code.  Therefore,
+       trusted PLs must not offer the ability to do that.  To fix plperl,
+       replace %ENV with a tied hash that rejects any modification attempt with
+       a warning. Untrusted plperlu retains the ability to change the
+       environment.
+ .
+       The PostgreSQL Project thanks Coby Abrams for reporting this problem.
+       (CVE-2024-10979)
+Checksums-Sha1:
+ 27b9bc96875e268b80242de6e3c5b5098f9bf888 3703 postgresql-13_13.17-0+deb11u1.dsc
+ a7472d5d7e3a5849e71e5523d2b892fccab14d2d 21681613 postgresql-13_13.17.orig.tar.bz2
+ f4bff6fe6f7c7ca8860e201ed1fb29ad9eae732f 35984 postgresql-13_13.17-0+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ d3d1aa7eeb5b4b1a44e8d922892fda7e77ca83f12e7f45629153cfdfa506c54d 3703 postgresql-13_13.17-0+deb11u1.dsc
+ 022b0a6e7bc374a777eece33708895d7b60cae07d492b286b296a49d7395d78b 21681613 postgresql-13_13.17.orig.tar.bz2
+ cd368c147453712bd3331e2a83e35df486330486599c3267804eeec59e709033 35984 postgresql-13_13.17-0+deb11u1.debian.tar.xz
+Files:
+ e4d6fed4f748b08ebf6c7fe1fc95d4d5 3703 database optional postgresql-13_13.17-0+deb11u1.dsc
+ 037a7e0eedf2bded8636f796aa9120ed 21681613 database optional postgresql-13_13.17.orig.tar.bz2
+ 93caeaa67a0a962965e558d99a9e542f 35984 database optional postgresql-13_13.17-0+deb11u1.debian.tar.xz
+

@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 06 Nov 2024 13:05:57 +0530
+Source: puma
+Architecture: source
+Version: 4.3.8-1+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Changes:
+ puma (4.3.8-1+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2024-21647, CVE-2024-45614
+Checksums-Sha1:
+ 1875b6c51af3d47793d3385f3a076ede940b3527 2100 puma_4.3.8-1+deb11u3.dsc
+ 907838ac45ff796bc1ca6ed8ef687374364e51e0 18356 puma_4.3.8-1+deb11u3.debian.tar.xz
+ bd9fc717e7ed619c1e080cb4fb60dc980c0b85ba 10166 puma_4.3.8-1+deb11u3_amd64.buildinfo
+Checksums-Sha256:
+ da1a4ccf29e21eb99238dec7337ae5c4462a672db61b9e6d8145aad076e81feb 2100 puma_4.3.8-1+deb11u3.dsc
+ e2d29e823154f1f8c39c38557e5b621abe65b407b680cc5e1eb7128700a0cb3a 18356 puma_4.3.8-1+deb11u3.debian.tar.xz
+ 4e9fe042fa67f8ae4bba7c52b5521236d457829f84acaf2c2767511e59444dea 10166 puma_4.3.8-1+deb11u3_amd64.buildinfo
+Files:
+ 113741660525e84847fc1d94661d8857 2100 web optional puma_4.3.8-1+deb11u3.dsc
+ fb8889923d28469c1b2fdf8b8c095fd9 18356 web optional puma_4.3.8-1+deb11u3.debian.tar.xz
+ 14c367db8d24bff7f96ae894910beee3 10166 web optional puma_4.3.8-1+deb11u3_amd64.buildinfo
+

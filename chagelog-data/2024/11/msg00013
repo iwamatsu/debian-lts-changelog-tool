@@ -1,0 +1,30 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Wed, 13 Nov 2024 21:31:15 +0200
+Source: waitress
+Architecture: source
+Version: 1.4.4-1.1+deb11u2
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ waitress (1.4.4-1.1+deb11u2) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-49769: DoS due to resource exhaustion
+   * Run upstream test suite at build time.
+Checksums-Sha1:
+ 11179881a96c627e5a841c52cc702577a9453d5b 2204 waitress_1.4.4-1.1+deb11u2.dsc
+ 7edf00b8c7c5064cc5d736bd1b52d36f42abbf77 168781 waitress_1.4.4.orig.tar.gz
+ cdc00873044d0c5ef4e2e3c790355cad92acae41 13156 waitress_1.4.4-1.1+deb11u2.debian.tar.xz
+Checksums-Sha256:
+ 7a995450f641e5c2772199459bb9c481e55b66b66b2ff50d476c448b81e32635 2204 waitress_1.4.4-1.1+deb11u2.dsc
+ 857d94a0f87954bceb954c8685c94565eb59ac5a81229ba252e2f86dab182d6d 168781 waitress_1.4.4.orig.tar.gz
+ 9fec6958876693f1b498ef6f2e56a295acb79a6ee317158ab41148108947cd8e 13156 waitress_1.4.4-1.1+deb11u2.debian.tar.xz
+Files:
+ fddbec6376a7b773ed6f780989ec12dc 2204 python optional waitress_1.4.4-1.1+deb11u2.dsc
+ dc4dabf509e5e909cb11dd38c0708f66 168781 python optional waitress_1.4.4.orig.tar.gz
+ b09181ff7d48679f4dbc7e97eda5e5be 13156 python optional waitress_1.4.4-1.1+deb11u2.debian.tar.xz
+

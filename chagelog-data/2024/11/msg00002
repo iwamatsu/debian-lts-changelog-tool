@@ -1,0 +1,33 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 04 Nov 2024 17:56:21 +0000
+Source: context
+Architecture: source
+Version: 2020.03.10.20200331-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Changes:
+ context (2020.03.10.20200331-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non Maintainer Upload by LTS team
+   * Fix followup of CVE-2023-32700 for rebuilding context.
+   * Add salsa CI.
+Checksums-Sha1:
+ ea4f510684da9ef10d8a8e66f46d896895d801db 2043 context_2020.03.10.20200331-1+deb11u1.dsc
+ e8a30cd0c5dbeea100b624d5f1e9610932dbbd5a 110353132 context_2020.03.10.20200331.orig.tar.gz
+ 17f1c7bd92a99d64727733c6d1a25b9d3a9b1a2c 29452 context_2020.03.10.20200331-1+deb11u1.debian.tar.xz
+ 26d28eaee6d0cf1fcc2824f00dcb3bd21830d816 6217 context_2020.03.10.20200331-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 869dbbfa5c262ed93c0d5465dec6f75f61201f15686725a71b4a7bf25f7d6806 2043 context_2020.03.10.20200331-1+deb11u1.dsc
+ 65fe956462c7fd6c241a035ee5f226958b0b7f78b0ba007208a55c97ce45b9b0 110353132 context_2020.03.10.20200331.orig.tar.gz
+ fe1a92b873b5af4604f6bd803539af6ffdf4f768339401155f006bcc1a98a1af 29452 context_2020.03.10.20200331-1+deb11u1.debian.tar.xz
+ a0bf4331054f94136081784bf7e578685c288861348d08054373d8adcb61bea0 6217 context_2020.03.10.20200331-1+deb11u1_amd64.buildinfo
+Files:
+ 915cb5f3fdc1caeb33b2cc3e63f2e169 2043 tex optional context_2020.03.10.20200331-1+deb11u1.dsc
+ 4261383cd0e123c0790c988669bbac42 110353132 tex optional context_2020.03.10.20200331.orig.tar.gz
+ c73c9606374e55e0e8b579fc17df33c4 29452 tex optional context_2020.03.10.20200331-1+deb11u1.debian.tar.xz
+ 8fb6339fd4408d5f282a37f560eaa17d 6217 tex optional context_2020.03.10.20200331-1+deb11u1_amd64.buildinfo
+

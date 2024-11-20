@@ -1,0 +1,39 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 11 Nov 2024 10:52:03 +0530
+Source: ruby-saml
+Binary: ruby-saml
+Architecture: source all
+Version: 1.11.0-1+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Abhijith PA <abhijith@debian.org>
+Description:
+ ruby-saml  - SAML toolkit for Ruby on Rails
+Changes:
+ ruby-saml (1.11.0-1+deb11u1) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the Debian LTS Team.
+   * Fix CVE-2024-45409: properly verify the signature of the SAML
+     Response.
+Checksums-Sha1:
+ e6cbbad29223ba084675bf766bfbf3de83436652 2143 ruby-saml_1.11.0-1+deb11u1.dsc
+ 9a816184fa68c7b55f15e18305a68381e77caa2f 305271 ruby-saml_1.11.0.orig.tar.gz
+ 8145e5a54b134299b7f966a99a4bf304de57a4e3 10968 ruby-saml_1.11.0-1+deb11u1.debian.tar.xz
+ 0058c17d47e002259d9b5a2130da738428c4ce31 53036 ruby-saml_1.11.0-1+deb11u1_all.deb
+ d4347f8ec9072a4f88fccf8ec42620fd705bf0bb 9862 ruby-saml_1.11.0-1+deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 7c183e998b2c093e51c6c31221a6103b9eb12fa8af3c629a5da5c52085cfeb30 2143 ruby-saml_1.11.0-1+deb11u1.dsc
+ 7af3d07dc51d5cbfdac9909da14a21357895bb26526f8aaee3dc84f8918ffcc0 305271 ruby-saml_1.11.0.orig.tar.gz
+ b3f5e559ca40bb03a9181035524b2806a320a56aaabfba29f900a580f34abc3f 10968 ruby-saml_1.11.0-1+deb11u1.debian.tar.xz
+ c306156b4a39b02ce20a070a8075bc7bb9f5211c3bb6a4d6e0ef634183f0f729 53036 ruby-saml_1.11.0-1+deb11u1_all.deb
+ ec2a5f711e49647c65dd4c5cf55059ecb986305b305ffea6da2d0093ab7dcded 9862 ruby-saml_1.11.0-1+deb11u1_amd64.buildinfo
+Files:
+ 2dcbc86c45aa81dc08d6c76075ba0817 2143 ruby optional ruby-saml_1.11.0-1+deb11u1.dsc
+ 50d23b304879ab2beaf63a6b0d583aa2 305271 ruby optional ruby-saml_1.11.0.orig.tar.gz
+ b8de541b39bb3429475a60d17382d35e 10968 ruby optional ruby-saml_1.11.0-1+deb11u1.debian.tar.xz
+ a8f9805f8fc3d8a23df9b3ced633b76a 53036 ruby optional ruby-saml_1.11.0-1+deb11u1_all.deb
+ 8e49f5b0ff749d857bb28fe746c71467 9862 ruby optional ruby-saml_1.11.0-1+deb11u1_amd64.buildinfo
+

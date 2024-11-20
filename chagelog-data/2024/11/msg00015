@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 18 Nov 2024 11:33:20 +0200
+Source: guix
+Architecture: source
+Version: 1.2.0-4+deb11u3
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Vagrant Cascadian <vagrant@debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ guix (1.2.0-4+deb11u3) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-52867: privilege escalation
+Checksums-Sha1:
+ d4ebd38a6201419b42e3c65ec61bca7c3716fd81 2387 guix_1.2.0-4+deb11u3.dsc
+ 9245bd579c15a089fecb4fde0d9e2fc43af4e0fa 30564986 guix_1.2.0.orig.tar.gz
+ e34806e9aef744309a6901ee70299b96a25f455c 833 guix_1.2.0.orig.tar.gz.asc
+ e115de6595aeda047a92e4a499850c9327208544 42664 guix_1.2.0-4+deb11u3.debian.tar.xz
+Checksums-Sha256:
+ 7bf6b68a0f4614e705622f739ad202c83fe461aa419b202bdc3e5898972be9ef 2387 guix_1.2.0-4+deb11u3.dsc
+ 5ecdf7ced25b1fb0ca7c57e794b7b60c8a7adcb15261dec2af37925c838c6d74 30564986 guix_1.2.0.orig.tar.gz
+ e278e3aba3fe9acd35aa6586933d940f0c847ccfb6d1370cb5c4f754732d2fb6 833 guix_1.2.0.orig.tar.gz.asc
+ 20e98d849fd759070b4b1cf68c9bbe5929f86cce8b05c40e2b4f13ad4277609c 42664 guix_1.2.0-4+deb11u3.debian.tar.xz
+Files:
+ 80e164dd4fc6c74065639c48f5e4097f 2387 admin optional guix_1.2.0-4+deb11u3.dsc
+ f11073e551eaf9ae7119cd90671c0d90 30564986 admin optional guix_1.2.0.orig.tar.gz
+ bbed756aaf1d8303a14cc9b5fdc05066 833 admin optional guix_1.2.0.orig.tar.gz.asc
+ 6a66bc4b5fbfb6d59d1eef89137619d3 42664 admin optional guix_1.2.0-4+deb11u3.debian.tar.xz
+
