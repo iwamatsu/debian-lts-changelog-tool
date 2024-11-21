@@ -1,0 +1,34 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 19 Nov 2024 15:36:12 +0100
+Source: postgresql-13
+Architecture: source
+Version: 13.18-0+deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian PostgreSQL Maintainers <team+postgresql@tracker.debian.org>
+Changed-By: Christoph Berg <myon@debian.org>
+Changes:
+ postgresql-13 (13.18-0+deb11u1) bullseye-security; urgency=medium
+ .
+   * New upstream version 13.18.
+ .
+     + Restore functionality of ALTER {ROLE|DATABASE} SET role
+ .
+       The fix for CVE-2024-10978 accidentally caused settings for role to not
+       be applied if they come from non-interactive sources, including previous
+       ALTER {ROLE|DATABASE} commands and the PGOPTIONS environment variable.
+Checksums-Sha1:
+ 9077a5d6b3340c83a41f7c7ed88dee2123a4ab4c 3703 postgresql-13_13.18-0+deb11u1.dsc
+ e314353cf318ce5e33dfb73a91cd2ac9553c9885 21687645 postgresql-13_13.18.orig.tar.bz2
+ 7a4e3c5d46fe86b17e71db25e8c1e32a16cd304b 36088 postgresql-13_13.18-0+deb11u1.debian.tar.xz
+Checksums-Sha256:
+ a9baa430b851a6cf7ae090e733e5ff3594700bdc8c838489642b219cdb0b376d 3703 postgresql-13_13.18-0+deb11u1.dsc
+ ceea92abee2a8c19408d278b68de6a78b6bd3dbb4fa2d653fa7ca745d666aab1 21687645 postgresql-13_13.18.orig.tar.bz2
+ 7c339a61498fe1e068fd9514ff0bf4dd97e30c2e5ab0e3d462e3622c83dd34a9 36088 postgresql-13_13.18-0+deb11u1.debian.tar.xz
+Files:
+ 42a9f526f884d6b0ec52c42a8b3dc4ff 3703 database optional postgresql-13_13.18-0+deb11u1.dsc
+ 3d4d71cbb0da76f10d8c0417854e1510 21687645 database optional postgresql-13_13.18.orig.tar.bz2
+ 93b6e404962490a4f098ec49bf88a23d 36088 database optional postgresql-13_13.18-0+deb11u1.debian.tar.xz
+

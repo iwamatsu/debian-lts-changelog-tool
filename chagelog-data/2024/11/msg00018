@@ -1,0 +1,63 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Wed, 20 Nov 2024 12:53:02 +0100
+Source: webkit2gtk
+Architecture: source
+Version: 2.46.3-1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian WebKit Maintainers <pkg-webkit-maintainers@lists.alioth.debian.org>
+Changed-By: Emilio Pozuelo Monfort <pochu@debian.org>
+Changes:
+ webkit2gtk (2.46.3-1~deb11u1) bullseye-security; urgency=medium
+ .
+   [ Alberto Garcia ]
+   * Rebuild for bullseye-security.
+   * gcc 10 segfaults when building webkit in amd64 (see #1008098) so use
+     clang instead. Keep using gcc in other architectures because clang has
+     problems in at least i386, arm64 and mipsel (see #1010329 and
+     #1016811).
+     - debian/rules: Tell CMake to use clang.
+     - debian/control.in: Build depend on clang.
+   * Build libsoup2 packages only.
+     - debian/rules: Set ENABLE_SOUP2=YES, ENABLE_SOUP3=NO, ENABLE_GTK4=NO
+       and USE_PREBUILT_DOCS=YES.
+   * debian/rules:
+     - Disable USE_AVI, USE_GBM, USE_GSTREAMER_TRANSCODER, USE_JPEGXL and
+       USE_SYSPROF_CAPTURE due to missing or additional build dependencies.
+     - Enable USE_OLD_DOC_PKG, USE_OLD_JSCBIN_PKG and USE_OLD_WEBDRIVER_PKG
+       to keep using the old package names.
+   * debian/control.in:
+     - Remove build dependencies on libgstreamer-plugins-bad1.0-dev,
+       libjxl-dev, libavif-dev and libsysprof-capture-4-dev.
+     - Make the -dev packages depend on the gir packages.
+   * debian/patches/disable-dmabuf.patch:
+     - Disable the DMABuf renderer in all cases in bullseye
+       (see #1054101).
+ .
+   [ Emilio Pozuelo Monfort ]
+   * Revert cmake bump.
+   * Use clang 16 for C++23 support, and use it on every architecture.
+     The GCC version in bullseye doesn't support c++2b.
+   * Use and link against libc++-16.
+   * Add libgstreamer-plugins-bad1.0-dev build-dependency, as required
+     by the new WebKit version. This GStreamer library depends on
+     libunwind-dev and looks for libunwind.pc, but libc++-16-dev depends
+     on libunwind-16-dev, which conflicts/provides libunwind-dev, so we
+     have to use the LLVM library. However, libunwind-16-dev ships no
+     pkg-config file, so we ship our own so that CMake can find it and
+     use the appropriate flags.
+Checksums-Sha1:
+ 86720555b2921f79c31ff8399c02f1f77bbf3147 4085 webkit2gtk_2.46.3-1~deb11u1.dsc
+ 2dbf5ae3991e1a025e7563e5e0cf47ede32791cf 91736 webkit2gtk_2.46.3-1~deb11u1.debian.tar.xz
+ 59ea52b6b0123a25eb77fd059ccc358ddf5aae4a 8726 webkit2gtk_2.46.3-1~deb11u1_source.buildinfo
+Checksums-Sha256:
+ 4af7b24005c2346c8da140008598b4a4d89827deaed3f06d9b11ba02b9889fb1 4085 webkit2gtk_2.46.3-1~deb11u1.dsc
+ e21455b3c2234f4dfc235b1271f9a73a6d6582f0b6b87617dc646a3e92cd9d40 91736 webkit2gtk_2.46.3-1~deb11u1.debian.tar.xz
+ fc6e5832ead35df107cc0ac0f4422ab69c6958c514d6f1a16620cfff0a0bf902 8726 webkit2gtk_2.46.3-1~deb11u1_source.buildinfo
+Files:
+ f083362887642a418eb6226d2d722e3b 4085 web optional webkit2gtk_2.46.3-1~deb11u1.dsc
+ 61b0da475339fd87fd11d6937ccd8751 91736 web optional webkit2gtk_2.46.3-1~deb11u1.debian.tar.xz
+ 7f6f84afa4418a7c3f66f89d2ca25147 8726 web optional webkit2gtk_2.46.3-1~deb11u1_source.buildinfo
+
