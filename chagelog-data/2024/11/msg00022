@@ -1,0 +1,29 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Mon, 18 Nov 2024 13:11:51 +0200
+Source: glib2.0
+Architecture: source
+Version: 2.66.8-1+deb11u5
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ glib2.0 (2.66.8-1+deb11u5) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-52533: SOCKS4a proxy buffer overflow
+Checksums-Sha1:
+ 2661695d778747bd245b74d4975cbca91fbd4ccf 3304 glib2.0_2.66.8-1+deb11u5.dsc
+ 668795cd3c2698a28987fb38d632ff7642ddf377 4845548 glib2.0_2.66.8.orig.tar.xz
+ 3377797ff86d899e1cffc6a32429337d2b2ecc7b 189160 glib2.0_2.66.8-1+deb11u5.debian.tar.xz
+Checksums-Sha256:
+ 25c496be75f49f3714e2f627d9f9cfd247471090e26a9c9ef078a9a997ace867 3304 glib2.0_2.66.8-1+deb11u5.dsc
+ 97bc87dd91365589af5cbbfea2574833aea7a1b71840fd365ecd2852c76b9c8b 4845548 glib2.0_2.66.8.orig.tar.xz
+ 15c59bae400067d4beb2a9f52b30dbf66fca85b586faf247b4e729258b03024d 189160 glib2.0_2.66.8-1+deb11u5.debian.tar.xz
+Files:
+ d246bb64d8ca0b1f46ed7fdde961123d 3304 libs optional glib2.0_2.66.8-1+deb11u5.dsc
+ 705dd46a43d339e8aea19e946e71c32a 4845548 libs optional glib2.0_2.66.8.orig.tar.xz
+ 6ebc0098d5ff1746bf342301ea9d616d 189160 libs optional glib2.0_2.66.8-1+deb11u5.debian.tar.xz
+
