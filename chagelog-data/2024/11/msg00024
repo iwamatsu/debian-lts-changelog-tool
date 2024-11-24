@@ -1,0 +1,69 @@
+Hash: SHA256
+
+Format: 1.8
+Date: Sun, 24 Nov 2024 13:11:47 +0100
+Source: intel-microcode
+Architecture: source
+Version: 3.20240910.1~deb11u1
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Changed-By: Tobias Frost <tobi@debian.org>
+Closes: 1081363
+Changes:
+ intel-microcode (3.20240910.1~deb11u1) bullseye-security; urgency=medium
+ .
+   [ Tobias Frost ]
+   * Non-maintainer upload by the LTS security team. Thanks to Henrique for
+     preparing the package!
+ .
+   [ Henrique de Moraes Holschuh ]
+   * Build for bullseye
+   * All trixie-only changes (from 3.20240813.2) are reverted on this branch
+ .
+ intel-microcode (3.20240910.1) unstable; urgency=medium
+ .
+   * New upstream microcode datafile 20240910 (closes: #1081363)
+     - Mitigations for INTEL-SA-01103 (CVE-2024-23984)
+       A potential security vulnerability in the Running Average Power Limit
+       (RAPL) interface for some Intel Processors may allow information
+       disclosure.
+     - Mitigations for INTEL-SA-01097 (CVE-2024-24968)
+       A potential security vulnerability in some Intel Processors may allow
+       denial of service.
+     - Fixes for unspecified functional issues on several processor models
+     - The processor voltage limit issue on Core 13rd/14th gen REQUIRES A
+       FIRMWARE UPDATE.  It is present in this release for sig 0xb0671, but
+       THE VOLTAGE ISSUE FIX ONLY WORKS WHEN THE MICROCODE UPDATE IS LOADED
+       THROUGH THE FIT TABLE IN FIRMWARE.  Contact your system vendor for a
+       firmware update that includes the appropriate microcode update for
+       your processor.
+   * Updated Microcodes:
+     sig 0x00090672, pf_mask 0x07, 2024-02-22, rev 0x0036, size 224256
+     sig 0x00090675, pf_mask 0x07, 2024-02-22, rev 0x0036
+     sig 0x000b06f2, pf_mask 0x07, 2024-02-22, rev 0x0036
+     sig 0x000b06f5, pf_mask 0x07, 2024-02-22, rev 0x0036
+     sig 0x000906a3, pf_mask 0x80, 2024-02-22, rev 0x0434, size 222208
+     sig 0x000906a4, pf_mask 0x80, 2024-02-22, rev 0x0434
+     sig 0x000a06a4, pf_mask 0xe6, 2024-06-17, rev 0x001f, size 137216
+     sig 0x000b0671, pf_mask 0x32, 2024-07-18, rev 0x0129, size 215040
+     sig 0x000b06a2, pf_mask 0xe0, 2024-02-22, rev 0x4122, size 220160
+     sig 0x000b06a3, pf_mask 0xe0, 2024-02-22, rev 0x4122
+     sig 0x000b06a8, pf_mask 0xe0, 2024-02-22, rev 0x4122
+     sig 0x000b06e0, pf_mask 0x19, 2024-03-25, rev 0x001a, size 138240
+   * Update changelog for 3.20240813.1 with new information
+   * Update changelog for 3.20240514.1 with new information
+   * source: update symlinks to reflect id of the latest release, 20240910
+Checksums-Sha1:
+ f0d1b2055f0edbc967fae3c6d1303f717d4c9b81 1821 intel-microcode_3.20240910.1~deb11u1.dsc
+ ae3a8dd1d0cae674e6a4dc936bd9dd8e53377c9c 7675876 intel-microcode_3.20240910.1~deb11u1.tar.xz
+ 15dec396f63f62d7a8636998b3353e22706948ae 6154 intel-microcode_3.20240910.1~deb11u1_amd64.buildinfo
+Checksums-Sha256:
+ 4c23bf06f26dde35e8b17c02f0378942880141abb78779083bc37a251bb3fd0b 1821 intel-microcode_3.20240910.1~deb11u1.dsc
+ ad0a0ffde08cb1c1be7ff2469a750cfb39895916d8a8b5b91af09e6e5f83db7d 7675876 intel-microcode_3.20240910.1~deb11u1.tar.xz
+ 308c2425e2325419ccf0ad00b4f8872c83d4964f577044850a4ac779dfd0882d 6154 intel-microcode_3.20240910.1~deb11u1_amd64.buildinfo
+Files:
+ 164d72d35acb2d355a19e8b306d79378 1821 non-free/admin standard intel-microcode_3.20240910.1~deb11u1.dsc
+ 41ae81f5107f7a37020597128cd864a7 7675876 non-free/admin standard intel-microcode_3.20240910.1~deb11u1.tar.xz
+ 1e24a7458372fc1ae39960f5b089c178 6154 non-free/admin standard intel-microcode_3.20240910.1~deb11u1_amd64.buildinfo
+

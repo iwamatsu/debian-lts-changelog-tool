@@ -1,0 +1,54 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Fri, 08 Nov 2024 20:26:18 +0000
+Source: ansible
+Architecture: source
+Version: 2.10.7+merged+base+2.10.17+dfsg-0+deb11u2
+Distribution: bullseye-security
+Urgency: high
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Changed-By: Bastien Roucariès <rouca@debian.org>
+Closes: 1082851
+Changes:
+ ansible (2.10.7+merged+base+2.10.17+dfsg-0+deb11u2) bullseye-security; urgency=high
+ .
+   * Non Maintainer Upload by the LTS team.
+   * Fix CVE-2024-8775:
+     A flaw was found in Ansible, where sensitive information stored in
+     Ansible Vault files can be exposed in plaintext during the execution
+     of a playbook. This occurs when using tasks such as include_vars to
+     load vaulted variables without setting the no_log: true parameter,
+     resulting in sensitive data being printed in the playbook output or
+     logs. This can lead to the unintentional disclosure of secrets like
+     passwords or API keys, compromising security and potentially allowing
+     unauthorized access or actions.
+     (Closes: #1082851)
+   * Fix CVE-2024-9902: A flaw was found in Ansible.
+     The ansible-core `user` module can allow an
+     unprivileged user to silently create or replace
+     the contents of any file on any system path
+     and take ownership of it when a privileged user
+     executes the `user` module against the unprivileged
+     user's home directory. If the unprivileged user
+     has traversal permissions on the directory containing
+     the exploited target file, they retain full control
+     over the contents of the file as its owner.
+   * Disable incidental_lvg test that always failed and was
+     disable on bookworm and later.
+Checksums-Sha1:
+ 66d216e93416209c989e297006500713752ced43 2823 ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2.dsc
+ 3d0c7ed8ad104c4df37386823da0b3fa81a7eace 20731960 ansible_2.10.7+merged+base+2.10.17+dfsg.orig.tar.xz
+ 87e9b85b76871efe20d1d47903e2bd15c78cf0bb 57480 ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2.debian.tar.xz
+ 9f4c71d7a514999ef2fcbd606e7b25724876aa5f 7391 ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2_amd64.buildinfo
+Checksums-Sha256:
+ d7e03a0045c142163ec094ab67204513bb605c126fefb9e9e7dde8c415b135d4 2823 ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2.dsc
+ 0c49275be642143d971ec802ebb192de1e0ad1a7ca07511103ae905f9b67f5b5 20731960 ansible_2.10.7+merged+base+2.10.17+dfsg.orig.tar.xz
+ 9954a76548661147fcd1e7394c26a53a80b4461122700844f2caea6c01d964cc 57480 ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2.debian.tar.xz
+ 7d2d0aea1bf4f64b50e40581ae8e115349566bff6ec0a78baee2b6d2273c8492 7391 ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2_amd64.buildinfo
+Files:
+ 6c80c2538b09d313f4623b215c098b2f 2823 admin optional ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2.dsc
+ bdf0596a969c2416fc71784f0dc16e04 20731960 admin optional ansible_2.10.7+merged+base+2.10.17+dfsg.orig.tar.xz
+ 23a0960b6e4b39a6c318336682ab49d0 57480 admin optional ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2.debian.tar.xz
+ 30e0a1f52380d637fe9a65ed93ed245c 7391 admin optional ansible_2.10.7+merged+base+2.10.17+dfsg-0+deb11u2_amd64.buildinfo
+
