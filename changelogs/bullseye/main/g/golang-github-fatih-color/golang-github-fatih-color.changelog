@@ -1,0 +1,57 @@
+golang-github-fatih-color (1.7.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release
+  * Added myself to Uploaders
+  * Priority: optional; Standards-Version: 4.4.1
+  * Testsuite: autopkgtest-pkg-go
+  * DH to version 12
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 26 Dec 2019 13:16:36 +1100
+
+golang-github-fatih-color (1.5.0-1) unstable; urgency=medium
+
+  [ Diego M. Rodriguez ]
+  * Exclude vendored libraries from upstream tarball
+  * New upstream version 1.5.0 (Closes: #862767)
+  * Add myself to uploaders
+
+  [ Peter Colberg ]
+  * Build-Depends on golang-github-mattn-go-isatty-dev (>= 0.0.2)
+  * Use https for copyright-format URL
+  * Update Standards-Version to 4.0.0
+
+ -- Diego M. Rodriguez <diego.plan9@gmail.com>  Fri, 23 Jun 2017 14:01:23 +0200
+
+golang-github-fatih-color (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump debhelper compat level to 10
+  * Build-depend on golang-any instead of golang-go
+  * Drop dependency on golang-go from -dev package
+  * Update debian/watch to use package name for tarball
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 19 Nov 2016 23:22:46 -0500
+
+golang-github-fatih-color (1.0.0-2) unstable; urgency=medium
+
+  * Remove Built-Using field from -dev package
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 24 Sep 2016 00:23:36 -0400
+
+golang-github-fatih-color (1.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add watch file to track upstream releases
+  * Update Standards-Version to 3.9.8
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 28 Aug 2016 09:03:28 -0400
+
+golang-github-fatih-color (0.0~git20160225.0.4f7bcef-1) unstable; urgency=medium
+
+  * Initial release (Closes: #804203).
+
+ -- Peter Colberg <peter@colberg.org>  Wed, 09 Mar 2016 21:48:21 -0500

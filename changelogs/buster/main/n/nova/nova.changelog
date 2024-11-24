@@ -1,0 +1,2021 @@
+nova (2:18.1.0-6+deb10u2) buster-security; urgency=medium
+
+  * CVE-2022-47951: By supplying a specially created VMDK flat image which
+    references a specific backing file path, an authenticated user may convince
+    systems to return a copy of that file's contents from the server resulting
+    in unauthorized access to potentially sensitive data. Add upstream patches
+    (Closes: #1029561):
+    - cve-2022-47951-nova-stable-rocky.patch
+    - images_Make_JSON_the_default_output_format_of_calls_to_qemu-img_info.patch
+    - images_Move_qemu-img_info_calls_into_privsep.patch
+  * Fixed minimum version of python3-oslo.utils (>= 3.36.5-0+deb10u3~),
+    required by the above CVE patch.
+  * Build-depends on qemu-utils (needed for new tests).
+  * Blacklist non-working tests:
+    - test_convert_image_with_prlimit_fail
+    - test_qemu_img_info_with_disk_not_found
+    - test_create_cow_image
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 27 Jan 2023 11:32:53 +0100
+
+nova (2:18.1.0-6+deb10u1) buster-security; urgency=medium
+
+  [ Thomas Goirand ]
+  * CVE-2019-14433/ OSSA-2019-003: a Server Resource Faults Leak External
+    Details. Applied upstream security fix: Replace non-nova server fault
+    message (Closes: #934114).
+  * Fix Cinder volume live migration, adding upstream patch:
+    Use_migration_status_during_volume_migrating_and_retyping.patch.
+  * Add patch to fix many issues with live migration fails:
+    libvirt-check-job-status-for-VIR_DOMAIN_EVENT_SUSPENDED_MIGRATED-event.
+  * Add Add-a-healtcheck-url.patch.
+
+  [ Michal Arbet ]
+  * Fix bug when package was installed noninteractive
+    and auth_url in placement/neutron section was changed
+  * Update pofiles.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 18 Nov 2019 13:30:25 +0100
+
+nova (2:18.1.0-6) unstable; urgency=medium
+
+  * Add upstream patch to fix broken request_spec, which in certain cases lead
+    to breaking instance migration:
+    - Workaround_missing_RequestSpec.instance_group.uuid.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 29 May 2019 14:56:05 +0200
+
+nova (2:18.1.0-5) unstable; urgency=medium
+
+  * Revert using uwsgi for nova-api: this breaks the metadata server.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Mar 2019 17:24:19 +0100
+
+nova (2:18.1.0-4) unstable; urgency=medium
+
+  * Use uwsgi for nova-api.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 01 Mar 2019 15:26:24 +0100
+
+nova (2:18.1.0-3) unstable; urgency=medium
+
+  * Also package the nova-serialproxy startup script/unit.
+  * Fix startup of nova-serialproxy.
+  * Accept only python3-os-vif (>= 1.11.1).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 19 Feb 2019 09:57:59 +0100
+
+nova (2:18.1.0-2) unstable; urgency=medium
+
+  * Add fix-python3-compatibility-ceph.patch
+  * Update debconf template translations, with thanks to:
+    - German: Helge Kreutzmann (Closes: #919423)
+    - Dutch: Frans Spiesschaert (Closes: #920430)
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 06 Feb 2019 18:04:27 +0100
+
+nova (2:18.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 17 Jan 2019 09:07:03 +0100
+
+nova (2:18.0.3-5) unstable; urgency=medium
+
+  * Update debconf template translations, with thanks to:
+    - French: Alban Vidal (Closes: #915285).
+    - Dutch: Frans Spiesschaert (Closes: #914535).
+    - Portuguese: Traduz PT (Closes: #914427).
+    - German: Chris Leick (Closes: #914385).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Jan 2019 14:23:41 +0100
+
+nova (2:18.0.3-4) unstable; urgency=medium
+
+  * d/control: Bump openstack-pkg-tools 89
+  * d/control: Add python3-openstackclient dependency
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 14 Nov 2018 13:52:11 +0100
+
+nova (2:18.0.3-3) unstable; urgency=medium
+
+  * d/rules:
+      - Create NOVA_CONF variable to reduce a code
+      - Add some placement defaults
+  * d/nova-common.config.in:
+    d/nova-common.postinst.in:
+      - Add placement configuration
+      - Add placement user creation (Closes: #913478)
+  * d/nova-common.templates.in: Add placement questions
+  * Update po files
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Sun, 11 Nov 2018 11:16:38 +0100
+
+nova (2:18.0.3-2) unstable; urgency=medium
+
+  * d/rules: Change neutron auth_url port default to 5000
+  * d/nova-common.config.in
+    d/nova-common.postinst.in
+    d/nova-common.templates.in
+      - Fix glance api_servers config by debconf (Closes: #913126)
+      - Fix neutron auth_url point to ksat-public-ip (Closes: #913127)
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 07 Nov 2018 12:43:56 +0100
+
+nova (2:18.0.3-1) unstable; urgency=medium
+
+  * Add debconf config for cinder os_region_name
+  * d/rules: make regionOne default value for os_region_name
+  * d/copyright: Add me to copyright file
+  * Update pofiles
+  * New upstream version
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Tue, 06 Nov 2018 11:35:16 +0100
+
+nova (2:18.0.1-3) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * d/control: Add me to uploaders field
+  * d/: Rename debconf config name from placement
+        to nova-placement-api
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Tue, 16 Oct 2018 14:39:42 +0200
+
+nova (2:18.0.1-2) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * d/nova-api-postinst.in:
+    - Add calling nova-common's trigger nova-common-db-sync
+    - Add calling "nova-manage cell_v2 map_cell0"
+    - Add calling "nova-manage cell_v2 create_cell --name=cell1"
+  * d/nova-api.postrm:
+    - Redesigned to nova-api.postrm.in
+  * d/nova-api.prerm:
+    - Add deletion of nova_api database
+  * d/nova-common.postinst.in
+    - Add function run_db_sync
+    - Add function create_cell0_database if configured
+      via dbconfig-common
+    - Changed postinst to call create_cell0_database
+      and after that run_db_sync
+    - Add if clause triggered which calls nova-common-db-sync
+  * d/nova-common.postrm.in:
+    - Add deletion of /etc/nova/placement-policy.json (Closes: #909115)
+    - Add deletion of nova_cell0 database if configured
+  * d/nova-common.triggers:
+    - Add nova-common-db-sync trigger
+  * d/nova-placement-api.config.in
+    - Add creation of placement db which is currently not required
+      in rocky, but now it is possible to do it with dbconfig-common
+  * d/nova-placement-api.postrm.in
+    - Add purging dbc config
+  * d/nova-placement-api.prerm
+    - Add deletion of placement database
+  * d/rules:
+    - Add deletion of __pychache__ in dh_clean
+    - Add pkgos-merge-templates of nova-placement-api
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 26 Sep 2018 15:59:53 +0200
+
+nova (2:18.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove Dont_persist_zero_allocation_ratios_in_ResourceTracker.patch applied
+    upstream.
+  * Add revert-restore-async-keyword.patch.
+  * (build-)depends on oslo.db to ensure we have async removal.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 25 Sep 2018 08:58:22 +0200
+
+nova (2:18.0.0-1) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Add --namespace osprofiler when generating nova.conf.
+  * Also generate placement-policy.json and install it in postinst.
+  * Add Add_debug_logs_for_when_provider_inventory_changes.patch.
+  * Add Log_the_operation_when_updating_generation_in_ProviderTree.patch.
+  * Add Avoid-spurious-ComputeNode.save-during-update_available_resource.patch.
+  * Add python3-ceph runtime depends. Note: this is for the moment incompatible
+    with Sid that doesn't have it.
+  * Fixed (build-)depends for this release.
+  * Removed patches applied upstream, refresh others:
+    - Fix_PatternPropertiesTestCase_for_py3.6.patch
+    - fix-async-as-keyword.patch
+    - make-nova-reproducible.patch
+  * Add Dont_persist_zero_allocation_ratios_in_ResourceTracker.patch.
+  * Blacklist all XenAPI and hacking tests, as some are failing. See launchpad
+    bugs #1790850 and #1790849.
+  * Diabled PatternPropertiesTestCase.test_validate_patternProperties_fails()
+    and CreateInstanceTypeTest.test_name_with_non_printable_characters() as it
+    fails as well and is unlikely to have an impact in production. See
+    launchpad bug https://bugs.launchpad.net/nova/+bug/1790847.
+
+  [ Ondřej Nový ]
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Aug 2018 16:36:22 +0200
+
+nova (2:17.0.3-13) unstable; urgency=medium
+
+  * Fixed init script description.
+  * Add fix-async-as-keyword.patch, fix fails to install with Python 3.7
+    because of async keyword (Closes: #904587).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 19 Jun 2018 10:24:00 +0200
+
+nova (2:17.0.3-12) unstable; urgency=medium
+
+  * Refreshed patches.
+  * Add make-nova-reproducible.patch (Closes: #892420).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Jun 2018 09:33:02 +0200
+
+nova (2:17.0.3-11) unstable; urgency=medium
+
+  * Add missin rights in nova-common.sudoers:
+    - nova ALL = (root) NOPASSWD: /usr/bin/privsep-helper *
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 Jun 2018 20:42:53 +0200
+
+nova (2:17.0.3-10) unstable; urgency=medium
+
+  * Removed euca2ools from build-depends.
+  * Do not call dh_auto_clean, use python3 setup.py clean.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 Jun 2018 09:37:38 +0200
+
+nova (2:17.0.3-9) unstable; urgency=medium
+
+  * Fixed startup description.
+  * Switched to openstack-pkg-tools >= 80~ UWSGI handling, adding ipv6 support.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 24 May 2018 17:06:27 +0200
+
+nova (2:17.0.3-8) unstable; urgency=medium
+
+  * Fix again nova-placement-api init script.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 May 2018 16:19:46 +0200
+
+nova (2:17.0.3-7) unstable; urgency=medium
+
+  [ Michal Arbet & Thomas Goirand ]
+  * Enable SSL support for nova-placement-api, and use a uwsgi .ini file,
+    which is a way more convenient for deployer to use rather than editing
+    /etc/init.d/nova-placement-api.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 May 2018 11:36:50 +0200
+
+nova (2:17.0.3-6) unstable; urgency=medium
+
+  * Add qemu-block-extra as runtime depends to nova-compute-{qemu,kvm}.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 16 May 2018 11:13:31 +0200
+
+nova (2:17.0.3-5) unstable; urgency=medium
+
+  * Switch to Type=notify for nova-{api,cells,compute,consoleauth,scheduler}.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 14 May 2018 15:21:05 +0200
+
+nova (2:17.0.3-4) unstable; urgency=medium
+
+  * nova-placement-api runtime depends on uwsgi-python3, not python 2.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 10 May 2018 15:07:01 +0000
+
+nova (2:17.0.3-3) unstable; urgency=medium
+
+  * Add dmidecode as runtime depends, needed by compute node for libvirt.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 07 May 2018 18:20:49 +0200
+
+nova (2:17.0.3-2) unstable; urgency=medium
+
+  * Add --rem-header Content-Lenght when starting the nova-placement-api uwsgi
+    daemon, as otherwise, we get a 104 error (connection reset by peer).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 May 2018 07:59:55 +0000
+
+nova (2:17.0.3-1) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * New upstream version
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 01 May 2018 11:59:41 +0000
+
+nova (2:17.0.0-4) unstable; urgency=medium
+
+  * Better default values for [neutron] section.
+  * Correctly read/write [neutron] config.
+  * Fixed dbc postrm.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Mar 2018 17:54:04 +0000
+
+nova (2:17.0.0-2) unstable; urgency=medium
+
+  * Fixed nova-placement-api must use uwsgi_python3 not uwsgi_python.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 10 Mar 2018 21:59:00 +0100
+
+nova (2:17.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix keystone_authtoken defaults.
+  * Removed double-defined override_dh_python3.
+  * Switched to openstack-pkg-tools >= 70~ provided debconf templates.
+  * Using policy.json generated with --format json.
+  * Add Breaks:+Replaces: python-nova (Closes: #891681).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 06 Mar 2018 21:05:55 +0000
+
+nova (2:17.0.0~rc1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 27 Feb 2018 10:05:08 +0000
+
+nova (2:17.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed patches applied upstream:
+    - Add_nova-idmapshift_to_rootwrap_filters.patch
+    - Fix_quobyte_test_validate_volume_no_mtab_entry.patch
+    - CVE-2017-16239_Refined_fix_for_validating_image_on_rebuild.patch
+    - CVE-2017-17051_Fix_doubling_allocations_on_rebuild.patch
+  * Using pkgos-dh_auto_test.
+  * Removed usr/bin/nova-idmapshift (removed in Queens).
+  * Removing debian/tmp/usr/etc after setup.py install.
+  * Generates policy.yaml using oslopolicy-sample-generator.
+  * Standards-Version is now 4.1.3.
+  * Some clean-up in debian/rules.
+  * Switched to Python 3.
+  * Make sure service files are generated for consoleproxi daemons.
+  * nova-common.config: do not use /sbin/route, cat in /proc instead.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 22 Feb 2018 15:38:30 +0000
+
+nova (2:16.0.3-10) unstable; urgency=medium
+
+  * Add explicit dependency on e2fsprogs (Closes: #887212, #887188).
+  * Updated / added debconf templates translations:
+    - nl.po (Closes: #882650).
+    - de.po (Closes: #885161).
+    - fr.po (Closes: #886208).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 24 Jan 2018 13:37:16 +0100
+
+nova (2:16.0.3-9) unstable; urgency=medium
+
+  * Fixed [neutron]/tenant_name.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Dec 2017 13:58:57 +0100
+
+nova (2:16.0.3-8) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 60~.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 Dec 2017 21:11:14 +0000
+
+nova (2:16.0.3-7) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 59~, to make sure we're using allocated
+    UID/GID from #884178.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 12 Dec 2017 12:56:16 +0000
+
+nova (2:16.0.3-6) unstable; urgency=high
+
+  * CVE-2017-17051 / OSSA-2017-006: Nova FilterScheduler doubles resource
+    allocations during rebuild with new image. Applied upstream patch: Fix
+    doubling allocations on rebuild (Closes: 883621).
+    Note: previous upload was in fact only refining the patch for addressing
+    CVE-2017-16239, not CVE-2017-17051. This upload really fixes the bug for
+    CVE-2017-17051.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Dec 2017 09:29:15 +0100
+
+nova (2:16.0.3-5) unstable; urgency=high
+
+  * CVE-2017-16239/OSSA-2017-005.1 (errata for CVE-2017-16239/OSSA-2017-005):
+    Nova Filter Scheduler bypass through rebuild action. Apply upstream patch:
+    Refined fix for validating image on rebuild (Closes: #883621).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 06 Dec 2017 12:24:45 +0100
+
+nova (2:16.0.3-4) unstable; urgency=medium
+
+  * Using --paste-logger when starting uwsgi for placement-api, and runtime
+    depends on python-pastescript.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 Dec 2017 10:06:29 +0000
+
+nova (2:16.0.3-3) unstable; urgency=medium
+
+  * Fixed default_floating_pool option to ext-net.
+  * 4 workers by default for nova-placement-api.
+  * Rebuilt with openstack-pkg-tools >= 56.
+  * Removed dh-systemd build-depends.
+  * Standards-Version is now 4.1.1.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 27 Nov 2017 16:36:27 +0100
+
+nova (2:16.0.3-2) unstable; urgency=medium
+
+  * Fixed arguments for nova-placement-api's uwsgi_python.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 25 Nov 2017 01:17:19 +0100
+
+nova (2:16.0.3-1) unstable; urgency=high
+
+  * New upstream release. Includes:
+    - CVE-2017-16239 / OSSA-2017-005: Nova Filter Scheduler bypass through
+      rebuild action. Applied upstream patch: Validate new image via scheduler
+      during rebuild (Closes: #882009).
+  * Add Fix_quobyte_test_validate_volume_no_mtab_entry.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 17 Nov 2017 15:16:54 +0000
+
+nova (2:16.0.1-3) unstable; urgency=medium
+
+  * Add missing source of debconf script in nova-placement-api.postinst.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 03 Nov 2017 21:37:20 +0000
+
+nova (2:16.0.1-2) unstable; urgency=medium
+
+  * Fixed nova-xenvncproxy init script syntax (Closes: #863165).
+  * Using uwsgi-plugin-python to run the placement-api (Closes: #875712).
+  * Now setting-up nova-placement-api automatically with debconf.
+  * The nova-compute daemon now runtime depends on fdisk (Closes: #872135).
+  * Update pt.po (Closes: #873173).
+  * Update fr.po (Closes: #874103).
+  * Replaces nova-api endpoint /v2/'%(tenant_id)s' by /v2.1 as per upstream
+    installation doc.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 02 Nov 2017 01:30:47 +0000
+
+nova (2:16.0.1-1) experimental; urgency=medium
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Updating maintainer field.
+  * Running wrap-and-sort -bast.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Correcting permissions in debian packaging files.
+  * Updating standards version to 4.0.1.
+  * Deprecating priority extra as per policy 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Removed nova-network.
+  * Fixed (build-)depends for this release.
+  * Rebased some patch, delete others.
+  * Blacklist all nova.tests.unit.test_wsgi.TestWSGIServerWithSSL* tests.
+  * Fix namespaces for nova.conf generation.
+  * Generating /etc/nova/policy.yaml.
+  * Removed nova-cert, which is also removed upstream.
+  * Fixed mssing binaries in nova-common.install.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 08 Oct 2017 00:41:47 +0200
+
+nova (2:14.0.0-4) unstable; urgency=medium
+
+  [ David Rabel ]
+  * Team upload.
+  * Bump build dependency on openstack-pkg-tools (Closes: #858708, #858710).
+
+  [ Thomas Goirand ]
+  * CVE-2017-7214: apply upstream patch (Closes: 858568).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 02 Apr 2017 12:52:50 +0200
+
+nova (2:14.0.0-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bumped debhelper compat version to 10
+
+  [ Thomas Goirand ]
+  * Allow using SQLAlchemy >= 1.1.
+  * Fix bug that prevented generating nova-spicehtml5proxy and nova-xenvncproxy
+    .service files.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 09 Dec 2016 17:40:19 +0100
+
+nova (2:14.0.0-2) unstable; urgency=medium
+
+  * Patches migration script to clean-up build_requests on upgrades from
+    Mitaka.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 19 Oct 2016 14:28:43 +0200
+
+nova (2:14.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 06 Oct 2016 17:22:58 +0200
+
+nova (2:14.0.0~rc1-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Use correct branch in Vcs-* fields
+
+  [ Thomas Goirand ]
+  * Uploading to unstable.
+  * Fixed oslotest EPOCH.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Sep 2016 10:05:08 +0200
+
+nova (2:14.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Using OpenStack's Gerrit as VCS URLs.
+  * Points .gitreview to OpenStack's Gerrit packaging-deb.
+  * Fixed nova.conf generation.
+  * Blacklist failing test:
+    - virt.libvirt.test_driver.LibvirtConnTestCase.test_spawn_with_config_drive
+  * Added a nova-placement-api package & daemon.
+  * Package /usr/bin/nova-policy in nova-common.
+  * Added --parallel when running unit tests.
+  * Revised debian/copyright holder list.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Sep 2016 09:40:05 +0200
+
+nova (2:14.0.0~b2-2) experimental; urgency=medium
+
+  * Team upload.
+  * Added python-pep8 to build depends (Closes: #834134)
+  * (Build-)Depends on python-websockify instead of websockify
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 14 Aug 2016 17:49:12 +0200
+
+nova (2:14.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Updated Danish translation of the debconf (Closes: #830630).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 11 Jul 2016 14:18:44 +0200
+
+nova (2:14.0.0~b1-2) experimental; urgency=medium
+
+  * Fixed correct path for $pybasedir.
+  * Fixed bindir to /usr/bin.
+  * Fixed use_neutron to True by default.
+  * Fixed api_servers to http://localhost:9292 by default.
+  * Rebuilt with openstack-pkg-tools >= 52~ to ensure ALTER TABLE is done
+    correctly with backquotes for the db name.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Jun 2016 08:29:14 +0000
+
+nova (2:14.0.0~b1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Update the namespace list when generating nova.conf.
+  * Adds fix-requirements.txt.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 08 Jun 2016 14:46:53 +0200
+
+nova (2:13.0.0-3) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * Updated Japanese debconf templates translation update (Closes: #820768).
+  * Updated Dutch debconf templates translation (Closes: #822887).
+  * Updated Brazilian Portuguese debconf templates (Closes: #824336).
+
+  [ Ondřej Nový ]
+  * Added Documentation to systemd units
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 23 Apr 2016 18:56:19 +0200
+
+nova (2:13.0.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use /bin/sh as su shell in postinst script explicitly
+  * Standards-Version is 3.9.8 now (no change)
+  * Use /bin/sh as default shell for "nova" user
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Apr 2016 11:04:59 +0000
+
+nova (2:13.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Apr 2016 18:17:11 +0200
+
+nova (2:13.0.0~rc3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Updated ja.po debconf translations (Closes: #815955).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Apr 2016 09:43:40 +0200
+
+nova (2:13.0.0~rc1-4) experimental; urgency=medium
+
+  * Standards-Version: 3.9.7 (no change)
+  * Do not use keystone admin auth token anymore (and therefore, build-depends
+    on openstack-pkg-tools >= 40~).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Mar 2016 09:45:11 +0000
+
+nova (2:13.0.0~rc1-3) experimental; urgency=medium
+
+  * Fixed netron -> neutron in nova-common.postinst.in.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Mar 2016 09:35:04 +0000
+
+nova (2:13.0.0~rc1-2) experimental; urgency=medium
+
+  * Added dbconfig-common management of the novaapi db.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Mar 2016 08:46:01 +0000
+
+nova (2:13.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ivan Udovichenko ]
+  * d/patches: Add Install-missed-files.patch file.
+  * d/patches/series: Remove outdated entry and add the new one.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fix [neutron]/auth_plugin -> [neutron]/auth_type fixup, to follow the
+    changes in upstream generated config file.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 21 Mar 2016 14:32:43 +0100
+
+nova (2:13.0.0~b3-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URLs (https).
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Fix namespace list for generating nova.conf.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Mar 2016 03:05:59 +0800
+
+nova (2:13.0.0~b2-2) experimental; urgency=medium
+
+  [ Ivan Udovichenko ]
+  * d/rules: Binary for nova-objectstore service is not generated anymore.
+
+  [ Thomas Goirand ]
+  * Do not use -S flag of dpkg-parsechangelog: incompatible with Trusty.
+  * Add build-depends-indep in Git to avoid crash during sphinx doc build.
+  * Bump EPOCH to align with Ubuntu.
+  * Stop using hand-crafted config file, and use the generated one.
+  * Removed ec2 from possible API activation (support for that doesn't exist
+    anymore).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 29 Jan 2016 06:08:52 +0000
+
+nova (1:13.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Do not delete nova-api-ec2 (it's gone upstream...).
+  * Fixed debian/copyright.
+  * Using testr directly for unit tests, as run_tests.sh is now deprecated.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Dec 2015 13:25:23 +0100
+
+nova (1:12.0.0-4) unstable; urgency=medium
+
+  * Added q-text-as-data as depends of nova-api.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Nov 2015 11:52:41 +0000
+
+nova (1:12.0.0-3) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools 37 to use Keystone API v3.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Nov 2015 09:08:37 +0000
+
+nova (1:12.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 Oct 2015 12:42:41 +0000
+
+nova (1:12.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updated the Danish translation of the debconf templates thanks to Joe
+    Dalton <joedalton2@yahoo.dk> (Closes: #800397).
+  * Updated Dutch translation of debconf messages thanks to Frans
+    Spiesschaert <Frans.Spiesschaert@yucom.be> (Closes: #797349).
+  * Added rsync as a dependency for nova-compute (Closes: #801579).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 15 Oct 2015 15:53:29 +0200
+
+nova (1:12.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Now nova-api depends on python-openstackclient.
+  * Fixed missing migrate.cfg file, preventing SQL migration to work.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 21 Sep 2015 13:04:19 +0000
+
+nova (1:12.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Refreshed patches, deleted obsolete ones.
+  * Fixed install of nova/locale.
+  * Fixed install of usr/bin/nova-rootwrap-daemon.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Sep 2015 15:03:48 +0200
+
+nova (1:12.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Reviewed (build-)depends for this release.
+  * Using oslo-config-generator to build the sample config file.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Jul 2015 22:55:25 +0000
+
+nova (1:12.0.0~b1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Reviewed (build-)depends for this release.
+  * Rebased patches and removed those applied upstream.
+  * Fixed export OSLO_PACKAGE_VERSION to not give PBR the ~ char.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 08 Jul 2015 10:22:47 +0200
+
+nova (2015.1.0-8) unstable; urgency=medium
+
+  * Allow running with SQLA 1.0.6.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 01 Jul 2015 03:17:58 +0000
+
+nova (2015.1.0-7) unstable; urgency=medium
+
+  * Still needs Breaks: + Replaces: of nova-compute-uml in nova-compute-ironic,
+    as per Andreas Beckmann <anbe@debian.org> advice (Closes: #788992).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 17 Jun 2015 14:38:44 +0200
+
+nova (2015.1.0-6) unstable; urgency=medium
+
+  * Removes nova-compute-uml (is there anyone using it?).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 15 Jun 2015 13:10:49 +0000
+
+nova (2015.1.0-5) unstable; urgency=medium
+
+  * Renames service_neutron_metadata_proxy as service_metadata_proxy, as per
+    upstream deprecation. Thanks to Mathieu Rohon for the bug report
+    (Closes: #788815).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 15 Jun 2015 15:05:13 +0200
+
+nova (2015.1.0-4) unstable; urgency=medium
+
+  * Added hotfix from upstream:
+    - Fix_loading_things_in_instance_extra_for_old_instances.patch
+    - Create-instance_extra-entry-if-it-doesn_t-update.patch
+    - Fix-max_number-for-migrate_flavor-data.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 03 Jun 2015 11:08:32 +0200
+
+nova (2015.1.0-3) unstable; urgency=medium
+
+  [ gustavo panizzo ]
+  * Add a missing rootwrap filter, needed to use unprivileged lxc.
+
+  [ Thomas Goirand ]
+  * Added bridge-utils dependency in nova-common (Closes: #786488).
+  * Updated fr.po thanks to Julien Patriarca (Closes: #786497).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 30 May 2015 16:08:33 +0200
+
+nova (2015.1.0-2) unstable; urgency=medium
+
+  * Added conflicts: nova-baremetal for the nova-compute-ironic
+    (Closes: #784294).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 May 2015 23:38:56 +0200
+
+nova (2015.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Apr 2015 21:59:59 +0000
+
+nova (2015.1~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Reviewed (build-)depends for this release.
+  * Removed the nova-baremetal package, since there's now Ironic.
+  * Added a nova-conmpute-ironic package.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 24 Dec 2014 09:53:43 +0800
+
+nova (2014.2.1-2) experimental; urgency=medium
+
+  * Now build-depends on openstack-pkg-tools (>= 20~).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 14 Dec 2014 15:47:29 +0000
+
+nova (2014.2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * CVE-2014-3708_Fixes_DOS_issue_in_instance_list_ip_filter_juno.patch has
+    been applied upstream, removing it.
+  * Added patch for removing ssl.PROTOCOL_SSLv3 from openstack/common.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 Dec 2014 23:51:29 +0800
+
+nova (2014.2-5) experimental; urgency=medium
+
+  * Fixed init scripts to use libvirtd instead of libvirt-bin (Closes: #772699)
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 10 Dec 2014 19:20:05 +0800
+
+nova (2014.2-4) experimental; urgency=medium
+
+  * Added CVE-2014-3708_Fixes_DOS_issue_in_instance_list_ip_filter_juno.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 12 Nov 2014 05:33:13 +0800
+
+nova (2014.2-3) experimental; urgency=medium
+
+  * Reworked the default nova.conf to use the new section and clean the
+    deprecated ones.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 23 Oct 2014 00:21:27 +0800
+
+nova (2014.2-2) experimental; urgency=medium
+
+  * Added conntrack as Depends: for nova-compute.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 15 Oct 2014 00:05:33 +0800
+
+nova (2014.2-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 16 Oct 2014 12:18:20 +0000
+
+nova (2014.2~rc2-1) experimental; urgency=medium
+
+  * Fixed correct de.po (Closes: #763682).
+  * Mangling upstream rc and beta versions in watch file.
+  * Now using a single logrotate file in nova-common.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 05 Oct 2014 15:02:15 +0800
+
+nova (2014.2~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Added pt_BR.po Brazilian Portuguese debconf templates translation thanks to
+    Adriano Rafael Gomes <adrianorg@arg.eti.br> (Closes: #762472).
+  * nova-xenvncproxy init script provides itself now.
+  * Updated (build-)depends for this release.
+  * Removed no-intersphinx patch (it's removed upstream).
+  * Now using templated init script for sysv-rc, generated systemd unit and
+    upstart jobs, using openstack-pkg-tools >= 13.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 29 Sep 2014 08:15:32 +0000
+
+nova (2014.2~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * New (build-)depends for this release.
+  * Removed nova-clear-rabbit-queues from nova-scheduler (gone from upstream).
+  * Also package nova-serialproxy.
+
+  [ gustavo panizzo ]
+  * Support to run nova daemons under systemd.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 03 Jul 2014 20:30:08 +0800
+
+nova (2014.1.1-4) unstable; urgency=high
+
+  * CVE-2013-1068: Fixed sudoers file (Closes: 753579).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 03 Jul 2014 20:25:51 +0800
+
+nova (2014.1.1-3) unstable; urgency=medium
+
+  * Adds libvirt_convert_cpu_features_attribute_from_list_to_a_set.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 18 Jun 2014 15:39:54 +0800
+
+nova (2014.1.1-2) unstable; urgency=medium
+
+  * Comment out cpu_mode=host-passthrough in /etc/nova/nova-compute.conf in the
+    nova-compute-kvm package, because that breaks our CI tests.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 11 Jun 2014 17:27:15 +0800
+
+nova (2014.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed both CVE-2014-2573 patches applied upstream.
+  * Refreshed Ceph patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Jun 2014 22:53:07 +0800
+
+nova (2014.1-11) unstable; urgency=medium
+
+  * Added cpu_mode=host-passthrough in nova-compute-kvm.conf.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 07 Jun 2014 16:56:42 +0800
+
+nova (2014.1-10) unstable; urgency=medium
+
+  * Now build-depends on opesntack-pkg-tools >= 0.12~.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 05 Jun 2014 07:19:54 +0000
+
+nova (2014.1-9) unstable; urgency=high
+
+  * CVE-2014-2573: Nova VMWare driver leaks rescued images. Applied 2 patches
+    from upstream (Closes: #750144).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Jun 2014 11:28:38 +0800
+
+nova (2014.1-8) unstable; urgency=medium
+
+  * Switched to copytruncate instead of restart daemons for logrotate.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 29 May 2014 13:47:54 +0800
+
+nova (2014.1-7) unstable; urgency=medium
+
+  * Removed useless python-support Build-Depends.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 May 2014 16:10:53 +0800
+
+nova (2014.1-6) unstable; urgency=medium
+
+  * Fixed the sql_connection -> connection in the default nova.conf.
+  * Fixed logrotate scripts to use "service X restart" always, and not using
+    dpkg-dev anymore (Closes: #747888).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 May 2014 21:18:55 +0800
+
+nova (2014.1-5) unstable; urgency=medium
+
+  * New patchset for CEPH support.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 13 May 2014 05:13:45 +0800
+
+nova (2014.1-4) unstable; urgency=medium
+
+  * Test if /sbin/route is present before using it (Closes: #737052).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 04 May 2014 00:31:54 +0800
+
+nova (2014.1-3) unstable; urgency=medium
+
+  * Fixes regression in nova template wording (Closes: #745277).
+  * Added German translation for debconf templates, thanks to  Pfannenstein
+    Erik <debianignatz@gmx.de> (Closes: #745445).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 03 May 2014 03:25:17 +0000
+
+nova (2014.1-2) unstable; urgency=low
+
+  * Added 5 Ceph support patches.
+  * Switched to [DEFAULT]/sql_connection to [database]/connection in the config
+    and postinst scripts of nova-common (Close: #745551).
+  * Added an example generated nova.conf.example file.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Apr 2014 22:55:20 +0800
+
+nova (2014.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 18 Apr 2014 09:36:19 +0800
+
+nova (2014.1~rc2-1) experimental; urgency=low
+
+  * New upstream pre-release.
+  * Fixed new configuration that goes now in the [libvirt] section.
+  * Allow selecting log destination for Openstack daemons.
+  * Fixed nova.conf for Icehouse.
+  * Updated Russian debconf translation, thanks to Yuri Kozlov
+    <yuray@komyakino.ru> (Closes: #743423).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Apr 2014 23:16:35 +0800
+
+nova (2014.1~rc1-1) experimental; urgency=low
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Reviewed (build-)dependencies.
+
+  [ Gustavo Panizzo ]
+  * Change the default VIF driver for kvm compute nodes.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 01 Apr 2014 07:55:24 +0800
+
+nova (2014.1~b3-1) experimental; urgency=low
+
+  * New upstream release (Icehouse beta 1).
+  * Removed CVE-2013-4463_CVE-2013-4469 now applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Dec 2013 22:56:39 +0800
+
+nova (2013.2.2-2) unstable; urgency=medium
+
+  * Rebuilt using openstack-pkg-tools >= 9~.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Feb 2014 17:52:57 +0000
+
+nova (2013.2.2-1) unstable; urgency=high
+
+  [ Thomas Goirand ]
+  * New upstream point release (Closes: #736926, #736465).
+  * Added gustavo panizzo <gfa@zumbi.com.ar> as uploader.
+  * Standards-Version: is now 3.9.5.
+  * Refreshed Ceph backport patch.
+
+  [ gustavo panizzo ]
+  * nova-manage db sync failure is not fatal in nova-common.postinst
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Feb 2014 13:53:10 +0800
+
+nova (2013.2.1-6) unstable; urgency=medium
+
+  * Fix broken template given by Christian PERRIER (Closes: #738271).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 09 Feb 2014 18:11:40 +0800
+
+nova (2013.2.1-5) unstable; urgency=medium
+
+  * Updated debconf template thanks to the intl team. (Closes: #737819)
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 08 Feb 2014 17:19:47 +0800
+
+nova (2013.2.1-4) unstable; urgency=medium
+
+  * Configures Neutron credentials through Debconf.
+  * Adds a backport of Ceph support into Nova.
+  * Restarts daemons after logrotate.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 18 Jan 2014 23:48:48 +0800
+
+nova (2013.2.1-3) unstable; urgency=medium
+
+  * Using dh_sphinxdoc correctly.
+  * Explicitly using --buildsystem=python_distutils.
+  * Removed duplicate build-depends: python-d2to1.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 17 Jan 2014 09:49:05 +0000
+
+nova (2013.2.1-2) unstable; urgency=medium
+
+  [ Gonéri Le Bouder ]
+  * Add myself in Uploaders
+  * nova-compute-kvm directly depends on qemu-kvm since kvm package doesn't
+    exist anymore. We keep an alternative dependency on kvm to simplify
+    backports.
+  * build_sphinx: pass target dir as an argument to avoid the following issue
+    with sphinx 1.2 https://bitbucket.org/birkenfeld/sphinx/pull-request/193
+    http://lists.openstack.org/pipermail/openstack-dev/2013-December/021863.html
+
+  [ Thomas Goirand ]
+  * Killed the DEFAULTS_FILE feature in init scripts and template.
+  * Updated debconf template translation, with thanks to:
+    - Swedish: Martin Bagge (Closes: #734621).
+    - German: Chris Leick (Closes: #735335).
+
+ -- Gonéri Le Bouder <goneri@debian.org>  Thu, 16 Jan 2014 10:21:08 +0100
+
+nova (2013.2.1-1) unstable; urgency=high
+
+  * New upstream release.
+  * Added | cut -d" " -f1 when searching for the default gateway interface,
+    in the nova-common.config script that tries to guess the "my_ip" address,
+    just in case there's more than one interface in use (in which case it may
+    fail in non-interactive mode).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 06 Dec 2013 15:35:56 +0800
+
+nova (2013.2-3) unstable; urgency=high
+
+  * Moved python-mysqldb from Recommends to Depends in python-nova.
+  * CVE-2013-4463 & CVE-2013-4469: ensure we don't boot oversized images,
+    applied upstream patch (Closes: #728605).
+  * Update of some debconf translations, with warm thanks to:
+    - French, Julien Patriarca <leatherface@debian.org> (Closes: #728765).
+    - Russian, Yuri Kozlov <yuray@komyakino.ru> (Closes: #729711).
+    - German, Chris Leick <c.leick@vollbio.de> (Closes: #730453).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 26 Nov 2013 00:13:07 +0800
+
+nova (2013.2-2) unstable; urgency=low
+
+  * Added some Provides: for the nova-consoleproxy so that it is in line with
+    what Ubuntu does.
+  * Adds --log-file= for each daemons.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 30 Oct 2013 22:11:58 +0800
+
+nova (2013.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 18 Oct 2013 00:41:40 +0800
+
+nova (2013.2~rc2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 15 Oct 2013 21:04:58 +0800
+
+nova (2013.2~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 06 Oct 2013 16:46:03 +0000
+
+nova (2013.1.3-2) unstable; urgency=low
+
+  * Removes XCP support to allow Ocaml transition to testing until XCP is
+    fixed and updated.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 25 Sep 2013 10:15:47 +0800
+
+nova (2013.1.3-1) unstable; urgency=low
+
+  * New upstream point release.
+  * Fixed wrong chown in upstart script (sed s/Root/root/).
+  * Adds new debconf template translations:
+    - Brazilian Portuguese, thanks to Adriano Rafael Gomes (Closes: #718710).
+    - Japanese, thanks to victory (Closes: #718924).
+  * Debconf translation updates:
+    - Danish, thanks to Joe Dalton (Closes: #720005).
+    - Portuguese, thanks to the Traduz team (Closes: #720315).
+    - Czech, thanks to Michal Šimůnek (Closes: #721039).
+    - Russian, thanks to Yuri Kozlov (Closes: #721259).
+  * Adds iproute to nova-common depends (Closes: #719138).
+  * Removes Make-nova-api-use-servicegroup.API.service_is_up.patch applied
+    upstream.
+  * Removes CVE-2013-2256_Make_flavors_is_public_option_actually_work.patch
+    now applied upstream.
+  * Removes CVE-2013-4185_Use_cached_nwinfo_for_secgroup_rules.patch now
+    applied upstream.
+  * CVE-2013-4278: Applies upstream patch (Closes: #720602).
+  * Added patch to fix Nova networking.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 22 Aug 2013 12:10:46 +0200
+
+nova (2013.1.2-3) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Add logrotate configuration for nova-manage.log.
+
+  [ Thomas Goirand ]
+  * Added some logic to purge /etc/init.d/nova-xcp-network if it's there, and
+    have upgrade working (Closes: #718965). Thanks to Andreas Beckmann for his
+    bug report.
+  * CVE-2013-2256: fixes ACL on public flavors (Closes: #718905).
+  * CVE-2013-4185: stops a potential DOS with source security groups by using
+    cached nwinfo for secgroup rules (Closes: #718907).
+  * Added missing nova-common pre-depends: net-tools.
+  * Fixed upgrade of nova-xcp-network to nova-xcp-plugins (Closes: #718965).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 07 Aug 2013 11:28:26 +0200
+
+nova (2013.1.2-1) unstable; urgency=low
+
+  * Uploading to unstable.
+  * New upstream release.
+  * Added Should-Start/stop: postgresql mysql in init scripts (Closes: #706013)
+    thanks to Julien Cristau for reporting.
+  * Fixed logrotate scripts for nova-xvpvncproxy and nova-consoleauth
+    (Closes: #706011). Thanks to Julien Cristau for reporting.
+  * Adds memcache_convert_host_value_from_unicode_to_a_string.patch
+  * CVE-2013-2030: Remove insecure default for signing_dir option from the
+    api-paste.ini (Closes: #707600).
+  * Removes memcache_convert_host_value_from_unicode_to_a_string.patch which
+    is now applied upstream.
+  * Moves Suggests: as Depends: for novnc and websockify for nova-novncproxy.
+  * Merged nova-xcp* into a single binary package.
+  * Merged NoVNC, XVP and SPICE console into a single binary package.
+  * Now using a single log file for all types of console proxy, and
+    logrotate that (Closes: #706011).
+  * Ran wrap-and-sort.
+  * Added Make nova-api use servicegroup.API.service_is_up() patch, so that
+    nova can work with multiple redundant memecached using heartbeat.
+  * Killed the nova-objectstore package.
+  * testrepository build-depends is now version >= 0.0.14
+  * Reviewed a bit the init scripts boot dependencies, and added a few
+    Should-Start / Should-Stop to make sure mysql, postgress and keystone are
+    up and running.
+  * Removed debian/python-nova.postinst, as update-python-modules
+    --post-install is managed by dh_python2.
+  * Added missing nova-compute dependencies in the nova-compute-<whatever>
+    packages.
+  * Sets default security_group_api = quantum.
+  * Starts nova after rabbit and ntp.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 24 Apr 2013 00:04:19 +0800
+
+nova (2013.1-1) experimental; urgency=low
+
+  * New upstream version.
+  * Removes fix-ini-syntax patch.
+  * Rewrote the pkgos_* calls to match the new parameter order.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 20 Jan 2013 13:16:10 +0000
+
+nova (2012.2.2-1) experimental; urgency=low
+
+  [ Mehdi Abaakouk ]
+  * New upstream version.
+  * New upstream version
+  * Add patches:
+     fix-ubuntu-tests.patch
+     fix-docs-build-without-network.patch
+  * Removed patches included by upstream:
+     nova-manage_flagfile_location.patch
+     CVE-2012-3360_CVE-2012-3361.patch
+     stable_essex_20120710.patch
+     iscsiadm_path.patch
+     CVE-2012-3371.patch
+     CVE-2012-3447_compute-node-file-injection.patch
+
+  [ Thomas Goirand ]
+  * Ordered debian/control build-depends and python-nova depends by alpha
+  order.
+  * Added new dependency to python-babel.
+  * Now uses setup.py to install python-nova.
+  * Switched to using pkgos_func functions.
+  * Sets compat level to 9.
+  * Now using xz compression level 9 for all debs.
+  * Configuring Keystone endpoint for nova-api.
+
+  [ Roland Mas ]
+  * No more build-dependency on python-glance (only -glanceclient).
+  * Stop providing the Volume service by default (now handled by Cinder).
+    Note: manual database migration required.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Nov 2012 06:53:06 +0000
+
+nova (2012.1.1-9) unstable; urgency=low
+
+  [ Thomas Goirand ]
+  * Added Debconf Chinese translation thanks to ben <duyujie.dyj@gmail.com>.
+
+  [ Loic Dachary (OuoU) ]
+  * revert to using --flagfile instead of --config-file in
+    nova-compute.init because --flagfile supports both configuration file
+    formats. Using --config-file forces to use the newest configuration
+    file format and is not backward compatible. If upgrading from
+    nova-compute-2012.1.1-4 to all versions until nova-compute-2012.1.1-8
+    when using the old format in nova.conf, nova-compute will no longer
+    run. It will silently fail to parse the older format and abort.
+
+ -- Loic Dachary (OuoU) <loic@debian.org>  Mon, 03 Sep 2012 13:24:09 +0200
+
+nova (2012.1.1-8) unstable; urgency=low
+
+  * Corrected wrong encoding in the it.po (Closes: #685576).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 24 Aug 2012 05:30:21 +0000
+
+nova (2012.1.1-7) unstable; urgency=low
+
+  * Updated Spanish debconf translation thanks to Jathan
+  <jathanblackred@gmail.com> (Closes: #678479).
+  * Added Italian debconf translation thanks to Beatrice Torracca
+  <beatricet@libero.it> (Closes: #681250).
+  * Added missing [DEFAULT] in nova-compute.conf for xen.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 10 Aug 2012 06:17:03 +0000
+
+nova (2012.1.1-6) unstable; urgency=high
+
+  [ Thomas Goirand ]
+  * CVE-2012-3447: file injection writing to host filesystem (Closes: #684256).
+  [ Ghe Rivero ]
+  * Fixed the init script of nova-compute to use /etc/nova/nova-compute.conf.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 07 Aug 2012 05:12:35 +0000
+
+nova (2012.1.1-5) unstable; urgency=high
+
+  * Fix CVE-2012-3371. Closes: #681301
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Thu, 12 Jul 2012 10:14:32 +0200
+
+nova (2012.1.1-4) unstable; urgency=low
+
+  * fix the iscsiadm path (Closes: #681175).
+
+ -- Loic Dachary (OuoU) <loic@debian.org>  Wed, 11 Jul 2012 09:14:08 +0200
+
+nova (2012.1.1-3) unstable; urgency=low
+
+  * Added a display-po-stats target in debian/rules
+  * Added a call-for-po-trans target in debian/rules
+  * Updated debconf translations thanks to:
+    - de.po: Pfannenstein Erik <epfannenstein@gmx.de> (Closes: #680558).
+    - pl.po: "Michał Kułach" <michalkulach@gmail.com> (Closes: #680524).
+    - da.po: Joe Dalton <joedalton2@yahoo.dk> (Closes: #680354).
+    - ru.po: Yuri Kozlov <yuray@komyakino.ru> (Closes: #680267).
+  * Do not rm -r /var/lib/nova/instances in the nova-compute postrm, because
+  it has files from nova-common. Same with nova-network (Closes: #680642).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 04 Jul 2012 17:15:47 +0000
+
+nova (2012.1.1-2) unstable; urgency=high
+
+  * Fixes CVE-2012-3360, CVE-2012-3361 (Closes: #680110).
+  * Debconf translation updates with thanks to:
+    - cs.po Michal Simunek <michal.simunek@gmail.com> (Closes: #679670).
+    - pt.po Miguel Figueiredo <elmig@debianpt.org> (Closes: #679497).
+    - sk.po helix84 <helix84@centrum.sk> (Closes: #679445).
+    - fr.po Julien Patriarca <patriarcaj@gmail.com> (Closes: #679422).
+    - sv.po Martin Bagge <brother@bsnet.se> (Closes: #679009).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Jul 2012 18:18:38 +0000
+
+nova (2012.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Thu, 28 Jun 2012 17:46:09 +0200
+
+nova (2012.1-8) unstable; urgency=low
+
+  [ Thomas Goirand ]
+  * Fixes "Cannot disassociate network from project" critical error 'bool'
+  object has no attribute decode (Closes: #672350).
+  * Added new debconf translations (with thanks to):
+    - es: jathan <jathanblackred@gmail.com> (Closes: #678479).
+    - de: Pfannenstein Erik <epfannenstein@gmx.de> (Closes: #678034).
+    - gl: Jorge Barreiro <yortx.barry@gmail.com> (Closes: #678908).
+    - pt: Traduz <traduz@debianpt.org> (Closes: #678735).
+    - cs: Michal Simunek <michal.simunek@gmail.com> (Closes: #678667).
+    - ru: Yuri Kozlov <yuray@komyakino.ru> (Closes: #678429).
+    - fr: Julien Patriarca <patriarcaj@gmail.com> (Closes: #678234).
+    - pl: "Michał Kułach" <michalkulach@gmail.com> (Closes: #678154).
+    - sk: helix84 <helix84@centrum.sk> (Closes: #677284).
+
+  [ Ghe Rivero ]
+  * remove extra slash on sql_connection nova.conf
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 25 Jun 2012 09:13:57 +0000
+
+nova (2012.1-7) unstable; urgency=low
+
+  * Fixes "prompting due to modified conffiles" (Closes: #677400).
+  * File /etc/default/nova-common isn't a conffile anymore as well.
+  * Removed libvirt-type flag in nova-compute-xen nova-compute.conf, since we
+  are using XenAPI and not libvirt.
+  * Now configuring XenAPI URL, user and password through Debconf.
+  * Makes replacements in nova.conf accept spaces, dashes and tabs.
+  * Added initial Swedish debconf translation thanks to Martin Bagge
+  <brother@bsnet.se> (Closes: #677031).
+  * Added initial Dutch debconf translation thanks to Jeroen Schot
+  <schot@A-Eskwadraat.nl> (Closes: #677364).
+  * Added initial Danish debconf translation thanks to Joe Dalton
+  <joedalton2@yahoo.dk> (Closes: #677798).
+  * Applied debian/control and debian/*.templates from debian-l10n-english
+  (Closes: #675136).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 18 Jun 2012 12:34:40 +0000
+
+nova (2012.1-6) unstable; urgency=low
+
+  [ Thomas Goirand ]
+  * Now depends on sqlite3 (Closes: #674510).
+  * nova-compute-{hypervisor} are now conflicting each others.
+  * Fixed URL to the format 1.0 for the debian/copyright file.
+  * nova-api is now split into multiple nova-api-* packages.
+
+  [ Mehdi Abaakouk ]
+  * Add nodocs support in DEB_BUILD_OPTIONS.
+  * Do not use dbconfig if configure_db is false. Closes: #675271
+  * Fixed CVE-2012-2654. (Closes: #676465)
+
+  [ Loic Dachary (OuoU) ]
+  * Fix broken init file for nova-bojectstore (Closes: #676638)
+  * Add Loic Dachary in uploaders
+
+ -- Loic Dachary (OuoU) <loic@debian.org>  Tue, 12 Jun 2012 17:51:01 +0200
+
+nova (2012.1-5) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Not start daemons from init by default. Added /etc/default/nova file
+  * Added some new packages: api-os-compute, api-os-volume, api-ec2,
+  compute-qemu, api-metadata
+  * Instal api-paste.ini from nova-common
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Mon, 28 May 2012 15:27:57 +0200
+
+nova (2012.1-4) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Properly use dbconfig postrm at nova-common. Closes: #673986
+  * Added python db modules to suggests. Closes: #672888
+
+  [ Mehdi Abaakou ]
+  * Remove obsolete volume_group option in nova-volume init script. Closes:
+    #674030
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Thu, 24 May 2012 08:50:35 +0200
+
+nova (2012.1-3) unstable; urgency=low
+
+  * 3 files are moved from python-nova to nova-compute, nova-network and
+  nova-volumes, add Replaces and Breaks statements to enable smooth upgrade of
+  version in testing. Closes: #665375
+  * Call dbconfig postrm script and remove nova-manage log. Closes: #670435
+  * Remove doc/sourc/api on dh_autoclean
+  * Purge nova-* log files
+
+ -- Mehdi Abaakouk <sileht@sileht.net>  Wed, 09 May 2012 11:55:04 +0200
+
+nova (2012.1-2) unstable; urgency=low
+
+  * Fixed CVE-2012-2101. Closes: #670637
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Wed, 02 May 2012 11:29:53 +0200
+
+nova (2012.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Mon, 09 Apr 2012 09:19:38 +0200
+
+nova (2012.1~rc3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Wed, 04 Apr 2012 10:14:01 +0200
+
+nova (2012.1~rc1-1) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Use nova-rootwrap instead of sudo
+
+  [ Thomas Goirand ]
+  * nova-xcp-network.init now has a Required-Start: xcp-networkd, as otherwise,
+  the boot process is simply stuck.
+  * Added a chmod +x of all Nova XCP plugins in the postinst: otherwise,
+  there's a XENAPI_PLUGIN_FAILURE when starting nova-compute, and the Git seems
+  to have wrong Unix rights.
+
+  [ Julien Danjou ]
+  * Add dbconfig support
+  * Bump standard version
+  * Add logrotate entry for nova-dhcpbridge.log in nova-network
+  * Add nova-cert package, providing the nova-cert daemon
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Tue, 20 Mar 2012 12:46:47 +0100
+
+nova (2012.1~e4-1) unstable; urgency=low
+
+  * New upstream version
+
+  [ Julien Danjou ]
+  * nova-api recommends python-keystone
+  * Allow nova group members to read logs and configuration file.
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Fri, 02 Mar 2012 08:22:03 +0100
+
+nova (2012.1~e3-4) unstable; urgency=low
+
+  * Added init script to nova-consoleauth
+  * Added init script to nova-xvpvncproxy
+
+ -- Julien Danjou <acid@debian.org>  Fri, 17 Feb 2012 10:18:55 +0100
+
+nova (2012.1~e3-3) unstable; urgency=low
+
+  * nova-compute- now depends on nova-common (Closes: #657569)
+  * Added nova-consoleauth to nova-console
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Tue, 31 Jan 2012 14:32:31 +0100
+
+nova (2012.1~e3-2) unstable; urgency=low
+
+  * Fixed compute-xen postinst (Closes: #657569)
+  * Minor fix in gbp.conf
+  * Added policy.json
+  * Added connection_type flag to nova.conf
+  * Fixed funtions names in nova-xcp-networkt.init
+
+ -- Ghe Rivero <ghe@debian.org>  Sat, 28 Jan 2012 10:36:52 +0100
+
+nova (2012.1~e3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ghe Rivero <ghe@debian.org>  Thu, 26 Jan 2012 14:16:48 +0100
+
+nova (2012.1~e2-4) experimental; urgency=low
+
+  [ Thomas Goirand ]
+  * Added missing Build-Depends: python-xattr, python-webob, python-glance,
+  python-routes, ipython, bpython.
+  * Removed duplicates in Build-Depends:
+  * Now also building nova-xcp-plugins and nova-xcp-network packages.
+  * Now build-depends on the new python-xenapi and nova-compute-xen depends
+  on it and not on libvirt anymore.
+  * Now build-depends on the new python-xenapi and nova-compute-xen depends
+  on it and not on libvirt anymore.
+  * Moved nova user creation in nova-compute-{lxc,uml,xen,kvm}.postinst because
+  nova-compute-xen doesn't Depends: on libvirt, and then the libvirt group
+  doesn't exist, then postinst fails.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Dec 2011 12:19:41 +0000
+
+nova (2012.1~e2+git757-g62cf887-3) experimental; urgency=low
+  [ Thomas Goirand ]
+  * Added missing Build-Depends: python-xattr, python-webob, python-glance,
+  python-routes, ipython, bpython.
+  * Removed duplicates in Build-Depends:
+  * Now also building nova-xcp-plugins and nova-xcp-network packages.
+  [ Ghe Rivero ]
+  * ...
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 25 Jan 2012 07:51:52 +0000
+
+nova (2012.1~e2+git757-g62cf887-2) experimental; urgency=low
+
+  * Fixed git debian/experimental merging
+  * Added adduser depends to nova-compute-{lxc,xen,kvm,uml}
+
+ -- Ghe Rivero <ghe@debian.org>  Thu, 19 Jan 2012 10:23:45 +0100
+
+nova (2012.1~e2+git757-g62cf887-1) experimental; urgency=low
+
+  [ Ghe Rivero ]
+  * New snapshot release
+  * Removed nova-vncproxy binary package
+
+  [ Thomas Goirand ]
+  * Now build-depends on the new python-xenapi and nova-compute-xen depends
+  on it and not on libvirt anymore.
+  * Now build-depends on the new python-xenapi and nova-compute-xen depends
+  on it and not on libvirt anymore.
+  * Moved nova user creation in nova-compute-{lxc,uml,xen,kvm}.postinst because
+  nova-compute-xen doesn't Depends: on libvirt, and then the libvirt group
+  doesn't exist, then postinst fails.
+
+ -- Ghe Rivero <ghe@debian.org>  Thu, 19 Jan 2012 08:44:36 +0100
+
+nova (2012.1~e2+git548-g6f0ef42-1) experimental; urgency=low
+
+  * New snapshot release
+
+ -- Ghe Rivero <ghe@debian.org>  Wed, 04 Jan 2012 09:26:11 +0100
+
+nova (2012.1~e2+git508-gcff2ddc-2) experimental; urgency=low
+
+  [ Thomas Goirand ]
+  * Added missing Build-Depends: python-xattr, python-webob, python-glance,
+  python-routes, ipython, bpython.
+  * Removed duplicates in Build-Depends:
+  * Now also building a nova-xcp-plugins package.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Dec 2011 12:19:41 +0000
+
+nova (2012.1~e2+git508-gcff2ddc-1) experimental; urgency=low
+
+  * New snapshot release
+
+ -- Ghe Rivero <ghe@debian.org>  Tue, 27 Dec 2011 20:25:31 +0100
+
+nova (2012.1~e2-3) unstable; urgency=low
+
+  [ Thomas Goirand ]
+  * nova-compute-xen shouldn't depends on the Xen hypervisor: it can be
+  installed in a domU for example.
+
+  [ Ghe Rivero ]
+  * Lintian clean of empty packages
+  * Added ovs-ofctl to nova_sudoers
+  * Clean rules files moving nova-doc linking to nova-doc.links
+  * Remove verbose logging in nova.conf
+  * Sync nova database only if using it by default.
+
+ -- Ghe Rivero <ghe@debian.org>  Wed, 28 Dec 2011 10:17:35 +0100
+
+nova (2012.1~e2-2) unstable; urgency=low
+
+  * Do not fail postinst if the database upgrade fails (Closes: #648282)
+  * Add missing files in debian/copyright (Closes: #633600)
+
+ -- Julien Danjou <acid@debian.org>  Mon, 19 Dec 2011 12:50:08 +0100
+
+nova (2012.1~e2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe@debian.org>  Fri, 16 Dec 2011 09:32:01 +0100
+
+nova (2012.1~e1-4) unstable; urgency=high
+
+  * Added security patch. CVE-2011-4596
+
+ -- Ghe Rivero <ghe@debian.org>  Tue, 13 Dec 2011 16:25:56 +0100
+
+nova (2012.1~e1-3) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Create lock dirs on init files
+
+  [ Julien Danjou ]
+  * Add LOCK_DIR creation on all init files
+  * Use NOVA_USER variable
+  * Create pidfile
+
+ -- Julien Danjou <acid@debian.org>  Fri, 02 Dec 2011 12:16:48 +0100
+
+nova (2012.1~e1-2) unstable; urgency=low
+
+  [ Julien Danjou ]
+  * Set real build-dependencies
+  * Fix Vcs URLs
+  * Fix Maintainer and Uploaders fields
+  * Fix copyright file format
+  * Enhance short description of python-nova.
+  * Remove Ubuntu related stuff
+  * Remove get-orig-source target
+  * Fix clean and build-deps for test
+  * Disabled tests on build
+  * Fix typo in nova-doc description
+  * Fix typo in copyright file
+  * Fix build-dependency on novaclient
+  * Add missing depends on adduser
+  * Use libjs-underscore in doc
+  * Stop making hypervisors packages conflicting
+  * Rewrite init scripts and add missing nova-vnc-proxy.init
+
+  [ Ghe Rivero ]
+  * Resolved circular Depends on nova-compute. (Closes: #649379)
+  * Some build-depends cleanup
+  * Fixed brctl path in sudo file. (Closes: #631830)
+
+  [ Thomas Goirand ]
+  * Added a small debian/gbp.conf
+  * Added missing python-netaddr build-depends.
+  * Added missing build-depends on python-gflags
+  * Added version (eg: >= 2.6.7-1) for build-depends on python-novaclient
+
+ -- Julien Danjou <acid@debian.org>  Thu, 01 Dec 2011 16:47:45 +0100
+
+nova (2012.1~e1-1) unstable; urgency=low
+
+  * [de01249] Imported Upstream version 2012.1~e1
+  * [216fb9a] Synced with ubuntu package
+
+ -- Ghe Rivero <ghe@debian.org>  Wed, 16 Nov 2011 14:34:27 +0100
+
+nova (2011.2-1) unstable; urgency=low
+
+  * Removes embedded jquery.js from nova-doc package.
+  * Added some manpages stubs to make package lintian clean.
+  * Adds a nova-volume.default where the admin can decide what VG to use.
+  * debian/nova-objectstore.logrotate working in Debian.
+  * Do not have debian/*.upstart files in Debian. Using debian/*.upstart.in
+  and copying them as .upstart only if building in Ubuntu.
+  * Nova init files reviewed so that they are working in Debian.
+  * Initscripts of nova-compute now has a Should-Start: libvirt-bin
+  * nova-compute.postinst working with libvirt group in Debian.
+  * Reviewed the package descriptions.
+  * Reviewed some dependencies in debian/control (added some adduser and
+  lsb-base depends).
+  * Added missing binary Depends: (nova-manage must depends on
+  python-amqplib unless failing puiparts tests, nova-compute is pretty
+  usless without qemu-utils)
+  * Removes .gitignore files from binaries.
+  * Don't package nova-manage.1 man page if we aren't building docs.
+  * Packages correctly: nova-manage.1 and not novamanage.1 !!!
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Apr 2011 10:02:07 +0000
+
+nova (2011.2~gamma1-0ubuntu1) natty; urgency=low
+
+  [Chuck Short]
+  * New upstream release.
+  * debian/nova-doc.docs: Adjust directory to the right docs path.
+
+  [Soren Hansen]
+  * Refresh nova-manage-flags patch.
+  * Adjust call to ajaxterm to work with the packaged ajaxterm instead
+    of the one we ship in the tarball.
+  * Remove all traces of the adminclient package. It moved to its own
+    tarball. There are no known consumers, so this should not be a
+    problem.
+  * Remove build-dependency on python-suds again.
+  * setup.py now takes care of installing the CA code, so yank those
+    bits from debian/nova-common.install.
+  * setup.py now places api-paste.ini correctly, so stop working around
+    it.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 08 Apr 2011 10:49:10 -0400
+
+nova (2011.2~bzr925-0ubuntu1) natty; urgency=low
+
+  [Chuck Short]
+  * New upstream release.
+
+  [Soren Hansen]
+  * Make the build fail if the test suite does. The test that used to
+    fail on the buildd's has been complete rewritten. (LP: #712481)
+  * Specify that we need Sphinx > 1.0 to build.
+  * Remove refresh_bzr_branches target from debian/rules. It is not used
+    anymore.
+  * Clean up after doc builds on debian/rules clean.
+  * Add a nova-ajax-console-proxy package.
+  * Add Recommends: ajaxterm to nova-compute, so that nova-ajax-console-
+    proxy will have something to connect to.
+  * Stop depending on aoetools. iscsi is the default nowadays (and has
+    been for a while).
+  * Move dependency on open-iscsi from nova-volume to nova-compute.
+    They're client tools, so that's where they belong.
+  * Add a build-depends on python-suds.
+  * Add logrote config for nova-ajax-console-proxy.
+  * Add upstart job for nova-ajax-console-proxy.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 31 Mar 2011 11:25:10 -0400
+
+nova (2011.2~bzr828-0ubuntu1) natty; urgency=low
+
+  * New upstream version.
+  * debian/control: Add python-lockfile as a build dependency.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 18 Mar 2011 09:28:17 -0400
+
+nova (2011.2~bzr786-0ubuntu1) natty; urgency=low
+
+  [Chuck Short]
+  * New upstream version.
+
+  [ Thierry Carrez (ttx) ]
+  * nova-api.conf was renamed api-paste.ini (LP: #705453)
+
+  [ Soren Hansen ]
+  * Start on filesystem event rather than local-filesystems.
+  * Weed out a *lot* of out-dated information from debian/control.
+  * Create /var/lock/nova in upstart jobs and set lock_path in the
+    flagfile.
+  * Add dependency on python-novaclient.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 11 Mar 2011 09:41:45 -0500
+
+nova (2011.2~bzr760-0ubuntu1) natty; urgency=low
+
+  [Chuck Short]
+  * New upstream version.
+  * Fix up typos in debian/control. (LP: #721414)
+
+  [ Thierry Carrez (ttx) ]
+  * Add python-distutils-extra as build-dep (for i18n)
+  * Ship .mo files in /usr/share/locale
+  * Add lvdisplay to nova_sudoers, clean up dupe entries
+
+  [ Soren Hansen ]
+  * Always run "nova-manage db sync" from postinst, unless an explicit
+    sql_connection has been set in nova.conf. (LP: #705758)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 04 Mar 2011 10:19:52 -0500
+
+nova (2011.2~bzr700-0ubuntu1) natty; urgency=low
+
+  [ Chuck Short ]
+  * New upstream version.
+
+  [ Soren Hansen ]
+  * Rely on --logdir to find and use the correct logfile.
+  * Remove the postrotate magic for all but nova-objectstore. It is not
+    needed anymore due to using RotatingFileHandler for logging.
+
+  [ Thierry Carrez ]
+  * Ship adminclient in a separate package.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 18 Feb 2011 09:36:22 -0500
+
+nova (2011.2~bzr663-0ubuntu1) natty; urgency=low
+
+  [ Chuck Short ]
+  * New upstream verison.
+  * Add python-paramiko to debian/control.
+
+  [Soren Hansen]
+  * Honour nocheck and nodocs in DEB_BUILD_OPTIONS.
+  * Add /sbin/route to sudoers file.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 11 Feb 2011 10:27:54 -0500
+
+nova (2011.1-0ubuntu2) natty; urgency=low
+
+  * Dont fail unittest because of buildd problems.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 03 Feb 2011 07:26:54 -0500
+
+nova (2011.1-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+  * Add recommends to python-mysqldb (LP: #708511)
+  * Add dependency of iscsitarget to nova-volume and a sugestion to use
+    sheepdog (LP: #708141)
+  * Suggest radvd for those who want to try ipv6.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 03 Feb 2011 07:00:52 -0500
+
+nova (2011.1~bzr638-0ubuntu1) natty; urgency=low
+
+  * New upstream snapshot.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 28 Jan 2011 13:41:00 -0500
+
+nova (2011.1~bzr597-0ubuntu1) natty; urgency=low
+
+  [ Chuck Short ]
+  * New upstream snapshot.
+  * Add socat, iscsiadm, and vgs to nova_sudoers.
+  * Add aoetools, open-iscsi to dependencies for nova-volume.
+  * Add socat to dependencies for nova-network.
+  * Add python-paste and python-pastedeploy as build dependency.
+  * Add python-tempita and python-migrate as build dependency.
+
+  [ Soren Hansen ]
+  * Add dependency on sudo.
+  * Add upstart jobs for everything.
+  * Adjust test run for nosetests newness.
+  * Quiet nova-compute's postinst script.
+  * Change the dependency on sqlalchemy to ensure the C extension gets
+    installed for versions of the package where that was split out.
+  * Don't chgrp anything to the 'nogroup' group. The whole idea of the
+    nogroup group is that it doesn't own anything, so only being a
+    member of that shouldn't grant you access to anything. Making dirs
+    and files owned by nogroup messes this up.
+  * Update nova-manage patch.
+  * Add iptables-{restore,save} to sudoers file.
+  * Create a logrotate config for each daemon. Make them restart the
+    service after rotation.
+  * Drop python-redis dependency.
+  * Change python compatibility from "2.6" to "2.6-"
+  * Add launchpad page to watch file.
+  * Set Python-Version control fields for python-nova.
+  * Add ip6tables-{save,restore} to sudoers file. (LP: #704458)
+  * Add python-glance dependency.
+  * Include paste config for nova-api.
+  * Initialise database on initial install.
+
+  [ Rick Clark ]
+  * Add dependency on python-cheetah
+  * Added iscsi target admin tool to sudoers file.
+  * Specified log for nova-objectstore.
+  * Set verbose logging in nova.conf.
+
+  [ Monty Taylor ]
+  * Add dependency on python-netaddr
+
+  [ Thierry Carrez (ttx) ]
+  * Added qemu-nbd to nova_sudoers
+  * Added modprobe nbd to nova-compute upstart script
+
+ -- Thierry Carrez (ttx) <thierry@openstack.org>  Mon, 24 Jan 2011 14:32:19 +0100
+
+nova (2011.1~bzr456-0ubuntu1) natty; urgency=low
+
+  [ Chuck Short ]
+  * New upstream snapshot.
+  * debian/source_nova.py:
+    Add apport hook.
+
+  [ Soren Hansen ]
+  * Removed logdir.patch. Merged upstream.
+  * Drop flagfile_location.patch: Merged upstream.
+  * Use new --state_path flag and weed out the many direct references to
+    /var/lib/nova.
+  * Leave it to upstream's 'setup.py install' to install templates.
+    Remove explicit paths from nova.conf.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 13 Dec 2010 10:17:01 -0500
+
+nova (2011.1~bzr412-0ubuntu1) natty; urgency=low
+
+  [ Soren Hansen ]
+  * New upstream snapshot.
+  * Added the new tarballs page to debian/watch.
+  * Clean out patch-branches (everything is upstream now).
+  * Remove redis-server as a build-depends and don't start it for tests
+    anymore.
+  * Add missing dependency on python-webob.
+  * Force a python-support run (so avoid deferring it until dpkg
+    triggers run). (LP: #660428)
+  * Remove build and runtime dependencies on python-tornado. It's not
+    needed anymore.
+  * logdir.patch: Add a --logdir option to workers so that they can all
+    use the same flagfile. (lp:~soren/nova/logdir-flag)
+  * Consolidate all the flagfiles into one.
+  * flagfile_location.patch: Patch from upstream to ensure all workers
+    have a consistent way of finding their flagfile.
+    (lp:~soren/nova/unify-default-flagfile-location)
+  * nova-manage_flagfile_location.patch: Make sure nova-manage uses
+    /etc/nova/nova.conf by default.
+  * Add build and runtime dependency on openssl. It used to be pulled in
+    by python-tornado, but is actually used directly by nova.
+
+  [ Chuck Short ]
+  * debian/control:
+   - Add dependency to python-rrdtool so that nova-instancemonitor
+     doesnt complain about missing python modules when starting.
+  * debian/nova-common.install: Add missing templates.
+  * debian/nova-*.conf: Update flagfiles to handle upstream changes.
+  * Dropped start-redis since we dont do redis anymore.
+
+ -- Soren Hansen <soren@ubuntu.com>  Tue, 23 Nov 2010 11:17:09 +0100
+
+nova (0.9.1~bzr331-0ubuntu2) maverick; urgency=low
+
+  * Add a minimal patch to ensure a string gets returned as an
+    instance's internal ID. (LP: #657053)
+
+ -- Soren Hansen <soren@ubuntu.com>  Fri, 08 Oct 2010 23:16:58 +0200
+
+nova (0.9.1~bzr331-0ubuntu1) maverick; urgency=low
+
+  [ Soren Hansen ]
+  * New upstream snapshot (FFe ref: LP #645936)
+  * Add SQLAlchemy dependency.
+  * Specify that we want sqlite and we want it in
+    /var/lib/nova/nova.sqlite.
+  * Move "adduser nova libvirtd" to nova-compute.postinst.
+  * Add python-eventlet and python-routes dependencies.
+  * Make /bin/true our error handler for init scripts.
+  * Install nova-api-new as nova-api.
+  * Add nova-scheduler package.
+  * Add /bin/kill to sudoers.
+  * Make sure nova_sudoers has the correct mode, otherwise sudo gets
+    very upset.
+  * Add ebtables and gawk dependencies for nwfilter stuff to work.
+
+  [ Chuck Short ]
+  * Add dependency on lvm2 for nova-volume.
+  * Add lvm commands to sudoers list.
+
+ -- Soren Hansen <soren@ubuntu.com>  Tue, 21 Sep 2010 16:36:37 +0200
+
+nova (0.9.1~bzr265-0ubuntu1) maverick; urgency=low
+
+  * New upstream snapshot (FFe: LP: #628027)
+  * Install uml libvirt xml file.
+  * Add adduser as a dependency of nova-common so that we can create a
+    nova user.
+  * Create a nova user on install.
+  * Create a separate tmpdir for nova, so that we can limit calls to
+    chmod/chown to dirs and files in that directory.
+  * Add nova-network package.
+  * Add a sudoers file for nova, so that we don't have to run as root
+    anymore.
+  * Fix all init scripts to run their respective daemons as nova.
+  * Update nova-compute flag file to account for moved libvirt
+    templates.
+  * Make all init scripts create /var/run/nova.
+  * Move all pidfiles into /var/run/nova.
+  * Make all daemons create a log file in /var/log/nova.
+  * Respect DEB_BUILD_OPTIONS=nocheck.
+  * Add a logrotate config file.
+
+ -- Soren Hansen <soren@ubuntu.com>  Tue, 07 Sep 2010 13:12:10 +0200
+
+nova (0.9.1~bzr204-0ubuntu2) maverick; urgency=low
+
+  * Make sure debian/start-redis is executable.
+
+ -- Soren Hansen <soren@ubuntu.com>  Sat, 07 Aug 2010 11:38:30 +0200
+
+nova (0.9.1~bzr204-0ubuntu1) maverick; urgency=low
+
+  * First OpenStack release.
+
+ -- Soren Hansen <soren@ubuntu.com>  Wed, 04 Aug 2010 13:27:50 +0200
+

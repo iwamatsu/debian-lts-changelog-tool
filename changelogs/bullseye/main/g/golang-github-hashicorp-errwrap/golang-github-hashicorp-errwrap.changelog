@@ -1,0 +1,62 @@
+golang-github-hashicorp-errwrap (1.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Apply multi-arch hints.
+    + golang-github-hashicorp-errwrap-dev: Add Multi-Arch: foreign.
+
+  [ Shengjing Zhu ]
+  * Update uscan watch file to version 4
+  * New upstream version 1.1.0
+  * Update Section to golang
+  * Bump debhelper-compat to 13
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Add Rules-Requires-Root
+  * Use /usr/share/common-licenses/MPL-2.0 in copyright
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 31 Jan 2021 01:30:41 +0800
+
+golang-github-hashicorp-errwrap (1.0.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 1.0.0
+  * Apply "cme fix dpkg" fixes to debian/control,
+    setting Priority to optional, bumping Standards-Version to 4.2.1, etc.
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Use debhelper (>= 11~)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 23 Dec 2018 08:19:06 -0700
+
+golang-github-hashicorp-errwrap (0.0~git20141028.0.7554cd9-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Anthony Fok ]
+  * Refresh debian/control:
+    - Change golang-go to golang-any in Build-Depends
+    - Remove golang-go from Depends in -dev package
+    - Bump Standards-Version to 4.0.0:
+      Use https form of the copyright-format URL in debian/copyright
+    - Use debhelper (>= 10)
+    - Add "Testsuite: autopkgtest-pkg-go"
+    - Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Tue, 25 Jul 2017 10:58:38 -0600
+
+golang-github-hashicorp-errwrap (0.0~git20141028.0.7554cd9-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 06 Nov 2015 15:31:20 -0800

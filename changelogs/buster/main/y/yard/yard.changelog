@@ -1,0 +1,257 @@
+yard (0.9.16-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2019-1020001: Arbitrary path traversal and file access in yard server
+  * CVE-2024-27285: Cross-Site Scripting in generated frames.html
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 06 Mar 2024 17:08:41 +0200
+
+yard (0.9.16-1) unstable; urgency=medium
+
+  * New upstream version 0.9.16
+  * Move debian/watch to gemwatch.debian.net
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+  * Mark yard-doc as Multi-Arch: foreign
+  * Drop 0006-failing-rubygems-search-paths-tests-with-ruby2.5.patch
+    (not needed any more)
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 16 Aug 2018 04:40:11 +0200
+
+yard (0.9.12-2) unstable; urgency=medium
+
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.1.3 (no changes needed)
+  * Use salsa.debian.org in Vcs-* fields
+  * Use https in watch file and copyright format URL
+  * Skip two tests in spec/cli/yri_spec.rb failing with ruby2.5
+    (Closes: #888198)
+  * Fix paths to documentations in doc-base and links files for yard-doc
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 15 Mar 2018 07:12:08 +0100
+
+yard (0.9.12-1) unstable; urgency=medium
+
+  * New upstream version 0.9.12
+  * Refresh patches
+  * Bump debhelper compatibility level to 10
+  * Bump Standards-Version to 4.1.1 (no changes needed)
+  * Use DEB_VERSION_UPSTREAM instead of parsing the changelog
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 27 Nov 2017 11:49:09 +0100
+
+yard (0.9.9-1) unstable; urgency=medium
+
+  * New upstream version 0.9.9
+  * Bump Standards-Version. No changes needed.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Thu, 06 Jul 2017 21:45:35 +0200
+
+yard (0.9.7-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Lucas Nussbaum ]
+  * Fix permissions of files in /usr/share/yard/templates. (Avoids lintian
+    warnings)
+
+  [ Antonio Terceiro ]
+  * New upstream release. Includes change to make the output reproducible
+    (Closes: #849972)
+  * debian/rules, debian/ruby-tests.rake: refreshed with `dh-make-ruby -w`
+  * debian/rules: install using the Rubygems layout. This makes most of the
+    patches we have been carrying here obsolete. Remaining patches
+    refreshed/updated.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 12 Jan 2017 21:45:38 -0200
+
+yard (0.9.5-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.9.5
+  * Refresh patches
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 02 Aug 2016 16:38:17 +0200
+
+yard (0.9.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.9.0
+  * Refresh privacy-breach.patch
+  * Drop skip_failing_test_ruby230.patch, not needed anymore
+  * Bump Standards-Version to 3.9.8 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 09 Jul 2016 09:05:45 +0200
+
+yard (0.8.7.6+git20160220-4) unstable; urgency=medium
+
+  * Add force_file_order.patch to force sorting filenames when compiling list
+    of files. This should help with reproducibility issues for packaging using
+    yard to generate documentation.
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Run wrap-and-sort on packaging files
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 17 Mar 2016 21:59:46 +0100
+
+yard (0.8.7.6+git20160220-3) unstable; urgency=medium
+
+  * Copy content of rubygems_plugin.rb in specs as this file is removed from
+    binary package, in order to fix DebCI tests
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 12 Mar 2016 00:50:56 +0100
+
+yard (0.8.7.6+git20160220-2) unstable; urgency=medium
+
+  * Do not install rubygems_plugin.rb (Closes:#812809)
+  * Skip temporarily a test failing with ruby 2.3.0
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 01 Mar 2016 19:28:04 +0100
+
+yard (0.8.7.6+git20160220-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Imported snapshot from upstream git repository
+    + test suite ported to RSpec 3 (Closes: #794148)
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Set debhelper compatibility level to 9
+  * Use https:// in Vcs-* fields
+  * Add privacy-breach.patch avoiding loading distant images in HTML
+    documentation
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 22 Feb 2016 00:49:05 +0100
+
+yard (0.8.7.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/copyright: fix path (avoids lintian warning).
+  * Ignore 'require-rubygems' failures given this test is removed in more
+    recent gem2deb versions.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Wed, 06 May 2015 11:08:54 +0200
+
+yard (0.8.7.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * Remove timestamps for reproducible builds (Closes: #776648)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 08 Apr 2015 17:31:55 +0200
+
+yard (0.8.7.4-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.8.7.4
+  * fix TEMPLATE_ROOT when run from the system installed library
+  * move source of jquery and jquery.autocomplete.js to debian/missing-sources
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 01 Apr 2014 09:56:29 +0200
+
+yard (0.8.7.3-2) unstable; urgency=medium
+
+  * Add move_yard_config_to_tmp_in_spec.patch so that tests about
+    configurations do not try to write in $HOME (Closes: #738409).
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 13 Feb 2014 17:09:25 +0100
+
+yard (0.8.7.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.8.7.3
+  * Drop rubygems depency, since it is shipped with Ruby1.9+
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 16 Jan 2014 11:02:42 +0100
+
+yard (0.8.7.2-1) unstable; urgency=low
+
+  * Imported Upstream version 0.8.7.2
+  * Use the rake method to run tests
+  * Indicate encoding for debian/yri.1.pod
+  * debian/rules:
+    + override dh_clean instead of dh_auto_clean
+    + remove doc/ when cleaning and just after auto_install to avoid
+      shipping files generated in tests in doc/
+  * promote ruby-redcarpet and graphviz from Suggests to Recommends
+  * documentation:
+    + remove docs/ from debian/yard.docs
+    + build yard documentation
+    + provide a separate yard-doc binary package
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 02 Oct 2013 11:35:04 +0200
+
+yard (0.8.6.1-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control
+    + remove obsolete DM-Upload-Allowed flag
+    + bump Standards-Version to 3.9.4 (no changes needed)
+    + update my email address
+    + use canonical URLs in Vcs-* fields
+    + replace ruby-rdiscount by ruby-redcarpet, which supports autolinking,
+      enabling an additional test
+  * debian/copyright
+    + drop lib/yard/parser/c_parser.rb, not used upstream anymore
+    + update years
+    + update my email address
+  * debian/*.pod: update manpages
+  * debian/patches:
+    + drop use_yard_gemspec_for_doc_manager_spec.patch, not needed anymore
+      since upstream now ships the gemspec file in the gem
+    + refresh remove_rubygems_and_path_manipulation_from_spec.patch and
+      require-in-executables.patch
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 07 May 2013 15:18:07 +0200
+
+yard (0.8.2.1-2) unstable; urgency=low
+
+  * Depend on ruby-gettext
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Fri, 29 Jun 2012 04:24:34 +0200
+
+yard (0.8.2.1-1) unstable; urgency=low
+
+  [ Paul van Tilburg ]
+  * New upstream release.
+  * debian/control:
+    - Added myself to the uploaders.
+    - Bumped gem2deb build-dependency to 0.3.0~.
+  * debian/patches: refreshed set-templates-path.patch. 
+  * debian/source/local-options: set the "unapply-patches" option. 
+
+  [ Cédric Boutillier ]
+  * add debian/patches/use_yard_gemspec_for_doc_manager_spec.patch
+    - temporarily import upstream yard.gemspec, used for doc_manager.rb specs
+  * add deactivate_failing_test_with_sbuild.patch (Closes: #674327)
+  * Build-depend on ruby-gettext
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Thu, 28 Jun 2012 07:21:42 +0200
+
+yard (0.8.1-1) unstable; urgency=low
+
+  * New upstream version
+  * Add myself to Uploaders:
+  * Build-Depends and Depends on libjs-jquery
+  * Bump Standards-Version: to 3.9.3 (no changes needed)
+  * Convert debian/copyright to DEP-5
+  * set-templates-path.patch: refresh and add DEP-3 header
+  * Update dependencies:
+    + add Build-depends on ruby-redcloth, ruby-rack, bundler, libjs-jquery;
+    + add Depends on libjs-query;
+    + add Suggests bundler, ruby-rdiscount;
+  * debian/patches:
+    + refresh require-in-executables.patch
+    + use relative path in set-templates-path.patch
+    + add remove_rubygems_and_path_manipulation_from_spec.patch
+  * Do not ignore test results anymore
+  * Provide simple manpages for yard, yardoc, yri
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Sun, 06 May 2012 17:48:08 +0200
+
+yard (0.7.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Tue, 20 Dec 2011 18:26:10 +0100
+
+yard (0.7.3-1) unstable; urgency=low
+
+  * Initial release.
+  * TODO for next release: several tests are currently failing.
+    See https://github.com/lsegal/yard/issues/397
+
+ -- Lucas Nussbaum <lucas@debian.org>  Sun, 16 Oct 2011 13:53:49 +0200

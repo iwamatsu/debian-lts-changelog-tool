@@ -1,0 +1,182 @@
+go-md2man-v2 (2.0.0+ds-5) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable
+  * Take over go-md2man
+    And go-md2man has Multi-Arch: foreign already (Closes: 919454)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 27 Oct 2020 12:39:40 +0800
+
+go-md2man-v2 (2.0.0+ds-4) experimental; urgency=medium
+
+  * Team upload.
+  * Rename the go-md2man package name.
+    The binary package go-md2man doesn't need a v2 suffix. It can replace
+    the old go-md2man built from src:go-md2man.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 24 Oct 2020 23:39:47 +0800
+
+go-md2man-v2 (2.0.0+ds-3) unstable; urgency=medium
+
+  * Team upload.
+  * Move the Go-Import-Path to github.com/cpuguy83/go-md2man/v2.
+    So the -dev package can co-install with v1.
+    The Conflicts on -dev causes golang-github-spf13-cobra and
+    golang-github-urfave-cli failed to migrate to testing.
+  * Add Rules-Requires-Root
+  * Fix Vcs URL to v2 repo
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 24 Oct 2020 23:02:52 +0800
+
+go-md2man-v2 (2.0.0+ds-2) unstable; urgency=medium
+
+  * Team upload.
+  * sourceful upload for migration to testing
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 02 Oct 2020 15:53:12 +0800
+
+go-md2man-v2 (2.0.0+ds-1) unstable; urgency=medium
+
+  * Team upload.
+  * update package name to go-md2man-v2 and conflict with v1 dev
+    package.
+    Executable package Conflicts and Replaces v1.
+  * New upstream release (first v2 release)
+  * Depends: golang-github-russross-blackfriday-v2-dev (>= 2.0.1~)
+  * Conflicts: golang-github-cpuguy83-go-md2man-dev
+  * Standards-Version: 4.5.0
+  * debhelper compatibility level 13
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Sep 2020 13:16:12 +0800
+
+go-md2man (1.0.10+ds-1) unstable; urgency=medium
+
+  * New upstream version 1.0.10
+  * Apply "cme fix dpkg" fixes:
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Replace override_dh_auto_clean with debian/clean
+  * Update versioned dependency on golang-github-russross-blackfriday-dev
+    to (>= 1.5.2~) according to go.mod
+
+ -- Anthony Fok <foka@debian.org>  Sun, 11 Aug 2019 01:34:58 -0600
+
+go-md2man (1.0.8+ds-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream release.
+  * Apply "cme fix dpkg" to debian/control,
+    bumping Standards-Version to 4.1.4,
+    setting Priority to optional,
+    adding Testsuite: autopkgtest-pkg-go, etc.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Apr 2018 05:15:47 -0600
+
+go-md2man (1.0.6+git20170603.6.23709d0+ds-1) unstable; urgency=medium
+
+  [ Riku Voipio ]
+  * Increase required version to avoid FTBFS in backports
+
+  [ Anthony Fok ]
+  * New upstream snapshot.
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright.
+  * Use debhelper (>= 10).
+
+ -- Anthony Fok <foka@debian.org>  Sun, 09 Jul 2017 09:29:03 -0600
+
+go-md2man (1.0.6+ds-1) unstable; urgency=medium
+
+  * New upstream version 1.0.6
+  * Exclude vendored-in dependencies that were added in 1.0.6
+  * Remove now unused Lintian override of statically-linked-binary
+    usr/bin/go-md2man
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Jan 2017 18:00:44 -0700
+
+go-md2man (1.0.5-2) unstable; urgency=medium
+
+  * Update debian/control
+    - Change architecture-specific golang-go and gccgo to the new
+      "golang-any" package in Build-Depends
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-* fields
+
+ -- Anthony Fok <foka@debian.org>  Thu, 09 Jun 2016 06:20:43 -0600
+
+go-md2man (1.0.5-1) unstable; urgency=medium
+
+  * Update to 1.0.5 upstream release, with improved man page rendering:
+     - Disable hyphenation
+     - Disable justification (adjust text to left margin only)
+     - Fix output for bulleted lists and numbered lists
+     - Escape initial apostrophe and period to prevent a line of text
+       from being misinterpreted as a request/macro, leading to
+       "warning: macro 'xxx' not defined" and missing text.
+  * Use architecture instead of alternatives in Build-Depends because
+    sbuild ignores alternatives in Build-Depends (Closes: #785649).
+  * Remove Depends: golang-go from -dev package so it can be used by
+    other Go packages on gccgo-only platforms.
+  * Revise debian/watch to skip upstream v1.tar.gz, which for some reasons
+    the current uscan thinks is the latest... :-p
+  * Add Lintian override for statically-linked-binary
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Wed, 13 Jan 2016 16:30:40 -0700
+
+go-md2man (1.0.4-3) unstable; urgency=medium
+
+  * Allow gccgo to satisfy our "go" needs (Closes: #785649).
+
+ -- Tianon Gravi <tianon@debian.org>  Thu, 15 Oct 2015 13:00:34 -0700
+
+go-md2man (1.0.4-2) unstable; urgency=medium
+
+  * Update to 1.0.4 upstream release (Closes: #798585).
+  * Rename "golang-go-md2man-dev" to "golang-github-cpuguy83-go-md2man-dev" for
+    pkg-go policy compliance.
+  * Add Conflicts/Provides/Replaces (doh!).
+
+ -- Tianon Gravi <tianon@debian.org>  Thu, 10 Sep 2015 20:25:34 -0700
+
+go-md2man (1.0.3-1) unstable; urgency=medium
+
+  * Update to 1.0.3 upstream release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 29 Jul 2015 23:46:50 -0600
+
+go-md2man (1.0.2-1) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sat, 02 May 2015 18:49:13 -0600
+
+go-md2man (1.0.2-1~exp1) experimental; urgency=low
+
+  * Update to 1.0.2 upstream release.
+    - Add manpage (Closes: #760486)
+    - Fix header parsing
+    - Fix code block output
+  * Fix minor Description capitalization error.
+  * Update Standards-Version to 3.9.6.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 28 Jan 2015 23:24:14 -0700
+
+go-md2man (1-2) unstable; urgency=medium
+
+  * Team Upload.
+  * Update md2man's description. Thanks, Luke!
+
+ -- Paul Tagliamonte <paultag@debian.org>  Sun, 24 Aug 2014 20:53:41 -0400
+
+go-md2man (1-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sat, 23 Aug 2014 23:11:50 -0400

@@ -1,0 +1,47 @@
+libapache-session-ldap-perl (0.4-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2020-36658: Validity of the X.509 certificate is not checked by
+    default when connecting to remote LDAP backends, because the default
+    configuration of the Net::LDAPS module for Perl is used.
+    This upload changes the default behavior to require X.509 validation
+    against the distribution bundle /etc/ssl/certs/ca-certificates.crt.
+    Previous behavior can reverted by setting `ldapVerify => "none"` when
+    initializing the Apache::Session::LDAP object.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Fri, 27 Jan 2023 17:23:38 +0100
+
+libapache-session-ldap-perl (0.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update years of upstream copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 27 Jun 2015 22:56:44 +0200
+
+libapache-session-ldap-perl (0.3-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Xavier Guimard ]
+  * Correct upstream license (Artistic or GPL-1+)
+  * Bump Standards-Version to 3.9.4
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Update Upstream-Contact and upstream copyright in debian/copyright.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 25 Oct 2014 16:01:15 +0200
+
+libapache-session-ldap-perl (0.2-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #553582)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 21 May 2012 06:01:22 +0200

@@ -1,0 +1,472 @@
+libencode-perl (3.08-1+deb11u1) bullseye-security; urgency=high
+
+  * [SECURITY] CVE-2021-36770: Encode loading code from working directory
+
+ -- Niko Tyni <ntyni@debian.org>  Fri, 06 Aug 2021 21:49:32 +0300
+
+libencode-perl (3.08-1) unstable; urgency=medium
+
+  * Import upstream version 3.08.
+  * Declare compliance with Debian Policy 4.5.1.
+  * Drop unused lintian override.
+  * Make file paths in lintian overrides version and architecture
+    agnostic.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 02 Dec 2020 19:05:16 +0100
+
+libencode-perl (3.07-1) unstable; urgency=medium
+
+  * Import upstream version 3.07.
+  * Bump debhelper-compat to 13.
+  * Update lintian overrides.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 25 Jul 2020 19:22:25 +0200
+
+libencode-perl (3.06-1) unstable; urgency=medium
+
+  * Import upstream version 3.06.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 02 May 2020 15:55:57 +0200
+
+libencode-perl (3.05-1) unstable; urgency=medium
+
+  * Import upstream version 3.05.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 18 Mar 2020 18:26:48 +0100
+
+libencode-perl (3.04-1) unstable; urgency=medium
+
+  * Import upstream version 3.04.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 11 Mar 2020 21:28:06 +0100
+
+libencode-perl (3.03-1) unstable; urgency=medium
+
+  * Import upstream version 3.03.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Set upstream metadata fields: Bug-Submit.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 02 Mar 2020 18:35:56 +0100
+
+libencode-perl (3.02-1) unstable; urgency=medium
+
+  * Import upstream version 3.02.
+  * Update Build-Depends for cross builds.
+  * Declare compliance with Debian Policy 4.4.1.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 25 Dec 2019 15:42:32 +0100
+
+libencode-perl (3.01-1) unstable; urgency=medium
+
+  * Import upstream version 3.01.
+  * Declare compliance with Debian Policy 4.4.0.
+  * Bump debhelper-compat to 12.
+  * debian/watch: use uscan version 4.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 20 Jul 2019 13:41:29 -0300
+
+libencode-perl (3.00-1) unstable; urgency=medium
+
+  * Import upstream version 3.00.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 06 Feb 2019 19:44:26 +0100
+
+libencode-perl (2.99-1) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Email change: Xavier Guimard -> yadd@debian.org
+
+  [ gregor herrmann ]
+  * Import upstream version 2.99.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Bump debhelper compatibility level to 11.
+  * Remove trailing whitespace from debian/*.
+  * Use HTTPS for unicode.org URLs in debian/copyright.
+  * Add a lintian override for false positive
+    package-contains-documentation-outside-usr-share-doc.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 22 Jan 2019 18:08:53 +0100
+
+libencode-perl (2.98-1) unstable; urgency=medium
+
+  * Imported version 2.98
+  * Declare compliance with Debian Policy 4.1.4 (no change needed)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 01 May 2018 08:34:41 +0200
+
+libencode-perl (2.97-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Xavier Guimard ]
+  * New upstream release
+  * Mark binary package as "Multi-Arch: same"
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 07 Mar 2018 15:24:32 +0100
+
+libencode-perl (2.96-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 12 Feb 2018 13:52:48 +0100
+
+libencode-perl (2.94-1) unstable; urgency=medium
+
+  * Import upstream version 2.94.
+    Fixes "deep recursion in Encode::find_encoding when decoding MIME header"
+    (Closes: #886492)
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.3.
+  * Bump debhelper compatibility level to 10.
+  * Remove trailing whitespace from debian/control.
+    Thanks to pedantic lintian.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 09 Jan 2018 21:07:29 +0100
+
+libencode-perl (2.93-1) unstable; urgency=medium
+
+  * Import upstream version 2.93.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.1.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 14 Oct 2017 17:16:41 +0200
+
+libencode-perl (2.92-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 2.92
+  * Needed to change priority to optional for standards version upgrade
+
+ -- Tamas CSILLAG <cstamas@cstamas.hu>  Tue, 08 Aug 2017 23:30:02 +0200
+
+libencode-perl (2.88-1) unstable; urgency=medium
+
+  * Import upstream version 2.88.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 03 Dec 2016 00:26:17 +0100
+
+libencode-perl (2.87-1) unstable; urgency=medium
+
+  * Import upstream version 2.87.
+    Fixes "panic: sv_setpvn called with negative strlen"
+    (Closes: #835989)
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 29 Oct 2016 01:39:07 +0200
+
+libencode-perl (2.86-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Remove Fabrizio Regalli from Uploaders. Thanks for your work!
+  * Remove Jose Luis Rivas from Uploaders. Thanks for your work!
+
+  [ Niko Tyni ]
+  * Imported Upstream version 2.86.
+    + includes CVE-2016-1238 fixes. (Closes: #835984)
+
+ -- Niko Tyni <ntyni@debian.org>  Mon, 29 Aug 2016 22:37:07 +0300
+
+libencode-perl (2.84-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ intrigeri ]
+  * Enable all hardening build flags.
+  * Declare compliance with Standards-Version 3.9.8.
+
+ -- intrigeri <intrigeri@debian.org>  Tue, 05 Jul 2016 21:08:07 +0000
+
+libencode-perl (2.84-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported upstream version 2.84.
+
+ -- Niko Tyni <ntyni@debian.org>  Mon, 11 Apr 2016 20:09:46 +0300
+
+libencode-perl (2.83-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 2.83.
+    + rewritten RFC 2047 implementation fixes whitespace issues
+      (Closes: #819155)
+
+ -- Niko Tyni <ntyni@debian.org>  Sat, 26 Mar 2016 14:15:43 +0200
+
+libencode-perl (2.82-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Import upstream version 2.82.
+  * Declare compliance with Debian Policy 3.9.7.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 07 Feb 2016 15:00:38 +0100
+
+libencode-perl (2.79-1) unstable; urgency=medium
+
+  * Import upstream version 2.79.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 22 Jan 2016 23:27:59 +0100
+
+libencode-perl (2.78-1) unstable; urgency=medium
+
+  * Import upstream version 2.78.
+  * Drop spelling.patch, merged upstream.
+  * Rename autopkgtest configuration file.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 17 Oct 2015 22:39:30 +0200
+
+libencode-perl (2.77-1) unstable; urgency=medium
+
+  * Import upstream version 2.77
+    Fixes "Encode::Unicode decode() dies unnecessarily"
+    (Closes: #799086)
+  * Add a patch to fix a spelling mistake in the POD.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 17 Sep 2015 17:46:12 +0200
+
+libencode-perl (2.76-1) unstable; urgency=medium
+
+  * Import upstream version 2.76.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 18 Aug 2015 16:37:59 +0200
+
+libencode-perl (2.75-1) unstable; urgency=medium
+
+  * Import upstream version 2.75.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 04 Jul 2015 21:06:23 +0200
+
+libencode-perl (2.73-1) unstable; urgency=medium
+
+  * New upstream release
+  * Upload to unstable
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 04 May 2015 13:21:06 +0100
+
+libencode-perl (2.72-1) experimental; urgency=medium
+
+  [ Anuradha Weeraman ]
+  * Team upload
+  * New upstream release
+
+  [ Dominic Hargreaves ]
+  * New upstream release
+  * Update copyright for new encguess script
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 29 Mar 2015 18:40:12 +0100
+
+libencode-perl (2.63-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Add debian/upstream/metadata
+  * Import upstream version 2.63
+  * Update years of upstream copyright.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 20 Oct 2014 20:21:26 +0200
+
+libencode-perl (2.62-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update comment in lintian-override.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 06 Jun 2014 14:49:20 +0200
+
+libencode-perl (2.60-1) unstable; urgency=medium
+
+  * Drop xz compression for {binary,source} package, set by default by
+    dpkg since 1.17.{0,6}.
+  * Strip trailing slash from metacpan URLs.
+
+  * New upstream release.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 11 May 2014 18:25:02 +0200
+
+libencode-perl (2.57-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 2.57
+  * Drop Pre-Depends on dpkg (>= 1.15.6~)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 12 Jan 2014 09:21:06 +0100
+
+libencode-perl (2.56-1) unstable; urgency=medium
+
+  * Import Upstream version 2.56
+  * Declare compliance with Debian Policy 3.9.5
+
+ -- Florian Schlichting <fsfs@debian.org>  Mon, 23 Dec 2013 23:28:02 +0100
+
+libencode-perl (2.55-1) unstable; urgency=low
+
+  * Import Upstream version 2.55
+
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 20 Sep 2013 12:41:05 +0200
+
+libencode-perl (2.54-1) unstable; urgency=low
+
+  * Import Upstream version 2.54
+
+ -- Florian Schlichting <fsfs@debian.org>  Sun, 08 Sep 2013 22:45:19 +0200
+
+libencode-perl (2.52-1) unstable; urgency=low
+
+  * Import Upstream version 2.52.
+  * Add copyright paragraph for data files in ucm/.
+  * Update years of upstream copyright.
+  * Hardening detected correctly, drop lintian override.
+  * Drop override_dh_builddeb, xz compression is the default now.
+  * Add myself to uploaders and copyright.
+
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 16 Aug 2013 12:27:52 +0200
+
+libencode-perl (2.51-1) unstable; urgency=low
+
+  * Imported Upstream version 2.51
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 30 Apr 2013 09:55:30 +0200
+
+libencode-perl (2.49-1) unstable; urgency=low
+
+  * Imported Upstream version 2.49
+    Closes: #702444
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 06 Mar 2013 06:35:18 +0100
+
+libencode-perl (2.48-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * Use XZ compression for source and binary packages.
+
+  [ gregor herrmann ]
+  * Add a Pre-Depends on dpkg (>= 1.15.6~) for the xz compression.
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Xavier Guimard ]
+  * Imported Upstream version 2.48
+  * Bump Standards-Version to 3.9.4
+  * Use debhelper 9.20120312
+  * Update debian/copyright (years and format)
+  * Add hardening-no-fortify-functions in lintian-overrides to hide
+    false-positive lintian warning
+  * Remove spelling patch now included in upstream
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 05 Mar 2013 08:15:42 +0100
+
+libencode-perl (2.44-1) unstable; urgency=high
+
+  * Team upload.
+  * Upload with high urgency as this includes a security fix.
+
+  [ Ansgar Burchardt ]
+  * New upstream release.
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Wed, 10 Aug 2011 11:03:23 +0200
+
+libencode-perl (2.43-1) unstable; urgency=low
+
+  [ Fabrizio Regalli ]
+  * New upstream release.
+  * Switch d/compat to 8.
+  * Add myself to Uploaders and Copyright.
+  * Bump to 3.9.2 Standard-Version.
+  * Update debhelper to (>= 8).
+  * Updated spelling.patch.
+
+  [ gregor herrmann ]
+  * Update years of upstream copyright.
+
+ -- Fabrizio Regalli <fabreg@fabreg.it>  Mon, 20 Jun 2011 00:28:43 +0200
+
+libencode-perl (2.42-1) unstable; urgency=low
+
+  * New upstream release (Closes: #608294)
+
+  [ Dominic Hargreaves ]
+  * Added myself as an uploader
+  * Bumped Standards-Version (no changes)
+
+  [ gregor herrmann ]
+  * Switch to source format 3.0 (quilt).
+  * debian/control: change Vcs-Browser field to ViewSVN.
+  * debian/watch: use extended regexp to match upstream releases.
+  * debian/copyright: switch to DEP5 formatting.
+  * Use debhelper 7 (debian/{rules,control,compat}.
+  * Add a patch to deal with spelling/grammar problems, and lintian override
+    where lintian and /me don't agree on English grammaar.
+  * Add /me to Uploaders.
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 04 Jan 2011 21:46:25 +0000
+
+libencode-perl (2.24-1) unstable; urgency=low
+
+  [ Damyan Ivanov ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+
+  [ gregor herrmann ]
+  * debian/rules: delete /usr/share/perl5 only if it exists.
+  * Add ${shlibs:Depends} to Depends in order to get the necessary
+    dependency on libc in the binary package.
+  * Remove debian/docs, the upstream README gets installed anyway by some
+    CDBS magic.
+
+  [ Martín Ferrari ]
+  * debian/watch: by-dist URL.
+  * debian/control:
+  - Changed: Maintainer set to Debian Perl Group; Jose Luis Rivas
+    <ghostbar38@gmail.com> moved to Uploaders.
+  - Bumped Standards-Version (no changes).
+  - Removed homepage link from description.
+  * New upstream release.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sat, 15 Mar 2008 17:42:17 +0100
+
+libencode-perl (2.23-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+   + Deleted directory since isn't needed anymore.
+  * debian/rules:
+   + Deleted `include` to `simple-patchsys.mk` rule since isn't needed anymore.
+   + Removed commands for cleaning builddir after install.
+   + Added `rm` to `/usr/share/perl5`, cleaning builddir.
+  * debian/dirs:
+   + Deleted, isn't used.
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Sat, 09 Jun 2007 21:37:56 -0400
+
+libencode-perl (2.21-1) unstable; urgency=low
+
+  * Initial release (Closes: #425184)
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Fri, 18 May 2007 23:49:27 -0400

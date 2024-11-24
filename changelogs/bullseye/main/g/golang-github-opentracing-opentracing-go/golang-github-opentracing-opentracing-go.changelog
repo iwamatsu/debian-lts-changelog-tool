@@ -1,0 +1,38 @@
+golang-github-opentracing-opentracing-go (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Jelmer Vernooĳ ]
+  * Change priority extra to priority optional.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Arnaud Rebillout ]
+  * Update watch file to version 4
+  * Update gitlab-ci.yml
+  * Section = golang
+  * Rules-Requires-Root = no
+  * Standards-Version = 4.5.1
+  * Bump debhelper compat
+  * Update Go Team email address
+  * Nitpick, re-order fields in d/control
+  * New upstream version 1.2.0
+  * Update license according to change upstream: MIT -> Apache
+  * Build-Depends -= golang-golang-x-net-dev
+  * Drop shlibs:Depends from -dev package
+  * Update gbp.conf, drop Pristine-Tar
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Fri, 08 Jan 2021 15:23:39 +0700
+
+golang-github-opentracing-opentracing-go (1.0.2-1) unstable; urgency=medium
+
+  * Initial release. Closes: #870191.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 30 Jul 2017 20:57:39 +0000

@@ -1,0 +1,30 @@
+cryptojs (3.1.2+dfsg-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2023-46233: Default PBKDF2 settings are 1000 times weaker than
+    specified in 1993 and 1.3M times weaker than OWASP's current
+    recommendations.
+    The default settings are now changed to use SHA256 with 250k iterations
+    (closes: #1055525).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 27 Nov 2023 18:24:46 +0100
+
+cryptojs (3.1.2+dfsg-2) unstable; urgency=low
+
+  * Cosmetic packaging changes.
+
+  [ Jean-Michel Vourgère <nirgal@debian.org> ]
+  * Re-created upstream "roll-ups", single javascript files with all
+    dependencies embedded. This enables the use of that library as documented,
+    and fixes import issues on Safari (closes: #786880).
+  * Added build-dependency on yui-compressor.
+  * New d/clean and d/build files.
+  * Added links to keep the old addresses working.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 14 Oct 2015 19:12:17 +0200
+
+cryptojs (3.1.2+dfsg-1) unstable; urgency=low
+
+  * Initial upload (closes: #719784).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 01 Dec 2014 18:21:05 +0000

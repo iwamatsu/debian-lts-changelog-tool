@@ -1,0 +1,72 @@
+ruby-kaminari (1.0.1-4+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload.
+  * Fix CVE-2020-11082:
+    There is a vulnerability that would allow an attacker to inject arbitrary
+    code into pages with pagination links.
+    (Closes: #961847)
+
+ -- Markus Koschany <apo@debian.org>  Sat, 02 Oct 2021 12:48:13 +0200
+
+ruby-kaminari (1.0.1-4) unstable; urgency=medium
+
+  * Add nocheck build profile for backporting
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 17 May 2018 18:04:01 +0530
+
+ruby-kaminari (1.0.1-3) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Bump standards version to 4.1.3 and debhelper compat to 11
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 22 Feb 2018 13:44:32 +0530
+
+ruby-kaminari (1.0.1-2) experimental; urgency=medium
+
+  * Update dependencies 
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 12 Sep 2017 19:22:36 +0530
+
+ruby-kaminari (1.0.1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Add new binary packages: ruby-kaminari-core, ruby-kaminari-actionview,
+    ruby-kaminari-activerecord
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 Sep 2017 16:47:48 +0530
+
+ruby-kaminari (0.17.0-3) unstable; urgency=medium
+
+  * debian/rules: ship both app/ and config/ using the rubygems layout.
+    (Closes:#841487)
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Fri, 21 Oct 2016 15:01:18 +0800
+
+ruby-kaminari (0.17.0-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Check gemspec dependencies during build
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 Jul 2016 00:22:27 +0530
+
+ruby-kaminari (0.17.0-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump Standards-Version to 3.9.8
+
+ -- Abhijith PA <abhijith@openmailbox.org>  Sun, 12 Jun 2016 13:24:54 +0530
+
+ruby-kaminari (0.16.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix formatting of bullets, thanks to Daniele Forsi (Closes: #779800)
+  * Bump standards version to 3.9.6 (no changes)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 27 May 2015 09:38:54 +0530
+
+ruby-kaminari (0.16.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #761030)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 10 Sep 2014 16:11:37 +0530

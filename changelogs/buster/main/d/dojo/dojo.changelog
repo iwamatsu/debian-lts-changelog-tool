@@ -1,0 +1,249 @@
+dojo (1.14.2+dfsg1-1+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2020-4051: Cross-site scripting (XSS) vulnerability in the Editor's
+    LinkDialog plugin (closes: #970000).
+  * CVE-2021-23450: Prototype pollution vulnerability via the setObject()
+    function (closes: #1014785).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sat, 28 Jan 2023 18:18:31 +0100
+
+dojo (1.14.2+dfsg1-1+deb10u2) buster; urgency=medium
+
+  * Team upload
+  * Fix prototype pollution in deepCopy method (Closes: #953585,
+    CVE-2020-5258)
+  * Fix Prototype Pollution in jqMix method (Closes: #953587, CVE-2020-5259)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 11 Mar 2020 06:18:23 +0100
+
+dojo (1.14.2+dfsg1-1+deb10u1) buster; urgency=medium
+
+  * Team upload
+  * Cleanup improper regex usage (Closes: #952771, CVE-2019-10785)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 04 Mar 2020 06:41:25 +0100
+
+dojo (1.14.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version. Fix a bower.json file error.
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 30 Oct 2018 18:40:03 +0100
+
+dojo (1.14.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Fix CVE-2018-15494 (Closes: #906540):
+    In Dojo Toolkit before 1.14, there is unescaped string injection in
+    dojox/Grid/DataGrid.
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 05 Sep 2018 14:59:53 +0200
+
+dojo (1.13.0+dfsg1-3) unstable; urgency=medium
+
+  * Really fix nodoc profile
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 04 Jun 2018 11:54:36 +0200
+
+dojo (1.13.0+dfsg1-2) unstable; urgency=medium
+
+  * Source only upload
+  * Fix nodoc profiles in rules
+  * link doc
+  * Really drop mtasc from control
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 04 Jun 2018 10:38:40 +0200
+
+dojo (1.13.0+dfsg1-1) unstable; urgency=high
+
+  * Add myself as uploader
+  * New upstream release
+  * Remove swf file
+  * Bump compat and standard version
+  * Install shrinksafe to /usr/share/java/shrinksafe
+  * Do not use mtasc Closes: #831548).
+    Bail early on the storage plugin, fallback to next storage
+    plugin.
+  * Move to git dpm
+  * Bug fix: "Updating the dojo Uploaders list", thanks to Tobias Frost
+    (Closes: #863693).
+  * Dojo is now the new upstream of shrinksafe. New shrinksafe will fix
+    FTBFS: OPTIMIZER FAILED: JavaException:
+    java.lang.RuntimeException: null, thanks to Lucas Nussbaum
+    (Closes: #852923).
+  * Install dojox documentation
+  * Fix CVE-2018-6561 (Closes: #898944)
+    dijit.Editor in Dojo Toolkit 1.13 allows XSS via
+    the onload attribute of an SVG element.
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 03 Jun 2018 20:40:08 +0200
+
+dojo (1.11.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload, to unstable since it’s a stable version
+
+  [ Dylan Schiemann ]
+  * Updating metadata for 1.11.0
+
+  [ David Prévot ]
+  * Drop self and ownCloud for Debian maintainers from uploaders
+
+ -- David Prévot <taffit@debian.org>  Wed, 23 Mar 2016 23:26:35 -0400
+
+dojo (1.11.0~rc3+dfsg-1) experimental; urgency=medium
+
+  * Upload RC to experimental
+
+  [ Dylan Schiemann ]
+  * Updating metadata for 1.11.0-rc3
+
+  [ David Prévot ]
+  * Support development versions
+  * Update copyright
+  * Update Standards-Version to 3.9.7
+
+ -- David Prévot <taffit@debian.org>  Fri, 26 Feb 2016 22:10:13 -0400
+
+dojo (1.10.4+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable since Jessie has been released
+  * Drop now incorrect README
+
+ -- David Prévot <taffit@debian.org>  Mon, 11 May 2015 14:53:20 -0400
+
+dojo (1.10.4+dfsg-1) experimental; urgency=medium
+
+  [ Colin Snover ]
+  * Updating metadata for 1.10.4
+
+  [ David Prévot ]
+  * Drop incorrect executable bit from non-executable file
+
+ -- David Prévot <taffit@debian.org>  Thu, 22 Jan 2015 14:54:46 -0400
+
+dojo (1.10.3+dfsg-1) experimental; urgency=medium
+
+  * Upload to experimental to respect the freeze
+
+  [ Colin Snover ]
+  * Updating metadata for 1.10.3
+
+  [ David Prévot ]
+  * Do not ship build scripts in binary package (Closes: #772324)
+  * Rebuild (and ship) Flash file
+  * Drop incorrect executable bit from non-executable files
+
+ -- David Prévot <taffit@debian.org>  Mon, 08 Dec 2014 21:27:17 -0400
+
+dojo (1.10.2+dfsg-1) unstable; urgency=medium
+
+  [ Colin Snover ]
+  * Updating metadata for 1.10.2
+
+  [ David Prévot ]
+  * Use repacksuffix feature of uscan
+  * Strip away copyrighted ICC profile
+  * Drop incorrect executable bit from non-executable files
+  * Bump standards version to 3.9.6
+
+ -- David Prévot <taffit@debian.org>  Mon, 20 Oct 2014 12:36:09 -0400
+
+dojo (1.10.1+dfsg-1) unstable; urgency=medium
+
+  [ Colin Snover ]
+  * Updating metadata for 1.10.1
+
+  [ David Prévot ]
+  * Strip away copyrighted ICC profiles
+  * Drop incorrect executable bit from non-executable files
+  * Make script executable
+  * Don’t ship outdated compatGrid.tar.gz
+
+ -- David Prévot <taffit@debian.org>  Sun, 14 Sep 2014 10:55:56 -0400
+
+dojo (1.10.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #706696)
+  * debian/control:
+    - Maintain the package inside the JavaScript team
+    - Add ownCloud for Debian to uploaders
+    - Expand package descriptions
+    - Bump standards version to 3.9.5
+  * debian/rules:
+    - Convert to dh short rules
+    - Remove extra files and directories
+  * Remove compression options
+  * Use nodejs instead of node
+  * Use repack feature from uscan
+  * Upstream:
+    + Strip away copyrighted ICC profiles
+    + Drop incorrect executable bit from non-executable files
+    + Make script executable
+  * Update copyright
+  * Override lintian false positive
+
+ -- David Prévot <taffit@debian.org>  Thu, 21 Aug 2014 11:06:37 -0400
+
+dojo (1.7.2+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+  * Updated build rules to support new build system (Closes: #660032).
+  * Bumped Standards-Version
+  * Added missing recommended build targets
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Mon, 20 Feb 2012 16:14:59 -0500
+
+dojo (1.6.1+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+  * Removed Thumbs.db from dojox.gantt project
+  * Removed fileuploader.swf to comply with the DFSG
+  * Updated README.source and uscan-dfsg-clean.sh to reflect DFSG changes
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Tue, 17 May 2011 15:10:25 -0400
+
+dojo (1.5.0+dfsg-1) experimental; urgency=low
+
+  * New upstream version (Closes: #597148)
+  * Repackaged using uncompressed dojo source code
+  * Added get-orig-source rule to debian/rules
+  * Changed package licensing to BSD license
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Tue, 16 Nov 2010 15:51:00 -0400
+
+dojo (1.4.3+dfsg1-1) unstable; urgency=low
+
+  * Removed uploader.swf and dojox.storage to comply with the DFSG
+    (Closes: #591961)
+  * Removed mtasc from libjs-dojo-dojox Suggests due to removal of the
+    dojox.storage project
+  * Updated README files to reflect DFSG changes
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Sun, 08 Aug 2010 19:55:01 -0400
+
+dojo (1.4.3+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Mon, 07 Jun 2010 08:40:01 -0400
+
+dojo (1.4.2+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+  * Cleaned up rules
+  * Made corrections to libjs-dojo-dojox.README.Debian
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Thu, 18 Mar 2010 18:03:37 -0400
+
+dojo (1.4.1+dfsg-1) unstable; urgency=low
+
+  * New upstream version (Closes: #568562)
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Tue, 02 Feb 2010 18:56:56 -0500
+
+dojo (1.3.2+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #515637)
+  * Removed dojox.av project to comply with the DFSG
+
+ -- Jason Morawski <rpgdude1@gmail.com>  Wed, 16 Aug 2009 16:19:42 -0400

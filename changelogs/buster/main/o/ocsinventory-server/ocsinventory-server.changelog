@@ -1,0 +1,456 @@
+ocsinventory-server (2.5+dfsg1-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Add patch to support php-cas fixed for CVE 2022 39369:
+    The CVE required a API-breaking change in php-cas.
+  * Update version constrain on php-cas to require fixed version.
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 08 Jul 2023 13:04:03 +0200
+
+ocsinventory-server (2.5+dfsg1-1) unstable; urgency=medium
+
+  [ Cyrille Bollu ]
+  * Add myself to uploaders
+
+  [ Xavier Guimard ]
+  * Replace libjs-chartjs dependency by libjs-chart.js
+  * Exclude minified files from import and rebuild them
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 25 Feb 2019 15:27:27 +0100
+
+ocsinventory-server (2.5+dfsg-1) unstable; urgency=medium
+
+  * Import upstream version 2.5, closes: CVE-2018-12482, CVE-2018-12483,
+    CVE-2018-14473, (CLoses: #905396, #906668, #898686)
+  * Add dataTables.conditionalPaging.js copyright
+  * Update patches offsets
+  * Add PHPMailer license (library kept until libphp-phpmailer will be
+    updated)
+  * Delete README and other files in /usr/share/!doc
+  * Fix PHP cron file permission and add php-cli in dependencies
+  * Move binutils/ doc files into .docs (and remove them in binutils)
+  * Declare compliance with policy 4.2.1
+  * Add patch to fix a privacy breach in mails (will be included in next
+    release)
+  * Add debian/tests/pkg-perl/SKIP for runtime-deps-and-recommends
+  * Email change: Xavier Guimard -> yadd@debian.org
+  * Bump debhelper compatibility level to 11
+  * Declare compliance with policy 4.3.0
+  * Ignore lintian warnings for Select2 translations
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 27 Dec 2018 20:53:23 +0100
+
+ocsinventory-server (2.4.1+dfsg-2) unstable; urgency=medium
+
+  * Display database errors (parameter OCS_OPT_DBI_PRINT_ERROR set to 1)
+  * Split use_system_libraries patch into:
+    - use_system_libraries
+    - fix-ocsreports-paths.patch: this part is not related to system libraries
+                                  but to our install. Links have also been
+                                  updated (Closes: #898640)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 14 May 2018 16:46:06 +0200
+
+ocsinventory-server (2.4.1+dfsg-1) unstable; urgency=medium
+
+  * Imported upstream version 2.4.1
+  * Replace maintainer by Debian-Perl-Group (Closes: #895424, #749304)
+  * Replace uploaders by myself
+  * Declare conformance with Policy 4.1.4
+  * Bump Debhelper compat level to 10
+  * Update patches
+  * Add upstream/metadata
+  * Update excluded files list
+  * Update debian/watch
+  * debian/control
+    - Replace priority extra by optional
+    - Add "Rules-Requires-Root: binary-targets"
+    - Dependencies:
+      * replace libjs-elycharts by libjs-chartjs
+      * remove libjs-raphael
+      * add libjs-jquery-file-upload
+      * add php-imap, php-mbstring, php-xml
+      * add ${perl:Depends} (ocs-reports)
+  * debian/rules:
+    - Change permissions with override_dh_fixperms (replace
+      ocsinventory-server.postinst)
+    - Update homepage
+    - Remove extra license file usr/share/ocsinventory-reports/LICENSE
+  * Update debian/copyright
+  * Set Franck Bourdeau as upstream contact
+  * Don't remove non empty configuration dir in postrm
+  * Update lintian-overrides files
+  * Ignore upstream .gitignore
+  * Update ocsinventory-server.conf looking at upstream
+  * Remove debian/*.docs files
+  * Remove outdated README.source
+  * Ajust debian/*.dirs list
+
+ -- Xavier Guimard <x.guimard@free.fr>  Thu, 03 May 2018 18:42:17 +0200
+
+ocsinventory-server (2.2+dfsg-0.1) unstable; urgency=low
+
+  [ Jean-Michel Vourgère ]
+  * New upstream release: (Closes: #822159)
+    - No longer oversatinizing passwords. (Closes: #746432)
+    - Updated dependencies requirements, including for PHP7. (Closes: #821539)
+    - d/copyright: Strip upstream source from ieee-data, libjs-bootstrap,
+      libjs-elycharts, libjs-jquery, libjs-jquery-datatables, libjs-jquery-ui,
+      libjs-jquery-migrate-1, libjs-raphael, php-cas, and phpqrcode. Added
+      +dfsg suffix to d/watch. New patch use_system_libraries.
+    - Drop patch 03_oui_format, applied uptream.
+    - Refreshed apache2 conf files from upstream. New lintian overrides.
+    - reports.post(inst|rm): New directory for logs.
+  * New d/patch/mainsection_dir cherry picked from upstream master.
+  * Updated d/watch after upstream move to github.
+  * New patch apache_conf_name to fix the help.
+  * Added alternatives to libapache2-mod-php dependency. (Closes: #746429)
+  * Added alternative to mysql-client dependency for MariaDB. (Closes: #732899)
+  * Dropped unused lintian overrides.
+  * d/rules: Tuned .pl permissions, no longer cleaning main_menu.xml.bak.
+  * Add d/README.source to work around uscan crash.
+  * Bumped policy version to 3.9.8: No change required.
+  * Switched Vcs-Git: to a secure uri scheme.
+  * New lintian override for datetimepicker.js source with long lines.
+  * Updated mysql packages names and alternatives (Closes: #848444, #848478)
+
+  [ Ondřej Surý ]
+  * Non-maintainer upload to finally get rid of php5 in unstable
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 09 Jan 2017 11:52:00 +0100
+
+ocsinventory-server (2.1.2-1) unstable; urgency=low
+
+  [ Jean-Michel Vourgère ]
+  * Imported Upstream version 2.1.2. (Closes: #760515)
+  * d/control: Update Vcs-Browser to match alioth changes.
+  * Switch to source format 3.0 (quilt).
+  * Updated apache2 conf to new syntax.
+  * Dropped pre-Jessie migration scripts.
+  * Dependencies changes:
+    - Added missing libjs-jquery.
+    - Dropped unused ucf.
+    - Changed php-net-ldap by php5-ldap. Thanks to Thijs Kinkhorst. (Closes:
+      #711059)
+    - Dropped unused ${shlibs:Depends}.
+    - Change hardcoded perl(>=5.14)|libcompress-zlib-perl by ${perl:Depends}.
+    - Dropped extra quilt.
+    - Replaced libphp-pclzip by php-pclzip. Thanks David Prévot. (Closes:
+      #749610)
+    - Added ieee-data; Drop embedded copy of oui.txt. New patch oui_format to
+      support extra spaces. Thanks Gürkan Sengün and Luciano Bello. (Closes:
+      #481301)
+    - Added php-cas; Drop embedded copy. Thanks to Olivier Berger. (Closes:
+      #679463)
+    - Added phpqrcode; Drop embedded copy. New patch to support the different
+      syntax.
+    - Added libjs-raphael; Drop embedded copy.
+    - Added libjs-elycharts; Drop embedded copy.
+    - Bumped priority of libsoap-lite-perl from Suggests: to Recommends:.
+  * Updated d/watch.
+  * Bumped policy to 3.9.6: No change required.
+  * d/copyright:
+    - Switched to DEP5 format.
+    - Changed main license from GPL-2+ to GPL-2.
+    - Added missing license for php cas.
+    - Added new section for ocsreports/libraries/qrcode/.
+  * Install upstream changelogs properly. Thanks lintian.
+  * Minimized d/rules.
+  * Bumped compat level to 9.
+  * Provide a default extra_useragents conffile.
+
+  [ Pierre Chifflier ]
+  * Change log group owner to adm.
+  * Fix clean target
+  * Add Jean-Michel Vourgère to uploaders
+
+ -- Pierre Chifflier <pollux@debian.org>  Mon, 27 Jul 2015 08:54:56 +0200
+
+ocsinventory-server (2.0.5-1.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Revert coinstallation with alternative php installations. It causes
+    postinst failure in some cases. See #746429. Thanks Christian Seiler.
+    d/control: libapache2-mod-php5|php5-cgi|php5-fpm is back to
+    libapache2-mod-php5, and php5-mysql|php5-mysqlnd is back to just
+    php5-mysql.
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Fri, 05 Dec 2014 02:01:44 +0100
+
+ocsinventory-server (2.0.5-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Add support for apache2.4: (Closes: #718475)
+    - debian/conf/ocsinventory.conf: Minimal patch for require directive.
+    - debian/rules:
+      dh_apache2 --package=ocsinventory-reports --noscripts # See #769322
+      dh_apache2 --package=ocsinventory-server
+    - renamed files in debian/conf/ to match package names. This is not NMU
+      friendly, but is better done before swithing to apache2.4, because names
+      are used in /var/lib/apache2/module/(en|dis)abled_by_maint/.
+    - debian/control: Add build-depends on dh-apache2|apache2-dev, drop hard
+      depends on apache2 for recommends on ${misc:Recommends}.
+    - debian/*apache2: New files to setup conf snipet in apache.
+    - (pre|post)(inst|rm):
+      . Uses apache2-maintscript-helper to enable modules.
+      . Remove apache conf files setup, let dh_apache2 do it.
+      . Manually call apache2-maintscript-helper for ocsinventory-reports
+        See #769322.
+      . Delete obsolete links in /etc/apache2/conf.d/.
+      . Detect user change in non-conffile /etc/ocsinventory/ocsinventory.conf
+        and delete it or move it to new location in
+        /etc/apache2/conf-available. Fix common incompatible change in require
+        directive syntax.
+      . Remove ocsinventory.conf.old too in postrm.
+    - New ocsinventory-reports.maintscript for moving the other real conffile.
+  * Fix log rotation failures (Closes: #678363)
+    - ocsinventory-server.postinst: Removed chmod g+w $log, added chmod g-w
+      $log on upgrades. Thanks NetVicious.
+  * Fix cohabitation with alternative php installations. (Closes: #746429)
+    - libapache2-mod-php5 becomes libapache2-mod-php5|php5-cgi|php5-fpm
+    - php5-mysql becomes php5-mysql|php5-mysqlnd
+    Thanks to Christian Seiler.
+  * Preserve php generated setup file dbconfig.inc.php: (Closes: #613609):
+    - New patch 02_preverse_dbconfig to remove empty dbconfig.inc.php from
+      distribution.
+    - ocsinventory-server.preinst: Copy existing dbconfig.inc.php to
+      /etc/ocsrepports/ if there is no such file, back it up out of the way
+      otherwise.
+    - new ocsinventory-server.links to have the file available from php.
+    - ocsinventory-server.postinst: Create "empty" file if none is there. Make
+      it writable by install.php.
+    - ocsinventory-server.postrm: Remove dbconfig.inc.php and
+      dbconfig.inc.php.old on purge.
+    - New ocsinventory-reports.lintian-overrides for broken symlink.
+    - Added dh_lintian in debian/rules.
+  * Documentation:
+    - Updated watch file after official page announces the move out of sf.net
+      (Closes: #768934)
+    - Fixed spelling in package description (softwares), thanks lintian.
+    - Refreshed patch 01-compat_with_other_agents.patch, which is not part of
+      series quilt file.
+    - Added Vcs-* fields in debian/control
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Sun, 30 Nov 2014 15:38:10 +0100
+
+ocsinventory-server (2.0.5-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+
+  [ Stuart Prescott ]
+  * Revert change of ocsinventory-server.conf to a conffile and only install
+    if on new installs (Closes: #656090).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 13 Mar 2013 18:48:22 +0100
+
+ocsinventory-server (2.0.5-1) unstable; urgency=low
+
+  * Imported Upstream version 2.0.5
+  * Bump Standards Version to 3.9.3
+  * libcompress-zlib-perl is now in perl, so fix the dependency line
+  * Re-enable /snmp, file snmp_com.txt has been removed and replaced by a table
+    in the SQL database
+
+ -- Pierre Chifflier <pollux@debian.org>  Thu, 05 Apr 2012 21:14:51 +0200
+
+ocsinventory-server (2.0.2-2) unstable; urgency=high
+
+  * Security: disable the /snmp web Alias to prevent unauthenticated users to
+    get the list of SNMP communities names and passwords
+
+ -- Pierre Chifflier <pollux@debian.org>  Sat, 29 Oct 2011 11:44:50 +0200
+
+ocsinventory-server (2.0.2-1) unstable; urgency=low
+
+  * Imported Upstream version 2.0.2
+    - jpgraph and FusionChartsFree have been removed (Closes: #639833)
+    - security: fix Cross-site scripting (XSS) vulnerability CVE-2011-4024
+  * Drop patch 01-compat_with_other_agents.patch, upstream has included a
+    solution.
+    See README.Debian for instructions on how to add agents.
+  * Update copyright file
+  * Remove embedded copy of jQuery library (replace it with a symlink)
+
+ -- Pierre Chifflier <pollux@debian.org>  Thu, 27 Oct 2011 22:29:10 +0200
+
+ocsinventory-server (2.0-1) unstable; urgency=low
+
+  * New upstream Version (Closes: #630815, #575248, #607478)
+    - Many changes, see ocsinventory-ng websites for more details
+    - archive does not contain vim swap files (Closes: #611868)
+    - see README.Debian for more intformation
+  * Add Yves Guimard to co-maintainers
+  * Merge packages changes from Yves Guimard:
+    - import new upstream version
+    - remove dbconfig support (Closes: #585915, #529398, #632152)
+    - remove debconf templates and translations since we none are used now
+      (Closes: #622136)
+    - remove quilt patches
+  * Fix lintian warnings
+  * Bump Standards Version
+  * Remove all previous quilt patches
+  * Add 01-compat_with_other_agents.patch:
+    - Allow fusioninventory agent to communicate with ocsinventory
+  * Add license info for jpgraph in copyright
+
+ -- Pierre Chifflier <pollux@debian.org>  Sat, 09 Jul 2011 14:30:43 +0200
+
+ocsinventory-server (1.02.2-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n issues. Debconf translations:
+    - Spanish (Camaleón).  Closes: #583773
+    - Danish (Joe Hansen).  Closes: #599831
+    - Italian (Vincenzo Campanella).  Closes: #600441
+    - Bokmål, Norwegian (Bjørn Steensrud).  Closes: #600517
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 19 Oct 2010 07:29:19 +0200
+
+ocsinventory-server (1.02.2-1) unstable; urgency=low
+
+  * New upstream security release
+  * Bump Standards Version to 3.8.3
+  * Add --debconf-ok to dbconfig calls (Closes: #531438)
+  * Add Japanese po-debconf template translation (Closes: #554087)
+  * Create /var/lib/ocsinventory-reports/download folder (Closes: #557782)
+
+ -- Pierre Chifflier <pollux@debian.org>  Sun, 31 Jan 2010 21:12:11 +0100
+
+ocsinventory-server (1.02.1-2) unstable; urgency=high
+
+  * Security update: fix potential SQL injection in ocsreports/machine.php
+    - no CVE yet (see http://seclists.org/fulldisclosure/2009/Aug/0143.html)
+    - urgency high
+    - Closes: #541995
+  * Bump Standards Version to 3.8.2 (no changes)
+
+ -- Pierre Chifflier <pollux@debian.org>  Tue, 18 Aug 2009 14:40:20 +0200
+
+ocsinventory-server (1.02.1-1) unstable; urgency=low
+
+  * New Upstream Version (Closes: #529409):
+    - Some security fixes
+    - Use the same error for wrong user or wrong password (Closes: #529344)
+  * Fix name of upstream tgz in watch file (Closes: #529608)
+  * Upload to unstable:
+    - The SQL table is fully created by dbconfig-common (Closes: #512660)
+
+ -- Pierre Chifflier <pollux@debian.org>  Mon, 01 Jun 2009 10:39:03 +0200
+
+ocsinventory-server (1.02-3) experimental; urgency=low
+
+  * Apply patches from Daniel Dehennin:
+  * Use dbconfig-common to fully create the database (Closes: #529595)
+    Running install.php after installation is not required anymore if
+    dbconfig-common is used.
+  * Try to load required apache modules during install (Closes: #530716)
+
+ -- Pierre Chifflier <pollux@debian.org>  Thu, 28 May 2009 16:07:55 +0200
+
+ocsinventory-server (1.02-2) experimental; urgency=low
+
+  * Fix extra comma in dbconfig.patch (Closes: #529437)
+  * Re-introduce hardcoded-dbauth.patch to fix DB login during install
+    (Closes: #529447)
+
+ -- Pierre Chifflier <pollux@debian.org>  Tue, 19 May 2009 21:32:32 +0200
+
+ocsinventory-server (1.02-1) experimental; urgency=low
+
+  * New Upstream Version (Closes: #526829, #513124)
+  * Refreshed patches
+  * Symlink is created during ocsinventory-reports.postinst (Closes: #518318)
+  * Add Swedish debconf translation (Closes: #504331)
+  * Bump standards version to 3.8.1
+  * Handle upgrade from previous versions by moving the old (incompatible)
+    config file out of the way (Closes: #499820).
+    See README.Debian for details
+  * Add local scripts to ocsinventory-server package (Closes: #527354)
+
+ -- Pierre Chifflier <pollux@debian.org>  Mon, 18 May 2009 22:28:05 +0200
+
+ocsinventory-server (1.02~rc2-1) experimental; urgency=low
+
+  * New upstream release candidate
+  * Drop patches for ipdiscover, the script was removed upstream
+  * Re-enable download feature
+  * Note: the documentation guide was removed upstream (Closes: #440656)
+  * Re-write configuration file
+  * Prefer PHP5 over PHP4
+
+ -- Pierre Chifflier <pollux@debian.org>  Mon, 08 Sep 2008 16:43:49 +0200
+
+ocsinventory-server (1.01-6) unstable; urgency=low
+
+  * Fix configuration file if not using dbconfig (Closes: #492047)
+  * This also allows to install without a MySQL server (Closes: #489461)
+  * Bump standards version to 3.8.0
+  * Replace Apache license in copyright file by a link to local file.
+
+ -- Pierre Chifflier <pollux@debian.org>  Tue, 29 Jul 2008 17:42:03 +0200
+
+ocsinventory-server (1.01-5) unstable; urgency=low
+
+  * Debconf translations:
+    - Basque (Closes: #483897)
+    - Brazilian Portuguese (Closes: #473351)
+    - Czech (Closes: #483298)
+    - Dutch (Closes: #450985)
+    - Finnish (Closes: #456962)
+    - Galician (Closes: #483732)
+    - Russian (Closes: #484320)
+    - Turkish (Closes: #484720)
+
+ -- Pierre Chifflier <pollux@debian.org>  Sun, 08 Jun 2008 13:01:14 +0200
+
+ocsinventory-server (1.01-4) unstable; urgency=low
+
+  * Acknowledge NMU (Closes: #468194)
+    Thanks to Mark Hymers
+  * Bump Standards version (no changes)
+  * Move homepage to pseudo-header
+
+ -- Pierre Chifflier <pollux@debian.org>  Mon, 14 Apr 2008 10:47:37 +0200
+
+ocsinventory-server (1.01-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with Perl 5.10.  Closes: #468194.
+
+ -- Mark Hymers <mhy@debian.org>  Sat, 05 Apr 2008 13:49:26 +0100
+
+ocsinventory-server (1.01-3) unstable; urgency=low
+
+  [ Pierre Chifflier ]
+  * Update my email address
+  * Debconf templates:
+    + French (Closes: #434080)
+    + (updated) Portuguese (Closes: #437287)
+  * Add installation notes (Closes: #439372, #433037)
+
+ -- Pierre Chifflier <pollux@debian.org>  Sun, 21 Oct 2007 18:07:55 +0200
+
+ocsinventory-server (1.01-2) unstable; urgency=low
+
+  * Fix spelling errors in debconf template (Closes: #432870)
+  * Debconf templates:
+    + German (Closes: #432868)
+    + Portuguese (Closes: #433186)
+
+ -- Pierre Chifflier <chifflier@inl.fr>  Tue, 17 Jul 2007 13:50:41 +0200
+
+ocsinventory-server (1.01-1) unstable; urgency=low
+
+  [ Pierre Chifflier ]
+  * Initial release (Closes: #419226)
+  * Should detect mod_perl version (1 or 2) in apache config
+
+  [ Eric DECORNOD ]
+  * split in two packages : Comm. Server and Adm. Console (-server and -reports)
+  * ocsreports: - Changed the location of dbconfig, download and ipd
+                - moved guide.pdf to documentation
+                - replaced hardcoded user/pass in install.php
+                - protected install.php w/ /etc/ocsinventory/htpasswd.setup
+  * ipdiscover-util.pl: - Replaced hardcoded config to dbconfig.inc.php
+
+ -- Pierre Chifflier <chifflier@inl.fr>  Thu, 24 May 2007 16:17:06 +0200

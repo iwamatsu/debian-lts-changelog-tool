@@ -1,0 +1,598 @@
+xmltooling (3.2.0-3+deb11u1) bullseye-security; urgency=high
+
+  * [6afa199] New patch: CPPXT-157 - Install blocking URI resolver into
+    Santuario.
+    Fix a denial of service vulnerability: Parsing of KeyInfo elements can
+    cause remote resource access.
+    Including certain legal but "malicious in intent" content in the
+    KeyInfo element defined by the XML Signature standard will result
+    in attempts by the SP's shibd process to dereference untrusted
+    URLs.
+    While the content of the URL must be supplied within the message
+    and does not include any SP internal state or dynamic content,
+    there is at minimum a risk of denial of service, and the attack
+    could be combined with others to create more serious vulnerabilities
+    in the future.
+    Thanks to Scott Cantor for the fix. (Closes: #1037948)
+
+ -- Ferenc Wágner <wferi@debian.org>  Wed, 14 Jun 2023 22:44:03 +0200
+
+xmltooling (3.2.0-3) unstable; urgency=medium
+
+  * [e9c5d46] New patch: CPPXT-151 Wiki migration broke some SecurityHelperTest
+    tests.
+    Thanks to Rod Widdowson (Closes: #991423)
+  * [fe231e2] Declare that our autopkgtest needs internet access
+
+ -- Ferenc Wágner <wferi@debian.org>  Mon, 26 Jul 2021 16:39:29 +0200
+
+xmltooling (3.2.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Ferenc Wágner <wferi@debian.org>  Wed, 06 Jan 2021 09:47:28 +0100
+
+xmltooling (3.2.0-1) experimental; urgency=medium
+
+  * [64912ff] New upstream release: 3.2.0
+  * [5c43277] Update Standards-Version to 4.5.1 (no changes needed)
+  * [977cead] Rename library package for upstream SONAME bump
+  * [3eecc61] Bump watch file format version to 4
+
+ -- Ferenc Wágner <wferi@debian.org>  Sun, 27 Dec 2020 14:36:24 +0100
+
+xmltooling (3.1.0-2) unstable; urgency=medium
+
+  * [4435dfb] Update packaging list email address
+  * Upload to unstable
+
+ -- Ferenc Wágner <wferi@debian.org>  Mon, 22 Jun 2020 18:00:09 +0200
+
+xmltooling (3.1.0-1) experimental; urgency=medium
+
+  * [e0f263d] New upstream release: 3.1.0
+  * [019b1c4] Rename library package for upstream SONAME bump
+
+ -- Ferenc Wágner <wferi@debian.org>  Mon, 20 Apr 2020 10:46:13 +0200
+
+xmltooling (3.0.5-1) unstable; urgency=medium
+
+  * [49cc60b] New upstream release: 3.0.5
+  * [f713597] As an autopkgtest, build the unit tests against the installed
+    package
+  * [023be7c] Enroll to basic Salsa CI
+  * [8a805da] Upgrade Standards-Version to 4.5.0 (no changes required)
+  * [ea16c9d] Switch to Debhelper compat level 12
+  * [373af1f] Enable rootless build
+  * [b8ce25d] Turn the test logs and result files into autopkgtest artifacts
+  * [cb949d7] Strip extra signatures from the upstream tarball signing key
+  * [84b70cd] I don't plan to provide symbols files
+
+ -- Ferenc Wágner <wferi@debian.org>  Tue, 28 Jan 2020 10:58:01 +0100
+
+xmltooling (3.0.4-1) unstable; urgency=high
+
+  * [f185b26] New upstream security release: 3.0.4
+    DSA-4407-1, CVE-2019-9628: uncaught exception on malformed XML
+    declaration.
+    Invalid data in the XML declaration causes an exception of a type
+    that was not handled properly in the parser class and propagates an
+    unexpected exception type.
+    This generally manifests as a crash in the calling code, which in the
+    Service Provider software's case is usually the shibd daemon process,
+    but can be Apache in some cases. Note that the crash occurs prior to
+    evaluation of a message's authenticity, so can be exploited by an
+    untrusted attacker.
+    https://shibboleth.net/community/advisories/secadv_20190311.txt
+    https://issues.shibboleth.net/jira/browse/CPPXT-143
+    Thanks to Scott Cantor (Closes: #924346)
+
+ -- Ferenc Wágner <wferi@debian.org>  Thu, 14 Mar 2019 14:58:36 +0100
+
+xmltooling (3.0.3-1) unstable; urgency=medium
+
+  [ Ferenc Wágner ]
+  * [d7405e9] New upstream release: 3.0.3
+  * [58fafb7] Drop the patches, they are included in upstream 3.0.3
+  * [97b5311] Update Standards-Version to 4.3.0 (no changes required).
+
+  [ Pino Toscano ]
+  * [36d1972] Declare zlib1g-dev build dependency (Closes: #915820)
+
+ -- Ferenc Wágner <wferi@debian.org>  Mon, 24 Dec 2018 10:51:09 +0100
+
+xmltooling (3.0.2-2) unstable; urgency=medium
+
+  * [bc7d7bc] Update Standards-Version to 4.2.1 (no changes required)
+  * [4ad9127] Cherry pick upstream patches fixing build with OpenSSL 1.1.1
+  * [b774ae2] The --enable-debug switch activates additional tracing code.
+    It does not influence the optimization level.
+  * Upload to unstable
+
+ -- Ferenc Wágner <wferi@debian.org>  Sat, 24 Nov 2018 22:58:32 +0100
+
+xmltooling (3.0.2-1) experimental; urgency=medium
+
+  * [263b9d1] New upstream release: 3.0.2
+  * [6ffad35] All of our patches were included upstream
+  * [dc188aa] Update Standards-Version to 4.1.5 (no changes required)
+  * [1dbdaee] Switch to Debhelper compat level 11
+  * [8a38bae] Stop repeating the common part of the package descriptions
+  * [ec0997b] Multiarch doesn't need Pre-Depends anymore
+  * [e33065c] Rename library package according to the new soversion
+  * [cb6df2a] Enable building with OpenSSL 1.1 (Closes: #859831)
+  * [49b8ca9] Revert "Provide a GCC 7 build with strict enough shlibs"
+    The GCC7 switchover is long done, this constraint isn't needed anymore.
+  * [c5f26c9] Update debian/copyright
+  * [5099fb1] Shibboleth SP 3 requires XML-Security 2 and log4shib 2
+  * [65857d6] We do not ship the libtool archive files.
+    But upstream installs them now to support make uninstall.
+  * [d5d3966] Clean up trailing whitespace in debian/changelog
+  * [b4e7f10] Our headers include Boost headers
+
+ -- Ferenc Wágner <wferi@debian.org>  Wed, 01 Aug 2018 00:25:03 +0200
+
+xmltooling (1.6.4-1) unstable; urgency=high
+
+  * [6c27b19] New upstream security release 1.6.4
+    DSA-4126-1, CVE-2018-0489: additional data forgery flaws
+    These flaws allow for changes to an XML document that do not break a
+    digital signature but alter the user data passed through to applications
+    enabling impersonation attacks and exposure of protected information.
+    https://shibboleth.net/community/advisories/secadv_20180227.txt
+    https://issues.shibboleth.net/jira/browse/CPPXT-128
+  * [621ab19] Refresh our patches
+
+ -- Ferenc Wágner <wferi@debian.org>  Wed, 28 Feb 2018 10:39:05 +0100
+
+xmltooling (1.6.3-1) unstable; urgency=medium
+
+  [ Russ Allbery ]
+  * [d7ea37c] Remove myself from Uploaders
+
+  [ Ferenc Wágner ]
+  * [69aa1e6] New upstream release
+  * [c0bccbb] Refresh our patches
+  * [5aff9d0] Update gbp configuration
+    - Move pristine-tar = True into the DEFAULT section
+    - Add merge-mode = replace into the import-orig section
+  * [ca00359] Update Standards-Version to 4.1.3 (no changes required)
+  * [9cee97e] Migrate to salsa.debian.org/shib-team
+  * [3eaf72e] Lintian does not emit embedded-javascript-library for Doxygen
+    anymore
+
+ -- Ferenc Wágner <wferi@debian.org>  Mon, 22 Jan 2018 10:54:47 +0100
+
+xmltooling (1.6.2-1) unstable; urgency=medium
+
+  * [9a9308f] Use HTTPS in debian/watch
+  * [91be34e] New upstream release (1.6.1)
+  * [360556e] Refresh our patches
+  * [e9fc2e5] New upstream release (1.6.2)
+  * [5166246] Refresh our patches
+  * [04ee5fc] Update Standards-Version to 4.1.1 (no changes needed)
+
+ -- Ferenc Wágner <wferi@debian.org>  Mon, 20 Nov 2017 08:48:10 +0100
+
+xmltooling (1.6.0-5) unstable; urgency=medium
+
+  * [7362bda] Provide a GCC 7 build with strict enough shlibs.
+    OpenSAML fails to build with GCC 7 with XMLTooling built with GCC 6,
+    because its samlsign executable does not find a symbol whose mangling
+    changed.  So build with GCC 7 from now on, and include a corresponding
+    shlibs dependency to force OpenSAML pull in this build.
+    This change must be left out of backports. (Closes: #874654)
+  * [d74a461] Follow upstream URL change in watch file
+  * [da7692d] Switch to using HTTPS in the debian/copyright URLs
+  * [e42dab7] Update Standards-Version to 4.1.0.
+    The "extra" priority became deprecated, promote to "optional".
+
+ -- Ferenc Wágner <wferi@debian.org>  Fri, 08 Sep 2017 21:12:25 +0200
+
+xmltooling (1.6.0-4) unstable; urgency=medium
+
+  [ Etienne Dysli Metref ]
+  * [b41ff9e] Add myself to uploaders
+  * [77c4330] Slightly relax the build dependency on libxml-security-c-dev.
+    Append a tilde to the required version (>= 1.7.3-3~) so that the
+    backported version (1.7.3-3~bpo8+1) can satisfy the dependency
+    (otherwise 1.7.3-3~bpo8+1 < 1.7.3-3).
+
+  [ Ferenc Wágner ]
+  * [5e96176] Stay with OpenSSL 1.0.
+    Thanks to Adrian Bunk <bunk@stusta.de> (Closes: #828608)
+  * [3395fb9] Provoke build error on undefined symbols in the library
+  * [1bba33e] New patch Get-new-pthread-checks-from-the-Autoconf-Archive.patch
+  * [a1ae4d6] Force linking the libraries with -lpthread again.
+    It's a more targeted version of c9b709b, which I removed via 28c0572 not
+    noticing the resulting dpkg-shlibdeps warnings.  Besides #468555, see also
+    https://lists.gnu.org/archive/html/libtool/2012-02/msg00003.html.
+
+ -- Ferenc Wágner <wferi@debian.org>  Fri, 16 Dec 2016 12:17:55 +0100
+
+xmltooling (1.6.0-3) unstable; urgency=medium
+
+  * [6b1e6e2] Export pkgxmldir (the correct name) via pkg-config.
+    And call it pkgxmldir instead of xmldir in the configure script.
+    (Closes: #836898)
+
+ -- Ferenc Wágner <wferi@debian.org>  Wed, 07 Sep 2016 11:40:05 +0200
+
+xmltooling (1.6.0-2) unstable; urgency=medium
+
+  * [f61b564] New patch Enable-skipping-tests-which-require-network-
+    access.patch.
+    Enable skipping tests which require network access
+    And skip them in debian/rules, because we aren't allowed to access the
+    network on the buildds.
+  * [1471fba] Our headers include others from libssl-dev
+  * [733e90a] The Doxygen tag file is unreproducible, don't ship it
+  * [79b38bf] New patch Enable-the-dot-feature-of-Doxygen.patch.
+    Enable the dot feature of Doxygen
+  * [cd7630d] Don't ship the .md5 and .map files from Doxygen.
+    These are generated since we use dot with Doxygen.
+  * [38db81d] Switch gbp dch to verbose changelog entries
+  * [28c0572] Pthread seems to work correctly with libtool now
+  * [792ecdb] Migrate to my Debian address
+  * Upload to unstable
+
+ -- Ferenc Wágner <wferi@debian.org>  Fri, 02 Sep 2016 15:55:36 +0200
+
+xmltooling (1.6.0-1) experimental; urgency=medium
+
+  * [87fa233] New patch Use-pkg-config-for-log4shib-log4cpp.patch
+  * [9522f00] Enable parallel builds
+  * [8400c02] Update Standards-Version to 3.9.8 (no changes needed)
+  * [b38f8d2] New upstream release (1.6.0)
+  * [f55fef0] Remove unnecessary patch, refresh the rest
+  * [2f5b598] Simplify removal of documentation files
+  * [d2096a7] Switch to secure VCS URIs
+  * [da6dc4e] Update debian/copyright
+  * [810bcdd] Rename library package for upstream SONAME bump
+  * [85137c5] Drop version constraints already satisfied by oldstable (wheezy)
+  * [9d5ba1b] Move doxygen and graphviz into Build-Depends-Indep
+  * [6fc8228] Don't build the software if only the documentation is needed
+  * [90f5d3c] New patch Fail-configuration-if-dlopen-is-not-found.patch
+  * [e5bb467] New patch Discover-xerces-xmlsec-openssl-and-curl-via-pkg-
+    conf.patch
+  * [56886b6] New patch Propagate-requirements-into-our-pkg-config-file.patch
+  * [c9eddbd] New patch Make-pkgconfigdir-configurable.patch
+  * [d0e3d2f] New patch Print-result-of-CURLINFO_TLS_SSL_PTR-test.patch
+  * [c0c0aab] New patch Make-pkgxmldir-configurable.patch
+  * [a301a9e] New patch Finish-separating-flags-use-_LIBADD.patch
+  * [f19bbf5] New patch Add-more-forgotten-test-result-prints.patch
+  * [6e5f01b] New patch Remove-.pl-extension-of-cxxtestgen.patch
+  * [fa4b54c] Generate the test harness
+  * [09bad45] New patch Don-t-install-the-test-program-but-link-correctly-
+    an.patch
+  * [a1db54e] Add 4 patches refactoring xmltoolingtest
+  * [83014f8] New patch Two-more-tests-don-t-build-without-xmlsec.patch
+  * [d6d7b60] New patch Only-add-found-packages-to-the-pkg-config-
+    dependenci.patch
+  * [8c9dee4] New patch Add-separate-pkg-config-file-for-xmltooling-lite.patch
+  * [8f14163] Require xml-security with a correct pkg-config file
+
+ -- Ferenc Wágner <wferi@niif.hu>  Thu, 21 Jul 2016 19:45:05 +0200
+
+xmltooling (1.5.6-2) unstable; urgency=medium
+
+  * [287f903] Wildcard version number in debian/rules
+  * [59d03c7] Set libxmltooling-dev dependency to liblog4shib-dev
+
+ -- Ferenc Wágner <wferi@niif.hu>  Sun, 17 Jan 2016 08:46:24 +0100
+
+xmltooling (1.5.6-1) unstable; urgency=medium
+
+  [ Russ Allbery ]
+  * [bbe4293] Really switch to xz compression for the *.debian.tar file
+  * [66fde9b] Fix typo in the Vcs-Git control field
+  * [303c566] Disable forcing of libtool --silent
+
+  [ Ferenc Wágner ]
+  * [8f40689] Add debian/gbp.conf for DEP-14 layout
+  * [449ccfe] Convert our single upstream patch into a gbp patch queue
+  * [7742fbb] We will generate debian/changelog by gbp dch before uploading
+  * [9fce794] Run wrap-and-sort -ast on the package
+  * [f62c11f] Correct my name in Uploaders
+  * [abe605b] Switch watch file to check for bzip-compressed archives
+  * [612e7c0] Check signature in watch file
+  * [d938f6a] New upstream release
+    SECURITY fix in 1.5.5 for CVE-2015-0851 DoS: Shibboleth SP software
+    crashes on well-formed but invalid XML (Closes: #793855)
+  * [fd6d573] Rename libxmltooling6 package to libxmltooling6v5
+    (Closes: #797625)
+  * [af5f295] dh_auto_configure uses --disable-dependency-tracking by default
+  * [e961f2c] The default compressor is xz since jessie
+  * [73017d0] New patch Avoid-forward-incompatibility-warnings-from-
+    Automake.patch
+  * [8d5f789] Enable all hardening features
+  * [7b101ba] Update Standards-Version to 3.9.6 (no changes needed)
+  * [2f9f14d] Ship the pkgconfig file
+  * [67a361a] The debian/tmp prefix is unnecessary since debhelper 7
+  * [107882c] Ship upstream README.txt in all binary packages
+  * [bb9ee79] Replacing the jquery.js embedded by Doxygen risks breaking the
+    docs
+  * [bc5c6d2] Ship the installed documentation, not the one from the build tree
+  * [44460c2] Remove installed files we won't use (preparing to --fail-missing)
+  * [8afabff] Fail package build if any installed file is left out in the future
+  * [55d05ba] No need to separate the doc-base files by extension
+  * [1cd59cc] Update debian/copyright
+  * [f8df74c] Use a fresher m4/ax_create_pkgconfig_info.m4
+  * Since GCC-5 is the default compiler now, this new upload provides a version
+    that current libstdc++ does not break (Closes: #793288).
+
+ -- Ferenc Wágner <wferi@niif.hu>  Thu, 10 Dec 2015 23:17:01 +0100
+
+xmltooling (1.5.3-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Call cpp with -P for the boost config. Closes: #778185.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 12 Jul 2015 19:18:55 +0200
+
+xmltooling (1.5.3-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Russ Allbery <rra@debian.org>  Thu, 11 Jul 2013 18:56:32 -0700
+
+xmltooling (1.5.3-1) experimental; urgency=low
+
+  * New upstream release.
+    - Update xmlsig 1.1 schema to final CR
+    - Check for missing private key in configuration check
+  * Move single-debian-patch to local-options and patch-header to
+    local-patch-header so that they only apply to the packages built from
+    the canonical Git repository and NMUs get regular version-numbered
+    patches.
+  * Switch to xz compression for *.debian.tar and the *.deb packages.
+  * Fix some minor debian/copyright inaccuracies and a missing GPL-3
+    pointer introduced in the previous release.
+
+ -- Russ Allbery <rra@debian.org>  Tue, 18 Jun 2013 14:18:20 -0700
+
+xmltooling (1.5.2-1) experimental; urgency=low
+
+  * New upstream release.
+    - Fix parsing of some Last-Modified headers.
+    - Fix memory leak in XMLObjectBuilder::buildFromElement().
+    - Improve remote CRL access and caching support.
+    - Support configuration of name and policy restrictions for the
+      signature metadata filter (signing certificate).
+    - Improve debug output.
+    - Support path resolution in ParserPool / catalog files.
+    - Avoid returning an empty Credential object.
+  * Add build dependency on libboost-dev.
+  * Use log4shib instead of log4cpp.
+  * Force build dependency on xml-security-c 1.7 or later for consistent
+    build results.
+  * Add Multi-Arch: same to libxmltooling-dev and Multi-Arch: foreign to
+    xmltooling-schemas and libxmltooling-doc.
+  * Canonicalize the URLs in the Vcs-Git and Vcs-Browser control fields.
+  * Update debian/copyright format to the released copyright-format 1.0.
+  * Update standards version to 3.9.4 (no changes required).
+
+ -- Russ Allbery <rra@debian.org>  Tue, 28 May 2013 13:49:14 -0700
+
+xmltooling (1.4.2-5) unstable; urgency=low
+
+  * Revert changes to add symbols file.  Due to churn in weak symbols for
+    inlined functions, it doesn't appear maintainanable with existing
+    tools, and for this library the shlibs behavior seems sufficient.
+  * Update Autotools build files via dh_autoreconf.
+  * Force linking with -lpthread, working around a bug in libtool that
+    drops the linkage because it uses -nostdlib.  See #468555.
+
+ -- Russ Allbery <rra@debian.org>  Tue, 31 Jan 2012 16:35:46 -0800
+
+xmltooling (1.4.2-4) unstable; urgency=low
+
+  * Update symbols files for all non-i386 architectures currently built by
+    the buildds except mipsel (which will hopefully be the same as mips),
+    armel (modeled after armhf), nad kfreebsd-i386 (hopefully the same as
+    i386).
+  * Build-Depend on pkg-kde-tools and use its symbolhelper plugin so that
+    the package can use the output of pkgkde-symbolshelper.
+
+ -- Russ Allbery <rra@debian.org>  Fri, 27 Jan 2012 21:59:27 -0800
+
+xmltooling (1.4.2-3) unstable; urgency=low
+
+  * Also enable bindnow hardening build flags and use the correct syntax
+    to add additional hardening flags.
+  * Add symbols file constructed with pkgkde-symbolshelper.  Add a
+    README.source file with a pointer to the documentation.
+
+ -- Russ Allbery <rra@debian.org>  Fri, 27 Jan 2012 14:06:42 -0800
+
+xmltooling (1.4.2-2) unstable; urgency=low
+
+  * Update to debhelper compatibility level V9.
+    - Enable hardening build flags.  (Closes: #656656)
+    - Enable multiarch support.
+  * Use the latest directory in debian/watch instead of the versioned
+    directories.
+  * Update the upstream homepage.
+  * Update the upstream download location in debian/copyright.
+  * Minor format updates to debian/copyright for the new DEP-5.
+
+ -- Russ Allbery <rra@debian.org>  Thu, 26 Jan 2012 12:58:17 -0800
+
+xmltooling (1.4.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix use attribute in shorthand file CredentialResolver
+    - Fix handling of SOAP 1.1 fault package
+    - Make library init routines idempotent
+  * Make removal of the Doxygen-installed jquery.js file conditional on
+    its existence, since some versions of Doxygen don't install it.
+  * Update debian/watch for the new upstream distribution location.
+
+ -- Russ Allbery <rra@debian.org>  Mon, 25 Jul 2011 15:44:12 -0700
+
+xmltooling (1.4.1-3) unstable; urgency=low
+
+  * Add explicit build dependency on libssl-dev, which is used directly by
+    this package, and force build dependency on libssl-dev 1.0 or later
+    for consistent build results.  If some Shibboleth-related libraries
+    are built against earlier versions of libssl, it produces linking
+    failures when building the Shibboleth SP package.
+  * Update standards version to 3.9.2 (no changes required).
+
+ -- Russ Allbery <rra@debian.org>  Thu, 07 Apr 2011 14:41:37 -0700
+
+xmltooling (1.4.1-2) unstable; urgency=low
+
+  * Fix FTBFS with arch-only builds, such as those on the buildds.
+    Thanks, Aaron M. Ucko.  (Closes: #618615)
+
+ -- Russ Allbery <rra@debian.org>  Wed, 16 Mar 2011 23:45:11 -0700
+
+xmltooling (1.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - gzip/deflate encoding support to HTTP transfers
+    - Support for top-level signature verification to reloadable XML files
+    - Support fetching CRLs based on the CRL distribution point extension
+    - Fix adding trust engines manually to chaining engine
+    - Fix root element handling in unmarshalling around a cloned DOM
+    - Fix config loader detection of no access to file
+    - Fix User-Agent string handling for AttributeQuery
+    - Ensure chained TrustEngine is not affected by ordering
+    - Support ETag caching in reloadable config files
+    - Support HTTP caching when accessing remote CRLs
+    - Switch to background thread for reloading files
+    - Option to re-enable TLS renegotiation when running on 0.9.8m+
+    - Improve handling of simple content when comments are present
+    - Fix configure probing with ld --as-needed (Closes: #606486)
+  * Force build dependency on xml-security-c 1.6 or later for consistent
+    build results.
+  * Add build dependency on pkg-config, which upstream now uses to find
+    the SSL libraries.
+  * Add build dependency on graphviz for better API documentation.
+  * Replace the version of jQuery installed by Doxygen in the
+    documentation package with a symlink to the version supplied by the
+    Debian package and add a dependency.
+  * Update to debhelper compatibility level V8.
+    - Use the autotools-dev debhelper module for config.{sub,guess}.
+    - Use debhelper rule minimization.
+  * Clean some additional files not removed by upstream make distclean.
+  * Update debian/copyright to the current DEP-5 specification.
+  * Change to Debian source format 3.0 (quilt).  Force a single Debian
+    patch for simplicity since the packaging is maintained in Git using
+    branches, and include a patch header explaining why.
+  * Update standards version to 3.9.1 (no changes required).
+
+ -- Russ Allbery <rra@debian.org>  Sun, 13 Mar 2011 20:45:25 -0700
+
+xmltooling (1.3.3-2) unstable; urgency=low
+
+  * Force source format 1.0 for now since it makes backporting easier.
+  * Add ${misc:Depends} to all package dependencies.
+  * Update standards version to 3.8.4 (no changes required).
+
+ -- Russ Allbery <rra@debian.org>  Thu, 13 May 2010 10:03:36 -0700
+
+xmltooling (1.3.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - Allow the empty string in assignment to DateTime members.
+    - Allow configuration to not extract local credential names for
+      matching purposes.
+
+ -- Russ Allbery <rra@debian.org>  Thu, 17 Dec 2009 18:29:08 -0800
+
+xmltooling (1.3.1-1) unstable; urgency=high
+
+  * Urgency set to high for security fix.
+  * New upstream release.
+    - SECURITY: Partial fix for improper handling of URLs that could be
+      abused for script injection and other cross-site scripting attacks.
+      The complete fix also requires newer opensaml2 and shibboleth-sp2
+      packages.  (CVE-2009-3300)
+    - Add setter for KeyInfoResolver object.
+    - Fix extraction of cert info for UTF-8 handling changes.
+    - Fix passing of TransportOption configuration to cURL.
+    - Fix instability in reusing a DOM after signing it.
+    - Remove xmlns:xml namespace declaration when marshalling and
+      unmarshalling to avoid canonicalization bugs.
+  * Rename library package for upstream SONAME bump.
+  * Build-depend on libxml-security-c-dev 1.5 or later and make
+    libxmltooling-dev depend on libxml-security-c-dev 1.5 or later to
+    ensure that all builds are consistent.  Although this package will
+    build with 1.4, the other packages built on xmltooling require 1.5.
+
+ -- Russ Allbery <rra@debian.org>  Fri, 06 Nov 2009 11:30:41 -0800
+
+xmltooling (1.2.2-1) unstable; urgency=high
+
+  * Urgency set to high for security fix.
+  * New upstream release.
+    - SECURITY: Fix potential buffer overflows and reuses of freed objects
+      in error handling code paths with invalid XML or with malformed
+      URLs.  See the upstream security advisory at
+      http://shibboleth.internet2.edu/secadv/secadv_20090826.txt
+    - Fix other validation issues with malformed objects.
+    - Fix for accessing the resolution context, which affects the ability
+      of callers to restrict keys based on use attributes.
+    - Fix encoding of backup metadata.
+  * Update debhelper compatibility level to V7.
+    - Use dh_prep instead of dh_clean -k.
+  * Update standards version to 3.8.3 (no changes required).
+
+ -- Russ Allbery <rra@debian.org>  Thu, 27 Aug 2009 11:31:37 -0700
+
+xmltooling (1.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Stop dropping the namespace of qualified attributes that aren't
+      extensions.
+    - Expose multiple certificate revocation lists via the credential
+      API, allowing separate revocation lists for intermediate certs.
+    - Provide the hostname in artifact resolution errors.
+    - Sanity-check provided credentials for consistency.
+  * Rename library package for upstream SONAME bump.
+  * Build against Xerces-C 3.0.
+  * Update standards version to 3.8.2 (no changes required).
+  * Remove duplicate section setting for the library package.
+
+ -- Russ Allbery <rra@debian.org>  Wed, 05 Aug 2009 15:45:06 -0700
+
+xmltooling (1.1-1) unstable; urgency=low
+
+  [ Russ Allbery ]
+  * New upstream bug-fix release.
+  * Bump SONAME of libxmltooling following upstream's versioning.
+  * Include <cstdio> in base.h since some of its macros use sprintf.
+    Fixes FTBFS for packages using xmltooling with GCC 4.4 that don't
+    already include cstdio.  Thanks, Martin Michlmayr.  (Closes: #505072)
+
+  [ Ferenc Wagner ]
+  * Fix watch file for upstream directory structure.
+
+ -- Russ Allbery <rra@debian.org>  Tue, 17 Feb 2009 17:23:00 -0800
+
+xmltooling (1.0-2) unstable; urgency=low
+
+  [ Ferenc Wagner ]
+  * Add dependencies to libxmltooling-dev for the packages whose header
+    files are included by XMLTooling headers.
+  * Include NOTICE.txt in all packages.
+
+  [ Russ Allbery ]
+  * Explicitly link with -lpthread to work around Bug#468555 in libtool.
+  * Change package priorities to extra.  Xerces-C is extra, so all of the
+    Shibboleth stack needs to be extra, and realistically it's somewhat of
+    an edge package in Debian.
+  * Add in copyright and license information for all of the other random
+    files in the tree, including all the Autoconf support files.
+  * Fix copyright file formatting to use the right syntax for Files.
+
+ -- Russ Allbery <rra@debian.org>  Wed, 18 Jun 2008 20:18:21 -0700
+
+xmltooling (1.0-1) unstable; urgency=low
+
+  [ Ferenc Wagner ]
+  * Initial release (Closes: #480287)
+
+ -- Russ Allbery <rra@debian.org>  Sat, 07 Jun 2008 13:00:13 -0700

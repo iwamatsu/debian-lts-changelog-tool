@@ -1,0 +1,136 @@
+h2o (2.2.5+dfsg2-2+deb10u2) buster-security; urgency=medium
+
+  * Fix HTTP/2 rapid reset DDOS attack. CVE-2023-44487.
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 29 Oct 2023 21:29:53 +0100
+
+h2o (2.2.5+dfsg2-2+deb10u1) buster-security; urgency=high
+
+  * [d9b7843] Fix HTTP/2 DoS attack vulnerabilities.
+              CVE-2019-9512 CVE-2019-9514 CVE-2019-9515. (Closes: #934886)
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 20 Aug 2019 22:29:07 +0200
+
+h2o (2.2.5+dfsg2-2) unstable; urgency=medium
+
+  * Rebuild against new wslay
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 01 Oct 2018 21:55:29 +0200
+
+h2o (2.2.5+dfsg2-1) unstable; urgency=medium
+
+  * d/watch: mangle upstream alpha/beta/rc versions.
+  * Modify upstream source to use the system's jquery and repack, bumping dfsg
+    revision in the process.
+  * Disable some tests broken by unexpected TLSv1.3 client support  and force
+    TLSv1.2 on all s_client test invocations. (Closes: #908136)
+  * Link libh2o and libh2o-evloop against libwslay. (Closes: #908124)
+  * Bump Standards-Version to 4.2.1; no changes needed.
+  * d/rules: respect the nocheck build option.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sat, 22 Sep 2018 23:33:20 +0300
+
+h2o (2.2.5+dfsg1-6) unstable; urgency=medium
+
+  * [e77f4db] Add sleep between server creation and client connection
+              in autopkgtest to be sure that the server is up and running
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 04 Jun 2018 23:40:06 +0200
+
+h2o (2.2.5+dfsg1-5) unstable; urgency=medium
+
+  * [e1f7662] Add allow-stderr to pass autopkgtest. (Closes: #900745)
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 04 Jun 2018 18:55:13 +0200
+
+h2o (2.2.5+dfsg1-4) unstable; urgency=medium
+
+  * [4836952] Use compat-level 11
+  * [3f5add2] Disable two tests failing on mips64el
+  * [ea6a746] Add libh2o-server autopkgtest
+  * [5a1ed1a] Add libh2o-client autopkgtest
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 03 Jun 2018 20:06:33 +0200
+
+h2o (2.2.5+dfsg1-3) unstable; urgency=medium
+
+  * [4b728d8] Fix docs installation
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 03 Jun 2018 07:38:18 +0200
+
+h2o (2.2.5+dfsg1-2) unstable; urgency=medium
+
+  * [cfc739c] Switch back to compat-level 10 to fix FTBFS
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 02 Jun 2018 20:20:30 +0200
+
+h2o (2.2.5+dfsg1-1) unstable; urgency=medium
+
+  * [e6f08d1] Update d/copyright and d/watch
+  * [a3ce271] Fix typo in patch
+  * [39d32ca] Use compat level 11
+  * [c2aefeb] Use packaged version of jquery.min.js
+  * New upstream version 2.2.5+dfsg1
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 02 Jun 2018 17:25:36 +0200
+
+h2o (2.2.4+dfsg-2) unstable; urgency=medium
+
+  * Add ruby to build-depends. (Closes: #897510)
+  * Apply cme fix dpkg-copyright
+  * Apply cme fix dpkg-control
+  * Set Standards-Version: 4.1.3
+  * Sort build-depends alphabetically
+  * control: update Vcs-Browser and Vcs-Git
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 02 May 2018 23:36:45 +0200
+
+h2o (2.2.4+dfsg-1) unstable; urgency=high
+
+  * New upstream bugfix release
+    + Fix crash when logging TLS 1.3 properties (CVE-2017-10872)
+    + Fix crash when handling malformed HTTP/2 request (CVE-2017-10908)
+  * Drop patches merged upstream:
+    + fix-mruby-proc.patch
+    + fix-segfault-on-big-endian.patch
+  * Bump Standards-Version to 4.1.2; no changes needed
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 21 Dec 2017 10:58:30 +0200
+
+h2o (2.2.3+dfsg-2) unstable; urgency=medium
+
+  * Fix segfault on big-endian systems when reverse-proxying to HTTPS. This
+    fixes FTBFS on s390x.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Fri, 27 Oct 2017 22:39:52 +0300
+
+h2o (2.2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream stable release.
+  * Drop patches merged upstream.
+    + Build-on-platforms-without-64-bit-atomics.patch
+    + Fix-deadlock-in-setup_bio.patch
+    + epoll-do-not-leak-epoll-fds-on-fork.patch
+    + epoll-explicitly-delete-sockets-on-close.patch
+  * New patch fixing Proc's in mruby handlers that reference outer-scope
+    variables. Thanks to Tatsushi Demachi.
+  * Refresh remaining patches.
+  * Disable the new 50reverse-proxy-drop-headers test as it requires network
+    access.
+  * Fix upgrade reload logic: do not restart on upgrades, just reload.
+  * Bump Standards to 4.1.1; no changes needed.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 19 Oct 2017 16:07:38 +0300
+
+h2o (2.2.2+dfsg-2) unstable; urgency=medium
+
+  * Fix FTBFS on platforms without 64-bit atomics (mips, powerpc and possibly
+    others), by using a 32-bit unsigned int as connection ID.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 21 Sep 2017 21:50:25 +0300
+
+h2o (2.2.2+dfsg-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #873811)
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 19 Sep 2017 12:45:21 +0300

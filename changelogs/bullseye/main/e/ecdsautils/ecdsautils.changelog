@@ -1,0 +1,27 @@
+ecdsautils (0.3.2+git20151018-2+deb11u1) bullseye-security; urgency=medium
+
+  * debian/patches:
+    - Add 0001-verify-fix-signature-verification-CVE-2022-24884.patch,
+      Fix CVE-2022-24884: Improper Verification of ECDSA Signatures
+
+ -- Sven Eckelmann <sven@narfation.org>  Thu, 05 May 2022 19:13:10 +0200
+
+ecdsautils (0.3.2+git20151018-2) unstable; urgency=low
+
+  * Fixed build depends (Closes: #802798).
+
+ -- Steffen Moeller <moeller@debian.org>  Sat, 24 Oct 2015 13:51:07 +0200
+
+ecdsautils (0.3.2+git20151018-1) unstable; urgency=low
+
+  * Initial release (Closes: #802255).
+  * Added/improved man pages
+
+ -- Steffen Moeller <moeller@debian.org>  Sun, 18 Oct 2015 01:09:23 +0200
+
+ecdsautils (0.3.2-1) unstable; urgency=low
+
+  * ecdsaverify will read from stdin if no file is given
+
+ -- Nils Schneider <nils@nilsschneider.net>  Mon, 21 Jul 2014 14:30:00 +0200
+

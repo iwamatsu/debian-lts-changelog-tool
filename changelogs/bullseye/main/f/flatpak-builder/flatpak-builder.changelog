@@ -1,0 +1,319 @@
+flatpak-builder (1.0.12-1+deb11u1) bullseye-security; urgency=high
+
+  * d/gbp.conf, Vcs-Git: Configure for bullseye stable updates
+  * d/p/Disable-filesystem-access-with-nofilesystem-host-reset.patch,
+    d/p/Allow-nofilesystem-host-reset-in-flatpak-builder-run.patch:
+    Add patches from upstream to prevent unintended access to host
+    filesystem (CVE-2022-21682). To be effective, this also requires an
+    updated version of flatpak.
+  * d/control: Bump flatpak dependencies to 1.10.7.
+    This ensures that we have the version that enables us to avoid
+    CVE-2022-21682.
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 18 Jan 2022 18:23:34 +0000
+
+flatpak-builder (1.0.12-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+    - Make --run work if manifest has --metadata in build-finish
+    - Don't extract git submodules if they're disabled
+    - Make debug messages more understandable
+  * Standards-Version: 4.5.1 (no changes required)
+  * Drop autopkgtest that uses python2 (Closes: #936530)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 22 Feb 2021 08:42:42 +0000
+
+flatpak-builder (1.0.11-1) unstable; urgency=medium
+
+  * New upstream release
+    - d/p/bzr-Run-brz-in-preference-to-bzr.patch:
+      Drop patch, applied upstream
+
+ -- Simon McVittie <smcv@debian.org>  Sat, 04 Jul 2020 15:26:09 +0100
+
+flatpak-builder (1.0.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add Suggests on p7zip-full, for 7z
+  * Standards-Version: 4.5.0 (no changes required)
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Repository.
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+  * Remove Suggests on bzr now that it is a transitional package to brz
+  * d/p/bzr-Run-brz-in-preference-to-bzr.patch:
+    Make the bzr module type actually work with only brz installed
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 20 Mar 2020 20:37:36 +0000
+
+flatpak-builder (1.0.9-1) unstable; urgency=medium
+
+  * New upstream release
+  * installed-tests: Downgrade python2 from Depends to Suggests.
+    Test coverage will be a bit better if it is installed, but this
+    doesn't need to block the eventual removal of python2 from Debian.
+    The test in question relies on implementation details of Python 2,
+    so it is not straightforward to convert to Python 3.
+    (Closes: #936530)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 16 Sep 2019 09:47:06 +0100
+
+flatpak-builder (1.0.8-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * Standards-Version: 4.4.0 (no changes required)
+  * Use debhelper-compat 12
+    - Do not explicitly set --libexecdir since /usr/libexec is now the
+      default
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 09 Jul 2019 17:35:23 +0100
+
+flatpak-builder (1.0.8-1) experimental; urgency=medium
+
+  * New upstream release
+  * d/salsa-ci.yml: Request standard CI on salsa.debian.org
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 27 Jun 2019 19:03:29 +0100
+
+flatpak-builder (1.0.7-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 10 May 2019 12:10:59 +0100
+
+flatpak-builder (1.0.6-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 12 Apr 2019 09:37:31 +0100
+
+flatpak-builder (1.0.5-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fix regression in picking up default build options from SDK
+      with flatpak >= 1.2
+  * Downgrade bzr|brz and subversion to Suggests (Closes: #917035)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 11 Feb 2019 08:23:12 +0000
+
+flatpak-builder (1.0.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 05 Feb 2019 15:48:59 +0000
+
+flatpak-builder (1.0.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version: 4.3.0 (no changes required)
+  * d/upstream/metadata: Add DEP-12 metadata
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 28 Jan 2019 14:06:58 +0000
+
+flatpak-builder (1.0.2-1) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Support brz as alternative to bzr.
+
+  [ Simon McVittie ]
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 15 Jan 2019 18:38:27 +0000
+
+flatpak-builder (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version: 4.2.1
+  * Install the upstream NEWS and README.md files
+  * d/flatpak-builder-tests.lintian-overrides: Silence some overzealous
+    package-contains-documentation-outside-usr-share-doc tags
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 04 Oct 2018 15:44:42 +0100
+
+flatpak-builder (1.0.0-1) unstable; urgency=medium
+
+  * New upstream stable release
+  * Standards-Version: 4.2.0
+  * d/watch: Only watch even-numbered (stable) branches
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 20 Aug 2018 15:14:36 +0100
+
+flatpak-builder (0.99.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Depend on flatpak (>= 0.99.1)
+  * Standards-Version: 4.1.5 (no changes required)
+  * Set libexecdir to /usr/libexec as allowed by FHS 3.0
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 10 Jul 2018 21:37:25 +0100
+
+flatpak-builder (0.99.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 28 Jun 2018 18:06:20 +0100
+
+flatpak-builder (0.99.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/watch: Watch for odd-numbered releases too
+  * Depend on flatpak (>= 0.11.8)
+  * Build-depend on libcurl4-gnutls-dev
+  * d/copyright: Update
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 21 Jun 2018 22:54:10 +0100
+
+flatpak-builder (0.10.10-1) unstable; urgency=medium
+
+  * New upstream release
+    - d/copyright: Update
+    - Explicitly enable YAML support
+    - Add subversion to Recommends
+  * Standards-Version: 4.1.4 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 26 Apr 2018 17:20:01 +0100
+
+flatpak-builder (0.10.9-1) unstable; urgency=medium
+
+  * New upstream release
+  - Includes patch from Aurelien Jarno to fix FTBFS with glibc 2.27
+    (Closes: #890722)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 19 Feb 2018 09:56:47 +0000
+
+flatpak-builder (0.10.8-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 16 Feb 2018 12:41:32 +0000
+
+flatpak-builder (0.10.7-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 14 Feb 2018 18:25:05 +0000
+
+flatpak-builder (0.10.6-2) unstable; urgency=medium
+
+  * Set Vcs-* to salsa.debian.org
+  * Standards-Version: 4.1.3 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 17 Jan 2018 14:27:22 +0000
+
+flatpak-builder (0.10.6-1) unstable; urgency=medium
+
+  * New upstream release
+    - (Build-)depend on flatpak 0.10.2 and ostree 2017.14
+  * Standards-Version: 4.1.2 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 15 Dec 2017 15:34:20 +0000
+
+flatpak-builder (0.10.5-1) unstable; urgency=medium
+
+  * New upstream release
+    - (Build-)depend on flatpak 0.10.1
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 27 Nov 2017 09:14:05 +0000
+
+flatpak-builder (0.10.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 06 Nov 2017 17:14:30 +0000
+
+flatpak-builder (0.10.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Version the dh-exec build-dependency to (>= 0.23~).
+    The version in oldstable doesn't support build profiles. Strictly
+    speaking 0.15 might be enough, but I'm not going to test with anything
+    older than oldstable-backports.
+  * debian/control: Set Rules-Requires-Root: no. This package does not
+    contain any file not owned by root.
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 31 Oct 2017 14:03:31 +0000
+
+flatpak-builder (0.10.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 27 Oct 2017 12:26:03 +0100
+
+flatpak-builder (0.10.0-1) unstable; urgency=medium
+
+  * d/watch: Track stable-branches (x.y.z where y is even), and fix to
+    cope with multi-digit minor versions
+  * New upstream stable release 0.10.0
+    - Increase ostree dependency to 2017.12
+    - Increase flatpak dependency to 0.10.0
+  * Remove unused override for --with-html-dir
+  * Do not force --disable-silent-rules, debhelper does this now
+  * Disable documentation generation under nodoc DEB_BUILD_OPTIONS
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 26 Oct 2017 12:41:56 +0100
+
+flatpak-builder (0.9.99-1) unstable; urgency=medium
+
+  * New upstream release
+    - Build-depend on libxml 2.4
+  * Update test wrapper scripts from flatpak 0.9.99-1
+    - Make sure /sbin/ldconfig is in PATH
+    - Remove an unused variable
+    - Treat debci as a test-specific user
+  * Standards-Version: 4.1.1 (no changes required)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 09 Oct 2017 14:17:02 +0100
+
+flatpak-builder (0.9.98-1) unstable; urgency=medium
+
+  * New upstream release
+    - Depend on flatpak 0.9.98
+  * Skip tests if bwrap cannot unshare IPC, net and PID namespaces
+    (see #876743)
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 26 Sep 2017 09:51:14 +0100
+
+flatpak-builder (0.9.11-2) unstable; urgency=medium
+
+  * Update flatpak-builder-tests' Breaks/Replaces on flatpak-tests to
+    account for versions 0.9.11~builder0.9.11 and 0.9.12~builder0.9.11
+  * Upload to unstable
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 22 Sep 2017 19:05:30 +0100
+
+flatpak-builder (0.9.11-1) experimental; urgency=medium
+
+  * New upstream release
+    - Drop all patches
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 13 Sep 2017 20:42:13 +0100
+
+flatpak-builder (0.9.9-2) experimental; urgency=medium
+
+  * Add patch from upstream to fix FTBFS on non-x86 non-ARM architectures
+  * Declare compliance with Policy 4.1.0
+  * d/copyright: Reinstate GPL-2+ text for one source file, which means
+    the binary is effectively GPL-2+.
+  * debian/upstream/signing-key.asc: Remove. Upstream no longer routinely
+    sign releases.
+  * flatpak-builder-tests: Add Breaks/Replaces on versions of
+    flatpak-tests that contain flatpak-builder tests
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 12 Sep 2017 10:05:21 +0100
+
+flatpak-builder (0.9.9-1) experimental; urgency=medium
+
+  * Fix debian/watch to look at
+    https://github.com/flatpak/flatpak-builder
+  * New upstream release
+    - Bump flatpak dependency to 0.9.9
+  * Mark patch as forwarded upstream
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 01 Sep 2017 17:23:07 +0100
+
+flatpak-builder (0.9.8+16+g4ff21f43-1) experimental; urgency=medium
+
+  * New source package, taking over flatpak-builder from src:flatpak
+    (Closes: #873594)
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 31 Aug 2017 19:29:25 +0100

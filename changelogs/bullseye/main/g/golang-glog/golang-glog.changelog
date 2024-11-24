@@ -1,0 +1,61 @@
+golang-glog (0.0~git20160126.23def4e-3) unstable; urgency=medium
+
+  * Add debian/watch
+  * Remove unused Files-Excluded field from debian/copyright
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Apply "cme fix dpkg" fixes
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Thu, 01 Aug 2019 02:58:20 -0600
+
+golang-glog (0.0~git20160126.23def4e-2) unstable; urgency=medium
+
+  * Team upload.
+  * Point Vcs-* urls to salsa.debian.org.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Apr 2018 12:16:35 -0400
+
+golang-glog (0.0~git20160126.23def4e-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Team upload.
+  * Add me as uploader
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+  * Remove Built-Using from -dev package
+
+  [ Dr. Tobias Quathamer ]
+  * Remove unneeded file d/source/local-options
+  * Modernize d/gbp.conf, remove obsolete options
+  * Remove most of the boilerplate code from d/rules
+  * Use debhelper v10
+  * Update d/copyright
+  * Update d/control with current pkg-go standards
+  * Update code location in long description
+  * New upstream version 0.0~git20160126.23def4e
+  * Update Standards-Version to 4.1.1
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Wed, 06 Dec 2017 00:06:25 +0100
+
+golang-glog (0+git20150801.fca8c88-1) unstable; urgency=medium
+
+  * debian/control: Migration to pkg-go team.
+  * New upstream commits.
+  * Add gen-orig-tgz target to debian/rules.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 21 Aug 2015 20:53:19 +0000
+
+golang-glog (0+git20150214.44145f0-2) unstable; urgency=medium
+
+  * Re-upload to fix wrong debian/copyright.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 14 Feb 2015 20:15:09 +0000
+
+golang-glog (0+git20150214.44145f0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #778407)
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 14 Feb 2015 18:15:05 +0000

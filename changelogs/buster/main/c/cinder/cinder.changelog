@@ -1,0 +1,961 @@
+cinder (2:13.0.7-1+deb10u2) buster-security; urgency=medium
+
+  * New upstream point release.
+  * Refreshed New_snapshot_clone_size_option.patch.
+  * Removed fix-python3-compatibility-ceph.patch applied upstream.
+  * Add cgroup-bin as runtime dependency, needed for QoS.
+  * Add add-a-healthcheck-url.patch.
+  * CVE-2022-47951: By supplying a specially created VMDK flat image which
+    references a specific backing file path, an authenticated user may convince
+    systems to return a copy of that file's contents from the server resulting
+    in unauthorized access to potentially sensitive data. Add upstream patch
+    CVE-2022-47951-Check_VMDK_subformat_against_an_allowed_list.patch
+    (Closes: #1029562).
+  * Blacklist test_mount_quobyte_should_reraise_already_mounted_error().
+  * Fixed minimum version of python3-oslo.utils (>= 3.36.5-0+deb10u3~),
+    required by the above CVE patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 27 Jan 2023 13:16:18 +0100
+
+cinder (2:13.0.3-1) unstable; urgency=medium
+
+  * New upstream version
+  * Remove upstream aplied patch
+    - Stop_masking_IOError_different_than_ENOSPC.patch
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Tue, 26 Feb 2019 11:30:22 +0100
+
+cinder (2:13.0.2-3) unstable; urgency=medium
+
+  * Update fix-python3-compatibility-ceph.patch
+  * Add ceph-common to recommends
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Tue, 26 Feb 2019 10:42:13 +0100
+
+cinder (2:13.0.2-2) unstable; urgency=medium
+
+  * Remove fix-qnap-unit-tests.patch
+  * Add fix-python3-compatibility-ceph.patch
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 06 Feb 2019 17:12:28 +0100
+
+cinder (2:13.0.2-1) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * Fix previous entry's typo that wrongly closed the bug.
+  * New upstream release.
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 17 Jan 2019 12:45:34 +0100
+
+cinder (2:13.0.1-5) unstable; urgency=medium
+
+  * Check if /bin/ip is executable before using it in config script for
+    autodetecting the value of my_ip (Clsoes: #914779).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 27 Nov 2018 14:05:07 +0100
+
+cinder (2:13.0.1-4) unstable; urgency=medium
+
+  * Add New_snapshot_clone_size_option.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 22 Nov 2018 14:37:58 +0100
+
+cinder (2:13.0.1-3) unstable; urgency=medium
+
+  * Add Stop_masking_IOError_different_than_ENOSPC.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 19 Nov 2018 11:53:39 +0100
+
+cinder (2:13.0.1-2) unstable; urgency=medium
+
+  * Rebuild with newer openstack-pkg-tools 89
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Mon, 12 Nov 2018 23:07:27 +0100
+
+cinder (2:13.0.1-1) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * New upstream version
+  * d/cinder-common.config.in:
+  * d/cinder-common.postinst.in:
+  * d/cinder-common.templates.in:
+      - Handle glance_api_servers via debconf (Closes: #912992)
+      - Handle my_ip via debconf (Closes: #912991)
+      * Fix volume_group name in config (Closes: #912987)
+  * d/cinder-common.postrm.in:
+      - Fix deletion of policy.json (Closes: #912984)
+  * d/rules: Make auth_strategy default to keystone
+  * d/copyright: Add me to copyright file
+  * d/control: Add me to uploaders field
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Tue, 06 Nov 2018 13:57:47 +0100
+
+cinder (2:13.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 05 Sep 2018 13:53:41 +0200
+
+cinder (2:13.0.0-1) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * Better init script descriptions.
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+  [ Ondřej Nový ]
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+  * d/changelog: Remove trailing whitespaces
+  * Removed patches applied upstream:
+    - Fix_python_version_check.patch
+    - fix-sqlite3-migration-tests.patch
+    - fix-netapp-unit-tests.patch
+    - disable-unit-tests-bug-1715915.patch
+    - fix-inspur-instorage-unit-tests.patch
+    - fix-dell-emc-unit-tests.patch
+    - fix-hpe3parfcdriver-unit-tests.patch
+    - fix-rbd-driver-for-python3.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Jun 2018 11:56:27 +0200
+
+cinder (2:12.0.1-1) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * New upstream version
+  * Add some deletion of files to dh_clean
+  * Add fix-sqlite3-migration-tests.patch
+  * Allow run all tests
+  * Add fix-netapp-unit-tests.patch
+  * Add fix-qnap-unit-tests.patch
+  * Add fix-dell-emc-unit-tests.patch
+  * Add fix-backup-validation-unit-tests.patch
+  * Add fix-hpe3parfcdriver-unit-tests.patch
+  * Add disable-unit-tests-bug-1715915.patch
+
+  [ Thomas Goirand ]
+  * Pipe tests to subunit2pyunit.
+  * Add fix-rbd-driver-for-python3.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 May 2018 12:02:25 +0200
+
+cinder (2:12.0.0-4) UNRELEASED; urgency=medium
+
+  * Switch back to using eventlet instead of uwsgi, as it crashes
+    puppet-openstack when doing "openstack volume type set".
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 24 Apr 2018 09:01:26 +0200
+
+cinder (2:12.0.0-3) unstable; urgency=medium
+
+  * Using unified postrm from openstack-pkg-tools >= 74~.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Mar 2018 16:21:45 +0000
+
+cinder (2:12.0.0-2) unstable; urgency=medium
+
+  * Added thin-provisioning-tools as runtime depends for cinder-common.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 07 Mar 2018 15:56:04 +0000
+
+cinder (2:12.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Switched to openstack-pkg-tools >= 70~ debconf templates.
+  * Switched Cinder to uwsgi.
+  * Add Build-Profiles: <!nodoc> for the -doc package.
+  * Downgrade python3-ceph to Recommends: until Ceph Lumiuous version is
+    uploaded with Python 3 support.
+  * Also downgrade python3-hp3parclient as recommends.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 05 Mar 2018 23:01:40 +0000
+
+cinder (2:12.0.0~rc1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Blacklist tests failing in Stretch backport:
+    - test_instorage_initialize_iscsi_connection_multipath (wrong ordering).
+    - VMAXCommonReplicationTest.test_failover_legacy_volume (wrong IP addr).
+    - TestHPE3PARFCDriver.test_create_modify_host not (not deterministic).
+  * Call stestr directly, do not use pkgos-dh_auto_test.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Feb 2018 21:13:30 +0000
+
+cinder (2:12.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Using pkgos-dh_auto_test.
+  * Generate policy.yaml using oslo-policy-generator.
+  * Switch package to Python 3.
+  * Blacklist qnap and netapp tests, as they fail in Python 3.
+  * Blacklist 3 other failing tests under Python 3:
+    - test_restore_backup_with_body_KeyError()
+    - test_vmax.VMAXCommonReplicationTest\.test_replicate_group()
+  * Standards-Version is now 4.1.3.
+  * Add patch for fixing some python2 sheebang to python 3.
+  * Fixed debian/copyright holder list and years.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 22 Feb 2018 15:37:20 +0000
+
+cinder (2:11.0.0-7) unstable; urgency=medium
+
+  [ David Rabel ]
+  * Team upload.
+  * Remove obsolete Build-Depends: dh-systemd.
+  * Remove unused patches at debian/patches/
+  * Fix encoding in d/po/pt.po.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 10 Feb 2018 12:42:35 +0000
+
+cinder (2:11.0.0-6) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 61~.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Dec 2017 08:41:37 +0000
+
+cinder (2:11.0.0-5) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 60~.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 Dec 2017 21:22:08 +0000
+
+cinder (2:11.0.0-4) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 59~, to make sure we're using allocated
+    UID/GID from #884178.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 12 Dec 2017 23:23:24 +0000
+
+cinder (2:11.0.0-3) unstable; urgency=medium
+
+  * Also register volumev3 / cinderv3 API endpoint.
+  * Rebuilt with openstack-pkg-tools >= 56.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Nov 2017 14:44:16 +0100
+
+cinder (2:11.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Updated fr.po (Closes: #875751).
+  * Updated pt.po (Closes: #876169).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 28 Oct 2017 10:16:42 +0000
+
+cinder (2:11.0.0-1) experimental; urgency=medium
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Updating maintainer field.
+  * Running wrap-and-sort -bast.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Correcting permissions in debian packaging files.
+  * Updating standards version to 4.0.1.
+  * Deprecating priority extra as per policy 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed now useless patches.
+  * Fixed oslo-config-generator namespaces in debian/rules.
+  * Wrap cinder.conf on 140 chars.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Oct 2017 23:39:49 +0200
+
+cinder (2:9.0.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Bump build dependency on openstack-pkg-tools (Closes: #858692).
+
+ -- David Rabel <david.rabel@noresoft.com>  Sat, 01 Apr 2017 11:22:35 +0200
+
+cinder (2:9.0.0-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Bumped debhelper compat version to 10
+
+  [ Ondřej Kobližek ]
+  * Patch-out upper constraints of SQLAlchemy
+  * Fixed SqlAlchemy worker model (Closes: #846749)
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Mon, 19 Dec 2016 10:23:09 +0100
+
+cinder (2:9.0.0-2) unstable; urgency=medium
+
+  * Also allows running open-iscsi using OR depends (Closes: #841452).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 21 Oct 2016 10:40:22 +0200
+
+cinder (2:9.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 06 Oct 2016 17:32:42 +0200
+
+cinder (2:9.0.0~rc1-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Use correct branch in Vcs-* fields
+
+  [ Thomas Goirand ]
+  * Uploading to unstable.
+  * Build-Depends on openstack-pkg-tools >= 53~.
+  * Fixed oslotest EPOCH.
+  * Debconf translation:
+    - it (Closes: #839197).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Sep 2016 09:38:45 +0200
+
+cinder (2:9.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Fixed namespace list when generating cinder.conf.
+  * Using OpenStack's Gerrit as VCS URLs.
+  * Rebased nozfs patches.
+  * Added PYTHONPATH=. when building sphinx doc.
+  * Black list 3 unit tests that non-deterministically fail:
+    - test_volume.VolumeMigrationTestCase.test_retype_volume_migration_failed
+    - test_volume.VolumeMigrationTestCase.test_retype_volume_migration_bad_policy
+    - backup.test_backup.BackupTestCase.test_create_backup_with_temp_snapshot
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Sep 2016 21:17:08 +0200
+
+cinder (2:9.0.0~b2-2) experimental; urgency=medium
+
+  * Team upload.
+  * Added python-pep8 to build depends (Closes: #834275)
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 14 Aug 2016 15:59:27 +0200
+
+cinder (2:9.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Rebased remove-zfssa-from-opts.py.patch.
+  * Updated Danish translation of the debconf templates (Closes: #830641).
+  * Blacklist VolumeMigrationTestCase.test_retype_volume_driver_success.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Jul 2016 16:35:01 +0200
+
+cinder (2:9.0.0~b1+dfsg1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Refreshed patches.
+  * Fixed generation of cinder.conf namespace list.
+  * Do not use custom OSLO_PACKAGE_VERSION and build-depends on
+    openstack-pkg-tools 50.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 09 Jun 2016 09:31:38 +0200
+
+cinder (2:8.0.0-4) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * Updated Japanese debconf templates (Closes: #820761).
+  * Updated Dutch debconf templates (Closes: #822967).
+  * Added Brazilian Portuguese debconf templates (Closes: #824287).
+
+  [ Ondřej Nový ]
+  * d/copyright: Changed source URL to https protocol
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 19 May 2016 10:51:12 +0200
+
+cinder (2:8.0.0-3) unstable; urgency=medium
+
+  * Also blacklist test_create_delete_cgsnapshot which is non-deterministically
+    failing (Closes: #824595).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 18 May 2016 10:20:47 +0200
+
+cinder (2:8.0.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+
+  [ Thomas Goirand ]
+  * Fixed endpoint creation that was buggy: it was using keystone admin auth
+    token which we removed for Mitaka (Closes: #820844).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 Apr 2016 20:21:03 +0000
+
+cinder (2:8.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Apr 2016 21:08:51 +0200
+
+cinder (2:8.0.0~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Updated ja.po debconf translation (Closes: #816343).
+  * Ran debconf-updatepo.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Apr 2016 10:43:20 +0200
+
+cinder (2:8.0.0~rc1-2) experimental; urgency=medium
+
+  * Do not use Keystone admin auth token to register API endpoint.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Mar 2016 12:24:55 +0000
+
+cinder (2:8.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Disable non-deterministic failed tests:
+    cinder.tests.unit.test_volume.VolumeTestCase.test_create_delete_volume
+  * Fixed (build-)depends for this release.
+  * Reworked install-missing-files.patch.
+  * Standards-Version: 3.9.7 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 14 Mar 2016 14:10:58 +0100
+
+cinder (2:8.0.0~b3-1) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * New (build-)depends on python-oauth2client to ensure its version.
+  * Added missing build-depends on git, needed by sphinx-build.
+  * Fixed config file generation.
+  * Refreshed / rebased patches.
+
+  [ Ondřej Nový ]
+  * Fixed homepage (https).
+  * Fixed VCS URLs (https).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 25 Jan 2016 10:02:39 +0000
+
+cinder (2:8.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed disable-zfs-tests.patch.
+  * Removed Downstream_Fix_for_Genconfig.patch.
+  * Added patch to remove zfssa tests.
+  * Added a doc-base registration file.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 07 Dec 2015 14:05:41 +0100
+
+cinder (2:7.0.0-4) unstable; urgency=medium
+
+  * Added q-text-as-data as depends for cinder-api.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Nov 2015 11:32:01 +0000
+
+cinder (2:7.0.0-3) unstable; urgency=medium
+
+  * Using Keystone API v3 to register in the catalog.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Nov 2015 18:19:42 +0000
+
+cinder (2:7.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 Oct 2015 13:44:00 +0000
+
+cinder (2:7.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Setup both v1 and v2 endpoints.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 15 Oct 2015 15:49:18 +0200
+
+cinder (2:7.0.0~rc2-1) experimental; urgency=medium
+
+  * cinder-api depends on python-openstackclient.
+  * cinder-api also registering the volumev2 type.
+  * Fixed cinder.conf generation:
+    - Fixed the default path for lock_path.
+    - Added upstream patch for fixing config file generation.
+    - Manually set enabled_backends = lvm, and appends a [lvm] section to set
+      the LVM backend as default.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Sep 2015 13:23:42 +0000
+
+cinder (2:7.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Refresh patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 25 Sep 2015 10:01:08 +0200
+
+cinder (2:7.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Align with MOS packaging:
+    - Bumped EPOCH to 2 instead of 1.
+    - Some Ubuntu version lower bounds for dependencies.
+    - Added a cinder-doc package.
+  * Fixed (build-)depends for this release.
+  * Refreshed disable-zfs-tests.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 01 Sep 2015 13:56:21 +0200
+
+cinder (1:7.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updated (build-)depends for this release.
+  * Fixed OSLO_PACKAGE_VERSION for last PBR version.
+  * Disable zfs tests.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 10 Jul 2015 09:41:59 +0200
+
+cinder (2015.1.0+2015.06.16.git26.9634b76ba5-3) unstable; urgency=medium
+
+  * Rebuilt for sqlalchemy 1.0.6.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 01 Jul 2015 02:21:46 +0000
+
+cinder (2015.1.0+2015.06.16.git26.9634b76ba5-2) unstable; urgency=medium
+
+  * Fixed changelog regarding CVE number: CVE-2015-1851 and not
+    CVE-2015-1850 (Closes: #789349).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 21 Jun 2015 14:21:31 +0000
+
+cinder (2015.1.0+2015.06.16.git26.9634b76ba5-1) unstable; urgency=high
+
+  * New upstream release (based on commit 26th g9634b76):
+    - Addresses CVE-2015-1851 / OSSA 2015-011 (Closes: #788996).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 16 Jun 2015 22:36:48 +0200
+
+cinder (2015.1.0+2015.06.06.git24.493b6c7f12-1) unstable; urgency=medium
+
+  * New upstream release (basing on commit 24th 2015.06.06 493b6c7f12).
+  * Fixed debian/watch file to read from correct cinder project and not Nova.
+  * Fixed config file generation taking patches from upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 11 May 2015 23:07:24 +0200
+
+cinder (2015.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fixed gbp.conf.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Apr 2015 21:33:43 +0000
+
+cinder (2015.1~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Updated (build-)depends for this release.
+  * Now generates cinder.conf on the fly.
+  * Added Fix_borked_StorPool_driver.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 09 Apr 2015 23:48:10 +0200
+
+cinder (2014.2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Now depends on openstack-pkg-tools (>= 20~) to avoid systemd issues with
+    previous versions.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 14 Dec 2014 08:59:02 +0000
+
+cinder (2014.2-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 16 Oct 2014 15:23:17 +0000
+
+cinder (2014.2~rc2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updated (build-)depends for this release.
+  * Switching to templated init scripts using openstack-pkg-tools >= 13.
+  * Mangling upstream rc and beta versions in watch file.
+  * Now using a single cinder-common.logrotate file instead of so many.
+  * Standards-Version is now 3.9.6 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 05 Oct 2014 14:23:48 +0800
+
+cinder (2014.2~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updated (build-)depends for this release.
+  * Added more lintian-override for false positive about unused debconf
+    templates.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 01 Oct 2014 15:43:51 +0800
+
+cinder (2014.2~b3-2) experimental; urgency=medium
+
+  * Fixed the DB connection directive name and section.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 24 Sep 2014 18:50:02 +0800
+
+cinder (2014.2~b3-1) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * New (build-)depends for this release.
+  * Removes usr/bin/cinder-rpc-zmq-receiver fron cinder-common.install,
+    as its gone upstream (moved into Oslo, it seems).
+
+  [ gustavo panizzo ]
+  * Support to run cinder daemons under systemd.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 20 Sep 2014 10:15:10 +0000
+
+cinder (2014.1.1-2) unstable; urgency=medium
+
+  * cinder-volume now depends on tgt >= 1:1.0.17-1.1~ (Closes: 751703).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 16 Jun 2014 15:37:47 +0800
+
+cinder (2014.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed fallback-to-None-on-missing-Glance-image-attrs.patch applied
+    upstream.
+  * Bumped python-six minimal requirements to 1.6.0.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Jun 2014 22:08:57 +0800
+
+cinder (2014.1-7) unstable; urgency=medium
+
+  * Now build-depends on openstack-pkg-tools >= 0.12~.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 05 Jun 2014 07:04:33 +0000
+
+cinder (2014.1-6) unstable; urgency=medium
+
+  * Switched from restarting daemons to copytruncate in logrotate.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 29 May 2014 14:01:00 +0800
+
+cinder (2014.1-5) unstable; urgency=medium
+
+  * Disable https for the default keystone conf, as this makes our CI fail.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 05 May 2014 13:14:58 +0800
+
+cinder (2014.1-4) unstable; urgency=medium
+
+  * Updated intalian debconf translations (Closes: #745386).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 03 May 2014 04:06:37 +0000
+
+cinder (2014.1-3) unstable; urgency=medium
+
+  * Now using keystone_authtoken in cinder.conf instead of api-paste.ini:
+    - Fixed config and postinst scripts of cinder-common to use that.
+    - Removed patch for api-paste.ini.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 01 May 2014 00:01:50 +0800
+
+cinder (2014.1-2) unstable; urgency=medium
+
+  * Applied patch from Mike Perez <thingee@gmail.com> to be able to create
+    volume from glance image without checksum.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 26 Apr 2014 23:12:30 +0800
+
+cinder (2014.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Applied patch from Sylvain Baubeau <sylvain.baubeau@enovance.com> to select
+    log destination (to syslog or to a file).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 09 Apr 2014 22:09:38 +0800
+
+cinder (2014.1~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Removed now useless fix-sqlalchemy-version patch.
+  * Fixed new (build-)dependencies for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 28 Mar 2014 18:40:20 +0800
+
+cinder (2014.1~b3-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 17 Feb 2014 15:11:34 +0800
+
+cinder (2013.2.2-2) unstable; urgency=medium
+
+  * Rebuilt using openstack-pkg-tools >= 9.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Feb 2014 17:36:24 +0000
+
+cinder (2013.2.2-1) unstable; urgency=medium
+
+  * New upstream point release.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Feb 2014 11:04:50 +0800
+
+cinder (2013.2.1-4) unstable; urgency=medium
+
+  * Added postrotate script after logrotate to restart daemons.
+  * Fix webob version in requirements.txt.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 03 Feb 2014 15:49:21 +0800
+
+cinder (2013.2.1-3) unstable; urgency=medium
+
+  * Updated fr.po debconf thanks to Julien Patriarca (Closes: #733091).
+  * New sv.po debconf translation thanks to Martin Bagge (Closes: #734585).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 13 Jan 2014 17:27:07 +0800
+
+cinder (2013.2.1-2) unstable; urgency=medium
+
+  * Kills the "cinder enable" debconf feature. (Closes: #732547)
+  * Adds a Spanish debconf translation thanks to Matias A. Bellone
+    <matiasbellone+debian@gmail.com> (Closes: #732535).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 19 Dec 2013 15:46:34 +0800
+
+cinder (2013.2.1-1) unstable; urgency=medium
+
+  * New upstream release (Icehouse beta 1).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Dec 2013 21:07:33 +0800
+
+cinder (2013.2-2) unstable; urgency=medium
+
+  * Updated debconf translations with warm thanks to:
+    - French, Julien Patriarca <leatherface@debian.org> (Closes: #728769).
+    - Russian, Yuri Kozlov <yuray@komyakino.ru> (Closes: #729775).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 08 Dec 2013 11:21:20 +0800
+
+cinder (2013.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Fixed the path to the log files in the init scripts.
+  * Fixed the value of the state_path directive to /var/lib/cinder instead of
+    somewhere in /usr/lib/python2.x.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 17 Oct 2013 01:02:21 +0800
+
+cinder (2013.2~rc3-1) experimental; urgency=low
+
+  * New upstream release.
+  * Kills the CEPH_ARGS hack in /etc/default/cinder and cinder-volume.init
+    since that's not needed anymore (upstream code manages this now in the
+    configuration file directly).
+  * sed -i "s/#auth_strategy=noauth/auth_strategy=keystone/" in the default
+    packaged cinder.conf (otherwise it doesn't work by default).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 11 Oct 2013 22:54:46 +0800
+
+cinder (2013.2~rc1-2) experimental; urgency=low
+
+  * Updates the templates and translations to really (Closes: #708658).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 09 Oct 2013 23:32:13 +0800
+
+cinder (2013.2~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Reviewed (build-)dependencies.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 22 Jun 2013 16:27:46 +0800
+
+cinder (2013.1.3-1) unstable; urgency=low
+
+  * New upstream point release.
+  * Added several Debconf templates translations:
+    - Portuguese, thanks to Miguel Figueiredo (Closes: #705707).
+    - Italian, thanks to Beatrice Torracca (Closes: #719879).
+    - Czech, thanks to Michal Šimůnek (Closes: #721135).
+  * Removes now applied upstream patches for CVE-2013-4202 & CVE-2013-4183.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 30 Aug 2013 11:35:22 +0800
+
+cinder (2013.1.2-4) unstable; urgency=high
+
+  * Adds missing depends: sqlite3.
+  * CVE-2013-4202: Fix DoS using XML entities in extensions (Closes:
+  * #719118).
+  * CVE-2013-4183: Enable zero the snapshot when delete snapshot in
+    LVMVolumeDriver (Closes: #719010).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 13 Jul 2013 22:51:29 +0800
+
+cinder (2013.1.2-3) unstable; urgency=low
+
+  * Adds a patch to make it work with sqlalchemy >= 0.8 (Closes: #715431).
+  * Added build-depends: python-pywbem.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 10 Jul 2013 15:28:16 +0800
+
+cinder (2013.1.2-2) unstable; urgency=low
+
+  * Starts Cinder after postgresql, mysql, keystone, rabbitmq-server and
+  * ntp.
+  * Added cinder-volume CEPH_ARGS export using what is configured in
+    /etc/default/cinder-volume.
+  * Rebuilds to use python-sqlalchemy >= 0.8.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 22 Jun 2013 16:27:46 +0800
+
+cinder (2013.1.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Jun 2013 22:55:23 +0800
+
+cinder (2013.1.1-2) unstable; urgency=low
+
+  * Added if [ -r /usr/share/dbconfig-common/dpkg/prerm ] in the prerm.
+  * Ran wrap-and-sort to clean stuff.
+  * Added creation and chown of /var/lib/cinder/{cache,volumes} after the
+    removal of the -R flag when doing the chown in openstack-pkg-tools.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 23 May 2013 00:08:47 +0800
+
+cinder (2013.1.1-1) unstable; urgency=low
+
+  * Uploading to unstable.
+  * New upstream release.
+  * Fixed /etc/sudoers.d/cinder-common
+  * Reviewed package descriptions by the debian-l10n-english team.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 Apr 2013 22:30:47 +0800
+
+cinder (2013.1-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 28 Jan 2013 15:54:59 +0800
+
+cinder (2012.2.1-1) experimental; urgency=low
+
+  [ Thomas Goirand ]
+  * New upstream release 2012.2.1
+  * Fixes wrong handling (eg: policy violation) of /etc/cinder/cinder.conf.
+  * Now uses pkgos_func functions for debconf and dbconfig-common handling.
+  * Renames /etc/sudoers.d/cinder_sudoers as /etc/sudoers.d/cinder-common.
+  * Debconf now users cinder/<debconf-screen-name> and not cinder-common/.
+  * Reviewed long and short descriptions in debian/control.
+  * Bumped Build-Depends-Indep: python-all to 2.6.6-3~ since we are using
+  dh_python2.
+  * Added everyone in the team as Uploaders:.
+  * Changed Homepage field to http://cinder.openstack.org/.
+  * Dependencies are now by alpha order.
+  * Removed useless empty cinder-volume.postrm, cinder-api.postrm,
+  cinder-scheduler.postinst, cinder-scheduler.postrm.
+  * Pre-Depends: dpkg (>= 1.15.6~) because we use xz compression.
+  * Asks for admin tenant, user and password with debconf, patches
+  api-paste.ini so it is syntaxicaly correct.
+  * Auto-detects a valide volume group name, and prompt the user with debconf
+  about it.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 02 Dec 2012 07:00:49 +0000
+
+cinder (2012.2~rc1+git1~6b31057-1) experimental; urgency=low
+
+  * First debian release
+
+ -- Mehdi Abaakouk <sileht@sileht.net>  Thu, 13 Sep 2012 15:52:06 +0200
+
+cinder (2012.2~rc1~20120907.230-0ubuntu4) quantal; urgency=low
+
+  [Chuck Short]
+  * New upstream version.
+  * debian/cinder.conf: Fix path for cinder-rootwrap. (LP: #1045438)
+  * debian/control: Add python-glanceclient as a dep.
+  * debian/cinder-common.postinst: Fix chmod thinko.
+  * debian/*.upstart: Specify the configuration files.
+
+  [Soren Hansen]
+  * Update debian/watch to account for symbolically named tarballs and
+    use newer URL.
+  * Fix Launchpad URLs in debian/watch.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 07 Sep 2012 11:27:55 -0500
+
+cinder (2012.2~f3-0ubuntu3) quantal; urgency=low
+
+  * debian/cinder.conf: Re-add sql_connection and set it to sqllite.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 22 Aug 2012 20:14:41 -0500
+
+cinder (2012.2~f3-0ubuntu2) quantal; urgency=low
+
+  * debian/cinder.conf: Get rid of deprecated warnings.
+    (LP: #1036240)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Sun, 19 Aug 2012 13:36:22 -0500
+
+cinder (2012.2~f3-0ubuntu1) quantal; urgency=low
+
+  * New upstream version.
+  * debian/patches/0001-Use-setuptools-git.patch: Dropped
+  * debian/control: Add python-glanceclient
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 17 Aug 2012 10:18:57 -0500
+
+cinder (2012.2~f3~20120809.102-0ubuntu2) quantal; urgency=low
+
+  * debian/cinder.conf, cinder-common.install: Use rootwrap.conf. (LP: #1036240)
+  * debian/control: Drop python-babel.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 13 Aug 2012 14:14:31 -0500
+
+cinder (2012.2~f3~20120809.102-0ubuntu1) quantal; urgency=low
+
+  [ Adam Gandelman ]
+  * debian/control: Add python-setuptools dependency.
+  * debian/cinder-common.postinst: Fix syntax errors, fix permissions.
+  * debian/cinder-common.dirs: Correct, etc/nova -> etc/cinder.
+  * debian/{cinder_sudoers, rules, cinder-common.install}: Install proper
+    cinder_sudoers.
+  * debian/cinder-*.upstart: Close quotes, replace 'nova' references with
+    'cinder'.
+  * debian/cinder.conf: Specify correct sql_connection.
+  * debian/cinder-scheduler.postinst: Added.  Migrate local databases only.
+
+  [ Chuck Short ]
+  * debian/*.upstart: Fix upstart jobs to run with right interfaces.
+    (LP: #1030197)
+  * debian/control: Drop python-babel, python-nosexcover
+  * debian/control: Add python-mox, pep8
+  * debian/rules: Re-add get-orig-source
+  * debian/rules: Enable testsuite.
+  * debian/cinder.conf: Update config file.
+  * debian/cinder-{api,volumes,scheduler}.manpages: Add manpages.
+  * New upstream version.
+  * debian/rules: Don't run pep8 tests
+  * debian/patches/0001-Use-setuptools-git.patch: Cleanup manifest
+  * debian/control: Add python-setuptools-git
+  * debian/control: Add section for python-cinder
+  * fix lintian warnings and errors.
+  * debian/cinder-common.install: Remove clear_rabbit_queues since it
+    will conflict with nova installed.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 10 Aug 2012 12:05:11 -0500
+
+cinder (2012.2~f1~20120503.2-0ubuntu1) quantal; urgency=low
+
+  * Initial release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 22 May 2012 09:57:46 -0400

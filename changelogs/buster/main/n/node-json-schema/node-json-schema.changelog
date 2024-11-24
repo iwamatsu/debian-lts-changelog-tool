@@ -1,0 +1,13 @@
+node-json-schema (0.2.3-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add patch to not allow __proto__ property to be used for
+    schema default/coerce. (Fixes: CVE-2021-3918) (Closes: #999765)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Wed, 07 Dec 2022 00:03:45 +0530
+
+node-json-schema (0.2.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #850401)
+
+ -- Amarpreet Arora <aroraak15.it@coep.ac.in>  Thu, 05 Jan 2017 07:17:56 +0000

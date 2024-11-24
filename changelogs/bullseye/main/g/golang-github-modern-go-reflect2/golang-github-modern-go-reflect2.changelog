@@ -1,0 +1,26 @@
+golang-github-modern-go-reflect2 (1.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields:
+    Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * New upstream version 1.0.1
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Bump debhelper-compat to 13
+  * Update Standards-Version 4.5.0 (no changes)
+  * Backport patch for gccgo
+  * No need to exclude tests in d/rules
+  * Add Rules-Requires-Root
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 20 Sep 2020 03:05:32 +0800
+
+golang-github-modern-go-reflect2 (1.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #901250)
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 10 Jun 2018 16:23:47 +0000

@@ -1,0 +1,194 @@
+golang-golang-x-text (0.3.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release v0.3.6 (Closes: #980001, CVE-2020-28851)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 07 Apr 2021 02:18:47 +0800
+
+golang-golang-x-text (0.3.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release v0.3.5 (Closes: #980002, CVE-2020-28852)
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 19 Jan 2021 02:11:19 +0800
+
+golang-golang-x-text (0.3.4-1) unstable; urgency=medium
+
+  * New upstream version 0.3.4
+  * Remove no-upstream-changelog tag from Lintian override
+    as the tag has been removed since lintian (2.5.96)
+  * Override Lintian "national-encoding" warnings as the files are needed
+    for testing charset conversion feature of golang.org/x/text
+
+ -- Anthony Fok <foka@debian.org>  Thu, 05 Nov 2020 02:01:18 -0700
+
+golang-golang-x-text (0.3.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release v0.3.3 (Closes: #964272, CVE-2020-14040)
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 12 Jul 2020 14:52:43 +0800
+
+golang-golang-x-text (0.3.2-4) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Mark golang-golang-x-text-dev Multi-Arch: foreign. (Closes: #952701)
+
+  [ Anthony Fok ]
+  * Bump Standards-Version to 4.5.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 27 Feb 2020 14:21:05 -0700
+
+golang-golang-x-text (0.3.2-3) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Team upload
+  * Source-only upload to migrate it to testing.
+
+  [ Anthony Fok ]
+  * Change "Debian Go packaging team" to "Debian Go Packaging Team"
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Sat, 28 Dec 2019 21:30:29 +0530
+
+golang-golang-x-text (0.3.2-2) unstable; urgency=medium
+
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+  * Bump Standards-Version to 4.4.1 (no change)
+  * Drop transitional package golang-x-text-dev (Closes: #939239)
+  * Remove dependency on golang-golang-x-tools-dev
+    to resolve a circular dependency with golang-golang-x-net-dev,
+    golang-golang-x-text-dev and golang-golang-x-tools-dev. (Closes: #940292)
+  * Add "Rules-Requires-Root: no" field to debian/control
+  * Update Vcs-Browser and Vcs-Git, and move git repository
+    from https://salsa.debian.org/go-team/packages/golang-x-text
+    to https://salsa.debian.org/go-team/packages/golang-golang-x-text
+  * Rename source package to golang-golang-x-text (from golang-x-text)
+    for compliance with Debian Go Packaging Team’s naming conventions
+
+ -- Anthony Fok <foka@debian.org>  Thu, 14 Nov 2019 05:35:41 -0700
+
+golang-x-text (0.3.2-1) unstable; urgency=medium
+
+  * New upstream version 0.3.2
+  * Change Build-Depends: debhelper (>= 11) to (>= 11~)
+  * Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sat, 27 Jul 2019 09:42:38 -0600
+
+golang-x-text (0.3.0-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Anthony Fok ]
+  * Update versioned build-dependency on dh-golang to >= 1.31~
+    to solve missing testdata/ contents, hence build failure,
+    in stretch-backports.
+
+  [ Shengjing Zhu ]
+  * Update team address to team+pkg-go@tracker.d.o.
+  * Update Standards-Version to 4.2.1. (no changes)
+  * Add patch to disable failed test. (Closes: 907714)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 01 Sep 2018 17:13:21 +0800
+
+golang-x-text (0.3.0-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream release 0.3.0
+  * Exclude message/pipeline to prevent circular dependency on x/tools
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright,
+    bumping Standards-Version to 4.1.4
+  * Build-depend on golang-any (>= 2:1.7~), as required
+    since golang.org/x/text v0.2.0 release
+  * Use debhelper (>= 11)
+  * Add debian/watch
+  * Remove now-unused Lintian override debian-watch-file-is-missing
+
+ -- Anthony Fok <foka@debian.org>  Wed, 09 May 2018 00:39:51 -0600
+
+golang-x-text (0.0~git20170627.0.6353ef0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 29 Jun 2017 04:22:14 -0600
+
+golang-x-text (0.0~git20161013.0.c745997-2) unstable; urgency=medium
+
+  * As we are not shipping cmd/gotext, drop the dependency on x/tools, as it
+    becomes a circular dependency. Instead, just exclude it from build/tests.
+  * Update dh-golang, and simplify debian/rules.
+  * Add lintian override for mention of old code.google.com repo.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 20 Nov 2016 16:05:10 +0000
+
+golang-x-text (0.0~git20161013.0.c745997-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Add dependency on golang-golang-x-tools-dev needed by cmd/gotext.
+  * TODO: The new /usr/bin/gotext needs to be packaged in the future.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 14 Oct 2016 10:44:44 -0600
+
+golang-x-text (0.0~git20160816.0.d69c40b-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Aug 2016 01:50:28 -0600
+
+golang-x-text (0.0~git20160606.0.a4d77b4-1) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * Require dh-golang 1.10, for XS-Go-Import-Path.
+  * debian/rules: Update gen-orig-tgz target.
+
+  [ Anthony Fok ]
+  * New upstream version.
+  * debian/control: Change "golang-go" to "golang-any" in Build-Depends.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 08 Jun 2016 06:53:12 -0600
+
+golang-x-text (0.0~git20160420.0.3100578-2) unstable; urgency=medium
+
+  * Update golang-go dependency, as the package fails with older go.
+  * Update gbp.conf to use DEP-14 branches.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 01 May 2016 18:03:46 +0000
+
+golang-x-text (0.0~git20160420.0.3100578-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version
+  * Update fields in debian/control:
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-* fields
+    - Add XS-Go-Import-Path field
+    - Add myself as to the list of Uploaders
+  * Rename golang-x-text-dev to golang-golang-x-text-dev
+    for pkg-go policy compliance
+  * Add debian/gbp.conf
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Apr 2016 02:13:32 +0800
+
+golang-x-text (0+git20151217.cf49866-1) unstable; urgency=medium
+
+  * Team upload.
+  * Update to latest upstream version. (Closes: #810776)
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 12 Jan 2016 13:00:13 +1100
+
+golang-x-text (0+git20150518.c93e7c9-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #785645)
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 18 May 2015 21:20:05 +0000

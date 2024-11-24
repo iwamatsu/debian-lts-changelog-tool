@@ -1,0 +1,95 @@
+node-qs (6.5.2-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-24999: Prototype poisoning vulnerability.  qs allows for instance
+    the creation of array-like objects by setting an Array in the `__ proto__`
+    property; the resulting Objects inherit the `Array` prototype, thereby
+    exposing native Array functions.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 30 Jan 2023 21:28:37 +0100
+
+node-qs (6.5.2-1) unstable; urgency=medium
+
+  * Team upload  
+  * New upstream version 6.5.2
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+  * Change section to javascript and priority to optional
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 19 Sep 2018 18:20:24 +0530
+
+node-qs (2.2.4-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.2.4
+  * Move to pkg-javascript
+  * Standards-Version 3.9.6
+  * New upstream, project rewritten from scratch:
+    + Homepage updated
+    + watch file updated
+    + copyright changed to BSD-3-clause
+  * Rewrite description
+  * Build-Depends nodejs
+  * Update docs
+  * Remove examples
+  * Update install files
+  * Disable test and build auto targets
+  * Fix permissions of installed files
+  * Add autopkgtest
+
+ -- Jérémy Lal <kapouer@melix.org>  Sun, 12 Oct 2014 16:59:09 +0200
+
+node-qs (0.6.5-1) unstable; urgency=low
+
+  * Upstream update
+  * watch: use github directly
+  * control:
+    + Homepage to github
+    + Bump Standards-Version to 3.9.4, no changes required
+    + Canonicalize Vcs-* url
+    + Use Node.js in description
+  * copyright: add Upstream-Contact, Source fields.
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 14 Aug 2013 11:31:02 +0200
+
+node-qs (0.5.5-1) experimental; urgency=low
+
+  * Upstream update
+  * Copyright: rename MIT to Expat license
+  * Install examples.js
+  * Install the module file in qs/index.js, remove install override.
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 23 Mar 2013 21:11:26 +0100
+
+node-qs (0.4.2-1) unstable; urgency=low
+
+  * New upstream version
+  * Standards-Version bump to 3.9.3, no changes needed
+  * Update debian/copyright
+
+ -- David Paleino <dapal@debian.org>  Thu, 22 Mar 2012 22:42:39 +0100
+
+node-qs (0.4.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- David Paleino <dapal@debian.org>  Sat, 31 Dec 2011 11:41:53 +0100
+
+node-qs (0.3.2-1) unstable; urgency=low
+
+  * New upstream version
+  * Add debian/watch
+
+ -- David Paleino <dapal@debian.org>  Wed, 16 Nov 2011 22:41:43 +0100
+
+node-qs (0.3.1-2) unstable; urgency=low
+
+  * Compliance to Debian Javascript Policy
+
+ -- David Paleino <dapal@debian.org>  Sun, 16 Oct 2011 00:00:18 +0200
+
+node-qs (0.3.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #645178)
+
+ -- David Paleino <dapal@debian.org>  Thu, 13 Oct 2011 12:13:09 +0200

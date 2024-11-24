@@ -1,0 +1,651 @@
+tinyproxy (1.10.0-5+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2023-49606
+    Fix use after free issue in header parsing of GTTP connections.
+  * CVE-2022-40468
+    Fix potential leak of left-over heap data.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 15 Sep 2024 19:03:02 +0200
+
+tinyproxy (1.10.0-5) unstable; urgency=medium
+
+  [ Unit 193 ]
+  * d/p/0001_fix-segfault-with-socks4.patch:
+    + Grab an upstream patch to fix a segfault when using socks4 with
+      tor. (Closes: #990434).
+
+  [ Mike Gabriel ]
+  * debian/tinyproxy.service:
+    + Use KillMode=process (instead of the default 'control-group'). The main
+      tinyproxy process will stop all its workers if a SIGTERM signal is
+      received. This avoids SIGTERM racing situation where the tinyproxy main
+      process and systemd are trying to kill tinyproxy's workers simultaneously.
+      (Closes: #968322).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 02 Jul 2021 12:25:46 +0200
+
+tinyproxy (1.10.0-4) unstable; urgency=medium
+
+  * debian/tinyproxy.init:
+    + Drop unconditional creation of PIDDIR. Follow-up for Vcs-Git commit
+      b186fa94. Thanks to Unit193 for spotting this and also for the
+      original patch. (Closes: #948283).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 21 Jan 2020 11:14:47 +0100
+
+tinyproxy (1.10.0-3) unstable; urgency=medium
+
+  * debian/tinyproxy.init:
+    + Only set PIDDIR, if PIDFILE is a non-zero length string. (Closes:
+      #948283).
+    + Tab-indentation cleanup (whitespace only).
+    + Drop usage of chgrp, check for non-zero length USER and GROUP variables.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 21 Jan 2020 10:37:45 +0100
+
+tinyproxy (1.10.0-2) unstable; urgency=medium
+
+  * debian/changelog:
+    + Grammar fixes in previous stanza.
+    + Bug number fix (missing hash) in previous stanza.
+    + Fix CVE number in previous stanza. Thanks to Salvatore from the Debian
+      Security Team for spotting this.
+  * debian/tinyproxy.postinst:
+    + Fix chmod on no files in empty log folder. (Closes: #909481).
+    + Fix chown no files in empty log folder (the command was complete bogus
+      before).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 23 Oct 2018 12:47:18 +0200
+
+tinyproxy (1.10.0-1) unstable; urgency=medium
+
+  [ Mike Gabriel ]
+  * New upstream release.
+    - Make bind option usable with transparent proxy, too. (Closes: #609095).
+    - Add SOCKS5 upstream proxy support. (Closes: #392848).
+    - CVE-2017-11747: Create PID file before dropping privileges. (Closes:
+      #870307).
+    - Prevent child from calling exit() on interrupt. Proposed fix
+      for the logrotate SIGHUP issues. (Closes: #704459).
+  * debian/patches:
+    + Add README file that informs about patch naming scheme.
+    + Drop sighup_hang.patch. Applied upstream.
+    + Add 1001_fix-select.patch. Handle multiple Listen directives properly.
+      (Closes: #898492).
+    + Add 1002_fix-ftbfs-on-Hurd.patch. Avoid duplication of build path when
+      built on hurd-i386. (Closes: #882527)."
+    + Add 1003_fix-rereading-filter-conf-when-unprivileged.patch. If dropping
+      privileges, read the filter config always as unprivileged user and report
+      an error, if that fails. (Closes: #756040).
+  * debian/tinyproxy.conf:
+    + Update Debian's tinyproxy.conf default configuration file.
+  * debian/control:
+    + Update Vcs-*: URLs. Packaging Git has been migrated to salsa.debian.org.
+    + Bump Standards-Version: to 4.2.1. No changes needed.
+  * debian/{control,compat}: Bump DH compat level to version 11.
+  * debian/copyright:
+    + Fix some DEP-3 format issues, add comment about current maintenance
+      status.
+  * debian/rules:
+    + Add get-orig-source target.
+    + Drop --enable-transparent configure option. Enabled by default now.
+    + Drop --disable-regexcheck (not supported upstream anymore. Also fixes
+      FTBFS during cross builds (Closes: #865832).
+    + Include architecture.mk rather than executing dpkg-architecture.
+    + Don't set --sysconfdir configure option. Is now ok with latest upstream
+      version.
+  * debian/tinyproxy-bin.install:
+    + The tinyproxy executable has been installed to /usr/bin since this
+      release, not /usr/sbin.
+  * debian/tinyproxy.{init,service}:
+    + The tinyproxy executable is in /usr/bin now.
+  * debian/tinyproxy.init:
+    + Let overriding the CONFIG variable via /etc/default/tinyproxy have an
+      effect. (Closes: #762924).
+  * debian/tinyproxy.default: Add file.
+  * debian/tinyproxy.service:
+    + Honour environment file in /etc/default/tinyproxy.
+  * debian/tinyproxy.{install,docs}:
+    + Correctly install documentation files into bin:pkg.
+  * debian/tinyproxy.postinst:
+    + Avoid recursive chown/chmod.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 04 Sep 2018 15:01:49 +0200
+
+tinyproxy (1.8.4-5) unstable; urgency=medium
+
+  * debian/control:
+    + Add B:/R: pair to tinyproxy-bin, as it breaks tinyproxy (<< 1.8.4-4~).
+      (Closes: #882385).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 22 Nov 2017 10:21:51 +0100
+
+tinyproxy (1.8.4-4) unstable; urgency=medium
+
+  [ Jordi Mallach ]
+  * Add Mike Gabriel <sunweaver@debian.org> as new maintainer.
+  * debian/control:
+    + Update Standards-Version to 4.1.1, with no changes needed.
+
+  [ Mike Gabriel ]
+  * debian/*:
+    + Split up tinyproxy into bin:pkgs tinyproxy-bin and tinyproxy.
+      The first provides the executable only (plus DATADIR), the second
+      everything else that is needed for running tinyproxy as a system
+      service.
+  * debian/control:
+    + Versioned D (tinyproxy) on tinyproxy-bin from the source package version.
+  * debian/{control,rules}:
+    + Switch from dh_install --fail-missing to dh_missing --fail-missing.
+  * lintian:
+    + Drop non-standard-dir-perm override. Dir permissions are set in postinst,
+      not in the package itself.
+  * debian/patches:
+    + Add minimal patch header to sighup_hang.patch.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 20 Nov 2017 12:55:19 +0100
+
+tinyproxy (1.8.4-3) unstable; urgency=medium
+
+  * Add sighup_hang.patch: Fix Tinyproxy ceasing to listen to connections
+    after it receives a SIGHUP, something that happens daily in our default
+    setup (closes: #880427).
+  * Fix path to tinyproxy.conf in sysvinit script. Thanks, Guo Yixuan (郭溢譞)
+    (closes: #870325).
+  * Add Depends on adduser.
+  * Update Standards-Version to 4.1.1, with no changes needed.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 15 Nov 2017 02:28:58 +0100
+
+tinyproxy (1.8.4-2) unstable; urgency=medium
+
+  * Remove obsolete preinst and postinst maintainer scripts.
+  * Add a tinyproxy system user to run the daemon (LP: #590634).
+  * Move tinyproxy.conf to /etc/tinyproxy, using dpkg-maintscript-helper.
+  * Move filter file location to /etc/tinyproxy as well.
+  * Remove obsolete README.Debian.
+  * Set sysconfdir to /etc/tinyproxy.
+  * Adjust tinyproxy.conf and tinyproxy.tmpfiles for tinyproxy user.
+  * Make /var/log/tinyproxy owned by tinyproxy.
+  * Add NEWS.Debian entry with warning about the tinyproxy user changes.
+  * Remove /var/log/tinyproxy on purge.
+  * Move handling of /var/log/tinyproxy permissions to postinst.
+  * Stop installing templates by hand, upstream build system also does it.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 21 Jan 2017 12:40:00 +0100
+
+tinyproxy (1.8.4-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Drops supplementary groups on startup (thanks, Gaudenz Steinlin;
+      closes: #722215).
+  * Update Homepage URL again.
+  * Update Vcs-* fields following migration to Git.
+  * Bump to debhelper compat v10.
+    Remove explicit Build-Depend on dh-autoreconf, now handled by dh.
+  * Drop all patches, all merged upstream.
+  * Drop no longer needed Build-Deps on bison, flex and libadns1-dev.
+  * Call dh_auto_configure instead of configure directly.
+  * Replace $(MAKE) call with dh_auto_install.
+  * Rewrite copyright in machine-readable format version 1.0.
+  * Make $DESC more descriptive in the init script.
+  * Make init script source init-functions from lsb-base.
+  * Update Standards-Version to 3.9.8.
+  * Change /var/run references to /run.
+  * Add Michael Adam's OpenPGP key to upstream/signing-key.asc.
+  * Update watch file for Github releases, and check PGP signature.
+  * Remove obsolete debian/source/options.
+  * Add systemd service and tmpfile files.
+  * Pass --fail-missing to dh_install.
+  * Enable all hardening options.
+  * Depend on lsb-base to ensure the utility functions are available.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 12 Jan 2017 17:47:16 +0100
+
+tinyproxy (1.8.3-3) unstable; urgency=high
+
+  * Add patches for CVE-2012-3505 (closes: #685281):
+    - CVE-2012-3505-tinyproxy-limit-headers.patch: Limit the number of
+      headers to prevent DoS attacks.
+    - CVE-2012-3505-tinyproxy-randomized-hashmaps.patch: Randomize hashmaps
+      in order to avoid fake headers getting included in the same bucket,
+      allowing for DoS attacks.
+    Bug reported and patches contributed by gpernot.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 24 Sep 2012 21:05:41 +0200
+
+tinyproxy (1.8.3-2) unstable; urgency=low
+
+  * Update Homepage again: webpage is served over https.
+  * Add prepend_ldflags.patch, by Moritz Muehlenhoff, to avoid overwriting
+    LDFLAGS. Enable dh_autoreconf support.
+  * Switch to debhelper v9 to take advantage of automatic dpkg-buildflags
+    setting and enable hardened build flags (closes: #655870).
+  * Bump Build-Deps to debhelper (>= 8.9.4).
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 23 Jan 2012 12:10:34 +0100
+
+tinyproxy (1.8.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop all patches, all are included upstream.
+  * Add CVE number to previous changelog entry, as validate_port_number.patch
+    could actually prevent a buffer overflow and access restriction bypass.
+  * Fix watch file, and switch to .xz tarballs.
+  * Cleanup tests/env on clean to fix a FTBFS after the first successful
+    build (closes: #651323).
+  * Bump to debhelper 8.
+  * Update copyright years.
+  * Update Vcs-* URLs.
+  * Update Homepage.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 02 Jan 2012 14:08:35 +0100
+
+tinyproxy (1.8.2-2) unstable; urgency=high
+
+  * Upper case "HTTP" in package descriptions (closes: #588193).
+  * Add validate_port_number.patch: exit if an invalid port is declared in
+    the Port directive [CVE-2011-1843].
+  * Add netmask_generation.patch: fix bug in ACL netmask generation, which
+    could allow to use Tinyproxy as an open proxy very easily
+    [CVE-2011-1499] (closes: #621493).
+  * Bump Standards-Version to 3.9.2, with no changes required.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 18 Apr 2011 23:03:16 +0200
+
+tinyproxy (1.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop all patches; all were taken from Git, or have been applied
+    upstream.
+  * Add upstream_matching_fix.patch by Daniel Piddock, to fix handling
+    of upstream rules (closes: #585075).
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 09 Jun 2010 01:08:17 +0200
+
+tinyproxy (1.8.1-5) unstable; urgency=medium
+
+  * Add sighup_memleak.patch, by John van der Kamp, to fix a memleak
+    when reloading tinyproxy, which happens daily via logrotate
+    (closes: #579427).
+  * Adjust testsuite_user_var.patch to use output of "id -un" instead of
+    "whoami".
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 02 Jun 2010 09:43:50 +0200
+
+tinyproxy (1.8.1-4) unstable; urgency=low
+
+  * Add log_message_storage_crash.patch to fix crashes when reloading
+    tinyproxy, as triggered by logrotate (thanks Dmitry Semyonov for the
+    bug report and patch, closes: #578319).
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 23 Apr 2010 15:41:36 +0200
+
+tinyproxy (1.8.1-3) unstable; urgency=low
+
+  * Add conf_fix_alignment.patch: fix a crash on startup on alpha
+    and ia64.
+  * Disable the testsuite on kfreebsd architectures, as it fails due to
+    some assumptions on how loopback network interfaces work on FreeBSD.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 24 Mar 2010 13:05:32 +0100
+
+tinyproxy (1.8.1-2) unstable; urgency=low
+
+  * Add testsuite_user_var.patch: don't assume $USER is set in the
+    build environment; use $(whoami) instead.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 23 Mar 2010 15:58:13 +0100
+
+tinyproxy (1.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - fixes behaviour with no Listen directive in config (closes: #572514).
+  * Drop all patches: all are included in this release, or are obsolete.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 09 Mar 2010 23:33:36 +0100
+
+tinyproxy (1.8.0-1) unstable; urgency=low
+
+  * New upstream stable release (closes: #309383, #567258).
+    - fixes reordering of headers issue (closes: #405068).
+    - fixes bind directive problems (closes: #517674).
+    - manpages are rewritten; misleading GPL comments are gone
+      (closes: #443569).
+    - the tunnel directive is no longer present (closes: #167898).
+    - logfiles are no longer removed on start (closes: #160764).
+  * Add myself to Uploaders.
+  * Change section to web.
+  * Update copyright info.
+  * Switch to source version 3.0 (quilt). Drop Build-Dep on quilt and
+    remove README.source.
+  * Add Build-Depends on asciidoc and xmlto.
+  * Drop the following patches, which were fixed or obsoleted upstream:
+    99_autoreconf.patch, scanner_debug_removal.patch.
+  * Add DEP-3 headers to remaining patches.
+  * Split pidfile_ownership.patch in two, creating a new patch handling
+    documentation. Disable the ownership patch, which doesn't handle
+    logfiles and changing the patch of the piddir is enough workaround
+    for now.
+  * Add logfile_location.patch, similar to the pidfile issue.
+  * Install /var/log/tinyproxy with owner nobody:adm and mode 750, make
+    sure dh_fixperms does not revert this, and add a lintian override.
+  * Resync debian/tinyproxy.conf with new version.
+  * Don't ship /var/run/tinyproxy, the init script handles its creation.
+  * Make init script check for conffile availability before grepping it.
+  * Bump Standards-Version to 3.8.4.
+  * Rewrite debian/rules using dh7, bump debhelper requirement to >= 7.0.50.
+  * Update Homepage and copyright to match the new upstream URL.
+  * Add Vcs fields.
+  * Update debian/docs, debian/dirs and debian/examples.
+  * Update watch file, updating download URL and removing hardcoded stable
+    release version from the path (closes: #551405).
+  * Fix logrotate script to use invoke-rc.d and okifempty
+    (closes: #536751, #567981).
+  * Use reload in logrotate, avoiding SIGTERMs (closes: #563482).
+  * Enable reverse proxying support, and explictly enable regexcheck.
+  * Set $sysconfdir to /etc.
+  * Install templates in /usr/share/tinyproxy.
+  * Handle tinyproxy's conffile location change in preinst/postinst.
+  * Add uninteractive_testsuite.patch to make the testsuite not wait for
+    a keypress when finishing.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 22 Feb 2010 20:48:12 +0100
+
+tinyproxy (1.6.3-3.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Clarify debian/copyright about "version 2 or above" GPL clause.
+    (Closes: #567265)
+
+ -- Stefano Zacchiroli <zack@debian.org>  Fri, 12 Feb 2010 11:04:04 +0100
+
+tinyproxy (1.6.3-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Note the Debian revision has been bumped to -3.2 instead of -2.2 to
+    ease Ubuntu synchronisation, as they mistakenly uploaded -3 some time ago.
+  * Bump debhelper requirement to 7 and add quilt to Build-Depends.
+  * Move to debhelper compat level 7.
+  * Cleanup rules a bit for debhelper v7.
+  * Move patches to upstream code to log_format_string_fix.patch,
+    scanner_debug_removal.patch and 99_autoreconf.patch.
+  * Remove apparently old and unused patches debian/logfile.patch and
+    debian/dfree-[1-4].patch.
+  * Make logrotate script restart tinyproxy only if it appears to be
+    running (closes: #369787). A better fix would be to improve the init
+    script adding a "try-restart" option, though.
+  * Apply patch from Christoph Biedl to allow tinyproxy to remove its pidfile
+    when shutting down, so the logrotate change actually works. This changes
+    the pidfile location to /var/run/tinyproxy.
+  * Add "Short-Description" and "Description" headers to the init script.
+  * Fix a typo in debian/rules so config.log gets removed on clean.
+  * Remove libtool and doc/report.sh on clean, and fix the rule as suggested
+    by lintian.
+  * Copy upstream's default conffile as debian/tinyproxy.conf and install
+    that one in the package.
+  * Disable non-localhost access by default, while adding commented entries
+    for all private network ranges (closes: #387721, #393236).
+  * Install example configuration file in /usr/share/doc/tinyproxy/examples.
+  * Remove obsolete debian/conffiles.
+  * Fix reference to conffile location in README.Debian (closes: #417338).
+  * Pass --enable-filter --enable-transparent-proxy --enable-upstream
+    to configure to explicitly enable some missing features.
+    (closes: #400931, LP #42598).
+  * Add doc/filter-howto.txt to installed documentation.
+  * Remove postinst and prerm script, which were used to fix an upgrade bug
+    6 years ago.
+  * Update upstream url in debian/copyright, and add a Homepage field to
+    debian/control.
+  * Extend copyright so it contains all the required information.
+  * Add a Debian.source document with notes about quilt usage to obtain
+    patched code.
+  * Add a watch file.
+  * Bump Standards-Version to 3.8.0.
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 04 Jul 2008 17:06:00 +0200
+
+tinyproxy (1.6.3-2.1) unstable; urgency=low
+
+  * Non-maintainer upload to solve release goal.
+  * Add LSB dependency header to init.d scripts (Closes: #466149).
+  * Fix format string bug in log.c (Closes: 366410).  Patch
+    from Karl Chen.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 29 Mar 2008 12:32:29 +0100
+
+tinyproxy (1.6.3-2) unstable; urgency=low
+
+  * Remove debugging grammar.[ch] and scanner.c as
+    noted by upstream
+
+ -- Ed Boraas <ed@debian.org>  Wed, 11 Aug 2004 12:20:18 -0600
+
+tinyproxy (1.6.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ed Boraas <ed@debian.org>  Tue, 10 Aug 2004 19:16:04 -0600
+
+tinyproxy (1.6.2-3) unstable; urgency=low
+
+  * Properly close file handles on daemonize (Closes: #248124)
+
+ -- Ed Boraas <ed@debian.org>  Mon,  9 Aug 2004 22:23:55 -0600
+
+tinyproxy (1.6.2-2) unstable; urgency=low
+
+  * Actually depend on logrotate
+
+ -- Ed Boraas <ed@debian.org>  Mon,  9 Aug 2004 18:16:09 -0600
+
+tinyproxy (1.6.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #262122)
+    * Makefile now uses proper prefixing for mkinstalldirs
+      (Closes: #264508)
+
+ -- Ed Boraas <ed@debian.org>  Mon,  9 Aug 2004 17:57:42 -0600
+
+tinyproxy (1.6.1-3) unstable; urgency=low
+
+  * Include a logrotate script (Closes: #163670)
+  * Updated to Policy 3.6.1
+
+ -- Ed Boraas <ed@debian.org>  Sun,  8 Aug 2004 00:20:04 -0600
+
+tinyproxy (1.6.1-2) unstable; urgency=low
+
+  * Build-depend on bison (Closes; #207579)
+
+ -- Ed Boraas <ed@debian.org>  Thu, 28 Aug 2003 07:14:47 -0600
+
+tinyproxy (1.6.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #186935)
+
+ -- Ed Boraas <ed@debian.org>  Mon, 11 Aug 2003 19:32:18 -0600
+
+tinyproxy (1.5.1-2) unstable; urgency=low
+
+  * Open logfile with elevated permissions, passing fd to children
+    (Closes: #159614)
+    * Urgency still low since the affected version is not in testing
+
+ -- Ed Boraas <ed@debian.org>  Wed, 4 Sep 2002 23:05:16 -0600
+
+tinyproxy (1.5.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #157315)
+
+ -- Ed Boraas <ed@debian.org>  Sat, 24 Aug 2002 16:48:50 -0600
+
+tinyproxy (1.4.3-3) unstable; urgency=high
+
+  * Work around paper-bag postrm bug introduced in 1.4.3-1 which
+    was preventing upgrades (Closes: #147858)
+  * postrm only cleans /etc/tinyproxy on purge, as it should have
+  * SECURITY: Please use this package in woody, as -2 won't
+    upgrade over 1.4.3-1 because of the postrm bug
+
+ -- Ed Boraas <ed@debian.org>  Thu, 23 May 2002 06:54:19 -0700
+
+tinyproxy (1.4.3-2) unstable; urgency=high
+
+  * SECURITY: Fixed double-free errors in consultation with
+    upstream authors. This fix affects woody. (Closes: #147240)
+
+ -- Ed Boraas <ed@debian.org>  Tue, 21 May 2002 21:35:35 -0700
+
+tinyproxy (1.4.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #139312)
+  * Remove /etc/tinyproxy after purge (Closes: #128246)
+  * Include RFC_INFO in /usr/share/doc/tinyproxy
+
+ -- Ed Boraas <ed@debian.org>  Sat, 23 Mar 2002 14:42:35 -0700
+
+tinyproxy (1.4.2.2-3) unstable; urgency=low
+
+  * Updated README.Debian to refer to new conffile in /etc
+    (Closes: #116769)
+  * Changed default port back to 8080
+
+ -- Ed Boraas <ed@debian.org>  Tue, 20 Nov 2001 06:53:54 -0700
+
+tinyproxy (1.4.2.2-2) unstable; urgency=low
+
+  * Add flex to build-deps (Closes: #116156)
+  * Include default tinyproxy.conf (Closes: #116186)
+
+ -- Ed Boraas <ed@debian.org>  Fri, 19 Oct 2001 17:13:37 -0600
+
+tinyproxy (1.4.2.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #115801, #115798)
+  * Bugfixes and /etc/default/tinyproxy support added
+    to init.d script (Closes: #115802)
+
+ -- Ed Boraas <ed@debian.org>  Tue, 16 Oct 2001 07:54:06 -0600
+
+tinyproxy (1.3.3b-3) unstable; urgency=low
+
+  * My, oh my. I'm uploading this only to say that the previous
+    changelog entry should be:
+    "Upstream now seems to default to port 8888, despite
+    documentation. Forced default port back to 8080, to
+    match previous versions (and documentation)"
+    Apologies for the extra upload, but I thought I'd best
+    clear that up.
+
+ -- Ed Boraas <ed@debian.org>  Wed, 20 Jun 2001 22:48:03 -0600
+
+
+tinyproxy (1.3.3b-2) unstable; urgency=low
+
+  * Upstream now seems to default to port 8080, despite
+    documentation. Forced default port back to 8080, to
+    match previous versions (and documentation)
+
+ -- Ed Boraas <ed@debian.org>  Wed, 20 Jun 2001 06:43:51 -0600
+
+
+tinyproxy (1.3.3b-1) unstable; urgency=low
+
+  * New upstream release
+  * Fixed some obscure file permissions that were causing
+    problems for the auto-builders (Closes: #92099)
+
+ -- Ed Boraas <ed@debian.org>  Thu, 29 Mar 2001 07:05:19 -0700
+
+
+tinyproxy (1.3.3a-3) unstable; urgency=low
+
+  * Moved build-depends to correct section (Closes: #87707)
+
+ -- Ed Boraas <ed@debian.org>  Mon, 26 Feb 2001 08:50:12 -0700
+
+
+tinyproxy (1.3.3a-2) unstable; urgency=low
+
+  * Now includes Build-Depends on libadns1-dev (Closes: #84382)
+  * Prerm no longer fails on failure to terminate (Closes: #84384)
+
+ -- Ed Boraas <ed@debian.org>  Sun, 25 Feb 2001 12:40:01 -0700
+
+
+tinyproxy (1.3.3a-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ed Boraas <ed@debian.org>  Tue, 23 Jan 2001 06:45:46 -0700
+
+
+tinyproxy (1.3.1-2) stable unstable; urgency=high
+
+  * Fixes remotely exploitable buffer overflow in
+    utils.c (Closes: #83182)
+  * Updated to policy version 3.2.1
+  * Default port noted in documentation (Closes: #83150)
+
+ -- Ed Boraas <ed@debian.org>  Tue, 23 Jan 2001 06:31:12 -0700
+
+
+tinyproxy (1.3.1-1) frozen unstable; urgency=low
+
+  * New upstream release
+  * Updated copyright file to refer to new location of GPL
+  * debian/rules (and others) redone due to upstream reorganization
+  * Up-to-date, bug-free, lintian-clean, ready for release.
+
+ -- Ed Boraas <ed@debian.org>  Tue, 8 Feb 2000 22:23:43 -0700
+
+
+tinyproxy (1.2.10-3) unstable; urgency=low
+
+  * Fixed another silly mistake in the init script
+
+ -- Ed Boraas <ed@debian.org>  Tue, 23 Nov 1999 19:04:34 -0700
+
+
+tinyproxy (1.2.10-2) unstable; urgency=low
+
+  * Fixed typo in /etc/init.d/tinyproxy (Closes: #50924)
+
+ -- Ed Boraas <ed@debian.org>  Mon, 22 Nov 1999 23:46:14 -0700
+
+
+tinyproxy (1.2.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ed Boraas <ed@debian.org>  Sun, 21 Nov 1999 03:21:23 -0700
+
+
+tinyproxy (1.2.7-2) unstable; urgency=low
+
+  * Now includes a simple init.d script. (Closes: #41218)
+
+ -- Ed Boraas <ed@debian.org>  Sat, 20 Nov 1999 11:21:54 -0700
+
+
+tinyproxy (1.2.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now conforms to Policy v3.
+  * Documentation moved to /usr/share/doc, and manpages
+    to /usr/share/man (to conform to new policy).
+
+ -- Ed Boraas <ed@debian.org>  Sat, 31 Jul 1999 18:35:34 -0600
+
+
+tinyproxy (1.2.6-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Ed Boraas <ed@debian.org>  Sun, 13 Jun 1999 02:40:21 -0600
+
+Local variables:
+mode: debian-changelog
+End:

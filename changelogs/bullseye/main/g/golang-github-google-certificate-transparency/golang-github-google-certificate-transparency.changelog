@@ -1,0 +1,22 @@
+golang-github-google-certificate-transparency (0.0~git20160709.0.0f6e3d1~ds1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Use debhelper v10
+  * Update to Standards-Version 4.1.1
+    - Use HTTPS URL for d/copyright
+    - Use Priority: optional
+  * Build-Depend on libssl-dev. (Closes: #858828)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Mon, 20 Nov 2017 19:32:14 +0100
+
+golang-github-google-certificate-transparency (0.0~git20160709.0.0f6e3d1~ds1-2) unstable; urgency=medium
+
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 20:22:59 +0300
+
+golang-github-google-certificate-transparency (0.0~git20160709.0.0f6e3d1~ds1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #854525)
+
+ -- Tim Potter <tpot@hpe.com>  Thu, 03 Nov 2016 11:08:58 +1100

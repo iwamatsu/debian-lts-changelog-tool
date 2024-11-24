@@ -1,0 +1,222 @@
+waitress (1.4.4-1.1+deb11u2) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-49769: DoS due to resource exhaustion
+  * Run upstream test suite at build time.
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 13 Nov 2024 21:31:15 +0200
+
+waitress (1.4.4-1.1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Security update, resolving a request smuggling vulnerability:
+    When using previous Waitress versions behind a proxy that does not
+    properly validate the incoming HTTP request matches the RFC7230 standard,
+    Waitress and the frontend proxy may disagree on where one request starts
+    and where it ends. This would allow requests to be smuggled via the
+    front-end proxy to waitress and later behavior.
+    CVE-2022-24761 (Closes: #1008013)
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 10 May 2022 17:14:39 -0400
+
+waitress (1.4.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix cleanup of the waitress-serve alternative.  (Closes: #984630)
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 20 Apr 2021 20:58:53 +0200
+
+waitress (1.4.4-1) unstable; urgency=medium
+
+  [ Andrej Shadura ]
+  * New upstream release.
+
+  [ Michael Fladischer ]
+  * Provide virtual package httpd-wsgi3.
+
+  [ Debian Janitor ]
+  * Replace spaces in short license names with dashes.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+  * Apply multi-arch hints.
+    + python-waitress-doc: Add Multi-Arch: foreign.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sat, 09 Jan 2021 10:16:20 +0100
+
+waitress (1.4.1-1) unstable; urgency=medium
+
+  [ Louis-Philippe Véronneau ]
+  * d/control: update the VCS links. (Closes: 946103)
+
+  [ Andrej Shandura ]
+  * New upstream release.
+    - Closes: #947306:
+      CVE-2019-16785: potential HTTP request smuggling/splitting
+      due to differences in endline parsing.
+      CVE-2019-16786: incorrect treatment of single requests as
+      multiple requests in the case of HTTP pipelining due to
+      the incorrect parsing of Transfer-Encoding ignoring all but
+      the first comma-separated header value.
+    - Closes: #947433:
+      CVE-2019-16789: potential HTTP request splitting leading
+      to potential cache poisoning or unexpected information
+      disclosure due to incorrect parsing of special whitespace
+      characters in the Transfer-Encoding header.
+  * Refresh the documentation configuration patch.
+  * Set Rules-Requires-Root: no
+  * Bump Standards-Version to 4.4.1, no changes.
+  * Replace dh_auto_install override with --shebang.
+  * Update debian/copyright.
+  * Use ${sphinxdoc:Built-Using}.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 01 Jan 2020 14:04:40 +0100
+
+waitress (1.3.1-4) unstable; urgency=medium
+
+  * Revert the documentation package rename.
+  * Revert the reversion of the Python 3 removal.
+  * Remove alternatives on preinst.
+  * Install waitress-serve into /usr/bin directly.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Sep 2019 21:38:15 +0200
+
+waitress (1.3.1-3) unstable; urgency=medium
+
+  * Revert the Python 3 removal.
+  * Try to remove alternatives, don’t fail if we can’t.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Sep 2019 21:07:45 +0200
+
+waitress (1.3.1-2) unstable; urgency=medium
+
+  * Rename the documentation package.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Sep 2019 18:48:27 +0200
+
+waitress (1.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Maintain in the team.
+  * Run wrap-and-sort -bask.
+  * Use debhelper-compat instead of debian/compat.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 9 to 12.
+  * Drop Python 2 support.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 12 Sep 2019 18:38:52 +0200
+
+waitress (1.2.0~b2-2) unstable; urgency=medium
+
+  * Unbreak docco build (Closes: #918669).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 08 Jan 2019 15:54:08 +0100
+
+waitress (1.2.0~b2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field.
+  * d/control: Add Vcs-* field.
+
+  [ Andrej Shadura ]
+  * New upstream release.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 07 Jan 2019 18:26:54 +0100
+
+waitress (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Enable autopkgtests.
+  * Add Vcs-*.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 13 May 2018 10:12:31 +0200
+
+waitress (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update package descriptions.
+  * Build-Depend on Python 2.7+/3.3+.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Tue, 13 Dec 2016 14:34:36 +0100
+
+waitress (0.8.10-1) unstable; urgency=medium
+
+  [ Juan Picca ]
+  * Make the build reproducible (Closes: #788597).
+
+  [ Andrew Shadura ]
+  * New upstream release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 26 Dec 2015 14:44:28 +0100
+
+waitress (0.8.9-2) unstable; urgency=medium
+
+  * Fix FTBFS (Closes: #765126).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Mon, 13 Oct 2014 21:56:21 +0200
+
+waitress (0.8.9-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Wed, 08 Oct 2014 15:58:50 +0200
+
+waitress (0.8.8-3) unstable; urgency=low
+
+  * Build against python3.4.
+  * Fix shebangs in waitress-serve scripts.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 24 Apr 2014 08:12:29 +0200
+
+waitress (0.8.8-2) unstable; urgency=low
+
+  * Fix the package description.
+  * Bump Standards-Version (no changes).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 24 Apr 2014 07:45:00 +0200
+
+waitress (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 14 Dec 2013 20:55:11 +0100
+
+waitress (0.8.7-3) unstable; urgency=low
+
+  * Switch to using dh-python instead of versioned depends
+    on python3 (Closes: #731532).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 14 Dec 2013 17:53:03 +0100
+
+waitress (0.8.7-2) unstable; urgency=low
+
+  * Update the watch file.
+  * Use alternatives to ensure co-installability of python2 and python3
+    versions (Closes: #725260).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 03 Oct 2013 15:44:25 +0200
+
+waitress (0.8.7-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Wed, 02 Oct 2013 20:49:35 +0200
+
+waitress (0.8.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Remove erroneous patch.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 13 Apr 2013 15:25:34 +0200
+
+waitress (0.8.1-1) experimental; urgency=low
+
+  * Initial release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 21 Mar 2013 21:02:04 +0100

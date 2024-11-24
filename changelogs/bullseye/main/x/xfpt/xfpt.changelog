@@ -1,0 +1,80 @@
+xfpt (0.11-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-43700
+    Cherry-pick 30-Diagnose-error-if-macro-expansion-makes-a-line-too-l.patch
+    from upstream GIT master to fix buffer overflow
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 29 Nov 2024 23:03:02 +0100
+
+xfpt (0.11-1) unstable; urgency=low
+
+  * Fix watchfile (report functionality).
+  * New upstream version, fixing memory issues. (Closes:  #968658, #968715)
+    + Unfuzz 10_destdirsupport.diff
+  * Use dh compat level 13.
+  * Drop superfluous README.source.
+
+ -- Andreas Metzler <ametzler@debian.org>  Fri, 18 Sep 2020 11:13:36 +0200
+
+xfpt (0.10-1) unstable; urgency=low
+
+  * New upstream version.
+    + Refresh 20_ld_and_cppflags.diff.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 07 Oct 2018 17:44:45 +0200
+
+xfpt (0.09-3) unstable; urgency=low
+
+  * Use dh v11 compat.
+  * Set DEB_BUILD_MAINT_OPTIONS := hardening=+all.
+  * Set Rules-Requires-Root: no.
+  * Sync priorities with override file.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 22 Apr 2018 18:11:23 +0200
+
+xfpt (0.09-2) unstable; urgency=medium
+
+  * Convert to dh.
+  * Use dh_autoreconf.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 28 Sep 2014 13:01:09 +0200
+
+xfpt (0.09-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 27 May 2012 09:11:11 +0200
+
+xfpt (0.08-2) unstable; urgency=low
+
+  * Use 'dpkg-buildflags --export=configure' to get hardening-flags. Append
+    -Wall to CFLAGS. Add required b-d on  dpkg-dev (>= 1.16.1).
+  * 20_ld_and_cppflags.diff: Use LDFLAGS and CPPFLAGS.
+  * Add build-arch and build-indep targets.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 11 Mar 2012 11:02:59 +0100
+
+xfpt (0.08-1) unstable; urgency=low
+
+  * New upstream version.
+  * Convert to v3 format, drop quilt build-dep.
+  * Register manual with doc-base.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 14 Nov 2010 18:22:25 +0100
+
+xfpt (0.07-1) unstable; urgency=low
+
+  * New upstream version.
+    + Bump debian/copyright.
+  * Use quilt.
+  * Standards-Version 3.8.3.
+  * Add watch file.
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 29 Aug 2009 13:41:41 +0200
+
+xfpt (0.06-1) unstable; urgency=low
+
+  * Initial release (Closes: #533819)
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 20 Jun 2009 14:18:39 +0000

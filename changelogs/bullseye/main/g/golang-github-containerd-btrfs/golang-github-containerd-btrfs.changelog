@@ -1,0 +1,50 @@
+golang-github-containerd-btrfs (0.0~git20201111.404b914-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Shengjing Zhu ]
+  * New upstream snapshot
+  * Exclude vendor dir in upstream tarball
+  * Bump Standards-Version to 4.5.1 (no changes)
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 26 Nov 2020 00:31:28 +0800
+
+golang-github-containerd-btrfs (0.0~git20200117.1539353-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20200117.1539353
+  * Remove unused Files-Excluded in copyright file
+  * Simplify uscan watch file
+  * Update maintainers address to team+pkg-go@tracker.debian.org
+  * Update debhelper compat to 12
+  * Update tandards-Version to 4.4.1 (no changes)
+  * Add Rules-Requires-Root
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 17 Jan 2020 12:13:17 +0800
+
+golang-github-containerd-btrfs (0.0~git20180306.2e1aa0d-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+    + fixes FTBFS "constant 18446744073709551616 overflows _Ctype_ulonglong".
+  * watch: to version 4; mode=git.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 26 Jul 2018 13:04:20 +1000
+
+golang-github-containerd-btrfs (0.0~git20171005.72c0a35-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Update build-dependencies to use the new libbtrfs-dev package. (Closes: #898874)
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 16 May 2018 14:08:35 +0100
+
+golang-github-containerd-btrfs (0.0~git20171005.72c0a35-1) unstable; urgency=medium
+
+  * Initial release (Closes: #890989)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Wed, 21 Feb 2018 18:22:01 +0700

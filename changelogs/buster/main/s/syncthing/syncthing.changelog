@@ -1,0 +1,481 @@
+syncthing (1.0.0~ds1-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 12:36:58 +0200
+
+syncthing (1.0.0~ds1-1) unstable; urgency=medium
+
+  * Repack suffix: +ds -> ~ds.
+  * New upstream version. (Closes: #918100)
+  * Remove update-rollinghash.patch (applied upstream).
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 05 Jan 2019 15:17:23 -0500
+
+syncthing (0.14.54+ds1-2) unstable; urgency=medium
+
+  * Build-depend on rollinghash >= 4.0.0.
+  * Import update-rollinghash.patch from upstream.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 10 Dec 2018 21:27:07 -0500
+
+syncthing (0.14.54+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Include .desktop files. (Closes: #832387)
+  * Remove unused prometheus-client.patch.
+  * Install Syncthing icons.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 10 Dec 2018 19:50:50 -0500
+
+syncthing (0.14.52+ds1-2) unstable; urgency=medium
+
+  * d/control: golang-go -> golang-any.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 10 Nov 2018 21:06:33 -0500
+
+syncthing (0.14.52+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: exclude fork-awesome.
+  * Remove fork-awesome.patch.
+  * Refresh patches.
+  * Depend on fonts-fork-awesome >= 1.1.5+ds1-2.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 10 Nov 2018 19:31:02 -0500
+
+syncthing (0.14.51+ds2-5) unstable; urgency=medium
+
+  * Depend on golang-github-prometheus-client-golang >= 0.9.0.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 21 Oct 2018 20:54:39 -0400
+
+syncthing (0.14.51+ds2-4) unstable; urgency=medium
+
+  * Remove unused debian/common.
+  * Remove unused debian/syncthing.
+  * Update to new Prometheus client API. (Closes: #911440)
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 21 Oct 2018 11:05:48 -0400
+
+syncthing (0.14.51+ds2-3) unstable; urgency=medium
+
+  * Ship ufw config. (closes ubuntu #1793045)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 11 Oct 2018 10:11:43 -0400
+
+syncthing (0.14.51+ds2-2) unstable; urgency=medium
+
+  * d/control: depend on suture >= 3.0.0.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 11 Oct 2018 00:38:12 -0400
+
+syncthing (0.14.51+ds2-1) unstable; urgency=medium
+
+  * d/copyright: ignore cmd/ursrv/static/*.
+  * Move from font-awesome to fork-awesome. (Closes: #905562)
+  * d/control: depend on golang-github-go-ldap-ldap-dev.
+  * d/rules: exclude cmd/ursrv.
+  * d/copyright: exclude gui/default/assets/font.
+  * patches: don't include raleway.css.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 10 Oct 2018 23:45:55 -0400
+
+syncthing (0.14.50+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 14 Sep 2018 22:39:24 -0400
+
+syncthing (0.14.49+ds1-3) unstable; urgency=medium
+
+  * Remove dependency on golang-github-kardianos-osext-dev.
+    (Thanks Anthony Fok!)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 23 Aug 2018 14:02:55 -0400
+
+syncthing (0.14.49+ds1-2) unstable; urgency=medium
+
+  * Only run tests on i386 and amd64.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 23 Aug 2018 13:57:37 -0400
+
+syncthing (0.14.49+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+    + Build should be fixed on 32bit platforms. (Closes: #903611)
+  * d/copyright: create section for gui/default/vendor/daterangepicker/*.
+  * depend on golang-github-thejerf-suture-dev >=2.0.3.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 29 Jul 2018 03:40:40 -0400
+
+syncthing (0.14.48+ds1-1) unstable; urgency=medium
+
+  * New upstream version. (Closes: #902250)
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 03 Jul 2018 17:59:06 -0400
+
+syncthing (0.14.46+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Depend on golang-github-zillode-notify-dev
+    >= 0.0~git20171210.8fff849-5.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 04 Apr 2018 14:28:29 -0400
+
+syncthing (0.14.45+ds1-3) unstable; urgency=medium
+
+  * Restore skip-watch-tests.patch.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 29 Mar 2018 12:34:06 -0400
+
+syncthing (0.14.45+ds1-2) unstable; urgency=medium
+
+  * Fix maintainer-script-should-not-use-recursive-chown-or-chmod.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 29 Mar 2018 11:34:44 -0400
+
+syncthing (0.14.45+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Remove unnecessary skip-watch-tests.patch.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 29 Mar 2018 11:29:49 -0400
+
+syncthing (0.14.44+ds1-2) unstable; urgency=medium
+
+  [ Mpampis Kostas ]
+  * Team upload
+  * Depend on golang-github-rcrowley-go-metrics-dev
+
+  [ Michael Stapelberg ]
+  * update debian/gitlab-ci.yml (using salsa.debian.org/go-team/ci/cmd/ci)
+
+  [ Christos Trochalakis ]
+  * Add missing golang-github-prometheus-client-golang-dev dependency
+
+ -- Mpampis Kostas <charkost.rb@gmail.com>  Tue, 13 Mar 2018 12:35:52 +0200
+
+syncthing (0.14.44+ds1-1) unstable; urgency=medium
+
+  * d/copyright: add sections for moment.js and fancytree.
+  * d/copyright: remove reference to lib/upnp/igd.go.
+  * d/copyright: fix insecure-copyright-format-uri.
+  * fix missing-built-using-field-for-golang-package.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Mar 2018 13:13:14 -0500
+
+syncthing (0.14.43+ds1-6) unstable; urgency=medium
+
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:01:09 -0500
+
+syncthing (0.14.43+ds1-5) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 14:55:07 -0500
+
+syncthing (0.14.43+ds1-4) unstable; urgency=medium
+
+  * Skip flaky watch tests.
+  * debian/compat: bump to 10.
+  * Bump Standards-Version to 4.1.3.
+  * Remove unused lintian overrides.
+  * Remove duplicate golang-github-xtaci-kcp-dev dependency.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 19 Jan 2018 11:06:00 -0500
+
+syncthing (0.14.43+ds1-3) unstable; urgency=medium
+
+  * extend-test-delay.patch: extend test delay to 30s.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 19 Jan 2018 10:15:38 -0500
+
+syncthing (0.14.43+ds1-2) unstable; urgency=medium
+
+  * Create extend-test-delay.patch.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 18 Jan 2018 20:14:59 -0500
+
+syncthing (0.14.43+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Depend on golang-github-xtaci-kcp-dev.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 18 Jan 2018 19:08:46 -0500
+
+syncthing (0.14.42+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * depend on golang-github-zillode-notify-dev.
+  * Priority extra -> optional.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 18 Jan 2018 18:46:02 -0500
+
+syncthing (0.14.38+ds1-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * New upstream version.
+  * Move to salsa.debian.org.
+  * Depend on golang-github-audriusbutkevicius-kcp-go-dev.
+  * No longer depend on dh-systemd.
+
+  [ Michael Lustfield ]
+  * Drop inactive uploader from Uploaders list.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 28 Dec 2017 18:07:05 -0500
+
+syncthing (0.14.37+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Depend on golang-github-kballard-go-shellquote-dev.
+  * Remove unused d/copyright section for
+    lib/osutil/mkdirall_windows.go.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 16 Sep 2017 22:13:18 -0400
+
+syncthing (0.14.36+ds1-3) unstable; urgency=medium
+
+  * Use -nat by default for relaysrv.
+  * discosrv now uses /etc/default/syncthing-discosrv instead of
+    /etc/default/stdiscosrv.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 29 Aug 2017 19:53:54 -0400
+
+syncthing (0.14.36+ds1-2) unstable; urgency=medium
+
+  * Create systemd services for syncthing-discosrv and
+    syncthing-relaysrv.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 28 Aug 2017 22:02:11 -0400
+
+syncthing (0.14.36+ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/watch: +dfsg -> +ds.
+  * Testsuite: autopkgtest-pkg-go.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 12 Aug 2017 21:00:50 -0400
+
+syncthing (0.14.33+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/rules: exclude the meta package.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 26 Jul 2017 21:55:02 -0400
+
+syncthing (0.14.31+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/watch: exclude release candidates. (Closes: #866600)
+  * Bump Standards-Version to 4.0.0.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 02 Jul 2017 03:15:19 -0400
+
+syncthing (0.14.31~rc.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version. (Closes: #858188)
+  * Add new dependencies:
+   - golang-github-audriusbutkevicius-pfilter-dev
+   - golang-github-ccding-go-stun-dev
+   - golang-github-chmduquesne-rollinghash-dev
+   - golang-golang-x-time-dev
+   - golang-github-xtaci-kcp-dev
+   - golang-github-xtaci-smux-dev
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 18 Jun 2017 17:24:11 -0400
+
+syncthing (0.14.18+dfsg1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Updating build dependency.
+
+ -- Michael Lustfield <michael@lustfield.net>  Thu, 06 Apr 2017 02:42:04 -0500
+
+syncthing (0.14.18+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 04 Jan 2017 11:43:38 -0500
+
+syncthing (0.14.17+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: add section for cmd/stcli.
+  * exclude stcli.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 30 Dec 2016 16:17:15 -0500
+
+syncthing (0.14.15+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 18 Dec 2016 14:01:17 -0500
+
+syncthing (0.14.13+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 30 Nov 2016 10:46:06 -0500
+
+syncthing (0.14.12+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: add section for angular-sanitize.js.
+  * Use Debian's genxdr.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 25 Nov 2016 11:31:51 -0500
+
+syncthing (0.14.11+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Refresh use-debian-proto.patch.
+  * Dependencies: +golang-github-sasha-s-go-deadlock-dev.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 15 Nov 2016 09:48:33 -0500
+
+syncthing (0.14.10+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Depend on golang-github-gobwas-glob-dev >= 0.2.1.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 01 Nov 2016 11:10:31 -0400
+
+syncthing (0.14.9+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 25 Oct 2016 10:23:00 -0400
+
+syncthing (0.14.8+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Remove unusable crypto_sha256.patch.
+  * Depend on golang-github-minio-sha256-simd-dev.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 15 Oct 2016 14:55:21 -0400
+
+syncthing (0.14.7+dfsg1-1) unstable; urgency=medium
+
+  * d/copyright: exclude extra/*.pdf.
+  * Add new patch: crypto_sha256.patch.
+  * d/rules: include _external_test/external.sh.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 09 Sep 2016 10:42:28 -0400
+
+syncthing (0.14.4+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 16 Aug 2016 11:47:43 -0400
+
+syncthing (0.14.3+dfsg1-4) unstable; urgency=medium
+
+  * Install systemd user file in proper directory. (Closes: #832975)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 04 Aug 2016 10:48:20 -0400
+
+syncthing (0.14.3+dfsg1-3) unstable; urgency=medium
+
+  * Build with tag purego.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Jul 2016 14:01:56 -0400
+
+syncthing (0.14.3+dfsg1-2) unstable; urgency=medium
+
+  * Removed unused node-uglify dependency.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Jul 2016 12:10:36 -0400
+
+syncthing (0.14.3+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Include stdiscosrv and strelaysrv manpages.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 28 Jul 2016 10:13:38 -0400
+
+syncthing (0.14.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Created packages for the discovery server and the relay server.
+  * Specify syncthing binary name in syncthing package description.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 27 Jul 2016 10:09:33 -0400
+
+syncthing (0.14.0+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Remove genxdr-command.patch.
+  * Create use-debian-proto.patch.
+  * Add postinst script to restart after upgrade.
+  * Removed some unused lintian overrides.
+  * New dependencies:
+     - golang-github-oschwald-geoip2-golang-dev
+     - golang-gogoprotobuf-dev
+  * d/copyright:
+    - discosrv -> stdiscosrv
+    - relaysrv -> strelaysrv
+  * d/rules: don't build strelaypoolsrv.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 10 Jul 2016 10:59:06 +0200
+
+syncthing (0.13.10+dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Set section of the main package to utils.
+  * Set section of the dev package to devel.
+  * Remove obsolete patches:
+    - build-Use-SOURCE_DATE_EPOCH-for-build-time-stamp-whe.patch
+    - lib-upgrade-Remove-TestGithubRelease-fixes-3362.patch
+    - script-Remove-build-date-in-genassets.go.patch
+    - Fix-typos.patch
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 04 Jul 2016 12:12:49 +0200
+
+syncthing (0.13.9+dfsg1-3) unstable; urgency=medium
+
+  * Properly include fontawesome fonts (Closes: #829090)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 30 Jun 2016 18:19:43 +0200
+
+syncthing (0.13.9+dfsg1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream patches
+    - Remove the TestGithubRelease test (Closes: #828808)
+    - Honor SOURCE_DATE_EPOCH when set  (Closes: #828994)
+  * Fix typos in messages and manpages
+
+ -- Nicolas Braud-Santoni <nicolas@braud-santoni.eu>  Wed, 29 Jun 2016 23:13:55 +0200
+
+syncthing (0.13.9+dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * d/copyright: new sections
+     - cmd/discosrv/*
+     - cmd/relaysrv/*
+  * Remove obsolete use-packaged-gateway.patch.
+  * genxdr-command.patch: include a new file.
+  * New dependencies:
+    - golang-github-cznic-ql-dev
+    - golang-github-golang-groupcache-dev
+    - golang-github-lib-pq-dev
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 27 Jun 2016 23:41:45 +0200
+
+syncthing (0.13.4+dfsg1-1) unstable; urgency=medium
+
+  * Added missing CC-BY-SA-4.0 section in d/copyright
+  * Changed maintainer to pkg-go team
+  * Added patch to use Debian's jackpak/gateway
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 31 May 2016 12:17:07 -0400
+
+syncthing (0.13.2+dfsg1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #749887)
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 May 2016 14:18:29 -0400

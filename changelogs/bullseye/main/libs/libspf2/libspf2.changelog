@@ -1,0 +1,355 @@
+libspf2 (1.2.10-7.1~deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Rebuild for bullseye-security.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 08 Aug 2021 14:05:13 +0200
+
+libspf2 (1.2.10-7.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * spf_compile.c: Correct size of ds_avail (CVE-2021-20314)
+  * Sanity check for sprintf
+  * Fixed 'reverse' macro modifier
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 08 Aug 2021 13:46:49 +0200
+
+libspf2 (1.2.10-7) unstable; urgency=low
+
+  * error_results.patch: Return information to use in the mail header and
+    such when no or multiple SPF records exist (Closes: #806313). Thanks
+    to Sebastian Schweizer <sebastian@schweizer.tel>.
+  * Bump Standards-Version to 3.9.7.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Fri, 25 Mar 2016 17:51:50 +0100
+
+libspf2 (1.2.10-6) unstable; urgency=medium
+
+  * gcc5-variadicmacros.patch: Fix syntax error with variadic macro with
+    no variable argument when compiling with GCC 5 (Closes: #777974).
+  * Rearrange debian/copyright to comply with the machine-readable format
+    specification.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Thu, 25 Jun 2015 22:26:05 +0200
+
+libspf2 (1.2.10-5) unstable; urgency=low
+
+  * abolish-spf-rrtype.patch: Stop trying to look up the dedicated SPF DNS
+    RR type, which was abolished by RFC 7208 (Closes: #764533).
+  * Bump Standards-Version to 3.9.6.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 12 Oct 2014 21:18:33 +0200
+
+libspf2 (1.2.10-4) unstable; urgency=low
+
+  * Upgrade to Debhelper compat level 9, in order to:
+  * Handle variable vendorarch installation directory (Closes: #752712),
+    by making debian/libmail-spf-xs-perl.install executable.
+  * Bump Standards-Version to 3.9.5.
+  * debian/rules: Update URL in get-orig-source target (a year late).
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sat, 05 Jul 2014 22:19:51 +0200
+
+libspf2 (1.2.10-3) unstable; urgency=low
+
+  * Merge changes from Ubuntu (Closes: #734224).
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sat, 01 Feb 2014 14:51:57 +0100
+
+libspf2 (1.2.10-2ubuntu1) trusty; urgency=medium
+
+  * Use dh-autoreconf instead of autotools-dev to also fix FTBFS on ppc64el by
+    getting new libtool macros (still updates config.{sub,guess}).
+
+ -- Logan Rosen <logan@ubuntu.com>  Fri, 03 Jan 2014 15:56:24 -0500
+
+libspf2 (1.2.10-2) unstable; urgency=low
+
+  * Convert debian/copyright to machine-readable format and update
+    copyright info including details on files in src/libreplace.
+  * debian/spfquery.libspf2.1: Change license to 2-clause BSD, as was
+    intended from the beginning.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Mon, 12 Aug 2013 12:07:40 +0200
+
+libspf2 (1.2.10-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop ipv6-bugs.patch and private-glibc-functions.patch; incorporated
+    upstream.
+  * Hide additional internal symbols from the dynamic table.
+  * Build and include the Perl XS module.
+  * Bump Standards-Version to 3.9.4.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Thu, 13 Jun 2013 23:58:12 +0200
+
+libspf2 (1.2.9-7) unstable; urgency=high
+
+  * Add postinst scripts that replace old documentation directories (from
+    before 1.2.9-5) in libspf2-dev, libspf2-2-dbg and spfquery with
+    symlinks (Closes: #687862, #687863, #687864). Thanks to Salvatore
+    Bonaccorso <carnil@debian.org>.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 23 Sep 2012 21:25:43 +0200
+
+libspf2 (1.2.9-6) unstable; urgency=low
+
+  * Rename ipv6-buffer-miscalculation.patch ipv6-bugs.patch. Include
+    the following small IPv6-related patches from FreeBSD:
+    * patch-src_libspf2_spf__compile.c
+    * patch-src_libspf2_spf__interpret.c
+    Already included was patch-src_libspf2_spf__expand.c.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 22 Jan 2012 22:45:04 +0100
+
+libspf2 (1.2.9-5) unstable; urgency=low
+
+  * Convert package to source format 3.0 (quilt).
+  * Include text of BSD license in debian/copyright, as is now preferred.
+  * Switch from CDBS to classic Debhelper, getting build flags from
+    dpkg-buildflags "by hand".
+  * Increase Debhelper compat level to 7.
+  * Put docs in libspf2-2 and replace the other packages' doc directories
+    with symlinks to that one.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Fri, 11 Nov 2011 22:13:50 +0100
+
+libspf2 (1.2.9-4) unstable; urgency=low
+
+  * Drop obsolete README.Debian-source; move non-obsolete info to
+    libspf2-dev.README.Debian.
+  * debian/libspf2.ver: Explicitly unhide certain special symbols that
+    became hidden on the mips and mipsel architectures but nowhere else,
+    causing a FTBFS.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sat, 03 Oct 2009 21:29:19 +0200
+
+libspf2 (1.2.9-3) unstable; urgency=high
+
+  * ipv6_buffer_miscalculation.dpatch: Fix an abort() caused by
+    miscalculating the size of an internal buffer when mail is received
+    over IPv6. Thanks to Matthias Scheler <tron@netbsd.org>.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 13 Sep 2009 20:23:22 +0200
+
+libspf2 (1.2.9-2) unstable; urgency=low
+
+  * debian/rules: Correct version.
+  * 01_private_glib_functions.dpatch: Avoid linking private glibc
+    functions.
+  * Simplify debian/*.install and exclude the libtool .la file from the
+    -dev package. Set DEB_DH_INSTALL_SOURCEDIR accordingly.
+  * Add ${misc:Depends} to Depends.
+  * Add debug package.
+  * Use ld version script to hide internal symbols.
+  * Bump Standards-Version to 3.8.3.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Tue, 25 Aug 2009 00:15:01 +0200
+
+libspf2 (1.2.9-1) unstable; urgency=high
+
+  * New upstream release.
+    - Drops non-dfsg Free IETF internet draft, so tarball no longer needs
+      repacking
+    + Fixes exploitable buffer overflow (LP: #287534)
+    + Multiple fixes for improved RFC 4408 compliance
+    + Update libspf2-2.symbols for new symbol
+      + 20_spf_dns_include_std_headers.dpatch: Updated.
+  * Thanks to Scott Kitterman.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Tue, 04 Nov 2008 21:14:31 +0100
+
+libspf2 (1.2.8~dfsg-1) unstable; urgency=low
+
+  * Merge changes from Ubuntu.
+  * Fix and tweak library dependency information (shlibs as well as
+    symbols).
+  * Upgrade to Standards-Version: 3.8.0. Changes needed:
+    + Add debian/README.source (§ 4.9).
+  * Bring debian/copyright a bit more up-to-date.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Sun, 02 Nov 2008 12:29:51 +0100
+
+libspf2 (1.2.8~dfsg-0ubuntu1) intrepid; urgency=low
+
+  * New upstream release (LP: #283920)
+    - Fixes multiple memory leaks
+    - CVE2008-2469 buffer overflows
+    - Adds new documentation
+    - Drop all patches except 20_spf_dns_include_std_headers.dpatch (included
+      upstream)
+    - Freshen 20_spf_dns_include_std_headers.dpatch
+    - Update debian/rules for new release
+  * Repack tarball to remove non-DFSG Free IETF draft
+  * Added debian/libspf2-2.symbols and updated for new version
+  * Drop README.Debian since it no longer applies.
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 19 Oct 2008 01:00:13 -0400
+
+libspf2 (1.2.5.dfsg-5) unstable; urgency=low
+
+  * 43_new_explanation_url.dpatch: Bring default explanation up to date by
+    referring to www.openspf.org instead of spf.pobox.com.
+  * Add spfquery(1) manpage.
+  * Fix format of copyright notice in debian/copyright.
+  * Move upstream homepage URL to the new Homepage control field, rename
+    VCS control fields, and update Standards-Version.
+  * A few cosmetic adjustments including fixing the indentation of the
+    1.2.5.dfsg-3 entry below (Closes: #465466).
+  * New maintainer email address.
+
+ -- Magnus Holmgren <holmgren@debian.org>  Fri, 18 Apr 2008 17:51:28 +0200
+
+libspf2 (1.2.5.dfsg-4) unstable; urgency=low
+
+  * Added 23_spfquery_ipv6.dpatch: Make spfquery accept IPv6 addresses
+    (Closes: #440147). Thanks to Matthias Cramer.
+  * 35_untabify_help.dpatch: Make --help output of utilities less ugly by
+    converting tabs to spaces.
+
+ -- Magnus Holmgren <magnus@kibibyte.se>  Wed, 05 Sep 2007 15:39:22 +0200
+
+libspf2 (1.2.5.dfsg-3) unstable; urgency=low
+
+  * 22_spfquery_fallback_segfault.dpatch: Fix fallback-related segfault in
+    spfquery (Closes: #430414). Thanks to Robert Millan.
+  * Correct debian/copyright (Closes: #433047). Thanks to Julian Mehnle.
+  * A second patch from Robert split into three:
+    * 40_permanent_include_errors.dpatch: Make permanent errors in
+      processing an include: directive cause the parent evaluation to return
+      a permanent error as well (Closes: #435139).
+    * 41_none_not_neutral.dpatch: Use a diffent explanation for
+      SPF_RESULT_NONE than the one for SPF_RESULT_NEUTRAL (Closes: #435140).
+    * 42_empty_sender.dpatch: Use the HELO identity in MAIL FROM checks if
+      the sender address has been set to the empty string (Closes: #431239).
+  * debian/control: Add XS-Vcs-* fields.
+
+ -- Magnus Holmgren <magnus@kibibyte.se>  Wed, 22 Aug 2007 17:13:27 +0200
+
+libspf2 (1.2.5.dfsg-2) unstable; urgency=low
+
+  * 21_spfquery_infininte_loop.dpatch: Fix infinite loop when giving
+    unimplemented options to spfquery.
+  * 20_printf_types.dpatch: Revert to using standard conversion specifiers
+    without z modifiers.
+  * debian/watch: mangle away .dfsg from package version.
+  * Lower spfquery and spfd alternatives priorities to 25.
+  * Skip applying 01_line-endings.dpatch; it's meaningless.
+
+ -- Magnus Holmgren <magnus@kibibyte.se>  Wed, 06 Jun 2007 19:31:01 +0200
+
+libspf2 (1.2.5.dfsg-1) unstable; urgency=low
+
+  * New maintainer (Closes: #372629).
+  * Repacked .orig.tar.gz without non-free IETF Internet Draft (Closes:
+    #393390).
+  * Merge updates from Ubuntu:
+    - Add debian/compat and Build-depend on debhelper >= 5.
+    - Add alternatives handling for /usr/bin/spfquery (Closes: #306875).
+      - Conflict on libmail-spf-query-perl << 1:1.999.1-3.
+      - Add postinst and prerm scripts.
+    - debian/copyright: update author address.
+    - debian/control: add final newline.
+  * debian/control: 
+    * Change description of spfquery (Closes: #410592).
+    * Add homepage to package descriptions.
+  * Reduce Debian diff by changing line endings with sed instead.
+  * Further reduce Debian diff by eliminating config.sub and config.guess
+    from there. Build-depend on autotools-dev to ensure up-to-date
+    versions instead.
+  * The autogenerated spf_lib_version.h was put in the wrong directory,
+    while there was a static spf_lib_version.h in the right directory.
+    Fix that with some rules in debian/rules.
+  * Use dpatch to manage patches.
+  * Apply 20_64bit_types.dpatch to hopefully prevent segfaults on 64-bit
+    architectures (Closes: #392793). Thanks to Thomas Jacob, Carsten
+    Koch-Mauthe and Herbert Straub.
+  * 20_printf_types.dpatch: Change format strings to use the z flag,
+    meaning size_t, among other things.
+  * 30_spfd_check_unlink_failure.dpatch: Fix a typo in spfd (patch from
+    Thomas Jacob).
+  * debian/watch: added.
+  * Update Standards-Version to 3.7.2 without changes.
+  * Apply 20_spf_dns_include_std_headers.dpatch: Include arpa/nameser.h and
+    netdb.h from spf_dns.h instead of defining the constants needed unless
+    certain HAVE_ macros are defined (Closes: #405885).
+  * Apply 25_maxvals.dpatch, which brings certain processing limits (meant
+    to mitigate DoS attacks) in line with RFC 4408. Thanks to Scott
+    Kitterman.
+  * debian/control: Change libspf2-dev dependency to ${binary:Version} so
+    that binNMUs will work.
+  * Ship spfd in the spfquery package (Closes: #258360).
+
+ -- Magnus Holmgren <magnus@kibibyte.se>  Sat, 24 Mar 2007 14:51:23 +0100
+
+libspf2 (1.2.5-4) unstable; urgency=low
+
+  * Orphan.
+
+ -- Eric Dorland <eric@debian.org>  Mon, 20 Nov 2006 02:16:20 -0500
+
+libspf2 (1.2.5-3) unstable; urgency=low
+
+  * src/include/spf_server.h: Remove useless include to
+    spf_dns_internal.h. (Closes: #312145)
+  * debian/control: Have spfquery against libmail-spf-query-perl to work
+    around #306875, hopefully temporarily. 
+
+ -- Eric Dorland <eric@debian.org>  Sat, 30 Jul 2005 01:25:24 -0400
+
+libspf2 (1.2.5-2) unstable; urgency=low
+
+  * The "Doh, missed a soname change" release.
+  * debian/libspf2-0.install: Rename to libspf2-2.install. 
+  * debian/control:
+    - Change libspf2-0 to libspf2-2 to reflect soname change. 
+      (Closes: #306205)
+    - Add spfquery package, don't package spfd for now, can't figure 
+      out how to make it work. This partially addresses #258360. 
+  * debian/spfquery.install: New file.
+
+ -- Eric Dorland <eric@debian.org>  Mon, 25 Apr 2005 20:07:48 -0400
+
+libspf2 (1.2.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 17 Apr 2005 23:37:27 -0400
+
+libspf2 (1.0.4-4) unstable; urgency=medium
+
+  * configure, aclocal.m4: Run aclocal and autoconf to get the right code
+    for the libtool test to use the pass_all method on arm. (Closes:
+    #276516)
+  * Urgency medium to get this bloody thing fixed already. 
+
+ -- Eric Dorland <eric@debian.org>  Fri, 26 Nov 2004 00:15:04 -0500
+
+libspf2 (1.0.4-3) unstable; urgency=low
+
+  * config/ltmain.sh: Re-libtoolize again, hopefully this will fix arm
+    building.
+
+ -- Eric Dorland <eric@debian.org>  Wed, 17 Nov 2004 13:50:50 -0500
+
+libspf2 (1.0.4-2) unstable; urgency=low
+
+  * config/ltmain.sh: Re-libtoolize. (Closes: #269936)
+  * configure.ac: Apply patch from Kurt Roeckx to fix build on
+    amd64. (Closes: #262687)
+  * Rerun autoconf to apply the changes.
+
+ -- Eric Dorland <eric@debian.org>  Mon,  6 Sep 2004 19:36:20 -0400
+
+libspf2 (1.0.4-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #261709)
+
+ -- Eric Dorland <eric@debian.org>  Mon,  9 Aug 2004 00:57:49 -0400
+
+libspf2 (1.0.3-1) unstable; urgency=low
+
+  * Initial release. (Closes: #257644)
+  
+ -- Eric Dorland <eric@debian.org>  Fri,  2 Jul 2004 00:00:19 -0400
+

@@ -1,0 +1,600 @@
+libphp-adodb (5.20.19-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Prevent auth bypass with PostgreSQL connections (CVE-2021-3850)
+    (Closes: #1004376)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 12 Mar 2022 21:04:13 +0100
+
+libphp-adodb (5.20.19-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bumped policy to 4.5.1: No change required.
+  * Bumped d/watch format to 4.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sat, 19 Dec 2020 08:08:01 +0100
+
+libphp-adodb (5.20.18-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bumped compat level to 13.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Mon, 17 Aug 2020 17:59:40 +0200
+
+libphp-adodb (5.20.17-2) unstable; urgency=medium
+
+  * Reupload without arch all binary.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sun, 12 Apr 2020 14:49:26 +0200
+
+libphp-adodb (5.20.17-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bumped policy to 4.5.0.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sat, 11 Apr 2020 22:57:05 +0200
+
+libphp-adodb (5.20.16-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Fri, 17 Jan 2020 16:35:20 +0100
+
+libphp-adodb (5.20.15-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Dropped migration script from version 4.64.
+  * d/control: root is not required for rules.
+  * Bumped compat to 12.
+  * Bumped policy to 4.4.1.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Fri, 29 Nov 2019 11:18:37 +0100
+
+libphp-adodb (5.20.14-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bumped standard to 4.3.0.
+  * Refreshed copyrights.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Mon, 07 Jan 2019 07:18:32 +0100
+
+libphp-adodb (5.20.13-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bumped standard to 4.2.1.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Tue, 28 Aug 2018 15:13:24 +0200
+
+libphp-adodb (5.20.12-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sun, 01 Apr 2018 11:24:32 +0000
+
+libphp-adodb (5.20.10-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Moved git packaging repository to salsa.
+  * Bumped standard to 4.1.3
+  * Bumped compat to 11.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Thu, 15 Mar 2018 09:55:12 +0000
+
+libphp-adodb (5.20.9-1) unstable; urgency=medium
+
+  * New upstream hotfix version.
+  * Drop php5 recommends.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Fri, 23 Dec 2016 20:13:55 +0100
+
+libphp-adodb (5.20.8-1) unstable; urgency=medium
+
+  * New upstream hotfix version.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Mon, 19 Dec 2016 15:36:16 +0100
+
+libphp-adodb (5.20.7-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Drop patch applied upstream.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Wed, 21 Sep 2016 23:44:45 +0200
+
+libphp-adodb (5.20.6-1) unstable; urgency=high
+
+  * New upstream version fixing CVE-2016-4855.
+  * New patch pdo-qstr-sql-injection. (Closes: #837211)
+  * Dropped Suggests: on removed php-adodb package.
+  * Bumped policy to 3.9.8. No change required.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sat, 10 Sep 2016 18:41:17 +0200
+
+libphp-adodb (5.20.4-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Drop d/patches/mysqli_allow_port_as_string.
+  * Drop d/doc-base and d/patches/privacy_html_external_img: Upstream no longer
+    provides documentation in the package.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Mon, 18 Apr 2016 07:28:37 +0200
+
+libphp-adodb (5.20.3-2) unstable; urgency=medium
+
+  * Switched to git. Updated d/control Vcs fields.
+  * New patch mysqli_allow_port_as_string to fix mysqli DSN support. Thanks
+    Nishanth Aravamudan.
+  * Priorized php7 dependencies.
+  * Updated upstream homepage address.
+  * Bumped policy to 3.9.7. No change required.
+  * Refreshed README.Debian for php7 and apache2.4.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Fri, 25 Mar 2016 21:43:53 +0100
+
+libphp-adodb (5.20.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sun, 03 Jan 2016 15:11:47 +0100
+
+libphp-adodb (5.20.2-2) unstable; urgency=medium
+
+  * Fixed doc-base name. (Closes: #809346)
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Tue, 29 Dec 2015 21:07:19 +0100
+
+libphp-adodb (5.20.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/rules, d/control: Use phpcomposer debhelper to make dependencies.
+  * d/control: Added php7.0 alternatives to recommends.
+  * Added d/patch/privacy_html_external_img to fix privacy breach.
+  * Added d/doc-base.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sun, 27 Dec 2015 23:35:23 +0100
+
+libphp-adodb (5.20.1-1) unstable; urgency=medium
+
+  * New upstream release:
+    - Dropped patches, applied upstream.
+    - Refreshed d/copyright.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sun, 27 Dec 2015 09:21:52 +0100
+
+libphp-adodb (5.18a-1) unstable; urgency=medium
+
+  * New upstream release:
+    - Properly handle quoted default values for PostgreSQL. (Closes: #596829)
+    - Allow PostgreSQL to "... ALTER COLUMN ... SET NOT NULL". (Closes:
+      #596830)
+    - Allow PostgreSQL to ALTER COLUMN boolean into integer. (Closes: #596835)
+  * Hide upgrade debconf notice on fresh install. (Closes: #586628)
+  * Added myself in uploaders.
+  * Dropped obsolete XS-Dm-Upload-Allowed:
+  * Bumped policy version to 3.9.6. No change required.
+  * Canonicalized Vcs- Fields.
+  * Minimized d/rules. Bumped dh compat level to 9.
+  * Copyrights: Switch to DEP5 format; Clarify LGPL2-1 alternative; Refreshed
+    years.
+  * Updated d/watch: Project moved to github.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Sun, 21 Jun 2015 23:18:03 +0200
+
+libphp-adodb (5.15-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix pending l10n issues. Debconf translations:
+  * Danish (Joe Hansen).  Closes: #623102
+  * Brazilian Portuguese (Adriano Rafael Gomes).  Closes: #656999
+  * Update standards to 3.9.3 (no changes).
+
+ -- Cameron Dale <camrdale@gmail.com>  Sun, 26 Feb 2012 19:43:29 -0800
+
+libphp-adodb (5.12-1) unstable; urgency=low
+
+  * New upstream release (Closes: #633623)
+  * Update and refresh patch 01_fix_broken_html_doc_links
+
+ -- Cameron Dale <camrdale@gmail.com>  Sun, 31 Jul 2011 15:47:52 -0700
+
+libphp-adodb (5.11-1) unstable; urgency=low
+
+  * New upstream release
+  * Update standards version to 3.9.2 (no changes)
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Fix the watch file
+
+ -- Cameron Dale <camrdale@gmail.com>  Mon, 25 Jul 2011 21:42:15 -0700
+
+libphp-adodb (5.10-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove the 02_update_copywrite_header patch as it is now upstream
+  * Update standards version to 3.8.4 (no changes)
+
+ -- Cameron Dale <camrdale@gmail.com>  Sun, 21 Mar 2010 01:17:15 -0700
+
+libphp-adodb (5.09a-1) unstable; urgency=low
+
+  * New upstream release
+  * Update the copyright of pear/Auth/Container/ADOdb.php (Closes: #535171)
+  * New Russian translation, thanks Yuri Kozlov (Closes: #531204)
+  * New Italian translation, thanks Luca Monducci (Closes: #544164)
+  * Update standards version to 3.8.3 (no changes)
+  * Set -e in the config script
+  * Change the section from web to php
+
+ -- Cameron Dale <camrdale@gmail.com>  Mon, 07 Sep 2009 13:27:18 -0700
+
+libphp-adodb (5.07-1) unstable; urgency=low
+
+  * New upstream release
+    - adds the missing drivers/adodb-pdo_sqlite (Closes: #510444)
+  * Update the 01_fix_broken_html_doc_links patch for the new release
+
+ -- Cameron Dale <camrdale@gmail.com>  Sun, 04 Jan 2009 14:45:07 -0800
+
+libphp-adodb (5.05-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update the watch file to work with upstream's file names
+  * Update standards version to 3.8.0
+    - Add a README.source file pointing to the quilt documentation
+    - Reflow the copyright to limit line lengths to 80
+    - Remove some non-Debian files from the .diff.gz
+  * medium urgency to get it into lenny
+
+ -- Cameron Dale <camrdale@gmail.com>  Sat, 19 Jul 2008 20:26:50 -0700
+
+libphp-adodb (5.04a-1) unstable; urgency=low
+
+  * New upstream release (Closes: #461869)
+    - only supports php5, php4 no longer supported
+  * Remove php4 dependencies
+  * Suggest php5-adodb as it provides a speedup (Closes: #460995)
+  * Special handling of some crufty .bak files
+  * Clarify the copyright
+  * Fix some lintian errors and cosmetics:
+    - binary-arch-rules-but-pkg-is-arch-indep
+    - upgrade to Standards-Version 3.7.3 (no changes)
+    - drop the XS from the VCS header fields
+    - add the Homepage header field
+    - remove the unused dpatch build-depends
+  * Start using quilt for patches
+  * Fix the broken and moved links in the docs (Closes: #471265)
+    (quilt patch 01_fix_broken_html_doc_links)
+
+ -- Cameron Dale <camrdale@gmail.com>  Fri, 02 May 2008 20:13:30 -0700
+
+libphp-adodb (4.96-1) unstable; urgency=low
+
+  * New upstream release (Closes: #444647)
+  * Add XS-Vcs-Browser to control file
+  * Fix capitalization in package description (Closes: #426136)
+  * Added spanish translation (Closes: #426178)
+  * Added Dm-Upload-Allowed for Debian Maintainer uploads
+
+ -- Cameron Dale <camrdale@gmail.com>  Wed, 17 Oct 2007 14:59:25 -0700
+
+libphp-adodb (4.94-1) unstable; urgency=low
+
+  * New upstream release
+  * Acknowledge NMU
+  * New Dutch translation (Closes: #413890)
+  * Updated recommends so only one php-db package is needed
+
+ -- Cameron Dale <camrdale@gmail.com>  Sun, 22 Apr 2007 14:25:18 -0800
+
+libphp-adodb (4.93a-1.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix pending l10n issues.
+  * Debconf translations:
+    - German. Closes: #406832
+    - Galician. Closes: #412870
+    - Portuguese. Closes: #413331
+    - Convert all PO files to UTF-8 (Japanese was UTF-8 already)
+
+ -- Christian Perrier <bubulle@debian.org>  Mon,  5 Mar 2007 07:16:28 +0100
+
+libphp-adodb (4.93a-1) unstable; urgency=high
+
+  * First upload from new maintainer (Closes: #398121)
+    - switched to debhelper from cdbs
+    - made php5 the default
+    - fixed upstream changelog availability
+    - moved all example docs to examples folder
+    - added dpatch system
+  * New Upstream Release
+  * Changed phpapi depends to php (Closes: #399174)
+  * Updated Japanese translation (Closes: #393205)
+
+ -- Cameron Dale <camrdale@gmail.com>  Tue, 21 Nov 2006 20:11:24 +0200
+
+libphp-adodb (4.72-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New Upstream Release (Closes: #349985)
+  * Updated Czech translation (Closes: #321809)
+  * Updated Vietnamese translation (Closes: #322287)
+  * Updated French translation (Closes: #322927)
+  * Added Swedish translation (Closes: #331482)
+  * Changed php depends to phpapi (Closes: #335380)
+  * Added dependencies for php5 (Closes: #333600, #351266)
+
+ -- Cameron Dale <camrdale@gmail.com>  Wed,  8 Mar 2006 20:11:24 +0200
+
+libphp-adodb (4.64-4) unstable; urgency=low
+
+  * Fix libphp-adodb.config script. The '#' is to much.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Fri,  5 Aug 2005 20:11:24 +0200
+
+libphp-adodb (4.64-3) unstable; urgency=low
+
+  * debian/control: let dh_installdebconf set the correct dependency
+    (Readed on planet.debian.net)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Fri,  5 Aug 2005 20:03:57 +0200
+
+libphp-adodb (4.64-2) unstable; urgency=low
+
+  * debian/control: allow debconf or debconf-2.0
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed,  3 Aug 2005 20:28:20 +0200
+
+libphp-adodb (4.64-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #283077)
+  * Update Standards version to 3.6.2
+  * debian/install.sh: correct find options to avoid find error message.
+  * grammar update to template file. (Closes: #312272, #312449)
+  * include Vietnamese translation for debconf. (Closes: #312448)
+  * include Czech translation for debconf. (Closes: #316897)
+  * extend php dependencies (mostly for apache2 users). (Closes: #297102)
+  * move adodb files to new path: /usr/share/php/adodb. (Closes: #278025)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Mon, 11 Jul 2005 13:27:18 +0200
+
+libphp-adodb (4.52-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu,  2 Sep 2004 16:25:00 +0200
+
+libphp-adodb (4.50-1) unstable; urgency=low
+
+  * New upstream version.
+  * Move install.sh into the debian/ directory
+  * Include japanese translation: ja.po. (Closes: #258785)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue, 20 Jul 2004 10:15:41 +0200
+
+libphp-adodb (4.21-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu,  1 Apr 2004 11:05:26 +0200
+
+libphp-adodb (4.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Move upgrade warning from preinst to libphp-adodb config file
+  * Remove lintian/linda overrides
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 21 Jan 2004 11:38:01 +0100
+
+libphp-adodb (4.05-2) unstable; urgency=low
+
+  * debian/control: depend on php4 OR php4-cgi. (Closes: #227228)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue, 20 Jan 2004 15:47:43 +0100
+
+libphp-adodb (4.05-1) unstable; urgency=low
+
+  * New upstream version.
+  * install.sh: install .sql scripts for session handling into doc/session/
+  * debian/README.Debian: include infos about sql session scripts
+
+ -- Thorsten Sauter <tsauter@debian.org>  Mon, 15 Dec 2003 21:56:24 +0100
+
+libphp-adodb (4.04-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu, 11 Dec 2003 15:43:00 +0100
+
+libphp-adodb (4.03-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sun,  9 Nov 2003 14:00:17 +0100
+
+libphp-adodb (4.01-1) unstable; urgency=low
+
+  * New upstream version.
+  * Closes: #217236
+    - fixed problem with rs2html
+    - fixed Insert_ID not working in LogSQL mode
+    - fixed problem with fixblobs for postgres64
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu, 23 Oct 2003 19:10:56 +0200
+
+libphp-adodb (4.00-1) unstable; urgency=low
+
+  * New upstream version.
+  * Fix some spell errors in po/de.po. (thanks Uwe Steinmann)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue, 21 Oct 2003 17:43:37 +0200
+
+libphp-adodb (3.80-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed,  3 Sep 2003 08:46:05 +0200
+
+libphp-adodb (3.72-2) unstable; urgency=low
+
+  * Update Brazilian Portuguese (pt_BR) debconf template. (Closes: #207973)
+  * debian/control:
+    - update standards version.
+    - depend now on php4 >= 4.0.5. libphp-adodb needs this version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sun, 31 Aug 2003 09:54:52 +0200
+
+libphp-adodb (3.72-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control:
+    - update standards version
+    - include cdbs build dependancy
+  * debian/rules:
+    - use cdbs for building the package
+    - prepare for cdbs patch system
+  * debian/changelog: convert to utf8
+  * place the upstream tarball inside the orig tarball
+  * install.sh: be more verbose during build process
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu, 14 Aug 2003 10:50:40 +0200
+
+libphp-adodb (3.60-3) unstable; urgency=low
+
+  * Include french translation. (Closes: #198722)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 25 Jun 2003 23:16:36 +0200
+
+libphp-adodb (3.60-2) unstable; urgency=low
+
+  * change debconf template, to make translation easier. (Closes: #198267)
+  * include pt_BR debconf template. (Closes: #198361)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sun, 22 Jun 2003 02:27:32 +0200
+
+libphp-adodb (3.60-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu, 19 Jun 2003 23:43:45 +0200
+
+libphp-adodb (3.50-1) unstable; urgency=low
+
+  * New upstream release
+  * Change maintainer email address.
+  * debian/rules:
+    - remove dh_compat and use debian/compat instead
+    - install more docs from upstream tarball
+  * debian/control: update standards version to 3.5.10
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 28 May 2003 20:48:48 +0200
+
+libphp-adodb (3.40-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Wed, 16 Apr 2003 22:35:42 +0200
+
+libphp-adodb (3.31-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control: update standards versions.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Tue, 18 Mar 2003 01:44:05 +0100
+
+libphp-adodb (3.11-2) unstable; urgency=low
+
+  * use po-debconf to localize debconf templates
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Wed, 12 Mar 2003 15:55:09 +0100
+
+libphp-adodb (3.11-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat, 15 Feb 2003 22:38:58 +0100
+
+libphp-adodb (3.10-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Fri,  7 Feb 2003 20:20:08 +0100
+
+libphp-adodb (3.00-2) unstable; urgency=low
+
+  * debian/(preinst|templates): warn the user if libphp-adodb is upgraded
+                                from old version with /usr/lib/adodb
+				(prior 2.0)
+  * debian/lintian.overrides: provide a lintian override file
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat, 25 Jan 2003 02:12:48 +0100
+
+libphp-adodb (3.00-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control: update standards versions
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Fri, 10 Jan 2003 22:21:54 +0100
+
+libphp-adodb (2.91-1) unstable; urgency=low
+
+  * New upstream version.
+  * Fix known bug in adodb-lib.inc.php
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat,  4 Jan 2003 12:28:51 +0100
+
+libphp-adodb (2.50-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Fri, 15 Nov 2002 22:23:32 +0100
+
+libphp-adodb (2.43-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sun, 27 Oct 2002 22:12:03 +0100
+
+libphp-adodb (2.42-2) unstable; urgency=low
+
+  * Fix important error with Oracle 8i, will be fixed in the next upcoming
+    2.43 release
+    for details: http://phplens.com/lens/lensforum/msgs.php?id=4059
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Thu, 24 Oct 2002 19:35:35 +0200
+
+libphp-adodb (2.42-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Mon,  7 Oct 2002 20:16:32 +0200
+
+libphp-adodb (2.40-2) unstable; urgency=low
+
+  * Fix some errors in the README.Debian file. (Closes: #160320)
+  * Extend the debian readme file.
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Wed, 11 Sep 2002 00:02:05 +0200
+
+libphp-adodb (2.40-1) unstable; urgency=low
+
+  * New upstream version
+  * Change Standards-Version to 3.5.7
+  * Update debhelper depends to 4.0.2
+  * Add a details description about further installation in the readme
+  * Install the official adodb icons
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Sat,  7 Sep 2002 01:34:02 +0200
+
+libphp-adodb (2.31-1) unstable; urgency=low
+
+  * Adopting the package from previous maintainer
+  * Include the 2.x upstream version from adodb. (Closes: #147472)
+  * Remove postinst/prerm. Closes: #140739
+  * Remove some spelling errors from description and files. Closes: #125015
+  * Move php files from /usr/lib to /usr/share
+  * Packet is not architecture independent
+
+ -- Thorsten Sauter <tsauter@gmx.net>  Wed, 21 Aug 2002 00:13:48 +0200
+
+libphp-adodb (1.51-1) unstable; urgency=low
+
+  * Initial Release (Closes: #108789)
+
+ -- Robert van der Meulen <rvdm@debian.org>  Wed,  7 Nov 2001 22:34:33 +0100

@@ -1,0 +1,40 @@
+golang-k8s-sigs-yaml (1.2.0-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * Backport patch to fix failed tests on arm64
+  * Add patch to fix tests on 32 bit arch (Closes: #986672)
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 15 Apr 2021 23:58:49 +0800
+
+golang-k8s-sigs-yaml (1.2.0-2) unstable; urgency=medium
+
+  * Add patch to only run TestJSONObjectToYAMLObject on amd64
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 08 Mar 2020 04:13:35 +0800
+
+golang-k8s-sigs-yaml (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Exclude vendor directory in d/copyright
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add golang-github-davecgh-go-spew-dev for test depends
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 28 Feb 2020 00:37:23 +0800
+
+golang-k8s-sigs-yaml (1.1.0-2) unstable; urgency=medium
+
+  * Replace golang-yaml.v2-dev with golang-gopkg-yaml.v2-dev
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 20 Jan 2020 11:03:58 +0800
+
+golang-k8s-sigs-yaml (1.1.0-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 05 Jan 2020 18:39:16 +0800

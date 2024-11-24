@@ -1,0 +1,393 @@
+coturn (4.5.1.1-1.1+deb10u2) buster-security; urgency=high
+
+  * [c750a89] Fix-CVE-2020-26262-Enable-Security
+    - Fix ipv6 ::1 loopback check
+    - Not allow allocate peer address 0.0.0.0/8 and ::/128
+
+ -- Mészáros Mihály <misi@majd.eu>  Tue, 15 Dec 2020 17:23:34 +0100
+
+coturn (4.5.1.1-1.1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * specially crafted HTTP POST request can lead to heap overflow which can
+    result in information leak (CVE-2020-6061) (Closes: #951876)
+  * specially crafted HTTP POST request can lead to server crash and denial of
+    service (CVE-2020-6062) (Closes: #951876)
+  * init with zero any new or reused stun buffers (CVE-2020-4067)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 26 Jun 2020 10:49:56 +0200
+
+coturn (4.5.1.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Don't ship the (empty) /var/lib/turn/turndb SQLite database and generate it
+    on-demand in the postinst instead, avoiding overwriting it on
+    upgrade/reinstall. (Closes: #929269)
+
+ -- Chris Lamb <lamby@debian.org>  Sun, 26 May 2019 15:11:04 +0100
+
+coturn (4.5.1.1-1) unstable; urgency=medium
+
+  * [a13ba45] Fix: missing /etc/turnserver.conf
+  * [8a03c32] Revert "Temporary prevent from failing"
+    This reverts commit 218987f4256a8894e06d7876c434b1f37fd0785f.
+  * [96ca6cb] New upstream release (4.5.1.1) (Closes: #916919)
+  * [f399223] Set log to syslog
+  * [7b135b2] Upgrde to debian-policy 4.3
+
+ -- Mészáros Mihály <misi@majd.eu>  Sun, 03 Mar 2019 00:38:30 +0100
+
+coturn (4.5.1.0-1) unstable; urgency=medium
+
+  * Sync to upstream 4.5.1.0
+    - Fix CVE-2018-4058: coTURN unsafe loopback forwarding
+      default configuration vulnerability
+      - by default loopback disabled
+      - no-loopback option removed!
+      - allow-loopback-peers option added
+    - Fix CVE-2018-4056: coTURN Administrator Web Portal
+      SQL injection vulnerability
+      - Web admin disabled by default
+      - Web admin could listen on separated IP and port
+      - web-admin-ip option added
+      - web-admin-port option added
+      - Web admin is disabled on STUN/TURN ports.
+      - web-admin-listen-on-workers option added
+        to enable web-admin STUN/TURN ports
+    - Fix CVE-2018-4059: coTURN server unsafe telnet admin
+      portal default configuration vulnerability
+      - An empty cli-password with an allow-loopback-peers option is prohibited.
+    - fix memory leak in read_config_file
+
+ -- Mészáros Mihály <misi@majd.eu>  Mon, 28 Jan 2019 13:16:57 +0100
+
+coturn (4.5.0.8-1) unstable; urgency=medium
+
+  [ Ferenc Wágner ]
+  * [2239059] Adopt DEP-14 repo structure
+  * [f670437] New upstream release (4.5.0.8)
+  * [455044e] Remove misplaced example files
+
+  [ Mészáros Mihály ]
+  * [924e374] Add myself to uploader
+  * [5505174] updated debian package
+    - add misi@majd.eu to uploaders
+    - add upstream metadata
+    - add systemd service file
+    - update according policy to 4.2.1
+    - update urls from http to https
+    - update override
+    - update compat from 9 to 10
+    - install readme.txt to doc
+  * [bc46839] wrap-and-sort -an
+  * [a468320] Review systemd starter
+  * [2db2918] Add info about systemd to README
+  * [e932875] Service type change to simple
+  * [a9e2953] Add autopkgtest
+  * [8d6976e] change back to fork
+  * [26f2b19] coturn daemon need few sec to setup listeners.
+    It returns elaier after fork, than it has finsihed all listener setup.
+  * [0c93a39] remove sleep from test
+  * [6096e86] Configure pid
+  * [232176f] Add comment why we need to sleep 2 sec
+  * [0a32440] Remove turnserver alias
+  * [36f88e7] Add full path to sleep (for backward compatibility).
+
+ -- Mészáros Mihály <misi@majd.eu>  Tue, 18 Dec 2018 14:43:33 +0100
+
+coturn (4.5.0.7-1) unstable; urgency=medium
+
+  * Sync to upstream 4.5.0.7
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 10 Dec 2017 20:08:06 -0800
+
+coturn (4.5.0.6-1) unstable; urgency=medium
+
+  * Incompatibility with BoringSSL fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 26 Mar 2017 22:09:04 -0700
+
+coturn (4.5.0.5-1) unstable; urgency=medium
+
+  * Sync to upstream 4.5.0.5
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 16 Oct 2016 23:38:04 -0700
+
+coturn (4.5.0.4-4) unstable; urgency=medium
+
+  * trying to fix piuparts report
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Tue, 23 Aug 2016 22:03:18 -0700
+
+coturn (4.5.0.4-3) unstable; urgency=medium
+
+  * trying to fix piuparts report
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 22 Aug 2016 23:56:49 -0700
+
+coturn (4.5.0.4-2) unstable; urgency=medium
+
+  * Debian Policy upgraded to 3.9.8
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 22 Aug 2016 01:32:39 -0700
+
+coturn (4.5.0.4-1) unstable; urgency=medium
+
+  * OpenSSL compatibility (closes: #828271)
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 22 Aug 2016 00:10:03 -0700
+
+coturn (4.5.0.3-1) unstable; urgency=medium
+
+  * SSLv3 support removed, closes: #804440
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 15 Nov 2015 23:38:46 -0800
+
+coturn (4.5.0.2-3) unstable; urgency=medium
+
+  * Telnet package dependency fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Fri, 02 Oct 2015 23:47:29 -0700
+
+coturn (4.5.0.2-1) unstable; urgency=medium
+
+  * DTLS segfault fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Wed, 30 Sep 2015 00:25:00 -0700
+
+coturn (4.5.0.1-5) unstable; urgency=medium
+
+  * Package for Sid
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 28 Sep 2015 00:17:13 -0700
+
+coturn (4.5.0.1-4) unstable; urgency=medium
+
+  * Copyright fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sat, 26 Sep 2015 20:55:13 -0700
+
+coturn (4.5.0.1-3) unstable; urgency=medium
+
+  * Typo fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sat, 26 Sep 2015 18:06:31 -0700
+
+coturn (4.5.0.1-2) unstable; urgency=medium
+
+  * Specs adjusted
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sat, 26 Sep 2015 15:03:38 -0700
+
+coturn (4.5.0.1-1) unstable; urgency=low
+
+  * Sync to upstream 4.5.0.1
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 20 Sep 2015 21:58:30 -0700
+
+coturn (4.4.5.4-2) unstable; urgency=low
+
+  * Github migration
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 19 Jul 2015 14:10:51 -0700
+
+coturn (4.4.5.4-1) unstable; urgency=low
+
+  * Migrated to Github
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 19 Jul 2015 14:00:45 -0700
+
+coturn (4.4.5.3-1) unstable; urgency=low
+
+  * sync to 4.4.5.3: security fix
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 28 Jun 2015 20:35:15 -0700
+
+coturn (4.4.5.2-1) unstable; urgency=low
+
+  * Sync to upstream 4.4.5.2
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sat, 06 Jun 2015 01:07:27 -0700
+
+coturn (4.4.5.1-1) unstable; urgency=low
+
+  * Sync to 4.4.5.1 upstream
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Wed, 27 May 2015 00:17:29 -0700
+
+coturn (4.4.4.2-1) unstable; urgency=low
+
+  * SCTP fixes.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 05 Apr 2015 21:24:55 -0700
+
+coturn (4.4.4.1-2) unstable; urgency=low
+
+  * sctp example script added to install
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 23 Mar 2015 23:44:00 -0700
+
+coturn (4.4.4.1-1) unstable; urgency=low
+
+  * Sync to 4.4.4.1: SCTP support and encrypted admin passwords support.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 23 Mar 2015 23:28:25 -0700
+
+coturn (4.4.2.3-1) unstable; urgency=low
+
+  * Sync to upstream 4.4.2.3
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Thu, 05 Mar 2015 23:33:39 -0800
+
+coturn (4.4.2.2-1) unstable; urgency=low
+
+  * Sync to upstream 4.4.2.2: SQLite db schema bug fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 22 Feb 2015 21:14:19 -0800
+
+coturn (4.4.2.1-1) unstable; urgency=low
+
+  * Sync to the new upstream version: updated according to the new draft
+    specs; bug fixes.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 08 Feb 2015 13:04:20 -0800
+
+coturn (4.4.1.2-1) unstable; urgency=low
+
+  * Sync to 4.4.1.2 upstream
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 01 Feb 2015 20:43:30 -0800
+
+coturn (4.4.1.1-2) unstable; urgency=low
+
+  * source control info fixed
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Fri, 30 Jan 2015 22:34:46 -0800
+
+coturn (4.4.1.1-1) unstable; urgency=low
+
+  * Sync to 4.4.1.1: security fixes; https web admin connection.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 25 Jan 2015 01:50:44 -0800
+
+coturn (4.3.3.1-1) unstable; urgency=low
+
+  * Sync to 4.3.3.1
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Wed, 24 Dec 2014 00:50:38 -0800
+
+coturn (4.3.2.2-1) unstable; urgency=low
+
+  * Sync to 4.3.2.2
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 14 Dec 2014 22:06:24 -0800
+
+coturn (4.3.2.1-1) unstable; urgency=low
+
+  * Sync to upstream 4.3.2.1
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 14 Dec 2014 21:42:37 -0800
+
+coturn (4.3.1.3-1) unstable; urgency=low
+
+  * Sync to 4.3.1.3: a maintenance build.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 07 Dec 2014 22:50:45 -0800
+
+coturn (4.3.1.2-1) unstable; urgency=low
+
+  * Sync to 4.3.1.2: SQLite DB installation fixed.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 23 Nov 2014 13:38:11 -0800
+
+coturn (4.3.1.1-1) unstable; urgency=low
+
+  * Sync to 4.3.1.1: SQLite support added.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 23 Nov 2014 00:15:03 -0800
+
+coturn (4.2.3.1-1) unstable; urgency=low
+
+  * Sync to 4.2.3.1
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sun, 09 Nov 2014 22:56:18 -0800
+
+coturn (4.2.2.2-1) unstable; urgency=low
+
+  * 1) Sync to 4.2.2.2; 2) UFW definitions added to the debian package.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Wed, 29 Oct 2014 23:49:49 -0700
+
+coturn (4.2.1.2-1) unstable; urgency=low
+
+  * Sync to upstream 4.2.1.2 version: the oAuth support added.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Mon, 13 Oct 2014 00:52:06 -0700
+
+coturn (4.1.2.1-3) unstable; urgency=low
+
+  * List of supported specs extended.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Tue, 02 Sep 2014 22:57:32 -0700
+
+coturn (4.1.2.1-2) unstable; urgency=low
+
+  * SVN source control tags changed to GIT
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Tue, 02 Sep 2014 22:23:55 -0700
+
+coturn (4.1.2.1-1) unstable; urgency=low
+
+  * Sync to upstream 4.1.2.1
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Wed, 20 Aug 2014 22:23:56 -0700
+
+coturn (4.1.1.1-1) unstable; urgency=low
+
+  * Sync to upstream 4.1.1.1
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Thu, 31 Jul 2014 00:55:33 -0700
+
+coturn (4.1.0.2-1) unstable; urgency=low
+
+  * Sync to upstream 4.1.0.2
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Tue, 22 Jul 2014 13:23:09 -0700
+
+coturn (4.1.0.1-1) unstable; urgency=low
+
+  * Sync to upstream 4.1.0.1: SSODA support, bug fixes.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Tue, 22 Jul 2014 08:46:21 -0700
+
+coturn (4.0.1.3-1) unstable; urgency=low
+
+  * Sync to upstream 4.0.1.3
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sat, 21 Jun 2014 00:00:39 -0700
+
+coturn (4.0.1.2-1) unstable; urgency=low
+
+  * Sync to upstream 4.0.1.2: Bandwidth specs implemented.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Sat, 07 Jun 2014 00:07:45 -0700
+
+coturn (4.0.0.2-1) unstable; urgency=low
+
+  * Sync to upstream 4.0.0.2.
+  * Package description in the control file updated.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Fri, 23 May 2014 23:20:39 -0700
+
+coturn (4.0.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Kernel channels definitions added.
+
+ -- Oleg Moskalenko <mom040267@gmail.com>  Wed, 07 May 2014 23:28:04 -0700
+
+coturn (4.0.0.0-1) unstable; urgency=low
+
+  * Initial Debian release (Closes: #747010)
+
+ -- Daniel Pocock <daniel@pocock.pro>  Wed, 07 May 2014 21:33:36 +0200

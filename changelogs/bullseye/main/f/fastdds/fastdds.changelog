@@ -1,0 +1,71 @@
+fastdds (2.1.0+ds-9+deb11u1) bullseye-security; urgency=medium
+
+  * Backport security fixes
+    - CVE-2021-38425 Denial-of-service by auth package flooding
+    - CVE-2023-39534 Malformed GAP submessage triggers assertion failure
+    - CVE-2023-39945 Unhandled exception on malformed data submessage
+    - CVE-2023-39946 Heap overflow triggered by PID_PROPERTY_LIST
+    - CVE-2023-39947 Heap overflow triggered by PID_PROPERTY_LIST
+    - CVE-2023-39948 Uncaught fastcdr exceptions
+    - CVE-2023-39949 Improper validation of sequence numbers
+    (Closes: #1043548)
+
+ -- Timo Röhling <roehling@debian.org>  Fri, 18 Aug 2023 20:19:21 +0200
+
+fastdds (2.1.0+ds-9) unstable; urgency=medium
+
+  * Disable import of fast-server-discovery target
+
+ -- Timo Röhling <timo@gaussglocke.de>  Fri, 29 Jan 2021 12:33:00 +0100
+
+fastdds (2.1.0+ds-8) unstable; urgency=medium
+
+  * Clean up symbols
+
+ -- Timo Röhling <timo@gaussglocke.de>  Tue, 05 Jan 2021 21:40:50 +0100
+
+fastdds (2.1.0+ds-7) unstable; urgency=medium
+
+  * Update symbols for new libasio DSO
+
+ -- Timo Röhling <timo@gaussglocke.de>  Tue, 05 Jan 2021 17:11:18 +0100
+
+fastdds (2.1.0+ds-6) unstable; urgency=medium
+
+  * Fix symbols for sh4, kfreebsd-amd64, hurd-i386
+
+ -- Timo Röhling <timo@gaussglocke.de>  Tue, 05 Jan 2021 15:12:43 +0100
+
+fastdds (2.1.0+ds-5) unstable; urgency=medium
+
+  * Adjust symbols file for Ubuntu
+  * Include different integer sizes in libatomic check
+  * Update URL in d/watch
+  * Disable non-compiling test on hurd-i386
+
+ -- Timo Röhling <timo@gaussglocke.de>  Wed, 30 Dec 2020 21:55:56 +0100
+
+fastdds (2.1.0+ds-4) unstable; urgency=medium
+
+  * Link tests against libatomic where needed
+
+ -- Timo Röhling <timo@gaussglocke.de>  Sat, 26 Dec 2020 16:05:50 +0100
+
+fastdds (2.1.0+ds-3) unstable; urgency=medium
+
+  * Make libatomic a public dependency
+
+ -- Timo Röhling <timo@gaussglocke.de>  Fri, 25 Dec 2020 17:42:54 +0100
+
+fastdds (2.1.0+ds-2) unstable; urgency=medium
+
+  * Fix FTBFS due to missing -latomic
+  * Workaround for __to_xstring symbol variations
+
+ -- Timo Röhling <timo@gaussglocke.de>  Fri, 25 Dec 2020 15:26:27 +0100
+
+fastdds (2.1.0+ds-1) unstable; urgency=medium
+
+  * Initial release (Closes: #976150)
+
+ -- Timo Röhling <timo@gaussglocke.de>  Sat, 12 Dec 2020 17:45:10 +0100

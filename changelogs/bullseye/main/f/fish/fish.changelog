@@ -1,0 +1,817 @@
+fish (3.1.2-3+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Prevent certain git commands that may invoke certain external programs
+    in fish_git_prompt (CVE-2022-20001)
+
+ -- Aron Xu <aron@debian.org>  Fri, 16 Sep 2022 22:42:06 +0800
+
+fish (3.1.2-3) unstable; urgency=medium
+
+  * Fix changelog that I somehow mangled.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Fri, 24 Jul 2020 09:27:34 +0200
+
+fish (3.1.2-2) unstable; urgency=medium
+
+  * Minimize upstream keyring.
+  * Fix dh_install excludes, thanks to David Adam (Closes: #964385).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Thu, 23 Jul 2020 12:28:54 +0200
+
+fish (3.1.2-1) unstable; urgency=medium
+
+  * New upstream version 3.1.2
+  * Bump debhelper compat level to 13 (no change).
+  * Specify Rules-Requires-Root: no.
+
+ -- Mo Zhou <lumin@debian.org>  Tue, 12 May 2020 09:10:21 +0800
+
+fish (3.1.0-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  [ Piper McCorkle ]
+  * Depend on python3-distutils so fish_config works (Closes: #956565)
+
+ -- Punit Agrawal <punit@debian.org>  Sat, 18 Apr 2020 07:36:57 +0900
+
+fish (3.1.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Mark fish-common as Multi-Arch: foreign
+
+ -- Punit Agrawal <punit@debian.org>  Sat, 07 Mar 2020 10:01:55 +0900
+
+fish (3.1.0-1) unstable; urgency=medium
+
+  * New upstream version 3.1.0
+  * Deprecate two of the old patches as they nolonger apply.
+  * Build system migration from autotools to CMake.
+  * Export HOME=/tmp for the tests.
+  * Update my mail address in control and copyright.
+  * Don't install rg.fish (older than the one provided in src:ripgrep).
+    Change dh_missing behaviour to --fail-missing.
+  * Bump Standards-Version to 4.5.0 (no change).
+  * Rules: don't install CHANGELOG more than once.
+  * Apply wrap-and-sort.
+  * Deprecate d/compat and B-D on debhelper-compat (= 12).
+  * Build-Depends on python3.
+  * Build-Depends on ninja and use the cmake+ninja buildsystem.
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 13 Feb 2020 12:19:00 +0800
+
+fish (3.0.2-2) unstable; urgency=medium
+
+  * Discard stderr message from systemd 241 when doing completion.
+    (Closes: #925308)
+
+ -- Mo Zhou <cdluminate@gmail.com>  Tue, 26 Mar 2019 13:16:52 +0000
+
+fish (3.0.2-1) unstable; urgency=medium
+
+  * New upstream version 3.0.2
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sat, 23 Feb 2019 01:04:26 +0000
+
+fish (3.0.1-1) unstable; urgency=medium
+
+  * New upstream version 3.0.1
+  * Remove the differential patch between 3.0.0 and 3.0.1(snapshot).
+
+ -- Mo Zhou <cdluminate@gmail.com>  Mon, 11 Feb 2019 16:38:38 +0000
+
+fish (3.0.0-2) unstable; urgency=medium
+
+  * Import increment patch from 3.0.0 to 3.0.1~git.c9e5299.
+  * Remove duplicated changelog file.
+  * Update lintian overrides.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Thu, 07 Feb 2019 02:02:53 +0000
+
+fish (3.0.0-1) unstable; urgency=medium
+
+  * New upstream version 3.0.0
+  * ITS: Append myself to Uploaders. (Closes: #918476)
+  * Remove --parallel from rules since it's the default for compat 11.
+  * Refresh existing patches.
+  * Move upstream README.md from fish-common to fish.
+  * Remove the installchangelog override and install changelog.
+  * Bump Standards-Version to 4.3.0 (no change).
+  * Use canonical URL in Vcs-Browser field.
+  * Remove dh_strip override since debug-symbol-migration is complete.
+  * NEWS: fish 3 introduced some breaking change.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Wed, 09 Jan 2019 02:55:53 +0000
+
+fish (2.7.1-3) unstable; urgency=medium
+
+  * Disable the test suite again until the failures are resolved.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sat, 17 Feb 2018 03:19:00 +0200
+
+fish (2.7.1-2) unstable; urgency=medium
+
+  * Replace $(PWD) with $(CURDIR) in Makefile.am (closes: #887524)
+    (hopefully!)
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Wed, 17 Jan 2018 20:06:59 +0200
+
+fish (2.7.1-1) unstable; urgency=medium
+
+  * Move to salsa.debian.org.
+  * New upstream release.
+  * Bump Standards-Version to 4.1.3 (no changes).
+  * Update to dh compat 11.
+  * Fix maintscript syntax.
+  * Run test suite.
+  * Add autopkgtests.
+  * Drop pointless Recommends: python in fish-common.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Thu, 11 Jan 2018 06:55:29 +0200
+
+fish (2.7.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop debian/patches/reproducible-doc-toc (equivalent changes included
+    upstream).
+  * Depend on python3 for completions support (closes: #882996).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sun, 17 Dec 2017 11:55:59 +0200
+
+fish (2.6.0-2) unstable; urgency=medium
+
+  * Drop patches/reproducible-doxyfile as this is no longer needed (and
+    also wrong, as it was was refreshed incorrectly at some point).
+  * Show commands run during the build (closes: #881251); thanks to Sven
+    Joachim for the patch.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Mon, 13 Nov 2017 06:14:48 +0200
+
+fish (2.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - ifconfig completion no longer changes cwd (closes: #859314).
+    - Refresh quilt patches.
+  * Depend on man-db as the completion system uses apropos
+    (closes: #857630).
+  * Drop fish-dbg and migrate to automatic -dbgsym packages.
+  * Bump Standards-Version to 4.0.0 (no changes).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Fri, 14 Jul 2017 08:12:37 +0200
+
+fish (2.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sun, 11 Dec 2016 04:26:38 +0200
+
+fish (2.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch debian/watch over to GitHub and check PGP signature
+    (closes: #829760).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Thu, 07 Jul 2016 03:34:20 +0200
+
+fish (2.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Refresh patches.
+    - Drop history-permissions-871a208.patch (was taken from upstream).
+  * Bump Standards-Version to 3.9.8 (no changes).
+  * Update Vcs-* to use https.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sun, 22 May 2016 09:53:18 +0200
+
+fish (2.2.0-3) unstable; urgency=medium
+
+  * Backport upstream patch for history permissions handling
+    (closes: #804092).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Wed, 16 Dec 2015 18:00:12 +0200
+
+fish (2.2.0-2) unstable; urgency=medium
+
+  * Fix botched maintainer scripts, and simplify by using .maintscript
+    files; this restores the add-shell/remove-shell functionality so fish
+    should once again be added to /etc/shells (closes: #793822).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sun, 02 Aug 2015 09:23:53 +0200
+
+fish (2.2.0-1) unstable; urgency=medium
+
+  * Add Pre-Depends for dpkg-maintscript-helper symlink_to_dir command
+    (closes: #792658).
+  * New upstream release.
+    - fishd has been removed upstream (closes: #788056).
+    - Deprecated GREP_* environment variables are no longer used
+      (closes: #791686).
+    - jQuery is no longer included in the upstream tarball, so no need to
+      repack (Angular is used in its place, but it is an unminified copy).
+    - sys_errlist is no longer used if unavailable (closes: #771052).
+    - Refresh patches to apply cleanly again.
+  * Apply patch from Chris Lamb to avoid locale-specific ordering
+    (closes: #791648).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sat, 18 Jul 2015 21:53:03 +0200
+
+fish (2.1.2+dfsg1-2) unstable; urgency=medium
+
+  * libjs-jquery dependency belongs more properly in fish-common.
+  * Fix replacement of /usr/doc symlinks with real directories
+    (closes: #788162).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Tue, 09 Jun 2015 08:51:44 +0200
+
+fish (2.1.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Normalized versioning scheme.
+  * Update debian/copyright, and switch to machine-readable format.
+    - Files-Excluded is now used for rebuilding the upstream tarball.
+  * Remove obsolete Suggests: menu (closes: #647367).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Wed, 29 Apr 2015 18:59:59 +0200
+
+fish (2.1.1.dfsg-3) unstable; urgency=low
+
+  * Adopting, set myself as maintainer (closes: #771785).
+  * Switch to dh sequencer (closes: #770973).
+  * Various general package cleanups / fixes.
+    - Bump Standards-Version.
+    - Update debian/watch.
+    - Update Vcs-* fields.
+  * Add Python to Recommends as various helper tools require it.
+    - Also update the scripts to use system Python instead of env.
+  * Move arch-indep files to fish-common package.
+  * Allow parallel building in debian/rules.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Sat, 13 Dec 2014 03:56:19 +0200
+
+fish (2.1.1.dfsg-2) unstable; urgency=medium
+
+  * Orphaning.
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Mon, 01 Dec 2014 14:15:32 -0200
+
+fish (2.1.1.dfsg-1) unstable; urgency=medium
+
+  * Remove jQuery file from upstream tarball
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Wed, 26 Nov 2014 20:13:12 -0200
+
+fish (2.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+  - includes fixes for the following security issues (Closes: #746259):
+    + CVE-2014-2905
+    + CVE-2014-2906
+    + CVE-2014-2914
+    + CVE-2014-3219
+    + CVE-2014-3856
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Mon, 24 Nov 2014 14:09:15 -0200
+
+fish (2.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+  - tarball mangled to not include minified jQuery (Closes: #744696)
+  * debian/control, debian/fish.links:
+  - depend on libjs-jquery
+  - link the minified jquery to where the original minified jQuery
+    got installed to
+  * debian/patches/01_fix-doc-typo.patch:
+  - removed, applied upstream
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sat, 10 May 2014 11:11:39 -0300
+
+fish (2.0.0-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches/01_fix-doc-typo.patch:
+  - removed; applied upstream
+  * debian/rules:
+  - README is now README.md
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Thu, 11 Jul 2013 23:36:28 -0300
+
+fish (1.23.1+20120106.git8b407a3-1) unstable; urgency=low
+
+  * New upstream snapshot
+  - No longer able to reproduce crash when calling funcsave with no
+    arguments (Closes: #547781)
+  - No longer able to reproduce schroot being STOPed when quitting it
+    from a in-chroot fish shell (Closes: #517099)
+  * Fix home page URL. Thanks to Patrik Lembke <blambi@chebab.com> for
+    noticing and letting me know. (Closes: #653246)
+  * debian/patches/fixes/fish_greeting.diff,
+    debian/patches/fixes/spelling.diff:
+  - removed; applied upstream
+  * debian/control, debian/rules:
+  - call autoreconf to generate the configure script, and Makefile.in
+    files
+  * debian/rules:
+  - ChangeLog does not exist anymore
+  * debian/patches/01_fix-doc-typo.patch:
+  - Fix documentation typo, thanks weakish <weakish@gmail.com>
+    for noticing and letting us know (Closes: #613975)
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sun, 08 Jan 2012 18:32:48 -0200
+
+fish (1.23.1-2) unstable; urgency=low
+
+  * New maintainer (Closes: #518793)
+
+  [ Adrien <alfredp@laposte.net> ]
+  * debian/patches/features/000_apt-cache-completion.patch:
+  - add apt-cache completion support (Closes: #518512)
+
+  [ Gustavo Noronha Silva ]
+  * debian/control:
+  - updated Standards-Version with no changes
+  - change fish-dbg's section to debug
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Sun, 12 Apr 2009 21:39:33 -0300
+
+fish (1.23.1-1) unstable; urgency=low
+
+  * Orphaning the packages.  Maintainer set to QA group.
+  * New upstream release
+    - Fix cd function to handle empty variables correctly. (Closes: #517106)
+    - Pressing Control-C (or otherwise changeing the command line content
+      through the commandline builtin) should clear the search buffer.
+      (Closes: #517104)
+  * Remove fixes/mimedb-hang.diff, merged upstream.
+  * Remove features/ssh-host-completion, merged upstream.
+  * Refresh fixes/spelling and fixes/fish_greeting.
+  * debian/rules:
+    - Remove config.* in clean and copy the system files in configure-stamp.
+    - Specify --docdir when calling configure so documentation is installed to
+      the proper directory.
+
+ -- James Vega <jamessan@debian.org>  Sun, 08 Mar 2009 13:15:58 -0400
+
+fish (1.23.0-6) unstable; urgency=low
+
+  * Switch to using topgit and quilt so there isn't a monolithic .diff.gz.
+    + debian/rules:
+      - Include quilt.make and tg2quilt.mk
+      - Add proper target prerequisites for (un)applying patches.
+    + debian/control: Add quilt to Build-Depends
+  * Add fixes/mimedb-hang.diff to fix an occasional problem where mimedb gets
+    stuck in an infinite loop trying to parse a mime info file.  Thanks to
+    James Reeves <jreeves@weavejester.com>.  (Closes: #487259)
+  * Add features/ssh-host-completion to use ~/.ssh/config as an additional
+    source of hostnames for hostname completion.  Based on a patch from
+    Antonio Terceiro <terceiro@softwarelivre.org>.  (Closes: #511915)
+  * debian/control:
+    + Update Vcs-* to point to collab-maint
+    + Bump Standards-Version to 3.8.0.0
+  * Policy changes:
+    + debian/rules: Handle space-separated DEB_BUILD_OPTIONS and parallel=n
+
+ -- James Vega <jamessan@debian.org>  Fri, 16 Jan 2009 18:26:47 -0500
+
+fish (1.23.0-5) unstable; urgency=low
+
+  "Where's that brown paper bag?" release
+  * debian/rules:
+    - Properly preserve the original versions of the config.sub/config.guess
+      instead of using config.sub for both.
+    - Tell dh_clean not to remove the preserved config.sub/config.guess.
+
+ -- James Vega <jamessan@debian.org>  Thu, 06 Mar 2008 15:58:43 -0500
+
+fish (1.23.0-4) unstable; urgency=low
+
+  * debian/completions/dupload.fish:
+    - Remove use of a function that doesn't exist anymore.
+
+ -- James Vega <jamessan@debian.org>  Wed, 05 Mar 2008 15:36:41 -0500
+
+fish (1.23.0-3) unstable; urgency=low
+
+  * debian/control:
+    - Priority: extra for fish-dbg
+  * debian/fish.doc-base
+    - Change Section to Shells to match doc-base naming
+
+ -- James Vega <jamessan@debian.org>  Wed, 05 Mar 2008 02:29:58 -0500
+
+fish (1.23.0-2) unstable; urgency=low
+
+  * debian/preinst:
+    - Use .dpkg-old instead of .dpkg-bak when removing conffiles.
+  * Added patches:
+    - Fix a spelling error in fish_indent.1.  (Closes: #463612)
+    - Quote $fish_greeting when used as a switch condition to allow users to
+      set it to an empty value.  (Closes: #465415)
+    - Fix the "Writing your own completions" link in the complete command's
+      documentation.  (Closes: #466267)
+  * debian/control:
+    - Add fish-dbg package.
+    - Remove cdbs from Build-Depends.
+  * debian/rules:
+    - Rewrite without using cdbs.
+  * debian/compat:
+    - Bump to debhelper version 5
+
+ -- James Vega <jamessan@debian.org>  Wed, 05 Mar 2008 02:03:59 -0500
+
+fish (1.23.0-1) unstable; urgency=low
+
+  * New upstream version.
+    - Merged patches:
+      + screen.c: Use wcsstr instead of wcscmp when checking if $TERM is a
+        screen variant.
+      + complete.c: Use wcscmp instead of == for string comparisons.
+  * debian/control:
+    - Bump policy to 3.7.3.0 - no changes needed.
+    - Remove version from debhelper Build-Depends.
+    - Add Doxygen to Build-Depends.
+  * debian/preinst:
+    - Handle upstream's removal of /etc/fish/fish_inputrc
+  * Added patches:
+    - Fix various spelling errors in documentation.
+  * debian/rules:
+    - Remove inclusion of simply-patchsys.mk.
+    - Remove dead code to figure out the upstream version.
+
+ -- James Vega <jamessan@debian.org>  Mon, 14 Jan 2008 09:29:03 -0500
+
+fish (1.22.3-3) unstable; urgency=low
+
+  * debian/control: Add Vcs-* and Homepage fields.
+  * Added patches:
+    - screen.c: Use wcsstr instead of wcscmp to determine whether $TERM is
+      screen in order to properly handle $TERM set to screen-bce,
+      screen-256color, etc.
+    - complete.c: Change a few string comparisons to use wcscmp instead of ==.
+  * Removed conffile handling from debian/{pre,post}inst since the version of
+    fish in Etch is newer than the version the maintainer scripts were
+    handling.
+  * debian/menu: Change the Apps section to Applications.
+
+ -- James Vega <jamessan@debian.org>  Sat, 13 Oct 2007 16:34:09 -0400
+
+fish (1.22.3-2) unstable; urgency=low
+
+  * Apparently, fish's tests still aren't well behaved on certain systems when
+    there's no $HOME.  Disabling the tests again while I talk with upstream.
+
+ -- James Vega <jamessan@debian.org>  Mon, 26 Mar 2007 18:30:10 -0400
+
+fish (1.22.3-1) unstable; urgency=low
+
+  * New upstream releases.
+  * debian/patches:
+    + Remove unnecessary_libs.diff since it causes some build issues I don't
+      feel like working around, it's not extremely important, and upstream's
+      next version will have a proper fix.
+    + Add Makefile.in-user_doc.diff which allows fish to build without
+      attempting to invoke Doxygen (since the docs are shipped with it).
+    + Add __fish_complete_vi.fish-unknown_function.diff which removes a line
+      that calls a non-existent function.
+  * debian/rules:
+    + No longer have to clean up after upstream's clean target.
+    + Remove export target now that I'm using bzr-builddeb
+    + Re-enable upstream's tests.  (Closes: #398721)
+
+ -- James Vega <jamessan@debian.org>  Mon, 26 Mar 2007 16:00:39 -0400
+
+fish (1.22.1-2) unstable; urgency=low
+
+  * Stop running upstream's test target since it relies on already having a
+    version of fish installed.  Fixes the FTBFS on all the buildds.
+
+ -- James Vega <jamessan@debian.org>  Tue, 14 Nov 2006 14:47:30 -0500
+
+fish (1.22.1-1) unstable; urgency=low
+
+  * New upstream releases. (closes: #396705)
+    - Added multi-line commandline editing.
+    - Restructured config file directories/naming.
+  * Clean out debian/patches since those are all integrated upstream.
+  * Update preinst/postinst to handle (re)moving the conffiles to the new
+    locations upstream is using.
+
+ -- James Vega <jamessan@debian.org>  Mon, 13 Nov 2006 10:58:42 -0500
+
+fish (1.21.12-4) unstable; urgency=medium
+
+  * Pull fish_tests.diff from upstream, which should fix the pointer
+    conversions in fish_tests.c. (closes: #394409)
+  * Urgency medium for RC bug.
+
+ -- James Vega <jamessan@debian.org>  Sun, 22 Oct 2006 10:37:37 -0400
+
+fish (1.21.12-3) unstable; urgency=medium
+
+  * medium urgency for fix to #388342 which was causing fish to FTBFS on ia64
+  * Pull a few patches from upstream:
+    - xdg_posix.diff: Should fix the problems with using strdup() and
+      compiling with -std=c99. (closes: #388342)
+    - zero_cast.diff: Cast 0 to void* when being used as a null pointer to
+      avoid problems on archs where sizeof(int) != sizeof(void*).
+
+ -- James Vega <jamessan@debian.org>  Fri, 20 Oct 2006 19:23:54 -0400
+
+fish (1.21.12-2) unstable; urgency=low
+
+  * Add unnecessary_libs.diff, which removes extra libraries which were being
+    linked with a couple binaries.
+  * Update upstream's URL. (closes: #391668)
+  * Pull a few patches from upstream to fix various bugs:
+    - manpages.diff: Fixes the formatting of a few manpages (closes: #382731)
+    - prevd_error.diff: Errors when using prevd or 'cd -'
+    - subcommand_completion.diff, subcommand_root_completion.diff,
+      sudo_path.diff: Fixes sudo completion. (closes: #380707)
+    - proper_clean.diff: Fix the clean target so that it doesn't remove extra
+      files and does remove generated files.
+  * Re-add groff-base Build-Depends.  This was used for more than just
+    building the documentation.
+
+ -- James Vega <jamessan@debian.org>  Mon,  9 Oct 2006 00:43:07 -0400
+
+fish (1.21.12-1) unstable; urgency=low
+
+  * New upstream versions.
+
+ -- James Vega <jamessan@debian.org>  Tue, 12 Sep 2006 09:17:27 -0400
+
+fish (1.21.10-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- James Vega <jamessan@debian.org>  Mon, 31 Jul 2006 19:21:49 -0400
+
+fish (1.21.9-2) unstable; urgency=low
+
+  * Pull 01_darcs-snapshot-2006-07-23.diff from upstream's Darcs repo to fix
+    variable substitutions which prevented fish's inputrc from being sourced.
+    + Remove 01_darcs-snapshot-2006-07-19.diff and 02_PACKAGE_TARNAME.diff
+      since they're included in this patch.
+
+ -- James Vega <jamessan@debian.org>  Thu, 27 Jul 2006 09:12:34 -0400
+
+fish (1.21.9-1) unstable; urgency=low
+
+  * New upstream release.
+    + Additional emacs-like keybindings (closes: #372174)
+    + Documentation is distributed in the tarball. No longer need doxygen and
+      groff-base Build-depends.
+  * Pull 01_darcs-snapshot-2006-07-19.diff from upstream's Darcs repo to fix
+    some test failures and incorrectly generated config files.
+  * Pull 02_PACKAGE_TARNAME.diff from upstream's Darcs repo to correct where
+    files are installed under /usr/share/doc.
+  * Re-add the preinst and NEWS files that went missing in 1.21.6-1 to handle
+    upstream moving the function/completion files from /etc/fish.d to
+    /usr/share/fish.  Thanks, mjt.
+
+ -- James Vega <jamessan@debian.org>  Sat, 22 Jul 2006 03:42:28 -0400
+
+fish (1.21.8-1) unstable; urgency=low
+
+  * New upstream release. (closes: #376407)
+
+ -- James Vega <jamessan@debian.org>  Mon,  3 Jul 2006 00:34:55 -0400
+
+fish (1.21.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add export rule to debian/rules to prepare a clean build directory.
+
+ -- James Vega <jamessan@debian.org>  Thu, 25 May 2006 08:58:05 -0400
+
+fish (1.21.6-2) unstable; urgency=low
+
+  * Pull 02-Eterm_workaround.diff from upstream which fixes a bug where
+    fish wouldn't terminate when Eterm was killed. (closes: #364052)
+
+ -- James Vega <jamessan@debian.org>  Wed, 10 May 2006 16:25:34 -0400
+
+fish (1.21.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Pull 01-apropos.fish.diff from upstream to fix an escaping problem in the
+    completion file for apropos. (closes: #366688)
+  * Update to 3.7.2.0 policy compliance (no changes needed)
+
+ -- James Vega <jamessan@debian.org>  Wed, 10 May 2006 11:03:05 -0400
+
+fish (1.21.5-1) unstable; urgency=low
+
+  * New upstream releases.
+    + Merged 01-fallback.c.patch
+    + 'type -f' no longer returns success in all cases (closes: #363495)
+  * debian/control:
+    + Add Depends: lynx | www-browser (closes: #361713)
+  * debian/copyright:
+    + Update to reflect inclusion of glibc's wcstok in fallback.c.
+  * Pull history.c-segfault.patch from upstream to fix a segfault when the
+    history is modified in non-interactive mode.
+
+ -- James Vega <jamessan@debian.org>  Thu, 20 Apr 2006 01:04:24 -0400
+
+fish (1.21.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    + Add 01-fallback.c.patch, which fixes a FTBFS on ppc.
+
+ -- James Vega <jamessan@debian.org>  Mon,  3 Apr 2006 11:00:01 -0400
+
+fish (1.21.2-1) unstable; urgency=low
+
+  * New upstream release
+    + Fix invalid GREP_OPTIONS environment variable. (closes: #358200)
+  * debian/patches:
+    + Remove 01backslash_escape.diff, was pulled from upstream for a bug
+      that's fixed in this release.
+    + Remove 00clean.diff, applied upstream.
+  * Add completion for dupload(1).
+  * debian/copyright:
+    + Reorganize the license information.
+    + Include direct copies of license headers from source files.
+
+ -- James Vega <jamessan@debian.org>  Sun, 26 Mar 2006 19:20:17 -0500
+
+fish (1.21.1-1) unstable; urgency=low
+
+  * New upstream release
+    + Fixes segfault when parsing a command with invalid syntax.
+      (closes: #355372)
+  * debian/copyright: Add the copyright/license information for the
+    xdgmime* files.
+  * Add 01backslash_escape.diff from upstream to support escaped
+    backslashes in quoted strings.
+
+ -- James Vega <jamessan@debian.org>  Sun,  5 Mar 2006 21:56:44 -0500
+
+fish (1.20.2-1) unstable; urgency=low
+
+  * New upstream release
+    + Minor bug fixes.
+    + Gracefully handle improperly encoded text.
+    + Improved completion of subcommands (e.g., sudo {cmd}).
+
+ -- James Vega <jamessan@debian.org>  Thu,  9 Feb 2006 10:11:12 -0500
+
+fish (1.20.1-1) unstable; urgency=low
+
+  * New upstream release
+    + Updated Swedish translation.
+    + Updated/added command completions.
+    + Added stacktraces for errors in shell functions.
+    + Added manpages for fishd and fish_pager. (Take that lintian!)
+  * Last upload wasn't supposed to be an NMU.  Fix the maintainer info.
+
+ -- James Vega <jamessan@debian.org>  Fri, 27 Jan 2006 00:29:05 -0500
+
+fish (1.20.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixes FTBFS/segfault on ia64.
+    + Added command completions for new commands, including gpg.
+    + Implemented i18n support.
+    + Short-circuit commands (and/or) now use infix instead of
+      RPN notation.
+  * debian/rules: No longer ship duplicate copies of upstream's
+    ChangeLog.
+  * debian/patches: Add 00make_clean.diff to make clean really clean.
+  * debian/control: Add autoconf and gettext to Build-Depend
+
+ -- James Vega <jamessan@debian.org>  Tue, 17 Jan 2006 18:02:07 -0500
+
+fish (1.19.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Add /sbin and /usr/sbin to PATH when root.
+    + Remove various GNUisms used in fish's shellscripts.
+    + Fix an infinite loop in the source builtin.
+    + Updated prompt_pwd to shorten long paths by displaying only
+      the first character of the shortened directories.
+
+ -- James Vega <jamessan@debian.org>  Wed, 11 Jan 2006 22:21:20 -0500
+
+fish (1.18.1-1) unstable; urgency=low
+
+  * New upstream releases.
+  * debian/watch: Update URL.
+  * debian/rules: Remove manual cleanup.  Correctly handled by upstream.
+
+ -- James Vega <jamessan@debian.org>  Sun, 11 Dec 2005 11:38:23 -0500
+
+fish (1.16.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- James Vega <jamessan@debian.org>  Tue,  8 Nov 2005 10:13:39 -0500
+
+fish (1.16.1-1) unstable; urgency=low
+
+  * New upstream releases.
+
+ -- James Vega <jamessan@debian.org>  Thu, 27 Oct 2005 08:10:20 -0400
+
+fish (1.13.4-1) unstable; urgency=low
+
+  * The "Thanks for all the fish" release.
+    + Thanks to jbailey for sponsoring during the nm process.
+  * New upstream releases.
+    + debian/patches:
+      - 00env.c.diff applied upstream.
+      - 01function.c.diff applied upstream.
+  * debian/control:
+    + Upated email address.
+    + Dropped versioned Build-Depends on Doxygen since version is older than
+      oldstable's version.
+  * Removed unnecessary debian/docs.
+  * Updated email address.
+
+ -- James Vega <jamessan@debian.org>  Mon, 19 Sep 2005 10:50:02 -0400
+
+fish (1.13.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: Update clean target to remove some generated files.
+
+ -- James Vega <jamessan@jamessan.com>  Wed, 31 Aug 2005 07:49:25 -0400
+
+fish (1.13.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + ChangeLog is now included as a standalone file.  (Closes: #315041)
+  * debian/patches:
+    + Add 00env.c.diff, prevents a segfault when compiling with GCC4.
+    + Add 01function.c.diff, include a missing header file.
+
+ -- James Vega <jamessan@jamessan.com>  Mon, 29 Aug 2005 08:00:16 -0400
+
+fish (1.12.1-1) unstable; urgency=low
+
+  * New upstream releases.
+  * debian/control:
+    + Bump Standards-Version to 3.6.2.
+    + Add autotools-dev to Build-Depends.
+    + Add doc-base and menu to Suggests.
+
+ -- James Vega <jamessan@jamessan.com>  Thu, 28 Jul 2005 13:59:44 -0400
+
+fish (1.11.1-2) unstable; urgency=low
+
+  * debian/control:
+    + Build-Depends: Remove autotools-dev.
+
+ -- James Vega <jamessan@jamessan.com>  Fri, 17 Jun 2005 09:41:58 -0400
+
+fish (1.11.1-1) unstable; urgency=low
+
+  * New upstream releases.
+    + Updated documentation to work around Doxygen.  (Closes: #314280)
+  * Removed patches:
+    + 100_silence_warnings.diff, applied upstream.
+    + 101_interactive_option.diff, applied upstream.
+    + 102_spelling_fixes.diff, applied upstream.
+  * debian/control:
+    + Build-Depends: Add autotools-dev.
+
+ -- James Vega <jamessan@jamessan.com>  Fri, 17 Jun 2005 08:11:48 -0400
+
+fish (1.10.1-1) unstable; urgency=low
+
+  * New upstream releases.
+  * debian/rules:
+    + Remove DEB_INSTALL_MANPAGES_fish directive.  count.1 is installed by
+      upstream now.
+  * Added patches:
+    + 100_silence_warnings.diff, which silences various warnings gcc emits
+      during compilation.
+    + 101_interactive_option.diff, which adds recognition of the -i argument
+      that various programs expect a shell to recognize.
+    + 102_spelling_fixes.diff, which fixes various spelling errors visible to
+      the end-user.
+  * debian/control:
+    + Build-Depends: added bc
+    + Depends: added bc
+
+ -- James Vega <jamessan@jamessan.com>  Tue,  7 Jun 2005 23:33:02 -0400
+
+fish (1.9.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove 100_Makefile.in.diff, applied upstream.
+  * Remove 200_b_append.diff, applied upstream.
+  * debian/control:
+    + Add groff-base and bsdmainutils to Build-Depends
+
+ -- James Vega <jamessan@jamessan.com>  Wed, 25 May 2005 10:26:01 -0400
+
+fish (1.9.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #310019)
+  * Added 100_Makefile.in.diff, to make the Makefile obey the configure
+    options.
+  * Added 200_b_append.diff, silence a compile warning and preserve constness.
+
+ -- James Vega <jamessan@jamessan.com>  Sat, 21 May 2005 12:06:27 -0400

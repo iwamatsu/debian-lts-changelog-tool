@@ -1,0 +1,540 @@
+ruby-nokogiri (1.11.1+dfsg-2+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport upstream fix for CVE-2022-24836 (Closes: #1009787).
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 25 Aug 2024 09:35:42 +0800
+
+ruby-nokogiri (1.11.1+dfsg-2) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Annotate test dependencies <!nocheck>. (Closes: #981388)
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 08 Feb 2021 17:28:42 +0100
+
+ruby-nokogiri (1.11.1+dfsg-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Cédric Boutillier ]
+  * [ci skip] Update team name
+  * [ci skip] Add .gitattributes to keep unwanted files out of the
+    source package
+
+  [ Pirate Praveen ]
+  * Remove coverage/* in clean target
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Security-Contact.
+
+  [ Lucas Nussbaum ]
+  * New upstream version 1.11.1+dfsg
+    + Fixes CVE CVE-2020-26247. Closes: #978967
+  * Bump debhelper compat to 13
+  * Bump Standards-Version to 4.5.1
+  * Add Rules-Requires-Root
+  * Refresh patches
+  * debian/rules gemspec: Force platform to ruby to download source gem
+  * Update gemspec
+  * Replace ruby-tests.rake by ruby-tests.rb to avoid issues with
+    nokogiri's rake libs
+  * Add some new build-dependencies
+
+ -- Lucas Nussbaum <lucas@debian.org>  Sat, 16 Jan 2021 07:37:10 +0100
+
+ruby-nokogiri (1.10.9+dfsg-1) unstable; urgency=medium
+
+  * Change repacksuffix to just +dfsg (it was +dfsg1)
+  * New upstream version 1.10.9+dfsg
+  * Update gemspec file to match new version
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 28 Mar 2020 11:53:38 +0530
+
+ruby-nokogiri (1.10.7+dfsg1-2) unstable; urgency=medium
+
+  * Rebuilt against Ruby2.7.
+  * debian/control:
+    - Bump Standards-Version to 4.5.0.
+
+ -- Georg Faerber <georg@debian.org>  Thu, 06 Feb 2020 12:53:54 +0000
+
+ruby-nokogiri (1.10.7+dfsg1-1) unstable; urgency=medium
+
+  [ Georg Faerber ]
+  * New upstream version 1.10.4+dfsg1
+  * debian/control: Use HTTPS in Homepage field
+  * debian/copyright: Use HTTPS in Homepage field
+
+  [ Pirate Praveen ]
+  * New upstream version 1.10.7+dfsg1
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 25 Dec 2019 22:11:06 +0530
+
+ruby-nokogiri (1.10.4+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version. (Closes: #934802)
+  * Drop compat file, add Build-Dependency on debhelper-compat.
+  * Use my debian.org mail address.
+  * Update gemspec file to 1.10.4.
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+ -- Georg Faerber <georg@debian.org>  Mon, 26 Aug 2019 10:21:24 +0000
+
+ruby-nokogiri (1.10.3+dfsg1-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 03 Aug 2019 11:47:08 +0000
+
+ruby-nokogiri (1.10.3+dfsg1-1) experimental; urgency=medium
+
+  * New upstream version 1.10.3+dfsg1
+  * Bump Standards-Version to 4.4.0 (no changes needed)
+  * Refresh patches
+  * Add a check to verify debian/gemspec is updated
+  * Update gemspec file to 1.10.3
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 03 Aug 2019 05:46:11 +0000
+
+ruby-nokogiri (1.10.1+dfsg1-1) experimental; urgency=medium
+
+  * New upstream version 1.10.1+dfsg1
+  * Update gemspec from rubygems.org
+  * Refresh patches
+  * Add ruby-simplecov as build dependency
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 04 Mar 2019 20:45:36 +0530
+
+ruby-nokogiri (1.10.0+dfsg1-2) unstable; urgency=medium
+
+  * Team upload
+  * Add Breaks for ruby-sanitize
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Fri, 08 Feb 2019 14:24:03 +0530
+
+ruby-nokogiri (1.10.0+dfsg1-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * New upstream version 1.10.0+dfsg1
+  * Use Github as source
+  * Update Files-Excluded paragraph in copyright file to exclude jar files
+    from source
+  * Remove ourdated Readme.source file
+  * Refresh 003-Remove-dependency-on-mini_portile2.patch
+  * Create rule to retrieve gemspec from corresponding .gem
+
+  [ Utkarsh Gupta ]
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Update watch and rules file
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 09 Jan 2019 10:15:39 +0100
+
+ruby-nokogiri (1.10.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 1.10.0
+  * Update patch file names with the serial number
+  * Refresh patches
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Tue, 08 Jan 2019 07:41:47 +0530
+
+ruby-nokogiri (1.9.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 1.9.1
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Move debian/watch to gemwatch.debian.net
+  * Refresh patches
+  * Update debian/rules
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Fri, 04 Jan 2019 00:28:17 +0530
+
+ruby-nokogiri (1.8.4-1) unstable; urgency=medium
+
+  * New upstream version 1.8.4
+  * Move debian/watch to gemwatch.debian.net
+  * Bump Standards-Version to 4.1.5 (no changes needed)
+  * Trivially refresh patches
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 31 Jul 2018 00:56:29 +0200
+
+ruby-nokogiri (1.8.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/changelog: Remove trailing whitespaces.
+  * debian/compat: Bump debhelper version to 11.
+  * debian/control:
+    - Add myself to Uploaders.
+    - Bump required debhelper version to >= 11~.
+    - Bump Standards-Version to 4.1.3, no changes needed.
+    - Use salsa.debian.org in Vcs-{Git,Browser}: fields.
+  * debian/copyright: Use HTTPS in link to copyright format spec.
+  * debian/watch:
+    - Bump version to 4.
+    - Use HTTPS in link to gemwatch service.
+
+ -- Georg Faerber <georg@riseup.net>  Tue, 20 Feb 2018 01:13:30 +0100
+
+ruby-nokogiri (1.8.1-1) unstable; urgency=medium
+
+  [ Antonio Terceiro ]
+  * Remove myself from Uploaders:
+
+  [ Cédric Boutillier ]
+  * New upstream version 1.8.1
+  * Refresh 0003-Remove-dependency-on-mini_portile2.patch
+  * Bump Standards-Version to 4.1.0 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 29 Sep 2017 11:59:08 +0200
+
+ruby-nokogiri (1.8.0-1) unstable; urgency=medium
+
+  * New upstream version 1.8.0
+  * Refresh patches.
+  * Drop 0005-skip-test-incompatible-with-libxml2-from-Debian.patch
+    (upstream also added a skip stanza)
+  * Bump Standards-Version. No changes needed.
+  * CHANGELOG.rdoc has been renamed to CHANGELOG.md
+
+ -- Lucas Nussbaum <lucas@debian.org>  Wed, 19 Jul 2017 11:23:24 +0200
+
+ruby-nokogiri (1.6.8.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add myself to Uploaders:
+  * Rework patche stack to use gbp-pq
+  * Skip one test that is incompatible with libxml2 currently in Debian
+    (Closes: #842910)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 14 Nov 2016 12:25:21 -0200
+
+ruby-nokogiri (1.6.8-2) unstable; urgency=medium
+
+  * Add missing dependency on ruby-pkg-config (Closes: #829171, #829175)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 01 Jul 2016 07:57:18 -0300
+
+ruby-nokogiri (1.6.8-1) unstable; urgency=medium
+
+  * Team upload
+  * Imported Upstream version 1.6.8
+  * Refresh patches
+    - skip-some-tests.patch: dropped, issues fixed upstream
+  * New build-dependency: ruby-pkg-config
+  * Bump Standards-Version: to 3.9.8, no changes needed
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 30 Jun 2016 09:21:12 -0300
+
+ruby-nokogiri (1.6.7.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Sourceful upload to build with current ruby-defaults.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Fri, 04 Mar 2016 13:58:14 +0100
+
+ruby-nokogiri (1.6.7.2-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Add myself to uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Mar 2016 12:47:33 +0530
+
+ruby-nokogiri (1.6.7.2-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream hotfix release
+  * Refresh patches
+  * Bump standards version to 3.9.7
+  * Switch to https for vcs-git url
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 23 Feb 2016 18:30:17 +0530
+
+ruby-nokogiri (1.6.7.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream hotfix release
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 23 Dec 2015 17:54:32 +0530
+
+ruby-nokogiri (1.6.7-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Refresh patches
+  * debian/ruby-nokogiri.docs: updated to reflect renaming/removal of upstream
+    README files
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 14 Dec 2015 10:59:27 -0200
+
+ruby-nokogiri (1.6.6.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Refresh patches
+  * Refresh packaging:
+    - dump debian/compat to 9
+    - reformat debian/control
+    - update debian/ruby-tests.rake
+    - cleanup debian/rules
+  * switch running tests to debian/ruby-tests.rake
+  * skip-some-tests.patch: skip tests that won't work against libxml2 2.9.2 in
+    Debian, but pass when using the embedded copy + patches in the Nokogiri
+    tree (Closes: #800028)
+  * debian/copyright: explicitly list files that are excluded from the
+    tarball, so that stuff is removed from the tarball by uscan
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 17 Nov 2015 14:39:46 -0200
+
+ruby-nokogiri (1.6.6.2+ds-2) unstable; urgency=medium
+
+  * Team upload.
+  * Re-upload to unstable.
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 29 Apr 2015 17:29:01 +0530
+
+ruby-nokogiri (1.6.6.2+ds-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Bump standards version to 3.9.6 (no changes).
+  * Refresh patches.
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 31 Mar 2015 11:57:03 +0530
+
+ruby-nokogiri (1.6.3.1+ds-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.6.3.1+ds
+  * Refresh always_use_system_libraries.patch
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 26 Jul 2014 06:12:09 +0200
+
+ruby-nokogiri (1.6.2.1+ds-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.6.2.1+ds
+  * Refresh patches
+  * Build-depend on pkg-config
+  * Drop support for ruby2.0
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 30 May 2014 16:30:31 +0200
+
+ruby-nokogiri (1.6.1+ds-4) unstable; urgency=medium
+
+  * Team upload
+  * Remove mini_portile from metadata.yml
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 06 May 2014 14:11:07 +0530
+
+ruby-nokogiri (1.6.1+ds-3) unstable; urgency=medium
+
+  * Team upload.
+  * Bump gem2deb build dep to >= 0.7.5~
+    - Fix for #743664
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 12 Apr 2014 19:01:32 +0530
+
+ruby-nokogiri (1.6.1+ds-2) unstable; urgency=low
+
+  * Team upload.
+  * Bump gem2deb build dep to 0.7.4~
+    - drop ruby1.9.1
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Apr 2014 17:52:29 +0530
+
+ruby-nokogiri (1.6.1+ds-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.6.1+ds
+    - version 1.6.1 fixes security issues CVE-2013-6460 CVE-2013-6461
+      (Closes: #734836)
+  * Mention in copyright file and README.source that the tarball is
+    repacked to remove convenience copies
+  * Add a dversionmangle option in debian/watch
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 11 Jan 2014 06:48:45 +0100
+
+ruby-nokogiri (1.6.0-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release:
+    - Strip embedded code copy from upstream source.
+    - Update patches:
+      remove-annoying-warning.patch: refreshed;
+      fix_tests_assert_match.patch: deleted, merged upstream;
+      minitest5_support.patch: deleted, merged upstream.
+    - Add a patch to always use the system libraries.
+  * Stop fiddling test/files/bogus.xml now that its properly shipped
+    in upstream tarball.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Sun, 03 Nov 2013 11:54:08 +0100
+
+ruby-nokogiri (1.5.9-3) unstable; urgency=low
+
+  * add deactivate_test_reader_blocking.patch, deactivating a test hanging on
+    kFreeBSD ports
+  * build against gem2deb >= 0.5.0~ to add ruby2.0 and drop ruby1.8 support
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 03 Sep 2013 01:14:52 +0200
+
+ruby-nokogiri (1.5.9-2) unstable; urgency=low
+
+  * Do not exclude test/xml/test_xinclude.rb from tests anymore
+  * debian/patches: add 2 patches to fix FTBFS (Closes: #714930)
+    + minitest5_support.patch: add support for MiniTest 5
+    + skip_test_reader_entity_reference_without_dtdload.patch: disable tests
+      failing with libxml2 2.9
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 16 Aug 2013 23:19:16 +0200
+
+ruby-nokogiri (1.5.9-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/rules:
+    + create empty file missing from the archive for the purpose of tests
+    + install upstream changelog
+  * debian/copyright:
+    + update my email address and year
+  * debian/control:
+    + update my email address
+    + bump Standars-Version to 3.9.4 (no changes needed)
+    + remove obsolete DM-Upload-Allowed flag
+    + use canonical anonscm.debian.org URLs for Vcs-* fields
+    + remove obsolete transitional packages
+  * debian/source:
+    + remove lintian-overrides, about transtional packages
+  * debian/patches/:
+    + remove include_missing_test_document_url_directory.patch, missing file
+      added upstream
+    + add fix_tests_assert_match.patch to make tests pass with minitest gem
+  * update manpage nokogiri(1) to take into account new options
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 10 May 2013 01:05:44 +0200
+
+ruby-nokogiri (1.5.5-1) unstable; urgency=low
+
+  * New upstream version
+  * Build-depend on gem2deb >= 0.3.0~
+  * add include_missing_test_document_url_directory.patch
+    + include test/files/test_document_url/ missing from the gem released by
+      upstream
+  * cosmetic refreshment of remove-annoying-warning.patch
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Tue, 26 Jun 2012 14:07:29 +0200
+
+ruby-nokogiri (1.5.4-1) unstable; urgency=low
+
+  * New upstream version
+  * Drop fix-format-security-issue.patch: included upstream
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Fri, 15 Jun 2012 23:53:43 +0200
+
+ruby-nokogiri (1.5.3-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/patches:
+    + drop fix-sporadically-failing-tests.patch (applied upstream)
+    + add fix-format-security-issue.patch (cherrypicked from upstream)
+       Fixes FTBFS with -Werror=format-security flag (Closes: #676207)
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Sat, 09 Jun 2012 16:08:57 +0200
+
+ruby-nokogiri (1.5.2-1) unstable; urgency=low
+
+  * New upstream version
+  * Add myself to Uploaders:
+  * Bump Standards-Version to 3.9.3 (no changes needed)
+  * Exclude temporarily test_xinclude.rb from the tests, as xinclude.xml is
+    missing in this version
+  * Add fix-sporadically-failing-tests.patch (Closes: #661690)
+  * Set Priority: to extra for transitional packages
+  * Override lintian warnings about duplicate decription for transitional
+    packages
+  * Convert copyright file to DEP-5
+  * Provide a simple manpage for nokogiri binary
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Sun, 13 May 2012 15:40:26 +0200
+
+ruby-nokogiri (1.5.0-1) unstable; urgency=low
+
+  * Switch to gem2deb. Rename source and binary packages.
+  * New upstream version. Closes: #604623.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Fri, 29 Jul 2011 18:50:38 +0200
+
+libnokogiri-ruby (1.4.0-4) unstable; urgency=low
+
+  * fix failing tests (and resulting FTBFS) with libxml 2.7.8, thanks to
+    Mike Dalessio (Closes: #606296)
+
+ -- Ryan Niebur <ryan@debian.org>  Mon, 13 Dec 2010 20:28:41 -0800
+
+libnokogiri-ruby (1.4.0-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/patches
+    - add fix-test_element_description.rb.patch from upstream git to fix
+     FTBFS (Closes: #577355)
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 23 Jul 2010 01:32:30 +0900
+
+libnokogiri-ruby (1.4.0-3) unstable; urgency=low
+
+  * Fix test to also work in UTC. Closes: #566055.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Thu, 21 Jan 2010 10:58:36 +1300
+
+libnokogiri-ruby (1.4.0-2) unstable; urgency=low
+
+  * Drop 1.9 package, add 1.9.1 package. Closes: #565825.
+  * Enable the test suite.
+    + Make ruby1.9.1 test suite failures non-fatal.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Wed, 20 Jan 2010 21:22:44 +1300
+
+libnokogiri-ruby (1.4.0-1) unstable; urgency=low
+
+  * New upstream release
+  * update email address
+  * close a launchpad bug too
+
+ -- Ryan Niebur <ryan@debian.org>  Thu, 05 Nov 2009 07:32:08 -0800
+
+libnokogiri-ruby (1.3.3-2) unstable; urgency=low
+
+  * add quilt patching
+  * get rid of the annoying libxml warning messages (Closes: 546843)
+    (LP: 475250)
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Tue, 15 Sep 2009 21:49:02 -0700
+
+libnokogiri-ruby (1.3.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Debian Policy 3.8.3
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Wed, 02 Sep 2009 17:36:50 -0700
+
+libnokogiri-ruby (1.3.2-1) unstable; urgency=low
+
+  * new upstream version
+  * Debian Policy 3.8.2
+  * install the upstream changelog
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sat, 27 Jun 2009 23:28:37 -0700
+
+libnokogiri-ruby (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * improve debian/rules a bit
+  * add DMUA field
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Mon, 01 Jun 2009 17:26:41 -0700
+
+libnokogiri-ruby (1.2.3-1) unstable; urgency=low
+
+  * Initial release (Closes: 520583)
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sun, 22 Mar 2009 12:13:48 -0700

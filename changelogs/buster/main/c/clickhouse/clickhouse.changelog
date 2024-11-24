@@ -1,0 +1,43 @@
+clickhouse (18.16.1+ds-4+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2021-42387, CVE-2021-42388, CVE-2021-43304, CVE-2021-43305 by
+    apdapting upstream patch to this version. (Closes: #1008216)
+
+ -- Tobias Frost <tobi@debian.org>  Thu, 03 Nov 2022 16:25:35 +0100
+
+clickhouse (18.16.1+ds-4) unstable; urgency=medium
+
+  * d/control: libcapnp-dev and libgoogle-perftools-dev build-depends are optional.
+  * d/control: Add hppa in the list of arch we want to build.
+  * d/rules: Skip autotest 00047 on ppc64el.
+  * d/rules: Exclude with_server test on archs other than amd64, arm64, ppc64el.
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Mon, 04 Feb 2019 01:51:29 +0300
+
+clickhouse (18.16.1+ds-3) unstable; urgency=medium
+
+  * d/rules: Skip test 00750 (fails on buildd).
+  * d/rules: Disable LTO on archs other than amd64.
+  * Add 0015-Fix-fallback-lz4-decomression.patch - Should fix FTBFS on
+    non-amd64 and non-arm64 archs.
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Thu, 31 Jan 2019 22:45:52 +0300
+
+clickhouse (18.16.1+ds-2) unstable; urgency=medium
+
+  * d/control: Use libcpuinfo only when avaible.
+  * d/control: Limit build with 64-bit platforms only.
+  * d/clickhouse-server.postrm: Remove logfiles on purge (Closes: #920831).
+  * d/clickhouse-server.postrm: Remove database on purge.
+  * d/control: clickhouse-server recommends clickhouse-client.
+  * Add 0014-Set-default-umask-to-027.patch.
+  * Add debian/TODO.
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Thu, 31 Jan 2019 12:02:02 +0300
+
+clickhouse (18.16.1+ds-1) unstable; urgency=medium
+
+  * Initial release (Closes: #851574)
+
+ -- Alexander GQ Gerasiov <gq@debian.org>  Mon, 21 Jan 2019 01:12:52 +0300

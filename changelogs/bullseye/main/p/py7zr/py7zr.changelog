@@ -1,0 +1,57 @@
+py7zr (0.11.3+dfsg-1+deb11u1) bullseye-security; urgency=medium
+
+  [ YOKOTA Hiroshi ]
+  * Fix sanity check for path traversal attack (Closes: #1032091,
+    CVE-2022-44900)
+
+ -- Santiago Ruano Rincón <santiago@freexian.com>  Wed, 27 Mar 2024 23:38:18 -0300
+
+py7zr (0.11.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches/ctime-to-mtime.patch
+    - drop patch, applied upstream
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 27 Jan 2021 01:07:19 -0500
+
+py7zr (0.11.1+dfsg-2) unstable; urgency=medium
+
+  * debian/control
+    - add pycryptodome to Depends; Closes: #979985
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 12 Jan 2021 11:27:50 -0500
+
+py7zr (0.11.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Use the new Debian Python Team contact name and address
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 06 Jan 2021 23:05:30 -0500
+
+py7zr (0.11.0+dfsg-4) unstable; urgency=medium
+
+  * source-only upload, after passing thru NEW
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 24 Dec 2020 21:07:10 -0500
+
+py7zr (0.11.0+dfsg-3) unstable; urgency=medium
+
+  * build a -doc package
+  * debian/control
+    - bump Standards-Version to 4.5.1 (no changes needed)
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 24 Dec 2020 00:30:42 -0500
+
+py7zr (0.11.0+dfsg-2) unstable; urgency=medium
+
+  * Run tests, excluding the ones failing due to our setup
+  * Use Pycryptodome, which is what upstream intended to use
+  * Tests for mtime and not ctime
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 09 Dec 2020 00:37:07 -0500
+
+py7zr (0.11.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release; Closes: #974183
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 19 Nov 2020 22:24:06 -0500

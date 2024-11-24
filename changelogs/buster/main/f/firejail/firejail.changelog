@@ -1,0 +1,442 @@
+firejail (0.9.58.2-2+deb10u3) buster-security; urgency=medium
+
+  * Fix local root exploit reachable via --join logic. (CVE-2022-31214)
+    (Closes: #1012510)
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Tue, 21 Jun 2022 19:54:44 +0200
+
+firejail (0.9.58.2-2+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Disable overlayfs support (CVE-2021-26910)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 09 Feb 2021 06:27:31 +0100
+
+firejail (0.9.58.2-2+deb10u1) buster-security; urgency=high
+
+  * Import security fixes for CVE-2020-17367 and CVE-2020-17368:
+    - don't interpret output arguments after end-of-options tag
+    - don't pass command line through shell when redirecting output
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 06 Aug 2020 18:05:53 +0200
+
+firejail (0.9.58.2-2) unstable; urgency=high
+
+  * Cherry-pick security fix for seccomp bypass issue. (Closes: #929732)
+    Seccomp filters were writable inside the jail, so they could be
+    overwritten/truncated. Another jail that was then joined with the first
+    one, had no seccomp filters applied.
+  * Cherry-pick security fix for binary truncation issue. (Closes: #929733)
+    When the jailed program was running as root, and firejail was killed
+    from the outside (as root), the jailed program had the possibility to
+    truncate the firejail binary outside the jail.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Wed, 29 May 2019 21:06:42 +0200
+
+firejail (0.9.58.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - new global configuration flag (name-change) that allows disabling
+      automatic renaming of sandboxes, if requested name already exists
+      (Closes: #920768)
+    - whitelist additional files in zoom profile
+      Thanks to Patrik Flykt for the patch. (Closes: #921454)
+  * Drop patch applied upstream.
+  * Switch off cgroup support by default in firejail.config, as it can be
+    used to move processes into less restricted cgroups (see also #916920).
+  * Install AppArmor local override file via dh_apparmor.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 08 Feb 2019 20:06:02 +0100
+
+firejail (0.9.58-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Mark github-desktop.profile as moved conffile.
+  * Allow ptrace read/readby requests in AppArmor profile.
+    Thanks to Salvo Tomaselli for the report and intrigeri for help with
+    AppArmor. (Closes: #912587)
+  * Restrict networking feature by default in firejail.config, as a new
+    network namespace can circumvent packet filter of default namespace.
+    Thanks to Alain Ducharme for the report. (Closes: #916920)
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 27 Jan 2019 17:09:49 +0100
+
+firejail (0.9.58~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+    - fix profile detection when path contains spaces (Closes: #903831)
+  * Drop patch applied upstream.
+  * Bump copyright years.
+  * Bump Standards-Version to 4.3.0.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 21 Jan 2019 21:37:32 +0100
+
+firejail (0.9.56-2) unstable; urgency=medium
+
+  * Properly (re)move obsolete conffiles.
+    Thanks to Paul Wise for repeatedly reporting these issues.
+    (Closes: #909640)
+  * Mark autopkgtests as flaky, as some tests behave differently than
+    expected depending on the environment they are run in.
+  * Cherry-pick upstream patches to skip some environment-dependent tests.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 01 Oct 2018 15:55:51 +0200
+
+firejail (0.9.56-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Move profiles test to unisolated test run.
+  * Recommend iproute2 for tc used in fshaper.sh for --bandwidth feature.
+  * Drop patch applied upstream.
+  * Bump Standards-Version to 4.2.1.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 20 Sep 2018 23:34:09 +0200
+
+firejail (0.9.56~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+    - evaluate UID_MIN at runtime instead of hardcoding during compilation
+      (Closes: #900337)
+  * Bump Standards-Version to 4.2.0.
+  * debian/tests:
+    - disable tests that attempt to access the internet
+    - temporarily disable broken tests (fixed upstream already)
+    - reorganize tests a bit; allow some to run unisolated
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 16 Aug 2018 19:26:39 +0200
+
+firejail (0.9.54-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Wed, 16 May 2018 20:30:01 +0200
+
+firejail (0.9.54~rc2-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 13 May 2018 21:11:28 +0200
+
+firejail (0.9.54~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+    - mark ~/.homesick as read-only by default (Closes: #884579)
+      Thanks to Alexander Gerasiov for the patch.
+  * Add NEWS entry about new user restriction feature.
+  * Add renamed profile to maintscript helper.
+  * Use dh_missing for missed file detection instead of dh_install.
+  * Bump copyright years.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 07 May 2018 22:42:16 +0200
+
+firejail (0.9.52-3) unstable; urgency=medium
+
+  * Move packaging VCS to salsa.
+  * Bump Standards-Version to 4.1.4.
+  * Add upstream metadata file.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 27 Apr 2018 19:42:28 +0200
+
+firejail (0.9.52-2) unstable; urgency=medium
+
+  * Cleanup removed conffile in correct binary package. (Closes: #884915)
+  * Bump debhelper compatibility/dependency to 11.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 21 Dec 2017 18:53:32 +0100
+
+firejail (0.9.52-1) unstable; urgency=medium
+
+  * New upstream release.
+    - new command to help building new profiles (--build) (Closes: #860942)
+  * Drop patch applied upstream.
+  * Remove lxterminal.profile conffile, which was deleted upstream.
+  * Bump Standards-Version to 4.1.2.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sat, 16 Dec 2017 14:07:29 +0100
+
+firejail (0.9.50-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 18 Sep 2017 00:53:38 +0200
+
+firejail (0.9.50-2) experimental; urgency=low
+
+  * Cherry-pick another seccomp-related build fix.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 10 Sep 2017 15:02:25 +0200
+
+firejail (0.9.50-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop build patch applied upstream.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 10 Sep 2017 03:01:53 +0200
+
+firejail (0.9.50~rc1-2) experimental; urgency=low
+
+  * Cherry-pick fix for build failure on some architectures.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Wed, 30 Aug 2017 22:33:09 +0200
+
+firejail (0.9.50~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+    - Several profile fixes (Closes: #866014, #872287, #872720)
+      Thanks to Martin Dosch for the reports and a patch.
+    - Improve cross build support (Closes: #869707)
+      Thanks to Helmut Grohne for providing the patch.
+  * debian/copyright: Switch URLs to https.
+  * Bump Standards-Version to 4.1.0.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Tue, 29 Aug 2017 18:31:22 +0200
+
+firejail (0.9.48-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 18 Jun 2017 13:48:09 +0200
+
+firejail (0.9.48-1) experimental; urgency=low
+
+  * New upstream release.
+    - Allow jailed thunderbird to read mime data (Closes: #864510)
+  * Run arguments and fcopy tests during autopkgtest.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 15 Jun 2017 12:24:55 +0200
+
+firejail (0.9.46-2) experimental; urgency=low
+
+  * Fix arch:all build by overriding dh_fixperms only for arch:any
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sat, 20 May 2017 11:34:01 +0200
+
+firejail (0.9.46-1) experimental; urgency=low
+
+  * New upstream release.
+  * Replace patch which prevented installation of contrib scripts to
+    /usr/lib with newly added configure option.
+  * Add Xvfb as alternative recommendation for X isolation.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 19 May 2017 00:28:31 +0200
+
+firejail (0.9.46~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+  * Split profiles into separate package (Closes: #850273).
+    - New binary package firejail-profiles
+    - Remove old profile conffiles from firejail binary package
+    - Add NEWS to inform about the package split
+  * debian/copyright:
+    - Document copyright of contributed script
+    - Update path of moved file
+    - Bump copyright years to 2017
+  * Install contrib scripts in doc directory.
+  * Replace icedove with thunderbird in test dependencies.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 21 Apr 2017 19:39:04 +0200
+
+firejail (0.9.44.10-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sat, 25 Mar 2017 12:17:06 +0100
+
+firejail (0.9.44.8-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 19 Jan 2017 23:14:35 +0100
+
+firejail (0.9.44.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 16 Jan 2017 19:33:26 +0100
+
+firejail (0.9.44.4-1) unstable; urgency=high
+
+  * New upstream release.
+    - Security fixes for: CVE-2017-5180, CVE-2017-5206, CVE-2017-5207
+      (Closes: #850528, #850558)
+  * Drop patches applied upstream.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sat, 07 Jan 2017 20:24:40 +0100
+
+firejail (0.9.44.2-3) unstable; urgency=high
+
+  * Add followup fix for CVE-2017-5180 (Closes: #850160).
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 06 Jan 2017 13:44:25 +0100
+
+firejail (0.9.44.2-2) unstable; urgency=high
+
+  * Add upstream fix for CVE-2017-5180 (Closes: #850160).
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Wed, 04 Jan 2017 23:56:30 +0100
+
+firejail (0.9.44.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 04 Dec 2016 21:44:08 +0100
+
+firejail (0.9.44-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix sandbox escape via terminal input buffer similar to
+      SELinux's CVE-2016-7545.
+  * Run apps-x11-xorg tests during autopkgtest.
+  * Add xauth to Recommends for x11=xorg sandbox feature.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 23 Oct 2016 13:13:17 +0200
+
+firejail (0.9.44~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+    - Fix program crashes with nvidia driver (Closes: #839868)
+  * Add iptables to Recommends for netfilter feature.
+  * Bump debhelper compat level to 10.
+    - Drop --parallel, which is now default behavior
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 16 Oct 2016 23:35:47 +0200
+
+firejail (0.9.42-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 09 Sep 2016 19:16:52 +0200
+
+firejail (0.9.42~rc2-1) experimental; urgency=low
+
+  * New upstream release candidate.
+    - shell prompt no longer overwritten by default (Closes: #834256)
+  * Drop patch for build failure, applied upstream.
+  * Add upstream signing key.
+  * Check upstream signature with uscan.
+  * Install upstream README.
+  * Enable AppArmor support.
+  * Include upstream sysutils tests in autopkgtest run.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 29 Aug 2016 21:39:09 +0200
+
+firejail (0.9.42~rc1-2) experimental; urgency=low
+
+  * Cherry-pick upstream fix for build failure on non-x86 platforms.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 28 Jul 2016 19:19:07 +0200
+
+firejail (0.9.42~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate.
+  * Drop LXC patch applied upstream.
+  * Add ping and wget to test dependencies.
+  * Run autopkgtests in isolation-machine.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 25 Jul 2016 22:27:01 +0200
+
+firejail (0.9.40-3) unstable; urgency=low
+
+  * Replace patch for LXC support with improved version by upstream.
+    Previous fix only worked for firejail as init process, not in
+    user sessions inside containers (like with autopkgtest).
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Tue, 14 Jun 2016 21:46:32 +0200
+
+firejail (0.9.40-2) unstable; urgency=low
+
+  * Remove obsolete conffiles (Closes: #825877).
+  * Add iptables to test dependencies.
+  * Cherry-pick upstream patch for LXC detection.
+    autopkgtests were failing in LXC because firejail wrongly
+    detected an already existing sandbox.
+  * Add gbp.conf to enable pristine-tar by default.
+  * Add Vcs-* fields; git repository is now in collab-maint.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Fri, 03 Jun 2016 00:39:17 +0200
+
+firejail (0.9.40-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix legacy Opera profile (Closes: #819950)
+  * Add autopkgtests to run upstream's test suite.
+    - skip test target in debian/rules, which is run in autopkgtest
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 30 May 2016 20:56:06 +0200
+
+firejail (0.9.40~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate. (Closes: #823191)
+  * Recommend xpra or xserver-xephyr for X11 isolation.
+  * Drop autotools-dev; debhelper is now doing the same.
+  * Bump copyright years to 2016.
+  * Bump Standards-Version to 3.9.8.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 02 May 2016 19:33:26 +0200
+
+firejail (0.9.38-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump standards version to 3.9.7.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 07 Feb 2016 12:07:07 +0100
+
+firejail (0.9.36-1) unstable; urgency=low
+
+  * New upstream release.
+    - Support for logging of blacklist violations (Closes: #794837)
+  * Updated Homepage field.
+  * Dropped reproducibility patch, which has been applied upstream.
+  * Dropped debian/missing-sources. Upstream removed binaries
+    from release tarball.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Tue, 29 Dec 2015 20:46:42 +0100
+
+firejail (0.9.34-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop libdir patch applied upstream.
+  * Symlink source which lintian thinks is missing.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 09 Nov 2015 20:30:16 +0100
+
+firejail (0.9.32-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added README.Debian.
+  * Added patch to fix the location of the lib dir.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sat, 24 Oct 2015 14:24:30 +0200
+
+firejail (0.9.28-1) unstable; urgency=low
+
+  * New upstream release.
+    - Common include for blacklisted directories (Closes: #789164)
+    - Improved support for other architectures (Closes: #789317)
+  * Enabled all Linux architectures again.
+  * Removed unneeded debian/firejail.bash-completion file.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Wed, 05 Aug 2015 23:13:40 +0200
+
+firejail (0.9.26-1) unstable; urgency=low
+
+  * New upstream release.
+  * Enabled all hardening options.
+  * Amended reproducibility patch to use normalized locale.
+  * Dropped usage of outdated bash-completion debhelper.
+  * Limited architectures to supported ones (Closes: #789163).
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Thu, 18 Jun 2015 19:36:29 +0200
+
+firejail (0.9.24-1) unstable; urgency=low
+
+  * New upstream release.
+  * Dropped patches applied upstream.
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Mon, 06 Apr 2015 12:56:57 +0200
+
+firejail (0.9.22-1) unstable; urgency=low
+
+  * Initial release (Closes: #777671)
+
+ -- Reiner Herrmann <reiner@reiner-h.de>  Sun, 15 Mar 2015 12:51:24 +0100

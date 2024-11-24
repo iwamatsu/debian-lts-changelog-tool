@@ -1,0 +1,500 @@
+sogo (5.0.1-4+deb11u1) bullseye-security; urgency=high
+
+  * [CVE-2021-33054] fixes validation of SAML message signatures
+    (closes: #989479)
+  * Switch gbp debian branch to bullseye.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 11 Nov 2021 21:44:21 +0100
+
+sogo (5.0.1-4) unstable; urgency=medium
+
+  * Build against OpenSSL, now that ftpmaster considers it a system
+    library. The GnuTLS codepath in SOGo is basically only used by
+    Debian/Ubuntu and is a source of many grave problems in SOGo
+    (closes: #981595).
+  * Don't run isLocalhost test, which is known to fail in many
+    build environments (not in official buildds, though) (closes: #980678).
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 02 Feb 2021 01:28:14 +0100
+
+sogo (5.0.1-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Jordi Mallach <jordi@debian.org>  Sun, 17 Jan 2021 13:39:15 +0100
+
+sogo (5.0.1-2) experimental; urgency=medium
+
+  * Reduce the number of expected testsuite failures to 3. One of the
+    failing tests is now passing on the new version.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 11 Jan 2021 16:26:15 +0100
+
+sogo (5.0.1-1) unstable; urgency=medium
+
+  * New upstream release (closes: #972523).
+    + fixes connection issues to IMAP servers with GnuTLS (closes: #932081)
+    + fixes webmail view with GnuTLS (closes: #975049)
+  * Update watch file to look for any X.Y.Z version.
+  * Enable Multi-Factor Authentication support.
+  * Build-Depend on libsodium-dev to enable argon2 password schemes.
+  * Drop gcc10.patch, now included in upstream version.
+  * Refresh patches.
+  * Update Standards-Version to 4.5.1.
+  * Add missing Build-Depends on libzip-dev.
+  * Bump libsope-dev requirement to >= 5.
+
+ -- Jordi Mallach <jordi@debian.org>  Mon, 30 Nov 2020 15:02:24 +0100
+
+sogo (4.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Explicitly install CHANGELOG.md as upstream changelog.
+  * Make build use pkg-config instead of xml2-config (closes: #949497).
+  * Build-Depend on pkg-config.
+  * Bump debhelper compat to v13.
+  * Fix builds with gcc-10 (closes: #957826).
+  * Refresh patches.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 22 Jul 2020 18:56:01 +0200
+
+sogo (4.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add python3.patch to make gen-saml2-exceptions.py python3 compatible.
+  * Switch Build-Depends to python3 (closes: #943277).
+  * Update Standards-Version to 4.5.0.
+  * Drop NEWS, which has been renamed to CHANGELOG.md.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 11 Feb 2020 13:14:02 +0100
+
+sogo (4.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop obsolete override for dh_mkshlibdeps.
+  * Revert changes to cron.daily script (closes: #944023)
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 06 Nov 2019 12:03:35 +0100
+
+sogo (4.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch to debhelper compat v12, using debhelper-compat B-D.
+  * Update to Standards-Version 4.4.1.
+  * Refresh sogo.init and sogo.cron.daily from upstream versions.
+  * Do not pass --fail-missing to dh_install.
+  * Update source lintian overrides.
+  * Drop references to OpenChange, which is gone from sources.
+  * Add Pre-Depends: ${misc:Pre-Depends} as suggested by lintian.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 31 Oct 2019 12:44:55 +0100
+
+sogo (4.0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update source lintian-overrides.
+  * Omit signedViewer altogether when not using openssl.
+    Thanks Hanno Stock <hanno.stock@indurad.com> for the patch.
+    (Closes: #889994)
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 31 Jul 2019 10:54:23 +0200
+
+sogo (4.0.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix stop and restart operations in init script. (Closes: #923421)
+  * Mark sogo-common as M-A: foreign.
+  * Update source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 28 Feb 2019 01:43:48 +0100
+
+sogo (4.0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump libsope1-dev Build-Dep to 4.0.6.
+  * Remove patch to fix exception, fix included in SOPE 4.0.6.
+  * Update source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 26 Feb 2019 13:43:25 +0100
+
+sogo (4.0.5-3) unstable; urgency=medium
+
+  * Add patch from upstream bugtracker to fix display of mail.
+    Many thanks to Onur Tolga Sehitoglu (closes: #920423).
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 12 Feb 2019 00:46:53 +0100
+
+sogo (4.0.5-2) unstable; urgency=medium
+
+  * Add patch to not use OpenSSL when we are configured to use GnuTLS
+    (closes: #914524).
+  * Add patch to unset MAKEFLAGS and MFLAGS in configure.
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Tue, 15 Jan 2019 10:14:20 +0100
+
+sogo (4.0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Define upstream-vcs-tag and upstream-branch options.
+  * Update Standards-Version to 4.3.0.
+  * Update source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 10 Jan 2019 10:45:18 +0100
+
+sogo (4.0.4-2) unstable; urgency=medium
+
+  * Do not pass --prefix to configure (closes: #897586).
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 26 Dec 2018 23:44:11 +0100
+
+sogo (4.0.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove patches from 4.0.3, now included upstream.
+  * Update source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 24 Oct 2018 22:55:49 +0200
+
+sogo (4.0.3-2) unstable; urgency=medium
+
+  * Add patch fix_time_conflict_validation (from upstream git) to fix
+    FreeBusy information when a user is not the owner of a calendar.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 23 Oct 2018 10:47:17 +0200
+
+sogo (4.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove unneeded override for dh_auto_test.
+  * Bump libsope1-dev Build-Dep to 4.0.3.
+  * Update source lintian-overrides.
+  * Add patch to fix FTBFS due to a "#elseif" typo.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 18 Oct 2018 02:44:43 +0200
+
+sogo (4.0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove fix_gnutls_signed_emails.patch, included upstream.
+  * Bump libsope1-dev Build-Dep to 4.0.2.
+  * Update Standards-Version to 4.2.1.
+  * Remove dh_strip override, as the dbgsym migration is complete.
+  * Update source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 07 Sep 2018 01:36:48 +0200
+
+sogo (4.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Set Rules-Requires-Root to no.
+  * Update Standards-Verson to 4.1.5.
+  * Bump libsope1-dev Build-Dep to 4.0.1.
+  * Add patch cherry-picked from upstream git to void displaying
+    empty signed emails when using GnuTLS.
+  * Update source lintian-overrides.
+  * Remove leftover file from the sogo-openchange package.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 09 Aug 2018 11:40:56 +0200
+
+sogo (4.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Watch for 4.x versions.
+  * Adapt patch for removed OpenChange support.
+  * Update expected number of testsuite failures to 4.
+  * Bump libsope1-dev Build-Dep to 4.0.0.
+  * Update Standards-Version to 4.1.3.
+  * Bump debhelper compat to v11.
+  * Remove unneeded --parallel dh argument for v11.
+  * Add database upgrade scripts for 4.0.0.
+  * Update Vcs-* fields after migration to Salsa.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 29 Mar 2018 03:37:58 +0200
+
+sogo (3.2.10-1) unstable; urgency=medium
+
+  * New upstream release.
+    - now renders S/MIME and PGP signed messages correctly.
+  * Remove -DSOGO_BUILD_DATE from $CFLAGS to fix build reproducibility
+    (closes: #854541).
+  * Bump libsope1-dev Build-Dep to 3.2.10.
+  * Remove full text of MPL-1.1 and refer to common-licenses.
+  * Update Standards-Version to 4.0.0.
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 21 Jul 2017 02:46:15 +0200
+
+sogo (3.2.9-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Add Scripts/mysql-utf8mb4.sql to docs.
+  * Add SOGo asciidoc files to distributed documentation.
+  * Add a note about the lack of database autoconfig to README.
+  * Promote memcached from Recommends to Depends.
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 24 Jun 2017 02:47:10 +0200
+
+sogo (3.2.9-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Bump libsope1-dev Build-Dep to 3.2.9.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 23 May 2017 19:06:49 +0200
+
+sogo (3.2.8-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump sope Build-Depends to 3.2.8.
+  * Drop patches cherrypicked from 3.2.6a.
+
+ -- Jordi Mallach <jordi@debian.org>  Sun, 23 Apr 2017 03:14:23 +0200
+
+sogo (3.2.6-2) unstable; urgency=medium
+
+  * Cherry pick important fixes from the upstream 3.2.6a release.
+    - [core] fixed "include in freebusy"
+    - [web] improved ACLs handling of inactive users
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 11 Apr 2017 01:52:41 +0200
+
+sogo (3.2.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Source field in copyright.
+  * Use https on all URLs.
+  * Bump sope Build-Depends to 3.2.6.
+  * Update source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Tue, 24 Jan 2017 00:04:21 +0100
+
+sogo (3.2.5-3) unstable; urgency=medium
+
+  * Fix RuntimeDirectory directive in service file (closes: #851626).
+
+ -- Jordi Mallach <jordi@debian.org>  Sat, 21 Jan 2017 13:09:50 +0100
+
+sogo (3.2.5-2) unstable; urgency=medium
+
+  * Add disable_test_rendering.patch to fix a FTBFS caused by a test unit
+    known to fail on Big Endian hosts.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 11 Jan 2017 23:29:02 +0100
+
+sogo (3.2.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch Maintainer field to new team address.
+    Keep Jeroen Dekkers in Uploaders, and add myself there too.
+  * Update Homepage field.
+  * Fix watch file to point at new download URL.
+  * Bump debhelper compat to v10.
+  * Drop dch id-length option from gbp.conf.
+  * Recommend memcached and add SOGoMemcachedHost to default config
+    (closes: #850724).
+  * Tighten the libsope1-dev Build-Depends to >= 3.2.5.
+  * Drop gnustep-config workaround patch, it is now fixed upstream.
+  * Don't disable TestVersit unit test, it now works as expected.
+  * Update the number of expected testsuite failures.
+  * Make testsuite failures fatal again.
+  * Add source lintian-overrides.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 11 Jan 2017 15:20:43 +0100
+
+sogo (3.2.4-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Stop creating /var/run via tmpfiles.d, use RuntimeDirectory instead.
+  * Use /run/sogo instead of /var/run/sogo.
+  * Remove empty sogo.prerm script.
+  * Fix path to datepicker elements in copyright.
+  * Update changelog.
+  * Revert "Update changelog."
+  * Fold override_dh_install into override_auto_dh_install.
+  * Release to unstable.
+
+ -- Jordi Mallach <jordi@debian.org>  Wed, 04 Jan 2017 10:54:57 +0100
+
+sogo (3.2.4-0.1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.
+    - includes fix for CVE-2015-5395: CSRF attack. Closes: #796197
+  * Refresh patches.
+  * Add python to Build-Depends, to be able to run gen-saml2-exceptions.py.
+  * Move to dbgsym package, and ensure migration via dh_strip --ddeb-migration.
+  * Make testsuite not fatal, for now. Closes: #827812
+  * Update dependency on mysql-server to default-mysql-server. Closes: #848489
+  * Add database scripts for upgrades to 3.x to docs.
+  * Use the vendored ckeditor for now.
+  * Remove js deps that are no longer needed.
+  * Update copyright.
+  * Add /var/run/sogo to tmpfiles.d file.
+  * Add a systemd service based on upstream's.
+  * Use secure URLs for Vcs-* and Homepage fields.
+  * Add dependency on lsb-base for init script.
+
+ -- Jordi Mallach <jordi@debian.org>  Sun, 01 Jan 2017 05:01:49 +0100
+
+sogo (2.2.17a-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Remove sogo-openchange, as OpenChange is being removed from the
+    archive. Closes: #808300
+
+ -- Jelmer Vernooij <jelmer@debian.org>  Fri, 18 Dec 2015 13:04:34 +0000
+
+sogo (2.2.17a-1) unstable; urgency=medium
+
+  * [426da082] New upstream release
+  * [863f3b94] Update patches
+  * [df7d5e92] Update version of libsope-dev build-depend
+  * [fb4eeda7] Add patch from upstream git to make building with
+    GnuTLS work again
+  * [6c854296] Add virtual-mysql-server to suggests as alternative
+    (Closes: #781971)
+  * [d1bce1f6] Update debian/copyright
+  * [552220e8] Add LSB Description field to init script
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sun, 26 Apr 2015 15:23:21 +0200
+
+sogo (2.2.14-1) experimental; urgency=medium
+
+  * [e1c02cf9] New upstream release
+  * [2c109af6] Update version of libsope-dev build-depend
+  * [fcf9733e] Bump Standards-Version to 3.9.6, no changes needed
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sun, 25 Jan 2015 22:42:41 +0100
+
+sogo (2.2.9+git20141017-1) unstable; urgency=medium
+
+  * [6b0ddb8c] New upstream git snapshot 2.2.9+git20141017
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sat, 25 Oct 2014 15:20:57 +0200
+
+sogo (2.2.9+git20141009-1) unstable; urgency=medium
+
+  * [effac894] New upstream git snapshot 2.2.9+git20141009
+    (Closes: #754909, #759857)
+  * [9890d799] Remove patches merged upstream
+  * [035175e6] Update sope and openchange build-depends
+  * [118c54a7] Add patch to remove build date from package
+  * [c74b2830] Fix short names in copyright file
+  * [286ab24c] Use logrotate script from upstream (Closes: #757949)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Mon, 13 Oct 2014 16:45:20 +0200
+
+sogo (2.2.5-3) unstable; urgency=medium
+
+  * [a0105ea6] Disable buggy TestVersit unit test. (Closes: #754212)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Tue, 08 Jul 2014 21:12:12 +0200
+
+sogo (2.2.5-2) unstable; urgency=medium
+
+  * [7613c6cc] Build-depend on libgnutls28-dev. (Closes: #754171)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Tue, 08 Jul 2014 14:20:53 +0200
+
+sogo (2.2.5-1) unstable; urgency=medium
+
+  * [90b8c6d3] New upstream release
+  * [6dc419c5] Update patches
+  * [04a02370] Update version of libsope-dev build-depend
+  * [010e6b08] Change /etc/sogo/sogo.conf group to sogo and mode to 0640
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sun, 08 Jun 2014 01:47:37 +0200
+
+sogo (2.2.3-1) experimental; urgency=medium
+
+  * [0837e058] New upstream release
+  * [9dff26d8] Update patches to new upstream version
+  * [40f1ddf6] Update version of libsope-dev build-depends to 2.2.3
+  * [770e90c9] Bump Standards version to 3.9.5 (no changes needed)
+  * [87c0717d] Change VCS-* fields to their canonical URI
+  * [2f95d6d8] Call dh_install with --list-missing --fail-missing
+  * [53a018b3] Include tmpfiles.d/sogo.conf in sogo.install
+  * [b70eaa27] Add patch to fix warnings from -Werror in OpenChange backend
+  * [ea9345a1] Build OpenChange backend, add sogo-openchange package
+  * [e71ff33c] Add patch to link correctly against libraries used
+  * [a974b2c4] Add upstream patch to fix unit test
+  * [4979ec49] Update debian/copyright
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sun, 13 Apr 2014 00:09:03 +0200
+
+sogo (2.1.1b-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #732189)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sat, 28 Dec 2013 23:15:41 +0100
+
+sogo (2.0.7-2) unstable; urgency=high
+
+  * Do not call make distclean if config.make does not exist, fixes FTBFS
+    with latest debhelper. (Closes: #720974)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Mon, 26 Aug 2013 20:07:08 +0200
+
+sogo (2.0.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update version of sope build dependency to 2.0.7.
+  * Remove patch applied upstream:
+    - 0001-Set-SOGoMailSpoolPath-to-var-spool-sogo-by-default
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Tue, 13 Aug 2013 20:32:13 +0200
+
+sogo (2.0.5a-1) unstable; urgency=low
+
+  * New upstream release.
+  * Include updated watch file written by Bart Martens.
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Mon, 06 May 2013 02:04:16 +0200
+
+sogo (2.0.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patches applied upstream:
+    - 0001-make-check
+    - 0002-link-everything-correctly
+    - 0003-Read-configuration-from-etc
+    - 0004-Add-support-for-GnuTLS
+    - 0007-Compile-daemon-as-PIE
+  * Fix cronjob error after package removal. (Closes: #682843)
+  * Update standards version to 3.9.4.
+  * Enable SAML support.
+  * Move sogo-backup.sh to /usr/sbin/sogo-backup and change backup
+    location to /var/backups/sogo. Also change the locations in the
+    cronjob. (Closes: #681797)
+  * Use systemd-tmpfiles instead of tmpreaper for systems running
+    systemd. (Closes: #677951)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sat, 13 Apr 2013 16:08:45 +0200
+
+sogo (1.3.16-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #677119)
+    - 0004-Add-support-for-GnuTLS.patch: Updated to new hashes in 1.3.16.
+    - 0007-GNUstep-1.24-fix.patch: Removed, was backported from upstream.
+  * Do not assume deluser is available in postrm. (Closes: #678099)
+  * Suggest postgresql or mysql-server. (Closes: #678047)
+  * Build with hardening
+    - 0007-Compile-daemon-as-PIE.patch: Compile the daemon as a PIE.
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Sat, 30 Jun 2012 02:55:17 +0200
+
+sogo (1.3.15a-2) unstable; urgency=low
+
+  * 0007-GNUstep-1.24-fix.patch:
+    - Fix to cope with changes in GNUstep 1.24. (Closes: #675201)
+  * Fix the cron.daily job:
+    - Delete the directories in a proper way. (Closes: #676161)
+    - Test whether tmpreaper is still installed before executing it.
+      (Closes: #675238)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Thu, 14 Jun 2012 14:28:31 +0200
+
+sogo (1.3.15a-1) unstable; urgency=low
+
+  * Initial release. (Closes: #584073)
+
+ -- Jeroen Dekkers <jeroen@dekkers.ch>  Wed, 23 May 2012 19:17:40 +0200

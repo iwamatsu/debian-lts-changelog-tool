@@ -1,0 +1,67 @@
+gokey (0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 12:57:44 +0200
+
+gokey (0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-3) unstable; urgency=medium
+
+  * Increase test timeout to six hours, because the tests need 190 minutes
+    on mips (Closes: #919759)
+  * Run tests for RSA2048 and RSA4096 again
+
+ -- Benjamin Drung <benjamin.drung@cloud.ionos.com>  Mon, 17 Jun 2019 20:04:04 +0200
+
+gokey (0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-2) unstable; urgency=medium
+
+  * Cherry-pick patch from upstream to import deterministic RSA key generation
+    code from Go 1.10 crypto/rsa package (Closes: #930426)
+
+ -- Benjamin Drung <benjamin.drung@cloud.ionos.com>  Thu, 13 Jun 2019 15:51:37 +0200
+
+gokey (0.0~git20190103.40eba7e+really0.0~git20181023.b4e2780-1) unstable; urgency=medium
+
+  * Team upload.
+  * Revert all changes between 0.0~git20181023.b4e2780-1
+    and 0.0~git20190103.40eba7e-1.
+    See https://bugs.debian.org/928227 for a rationale.
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 04 Jun 2019 20:53:29 +0200
+
+gokey (0.0~git20190103.40eba7e-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20190103.40eba7e
+     - Import deterministic RSA key generation code from Go 1.10
+       crypto/rsa package
+     - Add a test-case which tracks changes to the stdlib RSA key
+       generation algorithm
+  * Revert "Disable TestGetKey tests for RSA2048 and RSA4096"
+    because these tests now pass with Go 1.11
+  * Remove unneeded "Depends: golang-go" in -dev package
+
+ -- Anthony Fok <foka@debian.org>  Mon, 07 Jan 2019 23:12:50 -0700
+
+gokey (0.0~git20181023.b4e2780-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20181023.b4e2780
+  * Disable TestGetKey tests for RSA2048 and RSA4096
+    to fix "gokey_test.go:161: keys with same invocation options
+    do not match" test errors on Go >= 1.11 where rsa.GenerateKey
+    has been intentionally made non-deterministic.
+    See https://github.com/cloudflare/gokey/issues/17
+  * Remove patch for adding man page which has been applied upstream
+  * Modify debian/watch to track the HEAD of the git repository
+  * Apply "cme fix dpkg" fixes to debian/control,
+    bumping Standards-Version to 4.3.0, etc.
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add myself to the list of Uploaders
+  * Remove unneeded Files-Excluded field in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Mon, 31 Dec 2018 22:27:28 -0700
+
+gokey (0.0~git20170602.05f83bb-1) unstable; urgency=medium
+
+  * Initial release (Closes: #900881)
+
+ -- Benjamin Drung <benjamin.drung@profitbricks.com>  Wed, 06 Jun 2018 11:20:48 +0200

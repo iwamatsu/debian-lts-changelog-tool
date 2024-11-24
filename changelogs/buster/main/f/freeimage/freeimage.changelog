@@ -1,0 +1,379 @@
+freeimage (3.18.0+ds2-1+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2020-21427: fix buffer overflow in PluginBMP with upstream patches.
+  * CVE-2020-21428: fix buffer overflow in PluginDDS with upstream patch.
+  * CVE-2020-22524: fix buffer overflow in PluginPFM with upstream patch.
+
+ -- Anton Gladky <gladk@debian.org>  Fri, 24 Nov 2023 06:37:28 +0100
+
+freeimage (3.18.0+ds2-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2019-12213: stack exhaustion caused by unwanted recursion in
+    ReadThumbnail (Closes: #929597).
+  * CVE-2019-12211: heap buffer overflow caused by invalid memcpy in
+    PluginTIFF.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Tue, 10 Dec 2019 16:34:27 +0100
+
+freeimage (3.18.0+ds2-1) unstable; urgency=medium
+
+  * Upload into unstable.
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 05 Jan 2019 16:45:35 +0100
+
+freeimage (3.18.0+ds2-1~exp1) experimental; urgency=medium
+
+  [ Andreas Tille ]
+  * [6aa4ac3] New upstream version 3.18.0+ds1
+  * [7de4a2a] Refresh patches
+
+  [ Anton Gladky ]
+  * [61b38c4] Update d/copyright
+  * [1f3f566] New upstream version 3.18.0+ds2
+  * [4586d3b] Refresh patches
+  * [7ca9b46] Update -docs
+  * [b8ae146] Use standards-version 4.2.1
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 05 Jan 2019 16:45:20 +0100
+
+freeimage (3.17.0+ds1-6) unstable; urgency=medium
+
+  * Team upload.
+  * Drop redundant Testsuite: autopkgtest
+  * debhelper 11
+  * Point Vcs fields to salsa.debian.org
+  * Standards-Version: 4.1.5
+  * Drop explicit -dbg packages
+
+ -- Andreas Tille <tille@debian.org>  Sun, 29 Jul 2018 04:52:29 +0200
+
+freeimage (3.17.0+ds1-5) unstable; urgency=medium
+
+  [ James Cowgill ]
+  * [ab6c23d] Make the FaxG3 plugin visible but with no implementation
+    (Closes: #850027)
+
+  [ Anton Gladky ]
+  * [a4e7243] Apply cme fix dpkg.
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 12 Jan 2017 20:45:54 +0100
+
+freeimage (3.17.0+ds1-4) unstable; urgency=medium
+
+  [ Anton Gladky ]
+  * Fix CVE-number.
+
+  [ Ghislain Antony Vaillant ]
+  * Fix FTCBFS: use triplet-prefixed build tools.
+    Thanks to Helmut Grohne for the fix (Closes: #845279)
+  * Fix wrong file type detection for certain plugins.
+    Update Disable-vendored-dependencies.patch
+    Thanks to Boris Lesner for the fix (Closes: #841089)
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Tue, 13 Dec 2016 16:48:47 +0000
+
+freeimage (3.17.0+ds1-3) unstable; urgency=critical
+
+  [ Ghislain Antony Vaillant ]
+  * Fix CVE-2016-5684: apply patch from wheezy-security.
+    Thanks to Salvatore Bonaccorso, Balint Reczey and Chris Lamb
+    (Closes: #839827)
+  * d/gbp.conf: use master as packaging branch.
+  * Bump standards version to 3.9.8, no changes required.
+  * Upgrade to debhelper 10.
+    - Bump compat version to 10.
+    - Bump versioned depends of debhelper to 10.
+    - Drop explicit usage of `--with autoreconf` from dh command.
+    - Drop explicit usage of `--parallel` from dh command.
+  * Use DEB_BUILD_MAINT_OPTIONS for hardening.
+  * Disable PIE hardening feature.
+
+  [ Anton Gladky ]
+  * Change the urgency to critical.
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Mon, 10 Oct 2016 15:12:26 +0100
+
+freeimage (3.17.0+ds1-2) unstable; urgency=medium
+
+  * Improve build reproducibility by applying suggested s/sort/LC_ALL=C sort/
+    to Disable-vendored-dependencies.patch.
+  * Merge libpng16.patch with Fix-compatibility-with-system-libpng.patch.
+  * Use secure Vcs-Git URI.
+  * Bump standards version to 3.9.7, no changes required.
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Fri, 04 Mar 2016 09:59:58 +0000
+
+freeimage (3.17.0+ds1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * FTBFS with libpng1.6: New patch libpng16.patch (Closes: #742560)
+
+ -- Tobias Frost <tobi@debian.org>  Fri, 22 Jan 2016 06:33:47 +0100
+
+freeimage (3.17.0+ds1-1) unstable; urgency=medium
+
+  * Move from experimental to unstable.
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 18 Jan 2016 08:33:15 +0100
+
+freeimage (3.17.0+ds1-1~exp2) experimental; urgency=medium
+
+  * Add missing breaks / replaces relationship for libfreeimageplus-dev.
+    Thanks to Andreas Beckmann (Closes: #810570)
+  * Add missing depends on libfreeimage-dev for libfreeimageplus-dev.
+  * autopkgtest: use respective -dev packages for fi and fip tests.
+  * Add patch fixing the encoding of the FreeImage public header.
+    Thanks to Christophe Trophime (Closes: #798003)
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Sun, 10 Jan 2016 16:09:02 +0000
+
+freeimage (3.17.0+ds1-1~exp1) experimental; urgency=medium
+
+  [ Ghislain Antony Vaillant ]
+  * New upstream release.
+  * Use repacked upstream source tarball:
+    - d/copyright: exclude vendored libraries.
+    - d/watch: use more flexible regexes.
+    - Remove *get-orig script, no longer used.
+    - Remove *lintian-overrides, no longer used.
+  * d/copyright: update licensing information.
+  * Add gbp.conf file.
+  * d/control: refresh list of build dependencies.
+  * Add new binary packages for FreeImagePlus.
+    Packages: libfreeimageplus{3,3-dbg,-dev,-doc}
+  * d/rules:
+    - Add multi-arch support.
+    - Use modern hardening settings.
+    - Run FreeImage and FreeImagePlus testsuites.
+    - Call upstream dos2unix target.
+  * Add autopkgtest support.
+  * Refresh patch queue:
+    - Drop disable_embedded_libraries.patch, replaced by new set of patches
+      derived from Fedora's.
+      Files: Disable-vendored-dependencies.patch,
+             Use-system-dependencies.patch
+    - Drop patch for CVE-2015-3885, FreeImage now uses the system libraw.
+    - Disable tests for any functionality requiring the vendored libraries.
+      File: Disable-testing-of-JPEG-transform.patch
+    - Temporary disable failing JXR MemIO test.
+      File: Disable-testing-of-JXR-MemIO.patch
+    - Improve compatibility with system libraries.
+      Files: Fix-macro-redefinition-of-64-bit-integer-types.patch,
+             Fix-compatibility-with-system-libpng.patch
+    - Various bug fixes caught whilst testing.
+      Files: Fix-unsafe-usage-of-printf-in-testsuite.patch,
+             Fix-missing-cstdio-include-in-testsuite.patch,
+             Fix-endianness-detection.patch
+    - Disable HTML timestamps in Doxygen documentation.
+      File: Disable-usage-of-HTML-timestamps-in-doxygen.patch
+    - Rename patch fixing CVE-2015-0852.
+      File: Fix-CVE-2015-0852.patch
+
+  [ Anton Gladky ]
+  * Fix typo in d/control.
+  * Use packaged jquery.js instead of embedded.
+  * Fix build in indep-only mode.
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Wed, 11 Nov 2015 13:40:17 +0000
+
+freeimage (3.15.4-6) unstable; urgency=medium
+
+  * [2ae274b] Move package under the Debian science team. (Closes: #604614)
+  * [d526203] Apply cme fix dpkg-control.
+  * [d526a52] Use compat level 9.
+  * [c8cc95b] Simplify d/rules, .install.
+  * [2682cec] Fix integer overflow in the ljpeg_start function CVE-2015-3885.
+              (Closes: #786790)
+  * [64a044f] Ignore quilt dir
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 29 Oct 2015 23:17:04 +0100
+
+freeimage (3.15.4-5) unstable; urgency=medium
+
+  [ W. Martin Borgert ]
+  * QA upload.
+  * [e807e1c] Fix integer overflow. (Closes: #797165)
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 15 Sep 2015 22:50:49 +0200
+
+freeimage (3.15.4-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Remove libjpeg8-dev from Build-Depends
+  * Add compatibility transupp.c from src:libjpeg-turbo and use that
+    to compile against libjpeg62 (Closes: #763255)
+  * Make d/copyright machine readable and add jpeg/* and Source/LibJPEG/*
+    license
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 06 Oct 2014 11:29:52 +0200
+
+freeimage (3.15.4-4) unstable; urgency=medium
+
+  * QA upload.
+  * Build-depend on libjpeg8-dev.
+    Patch by Dejan Latinovic <Dejan.Latinovic@imgtec.com>.
+    Closes: #763255.
+  * Improve big endian detection.
+    Add fix-big-endian-detection.patch.
+    Patch by Dejan Latinovic <Dejan.Latinovic@imgtec.com>.
+    Closes:  #763730.
+  * Refresh patches
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 02 Oct 2014 10:18:47 +0100
+
+freeimage (3.15.4-3) unstable; urgency=low
+
+  * QA upload.
+  * disable_embedded_libraries.patch
+    - Use system libtiff (Closes: #735249)
+      Thanks to Sabayon from Gentoo for the hints
+  * tag_truncation.patch
+    - Cherry pick upstream fix for truncation of tags in TIFF files
+      Thanks to Julian Taylor (Closes: #735847)
+
+ -- Scott Howard <showard@debian.org>  Sun, 19 Jan 2014 21:44:52 -0500
+
+freeimage (3.15.4-2) unstable; urgency=low
+
+  * Fix FTBFS from declaring UINT64 twice
+    - updated debian/patches/fixes_ftbfs_amd64.patch
+
+ -- Scott Howard <showard@debian.org>  Tue, 14 Jan 2014 11:51:54 -0500
+
+freeimage (3.15.4-1) unstable; urgency=low
+
+  * QA Upload
+  * New upstream minor release 
+    - Includes fix to build on !linux (Closes: #650485)
+  * Refreshed patches (line endings had to change)
+    - Remove document-mode.patch (accepted upstream)
+  * Lintian fixes: S-V 3.9.5, DM-Upload-Allowed removed
+  * Remove document-mode.patch (accepted upstream)
+
+ -- Scott Howard <showard@debian.org>  Mon, 13 Jan 2014 21:57:45 -0500
+
+freeimage (3.15.1-2) unstable; urgency=low
+
+  * QA upload.
+  * debian/patches/document-mode.patch:
+    - Fix FTBFS with LibRaw 0.15 (Closes: #710133).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 11 Jul 2013 11:22:37 +0200
+
+freeimage (3.15.1-1) unstable; urgency=low
+
+  [ Evan Broder ]
+  * QA upload.
+  * New upstream release (closes: 649541, LP: #898825, #898845)
+    - Refreshed patches.
+      + Abuse dh-autoreconf to generate Makefile.srcs and fipMakefile.srcs
+        patches at build time
+    - Update debian/freeimage-get-orig-source for the new version.
+    - Add new build-dep libraw-dev.
+    - Update patch to disable embedded libraries to deal with API changes
+      in libpng, libmng, and libraw.
+    - Make sure we install symlinks for libfreeimageplus.
+    - Use (upstream-supported) CFLAGS instead of COMPILERFLAGS.
+  * Switch to source format 3.0 (quilt)
+  * Switch to dh(1) and debhelper compat 8
+  * Add missing misc:Depends.
+  * Include the upstream changelog.
+  * Update Debian standards version (no other changes needed).
+
+  [ Stefano Rivera ]
+  * Dropped README.source.
+  * Updated freeimage (3.9.5) fixes CVE-2011-1167, CVE-2011-0192,
+    CVE-2010-2595
+  * Override lintian's embedded-library error for libtiff. It wasn't
+    extricable.
+
+ -- Evan Broder <evan@ebroder.net>  Tue, 06 Dec 2011 14:31:21 +0200
+
+freeimage (3.10.0-4) unstable; urgency=low
+
+  * Fix copy-pasto in tif_config.h.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 29 Oct 2010 22:39:26 +0200
+
+freeimage (3.10.0-3) unstable; urgency=low
+
+  * Don't use embedded copies of various libraries, add build-deps on their
+    packaged versions (closes: #595560):
+    - libjpeg 6b
+    - libmng 1.0.9
+    - libopenjpeg 1.2.0
+    - libpng 1.2.23
+      + CVE-2010-2249, CVE-2010-1205, CVE-2010-0205, CVE-2009-2042,
+        CVE-2008-6218, CVE-2008-5907, CVE-2009-0040, CVE-2008-3964,
+        CVE-2008-1382
+    - openexr 1.6.1
+      + CVE-2009-1720, CVE-2009-1721
+    - zlib 1.2.3
+  * The embedded libtiff copy is still used, because freeimage uses its
+    internals and I couldn't figure out how to unentangle this.  Update the
+    tiff copy to 3.9.4-5, though:
+    CVE-2010-3087, CVE-2010-2483, CVE-2010-2482, CVE-2010-2481, CVE-2010-2443,
+    CVE-2010-2233, CVE-2010-2067, CVE-2010-2065, CVE-2010-1411, CVE-2009-2347,
+    CVE-2008-2327.
+  * Add tiff copyright and license to debian/copyright (closes: #601002)
+  * Link with -lm (closes: #558857).
+  * Try to avoid arch-specific values in our copy of tif_config.h and
+    tiffconf.h (closes: #601762)
+  * Set LFS CFLAGS in Makefile.gnu.
+  * Orphan package (closes: #595559).
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 29 Oct 2010 14:46:46 +0200
+
+freeimage (3.10.0-2) unstable; urgency=low
+
+  * Fixed typo in short description of libfreeimage3-dbg.
+    (Closes: #518647)
+  * Adjusted patched to not need -p0 (Closes: #485251).
+  * Made package priority optional.
+  * Moved libfreeimage3-dbg package into debug section. 
+  * Added debian/README.source.
+  * Added watch file.
+  * Added myself to Uploaders.
+  * Updated Standards-Version.
+
+ -- Michael Koch <konqueror@gmx.de>  Tue, 15 Sep 2009 20:12:53 +0200
+
+freeimage (3.10.0-1) unstable; urgency=low
+
+  * New upstream release. Closes: #471242
+  * Added extra freeimage documentation in orig tarball.
+  * Added get-orig-source target.
+  * Added Homepage field in control file.
+  * Removing some unnecessary stuff from rules file.
+  * Adding some necessary build dependencies.
+  * Adding some modifications to allow for configuring various compiler flags.
+  * Fix FTBFS on amd64.
+  * Adding debug package.
+  * Added DM-Upload-Allowed: yes field.
+  * Added Vcs entries.
+
+ -- Andres Mejia <mcitadel@gmail.com>  Thu, 15 May 2008 03:18:00 -0400
+
+freeimage (3.9.3-3) unstable; urgency=low
+
+  * Removed the file FreeImage393.pdf for which sources are apparently
+    not available.
+  * Added copyright ownner to copyright file.
+
+ -- Federico Di Gregorio <fog@debian.org>  Mon, 07 May 2007 15:35:21 +0200
+
+freeimage (3.9.3-2) unstable; urgency=low
+
+  * Now also build FreeImagePlus.
+  * Changed C++ to C/C++ in debian/control.
+
+ -- Federico Di Gregorio <fog@debian.org>  Sun, 22 Apr 2007 21:59:14 +0200
+
+freeimage (3.9.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #419696)
+
+ -- Federico Di Gregorio <fog@debian.org>  Sat, 21 Apr 2007 09:36:44 +0200
+

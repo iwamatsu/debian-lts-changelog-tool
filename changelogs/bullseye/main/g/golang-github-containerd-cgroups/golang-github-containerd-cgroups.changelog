@@ -1,0 +1,106 @@
+golang-github-containerd-cgroups (0.0~git20201119.4cbc285-4) unstable; urgency=medium
+
+  * Team upload.
+  * Disable cgroupv2 tests as the test infra is broken
+  * Revert "Autopkgtest should has needs-root restriction"
+    This reverts commit fc85817ebaae3e11b819b94c186469c143d5cd3f.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 10 Jan 2021 22:53:38 +0800
+
+golang-github-containerd-cgroups (0.0~git20201119.4cbc285-3) unstable; urgency=medium
+
+  * Team upload.
+  * Autopkgtest should has needs-root restriction
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 10 Jan 2021 18:17:00 +0800
+
+golang-github-containerd-cgroups (0.0~git20201119.4cbc285-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix tests on ppc64le
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 28 Nov 2020 23:05:32 +0800
+
+golang-github-containerd-cgroups (0.0~git20201119.4cbc285-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20201119.4cbc285
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 27 Nov 2020 00:44:22 +0800
+
+golang-github-containerd-cgroups (0.0~git20200817.7a3c009-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20200817.7a3c009
+  * Rework protobuf regeneration
+  * Add cilium-ebpf and sirupsen-logrus to Depends
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 18:54:54 +0800
+
+golang-github-containerd-cgroups (0.0~git20200413.9f1c62d-1) unstable; urgency=medium
+
+  * Team upload.
+  * Watch upstream release/1.1 branch in uscan
+  * New upstream version 0.0~git20200413.9f1c62d
+  * Update Standards-Version to 4.5.0
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Apr 2020 11:20:48 +0800
+
+golang-github-containerd-cgroups (0.0~git20190717.c4b9ac5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Remove unused Files-Excluded in copyright file
+  * Upload to unstable
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 07 Jan 2020 12:01:46 +0800
+
+golang-github-containerd-cgroups (0.0~git20190717.c4b9ac5-1) experimental; urgency=medium
+
+  * Team upload.
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Add Rules-Requires-Root
+  * New upstream version 0.0~git20190717.c4b9ac5
+  * Add patch to skip test which needs to mount cgroup in schroot
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 04 Jan 2020 02:36:00 +0800
+
+golang-github-containerd-cgroups (0.0~git20180223.d578e4e-3) unstable; urgency=medium
+
+  * DH to version 12
+  * Standards-Version: 4.4.1
+  * "watch" file to track head of "master"
+  * rules: set DH_GOLANG_GO_GENERATE := 1
+  * Build .pb.go file from source
+  * Added myself to Uploaders
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 18 Dec 2019 08:20:10 +1100
+
+golang-github-containerd-cgroups (0.0~git20180223.d578e4e-2) unstable; urgency=medium
+
+  [ Arnaud Rebillout ]
+  * Fix mistake in debian copyright
+
+  [ Michael Stapelberg ]
+  * update debian/gitlab-ci.yml (using salsa.debian.org/go-team/ci/cmd/ci)
+
+  [ Arnaud Rebillout ]
+  * Remove shlibs:Depends from the library package
+  * Fix copyright
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Tue, 20 Mar 2018 17:19:07 +0700
+
+golang-github-containerd-cgroups (0.0~git20180223.d578e4e-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20180223.d578e4e
+  * Remove patch that was accepted upstream
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Fri, 23 Feb 2018 08:51:29 +0700
+
+golang-github-containerd-cgroups (0.0~git20180201.c0710c9-1) unstable; urgency=medium
+
+  * Initial release (Closes: #890807)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Mon, 19 Feb 2018 11:17:21 +0700

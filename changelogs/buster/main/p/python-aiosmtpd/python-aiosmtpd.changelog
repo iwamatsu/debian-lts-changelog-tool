@@ -1,0 +1,111 @@
+python-aiosmtpd (1.2-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2024-27305: SMTP smuggling with non-standard line endings
+  * CVE-2024-34083: STARTTLS unencrypted command injection
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 11 Aug 2024 23:41:43 +0300
+
+python-aiosmtpd (1.2-3) unstable; urgency=medium
+
+  * d/rules:
+    - Implement a way to replace upstream's ssl certificate in build dir in
+      case we run tests and think about reputing upstream's certificate after.
+      This makes the package build reproducible.
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Wed, 10 Oct 2018 23:18:10 +0200
+
+python-aiosmtpd (1.2-2) unstable; urgency=medium
+
+  * d/rules:
+    - Implement a way to replace upstream's ssl certificate in build dir in
+      case we run tests. This allows one to have the tests working properly
+      independently of the time variable.
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Tue, 09 Oct 2018 23:02:58 +0200
+
+python-aiosmtpd (1.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Pierre-Elliott Bécue ]
+  * New upstream release: 1.2
+  * d/control:
+    - Set my Debian address instead of my Crans address as uploader
+    - Bump Standards-Version to 4.2.1. No change required
+  * d/rules:
+    - Broaden the examples directory removal to multiple python3 version
+  * d/patches:
+    - Add patch 0001 to ease the testing constraint on the test loop. This
+      could solve the FTBFS bugs from reproducibility tests.
+  * d/upstream/signing-key.asc:
+    - The new releaser of the package doesn't sign it. Remove the key for now.
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Tue, 09 Oct 2018 09:38:50 +0200
+
+python-aiosmtpd (1.1-6) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Pierre-Elliott Bécue ]
+  * d/control:
+    - Add missing dependency on python3-pkg-resources. (Closes: #895365)
+    - Bump Standards-Version to 4.1.4. No change required.
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Thu, 12 Apr 2018 18:12:16 +0200
+
+python-aiosmtpd (1.1-5) unstable; urgency=medium
+
+  * d/watch:
+    - @PACKAGE@ tag doesn't work properly as the source package's name is not
+      upstream's name.
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Tue, 06 Feb 2018 11:14:28 +0100
+
+python-aiosmtpd (1.1-4) unstable; urgency=medium
+
+  * d/watch: use uscan magic tags to fetch properly the gpg signature
+  * d/control:
+    - Bump Standards-Version to 4.1.3, no changes needed.
+    - Swap myself and DPMT as Maintainer/Uploaders
+    - dh requirement to 11
+    - Use Rules-Requires-Root: no for this package.
+  * d/rules:
+    - Add specific pybuild rule to avoid installing
+      /usr/lib/pythonXX/dist-packages/examples. Instead, move it to
+      /usr/share/doc/python3-aiosmtpd/, and remove the __pycache__ compiled
+      files in it.
+    - Enable DH verbose output.
+  * d/copyright:
+    - Update my copyright line as the year ++-ed.
+  * d/compat:
+    - Bump compat version to 11
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Mon, 08 Jan 2018 20:04:28 +0100
+
+python-aiosmtpd (1.1-3) unstable; urgency=medium
+
+  [ Pierre-Elliott Bécue ]
+  * Fixes .docs file that contains erroneous files paths
+
+  [ Mattia Rizzolo ]
+  * Bump Standards-Version to 4.0.1, no changes needed
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Mon, 07 Aug 2017 19:29:08 +0200
+
+python-aiosmtpd (1.1-2) unstable; urgency=medium
+
+  * Adds Upstream changelogs
+  * Adds crypto checking for the upstream tarball
+  * Adds some lintian overrides
+  * Debhelper compatibility bumps from 9 to 10
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Mon, 31 Jul 2017 12:28:50 +0200
+
+python-aiosmtpd (1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #866009)
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Thu, 06 Jul 2017 23:30:00 +0200

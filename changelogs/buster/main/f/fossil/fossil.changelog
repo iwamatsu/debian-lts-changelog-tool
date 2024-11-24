@@ -1,0 +1,557 @@
+fossil (1:2.8-1+deb10u1) buster-security; urgency=medium
+
+  * Non maintainer fix by LTS team.
+  * Cherry-pick fix f4ffefe708793b03 for CVE-2024-24795 and add
+    "Breaks: apache2 (<< 2.4.59-1~)" to stage fix; see
+    https://bz.apache.org/bugzilla/show_bug.cgi?id=68905
+    (closes: #1070069)
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 18 May 2024 20:03:31 +0000
+
+fossil (1:2.8-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump to debhelper 12
+  * Bump policy version
+  * Bump build dependency sqlite3 version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 22 Feb 2019 10:57:22 +0000
+
+fossil (1:2.7-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 01 Oct 2018 16:22:48 +0100
+
+fossil (1:2.6-1) unstable; urgency=medium
+
+  * New upstream version
+  * Requires sqlite3 >= 3.24.0
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 20 May 2018 23:05:47 +0100
+
+fossil (1:2.5-1) unstable; urgency=medium
+
+  * New upstream version
+  * Forward port mods to upstream: spelling errors in comments.
+  * Configuration option --with-tcl now requires argument, --with-tcl=1
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 14 Feb 2018 11:19:30 +0000
+
+fossil (1:2.4-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump debian standards version
+  * Use https URL for upstream pull in README.Debian
+  * Repack upstream tarball to remove autosetup/jimsh0.c (closes: #882720)
+  * ./configure --with-tcl-private-stubs or it won't compile dunno why
+  * Correct some minor spelling errors
+  * Repack upstream tarball to remove *.chm file
+  * Remove redundant-in-dh10 autotools-dev materials
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 07 Dec 2017 10:41:26 +0000
+
+fossil (1:2.2-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 02 May 2017 17:14:29 +0100
+
+fossil (1:2.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * Actually bump to debhelper 10
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 13 Mar 2017 14:01:54 +0000
+
+fossil (1:1.37-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump to debhelper 10
+  * Point to packaging repo in debian/control (closes: #638475)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 18 Jan 2017 12:24:18 +0000
+
+fossil (1:1.36-2) unstable; urgency=medium
+
+  * Fix openssl https issue, thanks to Sergei Golovan <sgolovan@nes.ru>
+    for the patch (closes: #847556)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 12 Dec 2016 01:12:58 +0100
+
+fossil (1:1.36-1) unstable; urgency=medium
+
+  * New upstream version (closes: #828301)
+  * Use upstream option to ignore unknown configuration options instead of
+    patching the configuration script (closes: #840807)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 11 Nov 2016 21:10:04 +0000
+
+fossil (1:1.35-4) unstable; urgency=medium
+
+  * dh --with bash-completion
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 18 Oct 2016 13:42:16 +0100
+
+fossil (1:1.35-3) unstable; urgency=medium
+
+  * flush unused local changes to autosetup/config.{sub,guess}
+  * flush local changes to autosetup/autosetup, add
+    unknown-option-ignoring-option to debian/rules
+  * use dh_bash-completion
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 18 Oct 2016 00:37:06 +0100
+
+fossil (1:1.35-2) unstable; urgency=medium
+
+  * Acknowledge and merge NMU (thanks Osamu and Sergei!)
+    - migrate debian/patches/ to fossil commits
+    - changes to debian/rules:
+      - Use upstream build and install script
+      - Install upstream bash completion script
+      - Hardening
+    - fixed debian/copyright
+    - changes to debian/control
+      - add dependencies for enhanced functionality
+      - tweak VCS fields for https
+      - multi-arch
+  * Re-enable parallel build
+  * Fix some upstream spelling errors (thanks, lintian!)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 10 Oct 2016 16:37:06 +0100
+
+fossil (1:1.35-1.1) unstable; urgency=low
+
+  [ Osamu Aoki ]
+  * Non-maintainer upload.
+  * New upstream release
+  * Merge Sergei's patch with Multi-arch: foreign
+  * Use upstream manpage
+  * Update VCS-Browser to show the source tree but leave #638475
+    since usually VCS-* are pointing to Debian packaging tree.
+  * Fix d/copyright (closes: #840122)
+
+  [ Sergei Golovan ]
+  * enable TH1 for embedded documentation pages
+  * enable TH1 hooks for commands and web pages
+  * enable Tcl integration (closes: #808069)
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 09 Oct 2016 15:41:58 +0900
+
+fossil (1:1.33-3) unstable; urgency=medium
+
+  * enable line editing via build dependency on libreadline-dev
+  * enable fuse filesystem via build dependency on libfuse-dev
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 12 Jul 2015 00:37:27 +0100
+
+fossil (1:1.33-2) unstable; urgency=medium
+
+  * Patch to just warn about unknown configuration options (closes: #789291)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 11 Jul 2015 21:59:48 +0100
+
+fossil (1:1.33-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 10 Jul 2015 21:51:12 +0100
+
+fossil (1:1.29-1) unstable; urgency=medium
+
+  * New upstream version
+  * debchange --newversion no longer needs --append (README.Debian)
+  * disable dh_auto_test due to scary warning in src/main.mk target test
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 21 Jun 2014 21:32:47 +0200
+
+fossil (1:1.28-2) unstable; urgency=medium
+
+  [ Daniel T Chen ]
+  * Use autotools-dev for arm64.
+
+  [ Barak A. Pearlmutter ]
+  * Merge ubuntu patch
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 07 Mar 2014 11:25:19 +0000
+
+fossil (1:1.28-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 10 Feb 2014 13:13:44 +0000
+
+fossil (1:1.27-2) unstable; urgency=low
+
+  * Build dependency on tcl for tclsh thanks to
+    Sergei Golovan <sgolovan@debian.org> (closes: #724987)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 30 Sep 2013 12:46:31 +0100
+
+fossil (1:1.27-1) unstable; urgency=low
+
+  * New upstream version (Closes: #718812)
+  * Include src/cson_amalgamation.{c,h} from upstream tarball: re-released
+    under free license!
+  * enable json in debian/rules
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 20 Sep 2013 09:45:17 +0100
+
+fossil (1:1.26+dfsg-1) unstable; urgency=low
+
+  * New upstream version (Closes: #718812)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 14 Aug 2013 17:17:12 +0200
+
+fossil (1:1.24+dfsg-0.1) unstable; urgency=low
+
+  * Non-maintainer upload with maintainer approval.
+  * Remove non-free src/cson_amalgamation.{c,h} from upstream tarball
+    (closes: #692623, #692624).
+
+ -- Ivo De Decker <ivo.dedecker@ugent.be>  Sat, 01 Dec 2012 15:14:55 +0100
+
+fossil (1:1.24-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 30 Oct 2012 15:27:34 +0000
+
+fossil (1:1.23-1) unstable; urgency=low
+
+  * New upstream version
+    - alternate upstream designation 2012.08.08.112557
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 19 Aug 2012 11:57:49 +0100
+
+fossil (1:1.22.1-1) unstable; urgency=low
+
+  * New upstream version
+    - listed as "patch" to 1.22 fixing minor bug in the diff logic
+    - therefore I call it 1.22.1
+    - alternate upstream designation 2012.03.17.175325
+  * Bump debian standard version
+  * Bump to dh 9
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 29 Mar 2012 09:34:00 +0100
+
+fossil (1:1.21-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 14 Dec 2011 17:42:10 +0000
+
+fossil (1:1.20-2) unstable; urgency=low
+
+  * Add build dependency on sqlite3 for /usr/bin/sqlite3, which is used
+    during the build process only when building outside a live fossil
+    repository.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 25 Oct 2011 15:15:49 +0100
+
+fossil (1:1.20-1) unstable; urgency=low
+
+  * New upstream version (aka 2011.10.21.125253)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 25 Oct 2011 12:51:50 +0100
+
+fossil (1:1.19-1) unstable; urgency=low
+
+  * Silence lintian debian-patch warning
+  * Include upstream changelog in docs
+  * New upstream version (aka version-1.19)
+    - Has build option to use system sqlite3; use it
+    - Make libsqlite3-dev build dependency unversioned
+    - Update fossil(1) man page
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 05 Sep 2011 15:28:40 +0100
+
+fossil (2011.05.28.185122-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 05 Jun 2011 16:36:46 +0100
+
+fossil (2011.05.23.151112-1) unstable; urgency=low
+
+  * New upstream version
+  * Bump debian standard version
+  * Guard use of SQLITE_CONFIG_URI
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 30 May 2011 10:45:56 +0100
+
+fossil (2011.05.12.145652-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 15 May 2011 09:08:47 +0100
+
+fossil (2011.04.13.120518-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 14 Apr 2011 14:05:21 +0100
+
+fossil (2011.03.16.111914-2) unstable; urgency=low
+
+  * Be sure src/sqlite3.{c,h} stay deleted (debian/rules) (closes: #618714)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 18 Mar 2011 11:39:26 +0000
+
+fossil (2011.03.16.111914-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 18 Mar 2011 10:20:20 +0000
+
+fossil (2011.03.01.190432-1) unstable; urgency=low
+
+  * New upstream version
+  * sqlite3 recent functionality guards to allow version 3.7.3,
+    and lower corresponding build dependency
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 02 Mar 2011 08:58:32 +0000
+
+fossil (2011.02.08.125237-1) unstable; urgency=low
+
+  * New upstream version
+  * Guard some invocations that use new sqlite3 API (src/shell.c)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 12 Feb 2011 16:58:57 +0000
+
+fossil (2011.01.13.195528947-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 20 Jan 2011 12:02:59 +0000
+
+fossil (2011.01.01.030647-2) unstable; urgency=low
+
+  * Update man page (debian/fossil.1)
+  * add OBJDIR prefix to file.h targets in src/makemake.tcl (closes: #609365)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 10 Jan 2011 12:37:28 +0000
+
+fossil (2011.01.01.030647-1) unstable; urgency=low
+
+  * New upstream version
+  * Guard some invocations that use a very new sqlite3 API (src/db.c)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 08 Jan 2011 22:47:10 +0000
+
+fossil (2010.12.21.135605-1) unstable; urgency=low
+
+  * New upstream version
+  * Merge post-release changes to trunk to get test suite fix
+  * Require libsqlite3 >= 3.7.4 and remove workaround for older versions
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 21 Dec 2010 22:00:43 -0500
+
+fossil (2010.12.07.133137-1) unstable; urgency=low
+
+  * New upstream version
+  * Allow parallel debian builds with dh --parallel (debian/rules)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 10 Dec 2010 12:48:17 +0000
+
+fossil (2010.11.17.133825-1) unstable; urgency=low
+
+  * New upstream version
+  * Document need for "fossil set manifest on" (debian/README.Debian)
+  * Work around new upstream use of new sqlite3_stmt_readonly()
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 19 Nov 2010 15:11:55 +0000
+
+fossil (2010.11.11.133638-1) unstable; urgency=low
+
+  * New upstream version
+  * Upgrade to debhelper 8
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 11 Nov 2010 16:02:12 +0000
+
+fossil (2010.11.10.014319-1) unstable; urgency=low
+
+  * New upstream version
+  * Silence gcc -Wall by casting output of sizeof() used in format %d
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 11 Nov 2010 11:06:35 +0000
+
+fossil (2010.11.01.142335-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 05 Nov 2010 11:55:48 +0000
+
+fossil (2010.10.05.035549-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 07 Oct 2010 09:27:20 +0100
+
+fossil (2010.09.18.155143-1) unstable; urgency=low
+
+  * Lower given debhelper build dependency version
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 21 Sep 2010 14:48:31 +0100
+
+fossil (2010.08.23.222416-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 26 Aug 2010 09:47:06 +0200
+
+fossil (2010.08.05.100943-1) unstable; urgency=low
+
+  * New upstream version
+  * Build dependency on sqlite >= 3.7.0 for sqlite3_wal_autocheckpoint
+  * Rev deb policy
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 08 Aug 2010 22:42:33 +0200
+
+fossil (2010.07.03.153359-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 07 Jul 2010 16:26:49 +0100
+
+fossil (2010.06.11.120259-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 17 Jun 2010 20:38:50 +0200
+
+fossil (2010.05.21.162104-1) unstable; urgency=low
+
+  * move to dpkg-source format 3.0 (quilt)
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 24 May 2010 10:56:25 +0100
+
+fossil (2010.03.18.142033-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 22 Mar 2010 09:35:07 +0000
+
+fossil (2010.03.08.141844-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 14 Mar 2010 19:52:49 +0000
+
+fossil (2010.02.13.123048-1) unstable; urgency=low
+
+  * New upstream version
+  * rev deb policy
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sat, 13 Feb 2010 21:11:34 +0000
+
+fossil (2010.02.09.115701-2) unstable; urgency=low
+
+  * build dependency on libssl-dev (oopie)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 10 Feb 2010 00:05:13 +0000
+
+fossil (2010.02.09.115701-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 09 Feb 2010 23:47:31 +0000
+
+fossil (2010.02.08.195900-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 08 Feb 2010 22:43:29 +0000
+
+fossil (2010.02.05.165758-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Sun, 07 Feb 2010 02:18:31 +0000
+
+fossil (2010.01.24.175507-1) unstable; urgency=low
+
+  * New upstream version
+  * fix typo in debian/README.Debian
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 27 Jan 2010 16:52:13 +0100
+
+fossil (2010.01.21.205359-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 22 Jan 2010 11:06:16 +0100
+
+fossil (2010.01.12.141013-1) unstable; urgency=low
+
+  * minor mods to debian/rules and associated auxiliary files
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 06 Jan 2010 14:01:47 +0100
+
+fossil (2009.12.20.213451-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 23 Dec 2009 15:25:13 -0500
+
+fossil (2009.11.11.162119-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 13 Nov 2009 15:36:47 -0500
+
+fossil (2009.10.11-1) unstable; urgency=low
+
+  * New upstream version with "fossil clean --all vs --force" patch
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 12 Oct 2009 21:07:42 -0400
+
+fossil (2009.10.05-1) unstable; urgency=low
+
+  * New upstream version
+  * Ensure that sourceball copies src/sqlite3.{c,h} are gone before build.
+    (Deleted in debian branch, but could reappear due to inadequacy of the
+    patch format, which could cause version skew on #include <sqlite3.h>.)
+  * Patch for fossil clean --force (docs) vs --all (code) to favour docs
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 06 Oct 2009 16:15:01 -0400
+
+fossil (2009.09.21.191920-6) unstable; urgency=low
+
+  * use system libsqlite (closes: #549473)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Mon, 05 Oct 2009 00:52:26 -0400
+
+fossil (2009.09.21.191920-5) unstable; urgency=low
+
+  * sed s'/^Section: devel/Section: vcs/' debian/control (closes: #549163)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 01 Oct 2009 07:10:13 -0400
+
+fossil (2009.09.21.191920-4) unstable; urgency=low
+
+  * Have binary package suggest GPG aka gnupg
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 25 Sep 2009 10:59:15 -0400
+
+fossil (2009.09.21.191920-3) unstable; urgency=low
+
+  * Add build dependency to get zlib.h and -lz (closes: #548265)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Fri, 25 Sep 2009 09:02:29 -0400
+
+fossil (2009.09.21.191920-2) unstable; urgency=low
+
+  * Add other authors listed in Copyright lines to debian/copyright
+  * Merge evolutionary upstream changes
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Wed, 23 Sep 2009 14:32:25 -0400
+
+fossil (2009.09.21.191920-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 22 Sep 2009 15:31:45 -0400

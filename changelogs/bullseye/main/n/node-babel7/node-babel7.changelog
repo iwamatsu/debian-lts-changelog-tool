@@ -1,0 +1,614 @@
+node-babel7 (7.12.12+~cs150.141.84-6+deb11u1) bullseye-security; urgency=medium
+
+  * Only evaluate own String/Number/Math methods (Closes: #1053880, CVE-2023-45133)
+
+ -- Yadd <yadd@debian.org>  Fri, 13 Oct 2023 18:25:57 +0400
+
+node-babel7 (7.12.12+~cs150.141.84-6) unstable; urgency=medium
+
+  * Team upload
+  * Make build reproducible
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 03 Feb 2021 06:31:56 +0100
+
+node-babel7 (7.12.12+~cs150.141.84-5) unstable; urgency=medium
+
+  * Team upload
+  * Remove tsconfig.buildinfo files (makes build reproducible)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 01 Feb 2021 16:33:41 +0100
+
+node-babel7 (7.12.12+~cs150.141.84-4) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Update minimum versions of dependencies
+
+  [ Xavier Guimard ]
+  * Install manpages without alternatives (Closes: #979551)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 27 Jan 2021 22:47:58 +0100
+
+node-babel7 (7.12.12+~cs150.141.84-3) unstable; urgency=medium
+
+  * Team upload
+  * Remove useless build dependency to node-typescript-types (Closes: #979788)
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 22 Jan 2021 19:07:09 +0100
+
+node-babel7 (7.12.12+~cs150.141.84-2) unstable; urgency=medium
+
+  * Team upload
+  * Source-only upload
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 09 Jan 2021 07:39:08 +0100
+
+node-babel7 (7.12.12+~cs150.141.84-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.12.12+~cs150.141.84
+  * Build a really "standalone" @babel/standalone
+  * Refresh patches
+  * Provides separated node-babel7-runtime and node-babel7-standalone
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 05 Jan 2021 13:28:05 +0100
+
+node-babel7 (7.12.11+~cs150.141.84-3) unstable; urgency=medium
+
+  * Team upload
+  * Build typescript definitions (Closes: #978341)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 03 Jan 2021 18:08:42 +0100
+
+node-babel7 (7.12.11+~cs150.141.84-2) unstable; urgency=medium
+
+  * Team upload
+  * Require pkg-js-tools ≥ 0.9.58~ (Closes: #977677)
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 18 Dec 2020 22:34:20 +0100
+
+node-babel7 (7.12.11+~cs150.141.84-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.12.11+~cs150.141.84
+  * Refresh patches
+  * Embed rollup-plugin-dts in build only modules
+  * Add build dependency to node-typescript
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 17 Dec 2020 12:27:51 +0100
+
+node-babel7 (7.12.10+~cs150.141.83-3) unstable; urgency=medium
+
+  * Team upload
+  * Install /usr/bin/babeljs-parser
+  * Build manpages using help2man
+  * Remove useless dependency to node-environment-flags (Closes: #977232)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 17 Dec 2020 08:46:12 +0100
+
+node-babel7 (7.12.10+~cs150.141.83-2) unstable; urgency=medium
+
+  * Team upload
+  * Remove some build modules, and add build dependencies to:
+    + node-cheerio
+    + node-jest-worker
+    + node-jsdom
+    + node-make-error
+    + node-rollup-plugin-inject
+    + node-rollup-plugin-node-polyfills
+    + node-rollup-plugin-terser
+    + node-serialize-javascript
+  * Build @babel/standalone (Closes: #977485)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 17 Dec 2020 03:53:31 +0100
+
+node-babel7 (7.12.10+~cs150.141.83-1) unstable; urgency=medium
+
+  * Team upload
+  * Add ctype=nodejs to component(s)
+  * New upstream version 7.12.10+~cs150.141.83
+  * Refresh patches
+  * Improve patch load-plugins-from-system-libraries
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 12 Dec 2020 17:17:39 +0100
+
+node-babel7 (7.12.9+~cs150.130.99-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ lintian-brush ]
+  * Fix field name case in debian/tests/control (Test-command => Test-Command).
+  * Set upstream metadata fields: Security-Contact.
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.1
+  * New upstream version 7.12.9+~cs150.130.99
+    Updates:
+     + babel 7.12.9
+     + @types/babel 7.4.0
+  * Refresh patches
+  * Remove useless dependencies
+  * Update require test
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 28 Nov 2020 17:04:44 +0100
+
+node-babel7 (7.12.6+~cs150.126.101-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.12.6+~cs150.126.101:
+    + Update babel itself to 7.12.6
+    + Embed @babel/plugin-syntax-import-meta
+  * Add dependencies to node-make-dir and node-quick-lru
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 08 Nov 2020 13:01:05 +0100
+
+node-babel7 (7.12.4+~cs142.117.99-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed typescript declarations
+  * New upstream version 7.12.4+~cs142.117.99 (no other changes)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 27 Oct 2020 13:22:25 +0100
+
+node-babel7 (7.12.4+~cs86.100.54-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed babel-preset-current-node-syntax and @babel/plugin-syntax-bigint
+  * New upstream version 7.12.4+~cs86.100.54 (no other changes)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 27 Oct 2020 08:50:20 +0100
+
+node-babel7 (7.12.4+~cs79.91.47-1) unstable; urgency=medium
+
+  * Team upload
+  * Use dh-sequence-nodejs
+  * New upstream version 7.12.4+~cs79.91.47
+    + Updates babel itself to 7.12.4
+    + Embed new components:
+      - @babel/plugin-syntax-logical-assignment-operators
+      - @babel/plugin-syntax-numeric-separator
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 21 Oct 2020 12:01:35 +0200
+
+node-babel7 (7.11.6+~cs65.71.39-1) unstable; urgency=medium
+
+  * Team upload
+  * Increase alternative level to take precedence over node-babel 6
+  * New upstream version 7.11.6+~cs65.71.39
+  * Update node-rollup-plugin* build dependencies to use new @rollup/plugin*
+  * Refresh patches
+  * Embed rollup-plugin-inject and rollup-plugin-node-polyfills for build only
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 24 Sep 2020 22:19:56 +0200
+
+node-babel7 (7.11.4+~cs65.71.38-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.11.4+~cs65.71.38
+  * Refresh patches
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 26 Aug 2020 11:31:24 +0200
+
+node-babel7 (7.11.3+~cs65.71.38-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.11.3+~cs65.71.38
+  * Refresh patches
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 16 Aug 2020 07:48:41 +0200
+
+node-babel7 (7.11.0+~cs65.71.38-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.11.0+~cs65.71.38
+  * Refresh patches
+  * Update lintian overrides
+  * Bump debhelper compatibility level to 13
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 14 Aug 2020 07:33:27 +0200
+
+node-babel7 (7.10.5+~cs65.71.38-4) unstable; urgency=medium
+
+  * Update minimum version of node-lodash to fix ftbfs
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 28 Jul 2020 13:13:36 +0530
+
+node-babel7 (7.10.5+~cs65.71.38-3) unstable; urgency=medium
+
+  * Switch to yarnpkg from npm for bootstrap build (npm no longer works because
+    package.json uses yarn specific features)
+  * Binary included upload with DEB_BUILD_PROFILES=pkg.node-babel7.yarnpkg
+    (Closes: #965353)
+  * Add git as conditional dependency in bootstrapping build profile
+  * Force yarnpkg in component package.json
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 26 Jul 2020 22:26:35 +0530
+
+node-babel7 (7.10.5+~cs65.71.38-2) unstable; urgency=medium
+
+  * Team upload
+  * Add "Provides" field to declare babeljs and all installed modules
+    (See: #965173)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 19 Jul 2020 09:56:24 +0200
+
+node-babel7 (7.10.5+~cs65.71.38-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.10.5+~cs65.71.38
+  * Refresh patches
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 16 Jul 2020 22:17:16 +0200
+
+node-babel7 (7.10.4+~cs65.71.38-1) unstable; urgency=medium
+
+  * Team upload
+  * Remove duplicate eslint-plugin-babel-plugin component
+  * New upstream version 7.10.4+~cs65.71.38
+  * Refresh patches
+  * Install @babel/eslint-* modules
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 01 Jul 2020 22:40:22 +0200
+
+node-babel7 (7.10.2+~cs66.71.39-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.10.2 (no component changes)
+  * Refresh patches
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 13 Jun 2020 17:25:28 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-8) unstable; urgency=medium
+
+  * Team upload
+  * Source only upload
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 13 Jun 2020 14:25:32 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-7) unstable; urgency=medium
+
+  * Team upload
+  * Update debian/clean
+  * Update core-js patch (fix node-string-decoder build)
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 12 Jun 2020 08:04:29 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-6) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 12 Jun 2020 07:00:08 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-5) experimental; urgency=medium
+
+  * Fix autopkgtest
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 30 May 2020 22:33:58 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-4) experimental; urgency=medium
+
+  * Team upload
+  * Add patch for core-js ≥ 3
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 20 May 2020 09:26:09 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-3) experimental; urgency=medium
+
+  * Team upload
+  * Require node-babel7 ≥ 7.9.6 to build
+  * Fix large number patch
+  * Fix build profile
+  * Fix pirates build in npm profile
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 19 May 2020 23:06:33 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-2) experimental; urgency=medium
+
+  * Team upload
+  * Fix bad transpilation for large numbers
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 19 May 2020 14:53:11 +0200
+
+node-babel7 (7.9.6+~cs66.71.39-1) experimental; urgency=medium
+
+  * Team upload
+  * Embed components: @babel/preset-modules babel-plugin-dynamic-import-node gensync
+  * Refresh patches
+  * Update dependencies:
+    + add build dependencies to node-leven, node-rollup-plugin-commonjs,
+      node-rollup-plugin-json
+    + require node-commander ≥ 4.1.1
+  * Embed components (not yet in 7.9.6 but needed to build it):
+    + @babel/plugin-syntax-export-namespace-from
+    + @babel/plugin-syntax-object-rest-spread
+    + @babel/plugin-syntax-async-generators @babel/plugin-syntax-dynamic-import
+    + @babel/plugin-syntax-json-strings
+    + @babel/plugin-syntax-nullish-coalescing-operator
+    + @babel/plugin-syntax-optional-catch-binding
+    + @babel/plugin-syntax-optional-chaining
+  * New upstream version 7.9.6+~cs66.71.39
+  * Clean build modules
+  * Embed build modules: browserify-fs, buffer-es6, jest-worker, process-es6,
+    rollup-plugin-node-builtins, rollup-plugin-node-globals,
+    rollup-plugin-terser, serialize-javascript
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 19 May 2020 13:19:05 +0200
+
+node-babel7 (7.4.5+~cs7.3.8-1) unstable; urgency=medium
+
+  * Add component: js-levenshtein
+  * New upstream version 7.4.5+~cs7.3.8
+  * Add node-babel7.install as workaround for pkg-js-tools not installing
+   the component
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 16 May 2020 18:55:28 +0530
+
+node-babel7 (7.4.5+~cs6.2.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Add patch for node-core-js ≥ 3 (Closes: #960261)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 11 May 2020 10:30:57 +0200
+
+node-babel7 (7.4.5+~cs6.2.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Add pirates and node-modules-regexp components (Closes: #960018)
+  * New upstream version 7.4.5+~cs6.2.2
+    Really: 7.4.5+~1.0.1+~0.2.0+~4.0.1+~1.0.0
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 08 May 2020 14:34:14 +0200
+
+node-babel7 (7.4.5-8) unstable; urgency=medium
+
+  * Team upload
+  * Add rebuild-itself autopkgtest test
+  * Rename "npm" build profile into pkg.node-babel.npm, following policy
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 03 May 2020 09:09:42 +0200
+
+node-babel7 (7.4.5-7) unstable; urgency=medium
+
+  * Update debian/tests/* to fix autopkgtest (remove modules no longer present)
+  * Disable autopkgtest-pkg-nodejs
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 May 2020 23:04:05 +0530
+
+node-babel7 (7.4.5-6) unstable; urgency=medium
+
+  * Source only upload (node-babel7 is available in archive)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 May 2020 12:21:28 +0530
+
+node-babel7 (7.4.5-5) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 May 2020 10:29:10 +0530
+
+node-babel7 (7.4.5-4) experimental; urgency=medium
+
+  [ Pirate Praveen ]
+  * Embed build only module: fastparse
+  * Update minimum version of node-supports-color to 5.3
+  * Tighten minimum version of node-core-js
+  * Allow node-gulp-babel from backports to satisfy dependency
+  * Add npm as conditional build dependency for use with npm build profile
+  * Tighten dependency on node-regenerator-transform (Closes: #958868)
+  * Update minimum version of node-browserslist
+
+  [ Xavier Guimard ]
+  * Use pkg-js-tools auto link during build
+
+  [ Pirate Praveen ]
+  * Skip use of prettier and don't build babel-standalone
+  * Use make build for more build steps
+  * Run make build with npm build profile as well
+  * Run make build-dist for complete build (Closes: #959110)
+  * Skip babel-polyfill generation (browserify is not packaged)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 May 2020 19:45:29 +0530
+
+node-babel7 (7.4.5-3) experimental; urgency=medium
+
+  * Team upload
+  * Remove temporarily "Provides" field to avoid conflicts with packages
+    provided by node-babel=6
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 23 Apr 2020 15:42:52 +0200
+
+node-babel7 (7.4.5-2) experimental; urgency=medium
+
+  * Add a breaks to node-babel before alternative mechanism
+  * Require node-fs-readdir-recursive ≥ 1.1.0~
+  * Remove acorn-walk, provided by acorn
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 20 Apr 2020 16:41:23 +0200
+
+node-babel7 (7.4.5-1) experimental; urgency=medium
+
+  * Team upload
+  * Rename temporarily to node-babel7
+  * Update install
+  * Update alternatives
+  * Update copyright
+  * New upstream version 7.4.5 (Closes: #954028)
+  * Embed components: babeleslint-plugin-development, charcodes
+  * Embed some little component for build
+  * Refresh patches
+  * Install all components
+  * Update build & install
+  * Update lintian overrides
+  * Update autopkgtest
+  * Update dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 17 Mar 2020 09:54:21 +0100
+
+node-babel (6.26.0+repack-3) unstable; urgency=medium
+
+  * Team upload
+  * Install binaries using alternatives to prepare distinct babel-7 package
+  * Decalre compliance with policy 4.5.0
+  * Update lintian overrides
+  * Fix gulpfile for gulp ≥ 4
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 14 Mar 2020 21:52:11 +0100
+
+node-babel (6.26.0+repack-2) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 11 Jan 2020 09:24:50 +0100
+
+node-babel (6.26.0+repack-1) experimental; urgency=medium
+
+  * Team upload
+  * Require node-liftoff ≥ 3.1.0-4 and node-vinyl-fs ≥ 2.4.4-2 (fixes build)
+  * Embed core-js 2.6, remove dependencies to node-core-js and repack
+    (Closes: #947422)
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.1
+  * Add "Rules-Requires-Root: no"
+  * Update lintian overrides
+  * Install embedded core-js into node-babel-runtime and link it into
+    node-babel-register and node-babel-polyfill
+  * Use pkg-js-tools auto install
+  * Require pkg-js-tools ≥ 0.23
+  * Update debian/copyright
+  * Fix babel-runtime install
+  * Add patchs descriptions
+  * Update VCS fields to salsa
+  * Update lintian overrides
+  * Remove .npmignore files from install
+  * Add upstream/metadata
+  * Fix HOME to /tmp during autopkgtest
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 05 Jan 2020 09:46:26 +0100
+
+node-babel (6.26.0+dfsg-3) unstable; urgency=medium
+
+  * Add new binary node-babel-plugin-transform-proto-to-assign
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 23 Jan 2018 19:49:32 +0530
+
+node-babel (6.26.0+dfsg-2) unstable; urgency=medium
+
+  * Provide babeljs-external-helpers command
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 07 Jan 2018 22:44:30 +0530
+
+node-babel (6.26.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Refresh patches
+  * Bump standards version
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 05 Jan 2018 21:37:50 +0530
+
+node-babel (6.25.0+dfsg1-3) unstable; urgency=medium
+
+  * Provide babeljs from node-babel-cli (as it provides /usr/bin/babeljs)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 15 Dec 2017 00:30:15 +0530
+
+node-babel (6.25.0+dfsg1-2) unstable; urgency=medium
+
+  * Drop node-babel-register dependency in node-babel-core (Closes: #876016)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 25 Oct 2017 23:45:49 +0530
+
+node-babel (6.25.0+dfsg1-1) unstable; urgency=medium
+
+  * Remove files without copyright owner, make ftp masters happy.
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 10 Oct 2017 10:51:25 +0530
+
+node-babel (6.25.0+dfsg-11) unstable; urgency=medium
+
+  * Add more binary packages
+  * Change /usr/bin/babel to /usr/bin/babeljs (Closes: #874420)
+  * Move to main section as babel can now build itself without using npm
+  * Add copyright to Google Inc for
+    packages/babel-preset-es2015/test/fixtures/traceur/*
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 08 Oct 2017 21:06:36 +0530
+
+node-babel (6.25.0+dfsg-10) unstable; urgency=medium
+
+  * Add node-regexpu-core as dependency for node-babel-preset-es2015
+  * Enable require test for babel-preset-es2015 and node-babel-preset-latest
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 26 Sep 2017 10:35:49 +0530
+
+node-babel (6.25.0+dfsg-9) unstable; urgency=medium
+
+  * Add new binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 22 Sep 2017 22:17:02 +0530
+
+node-babel (6.25.0+dfsg-8) unstable; urgency=medium
+
+  * Add missing dependency for node-babel-preset-stage-0
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 21 Sep 2017 13:38:38 +0530
+
+node-babel (6.25.0+dfsg-7) unstable; urgency=medium
+
+  * Update versions of packages provided by node-babel-preset-es2015
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 20 Sep 2017 12:36:40 +0530
+
+node-babel (6.25.0+dfsg-6) unstable; urgency=medium
+
+  * Add missing dependencies
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 19 Sep 2017 23:08:20 +0530
+
+node-babel (6.25.0+dfsg-5) unstable; urgency=medium
+
+  * Add new binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 18 Sep 2017 13:46:10 +0530
+
+node-babel (6.25.0+dfsg-4) unstable; urgency=medium
+
+  [ Pirate Praveen ]
+  * Add node-babel-plugin-transform-strict-mode as dependency for
+    node-babel-preset-es2015
+  * Use packaged modules from system when available
+
+  [ Daniel Ring ]
+  * Add more binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 17 Sep 2017 10:43:52 +0530
+
+node-babel (6.25.0+dfsg-3) unstable; urgency=medium
+
+  * Add more binary packages: node-babel-plugin-transform-strict-mode,
+    node-babel-helper-call-delegate, node-babel-helper-hoist-variables
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 14 Sep 2017 13:55:13 +0530
+
+node-babel (6.25.0+dfsg-2) unstable; urgency=medium
+
+  * Add more binary packages
+  * Increase autopkgtest coverage to all binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Aug 2017 11:17:49 +0530
+
+node-babel (6.25.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #849291)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 27 Dec 2016 11:55:00 +0530

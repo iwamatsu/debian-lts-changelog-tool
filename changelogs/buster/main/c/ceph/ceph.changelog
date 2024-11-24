@@ -1,0 +1,1010 @@
+ceph (12.2.11+dfsg1-2.1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+
+  [ Stefano Rivera ]
+  * Collection of minor security updates for Ceph.
+  * CVE-2020-27781: Privilege Escalation: User credentials could be manipulated
+    and stolen by Native CephFS consumers of OpenStack Manila, resulting in
+    potential privilege escalation. An Open Stack Manila user can request
+    access to a share to an arbitrary cephx user, including existing users.
+    The access key is retrieved via the interface drivers. Then, all users of
+    the requesting OpenStack project can view the access key. This enables the
+    attacker to target any resource that the user has access to. This can be
+    done to even "admin" users, compromising the ceph administrator.
+  * CVE-2021-20288: Potential Privilege Escalation: When handling
+    CEPHX_GET_PRINCIPAL_SESSION_KEY requests, ignore CEPH_ENTITY_TYPE_AUTH in
+    CephXServiceTicketRequest::keys.
+  * CVE-2020-1760: XSS: A flaw was found in the Ceph Object Gateway, where it
+    supports request sent by an anonymous user in Amazon S3. This flaw could
+    lead to potential XSS attacks due to the lack of proper neutralization of
+    untrusted input.
+  * CVE-2020-25678: Information Disclosure: ceph stores mgr module passwords
+    in clear text. This can be found by searching the mgr logs for grafana and
+    dashboard, with passwords visible.
+  * CVE-2019-10222: Denial of service: An unauthenticated attacker could crash
+    the Ceph RGW server by sending valid HTTP headers and terminating the
+    connection, resulting in a remote denial of service for Ceph RGW clients.
+  * CVE-2020-10753 and CVE-2021-3524: Header Injection: It was possible to
+    inject HTTP headers via a CORS ExposeHeader tag in an Amazon S3 bucket. The
+    newline character in the ExposeHeader tag in the CORS configuration file
+    generates a header injection in the response when the CORS request is
+    made.
+  * CVE-2020-12059: Denial of Service: A POST request with an invalid tagging
+    XML could crash the RGW process by triggering a NULL pointer exception.
+  * CVE-2020-1700: Denial of Service: A flaw was found in the way the Ceph RGW
+    Beast front-end handles unexpected disconnects. An authenticated attacker
+    can abuse this flaw by making multiple disconnect attempts resulting in a
+    permanent leak of a socket connection by radosgw. This flaw could lead to
+    a denial of service condition by pile up of CLOSE_WAIT sockets, eventually
+    leading to the exhaustion of available resources, preventing legitimate
+    users from connecting to the system.
+  * CVE-2021-3531: Denial of Service: When processing a GET Request in Ceph
+    Storage RGW for a swift URL that ends with two slashes it could cause the
+    rgw to crash, resulting in a denial of service.
+  * CVE-2021-3979: Loss of Confidentiality: A key length flaw was found in
+    Ceph Storage. An attacker could exploit the fact that the key length is
+    incorrectly passed in an encryption algorithm to create a non random key,
+    which is weaker and can be exploited for loss of confidentiality and
+    integrity on encrypted disks.
+
+  [ Bastien Roucariès ]
+
+  * CVE-2023-43040: A flaw was found in Ceph RGW. An unprivileged
+    user can write to any bucket(s) accessible by a given key
+    if a POST's form-data contains a key called 'bucket'
+    with a value matching the name of the bucket used to sign
+    the request. The result of this is that a user could actually
+    upload to any bucket accessible by the specified access key
+    as long as the bucket in the POST policy matches the bucket
+    in said POST form part. (Closes: #1053690)
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 21 Oct 2023 16:42:26 +0000
+
+ceph (12.2.11+dfsg1-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * [3194010] Install ceph-volume@.service into ceph-osd.
+    (Closes: #924061)
+
+ -- Bernd Zeimetz <bzed@debian.org>  Fri, 05 Apr 2019 15:12:52 +0200
+
+ceph (12.2.11+dfsg1-2) unstable; urgency=medium
+
+  * [27a321] Fix builds on 32bit architectures
+  * [346bfa] Fix linking radosgw without BEAST frontend
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Tue, 19 Feb 2019 08:50:12 +0100
+
+ceph (12.2.11+dfsg1-1) unstable; urgency=medium
+
+  * [8b6f70] Build depend on cmake >= 3.13.2
+  * [98ed84] New upstream version 12.2.11+dfsg1
+    - Fixes CVE-2018-14662, CVE-2018-16889, CVE-2018-16846
+    (Closes: #921948, #918969, #921947)
+  * [4d5c86] Mark all LTTng tracepoints symbols as optional
+  * [b92a2f] Build depend on debhelper >= 11.5.4~
+  * [5781cc] Add Breaks/Replaces ceph-base (<< 12.2.10+dfsg1-1~) to ceph-common
+    (Closes: #919898)
+  * [658bd3] Fixup Breaks/Replaces for files moved between binary packages
+  * [c24137] Install systemd units for Ceph MGR service
+    (Closes: #920176, #919871)
+  * [091e14] Remove no longer needed dpkg-maintscript-helper calls in radosgw
+  * [567dde] Temp changelog commit
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Tue, 12 Feb 2019 10:55:02 +0100
+
+ceph (12.2.10+dfsg1-1) unstable; urgency=medium
+
+  * [22146e] ceph-base: create directory for bootstrap-rbd key
+  * [8c0362] Move ceph bash completion to ceph-common
+  * [b9e790] Make ceph binary package Suggests binNMU safe
+  * [fc83f1] Install ceph-fuse systemd service file
+  * [e70c29] Enable LTTng
+  * [234e9b] New upstream version 12.2.10+dfsg1
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Sat, 29 Dec 2018 22:08:52 +0100
+
+ceph (12.2.8+dfsg1-5) unstable; urgency=medium
+
+  * [66e03b] Fix linking on archs which require libatomic
+  * [5236f3] Fix Python 3 autopkgtest
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Fri, 30 Nov 2018 16:49:02 +0100
+
+ceph (12.2.8+dfsg1-4) unstable; urgency=medium
+
+  * [97dfb6] Fix detection of armel for NEON instructions (Closes: #913599)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Thu, 22 Nov 2018 22:33:21 +0100
+
+ceph (12.2.8+dfsg1-3) unstable; urgency=medium
+
+  * [168bb9] Build depend on pythonX-dev instead of pythonX-all-dev
+    (Closes: #912905)
+  * [38d140] Patch to check for atomic support during build (Closes: #913601)
+  * [9cc0a5] Disable libboost-context on unsupported archs (Closes: #913600)
+  * [238143] Fix building with -g1 on 32 bit architectures
+  * [3b48d5] Use -mfloat-abi=softfp on armel for NEON instructions
+    (Closes: #913599)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Thu, 22 Nov 2018 09:38:09 +0100
+
+ceph (12.2.8+dfsg1-2) unstable; urgency=medium
+
+  * [5c4b36] Add architecture specific symbols for librados2
+  * [38bc1b] Build depend on libatomic1 on armel, m68k, mips, mipsel, powerpc,
+    powerpcspe and sh4
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Wed, 31 Oct 2018 23:38:05 +0100
+
+ceph (12.2.8+dfsg1-1) unstable; urgency=medium
+
+  [ James Page ]
+  * [9c55f6] Ensure that systemd targets are enabled and started
+  * [17ca38] Support optional runtime loading of openssl in radosgw
+  * [8927f6] Fix build on i386
+  * [774281] Ensure all ceph modules are included in the binary package.
+  * [00ca38] Cherry pick upstream fix to resolve FTBFS on armhf
+  * [5d118c] Add ceph-volume tools to ceph-osd package
+
+  [ Gaudenz Steinlin ]
+  * [ba768b] New upstream version 12.2.8+dfsg1
+    (Closes: #852999, #864535, #893149)
+  * [96eba0] Exclude jsonchecker from upstream source
+  * [7dd73b] Exclude Windows help file from orig tarball
+  * [9d1740] Move ceph initscript and systemd target to ceph-base
+  * [8ae049] Drop obsolete patches (either upstreamed or because of switch to
+    cmake)
+  * [cfd095] Create directory for Ceph Manager bootstrap keys
+  * [858194] Shell scripts moved out of architecture specific directory
+  * [f3f387] Merge ceph-fs-common package into ceph-common
+  * [1789fe] Move radosgw-admin to ceph-common
+  * [6f51fc] Add compressor plugins to ceph-common
+  * [5bd0d1] Add crypto plugins to ceph-common on amd64
+  * [7724f7] New binary package ceph-mgr
+  * [804be6] Remove librgw_file* from ceph-test. These are unit tests for rgw.
+  * [fef87a] Upstream changed the build system to cmake
+  * [134e34] Build Python 3 versions of Python modules (Closes: #883148)
+  * [52a969] Package RADOS gateway Python bindings (python-rgw)
+  * [a48700] Add rados-objclass-dev binary package
+  * [30306f] Update dependencies for new upstream release
+  * [4d07af] libcephfs1 -> libcephfs2 soname bumped upstream
+  * [c4022d] Remove ceph-disk-udev no longer shipped upstream
+  * [9aad82] Remove sample.fetch_config no longer shipped upstream
+  * [fc163d] Update copyright for new upstream release
+  * [21c408] Add /usr/bin/radosgw-es to radosgw package
+  * [f63b2a] ceph-osd: sysctl config to increase the maximum number of AIO
+    requests
+  * [5f1f30] Remove static libraries from -dev packages (removed upstream)
+  * [1db168] Install ceph-detect-init into /usr/bin instead of /usr/sbin
+  * [1fb625] Move ceph-*-tool from ceph-test into daemon packages
+  * [6a5628] Remove obsolete X-Python-Version
+  * [c6fc4d] Update to Debian Policy version 4.2.1
+  * [5821f2] Set multiarch triplet in debian/rules
+  * [9bdce0] Remove override of dh_auto_install
+  * [b71c87] Add libceph-common to librados2 and librados-dev pkgs
+  * [c746ce] Override JSON license lintian warning (false positive, code
+    removed)
+  * [17d65c] Use dh_missing instead of dh_install --list-missing
+  * [cba40a] Remove obsolete ceph-create-keys@.service from ceph-base
+  * [252d62] Update watch file for https and repacking
+  * [ef84cf] Install ceph SysV init script with dh_install
+  * [0c2c84] Add missing source for jquery.flot.js (actually
+    jquery.colorhelpers.js)
+  * [0f1e2e] Add missing sources for JQuery in civetweb
+  * [8010cc] Add missing sources from AdminLTE
+  * [7c425a] Add lintian overrides for source-is-missing false positives
+  * [75f7d2] Update symbols files
+  * [aa7295] Patch to fix build failures with Boost 1.67
+  * [872887] Build with Debian packaged Boost 1.67 instead of bundled Boost 1.66
+  * [abf215] Use google-perftools on all supported architectures
+  * [44dd74] Add missing sources for the mgr dashboard plugin
+  * [39f9d6] Depend on ceph-common for pythonX-cephfs (Closes: #896400)
+  * [7a10f0] Improve autopkgtests
+  * [7515ca] Add Python dependency for ceph-fuse
+  * [d91a92] Make the ceph binary package a pure metapackage
+  * [df1dc8] Add Lintian overrides for systemd targets
+  * [bc7cd4] Install upstream rbdmap systemd service file
+  * [dd44ea] Remove RUNPATH from JNI libraries
+  * [7e9bce] Add dependency on junit4 and libcephfs-java for ceph-test
+  * [dfbe7c] Remove unnecessary ceph-base postrm script (Closes: #867465)
+  * [bad29d] Fix permissions on /var/run/ceph in SysV init script
+    (Closes: #869142)
+  * [6edc7a] Mark libraries as Multi-Arch compatible (Closes: #822740)
+
+  [ Thomas Goirand ]
+  * [46be6f] Change VCS links to point to Salsa
+
+  [ Shengjing Zhu ]
+  * [bfcf95] Don't treat rados-classes and ceph/compressor as shared libraries
+  * [0ef4f9] Add missing interpreter in ceph-{osd,mon}.postinst
+    (Closes: #862684, #862685)
+  * [f75bfc] Change section of libcephfs-jni from libs to java
+  * [f4b5d4] Add patch to fix various spelling errors
+  * [f60d21] Patch to remove link to ceph.com for dashboard favicon
+  * [116028] Backport test build fix from upstream
+  * [b83166] Change architecture of ceph-fuse to linux-any (from amd64)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Sun, 28 Oct 2018 23:43:10 +0100
+
+ceph (10.2.5-7.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with -g1 instead of -g on 32bit architectures to fix
+    FTBFS due to the 2GB/3GB address space limits.
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 07 Jun 2017 11:39:39 +0300
+
+ceph (10.2.5-7.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * ceph-mon: Add Breaks+Replaces: ceph-common (<< 10) for taking over
+    /usr/bin/ceph-rest-api.  (Closes: #864161)
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 06 Jun 2017 09:08:30 +0200
+
+ceph (10.2.5-7) unstable; urgency=medium
+
+  * [a12798] Add fix-init-system-detection.patch.
+    This replaces the static init system detection by more appropriate
+    runtime detection which also works if a Debian system is running with
+    sysvinit. (Closes: #862075)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Fri, 12 May 2017 12:12:00 +0200
+
+ceph (10.2.5-6) unstable; urgency=medium
+
+  * [e44a30] Disable running dh_auto_install with parallel jobs
+    (Closes: #850906)
+  * [b7e926] Link with libatomic and --as-needed on all archs (Closes: #850831)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Wed, 11 Jan 2017 12:02:24 +0100
+
+ceph (10.2.5-5) unstable; urgency=medium
+
+  * [f4675d] Set _FILE_OFFSET_BITS=64 via DEB_CPPFLAGS_MAINT_APPEND
+  * [f60392] Install systemd targets for ceph services (Closes: #850509)
+  * [d3baba] Link with -latomic on mips/mipsel
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Tue, 10 Jan 2017 09:04:48 +0100
+
+ceph (10.2.5-4) unstable; urgency=medium
+
+  * [88034c] Build with ggc-min-expand=5 on mips/el (Closes: #849657)
+  * [c31e79] Add patch to build rocksdb with -latomic on mips/el
+  * [182dd8] NEWS entry about upgrades from Debian Jessie
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Sun, 08 Jan 2017 21:34:21 +0100
+
+ceph (10.2.5-3) unstable; urgency=medium
+
+  * [eeff8d] Use -mfloat-abi=softfp on armel for NEON plugin (Closes: #849660)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Thu, 05 Jan 2017 09:18:41 +0100
+
+ceph (10.2.5-2) unstable; urgency=medium
+
+  * [3859ca] Only list missing files instead of failing (Closes: #849031)
+  * [47aef7] Remove chrony from recommends (provides time-daemon)
+    (Closes: #827673)
+  * [3e96e6] Upstream fix for CVE-2016-9579 (short CORS request)
+    (Closes: #849048)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Sat, 24 Dec 2016 13:14:28 +0100
+
+ceph (10.2.5-1) unstable; urgency=medium
+
+  [ James Page ]
+  * [754935] Imported Upstream version 9.2.0
+    - [df85c3] Resync relevant packaging changes with upstream.
+    - [be5f82] Refresh patches.
+    - [d1f3fe] Add python-setuptools to BD's for ceph-detect-init.
+    - [b2f926] Add lsb-release to BD's to ensure that python modules are
+               installed to correct locations.
+    - [e4d702] Add python-sphinx to BD's to ensure man pages get generated
+               and installed.
+    - [3ead6e] Correct install location for ceph-monstore-update tool.
+    - [269754] [177b7a] Update symbols for new release.
+  * [4c45629] Update NEWS file for infernalis changes.
+  * [940491e] Limit number of parallel builds to 2 to reduce memory footprint
+              on builders.
+  * [a2bed4] New upstream version 10.2.5
+  * [cbfb6b] Sync upstream changes around rbdmap install and conf files.
+  * [5c52b2] Drop patches include upstream, refresh remaining patches
+  * [8f9820] Resync further packaging changes from upstream.
+  * [27d010] Re-add bz2-dev BD.
+  * [e94aa2] Add python-dev to BD's.
+  * [e201c1] d/p/pybind-flags.patch: Ensure that cython *FLAGS are correctly
+             set.
+  * [14cd12] d/p/fix-systemd-escaping.patch: Ensure that leading '/' is stripped
+             from block device paths when escaping for use in systemd unit
+             names.
+  * [33b3aa] Add pull request for systemd fixes
+  * [d781a2] d/ceph-mds.postinst: Fix syntax error.
+  * [ce55ec] Ensure that python flags are correct set for cython rbd build.
+  * [f9e35b] Switch rbd python binding to cython
+  * [8ccae0] Drop ceph_volume_client until its actually in the codebase.
+  * [0a11cc] Install to relative, not absolute /etc/ceph.
+  * [e2415a] Drop ceph-bluefs-tool from ceph package.
+  * [b16966] d/ceph-mds.dirs: Actually create /var/lib/ceph/mds prior to
+             changing permissions (LP: #1544647).
+  * [0c1201] d/ceph.init: Restore link to init-ceph, resolving un-install
+             failures due to missing init script (LP: #1546112).
+
+  [ Gaudenz Steinlin ]
+  * [e3cb86] Remove no longer needed check for dh-autoreconf>=6
+  * [9157b3] Install ceph-brag tool into ceph-common
+  * [74e9f3] Install ceph-client-debug into ceph-test
+  * [476449] Use jh_installlib to install Java libraries
+  * [643f6e] Don't remove configure script on dh_clean
+  * [4bb203] Remove *.la files to binary packages
+  * [b76c6a] Add build dependency on libboost-iostreams-dev
+  * [b0506f] Add build dependency on libldap2-dev
+  * [526ce1] Refresh patches for upstream version 10.2.2
+  * [cf539b] Remove patches applied upstream in 10.2.2
+
+  [ James Page ]
+  * [646b48] Add librgw2 binary packages.
+  * [ae3cda] Drop virtualenv from BD's.
+  * [7ebd7c] Re-enable rocksdb build for bluestore support
+  * [e393e5] Add rbd-mirror package
+  * [00d06d] Add patch to set g++ flags correctly for rocksdb
+  * [3b029a] Enable gperftools on arm64 architecture.
+  * [e88620] Add ceph-bluefs-tool to install.
+  * [4f40a1] Add s390x to list of rocksdb flags
+  * [858334] d/p/skip-setup.py-makefiles.patch,rules: Avoid use of virtualenv to
+             install ceph-disk and ceph-detect-init python modules.
+  * [40c3b7] Update watch file to scan for gz files.
+  * [49b716] Install librgw_file* as part of ceph-test package.
+
+  [ Gaudenz Steinlin ]
+  * [2e156d] d/rules: Install upstart and systemd configurations for rbd-mirror.
+
+  [ James Page ]
+  * [ca0b07] d/copyright: Ensure that jerasure and gf-complete are not stripped
+             from the upstream release tarball.
+  * [eee861] d/p/disable-openssl-linking.patch: Disable build time linking with
+             OpenSSL due to licensing incompatibilities.
+  * [07d7a6] d/*.symbols: Add new symbols for RC.
+  * [2416f1] Fix multiarch paths for librgw
+  * [2da01d] d/rules: Ensure that dh_systemd_start does not insert maintainer
+             script snippets for ceph-mon and ceph-create-keys - service restart
+             should be handled outside of the packaging as it is under upstart
+             and for all other systemd unit files installed (LP: #1563330).
+  * [76ec3b] d/ceph-common.postinst: Silence output of usermod call
+             (LP: #1569249).
+  * [63d60f] d/rules,ceph-common.install: Ensure that /etc/default/ceph is a
+             file and not a directory (LP: #1587516).
+  * [a866ca] d/control: Bumped Standards-Version to 3.9.8, no changes.
+  * [e0811e] d/ceph.install: Drop install of 60-ceph-partuuid-workaround.rules
+             as no longer part of upstream codebase.
+  * [25954f] * d/*: Split ceph-osd and ceph-mon into separate binary packages
+             and add new ceph-base binary package inline with upstream packaging
+             changes (LP: #1596063).
+  * [f1287b] Add missing misc depends
+  * [afeb18] d/rules,control: Drop -dbg packages and let Ubuntu builds take care
+             of ddeb generation instead.
+
+  [ Gaudenz Steinlin ]
+  * [e133b2] Install rbdmap manpage into ceph-common
+  * [b5ed64] Install radosgw-token command into radosgw package
+  * [0a27e1] Adapt installation of Python files to latest Jewel release
+  * [ef2544] Drop rocksdb-flags patch applied upstream
+  * [07aef4] Add patch osd-limit-omap-data-in-push-op
+  * [32f14d] Refresh patches
+
+  [ James Page ]
+  * [f4e95c] Fix install location for mount.ceph
+  * [6a9efc] Update install location for mount.ceph.fuse
+  * [7624f0] d/control: Add Pre-Depends on ceph-common to ceph-osd to ensure
+             that ceph user and group are created prior to unpacking of udev
+             rules (LP: #1631328).
+
+  [ Frode Nordahl ]
+  * [022ee3] Add rgw_rados-creation_time patch
+
+  [ Gaudenz Steinlin ]
+  * [05225f] Remove old ceph logrotate configuration
+
+  [ James Page ]
+  * [cfa82f] Refresh patches
+
+  [ Gaudenz Steinlin ]
+  * [fdec5d] Remove upstart support
+  * [5966f0] Use new RSA key for ceph-post-file
+  * [3748b6] Only install ChangeLog as upstream changelog
+  * [aa1393] Install bash-completions to /usr
+  * [ab0a88] Dependency on lsb-base for initscripts
+  * [4d78b0] Disable radosgw SysV init script on systemd
+  * [ff4c87] Don't install python bytecode
+  * [3cbf5e] Add missing dependencies on python (ceph-osd, ceph-mon)
+  * [8c70df] Update symbols files (librados2 and librbd1)
+  * [e4f0c5] Add ${shlibs:Depends} on Python C extensions
+  * [936838] Allow setting the number of parallel jobs
+  * [e5aa0f] Remove Laszlo and add myself to uploaders
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Sat, 17 Dec 2016 22:40:22 +0100
+
+ceph (0.94.5-1) experimental; urgency=medium
+
+  * [2d330d6] New upstream release:
+    - [1e93090] Drop patch for CVE-2015-5245, included upstream.
+    - [20adc7d] Refresh all other patches.
+  * [9255e5d] Ensure any erasure coding test libraries and dangling symlinks
+              are not included in the ceph package.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 09 Nov 2015 12:09:51 +0000
+
+ceph (0.94.3-1) experimental; urgency=medium
+
+  * [580fef] Imported Upstream version 0.94.3 (Closes:  #777814, #795178)
+  * [536935] Add upstream patch to fix CVE-2015-5245 (Closes: #798567)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Fri, 18 Sep 2015 16:55:23 +0200
+
+ceph (0.94.2-2) experimental; urgency=medium
+
+  * Revert "Drop virtualenv BD, disable unit tests."
+  * Restore patches for test enablement.
+  * Display test-suite log output in the event of failures.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 20 Jul 2015 13:37:06 +0100
+
+ceph (0.94.2-1) experimental; urgency=medium
+
+  * Resync with Ubuntu, introducing Ceph Hammer stable release:
+    - d/*.symbols: Update inline with upstream additions, use regex
+      for ceph version symbol.
+    - d/lib-systemd/system/ceph-create-keys.service: Automatically create
+      admin and bootstrap keys after ceph mon startup.
+    - d/p/vivid-does-systemd.patch: Ensure that disks prepared on vivid
+      or later use systemd for init.
+    - d/lib-systemd/system/*.service: Align nofile limits and restart config
+      with equivalent upstart configurations.
+    - d/p/fix-cycles-arch.patch: Skip initialization of cycles_per_sec
+      if rtdsc (or equivalent) is not supported.
+    - d/ceph{-common}.install,control: Move ceph_argparse.py down into
+      ceph-common package to fixup ceph cli usage/autopkgtest failure.
+    - d/control,ceph-common.install,librbd1.install: Move rbdnamer and
+      associated udev rules into ceph-common package.
+    - d/control,python-*: Split out rbd, rados and cephfs bindings into
+      separate python packages, move some bits into ceph/ceph-common.
+    - d/control: Move python-flask dependency to ceph package, only required
+      for REST API.
+    - d/control: Use google-perftools on arm64.
+    - d/control: Re-order Recommends to prefer ntp over chrony for Ubuntu.
+    - d/p/ceph-osd-prestart-path.patch: Fixup path for ceph-osd upstart
+      configuration pre-start script.
+    - d/p/fix-argparse-defaults.patch: Workaround behavioural change in
+      argparse set_defaults in python 2.7.9
+  * New upstream point release:
+    - d/p/*: Refresh.
+  * d/p/use_system_jerasure.patch,d/control: Drop use of libjerasure
+    as the patch is intrusive and expensive to maintain; will revisit if
+    adopted upstream.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 16 Jun 2015 11:31:05 +0100
+
+ceph (0.87-2) experimental; urgency=low
+
+  * Team upload.
+
+  [ Gaudenz Steinlin ]
+  * README.Debian: added clarification about setting the hashpspool flag.
+    (Closes: #769596).
+
+  [ James Page ]
+  * Added new "modules.patch" to mark new erasure coding libraries as
+    modules, wildcard install.
+
+  [ Dmitry Smirnov ]
+  * Recommends: added "ntp" to list of time-daemon alternatives
+    (Closes: #767511).
+  * Introduced native systemd services (except "rbdmap"), (Closes: #769593).
+  * ceph-test: install forgotten files.
+  * Run post-build tests:
+    + updated "virtualenv-never-download.patch" to pass
+      "--system-site-packages" to virtualenv to prevent downloads.
+    + added new patches to disable network-dependent and failing tests.
+  * Patchworks:
+    - bug-9341.patch
+    + bug-10036.patch (to show OSD affinity in "ceph osd tree").
+      Thanks, Mykola Golub.
+    + bug-10059.patch
+    + 0latest-giant.patch (Last-Update: 2014-11-15).
+    + sleep-recover.patch
+    + tests-disable.patch (to disable tests that need cluster).
+    + tests-disable-ceph-disk.patch
+    + use_system_gtest.patch (commented)
+      as first attempt to build with system "libgtest-dev".
+    + use_system_jerasure.patch
+  * Build-Depends:
+    + libjerasure-dev (>= 2.0.0-2~)
+    + virtualenv
+    + valgrind [amd64 armhf i386 powerpc]
+  * rules: pass "--without-lttng" to explicitly disable "lttng" to avoid
+    auto-enable if found.
+  * rules: disabled bundled RocksDB:
+    RocksDB suppose to improve performance of keyvaluestore OSDs but the
+    latter slow down to nearly unusable state when filled over 1 TiB even with
+    RocksDB. Moreover KV backend is experimental and super dangerous -- I lost
+    cluster due to OSD poisoning caused by KV OSD which was plugged only
+    during limited time. LevelDB is good enough, for now I see no reason to
+    use RocksDB especially considering that it is not packaged separately.
+  * Removed myself from Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 01 Apr 2015 11:47:38 +1100
+
+ceph (0.87-1) experimental; urgency=medium
+
+  * New major upstream release [October 2014].
+    + new "libradosstriper*" binary packages.
+  * Patchworks (removed old patches, refreshed remaining ones).
+    + "bug-9814.patch" to prevent OSD crash. Thanks, Haomai Wang.
+  * Install systemd sleep handler.
+  * Exclude erasure-code plugins from `dh_makeshlibs` processing to avoid
+    useless calls to `ldconfig` in maintainer scripts.
+  * Build-Depends:
+    + libbabeltrace-dev
+    + libbabeltrace-ctf-dev
+    + libbz2-dev
+    + libudev-dev
+    + zlib1g-dev
+  * Build with "--with-babeltrace".
+  * Build and statically link bundled RocksDB.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 30 Oct 2014 12:43:49 +1100
+
+ceph (0.80.9-2) unstable; urgency=medium
+
+  * [70fc1d] Add NEWS entry about CRUSH issues fixed in 0.80.9
+  * [f41bb6] Add NEWS entry about rbd backed filesystems and systemd
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Tue, 05 May 2015 21:29:15 +0200
+
+ceph (0.80.9-1) unstable; urgency=medium
+
+  * [4b4e] Imported Upstream version 0.80.9
+  * [7102] Remove patches firefly-latest and p2139 applied upstream
+  * [5869] Add myself to uploaders
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Mon, 04 May 2015 08:49:37 +0200
+
+ceph (0.80.7-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build-Depends: +libjerasure-dev (>= 2.0.0-2~)
+  * New patch to use system "jerasure" library instead of its bundled copy.
+  * Removed myself from Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 11 Dec 2014 12:55:38 +1100
+
+ceph (0.80.7-1) unstable; urgency=medium
+
+  * New upstream release [October 2014].
+  * Minor update to long description of "rbd-fuse" (Closes: #765462).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 16 Oct 2014 04:36:23 +1100
+
+ceph (0.80.6-1) unstable; urgency=medium
+
+  * New upstream release [October 2014].
+  * Standards-Version: 3.9.6.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 02 Oct 2014 23:07:04 +1000
+
+ceph (0.80.5-2) unstable; urgency=low
+
+  * Patchworks:
+    + new patch for Ceph#9341 to dramatically (e.g seconds instead of
+      hours) reduce rejoin (i.e. MDS restart) time (fuse clients).
+    + new "p2139.patch".
+    + new patch with fixes from Firefly HEAD;
+      includes patch to fix FTBFS on alpha (Closes: #756892).
+      updated "librbd1.symbols";
+  * Build-Depends: mark "yasm" as [amd64] (Closes: #760383).
+  * Recommends: + "time-daemon | chrony".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 16 Sep 2014 03:54:15 +1000
+
+ceph (0.80.5-1) unstable; urgency=medium
+
+  * New upstream stable release:
+    - d/p/firefly-post-release.patch: Dropped, no longer required.
+    - d/lib{rados2,cephfs1}.symbols: Update with new symbols.
+
+ -- James Page <jamespage@debian.org>  Wed, 30 Jul 2014 10:15:40 +0100
+
+ceph (0.80.4-1) unstable; urgency=medium
+
+  * New upstream release [July 2014].
+  * New patches:
+    + rbdmap1-mount.patch
+    + rbdmap2-hooks.patch
+    + rbdmap3-lazyumount.patch
+    + bug-8821.patch
+  * radosgw: removed unused lintian overrides.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 18 Jul 2014 02:33:39 +1000
+
+ceph (0.80.1-2) unstable; urgency=low
+
+  * Megapatch from "firefly" branch with post-0.80.1 fixes.
+  * Patches for upstream bugs 8342, 8624 and some cherry-picks.
+  * New "bash-completion.patch" with Bash completion improvements.
+  * New patch to fix FTBFS on 'hppa' (Closes: #748571).
+  * "sample.ceph.conf.patch": minor update.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 05 Jul 2014 20:29:44 +1000
+
+ceph (0.80.1-1) unstable; urgency=low
+
+  * New upstream release [May 2014].
+  * Dropped all backported patches.
+  * New "sleep-recover" and "client-sleep[1,2,3]" patches to fix
+    fuse-client hang after resume from suspend [#8291]; thanks, Zheng Yan.
+  * New "gcj_search_path.patch" to find "jni.h" with gcj-jdk v4.9.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 14 May 2014 09:24:15 +1000
+
+ceph (0.80-1) unstable; urgency=low
+
+  * New upstream release [May 2014].
+    + upload to unstable.
+  * Updated "README.Debian".
+  * Updated "debian/copyright"; Thanks, László Böszörményi.
+  * Added backported patches:
+      [8113, 8175, 8282, 8291, bp0001, sample.ceph.conf].
+  * "gbp.conf": don't merge to experimental.
+  * lintian-overrides: spelling-error-in-binary * tEH the.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 07 May 2014 16:43:07 +1000
+
+ceph (0.80~rc1-1) experimental; urgency=low
+
+  * New upstream pre-release.
+  * Minor re-factoring of udev rules installation.
+  * ceph-common: added ceph-crush-location.1 man page.
+  * ceph-test-dbg: fixed Depends.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 24 Apr 2014 02:52:12 +1000
+
+ceph (0.79-3) experimental; urgency=low
+
+  * New "arch.patch" to detect build architecture using dpkg-architecture.
+  * Mark amd64-only symbols as such.
+  * Minor rules cleanup.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 19 Apr 2014 15:56:37 +1000
+
+ceph (0.79-2) experimental; urgency=low
+
+  [ James Page ]
+  * d/p/modules.patch,d/ceph.install: Mark all jerasure plugins as modules
+    and ensure they are all installed.
+
+  [ Dmitry Smirnov ]
+  * Patchworks:
+    - removed unused "defaults-leveldb-osd.patch".
+    + improved description of "modules.patch". Thanks, James Page.
+    + added new backported patches [#5469, #8008, _1606, spelling].
+  * Added .symbols and "dh_makeshlibs -V" shlibs tightening (Closes: #744382).
+  * README.Debian: added note regarding kernel client mount option.
+  * copyright: added license for man files.
+  * control: "Suggests: logrotate".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 18 Apr 2014 18:27:01 +1000
+
+ceph (0.79-1) experimental; urgency=low
+
+  * New upstream release [April 2014].
+  * Tighten dependency on ceph-common.
+  * Install pm-suspend handler to stop/start ceph services on suspend/resume.
+  * New (inactive) patch to bump OSD's leveldb defaults.
+  * Patches dropped (applied-upstream):
+    - init.patch
+    - logrotate.patch
+    - fix-defaultweight.patch
+  * Refreshed "modules.patch".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 08 Apr 2014 16:52:04 +1000
+
+ceph (0.78-2) experimental; urgency=low
+
+  * Standards to 3.9.5.
+  * debian/copyright: reviewed and updated.
+  * ceph-test: added lintian-override for "binary-without-manpage".
+  * Patchworks:
+    + refreshed/renamed/reordered "virtualenv-never-download.patch".
+    + new "init.patch" for init.d scripts lintianisation.
+    + new "logrotate.patch" to avoid rotating empty logs.
+    + new "fix-defaultweight.patch" to fix weight calculation on OSD start.
+    + new "gcj.patch" with partial fix to FTBFS with gcj-jdk.
+  * Use symlinks to simplify installation of init.d and logrotate scripts.
+  * Added retrospective changelog entry to mention new B-D "libblkid-dev".
+  * Added "debian/clean file".
+  * Added "README.Debian" file with some hopefully useful notes.
+  * Added "mount.fuse.ceph.8" man page.
+  * rules:
+    + "dh --with" optimised.
+    + set JAVAC to prevent FTBFS due to incorrect use of 'gcj', when detected.
+    + verbose mode for 'cp' and 'rm' commands.
+    + build with "--as-needed" to minimise needless linking.
+  * control:
+    + lintian/duplicate-short-description + consistent capitalisation.
+    + removed needless versioned dependencies from Build-Depends.
+    + added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 25 Mar 2014 07:17:40 +1100
+
+ceph (0.78-1) experimental; urgency=medium
+
+  * New upstream release:
+    - d/control: Add "xfslib-dev" and "libblkid-dev" to BD's.
+    - d/*: Sync relevant packaging changes from upstream.
+    - d/p/*: Drop upstreamed patches.
+    - d/p/modules.patch: Mark libcls_user.so and libec_jerasure.so as modules.
+    - d/ceph.install: Only install libec_jerasure.so.
+  * d/ceph-test.install: Install test binaries to /usr/lib/ceph/bin; they
+    really don't need to be installed on the default path.
+  * d/{ceph|radosgw|ceph-mds}.lintian-overrides: Add overrides for intentional
+    difference in naming and structure between upstart configurations and
+    init.d scripts.
+
+ -- James Page <james.page@ubuntu.com>  Sat, 22 Mar 2014 18:27:40 +0000
+
+ceph (0.72.2-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ James Page ]
+  * d/ceph-test.install: Install test binaries to /usr/lib/ceph/bin; they
+    really don't need to be installed on the default path.
+
+  [ Dmitry Smirnov ]
+  * Tightened shlibs with "dh_makeshlibs -V" (Closes: #679686).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 14 Apr 2014 17:28:20 +1000
+
+ceph (0.72.2-2) unstable; urgency=medium
+
+  * d/radosgw.{postinst,postrm,preinst}: Handle renaming of radosgw
+    upstart configuration on upgrade@0.72.1-3.
+  * d/{ceph|ceph-mds|radosgw}.{postinst|prerm}: Check to ensure that system
+    is running upstart before trying to start/stop upstart configurations
+    (Closes: #734241, #738845, #738845).
+
+ -- James Page <jamespage@debian.org>  Sat, 08 Mar 2014 16:48:28 +0000
+
+ceph (0.72.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 01 Jan 2014 09:32:03 +0000
+
+ceph (0.72.1-3) unstable; urgency=low
+
+  * d/rules,ceph.install: Correct install paths for ceph-* helpers. 
+  * d/p/modules: Mark libcls_kvs.so as module.
+  * d/rules: Rename radosgw upstart configuration to radosgw-instance to
+    avoid namespace conflict with init script which breaks backwards
+    compatibility (LP: #1255464).
+
+ -- James Page <james.page@ubuntu.com>  Wed, 27 Nov 2013 10:52:48 +0000
+
+ceph (0.72.1-2) unstable; urgency=low
+
+  * Fix upgrade failures from ceph < 0.67.3-1 (Closes: #728164):
+    - d/control: ceph-mds Breaks/Replaces ceph (<< 0.67.3-1).
+    - d/control: ceph-fs-common Breaks/Replaces ceph-common (<< 0.67.3-1).
+  * d/rules,control: Use google-perftools on armhf and powerpc archs.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 25 Nov 2013 10:13:19 +0000
+
+ceph (0.72.1-1) unstable; urgency=low
+
+  * New upstream stable release:
+    - d/ceph-test.install: Add new ceph_filestore_tool, ceph-kvstore-tool
+      and ceph_test_cls_hello binaries, drop ceph_test_store_tool.
+    - d/ceph-common.install: Add new ceph-post-file binary and manpage.
+    - d/ceph.install: Tweaked install path /usr/sbin -> /sbin.
+    - d/control: Add new BD's on python-nose and yasm.
+    - d/copyright: Updates inline with changes in codebase.
+    - d/ceph.install,rules: Install rbdmap init file using dh_installinit.
+    - Refresh patches.
+  * d/control,rules: Disable unit testing; it requires a forked version of
+    cram and is still trying to download dependencies using virtualenv.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 22 Nov 2013 13:02:29 +0000
+
+ceph (0.67.3-1) unstable; urgency=low
+
+  [ Laszlo Boszormenyi ]
+  * New upstream release (Closes: #693866, #705262).
+  * Update debian/copyright.
+  * Sync with Ubuntu.
+
+  [ James Page ]
+  * d/control,rules,libcephfs-{java,jni}: Enable Java CephFS library,
+    add new BD's on javahelper and default-jdk, add dbg package.
+  * d/control: Add new BD on libboost-thread-dev for RADOS Gateway
+    keystone integration.
+  * d/{control,obsync.install}: Drop obsync package inline with
+    upstream.
+  * d/librbd-dev.install: Pickup new features.h file.
+  * Remove manual calls to ldconfig:
+    - d/lib{rados2|rbd1|cephfs1}.post*: Dropped - all these do is call
+      ldconfig which will automatically be done. 
+    - d/rules: Let dh_makeshlibs do its magic with postinst/postrm.
+  * d/tests/*: Added autopkgtests for librbd, librados, python-ceph
+    and the ceph CLI.
+  * d/control: Fix versions of librbd1, librados2 and libcephfs1 for
+    python-ceph as it requires an exact version match.
+  * d/ceph.docs: Drop - README from upstream is only useful for developers
+    (Closes: #722957).
+  * d/rules: Drop --upstart-only from dh_installinit calls for upstart
+    configurations; this is deprecated in Ubuntu and not support in Debian.
+  * d/rules: Exclude jni package from shlibs generation to avoid pointless
+    ldconfig calls in maintainer scripts.
+
+  [ Bastian Blank ]
+  * Use debhelper 9.
+  * Use dh-autoreconf.
+  * Install files from source tree if possible.
+  * Run test-suite:
+    - Build-depend on python-virtualenv.
+    - Ask virtualenv to never download anything.
+  * Fix clean target.
+  * Properly mark library modules:
+    - Don't longer exclude them from stripping.
+  * Drop all libtool .la files.
+  * Generate python dependencies.
+  * Don't exclude stuff from shlibs generation.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 01 Oct 2013 02:29:08 +0200
+
+ceph (0.48-1) unstable; urgency=low
+
+  * New upstream release, the first with long-term support.
+  * As gceph dropped by upstream, remove it from packaging.
+  * Build with hardening enabled and build-conflict with libcryptopp not to
+    mix up with libnss.
+  * Use symbol versioning (closes: #679686).
+  * Update debian/watch to GitHub tags.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 07 Jul 2012 07:53:40 +0200
+
+ceph (0.47.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use system leveldb (closes: #667907).
+  * Remove librgw1 , librgw-dev and librgw1-dbg and add rest-bench and
+    rest-bench-dbg packages.
+  * Backport leveldb build fixes from upstream git as
+    fix_leveldb_dep_for_system_library_case.patch and
+    fix_leveldb_includes_for_system_library_case.patch .
+  * Update packaging.
+  * Sync with Ubuntu: switch build-dependency from libcryptopp to libnss as
+    libcryptopp is not seeded.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 03 Jun 2012 13:37:52 +0200
+
+ceph (0.44.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Fri, 06 Apr 2012 01:10:15 +0200
+
+ceph (0.43-1) unstable; urgency=low
+
+  * New upstream release, now creates /var/run/ceph on each start
+    (closes: #660238).
+  * Update debian/copyright .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 26 Feb 2012 04:07:02 +0100
+
+ceph (0.41-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 05 Feb 2012 10:07:38 +0100
+
+ceph (0.40-1) unstable; urgency=low
+
+  * New upstream release (closes: #652037).
+  * Adjust copyright to match upstream source changes.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 14 Jan 2012 12:01:30 +0100
+
+ceph (0.38-1) unstable; urgency=low
+
+  * New upstream release (closes: #647764), missingok is now part of logrotate
+    directives (closes: #645651).
+  * Rename ceph-client-tools package to ceph-common , libceph-dev to
+    libcephfs-dev and libceph1{,-dbg} ones to libcephfs1{,-dbg} respectively.
+  * Update upstream VCS locations.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 27 Nov 2011 21:40:52 +0100
+
+ceph (0.35-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 24 Sep 2011 16:51:57 +0200
+
+ceph (0.34-1) unstable; urgency=low
+
+  * New upstream release (closes: #638714).
+  * Make librbd-dev depends on librados-dev as it uses headers from the latter
+    (closes: #636845).
+  * Add new binary packages, gceph, gceph-dbg and obsync . The libcrush ones
+    removed.
+  * Change to quilt source format and tune packaging.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 28 Aug 2011 15:56:16 +0200
+
+ceph (0.27-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Remove references to other libraries from dependency_libs field
+    (closes: #621208). 
+
+ -- Luk Claes <luk@debian.org>  Sat, 28 May 2011 22:28:48 +0200
+
+ceph (0.27-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Mon, 25 Apr 2011 10:09:05 +0200
+
+ceph (0.25.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Make Ceph cross buildable (closes: #618939), thanks to Hector Oron.
+  * Disable libatomic-ops on ARMv4t (armel) archs to prevent FTBFS
+    (closes: #615235), thanks go to Hector Oron again.
+  * Rename librados1{,-dbg,-dev} packages to librados2{,-dbg,-dev} ones;
+    conflict with and replace the former ones.
+  * Add librbd1 and librbd-dev packages.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 27 Mar 2011 15:51:23 +0200
+
+ceph (0.24.3-2) unstable; urgency=low
+
+  * Make Ceph Linux only and build on all Linux archs (closes: #614890).
+  * Support parallel building via DEB_BUILD_OPTIONS .
+  * Add watch file, thanks to Clint Byrum (closes: #615021).
+  * Tune packaging.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Fri, 25 Feb 2011 15:17:26 +0100
+
+ceph (0.24.3-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 19 Feb 2011 12:25:43 +0100
+
+ceph (0.24.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 29 Jan 2011 15:25:14 +0100
+
+ceph (0.24.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Tue, 11 Jan 2011 22:23:18 +0100
+
+ceph (0.24-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Wed, 01 Dec 2010 09:26:25 -0800
+
+ceph (0.23.1-1) experimental; urgency=low
+
+  * Initial release (Closes: #506040)
+
+ -- Sage Weil <sage@newdream.net>  Sun, 21 Nov 2010 15:22:21 -0800

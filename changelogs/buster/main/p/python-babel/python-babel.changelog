@@ -1,0 +1,300 @@
+python-babel (2.6.0+dfsg.1-1+deb10u1) buster-security; urgency=medium
+
+  * CVE-2021-20095 (Closes: #987824)
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Fri, 03 Dec 2021 17:26:10 +0100
+
+python-babel (2.6.0+dfsg.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Ran wrap-and-sort -bast.
+  * Removed build-depends versions when satisfied in stable.
+  * Removed now useless breaks+replaces in python-babel-doc.
+  * Add python{3,}-freezegun as build-depends.
+  * Build only with python3-sphinx.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 28 Aug 2018 22:17:16 +0200
+
+python-babel (2.4.0+dfsg.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 18 Jun 2017 13:43:52 +0200
+
+python-babel (2.4.0+dfsg.1-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    - Fix the way a local time is constructed in tests. (Closes: #825727)
+  * debian/rules: Update rm to work with Sphinx 1.5.
+  * debian/copyright: Update copyright years.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 24 Apr 2017 20:27:01 +0200
+
+python-babel (2.3.4+dfsg.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * debian/rules: Fix two invalid symlinks making babel unusable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 16 May 2016 21:30:02 +0200
+
+python-babel (2.3.4+dfsg.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release. (Closes: #824398)
+    - Support 'Language' header. (Closes: #737547)
+  * debian/rules:
+    - Run dh_python3 with --shebang=/usr/bin/python3. (Closes: #815826)
+    - Take care of localdata -> locale-data move.
+    - Remove obsolete code to deal with wheezy.
+  * debian/clean: Update files to clean.
+  * debian/*.{postinst,preinst,prerm,postrm}: Remove obsolete dir to symlink
+    handling. (Closes: #758785).
+  * debian/*.postrm: Do not call update-alternatives in postrm.
+  * debian/control:
+    - Bump Standards-Version.
+    - Add dh-python to B-D.
+    - Remove python(3)-six. It is no longer needed.
+    - Declare supported Python versions.
+    - Drop python-pybabel transitional package.
+  * debian/copyright:
+    - Update copyright years.
+    - Remove unused paragraph.
+    - Fix order of paragraphs.
+    - Fix license short name. (Closes: #779716)
+  * debian/patches: Drop obsolete and backported patches.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 16 May 2016 18:42:52 +0200
+
+python-babel (1.3+dfsg.1-7) unstable; urgency=high
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Jean-Michel Vourgère ]
+  * Made the build reproducible. Thanks to Val Lorentz. (Closes:
+    #795997)
+  * Rebuilt without python3.4. (Closes: #820202)
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Wed, 11 May 2016 01:03:58 +0200
+
+python-babel (1.3+dfsg.1-6) unstable; urgency=medium
+
+  * Team upload.
+  * debian/copyright: Fill out the `Files: common/*` section to include
+    the Unicode license agreement.  (Closes: #795594)
+  * debian/control: Update Standards-Version to 3.9.6 with no other
+    changes necessary.
+  * d/patches/aa4165d.patch: Upstream patch to fix test suite with newer
+    versions of pytz.
+  * d/watch: Use the pypi.debian.net redirector.
+
+ -- Barry Warsaw <barry@debian.org>  Wed, 16 Sep 2015 12:30:35 -0400
+
+python-babel (1.3+dfsg.1-5) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Thomas Viehmann ]
+  * Call test suite with LC_ALL=C to avoid test failures. (Closes: #741834)
+
+ -- Vincent Cheng <vcheng@debian.org>  Thu, 13 Nov 2014 23:06:03 -0800
+
+python-babel (1.3+dfsg.1-4) unstable; urgency=medium
+
+  * Fixed removal of pyshared folder stuff (that directory doesn't exist
+    anymore in Sid/Testing). This fixes FTBFS (Closes: #751056).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 24 Jun 2014 06:53:40 +0000
+
+python-babel (1.3+dfsg.1-3) unstable; urgency=medium
+
+  * Uses an embedded copy of dir_to_symlink() from dpkg-maintscript-helper to
+    allow easier backports to Wheezy (since there's no dpkg backport with that
+    function in Wheezy).
+  * Adds the use of six for unicode strings to allow easier backports to
+    Python 3.2.
+  * Version build-depends on python-pytest and python3-pytest.
+  * Runs the unit test on build (Closes: #727616).
+  * Removes sphinx.ext.intersphinx from docs/conf.py to avoid network access
+    during the build.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 13 Feb 2014 15:57:04 +0800
+
+python-babel (1.3+dfsg.1-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Really fix the directory to symlink conversion.  (Closes: #728427)
+    Use dpkg-maintscript-helper dir_to_symlink which requires dpkg 1.17.5.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 19 Jan 2014 00:40:32 +0100
+
+python-babel (1.3+dfsg.1-2) unstable; urgency=low
+
+  * Fixes upgrade from 1.3-2 that was deleting files from the -localedata
+    folder (Closes: #728427).
+  * Adds patch to fix-up locales in the currency name test, which caused FTBFS
+    in a sbuild chroot (Closes: #728425). Thanks Andrey Rahmatullin for
+    reporting, and James Page for his patch.
+  * Corrects debian/copyright to include the license of the CLDR data. Thanks
+    to Andrey Rahmatullin for reporting. (Closes: #729084).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 21 Nov 2013 16:23:56 +0000
+
+python-babel (1.3+dfsg.1-1) unstable; urgency=low
+
+  * Updates the VCS fields URLs.
+  * Now repacks upstream tarball to make it DFSG-Free: added a
+    get-orig-source and a debian/repack script (Closes: #727615).
+  * Adds a python-babel-localedata package containing the data files for both
+    python-babel and python3-babel (Closes: #727617).
+  * Runs the test suite at build time (Closes: #727616).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Oct 2013 05:29:57 +0000
+
+python-babel (1.3-2) unstable; urgency=low
+
+  * Adds missing Replaces + Breaks in the doc package (Closes: #726043).
+  * Fixes the handling of alternatives removal, thanks to Andreas Beckmann
+    <anbe@debian.org> for his extensive explanations in his bug report
+    (Closes: #726621).
+  * Updates debian/copyright to the currenty babel 1.3 licensing, thanks to
+    Sebastian Ramacher for reporting this.
+  * For the -doc package, removes wrong dependency on python3-pkg-resources,
+    added missing depends on ${sphinxdoc:Depends}. Thanks to Sebastian
+    Ramacher for reporting
+  * Add myself as uploader.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Oct 2013 04:53:40 +0000
+
+python-babel (1.3-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Standard-Version is now 3.9.4.
+  * Ran wrap-and-sort.
+  * debian/copyright is now in parseable format 1.0.
+  * Switched to 3.0 (quilt) source format.
+  * Switched to debhelper and compat level 9.
+  * Drops obsolete python-pybabel package.
+  * Drops Replaces:+Conflicts: python-pybabel (<< 0.9.6-1~).
+  * Adds Recommends: ${python:Recommends}.
+  * Adds support for python3, rewrote the debian/rules using the dh short
+    style with python_distutils.
+  * Updated debian/watch file to use PyPi.
+  * Using sphinx-build to build the doc.
+  * Updated homepage to http://babel.pocoo.org/.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Oct 2013 18:33:36 +0000
+
+python-babel (0.9.6-1) unstable; urgency=low
+
+  [ Andrey Rahmatullin ]
+  * New upstream version (Closes: #584893)
+  * Rename to python-babel (Closes: #556377)
+  * Enable build time tests
+  * Update Standards-Version to 3.9.2 (no change needed)
+  * Update debhelper compatibility level to 8
+  * Switch from dh_pysupport to dh_python2
+  * Add the Homepage field
+  * Register HTML docs with doc-base
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 25 Feb 2011 23:06:10 +0500
+
+python-pybabel (0.9.4-2) unstable; urgency=low
+
+  [ Kumar Appaiah ]
+  * debian/rules:
+    + Add --prefix=/usr to setup.py install call to prevent
+      files being installed on /usr/local. (Closes: #556156)
+  * debian/control
+    + Standards version is now 3.8.3 (no changes needed).
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Sat, 14 Nov 2009 10:00:38 -0500
+
+python-pybabel (0.9.4-1) unstable; urgency=low
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Add Vcs-Svn and Vcs-Browser fields (pointing to DPMT repository)
+  * Priority changed to optional
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Sun, 28 Dec 2008 20:35:43 +0100
+
+python-pybabel (0.9.1-9) unstable; urgency=low
+
+  * Added conflict against python-babel (closes: #493742) because both
+    python-pybabel and python-babel install as the same egg-info name
+    'babel'. The python-babel package will get fixed soon and this
+    conflict will get removed again.
+
+ -- Christoph Haas <haas@debian.org>  Tue, 23 Sep 2008 22:53:19 +0200
+
+python-pybabel (0.9.1-8) unstable; urgency=high
+
+  * Bumped policy version.
+  * Debian package repository moved from Hg to Git (XS-Vcs-Git)
+
+ -- Christoph Haas <haas@debian.org>  Sat, 13 Sep 2008 17:50:35 +0200
+
+python-pybabel (0.9.1-7) unstable; urgency=low
+
+  * Added dependency on python-pkg-resources (Closes: #498238).
+    (Thanks, Jens Breit and Serafeim Zanikolas)
+
+ -- Christoph Haas <haas@debian.org>  Sat, 13 Sep 2008 17:14:46 +0200
+
+python-pybabel (0.9.1-6) unstable; urgency=high
+
+  * Renaming the package from 'python-babel' to 'python-pybabel'
+    due to a name clash with another 'python-babel' package that
+    has been existing in Debian since 2003. (Closes: #461087)
+  * Urgency set to high to get the package back into Debian quickly.
+    The release team (Adeodato Simó aka 'dato') has agreed to unblock this
+    package during the Lenny freeze.
+
+ -- Christoph Haas <haas@debian.org>  Thu, 24 Jul 2008 16:52:50 +0200
+
+python-babel (0.9.1-5) unstable; urgency=low
+
+  * Added build dependency on python-setuptools (Closes: #467188)
+
+ -- Christoph Haas <haas@debian.org>  Sun, 24 Feb 2008 15:59:39 +0100
+
+python-babel (0.9.1-4) unstable; urgency=low
+
+  * xargs in debian/rules now called with -r so it does not fail if "find"
+    does not find files while fixing egg-info permissions (Closes: #464306)
+
+ -- Christoph Haas <haas@debian.org>  Sat, 09 Feb 2008 09:33:52 +0100
+
+python-babel (0.9.1-3) unstable; urgency=low
+
+  * Previous uploaded wasn't built with -v so the ITP closing
+    wasn't included in the .changes file.
+
+ -- Christoph Haas <haas@debian.org>  Sat, 26 Jan 2008 10:36:14 +0100
+
+python-babel (0.9.1-2) unstable; urgency=low
+
+  * Incorrect suggestion dependency for python-babel-doc removed
+
+ -- Christoph Haas <haas@debian.org>  Thu, 17 Jan 2008 15:01:08 +0100
+
+python-babel (0.9.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #461087)
+
+ -- Christoph Haas <haas@debian.org>  Wed, 16 Jan 2008 15:35:18 +0100

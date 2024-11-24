@@ -1,0 +1,28 @@
+golang-github-garyburd-redigo (0.0~git20150901.0.d8dbe4d-2.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 05 Jan 2021 16:34:05 +0100
+
+golang-github-garyburd-redigo (0.0~git20150901.0.d8dbe4d-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 19:59:33 +0300
+
+golang-github-garyburd-redigo (0.0~git20150901.0.d8dbe4d-1) unstable; urgency=low
+
+  [ Tim Potter ]
+  * Initial release (Closes: #785172)
+
+  [ Tianon Gravi ]
+  * Update packaging for pkg-go policies (and newer upstream)
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 04 Sep 2015 17:39:31 -0700

@@ -1,0 +1,38 @@
+tang (7-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2023-1672: Prevent a race condition which was resulting in a small time
+    window where newly-generated private keys were readable by other processes
+    on the same host. (Closes: #1038119)
+  * Use "Last-Update" (over "Date") in field names in Debian patches to avoid
+    issues with gbp-pq(1).
+
+ -- Chris Lamb <lamby@debian.org>  Tue, 07 Nov 2023 12:01:03 +0000
+
+tang (7-1+deb10u1) buster; urgency=medium
+
+  * Avoid race condition between keygen and update, resulting in "Key
+    derivation key not available!". Closees: #975343
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Mon, 25 Jan 2021 18:37:46 +0100
+
+tang (7-1) unstable; urgency=medium
+
+  * New upstream version 7
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 12 Aug 2018 00:57:45 +0200
+
+tang (6-2) unstable; urgency=medium
+
+  * Restrict architectures to linux-any
+  * Add missing dependency on jose. Closes: #904011
+  * Add versionized install dependencies for libjansson and http-parser.
+    Closes: #904025
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Mon, 23 Jul 2018 20:16:53 +0200
+
+tang (6-1) unstable; urgency=medium
+
+  * Initial release. Closes: #854409
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Tue, 14 Nov 2017 18:59:31 +0100

@@ -1,0 +1,854 @@
+ark (4:18.08.3-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Pass the ARCHIVE_EXTRACT_SECURE_SYMLINKS flag to libarchive
+    (CVE-2020-24654) (Closes: #969437)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 03 Sep 2020 23:23:48 +0200
+
+ark (4:18.08.3-1+deb10u1) buster-security; urgency=medium
+
+  * CVE-2020-16116
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Thu, 30 Jul 2020 19:50:19 +0200
+
+ark (4:18.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Jelmer Vernooĳ ]
+  * Move source package lintian overrides to debian/source.
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Add the kinit dependency, so KIO slaves work. (Closes: #907430)
+  * Remove the manual kde-l10n-ast, and kde-l10n-eo breaks/replaces, as they
+    are already part of ${kde-l10n:all}.
+  * Bump Standards-Version to 4.2.1, no changes required.
+  * Disable the build of unit tests, since they are not run anyway.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 25 Nov 2018 20:18:46 +0100
+
+ark (4:18.04.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * New upstream release (18.04.1).
+  * Update Vcs links to salsa.
+  * Use secure copyright format uri.
+  * Bump Standards-Version to 4.1.4 (No changes needed).
+  * Bump debhelper build-dep and compat to 11.
+  * Update build-deps and deps with the info from cmake
+  * Update copyright file for new upstream.
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 31 May 2018 00:43:04 +0200
+
+ark (4:17.08.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Adjust again l10npkgs_firstversion_ok to the fixed version of kde-
+    l10n. (Closes: #882257)
+
+ -- Pino Toscano <pino@debian.org>  Mon, 20 Nov 2017 21:00:04 +0100
+
+ark (4:17.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * New upstream release (17.08.0)
+  * Bump Standards-Version to 4.0.1.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Drop upstream patch
+  * Update uploaders list as requested by MIA team (Closes: #879291)
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will drop
+    translations.
+  * Bump Standards-Version to 4.1.1, no changes required.
+  * Stop forcing debian/tmp as local installation directory, installing
+    everything to the final location
+    - remove .so symlinks
+    - drop ark.install, and not-installed, no more useful now
+  * Remove unused transitional kdoctools-dev, and kio-dev build dependencies.
+  * Explicitly add gettext, and pkg-config as build dependencies.
+  * Update lintian overrides.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 19 Nov 2017 13:50:04 +0100
+
+ark (4:17.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 17 Aug 2017 09:29:49 +0000
+
+ark (4:17.04.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 12 Jul 2017 10:17:16 +0000
+
+ark (4:17.04.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 07 Jun 2017 12:19:26 +0000
+
+ark (4:17.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 11 May 2017 18:02:46 +0000
+
+ark (4:17.04.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 19 Apr 2017 13:02:00 +0000
+
+ark (4:16.12.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Mar 2017 13:45:39 +0000
+
+ark (4:16.12.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Feb 2017 16:55:22 +0000
+
+ark (4:16.12.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 11 Jan 2017 13:12:26 +0000
+
+ark (4:16.12.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 14 Dec 2016 16:21:48 +0000
+
+ark (4:16.08.3-2) unstable; urgency=medium
+
+  * Add new patch: Stop-running-executables-when-opening-urls.patch (CVE-2017-5330)
+    Thanks to Salvatore Bonaccorso for reporting (Closes: 850874)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 10 Feb 2017 16:29:46 +0100
+
+ark (4:16.08.3-1) unstable; urgency=medium
+
+  * New upstream release (16.08.3)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 23 Nov 2016 20:48:43 +0100
+
+ark (4:16.08.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 21 Nov 2016 13:51:44 +0000
+
+ark (4:16.08.2-1) unstable; urgency=medium
+
+  [ Pino Toscano ]
+  * Remove unused libqjson-dev build dependency.
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 17 Oct 2016 21:20:12 +0200
+
+ark (4:16.08.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 14 Oct 2016 13:38:09 +0000
+
+ark (4:16.08.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 16 Sep 2016 13:04:56 +0000
+
+ark (4:16.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 17 Aug 2016 11:47:05 +0000
+
+ark (4:16.04.3-1) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Add unar to Recommends and drop obsolete Suggests on various rar
+    extraction packages since unar is now what upstream supports
+    (Closes: #829265)
+    -  Thanks to Alex Henry for the report and the solution
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 17 Jul 2016 21:01:20 +0200
+
+ark (4:16.04.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 12 Jul 2016 11:39:45 +0000
+
+ark (4:16.04.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 22 Jun 2016 21:05:21 +0200
+
+ark (4:16.04.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 15 Jun 2016 14:45:38 +0000
+
+ark (4:16.04.1-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+  [ Maximiliano Curia ]
+  * New upstream release (15.12.2).
+  * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 26 May 2016 10:48:30 +0200
+
+ark (4:16.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Fri, 20 May 2016 14:20:39 +0000
+
+ark (4:16.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 18 May 2016 18:10:39 +0200
+
+ark (4:16.04.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Mon, 09 May 2016 14:26:16 +0000
+
+ark (4:15.12.1-1) experimental; urgency=medium
+
+  * New upstream release (15.12.0).
+  * New upstream release (15.12.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Feb 2016 10:24:09 +0100
+
+ark (4:15.08.3-1) unstable; urgency=medium
+
+  * New upstream release (15.08.3).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 02 Dec 2015 12:38:57 +0100
+
+ark (4:15.08.2-1) unstable; urgency=medium
+
+  * New upstream release (15.08.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 16 Oct 2015 08:06:42 +0200
+
+ark (4:15.08.1-1) unstable; urgency=medium
+
+  * New upstream release (15.08.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 19 Sep 2015 02:44:56 +0200
+
+ark (4:15.08.0-1) unstable; urgency=medium
+
+  * New upstream release (15.04.0).
+  * New upstream release (15.04.1).
+  * New upstream release (15.04.2).
+  * New upstream release (15.04.3).
+  * Drop usage of libarchive for zip files.
+  * Rename patch: use_libarchive_for_zip_files ->
+    update_libarchive_support
+  * New upstream release (15.08.0).
+  * Update build dependencies.
+  * Update copyright file.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 06 Sep 2015 15:54:46 +0200
+
+ark (4:15.08.0-0ubuntu1) wily; urgency=medium
+
+  * new upstream release
+
+ -- Ubuntu <ubuntu@ip-10-170-33-178.ec2.internal>  Wed, 26 Aug 2015 16:11:19 +0100
+
+ark (4:15.07.90-0ubuntu1) wily; urgency=medium
+
+  [ Jonathan Riddell ]
+  * New upstream release
+  * Remove Debian patch use_libarchive_for_zip_files, it causes problems
+    LP: #1404239
+
+  [ Aaron Honeycutt ]
+  * Ported to KF5
+
+  [ Jonathan Riddell ]
+  * new upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Aug 2015 08:55:10 +0100
+
+ark (4:15.04.2-0ubuntu1) wily; urgency=medium
+
+  [ Scarlett Clark ]
+  * New upstream release
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 09 Jun 2015 18:19:31 +0200
+
+ark (4:14.12.3-1) experimental; urgency=medium
+
+  * New upstream release (14.12.3).
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 29 Mar 2015 15:12:56 +0200
+
+ark (4:14.12.3-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 13 Mar 2015 14:15:02 -0700
+
+ark (4:14.12.2-1) experimental; urgency=medium
+
+  * New upstream release (4.14.3).
+  * New upstream release (14.12.2).
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * New upstream patch: upstream_stop_crashing_on_exit properly fixes
+    upstream_remove_part_from_KXMLGUIFactory_on_exit (Closes: #770840)
+    Thanks to Tsu Jan
+  * Remove upstream patch:
+    upstream_remove_part_from_KXMLGUIFactory_on_exit
+  * Remove upstream patch: upstream_stop_crashing_on_exit
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 23 Feb 2015 22:36:03 +0100
+
+ark (4:14.12.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Feb 2015 09:09:12 -0800
+
+ark (4:14.12.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove kdelibs5-dev depend version as there was not a new release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 15 Dec 2014 16:50:30 +0100
+
+ark (4:14.11.97-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release candidate
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 02 Dec 2014 09:36:08 -0800
+
+ark (4:14.11.95-0ubuntu2) vivid; urgency=medium
+
+  * Fix Watch file applications locations
+  * Fix VCS for new kde-applications location
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 24 Nov 2014 07:43:26 -0800
+
+ark (4:14.11.95-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release for kde-applications.
+   - Change maintainer to Debian/Kubuntu
+  * Debian merge: No remaining changes.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 21 Nov 2014 20:53:15 +0000
+
+ark (4:4.14.2-2) unstable; urgency=medium
+
+  * New upstream patch: upstream_remove_part_from_KXMLGUIFactory_on_exit
+  * Update patch: use_libarchive_for_zip_files, handle adding and
+    deleting files from a zip file (Closes: #769099)
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 13 Nov 2014 16:39:11 +0100
+
+ark (4:4.14.2-1) unstable; urgency=medium
+
+  * New upstream release (4.14.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 20 Oct 2014 17:12:56 +0200
+
+ark (4:4.14.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 10 Oct 2014 02:28:58 -0700
+
+ark (4:4.14.1-1) unstable; urgency=medium
+
+  * New upstream release (4.14.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 17 Sep 2014 09:44:21 +0200
+
+ark (4:4.14.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 22 Sep 2014 16:19:23 +0200
+
+ark (4:4.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 24 Aug 2014 03:40:24 +0200
+
+ark (4:4.14.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 20 Aug 2014 12:25:00 +0200
+
+ark (4:4.13.97-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release RC
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Fri, 01 Aug 2014 16:01:31 +0200
+
+ark (4:4.13.95-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Wed, 30 Jul 2014 17:18:38 +0200
+
+ark (4:4.13.90-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Thu, 24 Jul 2014 17:17:36 +0200
+
+ark (4:4.13.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 30 Jul 2014 20:26:05 +0200
+
+ark (4:4.13.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update patch: use_libarchive_for_zip_files (Closes: #749916)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 11 Jul 2014 10:58:57 +0200
+
+ark (4:4.13.2-0ubuntu1) utopic; urgency=medium
+
+  [ Rohan Garg ]
+  * Merge with debian, no remaining changes
+
+  [ Jonathan Riddell ]
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Jun 2014 11:37:36 +0100
+
+ark (4:4.13.1-1) unstable; urgency=low
+
+  [ Sune Vuorela ]
+  * Fix use_libarchive_for_zip_files. Thanks to Augusto Beiro for noticing.
+    (Closes: #748198)
+
+  [ Maximiliano Curia ]
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 26 May 2014 13:37:19 +0200
+
+ark (4:4.13.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream KDE Software Compilation release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Apr 2014 21:31:59 +0100
+
+ark (4:4.12.97-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Wed, 02 Apr 2014 11:03:35 +0200
+
+ark (4:4.12.95-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sun, 23 Mar 2014 11:50:40 +0100
+
+ark (4:4.12.90-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 19 Mar 2014 10:29:32 +0000
+
+ark (4:4.12.4-1) unstable; urgency=medium
+
+  * New patch: use_libarchive_for_zip_files (Closes: #723963)
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:24:17 +0200
+
+ark (4:4.12.3-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 04 Mar 2014 00:06:13 +0100
+
+ark (4:4.12.3-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 04 Mar 2014 20:23:12 +0100
+
+ark (4:4.12.2-1) experimental; urgency=medium
+
+  * Do not disable an empty test set.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * New upstream release.
+  * Add autopkgtests.
+  * Bump kde-sc-dev-latest build dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:31:50 +0100
+
+ark (4:4.12.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 04 Feb 2014 23:32:11 +0000
+
+ark (4:4.12.1-0ubuntu1) trusty; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 16 Jan 2014 07:52:44 +0000
+
+ark (4:4.12.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Dec 2013 16:19:08 +0000
+
+ark (4:4.11.97-0ubuntu1) trusty; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 29 Nov 2013 12:25:08 +0000
+
+ark (4:4.11.95-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 25 Nov 2013 17:36:44 +0100
+
+ark (4:4.11.80-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sat, 23 Nov 2013 17:23:47 +0100
+
+ark (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 10 Nov 2013 00:27:47 +0100
+
+ark (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update build-dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 09 Oct 2013 11:59:36 +0200
+
+ark (4:4.11.2-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 30 Sep 2013 13:53:42 +0100
+
+ark (4:4.11.1-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Howard Chan <smartboyhw@gmail.com>  Fri, 06 Sep 2013 22:02:29 +0100
+
+ark (4:4.11.0-0ubuntu1) saucy; urgency=low
+
+  [ Howard Chan ]
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 13 Aug 2013 23:53:24 +0100
+
+ark (4:4.10.97-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC 2 release
+  * New upstream RC 2 release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Jul 2013 18:46:38 +0100
+
+ark (4:4.10.95-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 19 Jul 2013 12:31:34 +0000
+
+ark (4:4.10.90-0ubuntu1) saucy; urgency=low
+
+  * New upstream bet release
+
+ -- Michał Zając <quintasan@kubuntu.org>  Fri, 28 Jun 2013 17:56:19 +0100
+
+ark (4:4.10.80-0ubuntu1) saucy; urgency=low
+
+  [ Rohan Garg ]
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 21 Jun 2013 00:42:48 +0100
+
+ark (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Jul 2013 09:22:09 +0200
+
+ark (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump debhelper build-dep and compat to 9.
+  * Bump Standards-Version to 3.9.4.
+  * Add myself to uploaders.
+  * Update vcs fields.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 19:46:52 +0200
+
+ark (4:4.10.4-0ubuntu1) saucy-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 06 Jun 2013 23:31:41 +0100
+
+ark (4:4.10.3-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+  * Merge with Debian git repository, no changes
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 23 May 2013 11:04:21 +0000
+
+ark (4:4.10.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+  [ Josep Febrer ]
+  * Bump kde-sc-dev-latest build dependency to version 4:4.10.1.
+  * Bump kdelibs5-dev and libkonq5-dev to 4:4.10.
+  * Pass -DKDE4_BUILD_TESTS=false to cmake in order to keep the tests disabled.
+
+  [ Sune Vuorela ]
+  * Update uploaders
+
+ -- Sune Vuorela <sune@debian.org>  Fri, 05 Apr 2013 21:33:51 +0000
+
+ark (4:4.10.2-0ubuntu1) raring; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 31 Mar 2013 14:33:17 +0200
+
+ark (4:4.10.1-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 05 Mar 2013 15:09:13 +0000
+
+ark (4:4.10.0-0ubuntu2) raring; urgency=low
+
+  * No-change rebuild for the libarchive13 transition.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Sun, 24 Feb 2013 10:35:11 -0700
+
+ark (4:4.10.0-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 06 Feb 2013 11:27:31 +0000
+
+ark (4:4.9.98-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 18 Jan 2013 14:52:35 +0000
+
+ark (4:4.9.97-0ubuntu1) raring; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 03 Jan 2013 22:21:33 +0100
+
+ark (4:4.9.95-0ubuntu1) raring; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Dec 2012 23:12:28 +0000
+
+ark (4:4.9.90-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream beta release
+  * Disable tests, currently broken
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Dec 2012 17:30:48 +0000
+
+ark (4:4.9.80-0ubuntu1) raring; urgency=low
+
+  [ Jonathan Riddell ]
+  * New upstream beta release
+
+  [ Rohan Garg ]
+  * Add libqjson-dev as a build-dep to run tests
+    - Drop the PHONY test target from rules
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 19 Nov 2012 15:40:40 +0000
+
+ark (4:4.9.3-0ubuntu1) raring; urgency=low
+
+  * New upstream release (LP: #1074747)
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 06 Nov 2012 22:19:43 +0100
+
+ark (4:4.9.2-0ubuntu1) quantal-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 02 Oct 2012 15:08:19 +0100
+
+ark (4:4.9.1-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Mon, 10 Sep 2012 18:13:47 +0530
+
+ark (4:4.9.0-0ubuntu2) raring; urgency=low
+
+  * Drop debian/utilities-file-archiver.xpm as ark ships its own icon now.
+
+ -- Felix Geyer <debfx@ubuntu.com>  Sat, 11 Aug 2012 17:51:30 +0200
+
+ark (4:4.9.0-0ubuntu1) quantal; urgency=low
+
+  * Use direct build-depends versions rather than kde-sc-dev-latest
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 26 Jul 2012 16:57:12 +0100
+
+ark (4:4.8.90-0ubuntu1) quantal; urgency=low
+
+  * New upstream beta release.
+
+ -- Felix Geyer <debfx@ubuntu.com>  Mon, 11 Jun 2012 21:58:26 +0200
+
+ark (4:4.8.80-0ubuntu1) quantal; urgency=low
+
+  * Merge with Debian git repository, remaining changes:
+    - Suggest instead of recommend p7zip-full
+    - Add and install utilities-file-archiver.xpm
+  * New upstream beta release.
+
+ -- Felix Geyer <debfx@ubuntu.com>  Wed, 06 Jun 2012 18:50:49 +0200
+
+ark (4:4.8.4-2) unstable; urgency=low
+
+  * Team upload
+
+  [ Eshat Cakar ]
+  * Add Breaks/Replaces with previous kdeutils-dbg packages. (Closes: #678491)
+
+ -- Sune Vuorela <sune@debian.org>  Fri, 22 Jun 2012 21:43:06 +0200
+
+ark (4:4.8.4-1) unstable; urgency=low
+
+  * Initial packaging, split from kdeutils.
+  * Update Standards-Version to 3.9.3, no further changes.
+  * Add ark-dbg package.
+  * Add watch file.
+
+ -- Eshat Cakar <info@eshat.de>  Wed, 04 Apr 2012 12:42:45 +0200
+
+ark (4:4.8.3-0r0) raring; urgency=low
+
+  * Initial packaging, split from kdeutils.
+  * Update Standards-Version to 3.9.3, no further changes.
+  * Add ark-dbg package.
+
+ -- Eshat Cakar <info@eshat.de>  Wed, 04 Apr 2012 12:42:45 +0200
+
+ark (4:4.8.3-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Kolberg <bulldog98@kubuntu.org>  Thu, 03 May 2012 21:09:07 +0200
+
+ark (4:4.8.2-0ubuntu2) precise-proposed; urgency=low
+
+  * Rebuild for .pot generation
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 12 Apr 2012 16:31:57 +0100
+
+ark (4:4.8.2-0ubuntu1) precise; urgency=low
+
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 03 Apr 2012 08:51:57 +0000
+
+ark (4:4.8.1-0ubuntu1) precise; urgency=low
+
+  [ Philip Muškovac ]
+  * New upstream release
+
+  [ Felix Geyer ]
+  * Make ark-dbg depend on ark.
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 08 Mar 2012 16:14:48 +0100
+
+ark (4:4.8.0a-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+  * Add build-dep on pkg-config for oneiric backports
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 20 Jan 2012 12:10:41 +0000
+
+ark (4:4.7.97-0ubuntu1) precise; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 05 Jan 2012 12:18:38 +0000
+
+ark (4:4.7.95-0ubuntu1) precise; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sat, 24 Dec 2011 22:27:45 +0100
+
+ark (4:4.7.90-0ubuntu1) precise; urgency=low
+
+  * Initial package
+  * Changes compared to Debian kdeutils:
+   - ark suggests  bzip2, p7zip-full, zip, unzip, not recommends
+   - ark does not support CD images - fix description
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 15 Dec 2011 14:20:40 +0000

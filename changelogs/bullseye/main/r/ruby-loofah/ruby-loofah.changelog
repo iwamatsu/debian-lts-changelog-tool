@@ -1,0 +1,155 @@
+ruby-loofah (2.7.0+dfsg-1+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2022-23514: slow regex attribute check with crass parser
+  * CVE-2022-23515: XSS with "image/svg+xml" in data URIs
+  * CVE-2022-23516: Uncontrolled CDATA recursion
+  * Provide scrub_uri_attribute for ruby-rails-html-sanitizer.
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 28 Sep 2024 14:21:23 +0300
+
+ruby-loofah (2.7.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 29 Aug 2020 19:31:28 +0900
+
+ruby-loofah (2.6.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version
+  * debian/control
+    - Drop unnecessary Depends: ruby-interpreter
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 29 Jun 2020 22:18:23 +0900
+
+ruby-loofah (2.5.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New Upstream Version 2.5.0+dfsg
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Hideki Yamane ]
+  * debian/control
+    - Update standards version to 4.5.0, no changes needed.
+    - Set debhelper-compat (= 13)
+  * Drop unnecessary debian/patches
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 06 Jun 2020 00:04:41 +0900
+
+ruby-loofah (2.4.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 03 Jan 2020 13:21:02 +0900
+
+ruby-loofah (2.3.1+dfsg-1) unstable; urgency=high
+
+  * Team upload
+
+  * New upstream version 2.3.1
+    - Fixed CVE-2019-15587 (Closes: Bug#942894)
+  * debian/control
+    - set Standards-Version: 4.4.1
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 23 Oct 2019 14:39:39 +0900
+
+ruby-loofah (2.2.3+dfsg-1) unstable; urgency=medium
+
+  * Repack upstream version 2.2.3 to remove minified JavaScript files, which
+    are shipped without the source. The files in question were used to run
+    benchmarks, the last change made to them was ten years ago.
+
+  * debian/changelog:
+    - Drop trailing whitespaces.
+  * debian/control:
+    - Drop obsolete build-dependency on debhelper, satisfied by
+      debhelper-compat since a while.
+    - Bump Standards-Version to 4.4.0.
+    - Declare that the build doesn't need root.
+    - Use my debian.org mail address.
+  * debian/copyright:
+    - Exclude benchmark directory, which contains minified JavaScript files.
+  * debian/rules:
+    - Make the build verbose.
+  * debian/watch:
+    - Add options to repack the upstream source to comply with the DFSG.
+
+ -- Georg Faerber <georg@debian.org>  Wed, 28 Aug 2019 11:10:44 +0000
+
+ruby-loofah (2.2.3-1) unstable; urgency=medium
+
+  * Team upload
+
+  * New upstream version 2.2.3 (Closes: #912398) (CVE-2018-16468)
+  * debian/watch
+    - update to use gemwatch.debian.net
+  * debian/control
+    - set Standards-Version: 4.3.0
+    - use dh12
+  * debian/compat
+    - drop it
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 30 Dec 2018 15:46:23 +0900
+
+ruby-loofah (2.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Georg Faerber <georg@riseup.net>  Thu, 22 Mar 2018 23:21:45 +0100
+
+ruby-loofah (2.2.1-1) unstable; urgency=medium
+
+  * New upstream release:
+    - Includes fix to prevent cross-site scripting via libxml2.
+      (Closes: #893596) (CVE-2018-8048)
+  * debian/changelog: Remove trailing whitespace.
+  * debian/compat: Bump debhelper compatibility level to 11.
+  * debian/control:
+    - Use salsa.debian.org in Vcs-* fields.
+    - Bump Standards-Version to 4.1.3 (no changes needed).
+    - Bump required debhelper version to >= 11~.
+    - Add ruby-crass as (build) dependency.
+    - Add myself as Uploader.
+  * debian/copyright:
+    - Use HTTPS in link to copyright format specification.
+    - Update Debian packaging authors.
+  * debian/patches: Drop obsolete patch to fix failing specs. This was
+    integrated upstream.
+  * debian/ruby-loofah.docs: Install upstream README.
+  * debian/watch: Use version 4 and HTTPS in link to gemwatch service.
+
+ -- Georg Faerber <georg@riseup.net>  Wed, 21 Mar 2018 23:10:40 +0100
+
+ruby-loofah (2.0.3-2) unstable; urgency=medium
+
+  * fix-tests-assert.patch: Patch to fix test failures (Closes: #808449)
+
+ -- Balasankar C <balasankarc@autistici.org>  Thu, 07 Jan 2016 18:51:50 +0530
+
+ruby-loofah (2.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump debhelper compatibility to 9.
+
+ -- Balasankar C <balasankarc@autistici.org>  Sun, 06 Sep 2015 13:22:57 +0530
+
+ruby-loofah (2.0.2-1) unstable; urgency=medium
+
+  * Upstream update (Closes: #784393)
+  * Add myself to uploaders
+  * Delete deactivate_whitewash_tests.patch, not needed anymore (tests fixed
+    upstream)
+
+ -- Balasankar C <balasankarc@autistici.org>  Wed, 06 May 2015 09:08:49 +0530
+
+ruby-loofah (2.0.1-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 24 Apr 2015 13:42:36 +0200

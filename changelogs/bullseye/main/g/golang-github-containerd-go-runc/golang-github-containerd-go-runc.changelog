@@ -1,0 +1,57 @@
+golang-github-containerd-go-runc (0.0~git20201020.16b287b-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20201020.16b287b
+  * Add golang-github-sirupsen-logrus-dev to Depends
+  * Bump Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 26 Nov 2020 00:43:16 +0800
+
+golang-github-containerd-go-runc (0.0~git20200707.23d84c5-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.0~git20200707.23d84c5
+  * Update debhelper compat to 13
+  * Update Standards-Version to 4.5.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 21:19:52 +0800
+
+golang-github-containerd-go-runc (0.0~git20190911.e029b79-2) unstable; urgency=medium
+
+  * Team upload.
+  * upload to unstable.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 07 Jan 2020 11:16:43 +0800
+
+golang-github-containerd-go-runc (0.0~git20190911.e029b79-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20190911.e029b79
+  * Add Rules-Requires-Root
+  * Remove unused Files-Excluded in copyright file
+  * Update Standards-Version to 4.4.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 04 Jan 2020 03:26:05 +0800
+
+golang-github-containerd-go-runc (0.0~git20190226.7d11b49-1) experimental; urgency=medium
+
+  * Team upload.
+  * Use git mode in debian/watch since upstream doesn't have tags
+  * New upstream version 0.0~git20190226.7d11b49
+  * Update pkg-go team address to team+pkg-go@tracker.debian.org
+  * Update debhelper-compat to 12, and drop debian/compat file
+  * Update Standards-Version to 4.3.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 08 Mar 2019 00:25:08 +0800
+
+golang-github-containerd-go-runc (0.0~git20180125.4f6e87a-1) unstable; urgency=medium
+
+  * Initial release (Closes: #889947)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Mon, 12 Feb 2018 16:05:23 +0700

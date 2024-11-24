@@ -1,0 +1,178 @@
+libclamunrar (0.103.10-0+deb10u1) buster-security; urgency=medium
+
+  * Update to 0.103.10.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Tue, 14 Nov 2023 14:46:33 +0100
+
+libclamunrar (0.102.3-0+deb10u1) buster; urgency=medium
+
+  * Import 0.102.3
+    - Updated libclamunrar to UnRAR 5.9.2.
+  * Provide a libclamunrar meta package which depends on the latest binary
+    package. Suggested by Matus UHLAR - fantomas (Closes: #939824).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 23 May 2020 20:34:59 +0200
+
+libclamunrar (0.101.2-1) unstable; urgency=high
+
+  * Import 0.101.2
+    - CVE-2019-1785 (A path-traversal write condition may occur as a result of
+      improper input validation when scanning RAR archives)
+    - CVE-2019-1798 (A use-after-free condition may occur as a result of
+      improper error handling when scanning nested RAR archives)
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 30 Mar 2019 16:37:10 +0100
+
+libclamunrar (0.101.1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 28 Feb 2019 23:57:23 +0100
+
+libclamunrar (0.101.1-1) experimental; urgency=medium
+
+  * Update to new upstream version.
+    - ABI changes from 7 to 9, some symbols changed.
+  * Bumped standards version to 4.3.0 without any changes.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sun, 10 Feb 2019 21:09:12 +0100
+
+libclamunrar (0.100.1-1) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Delete symlinks to files no longer shipped in libclamav7 (Closes: #903792)
+
+  [ Sebastian Andrzej Siewior ]
+  * Update to upstream version.
+    - Buffer over-read in unRAR code due to missing max value checks in table
+      initialization. Reported by Rui Reis.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 21 Jul 2018 17:58:50 +0200
+
+libclamunrar (0.100.0-1) unstable; urgency=medium
+
+  * Update to new upstream version (Closes: #873027).
+  * Update compat level to 11.
+  * Drop autoreconf related build-depends.
+  * Point Vcs* to salsa.
+  * Bumped standards version to 4.1.4.
+    - Use priority optional.
+  * Use https in the watchfile.
+  * Use `hardening=+all'.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 21 Jun 2018 21:28:32 +0200
+
+libclamunrar (0.99-4) unstable; urgency=medium
+
+  * Cherry pick fix for arbitrary memory write. CVE-2012-6706
+    (Closes: #867223).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 05 Jul 2017 00:12:51 +0200
+
+libclamunrar (0.99-3) unstable; urgency=medium
+
+  * Add a fixup for bb11601.
+  * Update VCS links.
+  * Bumped standards version to 3.9.8 (no changes required).
+  * Update compat level to 10.
+  * Drop autoreconv - it is default now
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 17 Dec 2016 22:00:03 +0100
+
+libclamunrar (0.99-2) unstable; urgency=medium
+
+  * Add patches from upstream bugzilla bb11600 and bb11601 to fix out of band
+    access
+  * drop openssl check (Closes: #828383).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 03 Nov 2016 21:39:40 +0100
+
+libclamunrar (0.99-1) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Correct debian/copyright to add missing copyright declarations/dates
+
+  [ Sebastian Andrzej Siewior ]
+  * Bumped standards version to 3.9.6 (no changes required).
+  * Import new upstream. This is required because clamav's major .so version
+    changed.
+  * switch from libclamunrar6 to libclamunrar7
+  * copy clamav's watch file
+  * add pkg-config to dependencies so autoreconf does not break
+  * don't link against libpcre if available.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Fri, 04 Dec 2015 21:29:11 +0100
+
+libclamunrar (0.98.5-1) unstable; urgency=medium
+
+  [ Sebastian Andrzej Siewior ]
+  * Update to new upstream version.
+    - Finaly address "double-free error exists within the
+      unrar_extract_next_prepare()" (Closes: #770647)
+  * Drop automake workaround, the bug was fixed.
+  * Fix LFS support using the same approach as clamav for compatibility and
+    correctness
+
+  [ Scott Kitterman ]
+  * Add build-dep on libssl-dev, needed for configure even if not used
+    in libclamunrar
+  * Update debian/copyright to add openssl exception per COPYING
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 22 Nov 2014 22:25:35 +0100
+
+libclamunrar (0.98.1-1) unstable; urgency=low
+
+  * New upstream version
+  * redo rules files to something smaller like we do have in the clamav
+    package.
+  * Do autoreconf before configure (closes: #727917).
+  * Enable hardened build flags (closes: #741080).
+  * Remove all .la files (clamd works without them).
+  * Add VCS-* tags.
+  * Add myself as uploader.
+  * Remove *.so files (lintian warning).
+  * Add a symbol file.
+  * Bumb standards version to 3.9.1 after made the required changes.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 03 May 2014 20:24:05 +0200
+
+libclamunrar (0.96.4-1) unstable; urgency=low
+
+  * New upstream version
+  * Bumped standards version to 3.9.1 (no changes).
+
+ -- Michael Tautschnig <mt@debian.org>  Tue, 26 Oct 2010 00:16:24 +0200
+
+libclamunrar (0.96-2) unstable; urgency=low
+
+  * Make configure executable (caused by buggy packaging)
+
+ -- Michael Tautschnig <mt@debian.org>  Fri, 16 Apr 2010 21:12:18 +0200
+
+libclamunrar (0.96-1) unstable; urgency=low
+
+  * New upstream version
+  * Bumped standards version to 3.8.4 (no changes).
+
+ -- Michael Tautschnig <mt@debian.org>  Tue, 13 Apr 2010 18:26:13 +0200
+
+libclamunrar (0.95.3-1) unstable; urgency=low
+
+  * Added XS-Autobuild flag and requested stanza to debian/copyright to allow
+    auto-building in non-free network (closes: #548667).
+  * Build-dep on zlib1g-dev (closes: #551805), also build-deb libbz2-dev.
+  * Bumped standards version to 3.8.3 (no changes).
+
+ -- Michael Tautschnig <mt@debian.org>  Sun, 01 Nov 2009 13:20:05 +0100
+
+libclamunrar (0.95.2-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Stephen Gran <sgran@debian.org>  Mon, 15 Jun 2009 23:25:52 +0100
+
+libclamunrar (0.95.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Michael Tautschnig <mt@debian.org>  Sun, 12 Apr 2009 18:01:51 +0200

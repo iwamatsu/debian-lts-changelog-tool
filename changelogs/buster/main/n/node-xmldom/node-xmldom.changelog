@@ -1,0 +1,25 @@
+node-xmldom (0.1.27+ds-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-39353: xmldom parses XML that is not well-formed because it
+    contains multiple top level elements, and adds all root nodes to the
+    childNodes collection of the Document, without reporting any error or
+    throwing. (Closes: #1024736)
+  * CVE-2021-21366: xmldom does not correctly preserve system identifiers,
+    FPIs or namespaces when repeatedly parsing and serializing maliciously
+    crafted documents.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sat, 31 Dec 2022 21:14:05 +0100
+
+node-xmldom (0.1.27+ds-1+deb10u1) buster-security; urgency=medium
+
+  * Team upload
+  * Fix prototype pollution (Closes: #1021618, CVE-2022-37616)
+
+ -- Yadd <yadd@debian.org>  Tue, 18 Oct 2022 10:07:37 +0200
+
+node-xmldom (0.1.27+ds-1) unstable; urgency=low
+
+  * Initial release (Closes: #902311). Repacked from github
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 12 Jun 2018 12:02:27 +0200

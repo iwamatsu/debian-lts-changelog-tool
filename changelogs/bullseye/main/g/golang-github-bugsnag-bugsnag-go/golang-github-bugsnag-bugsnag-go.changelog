@@ -1,0 +1,73 @@
+golang-github-bugsnag-bugsnag-go (1.7.0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+  [ Anthony Fok ]
+  * New upstream version 1.7.0
+  * debian/watch: Update to version=4 and add filenamemangle, etc.
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Remove debian/patches/noimport_osext.patch.
+    Add dependency on golang-github-kardianos-osext-dev, and
+    let panicwrap_test.go import github.com/kardianos/osext
+  * debian/control: Update dependencies for v1.7.0,
+    at least the ones that are already packaged for Debian
+  * Add local copy of unpackaged dependencies
+    - github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
+    - github.com/go-martini/martini v0.0.0-20170121215854-22fa46961aab
+  * debian/rules: Add execute_after_dh_auto_configure target to
+    copy local dependencies to github.com/bugsnag/bugsnag-go/vendor
+  * Bump dependency on golang-github-revel-revel-dev to (>= 1.0.0)
+  * debian/rules: Remove override_dh_auto_test target
+    now that all tests run successfully
+  * debian/rules: Override dh_auto_install with --no-binaries
+    to prevent test binaries from being installed
+  * Apply "cme fix dpkg" fixes:
+    - Organize debian/control fields
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+    - Bump Standards-Version to 4.5.0 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add "Rules-Requires-Root: no" to debian/control
+  * debian/control: Change Section from devel to golang
+  * Add myself to the list of Uploaders
+  * Add copyright information for included bootstrap-3.3.6 and jquery-2.2.4
+    and add non-minified versions to debian/missing-sources/
+
+ -- Anthony Fok <foka@debian.org>  Fri, 20 Nov 2020 22:04:14 -0700
+
+golang-github-bugsnag-bugsnag-go (1.0.5+dfsg-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * patch away obsolete "kardianos/osext"
+  * Standards-Version: 4.1.4; Priority: optional
+  * Testsuite: autopkgtest-pkg-go
+  * debhelper & compat to version 11
+  * copyright-format URL to HTTPS
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 04 Jul 2018 16:24:10 +1000
+
+golang-github-bugsnag-bugsnag-go (1.0.5+dfsg-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 17:44:37 +0300
+
+golang-github-bugsnag-bugsnag-go (1.0.5+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #785167)
+
+ -- Tim Potter <tpot@hp.com>  Fri, 08 May 2015 13:58:06 +1000

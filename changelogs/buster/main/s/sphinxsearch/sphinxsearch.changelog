@@ -1,0 +1,200 @@
+sphinxsearch (2.2.11-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2020-29050
+    Fix for arbitrary file reads by scattered file snippets
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 18 Dec 2021 23:03:02 +0100
+
+sphinxsearch (2.2.11-2) unstable; urgency=medium
+
+  * Fix upstream bug 2540: daemon crash on snippet generation 
+    for empty documents with html_strip enabled. (Closes: #869097)
+
+ -- YunQiang Su <syq@debian.org>  Sun, 20 Aug 2017 11:08:24 +0800
+
+sphinxsearch (2.2.11-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Switch Build-Depends to default-libmysqlclient-dev.
+    (Closes: #845911)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Mon, 19 Dec 2016 01:53:57 +0000
+
+sphinxsearch (2.2.11-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump standard version to 3.9.8.
+
+ -- YunQiang Su <syq@debian.org>  Wed, 26 Oct 2016 13:49:22 +0800
+
+sphinxsearch (2.2.9-1) unstable; urgency=medium
+  
+  * New upstream release.
+  * Add mulitarch libdir support (Closes: #769004).
+
+ -- YunQiang Su <syq@debian.org>  Sun, 03 May 2015 01:37:01 +0800
+
+sphinxsearch (2.2.5-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: 713331)
+  * Use dh 9 - compat level and rules.
+  * Add myself in to uploaders.
+
+ -- YunQiang Su <syq@debian.org>  Wed, 29 Oct 2014 11:37:25 +0000
+
+sphinxsearch (2.0.4-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Removed hard-coded dependency on libmysqlclient16 (Closes: #676595)
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Mon, 11 Jun 2012 20:31:53 +0000
+
+sphinxsearch (2.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix FTBFS with gcc-4.7. Thanks to Cyril Brulebois for the patch.
+    (closes: #667378)
+  * init script improvements thanks to Daniel Black.
+    (closes: #656326)
+  * watch file thanks to Mateusz Kijowski.
+    (closes: #663680, #663679)
+  * Bumped Standards Version.
+ 
+ -- Radu Spineanu <radu@debian.org>  Fri, 20 Apr 2012 02:24:37 +0000
+
+sphinxsearch (2.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upstream release fixes case when omitting mem_limit 
+    generates a spurious warning. (closes: #647815)
+  * Migrated from dpatch to quilt.
+
+ -- Radu Spineanu <radu@debian.org>  Tue, 10 Jan 2012 08:15:19 +0000
+
+sphinxsearch (0.9.9+2.0.2beta-1) unstable; urgency=low
+
+  * New upstream release. (2.0.2beta)
+  * New upstream fixes FTBFS. (closes: #648260)
+  * Create /var/run/sphinxsearch in init.d if it doesn't exist.
+    Thanks to John Paulett <john@paulett.org> for the patch.
+    (closes: #645663)
+
+ -- Radu Spineanu <radu@debian.org>  Thu, 01 Dec 2011 16:24:36 +0000
+
+sphinxsearch (0.9.9+2.0.1beta-1) unstable; urgency=low
+
+  * New upstream release. (2.0.1beta)
+    (closes: #639784)
+  * Fix FTBFS with multiarchified libstemmer.
+    (closes: #635030)
+  * logrotate now refers correctly to 
+    /var/run/sphinxsearch/searchd.pid.
+    (closes: #641194)
+  * Added a new entry about sphinxsearch running with
+    user privileges. (closes: #640732)
+
+ -- Radu Spineanu <radu@debian.org>  Sat, 08 Oct 2011 15:30:05 +0000
+
+sphinxsearch (0.9.9-9) unstable; urgency=low
+
+  * Run daemon as the sphinxsearch user. Related to #563205.
+    Inspired from Christian Hofstaedtler's patch.
+  * Moved pidfile to /var/run/sphinxsearch/searchd.pid
+  * postinst edits the conf file to replace the pid file location.
+
+ -- Radu Spineanu <radu@debian.org>  Wed, 20 Jul 2011 03:42:46 +0000
+
+sphinxsearch (0.9.9-8) unstable; urgency=low
+
+  * libstemmer support. Thanks for the awesome work done by
+    Thijs Kinkhorst and Adam Golebiowski. (closes: #570506)
+  * Added build-dependency on autoconf, automake, and dh_autoreconf.
+  * Added dh_autoreconf call in debian/rules.
+  * init.d: restart sphinx on reload/force-reload.
+    (closes: #625714)
+  * Add logrotate script. Thanks to Thijs Kinkhorst.
+    (closes: #630611)
+  * Bumped Standards Version.
+
+ -- Radu Spineanu <radu@debian.org>  Fri, 08 Jul 2011 05:56:12 +0000
+
+sphinxsearch (0.9.9-7) unstable; urgency=low
+
+  * Stop the cron entry from SPAM-ing (again).
+    (closes: #586146)
+  * Rename LABEL to NAME in init script.
+    (closes: #591763)
+  * Add a slight start delay in init.d script to avoid process checks 
+    before sphinx finished initializing. (closes: #613455)
+  * Add sphinx.conf as sphinx.conf.sample. (closes: #600708)
+  * Bumped Standards Version.
+
+ -- Radu Spineanu <radu@debian.org>  Sat, 09 Apr 2011 08:13:25 +0000
+
+sphinxsearch (0.9.9-6) unstable; urgency=low
+
+  * Fixed a bashism in crontab. (closes: #573401)
+
+ -- Radu Spineanu <radu@debian.org>  Sat, 05 Jun 2010 20:22:10 +0300
+
+sphinxsearch (0.9.9-5) unstable; urgency=low
+
+  * Added a patch from Julian Cristau to fix the alpha build.
+    (closes: #564620 )
+  * Check if $START is 'yes' in /etc/default/sphinxsearch 
+    when running cron script (closes: #573401)
+  * Added libexpat-dev build-dependency. Thanks to Patrik Rak
+    for pointing it out.
+
+ -- Radu Spineanu <radu@debian.org>  Wed, 21 Apr 2010 23:23:09 +0300
+
+sphinxsearch (0.9.9-4) unstable; urgency=low
+
+  * Fix init.d echo and return bug. 
+
+ -- Radu Spineanu <radu@debian.org>  Wed, 13 Jan 2010 01:48:49 +0200
+
+sphinxsearch (0.9.9-3) unstable; urgency=low
+
+  * Cronjob should be run as root for now.
+
+ -- Radu Spineanu <radu@debian.org>  Sun, 10 Jan 2010 19:23:04 +0200
+
+sphinxsearch (0.9.9-2) unstable; urgency=low
+
+  * Thanks to Christian Hofstaedtler <ch+debian@zeha.at>
+    sphinxsearch has a number of improvements (#563205)
+      + man pages for indexer and searchd
+      + indexer cronjob
+  * Don't ship example confs in /etc/sphinxsearch. But also don't
+    start init.d automatically. Let the user tweak sphinx.conf so that
+    it suits him first.
+  * Remove old configuration template files from /etc/sphinxsearch 
+    if present
+
+ -- Radu Spineanu <radu@debian.org>  Sun, 10 Jan 2010 17:46:43 +0200
+
+sphinxsearch (0.9.9-1) unstable; urgency=low
+
+  * New upstream release. (closes: #561687)
+
+ -- Radu Spineanu <radu@debian.org>  Mon, 28 Dec 2009 15:13:50 +0200
+
+sphinxsearch (0.9.8.1-3) unstable; urgency=low
+
+  * Upload with dpkg-buildpackage -sa.
+
+ -- Radu Spineanu <radu@debian.org>  Thu, 19 Nov 2009 15:24:45 +0200
+
+sphinxsearch (0.9.8.1-2) unstable; urgency=low
+
+  * Added missing copyright entries.
+
+ -- Radu Spineanu <radu@debian.org>  Tue, 17 Nov 2009 22:19:42 +0200
+
+sphinxsearch (0.9.8.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #456227, #458000)
+
+ -- Radu Spineanu <radu@debian.org>  Sun, 25 Oct 2009 00:09:31 +0300

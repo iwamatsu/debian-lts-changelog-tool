@@ -1,0 +1,259 @@
+flask (1.0.2-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Add backported upstream patch to fix CVE-2023-30861.
+  * Add debian/.gitlab-ci.yml.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 20 Aug 2023 19:21:11 +0100
+
+flask (1.0.2-3) unstable; urgency=medium
+
+  * Set https_proxy during building docs to prevent internet access
+    (Closes: #909570)
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 27 Sep 2018 10:50:39 +0200
+
+flask (1.0.2-2) unstable; urgency=medium
+
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Add d/p/0002-remove-DocVersion-related.patch and
+        d/p/0003-fix-issue-no-theme-named-flask-found.patch and
+        d/p/0004-empty-CONTRIBUTING-rst.patch and
+        d/p/0005-remove-carbon-ads.patch:
+    Make docs build compatible with newer pallets_sphinx_themes
+    (Closes: #908688)
+  * Bump standards version to 4.2.1 (no changes)
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 18 Sep 2018 11:42:45 +0200
+
+flask (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control:
+    - Remove ancient X-Python{,3}-Version field
+    - Bump required version of B-D a D for new upstream release
+    - B-D on python3-pallets-sphinx-themes
+  * d/patches/*: Drop. All applied upstream
+  * d/copyright: Change upstream copyright holders for new upstream release
+  * d/rules: Upstream renamed CHANGES -> CHANGES.rst
+  * Standards-Version is 4.1.4 now (no changes needed)
+  * Install examples
+  * Add upstream metadata
+  * d/copyright: Bump my copyright year
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 16 May 2018 15:39:05 +0200
+
+flask (0.12.2-4) unstable; urgency=medium
+
+  * d/control: Set Vcs-* to salsa.debian.org
+  * Add correct upstream changelog (Closes: #891342)
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 05 Mar 2018 14:20:35 +0100
+
+flask (0.12.2-3) unstable; urgency=medium
+
+  * Change priority from extra to optional
+  * Standards-Version is 4.1.3 now
+  * Remove unwanted license file from docs
+  * debian/patches/0003-Don-t-rely-on-X-Requested-With-for-pretty-print-json.patch:
+    Fix FTBFS (Closes: #884523)
+  * Bump debhelper compat level to 11
+  * Use Python 3 version of Sphinx for building docs
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 15 Jan 2018 14:59:22 +0100
+
+flask (0.12.2-2) unstable; urgency=medium
+
+  * Added Python 3.6 support for tests (Closes: #867482)
+  * Standards-Version is 4.0.0.4 now (no changes needed)
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 09 Jul 2017 18:36:07 +0200
+
+flask (0.12.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * d/control: Cleanup long description of python-flask-doc
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 20 Jun 2017 19:26:05 +0200
+
+flask (0.12.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * Use SOURCE_DATE_EPOCH for copyright year to make build reproducible
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 13 Apr 2017 06:48:44 +0200
+
+flask (0.12-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bumped debhelper version to 10
+
+ -- Ondřej Nový <onovy@debian.org>  Sun, 25 Dec 2016 16:01:11 +0100
+
+flask (0.11.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * New upstream release
+  * Fixed VCS URL (https)
+  * Bumped Standards-Version to 3.9.8 (no changes needed)
+  * Use extend-diff-ignore for egg-info instead of removing it
+  * d/copyright
+    - Converted to DEP5 format
+    - Added myself for Debian part
+  * Removed patches applied upstream:
+    - d/p/fix_test_appcontext_signals.patch
+    - d/p/fix_test_json_key_sorting.patch
+  * Added python{3,}-click and python{3,}-pytest to build depends
+  * Bumped required Python 2 version to 2.6
+  * Enabled autopkgtest-pkg-python testsuite
+  * Use override_dh_sphinxdoc for building Sphinx docs and added nodocs
+    support
+  * Use LC_ALL=C.UTF-8 when running tests, Click is failing on non UTF-8
+    locale
+  * Bumped required version of dh-python to 2.20160609~
+  * Added /usr/share/doc/python-flask-doc/rst symlink
+  * Removed override_dh_auto_clean and override_dh_python3 (not needed)
+  * Install /usr/bin/flask CLI only to python3-flask package
+  * Make python-flask and python3-flask descriptions distinct
+  * Removed all pre-wheezy version compare from dependency
+  * Removed python-simplejson from build-depends/recommends
+  * Added python3-blinker to build-depends/recommends
+  * Removed d/python-flask.pyremove (not needed)
+  * d/watch: Changed to pypi.debian.net
+  * Removed site_egg directory
+
+  [ Piotr Ożarowski ]
+  * Make sure sphinx-build doesn't access network
+  * Add Ondřej Nový to Uploaders
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 19 Jul 2016 21:37:45 +0200
+
+flask (0.10.1-2) unstable; urgency=low
+
+  * Add python3-flask binary package
+  * Add python-blinker to Recommends (used in flask.signals)
+  * Switch to pybuild buildsystem
+  * Add fix_test_appcontext_signals and fix_test_json_key_sorting patches
+    and enable tests at build time (patches taken from upstream repo)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 08 Aug 2013 22:19:13 +0200
+
+flask (0.10.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Add python-itsdangerous to Build-Depends and let dh_python2
+    add it to Depends
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 16 Jun 2013 15:08:42 +0200
+
+flask (0.9-2) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Piotr Ożarowski ]
+  * Add python-flask-doc binary package (closes: #703802)
+  * debian/compat bumped to 9
+  * Standards-Version bumped to 3.9.4 (no changes needed)
+  * upload to unstable
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 05 May 2013 20:25:15 +0200
+
+flask (0.9-1) experimental; urgency=low
+
+  * New upstream release
+    - upload to experimental due to Wheezy freeze
+  * remove flask/testsuite from binary package (it's doesn't work outside
+    build directory)
+  * Standards-Version bumped to 3.9.3 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 03 Aug 2012 19:29:35 +0200
+
+flask (0.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump minimum required python-werkzeug version to 0.8
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 16 Oct 2011 19:37:43 +0200
+
+flask (0.7.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 07 Jul 2011 23:09:37 +0200
+
+flask (0.7.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 29 Jun 2011 20:17:09 +0200
+
+flask (0.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 28 Jun 2011 21:46:12 +0200
+
+flask (0.6.1-2) unstable; urgency=low
+
+  * Provide flaskext namespace
+  * Build depend on python-all to make sure dh will invoke setup.py install
+    for all supported Python versions (and thus avoid dh_python2's
+    .pyinstall vs. guess_versions race)
+  * Standards-Version bumped to 3.9.2 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 07 May 2011 19:34:59 +0200
+
+flask (0.6.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 15 Jan 2011 20:49:53 +0100
+
+flask (0.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-Version bumped to 3.9.1 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 28 Jul 2010 17:46:02 +0200
+
+flask (0.5.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 18 Jul 2010 14:46:40 +0200
+
+flask (0.5.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Convert to dh_python2
+  * Standards-Version bumped to 3.9.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 11 Jul 2010 19:51:17 +0200
+
+flask (0.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 24 Jun 2010 01:26:58 +0200
+
+flask (0.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Add python-jinja2 and python-werkzeug to Build-Depends-Indep (for tests)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 28 May 2010 22:08:19 +0200
+
+flask (0.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Add python-simplejson | python (>= 2.6) to Recommends
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 12 May 2010 11:04:18 +0200
+
+flask (0.1-1) unstable; urgency=low
+
+  * Initial release (closes: #578093)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 16 Apr 2010 21:45:12 +0200

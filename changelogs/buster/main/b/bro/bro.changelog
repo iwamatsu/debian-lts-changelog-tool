@@ -1,0 +1,126 @@
+bro (2.5.5-1+deb10u1) buster-security; urgency=medium
+
+  * Add patches for CVE-2018-16807, CVE-2018-17019 (Closes: #908614,
+    #908779)
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 25 Jun 2019 21:26:53 +0200
+
+bro (2.5.5-1) unstable; urgency=medium
+
+  * New upstream version 2.5.5
+  * Bump Standards-Version
+  * Bump binpac build-dependency
+  * copyright: Add bits of Creative Commons license that are not strictly
+    part of the license (thanks, Lintian)
+  * Make build reproducible by removeing build path from *.bro files,
+    thanks to Chris Lamb (Closes: #908379)
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 05 Sep 2018 16:05:40 +0200
+
+bro (2.5.4-1) unstable; urgency=medium
+
+  * New upstream version 2.5.4
+  * Bump binpac build-dependency
+  * Bump Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 17 Jun 2018 12:47:27 +0200
+
+bro (2.5.3-1) unstable; urgency=medium
+
+  * New upstream version 2.5.3
+  * Bump Standards-Version
+  * Update VCS fields for salsa
+  * Bump version in binpac build-dependency
+  * Clean up debian/rules
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 15 Feb 2018 17:08:02 +0100
+
+bro (2.5.2-2) unstable; urgency=medium
+
+  * Add patches to port everything but OCSP-related features to OpenSSL
+    1.1 (Closes: #851091)
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 29 Nov 2017 16:40:09 +0100
+
+bro (2.5.2-1) unstable; urgency=medium
+
+  * Update upstream's public key
+  * New upstream version 2.5.2
+  * Modernize package: Bump DH compat level, Standards-Version; 
+    fix VCS-* URLs
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 17 Oct 2017 10:54:57 +0200
+
+bro (2.5.1-1) unstable; urgency=medium
+
+  * New upstream version 2.5.1
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 16 Jul 2017 14:23:59 +0200
+
+bro (2.5-1) unstable; urgency=medium
+
+  * New upstream version 2.5
+  * Update watch file
+  * Update patches
+  * No longer strip documentation from tarball -- it has a DFSG-free
+    license now.
+  * Bump Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 23 Dec 2016 23:36:01 +0100
+
+bro (2.4.1+dfsg-4) unstable; urgency=medium
+
+  * Disable OpenSSL 1.1 patches, build using libssl1.0-dev instead
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 22 Nov 2016 09:08:22 +0100
+
+bro (2.4.1+dfsg-3) unstable; urgency=medium
+
+  * Port most of the OpenSSL-using code to OpenSSL 1.1 (Closes: #828254).
+    OCSP validation stays disabled for now. Thanks to Sascha Steinbiss for
+    his help.
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 15 Nov 2016 12:35:28 +0100
+
+bro (2.4.1+dfsg-2) unstable; urgency=medium
+
+  * Fix FTBFS with OpenSSL built without SSLv3 support
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 05 Nov 2015 18:24:43 +0100
+
+bro (2.4.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 29 Oct 2015 19:01:12 +0100
+
+bro (2.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Rebased patch queue
+  * Deleted our manpage since there is now one in the upstream sources
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 28 Jun 2015 16:37:10 +0200
+
+bro (2.3.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Add missing entry to debian/copyright
+  * Drop bro-doc package. The documentation can't be packaged in main
+    because of license issues (CC BY-NC 3.0)
+  * Add script for stripping the doc/ directory from the original tarball
+  * Adjust binpac build-dependency
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 03 Feb 2015 21:14:50 +0100
+
+bro (2.3.1-2) unstable; urgency=medium
+
+  * Fix FTBFS when building architecture-dependent package only
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 13 Dec 2014 15:47:12 +0100
+
+bro (2.3.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #752546)
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 05 Dec 2014 22:14:18 +0100

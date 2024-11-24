@@ -1,0 +1,137 @@
+pcre2 (10.32-5+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2019-20454: Out-of-bounds read when the pattern \X is JIT compiled and
+    used to match specially crafted subjects in non-UTF mode.
+  * CVE-2022-1586: Out-of-bounds read involving unicode property matching in
+    JIT-compiled regular expressions. The issue occurs because the character
+    was not fully read in case-less matching within JIT. (Closes: #1011954).
+  * CVE-2022-1587: Out-of-bounds read affecting recursions in JIT-compiled
+    regular expressions caused by duplicate data transfers. (Closes:
+    #1011954).
+  * Subject buffer overread in JIT when UTF is disabled and \X or \R has a
+    greater than 1 fixed quantifier.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Thu, 16 Mar 2023 01:21:36 +0100
+
+pcre2 (10.32-5) unstable; urgency=high
+
+  * Patch from Guillem Jover <guillem@debian.org> to only use SSE2
+    instructions on those i386 CPUs that support them (Closes: #925360)
+
+ -- Matthew Vernon <matthew@debian.org>  Mon, 25 Mar 2019 19:56:19 +0000
+
+pcre2 (10.32-4) unstable; urgency=medium
+
+  * Take patch from Jeremy Bicha to build with
+    --disable-pcre2grep-callout: A grep tool should not be expected to
+    execute commands (Closes: #920273) (LP: #1636666)
+
+ -- Matthew Vernon <matthew@debian.org>  Thu, 24 Jan 2019 09:20:51 +0000
+
+pcre2 (10.32-3) unstable; urgency=medium
+
+  * Sacrifice an integer to dgit (previous upload didn't work)
+
+ -- Matthew Vernon <matthew@debian.org>  Sun, 28 Oct 2018 14:19:04 +0000
+
+pcre2 (10.32-2) unstable; urgency=medium
+
+  * Take Ondřej Nový's patch to remove redundant Priority field in -dbg
+    package
+
+ -- Matthew Vernon <matthew@debian.org>  Fri, 26 Oct 2018 20:01:53 +0100
+
+pcre2 (10.32-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matthew Vernon <matthew@debian.org>  Fri, 26 Oct 2018 19:27:13 +0100
+
+pcre2 (10.31-3) unstable; urgency=medium
+
+  * Disable JIT on mips* (apropos #892488)
+
+ -- Matthew Vernon <matthew@debian.org>  Sat, 10 Mar 2018 00:31:33 +0000
+
+pcre2 (10.31-2) unstable; urgency=low
+
+  * Point to salsa repo in vcs* fields
+  * priority extra -> optional
+  * Add homepage link in debian/control
+  * Update to newer standards-version
+
+ -- Matthew Vernon <matthew@debian.org>  Sat, 24 Feb 2018 14:57:26 +0000
+
+pcre2 (10.31-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #883224)
+
+ -- Matthew Vernon <matthew@debian.org>  Sat, 24 Feb 2018 12:13:02 +0000
+
+pcre2 (10.22-6) unstable; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Add a libpcre2-8-0-udeb, needed by vte2.91 (Closes: #887674)
+  * Enable parallel building.
+
+ -- Matthew Vernon <matthew@debian.org>  Sat, 03 Feb 2018 18:44:08 +0000
+
+pcre2 (10.22-5) unstable; urgency=medium
+
+  * Add Vcs-{Git,Browser} fields to debian/control
+
+ -- Matthew Vernon <matthew@debian.org>  Fri, 01 Dec 2017 17:35:06 +0000
+
+pcre2 (10.22-4) unstable; urgency=low
+
+  * Add README.source explaining packaging workflow (Closes: #862425)
+
+ -- Matthew Vernon <matthew@debian.org>  Thu, 30 Nov 2017 14:17:39 +0000
+
+pcre2 (10.22-3) unstable; urgency=medium
+
+  * CVE-2017-7186: invalid Unicode property lookup may cause denial of
+    service (Closes: #858233)
+
+ -- Matthew Vernon <matthew@debian.org>  Tue, 21 Mar 2017 22:33:58 +0000
+
+pcre2 (10.22-2) unstable; urgency=low
+
+  * re-upload with source :-(
+
+ -- Matthew Vernon <matthew@debian.org>  Tue, 02 Aug 2016 19:27:58 +0100
+
+pcre2 (10.22-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Matthew Vernon <matthew@debian.org>  Tue, 02 Aug 2016 18:59:19 +0100
+
+pcre2 (10.21-1) unstable; urgency=low
+
+  * New upstream version
+  * Upstream patch to fix workspace overflow for (*ACCEPT) with deeply
+    nested parentheses (Closes: #815920)
+
+ -- Matthew Vernon <matthew@debian.org>  Sat, 27 Feb 2016 15:21:34 +0000
+
+pcre2 (10.20-3) unstable; urgency=low
+
+  * Enable JIT on ppc64 & ppc64el (Closes: #806388)
+
+ -- Matthew Vernon <matthew@debian.org>  Fri, 27 Nov 2015 08:16:38 +0000
+
+pcre2 (10.20-2) unstable; urgency=low
+
+  * remove unnecessary -L settings (Closes: #805941)
+  * Improve makefile syntax, and add JIT on arm64
+
+ -- Matthew Vernon <matthew@debian.org>  Tue, 24 Nov 2015 20:39:15 +0000
+
+pcre2 (10.20-1) unstable; urgency=low
+
+  * Initial debian version (Closes: #805728)
+
+ -- Matthew Vernon <matthew@debian.org>  Sun, 22 Nov 2015 15:58:38 +0000
+

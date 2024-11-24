@@ -1,0 +1,155 @@
+waitress (1.2.0~b2-2+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2024-49769: DoS due to resource exhaustion
+
+ -- Adrian Bunk <bunk@debian.org>  Fri, 15 Nov 2024 18:06:06 +0200
+
+waitress (1.2.0~b2-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Security updates to fix request smuggling bugs, when combined with another
+    http proxy that interprets requests differently. This can lead to a
+    potential for HTTP request smuggling/splitting whereby Waitress may see
+    two requests while the front-end server only sees a single HTTP message.
+    This can result in cache poisoning or unexpected information disclosure.
+    The specific issues resolved are:
+    - CVE-2019-16785: Only recognise CRLF as a line-terminator, not a plain
+      LF. Before this change waitress could see two requests where the
+      front-end proxy only saw one.
+    - CVE-2019-16786: Waitress would parse the Transfer-Encoding header and
+      only look for a single string value, if that value was not "chunked" it
+      would fall through and use the Content-Length header instead.
+      This could allow for Waitress to treat a single request as multiple
+      requests in the case of HTTP pipelining.
+    - CVE-2019-16789: Specially crafted requests containing special whitespace
+      characters in the Transfer-Encoding header would get parsed by Waitress
+      as being a chunked request, but a front-end server would use the
+      Content-Length instead as the Transfer-Encoding header is considered
+      invalid due to containing invalid characters.
+      If a front-end server does HTTP pipelining to a backend Waitress server
+      this could lead to HTTP request splitting which may lead to potential
+      cache poisoning or unexpected information disclosure.
+    - CVE-2019-16792: If two Content-Length headers are sent in a single
+      request, Waitress would treat the request as having no body, thereby
+      treating the body of the request as a new request in HTTP pipelining.
+    - CVE-2022-24761: There are two classes of vulnerability that may lead to
+      request smuggling that are addressed by this advisory:
+      + The use of Python's int() to parse strings into integers, leading to
+        +10 to be parsed as 10, or 0x01 to be parsed as 1, where as the
+        standard specifies that the string should contain only digits or hex
+        digits.
+      + Waitress does not support chunk extensions, however it was discarding
+        them without validating that they did not contain illegal characters.
+      (Closes: #1008013)
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 11 May 2022 22:42:07 -0400
+
+waitress (1.2.0~b2-2) unstable; urgency=medium
+
+  * Unbreak docco build (Closes: #918669).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 08 Jan 2019 15:54:08 +0100
+
+waitress (1.2.0~b2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field.
+  * d/control: Add Vcs-* field.
+
+  [ Andrej Shadura ]
+  * New upstream release.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 07 Jan 2019 18:26:54 +0100
+
+waitress (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Enable autopkgtests.
+  * Add Vcs-*.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 13 May 2018 10:12:31 +0200
+
+waitress (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update package descriptions.
+  * Build-Depend on Python 2.7+/3.3+.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Tue, 13 Dec 2016 14:34:36 +0100
+
+waitress (0.8.10-1) unstable; urgency=medium
+
+  [ Juan Picca ]
+  * Make the build reproducible (Closes: #788597).
+
+  [ Andrew Shadura ]
+  * New upstream release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 26 Dec 2015 14:44:28 +0100
+
+waitress (0.8.9-2) unstable; urgency=medium
+
+  * Fix FTBFS (Closes: #765126).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Mon, 13 Oct 2014 21:56:21 +0200
+
+waitress (0.8.9-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Wed, 08 Oct 2014 15:58:50 +0200
+
+waitress (0.8.8-3) unstable; urgency=low
+
+  * Build against python3.4.
+  * Fix shebangs in waitress-serve scripts.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 24 Apr 2014 08:12:29 +0200
+
+waitress (0.8.8-2) unstable; urgency=low
+
+  * Fix the package description.
+  * Bump Standards-Version (no changes).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 24 Apr 2014 07:45:00 +0200
+
+waitress (0.8.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 14 Dec 2013 20:55:11 +0100
+
+waitress (0.8.7-3) unstable; urgency=low
+
+  * Switch to using dh-python instead of versioned depends
+    on python3 (Closes: #731532).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 14 Dec 2013 17:53:03 +0100
+
+waitress (0.8.7-2) unstable; urgency=low
+
+  * Update the watch file.
+  * Use alternatives to ensure co-installability of python2 and python3
+    versions (Closes: #725260).
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 03 Oct 2013 15:44:25 +0200
+
+waitress (0.8.7-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Wed, 02 Oct 2013 20:49:35 +0200
+
+waitress (0.8.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Remove erroneous patch.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Sat, 13 Apr 2013 15:25:34 +0200
+
+waitress (0.8.1-1) experimental; urgency=low
+
+  * Initial release.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 21 Mar 2013 21:02:04 +0100

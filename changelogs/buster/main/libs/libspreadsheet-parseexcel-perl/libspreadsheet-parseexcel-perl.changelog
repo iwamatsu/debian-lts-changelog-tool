@@ -1,0 +1,368 @@
+libspreadsheet-parseexcel-perl (0.6500-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2023-7101: Arbitrary code execution (ACE) vulnerability due to
+    passing unvalidated input from a file into a string-type “eval”.
+    Specifically, the issue stems from the evaluation of Number format strings
+    (not to be confused with printf-style format strings) within the Excel
+    parsing logic. (Closes: #1059450)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sun, 31 Dec 2023 00:53:09 +0100
+
+libspreadsheet-parseexcel-perl (0.6500-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * debian/copyright: update years of upstream and packaging copyright.
+  * Refresh patches.
+  * Bump debhelper compatibility level to 8.
+  * Remove version from libtest-pod-perl build dependency, already satisfied
+    in oldstable.
+  * Add new build and runtime dependency on libcrypt-rc4-perl.
+  * debian/control: update {versioned,alternative} (build) dependencies.
+  * Strip trailing slash from metacpan URLs.
+  * debian/rules: fix examples hashbang/permissions.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ Florian Schlichting ]
+  * Import Upstream version 0.6500
+  * Update upstream copyright holders
+  * Declare compliance with Debian Policy 3.9.5
+  * Drop 10objref.patch, feature incorporated upstream
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 05 May 2014 17:10:46 +0200
+
+libspreadsheet-parseexcel-perl (0.5800-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Use new 3.0 (quilt) source format
+  * Standards-Version 3.9.1 (no changes)
+  * Update copyright information
+  * Use new DEP5 copyright format
+
+  [ gregor herrmann ]
+  * Update patch headers (DEP3).
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Mon, 04 Oct 2010 22:08:29 -0400
+
+libspreadsheet-parseexcel-perl (0.5700-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Install examples from examples/*
+  * Refresh quilt patches
+
+  [ gregor herrmann ]
+  * Install the "old" sample directory with the directory structure, otherwise
+    it gets confusing.
+  * Update years of upstream and packaging copyright.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 24 Jan 2010 20:47:08 -0500
+
+libspreadsheet-parseexcel-perl (0.5600-1) unstable; urgency=low
+
+  * New upstream release
+  * Refresh patch 10objref.patch
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Tue, 15 Dec 2009 20:18:50 -0500
+
+libspreadsheet-parseexcel-perl (0.5500-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+
+  [ Ryan Niebur ]
+  * Update jawnsy's email address
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Wed, 30 Sep 2009 08:00:45 -0400
+
+libspreadsheet-parseexcel-perl (0.5400-1) unstable; urgency=low
+
+  * New upstream release
+    + Fix for height/width of hidden rows/columns (RT#48450)
+    + Fix mal-formed Print_Title Name block
+
+ -- Jonathan Yu <frequency@cpan.org>  Wed, 26 Aug 2009 05:51:44 -0400
+
+libspreadsheet-parseexcel-perl (0.5300-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+    + Fix minor int2col() bug (RT#48967)
+    + Check for valid dates in Utility::ExcelFmt (RT#48831)
+    + Fix for multiple dots in number formats (RT#45502)
+    + Rounding now behaves like (RT#45626)
+    + Fix incorrectly skipped charts (RT#44009)
+  * Use short debhelper rules format (--with quilt)
+  * Standards-Version 3.8.3 (no changes)
+  * Added myself to Uploaders
+  * Rewrote control description
+  * Refresh applied patches so they use unified patches
+  * Remove 60_this_is_not_a_manpage and 70_warnings_64bit.patch,
+    which were fixed upstream
+  * Override tests with AUTOMATED_TESTING=1, add to B-D-I
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * Add libtest-cpan-meta-perl to Build-Depends-Indep, enables another test.
+
+ -- Jonathan Yu <frequency@cpan.org>  Mon, 24 Aug 2009 18:28:05 -0400
+
+libspreadsheet-parseexcel-perl (0.4900-2) unstable; urgency=low
+
+  * Fix "Character in 'c' format wrapped in pack in perl 5.10" by adding the
+    patch from CPAN RT#18063 as 70_warnings_64bit.patch (closes: #495790).
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 12 Feb 2009 14:58:18 +0100
+
+libspreadsheet-parseexcel-perl (0.4900-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patches 20general.patch, 40saveparser.patch,
+    50_manpage_numbered_character.patch (applied upstream), refresh the
+    remaining patches.
+  * debian/copyright: switch to new format.
+  * Set debhelper compatibility level to 7; adapt debian/{control,compat,rules}.
+  * debian/control:
+    - switch Vcs-Browser field to ViewSVN
+    - add ${misc:Depends} to Depends: field
+    - update short and long description
+    - change my email address
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 29 Jan 2009 19:36:24 +0100
+
+libspreadsheet-parseexcel-perl (0.3300-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * Add debian/README.source to document quilt usage, as required by
+    Debian Policy since 3.8.0.
+  
+  [ Gunnar Wolf ]
+  * New upstream release
+  * Standards-version -> 3.8.0
+  * Commented out heafily incomplete manpage for
+    Spreadsheet::ParseExcel::SaveParser::Workbook, which is more a comment
+    than documentation. Lintian is surely happier this way.
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sun, 12 Oct 2008 19:57:02 -0500
+
+libspreadsheet-parseexcel-perl (0.3200-2) unstable; urgency=low
+
+  [ Damyan Ivanov ]
+  * debian/watch: Remove dash from the version capture
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields. Wrapped long lines. Added: /me to Uploaders.
+  * debian/rules:
+    - delete /usr/lib/perl5 only if it exists (closes: #467966)
+    - update based on dh-make-perl's examples
+    - don't install README any more (text version of the POD documentation)
+  * debian/watch: use dist-based URL.
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Change patch system from dpatch to quilt.
+  * debian/copyright:
+    - use specific upstream URL instead of just pointing to CPAN
+    - remove misleading paragraph about no Debian changes
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Wed, 12 Mar 2008 21:28:37 +0100
+
+libspreadsheet-parseexcel-perl (0.3200-1) unstable; urgency=low
+
+  * New upstream release
+  * Upstream new version removes always-failing test (Closes: #423806)
+  * The removed test makes the build process not to depend on
+    libproc-processtable-perl - Removing build-dependency
+  * Generated manpage had non-ASCII characters - Fixed.
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 14 May 2007 10:07:52 -0500
+
+libspreadsheet-parseexcel-perl (0.3000-2) unstable; urgency=low
+
+  [ Damyan Ivanov ]
+  * debian/rules: get-orig-source target simply invokes uscan instead of
+    pointing lynx to upstream download directory
+  * debian/control: added myself to Uploaders
+
+  [ Niko Tyni ]
+  * Update debian/copyright.
+
+ -- Niko Tyni <ntyni@iki.fi>  Mon, 23 Apr 2007 20:45:01 +0300
+
+libspreadsheet-parseexcel-perl (0.3000-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add dh_md5sums to debian/rules.
+  * debian/patches:
+    + 10objref.dpatch: updated for the new version.
+    + 40saveparser.dpatch: make Spreadsheet::ParseExcel::SaveParser
+      useable on its own again. (Closes: #420122)
+  * Add build-dependency on libproc-processtable-perl for test coverage.
+  * Update debian/copyright.
+
+ -- Niko Tyni <ntyni@iki.fi>  Sun, 22 Apr 2007 21:02:27 +0300
+
+libspreadsheet-parseexcel-perl (0.2800-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #411952)
+  * Add dependencies on libspreadsheet-writeexcel-perl, libjcode-pm-perl
+    and libunicode-map-perl.
+  * Add build-dependency on libtest-pod-perl for better test coverage.
+  * Mangle the version numbers in debian/watch to accommodate to the 
+    non-standard numbering upstream.
+
+ -- Niko Tyni <ntyni@iki.fi>  Sun, 25 Feb 2007 23:27:01 +0200
+
+libspreadsheet-parseexcel-perl (0.2603-5) unstable; urgency=low
+
+  * Migrate to dpatch.
+  * Move debhelper from Build-Depends to Build-Depends-Indep,
+    as per policy.
+  * Add myself to Uploaders.
+  * Don't build the package in the 'binary-arch' target.
+  * debian/patches:
+    + 30rstring.dpatch: handle UTF16-encoded strings in the 'RSTRING'
+      opcode, just like in 'STRING'. (Closes: #299870)
+  * Don't ignore the return code of 'make realclean'.
+  * Upgrade to Standards-Version 3.7.2. No changes needed.
+  * Upgrade to debhelper compatibility level 5.
+  * Don't ignore the return value of 'make test'.
+  * Don't install an empty /usr/lib/perl5 directory.
+
+ -- Niko Tyni <ntyni@iki.fi>  Sat, 17 Jun 2006 16:41:42 +0300
+
+libspreadsheet-parseexcel-perl (0.2603-4) unstable; urgency=low
+
+  * No longer reports "GENERAL" instead of the actual value in files
+    created by OpenOffice - Thanks Niko Tyni for the patch! (Closes:
+    #298484)
+  * Updated standards-version to 3.6.2
+  * Updated debhelper dependency to 4
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon,  2 Jan 2006 11:28:39 -0600
+
+libspreadsheet-parseexcel-perl (0.2603-3) unstable; urgency=low
+
+  * Now allows for IO::File, IO::Handle, IO::Wrap objects to be passed
+    in (Closes: #112130)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 24 May 2005 14:24:04 -0500
+
+libspreadsheet-parseexcel-perl (0.2603-2) unstable; urgency=low
+
+  * Modified source package name to libspreadsheet-parseexcel-perl to be
+    consistent with Perl package naming scheme
+  * New maintainer - Debian Perl Group <pkg-perl-
+    maintainer@lists.alioth.debian.org> via Gunnar Wolf
+    <gwolf@debian.org>
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 25 Jan 2005 08:52:28 -0600
+
+spreadsheet-parseexcel (0.2603-1) unstable; urgency=low
+
+  * New upstream release 0.2603 (Closes: #265849)
+  * Debian version number aligned with non-standard upstream number 
+  * debian/control: Section changed to perl
+  * debian/control: Standards-Version upgraded to 3.6.1.1
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 16 Aug 2004 21:46:16 -0500
+
+spreadsheet-parseexcel (0.26.02-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2602 (renamed 0.26.02)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 17 Jul 2002 19:40:25 -0500
+
+spreadsheet-parseexcel (0.26.01-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2601 (renamed 0.26.01)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 14 Jul 2002 07:26:08 -0500
+
+spreadsheet-parseexcel (0.26-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.26
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu,  6 Jun 2002 23:05:31 -0500
+
+spreadsheet-parseexcel (0.25-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.25
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sat, 11 May 2002 10:01:08 -0500
+
+spreadsheet-parseexcel (0.24.07-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2407 (renamed 0.24.07)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu, 25 Apr 2002 20:14:42 -0500
+
+spreadsheet-parseexcel (0.24.06-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2406 (renamed 0.24.06)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon,  8 Apr 2002 21:48:21 -0500
+
+spreadsheet-parseexcel (0.24.05-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2405 (renamed 0.24.05)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 30 Jan 2002 18:51:33 -0600
+
+spreadsheet-parseexcel (0.24.04-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2404 (renamed 0.24.04)
+  * debian/copyright: Corrected common-license/GPL file ref (lintian)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Fri,  7 Dec 2001 19:19:12 -0600
+
+spreadsheet-parseexcel (0.24.03-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2403 (renamed 0.24.03)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Tue,  7 Aug 2001 19:46:20 -0500
+
+spreadsheet-parseexcel (0.24.02-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.2402 (renamed 0.24.02)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sat, 14 Jul 2001 11:18:56 -0500
+
+spreadsheet-parseexcel (0.24-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.24
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Fri,  6 Jul 2001 19:39:26 -0500
+
+spreadsheet-parseexcel (0.23-1) unstable; urgency=low
+
+  * Upgraded to new upstream version 0.23
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Fri, 22 Jun 2001 21:11:55 -0500
+
+spreadsheet-parseexcel (0.22.3-1) unstable; urgency=low
+
+  * New upstream version 0.22.3
+  * debian/control: Rewrote Description
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu,  7 Jun 2001 17:53:49 -0500
+
+spreadsheet-parseexcel (0.22.1-1) unstable; urgency=low
+
+  * Initial Debian release following WNPP heads-up (Closes: #98663)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 27 May 2001 10:28:17 -0500

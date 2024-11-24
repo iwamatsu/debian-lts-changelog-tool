@@ -1,0 +1,33 @@
+golang-github-bshuster-repo-logrus-logstash-hook (0.4.1-2) unstable; urgency=medium
+
+  * Team upload
+  * DH to version 12
+  * Rules-Requires-Root: no
+  * Standards-Version: 4.5.0
+  * Testsuite: autopkgtest-pkg-go
+  * Disabled failing "TestLogstashFormatter" test (Closes: #954599)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 18 Apr 2020 12:22:08 +1000
+
+golang-github-bshuster-repo-logrus-logstash-hook (0.4.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * simplify watch file; ignore non-semantic "beta" versions.
+  * New upstream version 0.4.1
+  * (Build-)Depends:
+    = golang-github-sirupsen-logrus-dev (>= 1.0.2~)
+  * Standards-Version: 4.1.4
+  * Priority: optional
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 05 May 2018 23:06:36 +1000
+
+golang-github-bshuster-repo-logrus-logstash-hook (0.0~git20170102.0.5f729f2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #853804)
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 24 Jan 2017 14:02:12 +1100

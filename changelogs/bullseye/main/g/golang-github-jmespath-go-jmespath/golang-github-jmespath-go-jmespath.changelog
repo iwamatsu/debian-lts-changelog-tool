@@ -1,0 +1,69 @@
+golang-github-jmespath-go-jmespath (0.4.0-1) unstable; urgency=medium
+
+  * New upstream version 0.4.0
+  * debian/watch: Restrict regex to match go-jmespath itself only
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+  * Adjust debian/control and debian/copyright to accommodate the fact that
+    upstream added github.com/stretchr/testify@v1.5.1 as an internal
+    submodule, see https://github.com/jmespath/go-jmespath/pull/56
+
+ -- Anthony Fok <foka@debian.org>  Thu, 22 Oct 2020 05:07:51 -0600
+
+golang-github-jmespath-go-jmespath (0.3.0-1) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ, a.k.a. the Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+    Fixes: lintian: upstream-metadata-file-is-missing
+    See-also: https://lintian.debian.org/tags/upstream-metadata-file-is-missing.html
+
+  [ Anthony Fok ]
+  * New upstream version 0.3.0 (tag: v0.3.0)
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Update debian/watch to version=4 and add filenamemangle
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Revert patch for removing extra 's' in "expression" as the spelling fix
+    by Clint Adams has been merged upstream
+  * Update and expand copyright information
+
+ -- Anthony Fok <foka@debian.org>  Thu, 12 Mar 2020 18:26:06 -0600
+
+golang-github-jmespath-go-jmespath (0.2.2-3) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Jongmin Kim ]
+  * Add patch for removing extra 's' in "expression"
+  * Bump up the policy standard to 4.4.0
+  * Bump up the debhelper to 12
+  * Add myself as an uploader
+  * Change to new team mail address
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" fixes
+    - Bump Standards-Version to 4.4.1 (no change)
+    - Use https form of the copyright-format URL in debian/copyright
+  * Add myself to the list of Uploaders
+  * Fix Origin URL in the DEP3 header of debian/patches/fix-typo.patch
+  * Restore upstream source to Debian "master" branch,
+    and turn off overlay mode and export-dir etc. in debian/gbp.conf
+
+ -- Anthony Fok <foka@debian.org>  Mon, 14 Oct 2019 15:46:28 -0600
+
+golang-github-jmespath-go-jmespath (0.2.2-2) unstable; urgency=medium
+
+  * Change dependency to golang-any, for better arch support.
+  * Add myself to Uploaders.
+  * Update Standards-Version (no changes).
+  * Fix broken Vcs-Git.
+  * Remove unneded dependency on golang-go in the binary package.
+
+ -- Martina Ferrari <tincho@debian.org>  Mon, 26 Sep 2016 17:02:11 +0100
+
+golang-github-jmespath-go-jmespath (0.2.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #813908).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 24 Jan 2016 09:50:49 +1100

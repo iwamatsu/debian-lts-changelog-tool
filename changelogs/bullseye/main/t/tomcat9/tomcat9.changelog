@@ -1,0 +1,1061 @@
+tomcat9 (9.0.43-2~deb11u10) bullseye-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2023-46589:
+    Improper Input Validation vulnerability in Apache Tomcat. Tomcat 10 did not
+    correctly parse HTTP trailer headers. A trailer header that exceeded the
+    header size limit could cause Tomcat to treat a single request as multiple
+    requests leading to the possibility of request smuggling when behind a
+    reverse proxy.
+  * Fix CVE-2024-24549:
+    Denial of Service due to improper input validation vulnerability for
+    HTTP/2. When processing an HTTP/2 request, if the request exceeded any of
+    the configured limits for headers, the associated HTTP/2 stream was not
+    reset until after all of the headers had been processed.
+  * Fix CVE-2024-23672:
+    Denial of Service via incomplete cleanup vulnerability. It was possible for
+    WebSocket clients to keep WebSocket connections open leading to increased
+    resource consumption.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 18 Apr 2024 22:17:07 +0200
+
+tomcat9 (9.0.43-2~deb11u9) bullseye-security; urgency=high
+
+  * More HTTP/2 overhead protection adjustments
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 16 Oct 2023 14:51:43 +0200
+
+tomcat9 (9.0.43-2~deb11u8) bullseye-security; urgency=high
+
+  * Fixed the HTTP/2 overhead protection triggered on data frames.
+    (Closes: #1053820)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 12 Oct 2023 17:32:21 +0200
+
+tomcat9 (9.0.43-2~deb11u7) bullseye-security; urgency=high
+
+  * Fix CVE-2023-45648: Request smuggling. Tomcat did not correctly parse HTTP
+    trailer headers. A specially crafted, invalid trailer header could cause
+    Tomcat to treat a single request as multiple requests leading to the
+    possibility of request smuggling when behind a reverse proxy.
+  * Fix CVE-2023-44487: DoS caused by HTTP/2 frame overhead (Rapid Reset Attack)
+  * Fix CVE-2023-42795: Information Disclosure. When recycling various internal
+    objects, including the request and the response, prior to re-use by the next
+    request/response, an error could cause Tomcat to skip some parts of the
+    recycling process leading to information leaking from the current
+    request/response to the next.
+  * Fix CVE-2023-41080: Open redirect. If the ROOT (default) web application
+    is configured to use FORM authentication then it is possible that a
+    specially crafted URL could be used to trigger a redirect to an URL of
+    the attackers choice.
+  * Fix CVE-2023-28709: Denial of Service. If non-default HTTP connector
+    settings were used such that the maxParameterCount could be reached using
+    query string parameters and a request was submitted that supplied exactly
+    maxParameterCount parameters in the query string, the limit for uploaded
+    request parts could be bypassed with the potential for a denial of service
+    to occur.
+  * Fix CVE-2023-24998: Denial of service. Tomcat uses a packaged renamed copy
+    of Apache Commons FileUpload to provide the file upload functionality
+    defined in the Jakarta Servlet specification. Apache Tomcat was, therefore,
+    also vulnerable to the Commons FileUpload vulnerability CVE-2023-24998 as
+    there was no limit to the number of request parts processed. This resulted
+    in the possibility of an attacker triggering a DoS with a malicious upload
+    or series of uploads.
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 10 Oct 2023 18:20:19 +0200
+
+tomcat9 (9.0.43-2~deb11u6) bullseye-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2022-42252:
+    Apache Tomcat was configured to ignore invalid HTTP headers via setting
+    rejectIllegalHeader to false. Tomcat did not reject a request containing an
+    invalid Content-Length header making a request smuggling attack possible if
+    Tomcat was located behind a reverse proxy that also failed to reject the
+    request with the invalid header.
+  * Fix CVE-2022-45143:
+    The JsonErrorReportValve in Apache Tomcat did not escape the type, message
+    or description values. In some circumstances these are constructed from
+    user provided data and it was therefore possible for users to supply values
+    that invalidated or manipulated the JSON output.
+  * Fix CVE-2023-28708:
+    When using the RemoteIpFilter with requests received from a reverse proxy
+    via HTTP that include the X-Forwarded-Proto header set to https, session
+    cookies created by Apache Tomcat did not include the secure attribute. This
+    could result in the user agent transmitting the session cookie over an
+    insecure channel. (Closes: #1033475)
+
+ -- Markus Koschany <apo@debian.org>  Wed, 05 Apr 2023 17:47:16 +0200
+
+tomcat9 (9.0.43-2~deb11u5) bullseye; urgency=medium
+
+  * Team upload.
+  * Look for OpenJDK 17 when starting the server. (Closes: #1020948)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Fri, 06 Jan 2022 03:30:21 +0530
+
+tomcat9 (9.0.43-2~deb11u4) bullseye-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2021-43980:
+    The simplified implementation of blocking reads and writes introduced in
+    Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing
+    (but extremely hard to trigger) concurrency bug that could cause client
+    connections to share an Http11Processor instance resulting in responses, or
+    part responses, to be received by the wrong client.
+  * Fix CVE-2022-23181:
+    The fix for bug CVE-2020-9484 introduced a time of check, time of use
+    vulnerability into Apache Tomcat that allowed a local attacker to perform
+    actions with the privileges of the user that the Tomcat process is using.
+    This issue is only exploitable when Tomcat is configured to persist sessions
+    using the FileStore.
+  * Fix CVE-2022-29885:
+    The documentation of Apache Tomcat for the EncryptInterceptor incorrectly
+    stated it enabled Tomcat clustering to run over an untrusted network. This
+    was not correct. While the EncryptInterceptor does provide confidentiality
+    and integrity protection, it does not protect against all risks associated
+    with running over any untrusted network, particularly DoS risks.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 29 Oct 2022 17:03:57 +0200
+
+tomcat9 (9.0.43-2~deb11u3) bullseye-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2021-42340:
+    Apache Tomcat did not properly release an HTTP upgrade connection for
+    WebSocket connections once the WebSocket connection was closed. This
+    created a memory leak that, over time, could lead to a denial of service
+    via an OutOfMemoryError.
+
+ -- Markus Koschany <apo@debian.org>  Fri, 12 Nov 2021 10:45:54 +0100
+
+tomcat9 (9.0.43-2~deb11u2) bullseye-security; urgency=high
+
+  * Team upload.
+  * CVE-2021-30640: Fix NullPointerException.
+    If no userRoleAttribute is specified in the user's Realm configuration its
+    default value will be null. This will cause a NPE in the methods
+    doFilterEscaping and doAttributeValueEscaping. This is upstream bug
+    https://bz.apache.org/bugzilla/show_bug.cgi?id=65308
+  * Set the fileOwner of catalina.out to tomcat explicitly.
+    Thanks to Adam Cecile for the report. (Closes: #987179)
+  * Fix CVE-2021-41079:
+    Apache Tomcat did not properly validate incoming TLS packets. When Tomcat
+    was configured to use NIO+OpenSSL or NIO2+OpenSSL for TLS, a specially
+    crafted packet could be used to trigger an infinite loop resulting in a
+    denial of service.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 25 Sep 2021 21:34:00 +0200
+
+tomcat9 (9.0.43-2~deb11u1) bullseye-security; urgency=medium
+
+  * Team upload.
+  * Rebuild for bullseye-security.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 08 Aug 2021 15:19:44 +0200
+
+tomcat9 (9.0.43-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ mirabilos ]
+  * fix /var/log/tomcat9 permissions
+    fixup for commit 51128fe9fb2d4d0b56be675d845cf92e4301a6c3
+
+  [ Markus Koschany ]
+  * Fix CVE-2021-30640:
+    A vulnerability in the JNDI Realm of Apache Tomcat allows an attacker to
+    authenticate using variations of a valid user name and/or to bypass some of
+    the protection provided by the LockOut Realm.
+  * Fix CVE-2021-33037:
+    Apache Tomcat did not correctly parse the HTTP transfer-encoding request
+    header in some circumstances leading to the possibility to request
+    smuggling when used with a reverse proxy. Specifically: - Tomcat
+    incorrectly ignored the transfer encoding header if the client declared it
+    would only accept an HTTP/1.0 response; - Tomcat honoured the identify
+    encoding; and - Tomcat did not ensure that, if present, the chunked
+    encoding was the final encoding.
+    (Closes: #991046)
+
+ -- Markus Koschany <apo@debian.org>  Sat, 07 Aug 2021 00:11:43 +0200
+
+tomcat9 (9.0.43-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Rotate the catalina.out log file with the tomcat user (Closes: #971583)
+  * Switch to debhelper level 13
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 02 Feb 2021 20:23:51 +0100
+
+tomcat9 (9.0.41-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Standards-Version updated to 4.5.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 09 Dec 2020 16:03:00 +0100
+
+tomcat9 (9.0.40-1) unstable; urgency=medium
+
+  [ Emmanuel Bourg ]
+  * New upstream release
+    - Refreshed the patches
+  * Changed the home directory of the tomcat user to /var/lib/tomcat
+    (Closes: #926338)
+
+  [ Vincent McIntyre ]
+  * Automatically export the JAVA_HOME environment variable when the value
+    is defined in /etc/defaults/tomcat9 (Closes: #966338)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 24 Nov 2020 08:21:29 +0100
+
+tomcat9 (9.0.39-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * tomcat9-user now depends on netcat-openbsd instead of netcat
+    (Closes: #966158)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 12 Oct 2020 17:16:57 +0200
+
+tomcat9 (9.0.38-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 16 Sep 2020 16:04:03 +0200
+
+tomcat9 (9.0.37-3) unstable; urgency=medium
+
+  * control: Bump build-dep on bnd, drop bnd compat and re-export patches.
+    (Closes: #964433)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 06 Aug 2020 18:59:11 +0300
+
+tomcat9 (9.0.37-2) unstable; urgency=medium
+
+  * d/p/0029-fix-regression-in-bz64540.patch: Re-export util.net.jsse
+    and util.modeler.modules. (Closes: #964433)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 28 Jul 2020 14:09:13 +0300
+
+tomcat9 (9.0.37-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+    - Fixed the compatibility with the version of bnd in Debian
+  * Restored execute permission on /var/log/tomcat9 to the adm group
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 06 Jul 2020 22:39:32 +0200
+
+tomcat9 (9.0.36-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Grant write access on /var/log/tomcat9 to the adm group (LP: #1861881)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 23 Jun 2020 11:47:47 +0200
+
+tomcat9 (9.0.35-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fixes CVE-2020-9484: Remote Code Execution via session persistence (Closes: #961209)
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 21 May 2020 15:50:03 +0200
+
+tomcat9 (9.0.34-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Depend on libeclipse-jdt-core-java (>= 3.18.0)
+  * Switch to debhelper level 12
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 27 Apr 2020 00:36:59 +0200
+
+tomcat9 (9.0.31-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fixes CVE-2019-10072: Denial of Service (Closes: #930872)
+    - Fixes CVE-2019-12418: Local Privilege Escalation
+    - Fixes CVE-2019-17563: Session fixation attack
+    - Fixes CVE-2019-17569: HTTP Request Smuggling
+    - Fixes CVE-2020-1935: HTTP Request Smuggling
+    - Fixes CVE-2020-1938: AJP Request Injection (Closes: #952437)
+    - Fixes CATALINA_PID handling in catalina.sh (Closes: #948553)
+    - Refreshed the patches
+    - Fixed the compilation with Java 11
+  * Moved the RequiresMountsFor directive in the service file
+    to the Unit section (Closes: #942316)
+  * Tightened the dependency on systemd (Closes: #931997)
+  * Standards-Version updated to 4.5.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 24 Feb 2020 23:37:00 +0100
+
+tomcat9 (9.0.27-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Standards-Version updated to 4.4.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 14 Oct 2019 11:31:50 +0200
+
+tomcat9 (9.0.24-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 22 Aug 2019 13:55:14 +0200
+
+tomcat9 (9.0.22-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Track and download the new releases from GitHub
+  * Standards-Version updated to 4.4.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 12 Jul 2019 15:01:28 +0200
+
+tomcat9 (9.0.16-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Emmanuel Bourg ]
+  * Fixed CVE-2019-0221: The SSI printenv command echoes user provided data
+    without escaping and is, therefore, vulnerable to XSS. SSI is disabled
+    by default (Closes: #929895)
+
+  [ Thorsten Glaser ]
+  * Remove -XX:+UseG1GC from standard JAVA_OPTS; the JRE chooses
+    a suitable GC automatically anyway (Closes: #925928)
+  * Correct the ownership and permissions on the log directory:
+    group adm and setgid (Closes: #925929)
+  * Make the startup script honour the (renamed) $SECURITY_MANAGER
+  * debian/libexec/tomcat-locate-java.sh: Remove shebang and make
+    not executable as this is only ever sourced (makes no sense otherwise)
+
+  [ Christian Hänsel ]
+  * Restored the variable expansion in /etc/default/tomcat9 (Closes: #926319)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 13 Jun 2019 23:26:12 +0200
+
+tomcat9 (9.0.16-3) unstable; urgency=medium
+
+  * Removed read/write access to /var/lib/solr (Closes: #923299)
+  * Removed the broken catalina-ws.jar and catalina-jmx-remote.jar
+    symlinks in /usr/share/tomcat9/lib/
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 26 Feb 2019 09:31:13 +0100
+
+tomcat9 (9.0.16-2) unstable; urgency=medium
+
+  * Team upload.
+  * tomcat9.service: Permit read and write access to /var/lib/solr too.
+    (Closes: #919638)
+
+ -- Markus Koschany <apo@debian.org>  Mon, 18 Feb 2019 20:58:51 +0100
+
+tomcat9 (9.0.16-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+    - Install the new Chinese, Czech, German, Korean and Portuguese translations
+    - No longer build the extra WS and JMX jars
+  * Standards-Version updated to 4.3.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 08 Feb 2019 08:26:48 +0100
+
+tomcat9 (9.0.14-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Create the /var/log/tomcat9/ and /var/cache/tomcat9/ directories
+    at install time (Closes: #915791)
+  * Tightened the dependency on systemd
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 12 Dec 2018 13:45:52 +0100
+
+tomcat9 (9.0.13-2) unstable; urgency=medium
+
+  * Install the tomcat-embed-* artifacts with the 9.x version (Closes: #915578)
+  * Modified the dependencies required for creating the tomcat user
+    (adduser is replaced by systemd) (Closes: #915586)
+  * Fixed the tomcat-jasper pom to reference the ECJ dependency
+    from libeclipse-jdt-core-java
+  * Removed the redundant ReadWritePaths options in the service file for the log
+    and cache directories (Thanks to Lennart Poettering for the suggestion)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 05 Dec 2018 10:04:52 +0100
+
+tomcat9 (9.0.13-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+    - Renamed the package to tomcat9
+    - Removed the libservlet3.1-java package. From now on the Servlet API
+      is packaged in a separate package independent from Tomcat.
+    - Depend on libeclipse-jdt-core-java (>= 3.14.0) instead of libecj-java
+    - Updated the policy files in /etc/tomcat8/policy.d/
+    - Use the OSGi metadata generated by the upstream build
+    - Deploy the Tomcat artifacts in the Maven repository with the 9.x version
+    - Updated the README file
+  * Removed the SysV init script
+  * Restart the server automatically on failures
+  * Use a fixed non-configurable user 'tomcat' to run the server
+  * Removed the debconf integration. The user being now unmodifiable,
+    the remaining configuration parameter JAVA_OPTS can be edited in
+    /etc/default/tomcat9
+  * No longer add the 'common', 'server' and 'shared' directories under
+    CATALINA_HOME and CATALINA_BASE to the classpath. Extra jar files should go
+    to the 'lib' directory.
+  * Let Tomcat handle the rotation of its log files with the maxDays parameter
+    of the valves and log handlers instead of relying on a cron job
+  * Renamed the TOMCAT_SECURITY parameter to SECURITY_MANAGER in the service
+    configuration file
+  * Simplified the postinst script by using systemd-sysusers to create
+    the 'tomcat' user
+  * No longer create the /etc/tomcat9/Catalina/localhost directory at install
+    time and let Tomcat create it automatically
+  * Let systemd automatically create /var/log/tomcat9 and /var/cache/tomcat9
+  * Prevent Tomcat from writing outside of /var/log/tomcat9, /var/cache/tomcat9,
+    /var/lib/tomcat9/webapps and /etc/tomcat9/Catalina by default. This can be
+    overridden (see the README file).
+  * Build and install the extra jar catalina-ws.jar
+  * No longer recommend libcommons-pool-java and libcommons-dbcp-java since
+    Tomcat already embeds its own version of these libraries
+  * Support three-way merge when upgrading the configuration files
+  * Use the G1 garbage collector by default instead of Concurrent Mark Sweep
+  * The setenv.sh script in tomcat9-user and the service startup script now
+    share the same JDK detection logic
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 28 Nov 2018 15:06:00 +0100
+
+tomcat8 (8.5.35-3) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Updated the version required for libtcnative-1 (>= 1.2.18)
+  * Install the Russian translation added in Tomcat 8.5.33
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 20 Nov 2018 14:38:01 +0100
+
+tomcat8 (8.5.35-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the build failure with Easymock 4 (Closes: #913402)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 12 Nov 2018 10:52:08 +0100
+
+tomcat8 (8.5.35-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Thomas Opfer ]
+  * Removed old version requirement for package ant-optional that is not
+    required any more.
+
+  [ Emmanuel Bourg ]
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 08 Nov 2018 23:40:00 +0100
+
+tomcat8 (8.5.34-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 10 Sep 2018 14:31:03 +0200
+
+tomcat8 (8.5.33-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 8.5.33.
+    - Tomcat compiles to Java 7 bytecode and passes release=7 to javac now.
+      This ensures backwards compatibility with older JREs. (Closes: #906447)
+  * Declare compliance with Debian Policy 4.2.1.
+  * Refresh 0025-invalid-configuration-exit-status.patch.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 27 Aug 2018 13:41:16 +0200
+
+tomcat8 (8.5.32-2) unstable; urgency=medium
+
+  * Team upload.
+  * Added a systemd service file (Closes: #832151, #817909)
+  * Look for the Java runtime in the paths used by java-package >= 0.61
+    (/usr/lib/jvm/oracle-java<n>-{jre,jdk}-*) (Closes: #894318)
+  * Install catalina.policy in the tomcat8-user package to be able to run
+    custom instances with a security manager (Closes: #736321)
+  * Disabled the shutdown port (8005) by default
+  * Updated the policy files in /etc/tomcat8/policy.d/
+  * Added the missing Maven rules to use the 8.x generic version for
+    tomcat-jaspic-api, tomcat-storeconfig and tomcat-util-scan
+  * Set the gecos field when creating the tomcat8 user
+  * No longer set JSSE_HOME in the init script (JSSE is enabled by default)
+  * Standards-Version updated to 4.2.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 09 Aug 2018 17:53:44 +0200
+
+tomcat8 (8.5.32-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 25 Jun 2018 14:51:50 +0200
+
+tomcat8 (8.5.31-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Build with ant/1.10.3-2 and the automatic 'release' attribute restoring
+    the backward compatibility with Java 7 (Closes: #895866)
+  * Search for Java 10 and 11 runtimes
+  * Don't follow the symlinks when setting the owner of the /var/log/tomcat8
+    and /var/cache/tomcat8 directories in the postinst script
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 14 Jun 2018 13:32:46 +0200
+
+tomcat8 (8.5.30-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Standards-Version updated to 4.1.4
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 12 Apr 2018 09:49:28 +0200
+
+tomcat8 (8.5.29-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 12 Mar 2018 16:43:57 +0100
+
+tomcat8 (8.5.28-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+    - Disabled the tests checking the ARIA cipher since it isn't enabled
+      by default in OpenSSL
+  * Standards-Version updated to 4.1.3
+  * Switch to debhelper level 11
+  * Use a secure URL for checking and downloading the new releases
+  * No longer parse dpkg-parsechangelog in debian/rules
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 16 Feb 2018 13:43:01 +0100
+
+tomcat8 (8.5.24-2) unstable; urgency=medium
+
+  * Team upload.
+  * Removed the setDefaultAsyncSendTimeout method mistakenly added to
+    javax.websocket.WebSocketContainer in the version 8.5.24 (Closes: #884046)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 14 Dec 2017 12:35:33 +0100
+
+tomcat8 (8.5.24-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Standards-Version updated to 4.1.2
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 01 Dec 2017 09:20:18 +0100
+
+tomcat8 (8.5.23-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Standards-Version updated to 4.1.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 13 Oct 2017 00:01:48 +0200
+
+tomcat8 (8.5.21-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Emmanuel Bourg ]
+  * New upstream release
+    - Refreshed the patches
+    - Disabled Checkstyle
+  * Changed the Class-Path manifest entry of tomcat8-jasper.jar to use
+    the specification jars from libtomcat8-java instead of libservlet3.1-java
+    (Closes: #867247)
+
+  [ Miguel Landaeta ]
+  * Remove myself from uploaders. (Closes: #871892)
+  * Update copyright info.
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 20 Sep 2017 10:06:56 +0200
+
+tomcat8 (8.5.16-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Standards-Version updated to 4.0.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 26 Jun 2017 16:03:53 +0200
+
+tomcat8 (8.5.15-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 21 Jun 2017 13:00:44 +0200
+
+tomcat8 (8.5.14-2) unstable; urgency=high
+
+  * Team upload.
+  * Fixed CVE-2017-5664: Static error pages can be overwritten if the
+    DefaultServlet is configured to permit writes (Closes: #864447)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 08 Jun 2017 12:28:34 +0200
+
+tomcat8 (8.5.14-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Removed the CVE patches (fixed in this release)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 08 May 2017 00:17:52 +0200
+
+tomcat8 (8.5.12-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 18 Apr 2017 09:53:23 +0200
+
+tomcat8 (8.5.11-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix the following security vulnerabilities (Closes: #860068):
+    Thanks to Salvatore Bonaccorso for the report.
+   - CVE-2017-5647:
+     A bug in the handling of the pipelined requests when send file was used
+     resulted in the pipelined request being lost when send file processing of
+     the previous request completed. This could result in responses appearing
+     to be sent for the wrong request. For example, a user agent that sent
+     requests A, B and C could see the correct response for request A, the
+     response for request C for request B and no response for request C.
+   - CVE-2017-5648:
+     It was noticed that some calls to application listeners did not use the
+     appropriate facade object. When running an untrusted application under a
+     SecurityManager, it was therefore possible for that untrusted application
+     to retain a reference to the request or response object and thereby access
+     and/or modify information associated with another web application.
+   - CVE-2017-5650:
+     The handling of an HTTP/2 GOAWAY frame for a connection did not close
+     streams associated with that connection that were currently waiting for a
+     WINDOW_UPDATE before allowing the application to write more data. These
+     waiting streams each consumed a thread. A malicious client could therefore
+     construct a series of HTTP/2 requests that would consume all available
+     processing threads.
+   - CVE-2017-5651:
+     The refactoring of the HTTP connectors for 8.5.x onwards, introduced a
+     regression in the send file processing. If the send file processing
+     completed quickly, it was possible for the Processor to be added to the
+     processor cache twice. This could result in the same Processor being used
+     for multiple requests which in turn could lead to unexpected errors and/or
+     response mix-up.
+  *  debian/control: tomcat8: Fix Lintian error and depend on lsb-base.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 12 Apr 2017 09:58:46 +0200
+
+tomcat8 (8.5.11-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Recommend Java 8 in /etc/default/tomcat8
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 17 Jan 2017 15:09:30 +0100
+
+tomcat8 (8.5.9-2) unstable; urgency=medium
+
+  * Team upload.
+  * Require Java 8 or higher (Closes: #848612)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 19 Dec 2016 15:35:19 +0100
+
+tomcat8 (8.5.9-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Restored the classloading from the common, server and shared directories
+    under CATALINA_BASE (Closes: #847137)
+  * Fixed the installation error when JAVA_OPTS in /etc/default/tomcat8
+    contains the '%' character (Closes: #770911)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 08 Dec 2016 22:26:36 +0100
+
+tomcat8 (8.5.8-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+  * No longer make /etc/tomcat8/Catalina/localhost writable by the tomcat8 user
+    in the postinst script (Closes: #845393)
+  * The tomcat8 user is no longer removed when the package is purged
+    (Closes: #845385)
+  * Compress and remove the access log files with a .txt extension
+    (Closes: #845661)
+  * Added the delaycompress option to the logrotate configuration
+    of catalina.out (Closes: #843135)
+  * Changed the home directory for the tomcat8 user from /usr/share/tomcat8
+    to /var/lib/tomcat8 (Closes: #833261)
+  * Aligned the logging configuration with the upstream one
+  * Set the proper permissions for /etc/tomcat8/jaspic-providers.xml
+  * Install the new library jaspic-api.jar
+  * Install the Maven artifacts for tomcat-storeconfig
+  * Simplified debian/rules
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 01 Dec 2016 18:41:14 +0100
+
+tomcat8 (8.5.8-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+    - Tomcat no longer builds tomcat-embed-logging-juli.jar
+    - Updated the policy files
+    - Added a NEWS file detailing the major changes in Tomcat 8.5.x
+  * Enabled the APR library loading by default (required for HTTP/2 support)
+  * Promoted libtcnative-1 from suggested to recommended dependency
+  * Enabled the APR tests
+  * Fixed the test failure with TestStandardContextAliases
+  * Added a link to the Tomcat 8.5 migration guide in README.Debian
+  * Adapted debian/orig-tar.sh to download the 8.5.x releases
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 17 Nov 2016 23:54:35 +0100
+
+tomcat8 (8.0.39-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 15 Nov 2016 15:37:48 +0100
+
+tomcat8 (8.0.38-2) unstable; urgency=high
+
+  * Team upload.
+  * CVE-2016-1240 follow-up:
+    - The previous init.d fix was vulnerable to a race condition that could
+      be exploited to make any existing file writable by the tomcat user.
+      Thanks to Paul Szabo for the report and the fix.
+    - The catalina.policy file generated on startup was affected by a similar
+      vulnerability that could be exploited to overwrite any file on the system.
+      Thanks to Paul Szabo for the report.
+  * Install the extra jar catalina-jmx-remote.jar (Closes: #762916)
+  * Added the new libtomcat8-embed-java package containing the libraries
+    for embedding Tomcat into other applications.
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 28 Oct 2016 01:17:23 +0200
+
+tomcat8 (8.0.38-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Hardened the init.d script, thanks to Paul Szabo (Closes: #840685)
+  * Fixed the OSGi metadata for tomcat8-jasper.jar and tomcat8-jasper-el.jar
+  * Depend on libcglib-nodep-java instead of libcglib3-java
+  * Removed the unused Lintian overrides
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 19 Oct 2016 11:01:03 +0200
+
+tomcat8 (8.0.37-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Removed 0001-set-UTF-8-as-default-character-encoding.patch (fixed upstream)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 19 Sep 2016 09:37:33 +0200
+
+tomcat8 (8.0.36-3) unstable; urgency=high
+
+  * Team upload.
+  * Fixed CVE-2016-1240: A flaw in the init.d startup script allows local
+    attackers who have gained access to the server in the context of the
+    tomcat user through a vulnerability in a web application to replace
+    the catalina.out file with a symlink to an arbitrary file on the system,
+    potentially leading to a root privilege escalation.
+    Thanks to Dawid Golunski for the report.
+  * Removed the default 128M heap limit (LP: #568823)
+  * Depend on taglibs-standard instead of jakarta-taglibs-standard
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 14 Sep 2016 10:20:28 +0200
+
+tomcat8 (8.0.36-2) unstable; urgency=medium
+
+  * Team upload.
+  * Do not unconditionally overwrite files in /etc/tomcat8 anymore.
+    (Closes: #825786)
+  * Change file permissions to 640 for Debian files in /etc/tomcat8.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 02 Aug 2016 10:50:42 +0200
+
+tomcat8 (8.0.36-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+    - Depend on libecj-java (>= 3.11.0)
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Use a secure Vcs-Git URL
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 14 Jun 2016 14:34:46 +0200
+
+tomcat8 (8.0.32-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Fixed a warning in catalina.out caused by an incorrect path
+    for the root context (Closes: #808378)
+  * Standards-Version updated to 3.9.7 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 21 Dec 2015 11:20:10 +0100
+
+tomcat8 (8.0.30-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Use LC_ALL instead of LANG to format the date and make the documentation
+    reproducible on the builders
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 18 Dec 2015 11:44:06 +0100
+
+tomcat8 (8.0.28-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Fixed a localized date in the documentation to improve the reproducibility
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 19 Oct 2015 11:12:07 +0200
+
+tomcat8 (8.0.26-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Changed the authbind configuration to allow IPv6 connections (LP: #1443041)
+  * Fixed an upgrade error when /etc/tomcat8/tomcat-users.xml is removed
+    (LP: #1010791)
+  * Fixed a minor HTML error in the default index.html file (LP: #1236132)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 24 Aug 2015 00:30:40 +0200
+
+tomcat8 (8.0.24-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * debian/rules: Use an english locale when generating the documentation
+    to improve the reproducibility
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 08 Jul 2015 17:42:14 +0200
+
+tomcat8 (8.0.23-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/rules: Set the 'year' and 'today-iso-8601' build variables
+    to improve the reproducibility
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 26 May 2015 16:04:01 +0200
+
+tomcat8 (8.0.22-2) unstable; urgency=medium
+
+  * Replaced the date in ServerInfo.properties with the latest date
+    in debian/changelog to make the build reproducible
+  * debian/rules:
+    - Modified to use the dh sequencer
+    - Simplified the ant invocation and moved some properties
+      to debian/ant.properties
+    - Do not set the version.* properties already defined
+      in build.properties.default
+    - Renamed T_VER to VERSION
+    - Removed the RWFILES and RWLOC variables
+    - Merged the ANT_ARGS and ANT_INVOKE variables
+    - No longer remove the long gone .svn directories under
+      /usr/share/tomcat8/webapps/default_root
+    - Let dh_fixperms set the permissions instead of calling chmod +x
+    - Use debian/tomcat8-user.manpages instead of calling dh_installman
+    - Updated the copyright year in the Javadoc
+    - Simplified the call to mh_install
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 07 May 2015 14:13:30 +0200
+
+tomcat8 (8.0.22-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+    - No longer install tomcat-spdy.jar (removed upstream)
+  * Removed the timestamp from the Javadoc of the Servlet API
+    to make the build reproducible
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 06 May 2015 09:30:38 +0200
+
+tomcat8 (8.0.21-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Fri, 01 May 2015 12:41:13 -0300
+
+tomcat8 (8.0.21-1) experimental; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * debian/orig-tar.sh: Exclude the taglibs-standard-*.jar files
+    from the upstream tarball
+  * Support the JVMs installed by the older versions of java-package (<< 0.52)
+    and the oracle-java<n>-installer packages from webupd8 (Closes: #769166)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 30 Mar 2015 19:40:22 +0200
+
+tomcat8 (8.0.18-1) experimental; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Jan 2015 22:54:00 +0100
+
+tomcat8 (8.0.17-1) experimental; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 19 Jan 2015 09:58:16 +0100
+
+tomcat8 (8.0.15-1) experimental; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 08 Dec 2014 23:59:10 +0100
+
+tomcat8 (8.0.14-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Build depend on libcglib3-java instead of libcglib-java
+  * Standards-Version updated to 3.9.6 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 29 Sep 2014 13:23:43 +0200
+
+tomcat8 (8.0.12-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * Fixed the tomcat8-examples configuration (Closes: #753372)
+  * No longer create the common/server/shared directories under
+    /var/lib/tomcat8, and use a unique lib directory as documented
+    upstream since Tomcat 6. The old directories are still supported
+    if inherited from a previous installation (Closes: #754386)
+  * Depend on libecj-java >= 3.10.0 to support the new Java 8 syntax in JSPs
+  * Install the missing tomcat-dbcp.jar in libtomcat8-java and use it as
+    the default JDBC pool implementation instead of Commons DBCP.
+  * Removed the obsolete patch 0012-java7-compat.patch
+  * Tightened the build dependency on junit4 (>= 4.11)
+  * Build the Javadoc with the JDK specified by the JAVA_HOME variable
+    instead of the default JDK (this fixes a build failure when backporting
+    to Wheezy)
+  * Removed the note about the authbind IPv6 incompatibility
+    in /etc/defaults/tomcat8
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 17 Sep 2014 16:23:52 +0200
+
+tomcat8 (8.0.9-1) unstable; urgency=medium
+
+  [ Emmanuel Bourg ]
+  * New upstream release
+    - Refreshed the patches
+  * Search for OpenJDK 8 and Oracle JDKs when starting the server
+  * Removed the dependency on the non existent java-7-runtime package
+  * Fixed a link still pointing to the Tomcat 7 documentation in README.Debian
+  * Updated the version required for libtcnative-1 (>= 1.1.30)
+
+  [ tony mancill ]
+  * Update README.Debian with information about migration guides.
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 24 Jun 2014 21:28:37 +0200
+
+tomcat8 (8.0.8-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 22 May 2014 13:01:55 +0200
+
+tomcat8 (8.0.5-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+    - Disabled Java 8 support in JSPs (requires an Eclipse compiler update)
+  * Fixed the name of the doc-base file for libservlet3.1-java (Closes: #746338)
+  * Update email addresses of maintainers.
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 29 Apr 2014 10:22:45 +0200
+
+tomcat8 (8.0.3-1) unstable; urgency=medium
+
+  [ Emmanuel Bourg ]
+  * Team upload.
+  * New upstream release (Closes: #722675)
+    - Updated the version of the Servlet, JSP and EL APIs
+    - Switched to Java 7
+    - Updated the watch file to match the Tomcat 8 releases
+    - Refreshed the patches
+    - Updated debian/copyright, documented the xsd files licensed under the CDDL
+    - Installed the new jars (spdy, jni, websocket, websocket-api, storeconfig)
+    - Updated the artifactId of the specification jars to include
+      the new javax prefix
+    - Added the javax.websocket-api artifact to libservlet3.1-java
+    - New build dependency on cglib, easymock and objenesis
+  * Added a patch to include the name of the distribution on the error pages
+  * Use XZ compression for the upstream tarball
+  * debian/control:
+    - Replaced Sun Microsystems with Oracle in the packages descriptions
+    - Mentioned 'Apache Tomcat' in the packages descriptions
+    - Standards-Version updated to 3.9.5 (no changes)
+  * Deploy the Tomcat artifacts in the Maven repository with the 8.x version
+    instead of 'debian' to avoid conflicts with other versions of Tomcat.
+  * Hard coded the versions in the poms in debian/javaxpoms to fix the version
+    of the dependencies for jsp-api
+  * Renamed the jars in /usr/share/java to tomcat8-xxx to avoid conflicts
+    with other versions of Tomcat
+  * Added the missing descriptions to the patches
+  * Added a patch to ignore the failing tests
+  * Moved the tomcat-{servlet|jsp|el}-api artifacts from libservlet3.1-java
+    to libtomcat8-java and changed their versions to the Tomcat version instead
+    of the specification version.
+  * Removed libservlet3.1-java.links defining the tomcat-* links
+    in /usr/share/java with the specifications versions
+  * The symlinks to /usr/share/tomcat8/lib are no longer split between the two
+    packages libtomcat8-java and tomcat8-common. tomcat8-common assembles all
+    the jars required by Tomcat (tomcat jars + dbcp + pool). libtomcat8-java
+    deploys only the jars in /usr/share/java and the Maven artifacts in
+    /usr/share/maven-repo.
+  * Added the EL and WebSocket APIs to libservlet3.1-java-doc
+  * Added a Lintian override for the incompatible-java-bytecode-format warning
+    since Tomcat requires Java 7
+  * Added a Lintian override to clear the codeless-jar warnings
+    on the tomcat-i18n jars instead of a patch turning them into zip files.
+  * Removed 0011-fix-classpath-lintian-warnings.patch and specified
+    the classpath of jasper.jar in libtomcat8-java.manifest instead.
+
+  [ tony mancill ]
+  * Include tomcat-util-scan.jar in the libtomcat8-java package.
+  * Remove debian/NEWS (inapplicable to this release).
+  * Prune debian/changelog to only contain tomcat8 entries.
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sat, 15 Mar 2014 23:23:14 +0100

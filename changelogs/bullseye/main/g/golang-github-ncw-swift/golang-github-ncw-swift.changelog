@@ -1,0 +1,98 @@
+golang-github-ncw-swift (1.0.52-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 4.5.0
+  * debhelper compatibility level 13
+  * shorten synopsis to fit < 80 char
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Sep 2020 14:29:12 +0800
+
+golang-github-ncw-swift (1.0.49-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 4.4.1
+
+ -- Drew Parsons <dparsons@debian.org>  Sat, 11 Jan 2020 01:33:27 +0800
+
+golang-github-ncw-swift (1.0.47-2) unstable; urgency=medium
+
+  * Team upload.
+  * Standards-Version: 4.4.0
+  * debhelper compatibility level 12
+  * mark golang-github-ncw-swift-dev as Multi-Arch: foreign
+
+ -- Drew Parsons <dparsons@debian.org>  Thu, 25 Jul 2019 20:19:15 +0800
+
+golang-github-ncw-swift (1.0.47-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    - applies 0001-Fix-TestWatchdogReaderOnSlowNetwork.patch
+  * add debian/watch
+
+ -- Drew Parsons <dparsons@debian.org>  Sun, 05 May 2019 20:48:48 +0800
+
+golang-github-ncw-swift (0.0~git20180327.b2a7479-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix unreliable test (Closes: #923804)
+    + Fix TestWatchdogReaderOnSlowNetwork
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 16 Mar 2019 15:38:22 +0800
+
+golang-github-ncw-swift (0.0~git20180327.b2a7479-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.0~git20180327.b2a7479
+  * Use debhelper v11
+  * Update to Standards-Version 4.1.4
+    - Use HTTPS URL for d/copyright
+    - Use Priority: optional
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Mon, 09 Apr 2018 21:29:11 +0200
+
+golang-github-ncw-swift (0.0~git20160617.0.b964f2c-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build-Depends on golang-any instead of golang-go
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 01 Dec 2016 18:00:33 +0100
+
+golang-github-ncw-swift (0.0~git20160617.0.b964f2c-1) unstable; urgency=medium
+
+  [ Dr. Tobias Quathamer ]
+  * Team upload.
+  * Imported Upstream version 0.0~git20160617.0.b964f2c
+  * Update d/copyright
+  * Use debhelper v10
+  * Update team name
+  * Update to Standards-Version 3.9.8, no changes needed
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 11 Nov 2016 21:57:43 +0100
+
+golang-github-ncw-swift (0.0~git20151108.0.eb694f7-1) unstable; urgency=medium
+
+  * Update to newer upstream snapshot
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 19 Feb 2016 00:04:13 -0800
+
+golang-github-ncw-swift (0.0~git20150901.0.ca8cbbd-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 11 Sep 2015 15:59:54 -0700

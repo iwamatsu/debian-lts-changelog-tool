@@ -1,0 +1,159 @@
+guix (1.2.0-4+deb11u3) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-52867: privilege escalation
+
+ -- Adrian Bunk <bunk@debian.org>  Mon, 18 Nov 2024 11:33:20 +0200
+
+guix (1.2.0-4+deb11u2) bullseye-security; urgency=medium
+
+  * debian/patches: guix-daemon: Protect against file descriptor escape
+    when building fixed-output derivations (CVE-2024-27297).
+    (Closes: #1066113)
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 17 Apr 2024 15:39:38 -0700
+
+guix (1.2.0-4+deb11u1) bullseye; urgency=medium
+
+  [ Santiago Vila ]
+  * debian/patches: Remove expiration dates on openpgp keys used in test
+    suite. (Closes: #1011863).
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 08 Apr 2023 18:35:36 -0700
+
+guix (1.2.0-4) unstable; urgency=medium
+
+  * debian/patches: Fix privilege escalation issue in
+    guix-daemon. (Closes: #985467)
+  * debian/patches: Update init script to fix guix-daemon path. Thanks to
+    florine forine. (Closes: #983248)
+  * Add README.Debian documenting running with sysvinit and describing
+    differences with other methods of installing guix. (Closes: #983248)
+  * debian/patches: Adjust init script to use the _guixbuild group.
+  * sysusers.d/guix-daemon.conf: Explicitly create _guixbuild group to
+    workaround a bug in opensysusers.
+  * Install /etc/profile.d/guix.sh to ensure proper functioning of guix
+    profiles. (Closes: #985916)
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 27 Mar 2021 19:18:29 -0700
+
+guix (1.2.0-3) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Fix lintian overrides to be independent of architecture or guile
+    version.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 22 Jan 2021 18:29:29 -0800
+
+guix (1.2.0-2) experimental; urgency=medium
+
+  * debian/patches: Add description for skip-use-of-bootstrap-binary.
+  * debian/patches: Patch init script to use /usr/bin/guix-daemon.
+  * debian/patches: Patch init script to use /lib/lsb/init-functions.
+  * debian/rules: Disable parallel builds, as guile may embed the names of
+    files being concurrently compiled into each resulting binary.
+  * Add lintian overrides for various false positives about spelling, man
+    pages, license files, and documentation.
+  * sysusers.d/guix-daemon.conf: Quote the GECOS field.
+  * debian/control: Update Build-Depends/Depends to guile-git 0.4.0-2.
+  * debian/patches: Reenable tests that break with guile-git built against
+    old libgit2 version.
+  * debian/control: Drop Build-Depends and Depends on libgit2-dev, as this
+    is pulled in from the versioned guile-git dependency.
+  * debian/control: Update guile-gcrypt version that Depends on
+    libgcrypt-dev.
+  * debian/control: Update Build-Depends and Depends to versions of
+    guile-sqlite3 that Depend on libsqlite3-dev.
+  * debian/patches: Add patch to remove embedded build path.
+  * Switch to guile-2.2.
+  * debian/patches: Disable container tests.
+  * debian/patches: Disable guix environment test for containers.
+  * debian/patches: Disable syscall tests relying on user namespaces.
+  * debian/patches: Disable lint tests that fail with guile-2.2.
+  * debian/patches: Disable software heritage tests that fail with
+    guile-2.2.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Thu, 21 Jan 2021 00:00:05 -0800
+
+guix (1.2.0-1) experimental; urgency=medium
+
+  [ Vagrant Cascadian ]
+  * New upstream version 1.2.0
+  * debian/copyright: Update for 1.2.0.
+  * debian/patches:
+    - Use proper comments in patch for tests/graph.scm, and
+      drop patch disabling tests/graph.scm.
+    - Disable some channels tests due to failures on 32bit architectures.
+  * debian/rules: Pass GZIP and BZIP2 in the configure target to avoid
+    embedding different paths on usrmerge systems.
+  * debian/control: Bump versioned Build-Depends on libgit2-dev >= 1.0.1.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 23 Nov 2020 12:52:35 -0800
+
+guix (1.2.0~rc2-1) experimental; urgency=medium
+
+  * sysusers.d/guix-daemon.conf: Fix spelling of "empty" in home
+    directories (Closes: #974818).  Thanks to Axel Beckert.
+  * debian/patches: Disable script using bootstrap binaries.
+  * debian/patches: Update tests-that-fail-with-tilde-in-build-path,
+    partly fixed upstream.
+  * debian/copyright: Refresh for 1.2.0~rc2.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 18 Nov 2020 15:40:40 -0800
+
+guix (1.2.0~rc1-2) experimental; urgency=medium
+
+  * debian/guix.postinst: Only call systemd-sysusers if
+    installed. (Closes: #974751). Thanks to Axel Beckert.
+  * debian/control:
+    - Recommend systemd for systemd-sysusers command.
+    - Build-Depends/Depends: Allow slightly older versions of
+      guile-gnutls.
+  * debian/rules: Adjust guix architecture for armhf.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 14 Nov 2020 20:06:42 -0800
+
+guix (1.2.0~rc1-1) experimental; urgency=medium
+
+  * debian/control:
+    - Depends on libgit2-dev >= 1.0.
+    - Recommend nscd.
+    - Restrict architecture to amd64 arm64 armhf i386.
+  * debian/rules:
+    - Increase verbosity of test suite.
+    - Add a default /etc/guix/acl.
+  * debian/patches:
+    - Disable tests that fail when build path contains a tilde.
+  * debian/guix.postinst:
+    - Run systemd-sysusers.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 13 Nov 2020 19:27:03 -0800
+
+guix (1.1.0+67260.9e2523-2) experimental; urgency=medium
+
+  * debian/control:
+    - Update description. Thanks to Paul Wise!
+    - Add git and gnupg to Build-Depends for tests.
+    - Update Vcs-* headers.
+  * debian/patches:
+    - Drop ineffective patch to use /bin/guile.
+    - Drop patch to tests using git, was fixed upstream.
+    - Update patches to disable tests when when network is unavailable.
+    - Disable some non-deterministic tests.
+  * debian/rules:
+    - Disable network tests by passing RES_OPTIONS=attempts:0 instead of
+      bespoke variable, effectively disabling hostname resolution. Thanks
+      to jwilk!
+    - Copy copy system binaries for tests, to avoid downloading bootstrap
+      binaries over the network.
+    - Disable parallelism in dh_auto_test.
+  * Add lintian override for wrong-path-for-interpreter.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 11 Nov 2020 17:21:48 -0800
+
+guix (1.1.0+67260.9e2523-1) experimental; urgency=medium
+
+  * Initial release. Closes: #850644.
+  * git snapshot from commit 9e2523c25f7b8d6e8c29c679ad899703a120eed8.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 07 Nov 2020 16:27:55 -0800

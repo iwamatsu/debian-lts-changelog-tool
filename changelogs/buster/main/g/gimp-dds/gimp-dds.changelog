@@ -1,0 +1,92 @@
+gimp-dds (3.0.1-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2023-44441: File parsing heap buffer overflow.
+
+ -- Adrian Bunk <bunk@debian.org>  Thu, 30 Nov 2023 15:48:57 +0200
+
+gimp-dds (3.0.1-1) unstable; urgency=low
+
+  [ Evgeni Golov ]
+  * Correct Vcs-* URLs to point to anonscm.debian.org
+
+  [ Vincent Fourmond ]
+  * New upstream release
+    - refreshed makefile.diff
+  * Conforms to newer standards
+  * Bump to newer dh compat level
+
+ -- Vincent Fourmond <fourmond@debian.org>  Sun, 25 May 2014 15:17:48 +0200
+
+gimp-dds (2.2.1-1) unstable; urgency=low
+
+  * New upstream release, which fixes a FTBS (closes: #713553)
+  * Fix small typo in package description, thanks to Erik Esterer
+    <erik.esterer@gmail.com> (closes: #626917)
+  * Switch to dh debian/rules
+  * Refresh the patch on upstream makefile to make sure that debian global 
+    flags are used
+
+ -- Vincent Fourmond <fourmond@debian.org>  Fri, 28 Jun 2013 00:15:15 +0200
+
+gimp-dds (2.0.9-3) unstable; urgency=low
+
+  * Update to the new home for gimp-dds
+  * Added a watchfile now it is possible
+  * Already conforms to standards 3.9.0
+
+ -- Vincent Fourmond <fourmond@debian.org>  Sun, 18 Jul 2010 23:30:51 +0200
+
+gimp-dds (2.0.9-2) unstable; urgency=low
+
+  * Modify debian/rules to use Makefile.linux on all arches, to avoid
+    FTBSes on the non-linux arches (closes: 573773)
+
+ -- Vincent Fourmond <fourmond@debian.org>  Sun, 14 Mar 2010 01:46:45 +0100
+
+gimp-dds (2.0.9-1) unstable; urgency=low
+
+  * Drop dependency on quilt, unneeded for 3.0 (quilt)
+  * New upstream release:
+    - fix the off-by-one mistake in mipmap generation (closes: #564111,
+    #564113). Thanks to Michalis Kamburelis for spotting and Shawn Kirst
+    for fixing !
+
+ -- Vincent Fourmond <fourmond@debian.org>  Thu, 11 Mar 2010 20:25:24 +0100
+
+gimp-dds (2.0.7-2) unstable; urgency=medium
+
+  * Converted to source format 3.0 (quilt)
+  * Refreshed makefile.diff
+  * Removed debian/README.source, obsoleted by the use of format 3.0 (quilt)
+  * Add build-depend on libgtk2.0-dev, now necessary (closes: #569383)
+  * Urgency medium to fix RC bug in testing
+  * Conforms to standards 3.8.4
+
+ -- Vincent Fourmond <fourmond@debian.org>  Tue, 16 Feb 2010 00:47:59 +0100
+
+gimp-dds (2.0.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build-depends on gimp 2.6 development files
+  * Add a debian/README.source file to document the patching system.
+  * Now conforms to standards 3.8.1
+
+ -- Vincent Fourmond <fourmond@debian.org>  Tue, 05 May 2009 20:43:12 +0200
+
+gimp-dds (2.0.6-1) unstable; urgency=low
+
+  * New upstream release (closes: #488083)
+  * Adding provided PDF documentation
+
+ -- Vincent Fourmond <fourmond@debian.org>  Fri, 27 Jun 2008 23:35:29 +0200
+
+gimp-dds (2.0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #476189)
+  * No watch file, as it does not seem easy to guess the upstream
+    version number from the download link (well, impossible, that is)
+  * makefile.diff to pass the -Wl,--as-needed flag to gcc to drastically
+    reduce the number of dependencies
+
+ -- Vincent Fourmond <fourmond@debian.org>  Thu, 17 Apr 2008 21:22:59 +0200

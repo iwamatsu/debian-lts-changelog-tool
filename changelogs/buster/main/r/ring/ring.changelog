@@ -1,0 +1,520 @@
+ring (20190215.1.f152c98~ds1-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2021-37706
+    The header length of an incoming STUN message, containing an 
+    ERROR-CODE attribute, must not be negative.
+  * CVE-2021-43299
+    CVE-2021-43300
+    CVE-2021-43301
+    CVE-2021-43302
+    CVE-2021-43303
+    The length of an attacker controlled filename needs to be checked.
+  * CVE-2021-43804
+    Check declared length of incoming RTCP BYE message with actual
+    received packet size.
+  * CVE-2021-43845
+    Check length of data field in incoming RTCP XR message with actual
+    received packet size.
+  * CVE-2022-21722
+    incoming RTP/RTCP packets might cause out-of-bound read access
+  * CVE-2022-21723
+    an incoming SIP message that contains a malformed multipart might
+    cause out-of-bound read access
+  * CVE-2022-23537
+    A buffer overread might be possible when parsing a crafted
+    STUN message with unknown attribute
+  * CVE-2022-23608
+    A buffer overread might be possible when parsing a crafted
+    STUN message with unknown attribute
+  * CVE-2022-24754
+    stack-buffer overflow vulnerability which only impacts PJSIP users
+    who accept hashed digest credentials (credentials with data_type
+    `PJSIP_CRED_DATA_DIGEST`).
+  * CVE-2022-24763
+    denial-of-service vulnerability when using PJSIP's XML parsing
+  * CVE-2022-24764
+    stack buffer overflow vulnerability in pjmedia_sdp_print() and
+    pjmedia_sdp_media_print()
+  * CVE-2022-24793
+    buffer overflow vulnerability affects applications that use
+    PJSIP DNS resolution. This vulnerability is related to
+    CVE-2023-27585 but appears in a different function.
+    parse_rr() <-> parse_query()
+  * CVE-2022-31031
+    a stack buffer overflow vulnerability affects applications
+    that use STUN
+  * CVE-2022-39244
+    buffer overflow vulnerability in the PJSIP parser,
+    PJMEDIA RTP decoder, and PJMEDIA SDP parser
+  * CVE-2023-27585
+    buffer overflow vulnerability affects applications that use
+    PJSIP DNS resolution. This vulnerability is related to
+    CVE-2022-24793 but appears in a different function.
+    parse_query() <-> parse_rr()
+  * CVE-2022-23547
+    Possible buffer overread when parsing a certain STUN message
+    This issue is similar to CVE-2022-23537
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Mon, 28 Aug 2023 23:03:02 +0200
+
+ring (20190215.1.f152c98~ds1-1+deb10u1) buster; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2021-21375 (Closes: #986815)
+    The embedded copy of pjproject is affected by this CVE.
+    Due to bad handling of two consecutive crafted answers to an INVITE,
+    the attacker is able to crash the server resulting in a denial of
+    service.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Thu, 22 Apr 2021 19:03:02 +0200
+
+ring (20190215.1.f152c98~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Refresh patches.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 18 Feb 2019 22:46:25 -0500
+
+ring (20190110.1.e572469~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 14 Jan 2019 10:23:11 -0500
+
+ring (20190101.3.5315d84~ds1-2) unstable; urgency=medium
+
+  * Remove unused libsrtp dependency. (Closes: 918543)
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 14 Jan 2019 10:08:09 -0500
+
+ring (20190101.3.5315d84~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Rename binary packages to jami. Upstream has not fully completed
+    the transition yet and there are still things that use the Ring
+    name. However, this is a step in the right direction.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 05 Jan 2019 21:53:29 -0500
+
+ring (20181001.4.a99aaec~ds6-2) unstable; urgency=medium
+
+  * Build with LFS. (Closes: #913186)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 08 Nov 2018 13:02:52 -0500
+
+ring (20181001.4.a99aaec~ds6-1) unstable; urgency=medium
+
+  * Exclude graddle jar.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 08 Nov 2018 11:55:47 -0500
+
+ring (20181001.4.a99aaec~ds5-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 08 Nov 2018 11:46:08 -0500
+
+ring (20180816.2.e26b79f~ds1-3) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 23 Aug 2018 19:43:53 -0400
+
+ring (20180712.2.f3b87a6~ds1-2) unstable; urgency=medium
+
+  * No longer depend on boost. (Closes: #904498)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 23 Aug 2018 16:08:06 -0400
+
+ring (20180712.2.f3b87a6~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 17 Jul 2018 18:25:52 -0400
+
+ring (20180625.1.8dd3bf1~ds1-1) unstable; urgency=medium
+
+  * Document build requirements. (Closes: #896648)
+  * d/rules: --disable-upnp.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 26 Jun 2018 18:04:49 -0400
+
+ring (20180419.1.01da897~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Switch to Ayatana AppIndicator. (Closes: #894651)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 19 Apr 2018 14:01:32 -0400
+
+ring (20180414.2.2c51f89~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: ignore contrib/portable*
+  * Build-Depend on libssl-dev.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 19 Apr 2018 10:55:00 -0400
+
+ring (20180228.1.503da2b~ds1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 28 Feb 2018 12:19:23 -0500
+
+ring (20180222.1.7bffde2~ds2-2) unstable; urgency=medium
+
+  * Depend on libqt5sql5-sqlite (Closes: #891460)
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 27 Feb 2018 01:43:36 -0500
+
+ring (20180222.1.7bffde2~ds2-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/copyright: exclude vendored kashmir.
+  * Exclude pjsip-apps from tarball.
+  * Depend on opendht >= 1.6.0.
+  * d/copyright: fix insecure-copyright-format-uri.
+  * d/copyright: remove unused sections.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 27 Feb 2018 01:33:04 -0500
+
+ring (20180119.1.9e06f94~ds1-3) unstable; urgency=medium
+
+  * Cleanup d/changelog.
+  * Build msgpack-c v2 API.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 01 Feb 2018 17:49:53 +0000
+
+ring (20180119.1.9e06f94~ds1-2) unstable; urgency=medium
+
+  * Build with gcc-7. (Closes: #853642)
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 01 Feb 2018 01:00:59 -0500
+
+ring (20180119.1.9e06f94~ds1-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Don't depend on libwebkit2gtk-3.0-dev. (Closes: #871962)
+  * Depend on libcanberra-gtk3-dev.
+  * Move to libnm. (Closes: #862764)
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 26 Jan 2018 10:28:47 -0500
+
+ring (20171129.2.cf5bbff~ds1-2) unstable; urgency=medium
+
+  * Move to salsa.debian.org
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 28 Dec 2017 16:54:31 -0500
+
+ring (20171129.2.cf5bbff~ds1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #882625)
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 04 Dec 2017 23:40:21 -0500
+
+ring (20171024.1.eadbdeb~ds1-2) unstable; urgency=medium
+
+  * Update to OpenDHT 1.5.1. (Closes: #882625)
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 25 Nov 2017 15:10:59 -0500
+
+ring (20171024.1.eadbdeb~ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/rules: disable dbus-cpp and secp256k1.
+  * d/rules: build-depend on libsecp256k1-dev.
+  * d/control: priority extra -> optional.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 15 Nov 2017 21:22:02 -0500
+
+ring (20170912.1.912f772~dfsg1-2) unstable; urgency=medium
+
+  * Build using older msgpack-c API. (Closes: #866796)
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 04 Oct 2017 15:57:45 -0400
+
+ring (20170912.1.912f772~dfsg1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #873010)
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 16 Sep 2017 15:27:06 -0400
+
+ring (20170803.2.5fcfe3f~dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Depend on libvdpau-dev
+  * Use gcc-6
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 04 Aug 2017 22:25:59 -0400
+
+ring (20170720.2.5bf0a65~dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 26 Jul 2017 17:34:22 -0400
+
+ring (20170626.1.1335994~dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * d/copyright:
+      exclude:
+        - client-electron*
+        - daemon/contrib/tarballs/argon2*
+  * d/rules: --disable-gmp
+  * d/rules: --disable-gnutls
+  * Add dont-build-gnutls.patch
+  * Bump Standards-Version to 4.0.0
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 28 Jun 2017 01:16:21 -0400
+
+ring (20170202.1.23df36f~dfsg2-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * d/copyright: exclude client-uwp/*
+  * Remove triggers which were autogenerated
+  * Depend on libopendht-dev >= 1.3.3
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 02 Feb 2017 13:50:40 -0500
+
+ring (20161221.2.7bd7d91~dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 25 Dec 2016 23:42:25 -0500
+
+ring (20161207.2.7a29ace~dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * d/copyright: remove jquery section
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 08 Dec 2016 12:16:02 -0500
+
+ring (20161116.1.e59aaa5~dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * No longer leak system user by default (Closes: #843645)
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 21 Nov 2016 14:14:10 -0500
+
+ring (20161107.1.0ac5fac~dfsg1-1) unstable; urgency=high
+
+  * Urgency high because no Beta2 version has hit testing yet.
+  * New upstream version.
+  * Build with opendht-dev only.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 08 Nov 2016 10:49:03 -0500
+
+ring (20161104.4.17a0616~dfsg1-2) unstable; urgency=high
+
+  * Fixed lintian override
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 05 Nov 2016 00:34:01 -0400
+
+ring (20161104.4.17a0616~dfsg1-1) unstable; urgency=high
+
+  * New upstream snapshot
+  * Depend on libopendht-dev (>= 1.2.1~dfsg1-3)
+  * Remove unneeded opendht-libs.patch
+  * Parallelize contrib build
+  * high urgency because of Beta2 release, which breaks backwards
+    compatibility
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 04 Nov 2016 16:51:58 -0400
+
+ring (20161103.1.60700d3~dfsg1-1) unstable; urgency=medium
+
+  * d/copyright: exclude opendht
+  * d/copyright: mention ringdht files
+  * Daemon configure: disable many packages
+  * Add dependencies:
+      - librestbed-dev
+      - libva-dev
+      - libwebkit2gtk-4.0-dev
+      - libopendht-dev
+      - libasio-dev
+      - libcrypto++-dev
+      - libboost-system-dev
+      - libboost-random-dev
+      - opendht dependencies...
+  * Refresh jsoncpp-rename.patch
+  * d/copyright:
+      - remove opendht section
+      - mention new web files
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 03 Nov 2016 23:20:47 -0400
+
+ring (20160901.1.204c604~dfsg2-2) unstable; urgency=medium
+
+  * Daemon configure: -DGSETTINGS_LOCALCOMPILE=OFF
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 06 Sep 2016 14:21:10 -0400
+
+ring (20160901.1.204c604~dfsg2-1) unstable; urgency=medium
+
+  * Remove msgpack from the tarball
+  * Added libmsgpack-dev dependency (>= 1.4.2)
+  * d/copyright: Exclude restbed
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 06 Sep 2016 11:41:47 -0400
+
+ring (20160818.1.eb4fbc8~dfsg1-2) unstable; urgency=medium
+
+  * d/rules: Check for Makefile before distclean (Closes: #833926)
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 22 Aug 2016 11:40:25 -0400
+
+ring (20160818.1.eb4fbc8~dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Daemon contrib:
+      --disable-natpmp
+  * Daemon configure:
+      --disable-shared
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 22 Aug 2016 09:15:05 -0400
+
+ring (20160804.3.dfb2548~dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Removed obsolete fix-sdesnegotiator-negotiate.patch.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 10 Aug 2016 10:34:13 -0400
+
+ring (20160729.2.7a7dbd6~dfsg1-2) unstable; urgency=high
+
+  * Don't remove dring from /usr/lib
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 05 Aug 2016 09:52:23 -0400
+
+ring (20160729.2.7a7dbd6~dfsg1-1) unstable; urgency=high
+
+  * d/rules: bootstrap: use --no-checksums.
+  * Remove deprecated dring-usr-bin.patch.
+  * Backport Gerrit I0ef022486e00b5fef91d2552b83d57463282a683:
+     - sdes: fix SdesNegotiator::negotiate()
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 27 Jul 2016 16:03:24 -0400
+
+ring (20160726.1.da5343f~dfsg1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Removed unused dependencies:
+    - libticonv-dev
+    - chrpath
+    - git-core
+  * Re-order dependencies.
+  * Stop using deprecated configure options.
+  * Depend on libnm-glib-dev.
+  * Remove check-for-gsm.patch, replaced by confiure option.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 22 Jul 2016 12:00:44 -0400
+
+ring (20160720.3.73cfbb9~dfsg1-5) unstable; urgency=medium
+
+  * Move dring to /usr/bin. (Closes: #831978)
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 20 Jul 2016 19:05:07 -0400
+
+ring (20160720.3.73cfbb9~dfsg1-4) unstable; urgency=medium
+
+  * d/rules: build contrib with V=1
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 20 Jul 2016 18:12:57 -0400
+
+ring (20160720.3.73cfbb9~dfsg1-3) unstable; urgency=medium
+
+  * Implement Petter Reinholdtsen's feedback:
+   - d/rules: build with V=1
+   - d/rules: 'cd dir && make' -> 'make -C dir'
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 20 Jul 2016 17:40:19 -0400
+
+ring (20160720.3.73cfbb9~dfsg1-2) unstable; urgency=medium
+
+  * Build Dependencies: libappindicator-dev -> libappindicator3-dev
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 20 Jul 2016 15:31:06 -0400
+
+ring (20160720.3.73cfbb9~dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot:
+     - Closes: #831339
+  * Build Dependencies:
+     - re-organize order
+     - +libappindicator-dev
+  * Build lrc with debug symbols.
+  * README.Debian: updated tarballs location url.
+  * d/rules: pass --disable-downloads to bootstrap script.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 20 Jul 2016 12:59:19 -0400
+
+ring (20160712.1.66bea8b~dfsg1-1) unstable; urgency=medium
+
+  * d/watch: gpl.savoirfairelinux.net -> dl.ring.cx.
+  * remove deprecated use-debian-gnutls.patch.
+  * depend on libgnutls28-dev (>= 3.4.14).
+  * d/coptright: exclude client-ios.
+  * d/copyright: exclude libnatpmp.
+  * build depend on libnatpmp-dev.
+  * create use-debian-pmp.patch.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 01 Jul 2016 19:06:06 +0200
+
+ring (20160630.3.52c5ef6~dfsg1-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 01 Jul 2016 13:15:29 +0200
+
+ring (20160630.2.b3d131f~dfsg1-2) unstable; urgency=medium
+
+  * Create ring-daemon package.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 01 Jul 2016 00:09:22 +0200
+
+ring (20160630.2.b3d131f~dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove .sum-iax.
+  * d/copyright: reflect changes in msgpack.
+  * Add patch to use Debian's GnuTLS.
+  * Don't parallelize contrib build.
+  * d/rules: remove ring -> ring.cx.
+  * d/copyright: updated OpenDHT's ax_cxx_compile_stdcxx.m4
+    section
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 30 Jun 2016 19:09:51 +0200
+
+ring (20160422.1.3c07c8e~dfsg2-1) unstable; urgency=medium
+
+  * Remove libiax due to copyright issues
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 30 Jun 2016 14:44:15 +0200
+
+ring (20160422.1.3c07c8e~dfsg1-4) unstable; urgency=medium
+
+  * Fix maintscript-calls-ldconfig lintian warning.
+  * Bump Standards-Version to 3.9.8.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 28 Jun 2016 00:08:01 +0200
+
+ring (20160422.1.3c07c8e~dfsg1-3) unstable; urgency=medium
+
+  * Added mising argon2 copyright section
+  * README.Debian: don't mention libgsm
+  * d/copyright: mention April2016 pjsip thread
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 27 Jun 2016 22:54:48 +0200
+
+ring (20160422.1.3c07c8e~dfsg1-2) unstable; urgency=medium
+
+  * Removed ring binary (conflicts with alliance package)
+  * Removed empty cmake directory
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 23 Apr 2016 21:31:24 -0400
+
+ring (20160422.1.3c07c8e~dfsg1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #816707)
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 04 Mar 2016 13:16:17 -0500

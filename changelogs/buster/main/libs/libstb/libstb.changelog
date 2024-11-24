@@ -1,0 +1,27 @@
+libstb (0.0~git20180212.15.e6afb9c-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * CVE-2018-16981: Heap-based buffer overflow in stbi__out_gif_code().
+  * CVE-2019-13217: Heap buffer overflow in the Vorbis start_decoder().
+  * CVE-2019-13218: Division by zero in the Vorbis predict_point().
+  * CVE-2019-13219: NULL pointer dereference in the Vorbis get_window().
+  * CVE-2019-13220: Uninitialized stack variables in the Vorbis
+    start_decoder().
+  * CVE-2019-13221: Buffer overflow in the Vorbis compute_codewords().
+  * CVE-2019-13222: Out-of-bounds read of a global buffer in the Vorbis
+    draw_line().
+  * CVE-2019-13223: Reachable assertion in the Vorbis lookup1_values().
+  * CVE-2021-28021: Buffer overflow in stbi__extend_receive().
+  * CVE-2021-37789: Heap-based buffer overflow in stbi__jpeg_load().
+  * CVE-2021-42715: The HDR loader parsed truncated end-of-file RLE
+    scanlines as an infinite sequence of zero-length runs.
+  * CVE-2022-28041: Integer overflow in stbi__jpeg_decode_block_prog_dc().
+  * CVE-2022-28042: Heap-based use-after-free in stbi__jpeg_huff_decode().
+
+ -- Adrian Bunk <bunk@debian.org>  Tue, 31 Jan 2023 22:02:19 +0200
+
+libstb (0.0~git20180212.15.e6afb9c-1) unstable; urgency=medium
+
+  * Initial release (Closes: #909167)
+
+ -- Yangfl <mmyangfl@gmail.com>  Wed, 19 Sep 2018 14:35:07 +0800

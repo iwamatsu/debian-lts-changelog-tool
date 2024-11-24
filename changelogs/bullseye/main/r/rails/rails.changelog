@@ -1,0 +1,778 @@
+rails (2:6.0.3.7+dfsg-2+deb11u2) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2023-23913: a DOM based cross-site scripting in rails-ujs
+    for contenteditable HTML.
+  * CVE-2023-28120: Possible XSS Security Vulnerability in
+    SafeBuffer#bytesplice.
+  * Address a regression introduced in the fix of CVE-2021-22942.
+
+ -- Aron Xu <aron@debian.org>  Fri, 07 Apr 2023 01:30:34 +0800
+
+rails (2:6.0.3.7+dfsg-2+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2021-22942: possible open redirect vulnerability in the Host
+    Authorization middleware.
+  * CVE-2021-44528: specially crafted "X-Forwarded-Host" headers in
+    combination with certain "allowed host" formats can lead to
+    redirection of users to a malicious website.
+  * CVE-2022-21831: code injection in Active Storage.
+  * CVE-2022-22577: XSS in Action Pack which can lead to bypass CSP
+    for non HTML like responses.
+  * CVE-2022-23633: thread local state for the next request may not be
+    reset when the response body has been fully closed.
+  * CVE-2022-27777: XSS in Action View which can lead to content
+    injection.
+  * CVE-2023-22792: regular expression based DoS with specially crafted
+    cookies and X_FORWARDED_HOST headers.
+  * CVE-2023-22794: malicious user input may be sent to the database
+    with insufficient sanitization and be able to inject SQL outside of
+    the comment.
+  * CVE-2023-22795: regular expression based DoS related to crafted
+    If-None-Match header.
+  * CVE-2023-22796: regular expression based DoS related to the
+    underscore method.
+
+ -- Aron Xu <aron@debian.org>  Sat, 11 Mar 2023 14:53:57 +0800
+
+rails (2:6.0.3.7+dfsg-2) unstable; urgency=medium
+
+  * Partially revert "Update minimum version of ruby-marcel to 1.0~".
+  * Add patch relax marcel for bullseye.
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Fri, 09 Jul 2021 00:33:18 +0530
+
+rails (2:6.0.3.7+dfsg-1) unstable; urgency=high
+
+  * Upload to unstable directly.
+  * New upstream version 6.0.3.7+dfsg. (Closes: #988214)
+    - Prevent slow regex when parsing host authorization header.
+      (Fixed: CVE-2021-22904)
+    - Prevent catastrophic backtracking during mime parsing.
+      (Fixes: CVE-2021-22902)
+    - Prevent string polymorphic route arguments.
+      (Fixes: CVE-2021-22885)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 15 May 2021 16:05:45 +0530
+
+rails (2:6.0.3.6+dfsg-2) experimental; urgency=medium
+
+  * Install @rails/actioncable node module and Provide node-rails-actioncable
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 02 May 2021 23:47:43 +0530
+
+rails (2:6.0.3.6+dfsg-1) experimental; urgency=medium
+
+  * Team Upload
+  * New upstream version 6.0.3.6+dfsg (upgrade Active Storage’s Marcel
+    dependency to version 1.0.0.)
+    Before 1.0.0, Marcel—which is distributed under the terms of the MIT
+    License, like Rails—indirectly depended on MIME type data released under
+    the GNU General Public License making the effective license of rails
+    applications GPL. Marcel 1.0.0 instead directly packages MIME type data
+    adapted from Apache Tika, released under the permissive and compatible
+    Apache License 2.0.
+  * Update minimum version of ruby-marcel to 1.0~
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 29 Apr 2021 15:52:41 +0530
+
+rails (2:6.0.3.5+dfsg-1) unstable; urgency=high
+
+  * New upstream version 6.0.3.5+dfsg.
+    - Fix possible DoS vector in PostgreSQL money type.
+      (Fixes: CVE-2021-22880)
+    - Prevent open redirect when allowed host starts with a dot.
+      (Fixes: CVE-2021-22881)
+  * Fix d/gbp.conf for master-6.0 branch.
+  * Drop Jongmin Kim from uploaders.
+    - Thanks, Jongmin, for all the work so far!
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sun, 14 Feb 2021 18:48:21 +0530
+
+rails (2:6.0.3.4+dfsg-3) unstable; urgency=medium
+
+  [ Pirate Praveen ]
+  * Fix silent build failure and adapt rollup.config.js for
+    recent changes. (Closes: #979133)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Wed, 03 Feb 2021 22:12:15 +0530
+
+rails (2:6.0.3.4+dfsg-2) unstable; urgency=medium
+
+  [ Pirate Praveen ]
+  * Allow build with "nocheck" build profile to skip selenium
+    dependency. (Closes: #974065)
+    - Thanks, Sven Mueller, for the patch.
+  * Drop build dependency on qunit-selenium. (Closes: #976291)
+    - We do not have tests enabled that need qunit-selenium.
+
+  [ Utkarsh Gupta ]
+  * Fix d/control spacing issue.
+  * Remove unnecessary version guards.
+    + cme fix dpkg to the resuce.
+  * Bump debhelper-compat to 13.
+  * Re-format d/gbp.conf.
+    - To help properly branch out stuff.
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 12 Dec 2020 02:42:08 +0530
+
+rails (2:6.0.3.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 6.0.3.4+dfsg
+    - Fix a possible XSS vulnerability in Action Pack in
+      Development Mode. (Fixes: CVE-2020-8264) (Closes: #971988)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Mon, 12 Oct 2020 00:28:24 +0530
+
+rails (2:6.0.3.3+dfsg-1) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * [ci skip] Update team name
+  * [ci skip] Add .gitattributes to keep unwanted files out of the
+    source package
+
+  [ Utkarsh Gupta ]
+  * New upstream version 6.0.3.3+dfsg
+    - Ensure values directly from `options[:default]` are not marked
+      as `html_safe`. (Fixes: CVE-2020-15169) (Closes: #970040)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Fri, 11 Sep 2020 09:32:28 +0530
+
+rails (2:6.0.3.2+dfsg-11) unstable; urgency=medium
+
+  * Team Upload
+  * Move yarnpkg to recommends of rails meta package
+    (To help testing migration)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 28 Aug 2020 14:49:09 +0530
+
+rails (2:6.0.3.2+dfsg-10) unstable; urgency=medium
+
+  * Team Upload
+  * Skip creating javascript and webpack installation in newapp autopkgtest
+   (This fixes autopkgtest regression in arm64)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 27 Aug 2020 23:24:41 +0530
+
+rails (2:6.0.3.2+dfsg-9) unstable; urgency=medium
+
+  * Team Upload
+  * Remove webdrivers from default Gemfile for new rails applications
+    (Closes: #967007)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 11 Aug 2020 13:04:28 +0530
+
+rails (2:6.0.3.2+dfsg-8) unstable; urgency=medium
+
+  * Team Upload
+  * Add ruby-webpacker as dependency to rails meta package
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 07 Aug 2020 23:24:21 +0530
+
+rails (2:6.0.3.2+dfsg-7) unstable; urgency=medium
+
+  * Remove dependencies no longer required for rails metapackage
+  * Remove Breaks on ruby-carrierwave << 2
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 04 Aug 2020 17:49:02 +0530
+
+rails (2:6.0.3.2+dfsg-6) unstable; urgency=medium
+
+  * Add more dependencies for rails metapackage
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 04 Aug 2020 01:46:50 +0530
+
+rails (2:6.0.3.2+dfsg-5) unstable; urgency=medium
+
+  * Remove more generated files in clean
+  * Fix bundler patch and add bundler as dependency (Closes: #966838)
+  * Bump minimum version of puma to 4.1
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 03 Aug 2020 14:57:03 +0530
+
+rails (2:6.0.3.2+dfsg-4) unstable; urgency=medium
+
+  * Team Upload
+  * Fail build when tests fails (Closes: #919478)
+  * Start redis server for activesupport tests (fixes test failures)
+  * Change assets:compile to assets:codegen in actioncable build
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 03 Aug 2020 03:00:27 +0530
+
+rails (2:6.0.3.2+dfsg-3) unstable; urgency=medium
+
+  * Team Upload
+  * Reupload to unstable
+  * Add Breaks for packages that need a new version for rails 6 support
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 02 Aug 2020 22:54:59 +0530
+
+rails (2:6.0.3.2+dfsg-2) experimental; urgency=medium
+
+  * Team Upload
+  * Drop myself from uploaders
+  * Update minimum version of ruby-sass-rails to 6.0~
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 29 Jul 2020 18:15:23 +0530
+
+rails (2:6.0.3.2+dfsg-1) experimental; urgency=medium
+
+  * New upstream version 6.0.3.2+dfsg
+    - Fixes CVE-2020-8185: Untrusted users able to run pending
+      migrations in production (Closes: 964081)
+  * Refresh d/patches
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Wed, 01 Jul 2020 17:12:45 +0530
+
+rails (2:6.0.3.1+dfsg-1) experimental; urgency=medium
+
+  * New upstream version 6.0.3.1+dfsg
+  * Refresh patches
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 25 May 2020 16:04:56 +0530
+
+rails (2:6.0.2.1+dfsg-4) experimental; urgency=medium
+
+  * Tighten dependency on ruby-rails-html-sanitizer (for backports)
+  * Switch to node-babel7 for activestorage javascript bundle generation
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 03 May 2020 18:25:37 +0530
+
+rails (2:6.0.2.1+dfsg-3) experimental; urgency=medium
+
+  * Add patch to fix ActionController::TestSession#id to return
+    Rack::Session::SessionId instance.
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Thu, 26 Mar 2020 13:34:17 +0530
+
+rails (2:5.2.4.1+dfsg-1) unstable; urgency=medium
+
+  [ Lucas Kanashiro ]
+  * New upstream version 5.2.4.1+dfsg
+
+  [ Utkarsh Gupta ]
+  * Refresh patches
+  * Update patch to remove the function call
+  * Tighten dependency on ruby-rack
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 07 Mar 2020 17:35:09 +0530
+
+rails (2:5.2.3+dfsg-3) unstable; urgency=medium
+
+  * Tighten dependency on bundler
+  * Add patch to fix autopkgtest
+  * Use @d.o address
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Fri, 14 Feb 2020 05:31:36 +0530
+
+rails (2:5.2.3+dfsg-2) unstable; urgency=medium
+
+  * Relax dependency on bundler
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+
+ -- Sruthi Chandran <srud@debian.org>  Fri, 07 Feb 2020 11:55:23 +0100
+
+rails (2:6.0.2.1+dfsg-2) experimental; urgency=medium
+
+  * Tighten dependency on ruby-rack
+
+ -- Sruthi Chandran <srud@debian.org>  Wed, 05 Feb 2020 15:02:04 +0100
+
+rails (2:6.0.2.1+dfsg-1) experimental; urgency=medium
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Update standards version to 4.4.1, no changes needed.
+  * Remove obsolete fields Name, Contact from debian/upstream/metadata.
+
+  [ Sruthi Chandran ]
+  * New upstream version 6.0.2.1+dfsg
+  * Refresh patches
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+
+ -- Sruthi Chandran <srud@debian.org>  Tue, 04 Feb 2020 13:49:14 +0100
+
+rails (2:6.0.0+dfsg-1) experimental; urgency=medium
+
+  * New upstream version 6.0.0+dfsg
+  * d/control:
+    + Add myself as Uploaders
+    + Refresh the dependencies for 6.0.0
+    + Add new packages: ruby-actionmailbox and ruby-actiontext
+    + Fix lintian P: insecure-copyright-format-uri
+  * d/copyright:
+    + Refresh the copyrights for 6.0.0
+    + Fix lintian P: insecure-copyright-format-uri
+  * d/patches: Refresh the patches for 6.0.0
+  * d/ruby-tests.rb:
+    + Refresh the tests for 6.0.0
+    + Disable the lib/ renaming
+    + Disable the failing tests
+  * d/*.docs: Refresh the docs for 6.0.0
+
+ -- Jongmin Kim <jmkim@pukyong.ac.kr>  Sun, 25 Aug 2019 14:50:21 +0900
+
+rails (2:5.2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 5.2.3+dfsg
+  * Add salsa-ci.yml
+  * Bump Standards-Version to 4.4.0
+  * Bump debhelper-compat to 12
+  * Add myself as an uploader
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Tue, 13 Aug 2019 03:18:06 +0530
+
+rails (2:5.2.2.1+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.2.2.1+dfsg (Closes: #924520, #924521)
+    (Fixes: CVE-2019-5418 CVE-2019-5419, CVE-2019-5420)
+  * Drop unused override
+  * Remove duplicate Depends entry for rake
+  * Add d/upstream/metadata
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Sun, 17 Mar 2019 17:44:07 +0530
+
+rails (2:5.2.2+dfsg-6) unstable; urgency=medium
+
+  [ Antonio Terceiro ]
+  * debian/tests/control: remove explicit call to gem2deb-test-runner, as it
+    will be added automatically by autodep8.
+
+  [ Pirate Praveen ]
+  * Move all Recommends from ruby-rails to rails as Depends (Closes: #923507)
+  * Drop obsolete Breaks + Replaces rails3
+  * Drop needs-recommends restriction in newapp autopkgtest
+  * Add debian/node_modules path in activestorage/rollup.config.js for spark-md5
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 Mar 2019 19:50:07 +0530
+
+rails (2:5.2.2+dfsg-5) unstable; urgency=medium
+
+  * Recommend ruby-chromedriver-helper in ruby-rails
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 08 Feb 2019 16:22:07 +0530
+
+rails (2:5.2.2+dfsg-4) unstable; urgency=medium
+
+  * Allow ruby-sprockets-rails >= 3
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 07 Feb 2019 11:12:48 +0530
+
+rails (2:5.2.2+dfsg-3) unstable; urgency=medium
+
+  * Build action_cable.js using blade build system for ruby-actioncable
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 06 Feb 2019 18:01:34 +0530
+
+rails (2:5.2.2+dfsg-2) unstable; urgency=medium
+
+  * Use --gem-install option to dh_ruby as many components now has javascript
+    files targeted for asset pipeline.
+  * Fix typo in rules to correctly override dh_auto_build (Closes: #897641)
+  * Switch to rollup for building activestorage.js, like upstream
+  * Build rails-ujs as part of ruby-actionview with blade build system
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Jan 2019 14:47:39 +0530
+
+rails (2:5.2.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 5.2.2 (Closes: #914847, #914848)
+    (Fixes: CVE-2018-16476, CVE-2018-16477)
+  * Delete 0002-edit-activestorage-webpack-config-js.patch
+  * Add 0002-disable-uglify-in-activestorage-rollup-config-js.patch
+
+ -- Sruthi Chandran <srud@disroot.org>  Mon, 07 Jan 2019 00:23:02 +0530
+
+rails (2:5.2.0+dfsg-2) unstable; urgency=medium
+
+  * Re-upload to unstable
+
+ -- Sruthi Chandran <srud@disroot.org>  Thu, 03 Jan 2019 13:14:54 +0530
+
+rails (2:5.2.0+dfsg-1) experimental; urgency=medium
+
+  * New upstream release
+  * Add myself to uploaders
+  * Embed spark-md5
+  * Remove activestorage.js and syntaxhighlighter.js for dfsg
+  * Use webpack to build activestorage.js
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+  * Update lintian overrides
+  * Use salsa.debian.org in Vcs-* fields
+  * Add nocheck build profile
+  * Remove shCore.js from missing-sources
+
+ -- Sruthi Chandran <srud@disroot.org>  Fri, 03 Aug 2018 20:37:48 +0530
+
+rails (2:4.2.10-1) unstable; urgency=medium
+
+  * New upstream version 4.2.10
+  * Bump debhelper compat to 11 and standards version to 4.1.3
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 18 Mar 2018 17:20:16 +0530
+
+rails (2:4.2.9-4) unstable; urgency=medium
+
+  * Team upload.
+  * Patch gem specs to really relax rack-test dependency.
+
+ -- Marc Dequènes (Duck) <Duck@DuckCorp.org>  Thu, 07 Sep 2017 19:46:41 +0900
+
+rails (2:4.2.9-3) unstable; urgency=medium
+
+  * Relax dependency on ruby-rack-test
+  * Add myself to uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 06 Sep 2017 12:14:19 +0530
+
+rails (2:4.2.9-2) unstable; urgency=medium
+
+  * Team upload
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 23 Aug 2017 18:39:08 +0530
+
+rails (2:4.2.9-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 30 Jul 2017 22:14:24 +0530
+
+rails (2:4.2.7.1-1) unstable; urgency=medium
+
+  * New upstream release; includes fixes for the following issues:
+    - CVE-2016-6317: unsafe query generation in Active Record (Closes: #834154)
+    - CVE-2016-6316: Possible XSS Vulnerability in Action View (Closes: #834155)
+  * debian/watch: restrict to the 4.x series for now
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 22 Aug 2016 14:33:48 -0300
+
+rails (2:4.2.6-2) unstable; urgency=medium
+
+  * Team upload
+  * ruby-rails: Add ruby-coffee-rails to recommends (Closes: #818470)
+  * Relax ruby-json (drop << 2.0 requirement)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 22 Jul 2016 23:37:44 +0530
+
+rails (2:4.2.6-1) unstable; urgency=medium
+
+  [ Antonio Terceiro ]
+  * New upstream release
+  * debian/clean: list files that are created when the tests run
+  * Drop 0003-Make-AR-SpawnMethods-merge-to-check-an-arg-is-a-Proc.patch,
+    applied upstream
+
+  [ Praveen Arimbrathodiyil ]
+  * Set minimum version of ruby-sprockets-rails (for sprockets version
+    incompatibility with ruby-sass-rails)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 09 Apr 2016 19:39:46 -0300
+
+rails (2:4.2.5.2-2) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Antonio Terceiro ]
+  * 0002-load_paths.rb-don-t-load-bundler.patch: don't load bundler when
+    running tests
+  * Run tests during build
+    - add all runtime dependencies as build dependencies as well
+  * Run unit tests also under autopkgtest
+  * Add 0003-Make-AR-SpawnMethods-merge-to-check-an-arg-is-a-Proc.patch to fix
+    ActiveRecord relations with Ruby 2.3
+  * 0004-ActiveRecord-skip-a-few-tests-that-are-broken-on-Deb.patch skip some
+    tests that are broken on Debian.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 04 Mar 2016 14:49:00 -0300
+
+rails (2:4.2.5.2-1) unstable; urgency=high
+
+  * New upstream release
+  * Fixes 2 security issues:
+    - [CVE-2016-2098] Possible remote code execution vulnerability in Action
+      Pack
+    - [CVE-2016-2097] Possible Information Leak Vulnerability in Action View.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 02 Mar 2016 11:50:02 -0300
+
+rails (2:4.2.5.1-2) unstable; urgency=medium
+
+  * ruby-rails: change dependency from bundler to ruby-bundler, which will
+    not pull a development toolchain in Recommends:.
+  * Switch Vcs-* to https URLs
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 21 Feb 2016 13:58:35 -0300
+
+rails (2:4.2.5.1-1) unstable; urgency=high
+
+  * New upstream release. Includes fixes for the following several security
+    issues:
+    - [CVE-2015-7576] Timing attack vulnerability in basic authentication in
+                      Action Controller.
+    - [CVE-2016-0751] Possible Object Leak and Denial of Service attack in
+                      Action Pack
+    - [CVE-2015-7577] Nested attributes rejection proc bypass in Active Record.
+    - [CVE-2016-0752] Possible Information Leak Vulnerability in Action View
+    - [CVE-2016-0753] Possible Input Validation Circumvention in Active Model
+    - [CVE-2015-7581] Object leak vulnerability for wildcard controller routes
+                      in Action Pack
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 28 Jan 2016 10:56:35 -0200
+
+rails (2:4.2.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Skip dependency resolution check during the build, because too many of the
+    dependencies of the binary packages depend on rails to build, so let's
+    avoid loops. The checks are still performed as part of autopkgtest tests,
+    anyway.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 14 Dec 2015 11:04:15 -0200
+
+rails (2:4.2.4-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 12 Dec 2015 16:24:01 -0200
+
+rails (2:4.2.4-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream patch release
+  * Set minimum version for ruby-coffee-rails to 4.1.0
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 15 Sep 2015 18:25:16 +0530
+
+rails (2:4.2.3-4) experimental; urgency=medium
+
+  * Team upload
+  * ruby-activesupport: requires ruby-thread-safe >= 0.3.4, ruby-i18n >= 0.7
+  * ruby-actionview: requires ruby-html-sanitizer and ruby-dom-testing
+  * Check dependencies mentioned in gemspec
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 20 Aug 2015 11:50:37 +0530
+
+rails (2:4.2.3-3) experimental; urgency=medium
+
+  * ruby-actionmailer: Depends: ruby-activejob
+  * ruby-rails: requires ruby-turbolinks >= 2.5.3
+  * debian/copyright: remove mention of files removed upstream
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 14 Aug 2015 10:54:45 -0300
+
+rails (2:4.2.3-2) experimental; urgency=medium
+
+  * Team upload.
+  * Update dependency of ruby-arel for ruby-activerecord.
+  * Update dependency of ruby-rack for ruby-actionpack.
+  * Add new binary package: ruby-activejob.
+  * Add ruby-byebug and ruby-web-console to recommends for ruby-rails.
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 07 Aug 2015 01:38:10 +0530
+
+rails (2:4.2.3-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release; minor update.
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 28 Jul 2015 11:21:45 +0530
+
+rails (2:4.1.10-1) unstable; urgency=medium
+
+  * New upstream release; bug fixes only
+  * debian/copyright: fix mention to the license of
+    guides/assets/javascripts/jquery.min.js
+  * Drop transitional package ruby-activesupport-2.3; it was only needed for
+    upgrades from wheezy.
+  * Drop Breaks:/Replaces: relationships against packages provided by old
+    versioned source packages (e.g. *-2.3, *-3.2, *-4.0).
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 24 May 2015 18:11:04 -0300
+
+rails (2:4.1.8-1) unstable; urgency=medium
+
+  * New upstream release
+    - Includes only bug fixes and no behavior changes. In special, includes
+      fix for [CVE-2014-7818] and [CVE-2014-7829] (Arbitrary file existence
+      disclosure in Action Pack) (Closes: #770934)
+  * Add new transitional binary package ruby-activesupport-2.3 plus
+    appropriate Breaks:/Replaces: fieds in all binary packages to ensure
+    upgrades from wheezy work (Closes: #768850)
+    - Many thanks to Andreas Beckmann for helping debug the upgrade issue.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 25 Nov 2014 16:51:50 -0200
+
+rails (2:4.1.6-2) unstable; urgency=medium
+
+  * fix upgrades from wheezy:
+    - Remove Breaks: against old packages provided by previous versions of
+      Rails The Replaces: fields, left untouched, outght to be enough.
+    - ruby-actionview: Replaces ruby-actionpack-{2.3,3.2} since
+      ruby-actionview contains files that used to be in ruby-actionpack-*
+    - ruby-railties: Breaks/Replaces rails (<< 2:4) since ruby-railties
+      contains /usr/bin/rails which used to be in rails.
+  * debian/copyright: minor updates
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 30 Sep 2014 18:33:36 -0300
+
+rails (2:4.1.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches/relax-dependencies.patch: dropped, not necessary anymore
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 26 Sep 2014 15:59:24 -0300
+
+rails (2:4.1.5-1) unstable; urgency=high
+
+  * New upstream release
+    - Fixes CVE-2014-3514: data validation bypass vulnerability
+  * debian/watch: update to fetch new releases from github.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 18 Aug 2014 15:19:04 -0300
+
+rails (2:4.1.4-5) unstable; urgency=medium
+
+  * ruby-actionmailer: relax dependency on ruby-mail to work with the 2.6.x
+    series
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 04 Aug 2014 14:38:18 -0300
+
+rails (2:4.1.4-4) unstable; urgency=medium
+
+  * ruby-rails:
+    - add Recommends:
+      - ruby-jquery-rails
+      - ruby-coffee-rails
+      - ruby-sqlite3
+      - ruby-sass-rails
+      - ruby-uglifier
+      - ruby-spring
+      - ruby-turbolinks
+      - ruby-jbuilder
+      - ruby-sdoc
+    - add Breaks/Replaces: rails3
+    - bump Depends: ruby-sprockets-rails to (>= 2.1.3-1~)
+    - add Depends: ruby-treetop
+    - move ruby-activesuppport-3.2 from Breaks: to Conflicts:
+    - remove Breaks: rails (<< 2:4.1) since we now also provide a
+      `rails`` binary
+  * ruby-railties:
+    - remove Breaks: rails (<< 3:3.2.0)
+  * ruby-actionmailer:
+    - drop Depends: ruby-mail (<< 2.6)
+      cfe https://github.com/rails/rails/commit/bb0890d
+  * debian/tests/control: fix test dependencies to rails and *not* rails-3.2;
+    add needs-recommends instead of explicitly listing the recommended
+    packages
+  * debian/patches/mona_lisa.jpg_is_PD-Art_and_has_been_removed.patch: removed
+    as it does not make sense anymore (mona_lisa.jpg is just there).
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 03 Aug 2014 00:24:26 -0300
+
+rails (2:4.1.4-3) unstable; urgency=medium
+
+  * Re-add `rails` binary package
+  * Improve description for ruby-railties
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 26 Jul 2014 10:12:46 -0300
+
+rails (2:4.1.4-2) unstable; urgency=medium
+
+  [ Antonio Terceiro ]
+  * Don't install nonsensical binary from activesupport
+
+  [ Ondřej Surý ]
+  * Merge autopkgtests from rails-3.2
+  * Add missing sources for shCore.js and jquery.min.js
+  * Upload to unstable since no objections were raised to the RoR Debian
+    transition plan
+  * Remove repack script since there's nothing non-free in the upstream
+    tarball (Closes: #742407)
+  * Keep the guides/ (CC-BY-SA-3.0) and mona_lisa.jpg (PD), but document
+    that in d/copyright
+
+ -- Ondřej Surý <ondrej@debian.org>  Wed, 16 Jul 2014 17:19:07 +0200
+
+rails (2:4.1.4-1) experimental; urgency=medium
+
+  [ Antonio Terceiro ]
+  * debian/rules: adapt dh_clean call
+
+  [ Christian Hofstaedtler ]
+  * Relax dependencies
+  * Run bundle install --local, as in Debian Rails 3.2
+
+  [ Ondřej Surý ]
+  * New upstream version 4.1.4
+  * Drop versioning from rails package, we won't to provide just the last
+    stable upstream major version
+  * Update dependencies in d/control based on information from gemspec files
+  * Add ruby-actionview documentation
+  * Add conflict with old rails package
+  * Bump epoch to 2: to replace old virtual packages
+  * Update patches for 4.1.4 release
+  * Upload to experimental, so we can let the dust settle...
+
+ -- Ondřej Surý <ondrej@debian.org>  Wed, 16 Jul 2014 15:22:28 +0200
+
+rails-4.0 (4.0.2+dfsg-2) unstable; urgency=low
+
+  * Fix dependency -- ruby-rack doesn't have epoch (Closes: #731347)
+  * Move ruby-activerecord-deprecated-finders from Depends to Recommends
+
+ -- Ondřej Surý <ondrej@debian.org>  Thu, 12 Dec 2013 13:15:00 +0100
+
+rails-4.0 (4.0.2+dfsg-1) unstable; urgency=low
+
+  [ Antonio Terceiro ]
+  * ruby-actionpack-4.0: tighten versioned dependency on ruby-rack to take
+    epoch into account.
+
+  [ Ondřej Surý ]
+  * New upstream version 4.0.2+dfsg, fixes:
+    + [CVE-2013-6417] Incomplete fix to CVE-2013-0155 (Unsafe Query Generation Risk)
+    + [CVE-2013-4491] Reflective XSS Vulnerability in Ruby on Rails
+    + [CVE-2013-6415] XSS Vulnerability in number_to_currency
+    + [CVE-2013-6414] Denial of Service Vulnerability in Action View
+    + [CVE-2013-6416] XSS Vulnerability in simple_format helper
+
+ -- Ondřej Surý <ondrej@debian.org>  Wed, 04 Dec 2013 10:34:24 +0100
+
+rails-4.0 (4.0.0+dfsg-1) unstable; urgency=low
+
+  [ Antonio Terceiro ]
+  * Migrate to use dh_ruby multi-binary support
+
+  [ Ondřej Surý ]
+  * Initial release of Rails 4.0
+  * Merge ruby-{active,action}*-X.Y packages into rails-4.0
+  * Add Copyright headers for syntaxhighlighter
+  * New upstream version 4.0.0+dfsg
+  * Update the package based on ftp-master review:
+    + Weaken some Conflicts to Breaks (Keeping Conflicts for virtual
+      packages)
+    + Generate actionpack/lib/action_dispatch/journey/parser.rb in the
+      build using racc
+    + Fix copyright to include correct year: (c) 2004-2013 David
+      Heinemeier Hansson
+    + Add MIT or CC-BY license for HTML selector by Assaf Arkin
+    + PD-Art license is inconclusive, so we just remove the wikimedia Mona
+      Lisa picture and patch out the tests that were using it.
+      (http://commons.wikimedia.org/wiki/Commons:Reuse_of_PD-Art_photographs)
+    + Just remove whole guides.rubyonrails.org content from source tarball
+      (We'll repackage it to ruby-rails-guides-4.0 as soon as we clear the
+      licensing with upstream.)
+    + MIT-LICENSE in templates is needed for templating new projects, add
+      a lintian-override
+  * Add dversionmangle to debian/watch
+
+ -- Ondřej Surý <ondrej@debian.org>  Fri, 19 Jul 2013 15:35:13 +0200

@@ -1,0 +1,1153 @@
+tryton-server (5.0.33-2+deb11u2) bullseye-security; urgency=high
+
+  * Add 05_enforce_record_rules.patch.
+    This patch fixes the information disclosure leak when reading from
+    function fields with record rules
+    https://discuss.tryton.org/t/security-release-for-issue-12428/6397
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 22 Aug 2023 15:53:54 +0200
+
+tryton-server (5.0.33-2+deb11u1) bullseye-security; urgency=high
+
+  * This release contains fixes for XML parsing vulnerabilities:
+    https://discuss.tryton.org/t/security-release-for-issue11219-and-issue11244/5059
+    https://bugs.tryton.org/issue11219 (CVE-2022-26661)
+    https://bugs.tryton.org/issue11244 (CVE-2022-26662)
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 09 Mar 2022 12:04:36 +0100
+
+tryton-server (5.0.33-2) unstable; urgency=medium
+
+  * Refresh 03_werkzeug10_compatibility.patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 17 Feb 2021 17:46:28 +0100
+
+tryton-server (5.0.33-1) unstable; urgency=medium
+
+  * Updating to standards version 4.5.1, no changes needed.
+  * Merging upstream version 5.0.33.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 17 Feb 2021 17:05:57 +0100
+
+tryton-server (5.0.30-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.30.
+  * Refresh 03_werkzeug10_compatibility.patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Dec 2020 13:13:21 +0100
+
+tryton-server (5.0.26-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.26.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 26 Sep 2020 10:13:15 +0200
+
+tryton-server (5.0.23-2) unstable; urgency=medium
+
+  * Remove systemd from dh arguments, it is deprecated for this debhelper
+    compat.
+  * Correct a typo in a patch description.
+  * Remove the version constraint for werkzeug (Closes: #966984).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 10 Aug 2020 11:12:53 +0200
+
+tryton-server (5.0.23-1) unstable; urgency=medium
+
+  * Remove tryton-server.lintian-overrides.
+  * Add the according links for the binaries for compliance with the used
+    namespace.
+  * Update year of debian copyright.
+  * Bump the Standards-Version to 4.5.0, no changes needed.
+  * Add Rules-Requires-Root: no to d/control.
+  * Merging upstream version 5.0.23.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 04 Jul 2020 13:01:14 +0200
+
+tryton-server (5.0.20-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.20.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 05 Apr 2020 13:34:55 +0200
+
+tryton-server (5.0.19-1) unstable; urgency=medium
+
+  * Add 03_werkzeug10_compatibility.patch.
+  * Use the correct license for the distributed icons.
+  * Merging upstream version 5.0.19.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 12 Mar 2020 17:40:29 +0100
+
+tryton-server (5.0.16-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.16.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 03 Dec 2019 10:01:44 +0100
+
+tryton-server (5.0.14-2) unstable; urgency=medium
+
+  * Refresh patch 02_avoid_call_to_pypi.patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 22 Oct 2019 13:08:52 +0200
+
+tryton-server (5.0.14-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.14.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 21 Oct 2019 12:24:11 +0200
+
+tryton-server (5.0.10-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.10.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 23 Jul 2019 18:43:54 +0200
+
+tryton-server (5.0.6-2) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.4.0, no changes needed.
+  * Update year of debian copyright.
+  * Setting the branch in the watch file to the fixed version 5.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 22 Jul 2019 12:17:42 +0200
+
+tryton-server (5.0.6-1) unstable; urgency=medium
+
+  * Add the actual upstream maintainer key to signing-key.asc.
+  * Merging upstream version 5.0.6.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 03 Apr 2019 13:55:35 +0200
+
+tryton-server (5.0.5-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.5.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 20 Feb 2019 10:45:57 +0100
+
+tryton-server (5.0.4-1) unstable; urgency=medium
+
+  * Add more configuration parameters to trytond.conf.
+  * Merging upstream version 5.0.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 23 Jan 2019 16:06:18 +0100
+
+tryton-server (5.0.3-1) unstable; urgency=medium
+
+  * Use generic Depends in tests/control.
+  * Bump the Standards-Version to 4.3.0, no changes needed.
+  * Merging upstream version 5.0.3.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 06 Jan 2019 13:01:38 +0100
+
+tryton-server (5.0.2-2) unstable; urgency=medium
+
+  * Run the package testsuite as autopkgtest.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 30 Dec 2018 17:03:55 +0100
+
+tryton-server (5.0.2-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 03 Dec 2018 13:45:23 +0100
+
+tryton-server (5.0.1-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.0.
+  * Merging upstream version 5.0.1.
+    Contains a fix for security issue
+    https://bugs.tryton.org/issue7766
+    https://discuss.tryton.org/t/security-release-for-issue7766
+    No CVE available so far.
+  * Add Build-Depends and Depends python3-passlib.
+  * Move python3-bcrypt from Recommends to (Build-)Depends.
+  * Replace no more needed unoconv by the needed libreoffice dependencies.
+  * Add optional python3-html2text to Recommends.
+  * Refresh patches.
+  * Updating to Standards-Version: 4.2.1, no changes needed.
+  * Update signing-key.asc with the minimized actual upstream maintainer
+    key.
+  * Update the man pages for series 5.0.
+  * Add a man page for trytond-worker.
+  * Add init scripts for trytond-worker.
+  * Remove lintian override for application-in-library-section, the false
+    positive was fixed in lintian.
+  * Add tryton-server-worker to lintian overrides for omitted-systemd-
+    service-for-init.d-script.
+  * Update trytond.conf for series 5.0.
+  * Add hints for the start of Tryton cron and workers.
+  * Add NEWS for new major 5.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 19 Nov 2018 21:21:40 +0100
+
+tryton-server (4.6.3-2) unstable; urgency=medium
+
+  * Call dh_installinit with correct parameters for compat level >=10
+    (Closes: #895497).
+  * Add tryton-server.lintian-overrides.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 13 Apr 2018 13:01:38 +0200
+
+tryton-server (4.6.3-1) unstable; urgency=medium
+
+  * Use correct options in dh_installinit for older debhelper versions.
+  * Bump debhelper compat level to 10.
+  * Merging upstream version 4.6.3.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 30 Mar 2018 14:36:12 +0200
+
+tryton-server (4.6.2-2) unstable; urgency=medium
+
+  * Update year of debian copyright.
+  * Updating to standards version 4.1.3, no changes needed.
+  * control: update Vcs-Browser and Vcs-Git
+  * Set the Maintainer address to team+tryton-team@tracker.debian.org.
+  * Add DATABASES parameter to sysvinit scripts.
+  * Rework the start configuration for Tryton cron jobs.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 29 Mar 2018 21:15:24 +0200
+
+tryton-server (4.6.2-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 06 Jan 2018 11:49:44 +0100
+
+tryton-server (4.6.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 12 Dec 2017 19:15:11 +0100
+
+tryton-server (4.6.0-1) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.1.1, no changes needed.
+  * Merging upstream version 4.6.0.
+  * Refresh patches.
+  * Updating debian/manpages.
+  * Prepare the NEWS for 4.6.0.
+  * Remove superseded BD on dh_systemd.
+  * Add 02_avoid_call_to_pypi.patch.
+  * Add versioned dependency for relatorio to be safe with respect to BD
+    python-magic.
+  * Correcting a typo in a man page.
+  * Use https in the watch file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 07 Nov 2017 10:20:49 +0100
+
+tryton-server (4.4.4-1) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.1.0, no changes needed.
+  * Merging upstream version 4.4.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 05 Oct 2017 11:16:16 +0200
+
+tryton-server (4.4.3-3) unstable; urgency=medium
+
+  * Switch to Python3.
+  * Remove some duplicate sections from trytond.conf.
+  * Set the standard log level to ERROR.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 20 Aug 2017 17:59:49 +0200
+
+tryton-server (4.4.3-2) unstable; urgency=medium
+
+  * Use the preferred https URL format in the copyright file.
+  * Bump the Standards-Version to 4.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Aug 2017 16:03:14 +0200
+
+tryton-server (4.4.3-1) unstable; urgency=medium
+
+  * Adapt trytond_log.conf to use correct configparser format.
+  * Merging upstream version 4.4.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Aug 2017 12:48:41 +0200
+
+tryton-server (4.4.2-1) unstable; urgency=medium
+
+  * Change the maintainer address to tryton-debian@lists.alioth.debian.org
+    (Closes: #865109).
+  * Merging upstream version 4.4.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 02 Jul 2017 16:49:52 +0200
+
+tryton-server (4.4.1-2) unstable; urgency=medium
+
+  * Adapt the date in the NEWS file to the final changelog entry.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 12 Jun 2017 13:13:18 +0200
+
+tryton-server (4.4.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.4.0.
+  * Merging upstream version 4.4.1.
+  * Updating debian/copyright.
+  * Updating debian/manpages.
+  * Add new deprecated modules to 01_migrate_obsolete_modules.patch.
+  * Add Breaks for the deprecated modules in series 4.4.
+  * Add the NEWS for series 4.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 10 Jun 2017 23:37:13 +0200
+
+tryton-server (4.2.3-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 04 Apr 2017 09:35:29 +0200
+
+tryton-server (4.2.2-1) unstable; urgency=medium
+
+  * Add the actual upstream maintainer key to signing-key.asc.
+  * Merging upstream version 4.2.2.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 14 Mar 2017 10:26:45 +0100
+
+tryton-server (4.2.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 04 Jan 2017 12:31:07 +0100
+
+tryton-server (4.2.0-2) unstable; urgency=medium
+
+  * Use sudo instead of the root prefix for better understanding
+    throughout the whole document.
+  * Improve the command lines in NEWS for better understanding (Closes:
+    #847436).
+  * Add configuration parameters for module authentication_sms.
+  * Include the language code update into the upgrade procedures for 4.2.
+  * Extend the README.Debian to contain also hints for language activation
+    and manual migration procedures.
+  * Add also the manual upgrade procedures for 3.6 and 4.0 to the NEWS
+    file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 19 Dec 2016 10:13:50 +0100
+
+tryton-server (4.2.0-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.0.
+  * Updating the Recommends for 4.2.
+  * Updating 01_migrate_obsolete_modules.patch for 4.2.
+  * Updating the man pages for 4.2.
+  * Update README.Debian for 4.2.
+  * Updating trytond.conf for 4.2.
+  * Adding the NEWS for the new major 4.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 05 Dec 2016 15:31:44 +0100
+
+tryton-server (4.0.5-1) unstable; urgency=medium
+
+  * Setting the log level to WARNING, log level INFO logs meanwhile to
+    many details.
+  * Add missing lsb-base to Depends (Closes: #840751).
+  * Merging upstream version 4.0.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 08 Nov 2016 09:17:06 +0100
+
+tryton-server (4.0.4-1) unstable; urgency=high
+
+  * Merging upstream version 4.0.4.
+  * CVE-2016-1241 Prevent read of password hash.
+  * CVE-2016-1242 Sanitize path in file_open.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 30 Aug 2016 14:58:56 +0200
+
+tryton-server (4.0.3-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 05 Aug 2016 11:16:37 +0200
+
+tryton-server (4.0.2-2) unstable; urgency=medium
+
+  * Adding the correct web root for tryton-sao to trytond.conf.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 25 Jul 2016 18:59:35 +0200
+
+tryton-server (4.0.2-1) unstable; urgency=medium
+
+  * Updating to Standards-Version: 3.9.8, no changes needed.
+  * Correcting a typo in the news file.
+  * Removing tryton-neso, it is no more in the archive.
+  * Merging upstream version 4.0.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 11 Jul 2016 19:08:17 +0200
+
+tryton-server (4.0.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.0.
+  * Merging upstream version 4.0.1.
+  * Updating the copyright file.
+  * Updating Depends, Recommends and Suggests for 4.0.
+  * Updating and adding new manpages for the new dedicated binaries.
+  * Removing the cron option from the service file for the server.
+  * Adding a dedicated service file for the cron job.
+  * Updating README.Debian for 4.0.
+  * Updating the configuration parameters in trytond.conf.
+  * Removing the cron option from the sysvinit configuration.
+  * Providing a separate sysvinit service for the now dedicated cron job.
+  * Refreshing 01_migrate_obsolete_modules patch.
+  * Renaming 01_migrate_obsolete_modules to
+    01_migrate_obsolete_modules.patch.
+  * Adding Documentation keys to the service files.
+  * Improving the descriptions in the service files.
+  * Adding the NEWS for 4.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 30 May 2016 18:17:30 +0200
+
+tryton-server (3.8.5-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 09 Apr 2016 20:05:27 +0200
+
+tryton-server (3.8.4-1) unstable; urgency=medium
+
+  * Updating signing-key.asc with the actual upstream maintainer keys.
+  * Merging upstream version 3.8.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 15 Mar 2016 21:04:35 +0100
+
+tryton-server (3.8.3-2) unstable; urgency=medium
+
+  * Updating to standards version 3.9.7, no changes needed.
+  * Updating VCS-Browser to https and canonical cgit URL.
+  * Updating VCS-Git to https and canonical cgit URL.
+  * Removing the braces from the dh call.
+  * Removing the version constraint from python.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 08 Mar 2016 13:09:34 +0100
+
+tryton-server (3.8.3-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 10 Feb 2016 18:16:10 +0100
+
+tryton-server (3.8.2-1) unstable; urgency=medium
+
+  * Moving python-simplejson from Depends to Recommends.
+  * Merging upstream version 3.8.2.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 17 Jan 2016 19:05:15 +0100
+
+tryton-server (3.8.1-1) unstable; urgency=high
+
+  * Merging upstream version 3.8.1.
+  * Fix for CVE-2015-0861 field access on multi write.
+    https://bugs.tryton.org/issue5167
+    https://codereview.tryton.org/22631002
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 16 Dec 2015 15:26:05 +0100
+
+tryton-server (3.8.0-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.0.
+  * Refreshing patches.
+  * Actualisation of the man page.
+  * Adding news for version 3.8.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 12 Nov 2015 19:00:59 +0100
+
+tryton-server (3.6.3-3) unstable; urgency=medium
+
+  * Reverting partly 3d6be619141e3ca0390459b6cfaa22b323be2101.
+  * Removing initial space in DAEMON_OPTS in tryton-server.default
+    (Closes: #803066).
+  * Adding the cron option also to the default DAEMON_OPTS in the init
+    script.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 27 Oct 2015 10:57:08 +0100
+
+tryton-server (3.6.3-2) unstable; urgency=medium
+
+  * Removing libreoffice* from Suggests.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 23 Oct 2015 13:20:27 +0200
+
+tryton-server (3.6.3-1) unstable; urgency=medium
+
+  * Merging upstream version 3.6.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 20 Sep 2015 21:06:14 +0200
+
+tryton-server (3.6.2-1) unstable; urgency=medium
+
+  * Adapting section naming in gbp.conf to current git-buildpackage.
+  * Enabling tests on sqlite memory database.
+  * Merging upstream version 3.6.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 15 Jul 2015 14:09:50 +0200
+
+tryton-server (3.6.1-1) unstable; urgency=medium
+
+  * Running internal cron of trytond by default.
+  * Updating year of debian copyright.
+  * Using POSIX-compatible pathfind in postrm to remove hardcoded path.
+  * Fixing spelling error in README.
+  * Unifying quoting of variables in maintainer scipts.
+  * Merging upstream version 3.6.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 20 May 2015 14:13:40 +0200
+
+tryton-server (3.6.0-1) unstable; urgency=medium
+
+  * Wrapping and sorting control files (wrap-and-sort -bts).
+  * Merging upstream version 3.6.0.
+  * Adding NEWS for version 3.6.
+  * Renaming and updating patch 01_migrate_obsolete_ldap_connection to
+    01_migrate_obsolete_modules.
+  * Updating manpage.
+  * Adding setting price_decimal to trytond.conf.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 26 Apr 2015 23:49:50 +0200
+
+tryton-server (3.4.3-1) unstable; urgency=medium
+
+  * Improving boilerplate in d/control (Closes: #771722).
+  * Removing TODO from docs prospectively, they are about to be removed
+    upstream.
+  * Merging upstream version 3.4.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 31 Mar 2015 14:25:01 +0200
+
+tryton-server (3.4.2-1) unstable; urgency=medium
+
+  * Removing on purge also the data directory of tryton-server.
+  * Adding actual upstream signing key.
+  * Merging upstream version 3.4.2.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 18 Feb 2015 10:34:16 +0100
+
+tryton-server (3.4.1-1) unstable; urgency=medium
+
+  * Merging upstream version 3.4.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 04 Dec 2014 19:15:52 +0100
+
+tryton-server (3.4.0-2) unstable; urgency=medium
+
+  * Adding path to the configuration file to the commands in the README.
+  * Adding path to the configuration file to the commands in NEWS.
+  * Correcting conf file handling.
+  * Removing python-openssl from Recommends, no more needed.
+  * Improving the documentation in trytond.conf.
+  * Correcting documentation in trytond.conf to reflect current ipv6
+    behavior.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 02 Dec 2014 11:06:28 +0100
+
+tryton-server (3.4.0-1) unstable; urgency=medium
+
+  * Merging upstream version 3.4.0.
+  * Adding a default configuration file.
+  * Removing the configuration patches, no more needed.
+  * Updating copyright, the backport of orderddict was removed.
+  * Updating man page.
+  * Adding a logging configuration file needed for version 3.4.
+  * Correcting the SSL settings in trytond.conf to keep old behavior.
+  * Removing old logrotate configuration, no more needed.
+  * Using the subdirectory /etc/tryton for all configuration files.
+  * Updating README.Debian for version 3.4.
+  * Adding NEWS for the new version 3.4.
+  * Adding 01_migrate_obsolete_ldap_connection patch.
+  * Setting ownership and permissions for the logging configuration file.
+  * Removing also dpkg-statoverrides for trytond_log.conf on purge.
+  * Adapting tryton-server.default to the new setup.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 23 Oct 2014 13:22:34 +0200
+
+tryton-server (3.2.3-1) unstable; urgency=high
+
+  * Adding actual upstream signing key.
+  * Updating to Standards-Version: 3.9.6, no changes needed.
+  * Merging upstream version 3.2.3.
+  * Contains fixes for CVE-2014-6633. This patch introduces fixes to not
+    allow double underscores in safe_eval and uses literal_eval wherever
+    possible. S.a https://bugs.tryton.org/issue4155.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 30 Sep 2014 12:08:43 +0200
+
+tryton-server (3.2.2-1) unstable; urgency=medium
+
+  * Adding a tryton-server.service file.
+  * Merging upstream version 3.2.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 26 Aug 2014 14:33:42 +0200
+
+tryton-server (3.2.1-1) unstable; urgency=medium
+
+  * Updating signing key while using now plain .asc files instead of .pgp
+    binaries.
+  * Building with dh-systemd to provide clean interaction when switching
+    init systems.
+  * Improving setup directions in README.
+  * Merging upstream version 3.2.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 02 Jul 2014 14:05:43 +0200
+
+tryton-server (3.2.0-1) unstable; urgency=medium
+
+  * Merging upstream version 3.2.0.
+  * Bumping minimal required Python version to 2.7.
+  * Updating gbp.conf for usage of upstream tarball compression.
+  * Adding news for new major.
+  * Updating Recommends and Suggests for version 3.2.
+  * Updating manpage.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 24 Apr 2014 15:30:29 +0200
+
+tryton-server (3.0.4-1) unstable; urgency=medium
+
+  * Merging upstream version 3.0.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 16 Apr 2014 15:11:11 +0200
+
+tryton-server (3.0.3-1) unstable; urgency=medium
+
+  * Adding the tryton user to the ssl-cert group on fresh installs.
+  * Reviewing and updating README.Debian.
+  * Merging upstream version 3.0.3.
+  * Updating copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 26 Mar 2014 18:50:26 +0100
+
+tryton-server (3.0.2-2) unstable; urgency=medium
+
+  * Updating year in debian copyright.
+  * Removing debian/source/options, we are building with dpkg defaults.
+  * Removing PYBUILD_DESTDIR_python2 from rules, it is no more needed.
+  * Adding pgp verification for uscan.
+  * Adding gbp.conf for usage with git-buildpackage.
+  * Re-enabling PYBUILD_DESTDIR_python2, it is needed in a multibinary
+    package.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 12 Mar 2014 12:48:48 +0100
+
+tryton-server (3.0.2-1) unstable; urgency=medium
+
+  * Using dpkg-statoverride to allow local overrides of (otherwise)
+    enforced restricted access permissions to /etc/trytond.conf,
+    /var/lib/tryton and /var/log/tryton.
+  * Merging upstream version 3.0.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 19 Jan 2014 19:43:23 +0100
+
+tryton-server (3.0.1-1) unstable; urgency=low
+
+  * Merging upstream version 3.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 11 Dec 2013 13:00:01 +0100
+
+tryton-server (3.0.0-2) unstable; urgency=low
+
+  * Pointing VCS fields to new location on alioth.debian.org.
+  * Using dpkg defaults for xz compression.
+  * Adding SSL packages to Recommends.
+  * Moving unoconv from Suggests to Recommends.
+  * Renaming 01-debian-data-dir to 01-debian-data-dir.patch.
+  * Adding 02-snakeoil-certs.patch
+  * Improving 01-debian-data-dir.patch according to dep3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 02 Dec 2013 21:18:12 +0100
+
+tryton-server (3.0.0-1) unstable; urgency=low
+
+  * Adding tryton-server-doc to Suggests.
+  * Adding tryton-modules-all to Suggests.
+  * Merging upstream version 3.0.0.
+  * Updating Depends.
+  * Refreshing patches.
+  * Adding NEWS for the new major version 3.0.0.
+  * Updating README.Debian.
+  * Removing echo messages from postinst.
+  * Updating manpage.
+  * Updating to standards version 3.9.5, no changes needed.
+  * Changing to buildsystem pybuild.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 25 Nov 2013 17:56:04 +0100
+
+tryton-server (2.8.3-1) unstable; urgency=low
+
+  * Merging upstream version 2.8.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 13 Oct 2013 20:24:05 +0200
+
+tryton-server (2.8.2-1) unstable; urgency=low
+
+  * Adding copyright and license for trytond/tools/ordereddict.py
+    (Closes: #716781).
+  * Moving sphinx-build to override_dh_auto_build.
+  * Removing pydist-overrides, it is no more needed.
+  * Removing inadvertently comitted .pc directory.
+  * Adapting the rules file to work also with git-buildpackage.
+  * Merging upstream version 2.8.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 05 Aug 2013 21:23:58 +0200
+
+tryton-server (2.8.1-1) unstable; urgency=low
+
+  * Merging upstream version 2.8.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 10 Jun 2013 13:52:34 +0200
+
+tryton-server (2.8.0-2) unstable; urgency=low
+
+  * Builduing new package tryton-server-doc from sphinx documentation.
+  * Reordering overrides in rules file.
+  * Adding new major hint to NEWS.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 31 May 2013 17:27:41 +0200
+
+tryton-server (2.8.0-1) experimental; urgency=low
+
+  * Merging upstream version 2.8.0.
+  * Updating copyright.
+  * Adjusting Recommends for Tryton version 2.8.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 02 May 2013 15:21:23 +0200
+
+tryton-server (2.6.3-3) experimental; urgency=low
+
+  * Updating README.Debian to current version.
+  * Adding group read permissions to trytond conf file.
+  * Removing Daniel from Uploaders. Thanks for your work! (Closes: #704410).
+  * Fixing a typo in README.Debian.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 27 Apr 2013 15:25:06 +0200
+
+tryton-server (2.6.3-2) experimental; urgency=low
+
+  * Updating Vcs-Git to correct address.
+  * Adding watch file. Thanks to Bart Martens <bartm@debian.org>.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 23 Mar 2013 14:01:37 +0100
+
+tryton-server (2.6.3-1) experimental; urgency=low
+
+  * Removing obsolete Dm-Upload-Allowed
+  * Updating and adding options to man page (Closes: #691556).
+  * Updating to Standards-Version: 3.9.4, no changes needed.
+  * Merging upstream version 2.6.1.
+  * Merging upstream version 2.6.2.
+  * Merging upstream version 2.6.3.
+  * Escaping correctly the - sign in man page.
+  * Updating copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 16 Feb 2013 21:45:02 +0100
+
+tryton-server (2.6.0-1) experimental; urgency=low
+
+  * Merging upstream version 2.6.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 24 Oct 2012 14:25:28 +0200
+
+tryton-server (2.4.2-2) experimental; urgency=low
+
+  [ Daniel Baumann ]
+  * Updating maintainers field.
+  * Updating vcs fields.
+  * Switching to xz compression.
+  * Updating to debhelper version 9.
+  * Correcting copyright file to match format version 1.0.
+  * Sorting overrides alphabetically in rules.
+
+  [ Mathias Behrle ]
+  * Merging branch debian-wheezy-2.2 (Closes: #687747).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 16 Sep 2012 12:54:49 +0200
+
+tryton-server (2.4.2-1) experimental; urgency=high
+
+  * Merging upstream version 2.4.2.
+  * This release fixes CVE-2012-2238
+    https://bugs.tryton.org/issue2757
+    http://hg.tryton.org/2.4/trytond/rev/279f0031b461
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 11 Sep 2012 13:27:37 +0200
+
+tryton-server (2.4.1-1) experimental; urgency=low
+
+  * Merging upstream version 2.4.0.
+  * Merging upstream version 2.4.1.
+  * Updating Copyright.
+  * Removing patch 02-support-pywebdav-0.9.8, went upstream.
+  * Refreshing patch 01-debian-data-dir.
+  * Removing versioned Recommend of pywebdav, 0.9.8 is in testing.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 26 Apr 2012 19:36:51 +0200
+
+tryton-server (2.2.2-1) unstable; urgency=high
+
+  * Merging upstream version 2.2.2.
+    This upstream version contains the fix for CVE-2012-0215:
+    Don't allow rpc call on ModelStorage without ModelView
+  * Refreshing 02-support-pywebdav-0.9.8 patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 28 Mar 2012 23:15:53 +0200
+
+tryton-server (2.2.1-3) unstable; urgency=low
+
+  * Adding backport of shared WebDAV to
+    debian/patches/02-support-pywebdav-0.9.8.
+  * Adding NEWS file for upgrade to shared WebDAV.
+  * Adding versioned Recommend for python-webdav >= 0.9.8.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 28 Mar 2012 13:38:01 +0200
+
+tryton-server (2.2.1-2) unstable; urgency=low
+
+  * Moving python-psyopg2 to Recommends.
+  * Updating to Standards-Version: 3.9.3, no changes needed.
+  * Updating year in copyright.
+  * Adding Format header for DEP5.
+  * Adding patch to support new structure of pywebdav > 0.9.4.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 27 Mar 2012 10:38:02 +0200
+
+tryton-server (2.2.1-1) unstable; urgency=low
+
+  * Merging upstream version 2.2.1.
+  * Bumping X-Python-Version to >=2.6.
+  * Updating version in man page.
+  * Adding python-polib to pydist-overrides.
+  * Updating Depends and Suggests for version 2.2.0.
+  * Setting the data_path of trytond to the home of the tryton user
+    (Closes: #624350).
+  * Updating copyright.
+  * Removing 01-dfsg-icons patch, patch went upstream.
+  * Merging upstream version 2.2.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 26 Dec 2011 13:56:34 +0100
+
+tryton-server (2.0.2+dfsg-1) unstable; urgency=low
+
+  * Merging upstream version 2.0.2+dfsg.
+  * Removing tango-icon-theme from Depends.
+  * Adding Bug URL to dfsg-icons patch.
+  * Rediffing dfsg-icons patch.
+  * Reordering anf fixing license for public-domain.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 03 Oct 2011 14:54:36 +0200
+
+tryton-server (2.0.1+dfsg-3) unstable; urgency=low
+
+  * Removing logrotate from Recommends, trytond uses internal logrotate handler.
+  * Removing deprecated XB-Python-Version for dh_python2.
+  * Adding license for icons taken from tango project.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 22 Jul 2011 13:50:57 +0200
+
+tryton-server (2.0.1+dfsg-2) unstable; urgency=low
+
+  * Patching in DFSG compatible icons instead of linking to them,
+    setup.py needs to find them.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 16 Jul 2011 23:32:18 +0200
+
+tryton-server (2.0.1+dfsg-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Moving to source format 3.0 (quilt).
+  * Not wrapping uploaders field, it does not exceed 80 chars.
+  * Compacting copyright file.
+  * Updating manpage.
+  * Silencing and correcting rmdir calls in postrm.
+  * Prefixing variables in maintainer scripts in order to ensure not to get
+    in the way of the rest of the environment (and in anticipation of using
+    debconf later on).
+
+  [ Mathias Behrle ]
+  * Merging upstream version 2.0.1+dfsg.
+  * Replacing non-DFSG compliant graphics by linking to tango-icon-theme.
+  * Moving from deprecated python-support to dh_python, thanks to
+    Charlie Smotherman <cjsmo@cableone.net> (Closes: #632773).
+  * Removing empty variable from DAEMON_OPTS.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 14 Jul 2011 15:47:15 +0200
+
+tryton-server (2.0.1-1) unstable; urgency=low
+
+  * Merging upstream version 2.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 05 Jun 2011 13:19:44 +0200
+
+tryton-server (2.0.0-1) unstable; urgency=low
+
+  * Changing recommends from openoffice.org to libreoffice (Closes: #614324).
+  * Moving recommends for office-suite to suggests.
+  * Updating to standards version 3.9.2.
+  * Improving logging to let handle server rotation of log files.
+  * Merging upstream version 2.0.0.
+  * Adding databases to Should-Start and Should-Stop.
+  * Fixing creation of log directory for repeated installation.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 25 May 2011 00:25:09 +0200
+
+tryton-server (1.8.2-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Removing --remove-home from deluser call in postinst (Closes:
+    #604214).
+
+  [ Mathias Behrle ]
+  * Enforcing stronger permissions on trytond.conf in postinst (Closes:
+    #612644).
+  * Merging upstream version 1.8.2.
+  * Updating Copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 15 Feb 2011 13:20:08 +0100
+
+tryton-server (1.8.1-1) experimental; urgency=low
+
+  * Merging upstream version 1.8.1.
+  * Updating email address of Mathias.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 19 Nov 2010 14:36:49 +0100
+
+tryton-server (1.8.0-1) experimental; urgency=low
+
+  * Updating to debhelper version 8.
+  * Updating to standards version 3.9.1.
+  * Switching to source format 3.0 (quilt).
+  * Merging upstream version 1.8.0.
+  * Updating version and date header in manpage.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 12 Nov 2010 12:41:59 +0100
+
+tryton-server (1.6.1-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Wrapping copyright.
+
+  [ Mathias Behrle ]
+  * Moving python-psyco and python-sphinx to Suggests.
+  * Moving logrotate to Recommends.
+
+  [ Daniel Baumann ]
+  * Updating standards version to 3.9.0.
+  * Merging upstream version 1.6.1.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 06 Aug 2010 16:36:02 +0200
+
+tryton-server (1.6.0-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Adding Dm-Upload-Allowed in control in preparation for Mathias.
+
+  [ Mathias Behrle ]
+  * Merging upstream version 1.6.0.
+  * Updating copyright.
+  * Updating depends and recommends.
+  * Setting minimal python version to 2.5 for sqlite support.
+  * Updating postinst message.
+  * Updating README.Debian.
+
+  [ Daniel Baumann ]
+  * Updating date and version header in manpage.
+  * Fixing bashisms and other cosmetics in init, defaults, and postinst
+    scripts.
+
+ -- Mathias Behrle <mathiasb@mbsolutions.selfip.biz>  Sun, 09 May 2010 21:55:54 +0200
+
+tryton-server (1.4.5-2) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Adding logrotate script.
+
+  [ Daniel Baumann ]
+  * Addiing depends to remote_fs in init script.
+  * Adding logrotate to suggests.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 07 Apr 2010 00:18:15 +0200
+
+tryton-server (1.4.5-1) unstable; urgency=low
+
+  * Mergin upstream version 1.4.5.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 31 Mar 2010 23:59:30 +0200
+
+tryton-server (1.4.4-1) unstable; urgency=low
+
+  * Updating year in copyright file.
+  * Removing unneeded python-all-dev from build-depends.
+  * Bumping versioned build-depends on debhelper.
+  * Updating to standards 3.8.4.
+  * Merging upstream version 1.4.4.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 20 Feb 2010 11:07:27 +0100
+
+tryton-server (1.4.3-1) unstable; urgency=low
+
+  * Merging upstream version 1.4.3.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 09 Dec 2009 19:26:44 +0100
+
+tryton-server (1.4.2-1) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Fixing init command in README.
+  * Adding hint for client major version.
+
+  [ Daniel Baumann ]
+  * Merging upstream version 1.4.2.
+  * Updating README.source.
+  * Adding explicit debian source version 1.0 until switch to 3.0.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 25 Nov 2009 12:31:35 +0100
+
+tryton-server (1.4.1-2) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Adding postgresql to Recommends.
+  * Removing deprecated option -q for PostgreSQL client commands.
+  * Reworking README to be more explicit.
+  * Adding neso to postinst message.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 31 Oct 2009 09:13:09 +0100
+
+tryton-server (1.4.1-1) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Merging upstream version 1.4.1.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 21 Oct 2009 06:10:04 +0200
+
+tryton-server (1.4.0-1) unstable; urgency=low
+
+  * Merging upstream version 1.4.0.
+  * Adding tryton-neso to suggests.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 19 Oct 2009 21:12:15 +0200
+
+tryton-server (1.2.2-2) unstable; urgency=low
+
+  * Bumping versioned build-depends on debhelper.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 18 Oct 2009 14:19:25 +0200
+
+tryton-server (1.2.2-1) unstable; urgency=low
+
+  * Updating to standards version 3.8.3.
+  * Adding maintainer homepage field to control.
+  * Adding README.source.
+  * Merging upstream version 1.2.2.
+  * Adding recommends to python-openssl.
+  * Moving maintainer homepage field to copyright.
+  * Updating README.source.
+  * Using ascii only characters in copyright.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 05 Sep 2009 09:40:14 +0200
+
+tryton-server (1.2.1-3) unstable; urgency=low
+
+  * Updating maintainer field.
+  * Updating vcs fields.
+  * Wrapping lines in control.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 10 Aug 2009 20:31:40 +0200
+
+tryton-server (1.2.1-2) unstable; urgency=low
+
+  * Dropping information in README.Debian for postgresql 8.2 and older,
+    even lenny has already 8.3.
+  * Corrected wrapping of README.Debian to 80 characters a line.
+  * Minimizing rules file.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 26 Jul 2009 20:52:02 +0200
+
+tryton-server (1.2.1-1) unstable; urgency=low
+
+  * Updating to build with python2.6.
+  * Updating package to standards version 3.8.2.
+  * Merging upstream version 1.2.1.
+  * Updating date and version in manpage header.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 10 Jul 2009 14:13:56 +0200
+
+tryton-server (1.2.0-2) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Adding update information to postinst script.
+
+  [ Daniel Baumann ]
+  * Removing log file and (potentially) empty directories on purge
+    (Closes: #527380).
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 07 May 2009 14:30:43 +0200
+
+tryton-server (1.2.0-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Merging upstream version 1.2.0.
+  * Tidy rules files.
+  * Updating version information in manpage.
+  * Updating copyright file for new upstream release.
+  * Including TODO file in docs.
+
+  [ Mathias Behrle ]
+  * Updating application description.
+
+  [ Daniel Baumann ]
+  * Correcting wrapping of control file.
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 21 Apr 2009 19:27:00 +0200
+
+tryton-server (1.0.3-3) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Fixing init script to use the correct daemon user (Closes: #521653).
+  * Adding documentation for forced chmod on conf file (Closes: #521659).
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 30 Mar 2009 11:05:00 +0200
+
+tryton-server (1.0.3-2) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Reworking general server setup and documentation.
+
+  [ Daniel Baumann ]
+  * Adding Mathias to uploaders.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 28 Mar 2009 16:10:00 +0100
+
+tryton-server (1.0.3-1) unstable; urgency=low
+
+  * Merging upstream version 1.0.3.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 23 Mar 2009 08:01:00 +0100
+
+tryton-server (1.0.2-1) unstable; urgency=low
+
+  * Merging upstream version 1.0.2.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 23 Mar 2009 07:25:00 +0100
+
+tryton-server (1.0.1-1) unstable; urgency=low
+
+  * Merging upstream version 1.0.1.
+  * Updating to standards 3.8.1.
+  * Making package arch all as it should be (Closes: #520810).
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 22 Mar 2009 22:35:00 +0100
+
+tryton-server (1.0.0-2) unstable; urgency=low
+
+  * Updating recommends to openoffice-python.
+  * Updating recommends to openoffice.org.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 22 Mar 2009 14:51:00 +0100
+
+tryton-server (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #506095).
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 12 Jan 2009 15:49:00 -0500

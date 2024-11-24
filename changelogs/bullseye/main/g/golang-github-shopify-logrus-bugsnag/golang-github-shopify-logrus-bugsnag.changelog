@@ -1,0 +1,51 @@
+golang-github-shopify-logrus-bugsnag (0.0~git20171204.577dee2-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit,
+    Repository, Repository-Browse.
+
+  [ Anthony Fok ]
+  * debian/watch: Update to version=4 and set to track git HEAD
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Apply "cme fix dpkg" fixes:
+    - Organize debian/control fields
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+    - Bump Standards-Version to 4.5.0 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * debian/control: Change Section from devel to golang
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Fri, 20 Nov 2020 22:15:30 -0700
+
+golang-github-shopify-logrus-bugsnag (0.0~git20171204.577dee2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Tianon Gravi ]
+  * Initial debian/
+  * Bump version to include LICENSE
+  * Update "Copyright" owners
+  * Add "debian/watch"
+  * s/UNRELEASED/unstable/
+
+  [ Dmitry Smirnov ]
+  * New upstream snapshot
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional
+  * debhelper & compat to version 11
+  * golang-go --> golang-any
+  * New patch to disable broken test.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 12 Jun 2018 21:34:20 +1000
+
+golang-github-shopify-logrus-bugsnag (0.0~git20160517.0.5a46080-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Tue, 17 May 2016 11:12:02 -0700

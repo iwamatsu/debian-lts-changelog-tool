@@ -1,0 +1,25 @@
+gobuster (2.0.1-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 11:58:13 +0200
+
+gobuster (2.0.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Remove trailing whitespaces
+
+  [ Alexander Fischer ]
+  * New upstream version 2.0.1
+  * remove patch
+  * changed uuid library dependency
+  * removed test file due to missing dependency in debian
+
+ -- Alexander Fischer <mirar@chaosmail.org>  Sun, 03 Feb 2019 14:03:01 +0100
+
+gobuster (1.4.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #897628)
+
+ -- Alexander Fischer <mirar@chaosmail.org>  Thu, 03 May 2018 17:55:25 +0200

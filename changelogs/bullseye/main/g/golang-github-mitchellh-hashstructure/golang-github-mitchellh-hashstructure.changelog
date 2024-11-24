@@ -1,0 +1,42 @@
+golang-github-mitchellh-hashstructure (1.0.0-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 08 Jan 2021 14:12:17 +0100
+
+golang-github-mitchellh-hashstructure (1.0.0-1) unstable; urgency=medium
+
+  * New upstream version 1.0.0
+  * Update debian/watch to track release tarballs
+  * Bump Standards-Version to 4.2.1 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 20:26:04 -0700
+
+golang-github-mitchellh-hashstructure (0.0~git20170608.2bca23e-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20170608.2bca23e
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright,
+    adding "Testsuite: autopkgtest-pkg-go" field,
+    setting Priority to optional, bumping Standards-Version to 4.2.0,
+    and using secure https URL in debian/copyright, etc.
+  * Build-Depends on golang-any instead of golang-go
+    and remove unnecessary Depends on golang-go from -dev package
+  * Use debhelper (>= 11)
+  * Add myself to the list of Uploaders
+  * Add debian/watch, checking Git HEAD
+
+ -- Anthony Fok <foka@debian.org>  Sat, 18 Aug 2018 07:13:45 -0600
+
+golang-github-mitchellh-hashstructure (0.0~git20160209.0.6b17d66-1) unstable; urgency=medium
+
+  * Initial release (Closes: #818546).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 18 Mar 2016 08:03:42 +1100

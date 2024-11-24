@@ -1,0 +1,149 @@
+node-moment (2.24.0+ds-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add patch to avoid loading path-looking locales from fs.
+    (Fixes: CVE-2022-24785) (Closes: #1009327)
+  * Add patch to fix redos in preprocessRFC2822 regex.
+    (Fixes: CVE-2022-31129) (Closes: #1014845)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sun, 29 Jan 2023 04:38:52 +0530
+
+node-moment (2.24.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.3.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 23 Jan 2019 15:13:16 +0100
+
+node-moment (2.23.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.2.1.
+  * Ship typescript definitions.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 21 Dec 2018 21:40:22 +0100
+
+node-moment (2.22.2+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <jpuydt@debian.org>  Tue, 19 Jun 2018 23:46:53 +0200
+
+node-moment (2.22.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 26 Apr 2018 11:59:05 +0200
+
+node-moment (2.21.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 04 Mar 2018 09:33:21 +0100
+
+node-moment (2.20.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 20 Dec 2017 09:53:34 +0100
+
+node-moment (2.19.4+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 16 Dec 2017 12:03:34 +0100
+
+node-moment (2.19.3+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 03 Dec 2017 02:32:37 +0100
+
+node-moment (2.19.2+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Mon, 13 Nov 2017 08:48:01 +0100
+
+node-moment (2.19.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.1.1.
+  * Bump d/watch to version 4.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 15 Oct 2017 09:31:57 +0200
+
+node-moment (2.18.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Push standards-version to 4.0.0.
+  * Change section to javascript.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 01 Jul 2017 15:49:39 +0200
+
+node-moment (2.17.1+ds-1) unstable; urgency=medium
+
+  * Changed d/copyright to follow new license.
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 11 Jan 2017 10:31:13 +0100
+
+node-moment (2.16.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 16 Nov 2016 10:01:31 +0100
+
+node-moment (2.15.2+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 27 Oct 2016 21:01:52 +0200
+
+node-moment (2.15.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Pushed compat to 10.
+  * Marked node-moment as Multi-Arch: foreign too.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 28 Sep 2016 17:06:26 +0200
+
+node-moment (2.15.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Marked libjs-moment as Multi-Arch: foreign.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 16 Sep 2016 08:59:50 +0200
+
+node-moment (2.14.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 08 Jul 2016 08:26:15 +0200
+
+node-moment (2.13.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Pushed standards-version up.
+  * Use https in Vcs-* fields.
+  * Ship locales. (Closes: #815482)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 15 May 2016 13:17:21 +0000
+
+node-moment (2.11.0+ds-1) unstable; urgency=medium
+
+  [ Julien Puydt ]
+  * New upstream release.
+  * Use +ds instead of +dfsg.
+  * Remove obsolete lintian overrides.
+
+  [ Mattia Rizzolo ]
+  * Use https and the cgit web frontend in Vcs-Browser
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 03 Jan 2016 13:14:02 +0100
+
+node-moment (2.10.6+dfsg-1) unstable; urgency=medium
+
+  * Initial packaging. (Closes: #759598)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 08 Oct 2015 16:17:42 +0200

@@ -1,0 +1,30 @@
+golang-github-containerd-go-cni (1.0.1-1) unstable; urgency=medium
+
+  * New upstream version 1.0.1
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 21:25:58 +0800
+
+golang-github-containerd-go-cni (1.0.0-1) unstable; urgency=medium
+
+  * New upstream version 1.0.0
+  * Bump debhelper-compat to 13
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add patch to fix compatibility with new CNI (Closes: #965266)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 19 Jul 2020 00:57:53 +0800
+
+golang-github-containerd-go-cni (0.0~git20190904.d20b7ee-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Standards-Version: 4.4.1.
+  * Added myself to Uploaders.
+  * (Build-)Depends:
+    = golang-github-appc-cni-dev (>= 0.7.1~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 17 Oct 2019 13:01:07 +1100
+
+golang-github-containerd-go-cni (0.0~git20190226.0683513-1) unstable; urgency=medium
+
+  * Initial release (Closes: 924098)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 09 Mar 2019 23:04:41 +0800

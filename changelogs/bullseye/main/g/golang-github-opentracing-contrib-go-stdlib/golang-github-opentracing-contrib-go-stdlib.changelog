@@ -1,0 +1,44 @@
+golang-github-opentracing-contrib-go-stdlib (1.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Martina Ferrari ]
+  * Stop using pristine-tar.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Arnaud Rebillout ]
+  * Update watch file to track upstream releases
+  * Update gitlab-ci.yml
+  * Simplify gbp.conf
+  * Section = golang
+  * Rules-Requires-Root = no
+  * Bump Standards-Version
+  * Bump debhelper compat
+  * Update Go Team email address
+  * New upstream version 1.0.0
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Fri, 08 Jan 2021 15:11:44 +0700
+
+golang-github-opentracing-contrib-go-stdlib (0.0~git20190519.cf7a6c9-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Daniel Swarbrick ]
+  * Update git snapshot to preserve additional interfaces.
+  * Bump Standards-Version (debhelper-compat = 12).
+
+  [ Martina Ferrari ]
+  * Relicense packaging as Apache-2.0, matching upstream.
+  * Automated cme fixes.
+
+ -- Martina Ferrari <tincho@debian.org>  Mon, 13 Jan 2020 10:03:52 +0000
+
+golang-github-opentracing-contrib-go-stdlib (0.0~git20170528.48e4d76-1) unstable; urgency=medium
+
+  * Initial release. Closes: #870195.
+
+ -- Martina Ferrari <tincho@debian.org>  Sun, 30 Jul 2017 21:08:34 +0000

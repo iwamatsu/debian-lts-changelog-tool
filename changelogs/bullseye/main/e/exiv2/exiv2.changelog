@@ -1,0 +1,787 @@
+exiv2 (0.27.3-3+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2021-31291 (Closes: #991705)
+  * CVE-2021-31292 (Closes: #991706)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Fri, 06 Aug 2021 10:57:42 +0200
+
+exiv2 (0.27.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols file from the logs of buildds.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 09 Aug 2020 07:15:23 +0200
+
+exiv2 (0.27.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Limit -fcf-protection only on x86 architectures, as it does not exist
+    elsewhere; patch fcf-protection-only-on-x86.diff.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 09 Aug 2020 00:51:27 +0200
+
+exiv2 (0.27.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release:
+    - fixes CVE-2019-17402 (Closes: #946341)
+  * Update the patches:
+    - fix-man-page-table-formatting.patch: refresh
+    - remove-execute-permission-bit-from-ini-test-sample.patch: not needed as
+      patch, it will be done with a simpler chmod
+    - Fix-issue-712.patch: drop, backported from upstream
+    - Add-comment-to-explain-choice-of-cut-off-value.patch: drop, backported
+      from upstream
+    - Fix-1011-fix_1011_jp2_readmetadata_loop.patch: drop, backported from
+      upstream
+    - drop debian/source/include-binaries, no more needed now
+  * Update symbols file. (Closes: #950631, #957188)
+  * Add Rules-Requires-Root: no.
+  * Append -Wno-deprecated-declarations to the CXXFLAGS: exiv2 uses
+    std::auto_ptr<> a lot, so avoid the lots of deprecation warnings.
+  * Remove the executable permissions from all the .ini files in libexiv2-doc.
+  * Explicitly add the gettext build dependency.
+  * Do not ship TODO in libexiv2-doc, as it is not useful for users.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 08 Aug 2020 23:23:52 +0200
+
+exiv2 (0.27.2-8) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols file from the logs of buildds.
+  * Merge useful changes from 0.25-4:
+    - add Maximiliano Curia as Uploader
+    - adjust version of dbgsym migration
+  * Drop the python:native build dependency, as it is not used.
+    (Closes: #936496)
+  * Sort install files.
+  * Move the static libexiv2-xmp.a from libexiv2-27 to libexiv2-dev, as it is
+    needed only for development
+    - add proper breaks/replaces
+  * The current way to build the API documentation is suboptimal: even in
+    -indep builds a an -arch build is forced; also the separate doc build
+    requires a custom patch, Instead:
+    - move the common arguments for cmake to a variable to avoid duplication
+    - pass -DEXIV2_BUILD_DOC=ON to enable the documentation build, unless on
+      -arch builds
+    - pass -DCMAKE_INSTALL_DOCDIR=/usr/share/doc/exiv2/html to cmake to change
+      the installation directory of the documentation (mostly for the "html"
+      part), and change libexiv2-doc.docs to pick it from that location
+    - call the "doc" target in -indep builds
+    - drop patch 0001-doc-only-build-target.patch, no more needed now
+  * Remove patch numbers from patch files.
+  * Backport upstream commits 4c28673b641d7eacb50baafb5c286f6900ce2002, and
+    d4d4d766e9ade2376115eb41cc478eb195df1b39 to fix CVE-2019-9143 and
+    CVE-2019-9144; patches Fix-issue-712.patch, and
+    Add-comment-to-explain-choice-of-cut-off-value.patch.
+    (Closes: #923472, #923473)
+  * Backport upstream commit 1b917c3f7dd86336a9f6fda4456422c419dfe88c to fix
+    CVE-2019-20421; patch Fix-1011-fix_1011_jp2_readmetadata_loop.patch.
+    (Closes: #950183)
+  * Add debian/source/include-binaries for the patches Fix-issue-712.patch, and
+    Fix-1011-fix_1011_jp2_readmetadata_loop.patch, as they contain the binary
+    testcases for the fixes.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 30 Jan 2020 09:39:44 +0100
+
+exiv2 (0.27.2-7) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols file.
+  * Remove the dh_missing --list-missing invocation, as it is done by default
+    in debhelper compatibility 12.
+  * Switch from the debhelper build dependency to debhelper-compat
+    - remove debian/compat
+  * Bump Standards-Version to 4.5.0, no changes required.
+  * Remove trailing whitespaces in changelog.
+  * Update lintian overrides.
+  * Pass -DEXIV2_BUILD_SAMPLES=OFF to cmake to disable the build of samples,
+    as we do not ship them anyway.
+  * Remove debian/not-installed, no more needed now.
+  * Drop removal of .la files, as they are not shipped anymore.
+  * Add the configuration for the CI on salsa.
+  * Use https for Homepage.
+  * Tweak watch file to consider only digits and dots for versions.
+  * Move translations from libexiv2-dev to the main library package, as they
+    contain messages for the library and the exiv2 tool
+    - add proper breaks/replaces
+
+ -- Pino Toscano <pino@debian.org>  Tue, 28 Jan 2020 09:32:57 +0100
+
+exiv2 (0.27.2-6) unstable; urgency=medium
+
+  [ Steve Robbins ]
+  * Source upload to unstable.  Closes: #914006, #926880.
+  * Update symbols.
+
+ -- Steve M. Robbins <smr@debian.org>  Mon, 27 Jan 2020 22:50:41 -0600
+
+exiv2 (0.27.2-5) experimental; urgency=medium
+
+  [ Steve Robbins ]
+  * Update symbols
+
+ -- Steve M. Robbins <smr@debian.org>  Sun, 26 Jan 2020 09:57:00 -0600
+
+exiv2 (0.27.2-4) experimental; urgency=medium
+
+  [ Steve Robbins ]
+  * Add myself to uploaders
+  * Fix SOVERSION in symbols file.
+
+ -- Steve M. Robbins <smr@debian.org>  Sat, 25 Jan 2020 22:42:34 -0600
+
+exiv2 (0.27.2-3) experimental; urgency=medium
+
+  [ Steve Robbins ]
+  * Updated symbol file from build server logs.
+
+ -- Steve M. Robbins <smr@debian.org>  Wed, 06 Nov 2019 19:36:27 -0600
+
+exiv2 (0.27.2-2) experimental; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Fix Vcs-Git and Vcs-Browser URLs.
+
+  [ Steven Robbins ]
+  * Revert symbols file to 0.25, in order to get diffs from build servers.
+
+ -- Steve M. Robbins <smr@debian.org>  Mon, 04 Nov 2019 23:54:08 -0600
+
+exiv2 (0.27.2-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * New revision
+  * Update uploaders list as requested by MIA team (Closes: #879288)
+
+  [ Simon Frei ]
+  * New upstream release (0.27.2)
+  * Drop upstream patches
+  * Follow upstream soversion bump
+  * Update build dependencies
+  * Reenable XMP support
+  * Bump debhelper from 9 to 12
+  * Bump Standards-Version to 4.4.0 (no changes)
+  * Various fixes due to lintian
+
+ -- Steve M. Robbins <smr@debian.org>  Tue, 10 Sep 2019 00:05:18 -0500
+
+exiv2 (0.26-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: Annotate python build dependency with :native (Closes:
+    #843102)
+
+  [ Maximiliano Curia ]
+  * Update watch file
+  * New upstream release (0.26).
+  * Bump Standards-Version to 4.0.0, no changes needed.
+  * Update Vcs fields
+  * Migrate to automatic dbgsym packages
+  * Update build-deps and deps with the info from cmake
+  * Drop patch: libtool_update.diff
+  * Drop upstream patches
+  * Follow upstream soversion bump
+  * Drop .a file
+  * Disable the static xmp lib
+  * Update symbols files.
+  * Add libssh-gcrypt-dev missing build dep
+  * Fix indep build
+  * Release to experimental
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 13 Jul 2017 18:56:52 +0200
+
+exiv2 (0.25-4) unstable; urgency=medium
+
+  [ Roberto C. Sanchez ]
+  * CVE-2018-10958: denial of service through memory exhaustion and
+    application crash by a crafted PNG image.
+  * CVE-2018-10999: a heap-based buffer over-read via a crafted PNG image.
+  * CVE-2018-10998: denial of service through memory exhaustion and
+    application crash by a crafted image.
+  * CVE-2018-11531: a heap-based buffer overflow and application crash by a
+    crafted image.
+  * CVE-2018-12264: integer overflow leading to out of bounds read by a
+    crafted image. (Closes: #901707)
+  * CVE-2018-12265: integer overflow leading to out of bounds read by a
+    crafted image. (Closes: #901706)
+
+  [ Maximiliano Curia ]
+  * Bump debhelper build-dep and compat to 11
+  * Bump to Standards-Version 4.1.4
+  * Update Vcs fields
+  * Migrate to automatic dbgsym packages
+  * Drop parallel and autotools_dev from dh call
+  * Update watch file
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 28 Jun 2018 18:05:24 +0200
+
+exiv2 (0.25-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * CVE-2017-9239 (Closes: #863410)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Mon, 05 Jun 2017 22:42:20 +0200
+
+exiv2 (0.25-3) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * Fix crashes on Casio images files (upstream cherry pick) (Closes: #814051)
+  * mention XMP in the description (Closes: #790784)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 17 May 2016 23:08:21 +0900
+
+exiv2 (0.25-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Fix symbol files for amd64/mips64el/sparc64/sh4 (Closes: #799611).
+
+ -- YunQiang Su <syq@debian.org>  Thu, 08 Oct 2015 14:39:02 +0800
+
+exiv2 (0.25-2) unstable; urgency=medium
+
+  * Update symbols files from buildds logs (0.25-1) (Closes: #794728) Thanks
+    to Aaron M. Ucko.
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 06 Aug 2015 12:37:59 +0200
+
+exiv2 (0.25-1) unstable; urgency=medium
+
+  [ Pino Toscano ]
+  * libexiv2-dev: stop again depending on pkg-config, as this is no more
+    needed now (for real this time).
+
+  [ Maximiliano Curia ]
+  * New upstream release (0.25). (Closes: #789956)
+  * Refresh patch: libtool_update.diff
+  * Remove upstream applied patch: CVE-2014-9449.patch
+  * Bump Standards-Version to 3.9.6, no changes needed.
+  * Update copyright information.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 05 Aug 2015 13:07:18 +0200
+
+exiv2 (0.24-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add CVE-2014-9449.patch patch.
+    CVE-2014-9449: buffer overflow in RiffVideo::infoTagsHandler
+    Thanks to Klaus Ethgen <Klaus@Ethgen.de> (Closes: #773846)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 07 Jan 2015 20:25:48 +0100
+
+exiv2 (0.24-4) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable. (See #732957)
+  * Re-add the pkg-config dependency in libexiv2-dev, as there is still one
+    source relying on it.
+
+ -- Pino Toscano <pino@debian.org>  Fri, 05 Sep 2014 23:22:40 +0200
+
+exiv2 (0.24-3) experimental; urgency=medium
+
+  * Team upload.
+  * Integrate 0.23-1.1 NMU (thanks Wookey).
+  * Move the libjs-jquery, doxygen, graphviz build dependencies as
+    Build-Depend-Indep, as they are needed in indep-build only.
+  * Update libtool files for ppc64el. (Closes: #757412)
+
+ -- Pino Toscano <pino@debian.org>  Thu, 28 Aug 2014 23:00:16 +0200
+
+exiv2 (0.24-2) experimental; urgency=low
+
+  * Team upload.
+  * Update Vcs-* headers.
+  * Fix the replacement of the doxygen-generated jquery.js with a symlink to
+    the system copy:
+    - properly replace any version with a symlink
+    - remove usage of dh-linktree: drop libexiv2-doc.linktrees and the
+      dh-linktree build dependency
+    - make libexiv2-doc depend on libjs-jquery
+  * Improve the .install files:
+    - use exiv2.install to install the exiv2.1 man page
+    - make them a bit more explicit
+    - remove the "debian/tmp/" prefix from the installed files
+    - sort them
+  * Remove the libtool .la file instead of installing it; dependencies have to
+    be rebuilt for the SONAME bump anyway, so there is no risk for breakages.
+  * Remove the doxygen-generated *.map and *.md5 files from the -doc package.
+  * Add a lintian override in libexiv2-doc for the duplicated files
+    (image graphs, basically) generated by doxygen.
+  * Bump to the debhelper compatibility 9:
+    - bump compat to 9
+    - bump the debhelper build dependency to >= 9~
+    - stop manually specifying the build flags, they are handled automatically
+    - adjust the library paths in .install files and rules to the multiarch
+      paths
+    - add Pre-Depends: ${misc:Pre-Depends} in libexiv2-13
+  * Mark libexiv2-13 and libexiv2-dbg as Multi-Arch: same.
+  * Tighten the exiv2 dependency on the same version of the libexiv2 library.
+  * Remove the extra "samples" subdirectory for the examples in libexiv2-dev.
+  * Bump Standards-Version to 3.9.5, no changes required.
+  * Do not compress .cpp files (found in examples).
+  * libexiv2-dev: stop depending on pkg-config, as this is no more needed now.
+
+ -- Pino Toscano <pino@debian.org>  Fri, 17 Jan 2014 22:39:03 +0100
+
+exiv2 (0.24-1) experimental; urgency=low
+
+  * New upstream release
+    - support for Video metadata
+    - more cameras and accessories now recognised
+    - Numerous bugs fixes, build and test improvments
+  * NEW package libexiv2-13 - match soname
+  * Fix "libexiv2-doc documentation package seems to be lacking in
+    content" include patch from ~dancer (Closes: #687278)
+  * Update "config.{guess,sub}" --with autotools_dev (Closes: #727295, #548926)
+  * Drop 00_hyphens_used_as_minus.diff - included upstream
+  * Add specific +override_dh_auto_build-indep: target for doxygen build
+
+ -- Mark Purcell <msp@debian.org>  Sun, 15 Dec 2013 11:12:34 +1100
+
+exiv2 (0.23-1.1) unreleased; urgency=low
+
+  * Non-maintainer upload.
+  * Ensure configurey is updated for new architectures (Closes: #727295)
+
+ -- Wookey <wookey@debian.org>  Wed, 18 Jun 2014 21:55:26 +0000
+
+exiv2 (0.23-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes "Support for .cr2 RAW files" (Closes: #665736)
+  * NEW package libexiv2-12 - match soname
+  * Drop spelling-error-in-binary.diff - included upstream
+  * Drop spelling-error-in-manpage.diff - included upstream
+  * Upload to unstable - coordinated through debian release
+    - Fixes "please package 0.21 or newer to unstable" (Closes: #650516)
+  * Update to Standard 3.9.3 - no changes necessary
+
+ -- Mark Purcell <msp@debian.org>  Sat, 05 May 2012 09:31:28 +1000
+
+exiv2 (0.22-2) experimental; urgency=low
+
+  * dh_auto_configure  $(shell dpkg-buildflags --export=configure)
+    - Fixes "Please enabled hardened build flags" (Closes: #656356)
+  * dh-linktree - fixes libexiv2-doc: embedded-javascript-library
+  * Update debian/copyright GPL-2 -  copyright-refers-to-symlink-license
+  * Fix spelling-error-in-manpage exiv2.1.gz explicitely explicitly
+  * Fix spelling-error-in-binary
+  * Switch to dh_bugfiles
+  * Add samples/ to libexiv2-doc/examples
+  * Fixed "Lib not recommend exiv2" changes to Suggests: (Closes: #615137)
+
+ -- Mark Purcell <msp@debian.org>  Wed, 25 Jan 2012 07:16:15 +1100
+
+exiv2 (0.22-1) experimental; urgency=low
+
+  * New upstream release
+  * NEW Package libexiv2-11 - soname bump
+  * Drop usr/lib/libexiv2.la non-empty-dependency_libs-in-la-file
+  * Ack NMU, Thanks Luk (Closes: #618747)
+
+ -- Mark Purcell <msp@debian.org>  Sat, 24 Sep 2011 14:28:30 +1000
+
+exiv2 (0.20-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Remove references to other libraries from dependency_libs field
+    (Closes: #618747)
+
+ -- Luk Claes <luk@debian.org>  Sun, 29 May 2011 19:49:33 +0200
+
+exiv2 (0.21.1-1) experimental; urgency=low
+
+  * New upstream release
+  * Update upstream bug tracker in presubj
+
+ -- Mark Purcell <msp@debian.org>  Fri, 25 Feb 2011 20:03:39 +1100
+
+exiv2 (0.21-1) experimental; urgency=low
+
+  * New upstream release (Closes: #556913, #486884, #511273)
+    - Samsung SRW and Makernote support, API Changes
+  * NEW package libexiv2-10 - soname bump
+  * Update debian/control Description:
+
+ -- Mark Purcell <msp@debian.org>  Thu, 27 Jan 2011 00:05:42 +1100
+
+exiv2 (0.20-2) unstable; urgency=low
+
+  * Upload to unstable - cleared with debian-release
+
+ -- Mark Purcell <msp@debian.org>  Fri, 09 Jul 2010 19:43:59 +1000
+
+exiv2 (0.20-1) experimental; urgency=low
+
+  * New upstream release
+    - NEW package libexiv2-9 - soname bump
+    - Makernote updates
+    - Nikon performance improvement (Closes: #579835)
+
+  [ Michal Čihař ]
+  * Add -dbg package (Closes: #557088)
+
+  [ Mark Purcell ]
+  * Siwtch to source/format = 3.0 (quilt)
+  * debian/control switch to '-' bullet marker (Closes: #564326)
+  * Dropped fuji from Maintainers - inactive
+  * Simplify get-orig-source target - uscan
+
+ -- Mark Purcell <msp@debian.org>  Sun, 30 May 2010 14:45:46 +1000
+
+exiv2 (0.19-1) unstable; urgency=low
+
+  * New upstream release
+    - TIFF performance improvement and Nikon updates
+  * NEW package libexiv2-6 - soname bump
+
+ -- Mark Purcell <msp@debian.org>  Fri, 01 Jan 2010 11:42:13 +1100
+
+exiv2 (0.18.2-1) unstable; urgency=low
+
+  * New upstream release
+    - Bugfix release
+
+  [Ryan Kavanagh]
+
+  * Add lintian overrides:
+    - libexiv2-dev: extended-description-is-probably-too-short
+  * Fix a typo in README.Debian (s/enviroment/environment/)
+  * Fix hyphens as minus signs in the manpage, 00_hyphens_used_as_minus.diff
+
+  [Fathi Boudra]
+
+  * Bump Standards-Version from 3.8.1 to 3.8.2 (no changes needed)
+  * Add quilt build dependency
+  * Remove cdbs build dependency - use dh and rewrite debian/rules
+
+ -- Fathi Boudra <fabo@debian.org>  Thu, 09 Jul 2009 18:50:32 -0400
+
+exiv2 (0.18.1-1) unstable; urgency=low
+
+  * New upstream release
+    - (Closes: #525535): "[libexiv2-5] New upstream version 0.18.1"
+    - write-support for Adobe Photoshop PSD images
+    - read-support for Panasonic RW2 images
+    - Panasonic and Nikon makernote update
+  * Upload to unstable - discussed on debian-release
+    - libexiv2-5 library transition
+  * Fix: package-lacks-versioned-build-depends-on-debhelper
+  * Add ${misc:Depends}
+
+ -- Mark Purcell <msp@debian.org>  Wed, 29 Apr 2009 21:53:40 +1000
+
+exiv2 (0.18-1) experimental; urgency=low
+
+  * New upstream release
+    - Closes: #426274 - "Setting "Exif.Image.DateTime Date" error"
+    - Closes: #505023 - "FTBFS with GCC 4.4: missing #include"
+
+ -- Mark Purcell <msp@debian.org>  Fri, 19 Dec 2008 07:39:10 +1100
+
+exiv2 (0.18~pre2-1) experimental; urgency=low
+
+  * New upstream release
+  * NEW package libexiv2-5 - match upstream soname
+  * Update Standards Version 3.8.0 - no changes
+
+ -- Mark Purcell <msp@debian.org>  Sat, 08 Nov 2008 10:46:51 +1100
+
+exiv2 (0.17.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - Library transition cleared on debian-release/ d-d-a
+  * Version 0.17 also fixes:
+    - CVE-2008-2696: DoS via metadata in images (Closes: #486328)
+    - crashes when fed with wrong file (Closes: #485670)
+  * Urgency medium for CVE fix
+  * debian/patches/gcc4.3.diff unecessary for gcc-4.3
+  * Add /usr/share/bug/exiv2/presubj message for reportbug(1)
+
+ -- Mark Purcell <msp@debian.org>  Sat, 21 Jun 2008 08:23:53 +1000
+
+exiv2 (0.17-1) experimental; urgency=low
+
+  * New upstream release
+  * Switch to simple-patchsys.mk
+  * Refresh & merge gcc4.3 patches
+  * New Package: libexiv2-4 - soname bump
+  * Add Build-Depends: libexpat1-dev
+  * Upload to experimental to clear NEW processing
+
+ -- Mark Purcell <msp@debian.org>  Tue, 10 Jun 2008 23:05:33 +1000
+
+exiv2 (0.16-4) unstable; urgency=low
+
+  [Ana Beatriz Guerrero Lopez]
+
+  * Team upload to address FTBFS with GCC 4.3.
+  * Apply patch by Cyril Brulebois to fix FTBFS with GCC 4.3.
+    (Closes: #466901)
+
+ -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Sun, 23 Mar 2008 15:42:16 +0100
+
+exiv2 (0.16-3) unstable; urgency=low
+
+  * Remove Conflicts/Replaces libexiv2-0 for libexiv2-2. (Closes: #463852)
+
+ -- Fathi Boudra <fabo@debian.org>  Tue, 05 Feb 2008 00:52:35 +0100
+
+exiv2 (0.16-2) unstable; urgency=low
+
+  * Remove Conflicts/Replaces libexiv2-0 for libexiv2-2. (Closes: #463852)
+
+ -- Fathi Boudra <fabo@debian.org>  Mon, 04 Feb 2008 15:39:20 +0100
+
+exiv2 (0.16-1) unstable; urgency=low
+
+  * New upstream release (Closes: #441524, #455633, #461009)
+  * Remove patches, merged upstream:
+    * CVE-2007-6353
+    * Rev 1124 pull
+  * Add 01_gcc4.3.diff patch. Missing std:: removal not merged upstream yet
+  * Bump compat to 6
+  * Update copyright file
+  * Add myself in Uploaders field
+  * Clean up build dependencies:
+    * Remove g++ and dpkg-dev
+    * Add quilt and libexpat1-dev
+    * Bump debhelper to 6
+  * Bump Standard-Version to 3.7.3
+  * Use Homepage field
+  * Add Conflicts/Replaces libexiv2-0 for libexiv2-2
+  * Clean up rules
+  * Add clean target (Closes: 442560)
+  * Build with --no-undefined and --as-needed linker flags
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 16 Jan 2008 09:17:08 +0100
+
+exiv2 (0.15-2) unstable; urgency=high
+
+  [Ana Beatriz Guerrero Lopez]
+  * Team upload to fix security bug.
+  * Add patch to fix integer overflow in EXIF parsing.
+    CVE-2007-6353 (Closes: #456760)
+
+ -- Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>  Mon, 17 Dec 2007 19:13:11 +0100
+
+exiv2 (0.15-1) unstable; urgency=low
+
+  * New upstream release
+    - maintenance release, support for Minolta G500 RAW files
+
+ -- Mark Purcell <msp@debian.org>  Sun, 22 Jul 2007 12:20:57 +0100
+
+exiv2 (0.14-2) unstable; urgency=medium
+
+  * DebConf7 release :-)
+  * Urgency medium as this fixes a number of crashes in digikam et al
+  * Pull in upstream fixes for jpeg/tiff MSC makernote crashes
+    (rev 1106/1124)
+
+ -- Mark Purcell <msp@debian.org>  Tue, 19 Jun 2007 12:55:55 +0100
+
+exiv2 (0.14-1) unstable; urgency=low
+
+  * new upstream release (Closes: #414372)
+
+  [ Achim Bohnet ]
+  * 0.14 changed API: rename libexiv2-0.12 to libexiv2-0 accordingly.
+  * libexiv2-dev: exiv2 has no exiv2-config script anymore.
+  * debian/control:
+    + Etch does not have a libexiv2 package.  So remove Replaces/Conflict.
+    + libexiv2-dev: No need to depend on ${shlibs:Depends}, ${misc:Depends}
+  * debian/exiv2.1 removed: included upstream.
+  * debian/libexiv2-0: install message catalogs
+
+  [ Mark Purcell ]
+  * FTBFS with GCC 4.3: missing #includes (Closes: #417176)
+  * Build-Depends: doxygen, graphviz, python, xsltproc
+  * Reinstate libexiv2-doc, better to build with doxygen than other tarball
+  * Add build/libexiv2-doc:: to debian/rules
+  * Rework debian/libexiv2-dev.install
+  * Rework debian/libexiv2-doc.docs
+  * Rework debian/libexiv2-0.install
+
+ -- Mark Purcell <msp@debian.org>  Wed, 09 May 2007 22:28:37 +0100
+
+exiv2 (0.12-1) unstable; urgency=low
+
+  * Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+  * Switch to cdbs
+  * Add debian/watch
+  * Ack NMU fix:
+    - library package needs to be renamed (libstdc++ allocator change)
+    (Closes: #339163)
+
+ -- Mark Purcell <msp@debian.org>  Wed, 14 Mar 2007 08:12:49 +0000
+
+exiv2 (0.10-1.4) unstable; urgency=high
+
+  * Non-Maintainer upload. Again :-(
+  * High-urgency upload for RC bugfix
+  * Apply Steve Langasek patch to overcome crashes on invalid input
+    - Image with corrupted metadata crashes Exiv2 (Closes: #401660)
+  * Move usr/lib/*.la  libtool linkage information file to -dev package
+    - file conflict with libexiv2-0.10 (Closes: #405805)
+  * Move usr/lib/*.so  development linkage file to -dev package
+  * Include upstream exiv2.pc in -dev package
+    - exiv2.pc is missing (Closes: #396060)
+  * Add libexiv2-dev Depends: pkg-config
+
+ -- Mark Purcell <msp@debian.org>  Sun, 21 Jan 2007 21:06:27 +0000
+
+exiv2 (0.12-0.2) experimental; urgency=low
+
+  * Non-maintainer upload. (NMU)
+  * Add Build-Depends: zlib1g-dev, thanks Kurt
+    - FTBFS: checking zlib in /usr... failed (Closes: #405916)
+
+ -- Mark Purcell <msp@debian.org>  Sun,  7 Jan 2007 12:22:39 +0000
+
+exiv2 (0.12-0.1) experimental; urgency=medium
+
+  * Non-mantainer upload. (NMU)
+  * Urgency medium as this fixes RC bugs
+  * New upstream bugfix release
+    - Image with corrupted metadata crashes Exiv2 (Closes: #401660)
+    - new upstream release 0.12 (Closes: #389711)
+  * Include upstream exiv2.pc in debian package
+    - exiv2.pc is missing (Closes: #396060)
+  * Bump soname
+    - file conflict with libexiv2 (Closes: #386934)
+
+ -- Mark Purcell <msp@debian.org>  Sat, 23 Dec 2006 18:42:30 +1100
+
+exiv2 (0.10-1.3) unstable; urgency=low
+
+  * NMU.
+  * debian/rules dh_makeshlibs -V (Closes: #386899)
+
+ -- Mark Purcell <msp@debian.org>  Thu, 21 Sep 2006 06:37:22 +0100
+
+exiv2 (0.10-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix overly strict shlibs line. Closes: #386899
+  * Also adding conflict,replaces from libexiv2-0.10 to libexiv2.
+
+ -- Andreas Barth <aba@not.so.argh.org>  Mon, 11 Sep 2006 20:04:40 +0200
+
+exiv2 (0.10-1.1) unstable; urgency=medium
+
+  [ David Schmitt ]
+  * Non-maintainer upload.
+  * Medium-urgency upload for RC bugfix.
+  * Change package name from libexiv2 to libexiv2-0.10 to encode the full
+    SONAME as well as for the C++ mt allocator ABI change, and conflict/replace
+    libexiv2 accordingly.  Closes: #339163, #382867.
+  * Remove unnecessary libexiv2.{postinst,postrm} scripts, as they don't do
+    anything that debhelper doesn't already do for us.
+  * replace shlibs.local by dh_makeshlibs -V
+  * make package bin-NMU-able by using ${binary:Version} and B-D on dpkg-dev
+    (>= 1.13.19)
+
+  [ Andreas Barth ]
+  * Uploading NMU.
+
+ -- Andreas Barth <aba@not.so.argh.org>  Sun, 10 Sep 2006 09:09:55 +0200
+
+exiv2 (0.10-1) unstable; urgency=low
+
+  * New Upstream Release. (Fixes: #370151)
+
+ -- KELEMEN Peter <fuji@debian.org>  Tue, 14 Jun 2006 00:02:57 +0200
+
+exiv2 (0.9.1-1) unstable; urgency=low
+
+  * New Upstream Release.
+  * debian/control: -dev Suggests: -doc.
+
+ -- KELEMEN Peter <fuji@debian.org>  Sat,  4 Feb 2006 07:45:00 +0100
+
+exiv2 (0.9-1) unstable; urgency=low
+
+  * New Upstream Release.
+  * debian/rules: Ship with upstream documentation by default.
+  * debian/control: relax build dependencies.
+
+ -- KELEMEN Peter <fuji@debian.org>  Fri, 27 Jan 2006 20:41:35 +0100
+
+exiv2 (0.7-10) unstable; urgency=low
+
+  * C++ allocator change.  (Closes: #339163)
+
+ -- KELEMEN Peter <fuji@debian.org>  Fri, 18 Nov 2005 00:08:45 +0100
+
+exiv2 (0.7-9) unstable; urgency=low
+
+  * Added missing Build-Depends: sharutils (Closes: #328376)
+  * Standards-Version: 3.6.2 (no changes)
+
+ -- KELEMEN Peter <fuji@debian.org>  Thu, 15 Sep 2005 14:54:32 +0200
+
+exiv2 (0.7-8) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- KELEMEN Peter <fuji@debian.org>  Wed, 14 Sep 2005 15:11:33 +0200
+
+exiv2 (0.7-7) experimental; urgency=low
+
+  * Upload to Debian archive.
+
+ -- KELEMEN Peter <fuji@debian.org>  Mon, 18 Jul 2005 00:18:51 +0200
+
+exiv2 (0.7-6) experimental; urgency=low
+
+  * g++-4.0 rebuild.
+
+ -- KELEMEN Peter <fuji@debian.org>  Mon, 11 Jul 2005 03:36:38 +0200
+
+exiv2 (0.7-5) experimental; urgency=low
+
+  * fix multiple copyrights
+  * strengthen lib deps
+
+ -- KELEMEN Peter <fuji@debian.org>  Sun, 19 Jun 2005 16:24:51 +0200
+
+exiv2 (0.7-4) experimental; urgency=low
+
+  * doc fixes
+
+ -- KELEMEN Peter <fuji@debian.org>  Sun, 19 Jun 2005 14:43:46 +0200
+
+exiv2 (0.7-3) experimental; urgency=low
+
+  * Make the package non-native.
+  * Build with g++-4.0.
+
+ -- KELEMEN Peter <fuji@debian.org>  Sat, 18 Jun 2005 19:34:44 +0200
+
+exiv2 (0.7-2) experimental; urgency=low
+
+  * static libray to -dev
+  * clean up -doc
+  * cmd.txt as example in exiv2
+
+ -- KELEMEN Peter <fuji@debian.org>  Thu, 16 Jun 2005 20:48:55 +0200
+
+exiv2 (0.7-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- KELEMEN Peter <fuji@debian.org>  Thu, 16 Jun 2005 10:46:37 +0200
+
+exiv2 (0.6.2-1) experimental; urgency=low
+
+  * Initial release. (Closes: #312490)
+
+ -- KELEMEN Peter <fuji@debian.org>  Wed,  8 Jun 2005 14:39:56 +0200

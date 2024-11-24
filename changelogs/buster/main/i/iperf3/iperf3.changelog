@@ -1,0 +1,61 @@
+iperf3 (3.6-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2023-38403:
+    A memory allocation issue was found in iperf3, the Internet Protocol
+    bandwidth measuring tool, that may cause a denial of service when
+    encountering a certain invalid length value in TCP packets.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 25 Jul 2023 16:44:58 +0200
+
+iperf3 (3.6-2) unstable; urgency=low
+
+  * Fix Build-Depends for non-Linux architectures.
+
+ -- Roberto Lumbreras <rover@debian.org>  Fri, 27 Jul 2018 07:08:04 +0200
+
+iperf3 (3.6-1) unstable; urgency=low
+
+  * Enabled SCTP support (Closes: #858944).
+  * Enabled OpenSSL support.
+  * New maintainer.
+  * New upstream version. (Closes: #840545).
+  * Updated standards.
+
+ -- Roberto Lumbreras <rover@debian.org>  Thu, 26 Jul 2018 16:43:49 +0200
+
+iperf3 (3.1.3-1) unstable; urgency=medium
+
+  * new upstream version which fixes CVE-2016-4303 (Closes: #827116)
+  * enabled hardening flags
+  * bumped standards version to 3.9.8
+
+ -- Raoul Gunnar Borenius <borenius@dfn.de>  Wed, 22 Jun 2016 17:01:13 +0200
+
+iperf3 (3.1.2-1) unstable; urgency=medium
+
+  * new upstream version (Closes: #808820)
+
+ -- Raoul Gunnar Borenius <borenius@dfn.de>  Fri, 19 Feb 2016 09:28:49 +0100
+
+iperf3 (3.0.11-1) unstable; urgency=medium
+
+  * new upstream version
+  * added multiarch support
+  * bumped standards version to 3.9.6
+
+ -- Raoul Gunnar Borenius <borenius@dfn.de>  Mon, 20 Jul 2015 08:08:59 +0200
+
+iperf3 (3.0.7-1) unstable; urgency=medium
+
+  * new upstream version
+  * tarball repackaging not necessary anymore
+
+ -- Raoul Gunnar Borenius <borenius@dfn.de>  Thu, 11 Sep 2014 11:57:57 +0200
+
+iperf3 (3.0.5+dfsg1-1) unstable; urgency=low
+
+  * Initial release (Closes: #739921)
+  * Repackage tarball to delete bootstrap.sh file with restrictive copyright.
+
+ -- Raoul Gunnar Borenius <borenius@dfn.de>  Sat, 21 Jun 2014 15:57:27 +0200

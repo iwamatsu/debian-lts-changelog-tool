@@ -1,0 +1,99 @@
+docker-libkv (0.2.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Arnaud Rebillout ]
+  * Bump compat to 13
+  * Bump Standards-Version
+  * Add Rules-Requires-Root
+  * Remove empty d/patches
+  * Reduce d/gbp.conf to the minimum
+  * Remove obsolete DH_GOPKG from d/rules
+  * Backport upstream patches
+  * Update build dependencies, replace boltdb-bolt with coreos-bbolt
+
+  [ Shengjing Zhu ]
+  * Update uscan watch file version to 4
+  * Change Section to golang
+  * Drop unused Depends
+  * Add DEP3 tags in patches
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Tue, 01 Dec 2020 15:15:26 +0700
+
+docker-libkv (0.2.1-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Anthony Fok ]
+  * New uptream release.
+  * {Build-,}Depends on golang-any instead of golang-go
+  * Use debhelper (>= 10)
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Bump dependency on golang-etcd-server-dev to 3.0.0 as per upstream
+  * Add "XS-Go-Import-Path: github.com/docker/libkv" to debian/control
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Mon, 17 Jul 2017 11:32:57 -0600
+
+docker-libkv (0.2.0-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Standards-Version: 3.9.8.
+  * Removed "Built-Using" header.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 09 Jul 2016 17:24:21 +1000
+
+docker-libkv (0.1.0-3) unstable; urgency=medium
+
+  * Re-build with "golang-github-hashicorp-consul-dev".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 09 Mar 2016 20:31:19 +1100
+
+docker-libkv (0.1.0-2) unstable; urgency=medium
+
+  * Versioned depends on "golang-etcd-server-dev (>= 2.2.2+dfsg-2~)"
+    (Closes: #808054).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 16 Dec 2015 09:57:17 +1100
+
+docker-libkv (0.1.0-1) unstable; urgency=medium
+
+  * New upstream release [November 2015].
+
+  [ Dmitry Smirnov ]
+  * Move repository to Debian Go Packaging Team.
+  * gbp.conf update for GBP fanboys.
+  * copyright: added CC-BY-SA-4.0 license for docs.
+  * (Build-)Depends: drop "golang-testify-dev".
+
+  [ Tim Potter ]
+  * Add d/docs file
+  * Remove needless consul patch, but consul backend is still not built.
+  * Build-Depends:
+    + golang-golang-x-net-dev
+    + golang-etcd-server-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 19 Nov 2015 10:17:53 +1100
+
+docker-libkv (0.0~git20150829.0.2954a88-1) unstable; urgency=medium
+
+  * Initial release (Closes: #798310).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 08 Sep 2015 07:21:12 +1000

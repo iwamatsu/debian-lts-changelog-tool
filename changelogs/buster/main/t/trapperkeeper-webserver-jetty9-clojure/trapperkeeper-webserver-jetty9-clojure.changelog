@@ -1,0 +1,32 @@
+trapperkeeper-webserver-jetty9-clojure (1.7.0-2+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload.
+
+  [ Adam D. Barratt ]
+  * Replace deprecated class SslContextFactory with SslContextFactory#Server.
+    Largely based on a patch by Markus Koschany. (Closes: #1055348)
+
+ -- Markus Koschany <apo@debian.org>  Mon, 06 Nov 2023 23:23:30 +0100
+
+trapperkeeper-webserver-jetty9-clojure (1.7.0-2+deb10u1) buster; urgency=medium
+
+  [ Manfred Stock ]
+  * Add patch for SSL compatibility with newer Jetty (closes: #930562).
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 13 Sep 2019 11:00:50 +0200
+
+trapperkeeper-webserver-jetty9-clojure (1.7.0-2) unstable; urgency=medium
+
+  * Fix compatibility with Jetty 9.4
+  * d/control: switch Vcs-* to salsa
+  * Bump Standards-Version to 4.3.0; no changes needed
+  * d/copyright: bump debian/* years
+  * Bump dh compat to 11; no changes needed
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 07 Feb 2019 20:23:37 +0200
+
+trapperkeeper-webserver-jetty9-clojure (1.7.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #855745)
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sat, 05 Aug 2017 15:49:23 -0400

@@ -1,0 +1,86 @@
+ruby-git (1.2.8-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add patch to address command line injection in Git::Lib#fetch.
+    (Fixes: CVE-2022-25648) (Closes: #1009926)
+  * Add patch to properly unescape diff paths and in ls-files do not unescape
+    file paths with eval. (Fixes: CVE-2022-46648, CVE-2022-47318)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sun, 29 Jan 2023 19:20:59 +0530
+
+ruby-git (1.2.8-1) unstable; urgency=low
+
+  * New upstream version, closes: #763889.
+     - Refresh patch no_color_pipes.
+  * Update Standards-Version to 3.9.6, no source changes needed.
+  * Remove libgit-ruby* transitional packages, closes: #735703.
+
+ -- Michael Schutte <michi@debian.org>  Sat, 25 Oct 2014 20:19:58 +0200
+
+ruby-git (1.2.6-1) unstable; urgency=low
+
+  * New upstream version.
+    - Fully supports Ruby 2.0; drop requirement on Ruby 1.8 through
+      XS-Ruby-Versions, closes: #730887.
+    - Install README.md instead of README.
+  * Rename patches/no_color_pipes to patches/no_color_pipes.diff and update.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * Use the anonscm.debian.org hostname in Vcs-* URLs.
+  * Point to the correct URL for the 1.0 machine-readable copyright spec in
+    debian/copyright.
+  * Depend on git instead of git-core.
+  * Make transitional packages Priority: extra.
+
+ -- Michael Schutte <michi@debian.org>  Sun, 01 Dec 2013 11:52:43 +0100
+
+ruby-git (1.2.5-2) unstable; urgency=low
+
+  * Rename to ruby-git and switch to dh_ruby packaging, see
+    <http://wiki.debian.org/Teams/Ruby/RubyInWheezy>.
+  * Drop the API documentation according to the decision reported there.
+  * Point Vcs-* to the renamed repo.
+  * Turn libgit-ruby{,1.8} into empty transitional packages, taking over
+    the entire libgit-ruby source package.
+  * Update debian/copyright to the frozen revision of DEP 5.
+  * Bump Standards-Version to 3.9.2, no changes needed.
+
+ -- Michael Schutte <michi@debian.org>  Sun, 12 Jun 2011 10:51:37 +0200
+
+libgit-ruby (1.2.5-1) unstable; urgency=low
+
+  * New upstream version.
+  * New patch no_color_pipes, closes: #592673.  Use the “--no-color” switch on
+    commands like “git branch” and “git diff” to avoid problems in parsing
+    their output when “color.* = always”.
+  * Convert package to the 3.0 (quilt) source format.
+  * Use debhelper 7.0.50 override features in debian/rules, adjust
+    build-dependency accordingly.
+  * Move libgit-ruby to section ruby (formerly libs).
+  * Change description so the package cannot be mistaken for a pure Ruby
+    implementation of Git.
+  * Use githubredir in the watchfile as no tarballs are provided by upstream
+    (gems are the primary path of distribution).
+  * Change the maintainer e-mail address in control and copyright.
+  * Remove Homepage: field from debian/control (seems to be gone).
+  * Simplify debian/copyright to the current DEP-5 draft.
+  * Distinguish libgit-ruby{,1.8} in their short descriptions.
+  * Add ${misc:Depends}.
+  * Bump Standards-Version to 3.9.1, no changes needed.
+  * Update Vcs-* headers (changed username on Alioth).
+  * Document quilt patches according to DEP-3.
+
+ -- Michael Schutte <michi@debian.org>  Wed, 16 Feb 2011 14:21:15 +0100
+
+libgit-ruby (1.0.7-2) unstable; urgency=low
+
+  * Depend on git-core, closes: #486681.
+  * Add Paul van Tilburg to Uploaders.
+  * Bump Standards-Version to 3.8.0 (no changes needed).
+
+ -- Michael Schutte <m.schutte.jr@gmail.com>  Sun, 22 Jun 2008 16:16:00 +0200
+
+libgit-ruby (1.0.7-1) unstable; urgency=low
+
+  * Initial release, closes: #483002.
+
+ -- Michael Schutte <m.schutte.jr@gmail.com>  Wed, 04 Jun 2008 20:45:47 +0200

@@ -1,0 +1,127 @@
+editorconfig-core (0.12.1-1.1+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2023-0341
+    Fix potential buffer overflow in ec_glob (#87)
+  * CVE-2024-53849
+    Fix pointer overflow in STRING_CAT and other locations
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 29 Nov 2024 22:03:02 +0100
+
+editorconfig-core (0.12.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/control: Drop explicit Pre-Depends on multiarch-support
+    (Closes: #870509).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sat, 20 Jan 2018 22:17:16 +0100
+
+editorconfig-core (0.12.1-1) unstable; urgency=medium
+
+  [ upstream ]
+  * New release.
+    + Fix avoid calling exit()
+      Closes: Bug#818625.
+    + Bump required minimum cmake version to 2.8.7.
+    + Use GNU installation dirs for OS portability.
+
+  [ Jonas Smedegaard ]
+  * Modernize watch file, and add usage hint comment.
+  * Drop CDBS get-orig-source target: Use "gbp import-orig --uscan"
+    instead.
+  * Declare compliance with Debian Policy 3.9.7.
+  * Modernize Vcs-Git field: Use https protocol.
+  * Update copyright info:
+    + Extend coverage for main upstream author.
+    + Extend copyright of packaging to cover current year.
+    + Use License-Grant and License-Reference fields.
+      Thanks to Ben Finney.
+  * Add lintian override regarding license in License-Reference field.
+    See bug#786450.
+  * Build-depend unversioned on debhelper: Needed version satisfied even
+    in oldstable.
+  * Add lintian override regarding debhelper 9.
+  * Update/unfuzz patches.
+  * Install development man pages, and adjust section for file format
+    man page.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 25 Mar 2016 14:03:18 +0100
+
+editorconfig-core (0.12.0-2) unstable; urgency=medium
+
+  * Fix have -doc package symlink externally packaged jquery.
+    Build-depend (not only depend) on libjs-jquery.
+  * Update copyright info: Extend coverage for myself.
+  * Resolve major version from upstream code (not changelog version.
+  * Modernize git-buildpackage config: Drop "git-" prefix.
+  * Avoid compressing documentation.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 02 May 2015 14:28:45 +0200
+
+editorconfig-core (0.12.0-1) experimental; urgency=medium
+
+  [ upstream ]
+  * New release.
+    Closes: bug#767189, Thanks to Hong Xu.
+
+  [ Vasudev Kamath ]
+  * Update source URL in copyright and watch file to reflect upstream
+    renaming of project to editorconfig-core-c.
+  * Update copyright file:
+    + Add Files sections for newly added files.
+    + Drop Files section for no longer shipped ec_fnmatch.* files, and
+      drop now unused BSD-3-clause License section.
+  * Build-depend on libpcre3-dev.
+  * Declare compliance with Standards-Version 3.9.6.
+  * Add patch 1002 to make package build reproducible.
+
+  [ Jonas Smedegaard ]
+  * Modernize CDBS use:
+    + Stop explicitly pass LDFLAGS: Done implicitly since cdbs 0.4.122.
+    + Stop suppress optional build dependencies: available even in
+      oldstable.
+  * Update Vcs-Browser field to use canonical https protocol.
+  * Stop track upstream tarball checksum.
+  * Simplify watch file.
+  * Fix tighten build-dependency on d-shlibs: Needed for --multiarch and
+    --exclude-la options.
+  * Unfuzz and reorder patches.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 12 Mar 2015 22:00:51 +0100
+
+editorconfig-core (0.11.5-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 3.9.5, no change to package source.
+  * Replace gitweb url with cgit URL in Vcs-Browser field.
+  * Mark -dbg package as Multi-Arch same
+  * Bump compat to 9 to fix Multi-Arch -dbg package generation
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Thu, 14 Aug 2014 22:18:07 +0530
+
+editorconfig-core (0.11.5-1) unstable; urgency=low
+
+  [ Jonas Smedegaard ]
+  * Fix a typo in short description.
+  * Add README.source emphasizing control.in file as *not* a
+    show-stopper for contributions, referring to
+    CDBS+git-buildpackage wiki page for details.
+
+  [ Vasudev Kamath ]
+  * Imported Upstream version 0.11.5
+  * Moved doxygen into build-depends from build-depends-indep as it is
+    generating man pages needed by the package.
+    Closes: bug#705682
+  * Use DEB_UPSTREAM_VERSION instead of hard coding upstream version in
+    arguments to dh_link for editorconfig package.
+  * Add multi-arch related quirks, including missing ${cdbs:Pre-Depends}
+    substitution value.
+
+ -- Vasudev Kamath <kamathvasudev@gmail.com>  Mon, 10 Jun 2013 19:52:34 +0530
+
+editorconfig-core (0.11.0-1) unstable; urgency=low
+
+  [ Vasudev Kamath ]
+  * Initial release.
+    Closes: bug#679663.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 29 Mar 2013 16:41:00 +0100

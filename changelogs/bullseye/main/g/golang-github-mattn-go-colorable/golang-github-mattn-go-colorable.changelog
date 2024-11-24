@@ -1,0 +1,106 @@
+golang-github-mattn-go-colorable (0.1.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Sep 2020 00:15:28 +0800
+
+golang-github-mattn-go-colorable (0.1.6-1) unstable; urgency=medium
+
+  [ Michael Stapelberg ]
+  * update debian/gitlab-ci.yml (using salsa.debian.org/go-team/ci/cmd/ci)
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+    Fixes: lintian: insecure-copyright-format-uri
+  * Bump debhelper from old 9 to 12.
+    Fixes: lintian: package-uses-old-debhelper-compat-version
+  * Set debhelper-compat version in Build-Depends.
+    Fixes: lintian: uses-debhelper-compat-file
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+    Fixes: lintian: upstream-metadata-file-is-missing
+  * Add debian/watch file, using github.
+    Fixes: lintian: debian-watch-file-is-missing
+
+  [ Jelmer Vernooĳ ]
+  * Merge branch 'lintian-fixes' into 'master'
+    Fix some issues reported by lintian
+    See merge request go-team/packages/golang-github-mattn-go-colorable!1
+
+  [ Anthony Fok ]
+  * New upstream version 0.1.6
+  * Apply "cme fix dpkg" fixes to debian/control:
+    - Organize debian/control fields
+    - Bump Standards-Version to 4.5.0 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Remove unneeded debian/source/options file
+  * Add myself to the list of Uploaders
+  * Add "Rules-Requires-Root: no" to debian/control
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * debian/rules: Prevent the building of /usr/bin/colorable
+
+ -- Anthony Fok <foka@debian.org>  Mon, 25 May 2020 19:53:57 -0600
+
+golang-github-mattn-go-colorable (0.0.9-3) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 06 Feb 2018 00:19:49 -0500
+
+golang-github-mattn-go-colorable (0.0.9-2) unstable; urgency=medium
+
+  * Team upload.
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 17:08:20 -0500
+
+golang-github-mattn-go-colorable (0.0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add golang-github-mattn-go-isatty-dev to B-D.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 10 Jan 2018 12:47:40 +0900
+
+golang-github-mattn-go-colorable (0.0.6-3) unstable; urgency=medium
+
+  * Team upload.
+  * Move to salsa.debian.org.
+  * Use XS-Go-Import-Path.
+  * Testsuite: autopkgtest-pkg-go.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 07 Jan 2018 21:39:06 -0500
+
+golang-github-mattn-go-colorable (0.0.6-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team Upload
+  * Remove Built-Using from arch:all -dev package
+
+  [Nobuhiro Iwamatsu ]
+  * Update Standards-Version to 4.1.1.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 20 Oct 2017 12:34:25 +0900
+
+golang-github-mattn-go-colorable (0.0.6-1) unstable; urgency=medium
+
+  [ Nobuhiro Iwamatsu ]
+  * New upstream. Update to 0.0.6.
+  * Update Standards-Version to 3.9.8.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sat, 15 Oct 2016 07:40:51 +0900
+
+golang-github-mattn-go-colorable (0.0~git20160226.9cbef7c3-2) UNRELEASED; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+ -- Paul Tagliamonte <paultag@debian.org>  Wed, 29 Jun 2016 20:42:51 -0400
+
+golang-github-mattn-go-colorable (0.0~git20160226.9cbef7c3-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #816010)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 26 Feb 2016 02:47:36 +0900

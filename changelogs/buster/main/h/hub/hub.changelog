@@ -1,0 +1,72 @@
+hub (2.7.0~ds1-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 12:20:19 +0200
+
+hub (2.7.0~ds1-1) unstable; urgency=medium
+
+  * New upstream version 2.7.0
+  * Bump Standards-Version to 4.3.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 02 Jan 2019 01:38:14 -0700
+
+hub (2.6.1~ds1-1) unstable; urgency=medium
+
+  * New upstream version 2.6.1
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Refresh man-pages.patch
+  * Remove disable-TestTransformRemoteArgs.patch.
+    See https://github.com/github/hub/issues/1937
+
+ -- Anthony Fok <foka@debian.org>  Sat, 22 Dec 2018 21:11:20 -0700
+
+hub (2.6.0~ds1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Thu, 15 Nov 2018 11:32:51 +0200
+
+hub (2.5.1~ds1-1) unstable; urgency=medium
+
+  * New upstream version 2.5.1
+  * Remove goyaml.patch which has been merged upstream.
+    See https://github.com/github/hub/pull/1780
+
+ -- Anthony Fok <foka@debian.org>  Mon, 24 Sep 2018 21:17:37 -0600
+
+hub (2.4.0~ds1-1) unstable; urgency=medium
+
+  [ Tianon Gravi ]
+  * Initial packaging in 2015 and 2016 with hub 2.2.3~ds1,
+    but unreleased due to missing dependencies
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * Initial release of hub 2.4.0~ds1 (Closes: #807866)
+  * Migrate from gopkg.in/yaml.v1 to gopkg.in/yaml.v2
+  * Update Build-Depends for hub v2.4.0
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright
+  * Add myself to the list of Uploaders
+  * Build and install man pages
+  * Install bash, fish and zsh completion files
+  * Disable TestTransformRemoteArgs which requires local repo in .git/
+  * Update package description and dependencies
+
+  [ Antoine Beaupré ]
+  * Fix build dependency:
+    The ruby-ronn package does not ship the ronn program anymore
+
+  [ Anthony Fok ]
+  * Bump Standards-Version to 4.2.1 (no change)
+  * Add behind-the-scene copyright information about this Go rewrite of Hub
+    (v2), initiated by Jingwen Owen Ou <jingweno@gmail.com> which has now
+    replaced the original (v1) Ruby implementation, to debian/copyright
+    (Closes: #909514)
+  * Also add my name for the debian/* files to debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Mon, 24 Sep 2018 17:03:52 -0600

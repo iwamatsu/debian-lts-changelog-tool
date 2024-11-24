@@ -1,0 +1,59 @@
+golang-bugsnag-panicwrap (1.2.0-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 05 Jan 2021 23:21:07 +0100
+
+golang-bugsnag-panicwrap (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Patched away "kardianos/osext";
+    removed "golang-github-kardianos-osext-dev" from (Build-)Depends.
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional.
+  * debhelper & compat to version 11.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 04 Jul 2018 15:37:31 +1000
+
+golang-bugsnag-panicwrap (1.1.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Switch to XS-Go-Import-Path
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Thu, 08 Feb 2018 09:12:48 +0100
+
+golang-bugsnag-panicwrap (1.1.0-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 13:35:06 +0300
+
+golang-bugsnag-panicwrap (1.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Introduced "gbp.conf".
+  * Introduced "watch" file.
+  * Standards-Version: 3.9.7.
+  * Vcs-Browser URL to HTTPS.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 30 Mar 2016 15:58:20 +1100
+
+golang-bugsnag-panicwrap (0.0~git20141111-1) unstable; urgency=low
+
+  * Initial release (Closes: #785086)
+
+ -- Tim Potter <tpot@hp.com>  Wed, 09 Sep 2015 12:55:46 +1000

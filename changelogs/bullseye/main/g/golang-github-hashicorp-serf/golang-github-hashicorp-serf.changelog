@@ -1,0 +1,131 @@
+golang-github-hashicorp-serf (0.9.4~ds1-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Remove references to obsolete targets in systemd unit files:
+      debian/serf.service (syslog.target).
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+  [ Dmitry Smirnov ]
+  * New upstream release
+  * Rules-Requires-Root: no
+  * Standards-Version: 4.5.0
+  * (Build-)Depends:
+    - golang-github-posener-complete-dev
+    = golang-github-hashicorp-memberlist-dev (>= 0.2.2~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 06 Oct 2020 20:38:37 +1100
+
+golang-github-hashicorp-serf (0.8.5~ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.1
+  * (Build-)Depends:
+    = golang-github-hashicorp-go-msgpack-dev (>= 0.5.5~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 24 Oct 2019 02:29:24 +1100
+
+golang-github-hashicorp-serf (0.8.4~ds1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Added myself to Uploaders.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+  * Added "Pre-Depends: ${misc:Pre-Depends}".
+  * (Build-)Depends:
+    + golang-github-fatih-color-dev
+    + golang-github-google-btree-dev
+    + golang-github-posener-complete-dev
+    = golang-github-hashicorp-memberlist-dev (>= 0.1.5~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 28 Sep 2019 09:51:43 +1000
+
+golang-github-hashicorp-serf (0.8.1+git20180508.80ab4877~ds-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream snapshot.
+  * Use Files-Excluded to preserve "vendor/github.com/sean-/seed".
+  * Removed "04-Revendor-memberlist.patch".
+  * (Build-)Depends:
+    = golang-github-hashicorp-memberlist-dev (>= 0.1.0+git20180209~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 27 Jun 2018 11:56:08 +1000
+
+golang-github-hashicorp-serf (0.8.1+git20171021.c20a0b1~ds1-5) unstable; urgency=medium
+
+  * Team upload.
+  * Set Built-Using
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Mon, 05 Mar 2018 18:54:53 +0100
+
+golang-github-hashicorp-serf (0.8.1+git20171021.c20a0b1~ds1-4) unstable; urgency=high
+
+  * Ignore test failures again, as they are too flakey (upstream bug #496).
+    Closes: 884031.
+  * Stop using prisine-tar.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 18 Dec 2017 15:58:42 +0000
+
+golang-github-hashicorp-serf (0.8.1+git20171021.c20a0b1~ds1-3) unstable; urgency=medium
+
+  * Fix build failures in 32-bits.
+  * Re-vendor hashicorp/memberlist, as the released version breaks serf
+    completely.
+  * Add myself to Uploaders.
+  * Replace initscript links with actual files, and fix reference to
+    /usr/local/bin. Closes: 871615.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 07 Nov 2017 19:39:42 +0000
+
+golang-github-hashicorp-serf (0.8.1+git20171021.c20a0b1~ds1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix typo in dependencies.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 23 Oct 2017 07:04:31 +0000
+
+golang-github-hashicorp-serf (0.8.1+git20171021.c20a0b1~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot, needed for consul.
+  * Exclude vendor/ directory when importing.
+  * Update dependencies.
+  * Automatic packaging fixes by cme and pkg-go-common-fixes.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Mark package as autopkgtest-able.
+  * Stop ignoring test failures; patch currently failing tests.
+  * Fix spelling mistakes spotted by lintian.
+  * More lintian fixes.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 23 Oct 2017 06:44:47 +0000
+
+golang-github-hashicorp-serf (0.7.0~ds1-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 16:49:48 +0300
+
+golang-github-hashicorp-serf (0.7.0~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Removed obsolete patches.
+  * Ignore test failures.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 12:54:00 +1100
+
+golang-github-hashicorp-serf (0.6.4~ds1-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Sat, 24 Oct 2015 05:50:24 -0700

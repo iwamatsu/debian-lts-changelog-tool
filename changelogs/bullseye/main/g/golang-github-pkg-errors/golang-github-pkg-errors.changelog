@@ -1,0 +1,61 @@
+golang-github-pkg-errors (0.9.1-1) unstable; urgency=medium
+
+  * New upstream version 0.9.1
+    - Add support to Go 1.13.  Fixes FTBFS. (Closes: #952194)
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+  * Bump Standards-Version to 4.5.0 (no change)
+  * debian/control: Add "Rules-Requires-Root: no"
+  * debian/copyright: Add Upstream-Contact field
+
+ -- Anthony Fok <foka@debian.org>  Wed, 26 Feb 2020 15:26:27 -0700
+
+golang-github-pkg-errors (0.8.1-1) unstable; urgency=medium
+
+  * New upstream version 0.8.1
+  * Update Maintainer address in debian/control
+  * Bump Standards-Version to 4.3.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 17 Jan 2019 23:47:05 -0700
+
+golang-github-pkg-errors (0.8.0+git20180311.816c908-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.8.0+git20180311.816c908
+  * Apply "cme fix dpkg" to debian/control,
+    bumping Standards-Version to 4.1.3,
+    setting Priority to optional,
+    adding Testsuite: autopkgtest-pkg-go, etc.
+  * Use debhelper (>= 11)
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Apr 2018 23:08:01 -0600
+
+golang-github-pkg-errors (0.8.0+git20170505.5.c605e28-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 30 Jun 2017 23:18:56 -0600
+
+golang-github-pkg-errors (0.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 16 Oct 2016 02:41:21 -0600
+
+golang-github-pkg-errors (0.7.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove duplicate end-of-line '\' in debian/watch.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Aug 2016 05:14:46 -0600
+
+golang-github-pkg-errors (0.6.0+git20160608.5.2af433a-1) unstable; urgency=medium
+
+  * Initial release (Closes: #826757)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 08 Jun 2016 11:29:27 -0600

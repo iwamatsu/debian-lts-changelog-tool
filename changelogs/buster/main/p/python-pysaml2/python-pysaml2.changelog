@@ -1,0 +1,142 @@
+python-pysaml2 (4.5.0-4+deb10u1) buster-security; urgency=medium
+
+  * CVE-2020-5390: does not check that the signature in a SAML document is
+    enveloped and thus signature wrapping is effective, i.e., it is affected by
+    XML Signature Wrapping (XSW). Applied upstream patch: Fix XML Signature
+    Wrapping (XSW) vulnerabilities (Closes: #949322).
+  * Remove a test file that will fail past 2020-11-28 (Closes: #949227).
+  * Add fix-importing-mock-in-py2.7.patch.
+  * Add remove-test_switch_1.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 07 Feb 2020 09:27:20 +0100
+
+python-pysaml2 (4.5.0-4) unstable; urgency=medium
+
+  * CVE-2017-1000246: Reuse of AES initialization vector in AESCipher /
+    UsernamePasswordMako / Server. Backported upstream patch:
+    CVE-2017-1000246_Always_generate_a_random_IV_for_AES_operations.patch
+    (Closes: #882012).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 07 Sep 2018 11:54:53 +0200
+
+python-pysaml2 (4.5.0-3) unstable; urgency=medium
+
+  * Also remove test_load_remote_encoding() test which is doing network access
+    during build (Closes: #907944).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 07 Sep 2018 11:34:59 +0200
+
+python-pysaml2 (4.5.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 03 Sep 2018 17:05:03 +0200
+
+python-pysaml2 (4.5.0-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+  [ Thomas Goirand ]
+  * New upstream release. (Closes: #857848, #882012, #886423, #859135).
+  * Refreshed/rebased all patches.
+  * Added python{3,}-defusedxml as (build-)depends.
+  * Add python{3,}-future as (buid-)depends.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 20 Aug 2018 16:47:23 +0200
+
+python-pysaml2 (4.0.2-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * Sets http_proxy to the discard port to make sure tests aren't doing
+    network access.
+  * Add patch to also remove tests/test_83_md_extensions.py that fails
+    test discovery.
+  * Also removed test_load_extern_incommon() which is doing network access.
+  * Also removed test_enc1() failing for an unknown reason.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 30 Apr 2018 10:24:47 +0000
+
+python-pysaml2 (4.0.2-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Add missing build-depends: python{3,}-mock.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Feb 2018 20:46:48 +0000
+
+python-pysaml2 (4.0.2-1) experimental; urgency=medium
+
+  * Fixed VCS URLs (https).
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+  * d/copyright: Changed source URL to https protocol
+  [ gustavo panizzo ]
+  * Increase the minimum version of python-pyasn1 required.
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Updating maintainer field.
+  * Running wrap-and-sort -bast.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Correcting permissions in debian packaging files.
+  * Updating standards version to 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Using pkgos-dh_auto_install.
+  * Remove one failing test.
+  * Fixed debian/copyright ordering and years.
+  * Standards-Version is now 4.1.3.
+  * Using debhelper 10.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Feb 2018 13:41:27 +0000
+
+python-pysaml2 (3.0.0-3) unstable; urgency=medium
+
+  * override_dh_python3 to fix Py3 shebang.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Oct 2015 23:48:31 +0000
+
+python-pysaml2 (3.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 Oct 2015 10:34:56 +0000
+
+python-pysaml2 (3.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Added Python3 support.
+  * Updated watch file to use github tag and not broken pypi.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 31 Jul 2015 08:47:57 +0000
+
+python-pysaml2 (2.4.0-2) unstable; urgency=medium
+
+  * Makes build reproducible thanks to Juan Picca (Closes: #789751).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 26 Jun 2015 15:41:09 +0200
+
+python-pysaml2 (2.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Dropped X-Python-Version: >= 2.7.
+  * Standard-Versions: is now 3.9.6.
+  * Also renames /usr/bin/merge_metadata.py as pysaml2-merge-metadata.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 May 2015 17:48:07 +0200
+
+python-pysaml2 (2.0.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #760824)
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 08 Sep 2014 16:11:53 +0800

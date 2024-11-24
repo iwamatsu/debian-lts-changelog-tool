@@ -1,0 +1,77 @@
+golang-gogottrpc (1.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.0.2
+  * Update golang-procfs-dev to golang-github-prometheus-procfs-dev
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Update Section to golang
+  * Update lintian overrides
+    binary-without-manpage renamed to no-manual-page
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 26 Nov 2020 01:39:27 +0800
+
+golang-gogottrpc (1.0.1-2) UNRELEASED; urgency=low
+
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sun, 07 Jun 2020 09:34:54 -0000
+
+golang-gogottrpc (1.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Track upstream tags in uscan
+  * New upstream version 1.0.1
+  * Update debhelper-compat to 13
+  * Remove patch which is for go1.9
+  * Update Standards-Version to 4.5.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 20 May 2020 01:03:31 +0800
+
+golang-gogottrpc (0.0~git20190828.92c8520-2) unstable; urgency=medium
+
+  * Team upload.
+  * rebuild for sid.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 07 Jan 2020 02:07:40 +0800
+
+golang-gogottrpc (0.0~git20190828.92c8520-1) experimental; urgency=medium
+
+  * Team upload.
+  * Fix wrong version in Replaces and Breaks
+  * Update Standards-Version to 4.4.1 (no changes)
+  * Add golang-procfs-dev to Build-Depends, used in testing
+  * Remove unused lintian overrides
+  * Set Rules-Requires-Root to no
+  * New upstream version 0.0~git20190828.92c8520
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 04 Jan 2020 02:50:35 +0800
+
+golang-gogottrpc (0.0~git20190211.6914432-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Arnaud Rebillout ]
+  * Set minimal requirement for some build dependencies
+  * Fix Vcs-Browser/Git fields
+
+  [ Shengjing Zhu ]
+  * Use git mode in debian/watch since upstream doesn't have tags
+  * New upstream version 0.0~git20190211.6914432
+  * Update pkg-go team address to team+pkg-go@tracker.debian.org
+  * Rename dev package name to golang-github-containerd-ttrpc-dev.
+    Upstream repository has moved to https://github.com/containerd/ttrpc
+  * Update copyright info for new version
+  * Exclude example directory when building
+  * Update debhelper-compat to 12, and drop debian/compat file
+  * Remove patch applied in new version
+  * Skip dh_dwz sequence, since it fails on binary without .debug_info section
+  * Update Standards-Version to 4.3.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 02 Mar 2019 22:13:22 +0800
+
+golang-gogottrpc (0.0~git20180205.d452837-1) unstable; urgency=medium
+
+  * Initial release (Closes: #890958)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Wed, 21 Feb 2018 10:37:54 +0700

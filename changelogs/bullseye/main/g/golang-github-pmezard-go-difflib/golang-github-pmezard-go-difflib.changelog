@@ -1,0 +1,60 @@
+golang-github-pmezard-go-difflib (1.0.0-3) unstable; urgency=medium
+
+  [ Debian Janitor (Jelmer Vernooĳ) ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+  * Apply multi-arch hints.
+    + golang-github-pmezard-go-difflib-dev: Add Multi-Arch: foreign.
+
+  [ Anthony Fok ]
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Add "Rules-Requires-Root: no" to debian/control
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+
+ -- Anthony Fok <foka@debian.org>  Thu, 05 Nov 2020 03:21:12 -0700
+
+golang-github-pmezard-go-difflib (1.0.0-2) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" fixes to debian/control, adding
+    "Testsuite: autopkgtest-pkg-go" field, setting Priority to "optional",
+    bumping Standards-Version to 4.2.1, bumping debhelper to (>= 11~), etc.
+  * Update Maintainer address in debian/control
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Dec 2018 00:07:15 -0700
+
+golang-github-pmezard-go-difflib (1.0.0-1) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * Team upload.
+  * Fix broken watch file.
+
+  [ Anthony Fok ]
+  * New upstream version 1.0.0 (released on 8 Aug 2016)
+    which is actually identical to 0.0~git20160110.0.792786c.
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Jan 2017 02:32:35 -0700
+
+golang-github-pmezard-go-difflib (0.0~git20160110.0.792786c-2) unstable; urgency=medium
+
+  * Team upload
+  * Refresh debian/control:
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URL for Vcs-Git field too
+    - Change golang-go to golang-any in Build-Depends
+    - Remove golang-go from Depends field
+  * Add debian/watch file
+
+ -- Anthony Fok <foka@debian.org>  Sun, 12 Jun 2016 15:04:04 -0600
+
+golang-github-pmezard-go-difflib (0.0~git20160110.0.792786c-1) unstable; urgency=medium
+
+  * Initial release (Closes: #817968).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 12 Mar 2016 17:08:14 +1100

@@ -1,0 +1,264 @@
+python-oslo.utils (3.36.5-0+deb10u3) buster-security; urgency=medium
+
+  * Add patch to address CVE-2022-47951:
+    imageutils_Report_format_specific_..._when_using_JSON_output_format.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 27 Jan 2023 11:23:03 +0100
+
+python-oslo.utils (3.36.5-0+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS security team.
+  * CVE-2022-0718: Due to improper parsing, passwords with a double quote
+    in them where not masked in logs logs, causing any part of the password
+    after the double quote to be revealed in plaintext.
+  * Configure autopkgtests to work.
+
+ -- Chris Lamb <lamby@debian.org>  Tue, 13 Sep 2022 13:59:23 +0100
+
+python-oslo.utils (3.36.5-0+deb10u1) buster; urgency=medium
+
+  * CVE-2019-3866: Sensitive information leaked in mistral logs. Upgrade to
+    the tip of the upstream stable/rocky branch (as the upstream patch would
+    not otherwise apply).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 21 Dec 2019 21:37:40 +0100
+
+python-oslo.utils (3.36.4-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 03 Sep 2018 23:20:56 +0200
+
+python-oslo.utils (3.36.4-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Add trailing tilde to min version depend to allow
+    backports
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+  [ Thomas Goirand ]
+  * New upstream release (rocky).
+  * Fixed (build-)depends for this release.
+
+  [ Michal Arbet ]
+  * d/control: Bump debhelper version
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 18 Aug 2018 21:46:12 +0200
+
+python-oslo.utils (3.35.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Feb 2018 21:28:49 +0000
+
+python-oslo.utils (3.35.0-1) experimental; urgency=medium
+
+  * Set VCS URLs to point to salsa.
+  * New upstream release.
+  * Update (build-)depends for this release.
+  * Using pkgos-dh_auto_{install,test}.
+  * Standards-Version is now 4.1.3.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 10 Feb 2018 14:22:22 +0100
+
+python-oslo.utils (3.28.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Fixed watch file.
+  * Removed disabling dh_sphinxdoc.
+  * Standards-Version is now 4.1.1.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 01 Nov 2017 21:56:33 +0000
+
+python-oslo.utils (3.28.0-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+  * d/copyright: Changed source URL to https protocol
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed now useless transition packages.
+  * debian/gpb.conf using debian/pike.
+  * Removed now useless requirements patch for pytz version.
+  * Disable calling dh_sphinxdoc as it's broken.
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Running wrap-and-sort -bast.
+  * Updating maintainer field.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Updating standards version to 4.0.1.
+  * Updating standards version to 4.1.0.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Aug 2017 18:13:37 +0000
+
+python-oslo.utils (3.8.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 Apr 2016 08:29:15 +0000
+
+python-oslo.utils (3.8.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 02 Apr 2016 14:46:26 +0200
+
+python-oslo.utils (3.7.0-1) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * Fixed minimum version of python{3,}-netifaces to 0.10.4.
+  * Standards-Version: 3.9.7 (no change).
+
+  [ Ondřej Nový ]
+  * Fixed homepage (https).
+  * Fixed VCS URLs (https).
+
+  [ Corey Bryant ]
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/allow-any-pytz-version.patch: Rebased.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 Mar 2016 10:22:30 +0000
+
+python-oslo.utils (3.4.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed ordering in debian/coypright.
+  * Fixed oslo.config version in build-depends-indep.
+  * Fixed duplicate long description.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Jan 2016 08:33:00 +0000
+
+python-oslo.utils (3.3.0-1) experimental; urgency=medium
+
+  [ David Della Vecchia ]
+  * New upstream release.
+  * d/control: Align requirements with upstream.
+
+  [ Corey Bryant ]
+  * d/control: Add python3-funcsigs to (build-)depends.
+  * d/rules: Run tests for all py3 versions.
+
+  [ Thomas Goirand ]
+  * Added Corey as Uploaders:.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 08 Jan 2016 12:56:27 -0500
+
+python-oslo.utils (3.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 01 Dec 2015 10:39:35 +0100
+
+python-oslo.utils (2.5.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Switched from override_dh_install to override_dh_auto_install.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 15 Oct 2015 20:47:59 +0000
+
+python-oslo.utils (2.5.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Refreshed patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 27 Sep 2015 21:45:21 +0200
+
+python-oslo.utils (2.4.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Added a patch to allow any version of pytz.
+  * Do not run test using Python 3.5 (python-netifaces can't be imported).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Sep 2015 09:58:33 +0000
+
+python-oslo.utils (2.1.0-1) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed && -> ; in debian/rules.
+  * Fixed (build-)depends for this release.
+  * Do not manually copy oslo/utils, as the namespace version is gone.
+
+  [ James Page ]
+  * Fixup typo in transitional package description (LP: #1471561).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 23 Jun 2015 23:45:52 +0200
+
+python-oslo.utils (1.6.0-2) experimental; urgency=medium
+
+  * Team upload.
+  * d/control: Remove errant , from Uploaders field.
+  * d/watch: Update to use Debian pypi redirector.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 15 Jun 2015 08:43:09 +0100
+
+python-oslo.utils (1.6.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release:
+    - d/control: Align dependencies and version requirements with upstream.
+    - d/control: Drop Build-Conflicts on python{3}-oslo.utils, no longer
+      needed.
+  * Re-align with Ubuntu:
+    - d/control: Add Breaks/Replaces for Ubuntu *oslo-utils packages.
+    - d/control: Add transitional packages for *oslo-utils.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 09 Jun 2015 08:50:43 +0100
+
+python-oslo.utils (1.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 25 Feb 2015 18:14:13 +0100
+
+python-oslo.utils (1.2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Reviewed (build-)depends.
+  * Added patch of .testr.conf to not list ./tests unit tests, which are using
+    the oslo. namespace (and then, failing in Python 3).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 23 Dec 2014 13:06:27 +0800
+
+python-oslo.utils (1.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 30 Sep 2014 14:52:27 +0000
+
+python-oslo.utils (0.3.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed new (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 17 Sep 2014 12:20:48 +0800
+
+python-oslo.utils (0.2.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Uploading to experimental before Jessie's freeze.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 05 Sep 2014 15:50:43 +0800
+
+python-oslo.utils (0.1.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #757325)
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Aug 2014 15:40:04 +0800

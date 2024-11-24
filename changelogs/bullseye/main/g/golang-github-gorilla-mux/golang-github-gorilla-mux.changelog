@@ -1,0 +1,100 @@
+golang-github-gorilla-mux (1.7.4-1) unstable; urgency=medium
+
+  * Team upload.
+  [ Debian Janitor ]
+  * Wrap long lines in changelog entries: 1.1-3.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Fix day-of-week for changelog entry 0.0~git20130701-1.
+
+  [ Reinhard Tartler ]
+  * New upstream version 1.7.4
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 11 Jul 2020 09:58:58 -0400
+
+golang-github-gorilla-mux (1.7.3-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Arnaud Rebillout ]
+  * New upstream version 1.7.3.
+  * Rework copyright for clarity, update format url.
+  * Update copyright for new upstream version.
+  * Bump compat to 12.
+  * Update various fields in control file.
+  * Update build dependencies.
+  * Remove golang-mux-dev breaks/replaces.
+  * Make myself an uploader.
+  * Remove helpers and Dockerfile.
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Wed, 23 Oct 2019 19:56:42 +1100
+
+golang-github-gorilla-mux (1.1-4) unstable; urgency=medium
+
+  * Team Upload
+  * Convert to XS-Go-Import-Path
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Wed, 25 Oct 2017 08:59:44 +0200
+
+golang-github-gorilla-mux (1.1-3) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 14:07:18 +0300
+
+golang-github-gorilla-mux (1.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Fixed Breaks/Replaces (Closes: #827330).
+  * Vcs-Git URL to HTTPS.
+  * Removed "Built-Using" field from -dev package.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 15 Jun 2016 16:08:52 +1000
+
+golang-github-gorilla-mux (1.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Tim Potter ]
+  * New upstream release (Closes: #822929)
+  * Update standards version to 3.9.8 and tweak short description
+
+  [ Dmitry Smirnov ]
+  * Added "watch" file.
+  * "golang-context-dev" --> "golang-github-gorilla-context-dev"
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 10 Jun 2016 22:05:02 +1000
+
+golang-github-gorilla-mux (0.0~git20150814.0.f7b6aaa-1) unstable; urgency=medium
+
+  * Upstream bump to f7b6aaa (2015-08-14).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Fri, 14 Aug 2015 16:18:20 -0600
+
+golang-mux (0.0~git20140505.1.136d54f-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update copyright to match body of the license, BSD-3, not MIT/Expat.
+    Thanks for that catch, alteholz.
+
+ -- Paul Tagliamonte <paultag@debian.org>  Thu, 12 Jun 2014 22:07:36 -0400
+
+golang-mux (0.0~git20140505.1.136d54f-1) unstable; urgency=medium
+
+  * We're hijacking the golang-mux-dev bianry because we want a source
+    rename to bring it in-line with go policy.
+  * Upstream bump to 136d54f (2014-05-05)
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 11 Jun 2014 21:18:57 -0400
+
+golang-mux-dev (0.0~git20130701-1) unstable; urgency=low
+
+  * Initial release (Closes: #714805)
+
+ -- Daniel Mizyrycki <mzdaniel@glidelink.net>  Sat, 13 Jul 2013 11:19:06 -0700

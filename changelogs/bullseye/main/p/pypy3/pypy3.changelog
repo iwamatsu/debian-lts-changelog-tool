@@ -1,0 +1,372 @@
+pypy3 (7.3.5+dfsg-2+deb11u4) bullseye-security; urgency=medium
+
+  * Security patches to the standard library:
+    - Apply cPython upstream security fix for CVE-2022-45061:
+      Fix quadratic time idna decoding.
+    - Apply cPython upstream security fix for CVE-2022-0391:
+      Remove the newline, and tab early from query and fragments.
+    - Apply cPython upstream security fix for CVE-2021-3737:
+      Fix http client infinite line reading (DoS) after
+      a HTTP 100 Continue.
+    - Apply cPython upstream security fix for CVE-2024-9287:
+      Quote template strings in `venv` activation scripts.
+    - Apply cPython upstream security fix for CVE-2021-28861:
+      Fix an open redirection vulnerability in http.server.
+    - Apply cPython upstream security fix for CVE-2023-27043:
+      Reject malformed addresses in email.parseaddr().
+  * Apply upstream security fix CVE-2020-10735:
+    Prevent DoS by large int<->str conversions,
+    implement the int_max_str_digits handling.
+  * Apply security fix for CVE-2020-29651 in the bundled python-py:
+    svnwc: fix regular expression vulnerable to DoS.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 26 Nov 2024 09:18:20 +0100
+
+pypy3 (7.3.5+dfsg-2+deb11u3) bullseye-security; urgency=medium
+
+  * Security patches to the standard library:
+    - Apply cPython upstream security fix for CVE-2023-24329:
+      Strip C0 control and space characters in urlsplit.
+    - Apply cPython upstream security fix for CVE-2023-40217:
+      Avoid bypass TLS of handshake protections on closed sockets.
+    - Apply cPython upstream security fix for CVE-2023-6597:
+      tempfile.TemporaryDirectory: fix symlink bug in cleanup.
+    - Apply cPython upstream security fix for CVE-2024-0450:
+      Protect zipfile from "quoted-overlap" zipbomb.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 06 Nov 2024 21:11:12 +0100
+
+pypy3 (7.3.5+dfsg-2+deb11u2) bullseye-security; urgency=medium
+
+  * Patch: Resolve CVE-2022-37454, a buffer overflow in SHA-3 (Keccak).
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 01 Nov 2022 21:40:38 +0200
+
+pypy3 (7.3.5+dfsg-2+deb11u1) bullseye; urgency=medium
+
+  * Patch: Remove extraneous #endif from import.h (Closes: #1001519)
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 25 Dec 2021 11:54:46 -0400
+
+pypy3 (7.3.5+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 03 Jun 2021 15:59:21 -0400
+
+pypy3 (7.3.5+dfsg-1) experimental; urgency=medium
+
+  * New upstream point release.
+  * Refresh patches.
+  * Drop patches cve-2021-3426 and ftplib-restrict-pasv, superseded upstream.
+  * Drop Pre-Depends dpkg (>= 1.15.6~). xz is always supported, these days.
+  * Move more translation logic into debian/scripts/translate.sh
+  * Use the bundled pycparser for translation, so that Debian can drop the
+    python-pycparser binary package.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sun, 23 May 2021 08:05:03 -0400
+
+pypy3 (7.3.4+dfsg-2) experimental; urgency=medium
+
+  * Move pypy3 dependencies to Pre-Depends, as the pypy3 binary is used in
+    package maintainer scripts. (Closes: #987908)
+  * Remove pydoc getfile feature. (CVE-2021-3426)
+  * security: Restrict ftplib PASV hosts (no CVE assigned).
+
+ -- Stefano Rivera <stefanor@debian.org>  Sun, 02 May 2021 12:32:41 -0400
+
+pypy3 (7.3.4+dfsg-1) experimental; urgency=medium
+
+  * New upstream release (identical to RC2).
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 12 Apr 2021 17:05:09 -0400
+
+pypy3 (7.3.4~rc2+dfsg-1) experimental; urgency=medium
+
+  * New upstream RC.
+  * Refresh patches.
+  * Drop patch no-sphinx-affiliates, superseded upstream.
+  * Update copyright.
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 05 Apr 2021 14:08:41 -0700
+
+pypy3 (7.3.4~rc1+dfsg-1) experimental; urgency=medium
+
+  * New upstream RC.
+    - Upload to experimental.
+    - Targeting Python 3.7 compatibility.
+  * Refresh patches.
+  * Drop patches, superseded upstream: core-type-annotation-scoping,
+    core-utf8-errors-ignore, cve-2021-23336, fcntl-segfault, and
+    fix-_crypt-imports.
+  * Replace deprecated imp.get_tag() in the byte-compilation autopkgtest.
+  * Update copyright.
+  * Bump Standards-Version to 4.5.1, no changes needed.
+  * Bump watch file version to 4.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 27 Mar 2021 08:32:38 -0700
+
+pypy3 (7.3.3+dfsg-3) unstable; urgency=medium
+
+  * Patch: CVE-2021-23336: Only use '&' as a query string separator.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 25 Feb 2021 10:55:51 -0800
+
+pypy3 (7.3.3+dfsg-2) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Drop patch s390x-z10, not needed since 7.3.1 dropped the assert we were
+    protecting ourselves from.
+  * Update s390x model target: z196 on Debian, zEC12 on Ubuntu < focal, z13 on
+    Ubuntu >= focal.
+  * Patch: Fix _crypt module's imports.
+  * Patch: Fix utf-8 decode with errors=ignore.
+  * Patch: Fix type annotation scoping bug.
+  * Patch: Fix segfault in fcntl.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + pypy3-doc: Add Multi-Arch: foreign.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 19 Dec 2020 12:26:35 -0800
+
+pypy3 (7.3.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upload to unstable.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 21 Nov 2020 10:46:01 -0800
+
+pypy3 (7.3.3~rc1+dfsg-1) experimental; urgency=medium
+
+  * New upstream RC release.
+    - Upload to experimental.
+  * Refresh patches.
+  * Update copyright.
+  * Drop patch ppc64-jit-regression, superseded upstream.
+  * Drop patch xdg-gvfs-open. Superseded upstream in 2.3 :P
+  * Drop patch test_termios. No longer needed.
+  * Carry over bdist-wininst-notfound from Debian's python3.8 package.
+  * Update Homepage.
+  * Add UpstreamMetadata.
+  * Point watch URL at downloads.python.org, bitbucket is no longer used.
+  * Fix some warnings in our fibc test package.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 12 Nov 2020 16:28:10 -0800
+
+pypy3 (7.3.2+dfsg-2) unstable; urgency=medium
+
+  * Patch: Fix JIT breakage on ppc64.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 26 Sep 2020 15:27:37 -0700
+
+pypy3 (7.3.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Drop patches pip-10 and sqlite3-isolation-regression, superseded upstream.
+  * Patch: Disable sphinx-affiliates search, not yet available in Debian.
+  * Add support for -V to pypy3compile. Given we support BCEP, it makes sense,
+    and will reduce package install noise.
+  * Update copyright.
+  * Use upstream's tool to build cffi modules, directly. It is useable
+    stand-alone, these days, and catches failures.
+  * Reorganize patches and prefix their commit messages with a category.
+  * Patch: Ignore InvalidTerminal exception in test_readline under TERM=dumb.
+  * Patch: Handle InvalidTerminal in rlcompleter.
+  * Patch: Ignore fcntl test lease failures known to occur on tmpfs on older
+    kernels (e.g. current buildds).
+  * Strip rpython/rlib/test/loadtest/loadtest*.dll from the source package.
+  * Run pypyjit tests under python 2.
+  * Tweak distutils-install-layout patch to avoid duplicate sys.path entries
+    when not in the installed layout.
+  * Fix ensurepip._uninstall, broken in our ensurepip-wheels patch.
+  * Build-Depend on python-pip-whl, used by test_venv.
+  * Disable zip_safe in our autopkgtest test packages with C extensions.
+    setuptools 47.3.2 broke C extension imports from eggs.
+  * Patch: Use the python2 binary to run the internal test suite. Debian
+    doesn't have a python binary any more.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 25 Sep 2020 20:29:03 -0700
+
+pypy3 (7.3.1+dfsg-4) unstable; urgency=medium
+
+  * Revert change to pypy3clean in 7.3.1+dfsg-2, that broke package removal.
+    Build knowledge of cPython compatibility into pypy3clean, to determine pyc
+    filenames.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 21 Apr 2020 21:49:20 -0700
+
+pypy3 (7.3.1+dfsg-3) unstable; urgency=medium
+
+  * Fix sqlite3 cffi build on armhf, there was an error in the ctypes-arm
+    patch.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 21 Apr 2020 09:21:37 -0700
+
+pypy3 (7.3.1+dfsg-2) unstable; urgency=medium
+
+  * Cherry-pick a sqlite3 regression patch.
+  * Point to the installed stdlib in the pypy-local sysconfig layout.
+  * Build out autopkgtests a little. Test: cffi lib importability, local
+    package installation, virtualenvs, byte-compilation.
+  * Add /usr/local/lib/pypy3.6/dist-packages to sys.path, so users can locally
+    install packages. (Closes: #956412)
+
+ -- Stefano Rivera <stefanor@debian.org>  Mon, 20 Apr 2020 15:36:17 -0700
+
+pypy3 (7.3.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release, upload to unstable
+  * Refresh patches.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 10 Apr 2020 12:34:21 -0700
+
+pypy3 (7.3.1~rc2+dfsg-1) experimental; urgency=medium
+
+  * New upstream RC, upload to experimental
+  * Update copyright.
+  * Bump Standards-Version to 4.5.0, no changes needed.
+  * Refresh patches.
+  * Update build-cffi-modules to use upstream's new library location.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 09 Apr 2020 16:05:54 -0700
+
+pypy3 (7.3.0+dfsg-4) unstable; urgency=medium
+
+  * Patch: Build Sphinx docs with Python 3. This requires disabling autodoc
+    and other custom extensions.
+  * Byte compile exception patterns (bcep) changes following python3-defaults
+    (3.8.2-2):
+    - new "file" type to list just one file
+      example: file|-4.0|/usr/share/foo/test.py
+    - ignore lines that start with hash char. (to allow comments)
+    - tighten checking directory name (partial match was possible before)
+    - in "re" type's pattern - check relative paths in addition to full path
+      (i.e. no need to include directory path in the pattern)
+      example: re|-4.0|/usr/lib/bar|baz/test.*\.py
+    - only warn about invalid patterns (instead of failing)
+  * Execute python2 (instead of python) during the build.
+  * We don't need python-docutils, any more.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 24 Mar 2020 19:16:53 -0700
+
+pypy3 (7.3.0+dfsg-3) unstable; urgency=medium
+
+  * Patch: Force s390x port to target z10 by default, fixing FTBFS.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 15 Jan 2020 09:53:22 +0000
+
+pypy3 (7.3.0+dfsg-2) unstable; urgency=medium
+
+  * Build-Depend on python2 instead of python.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 14 Jan 2020 07:57:50 +0200
+
+pypy3 (7.3.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Drop patch arm64-gcc-bug, superseded upstream.
+  * Update copyright.
+  * Build with pypy on arm64, now that we've bootstrapped the JIT.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 24 Dec 2019 08:58:34 +0200
+
+pypy3 (7.2.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream final release.
+  * Upload to unstable.
+  * Enable JIT and continuation module on arm64.
+  * Refresh patches.
+  * Patch arm64-gcc-bug: Avoid a GCC bug in the new arm64 JIT.
+  * Bump Standards-Version to 4.4.1, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 02 Nov 2019 11:56:38 -0700
+
+pypy3 (7.2.0~rc1+dfsg-1) experimental; urgency=medium
+
+  * New upstream RC, uploaded to experimental.
+  * Revert: Strip blake2b.o from the orig tarball.
+  * Refresh patches.
+  * Drop patch plat-linux-differences, superseded in cPython 3.6.
+  * Update copyright.
+  * Bump Standards-Version to 4.4.0, no changes needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 03 Oct 2019 14:49:58 +0300
+
+pypy3 (7.1.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Strip blake2b.o from the orig tarball.
+  * Switch to the 3.6 branch, the 3.5 branch is no longer being maintained
+    upstream. (Closes: #933092)
+  * Update watch file regex, upstream calls it pypy3.6 now.
+  * Drop patches, superseded upstream: graphlib-dots, hypothesis-crashes,
+    hurd-sysmacros.
+  * Replace patch version-7.0.0 with version-7.1.1.
+  * Refresh patches.
+  * Update copyright.
+  * Name pypy3{clean,compile} correctly in their own errors.
+  * Drop multiarch-extensions.sh, not needed for pypy3.
+  * Install _blake2 and _sha3 cffi modules.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 09 Aug 2019 12:50:05 -0300
+
+pypy3 (7.0.0+dfsg-3) unstable; urgency=medium
+
+  * Let pypy3 attempt to build on hurd. It has been previously ported.
+  * Fix webbrowser module. We had a patch that wasn't well ported to pypy3.
+  * Patch hurd-sysmacros: Include <sys/sysmacros.h> on GNU/Hurd.
+  * Remove old copyright file blocks for lib-python/2.7, it's no longer
+    included, upstream.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 20 Feb 2019 17:31:35 -0800
+
+pypy3 (7.0.0+dfsg-2) unstable; urgency=medium
+
+  * Remove dh_builddeb override, no longer necessary.
+  * Bump Standards-Version to 4.3.0, no changes needed.
+  * Don't use dh_python3, it wasn't doing anything, anyway.
+  * Patches from upstream release branch:
+    - Set the version to 7.0.0, accidentally updated in a merge.
+    - hypothesis-crashes: Handle older hypothesis versions better.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 08 Feb 2019 19:08:43 +0200
+
+pypy3 (7.0.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Drop patches avoid-rvmprof-dummy, hurd, and rvmprof-dummy. Superseded
+    upstream.
+  * Update copyright.
+  * Clean up after the new "extra_tests" directory.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 07 Feb 2019 15:34:05 +0200
+
+pypy3 (6.0.0+dfsg-3) unstable; urgency=medium
+
+  * Build-Depend on liblzma-dev, to build the lzma cffi module.
+    Thanks Helmut Grohne. (Closes: #921494)
+  * Bump Standards-Version to 4.3.0, no changes needed.
+  * Ignore lib_pypy/_testmultiphase.c in clean.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 06 Feb 2019 17:10:24 +0200
+
+pypy3 (6.0.0+dfsg-2) unstable; urgency=medium
+
+   * Upload to unstable.
+   * Patch graphlib-dots: Print some more mandlebrot while breaking cycles, to
+     avoid build timeouts.
+   * Add some superficial autopkgtests.
+   * Support pip 10 in ensurepip.
+   * pypy3-lib-testsuite: Don't attempt to byte-compile lib2to3's test data.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 31 Jan 2019 18:16:35 +0100
+
+pypy3 (6.0.0+dfsg-1) experimental; urgency=medium
+
+  * Initial release (based on pypy 6.0.0+dfsg-2 packaging). (Closes: #762346)
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 01 Jan 2019 20:02:42 +0000

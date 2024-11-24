@@ -1,0 +1,68 @@
+pysha3 (1.0.2-4.1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix a buffer overflow issue in SHA-3 CVE-2022-37454 (Closes: #1023030).
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 29 Oct 2022 15:13:09 +0200
+
+pysha3 (1.0.2-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * d/tests/smoke-python3: Fix autopkgtest regression.
+    Use pyversions -s to test all suported version (Closes: #954470).
+
+ -- Emmanuel Arias <eamanu@yaerobi.com>  Sat, 28 Mar 2020 16:18:51 -0400
+
+pysha3 (1.0.2-4) unstable; urgency=medium
+
+  * Declare Debhelper compatibility using ‘debhelper-compat’ dependency.
+  * Remove obsolete dependency on ‘python-setuptools’.
+    Closes: bug#937534. Thanks to Sandro Tosi for the follow-up notice.
+  * Specify the package build system does not require root privilege.
+
+ -- Ben Finney <bignose@debian.org>  Sun, 19 Jan 2020 20:43:49 +1100
+
+pysha3 (1.0.2-3) unstable; urgency=medium
+
+  [ Ben Finney ]
+
+  * Upload to “unstable”.
+  * Declare conformance to “Standards-Version: 4.4.1”.
+  * Specify VCS URLs for current Debian package VCS hosting.
+  * Specify HTTPS URL for copyright format.
+  * Grant license in Debian package under condition of GPL-3+.
+  * Separate architecture-dependent build dependencies to
+    “Build-Depends-Arch”.
+  * Use a null command for ‘clean’ during ‘Git-BuildPackage’.
+  * Declare Debhelper compatibility level 12.
+  * debian/compat:
+    * Remove obsolescent configuration file.
+  * Record upstream metadata in DEP-12 document.
+  * Remove obsolete control field for Python 2 version.
+  * Remove declaration for minimum Python 3 version.
+    Python >= 3.4 is now in all supported Debian releases.
+  * Remove ‘get-orig-source’ and ‘get-packaged-orig-source’ targets.
+    These are no longer mentioned in Debian Policy 4.1.4 and later.
+
+  [ Sandro Tosi ]
+
+  * Remove support for Python 2.
+    Closes: bug#937534.
+
+ -- Ben Finney <bignose@debian.org>  Fri, 25 Oct 2019 22:48:30 +1100
+
+pysha3 (1.0.2-2) unstable; urgency=medium
+
+  * Correct VCS URL fields.
+  * Remove suggestion for unrelated package.
+  * Enable upstream test suite during build.
+
+ -- Ben Finney <bignose@debian.org>  Wed, 23 Aug 2017 09:36:06 +1000
+
+pysha3 (1.0.2-1) unstable; urgency=medium
+
+  * The “سليمان الرشودي (Suliman Ibrahim al-Reshoudi)” release.
+  * Initial release.
+    Closes: bug#866518.
+
+ -- Ben Finney <bignose@debian.org>  Wed, 16 Aug 2017 22:59:19 +1000

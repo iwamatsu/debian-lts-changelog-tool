@@ -1,0 +1,21 @@
+libscram-java (1.0.0~beta.2-3) unstable; urgency=medium
+
+  * Drop libscram-java-doc package, it FTBFSes with Java 11 and I think no one
+    will notice it's missing anyway.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 18 Feb 2019 14:03:49 +0100
+
+libscram-java (1.0.0~beta.2-2) unstable; urgency=medium
+
+  * Mark as Multi-Arch: foreign.
+  * doc: Ship two separate doc-base control files.
+  * Downgrade to DH 10 and drop version restriction on
+    libmaven-javadoc-plugin-java build-dependency for easier backports.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 29 May 2018 22:48:24 +0200
+
+libscram-java (1.0.0~beta.2-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Christoph Berg <myon@debian.org>  Sun, 06 May 2018 18:59:01 +0200

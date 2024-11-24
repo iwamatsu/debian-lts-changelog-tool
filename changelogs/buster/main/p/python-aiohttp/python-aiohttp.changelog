@@ -1,0 +1,168 @@
+python-aiohttp (3.5.1-1+deb10u1) buster-security; urgency=medium
+
+  * Team upload.
+  * CVE-2021-21330: Prevent open redirect in
+    aiohttp.web.normalize_path_middleware.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 26 Feb 2021 23:02:08 -0800
+
+python-aiohttp (3.5.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove idna_ssl patch - no longer needed in Python >= 3.7
+  * Standards-Version bumped to 4.3.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 31 Dec 2018 18:15:56 +0100
+
+python-aiohttp (3.4.4-1~exp1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release (Closes: #901010)
+  * debian/control:
+    - New standards version 4.2.1 - no changes
+    - Recommends libjs-jquery
+  * debian/gbp.conf: Enable pristine-tar build
+  * debian/patches:
+    - Refresh patches
+    - debian/patches/0002-Use-local-install-of-jquery.patch
+      (fixes lintian)
+  * debian/rules:
+    - Do not delete aiohttp/_*.c in override_dh_auto_clean
+    - Delete _find_header.h from binary packages
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Fri, 21 Dec 2018 18:32:14 +0000
+
+python-aiohttp (3.1.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * d/copyright: Fix Format URL to correct one
+  * d/rules: Remove trailing whitespaces
+  * Bump debhelper compat level to 11
+  * Standards-Version is 4.2.0 now (no changes needed)
+  * Enable autopkgtest-pkg-python testsuite
+  * Install examples
+  * Really bump required Python 3 version to 3.5.3
+  * Enable all hardening
+  * Add upstream metadata
+  * d/copyright: Change Source to new location
+  * Convert git repository from git-dpm to gbp layout
+  * Require python3-yarl at least 1.0 (Closes: #897432)
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 14 Aug 2018 14:53:26 +0200
+
+python-aiohttp (3.0.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+    - minimum required Python 3 version bumped to 3.5.3
+  * bundle idna_ssl module until Python 3.7 is the one supported in Debian
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 14 Feb 2018 12:59:09 +0100
+
+python-aiohttp (2.3.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 4.1.2 (d/copyright format URL switch to HTTPS)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 20 Dec 2017 12:01:51 +0100
+
+python-aiohttp (2.2.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/rules: clean generated C files. Closes: #880352.
+  * d/control: bump Standards-Version to 4.1.1.
+  * d/watch: switch to HTTPS.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 26 Nov 2017 19:06:47 +0100
+
+python-aiohttp (2.2.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 09 Jul 2017 22:53:16 +0200
+
+python-aiohttp (2.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 4.0.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 23 Jun 2017 19:50:46 +0200
+
+python-aiohttp (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/compat changed to 10 (this change also closes: 845178 thanks to
+    dh_autoreconf)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 21 Dec 2016 13:30:27 +0100
+
+python-aiohttp (1.1.5-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 18 Nov 2016 19:58:04 +0100
+
+python-aiohttp (1.1.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - works with new multidict (closes: 835299)
+    - decompresses HTTP bodies (closes: 833254)
+  * tests disabled for now (see comment in debian/rules)
+    closes: 830567, 839478
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 08 Nov 2016 22:58:56 +0100
+
+python-aiohttp (0.22.4-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+    - Add dependency on python3-multidict
+  * Backport changes in test/test_connector.py from upstream master branch
+  * Standards-Version bumped to 3.9.8 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 28 Jul 2016 23:32:19 +0200
+
+python-aiohttp (0.20.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Replace python3-nose with python3-pytest in Build-Depends
+    and remove override_dh_auto_test from debian/rules;
+    remove no longer needed override_dh_auto_test in debian/rules
+  * Remove .cache directory in clean target
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 28 Jan 2016 21:42:23 +0100
+
+python-aiohttp (0.17.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 29 Sep 2015 23:12:42 +0200
+
+python-aiohttp (0.17.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * d/patches/no-gunicorn.patch: Deleted; we have python3-gunicorn now.
+  * d/control: Add python3-gunicorn to Build-Depends.
+  * d/rules: override_dh_auto_test until pybuild bug #749506 is fixed.
+
+ -- Barry Warsaw <barry@debian.org>  Thu, 13 Aug 2015 16:12:29 -0400
+
+python-aiohttp (0.15.3-1) unstable; urgency=medium
+
+  * Update to 0.15.3 upstream release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sun, 03 May 2015 06:44:18 +0000
+
+python-aiohttp (0.15.1-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sat, 04 Apr 2015 09:07:00 -0600

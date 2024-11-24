@@ -1,0 +1,21 @@
+node-tough-cookie (2.3.4+dfsg-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2023-26136: Prototype Pollution vulnerability.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 10 Jul 2023 20:09:56 +0200
+
+node-tough-cookie (2.3.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 2.3.4+dfsg (Closes: #877660) (Fixes: CVE-2017-15010)
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump debhelper compatibility level to 11
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 18 Aug 2018 23:05:35 +0530
+
+node-tough-cookie (2.3.2+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #850121)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 29 Apr 2017 14:14:41 +0530

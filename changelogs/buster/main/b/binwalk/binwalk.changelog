@@ -1,0 +1,243 @@
+binwalk (2.1.2~git20180830+dfsg1-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * CVE-2022-4510: Code execution through crafted PFS filesystem.
+
+ -- Adrian Bunk <bunk@debian.org>  Thu, 23 Feb 2023 19:27:45 +0200
+
+binwalk (2.1.2~git20180830+dfsg1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 2.1.2~git20180830+dfsg1.
+  * Update team maintainer address to Debian Security Tools
+    <team+pkg-security@tracker.debian.org>.
+  * Update Vcs-Git and Vcs-Browser for the move to salsa.debian.org.
+  * Update upstream URL for new git repository.
+  * Bump debhelper compat level to 11 and Standards-Version to 4.2.1.
+  * Update repacking rules, we drop some huge testing files now.
+  * Drop upstream patch fixing a typo.
+    Instead submitted a ticket here:
+    https://github.com/ReFirmLabs/binwalk/issues/351
+  * Cleanup python packaging
+    * use correct section for python3-binwal
+    * drop useless X-Python3-Version
+    * add ${python3:Depends} to the binwalk package too
+  * Cleanup the rules file
+  * Add python3-nose to build-depends
+  * Re-instate override of dh_auto_clean with explanation
+  * Use upstream's "setup.py test" to run the tests
+  * Add autopkgtests
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 30 Aug 2018 22:25:06 +0200
+
+binwalk (2.1.1-16) unstable; urgency=medium
+
+  * Switch to compat level 10
+  * Switch to watch format 4
+  
+  [ Mathieu Malaterre ]
+  * Enforce minimum p7zip-full version (Closes: #845952)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 28 Nov 2016 20:12:40 +0100
+
+binwalk (2.1.1-15) unstable; urgency=low
+
+  * Fail, it works on DoM (sbuild) but not on buildds
+    sbuild. It works on pbuilder-dist sid chroot, but
+    not with pbuilder-dist sid build. Restoring the manpage,
+    do not recreate it during build.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 28 Sep 2016 15:52:28 +0200
+
+binwalk (2.1.1-14) unstable; urgency=low
+
+  * Add PYTHONPATH to fix build when python3-binwalk
+    is not installed.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 28 Sep 2016 10:19:18 +0200
+
+binwalk (2.1.1-13) unstable; urgency=low
+
+  * Add help2man to build-dependencies.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 28 Sep 2016 09:10:05 +0200
+
+binwalk (2.1.1-12) unstable; urgency=low
+
+  [ Mathieu Malaterre ]
+  * Change version dinamically, to fully automate the manpage
+    creation
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 28 Sep 2016 08:36:04 +0200
+
+binwalk (2.1.1-11) unstable; urgency=low
+
+  * Try to generate the manpage at build time,
+    lets see if the package is still reproducible or not.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 28 Sep 2016 08:20:05 +0200
+
+binwalk (2.1.1-10) unstable; urgency=medium
+
+  * Add deflate/lzma/partial/stop in manpage.
+    Thanks malat for the report! (Closes: #839040)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 28 Sep 2016 08:10:40 +0200
+
+binwalk (2.1.1-9) unstable; urgency=medium
+
+  * Add gbp.conf file
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 22 Aug 2016 17:18:34 +0200
+
+binwalk (2.1.1-8) unstable; urgency=medium
+
+  * Fix version check (Closes: #827837)
+    - thanks Andreas Beckmann for the report!
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 21 Jun 2016 17:38:50 +0200
+
+binwalk (2.1.1-7) unstable; urgency=medium
+
+  * Provide a python3-binwalk package, together
+    with the binwalk only providing the binary.
+  * Remove cramfsprogs not available anymore.
+    thanks Thorsten Alteholz for the useful review.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 31 May 2016 12:12:33 +0200
+
+binwalk (2.1.1-6) unstable; urgency=medium
+
+  * Move the packaging to pkg-security
+  * Std-version is 3.9.8
+  * VCS in secure mode.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 28 May 2016 09:52:32 +0200
+
+binwalk (2.1.1-5) unstable; urgency=medium
+
+  [ Reiner Herrmann <reiner@reiner-h.de> ]
+  * Move to python3
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 18 Apr 2016 17:11:17 +0200
+
+binwalk (2.1.1-4) unstable; urgency=medium
+
+  * Remove gzip and tar dependencies, part of essential packages.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sun, 10 Jan 2016 23:25:07 +0100
+
+binwalk (2.1.1-3) unstable; urgency=low
+
+  * Make python-pyqtgraph an optional dependency.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 07 Jan 2016 23:10:16 +0100
+
+binwalk (2.1.1-2) unstable; urgency=medium
+
+  * Remove unnecessary runtime dependencies, already satisfied
+    by python-pyqtgraph.
+    - thanks Nick Phillips <nick.phillips@otago.ac.nz> for the
+      useful bug report and hint!
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 07 Jan 2016 00:24:34 +0100
+
+binwalk (2.1.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - drop libraries, make package arch:all
+    - change rules file to drop autoreconf
+    - drop autoreconf and python-all-dev
+    - drop patches regarding the libraries
+    - remove dropped stuff from copyright.
+  * patch refresh.
+  * refresh manpage.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 24 Dec 2015 10:20:01 +0100
+
+binwalk (2.0.1+dfsg-3) unstable; urgency=medium
+
+  * Fix typo in previous upload.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sun, 08 Nov 2015 19:30:02 +0100
+
+binwalk (2.0.1+dfsg-2) unstable; urgency=medium
+
+  * Update my uid
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 06 Nov 2015 10:38:43 +0100
+
+binwalk (2.0.1+dfsg-1) unstable; urgency=medium
+
+  * Tweak rules/clean target.
+  * Bump standard version to 3.9.6, no changes required.
+  * Remove bundled deps, ssdeep has a non-free file inside.
+    (cfr: #764357).
+  * Removed bundled depds inside copyright.
+  * Add a README.source file explaining why we remove bundles
+    directory.
+  * Remove libfuzzy2 as b-d, upstream says the feature will be removed
+    in the next release), avoding an autoremoval.
+  * d/copyright: add src/bundles to Files-Excluded, thanks Vincent Cheng!
+
+ -- Gianfranco Costamagna <costamagnagianfranco@yahoo.it>  Wed, 01 Oct 2014 14:44:28 +0200
+
+binwalk (2.0.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.0.1 (Closes: #727553, Closes: #754317)
+    - Updated docs location
+  * Tweak rules file to remove binary files when cleaning.
+  * debian/control: add X-Python-Version: >= 2.7 and
+    some new dependencies such as python-pyqtgraph.
+  * debian/control: add python-opengl python-qt4 and python-qt4-gl
+    as depdencies, to force the right pyqtgraph render engine.
+  * patch destdir.patch, add DESTDIR to install path.
+  * Add dh-autoreconf as build-dependency, and some missing
+    runtime dependencies, needed to correctly extract the various
+    kind of supported files.
+  * Bump standard version to 3.9.5, no changes required.
+  * Add myself to uploaders.
+  * debian/{control,watch,copyright} New website (Closes: #734708)
+  * Update VCS fields to canonical.
+  * Update man page.
+  * Update copyright file.
+
+ -- Gianfranco Costamagna <costamagnagianfranco@yahoo.it>  Mon, 30 Jun 2014 12:24:41 +0200
+
+binwalk (1.0-1) unstable; urgency=low
+
+  * [c78b7e93] Imported Upstream version 1.0
+    - full rewrite in python
+  * [5eb6c54c] migrate to new python rewrite
+  * [be1394d6] add python API to /u/s/docs/binwalk
+
+ -- Leo Costela <costela@debian.org>  Wed, 20 Feb 2013 18:21:37 +0100
+
+binwalk (0.5.0-1) unstable; urgency=low
+
+  * [e62042e2] Imported Upstream version 0.5.0
+  * [c04a9633] add patch to fix DESTDIR handling during install
+
+ -- Leo Costela <costela@debian.org>  Thu, 17 Jan 2013 17:12:32 +0100
+
+binwalk (0.4.5-1) unstable; urgency=low
+
+  * [6b44b155] Imported Upstream version 0.4.5
+
+ -- Leo Costela <costela@debian.org>  Sat, 08 Sep 2012 13:19:20 +0200
+
+binwalk (0.4.4-1) unstable; urgency=low
+
+  * [658252c0] Imported Upstream version 0.4.4
+  * [30f6357d] debian/copyright: add copyrighted blocks in magic.* files
+  * [d3607624] drop use_cppflags.patch (merged upstream)
+  * [f7060555] don't build with --enable-libmagic and drop README.source
+
+ -- Leo Costela <costela@debian.org>  Mon, 06 Aug 2012 17:56:57 +0200
+
+binwalk (0.4.3+dfsg-1) unstable; urgency=low
+
+  * First debian package (closes: #660654)
+
+ -- Leo Costela <costela@debian.org>  Sun, 15 Jul 2012 15:55:22 +0200
+

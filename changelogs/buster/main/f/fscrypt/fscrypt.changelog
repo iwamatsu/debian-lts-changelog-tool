@@ -1,0 +1,41 @@
+fscrypt (0.2.4-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 13:16:08 +0200
+
+fscrypt (0.2.4-2) unstable; urgency=medium
+
+  * Use team+pkg-go@tracker.debian.org in Maintainer
+  * Versioned dependency on golang-any >= 2:1.10~ (see README.md)
+  * Disable filesystem tests (require an ad-hoc filesystem and root)
+    Fixes FTBFS on ppc64el.
+  * Versioned dependency on dh-golang >= 1.35 (fixes FTBFS with gccgo-8)
+  * Make the PAM library installation rules work with gccgo-go
+
+ -- Paride Legovini <pl@ninthfloor.org>  Sat, 25 Aug 2018 12:48:36 +0000
+
+fscrypt (0.2.4-1) unstable; urgency=medium
+
+  * New upstream version. Fixes: CVE-2018-6558.
+  * Bump Standards-Versions to 4.2.0 (no changes needed)
+  * gbp.conf: set upstream-branch = upstream/latest (DEP14)
+  * Improve the installation rules for the binary and PAM library
+  * Run all the tests but the failing ones instead of disabling all of them
+  * Verbose build (DH_VERBOSE = 1)
+
+ -- Paride Legovini <pl@ninthfloor.org>  Thu, 23 Aug 2018 07:55:41 +0000
+
+fscrypt (0.2.3-2) unstable; urgency=medium
+
+  * Do not set ‘-buildmode=pie’ on mips/mipsel/mips64el
+  * Fix the PAM library installation rule for non-amd64 archs
+
+ -- Paride Legovini <pl@ninthfloor.org>  Tue, 10 Apr 2018 14:21:55 +0000
+
+fscrypt (0.2.3-1) unstable; urgency=medium
+
+  * Initial release (Closes: #894406)
+
+ -- Paride Legovini <pl@ninthfloor.org>  Mon, 09 Apr 2018 17:06:27 +0000

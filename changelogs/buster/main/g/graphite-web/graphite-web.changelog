@@ -1,0 +1,236 @@
+graphite-web (1.1.4-3+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2022-4728, CVE-2022-4729 & CVE-2022-4730: Prevent a series of
+    cross-site scripting (XSS) vulnerabilties that could have been exploited
+    remotely. Issues existed in the Cookie Handler, Template Name Handler and
+    Absolute Time Range Handler components. (Closes: #1026992)
+
+ -- Chris Lamb <lamby@debian.org>  Mon, 06 Feb 2023 13:00:39 -0800
+
+graphite-web (1.1.4-3+deb10u1) buster; urgency=high
+
+  [ Utkarsh Gupta ]
+  * Add patch to remove the 'send_email' function to avoid SSRF attack.
+    This was insecure, not used in the code, and was undocumented as well.
+    (Fixes: CVE-2017-18638)
+
+  [ Thomas Goirand ]
+  * Avoid hourly error in cron with no whisper db (Closes: #940554). Thanks to
+    Alexandre Rossi <niol@zincube.net> for the patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 17 Oct 2019 05:47:35 +0530
+
+graphite-web (1.1.4-3) unstable; urgency=medium
+
+  * Fix shebang of /usr/bin/graphite-manage. (Closes: #925240)
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 07 Jun 2019 09:39:24 +0200
+
+graphite-web (1.1.4-2) unstable; urgency=medium
+
+  * Fix README to suggest installation of libapache2-mod-wsgi-py3, and added
+    NEWS about it (Closes: #917096).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 26 Dec 2018 08:35:26 +0100
+
+graphite-web (1.1.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rebase patches.
+  * Added myself as uploader (after contacting the current maintainers).
+  * Ran wrap-and-sort -bast.
+  * Removed obsolete X-Python-Version: >=2.6.
+  * Switched to debhelper 10.
+  * Switched the package to Python 3.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 10 Dec 2018 15:28:59 +0100
+
+graphite-web (1.0.2+debian-2.1) unstable; urgency=medium
+
+  * NMU
+  * VCS move to salsa
+  * change maintainer to tracker list (closes: #899808)
+
+ -- Christoph Martin <martin@uni-mainz.de>  Tue, 23 Oct 2018 13:57:47 +0200
+
+graphite-web (1.0.2+debian-2) unstable; urgency=medium
+
+  * d/p/local_settings.patch: fixed typo (Closes: #876522)
+
+ -- Jonas Genannt <genannt@debian.org>  Sat, 23 Sep 2017 13:56:38 +0200
+
+graphite-web (1.0.2+debian-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.0.2+debian
+    - Closes: #862084, #860195, #840516
+  * d/README.source: update information
+  * d/bin/graphite-build-search-index
+    - fixed race condition [Michael Abmayer] (Closes: #849080)
+  * d/p/remove_thirdparty_modules.patch: included by upstream
+  * d/p/django19.patch: included by upstream
+  * removed remove_internal_logrotate.patch upstream has add the setting
+  * updated to new upstream version:
+    - local_settings.patch
+    - settings_debian.patch
+  * d/copyright:
+    - removed unused statement (upstream removed files)
+    - updated copyright years
+  * d/graphite-web.links: removed upstream no longer includes
+    prototype and scriptaculous
+  * d/graphite.wsgi: use upstream wsgi file (removed Debian version)
+  * d/apache2-graphite.conf: changed content to static
+  * d/control:
+    - bumped depends version of python-whisper to 1.0.2
+    - bumped standards version (no change needed)
+    - removed libjs-scriptaculous, libjs-prototype from depends
+    - added python-urllib3 as depends
+    - added python-scandir as depends
+  * debian/graphite-web.NEWS: added note about changed webserver configuration
+
+ -- Jonas Genannt <genannt@debian.org>  Wed, 20 Sep 2017 16:45:11 +0200
+
+graphite-web (0.9.15+debian-2) unstable; urgency=medium
+
+  [ Mathieu Parent ]
+  * Remove me from uploaders
+
+  [ Jonas Genannt ]
+  * d/README: change to migrate (Closes: #824230)
+  * d/README: added chown for sqlite usage (Closes: #811389)
+  * Added backported patch for Django 1.9 (Closes: #824962)
+  * d/control:
+    - bumped standards version
+    - changed to secure Vcs URLs
+
+ -- Jonas Genannt <genannt@debian.org>  Sun, 22 May 2016 15:32:51 +0200
+
+graphite-web (0.9.15+debian-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.9.15+debian
+  * d/copyright: updated copyright year
+  * d/p/settings_debian: refreshed patch
+  * d/p/remove_thirdparty_modules: refreshed patch
+  * d/control:
+    - added Python-Version flag
+    - added dh-python
+    - added Version dependency
+  * removed disable_install_opt.patch
+  * d/rules: switched to pybuild
+  * Updated README.Debian
+
+ -- Jonas Genannt <genannt@debian.org>  Sat, 28 Nov 2015 17:23:48 +0100
+
+graphite-web (0.9.13+debian-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.9.13+debian (Closes: #784441)
+  * d/watch: updated watch file to pypi.debian.net service
+  * d/control:
+    - removed jquery depends; jquery was removed from Graphite
+    - updated my email address
+    - bumped standards version to 3.9.6 (no changes needed)
+  * d/README.source: updated for new upstream release
+  * patches removed, included by upstream:
+    - add_maximum_returned_datapoints.patch
+    - remove_graphlot.patch
+    - django17.patch
+    - django1.6_compatibility.patch
+  * patches refreshed for new upstream version:
+    - settings_debian.patch: refreshed
+    - remove_thirdparty_modules.patch: refreshed
+  * d/copyright: updated years and copyright
+  * d/rules: remove included DS_Store file
+  * d/graphite-web.links: removed jquery links
+
+ -- Jonas Genannt <genannt@debian.org>  Mon, 25 May 2015 15:54:10 +0200
+
+graphite-web (0.9.12+debian-7) unstable; urgency=low
+
+  * added patch for maxDataPoints in json format
+    huge performance impact for dashboards like grafana (Closes: #775783)
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Thu, 29 Jan 2015 12:36:30 +0100
+
+graphite-web (0.9.12+debian-6) unstable; urgency=medium
+
+  [ Vincent Bernat ]
+  * d/postinst: fix directory creation
+
+  [ Jonas Genannt ]
+  * added patch to remove Graphlot feature
+    Graphlot feature was broken in Debian. Upstream
+    removed Graphlot feature.
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Wed, 03 Sep 2014 19:25:55 +0200
+
+graphite-web (0.9.12+debian-5) unstable; urgency=low
+
+  * Team upload.
+  * Graphite works now with Django 1.6 and 1.7 (Closes: #755638)
+  * d/README.Debian: use service to restart apache
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Fri, 15 Aug 2014 18:34:55 +0200
+
+graphite-web (0.9.12+debian-4) unstable; urgency=medium
+
+  * added missing sources of extjs and ace (Closes: #744708)
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Mon, 28 Jul 2014 15:52:22 +0200
+
+graphite-web (0.9.12+debian-3) unstable; urgency=low
+
+  * d/control: removed python-sqlite from depends (Closes: #739517)
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 22 Feb 2014 17:04:47 +0100
+
+graphite-web (0.9.12+debian-2) unstable; urgency=low
+
+  [ Bernhard Schmidt ]
+  * Import upstream patch to fix Django 1.6 compatibility
+  * drop part about webapp/graphite/manage.py from patch, included upstream
+  * changelog
+  * graphite-manage: fix Django 1.6 compatibility (Closes: #729854)
+
+  [ Jonas Genannt ]
+  * d/control:
+    - bumped standards version
+    - added version depend to python-django >> 1.6-1~
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Mon, 25 Nov 2013 21:37:19 +0100
+
+graphite-web (0.9.12+debian-1) unstable; urgency=high
+
+  * New Upstream Version (Closes: #720454, #721085)
+    - Security fix included: CVE-2013-5093
+  * refreshed patches against new version
+  * d/control: updated Homepage field
+  * d/control: added version depend on python-django-tagging
+    since pyhton-django-taggit mistake
+  * d/copyright: added Copyright section for ace
+  * Added NEWS file
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sun, 01 Sep 2013 21:30:47 +0200
+
+graphite-web (0.9.10+debian-2) unstable; urgency=low
+
+  [ Marcelo Jorge Vieira ]
+  * libjs-flot was renamed to libjs-jquery-flot (Closes: #710452)
+
+  [ Jonas Genannt ]
+  * run cronjob only if binary is available (Closes: #705976)
+  * changed git to anonscm.debian.org as recommended by lintian
+
+  [ Mathieu Parent ]
+  * gbp.conf: Build to build-area
+  * gbp.conf: Set pristine-tar to true
+  * d/rules: Check for embedded libraries
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 10 Jun 2013 18:17:39 +0200
+
+graphite-web (0.9.10+debian-1) unstable; urgency=low
+
+  * Initial release. (Closes: #659632)
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 09 Mar 2013 16:06:34 +0100

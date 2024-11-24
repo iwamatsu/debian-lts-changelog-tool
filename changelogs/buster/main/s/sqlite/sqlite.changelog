@@ -1,0 +1,500 @@
+sqlite (2.8.17-15+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport patch for CVE-2016-6153, insecure tmpfile generation.
+  * Backport patch for CVE-2018-8740, segfault on corrupted file.
+
+ -- Tobias Frost <tobi@debian.org>  Mon, 22 May 2023 12:41:47 +0200
+
+sqlite (2.8.17-15) unstable; urgency=medium
+
+  * Make the package multiarch.
+  * Drop incorrect hunks from lemon patch (closes: #895642).
+  * Fix package installation.
+  * Fix test compilation.
+  * Ignore test failures for known problems.
+  * Make rebuildable.
+  * Update debhelper level to 11:
+    - don't specify parallel to debhelper.
+  * Update Standards-Version to 4.1.5 .
+
+  [ Aurelien Jarno <aurelien@aurel32.net> ]
+  * Fix FTBFS with GCC 7/8 on architectures with unsigned char
+    (closes: #872535).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 21 Aug 2018 21:19:22 +0000
+
+sqlite (2.8.17-14) unstable; urgency=low
+
+  [ Helmut Grohne <helmut@subdivi.de> ]
+  * Fix FTCBFS (closes: #850428):
+    + Tell configure what compilers to use
+    + 06-cross.patch: Fix wrong uses of AC_CHECK_FILE
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 06 Jan 2017 16:35:02 +0000
+
+sqlite (2.8.17-13) unstable; urgency=low
+
+  * Build with hardening.
+  * Provide debug packages (closes: #312006).
+  * Keep rebuildable.
+  * Update Standards-Version to 3.9.8 .
+
+  [ Aaron Hall <ahall@vitaphone.net> ]
+  * Note in description that it's SQLite v2, not v3 (closes: #774174).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 10 Aug 2016 10:42:12 +0000
+
+sqlite (2.8.17-12) unstable; urgency=low
+
+  * Sync with Ubuntu.
+
+  [ Adam Conrad <adconrad@ubuntu.com> ]
+  * Update config.{sub,guess} too, autoreconf isn't enough for this
+    (closes: #727510).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 28 Aug 2014 21:32:41 +0000
+
+sqlite (2.8.17-11) unstable; urgency=low
+
+  * Move to Tcl 8.6 .
+
+  [ Peter Michael Green <plugwash@debian.org> ]
+  * Add code in debian/rules to make build use appropriate tclsh
+    (closes: #746058).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 28 May 2014 12:14:25 +0000
+
+sqlite (2.8.17-10) unstable; urgency=low
+
+  * Update Standards-Version to 3.9.5 .
+
+  [ Wookey <wookey@debian.org> ] 
+  * Update config.{sub.guess} automatically (closes: #727510).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 06 Jan 2014 15:07:43 +0000
+
+sqlite (2.8.17-9) unstable; urgency=low
+
+  * Move to short debhelper rules and 3.0 (quilt) source format
+    (closes: #725539).
+  * Run tests but don't fail on them.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 18 Oct 2013 12:04:56 +0000
+
+sqlite (2.8.17-8) unstable; urgency=low
+
+  * Refresh auto* files and move to automake 1.13 (closes: #710341, #713180).
+  * Add missing headers.
+  * Fix pkgIndex.tcl for proper import.
+  * Update to Standards-Version 3.9.4 .
+  * Move to debhelper level 8 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 09 Jul 2013 18:06:30 +0200
+
+sqlite (2.8.17-7) unstable; urgency=low
+
+  * Fix upstream mistake of missing format argument in fprintf
+    (closes: #646032).
+  * Empty dependency_list in libsqlite.la .
+  * Update packaging and its dependencies.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Tue, 25 Oct 2011 00:55:38 +0200
+
+sqlite (2.8.17-6.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS by replacing DEB_BUILD_MAKE_TARGET with 
+    DEB_MAKE_BUILD_TARGET. Thanks to Daniel Schepler for the patch
+    (closes: #618154).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Tue, 02 Aug 2011 19:06:03 +0200
+
+sqlite (2.8.17-6) unstable; urgency=low
+
+  * Change readline build dependency to plain libreadline-dev (version 6 ATM).
+  * Fix version in pkgIndex.tcl (closes: #483993).
+  * Register with doc-base (closes: #452390).
+  * Fix section to be database.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sun, 13 Sep 2009 15:14:27 +0000
+
+sqlite (2.8.17-5) unstable; urgency=low
+
+  [ Daniel Schepler ]
+  * Fix FTBFS due to libtool version mismatch error (closes: #544437).
+
+  [ Laszlo Boszormenyi ]
+  * Update debhelper compatibility to 6 and standards-version to 3.8.3 ;
+    add missing ${misc:Depends} to depends lines and fix Tcl spelling.
+  * Don't use watch for now, upstream doesn't seem to host this version
+    anymore.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Thu, 03 Sep 2009 18:30:44 +0000
+
+sqlite (2.8.17-4) unstable; urgency=low
+
+  * Fixed upstream Makefile.in not to lose doc/lemon.html and
+    doc/report1.txt on rebuilds (closes: #441725).
+  * Corrected debian/watch file.
+  * Removed debconf message, was horribly old and outdated. Thanks again to
+    everyone who contributed with translations.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Thu,  4 Oct 2007 11:39:25 +0200
+
+sqlite (2.8.17-3) unstable; urgency=medium
+
+  * Accept Nico's quick security fix related upload (closes: #441233).
+  * Add Italian and Catalan debconf translations, thanks to Luca Monducci and
+    Jorda Polo respectively (closes: #426155, #412582).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 08 Sep 2007 10:53:33 +0300
+
+sqlite (2.8.17-2.1) unstable; urgency=high
+
+  * Non-maintainer upload by testing security team.
+  * Included 01-fix-CVE-2007-1888.patch to fix buffer overflow
+    in encode.c (CVE-2007-1888) (Closes: #441233).
+
+ -- Nico Golde <nion@debian.org>  Fri, 07 Sep 2007 17:47:03 +0200
+
+sqlite (2.8.17-2) unstable; urgency=low
+
+  * Add Galician (closes: #407958), Russian (closes: #397167) and Spanish
+    (closes: #403493) debconf translations.
+  * Correct Portuguese debconf translation filename (closes: #404167).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Tue, 30 Jan 2007 18:03:13 +0000
+
+sqlite (2.8.17-1) unstable; urgency=low
+
+  * New upstream release (closes: #357168) and new maintainer with ACK from
+    Andreas. Thanks for your previous work Rotty!
+  * Added possibility to configure with cdebconf (closes: #332102).
+  * Added Vietnamese (closes: #318703), Swedish (closes: #333275),
+    German (closes: #347517) and Portugese (closes: #372469) debconf
+    translations.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Wed, 11 Oct 2006 21:13:34 +0000
+
+sqlite (2.8.16-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes critical VACUUM bug, hence urgency=medium.
+
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 16 Feb 2005 16:33:01 +0100
+
+sqlite (2.8.15-5) unstable; urgency=high
+
+  * Use automake1.9 to build instead of 1.8, as indicated by
+    build-depends (closes: #293388).
+  * Added watch file.
+
+ -- Andreas Rottmann <rotty@debian.org>  Fri,  4 Feb 2005 13:07:01 +0100
+
+sqlite (2.8.15-4) unstable; urgency=medium
+
+  * Included Czech debconf translation (closes: #290912), urgency medium
+    so this ships with Sarge.
+  * Build against libreadline5-dev instead of  libreadline4-dev.
+  * Build-depend on automake1.9 instead of automake1.8.
+  * sqlite: adjust description synposis (Developers Reference 6.2.2).
+
+ -- Andreas Rottmann <rotty@debian.org>  Fri, 28 Jan 2005 13:34:56 +0100
+
+sqlite (2.8.15-3) unstable; urgency=low
+
+  * Link against the libpthread (closes: #264307), thanks to Robert
+    Millan.
+  * Updated Japanese translation, provided by Hideki Yamane 
+    (closes: #271257).
+  * Removed lemon package, now built by sqlite3.
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 25 Nov 2004 11:33:28 +0100
+
+sqlite (2.8.15-2) unstable; urgency=low
+
+  * Included Japanese debconf translation (closes: #264122).
+
+ -- Andreas Rottmann <rotty@debian.org>  Sat,  7 Aug 2004 13:42:37 +0200
+
+sqlite (2.8.15-1) unstable; urgency=low
+
+  * New upstream release.
+  * SQLite is now compiled with UTF-8 support enabled (closes: #257069).
+  * sqlite-doc now includes arch2.gif (closes: #259345).
+
+ -- Andreas Rottmann <rotty@debian.org>  Mon,  2 Aug 2004 12:46:09 +0200
+
+sqlite (2.8.13-3) unstable; urgency=low
+
+  * Added Brazilian Portuguese debconf translation (closes: #242085).
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue,  6 Apr 2004 11:21:09 +0200
+
+sqlite (2.8.13-2) unstable; urgency=low
+
+  * Added sqlite.pc to -dev package (closes: #240257).
+
+ -- Andreas Rottmann <rotty@debian.org>  Fri, 26 Mar 2004 15:28:24 +0100
+
+sqlite (2.8.13-1) unstable; urgency=low
+
+  * New upstream release.
+    - Has my Makefile.in changes, so 01-libtool.patch gone now.
+    - Bogus assertation removed (closes: #234977).
+    - Segfault on command-line SQL fixed (closes: #234625).
+    - Lemon parse table bug fixed (closes: #233690).
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue,  9 Mar 2004 13:41:23 +0100
+
+sqlite (2.8.12-3) unstable; urgency=low
+
+  * Switch to updating auto* stuff at build time.
+    - Build-Depend on autoconf, automake1.8, libtool (>= 1.5.2),
+      tighten build-dependency on cdbs (>= 0.4.15).
+    - debian/rules: Use CDBS auto-update features for updating autoconf 
+      and libtool *as well as aclocal*.
+    - 01-libtool.patch now only contains modifications to Makefile.in.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Sun, 29 Feb 2004 15:32:22 +0100
+
+sqlite (2.8.12-2) unstable; urgency=low
+
+  * Now generate a package for lemon (closes: #234059).
+    - Added a bit of info in README.Debian.
+    - Incorporated lemon.html and lemon.1 from the old stand-alone package.
+    - New patch 02-lemon-snprintf, carried over from old package.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Mon, 23 Feb 2004 15:25:40 +0100
+
+sqlite (2.8.12-1) unstable; urgency=low
+
+  * New upstream release (closes: #232619).
+    - Includes patch  01-upstream-ch-1162.
+  * Put libtool-related changes in debian/patches/01-libtool.patch, not
+    directly in the diff.gz.
+  * Moved src/pkgIndex.tcl to debian/, since it is not part of upstream.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 18 Feb 2004 14:24:47 +0100
+
+sqlite (2.8.9-4) unstable; urgency=low
+
+  * Updated libtool from 1.5.0a to 1.5.2 (closes: #230820).
+
+ -- Andreas Rottmann <rotty@debian.org>  Mon,  2 Feb 2004 19:34:11 +0100
+
+sqlite (2.8.9-3) unstable; urgency=low
+
+  * Added Greek debconf translation (closes: #229506).
+
+ -- Andreas Rottmann <rotty@debian.org>  Sun, 25 Jan 2004 15:42:01 +0100
+
+sqlite (2.8.9-2) unstable; urgency=low
+
+  * debian/rules: Make sure all packages that depend on libsqlite0 are
+    built after it (closes: #228830).
+
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 21 Jan 2004 11:37:48 +0100
+
+sqlite (2.8.9-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Again a critical bugfix release, closes: #226698).
+  * debian/rules: Now use simple-patchsys.mk
+  * New patch 01-upstream-ch-1162, which fixes the test suite (thanks to
+    Aaron M. Ucko <ucko@debian.org> for pointing this out).
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu,  8 Jan 2004 13:19:57 +0100
+
+sqlite (2.8.8-1) unstable; urgency=medium
+
+  * New upstream release (urgency medium due to unlikely data corruption
+    bug).
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu,  1 Jan 2004 22:17:01 +0100
+
+sqlite (2.8.6-1) unstable; urgency=low
+
+  * New upstream release (closes: #216808).
+  * debian/control:
+    - Standards-Version: 3.6.1 (no changes).
+  * Updated libtool.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Sat,  8 Nov 2003 14:17:03 +0100
+
+sqlite (2.8.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added dutch debconf template translation (closes: #206513).
+  * Standards-Version 3.6.0 (no changes). 
+  * No more sharing of /usr/share/doc/<package> (isn't easily possible
+    with new CBS versions).
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 21 Aug 2003 10:56:43 +0200
+
+sqlite (2.8.3-2) unstable; urgency=low
+
+  * debian/control:
+    - Added Build-Depends on libreadline4-dev.
+  * Makefile.in:
+    - Remove config.h, Makefile and libtool in the distclean target 
+      (closes: #186955).
+    
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 12 Jun 2003 19:03:40 +0200
+
+sqlite (2.8.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue, 10 Jun 2003 12:46:37 +0200
+
+sqlite (2.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switched from CBS to CDBS.
+  * debian/control:
+    - Made sqlite, libsqlite0-dev and libsqlite-tcl suggest sqlite-doc.
+    - Changed section of libsqlite0-dev to libdevel.
+    - Bumped Standards-Version to 3.5.10 (no changes).
+  * Added README.Debian file lining out the sqlite packages (closes: #192142).
+  * Added french debconf template translation (closes: #193514).
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue, 20 May 2003 15:35:47 +0200
+
+sqlite (2.8.0-3) unstable; urgency=low
+
+  * Now build and include docs again (closes: #186467).
+  * Updated CBS.
+  * Made libsqlite0-dev and libsqlite-tcl link their doc directories to
+    the libsqlite0 one, instead of duplicating the contents.
+  * Include upstream changelog in packages.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Sun, 30 Mar 2003 20:56:24 +0200
+
+sqlite (2.8.0-2) unstable; urgency=low
+
+  * Now using po-debconf.
+    + Updated debhelper Build-Depends (>= 4.1.16).
+  * Updated CBS.
+  * Bumped Standards-Version to 3.5.9.
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 20 Mar 2003 17:00:42 +0100
+
+sqlite (2.8.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Got rid of debian/shlibs.local.
+  * Make dependencies on libsqlite0 versioned.
+
+ -- Andreas Rottmann <rotty@debian.org>  Mon, 24 Feb 2003 18:11:11 +0100
+
+sqlite (2.7.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now building against tcl8.4-dev.
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue, 28 Jan 2003 10:57:10 +0100
+
+sqlite (2.7.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now using CBS.
+    + Build-Depend on autotools-dev, so CBS can use current 
+      config.{guess,sub}.
+  * Bumped Standards-Version to 3.5.8 (no changes).
+
+ -- Andreas Rottmann <rotty@debian.org>  Sun, 22 Dec 2002 21:38:27 +0100
+
+sqlite (2.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+    + Includes quickstart.html. (closes: #162451)
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 26 Sep 2002 19:19:37 +0200
+
+sqlite (2.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Makefile.in: fixed wrong -rpath for libtclsqlite.la
+  * debian/libsqlite0.{preinst|postinst}: use "set -e" instead of
+    "#!/bin/sh -e" (fixes linda warning).
+  * debian/control: 
+      + rename libsqlite0-tcl to libsqlite-tcl, since that makes more sense.
+      + rename libsqlite-dev to libsqlite0-dev, to be more compliant with 
+        libpkg-guide.
+
+ -- Andreas Rottmann <rotty@debian.org>  Mon, 26 Aug 2002 16:29:31 +0200
+
+sqlite (2.6.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/rules, debian/control: Now building using debhelper 4.
+  * sqlite.1, debian/copyright: Updated to new www.sqlite.org site.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 14 Aug 2002 15:55:49 +0200
+
+sqlite (2.6.1-2) unstable; urgency=low
+
+  * Fixed 'is is' typo in package descriptions. (closes: #154185, #154186)
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 25 Jul 2002 14:39:24 +0200
+
+sqlite (2.6.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Database format has changed, opening databases with the new version of
+    the library will convert them. Alert the user with a debconf note.
+  * Now using LIBRARY_PATH in debian/rules instead of modifiying
+    Makefile.in.
+  * Fixed and improved package descriptions.
+  * Bumped up Standards-Version to 3.5.6.1.
+  * Now versioning dependency on libsqlite.
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue, 23 Jul 2002 12:55:12 +0200
+
+sqlite (2.5.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andreas Rottmann <rotty@debian.org>  Tue,  2 Jul 2002 17:30:19 +0200
+
+sqlite (2.4.12-1) unstable; urgency=low
+
+  * New upstream version.
+  * Now compiling with -DTHREADSAFE=1. (closes: #149386)
+
+ -- Andreas Rottmann <rotty@debian.org>  Sun,  9 Jun 2002 22:20:12 +0200
+
+sqlite (2.4.10-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andreas Rottmann <rotty@debian.org>  Sun,  5 May 2002 22:26:15 +0200
+
+sqlite (2.4.7-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 17 Apr 2002 20:09:22 +0200
+
+sqlite (2.4.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andreas Rottmann <rotty@debian.org>  Sun, 31 Mar 2002 20:44:24 +0200
+
+sqlite (2.4.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * Added proper sections to debian/control.
+
+ -- Andreas Rottmann <rotty@debian.org>  Mon, 11 Mar 2002 10:47:03 +0100
+
+sqlite (2.2.1-1) unstable; urgency=low
+
+  * Initial release. (closes: #127510)
+
+ -- Andreas Rottmann <rotty@debian.org>  Wed,  9 Jan 2002 21:56:21 +0100
+
+

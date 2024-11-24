@@ -1,0 +1,356 @@
+libtirpc (1.3.1-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix DoS vulnerability in libtirpc (CVE-2021-46828) (Closes: #1015873)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 01 Aug 2022 16:26:18 +0200
+
+libtirpc (1.3.1-1) unstable; urgency=medium
+
+  * New upstream release (1.3.1):
+    + Refresh patches:
+      - debian/patches/03-kfreebsd.diff
+      - debian/patches/06-hurd-client-port.diff
+  * debian/watch: Bump to Standard Version 4
+  * Bump Standards-Version to 4.5.1. No changes required
+
+ -- Josue Ortega <josue@debian.org>  Wed, 30 Dec 2020 19:21:05 -0600
+
+libtirpc (1.2.6-3) unstable; urgency=medium
+
+  * Source only upload to enable new package migration to testing
+  * debian/patches: Document header Forwarded as not-needed on patches
+    03-kfreebsd and 05-hurd-port
+
+ -- Josue Ortega <josue@debian.org>  Sun, 11 Oct 2020 14:39:10 -0600
+
+libtirpc (1.2.6-2) unstable; urgency=medium
+
+  * Add udeb package. Thanks to Aurelien Jarno <aurel32@debian.org> for
+    the patch. (Closes: #968824)
+  * Bump debhelper-compat to use (= 13):
+    + Add debian/not-installed file
+
+ -- Josue Ortega <josue@debian.org>  Sun, 23 Aug 2020 16:56:17 -0600
+
+libtirpc (1.2.6-1) unstable; urgency=medium
+
+  * New upstream release (1.2.6)
+    + Closes: #957482
+  * Bump Standards-Version to 4.5.0. No changes required
+
+ -- Josue Ortega <josue@debian.org>  Sat, 18 Apr 2020 16:14:00 -0600
+
+libtirpc (1.2.5-1) unstable; urgency=medium
+
+  * New upstream release (1.2.5):
+    + Remove debian/patches/fix-manpage.diff, patch is no longer needed
+  * Bump Standards-Version to 4.4.1. No changes required
+  * debian/control: Add Rules-Requires-Root field
+  * Add debian/tests
+
+ -- Josue Ortega <josue@debian.org>  Fri, 27 Dec 2019 08:11:57 -0600
+
+libtirpc (1.1.4-1) unstable; urgency=medium
+
+  * New maintainer. Closes: #925044
+  * Update package to use debhelper-compat (= 12):
+    - Remove dh-autoreconf, autotools-dev from build depends
+  * Update debian/copyright to machine-readable format (DEP-5)
+  * Add description to debian/patches/fix-manpage.diff
+  * Add description to debian/patches/03-kfreebsd.diff
+  * debian/rules: Add hardening flags
+  * debian/control:
+    - Add Vcs fields
+    - Fix typo in libtirpc-devel long description
+  * Bump Standards-Version to 4.4.0. No changes required.
+
+ -- Josue Ortega <josue@debian.org>  Sun, 01 Sep 2019 12:43:24 -0600
+
+libtirpc (1.1.4-0.4) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * libtirpc-common: add missing Breaks: libtirpc1 to ensure clean upgrades.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 11 Dec 2018 15:41:49 +0100
+
+libtirpc (1.1.4-0.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop debian/libtirpc-dev.dirs and debian/libtirpc3.dirs, these are only
+    needed if we want to ship empty directories
+  * debian/patches/03-kfreebsd.diff: Fix FTBFS on non-linux architectures, the
+    package builds again on these architectures, not tested though
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 21 Oct 2018 11:26:49 +0200
+
+libtirpc (1.1.4-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Upload to unstable
+  * debian/libtirpc3.symbols: Add Build-Depends-Package field
+  * debian/control: Relax a bit the dependency from libtirpc3 against
+    libtirpc-common
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 20 Oct 2018 13:06:56 +0200
+
+libtirpc (1.1.4-0.1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release (Closes: #889597)
+    - Drop d/p/10-CVE-2016-4429.diff: Fixed upstream
+  * debian/watch: Update the URL to point to sourceforge
+  * debian/control: Bump Standards-Version to 4.2.1 (no further changes)
+  * debian/control: Downgrade priority to optional to please lintian
+  * debian/control: Remove duplicate Section/Priority to please lintian
+  * Create a new libtirpc-common package and move /etc/netconfig and
+    netconfig.5 to it, do not conflit with libtirpc1 to ease the
+    co-installation of libtirpc1 and libtirpc3 (Closes: #884029)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 14 Oct 2018 18:10:57 +0200
+
+libtirpc (1.0.2-0.2) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * Update the list of copyright holders. Closes: #883910.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 09 Dec 2017 13:16:22 +0100
+
+libtirpc (1.0.2-0.1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version.
+    - rendezvous_request: check the makefd_xprt return value (CVE-2018-14622)
+      (Closes: #907608)
+  * Bump standards version.
+  * Mark the -dev package as M-A: same.
+  * Add a symbols file for libtirpc3.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 05 Dec 2017 07:37:47 +0100
+
+libtirpc (0.2.5-1.2) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * CVE-2017-8779: Memory leak when failing to parse XDR strings or bytearrays
+    (Closes: #861834)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 05 May 2017 17:24:41 +0200
+
+libtirpc (0.2.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix CVE-2016-4429 (Closes: #840347)
+  * Standards-Version is now 3.9.8
+  * Update patch 05-hurd-port.diff as config.h is already deleted by
+    debhelper.
+  * Stop installing empty /usr/lib directory.
+  * Stop installing now empty postinst/postrm, as debhelper installs
+    an ldconfig trigger instead.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 21 Dec 2016 22:12:21 +0000
+
+libtirpc (0.2.5-1) unstable; urgency=medium
+
+  * New upstream version 0.2.5.
+    Remove the INSTALL symlink, replace it with INSTALL from 0.2.3
+    and repackage original upstream to fix lintian error:
+    E: libtirpc source: source-contains-unsafe-symlink INSTALL
+  * Merged upstream at http://git.infradead.org/users/steved/libtirpc.git
+    e63e2b5 Add a pthread key initializer constant
+    db2faef Clean up forward declarations in src/auth_gss.c
+    797365f Clean up forward declarations in src/svc_auth_gss.c
+    3bb76d9 man: Organize man/Makefile.am
+    fd96ce3 man: Replace outdated Solaris and BSD references in the man pages
+    03de41b Pre-register server side RPCSEC GSS support
+    cf2e008 Avoid buffer overruns by allocating buffer in svcauth_gss_validate()
+    a940bf9 xdr_rejected_reply: Don't crash with invalid server rejection
+  * Refresh patches.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 09 Sep 2014 02:30:09 +0100
+
+libtirpc (0.2.4-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Upload to unstable where this belongs to fix the release critical bug.
+  * Declare Breaks: against versions of nfs-common, nfs-kernel-server that
+    link against libtirpc1 and libgssglue1, so that we have a proper
+    transition.  Closes: #755703.
+
+ -- Steve Langasek <vorlon@debian.org>  Mon, 11 Aug 2014 07:28:30 +0000
+
+libtirpc (0.2.4-2) experimental; urgency=medium
+
+  * Get rid of libgssglue1.
+    Run configure without "--enable-gss".
+    Don't build-depend on libgssglue-dev.
+    Drop 07-gssglue-gssapi.h.diff.
+    Closes: #755703.
+  * autogen.sh creates config.h.in.
+    Drop 08-config.h.in.diff.
+  * Refresh db2faef.patch.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 02 Aug 2014 09:40:26 +0100
+
+libtirpc (0.2.4-1) unstable; urgency=medium
+
+  * New maintainer.
+    Closes: #740622.
+  * New upstream version 0.2.4.
+    Remove the INSTALL symlink, replace it with INSTALL from 0.2.3
+    and repackage original upstream to fix lintian error:
+    E: libtirpc source: source-contains-unsafe-symlink INSTALL
+  * Fix "fatal error: gssapi/gssapi.h: No such file or directory"
+    Add 07-gssglue-gssapi.h.diff
+  * Update 05-hurd-port.diff to have AM_CONFIG_HEADER(config.h) in
+    configure.ac.
+  * Run autogen.sh to create config.h.in.
+  * Run autoheader to create config.h.
+    Add 09-autogen.sh.diff.
+  * Build-Depends on libkrb5-dev.
+  * Add upstream patches from http://git.infradead.org/users/steved/libtirpc.git
+    e63e2b5 Add a pthread key initializer constant
+    db2faef Clean up forward declarations in src/auth_gss.c
+    797365f Clean up forward declarations in src/svc_auth_gss.c
+    3bb76d9 man: Organize man/Makefile.am
+    fd96ce3 man: Replace outdated Solaris and BSD references in the man pages
+    03de41b Pre-register server side RPCSEC GSS support
+    cf2e008 Avoid buffer overruns by allocating buffer in svcauth_gss_validate()
+    a940bf9 xdr_rejected_reply: Don't crash with invalid server rejection
+  * Add debian/watch.
+  * Refresh patches.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 18 Jul 2014 13:04:00 +0100
+
+libtirpc (0.2.3-2) unstable; urgency=medium
+
+  * Debian QA upload.
+  * Fix breakage introduced by 05-hurd-port.diff (Closes: #740491, #740574):
+    - Include config.h from src/getpeereid.c so that the test on
+      HAVE_SYS_USER_H actually works.
+    - Drop src/config.h which is an old copy of src/config.h.in.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Fri, 04 Jul 2014 23:13:14 +0200
+
+libtirpc (0.2.3-1) unstable; urgency=medium
+
+  * Debian QA upload.
+  * New upstream version:
+    - includes fix to avoid issues with lock elision. (Closes: #751147).
+    - drop 01-remove-des-crypt.diff patch (merged upstream).
+    - drop 02-rerun-bootstrap.diff patch (not needed anymore).
+    - refresh 03-kfreebsd.diff patch.
+    - refresh 05-hurd-port.diff patch.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Tue, 10 Jun 2014 21:12:53 +0200
+
+libtirpc (0.2.2-7) unstable; urgency=low
+
+  * Debian QA group upload.
+  * Added patch 06-hurd-client-port.diff, avoid malloc overflow in
+    client code on Hurd (Closes: #739674).
+  * Rewrite rules file to use dh and move to debhelper compat level 9
+    for hardening support.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 03 Mar 2014 11:05:36 +0100
+
+libtirpc (0.2.2-6) unstable; urgency=medium
+
+  * Orphan package.
+  * Acknowledge NMU.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sun, 02 Mar 2014 20:52:38 +0100
+
+libtirpc (0.2.2-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload with maintainer approval.
+  * Added patch 05-hurd-port.diff fixing build problems on Hurd
+    (Closes: #739557).  Build using dh-autoreconf to activate changes
+    to configure.ac.
+  * Update standards-version from 3.9.2 to 3.9.5.  No changes needed.
+  * Add homepage URL in control file.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Thu, 20 Feb 2014 12:28:09 +0100
+
+libtirpc (0.2.2-5) unstable; urgency=low
+
+  * 04-fix-memory-leak.diff: New patch from George Danchev,
+    fixes a small memory leak in error situations. (Closes: #552024)
+  * Install man pages, both for libtirpc1 and libtirpc-dev. (Closes: #624510)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sun, 10 Jul 2011 21:49:27 +0200
+
+libtirpc (0.2.2-4) unstable; urgency=low
+
+  * Set the priority of libtirpc-dev to extra, to properly match the
+    overrides in the archive.
+  * Move the shared library (not the development symlink and static library)
+    from /usr/lib to /lib.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sat, 09 Jul 2011 19:38:30 +0200
+
+libtirpc (0.2.2-3) unstable; urgency=low
+
+  * Make package multiarch-capable.
+    * Set DEB_HOST_MULTIARCH correctly in debian/rules.
+    * Give --libdir to configure.
+    * Replace usr/lib with usr/lib/* in *.install.
+    * Up debian/compat level to 8, and bump debhelper dependency version
+      to 8.1.3.
+    * Make libtirpc1 Pre-Depend on ${misc:Pre-Depends}.
+    * Mark libtirpc1 as Multi-Arch: same.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sun, 03 Jul 2011 22:46:02 +0200
+
+libtirpc (0.2.2-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * 03-kfreebsd.diff: Fix FTBFS on GNU/kFreeBSD. Thanks Petr Salinger.
+    (Closes: #610716)
+
+ -- Robert Millan <rmh@debian.org>  Wed, 08 Jun 2011 12:53:03 +0200
+
+libtirpc (0.2.2-2) unstable; urgency=low
+
+  * Correct priority to standard.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Wed, 01 Jun 2011 20:47:40 +0200
+
+libtirpc (0.2.2-1) unstable; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * New upstream release. (Closes: #625807)
+    * 01-remove-des-crypt.diff: New patch. Reverts upstream commit
+      9bdcba10aa67ce3f67810c7aaac944a00dcfcee5, which is not relevant
+      for glibc and breaks the build.
+    * 02-rerun-bootstrap.diff: Rerun ./bootstrap to pick up the Makefile.am
+      change from the previous patch.
+  * Update Standards-Version to 3.9.2 (no changes needed).
+  * Drop unneeded build-dependency on libgss-dev.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Wed, 01 Jun 2011 19:10:25 +0200
+
+libtirpc (0.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+    * Removed obsolete patch debian/patches/01-add-docs-to-subdirs-list.patch.
+    * No longer hard-codes list of IEEE754-compatible architectures, so fixes
+      building on HPPA. (Closes: #559102)
+  * Remove patch system, as we have no patches left.
+  * Add ${misc:Depends} to dependency list for both packages, to keep
+    lintian happy.
+  * Update Standards-Version to 3.9.1 (no changes needed).
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sat, 11 Dec 2010 11:36:38 +0100
+
+libtirpc (0.2.0-2) unstable; urgency=low
+
+  * Add pkg-config to list of build-deps; fixes FTBFS.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sat, 04 Jul 2009 15:39:12 +0200
+
+libtirpc (0.2.0-1) unstable; urgency=low
+
+  * Initial upload to Debian, following Sun's license change of code from the
+    (non-free) Sun RPC license to a BSD-like license.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Thu, 25 Jun 2009 20:20:32 +0200

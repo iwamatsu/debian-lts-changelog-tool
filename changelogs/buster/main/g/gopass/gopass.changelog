@@ -1,0 +1,93 @@
+gopass (1.2.0-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 12:15:05 +0200
+
+gopass (1.2.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Deprecating priority extra as per policy 4.0.1
+
+  [ Alexandre Viau ]
+  * Clarify relation with gopass.pw in description (Closes: #912408)
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 31 Oct 2018 17:27:33 -0400
+
+gopass (1.2.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 20 Feb 2018 21:19:23 -0500
+
+gopass (1.1.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 10 Feb 2018 10:15:45 -0500
+
+gopass (1.0.8-2) unstable; urgency=medium
+
+  * Move to salsa.debian.org.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Dec 2017 01:26:50 -0500
+
+gopass (1.0.8-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 17 Dec 2017 14:11:50 -0500
+
+gopass (1.0.7-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 24 Aug 2017 23:02:56 -0400
+
+gopass (1.0.6-2) unstable; urgency=medium
+
+  * Depend on golang-go. (Closes: #868987)
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 19 Jul 2017 22:58:30 -0400
+
+gopass (1.0.6-1) unstable; urgency=medium
+
+  * New upstream snapshot. (Closes: #868987)
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 19 Jul 2017 21:24:29 -0400
+
+gopass (1.0.5-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * d/control: gopass recommends git.
+  * d/control: change priority from extra to optional for gopass.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 19 Jul 2017 10:54:12 -0400
+
+gopass (1.0.4-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 17 Jul 2017 20:54:44 -0400
+
+gopass (1.0.2-2) unstable; urgency=medium
+
+  * d/copyright: create section for bash_completion.d/gopass
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 17 Jul 2017 19:37:58 -0400
+
+gopass (1.0.2-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Include bash completion.
+  * Create golang-github-aviau-gopass-dev package.
+  * Set proper package sections.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 17 Jul 2017 18:50:09 -0400
+
+gopass (1.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #781494)
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 17 Jul 2017 15:26:42 -0400

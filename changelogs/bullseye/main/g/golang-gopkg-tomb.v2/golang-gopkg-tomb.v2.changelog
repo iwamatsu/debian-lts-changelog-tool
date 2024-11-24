@@ -1,0 +1,34 @@
+golang-gopkg-tomb.v2 (0.0~git20161208.d5d1b58-3) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:08:35 -0500
+
+golang-gopkg-tomb.v2 (0.0~git20161208.d5d1b58-2) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 15:09:35 -0500
+
+golang-gopkg-tomb.v2 (0.0~git20161208.d5d1b58-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+  * Remove Built-Using from arch:all -dev package
+
+  [ Michael Hudson-Doyle ]
+  * New upstream release. 
+
+  [ Alexandre Viau ]
+  * Move to XS-Go-Import-Path.
+  * Move to salsa.debian.org.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Dec 2017 17:17:25 -0500
+
+golang-gopkg-tomb.v2 (0.0~git20140626.14b3d72-1) unstable; urgency=low
+
+  * Initial release. (Closes: #792798)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Fri, 27 Mar 2015 14:47:24 -0400

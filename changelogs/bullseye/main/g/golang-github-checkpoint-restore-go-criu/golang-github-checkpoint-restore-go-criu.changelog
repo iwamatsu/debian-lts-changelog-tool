@@ -1,0 +1,42 @@
+golang-github-checkpoint-restore-go-criu (4.1.0-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * Remove test directory manually in dh_configure (Closes: #971197)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 04 Oct 2020 16:25:43 +0800
+
+golang-github-checkpoint-restore-go-criu (4.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 00:45:08 +0800
+
+golang-github-checkpoint-restore-go-criu (4.1.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 4.1.0
+  * Bump debhelper-compat to 13
+  * Remove unused Files-Excluded in d/copyright
+  * Exclude main package when building
+  * Update proto defines from criu 3.14
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 17 Aug 2020 23:30:59 +0800
+
+golang-github-checkpoint-restore-go-criu (3.11-2) unstable; urgency=medium
+
+  * Standards-Version: 4.5.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 26 Jan 2020 20:17:42 +1100
+
+golang-github-checkpoint-restore-go-criu (3.11-1) unstable; urgency=medium
+
+  * Initial release (Closes: #948113).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 04 Jan 2020 17:35:35 +1100

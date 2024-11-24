@@ -1,0 +1,165 @@
+prosody-modules (0.0~hg20190203.b54e98d5c4a1+dfsg-1+deb10u1) buster-security; urgency=high
+
+  * fix for CVE-2020-8086
+
+ -- Victor Seva <vseva@debian.org>  Tue, 28 Jan 2020 11:34:19 +0100
+
+prosody-modules (0.0~hg20190203.b54e98d5c4a1+dfsg-1) unstable; urgency=medium
+
+  * new upstream snapshot
+  * add mod_atom (Closes: #919503)
+  * add mod_prometheus (Closes: #919505)
+  * add mod_pubsub_mqtt (Closes: #919502)
+  * add mod_seclabels (Closes: #919501)
+  * add mod_pubsub_feeds (Closes: #919510)
+  * add mod_client_certs (Closes: #921477)
+  * remove mod_omemo_all_access (not needed for prosody >= 0.11
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 06 Feb 2019 10:02:53 +0000
+
+prosody-modules (0.0~hg20181209.39ec478a752e+dfsg-1) unstable; urgency=medium
+
+  * new upstream snapshot
+  * add mod_bob, mod_pubsub_text_interface,
+    mod_register_web (Closes: #908610), and mod_vcard_muc
+  * recommend lua-ldap instead of depending on it
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 09 Dec 2018 23:15:54 +0000
+
+prosody-modules (0.0~hg20180420.902ecd6400bd+dfsg-1) unstable; urgency=medium
+
+  [ W. Martin Borgert ]
+  * new upstream snapshot (Closes: #893811)
+  * set maintainer to XMPP team and change VCS to salsa
+  * bump standards version and dh compat level, add R³=no
+  * add mod_auth_ldap (Closes: #888768)
+  * add mod_csi_battery_saver (Closes: #883191)
+  * add mod_omemo_all_access (Closes: #885720)
+  * remove mod_pep_plus module: not working with 0.10, according to upstream
+
+  [ Victor Seva ]
+  * debian/gbp.conf
+  * add mod_muc_log[_http] (Closes: #885721)
+  * fix d/copyright lintian warnings
+  * update Standards-Version to 4.1.4 (no changes needed)
+  * update Maintainer email due mailing list migration
+  * fix privacy-breach-generic on mod_muc_log_http
+
+ -- Victor Seva <vseva@debian.org>  Fri, 20 Apr 2018 11:15:08 +0200
+
+prosody-modules (0.0~hg20170929.c53cc1ae4788+dfsg-3) unstable; urgency=medium
+
+  [ W. Martin Borgert ]
+  * mention mod_mam_muc in d/ch
+
+  [ Victor Seva ]
+  * add mod_http_muc_log (Closes: #882019)
+  * add mod_private_adhoc (Closes: #878737)
+  * add mod_privacy_lists (Closes: #878735)
+  * fix vcs-field-uses-insecure-uri lintian error
+  * fix wildcard-matches-nothing-in-dep5-copyright lintian error
+  * lintian-overrides to remove debian-watch-file-is-missing error
+  * fix priority-extra-is-replaced-by-priority-optional lintian error
+  * fix scripts permissions
+  * override testsuite-autopkgtest-missing lintian error
+
+ -- Victor Seva <vseva@debian.org>  Tue, 21 Nov 2017 17:03:57 +0100
+
+prosody-modules (0.0~hg20170929.c53cc1ae4788+dfsg-2) unstable; urgency=medium
+
+  * re-upload to unstable for prosody >= 0.10.0
+  * add mod_mam_muc (Closes: #877568)
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 13 Oct 2017 19:46:55 +0000
+
+prosody-modules (0.0~hg20170929.c53cc1ae4788+dfsg-1exp) experimental; urgency=medium
+
+  * build for prosody 0.10 in experimental (mod_carbons and mod_mam
+    already in prosody)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 01 Oct 2017 19:01:13 +0000
+
+prosody-modules (0.0~hg20170929.c53cc1ae4788+dfsg-1) unstable; urgency=medium
+
+  * new upstream snapshot
+  * add mod_list_inactive and mod_lastlog (Closes: #875287)
+  * bump standards version and dh compat level, no changes
+
+  [ Victor Seva <vseva@debian.org>  Wed, 19 Jul 2017 18:11:17 +0200 ]
+  * add mod_profile (Closes:#836022)
+  * add mod_auth_dovecot (Closes:#852634)
+  * add mod_delegation (Closes:#854064)
+  * add mod_default_bookmarks (Closes: #862097)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 01 Oct 2017 18:32:36 +0000
+
+prosody-modules (0.0~hg20170719.cd828b1cb5b9+dfsg-2) experimental; urgency=medium
+
+  * remove mod_carbons (included in prosody 0.10) (closes:#869591)
+
+ -- Victor Seva <vseva@debian.org>  Mon, 24 Jul 2017 18:35:46 +0200
+
+prosody-modules (0.0~hg20170719.cd828b1cb5b9+dfsg-1) experimental; urgency=medium
+
+  * New upstream version 0.0~hg20170719.cd828b1cb5b9+dfsg (closes: #863375)
+  * remove mod_mam (#867678) provided by prosody 0.10+
+  * add mod_profile (Closes:#836022)
+  * remove duplicated modules
+  * add mod_auth_dovecot (Closes:#852634)
+  * add mod_delegation (Closes:#854064)
+  * add mod_default_bookmarks (Closes: #862097)
+
+ -- Victor Seva <vseva@debian.org>  Wed, 19 Jul 2017 18:11:17 +0200
+
+prosody-modules (0.0~hg20170123.3ed504b944e5+dfsg-1) unstable; urgency=medium
+
+  * New upstream (Closes: #850674)
+  * Add mod_firewall (Closes: #852268)
+  * Add mod_privilege (Closes: #835974)
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 23 Jan 2017 22:13:28 +0000
+
+prosody-modules (0.0~hg20160813.65d9093525ca+dfsg-3) unstable; urgency=medium
+
+  * add mod_block_strangers (closes: #846096)
+
+ -- Victor Seva <vseva@debian.org>  Mon, 28 Nov 2016 14:43:22 +0100
+
+prosody-modules (0.0~hg20160813.65d9093525ca+dfsg-2) unstable; urgency=medium
+
+  [ W. Martin Borgert ]
+  * Forgot to add README.source
+
+  [ Victor Seva ]
+  * Add mod_blocking & mod_cloud_notify (closes: #841872)
+  * Add mod_vjud (closes: #836020)
+  * Add mod_invite (closes: #834352)
+
+ -- Victor Seva <vseva@debian.org>  Fri, 25 Nov 2016 14:18:22 +0100
+
+prosody-modules (0.0~hg20160813.65d9093525ca+dfsg-1) unstable; urgency=low
+
+    [ Victor Seva <linuxmaniac@torreviejawireless.org> 2016-04-18 ]
+  * Add stable modules (Closes: #820885).
+    [ W. Martin Borgert <debacle@debian.org> 2016-08-14 ]
+  * Use current upstream snapshot, without non-source files.
+  * Add mobile focused modules (Closes: #826271).
+  * Bump standards version, no changes.
+  * Extend package description.
+  * Add module READMEs.
+  * Add myself to uploaders.
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 14 Aug 2016 18:00:58 +0000
+
+prosody-modules (0.0~hg20150813.12ac88940fe3-2) unstable; urgency=medium
+
+  * Update patch on mod_HA1.  Thanks Matthew Wild.
+  * Install README for mod_ldap
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Mon, 17 Aug 2015 16:09:56 +0200
+
+prosody-modules (0.0~hg20150813.12ac88940fe3-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #719882)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Sun, 16 Aug 2015 23:06:15 +0200

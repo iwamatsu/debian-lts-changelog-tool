@@ -1,0 +1,347 @@
+pngcheck (3.0.3-1~deb11u1) bullseye-security; urgency=medium
+
+  * Rebuild for stable, pretty much all of the changes since 2.3.0
+    are security fixes, besides CVE-2020-35511, there's also several
+    without CVE IDs assigned. Upstream dropped the -f option as a
+    security fix, as such it's also missing in this upload (Closes: #1021278)
+
+ -- Moritz <jmm@debian.org>  Fri, 09 Dec 2022 17:54:41 +0100
+
+pngcheck (3.0.3-1) unstable; urgency=medium
+
+  * New upstream version 3.0.3. (Closes: #1021278, LP: #1960400)
+  * debian/patches/020-manpage_whatis.patch: fixed to reflect upstream changes.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Mon, 05 Dec 2022 20:08:12 +0000
+
+pngcheck (3.0.2-4) unstable; urgency=medium
+
+  * debian/watch: changed the download URL to the homepage as the previous one
+    only hosts the Win32 source zip.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Mon, 05 Dec 2022 10:52:05 -0300
+
+pngcheck (3.0.2-3) unstable; urgency=medium
+
+  * debian/control: bumped Standards-Version to 4.6.1.
+  * debian/copyright: updated packaging copyright years.
+  * debian/tests/control: changed test to avoid failing only because of warning.
+    Thanks to Paul Gevers <elbrus@debian.org>. (Closes: #1024180)
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Thu, 24 Nov 2022 15:14:37 +0000
+
+pngcheck (3.0.2-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * debian/control: bumped Standards-Version to 4.6.0.
+  * debian/rules: avoided FTCBFS by explicitly passing CC to make.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Sun, 26 Sep 2021 22:56:24 +0000
+
+pngcheck (3.0.2-1) experimental; urgency=medium
+
+  * New upstream version 3.0.2.
+  * debian/clean: updated to reflect the changes in the makefile patch.
+  * debian/control: bumped Standards-Version to 4.5.1.
+  * debian/copyright: updated upstream and packaging copyright years.
+  * debian/dirs: no longer needed, as debian/install creates every needed
+    directory. Removed.
+  * debian/install: updated to reflect changes in the makefile patch.
+  * debian/manpages: updated to install upstream-provided manpages.
+  * debian/patches/:
+      - 010-makefile.patch: added to replace previous makefile patch and
+        minimize changes from upstream.
+      - 020-manpage_whatis.patch: added to provide more useful whatis entries
+        for upstream manpages.
+      - 10-pngsplit-format-strings.patch and 30-fix-new-source-warnings.patch:
+        no longer needed, as the previously affected upstream function calls now
+        use string literals instead of variables. Removed.
+      - 20-pngsplit-long-options.patch: removed, as it changes upstream
+        command-line interface for no good reason.
+      - 40-fix-makefile-unx-dh.patch: replaced by 010-makefile.patch.
+      - 50-rename-makefile-unx.patch: no longer needed, because of added
+        dh_auto_build override in debian/rules. Removed.
+      - 60-fix-buffer-overflow.patch: no longer needed, as new upstream version
+        already contains it. Removed.
+  * debian/pod2man.mk: no longer needed, as there are no *.pod files left.
+    Removed.
+  * debian/rules:
+      - Added dh_auto_build override to use non-standard makefile name.
+      - Removed export '-Wl,--as-needed' linker flag, as the bullseye toolchain
+        defaults to linking with it.
+  * debian/*.pod: no longer needed, as upstream now provides manpages to all
+    binaries. Removed.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Tue, 08 Jun 2021 02:55:39 +0000
+
+pngcheck (2.3.0-13) unstable; urgency=medium
+
+  * debian/patches/60-fix-buffer-overflow.patch: added to fix CVE-2020-27818.
+    Thanks to Salvatore Bonaccorso <carnil@debian.org>. (Closes: #976350)
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Fri, 04 Dec 2020 07:24:15 +0000
+
+pngcheck (2.3.0-12) unstable; urgency=medium
+
+  * New maintainer. (Closes: #920120)
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Sat, 13 Jun 2020 23:19:08 -0500
+
+pngcheck (2.3.0-11) unstable; urgency=medium
+
+  * QA upload.
+  * debian/control: changed Vcs-* URLs to salsa.debian.org.
+  * debian/salsa-ci.yml: added to provide CI tests for Salsa.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Thu, 04 Jun 2020 18:00:07 -0500
+
+pngcheck (2.3.0-10) unstable; urgency=medium
+
+  * QA upload.
+  * Included gpl/png-fix-IDAT-windowsize into the binary package. Consequently:
+      - debian/clean: added entry.
+      - debian/install: added entry.
+      - debian/patches: 30-fix-new-source-warnings.patch: added to fix the
+        compilation warnings.
+      - debian/png-fix-IDAT-windowsize.1.pod: created to provide a manpage to
+        the binary.
+      - debian/tests/control: added superficial CI test.
+  * debian/control: added 'Rules-Requires-Root: no' to source stanza.
+  * debian/docs: created to provide the README file.
+  * debian/patches/*:
+      - 40-fix-makefile-unx-dh.patch: added to fix upstream makefile regarding
+        DH usage and to build manpages from POD files. Also builds the package
+        correctly with zlib support. Thanks to Kevin Ryde
+        <user42_kevin@yahoo.com.au>.  (Closes: #909638)
+      - 50-rename-makefile-unx.patch: added to rename the fixed makefile to
+        'Makefile' while keeping the diffs from the previous patch.
+      - Fixed typos and removed blank lines on previous headers.
+  * debian/pngcheck.1.pod: added a NOTES section about the usage of
+    png-fix-IDAT-windowsize to fix some of the problems found by pngcheck.
+    Thanks to Kevin Ryde <user42_kevin@yahoo.com.au>.  (Closes: #909919)
+  * debian/png{check,split}.1.pod:
+      - Fixed some minor typos.
+      - Updated the SYNOPSIS and OPTIONS sections according to the program
+        options.
+  * debian/rules:
+      - Moved manpage generation target to 40-fix-makefile-unx-dh.patch.
+      - Removed dh_auto_build override.
+  * debian/tests/control: added superficial restriction to the trivial tests.
+  * debian/upstream/metadata: created.
+  * debian/watch:
+      - Bumped to version 4.
+      - Improved the rule.
+      - Using a secure URL.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Sun, 31 May 2020 17:25:54 -0500
+
+pngcheck (2.3.0-9) unstable; urgency=medium
+
+  * QA upload.
+  * Ran wrap-and-sort.
+  * debian/control: updated Homepage field.
+  * debian/copyright:
+      - Added debian/tests/openlogo-nd-100.png paragraph.
+      - Removed non-standard X-* fields.
+      - Updated Source field.
+      - Updated upstream and packaging copyright years.
+      - Using a secure URI in Format field.
+  * debian/pod2man.mk: modified man page build to use latest debian/changelog
+      entry timestamp instead of local date to make the package build
+      reproducibly (Closes: #795987). Thanks to Eduard Sanou
+      <dhole@openmailbox.org>.
+  * debian/rules: included buildtools.mk to fix FTCBFS (Closes: #895298).
+      Thanks to Helmut Grohne <helmut@subdivi.de>.
+  * debian/source/include-binaries: created to include new file
+      (debian/tests/openlogo-nd-100.png).
+  * debian/tests/control: created to perform trivial CI tests.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Tue, 19 May 2020 01:46:20 -0500
+
+pngcheck (2.3.0-8) unstable; urgency=medium
+
+  * QA upload.
+  * Set Debian QA Group as maintainer. (see #920120)
+  * Using new DH level format. Consequently:
+      - debian/compat: removed.
+      - debian/control: changed from 'debhelper' to 'debhelper-compat' in
+        Build-Depends field and bumped level to 13.
+  * debian/control: bumped Standards-Version to 4.5.0.
+
+ -- David da Silva Polverari <david.polverari@gmail.com>  Mon, 11 May 2020 22:05:28 -0500
+
+pngcheck (2.3.0-7) unstable; urgency=low
+
+  * debian/control
+    - (pngcheck::Depends): Remove unused
+      libpng12-0 (Closes: #709354). Thanks to Jakub Wilk <jwilk@debian.org>.
+    - (Vcs-*): Update to anonscm.debian.org.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 01 Jun 2013 22:48:29 +0300
+
+pngcheck (2.3.0-6) unstable; urgency=low
+
+  * debian/clean
+    - Add gpl/pngsplit.
+  * debian/control
+    - (Build-Depends): Add zlib1g-dev (Closes: #709353). Remove unused
+      libpng-dev (Closes: #709354). Thanks to Jakub Wilk <jwilk@debian.org>.
+    - (Standards-Version): Update to 3.9.4.
+  * debian/copyright
+    - Update year.
+    - Change X-Comment to standard Comment header.
+    - Update licence name from MIT to more descriptive Custom-MIT-like.
+    - Add years to pngsplit.c
+    - Update upstream homepage.
+  * debian/install
+    - Rename from pngcheck.install. Install pngsplit.
+  * debian/manpages
+    - Rename from pngcheck.manpages.
+  * debian/patches
+    - (10): New. Correct format string in pngsplit.
+    - (20): New. Use GNU --long options in pngsplit.
+  * debian/pngcheck.1.pod
+    - (AUTHORS): Replace template with program author (Closes: #709349).
+    - (DESCRIPTION): Fix typo (Closes: #709350).
+    - (OPTIONS): Order alphabetically.
+  * debian/pngsplit.1.pod
+    - New.
+  * debian/pod2man.mk
+    - Remove sed, use --release. Thanks to Jakub Wilk <jwilk@debian.org>.
+  * debian/rules
+    - (override_dh_auto_build): Change gcc to $(CC) variable. Build
+      new utility pngsplit.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 23 May 2013 09:03:35 +0300
+
+pngcheck (2.3.0-5) unstable; urgency=low
+
+  * debian/control
+    - (Build-Depends): Rm dpkg-dev; not needed with debhelper 9.
+  * debian/debian-compile.mk
+    - Delete. Not used.
+  * debian/rules
+    - Enable all hardening flags.
+    - Change to DEB_CXXFLAGS_* flags and improve build target to
+      include CPPFLAGS (Closes: #662803). Patch thanks to Simon Ruderich
+      <simon@ruderich.org>.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 07 Mar 2012 00:46:04 -0500
+
+pngcheck (2.3.0-4) unstable; urgency=low
+
+  * debian/compat
+    - Update to 9
+  * debian/control
+    - (Build-Depends): update to debhelper 9, dpkg-dev 1.16.1.
+      Change libpng12-dev to libpng-dev; libpng 1.5 transition
+      <http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=650601>.
+    - (Standards-Version): Update to 3.9.3.
+  * debian/copyright
+    - Update to format 1.0.
+  * debian/rules
+    - Delete unnecessary targets.
+    - Use hardened CFLAGS.
+      http://wiki.debian.org/ReleaseGoals/SecurityHardeningBuildFlags
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 05 Mar 2012 04:00:59 -0500
+
+pngcheck (2.3.0-3) unstable; urgency=medium
+
+  * debian/control
+    - (Build-Depends): use debhelper 7.1 due to
+      override in debian/rules (lintian).
+    - (binary-arch): Add target needed for 'debuild -B'.
+  * debian/rules
+    - Factor away more rules handled by dh(1).
+    - (override_dh_auto_build): move CFLAGS after gcc(1) call.
+    - (binary-arch): Add dh_install to make sure main binary
+      is installed (grave; Closes: #564629).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 14 Jan 2010 18:00:11 +0200
+
+pngcheck (2.3.0-2) unstable; urgency=low
+
+  * Move to format: 3.0 (quilt).
+  * debian/clean
+    - Move content from debian/rules for dh(1).
+  * debian/control
+    - (Depends): add ${misc:Depends} for debhelper.
+  * debian/copyright
+    - Minor layout updates.
+  * debian/debian-compile.mk
+    - Rename from debian/debian-vars.mk.
+  * debian/pngcheck.{install,manpages}
+    - Move content from debian/rules for dh(1).
+  * debian/pngcheck.1.pod
+    - Add copyright.
+  * debian/rules
+    - Remove dpatch.
+    - Remove rules obsoleted by dh(1).
+  * debian/source/format
+    - New file.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 19 Dec 2009 17:03:49 +0200
+
+pngcheck (2.3.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #391523).
+  * debian/control:
+    - (Build-Depends): remove unused dpatch.
+    - (Standards-Version): update to 3.8.3.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 02 Dec 2009 14:02:15 +0000
+
+pngcheck (2.0.0-2) unstable; urgency=low
+
+  * New maintainer (Closes: #540920).
+  * debian/compat:
+    - update to 7.
+  * debian/control
+    - (Build-Depends): update debhelper 7.
+    - (Description): new first line.
+    - (Homepage): point to Freshmeat.
+    - (Section): move from devel to graphics (Closes: #358132).
+    - (Standards-Version): update to 3.8.2.
+    - (Vcs-*): new fields.
+  * debian/copyright
+    - Update to latest template.
+    - Update contact addresses and source code URLs.
+  * debian/rules
+    - (install): use dh_prep (lintian).
+  * debian/*.mk
+    - new helper macros.
+  * debian/*.pod
+    - Convert old *.1 page into maintainable POD.
+    - (DESCRIPTION): Add one more paragraph.
+    - (SEE ALSO): add new section.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 11 Aug 2009 20:21:20 +0000
+
+pngcheck (2.0.0-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/rules:
+    + Fix bashism (Closes: #477614).
+  * debian/control:
+    + Add Homepage field.
+
+ -- Marco Rodrigues <gothicx@sapo.pt>  Sun, 15 Jun 2008 21:04:57 +0100
+
+pngcheck (2.0.0-1) unstable; urgency=low
+
+  * New upstream release. (closes: #355222)
+
+ -- Lucas Wall <lwall@debian.org>  Sat,  4 Mar 2006 10:26:04 -0300
+
+pngcheck (1.99.3-2) unstable; urgency=low
+
+  * New maintainer. (closes: #297442)
+
+ -- Lucas Wall <lwall@debian.org>  Tue,  1 Mar 2005 13:28:18 -0300
+
+pngcheck (1.99.3-1) unstable; urgency=low
+
+  * Initial upload
+
+ -- Kevin M. Rosenberg <kmr@debian.org>  Wed, 18 Aug 2004 07:20:10 -0600

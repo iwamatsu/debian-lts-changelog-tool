@@ -1,0 +1,92 @@
+continuity (0.0~git20201208.1805252-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix DH_GOLANG_EXCLUDES which excludes unexpected test file
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 25 Jan 2021 22:17:12 +0800
+
+continuity (0.0~git20201208.1805252-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20201208.1805252
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 25 Jan 2021 04:11:27 +0800
+
+continuity (0.0~git20201119.04c754f-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix building on arm64
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 26 Nov 2020 11:10:49 +0800
+
+continuity (0.0~git20201119.04c754f-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20201119.04c754f
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 26 Nov 2020 01:48:10 +0800
+
+continuity (0.0~git20200710.efbc448-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.0~git20200710.efbc448
+  * Update debhelper compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 21:59:54 +0800
+
+continuity (0.0~git20200107.26c1120-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20200107.26c1120
+  * Update Standards-Version to 4.4.1 (no changes)
+  * Add Rules-Requires-Root
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Jan 2020 03:26:51 +0800
+
+continuity (0.0~git20190827.75bee3e-1) unstable; urgency=medium
+
+  [ Dmitry Smirnov ]
+  * Upload to unstable.
+  * rules: set DH_GOLANG_GO_GENERATE=1.
+
+  [ Arnaud Rebillout ]
+  * New upstream version 0.0~git20190827.75bee3e
+  * Remove mention regarding missing upstream copyright
+  * Bump standards version
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Sat, 26 Oct 2019 09:21:43 +1100
+
+continuity (0.0~git20181203.004b464-1) experimental; urgency=medium
+
+  [ Arnaud Rebillout ]
+  * Team upload.
+  * Set minimal requirement for some build dependencies
+  * Update copyright
+  * Add copyright for sysx/asm.s
+
+  [ Shengjing Zhu ]
+  * Use git mode in debian/watch since upstream doesn't have tags
+  * New upstream version 0.0~git20181203.004b464
+  * Update pkg-go team address to team+pkg-go@tracker.debian.org
+  * Update copyright info for new version
+  * Update debhelper-compat to 12, and drop debian/compat file
+  * Update Standards-Version to 4.3.0 (no changes)
+  * Remove golang-golang-x-net-dev from {Build-,}Depends, not used directly
+  * Drop command binary package to reduce the Build-Depends (Closes: #923603）
+  * Skip one test that needs 6G space
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 07 Mar 2019 23:26:38 +0800
+
+continuity (0.0~git20180216.d8fb858-1) unstable; urgency=medium
+
+  * Initial release (Closes: #890983)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Wed, 21 Feb 2018 16:18:12 +0700

@@ -1,0 +1,856 @@
+nsis (3.04-1+deb9u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Cherry-pick upstream commits to fix CVE-2023-37378.
+  * Hardcode VER_REVISION to ignore deb9u1 suffix.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 07 Jul 2023 13:05:40 +0100
+
+nsis (3.04-1) unstable; urgency=medium
+
+  * New 3.04 upstream release
+
+  [ Thomas Gaugler ]
+  * Provide decomposed version to indirectly set packed version
+  * Remove LibraryLocal from build following upstream
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+  * d/rules: Remove trailing whitespaces
+  * d/watch: Use https protocol
+
+ -- Thomas Gaugler <thomas@dadie.net>  Mon, 07 Jan 2019 08:40:25 +0100
+
+nsis (3.03-2) unstable; urgency=low
+
+  * Migrate NSIS 3 to unstable
+
+  [ Thomas Gaugler ]
+  * Correct and refactor SKIPUTILS parameter setting
+  * Reactivate Library.nsi test case
+
+  [ Didier Raboud ]
+  * Add gbp.conf
+  * Mark nsis-{common,pluginapi,doc} Multi-Arch: foreign
+
+ -- Didier Raboud <odyx@debian.org>  Sat, 31 Mar 2018 14:53:58 +0200
+
+nsis (3.03-1) experimental; urgency=low
+
+  * New 3.03 upstream release:
+    - Add Library.nsi to ignored examples
+
+  * Packaging cleanup
+    - Cleanup d/control thanks to cme
+    - Update debian/copyright for new upstream release thanks to cme
+    - Bump debhelper compat to 11
+    - Update Vcs-* fields for the move to salsa
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 27 Feb 2018 14:14:01 +0100
+
+nsis (3.02.1-1) experimental; urgency=low
+
+  * New 3.02.1 upstream release
+  * Bump debhelper compat to 10
+  * Bump Standards-Version to 4.0.1 without changes needed
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 31 Aug 2017 20:44:15 +0200
+
+nsis (3.01-1) experimental; urgency=medium
+
+  * New 3.01 upstream release
+  * Drop all patches, all included upstream
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 16 Dec 2016 13:15:34 +0100
+
+nsis (3.0-5) experimental; urgency=medium
+
+  * Backport upstream workaround for '#1156 zlibCompressionTest loops
+    endlessly'
+
+ -- Didier Raboud <odyx@debian.org>  Sun, 11 Dec 2016 09:40:39 +0100
+
+nsis (3.0-4) experimental; urgency=medium
+
+  * Only build in parallel in builds without arch-all packages, to circumvent
+    arch:all FTBFS
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 09 Dec 2016 16:15:19 +0100
+
+nsis (3.0-3) experimental; urgency=medium
+
+  [ Thomas Gaugler ]
+  * makensis man page: OUTPUTCHARSET is not applicable for POSIX systems
+  * Added Patch: WinWStrDupFromChar writes beyond allocated memory
+  * Updated plugin api library description (new: amd64 & unicode)
+  * Added Patch: Make WinWStrDupFromWC endian agnostic
+
+  [ Didier Raboud ]
+  * Add BUILD_ARCH endianness test at the start of the build-indep target
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 05 Oct 2016 08:40:53 +0200
+
+nsis (3.0-2) experimental; urgency=low
+
+  * Build makensis in build-indep to fix indep-only FTBFS
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 12 Aug 2016 17:24:06 +0200
+
+nsis (3.0-1) experimental; urgency=low
+
+  * New 3.0 upstream release
+
+  [ Thomas Gaugler ]
+  * Remove all patches for new upstream release
+  * Build installer for win32 and win64
+  * Use secure URL for Vcs-Browser field
+  * Changed debian/copyright into a standard, machine-readable format
+  * Build all plugins for win64
+  * Removed unused nsis.lintian-overrides file
+  * Updated makensis man page
+  * Remove duplicate AUTHOR section in LibraryLocal man page
+  * Remove duplicate AUTHOR section in GenPat man page
+  * Simplify extraction of Version from changelog
+  * Removed obsolete and completed tasks from TODO file
+
+  [ Didier Raboud ]
+  * Add missing dpkg-dev versioned B-D for dpkg-parsechangelog's --show-field
+  * Re-add patch to statically link libstdc++ for plugins
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 12 Aug 2016 14:36:48 +0200
+
+nsis (2.51-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refresh all patches for 2.51
+    - Escape the NSISCALL $STDCALL variable in the CPPDEFINES tuple
+
+  * Bump S-V to 3.9.8 without changes needed
+  * Run wrap-and-sort -sat on debian packaging files
+
+ -- Didier Raboud <odyx@debian.org>  Fri, 08 Apr 2016 13:51:08 +0200
+
+nsis (2.50-1) unstable; urgency=medium
+
+  [ Thomas Gaugler ]
+  * New upstream release
+    - Fixed CreateShortcut failure on Vista caused by security changes
+  * Switched to using DocBook 5 and xsltproc for manpage generation
+    because the xmlto package has no longer a maintainer.
+  * Acknowledge NMU
+
+  [ Didier Raboud ]
+  * Refresh all patches for 2.50
+
+ -- Didier Raboud <odyx@debian.org>  Wed, 13 Jan 2016 22:02:48 +0100
+
+nsis (2.48-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use "find -perm /x" instead of "find -perm +x". Closes: #808934
+
+ -- Andreas Metzler <ametzler@debian.org>  Tue, 29 Dec 2015 15:02:57 +0100
+
+nsis (2.48-2) unstable; urgency=medium
+
+  * Build makensis in build-indep to fix indep-only FTBFS
+
+ -- Didier Raboud <odyx@debian.org>  Tue, 15 Dec 2015 15:02:09 +0100
+
+nsis (2.48-1) unstable; urgency=medium
+
+  * New upstream release
+    - LoadLibrary security hardening to prevent dll hijacking
+      (Bug #1125, Closes: #806036)
+
+  * Updated to Standards-Version 3.9.6
+  * Acknowledge NMU
+
+ -- Thomas Gaugler <thomas@dadie.net>  Tue, 15 Dec 2015 10:51:30 +0100
+
+nsis (2.46-10.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with -fgnu89-inline. Closes: #778029.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 10 Jul 2015 13:59:55 +0200
+
+nsis (2.46-10) unstable; urgency=medium
+
+  * Fail the build if libwinpthread is needed at runtime (see #722898)
+
+ -- Didier Raboud <odyx@debian.org>  Mon, 15 Dec 2014 22:58:06 +0100
+
+nsis (2.46-9) unstable; urgency=medium
+
+  [ Didier Raboud ]
+  * Update Vcs-* URLs to be canonical.
+
+  [ Thomas Gaugler ]
+  * Fix of GCC stdcall attribute warnings occurring for targets other
+    than Windows.
+  * Overwrite lintian warning about missing Large File Support (LFS).
+  * Replace duplicate image files of Modern UI with symbolic links.
+  * Probe for built makensis instead of using wildcard function.
+  * Use correct syntax for invoking shell function from make.
+  * Rely on PATH environment for finding mingw-w64 rather than
+    explicitly searching for it.
+  * Suggest wine package for any architecture it is available.
+  * Fix test run on s390x by using stdint.h for portable data type
+    definitions. (Closes: #754679)
+
+ -- Thomas Gaugler <thomas@dadie.net>  Mon, 14 Jul 2014 20:25:01 +0200
+
+nsis (2.46-8) unstable; urgency=low
+
+  * Dropped superfluous build dependency of libstdc++6-4.6-dev because
+    this build dependency is fulfilled by build-essential. (Closes:
+    #747982)
+  * Updated to Standards-Version 3.9.5.
+  * Use wildcard function of make instead of relying on shell for path
+    expansion.
+  * Honor hardening flags.
+  * Fix of mingw-w64 warnings concerning out of bounds array access.
+  * Deploy variables for path names in debian/rules.
+  * Upgraded to debhelper version 9.
+  * Defined override targets for arch and indep packages.
+  * Introduced variables for build directory and type in debian/rules.
+  * Retain same flags for build and installation to avoid rebuilding.
+
+ -- Thomas Gaugler <thomas@dadie.net>  Sun, 25 May 2014 11:35:48 +0200
+
+nsis (2.46-7) unstable; urgency=low
+
+  * Make plugins not depend on libgcc_s_sjlj-1.dll nor libdtdc++-6.dll
+    by forcing static compilation of both libgcc and libstdc++. (Closes:
+    #654380)
+
+ -- Didier Raboud <odyx@debian.org>  Thu, 05 Jan 2012 19:06:42 +0100
+
+nsis (2.46-6) unstable; urgency=low
+
+  * Corrected command line options passed to scons for build/NEWS target.
+  * Use zmemcpy function of the same calling convention.
+
+ -- Thomas Gaugler <thomas@dadie.net>  Fri, 07 Oct 2011 10:28:21 +0200
+
+nsis (2.46-5) unstable; urgency=low
+
+  * Add Replaces/Breaks against nsis to the new packages (Closes: #630620)
+
+ -- Thomas Gaugler <thomas@dadie.net>  Sat, 18 Jun 2011 16:41:54 +0000
+
+nsis (2.46-4) unstable; urgency=low
+
+  [ Thomas Gaugler ]
+  * Run architecture independent build process only when demanded.
+  * Split NSIS package into four packages:
+    - compiler and utilities (architecture dependent)
+    - plugins, stubs and resource files (win32)
+    - header and library files for developing NSIS plugins (win32)
+    - examples and HTML documentation (architecture independent)
+  * Updated to Standards-Version 3.9.2
+  * Support building with mingw-w64 (Closes: #620099)
+  * Support parallel build
+
+  [ Didier Raboud ]
+  * Don't hide output from scons in clean.
+  * Move packaging from Subversion to Git, update Vcs-* fields.
+  * Add explicit libstdc++6-4.6-dev Build-Depend.
+
+ -- Thomas Gaugler <thomas@dadie.net>  Sat, 11 Jun 2011 15:24:40 +0000
+
+nsis (2.46-3) experimental; urgency=low
+
+  * Fixed warnings of missing elements occuring in man page generation
+  * Use variant_dir instead of build_dir keyword in SConstruct file
+  * Run complete set of tests independent of architecture
+  * Removed the option to build with the orphaned gcc-mingw32
+  * Removed architecture restrictions
+  * Updated to Standards-Version 3.9.1
+
+ -- Thomas Gaugler <thomas@dadie.net>  Sun, 07 Nov 2010 17:30:30 +0000
+
+nsis (2.46-2) unstable; urgency=low
+
+  * Updated zlib patch with changes from upstream subversion repository
+  * Made embedded inflate function compatible with zlib (Closes: #579407)
+  * Exclude unneeded win32-only utilities from building
+  * Build makensis and portable utilities natively for amd64
+
+ -- Thomas Gaugler <thomas@dadie.net>  Wed, 05 May 2010 20:39:58 +0000
+
+nsis (2.46-1) unstable; urgency=low
+
+  [ Thomas Gaugler ]
+  * New upstream release
+  * Switch to 3.0 (quilt) source format
+  * Use the system provided compression library of zlib
+  * Switch to debhelper 7's minimal rules file mode
+
+  [ Paul Wise ]
+  * Link against the 32-bit zlib on amd64 to prevent FTBFS
+
+ -- Thomas Gaugler <thomas@dadie.net>  Tue, 22 Dec 2009 18:53:50 +0000
+
+nsis (2.45-1) unstable; urgency=low
+
+  * New upstream release
+  * Adopted package from Paul Wise with his permission
+  * Allow building with either gcc-mingw32 (>= 4.4.0-3) or mingw32
+  * Fixed occurring access violation in Math plugin once the
+    installer window is closed.
+
+ -- Thomas Gaugler <thomas@dadie.net>  Mon, 17 Aug 2009 19:04:01 +0000
+
+nsis (2.44-4) unstable; urgency=low
+
+  * Brown paper bag upload
+  * Actually give the option to dh_strip (closes: #519703)
+
+ -- Paul Wise <pabs@debian.org>  Fri, 20 Mar 2009 12:07:00 +0900
+
+nsis (2.44-3) unstable; urgency=low
+
+  * Don't let dh_strip work on (and break) the libpluginapi.a file
+    (Closes: #519703).
+  * Support new nocheck option in DEB_BUILD_OPTIONS
+  * Bump Standards-Version, nsis now complies
+
+ -- Paul Wise <pabs@debian.org>  Mon, 16 Mar 2009 01:26:29 +0900
+
+nsis (2.44-2) unstable; urgency=low
+
+  * Woops, actually upload to unstable
+  * Use dh_lintian instead of manually installing overrides
+  * Switch to debhelper compat level 7
+  * Switch from dh_clean -k to dh_prep
+
+ -- Paul Wise <pabs@debian.org>  Wed, 25 Feb 2009 01:03:19 +0900
+
+nsis (2.44-1) experimental; urgency=low
+
+  * New upstream bugfix release
+    - drop merged fix-Library.nsi-test.patch
+  * Move to unstable now that lenny is released
+  * Add missing System Call.S copyright info
+
+ -- Paul Wise <pabs@debian.org>  Tue, 24 Feb 2009 17:51:13 +0900
+
+nsis (2.43-1) experimental; urgency=low
+
+  * New upstream release (w00t)
+    - Finally makes the System plugin fully functional. Thanks a lot to
+      Thomas Gaugler for implementing this (Closes: #319999, LP: #157356)
+    - Compiles Resource.dll from an icon and a short .rc (Closes: #442192)
+    - Building nsis plugins changes with this release, add details to
+      README.Debian and a notification in NEWS.Debian.
+  * Add some more items to the TODO file.
+  * Apply upstream patch to fix the Library.nsi test
+  * Refer to the correct GPL version in the copyright file
+
+ -- Paul Wise <pabs@debian.org>  Thu, 05 Feb 2009 17:52:53 +0900
+
+nsis (2.39-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Paul Wise <pabs@debian.org>  Wed, 27 Aug 2008 13:09:09 +0800
+
+nsis (2.38-1) experimental; urgency=low
+
+  * New upstream release
+    - all patches included
+  * Put in experimental because it breaks win32-loader
+
+ -- Paul Wise <pabs@debian.org>  Wed, 16 Jul 2008 16:16:58 +0800
+
+nsis (2.37-2) unstable; urgency=medium
+
+  * Ensure the package will FTBFS when makensis is not built
+  * The rebuild should create makensis on amd64 (Closes: #484938)
+  * Don't run the patch, build and test process twice
+  * Run the tests as well as the test scripts on i386 only
+  * Fix FTBFS when converted to dpkg source format 3.0 (Closes: #485350)
+  * Bump Standards-Version (no changes needed)
+
+ -- Paul Wise <pabs@debian.org>  Mon, 09 Jun 2008 15:42:38 +0800
+
+nsis (2.37-1) unstable; urgency=low
+
+  * New upstream release
+    - all patches included
+  * Apply upstream patch to fix the HeaderBitmap test failure
+
+ -- Paul Wise <pabs@debian.org>  Sun, 18 May 2008 18:32:18 +0800
+
+nsis (2.36-1) unstable; urgency=low
+
+  * New upstream release
+    - all patches included
+
+ -- Paul Wise <pabs@debian.org>  Mon, 07 Apr 2008 13:35:41 +0800
+
+nsis (2.35-2) unstable; urgency=low
+
+  * Brown paper bag release
+  * Fix FTBFS on amd64: add an amd64 build-dep on g++-multilib
+
+ -- Paul Wise <pabs@debian.org>  Tue, 11 Mar 2008 16:38:10 +0900
+
+nsis (2.35-1) unstable; urgency=low
+
+  * New upstream release
+    - MUI2 is now declared stable and should be preferred
+  * Bump Standards-Version (no changes)
+  * Properly capitalise Debian in the short description
+  * Accept defeat; drop the amd64 patch since upstream says it a hack and
+    it is a hassle to update for new upstreams. For now, we only support
+    i386 and amd64 via upstream's use of -m32. The right way to fix this
+    is to rewrite some of the internal parts and get that upstreamed,
+    but this is a big and very complex task I have no time for yet.
+    - nsis has also been added to Packages-arch-specific
+    - This effectively closes: #451900 since we don't support s390/etc
+    - Apply patch to add some more -m32 since upstream doesn't use enough yet
+  * Apply upstream patch to ignore tests failing on Linux (Closes: #464311)
+  * Apply upstream patch to fix FTBFS with GCC 4.3 (Closes: #456082)
+  * Fix FTBFS with -j2 due to a race in build/patch target dependencies
+  * Generate a couple of new README files and link a new changelog file
+  * Update the doc-base section to the latest doc-base spec
+
+ -- Paul Wise <pabs@debian.org>  Fri, 07 Mar 2008 00:34:11 +0900
+
+nsis (2.33-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes showing the welcome page on Win95
+    - Includes 02_better_strip.patch, drop
+
+ -- Paul Wise <pabs@debian.org>  Sun, 18 Nov 2007 20:03:57 +0930
+
+nsis (2.32-1) unstable; urgency=low
+
+  * New upstream release
+  * Improve package metadata (thanks to enrico's debtags talk):
+    - Suggest mingw32 for cross-compiling Win32 apps
+    - add Win32 keyword to the description
+    - Move Homepage from description to new dpkg field
+    - wine is now available on amd64, suggest it there
+
+ -- Paul Wise <pabs@debian.org>  Wed, 14 Nov 2007 15:43:53 +0930
+
+nsis (2.31-1) unstable; urgency=low
+
+  * New upstream release
+    - Builds with new mingw32 (Closes: #444504)
+
+ -- Paul Wise <pabs@debian.org>  Wed, 03 Oct 2007 17:44:54 +1000
+
+nsis (2.30-1) unstable; urgency=low
+
+  * New upstream release
+    - MUI language changes, Catalan is back
+    - Includes the new Modern UI 2
+    - Drop manual IGNORETESTS, upstream uses it now
+  * Add a manual page for the LibraryLocal utility
+  * Don't strip executables with nostrip build option (Closes: #437654)
+    - Also let DEB_BUILD_OPTIONS=nostripfull prevent plugin/stub stripping
+
+ -- Paul Wise <pabs@debian.org>  Tue, 28 Aug 2007 15:22:48 +1000
+
+nsis (2.29-1) unstable; urgency=low
+
+  * New upstream release
+    - adds nsDialogs, a replacement for InstallOptions
+    - Drop Catalan hack, upstream fixed it
+  * System plugin patch was accepted upstream, fix README.Debian
+
+ -- Paul Wise <pabs@debian.org>  Tue, 17 Jul 2007 18:28:57 +1000
+
+nsis (2.28-1) unstable; urgency=low
+
+  * New upstream release
+    - Drop 02_build_system_plugin, applied upstream
+    - Use new IGNORETESTS option instead of SKIPTESTS
+    - Hack around a quilt bug and the Catalan translation being removed
+      See http://sourceforge.net/support/tracker.php?aid=1558822
+    - Again update 64-bit fixes patch for the new upstream,
+      also drop use of -m32 (Closes: #426381)
+
+ -- Paul Wise <pabs@debian.org>  Thu, 14 Jun 2007 19:41:16 +0100
+
+nsis (2.27-2) unstable; urgency=low
+
+  * Update 64-bit fixes patch for the new upstream, possibly closes: #423415
+
+ -- Paul Wise <pabs@debian.org>  Sat, 26 May 2007 21:12:10 +1000
+
+nsis (2.27-1) unstable; urgency=low
+
+  * New upstream release
+    - builds with newer scons (Closes: #422829)
+  * Disable some functions of System plugin, builds now
+  * Document the differing location of plugin header
+
+ -- Paul Wise <pabs@debian.org>  Wed, 09 May 2007 20:15:51 +1000
+
+nsis (2.25-1) experimental; urgency=low
+
+  * New upstream release
+    - requires scons 0.96.93, update build-depends
+    - 04_changelog: drop, upstream generates a ChangeLog now
+    - 02_debug_opt: drop, use APPEND_CCFLAGS/APPEND_LINKFLAGS
+    - Distributes the example plugin and header (Closes: #408646)
+    - 7-zip code is relicenced under the Common Public Licence 1.0
+  * XX_old_scons_compat: drop, new scons will soon be in stable
+  * Disable building the new menu item, needs wxWidgets 2.8 not in Debian
+  * Install the plugin header into the mingw32 include dir
+  * Bump debhelper compatability level
+
+ -- Paul Wise <pabs@debian.org>  Mon, 02 Apr 2007 23:34:54 +0800
+
+nsis (2.19-3) unstable; urgency=low
+
+  * Create and use DEBUG_SYMBOLS and OPT instead of DEBUG,
+    which has side effects and modifying CFLAGS, which does not work.
+
+ -- Paul Wise <pabs@debian.org>  Thu,  8 Feb 2007 15:50:43 +1100
+
+nsis (2.19-2) unstable; urgency=low
+
+  * Incorporate changes from NMUs (thanks everyone)
+  * Enable DEBUG=1 when building, to get the CFLAGS required by policy.
+  * Fix outstanding 64-bit issues in makensis.  Closes: #398421.
+  * Change my email address now that I'm a Debian Developer
+
+ -- Paul Wise <pabs@debian.org>  Tue, 30 Jan 2007 19:20:01 +1100
+
+nsis (2.19-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * apply patch to build correctly on 64bit-systems. Closes: #383336, #398421
+
+ -- Andreas Barth <aba@not.so.argh.org>  Tue, 28 Nov 2006 10:10:52 +0100
+
+nsis (2.19-1) unstable; urgency=low
+
+  * New upstream release
+    - 04_changelog: update to v219 cvs tag
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Wed,  9 Aug 2006 13:55:57 +0800
+
+nsis (2.18-1) unstable; urgency=low
+
+  * New upstream release
+    - 04_changelog: update to v218 cvs tag
+    - 03_docs_fixes: drop (applied upstream)
+  * Only suggest wine on i386 and kfreebsd-i386
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun,  2 Jul 2006 22:41:35 +0800
+
+nsis (2.17-1) unstable; urgency=low
+
+  * New upstream release
+    - Update patches:
+     - 04_changelog: update to v217 cvs tag
+  * Use quilt instead of dpatch
+  * Use the new scons in unstable:
+    - Update scons build-dependency
+    - Move diff.gz stuff to XX_old_scons_compat (still useful for backports)
+    - Add an extra fix to XX_old_scons_compat for the NSIS Menu SConscript
+  * 03_docs_fixes:
+    - Replace most of 03_docs_fixes with commands to detect .gz files
+    - Fix nsis ViewCVS url - SF.net changed its CVS URLs
+    - Fix VPatch Readme.html example.nsi link
+  * Remove 01_menu_fixes, since it is not used and probably bitrotten
+  * Update README.Debian: add URL to System.dll work and fix download URL
+  * Fix 2.16-1 changelog: replace 64-bit with big-endian
+  * Bump Standards-Version (no changes)
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun, 21 May 2006 22:18:35 +0800
+
+nsis (2.16-1) unstable; urgency=low
+
+  * New upstream release
+    - Finally supports big-endian platforms
+    - Update patches:
+     - 04_changelog: update to v216 cvs tag
+    - Drop parts of the diff.gz integrated upstream
+  * Upload to unstable (works with old scons now)
+    - Add patch to allow the scons stuff to work with scons 0.96.1.
+      This is in the diff.gz so that debian/rules clean works.
+      Thanks to Amir Szekely from upstream for helping with this.
+    - Reduce scons build-dependency to >= 0.96
+    - Clean .sconsign files at the appropriate moments
+  * debian/rules: prevent the tests from being run twice
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun,  9 Apr 2006 23:37:45 +0800
+
+nsis (2.15-2) experimental; urgency=low
+
+  * Brown paper bag release
+  * Fix broken search path for stubs/etc due to upstream changes related
+    to the introduction of Source/exehead/sconf.h
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Fri, 10 Mar 2006 23:24:35 +0800
+
+nsis (2.15-1) experimental; urgency=low
+
+  * New upstream release
+    - Update patches:
+     - 04_changelog: update to v215 cvs tag
+    - Drop parts of the diff.gz integrated upstream
+  * debian/rules: Remove new generated files in clean target:
+    Source/exehead/sconf.h and Source/version.h
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun,  5 Mar 2006 12:32:44 +0800
+
+nsis (2.14-3) experimental; urgency=low
+
+  * Properly convert paths passed to !addincludedir. Closes: #352259
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Thu, 23 Feb 2006 19:29:16 +0800
+
+nsis (2.14-2) experimental; urgency=low
+
+  * Add a build-stamp target so that the tests only run once on buildds
+  * For the tests, install licence.txt, since one test needs it
+  * Use CPPDEFINES not CPPFLAGS to define __BIG_ENDIAN__ (Closes: #350112)
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sat, 28 Jan 2006 00:00:57 +0800
+
+nsis (2.14-1) experimental; urgency=low
+
+  * New upstream release
+    - Fixes plugin breakage on Win9X and WinNT in 2.13
+    - Update patches:
+     - 04_changelog: update to v214 cvs tag
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Wed, 25 Jan 2006 10:05:16 +0800
+
+nsis (2.13-1) UNRELEASED; urgency=low
+
+  * New upstream release
+    - Update patches:
+      - 04_changelog: update to v213 cvs tag
+      - 03_docs_fixes: drop parts fixed by the POSIX install patch
+    - Drop patches:
+      - 02_config_dirs: upstream accepted my POSIX install patch for scons
+    - debian/rules: adapt install/etc to POSIX install patch
+    - debian/copyright: update copyright years
+    - debian/README.Debian: update upstream url
+  * debian/rules: in the clean target, only ignore missing scons
+  * debian/control: make the homepage comply to the developers reference
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun, 22 Jan 2006 12:09:43 +0800
+
+nsis (2.12-2) UNRELEASED; urgency=low
+
+  * 05_examples_fixes: replace with some sed calls
+  * debian/control: scons build-dependency doesn't need debian version
+  * debian/rules: tell scons to ignore tests that fail
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Tue,  3 Jan 2006 17:50:11 +0800
+
+nsis (2.12-1) experimental; urgency=low
+
+  * New upstream release
+    - Update patches:
+     - 04_changelog: update to v212 cvs tag
+     - 05_examples_fixes: Fix MultiLanguage.nsi from the MUI
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun, 18 Dec 2005 13:47:11 +0800
+
+nsis (2.11-1) experimental; urgency=low
+
+  * New upstream release
+    - Update patches:
+     - 04_changelog: update to v211 cvs tag
+    - Drop patches:
+     - 06_logiclib_fixes: fixed properly by upstream
+  * debian/rules: Use dpkg-parsechangelog to get the version
+  * debian/rules: Enable tests, but ignore the results
+  * debian/watch: use sf.net instead of the real url
+  * 01_menu_fixes: disable for now, not needed and a pain to update
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Mon, 14 Nov 2005 10:41:26 +0800
+
+nsis (2.10-1-1) experimental; urgency=low
+
+  * New upstream release
+    - VPatch 3 included upstream, we now have GenPat, so fix README.Debian
+    - Now requires scons 0.96.91 for building
+    - Update patches:
+     - 04_changelog: update to v210 cvs tag
+  * debian/rules: Ignore some failures in the clean target, motivated by
+    http://lists.debian.org/debian-mentors/2005/09/msg00009.html
+  * debian/README.Debian: Add note about System plugin plans to README.Debian
+  * debian/rules: Convert html files to README files using the pretty style
+  * debian/GenPat.xml: add manual page for GenPat
+  * debian/rules: Convert html to text README during build target instead
+  * debian/makensis.xml: Fix path to HTML docs and DTD version
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Wed,  5 Oct 2005 18:39:53 +0800
+
+nsis (2.09-1) experimental; urgency=low
+
+  * New upstream release
+    - Update patches:
+      - 04_changelog: update to v209 cvs tag
+    - Drop patches included upstream:
+      - 07_fix_ndata_rsrc_order
+      - 08_extern_c_c++_plugins
+      - parts of 05_examples_fixes
+  * debian/watch: use uupdate when new releases are found
+  * 03_docs_fixes: remove reference to NSIS dir in tutorial.but
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Mon, 29 Aug 2005 08:48:23 +0800
+
+nsis (2.08-4) experimental; urgency=low
+
+  * 08_extern_c_c++_plugins: Change the C++ plugins to use extern "C" for
+    their DllMain, so that it gets called. Fixes crash with the BgImage plugin
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Wed, 10 Aug 2005 17:40:09 +0800
+
+nsis (2.08-3) experimental; urgency=medium
+
+  * debian/watch: use sourceforge support from uscan in devscripts 2.9
+  * Don't ship *.def and *.lib files for plugins
+  * 05_examples_fixes: change Luxembourgish.nsh macro case (Closes: #320557)
+  * 07_fix_ndata_rsrc_order: New patch from upstream to fix installers broken
+    by the interaction between .ndata and .rsrc sections in mingw32
+    http://forums.winamp.com/showthread.php?threadid=212630
+    http://forums.winamp.com/showthread.php?threadid=222992
+    (Closes: #319929)
+  * debian/makensis.xml:
+    - workaround xmlto using non-utf8 trademark symbol
+    - update to latest docbook version since sarge fixed it
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sat,  6 Aug 2005 19:25:04 +0800
+
+nsis (2.08-2) experimental; urgency=low
+
+  * New patches: (Closes: #319936)
+    - 05_examples_fixes: fix some minor problems with the examples
+    - 06_logiclib_fixes: fix non-portable !system commands
+  * Add a note about not-built stuff in the package description
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Wed, 27 Jul 2005 14:11:13 +0800
+
+nsis (2.08-1) experimental; urgency=low
+
+  * New upstream release
+    - Several files are now generated from proper source
+  * Update patches:
+    - 01_menu_fixes.dpatch: update case of some dirs
+    - 02_config_dirs.dpatch: parts replaced upstream
+    - 04_changelog.dpatch: update to v2.08 cvs tag
+  * Fix section in debian/doc-base
+  * Remove workaround for dh_strip bug from debian/rules
+  * Switch NEWS generation to AppendixF.html
+  * Update some years in debian/copyright
+  * Ship NEWS in the .deb (oops)
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun, 24 Jul 2005 13:47:33 +0800
+
+nsis (2.07-2) UNRELEASED; urgency=low
+
+  * Add README.Debian explaining about removed stuff
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sat,  9 Jul 2005 17:18:19 +0800
+
+nsis (2.07-1) experimental; urgency=low
+
+  * New upstream release
+    - Update patches:
+      - Update my email address
+      - 02_config_dirs.dpatch: one function name changed
+      - 04_changelog.dpatch: update to v2.07 cvs tag
+    - Drop stuff (integrated/replaced upstream):
+      - 01_fix_makefiles.dpatch
+      - 03_compile_fixes.dpatch
+      - 05_amd64_fixes.dpatch
+      - 06_halibut_fixes.dpatch
+      - 07_fix_examples.dpatch
+  * Use lolando's sfdlr.php in debian/watch
+  * Remove debian/README.Debian-source
+  * New patches:
+    - 01_menu_fixes.dpatch fixes Menu files for use in normal browsers
+    - 03_docs_fixes.dpatch fixes paths in Docs files
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Thu, 23 Jun 2005 20:56:42 +0800
+
+nsis (2.06-6) unstable; urgency=low
+
+  * Bump version number for gcc4 transition and sparc rebuild
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Thu,  7 Jul 2005 13:12:08 +0800
+
+nsis (2.06-5) unstable; urgency=low
+
+  * Brown paper bag release
+  * Use $^ instead of $< in Contrib Makefiles (Closes: #312564)
+  * Update maintainer address (v3.com discontinued email forwards)
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Mon, 13 Jun 2005 21:34:53 +0800
+
+nsis (2.06-4) unstable; urgency=low
+
+  * 01_fix_makefiles.dpatch
+    - Include the exe files from Contrib/UIs/ since upstream considers them
+      to be source code (Closes: #304678):
+      http://forums.winamp.com/showthread.php?postid=1642451#post1642451
+    - Create some symlinks due to incorrect filename case in some examples
+    - Change the magic to use /bin/bash instead of /bin/sh
+    - Install some extra files needed by the VPatch example
+  * 01_fix_makefiles.dpatch, debian/rules, debian/lintian.overrides
+    - Include /usr/share/nsis/Contrib/Modern UI/Licence.txt because the
+      example files require it, and create lintian/linda overrides too
+  * 07_fix_examples.dpatch
+    New patch: fix some issues in the example .nsi scripts
+  * debian/patches/*
+    - Update authorship and descriptions
+
+ -- Paul Wise <pabs@zip.to>  Sun, 17 Apr 2005 17:20:52 +0800
+
+nsis (2.06-3) unstable; urgency=low
+
+  * 06_halibut_fixes.dpatch
+    - New patch: fix FTBFS caused by halibut segfaults,
+      thanks to Blars Blarson and finn/mentat (Closes: #303881)
+  * debian/control
+    - Merge the first two paragraphs of the Description,
+      and remove redundant information (Closes: #304102)
+
+ -- Paul Wise <pabs@zip.to>  Tue, 12 Apr 2005 00:27:00 +0800
+
+nsis (2.06-2) unstable; urgency=low
+
+  * Change the generated ChangeLog to a generated NEWS
+  * 04_changelog.dpatch
+    - New patch: Adds cvs logs from upstream (using cvs2cl) as ChangeLog
+  * debian/watch
+    - New file - use heanet.sf.net, because it allows direct downloads
+  * 05_amd64_fixes.dpatch
+    - New patch: Add amd64 FTBFS patch from Andreas Jochens (Closes: #303709)
+
+ -- Paul Wise <pabs@zip.to>  Fri,  8 Apr 2005 19:00:18 +0800
+
+nsis (2.06-1) unstable; urgency=low
+
+  * New upstream release
+  * Move patches to dpatch
+  * Fix spelling error in description
+  * Remove cruft from debian/rules
+  * Convert Appendix E from the docs to a changelog
+
+ -- Paul Wise <pabs@zip.to>  Wed, 30 Mar 2005 19:53:45 +0800
+
+nsis (2.05-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #276148, #276153)
+  * Grab halibut (builds docs) from upstream CVS
+
+ -- Paul Wise <pabs@zip.to>  Tue, 15 Feb 2005 21:49:09 +0800
+

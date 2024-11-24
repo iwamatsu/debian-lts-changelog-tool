@@ -1,0 +1,57 @@
+ruby-doorkeeper (4.4.2-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2023-34246: It was discovered that Doorkeeper automatically processed
+    authorization requests without user consent for public clients that have
+    been previously approved; public clients are inherently vulnerable to
+    impersonation as their identity cannot be assured. (Closes: #1038950)
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 07 Jul 2023 17:24:05 +0100
+
+ruby-doorkeeper (4.4.2-1) unstable; urgency=medium
+
+  * New upstream version 4.4.2 (Closes: #903980)
+    (Fixes: CVE-2018-1000211, CVE-2018-1000088)
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 25 Aug 2018 17:22:16 +0530
+
+ruby-doorkeeper (4.3.1-1) unstable; urgency=medium
+
+  * New upstream version 4.3.1
+  * Bump debhelper compat to 11 and standards version to 4.1.3
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 18 Mar 2018 19:36:04 +0530
+
+ruby-doorkeeper (4.2.0-3) unstable; urgency=medium
+
+  * Reupload to unstable (Closes: #834843)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 01 Sep 2016 12:38:26 +0530
+
+ruby-doorkeeper (4.2.0-2) experimental; urgency=medium
+
+  * Rebuild to fix gemspec 
+  * Fix version detection with prefer-local-version.patch
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 25 Aug 2016 17:19:56 +0530
+
+ruby-doorkeeper (4.2.0-1) experimental; urgency=medium
+
+  * New upstream releass (Fixes: CVE-2016-6582)
+  * use DH_RUBY = --gem-install
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 23 Aug 2016 16:01:54 +0530
+
+ruby-doorkeeper (3.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump standards version to 3.9.8 (no changes)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 31 May 2016 00:13:06 +0530
+
+ruby-doorkeeper (2.2.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #790721)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 03 Jul 2015 22:21:03 +0530

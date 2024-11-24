@@ -1,0 +1,123 @@
+php-pear (1:1.10.6+submodules+notgz-1.1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * directory traversal due to inadequate checking of symbolic links
+    (CVE-2020-36193) (Closes: #980428)
+    - Disallow symlinks to out-of-path filenames
+    - Add testcase for relative and in-path symlink
+    - Fix out-of-path check for virtual relative symlink
+    - PHP compat fix
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 17 Apr 2021 14:08:59 +0200
+
+php-pear (1:1.10.6+submodules+notgz-1.1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * ensure we catch additional malicious/crafted filenames (CVE-2020-28948,
+    CVE-2020-28949) (Closes: #976108)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 06 Dec 2020 16:03:59 +0100
+
+php-pear (1:1.10.6+submodules+notgz-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Don't allow filenames to start with phar:// (CVE-2018-1000888)
+    (Closes: #919147)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 13 Jan 2019 11:49:26 +0100
+
+php-pear (1:1.10.6+submodules+notgz-1) unstable; urgency=medium
+
+  * Update PEAR to 10.1.6
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 01 Oct 2018 12:15:44 +0000
+
+php-pear (1:1.10.5+submodules+notgz-1) unstable; urgency=medium
+
+  * Update PEAR to 1.10.5
+  * Update Archive_Tar to 1.4.3
+  * Update XML_Util to 1.4.3
+
+ -- Ondřej Surý <ondrej@debian.org>  Thu, 10 Aug 2017 23:19:49 +0200
+
+php-pear (1:1.10.4+submodules+notgz-1) experimental; urgency=medium
+
+  * Update PEAR to 1.10.4
+  * Rebase patches on top of 1.10.4+submodules+notgz
+  * Update submodules to latest PEAR packaged versions:
+    bdd47347df76dbaa89227c5e1afd6f6809985b4c submodules/Archive_Tar (1.4.2)
+    82f05cd1aa3edf34e19aa7c8ca312ce13a6a577f submodules/Console_Getopt (v1.4.1)
+    608fdc835a62fb238e61bd1cf0aaf6c7a4420b5c submodules/Structures_Graph (v1.1.1)
+    0ee5f1d88573a935daf68d795048165b3491b5ff submodules/XML_Util (v1.4.2)
+
+ -- Ondřej Surý <ondrej@debian.org>  Tue, 30 May 2017 16:18:19 +0200
+
+php-pear (1:1.10.1+submodules+notgz-9) unstable; urgency=medium
+
+  * Fix Vcs-* fields (was pointing to pkg-php-tools)
+  * Standards-Version: 3.9.8, no change
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 25 Jan 2017 07:48:36 +0100
+
+php-pear (1:1.10.1+submodules+notgz-8) unstable; urgency=medium
+
+  * Remove /usr/share/php/{.depdb,.filemap}
+    - As they would be outdated.
+    - This also fixes the last remaining FTBR
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 24 Apr 2016 00:54:49 +0200
+
+php-pear (1:1.10.1+submodules+notgz-7) unstable; urgency=medium
+
+  * Makes the build reproducible by fixing _lastmodified to be an int
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 20 Apr 2016 06:47:23 +0200
+
+php-pear (1:1.10.1+submodules+notgz-6) unstable; urgency=medium
+
+  * Add mv_conffile to move existing /etc/pear.conf to /etc/pear/pear.conf
+
+ -- Ondřej Surý <ondrej@debian.org>  Tue, 22 Mar 2016 09:48:02 +0100
+
+php-pear (1:1.10.1+submodules+notgz-5) unstable; urgency=medium
+
+  * Replace /usr/share/doc/php-pear symlink by a dir (Closes: #817814)
+  * Set PHP_PEAR_SYSCONF_DIR to /etc/pear (Closes: #818271)
+  * Fix "PECL extensions FTBFS with PHP Fatal error:
+    Call to a member function getFilelist() on null" (Closes: #805222)
+  * Standards-Version: 3.9.7
+  * Updated Vcs-* fields to use https
+  * Add lintian override for pear-package-without-pkg-php-tools-builddep
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 19 Mar 2016 22:43:58 +0100
+
+php-pear (1:1.10.1+submodules+notgz-4) unstable; urgency=medium
+
+  * pecl command needs to run without -n to pickup default PHP cli
+    configuration, so XML module gets loaded
+  * php-pear needs to pull XML extension as packaged in php-xml both into
+    Depends and Build-Depends
+
+ -- Ondřej Surý <ondrej@debian.org>  Thu, 03 Mar 2016 11:17:21 +0100
+
+php-pear (1:1.10.1+submodules+notgz-3) unstable; urgency=medium
+
+  * Depend on generic php-cli instead of php5-cli
+  * Fix debian/php-pear.substvars-static to not depend on php5-*
+  * Move included modules from Depends to Provides
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 07 Dec 2015 16:00:56 +0100
+
+php-pear (1:1.10.1+submodules+notgz-2) experimental; urgency=medium
+
+  * Don't depend on included libs: Structures_Graph, Console_Getopt, XML_Util
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 08 Dec 2015 23:17:52 +0100
+
+php-pear (1:1.10.1+submodules+notgz-1) experimental; urgency=low
+
+  * Initial release. (Closes: #801919)
+  * Using epoch, as package was previously in src:php5 (Closes: #714848)
+  * Install manpages (Closes: #414878)
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 27 Nov 2015 23:30:21 +0100

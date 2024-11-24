@@ -1,0 +1,252 @@
+pdfcrack (0.16-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2020-22336: Stack overflow in the MD5 function.
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 06 Aug 2023 13:34:56 +0300
+
+pdfcrack (0.16-3) unstable; urgency=medium
+
+  [ Joao Eriberto Mota Filho ]
+  * debian/copyright: added rights for Ondřej Nový.
+
+  [ Ondřej Nový ]
+  * debian/watch: use https protocol.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Mon, 03 Dec 2018 21:37:15 -0200
+
+pdfcrack (0.16-2) unstable; urgency=medium
+
+  * Migrated DH level to 11.
+  * debian/control:
+      - Bumped Standards-Version to 4.2.1.
+      - Changed Vcs-* URLs to salsa.debian.org.
+  * debian/copyright:
+      - Updated packaging copyright years.
+      - Using a secure copyright format in URI.
+  * debian/source/include-binaries: added to allow debian/tests/test.pdf file.
+  * debian/tests/*: added to perform tests.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Mon, 24 Sep 2018 21:50:56 -0300
+
+pdfcrack (0.16-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control: bumped Standards-Version to 4.0.0.
+  * debian/copyright: updated the upstream and packaging copyright years.
+  * debian/patches/10_fix-manpage.patch: removed. The upstream fixed the
+    source code. Thanks.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Wed, 19 Jul 2017 12:33:13 -0300
+
+pdfcrack (0.15-5) unstable; urgency=medium
+
+  * Bumped DH level to 10.
+  * debian/control: bumped Standards-Version to 3.9.8.
+  * debian/copyright: added a new primary email address for upstream, making
+    secondary the current address.
+  * debian/patches/fix-manpage.patch: renamed to 10_fix-manpage.patch.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 12 Nov 2016 22:50:43 -0200
+
+pdfcrack (0.15-4) unstable; urgency=medium
+
+  * debian/control: fixed the Vcs-* fields.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 19 Mar 2016 10:52:09 -0300
+
+pdfcrack (0.15-3) unstable; urgency=medium
+
+  * debian/control:
+      - Bumped Standards-Version to 3.9.7.
+      - Updated the Vcs-* fields to use https instead of http and git.
+  * debian/copyright: updated the packaging copyright years.
+  * debian/watch:
+      - Removed an extra (useless) source address.
+      - Using version 4.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 05 Mar 2016 00:06:34 -0300
+
+pdfcrack (0.15-2) unstable; urgency=medium
+
+  * debian/patches/fix-manpage.patch: added to fix indentations inside the
+      OPTIONS section. (Closes: #803151)
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Thu, 29 Oct 2015 14:26:41 -0200
+
+pdfcrack (0.15-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+      - Bumped the Standards-Version to 3.9.6.
+      - Improved the long description.
+  * debian/copyright:
+      - Dropped dot-zero from GPL license short name.
+      - Updated all copyright information.
+      - Updated the upstream and packaging copyright years.
+      - Updated the Upstream-Name field in header.
+  * debian/docs: added the upstream TODO file.
+  * debian/gbp.conf: not used by me... Removed.
+  * debian/rules: removed the parallel option from dh.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 03 Oct 2015 19:05:52 -0300
+
+pdfcrack (0.14-2) unstable; urgency=medium
+
+  * Cryptographic signature verification: the upstream is providing a GPG
+      signature that allows the tarball verification. Consequently:
+      - Added the debian/upstream/signing-key.asc file.
+      - Updated the debian/watch file.
+  * debian/control: updated the Homepage field.
+  * debian/rules: added the DEB_BUILD_MAINT_OPTIONS variable to fix the
+      issues pointed by blhc.
+  * debian/watch: added an extra check to SourceForge.net.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Wed, 17 Sep 2014 11:36:28 -0300
+
+pdfcrack (0.14-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/man/: removed the manpage. The upstream
+    is providing one now. Thanks.
+  * debian/manpages: pointing to upstream now.
+  * debian/patches: removed. The upstream fixed the
+    source code. Thanks.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Mon, 01 Sep 2014 15:15:15 -0300
+
+pdfcrack (0.13-3) unstable; urgency=medium
+
+  * New maintainer email address.
+  * debian/control: updated the Vcs-Browser field.
+  * debian/man/:
+      - Added genman.sh to automate the manpage creation.
+      - Renamed pdfcrack.header.txt to header.txt.
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Sat, 02 Aug 2014 19:42:47 -0300
+
+pdfcrack (0.13-2) unstable; urgency=medium
+
+  * Added a patch, to Makefile, changing from 'CFLAGS =' to 'CFLAGS +=',
+    to avoid the dpkg-buildflags-missing warning.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Thu, 20 Feb 2014 15:40:05 -0300
+
+pdfcrack (0.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/dirs: removed because this file is useless now.
+  * debian/docs: removed the 'TODO' reference because the upstream no
+    longer provides this file.
+  * debian/patches/Makefile: removed because the upstream fixed the
+    source code. Thanks Henning.
+  * debian/watch: improved.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Sun, 16 Feb 2014 15:36:10 -0300
+
+pdfcrack (0.12-1) unstable; urgency=medium
+
+  * New upstream release (LP: #1110689).
+  * debian/copyright: updated the upstream copyright years.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Sat, 01 Feb 2014 10:14:32 -0200
+
+pdfcrack (0.11-4) unstable; urgency=medium
+
+  * Edited the 'Makefile' patch to change the CFLAGS, to avoid the
+    dpkg-buildflags-missing warning.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Tue, 21 Jan 2014 00:24:22 -0200
+
+pdfcrack (0.11-3) unstable; urgency=medium
+
+  * New maintainer. Thanks a lot to Nacho Barrientos Arias, the initial
+    maintainer, for your nice work over this package. (Closes: #733525)
+  * Migrations:
+      - debian format from 1.0 to 3.0.
+      - debian/copyright to new format (1.0).
+      - debian/rules: to new (reduced) format.
+      - debhelper version from 7 to 9.
+      - Standards-Version from 3.8.3 to 3.9.5.
+  * Manpage:
+      - Renamed debian/manpages directory to debian/man.
+      - Created the debian/manpages file to install the debian/man/pdfcrack.1
+        file.
+      - debian/man/pdfcrack.1 file:
+          - Added a warning about pdfcrack use and local laws. (LP: #224562)
+          - Converted the manpage source to txt2man format.
+          - Fixed some hyphen-used-as-minus-sign problems.
+  * debian/control:
+      - Added the VCS fields.
+      - Added ${misc:Depends} to Depends field.
+      - Little improvements in the long description.
+      - Removed 'quilt' from Build-Depends field.
+  * debian/docs: added TODO file.
+  * debian/gbp.conf: added to allow git-buildpackage usage.
+  * debian/install: created to install the pdfcrack final binary.
+  * debian/patches/01_drop_strip_calls.diff:
+      - Added a header.
+      - Added GCC hardening procedures.
+      - Renamed to Makefile.
+  * debian/README.source: removed because this file is useless now.
+  * debian/watch: fixed.
+
+ -- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>  Sat, 18 Jan 2014 17:12:01 -0200
+
+pdfcrack (0.11-2) unstable; urgency=low
+
+  * Orphaned
+   + Set maintainer to Debian QA Group <packages@qa.debian.org>
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Sun, 29 Dec 2013 19:14:34 +0000
+
+pdfcrack (0.11-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+   + Update standards-version to 3.8.3 (no changes).
+   + Suggest pdf-viewer instead of pdf-reader (closes: #498032).
+  * debian/watch
+   + Using SF.net redirector
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Thu, 24 Sep 2009 16:00:45 +0200
+
+pdfcrack (0.10-1) unstable; urgency=low
+
+  * New upstream release (closes: #490187).
+  * debian/control
+   + Set Standards-Version to 3.8.0 (no changes).
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Wed, 23 Jul 2008 11:16:06 +0200
+
+pdfcrack (0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+  - Move the homepage to the new field.
+  - Add quilt as build-dep.
+  - New maintainer email address.
+  - Suggest pdf-reader instead of xpdf-reader
+  * debian/rules
+  - Apply patches
+  * debian/patches
+  - 01_drop_strip_calls: removes explicit strip calls
+    (closes: #437761).
+
+ -- Nacho Barrientos Arias <nacho@debian.org>  Fri, 23 Nov 2007 23:23:42 +0100
+
+pdfcrack (0.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules
+  - Minor clean.
+  - Removed -fweb from CFLAGS's set, not required now.
+
+ -- Nacho Barrientos Arias <chipi@criptonita.com>  Thu, 26 Oct 2006 12:19:46 +0200
+
+pdfcrack (0.7-1) unstable; urgency=low
+
+  * Initial release (Closes: #380328).
+  * Added manpage for pdfcrack not included in upstream sources.
+
+ -- Nacho Barrientos Arias <chipi@criptonita.com>  Sat, 29 Jul 2006 12:04:47 +0200

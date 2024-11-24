@@ -1,0 +1,1864 @@
+lilypond (2.19.81+really-2.18.2-13+deb10u1) buster-security; urgency=medium
+
+  * Disable embedded-postscript and embedded-svg in safe mode
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Mon, 27 Jul 2020 09:06:24 +0200
+
+lilypond (2.19.81+really-2.18.2-13) unstable; urgency=medium
+
+  * New upload to override the accidental upload of the
+    experimental version to unstable, effectivly canceling the
+    2.18.2-13 upload two days ago.
+    We avoid using an epoch because lilypond is expected to release
+    their stable version 2.20 before the freeze of buster. The
+    "+really" workaround in the Debian version number could be
+    removed then.
+  * Update script for doc packages
+  * Add Multi-Arch: foreign to pdf packages
+  * Run wrap-and-sort and cme fix dpkg
+  * Update Standards-Version to 4.1.4, no changes needed
+  * Use debhelper v11
+  * Fix lintian warning: Remove '--with quilt' from debhelper call
+    in debian/rules. The package is already using the 3.0 (quilt)
+    source format.
+  * Remove unneeded patches
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 12 May 2018 21:22:39 +0200
+
+lilypond (2.18.2-13) unstable; urgency=medium
+
+  * Switch lilypond-invoke-editor to use system* instead of system to fix
+    CVE-2017-17523 for non textedit:// URIs. (Closes: #884136)
+    This fixes the newly assigned CVE-2018-10992.
+
+ -- Don Armstrong <don@debian.org>  Thu, 10 May 2018 17:24:03 -0700
+
+lilypond (2.18.2-12) unstable; urgency=medium
+
+  * Fix argument injection in lilypond-invoke-editor, CVE-2017-17523.
+    This is a cherry-pick of upstream's fix, see
+    https://sourceforge.net/p/testlilyissues/issues/5243/ (Closes: #884136)
+  * Update Standards-Version to 4.1.3, no changes needed
+  * Update d/copyright
+  * Switch Vcs-URLs to salsa.d.o and add default branch for git
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Mon, 29 Jan 2018 20:59:58 +0100
+
+lilypond (2.18.2-11) unstable; urgency=medium
+
+  * Fix typo in d/copyright, spotted by lintian
+  * Remove unused lintian overrides
+  * Fix typo in package description
+  * Remove Replaces/Breaks for lilypond-doc (<< 2.16.2-1~exp+1).
+    Even oldstable has 2.18.2-4, so an upgrade should be possible
+    without problems.
+  * Remove obsolete package name lilypond1.3
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Wed, 11 Oct 2017 13:09:20 +0200
+
+lilypond (2.18.2-10) unstable; urgency=medium
+
+  * Remove now useless mktexlsr calls and such from lilypond-doc.post{inst,rm}.
+    Thanks to Julian Gilbey (Closes: #771732)
+  * Fix typo in Vcs-Browser URL
+  * Use fonts-freefont-otf instead of fonts-freefont-ttf
+  * Update watch file for new upstream location
+  * Update Standards-Version to 4.1.1, no changes needed
+  * Use debhelper v10
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 06 Oct 2017 08:46:31 +0200
+
+lilypond (2.18.2-9) unstable; urgency=medium
+
+  * There is no need to remove /usr/share/info/lilypond anymore, as the
+    info directory is the master source for the images which are built and
+    are linked to from the HTML. (Closes: #871631)
+  * Cherrypick fix for upstream issue 4814 which fixes segfaults in
+    grob.cc in newer versions of GCC (Closes: #866129). Thanks to Antonio
+    Ospite for mentioning the patch.
+
+ -- Don Armstrong <don@debian.org>  Tue, 15 Aug 2017 13:38:30 -0700
+
+lilypond (2.18.2-8) unstable; urgency=medium
+
+  [ Don Armstrong ]
+  * Ignore non-empty /usr/share/lilypond in postinst (Closes: #737505)
+
+  [ Dr. Tobias Quathamer ]
+  * Update Standards-Version to 4.0.0
+    - Use HTTPS URL for d/copyright
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 27 Jun 2017 21:33:50 +0200
+
+lilypond (2.18.2-7) unstable; urgency=medium
+
+  * Fix FTBFS (introduced by me in 2.18.2-5) on hurd-i386
+  * Fix FTBFS (introduced by me in 2.18.2-5) on kfreebsd-{amd64,i386}
+  * Run tests only when documentation has been built, and
+    fix check for DEB_BUILD_OPTIONS=nocheck. (See #760794)
+  * Suggests instead of Recommends lilypond-doc. (Closes: #653263)
+  * Fix Lintian warning: debian-rules-ignores-make-clean-error
+  * Fix Lintian warnings: wildcard-matches-nothing-in-dep5-copyright
+
+ -- Anthony Fok <foka@debian.org>  Sun, 29 Jan 2017 04:58:33 -0700
+
+lilypond (2.18.2-6) unstable; urgency=medium
+
+  [ Dr. Tobias Quathamer ]
+  * Add myself as uploader
+    (cherry-picked from 2016-07-25 git commit to debian-experimental branch)
+
+  [ Anthony Fok ]
+  * Fix FTBFS when built with "dpkg-buildpackage -A".
+    Previously, "$(MAKE) install" was not run for arch-independent build,
+    hence dh_install was unable to find the non-documentation files that are
+    destined for lilypond-data.
+    Thanks to Santiago Vila for the bug report. (Closes: #806067)
+  * debian/rules: Leave PDF documentation uncompressed.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 27 Jan 2017 13:15:13 -0700
+
+lilypond (2.18.2-5) unstable; urgency=medium
+
+  [ Dr. Tobias Quathamer ]
+  * Fix patch for FTBFS on hurd. Thanks to Petter Reinholdtsen
+    for the bug report and patch. (Closes: #761036)
+
+  [ Anthony Fok ]
+  * Bundle our own private copy of guile-1.8.  Superceded by guile-2.0,
+    the old guile-1.8 was finally removed from Debian in May 2016.
+    Unfortunately, LilyPond 2.18.2 still requires Guile 1.8,
+    and LilyPond 2.19.x and Guile 2 are just not yet ready for each other.
+    So, it would seem that bundling our own private guile-1.8 is the only
+    viable option to keep LilyPond 2.18.2 in Debian for the time being.
+    Hope this would allow LilyPond to re-enter Debian 9 "stretch"!
+    See Bug #746005 for more information.
+  * Import guile-1.8 as multiple upstream tarball component,
+    originally Debian's own DFSG-compliant guile-1.8_1.8.8+1.orig.tar.bz2,
+    recompressed with gzip as lilypond_2.18.2.orig-guile18.tar.gz
+    (to work around current gbp limitation).
+  * Add debian/gbp.conf for multiple upstream tarball (MUT)
+    with special "multiple upstream tarball" (MUT) upstream-mut branch
+    branch and upstream-mut/%(version)s tags for Debian 9 "stretch".
+  * Cherry-pick set-global-fonts function from upstream to scm/font.scm
+  * Refresh debian/control:
+    - Add myself to the Uploaders field
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URIs for Vcs-Browser and Vcs-Git fields
+  * Add explicit Build-Depends on libfl-dev
+    LilyPond needs /usr/include/FlexLexer.h from libfl-dev,
+    but flex dependency on libfl-dev has been demoted to Recommends
+    since flex (2.6.1-1.1) dated 2016-11-24.
+  * Remove bitmap fonts from Build-Depends and use vector fonts only.
+    Also, Build-Conflicts with fonts-noto-cjk which contains OpenType
+    Collection (OTC) fonts, which unfortunately Ghostscript does not yet
+    support and would cause the build to abort.
+  * Make lilypond-doc-html Depends on lilypond-doc for its PNG images
+  * Add "--no-parallel" to dh_auto_clean in debian/rules.
+    The use of a parallel "$(MAKE) -j4 distclean" tends to fail
+    after a full build.
+  * Fix some minor errors and omissions in debian/copyright.
+    Also add Dr. Tobias Quathamer and me as contributors to debian/*.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 27 Jan 2017 05:05:52 -0700
+
+lilypond (2.18.2-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/control:
+    - Replace ttf-kochi fonts with ipafonts (Closes: #804514).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 30 Dec 2015 14:57:33 +0100
+
+lilypond (2.18.2-4) unstable; urgency=medium
+
+  * Fix the wrong maintscript-helper invocation which was trying to
+    symlink to /usr/share/doc/lilypond/Documentation/user instead of
+    /usr/share/doc/lilypond/Documentation. (Closes: #768272)
+  * Add missing Pre-Depends: ${misc:Depends} for dpkg-maintscript-helper.
+
+ -- Don Armstrong <don@debian.org>  Sun, 16 Nov 2014 17:38:32 -0800
+
+lilypond (2.18.2-3) unstable; urgency=medium
+
+  * Revert previous patch (no parallel); the issue was actually running
+    tests on architecture independent builds which had not built any of
+    the documentation. (Closes: #760794)
+  * Stop setting HOME to /tmp in debian/rules. (Closes: #762230)
+
+ -- Don Armstrong <don@debian.org>  Tue, 16 Sep 2014 14:50:14 -0700
+
+lilypond (2.18.2-2) unstable; urgency=high
+
+  * Disable parallel support on !amd64 to avoid build failures on those
+    architectures. This is a temporary fix; a real fix to the (possibly)
+    broken makefiles needs to be written. (Closes: #760794)
+
+ -- Don Armstrong <don@debian.org>  Tue, 09 Sep 2014 08:18:49 -0700
+
+lilypond (2.18.2-1) unstable; urgency=high
+
+  * New upstream version
+  * Fix Broken usage of dpkg-maintscript-helper (relative pathnames vs.
+    aboslute pathnames), thanks to Guillem Jover and Petter Reinholdtsen
+    (Closes: #758787).
+
+ -- Don Armstrong <don@debian.org>  Wed, 03 Sep 2014 15:22:54 -0700
+
+lilypond (2.18.0-1) unstable; urgency=low
+
+  * New upstream version (closes: #729817)
+  * Fix replacement of /usr/share/info/lilypond symlink with a directory
+    (Closes: #736306)
+
+ -- Don Armstrong <don@debian.org>  Tue, 31 Dec 2013 13:23:41 -0800
+
+lilypond (2.16.2-3) unstable; urgency=low
+
+  * Do not include non-existant paths in lilypond-doc.doc-base-special
+    (closes: #693238)
+  * Breaks/Replaces lilypond-doc in html packages to stop problems on
+    wheezy upgrade. (Closes: #718013)
+  * Fix freetype path by applying patch from upstream (Closes: #733399)
+  * Fix bison build failures with 42cb7d44
+
+ -- Don Armstrong <don@debian.org>  Tue, 31 Dec 2013 09:44:05 -0800
+
+lilypond (2.16.2-2) unstable; urgency=low
+
+  * Fix bad syntax in texinfo documentation exposed by texinfo >= 5.1
+    (closes: #707190)
+  * Patch around using PATH_MAX in flower/file-name.cc to have builds work
+    on hurd (hopefully).
+
+ -- Don Armstrong <don@debian.org>  Wed, 15 May 2013 11:40:14 -0700
+
+lilypond (2.16.2-1) unstable; urgency=low
+
+  * Release 2.16.2-1 to unstable
+
+ -- Don Armstrong <don@debian.org>  Mon, 06 May 2013 10:15:36 -0700
+
+lilypond (2.16.2-1~exp+1) experimental; urgency=low
+
+  * New upstream release (closes: #705895)
+  * Put languages in their own subdocument to work around doc-base not
+    having a language specifier (closes: #698435)
+
+ -- Don Armstrong <don@debian.org>  Wed, 24 Apr 2013 21:53:13 -0700
+
+lilypond (2.16.1-1~exp+2) experimental; urgency=low
+
+  * New upstream release
+  * netpbm and fonts are required to run the tests during the binary
+    build; migrate the Build-Depends-Indep to Build-Depends.
+  * Switch to dh style rules
+
+ -- Don Armstrong <don@debian.org>  Tue, 02 Oct 2012 17:33:29 -0700
+
+lilypond (2.16.0-1~exp+1) experimental; urgency=low
+
+  * New upstream release (Closes: #686788)
+  * Fix "warnings from install-info" by splitting the direntry sections
+    across the texinfo files (Closes: #648689). Thanks to Julian Gilbey
+    for the patch.
+  * Fix noopt support to use --disable-optimising as ./configure does
+    crazy things.
+  * Apply patch from 13fc2437e2aaa9 to fix segfault in font-mark where a
+    garbage collection can trigger a null pointer dereference (closes:
+    #684817)
+  * Split out lilypond-doc packages (Closes: #443915)
+
+ -- Don Armstrong <don@debian.org>  Tue, 04 Sep 2012 11:16:50 -0700
+
+lilypond (2.14.2-3) unstable; urgency=low
+
+  * Fix redefinition of s in Music_sequence::first_start. (Closes:
+    #672087).
+
+ -- Don Armstrong <don@debian.org>  Sun, 13 May 2012 16:07:16 -0700
+
+lilypond (2.14.2-2) unstable; urgency=low
+
+  * Disable optimization on i386 and kfreebsd-i386 to avoid segfaults with
+    python7; thanks to Matthias Klose and Scott Kitterman for the
+    temporary solution. (Closes: #643664)
+
+ -- Don Armstrong <don@debian.org>  Wed, 28 Sep 2011 09:44:40 -0700
+
+lilypond (2.14.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #629520)
+  * Fix bad Recommends on texlive-latex-base (Closes: #594403)
+  * Ditch useless links (Closes: #522120)
+  * Apply patch from 77c34ddc (Werner Lemberg <wl@gnu.org>)
+    to fix compilation with g++ 4.5 (Closes: #606642).
+    Thanks to Colin Watson for an alternative patch.
+  * Add parts of patch f113bf2f (Benjamin Peterson <benjamin@python.org>)
+    to fix segfaults on invalid engraver names.
+  * Update standards version; no changes
+  * Specify source version 1
+  * No need to conflict with ancient versions of lilypond anymore
+
+ -- Don Armstrong <don@debian.org>  Tue, 02 Aug 2011 13:14:29 -0700
+
+lilypond (2.12.3-7) unstable; urgency=low
+
+  * Use /dev/stderr instead of /dev/tty (Closes: #574629)
+  * Use py_support to require rebuilds when python's API changes (Closes:
+    #380855)
+  * Properly remove empty /usr/share/info/lilypond directory and replace
+    with symlink
+
+ -- Don Armstrong <don@debian.org>  Tue, 24 Aug 2010 15:52:59 -0700
+
+lilypond (2.12.3-6) unstable; urgency=low
+
+  * Fix syntax error in scm/lily.scm. Thanks to dann frazier for pointing
+    out the fix. (Closes: #574629)
+  * Depend on ghostscript (Closes: #575906)
+
+ -- Don Armstrong <don@debian.org>  Wed, 31 Mar 2010 20:57:04 -0700
+
+lilypond (2.12.3-5) unstable; urgency=low
+
+  * Its guile that's being used, not MIT scheme; use access? instead of
+    file-writable? (Closes: #572290)
+
+ -- Don Armstrong <don@debian.org>  Thu, 04 Mar 2010 23:38:32 -0800
+
+lilypond (2.12.3-4) unstable; urgency=low
+
+  * Scheme uses file-writeable for some reason (Closes: #572290)
+
+ -- Don Armstrong <don@debian.org>  Thu, 04 Mar 2010 08:38:33 -0800
+
+lilypond (2.12.3-3) unstable; urgency=low
+
+  * Use /dev/null if /dev/tty isn't writable (Closes: #572290)
+
+ -- Don Armstrong <don@debian.org>  Wed, 03 Mar 2010 17:56:55 -0800
+
+lilypond (2.12.3-2) unstable; urgency=low
+
+  * Build-Depend on rsync (Closes: #571670)
+  * Ditch unneded Build-Conflict
+
+ -- Don Armstrong <don@debian.org>  Fri, 26 Feb 2010 17:32:22 -0800
+
+lilypond (2.12.3-1) unstable; urgency=low
+
+  * New upstream release
+    - Ditch claop.py (Closes: #545911)
+    - fix FTBFS (Closes: #560487)
+  * Always suppress gs startup output
+  * Build-Depend on texlive-latex-recommended
+  * Move Pre-Depends: for kpsewhich to Depends: (we no longer ship a preinst)
+  * Update standards version
+    - Stop calling install-info directly; use triggers instead
+
+ -- Don Armstrong <don@debian.org>  Tue, 23 Feb 2010 00:12:21 -0800
+
+lilypond (2.12.2-1) unstable; urgency=low
+
+  * New maintainer
+  * Use patches from Raphael Geissert to fix bashism and remove path to
+    commands
+    - Fix bashism in debian/rules. Closes: #535404
+    - Remove the path to the commands in the maintainer scripts
+
+ -- Don Armstrong <don@debian.org>  Wed, 08 Jul 2009 16:01:06 -0700
+
+lilypond (2.12.2-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream release (closes: #506936)
+    - Resolves issue with guile 1.8.6 (closes: #524023)
+    - Fixes FTBFS (closes: #524086)
+  * Remove build-coonflicts indep on gs-gpl as the conflicting versions
+    aren't distributed anymore
+  * Remove versioned build dependencies (all of the requirements are older
+    than the oldest we distribute)
+  * Add Build-Depends on texi2html and texlive-metapost
+  * Move Homepage: to a control header (closes: #474262)
+  * Add ja/user/macros.texi and python/langdefs from git commit
+    4ee200780114be081a73cae3f7bf6bbc84a30b53 (Allows building the ja texi
+    documentation)
+
+ -- Don Armstrong <don@debian.org>  Sat, 06 Jun 2009 13:49:11 -0700
+
+lilypond (2.10.33-2.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix double build problem as patched by Peter Eisentraut
+    <petere@debian.org> (Closes: #482911).
+  * Do not list transitional package first in Pre-Depends
+    line (Closes: #481776).
+  * Changed build dependency from gs-gpl|gs-esp to ghostscript
+    to not reference transitional packages.
+
+ -- Michael Meskes <meskes@debian.org>  Sun, 05 Oct 2008 13:48:20 +0200
+
+lilypond (2.10.33-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with dash (Closes: #471757).
+
+ -- Peter Eisentraut <petere@debian.org>  Sun, 25 May 2008 03:27:26 +0200
+
+lilypond (2.10.33-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with GCC 4.3 (Closes: #413427).
+  * Copy config.{guess,sub} to fix FTBFS on GNU/kFreeBSD (Closes: #404441).
+
+ -- Luk Claes <luk@debian.org>  Sat, 08 Mar 2008 13:43:35 +0000
+
+lilypond (2.10.33-2) unstable; urgency=low
+
+  * debian/control (Build-Depends-Indep): Use ttf-dejavu instead of
+    ttf-bitstream-vera.  (Closes: #461271)
+
+  * debian/control (Standards-Version): Update to 3.7.3. (No changes needed.)
+
+  * debian/rules (clean): Don't ignore all errors on recursive make invocations.
+
+  * debian/rules (binary-indep): Use $(CURDIR) instead of $(PWD).
+
+  * debian/copyright: Update FSF address to Franklin St.
+
+  * debian/changelog: Fix syntax for trailer line for 2.8.7-3.1 record.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Thu, 17 Jan 2008 10:24:27 -0800
+
+lilypond (2.10.33-1) unstable; urgency=low
+
+  * New upstream release.
+
+  * debian/control (lilypond Depends): Use source:Version instead of
+  Source-Version.
+  (lilypond-doc Suggests): Likewise.
+  (lilypond-data Recommends): Likewise, but with >= in place of = as well.
+  (Closes: #380071).  Thanks to Lior Kaplan for the patch.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Wed, 02 Jan 2008 10:11:04 -0700
+
+lilypond (2.10.29-2) unstable; urgency=low
+
+  * debian/control: Drop gs-afpl from Build-Conflicts-Indep, since that package
+    no longer exists. (Closes: #447460).
+  * debian/control: Build-Conflict with guile-1.8-dev version 1.8.2+1-2,
+    which had an ABI-incompatible change by mistake.  Likewise, lilypond
+    package Conflicts with guile-1.8 version 1.8.2+1-2. (Closes: #452647)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Fri, 30 Nov 2007 22:20:42 -0500
+
+lilypond (2.10.29-1) unstable; urgency=low
+
+  * New upstream release.  Require at least version 1.1.19 of mftrace.
+    Require at least version 2.4 of python-dev.  (Closes: #396889,
+    #399356, #400335)
+  * debian/control (Build-Depends-Indep): Add rsync.
+
+  * Acknowledge NMU (Closes: #422395).
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Sat, 08 Sep 2007 20:08:21 -0400
+
+lilypond (2.8.7-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * FTBFS: ! I cannot find file 'lcircle10'. (Closes: #422395)
+
+ -- Neil Williams <codehelp@debian.org>  Tue, 17 Jul 2007 12:59:43 +0100
+
+lilypond (2.8.7-3) unstable; urgency=medium
+
+  * scripts/midi2ly.py: When setting DATADIR, find Lilypond python files
+    in the @TOPLEVEL_VERSION@ directory, not 'current'.  Patch thanks to
+    Chris Lamb (chris@chris-lamb.co.uk).  (Closes: #400550)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Tue, 19 Dec 2006 10:18:12 -0800
+
+lilypond (2.8.7-2) unstable; urgency=low
+
+  * debian/control (Build-Depends-Indep): Drop gs alternative for
+    Ghostscript.  Move gs-gpl | gs-esp to Build-Depends.
+    (Build-Depends): Put gs-gpl | gs-esp here; require at least version
+    8.50 of either.  Require version 2.1 at least of python-dev.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Sat, 11 Nov 2006 21:11:48 -0800
+
+lilypond (2.8.7-1) unstable; urgency=low
+
+  * New upstream release.  (Closes: #357057, #358663)
+  * debian/control (Build-Depends): Require at least version
+    0.0.20060125-1 of fontforge.  Require at least version 4.8.dfsg.1-1 of
+    texinfo.  Require guile-1.8-dev instead of guile-1.6-dev.
+  * debian/control (Build-Depends-Indep): Require gsfonts | gsfonts-x11 to
+    fetch New Century Schoolbook fonts.
+  * debian/control (lilypond/Depends): Require guile-1.8 instead of guile-1.6.
+  * debian/rules (install): Don't delete texinfo.tex anymore, upstream is
+    no longer shipping it.
+
+  * debian/control (Build-Depends): Add libgmp3-dev and libltdl3-dev,
+    temporarily. to workaround missing dependencies in guile-1.8-dev.
+
+  * debian/control (lilypond-data/Pre-Depends): Allow texlive-base as an
+    alternative to tetex-bin. (Closes: #386589)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Wed, 25 Oct 2006 23:26:15 -0700
+
+lilypond (2.6.5-3) unstable; urgency=medium
+
+  * debian/rules (install): Don't install .pyc files.
+  * debian/control (Build-Depends): Require python-support and at least
+    version 5 of debhelper.
+    (lilypond-data/Depends): Add ${python:Depends}.
+  * debian/rules (binary-indep): Call dh_pysupport on our private modules
+    directory. (Closes: #392488)
+
+  * debian/compat: Bump to version 5.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Thu, 12 Oct 2006 11:59:58 -0700
+
+lilypond (2.6.5-2) unstable; urgency=low
+
+  * debian/rules (HOME): Set this environment variable to a usable value
+    to avoid a fontconfig buglet.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Mon, 18 Sep 2006 23:01:35 -0700
+
+lilypond (2.6.5-1) unstable; urgency=low
+
+  * New upstream release.  Lilypond 2.8 for Debian is currently stalled
+    because guile-1.8 is required for it, and the Debian builds of
+    guile-1.8 are encountering bugs.  So let's at least get the last
+    lilypond-2.6 into etch in case guile-1.8 doesn't get there in time.
+  * stepmake/bin/config.sub, stepmake/bin/config.guess: Use debian
+    versions, from autotools-dev 20060702.1.
+
+  * lily/include/accidental-interface.hh (Accidental_interface): Declare
+    member accurate_boxes without qualification.
+  * lily/include/stem.hh (Stem): Declare member beam_multiplicity without
+    qualification.
+  * lily/include/slur-scoring.hh (Slur_score_state): Declare member
+    generate_avoid_offsets without qualification.
+    (Thanks to Martin Michlmayr <tbm@cyrius.com> for the patch.)
+    (Closes: #357057, #387644)
+
+  * mf/GNUmakefile (pfa_warning): Select only the first line of mftrace
+    --version output for mftrace check, since mftrace now prints more than
+    just one line.
+
+  * debian/control (Build-Depends-Indep): Add ttf-bitstream-vera and
+    ttf-freefont. (Many thanks to Bill Allombert <allomber@math.u-bordeaux>
+    for the fix.) (Closes: #359855)
+
+  * debian/control (Build-Depends): Require at least version 2.4.1-1 of
+    libfontconfig1-dev; 2.4.0 was missing FcConfigAppFontAddDir, which we
+    need.
+
+  * debian/rules (binary-indep): Don't symlink logos anymore.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Thu,  7 Sep 2006 22:34:19 -0700
+
+lilypond (2.6.3-10) unstable; urgency=low
+
+  * debian/control (Build-Depends): Drop explicit dependency on
+    g++-3.4.
+  * debian/rules: No longer set CXX demanding g++-3.4 on certain
+    archs.  (Closes: #343007)
+
+  * debian/lilypond-data.postrm: Don't set TEXMFMAIN at all (it isn't
+    used).  Don't try and set VARTEXFONTS if $1 is "purge".  Don't remove
+    fonts on a purge command; it gets done at remove time and that's
+    sufficient.  (All this is necessary because postrm scripts cannot
+    depend on non-essential packages at purge time.)  (Closes: #325907)
+
+  * debian/control (lilypond-data): Pre-Depends on tetex-bin to make sure
+    kpsewhich is available for the maintainer scripts.  (Closes: #336052,
+    #343182, #335847).
+
+  * debian/control (Build-Depends): No longer accept libguile-dev for
+    guile support, and require at least version 1.6.7 of guile-1.6-dev.
+    (lilypond): Likewise here, require version 1.6.7 of guile-1.6.
+    (Closes: #337597)
+
+  * debian/control (lilypond): Spell "seamlessly" correctly.  (Closes:
+    #327675)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Fri, 13 Jan 2006 12:59:15 -0800
+
+lilypond (2.6.3-9) unstable; urgency=low
+
+  * Packaging suggestions from upstream:
+  * debian/control (Build-Depends): Drop ec-fonts-mftraced,
+    libkpathsea-dev, tetex-bin, tetex-extra.
+   (Build-Depends-Indep): Add emacs-intl-fonts, xfonts-intl-arabic,
+    xfonts-intl-asian, xfonts-intl-chinese, xfonts-intl-chinese-big,
+    xfonts-intl-european, xfonts-intl-japanese, xfonts-intl-japanese-big,
+    xfonts-intl-phonetic, ttf-kochi-gothic, ttf-kochi-mincho.  (These
+    get embedded into the generated webpage.)
+   (lilypond): Don't depend on ec-fonts-mftraced, tetex-bin, or tetex-extra.
+   (lilypond-data): Don't depend on tetex-bin.
+
+  * debian/control (Build-Depends): Drop long-unneeded version dependency
+    on binutils and libc6-dev and its variants.
+
+  * debian/gui-2.6.patch: New file, provided by upstream.  Applied, with
+    suitable massaging of ChangeLog.
+  * debian/rules, scm/lily.scm: Revert change from 2.6.3-7.
+
+  * debian/python-2.6.patch: New file, provided by upstream.  Applied, with
+    suitable massaging of ChangeLog.
+  * debian/rules (install): Revert change from 3.6.3-6.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  23 Oct 2005 15:22:34 -0700
+
+lilypond (2.6.3-8) unstable; urgency=low
+
+  * Avoid GCC 4.0 bug on arm, hppa, and m68k.
+  * debian/control (Build-Depends): Add g++-3.4 on arm, hppa, and m68k.
+  * debian/rules: On arm, hppa, and m68k, use g++-3.4 for CXX.
+  (Closes: #335287)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Sat, 22 Oct 2005 23:18:36 -0700
+
+lilypond (2.6.3-7) unstable; urgency=low
+
+  * debian/rules (build, build-doc): Abandon attempts to have a terminal
+    set as stdin.  Instead, set and export environment variable
+    LILYPONDNOGUI.
+  * scm/lily.scm (running-from-gui?): Return #f anytime LILYPONDNOGUI
+    environment variable is set.  (Closes: #334877)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Sat, 22 Oct 2005 15:18:35 -0700
+
+lilypond (2.6.3-6) unstable; urgency=low
+
+  * debian/rules (install): Move midi.so from /usr/share into /usr/lib and
+    leave behind a symlink to find it.
+  * debian/lilypond.install: Add usr/lib.
+    (Closes: #335207)
+
+  * debian/rules (build, build-doc): Use screen to set up a tty for input
+    instead of relying on /dev/tty; that will work in more environments.
+  * debian/control (Build-Depends, Build-Depends-Indep): Add screen.  Gak.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Sat, 22 Oct 2005 10:51:49 -0700
+
+lilypond (2.6.3-5) unstable; urgency=low
+
+  * debian/rules (build, build-doc): Redirect input from /dev/tty in MAKE
+    invocations.  It seems that lilypond assumes that, if stdin is not a
+    terminal, we must be running under a gui.  This changes the behavior
+    of the program in several fundamental ways, causing the scripts used
+    for generating documentation to fail. (Closes: #334877)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Fri, 21 Oct 2005 20:33:11 -0700
+
+lilypond (2.6.3-4) unstable; urgency=low
+
+  * debian/control (Build-Depends): Require libfreetype6-dev,
+    libpango1.0-dev, and libfontconfig-dev.  Grr, I think this does it.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Wed, 19 Oct 2005 20:48:51 -0700
+
+lilypond (2.6.3-3) unstable; urgency=low
+
+  * debian/control (Build-Depends): Require pkg-config, at least version
+    0.9.0.
+
+  * debian/control (Build-Depends): Accept libc0.1-dev (>= 2.2.4-6) as a
+    libc alternative.
+  * stepmake/bin/config.guess, stepmake/bin/config.sub: Use debian
+    versions, from autotools-dev 20050803.1.  (Closes: #334786)
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Wed, 19 Oct 2005 16:40:21 -0700
+
+lilypond (2.6.3-2) unstable; urgency=low
+
+  * debian/rules (clean): Don't fail if lib/python isn't hanging around.
+    (Closes: #334725).
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Wed, 19 Oct 2005 09:41:10 -0700
+
+lilypond (2.6.3-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #323526, #315970, #316125, #314242)
+  * upstream-debian: holds the "debian" directory that upstream insists on
+    packaging, and which makes updating versions a royal PITA.  So we'll just
+    store what they do there, and then let them do what they want, and build
+    ourselves for the Debian way.
+  * debian/rules (binary-indep): No longer look for lilypond.map file or
+    install it.
+  * debian/lilypond-data.dirs: Drop etc/texmf/dvips.
+  * debian/watch: Look in the v2.6 download directory now.
+  * debian/lilypond.install: Don't worry about usr/lib anymore.
+  * debian/rules (binary-indep): No longer does upstream build PS docs, so
+    we no longer make symlinks to them.
+
+  * debian/control (clean): Remove annoying lib/python symlink.
+
+  * debian/control (lilypond): Update description to mention SVG.
+
+  * debian/control (lilypond1.3): Drop transitional package.
+  * debian/lilypond1.3.copyright: Remove file.  (Closes: #308709)
+  * debian/control (lilypond): Don't conflict with lilypond1.3 or
+    musixtex-fonts anymore.
+
+  * debian/control (lilypond-data): Depend on texinfo | texlive-texinfo.
+  * debian/rules (install): Don't install texinfo.tex.  (Closes: #322338)
+
+  * debian/control (Build-Depends): Require version 0.0.20050911-1 of
+    fontforge, or greater, to avoid crashes during building.
+
+  * debian/control (Build-Depends): Require at least version 1.1.17-1 of
+    mftrace, to avoid a gcc4-related bug that was only fixed in that version.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Tue, 18 Oct 2005 19:33:41 -0700
+
+lilypond (2.4.5-2) unstable; urgency=low
+
+  * debian/control (Build-Depends): Build system demands you have
+    ec-fonts-mftraced installed to build, so do it.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Fri,  8 Apr 2005 04:38:44 -0700
+
+lilypond (2.4.5-1) unstable; urgency=low
+
+  * New upstream release.  (Closes: #285370, #296034, #300609)
+  * debian/control (Build-Depends): Remove fontforge, autotrace, t1utils,
+    imagemagick.
+  (Build-Depends-Indep): Add imagemagick.
+  (lilypond Depends): Add ec-fonts-mftraced.
+  * debian/rules (binary-indep): Get lilypond.map from its new location.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Thu,  7 Apr 2005 12:48:17 -0700
+
+lilypond (2.2.6-3) unstable; urgency=low
+
+  * New maintainer.  (Closes: #278502).
+
+  * debian/control: Build-Depends on autotrace.  (Closes: #289376).
+
+  * mf/GNUmakefile (.pfa generic rule): Use "--formats=pfa" instead of "--pfa."
+  * stepmake/metafont-rules.make: Likewise; also for .pfb generic rule.
+  * debian/control: Require at least version 1.1.5-1 of mftrace.
+
+ -- Thomas Bushnell, BSG <tb@debian.org>  Mon, 14 Mar 2005 10:44:03 -0800
+
+lilypond (2.2.6-2.1) unstable; urgency=high
+
+  * Non-maintainer upload during BSP
+  * Version build-dep on fontforge, only newest upstream seems to be able to
+    build this package. Thanks Bastian Kleineidam <calvin@debian.org> for
+    fixing fontforge and suggesting this fix (Closes:#278502)
+
+ -- Jeroen van Wolffelaar <jeroen@wolffelaar.nl>  Sat,  8 Jan 2005 19:54:27 +0100
+
+lilypond (2.2.6-2) unstable; urgency=high
+
+  * Added the Werner Lemberg's Asian scripts examples.  He e-mailed me
+    and said, "I suggest that you add the two example files to the
+    Debian package also -- the mailing list archive of the lilypond
+    list shows garbage only (at least for me)."  Yes, ditto here.
+    So yes, xiao-haizi-guai-guai.ly and sakura-sakura.ly are in!  :-)
+  * The "-sDEVICE=bbox" bug has been fixed in gs-gpl (8.01-5), so I have
+    adjusted debian/control accordingly.  (Note to self: Need to check
+    gs-afpl (8.14-3) to see if it too can be taken off the blacklist.)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 19 Sep 2004 06:39:07 +0800
+
+lilypond (2.2.6-1) unstable; urgency=high
+
+  * New upstream stable release.  (Closes: Bug#264263)
+  * urgency=high to ensure entrance into Debian Sarge.
+  * Special thanks to Daniel Burrows for the previous NMUs!  :-)
+    (Closes: #257335, #261861)
+  * Added patch by Werner Lemberg to lilypond.py so that Asian scripts
+    may be used with LilyPond.  Need to "apt-get install latex-ucs"!  See
+    http://lists.gnu.org/archive/html/lilypond-devel/2004-07/msg00071.html
+  * Thanks to Ferenc Wagner for letting me know of some packaging bugs
+    that I have introduced over the years:
+     - Removed obsolete MAKE_PFA_FILES=1 from "make" invocations.
+     - s/--enable-optimise/--enable-optimising/;
+     - Removed Build-Depends: autotrace; mftrace prefers potrace.
+  * Let's follow Han-wen's Red Hat SPECS file too: --disable-checking.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 26 Aug 2004 02:30:04 +0800
+
+lilypond (2.2.3-1.3) unstable; urgency=low
+
+  * The doc-base file was coming from upstream!  Kill it dead in
+    debian/rules clean so that it doesn't keep coming back from
+    the grave to haunt me. (Closes: #261861)
+
+ -- Daniel Burrows <dburrows@debian.org>  Mon,  2 Aug 2004 16:03:32 -0400
+
+lilypond (2.2.3-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Added Replaces: lilypond (<= 2.2.3-1), lilypond-data (<= 2.2.3-1) to
+    lilypond-doc. (Closes: #261861)
+
+ -- Daniel Burrows <dburrows@debian.org>  Wed, 28 Jul 2004 13:08:57 -0400
+
+lilypond (2.2.3-1.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Removed doc-base files for the lilypond and lilypond-data packages;
+    moved the description of the info files to the doc-base file of the
+    lilypond-doc package, which actually contains them; corrected the
+    location of the info files in the doc-base file. (Closes: #257335)
+
+ -- Daniel Burrows <dburrows@debian.org>  Sat, 17 Jul 2004 12:55:57 -0400
+
+lilypond (2.2.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 27 Jun 2004 16:53:06 +0800
+
+lilypond (2.2.2-2) unstable; urgency=low
+
+  * New upstream release.  (Closes: Bug#242861)
+    - Thanks to Pedro Kroeger for providing interim sid packages while
+      I was away for an extended period of time.
+  * Copied some ideas from Ferenc Wagner's LilyPond for woody (Thanks!):
+     - Split out shared data to lilypond-data package.  (Closes: Bug#233406)
+     - Make lilypond-data conflict with earlier lilypond versions.
+     - debian/control: Relaxed autotrace Build-Depends (>= 0.29).
+     - debian/control: Added imagemagick Build-Depends (>= 5.4.4.5).
+  * Added more details to lilypond package description.  (Closes: Bug#245370)
+  * gs-gpl 8.01 (and gs-afpl 8.14) dies when building LilyPond docs.
+    (Known -sDEVICE=bbox bug in gs 8.01 and newer, see gs-gpl Bug#250290.)
+    Added Build-Conflict-Indep: gs-gpl (>= 8.01) | gs-afpl (Closes: Bug#250622)
+  * Build-Depends: fontforge | pfaedit.
+  * debian/watch: Updated to new URL and new format.
+  * vim/GNUmakefile: Install $(vimdir)/*/lilypond.vim scripts with "-m 644".
+
+ -- Anthony Fok <foka@debian.org>  Fri, 18 Jun 2004 02:39:58 +0800
+
+lilypond (2.1.0-2) unstable; urgency=low
+
+  * A few HTML links in Documentation/user/{introduction,tutorial}.itely
+    went up one too few level in the directory tree, i.e. broken links.
+    Thanks to D. Raleigh Arnold for the bug report.  (Closes: Bug#208208)
+  * Build-Depends: imagemagick; lilypond uses "convert" nowadays.
+    Thanks to Daniel Schepler for the bug report.  (Closes: Bug#221062)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Nov 2003 10:12:16 +0800
+
+lilypond (2.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build-Requires: pfaedit (>= 0.0.20031020-3) to prevent FTBFS on alpha.
+    Thanks to Petter Reinholdtsen for the bug report, and thanks to
+     Peter Hawkins for adopting the PfaEdit package!  (Closes: Bug#217216)
+  * Build process used to redirect to /dev/stderr which does not exist in
+    all environments.  Upstream replaced it with ">&2" in 1.9.0 in August.
+    Thanks to Daniel Schepler for the bug report.  (Closes: #215481)
+  * Added symlink from /usr/share/lilypond/$(VERSION)/fonts/type1 to
+    /usr/share/texmf/fonts/type1/public/lilypond.  Thanks to Pedro Kroger
+    and Mats Bengtsson's discussion on the lilypond-devel:
+    http://mail.gnu.org/archive/html/lilypond-devel/2003-10/msg00016.html
+
+ -- Anthony Fok <foka@debian.org>  Sat, 25 Oct 2003 19:34:41 +0800
+
+lilypond (1.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Thanks to Jan Nieuwenhuizen for the following fixes:
+    debian/control (Build-Depends): Add flex-old as alternative to flex.
+                                    Deprecate bison 1.75.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 27 Aug 2003 00:24:20 +0800
+
+lilypond (1.8.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 13 Aug 2003 00:23:36 +0800
+
+lilypond (1.7.29-1) unstable; urgency=medium
+
+  * New upstream release, preparing for lilypond-1.8.  :-)
+  * stepmake/bin/add-html-footer.py: Use LOGNAME only if it exists.
+    pbuilder unsets LOGNAME and Python returns KeyError.
+    Thanks to Daniel Schepler for the report.  (Closes: Bug#193065)
+  * debian/rules: Revert to calling ./configure rather than ./autogen.sh.
+  * An issue with autoconf <= 2.57 and g++ >= 3.3 has been preventing
+    getopt-long.cc from compiling.  A workaround was checked in by upstream
+    author Jan Nieuwenhuizen on 2003-06-08, and the fix in aclocal.m4 was
+    backported from 1.7.29.  (Closes: Bug#197761)
+  * Mark Brown says 1.7.27 has fixed FTBFS on m86k too.  Thanks for the
+    note!  (Closes: Bug#200510)
+  * Run dh_scrollkeeper to register *.omf files.
+
+ -- Anthony Fok <foka@debian.org>  Fri,  1 Aug 2003 05:40:04 +0800
+
+lilypond (1.6.9-2) unstable; urgency=medium
+
+  * CVS updates as of 2003-04-29.  (Thanks, Jan!)
+  * "Empty midi2ly.1" problem has been fixed upstream.  (Closes: Bug#181927)
+  * Build-Depends: autoconf2.13 and run autogen.sh in debian/rules
+    to ensure this package passes the auto-build daemons.  :-)
+
+ -- Anthony Fok <foka@debian.org>  Thu,  1 May 2003 13:18:57 +0800
+
+lilypond (1.6.9-1) unstable; urgency=medium
+
+  * New upstream release with CVS updates as of 2003-04-15.
+    Jan Nieuwenhuizen has backported fixes to deal with build problems
+    with flex (>= 2.5.29).
+  * Rebuild with guile-1.6 packages.
+  * Merged debian/* fixes by upstream author Jan Nieuwenhuizen (Thanks!):
+    - Depend on mftrace (>= 1.0.17-1) instead of pktrace.
+    - Add guile-1.6-dev as alternative dependency to libguile-dev
+    - Bugfix for docdir when with changed package name.
+    - Remove bibtex2html dependencies.  (LilyPond has come with its own
+      bib2html for some time now.  However, xpmtoppm and pnmtopng from
+      netpbm is still needed - foka)
+    - Remove gcc-3.x/lexer kludge.
+  * midi2ly.1 was empty because help2man calls midi2ly but it couldn't
+    "import midi": python/out/midi.so wasn't built until later.  Added
+    a kludge in debian/rules to regenerate midi2ly.1 manually.
+    Thanks to Colin Watson for reporting the bug.  (See Bug#181927)
+
+ -- Anthony Fok <foka@debian.org>  Mon, 28 Apr 2003 03:50:50 +0800
+
+lilypond (1.6.6-2) unstable; urgency=high
+
+  * Hmm, so /usr/share/texmf/dvips/config is an symlink, and thus
+    /usr/share/lilypond/1.6.6/dvips/lilypond.map conflicts with tetex-base.
+    Let's move it to /etc/texmf/dvips/lilypond.map then, and make it a
+    conffile.  Thanks for all the (duplicate) bug reports!  ;-)
+    (Closes: Bug#169811, #169812, #169877, #169946)
+
+ -- Anthony Fok <foka@debian.org>  Sat, 23 Nov 2002 19:21:04 +0800
+
+lilypond (1.6.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Updated Debian section in Documentation/topdocs/INSTALL.texi.
+  * FTBFS bug due to bugs in bison-1.50.  Now explicitly Build-Depends
+    on bison << 1:1.50 or >= 1:1.75-1.  (Closes: Bug#165662)
+
+ -- Anthony Fok <foka@debian.org>  Tue, 22 Oct 2002 02:05:33 +0800
+
+lilypond (1.6.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Higher urgency because of memory corruption bugs in previous releases.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 22 Sep 2002 01:55:29 +0800
+
+lilypond (1.6.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 21 Sep 2002 11:14:48 +0800
+
+lilypond (1.6.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Check g++ version and run lexer-gcc-3.1.sh if necessary.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Sep 2002 23:37:27 +0800
+
+lilypond (1.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * binary-arch: Changed "DH_OPTIONS=-a" to "DH_OPTIONS=-s" so that
+    dpkg-gencontrol would not choke on lilypond1.3 for unlisted
+    architectures.  Thanks to Ryan Murray for the report and suggested
+    fix.  (Closes: Bug#157766)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 25 Aug 2002 11:59:01 +0800
+
+lilypond (1.5.68-2) unstable; urgency=low
+
+  * Oops, I was missing Build-Depends on python-dev.  Thanks to LaMont
+    Jones and his hppa build daemon for the report. (Closes: Bug#153402)
+  * lilypond should Depends instead of Recommends tetex-extra.
+    Thanks to Russell Neches for the report.  (Closes: Bug#152228)
+  * lilypond-indent.el is now installed in lilypond 1.5.x.
+    Thanks to Christophe Rhodes for the report.  (Closes: Bug#139070)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 18 Jul 2002 23:41:44 +0800
+
+lilypond (1.5.68-1) unstable; urgency=low
+
+  * New upstream release, gearing up for 1.6.0.
+  * Thanks to upstream author Jan Nieuwenhuizen for updating the Debian
+    package to work with 1.5.68.
+  * As per Jan's suggestion, now Build-Depends: pktrace (>= 1.0.3-1),
+    pfaedit (>= 0.0.20020312-1), autotrace, t1utils
+
+ -- Anthony Fok <foka@debian.org>  Wed, 17 Jul 2002 03:20:23 +0800
+
+lilypond (1.4.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * Depends: pktrace
+
+ -- Anthony Fok <foka@debian.org>  Mon,  6 May 2002 04:09:32 +0800
+
+lilypond (1.4.12-1) unstable; urgency=high
+
+  * New upstream maintenance release.
+  * Several important fixes (including our bison-related patch added
+    to 1.4.10-1) are included since 1.4.11 this release.  (Now, I
+    don't even need to increase teTeX's extra_mem_top, extra_mem_bot
+    or pool_size!  :-)  Please include in Woody.
+  * Fixed a typo in lilypond-doc package description: typestting ->
+    typesetting.  Thanks, Matt Zimmerman!  (Closes: Bug#125083)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 24 Feb 2002 02:06:15 +0800
+
+lilypond (1.4.10-1) unstable; urgency=high
+
+  * New upstream release.
+  * lilypond failed to build with bison >= 1.30 because bison's output file
+    has been renamed.  Applied an upstream fix.  (Closes: Bug#133692)
+  * lilypond's documentation also failed to build with the latest
+    tetex or texinfo package.  Instead of increasing extra_mem_top and
+    extra_mem_bot, increasing pool_size does the trick.
+
+ -- Anthony Fok <foka@debian.org>  Mon, 18 Feb 2002 11:41:31 +0800
+
+lilypond (1.4.9-1) unstable; urgency=high
+
+  * New upstream release.
+  * Oops, libc6-dev is known as libc6.1-dev and libc-dev on some
+    architectures.  Fixed Build-Depends so that lilypond can be built
+    on all platforms.  Thanks to Colin Watson for reporting the bug.
+    (Closes: Bug#120208)
+
+ -- Anthony Fok <foka@debian.org>  Tue, 27 Nov 2001 23:28:11 +0800
+
+lilypond (1.4.8-2) unstable; urgency=high
+
+  * [debian/rules]: Use -s instead of -a so that lilypond would get built
+     on all architectures even when the dummy lilypond1.3 package isn't
+     built.  Thanks to Ryan Murray for the report.  (Closes: Bug#117622)
+  * Depends on python instead of python-base.  The python scripts in
+    lilypond work with old and new Python versions.
+  * Build-Depends on "-z combreloc"-enabled binutils (>= 2.11.92.0.10-2)
+    and libc6-dev (>= 2.2.4-5) so that lily runs faster!  :-)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 11 Nov 2001 10:45:10 +0800
+
+lilypond (1.4.8-1) unstable; urgency=high
+
+  * New upstream release.  (Closes: Bug#111132)
+  * Stopped using $(PWD) in make, as it doesn't seems to work on
+    potato systems with older "make".  Reverted to `pwd`.
+    Thanks to Wolfgang Schnitker for notifying me this problem.
+  * Changed the lilypond1.3 dummy package's Architecture from "all"
+    to "arm i386 m68k powerpc sparc".  Also, as upstream updated
+    config.sub and config.guess to recognize ia64 and hppa.
+    Thanks to Anthony Towns for the bug report.  (Closes: Bug#114266)
+  * Versioned Build-Depends: flex (>= 2.5.4a-14) to ensure gcc-3.0
+    compatibility.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Oct 2001 18:28:45 +0800
+
+lilypond (1.4.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upstream includes lexer-gcc-3.0.patch which should fix compilation
+    problems with g++-3.0.  (Closes: Bug#105001)
+  * Hurray!  texinfo-4.0b is finally in Debian!  Thanks, Josip!  :-)
+    Updated Build-Depends.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 25 Jul 2001 03:04:37 +0800
+
+lilypond (1.4.3-1) unstable; urgency=high
+
+  * New upstream release.
+  * Urgency high because LilyPond-1.2.17 is too buggy and yet it has
+    been stuck in testing forever.  LilyPond-1.4.x fixes multiple
+    serious bugs.  :-)
+  * Ah, silly me, lilypond was conflicting against itself!  I forgot
+    to remove this relics during the switch from lilypond1.3 to lilypond.
+  * Fixed a new bug in lily/main.cc which caused lilypond to skip over every
+    other command-line argument.
+  * [configure.in]: Added -mieee to CFLAGS and CXXFLAGS when building on
+     Alpha to prevent FP exception.  Thanks to Christopher C. Chimelis
+     for the fix!
+
+ -- Anthony Fok <foka@debian.org>  Fri, 15 Jun 2001 00:42:46 -0600
+
+lilypond (1.4.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Moved "bibtex2html, gs | gs-aladdin, netpbm (>= 2:9.10-1)"
+    from Build-Depends to Build-Depends-Indep because these packages
+    are only needed for building lilypond-doc.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 29 May 2001 02:26:58 -0600
+
+lilypond (1.4.1-1) unstable; urgency=low
+
+  * New upstream release.  (Closes: Bug#97598)
+  * export extra_mem_top=100000 and extra_mem_bot=100000, otherwise
+    latex runs out of memory when processing standchen.dvi.latex.
+  * Split the documentation into the "lilypond-doc" package, which
+    provides the LilyPond website in /usr/share/doc/lilypond/html.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 16 May 2001 16:03:40 -0600
+
+lilypond (1.3.150-1) unstable; urgency=low
+
+  * New upstream version.
+  * Renamed package from lilypond1.3 back to lilypond.
+    This also fixes a lot of bugs from the old lilypond-1.2.17 package.
+    lilypond1.3 is temporarily provided as a dummy transitional package.
+    Closes: Bug#67697, 84352, 48731, 72223, 85834.
+  * [debian/rules]:
+     - No longer blindly copy intermediate DVI files into
+       the deb package.  Thanks to Daniel Burrows for the reminder.
+       Closes: Bug#87852.
+     - Added "export MODE=ljfour" and "export BDPI=600" because I use
+       something different in my local /etc/texmf/mktex.cnf and that
+       broke the build.
+  * Fixed Build-Depends because pnmtopng has been merged into the netpbm
+    package.  Thanks to Adrian Bunk for the notice.  Closes: Bug#93961.
+  * [lily/kpath.cc]: Modified to better conform to web2c fontpath policy.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 26 Apr 2001 03:25:50 -0600
+
+lilypond1.3 (1.3.132-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Oops, in 1.3.129-1, the "(setq auto-mode-alist (append ..." line in
+    /etc/emacs/site-start.d/50lilypond1.3.el (debian/emacsen-startup)
+    and in FAQ.txt was buggy.  Thanks to Erik Demaine for the bug report.
+    Closes: Bug#86685.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 25 Feb 2001 20:27:09 -0700
+
+lilypond1.3 (1.3.129-1) unstable; urgency=low
+
+  * In memory of Werner Icking + (August 26, 1943 - February 8, 2001),
+    a dear friend, a kind educator, and a hard worker in sharing beautiful
+    typeset music to the world.  (Maintainer of the GMD Music Archive,
+    http://www.gmd.de/Misc/Music/).
+
+  * New upstream release.
+  * Upstream has changed from "lilypond-mode" to the "studly caps name"
+    "LilyPond-mode".  Fixed /etc/emacs/site-start.d/50lilypond1.3.el
+    (debian/emacsen-startup).  Thanks to Christophe Rhodes for the bug
+    report.  Closes: Bug#83732.
+  * Added "Build-Conflicts: lilypond, lilypond1.3" to prevent old
+    lilypond font files from potentially interfering with the build on
+    other Debian ports autobuilders.
+  * Built with libguile-dev (1:1.4-9) or newer to ensure correct
+    linkage to libqthreads.so.9.  Also updated the Build-Depends and
+    Depends fields accordingly.  Thanks to guile1.4 package maintainer
+    Rob Browning for his notification and to Daniel Burrows for his bug
+    report.  Closes: Bug#85896.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 10 Feb 2001 01:38:36 -0700
+
+lilypond1.3 (1.3.121-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added more detailed instruction for building lilypond1.3 on Debian
+    in Documentation/topdocs/INSTALL.texi (hence INSTALL.txt).
+  * Applied Han-wen's one-line patch to lily/system-start-delimiter.cc
+    to remove bracket-width.
+  * It seems that bracket-width needs to be removed from
+    scm/grob-description.scm and scm/interface-description.scm too.
+
+ -- Anthony Fok <foka@debian.org>  Sun,  7 Jan 2001 02:34:46 -0700
+
+lilypond1.3 (1.3.119-1) unstable; urgency=low
+
+  * New upstream release.
+  * Merged debian/* fixes by upstream author Jan Nieuwenhuizen.  Thanks!
+     - The lilypond info files are back!  Partially fixed Bug#72233.
+     - Uses the new libguile9 instead of the old libguile6.
+  * Depends on libkpathsea3 instead of the old tetex-lib; Build-Depends
+    is also changed accordingly.  Closes: Bug#79469, Bug#79837.
+  * Edited Documentation/user/development.itexi so that it builds
+    without error.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 22 Dec 2000 12:54:49 -0700
+
+lilypond1.3 (1.3.107) unstable; urgency=low
+
+  * Fixed watch location.
+  * Local build, not uploaded to Debian.
+
+ -- Jan Nieuwenhuizen <janneke@gnu.org>  Mon, 13 Nov 2000 13:33:53 +0100
+
+lilypond1.3 (1.3.103) unstable; urgency=low
+
+  * Re-enabled info doc rules.
+  * Local build, not uploaded to Debian.
+
+ -- Jan Nieuwenhuizen <janneke@gnu.org>  Sun,  5 Nov 2000 22:15:57 -0100
+
+lilypond1.3 (1.3.99-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 31 Oct 2000 00:48:20 -0700
+
+lilypond1.3 (1.3.94-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Sun,  8 Oct 2000 12:36:52 -0600
+
+lilypond1.3 (1.3.80.jcn1-1) unstable; urgency=low
+
+  * New upstream release.
+  * s/tetex-devel/tetex-dev/ in Build-Depends.  Thanks to bug report
+    filed by fellow developer Roman Hodek (closes: Bug#69772).
+
+ -- Anthony Fok <foka@debian.org>  Sun, 27 Aug 2000 06:11:22 -0600
+
+lilypond1.3 (1.3.79-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added tetex-dev to Build-Depends.  Thanks to bug report by fellow
+    developer Daniel Jacobowitz (closes: Bug#68441).
+  * Install two documentation files NEWS and ROADMAP.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 17 Aug 2000 22:57:57 -0600
+
+lilypond1.3 (1.3.78-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 16 Aug 2000 06:32:14 -0600
+
+lilypond1.3 (1.3.75-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated the link to the http://sca.uwaterloo.ca/lilypond/ mirror in
+    the package description.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 26 Jul 2000 01:56:28 -0600
+
+lilypond1.3 (1.3.58-1) unstable; urgency=low
+
+  * New upstream release with patch from Han-wen.
+
+ -- Anthony Fok <foka@debian.org>  Thu,  8 Jun 2000 17:19:08 -0600
+
+lilypond1.3 (1.3.48-1) unstable; urgency=low
+
+  * New upstream release.
+  * [debian/control]: Added Depends: guile, for /usr/bin/as2text (Lintian).
+  * [debian/rules]: Changed the symlink /usr/share/lilypond/cmtfm from
+      absolute to relative.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 10 May 2000 12:17:54 -0600
+
+lilypond1.3 (1.3.45-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 14 Apr 2000 21:39:40 -0600
+
+lilypond1.3 (1.3.44-1) unstable; urgency=low
+
+  * New upstream development release with numerous bug fixes, small
+    enhancements, and updates to documentation.
+  * [debian/postinst]: Fixed the pathname to README.Debian.  Thanks to
+      Olivier Abad for the bug report (closes: Bug#58674).
+  * [debian/rules]: Now configure with --enable-optimise again.
+      Yes, it appears that LilyPond and glibc2.1.3 finally get along
+      nicely even with optimisation turned on.  Hurray!  :-)
+  * [Documentation/user/*]: Fixed some formatting bugs in the texinfo files.
+  * [debian/control]: Modified description to hint that 1.3.43 is better
+      than 1.2.17.  :-)
+  * [debian/{rules,emacsen-startup}]: Added an Emacs startup file
+      /etc/emacs/site-start.d/50lilypond1.3.el so that lilypond-mode is
+      automatically loaded for *.ly files.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 12 Apr 2000 21:22:31 -0600
+
+lilypond1.3 (1.3.24-1) frozen unstable; urgency=low
+
+  * New upstream development release with lots of bug fixes.  :-)
+  * [debian/control]: Added missing build dependencies.  Thanks to
+     Roman Hodek for the bug report and solution (closes: Bug#58078).
+
+ -- Anthony Fok <foka@debian.org>  Sat, 19 Feb 2000 15:14:31 -0700
+
+lilypond1.3 (1.3.17-1) unstable; urgency=low
+
+  * New upstream release.  Merry Christmas!
+
+ -- Anthony Fok <foka@debian.org>  Fri, 24 Dec 1999 08:59:21 -0700
+
+lilypond1.3 (1.3.16-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 22 Dec 1999 22:12:30 -0700
+
+lilypond1.3 (1.3.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * [debian/rules]: Commented out "$(MAKE) -C Documentation/programmer ps"
+      temporarily because of error making lilypond-overview.dvi.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 17 Dec 1999 00:33:47 -0700
+
+lilypond1.3 (1.3.5-1) unstable; urgency=low
+
+  * New upstream release.  lilypond1.3 is the developmental branch.
+  * [debian/rules]: Removed "install-stamp".
+  * [debian/control]:
+      - Standards-Version: 3.1.0
+      - Added the Build-Depends field.
+      - Updated dependencies of tetex-{base,bin,extra} packages to
+        1.0*-1.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 13 Nov 1999 23:25:42 -0700
+
+lilypond (1.2.17-1) unstable; urgency=low
+
+  * New upstream release.
+  * [debian/rules]:
+     - Reverted to configuring with --disable-optimise.
+     - The documentation files are now built properly, and both
+       ps and dvi versions are included.
+  * Standards-Version: 3.0.1
+
+ -- Anthony Fok <foka@debian.org>  Sat, 30 Oct 1999 06:57:04 -0600
+
+lilypond (1.2.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * [debian/control]:
+     - Removed recommendation for python-misc (>= 1.5.1)
+       and updated the recommendation of python-base to 1.5.2-4.
+       Thanks to Gregor Hoffleit for the note (closes: Bug#41343).
+     - Updated package description to that provided by the upstream
+       authors in the new version.
+  * [debian/rules]: Now configure with --enable-optimise.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 24 Aug 1999 22:05:12 -0600
+
+lilypond (1.1.53-1) unstable; urgency=low
+
+  * New upstream release.
+  * Partially upgraded to standards version 3.0.0:
+     - Updated copyright to point to /usr/share/common-licenses
+     - First step towards FHS-compliance: Man pages are now installed
+       under /usr/share/man.
+
+ -- Anthony Fok <foka@debian.org>  Wed,  7 Jul 1999 15:23:57 -0600
+
+lilypond (1.1.47-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 10 Jun 1999 18:10:13 -0600
+
+lilypond (1.1.42-1) unstable; urgency=low
+
+  * New upstream release.
+  * [postinst]: Runs "/usr/bin/mktexlsr /usr/share/texmf" to save time.
+  * [postrm]: Removed the unnecessary "/usr/bin/mktexlsr" call.
+  * The segfault problem has disappeared on my computer (running
+    the latest potato system).  Please test.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 11 May 1999 11:16:58 -0600
+
+lilypond (1.1.37-1) unstable; urgency=low
+
+  * New upstream release.
+  * Known problem: LilyPond simply segfaults under glibc 2.1 on my i386
+    system, and I don't know how to fix the problem yet.  I hope users of
+    other platforms have better luck.
+  * [debian/rules]:
+      - Make and install info files.
+      - Removed "CC=egcc" because the default gcc on all platforms is
+        now the one from egcs.
+      - Install *.png instead of *.xpm.
+      - Minor clean-ups.
+  * Added debian/compress to make sure *.png are not compressed.
+  * Added debian/doc-base and postinst/prerm for the LilyPond info files.
+  * s!usr/lib/texmf!usr/share/texmf!g and cleaned up old hacks
+    in {pre,post}{inst,rm} files due to tetex's new FHS-compliant
+    directory structure.
+  * [debian/control]: Now Depends/Recommends the latest FHS-compliant
+      tetex-{bin,base,extra} (>= 0.9.99031{0,1}-1) packages.
+
+ -- Anthony Fok <foka@debian.org>  Mon,  5 Apr 1999 20:43:30 -0600
+
+lilypond (1.1.31-1) unstable; urgency=low
+
+  * New upstream release.
+  * Re-incorporated the changes in debian/rules and debian/postinst
+    from lilypond_1.0.xx series.  I forgot these changes when I moved
+    from 1.0.19.uu3-1 to 1.1.29-1.  Sorry!  :-)
+  * [make/lilypond-vars.make]: Copied the definition of TEX_TFMDIR from
+      make/toplevel.make.in and added it to LILYINCLUDE...
+  * Applied the patch lilypond-1.1.31.jcn1.diff from Jan Nieuwenhuizen.
+  * [debian/rules]:
+      - Temporarily use "-$(MAKE) -k -C Documentation/tex dvi" to
+        circumvent the occasional \times segfault problem when building
+        refman.dvi.
+      - Added symlink /usr/lib/texmf/fonts/tfm/public/lilypond.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 18 Feb 1999 00:25:04 -0700
+
+lilypond (1.1.29-1) unstable; urgency=low
+
+  * New upstream release.
+  * [stepmake/aclocal.m4]: AC_STEPMAKE_GUILE now calls the GUILE_FLAGS
+      macro to set -lqthreads etc., otherwise Guile would not be detected
+      by the configure script.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Feb 1999 09:05:00 -0700
+
+lilypond (1.0.19.uu3-1) frozen unstable; urgency=low
+
+  * New upstream bug-fix release.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 12 Dec 1998 04:23:15 -0700
+
+lilypond (1.0.19.uu1-2) frozen unstable; urgency=low
+
+  * [debian/rules]: Now builds the LilyPond documentation in dvi format.
+      Thanks to Roland Rosenfeld <roland@spinnaker.rhein.de>
+      for the bug report. (closes: Bug#30123).
+  * [debian/control]: Now also Recommends: tetex-extra (>= 0.9.981030-1)
+      because the .dvi documentation uses the EC fonts in that package.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 10 Dec 1998 17:43:57 -0700
+
+lilypond (1.0.19.uu1-1) frozen unstable; urgency=low
+
+  * New upstream bug-fix release.
+
+ -- Anthony Fok <foka@debian.org>  Mon,  7 Dec 1998 13:12:02 -0700
+
+lilypond (1.0.18-2) frozen unstable; urgency=low
+
+  * [debian/rules]: Added symlink /usr/lib/texmf/fonts/afm/public/lilypond.
+      Thanks to Julian Gilbey <jdg@maths.qmw.ac.uk> for the bug report
+      (closes: Bug#29407).
+  * [scripts/ly2dvi.py]: Re-added a patch similar to the one in 1.0.17-1,
+      but teTeX's default search path is now placed *before* the ones that
+      ly2dvi adds.  Thanks to Roland Rosenfeld <roland@spinnaker.rhein.de>
+      for the bug report. (closes: Bug#29459).
+
+ -- Anthony Fok <foka@debian.org>  Mon, 23 Nov 1998 21:29:25 -0700
+
+lilypond (1.0.18-1) frozen unstable; urgency=low
+
+  * New upstream bug-fix release.
+  * [debian/control]:
+      - Upgraded to standards version 2.5.0.0 (no changes).
+      - Recommends: python-misc (>= 1.5.1) because ly2dvi needs the glob
+        module in the python-misc package (closes: Bug#29283).
+      - Updated dependencies on tetex* to the latest versions:
+          Depends: tetex-bin (>= 0.9.981031-2)
+          Recommends: tetex-base (>= 0.9.981030-1)
+        due to changes in tetex's directory structure.
+  * [debian/rules]:
+      - The symlink ../../../../../share/lilypond/mf is now named
+        /usr/lib/texmf/fonts/source/public/lilypond instead of
+        /usr/lib/texmf/fonts/source/public/mf (Bug#29284).
+      - In the latest tetex-base package, /usr/lib/texmf/doc is now a
+        symlink to /usr/doc/texmf.  Therefore, we now install lilypond's
+        documentation into /usr/doc/texmf/musixtex/lilypond.
+        (closes: Bug#28999, Bug#29326)
+  * [debian/preinst]:
+      - The script now removes the directories
+        /var/spool/texmf/pk/*/public/mf and /var/spool/texmf/tfm/public/mf
+        created inadvertently by Debian's buggy lilypond 1.0.17-1.  :-)
+        (Bug#29284)
+      - Since 1.0.17-1, /usr/lib/texmf/tex/lilypond has been changed to a
+        symbolic directory.  The script now removes the old real directory
+        to prevent problems during upgrade (closes: Bug#29284).
+  * [debian/postinst]: I copied a few lines from tetex-nonfree's postinst
+      to remove the old directory /usr/lib/texmf/doc if lilypond is the
+      last package to use that directory, and create a symlink to
+      /usr/doc/texmf.  :-)
+  * Rebuilt with yodl (1.31.7-1) installed to ensure the documentations
+    are compiled properly (closes: Bug#29285).
+  * Thanks to Fabien Ninoles <fab@tzone.org>, Roland Rosenfeld
+    <roland@spinnaker.rhein.de> and Julian Gilbey <jdg@maths.qmw.ac.uk>
+    for reporting the bugs listed above. :-)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 12 Nov 1998 03:14:25 -0700
+
+lilypond (1.0.17-1) frozen unstable; urgency=low
+
+  * New upstream "stable" release.
+  * [debian/{copyright,control}]: pcnov095.win.tue.nl -> ftp.cs.uu.nl
+      (New upstream master FTP site).  Also updated JCN's web site URL.
+  * [debian/rules]:
+      - Now, in the "clean:" target, runs either
+        "find . -user root | xargs -r chown $$SUDO_USER.$$SUDO_GID" or
+        "find . -user root | xargs -r chown $$LOGNAME" to deal with all those
+        root-owned "out/*" files generated during a "sudo debian/rules clean"
+        run.  Thanks to Roman Hodek <Roman.Hodek@informatik.uni-erlangen.de>
+        for reporting the problem!  (closes: Bug#27044)
+      - Updated debian/rules according to the new debhelper rules example.
+      - Now configures with --disable-optimise instead of --enable-optimise,
+        otherwise it would not compile.
+      - Added symlinks to directories under /usr/lib/texmf because lilypond
+        now puts everything under /usr/share/lilypond.
+  * [Documentation/topdocs/AUTHORS.yo]: Added a trailing "/" on URLs.
+  * [scripts/ly2dvi.py]: Added a hack to add an extra os.pathsep (":" on
+      Linux) to TEXINPUTS and MFINPUTS, otherwise ly2dvi and TeX would fail
+      to find the necessary files.
+  * Compiled with libstdc++2.9.  :-)
+
+ -- Anthony Fok <foka@debian.org>  Tue,  3 Nov 1998 14:31:18 -0700
+
+lilypond (1.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 15 Aug 1998 04:32:08 -0600
+
+lilypond (1.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * [aclocal.m4]: Temporarily changed OPTIMIZE="-O2" to OPTIMIZE="-O"
+      to avoid egcs (c++) complaint of "Internal compiler error"
+      on my computer.
+  * [scripts/mudela-book.py]: Added "#!@PYTHON@" at the top.  This string
+      expands to "#!/usr/bin/python" in /usr/bin/mudela-book.
+      (Thanks to Lintian.  :-)
+  * [debian/control]: Recommends: python-base (>= 1.5.1).
+      (Again, thanks to Lintian.  :-)
+  * [debian/postrm]: Now also removes the generated LilyPond fonts
+      *.{tfm,pk} under /var/spool/texmf when called as "postrm remove".
+  * [debian/preinst]: Yes, have to bring this back to remove the generated
+      LilyPond fonts in /var/spool/texmf because "postrm remove" didn't do
+      its jobs in previous versions.  Oops.  :-)
+  * [debian/rules]: Installs a few new upstream documentation files, and
+      the example files in out/ directories are moved to parent directories.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 14 Aug 1998 03:30:05 -0600
+
+lilypond (0.1.76-1) unstable; urgency=low
+
+  * support for 'make deb' target
+  * Not uploaded to Debian's FTP site.
+
+ -- Jan Nieuwenhuizen <janneke@gnu.org>  Fri,  3 Jul 1998 17:53:37 +0200
+
+lilypond (0.1.71-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Sat,  6 Jun 1998 00:00:00 -0600
+
+lilypond (0.1.66-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 20 May 1998 06:50:12 -0600
+
+lilypond (0.1.61-1) frozen unstable; urgency=low
+
+  * New upstream release with tons of bug fixes.
+    Please put this in Hamm.
+  * Revised debian/rules w.r.t. make/lilypond.spec.in.
+
+ -- Anthony Fok <foka@debian.org>  Mon,  4 May 1998 03:36:06 -0600
+
+lilypond (0.1.60-1) frozen unstable; urgency=medium
+
+  * New upstream release with lots of bug fixes, including the MIDI
+    generation bug in 0.1.48.  Please put this in Hamm.
+  * debian/control:
+     - Upgraded to standards version 2.4.1.0 (no changes).
+  * debian/rules:
+     - lilypond now also depends on tetex-base (>= 0.9-5)
+       and conflicts with tetex-base (<< 0.9).
+  * Modified postinst and postrm to work with teTeX 0.9 / Web2C 7.2:
+     - Removed all the *ugly* kludges and functions that were supposed to
+       deal with non-Debian teTeX installations.  Those kludges were
+       specifically made for teTeX 0.4, but they failed to work as intended
+       due to the changes in teTeX 0.9.
+     - No longer messes with special.map because the standard
+       Web2C 7.2 special.map already lists the feta fonts.
+     - Since postinst is so much simpler, it is now a sh script!  :-)
+  * Removed preinst which contained yet another obsolete kludge to clean
+    obsolete/ancient lilypond fonts.
+  * Updated the GNU LilyPond Home Page URIs.
+
+ -- Anthony Fok <foka@debian.org>  Fri,  1 May 1998 01:14:49 -0600
+
+lilypond (0.1.48-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 13 Mar 1998 22:15:11 -0800
+
+lilypond (0.1.46-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 27 Feb 1998 22:43:41 -0800
+
+lilypond (0.1.45-1) unstable; urgency=low
+
+  * New upstream "The Utrecht Release".
+  * Compiled on va.debian.org because egcs 1.0.1 on my computer
+    no longer comes with libg++.  :-(  But hey, va.debian.org
+    sure is fast!  <grin>
+  * Temporarily includes *.xpm instead of *.gif files because
+    the netpbm package is not installed on va.debian.org, and
+    also because it violates Policy 2.1.2.  Thanks to
+    James Troup <J.J.Troup@scm.brad.ac.uk> for bug report!  :-)
+    (Fixes Bug#18212)
+  * debian/rules: Added "dh_undocumented ly2dvi.1".
+
+ -- Anthony Fok <foka@debian.org>  Sat, 21 Feb 1998 01:37:57 -0700
+
+lilypond (0.1.44-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Fri,  6 Feb 1998 22:07:39 -0700
+
+lilypond (0.1.43-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upgraded to standards version 2.4.0.0 (no changes).
+  * Minor fixes to the copyright file (GPL.gz -> GPL).
+  * Revised the package description based on the new lilypond.lsm.
+  * Now includes *.gif instead of *.xpm files.
+  * Other minor revisions to debian/rules.
+  * Added version numbering to the libflower shared library.
+  * Now installs /usr/lib/emacs/site-lisp/mudela-mode.el,
+    but I haven't figured out how to use it myself.  <grin>
+
+ -- Anthony Fok <foka@debian.org>  Fri,  6 Feb 1998 17:26:55 -0700
+
+lilypond (0.1.42-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now places ly2dvi in /usr/bin.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 29 Jan 1998 02:50:36 -0700
+
+lilypond (0.1.41-1) unstable; urgency=low
+
+  * New upstream "The Birthday Release".
+
+ -- Anthony Fok <foka@debian.org>  Wed, 21 Jan 1998 02:20:00 -0700
+
+lilypond (0.1.40-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Anthony Fok <foka@debian.org>  Mon, 12 Jan 1998 19:19:50 -0700
+
+lilypond (0.1.39-2) unstable; urgency=low
+
+  * debian/control:
+     - Description: Remove the note about installing musixtex or
+       musixtex-fonts.
+     - Added "Conflicts: musixtex-fonts".
+
+ -- Anthony Fok <foka@debian.org>  Tue,  6 Jan 1998 02:42:56 -0700
+
+lilypond (0.1.39-1) unstable; urgency=low
+
+  * New upstream LilyPond '98 "New Year Gift" release.
+  * debian/control:
+     - No longer Recommends: "musixtex" or "musixtex-fonts" because
+       LilyPond no longer needs them.
+     - Therefore, Section: is changed from "contrib/tex" to "tex".
+       LilyPond can finally go into the main distribution.  Hurray!
+  * debian/rules: Now also dh_installdocs ANNOUNCE-0.1 and ONEWS.
+  * preinst, postinst, postrm: Added #DEBHELPER#.
+  * preinst, postrm: Changed #!/bin/bash to #!/bin/sh.
+
+ -- Anthony Fok <foka@debian.org>  Mon,  5 Jan 1998 18:42:30 -0700
+
+lilypond (0.1.38-1) unstable; urgency=low
+
+  * New upstream Xmas release.
+  * Applied patch patch-0.1.38.jcn1 from Jan Nieuwenhuizen.
+  * Have fun, Merry Christmas and a Happy 1998. -- Han-Wen Nienhuys
+
+ -- Anthony Fok <foka@debian.org>  Wed, 24 Dec 1997 16:38:14 -0700
+
+lilypond (0.1.37-1) unstable; urgency=low
+
+  * New upstream release
+  * Minor modifications to debian/rules due to changes in
+    debhelper 0.32.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 12 Dec 1997 11:11:12 -0700
+
+lilypond (0.1.36-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@debian.org>  Tue,  9 Dec 1997 18:33:50 -0700
+
+lilypond (0.1.35-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@debian.org>  Fri,  5 Dec 1997 21:06:31 -0700
+
+lilypond (0.1.34-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@debian.org>  Thu,  4 Dec 1997 19:42:22 -0700
+
+lilypond (0.1.33-1) unstable; urgency=low
+
+  * New upstream release
+  * Changed my maintainer e-mail address to <foka@debian.org>.  :)
+
+ -- Anthony Fok <foka@debian.org>  Tue, 25 Nov 1997 00:22:57 -0700
+
+lilypond (0.1.32-2) unstable; urgency=low
+
+  * Commented out run_texhash() in postinst by mistake.  Fixed.
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Sun, 23 Nov 1997 03:04:29 -0700
+
+lilypond (0.1.32-1) unstable; urgency=low
+
+  * New upstream release
+  * Applied a small fix to postinst.  The font-entries-search-and-replace
+    add_fonts() subroutine was slightly buggy.
+  * Unpatched ./configure.  It turned out that I spelt "--enable-optimise"
+    as "--enable-optimize" in debian/rules by mistake.  Oops!  :)  Thanks
+    to the upstream author for pointing this out!  :)
+  * The upstream authors has included the ./debian/* files in the pristine
+    source archive!  They also fixed some minor errors in README.debian
+    and copyright.  Thanks a lot!  :)
+  * Removed the line "dh_clean" from "binary-arch:" and switched the order
+    of dh_clean in "clean:" in debian/rules.  dh_clean was deleting
+    the zero-byte file ./make/out/Site.make, causing the build to fail.
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Sun, 23 Nov 1997 01:39:31 -0700
+
+lilypond (0.1.29-1) unstable; urgency=low
+
+  * New upstream release
+  * Patched ./configure in source package to make c++ use the -O2 -g options
+    on all the files.  Now, /usr/bin/lilypond is a lot leaner!  <smile>
+    (I will discuss it with the upstream author.)
+  * Adapted postinst (a Perl script) from the musixtex package for lilypond.
+    Now postinst adds the new LilyPond font entries into
+    /usr/lib/texmf/fontname/special.map.
+  * Added preinst to clean up my mess from previous releases: the old
+    "stray" automatically generated TFM and PK font files were placed in
+    the wrong directories because they were not listed in
+    /usr/lib/texmf/fontname/special.map.
+  * Did some minor clean-up in debian/rules and switched to debhelper.
+  * Updated Standards-Version to 2.3.0.1
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Tue, 11 Nov 1997 02:31:33 -0700
+
+lilypond (0.1.25-1) unstable; urgency=low
+
+  * Added a note in README.debian about the possibility of some LilyPond
+    fonts not showing up after an upgrade, and a possible solution to this
+    problem.
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Thu, 23 Oct 1997 17:00:14 -0600
+
+lilypond (0.1.24-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Tue, 21 Oct 1997 04:12:01 -0600
+
+lilypond (0.1.23-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Thu, 16 Oct 1997 02:15:55 -0600
+
+lilypond (0.1.22-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Mon, 13 Oct 1997 23:51:01 -0600
+
+lilypond (0.1.21-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Thu,  9 Oct 1997 22:58:26 -0600
+
+lilypond (0.1.18.jcn1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Sat,  4 Oct 1997 03:48:45 -0600
+
+lilypond (0.1.17-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove redundancy in package's description (Fixed bug #12511)
+  * Added a note about the new LilyPond MF fonts which are not yet listed
+    in the current standard special.map (in the teTeX package)
+  * Added SHELL=/bin/bash to debian/rules because I use bashism. <smile>
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Sun, 28 Sep 1997 01:41:15 -0600
+
+lilypond (0.1.12-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated the mailing address of the Free Software Foundation
+    listed in /usr/doc/lilypond/copyright
+  * Updated Standards-Version to 2.3.0.0
+  * Built with debmake 3.3.14 and fakeroot 0.0-9 <grin>
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Sun,  7 Sep 1997 23:00:53 -0600
+
+lilypond (0.1.9-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Mon, 18 Aug 1997 15:14:24 -0600
+
+lilypond (0.1.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Thu, 14 Aug 1997 15:18:40 -0600
+
+lilypond (0.1.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Thu, 14 Aug 1997 05:14:06 -0600
+
+lilypond (0.1.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Sat,  9 Aug 1997 14:15:11 -0600
+
+lilypond (0.1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Thu,  7 Aug 1997 22:54:20 -0600
+
+lilypond (0.1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Anthony Fok <foka@gpu.srv.ualberta.ca>  Wed,  6 Aug 1997 04:40:57 -0600

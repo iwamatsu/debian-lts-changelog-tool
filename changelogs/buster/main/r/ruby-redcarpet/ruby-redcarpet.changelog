@@ -1,0 +1,192 @@
+ruby-redcarpet (3.4.0-4+deb10u1) buster-security; urgency=high
+
+  * Fix a security vulnerability using `:quote` in combination with the
+    `:escape_html` option. (Fixes: CVE-2020-26298) (Closes: #980057)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Fri, 15 Jan 2021 01:32:04 +0530
+
+ruby-redcarpet (3.4.0-4) unstable; urgency=medium
+
+  * Re-enable accidentally disabled patch to fix 32b architectures
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Tue, 20 Feb 2018 14:33:17 +0700
+
+ruby-redcarpet (3.4.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix Ruby 2.5 test failure when Ruby 2.3 is installed as default
+    (Closes: #888168)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Mon, 19 Feb 2018 22:30:34 +0700
+
+ruby-redcarpet (3.4.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch fix-test-suite-on-32b-arch.patch. Closes: #865133
+
+ -- Lucas Nussbaum <lucas@debian.org>  Sat, 08 Jul 2017 09:25:10 +0200
+
+ruby-redcarpet (3.4.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Bump Standard-Version:3.9.8
+  * Remove patch call-the-right-ruby.patch (incorporated upstream)
+  * Remove patch fix_test_no_rewind_into_previous_inline.patch
+    (incorporated upstream)
+
+ -- Abhijith PA <abhijith@openmailbox.org>  Sat, 17 Jun 2017 10:09:36 +0530
+
+ruby-redcarpet (3.3.4-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Run wrap-and-sort on packaging files
+
+  [ Christian Hofstaedtler ]
+  * Update packaging using dh-make-ruby -w.
+  * Remove rdeps-test autopkgtest, rdeps should do that on their own.
+    This is prompted by the removal of "mdpress", which now makes
+    the test fail, but this is not redcarpet's fault at all.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sat, 05 Mar 2016 13:55:12 +0100
+
+ruby-redcarpet (3.3.4-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.3.4
+  * Refresh patches
+  * Drop ruby-nokogiri from Build-Depends, thanks to Abhijith PA.
+  * Bump Standard version: 3.9.7
+  * Fix lintian warning: vcs-field-uses-insecure-uri
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 24 Feb 2016 17:02:18 +0900
+
+ruby-redcarpet (3.3.3-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 Jan 2016 01:08:30 +0530
+
+ruby-redcarpet (3.3.3-1) experimental; urgency=medium
+
+  * New upstream patch release
+  * Add myself to uploaders
+  * Add a simple rdeps test (need to fix their gemspec for tests to pass)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 Jan 2016 15:25:17 +0530
+
+ruby-redcarpet (3.3.2-1) unstable; urgency=medium
+
+  [ Pirate Praveen ]
+  * Team upload.
+  * New upstream release.
+  * Remove patch 0001-Remove-RubyGems-Depends.patch (already applied).
+
+  [ Antonio Terceiro ]
+  * debian/patches/call-the-right-ruby.patch: while testing the redcarpet
+    binary, call it using the Ruby interpreter currently being used for tests
+    (Closes: #797101)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 30 Oct 2015 09:31:06 -0200
+
+ruby-redcarpet (3.2.3-1) unstable; urgency=medium
+
+  * New upstream release: 3.2.3.
+  * Added myself to Uploaders.
+  * debian/control: updated Vcs-Browser, Homepage. Added Testsuite.
+  * Remove patch 0002-Fix-markdown_test.patch: no longer needed.
+  * Add patch fix_test_no_rewind_into_previous_inline.patch.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Wed, 06 May 2015 11:24:37 +0200
+
+ruby-redcarpet (3.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Re-upload to unstable. 
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 27 Apr 2015 14:29:54 +0530
+
+ruby-redcarpet (3.2.0-1) experimental; urgency=medium
+ 
+  * Team upload.
+  * New upstream release.
+  * Bump standards version to 3.9.6 (no changes).
+  * Refresh patches. 
+ 
+ -- Pirate Praveen <praveen@debian.org>  Tue, 18 Nov 2014 15:30:22 +0530
+
+ruby-redcarpet (3.1.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.1.2
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Fri, 30 May 2014 00:52:17 +0900
+
+ruby-redcarpet (3.1.1-2) unstable; urgency=low
+
+  * Team upload.
+  * Bump gem2deb build dep to 0.7.4~
+    - drop ruby1.9.1
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Apr 2014 18:10:45 +0530
+
+ruby-redcarpet (3.1.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.1.1
+  * Add Markdown Test patch
+  * Bump Standard Version: 3.9.5, Compat: 9
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Sun, 23 Mar 2014 22:26:28 +0900
+
+ruby-redcarpet (3.0.0-1) unstable; urgency=low
+
+  * Imported Upstream version 3.0.0
+  * Update manpages: bump version
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Thu, 12 Sep 2013 22:06:46 +0900
+
+ruby-redcarpet (2.3.0-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * Team upload.
+  * Imported Upstream version 2.3.0
+  * Add patch: Remove RubyGems Depends in tests/test_helper.rb
+  * Update Test: import upstream Rakefile into debian/ruby-tests.rake
+  * Update copyright
+  * Bump Standard Version: 3.9.4
+
+  [ Cédric Boutillier ]
+  * debian/control: remove obsolete DM-Upload-Allowed flag
+  * use canonical URI in Vcs-* fields
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Sun, 02 Jun 2013 02:23:19 +0900
+
+ruby-redcarpet (2.2.2-1) experimental; urgency=low
+
+  * Imported Upstream version 2.2.2
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Thu, 17 Jan 2013 21:45:24 +0900
+
+ruby-redcarpet (2.1.1-3) unstable; urgency=low
+
+  * Team upload.
+  * Bump build dependency on gem2deb to >= 0.3.0~.
+  * Update debian/copyright to DEP-5 copyright-format/1.0
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Sat, 30 Jun 2012 21:28:15 +0200
+
+ruby-redcarpet (2.1.1-2) unstable; urgency=low
+
+  * Fix FTBFS: (Closes: #677147, #676977)
+    - Add Build-Depends: ruby-nokogiri
+      Thanks to Peter Green, Aaron M. Ucko
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 12 Jun 2012 16:26:16 +0900
+
+ruby-redcarpet (2.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #672508)
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Thu, 10 May 2012 01:58:32 +0900

@@ -1,0 +1,304 @@
+teeworlds (0.7.2-5+deb10u1) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2020-12066:
+    A remote attacker was able to shut down the teeworlds server and cause a
+    denial-of-service by crafting a specific server packet.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 12 Sep 2020 23:40:31 +0200
+
+teeworlds (0.7.2-5) unstable; urgency=medium
+
+  * Team upload.
+  * Backport other commits to improve patches for CVE-2019-10877,
+     CVE-2019-10878 and CVE-2019-10879.
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 06 May 2019 07:41:59 +0200
+
+teeworlds (0.7.2-4) unstable; urgency=medium
+
+  * Team upload.
+  * Add upstream patches to fix CVE-2019-10877 CVE-2019-10878 CVE-2019-10879
+     (Closes: #927152).
+  * Add upstream patch to fix creation of recursive path. (Closes: #928110)
+
+ -- Dylan Aïssi <daissi@debian.org>  Sat, 04 May 2019 22:14:03 +0200
+
+teeworlds (0.7.2-3) unstable; urgency=medium
+
+  * Stop building with -msse2 on i386. (Closes: #921274)
+    - Cherry-pick upstream fix as no-sse2-required.patch
+
+ -- Felix Geyer <fgeyer@debian.org>  Thu, 28 Feb 2019 22:35:34 +0100
+
+teeworlds (0.7.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Apply upstream's patch for immintrin.h and include it only on amd64 and
+    i386. This fixes a FTBFS on all other Debian architectures.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 03 Jan 2019 10:28:18 +0100
+
+teeworlds (0.7.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.7.2.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Use canonical VCS URI.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 02 Jan 2019 19:26:45 +0100
+
+teeworlds (0.7.0-1) unstable; urgency=high
+
+  * Team upload.
+  * New upstream version 0.7.0
+    - No longer repack the tarball because it is DFSG-compliant.
+    - However see README.source. We have to add maps and translations manually
+      because network connections at build time are not allowed.
+    - Fix CVE-2018-18541: remote denial-of-service vulnerability in
+      teeworlds-server. (Closes: #911487)
+    - Use pkg-config to detect libraries. (Closes: #892351)
+  * Switch to compat level 11.
+  * Declare compliance with Debian Policy 4.2.1.
+  * Update debian/watch and track new releases on github.com.
+  * Update debian/copyright for new release.
+  * Rebase all patches for new release.
+  * Switch from SDL 1 to SDL 2.
+  * Use bam -t option for more verbosity.
+  * Do not create debian.lua anymore.
+  * Add portability.patch and don't make the build fail if we build on
+    non-supported architectures.
+  * Add builddir.patch and use a more predictable location for build output
+    files.
+  * Provide a systemd service file for teeworlds-server.
+    Install a new teeworlds.service file but disable the server by default.
+    Explain in README.Debian what steps are needed to run a server.
+    (Closes: #536107)
+
+ -- Markus Koschany <apo@debian.org>  Sat, 27 Oct 2018 12:11:25 +0200
+
+teeworlds (0.6.4+dfsg-1) unstable; urgency=high
+
+  * New upstream release.
+    - Fixes possible remote code execution on the client. (Closes: #844546)
+  * Refresh new-wavpack.patch
+  * Drop patches that have been fixed upstream:
+    - fix-gcc6-rename-round.patch
+    - fix-gcc6-var-types.patch
+    - reset-nethash.patch
+
+ -- Felix Geyer <fgeyer@debian.org>  Thu, 17 Nov 2016 20:57:15 +0100
+
+teeworlds (0.6.3+dfsg-3) unstable; urgency=medium
+
+  * Reset nethash to the one of pristine 0.6.3.
+    - We haven't done any functional changes.
+    - Add d/p/reset-nethash.patch
+    - Closes: #834285
+  * Add keywords to the desktop file.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 14 Aug 2016 10:47:58 +0200
+
+teeworlds (0.6.3+dfsg-2) unstable; urgency=medium
+
+  * Fix FTBFS with GCC 6. (Closes: #811757)
+    - Add fix-gcc6-rename-round.patch
+    - Add fix-gcc6-var-types.patch
+
+ -- Felix Geyer <fgeyer@debian.org>  Fri, 01 Jul 2016 19:29:57 +0200
+
+teeworlds (0.6.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #789979)
+    - Drop fixed_a_server_crash.patch, applied upstream.
+  * Make teeworlds-data depend on fonts-dejavu-core instead of ttf-dejavu-core.
+    (Closes: #709939)
+  * Drop Debian menu entry.
+  * Enable all hardening build flags.
+  * Use Files-Excluded copyright field for repacking source tarball.
+  * Switch to debhelper compat level 9.
+  * Use https in Vcs-* and Homepage URLs.
+
+ -- Felix Geyer <fgeyer@debian.org>  Mon, 25 Apr 2016 20:35:12 +0200
+
+teeworlds (0.6.2+dfsg-2) unstable; urgency=high
+
+  * Fix a server crash that is remotely exploitable. (Closes: #770514)
+    - Add fixed_a_server_crash.patch, cherry picked from 0.6.3.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 23 Nov 2014 16:45:28 +0100
+
+teeworlds (0.6.2+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+    - Update patches.
+  * Pass $CPPFLAGS to the build system.
+  * Switch to my @debian.org email address.
+  * Bump Standards-Version to 3.9.4, no changes needed.
+  * Change Vcs host to anonscm.debian.org.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 05 May 2013 09:49:34 +0200
+
+teeworlds (0.6.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Repackage upstream tarball to remove pre-compiled libraries.
+  * Update watch file.
+  * Refresh patches.
+  * Drop patches that have been applied upstream: fix-ftbfs-hurd.patch,
+    fix-ftbfs-kfreebsd.patch and gcc-endianness.patch.
+  * Use dh_link to create the DejaVuSans.ttf symlink.
+  * Query dpkg-buildflags instead of relying on dpkg-buildpackage to set the
+    environment variables.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Fri, 05 Aug 2011 15:02:49 +0200
+
+teeworlds (0.6.0-2) unstable; urgency=low
+
+  * Only replace the embedded DejaVuSans.ttf when teeworlds-data is
+    actually built.
+  * Document the DejaVu license in debian/copyright.
+  * Fix FTBFS on GNU Hurd, thanks to Pino Toscano.
+    - Add fix-ftbfs-hurd.patch
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Thu, 19 May 2011 12:32:21 +0200
+
+teeworlds (0.6.0-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #625651)
+    - Fixes FTBFS with gcc 4.6. (Closes: #624977)
+  * Refresh patches.
+  * Add libfreetype6-dev to build-depends.
+  * Immediately abort bam on error.
+  * Update Vcs control fields, package moved to git.
+  * Switch to debhelper compat level 8.
+  * Set minimal bam version to 0.4.
+  * In clean target: don't fail if calling bam returns an error.
+  * teeworlds doesn't suggest teeworlds-server anymore.
+  * Bump Standards-Version to 3.9.2, no changes needed.
+  * Replace embedded copy of DejaVuSans.ttf with a symlink and make
+    teeworlds-data depend on ttf-dejavu-core.
+  * Fix lintian warning description-synopsis-starts-with-article.
+  * Replace the custom icon with the offical ones extracted from an ico file.
+    - Build-depend on icoutils and imagemagick.
+  * Fix FTBFS on kfreebsd.
+    - Add fix-ftbfs-kfreebsd.patch
+  * Use gcc macros instead of an incomplete list of architectures to detect
+    the endianness.
+    - Add gcc-endianness.patch
+  * Remove map_version in the clean target.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Wed, 18 May 2011 14:35:24 +0200
+
+teeworlds (0.5.2-2) unstable; urgency=low
+
+  * Only fix permissions of data files when arch-all packages are built.
+    (Closes: #586534)
+  * Add -Wl,--as-needed to LDFLAGS.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Mon, 21 Jun 2010 18:50:29 +0200
+
+teeworlds (0.5.2-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #559938, LP: #559922)
+  * Add myself as uploader.
+  * Fix loading of sound files. (Closes: #551906)
+  * Add set-data-dir.patch to hardcode the data dir location.
+  * Remove wrapper scripts, they aren't needed anymore as the data dir is
+    hardcoded and teeworlds suppresses the screensaver by using SDL.
+  * Add ${misc:Depends} to teeworlds-data dependencies.
+  * Bump Standards-Version to 3.8.4, no changes needed.
+  * Switch to dh7 rules and source format 3.0 (quilt).
+  * Bump debian/compat to 7.
+  * Add pass-build-flags.patch to pass CFLAGS and LDFLAGS to the build system.
+  * Remove unneeded build-dependencies.
+  * Don't remove embedded libs in the clean target.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Tue, 01 Jun 2010 15:32:53 +0200
+
+teeworlds (0.5.1-4) unstable; urgency=low
+
+  * update the wrapper to poke the screensaver with dbus-send
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sat, 22 Aug 2009 16:31:32 +0200
+
+teeworlds (0.5.1-3) unstable; urgency=low
+
+  [ Gonéri Le Bouder ]
+  * Clean: clean the teeworld binary, the embedded libs and correctly
+    call unpatch
+  * refresh the system-libs.patch and new-wavpack.patch and apply them
+
+  [ Paul Wise ]
+  * Fix bashism in the --help option of the teeworlds-server script
+    (Closes: #530198)
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sun, 10 May 2009 23:38:35 +0200
+
+teeworlds (0.5.1-2) unstable; urgency=low
+
+  * Fix the ouput of teeworlds-server --help with /bin/sh ->
+    /bin/bash (Closes: #511600)
+  * Standard version 3.8.1
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sun, 12 Apr 2009 02:32:37 +0200
+
+teeworlds (0.5.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #511875, #517002)
+   - Bam has its own release now
+   - Update debian/copyright
+   - BuildDepends on libsdl1.2-dev
+   - Update the clean target
+  * teeworlds-server doesn't suggest teeworlds-server anymore
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Fri, 23 Jan 2009 23:09:01 +0100
+
+teeworlds (0.4.3-3) experimental; urgency=low
+
+  * add a loop in teeworld wrapper to poke the screensaver and avoid freeze
+    (Closes: #480902)
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sun, 11 Jan 2009 20:05:45 +0100
+
+teeworlds (0.4.3-2) experimental; urgency=low
+
+  [ Gonéri Le Bouder ]
+  * Apply Michel Dänzer patch to avoid crash on big endian arch
+    (Closes: #504704)
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sun, 14 Dec 2008 01:55:34 +0100
+
+teeworlds (0.4.3-1) experimental; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Add Homepage field
+
+  [ Miriam Ruiz ]
+  * Upgraded Standards-Version from 3.7.3 to 3.8.0: No changes needed
+  * Added README.source file
+
+  [ Gonéri Le Bouder ]
+  * New Upstream Release
+  * Refresh the patches
+  * Don't link against libasound2 anymore
+   + add dont-link-with-asound.diff
+   + remove libasound2-dev from the build-deps
+  * Add myself in uploader
+  * Versioned dependency against teeworlds-data (= ${source:Version})
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Tue, 04 Nov 2008 00:54:25 +0100
+
+teeworlds (0.4.2-2) unstable; urgency=low
+
+  [ Gonéri Le Bouder ]
+  * Fix the build on SPARC (Closes: #481817)
+   + add fix-bam-FTBFS.patch
+
+ -- Debian Games Team <pkg-games-devel@lists.alioth.debian.org>  Tue, 28 Oct 2008 23:53:17 +0100
+
+teeworlds (0.4.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #460848)
+
+ -- Jack Coulter <jscinoz@gmail.com>  Sun, 13 Apr 2008 18:48:12 +1000

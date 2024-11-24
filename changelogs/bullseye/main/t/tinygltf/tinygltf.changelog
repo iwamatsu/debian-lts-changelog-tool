@@ -1,0 +1,73 @@
+tinygltf (2.5.0+dfsg-3+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2022-3008: Disable unsafe file path expansion (Closes: #1019357)
+
+ -- Timo Röhling <roehling@debian.org>  Thu, 08 Sep 2022 23:36:12 +0200
+
+tinygltf (2.5.0+dfsg-3) unstable; urgency=medium
+
+  * Mark inlinable symbols to prevent spurious build failures
+
+ -- Timo Röhling <timo@gaussglocke.de>  Fri, 04 Dec 2020 20:24:47 +0100
+
+tinygltf (2.5.0+dfsg-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.5.1
+  * Stop filtering vaguely linked symbols from DSO
+  * Fix symbols for kfreebsd-amd64
+
+ -- Timo Röhling <timo@gaussglocke.de>  Sun, 29 Nov 2020 12:29:50 +0100
+
+tinygltf (2.5.0+dfsg-1) unstable; urgency=medium
+
+  * [8f5c4ed] New upstream version 2.5.0+dfsg
+  * [83eb9ca] Update maintainer email address
+
+ -- Timo Röhling <timo@gaussglocke.de>  Tue, 03 Nov 2020 16:46:11 +0100
+
+tinygltf (2.4.0+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable. No transition slot required (yet).
+  * Add README.Debian to explain library usage
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Thu, 08 Oct 2020 15:14:42 +0200
+
+tinygltf (2.4.0+dfsg-1) experimental; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit, Repository, Repository-Browse.
+
+  [ Timo Röhling ]
+  * New upstream version 2.4.0+dfsg
+  * Bump SOVERSION to 1d
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Thu, 01 Oct 2020 17:56:37 +0200
+
+tinygltf (2.2.0+dfsg1-4) unstable; urgency=medium
+
+  * Bump debhelper to version 13
+  * Create new symbols file with pkg-kde-tools (Closes: #966943)
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Tue, 11 Aug 2020 13:38:17 +0200
+
+tinygltf (2.2.0+dfsg1-3) unstable; urgency=medium
+
+  * Fix symbols file (FTBFS on s390x)
+  * Remove duplicated symbols
+  * Enable Large File support
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Tue, 21 Apr 2020 10:32:24 +0200
+
+tinygltf (2.2.0+dfsg1-2) unstable; urgency=medium
+
+  * Fix symbols for std::size_t (FTBFS on 32 bit architectures)
+  * Add pkg-config file
+  * Update Vcs-* info
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Mon, 20 Apr 2020 13:35:05 +0200
+
+tinygltf (2.2.0+dfsg1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #953868)
+
+ -- Timo Röhling <timo.roehling@fkie.fraunhofer.de>  Sat, 14 Mar 2020 10:20:46 +0100

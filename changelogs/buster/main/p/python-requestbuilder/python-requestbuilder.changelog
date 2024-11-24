@@ -1,0 +1,63 @@
+python-requestbuilder (0.5.2-2+deb10u1) buster-security; urgency=medium
+
+  * Non maintainer upload by the LTS team
+  * Render version PEP440 compliant.
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 26 Nov 2023 14:24:52 +0000
+
+python-requestbuilder (0.5.2-2) unstable; urgency=medium
+
+  * Add Py3 support.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 09 Aug 2016 10:08:33 +0000
+
+python-requestbuilder (0.5.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URLs (https).
+  * d/rules: Changed UPSTREAM_GIT protocol to https
+  * d/copyright: Changed source URL to https protocol
+
+  [ Thomas Goirand ]
+  * New upstream release (Closes: #832974).
+  * Remove debian/install which was installing /usr/bin/httpget from ./bin.
+  * Removed inactive maintainers from uploaders field.
+  * Ran wrap-and-sort -t -a.
+  * Fixed (build-)depends version and moved some deps from build-depends to
+    build-depends-indep.
+  * Fixed debian/copyright ordering.
+  * Standards-Version: 3.9.8 (no change).
+  * debian/rules: list dh commands we don't run, to build faster.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 09 Aug 2016 11:45:43 +0200
+
+python-requestbuilder (0.2.3-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #764424).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 08 Oct 2014 14:52:28 +0800
+
+python-requestbuilder (0.2.2-1) unstable; urgency=medium
+
+  [ Thomas Bechtold ]
+  * debian/watch: Fix version recognition.
+
+  [ Thomas Goirand ]
+  * New upstream release (Closes: #764297).
+  * Added extend-diff-ignore = "^[^/]*[.]egg-info/" in debian/source/options.
+  * Standards-Version is now 3.9.6.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 07 Oct 2014 10:33:06 +0800
+
+python-requestbuilder (0.1.0-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #731951).
+  * Standards-Version: is now 3.9.5.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 02 Mar 2014 17:39:18 +0800
+
+python-requestbuilder (0.1.0~beta2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #715136)
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 06 Jul 2013 13:44:37 +0800

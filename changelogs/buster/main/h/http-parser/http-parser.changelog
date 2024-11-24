@@ -1,0 +1,104 @@
+http-parser (2.8.1-1+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * CVE-2020-8287: Prevent a potential HTTP request smuggling vulnerability
+    caused by http-parser allowing two copies of a header field in a HTTP
+    request. (Closes: #1016690)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Mon, 05 Dec 2022 14:12:02 +0530
+
+http-parser (2.8.1-1+deb10u2) buster; urgency=medium
+
+  * Fix ABI breakage introduced by accident in 2.8.1-1+deb10u1.
+    Many thanks to Hilko Bengen.
+    Closes: #996460, #996939, #996997
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 31 Oct 2021 23:50:09 +0100
+
+http-parser (2.8.1-1+deb10u1) buster; urgency=medium
+
+  * Cherry-pick "Support multi-coding Transfer-Encoding".
+    Closes: #977467 [CVE-2019-15605]
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Fri, 04 Jun 2021 20:59:56 +0200
+
+http-parser (2.8.1-1) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Thu, 12 Apr 2018 22:15:13 +0200
+
+http-parser (2.8.1-1~exp1) experimental; urgency=medium
+
+  * Upload to experimental
+  * New upstream version 2.8.1, soname 2.8
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Wed, 04 Apr 2018 23:22:46 +0200
+
+http-parser (2.7.1-2) unstable; urgency=medium
+
+  * Eventually upload to unstable. Closes: #795492
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 19 Nov 2017 16:06:25 +0100
+
+http-parser (2.7.1-2~exp1) experimental; urgency=medium
+
+  * Upload to experimental
+  * Packaging cleanup, create a -dbgsym package
+  * Cherry-pick upstream commit v2.7.1-1-g335850f: Provide
+    HTTP_STATUS_MAP(XX) and enum http_status
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Tue, 14 Nov 2017 18:52:13 +0100
+
+http-parser (2.7.1-1~exp1) experimental; urgency=medium
+
+  * New maintainer, thanks to Pirate Praveen for maintaining this package
+  * New upstream version 2.7.1
+  * Upload to experimental as first step for the transition
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 12 Nov 2017 23:45:57 +0100
+
+http-parser (2.1-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with GCC-7, thanks to Hilko Bengen (Closes: #853446)
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: Let dh_auto_build pass cross flags. (Closes #842848)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 04 Nov 2017 21:01:55 +0100
+
+http-parser (2.1-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ Per Andersson ]
+  * Update copyright with years
+  * Fix Vcs-* URLs
+
+  [ Cédric Boutillier ]
+  * debian/rules:
+    - export build flags
+    - override dh_auto_install instead of defining build: target
+      (Closes: #719036)
+  * debian/patches:
+    - add fix-soname.patch from upstream to define a proper SONAME
+    - update use-ldflags.patch to add LDFLAGS to LDFLAGS_LIB
+  * Fix multiarch installation path (Closes: #719780)
+    - ld can now find it with -lhttp_parser (Closes: #724204)
+  * Install symlinks for the -dev package
+
+  [ Praveen Arimbrathodiyil ]
+  * add symbols file
+  * unapply patches after build
+  * override dh_makeshlibs
+  * add a -dbg package
+  * add dpkg-dev (>= 1.16.1~) to build deps
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 24 Sep 2013 00:29:11 +0200
+
+http-parser (2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #712052)
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Thu, 13 Jun 2013 20:37:49 +0530

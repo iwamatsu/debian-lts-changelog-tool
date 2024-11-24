@@ -1,0 +1,86 @@
+gotest.tools (3.0.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 3.0.3
+  * Update uscan watch file version to 4
+  * Refresh patches
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Update Section to golang
+  * Skip unreliable test
+  * Rename lintian tag source-contains-unsafe-symlink
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 03 Dec 2020 23:18:49 +0800
+
+gotest.tools (3.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Arnaud Rebillout ]
+  * New upstream version 3.0.2
+  * Revert "Cherry-pick patches for go-cmp v0.4.0 upgrade"
+  * Revert "Cherry-pick useful commits between v2.3.0 and v3.0.2"
+  * Add upstream patch for go-cmp v0.4
+  * Remove import aliases
+
+  [ Shengjing Zhu ]
+  * Bump debhelper-compat to 13
+  * Drop golang-github-spf13-pflag-dev and golang-golang-x-tools-dev
+    They are needed by gty-migrate-from-testify cmd, which is excluded.
+  * Revert "Set DH_GOLANG_EXCLUDES_ALL to false in debian/rules"
+  * Not exclude icmd, it's used by tests
+  * Add source lintian-overrides for absolute-symbolic-link-target-in-source
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 21 Jun 2020 15:01:26 +0800
+
+gotest.tools (2.3.0-3) unstable; urgency=medium
+
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Cherry-pick useful commits between v2.3.0 and v3.0.2
+    especially fixes for Go 1.14
+  * Cherry-pick patches for go-cmp v0.4.0 upgrade
+  * debian/control: Bump dependency on golang-github-google-go-cmp-dev
+    to (>= 0.4.0~)
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Bump Standards-Version to 4.5.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Feb 2020 16:32:19 -0700
+
+gotest.tools (2.3.0-2) unstable; urgency=medium
+
+  * Set DH_GOLANG_EXCLUDES_ALL to false in debian/rules
+    so that assert/cmd and icmd/internal/stub are included in the final deb
+    with debhelper-compat (= 12).  Fixes autopkgtest regression.
+  * Apply "cme fix dpkg" formatting to debian/control
+  * Add myself to the list of Uploaders
+  * Skip nondeterministic TestDeepEqual in assert/cmp/compare_test.go.
+    go-cmp 0.3.0 deliberately returns a nondeterministic report string,
+    randomly alternating between regular space (U+0020) and non-breaking
+    space (U+00A0) for indents, so TestDeepEqual is now very flakey.
+    See https://github.com/gotestyourself/gotest.tools/pull/158
+    and https://github.com/google/go-cmp/pull/124 for the whole story.
+
+ -- Anthony Fok <foka@debian.org>  Tue, 06 Aug 2019 09:06:39 -0600
+
+gotest.tools (2.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 2.3.0
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+  * Bump Standards-Version to 4.4.0 (no change)
+  * Add patches to fix tests for google/go-cmp 0.3.0.
+    See https://github.com/gotestyourself/gotest.tools/pull/158
+  * Override dh_auto_configure to copy invalid symlinks inside fs/testdata
+    that are needed by TestFromDirSymlink
+  * Add Lintian override for source-contains-unsafe-symlink:
+    fs/testdata/copy-test-with-symlink/a/b/3 -> /some/inexistent/link
+    is part of the package's testsuite.
+  * Skip network test TestWaitOnSocketWithTimeout/connection_to
+
+ -- Anthony Fok <foka@debian.org>  Mon, 05 Aug 2019 18:19:35 -0600
+
+gotest.tools (2.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #905538)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Sun, 05 Aug 2018 20:50:02 +0800

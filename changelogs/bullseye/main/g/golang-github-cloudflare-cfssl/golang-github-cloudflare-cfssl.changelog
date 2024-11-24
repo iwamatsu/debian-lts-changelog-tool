@@ -1,0 +1,30 @@
+golang-github-cloudflare-cfssl (1.2.0+git20160825.89.7fb22c8-3.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Sun, 03 Jan 2021 17:35:45 +0100
+
+golang-github-cloudflare-cfssl (1.2.0+git20160825.89.7fb22c8-3) unstable; urgency=medium
+
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends 
+
+ -- Konstantinos Margaritis <markos@debian.org>  Wed, 09 Aug 2017 15:18:51 +0300
+
+golang-github-cloudflare-cfssl (1.2.0+git20160825.89.7fb22c8-2) unstable; urgency=medium
+
+  * Ignore binary-without-manpage Lintian message.
+  * Rename "mkbundle" binary to "cfssl-mkbundle" to avoid name clash
+    with mon-devel package. (Closes: #855509)
+  * Fix more test failures due to Debian build directory.
+  * Don't bundle test binaries maclient and maserver.
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 14 Apr 2017 12:27:22 +1000
+
+golang-github-cloudflare-cfssl (1.2.0+git20160825.89.7fb22c8-1) unstable; urgency=medium
+
+  * Initial release (Closes: #854526)
+  * Dummy changelog entry to refresh signature on changes file.
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 04 Nov 2016 12:39:48 +1100

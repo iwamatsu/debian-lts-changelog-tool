@@ -1,0 +1,483 @@
+barbican (1:11.0.0-3+deb11u1) bullseye-security; urgency=medium
+
+  * Add increase_DEFAULT_MAX_SECRET_BYTES.patch.
+  * CVE-2022-3100: access policy bypass via query string injection. Added
+    upstream patch: query_string_were_mistakenly_being_used_in_the_....patch
+    (Closes: #1021139).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 20 Jun 2022 12:04:47 +0200
+
+barbican (1:11.0.0-3) unstable; urgency=medium
+
+  * Tune barbican-api-uwsgi.ini for performance.
+  * Do not manage stuff in /etc/barbican/vassals (Closes: #987198).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 20 Apr 2021 11:59:15 +0200
+
+barbican (1:11.0.0-2) unstable; urgency=medium
+
+  * mv /etc/barbican/policy.json /etc/barbican/disabled.policy.json.old instead
+    of deleting /etc/barbican/policy.json.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 15 Dec 2020 11:19:57 +0100
+
+barbican (1:11.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Fixed debian/watch.
+  * Add a debian/salsa-ci.yml.
+  * Add python-3.9-use-decodebytes-not-decodestring.patch.
+  * Blacklist some test_hacking tests which are failing under Python 3.9.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 17 Oct 2020 11:31:59 +0200
+
+barbican (1:11.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Switched to /etc/barbican/policy.d/00_default_policy.yaml policy file.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Sep 2020 09:52:05 +0200
+
+barbican (1:10.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 May 2020 15:27:25 +0200
+
+barbican (1:10.0.0~rc1-2) unstable; urgency=medium
+
+  * Add Add-a-healthcheck-URL.patch.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 09 May 2020 01:25:51 +0200
+
+barbican (1:10.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Add python3-sphinxcontrib.svg2pdfconverter as build-depends.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 24 Apr 2020 21:08:26 +0200
+
+barbican (1:9.0.0-3) unstable; urgency=medium
+
+  * Blacklist test_hacking.HackingTestCase.test_logging_with_tuple_argument()
+    and test_should_validate_all_fields_and_make_key_lowercase()
+    (Closes: #952264).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 25 Feb 2020 16:03:52 +0100
+
+barbican (1:9.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 21 Oct 2019 23:48:08 +0200
+
+barbican (1:9.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 16 Oct 2019 16:53:11 +0200
+
+barbican (1:9.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 28 Sep 2019 09:38:04 +0200
+
+barbican (1:8.0.0-3) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 17 Jul 2019 15:18:01 +0200
+
+barbican (1:8.0.0-2) experimental; urgency=medium
+
+  * d/control:
+      - Bump openstack-pkg-tools to version 99
+      - Add me to uploaders field
+  * d/copyright: Add me to copyrights file
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Fri, 03 May 2019 19:02:42 +0200
+
+barbican (1:8.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 Apr 2019 08:51:35 +0200
+
+barbican (1:8.0.0~rc1-3) experimental; urgency=medium
+
+  * Bump castellan min version to 1.2.2 (Closes: #926287).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 03 Apr 2019 23:07:51 +0200
+
+barbican (1:8.0.0~rc1-2) experimental; urgency=medium
+
+  * Using config generators without the python3- prefixes.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 29 Mar 2019 15:18:43 +0100
+
+barbican (1:8.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Removed all dependency versions, satisfied in Buster.
+  * Add python3-oslo.upgradecheck.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 29 Mar 2019 14:57:13 +0100
+
+barbican (1:7.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Correctly rm api_audit_map.conf before /etc/barbican on purge.
+    (Closes: #905501)
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Aug 2018 11:43:53 +0200
+
+barbican (1:7.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Running wrap-and-sort -bast
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Blacklist WhenTestingKMIPSecretStore.test_credential() that looks broken.
+  * d/rules: rm -rf $(CURDIR)/debian/tmp/usr/etc.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 24 Aug 2018 09:10:00 +0200
+
+barbican (1:6.0.0-5) unstable; urgency=medium
+
+  * Remove api-paste.ini patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 19 Jun 2018 17:41:52 +0200
+
+barbican (1:6.0.0-4) unstable; urgency=medium
+
+  * Nicer daemon desc.
+  * Switch api to uwsgi.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Jun 2018 11:16:48 +0200
+
+barbican (1:6.0.0-3) unstable; urgency=medium
+
+  * debconf edits keystone_authtoken in barbican.conf, not in the
+    apt-paste.conf (Closes: #894171).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 27 Mar 2018 06:46:10 +0000
+
+barbican (1:6.0.0-2) unstable; urgency=medium
+
+  * Fixed dbc postrm.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Mar 2018 16:18:23 +0000
+
+barbican (1:6.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Generate policy.json using --format json.
+  * Switch to openstack-pkg-tools >= 70~:
+    - removed embedded debconf templates, merging at build time the ones from
+      openstack-pkg-tools.
+  * barbican now use the standard keystone_authtoken section instead of
+    the legacy filter:authtoken: maint scripts follow.
+  * Add barbican-common.{pre,post}rm to clean the db correctly on purge.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 05 Mar 2018 22:01:08 +0000
+
+barbican (1:6.0.0~rc1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 27 Feb 2018 10:03:16 +0000
+
+barbican (1:6.0.0~rc1-1) experimental; urgency=medium
+
+  [ David Rabel ]
+  * Remove unused repair-broken-migration-scripts.patch
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Switch to Python 3.
+  * Standards-Version is now 4.1.3.
+  * Fixed copyright holders list and years.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 22 Feb 2018 15:18:16 +0000
+
+barbican (1:5.0.0-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use dh_missing --fail-missing
+
+  [ Thomas Goirand ]
+  * rm -f /etc/barbican/api_audit_map.conf on purge (Closes: #886928).
+  * Add ru.po debconf templates translation (Closes: #883461).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 25 Jan 2018 11:38:22 +0100
+
+barbican (1:5.0.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix short description of barbican-api (Closes: #881499)
+  * Update Dutch translation of debconf messages (Closes: #881766)
+  * d/control: Remove duplicate B-D on python-openstackdocstheme
+  * d/control: Add lsb-base to depends for init scripts
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 18 Nov 2017 17:08:58 +0100
+
+barbican (1:5.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Added missing build-depends: python-pep8 (Closes: #880225).
+  * Updated fr.po (Closes: #876311).
+  * Uploading to unstable (Closes: #871173).
+  * Removed dh-systemd build-depends.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 30 Oct 2017 22:07:32 +0000
+
+barbican (1:5.0.0-1) experimental; urgency=medium
+
+  * Add patch for requirements.txt to avoid FTBFS in Jessie.
+  * New upstream release.
+  * Ran wrap-and-sort -bast.
+  * Fixed (build-)depends for this release.
+  * Updated VCS URLs.
+  * Fixed Maintainer field.
+  * Deprecating priority extra as per policy 4.0.1.
+  * Standards-Version is now 4.1.1.
+  * Minor debian/rules clean-ups.
+  * Generating config files with oslo binaries.
+  * Removed, refreshed and rebased patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 16 Oct 2017 02:00:11 +0200
+
+barbican (1:3.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed patches applied upstream.
+  * Rebased authtoken in config patch.
+  * Fixed config and postinst script for authtoken.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Jul 2016 17:14:10 +0200
+
+barbican (1:2.0.0-5) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * Updated Dutch debconf templates (Closes: #822884).
+
+  [ Ondřej Nový ]
+  * d/copyright: Changed source URL to https protocol
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 20 May 2016 14:41:06 +0000
+
+barbican (1:2.0.0-4) unstable; urgency=medium
+
+  * Set keystone_notifications enable True by default.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 29 Apr 2016 18:39:00 +0000
+
+barbican (1:2.0.0-3) unstable; urgency=medium
+
+  * Added Fix_circular_dependency_of_certificate_manager_module.patch from
+    upstream.
+  * Added fix-keystone-listener.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 29 Apr 2016 17:20:01 +0000
+
+barbican (1:2.0.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+
+  [ Thomas Goirand ]
+  * Added python-pymysql as runtime depends:.
+  * Added Portuguese translation for debconf messages (Closes: #821241).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 21 Apr 2016 23:56:39 +0200
+
+barbican (1:2.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Apr 2016 21:27:00 +0200
+
+barbican (1:2.0.0~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed a chunk of debian/patches/repair-broken-migration-scripts.patch
+    applied upstream.
+  * Uploading to unstable.
+  * Added de.po debconf translation (Closes: #819690).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Apr 2016 11:15:05 +0200
+
+barbican (1:2.0.0~rc1-3) experimental; urgency=medium
+
+  * Not using admin auth token anymore for registering API endpoint.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Mar 2016 12:10:31 +0000
+
+barbican (1:2.0.0~rc1-2) experimental; urgency=medium
+
+  * Fixed config script.
+  * Installing missing alembic migration files.
+  * Add repair-broken-migration-scripts.patch.
+  * Fixed the barbican-api daemon not to use uwsgi anymore, and fixed the
+    default barbican-api-paste.ini.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 24 Mar 2016 12:08:54 +0100
+
+barbican (1:2.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Added python-openstackdocstheme (>= 1.0.3) as build-depends-indep.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Mar 2016 15:07:10 +0100
+
+barbican (1:2.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed removed-image-hosted-on-rackspace-cdn.patch now fixed upstream.
+  * Standards-Version: 3.9.7 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 07 Mar 2016 22:11:22 +0800
+
+barbican (1:2.0.0~b2-2) experimental; urgency=medium
+
+  * Updated nl.po debconf translation (Closes: #806492).
+  * VCS URLs using HTTPS.
+  * Added removed-image-hosted-on-rackspace-cdn.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 06 Feb 2016 05:29:10 +0000
+
+barbican (1:2.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Fixed debian/copyright ordering.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Dec 2015 11:37:31 +0100
+
+barbican (1:1.0.0-6) unstable; urgency=medium
+
+  * Added pt.po debconf translation (Closes: #804098).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 13 Nov 2015 10:28:41 +0100
+
+barbican (1:1.0.0-5) unstable; urgency=medium
+
+  * Added q-text-as-data as depends for barbican-api.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Nov 2015 11:26:15 +0000
+
+barbican (1:1.0.0-4) unstable; urgency=medium
+
+  * Added debian/barbican-common.templates in d/po/POTFILES.in
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Nov 2015 09:20:36 +0000
+
+barbican (1:1.0.0-3) unstable; urgency=medium
+
+  * Rebuilt using openstack-pkg-tools to use Keystone v3 API.
+  * Activated the barbican-db-sync job in postinst.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Nov 2015 20:13:02 +0000
+
+barbican (1:1.0.0-2) unstable; urgency=medium
+
+  * Deletes barbican.conf on purge (Closes: #802535).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Oct 2015 12:11:10 +0000
+
+barbican (1:1.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Added French debconf templates translation thanks to Christian Perrier
+    <bubulle@debian.org> (Closes: #799909).
+  * Added Dutch translation of debconf messages thanks to Frans Spiesschaert
+    <Frans.Spiesschaert@yucom.be> (Closes: #799459).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 Oct 2015 13:40:28 +0000
+
+barbican (1:1.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Added fr.po.
+  * Fixed minimum python-pykmip build-depends.
+  * Now barbican-api depends on openstackclient.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 21 Sep 2015 12:55:10 +0000
+
+barbican (1:1.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Rebased patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 09 Sep 2015 13:35:08 +0200
+
+barbican (2015.1.0-7) unstable; urgency=medium
+
+  * Rebuilt against python-sqlalchemy 1.0.6.
+  * Fixed FTBFS by not running test failing with mock >= 1.3 (Closes: #795811).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 30 Jun 2015 17:26:44 +0000
+
+barbican (2015.1.0-6) unstable; urgency=medium
+
+  * Finished the debconf automatic keystone authtoken, db, rabbitMQ
+    configuration, and API endpoints.
+  * Added debian/barbican-doc.doc-base.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 23 Jun 2015 14:55:06 +0200
+
+barbican (2015.1.0-5) unstable; urgency=medium
+
+  * Ran debconf-updatepo (Closes: #788675).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 14 Jun 2015 09:23:03 +0000
+
+barbican (2015.1.0-4) unstable; urgency=medium
+
+  * Fixes templates so that they don't reference Cinder (Closes: #787702).
+  * Added pt.po debconf templates translations thanks to Américo Monteiro
+    <a_monteiro@gmx.com> (Closes: #788039).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 Jun 2015 23:27:36 +0200
+
+barbican (2015.1.0-3) unstable; urgency=medium
+
+  * Added dbconfig-common as dependency of barbican-common (Closes: #787507).
+  * Added debian/po/POTFILES.in and ran debconf-updatepo.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 02 Jun 2015 15:58:30 +0200
+
+barbican (2015.1.0-2) unstable; urgency=medium
+
+  * Added uwsgi-core as Depends: for barbican-api.
+  * Fixed barbican-api init scripts.
+  * Added missing binaries from /usr/bin/*.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 May 2015 09:10:01 +0000
+
+barbican (2015.1.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #784055).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 23 Mar 2015 17:46:24 +0100

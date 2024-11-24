@@ -1,0 +1,61 @@
+golang-github-willf-bitset (1.1.11-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Jelmer Vernooĳ ]
+  * Use secure copyright file specification URI.
+  * Fix Debian QA group name.
+
+  [ Debian Janitor ]
+  * Update standards version to 4.1.1, no changes needed.
+  * Bump debhelper from old 10 to 12.
+  * Change priority extra to priority optional.
+  * Update renamed lintian tag names in lintian overrides.
+  * Set upstream metadata fields: Repository.
+
+  [ Shengjing Zhu ]
+  * New upstream version 1.1.11
+  * New maintainer (Closes: #889198)
+  * Update debhelper compat to 13
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add Rules-Requires-Root
+  * Enable tests
+  * Update d/copyright
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 24 Aug 2020 00:09:17 +0800
+
+golang-github-willf-bitset (1.1.3-3) unstable; urgency=medium
+
+  * Remove Michael Lustfield from Uploaders list.
+
+ -- Michael Lustfield <michael@lustfield.net>  Sat, 03 Feb 2018 12:13:34 -0600
+
+golang-github-willf-bitset (1.1.3-2) unstable; urgency=medium
+
+  * Oprhaning package.
+
+ -- Michael Lustfield <michael@lustfield.net>  Fri, 02 Feb 2018 23:16:08 -0600
+
+golang-github-willf-bitset (1.1.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Follow upstream releases; not git tags.
+  * Maintenance updates:
+    - Standards version bump.
+    - Add Testsuite.
+    - Fix failing tests.
+
+ -- Michael Lustfield <michael@lustfield.net>  Tue, 26 Sep 2017 04:12:48 -0500
+
+golang-github-willf-bitset (1.1.2+git20170505.0.988f4f2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Lustfield <michael@lustfield.net>  Mon, 17 Jul 2017 21:11:47 -0500
+
+golang-github-willf-bitset (1.0.0+git20161202.88.5c3c0fc-1) unstable; urgency=medium
+
+  * Initial release (Closes: #722977)
+
+ -- Michael Lustfield <michael@lustfield.net>  Fri, 24 Mar 2017 01:19:59 -0500

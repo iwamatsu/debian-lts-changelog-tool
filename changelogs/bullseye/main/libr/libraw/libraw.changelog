@@ -1,0 +1,563 @@
+libraw (0.20.2-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * check for input buffer size on datastream::gets (CVE-2021-32142)
+    (Closes: #1031790)
+  * do not set shrink flag for 3/4 component images (CVE-2023-1729)
+    (Closes: #1036281)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 27 May 2023 07:51:55 +0200
+
+libraw (0.20.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Mon, 19 Oct 2020 23:00:12 +0200
+
+libraw (0.20.0-4) unstable; urgency=medium
+
+  * Upload to unstable
+  * debian/libraw20.symbols: drop duplicates and
+    restrict to 64 bits
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 18 Aug 2020 15:45:30 +0200
+
+libraw (0.20.0-3) experimental; urgency=medium
+
+  * debian/libraw20.symbols: drop MISSING and update others
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 04 Aug 2020 23:43:02 +0200
+
+libraw (0.20.0-2) experimental; urgency=medium
+
+  * debian/libraw20.symbols: file updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 04 Aug 2020 21:11:25 +0200
+
+libraw (0.20.0-1) experimental; urgency=medium
+
+  [ Matteo F. Vescovi ]
+  * New upstream release
+    This release fixes CVE-2020-15503:
+    | LibRaw before 0.20-RC1 lacks a thumbnail size range check.
+    | This affects decoders/unpack_thumb.cpp,
+    | postprocessing/mem_image.cpp, and utils/thumb_utils.cpp.
+    | For example,
+    | malloc(sizeof(libraw_processed_image_t)+T.tlength) occurs
+    | without validating T.tlength.
+  * debian/: SONAME bump 19 -> 20
+  * debian/control:
+    - debhelper bump 12 -> 13
+    - S-V bump 4.4.0 -> 4.5.0 (no changes needed)
+    - RRR set
+  * debian/tests/smoketest: path adapted
+  * debian/copyright: entries for unused files and licenses removed
+  * debian/rules: drop useless files installation
+  * debian/libraw20.symbols: missing and new symbols added
+
+  [ Sebastien Bacher ]
+  * debian/tests/build: use the correct compiler for
+    autopkgtest cross-testing. (Closes: #954886)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 30 Jul 2020 00:09:36 +0200
+
+libraw (0.19.5-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Wed, 28 Aug 2019 23:45:51 +0200
+
+libraw (0.19.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/: really bump debhelper to v12
+  * debian/control: S-V bump 4.3.0 -> 4.4.0 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 09 Aug 2019 22:29:04 +0200
+
+libraw (0.19.3-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/patches/: patchset dropped (applied upstream)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 11 Jul 2019 22:46:26 +0200
+
+libraw (0.19.2-2) unstable; urgency=medium
+
+  * debian/patches/: patchset updated
+    - 0001-Fix_CVE-2018-20365_for_real.patch added
+  * debian/: debhelper bump 11 -> 12
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 10 Jan 2019 21:51:18 +0100
+
+libraw (0.19.2-1) unstable; urgency=medium
+
+  * New upstream release
+    This minor release fixes the following
+    security issues:
+    - CVE-2018-20337
+    - CVE-2018-20363
+    - CVE-2018-20364
+    - CVE-2018-20365
+  * debian/control: S-V bump 4.2.1 -> 4.3.0 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 27 Dec 2018 21:25:22 +0100
+
+libraw (0.19.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Sun, 16 Dec 2018 14:34:20 +0100
+
+libraw (0.19.0-4) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * debian/libraw19.symbols: Mark 2 symbols as optional
+    which disappear when built with -O3 on Ubuntu's ppc64el
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 09 Nov 2018 22:53:58 +0100
+
+libraw (0.19.0-3) unstable; urgency=medium
+
+  * Upload to unstable
+  * debian/control: S-V bump 4.1.5 -> 4.2.1 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Mon, 27 Aug 2018 23:10:52 +0200
+
+libraw (0.19.0-2) experimental; urgency=medium
+
+  * debian/libraw19.symbols: symbols updated to fix buildd FTBFS
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 26 Jul 2018 23:34:33 +0200
+
+libraw (0.19.0-1) experimental; urgency=medium
+
+  * New upstream release
+    - debian/: SONAME bump 16 -> 19
+    - debian/libraw19.symbols: symbols updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Wed, 18 Jul 2018 22:49:27 +0200
+
+libraw (0.18.13-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: S-V bump 4.1.4 -> 4.1.5 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 13 Jul 2018 00:05:29 +0200
+
+libraw (0.18.11-1) unstable; urgency=high
+
+  * New upstream release (Closes: #897185, #897186)
+    - Fix CVE-2018-10528 and CVE-2018-10529
+  * debian/control: S-V bump 4.1.3 -> 4.1.4 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 29 May 2018 23:40:01 +0200
+
+libraw (0.18.8-2) unstable; urgency=medium
+
+  [ Mattia Rizzolo ]
+  * d/control: Update the Vcs-* fields for the move to salsa.debian.org.
+  * Use HTTPS in the Homepage field.
+  * d/rules: make use of dpkg-buildflags facilities to set LDFLAGS
+    built files are bit-by-bit reproducible.
+  * d/rules: drop option already passed by dh_auto_configure --prefix=/usr
+  * d/rules: drop manual invocation of dh_makeshlibs.
+  * Simplify symbols file, collating the architectures filters
+    into arch-bits=64/32.
+
+  [ Matteo F. Vescovi ]
+  * debian/libraw16.symbols: MISSING entries dropped
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 06 Mar 2018 22:33:44 +0100
+
+libraw (0.18.8-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/libraw16.symbols: symbols updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Sun, 04 Mar 2018 15:29:17 +0100
+
+libraw (0.18.7-2) unstable; urgency=medium
+
+  [ Jason Duerstock ]
+  * debian/libraw16.symbols: symbols refreshed to add ia64 architecture
+    (Closes: #888061)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Wed, 24 Jan 2018 14:44:01 +0100
+
+libraw (0.18.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/copyright: copyright-format moved to https://
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Mon, 22 Jan 2018 23:02:49 +0100
+
+libraw (0.18.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/compat: 10 -> 11
+  * debian/control: debhelper versioning 10 -> 11
+  * debian/control: S-V bump 4.1.1 -> 4.1.3 (no changes needed)
+  * debian/libraw16.symbols: update MISSING symbols
+  * debian/libraw-doc.doc-base: fix installation path
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Sun, 07 Jan 2018 14:04:54 +0100
+
+libraw (0.18.5-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #874729)
+  * debian/: autotools-dev usage dropped
+  * debian/control: S-V bump 4.0.0 -> 4.1.1 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 06 Oct 2017 21:51:38 +0200
+
+libraw (0.18.2-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * debian/control: S-V bump 3.9.8 => 4.0.0 (no changes needed)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 22 Jun 2017 17:32:33 +0200
+
+libraw (0.18.2-1) experimental; urgency=medium
+
+  * New upstream release
+    - debian/libraw16.symbols: MISSING symbols updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Sat, 25 Mar 2017 13:45:42 +0100
+
+libraw (0.18.1-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 03 Mar 2017 14:57:36 +0100
+
+libraw (0.18.0-1) experimental; urgency=medium
+
+  * New upstream release
+    - debian/: SONAME bump libraw15 => libraw16
+    - debian/libraw16.symbols: symbols updated
+    - debian/copyright: licenses updated
+    - debian/patches/: patchset dropped (applied upstream)
+  * debian/: bump compatibility 9 -> 10
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Mon, 02 Jan 2017 13:52:44 +0100
+
+libraw (0.17.2-6) unstable; urgency=medium
+
+  * debian/patches/: patchset updated (again)
+    - 0001-Fix_gcc6_narrowing_error.patch replaced with
+      0001-Fix_gcc6_narrowing_conversion.patch since it
+      was causing FTBFS on most little-endian architectures
+      Thanks to Alex Tutubalin (upstream) for the quick fix.
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 25 Aug 2016 22:29:57 +0200
+
+libraw (0.17.2-5) unstable; urgency=medium
+
+  * debian/patches/: patchset updated
+    - 0001-Fix_dcraw_narrowing_for_gcc6.patch dropped
+      (wrong approach to fix the issue)
+    - 0001-Fix_gcc6_narrowing_error.patch added (Closes: #835350)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Wed, 24 Aug 2016 22:26:35 +0200
+
+libraw (0.17.2-4) unstable; urgency=medium
+
+  * debian/patches/: patchset updated (Closes: #811744)
+    - 0001-Fix_dcraw_narrowing_for_gcc6.patch refreshed
+      Thanks to Alex Tutubalin (upstream dev) for the advice.
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Wed, 27 Jul 2016 23:33:34 +0200
+
+libraw (0.17.2-3) unstable; urgency=medium
+
+  * debian/patches/: patchset initiated (Closes: #811744)
+    - 0001-Fix_dcraw_narrowing_for_gcc6.patch added
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 30 Jun 2016 22:12:11 +0200
+
+libraw (0.17.2-2) unstable; urgency=medium
+
+  * debian/control: libjasper-dev b-dep dropped (Closes: #818204)
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Sun, 26 Jun 2016 14:22:59 +0200
+
+libraw (0.17.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: Maintainer field updated.
+    Sadly, the Shotwell Team has dissolved.
+    Now the LibRaw is under PhotoTools Maintainers umbrella.
+  * debian/control: S-V bump 3.9.6 -> 3.9.8 (no changes needed)
+  * debian/control: Vcs-* fields updated for https:// usage
+  * debian/libraw15.symbols: symbols updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Wed, 25 May 2016 22:02:07 +0200
+
+libraw (0.17.1-1) unstable; urgency=high
+
+  * New upstream release (Closes: #806809)
+    - Fix CVE-2015-8366 and CVE-2015-8367
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Thu, 03 Dec 2015 21:19:12 +0100
+
+libraw (0.17.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/: SONAME bump libraw10 => libraw15
+    - debian/rules: bump dh_makeshlibs to libraw15
+    - debian/libraw15.symbols: symbols refreshed
+  * debian/copyright: file updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Fri, 16 Oct 2015 10:03:52 +0200
+
+libraw (0.16.2-1) unstable; urgency=high
+
+  * New upstream release
+    - Fix CVE-2015-3885
+  * debian/control:
+    - XS-Testsuite field dropped
+    - Uploader e-mail address updated
+
+ -- Matteo F. Vescovi <mfv@debian.org>  Tue, 26 May 2015 09:06:05 +0200
+
+libraw (0.16.0-9) unstable; urgency=medium
+
+  * debian/control: strictly build-depends on libjpeg-dev.
+    Thanks to Ondřej Surý (ondrej) for the patch. (Closes: #763482)
+  * debian/control: S-V bump 3.9.5 => 3.9.6 (no changes needed)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Tue, 30 Sep 2014 17:47:16 +0200
+
+libraw (0.16.0-8) unstable; urgency=medium
+
+  * debian/watch: search path updated (Closes: #759650)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Fri, 29 Aug 2014 10:29:55 +0200
+
+libraw (0.16.0-7) unstable; urgency=medium
+
+  * debian/libraw10.symbols: updated for mips64/mips64el.
+    Thanks to YunQiang Su for the patch. (Closes: #758530)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Thu, 28 Aug 2014 16:06:06 +0200
+
+libraw (0.16.0-6) unstable; urgency=medium
+
+  * debian/control: new uploader (Closes: #755414)
+  * debian/control: VCS fields added
+  * debian/libraw10.symbols: mips64/mips64el archs added.
+    Thanks to YunQiang Su for the patch. (Closes: #754360)
+
+ -- Matteo F. Vescovi <mfvescovi@gmail.com>  Mon, 21 Jul 2014 15:10:41 +0200
+
+libraw (0.16.0-5) unstable; urgency=medium
+
+  [ Martin Pitt ]
+  * Fix autopkgtest: Add missing libraw-dev test dep, drop unnecessary
+    @builddeps@, and add missing "set -e" so that the test actually fails
+    properly. Also fix linking order to also work with binutils-gold.
+    These fixes closes: #750985.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Tue, 10 Jun 2014 11:13:04 +0200
+
+libraw (0.16.0-4) unstable; urgency=medium
+
+  * debian/libraw10.symbols:
+    - Update symbols to build against gcc-4.9 (Closes: #746875).
+  * debian/tests/testbuild:
+    - Provide a simple test to check whether the package is fucntional,
+      as per DEP8 (autopkgtests).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 07 Jun 2014 18:43:23 +0200
+
+libraw (0.16.0-3) unstable; urgency=medium
+
+  [ Adam Conrad ]
+  * debian/libraw10.symbols:
+    - Update symbols for arm64 and ppc64el (Closes: #745883).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 01 May 2014 09:58:02 +0200
+
+libraw (0.16.0-2) unstable; urgency=medium
+
+  * debian/libraw10.symbol:
+    - Handle 32-bit symbol differences (Closes: #740106).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Thu, 27 Feb 2014 16:34:23 +0100
+
+libraw (0.16.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    - Re-add myself as Uploader.
+    - Bump Standards-Version to 3.9.5.
+  * debian/copyright:
+    - Update license information.
+  * debian/libraw10.symbol:
+    - Renamed from libraw9.symbols.amd64 to match new binary, refreshed
+      with the new symbols (Closes: #738424).
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 24 Feb 2014 18:53:46 +0100
+
+libraw (0.15.4-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+    - Fix for CVE-2013-1438 (Closes: #721231).
+    - Fix for CVE-2013-1439 (Closes: #721338).
+    - Fix segmentaition fault when unprocessed_raw is passed -s option
+      wihout any parameter (Closes: #716423).
+  * debian/patches/4channels_parameter.patch:
+    - Dropped, applied upstream.
+  * debian/patches/typo.patch:
+    - Dropped, applied upstream.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 05 Oct 2013 17:53:47 +0200
+
+libraw (0.15.3-1) unstable; urgency=low
+
+  * Team upload to unstable.
+  * New upstream release (Closes: #710353).
+    - Fix error handling for broken full-color images - CVE-2013-2126.
+    - Fix wrong data_maximum calcluation - CVE-2013-2127.
+  * debian/patches/4channels_parameter.patch:
+    - Fix segmentaition fault when 4channel is passed -s option without
+       any parameter (Closes: #715577).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Wed, 10 Jul 2013 21:20:09 +0200
+
+libraw (0.15.1-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * debian/patches/typo.patch:
+    - Fix typo in help output.
+  * debian/control:
+    - Build-depend on dh-autoreconf.
+    - Build-depend on libjpeg8-dev | libjpeg-dev.
+    - Replace libraw5 with libraw9, SONAME changed.
+    - libraw-dev depends on libraw9 accordingly.
+  * debian/copyright:
+    - Update copyright years.
+  * debian/libraw9.install:
+    - Renamed from libraw5.install to match new binary.
+  * debian/libraw9.symbols.amd64:
+    - Renamed from libraw5.symbols.amd64 to match new binary.
+  * debian/rules:
+    - Build with autoreconf support.
+    - Build with DNG support (Closes: #699356).
+    - Pass "-Wl,-z,defs -Wl,--as-needed" to LDFLAGS.
+    - Update dh_makeshlibs call to match new binary.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 25 May 2013 02:50:14 +0200
+
+libraw (0.14.7-2) unstable; urgency=low
+
+  * Team upload.
+  * Upload to unstable.
+  * debian/control:
+    - Remove deprecated DM-Upload-Allowed field.
+    - Bump Standards-Version to 3.9.4.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 12 May 2013 20:47:35 +0200
+
+libraw (0.14.7-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release (Closes: #682982).
+  * debian/control:
+    - Add DM-Upload-Allowed field.
+  * debian/watch:
+    - Use new redirector librawredir.debian.net.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 25 Aug 2012 13:35:59 +0200
+
+libraw (0.14.6-2) unstable; urgency=low
+
+  * Team upload.
+  * debian/control:
+    - Add liblcms2-dev to libraw-dev Depends field.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 27 May 2012 12:16:53 +0200
+
+libraw (0.14.6-1) unstable; urgency=low
+
+  * Team upload to unstable.
+  * New upstream release.
+  * Multi-arch support.
+  * debian/compat:
+    - Bump compatibility level to 9.
+  * debian/control:
+    - Bump Standards-Version to 3.9.3.
+  * debian/copyright:
+    - Update copyright years.
+    - Format now points to copyright-format site.
+  * debian/libraw5.symbols.amd64:
+    - Refresh symbols file.
+  * debian/rules:
+    - Bump minimum version in dh_makeshlibs to 0.14.6.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 06 May 2012 17:59:10 +0200
+
+libraw (0.14.0-1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * debian/control:
+    - Replace libraw2 with libraw5, SONAME changed.
+    - libraw-dev depends on libraw5 accordingly.
+    - Build-depend on pkg-config, libjasper-dev and liblcms2-dev.
+  * debian/libraw5.install:
+    - Renamed from libraw2.install to match new binary.
+  * debian/libraw5.symbols.amd64:
+    - Renamed from libraw2.symbols.amd64 to match new binary.
+  * debian/rules:
+    - Update dh_makeshlibs call to match new binary.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 24 Sep 2011 15:32:39 +0200
+
+libraw (0.13.8-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * debian/control:
+    - Add Debian Shotwell Maintainers to Maintainers.
+    - Move Devid to Uploaders.
+    - Add autotools-dev to Build-Depends.
+    - Add libraw2 package, who provides the shared library.
+    - Add libraw2-bin package, who provides some tools to
+      manipulate RAW files.
+    - Bump Standards-Version to 3.9.2, no changes required.
+  * debian/copyright:
+    - Update copyright information.
+  * debian/rules:
+    - Build with autotools_dev to regenerate config.{sub,guess}.
+    - Manually set prefix to install shared library correctly.
+  * debian/watch:
+    - Upstream disabled listing support, watch file is no-op now.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 22 Aug 2011 20:45:22 +0200
+
+libraw (0.13.1-2) unstable; urgency=low
+
+  * Set myself as maintainer (Closes: #613870).
+  * debian/control: add Timo Witte to Uploaders field.
+  * debian/install: install *.pc files in /usr/lib/pkgconfig (Closes: #613777).
+
+ -- Devid Antonio Filoni <d.filoni@ubuntu.com>  Fri, 04 Mar 2011 20:48:20 +0100
+
+libraw (0.13.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #607139).
+  * debian/control:
+    - Bump Standards-Version to 3.9.1, no changes required.
+  * debian/copyright:
+    - Update copyright years.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Tue, 08 Feb 2011 22:53:51 +0100
+
+libraw (0.9.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #578830).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sat, 12 Jun 2010 10:09:37 +0200

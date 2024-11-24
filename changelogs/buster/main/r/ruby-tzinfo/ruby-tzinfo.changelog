@@ -1,0 +1,168 @@
+ruby-tzinfo (1.2.5-1+deb10u1) buster-security; urgency=high
+
+  * CVE-2022-31163: Prevent a directory-traversal issue in Timezone.get when
+    using the Ruby data source.
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 18 Aug 2022 10:41:44 -0700
+
+ruby-tzinfo (1.2.5-1) unstable; urgency=medium
+
+  [ Hleb Valoshka ]
+  * New upstream version
+  * Point Vcs-* to salsa.d.o
+  * Update homepage in debian/control
+  * Bump Standards-Version to 4.1.3 (no changes)
+  * Use https in watch file
+  * Set dh compat level to 11
+
+  [ Cédric Boutillier ]
+  * Set Testsuite to autopkgtest-pkg-ruby
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sat, 17 Mar 2018 15:07:52 +0300
+
+ruby-tzinfo (1.2.3-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump standards version to 4.0.0 (no changes)
+  * Update format and source addresses in debian/copyright
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Fri, 18 Aug 2017 14:30:56 +0300
+
+ruby-tzinfo (1.2.2-2) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Run wrap-and-sort on packaging files
+
+  [ Hleb Valoshka ]
+  * Bump Standards-Version to 3.9.8 (no changes)
+  * Add tzdata to dependencies (Closes: #839407)
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sun, 02 Oct 2016 10:20:55 +0300
+
+ruby-tzinfo (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add ruby-minitest to Build-Depends, need it to run tests.
+  * Bump Standards-Version to 3.9.6 (no changes).
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Mon, 27 Oct 2014 21:22:43 +0300
+
+ruby-tzinfo (1.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rebuild against newer gem2deb (adds gemspec for all interpreters, current
+    and future)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 19 May 2014 12:32:08 -0300
+
+ruby-tzinfo (1.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Install CHANGES.md as upstream's changelog.
+  * Build against gem2deb >= 0.5.0~ to add ruby2.0 and drop ruby1.8 support.
+  * Drop patches.
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sun, 24 Nov 2013 14:08:53 +0300
+
+ruby-tzinfo (1.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.4 (no changes).
+  * Remove obsoleted DM-Upload-Allowed.
+  * Update Vcs-* fields to use anonscm.debian.org.
+  * Use Expat as a license name instead of MIT.
+  * Update source address in debian/copyright.
+  * Drop transitional packages.
+  * Drop 0002-use-system-tz-data.patch, upstream now supports system
+    zoneinfo files itself.
+  * Refresh 0001-disable-tainted-load-test.patch.
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sat, 17 Aug 2013 17:56:19 +0300
+
+ruby-tzinfo (0.3.33-3) unstable; urgency=low
+
+  * Use system timezome data (Closes: #503591).
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sun, 08 Jul 2012 12:26:58 +0300
+
+ruby-tzinfo (0.3.33-2) unstable; urgency=low
+
+  * Team upload.
+  * Rebuild against newer gem2deb
+
+ -- Vincent Fourmond <fourmond@debian.org>  Mon, 25 Jun 2012 21:58:29 +0200
+
+ruby-tzinfo (0.3.33-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sat, 14 Apr 2012 20:28:21 +0300
+
+ruby-tzinfo (0.3.32-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.3.
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sat, 17 Mar 2012 01:13:04 +0300
+
+ruby-tzinfo (0.3.31-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to gem2deb-based packaging.
+    - source and binary packages renamed to ruby-tzinfo
+    - transitional packages added
+    - source format changed to 3.0 (quilt).
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Sat, 18 Feb 2012 17:32:54 +0300
+
+libtzinfo-ruby (0.3.19-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Thu, 08 Apr 2010 16:19:03 -0400
+
+libtzinfo-ruby (0.3.16-1) unstable; urgency=low
+
+  * New upstream release
+  * Port the package to Ruby 1.9.1 (Closes: #569873)
+  * Added myself as an uploader
+  * Standards-version 3.8.3→3.8.4 (no changes needed)
+  * Removed simple-patchsys from debian/rules (was not used)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 16 Feb 2010 15:43:03 -0600
+
+libtzinfo-ruby (0.3.14-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.8.3 (no changes)
+  * Make lintian happy:
+    + Have Build-Depends satisfy requirements for 'debian/rules clean'
+    + Add missing ${misc:Depends} dependency for each binary package
+  * Update package section to ruby to comply with new archive layout.
+
+  [ Lucas Nussbaum ]
+  * Fixed Vcs-* fields after pkg-ruby-extras SVN layout change.
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Thu, 27 Aug 2009 18:59:36 -0400
+
+libtzinfo-ruby (0.3.12-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Tue, 18 Nov 2008 20:35:43 -0500
+
+libtzinfo-ruby (0.3.11-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Wed, 29 Oct 2008 22:41:33 -0400
+
+libtzinfo-ruby (0.3.10-1) unstable; urgency=low
+
+  * Initial release (Closes: #499907)
+
+ -- Roberto C. Sanchez <roberto@connexer.com>  Tue, 23 Sep 2008 11:29:09 -0400
+

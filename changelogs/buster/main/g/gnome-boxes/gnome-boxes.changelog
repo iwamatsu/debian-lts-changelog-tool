@@ -1,0 +1,523 @@
+gnome-boxes (3.30.3-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport fix for freeRDP2 > 2.0.0
+  * Ensure that updated freerdp2-dev is picked up.
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 07 Oct 2023 17:54:21 +0200
+
+gnome-boxes (3.30.3-2) unstable; urgency=medium
+
+  * Restore -W1,-O1 to our LDFLAGS
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 23 Dec 2018 09:50:49 -0500
+
+gnome-boxes (3.30.3-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 26 Nov 2018 19:22:12 -0500
+
+gnome-boxes (3.30.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump minimum meson to 0.46
+  * Build-Depend on freerdp2-dev
+  * Add X-Ubuntu-Use-Langpack to opt in to Ubuntu language pack handling
+    (LP: #1779574)
+  * Bump Standards-Version to 4.2.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 25 Sep 2018 09:19:06 -0400
+
+gnome-boxes (3.28.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Should list x86_64 OS images again (Closes: #895363)
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 27 Jun 2018 10:18:54 +0100
+
+gnome-boxes (3.28.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.4
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 09 Apr 2018 08:42:31 -0400
+
+gnome-boxes (3.27.92-1) unstable; urgency=medium
+
+  * New upstream release candidate
+  * Release to unstable
+  * Drop 0001-meson-Add-LINGUAS-to-build-translated-help.patch: Applied
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 04 Mar 2018 08:20:15 -0500
+
+gnome-boxes (3.27.90-1) experimental; urgency=medium
+
+  * New upstream release
+  * Use Files-Excluded to exclude Vala stamp files
+  * Build-Depend on libwebkit2gtk-4.0-dev
+  * Bump Build-Depends on libosinfo-1.0-dev and libgtk-3-dev
+  * Build with meson
+  * Add 0001-meson-Add-LINGUAS-to-build-translated-help.patch:
+    - Fix help translations with meson build
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 07 Feb 2018 17:56:17 -0500
+
+gnome-boxes (3.26.2-3) unstable; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump debhelper compat to 11
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 02 Feb 2018 08:22:42 -0500
+
+gnome-boxes (3.26.2-2) unstable; urgency=medium
+
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Bump Standards-Version to 4.1.2
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 14 Dec 2017 21:12:00 -0500
+
+gnome-boxes (3.26.2-1) unstable; urgency=medium
+
+  * New upstream release (LP: #1729106)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 31 Oct 2017 20:21:57 -0400
+
+gnome-boxes (3.26.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 02 Oct 2017 14:31:56 -0400
+
+gnome-boxes (3.26.0-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * Build-depend on libtracker-sparql-2.0-dev instead of 1.0
+
+  [ Laurent Bigonville ]
+  * Try to build gnome-boxes on all architectures
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 13 Sep 2017 14:12:51 -0400
+
+gnome-boxes (3.25.91-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Update Build-Depends per configure.ac
+  * Bump Standards-Version to 4.1.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 30 Aug 2017 13:52:10 -0400
+
+gnome-boxes (3.22.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add Build-Depends on libsecret-1-dev. Passwords for express installations
+    are no longer stored in plaintext on disk but in the keyring.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 15 Feb 2017 09:24:45 +0100
+
+gnome-boxes (3.22.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 24 Nov 2016 07:36:49 +0100
+
+gnome-boxes (3.22.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 07 Nov 2016 15:43:23 +0100
+
+gnome-boxes (3.22.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 10 Oct 2016 17:59:44 +0200
+
+gnome-boxes (3.22.0-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * debian/docs: Add README.logos
+  * debian/rules:
+    - Drop obsolete --enable-smartcard --enable-usbredir
+      (always enabled now)
+
+  [ Michael Biebl ]
+  * Use non-multiarch path (/usr/lib/gnome-boxes) for libexecdir.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 20 Sep 2016 10:55:10 +0200
+
+gnome-boxes (3.21.3-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream beta release
+  * Convert from cdbs to dh
+  * Add debian/docs to install NEWS, README and THANKS
+  * Bump debhelper compat to 10
+  * Enable all hardening flags
+  * Delete vala stamps to rebuild generated source files
+  * debian/patches/01_Ensure_disk_reability_on_import.patch:
+    Dropped, applied in new version
+
+  [ Michael Biebl ]
+  * Change Build-Depends on itstool to yelp-tools. We run autoreconf and need
+    the YELP_HELP_INIT autoconf macro.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 06 Sep 2016 22:41:04 +0200
+
+gnome-boxes (3.20.2-2) unstable; urgency=medium
+
+  * debian/patches/01_Ensure_disk_reability_on_import.patch: Only check system
+    disk image readability when effectively trying to import it.
+
+ -- Laurent Bigonville <bigon@debian.org>  Wed, 15 Jun 2016 14:10:12 +0200
+
+gnome-boxes (3.20.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 11 May 2016 17:41:48 +0200
+
+gnome-boxes (3.20.0-2) unstable; urgency=medium
+
+  * Enable oVirt support (Closes: #801783)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 24 Apr 2016 14:18:13 +0200
+
+gnome-boxes (3.20.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    - Bump gtk+ to >= 3.19.4
+    - Bump libvirt-glib to >= 0.2.3
+  * Bump Standards-Version to 3.9.8
+  * Bump debhelper compat to 9
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 18 Apr 2016 18:48:39 +0200
+
+gnome-boxes (3.18.1-1.1) unstable; urgency=medium
+
+  * Depend on libvirt-daemon instead of the libvirt-bin transitional package
+    (Closes: #809417)
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 04 Feb 2016 08:38:12 +0100
+
+gnome-boxes (3.18.1-1) unstable; urgency=medium
+
+  [ Laurent Bigonville ]
+  * New upstream release.
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+  * Remove Jeremy Bicha from Uploaders since he hasn't been active for a long
+    time. Thanks Jeremy!
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 14 Oct 2015 16:23:09 +0200
+
+gnome-boxes (3.17.92-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update build-dependencies according to configure.ac changes:
+    - bump libosinfo-1.0-dev to >= 0.2.12
+    - bump libvirt-glib-1.0-dev to >= 0.2.2
+    - bump valac to >= 0.28.0.16
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Sep 2015 17:02:30 +0200
+
+gnome-boxes (3.16.2-2) unstable; urgency=medium
+
+  * debian/control.in: Add an explicit versionized Breaks against
+    libspice-server1 (<< 0.12.5-1.1~) so we are sure it has smartcard support
+    enabled.
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 24 Aug 2015 21:58:49 +0200
+
+gnome-boxes (3.16.2-1) unstable; urgency=medium
+
+  [ Laurent Bigonville ]
+  * New upstream release
+    - Bump the build-dependencies
+  * Drop debian/patches/01_drop-onlyshowin.patch: Merged upstream
+  * debian/rules:
+    - Enable smartcard support
+    - Explicitly enable USB redirection
+
+  [ Michael Biebl ]
+  * Drop Build-Depends on libclutter-1.0-dev and libclutter-gtk-1.0-dev, no
+    longer needed.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 03 Aug 2015 23:52:08 +0200
+
+gnome-boxes (3.14.2-2) unstable; urgency=medium
+
+  * Drop outdated/useless fuseiso dependency
+    - replaced by iso-read in 3.11.3
+    - then iso-read no longer needed since 3.13.90
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 18 Mar 2015 10:18:05 +0100
+
+gnome-boxes (3.14.2-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream bugfix release.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 05 Dec 2014 14:32:03 +0100
+
+gnome-boxes (3.14.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control.in: Update Homepage URL
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 19 Oct 2014 22:36:55 +0200
+
+gnome-boxes (3.14.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * debian/control.in: Bump Standards-Version to 3.9.6 (no further changes)
+  * debian/copyright: Drop copyright information regarding
+    data/icons/debian.svg and data/icons/ubuntu.svg, the files are not shipped
+    in the tarball anymore
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 12 Oct 2014 18:31:33 +0200
+
+gnome-boxes (3.14.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    + Add libarchive-dev (>= 3.0.0)
+    + Bump libgtk-3-dev (>= 3.13.2)
+    + Bump libvirt-glib-1.0-dev (>= 0.1.9)
+    + Bump valac (>= 0.24.0.65)
+  * Update debian/patches/01_drop-onlyshowin.patch to apply again.
+  * Bump libosinfo-dev build-dependency to 0.2.11
+    - gnome-boxes uses new APIs from recent libosinfo versions.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 27 Sep 2014 14:53:25 +0200
+
+gnome-boxes (3.12.3-1) unstable; urgency=medium
+
+  * New upstream releas.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 13 Jul 2014 15:44:31 +0200
+
+gnome-boxes (3.12.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 16 May 2014 19:23:53 +0200
+
+gnome-boxes (3.12.1-2) unstable; urgency=medium
+
+  * Switch to tracker 1.0. (Closes: #741430)
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 10 May 2014 01:09:09 +0200
+
+gnome-boxes (3.12.1-1) unstable; urgency=medium
+
+  * Simplify valac build-dependency: Drop alternative valac-0.24
+  * Bump valac to >= 0.23.3.1 just to be aligned with configure.ac
+  * New upstream release.
+  * Revert tracker 1.0 build-dependency back to 0.16
+    - we don't want to be held back by the transition
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 21 Apr 2014 15:23:53 +0200
+
+gnome-boxes (3.12.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    - Bump libglib2.0-dev to >= 2.38.0
+    - Bump libgtk-3-dev to >= 3.11
+    - Bump libosinfo-1.0-dev to >= 0.2.9
+    - Switch vala to 0.24 branch (>= 0.23.1.1)
+    - Add tracker branch 1.0 as alternative to 0.16
+  * Drop debian/patches/0001-Revert-Update-to-libvirt-gconfig-0.1.7.patch
+    - no longer needed.
+  * Bump libvirt-glib build-dependency to >= 0.1.7, see entry above.
+  * Bump Standards-Version to 3.9.5
+  * Have quilt refresh debian/patches/01_drop-onlyshowin.patch to apply.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 26 Mar 2014 22:31:50 +0100
+
+gnome-boxes (3.10.0-1) experimental; urgency=low
+
+  * Sync from Ubuntu Gnome3 Staging PPA (3.10.0-0ubuntu1~saucy1)
+
+  [ Rico Tzschichholz ]
+  * New upstream release
+  * debian/control.in:
+    - Bump build-deps on libgtk-3-dev (>= 3.9), libosinfo-dev (>= 0.2.7),
+      libvirt-glib-1.0-dev (>= 0.1.7)
+    - Require vala-0.22 (>= 0.21.1)
+
+  [ Andreas Henriksson ]
+  * Add debian/patches/0001-Revert-Update-to-libvirt-gconfig-0.1.7.patch
+    - revert upstream commit bumping requirement to 0.1.7 while
+      waiting for maintainer action on Debian bug #726582
+  * Lower build-dependency on libvirt-glib-1.0-dev to 0.1.6
+  * Use dh-autoreconf to regenerate build scripts because of above changes
+    - build-depend on dh-autoreconf and include it in debian/rules
+    - build-depend on yelp-tools for the m4 macro used in configure.ac
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 04 Nov 2013 15:33:55 +0100
+
+gnome-boxes (3.8.4-1) unstable; urgency=low
+
+  [ Laurent Bigonville ]
+  * debian/control.in:
+    - Use canonical URL for Vcs-Svn field
+    - Recommends qemu-system-x86 instead of qemu-kvm, as it is now a
+      transitional package
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * Update homepage
+
+  [ Michael Biebl ]
+  * Upload to unstable.
+  * Drop alternative Build-Depends on libtracker-sparql-0.14-dev and bump
+    minimum required version of tracker to (>= 0.16.0).
+  * Bump Standards-Version to 3.9.4. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 27 Aug 2013 20:13:32 +0200
+
+gnome-boxes (3.8.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Build-depend on valac (>= 0.17.3) instead of valac-0.18
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 25 May 2013 13:29:55 +0200
+
+gnome-boxes (3.8.0-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release.
+  * debian/control.in:
+    - Depend on libosinfo-bin so that physical CDs can be used
+      for installing a new virtual machine (Closes: #695818)
+  * debian/control.in, debian/rules:
+    - qemu on Ubuntu 13.04 includes spice support so drop the
+      special handling
+
+  [ Andreas Henriksson ]
+  * New upstream release (v3.8.0)
+  * Bump build-dependencies according to configure.ac
+    - libglib2.0-dev (>= 2.29.90) to (>= 2.32)
+    - libosinfo-1.0-dev (>= 0.2.1) to (>= 0.2.6)
+    - libspice-client-gtk-3.0-dev (>= 0.12.101) to (>= 0.15)
+    - libvirt-glib-1.0-dev (>= 0.1.2) to (>= 0.1.5)
+    - libtracker-sparql-0.16-dev as alternative to libtracker-sparql-0.14-dev
+    - valac-0.18 (>= 0.17.2) to (>= 0.17.3)
+  * Update debian/patches/01_drop-onlyshowin.patch to apply.
+  * Add build-dependencies for tools used during build:
+    - desktop-file-utils for desktop-file-validate
+    - libxml2-utils for xmllint
+    - itstool
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 01 Apr 2013 23:29:21 +0200
+
+gnome-boxes (3.6.2-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release (3.6.1.1).
+    - Non-free logos are now downloaded on demand (Closes: #663560)
+  * debian/control.in:
+    - Update dependencies
+  * debian/README.source:
+    - Dropped
+  * debian/watch: Stop mangling upstream version
+
+  [ Andreas Henriksson ]
+  * New upstream release (3.6.2).
+    - Bump libosinfo build dependency to >= 0.2.1.
+  * Change valac (>= 0.17.2) to valac-0.18 (>= 0.17.2),
+    since valac hasn't yet been bumped for vala 0.18.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 11 Dec 2012 23:52:29 +0100
+
+gnome-boxes (3.4.3+dfsg-2) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/control.in:
+    - Depend on libosinfo-bin so that physical CDs can be used
+      for installing a new virtual machine (Closes: #695818)
+
+  [ Michael Biebl ]
+  * Build against tracker 0.16.
+  * Use dh-autoreconf to update the build system.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 30 Jul 2013 14:21:06 +0200
+
+gnome-boxes (3.4.3+dfsg-1) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/control.in, debian/rules: Recommend qemu-kvm-spice on Ubuntu
+  * Drop unnecessary libvala build-depends and build-depend on
+    valac (>= 0.16.0) (Closes: #675642)
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * debian/watch: Track stable releases.
+  * debian/patches/02_revert-dragging-window.patch: Removed, fixed upstream.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 13 Jun 2012 14:31:00 +0200
+
+gnome-boxes (3.4.2+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - Bump libvirt-glib-1.0-dev build-dep to 0.0.8
+  * Update debian/copyright: some files got renamed
+  * Update debian/README.source: some files got renamed
+  * debian/control.in: Build-depdends against valac-0.16 instead of valac-0.14
+  * debian/rules: Pass --enable-vala to the configure to regenerate C files
+  * Add debian/patches/02_revert-dragging-window.patch: Revert change that was
+    preventing the OSD to appear with some clutter-gtk versions
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 19 May 2012 13:38:26 +0200
+
+gnome-boxes (3.4.1+dfsg-1) unstable; urgency=low
+
+  [ Laurent Bigonville ]
+  * Upload to unstable
+  * Repack source tarball to remove non-DFSG logos (Closes: #663560)
+  * New upstream release
+    - Bump libvirt-glib-1.0-dev to 0.0.7
+    - Bump libosinfo-1.0-dev to 0.1.1
+  * debian/control:
+    - Add tracker to the dependencies (Closes: #665086)
+    - Also build the package for i386 architecture
+    - Add mtools to the dependencies, required for mcopy
+    - Drop gir1.2-gtkclutter-1.0 and gir1.2-libosinfo-1.0 dependencies
+    - Demote qemu-kvm to Recommends, the package can also allow connections to
+      remote kvm instances
+    - Add Homepage field
+  * debian/copyright: Add the license of the Debian and Ubuntu Circle of
+    Friends logos
+  * debian/watch: Mangle upstream version to remove '+dfsg'
+  * debian/README.source: Describe why the source tarball has been reprocessed
+
+  [ Jeremy Bicha ]
+  * debian/copyright: Drop the debian/* copyright section since it's
+    no longer required by Debian policy.
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 05 May 2012 01:07:45 +0200
+
+gnome-boxes (3.4.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump Build-Depends on libgudev-1.0-dev to (>= 165).
+  * debian/copyright: Update URL to the final copyright format 1.0 spec.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 03 Apr 2012 18:13:16 +0200
+
+gnome-boxes (3.3.91-1) experimental; urgency=low
+
+  [ Jeremy Bicha ]
+  * Initial release (Closes: #655901).
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 10 Mar 2012 07:40:11 +0100

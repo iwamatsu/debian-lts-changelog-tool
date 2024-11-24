@@ -1,0 +1,204 @@
+openjdk-11-jre-dcevm (11.0.12+7-1~deb10u1) buster-security; urgency=medium
+
+  * Rebuild for buster
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 01 Aug 2021 16:03:09 +0200
+
+openjdk-11-jre-dcevm (11.0.12+7-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #991006)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 01 Aug 2021 15:26:13 +0200
+
+openjdk-11-jre-dcevm (11.0.11+9-2) unstable; urgency=medium
+
+  * Added an autopkgtest test suite to catch regressions caused by JDK updates
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 03 May 2021 14:40:22 +0200
+
+openjdk-11-jre-dcevm (11.0.11+9-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #984725)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Apr 2021 10:42:03 +0200
+
+openjdk-11-jre-dcevm (11.0.10+1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 03 Feb 2021 20:47:07 +0100
+
+openjdk-11-jre-dcevm (11.0.9+1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build with default g++ (Closes: #978516)
+  * Bump Standards-Version to 4.5.1
+
+ -- tony mancill <tmancill@debian.org>  Mon, 28 Dec 2020 11:16:59 -0800
+
+openjdk-11-jre-dcevm (11.0.9+1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 11.0.9+1 (Closes: #972788)
+  * Update to debhelper compat level 13
+  * Set "Rules-Requires-Root: no" in debian/control
+
+ -- tony mancill <tmancill@debian.org>  Sun, 25 Oct 2020 09:11:45 -0700
+
+openjdk-11-jre-dcevm (11.0.7+1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #942876)
+    - Refreshed the patch
+  * Switch to debhelper level 12
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 31 May 2020 23:36:58 +0200
+
+openjdk-11-jre-dcevm (11.0.5+5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patch
+    - New build dependency on libxrandr-dev
+  * Standards-Version updated to 4.5.0
+  * Build with g++-9 instead of g++-8 (Closes: #944182)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 05 Mar 2020 10:01:04 +0100
+
+openjdk-11-jre-dcevm (11.0.3+1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #924972)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 19 Mar 2019 11:13:57 +0100
+
+openjdk-11-jre-dcevm (11.0.1+8-1) unstable; urgency=medium
+
+  [ Emmanuel Bourg ]
+  * New upstream release
+
+  [ Matthias Klose ]
+  * Fix ftbfs on i386 (Closes: #922678)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 25 Feb 2019 08:24:01 +0100
+
+openjdk-11-jre-dcevm (11.0.1+7-1) unstable; urgency=medium
+
+  * Switch to OpenJDK 11:
+    - Renamed the package to openjdk-11-jre-dcevm
+    - Fetch the new releases from the HotswapProjects/openjdk-jdk11u-dcevm
+      project on GitHub
+    - Added the required but unused JDK build dependencies
+    - Updated debian/rules
+  * Added the libpath patch from openjdk-11
+  * Build with g++-8 instead of g++-7
+  * Standards-Version updated to 4.3.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 04 Feb 2019 09:11:41 +0100
+
+openjdk-8-jre-dcevm (8u181-1) unstable; urgency=medium
+
+  * New upstream release
+    - Imported the light-jdk8u181-b13 DCEVM patches
+  * Standards-Version updated to 4.2.1
+  * Switch to debhelper level 11
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 19 Oct 2018 16:21:18 +0200
+
+openjdk-8-jre-dcevm (8u112-2) unstable; urgency=medium
+
+  * Fixed the build failure with GCC 7 (Closes: #853592)
+  * Standards-Version updated to 4.1.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 02 Oct 2017 09:48:02 +0200
+
+openjdk-8-jre-dcevm (8u112-1) unstable; urgency=medium
+
+  * New upstream release
+    - Imported the light-jdk8u112-b16 DCEVM patches (build 7)
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 06 Dec 2016 14:32:21 +0100
+
+openjdk-8-jre-dcevm (8u92-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixed the build failure with GCC 6, thanks to Adrian Bunk for the patch.
+    (Closes: #831153)
+  * Build with -fno-lifetime-dse -fno-delete-null-pointer-checks to match
+    the build parameters of the openjdk-8 package with GCC 6
+  * Depend on g++-6 instead of g++-5 (Closes: #835956)
+  * Standards-Version updated to 3.9.8
+  * Use a secure Vcs-Git URL
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 18 Oct 2016 16:50:40 +0200
+
+openjdk-8-jre-dcevm (8u74-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 21 Mar 2016 00:17:26 +0100
+
+openjdk-8-jre-dcevm (8u66-1) unstable; urgency=medium
+
+  * Switch to OpenJDK 8:
+    - Renamed the package to openjdk-8-jre-dcevm
+    - Imported the light-jdk8u66-b17 DCEVM patches (build 5)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 10 Feb 2016 13:35:34 +0100
+
+openjdk-7-jre-dcevm (7u79-3) unstable; urgency=medium
+
+  * Updated the DCEVM patches for Java 7u79 (build 8)
+  * Standards-Version updated to 3.9.7 (no changes)
+  * Replaced the hardcoded package name in debian/rules and debian/orig-tar.sh
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 10 Feb 2016 11:43:32 +0100
+
+openjdk-7-jre-dcevm (7u79-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/rules: export DISABLE_HOTSPOT_OS_VERSION_CHECK=ok and disable this
+    version check to prevent a FTBFS with newer kernels.
+    Thanks to Chris Faux for the report. (Closes: #809588)
+  * d/control: Remove deprecated B-D hardening-wrapper. (Closes: #759648)
+  * Vcs-Browser: Use https.
+  * d/rules: Remove export DEB_BUILD_HARDENING=1
+
+ -- Markus Koschany <apo@debian.org>  Sat, 09 Jan 2016 17:32:23 +0100
+
+openjdk-7-jre-dcevm (7u79-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixed a linker error with G1SATBCardTableModRefBS
+  * Build depend on GCC 5
+  * Updated debian/watch
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 22 Sep 2015 11:33:49 +0200
+
+openjdk-7-jre-dcevm (7u60-3) unstable; urgency=medium
+
+  * Backported the new JVM_FindClassFromCaller function added in Java 7u71
+    (Closes: #768715)
+  * Standards-Version updated to 3.9.6 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 17 Nov 2014 10:58:24 +0100
+
+openjdk-7-jre-dcevm (7u60-2) unstable; urgency=medium
+
+  * Fixed a build failure on i386 (Closes: #760304)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 12 Sep 2014 15:56:22 +0200
+
+openjdk-7-jre-dcevm (7u60-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixed a build failure on i386 (Closes: #759705)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 01 Sep 2014 19:55:37 +0200
+
+openjdk-7-jre-dcevm (7u55-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #747493)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sat, 10 May 2014 22:38:09 +0200

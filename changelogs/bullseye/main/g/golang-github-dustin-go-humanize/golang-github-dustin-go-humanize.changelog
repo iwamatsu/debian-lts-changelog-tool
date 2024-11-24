@@ -1,0 +1,59 @@
+golang-github-dustin-go-humanize (1.0.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+  * Update standards version to 4.4.1, no changes needed.
+  * Apply multi-arch hints.
+    + golang-github-dustin-go-humanize-dev: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 05 Feb 2021 01:06:04 +0000
+
+golang-github-dustin-go-humanize (1.0.0-1) unstable; urgency=medium
+
+  * New upstream version 1.0.0
+  * Add debian/watch
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Use debhelper (>= 12~)
+  * Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sat, 27 Jul 2019 08:37:10 -0600
+
+golang-github-dustin-go-humanize (0.0~git20171111.bb3d318-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20171111.bb3d318
+  * Apply "cme fix dpkg" and bump Standards-Version to 4.1.4
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Apr 2018 08:58:14 -0600
+
+golang-github-dustin-go-humanize (0.0~git20170228.0.259d2a1-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20170228.0.259d2a1
+  * Update debian/gbp.conf to do without a build-area directory
+  * Build-Depends on golang-any instead of golang-go,
+    and remove unnecessary Depends on golang-go from -dev package
+  * Use debhelper (>= 10)
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Wed, 26 Jul 2017 23:11:08 -0600
+
+golang-github-dustin-go-humanize (0.0~git20151125.0.8929fe9-1) unstable; urgency=medium
+
+  * Initial release (Closes: #816784).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 05 Mar 2016 20:01:43 +1100

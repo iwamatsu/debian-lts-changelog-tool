@@ -1,0 +1,62 @@
+golang-github-coreos-pkg (4-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 06 Feb 2021 03:04:14 +0000
+
+golang-github-coreos-pkg (4-2) unstable; urgency=medium
+
+  * Standards-Version: 4.4.1
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 08 Oct 2019 14:01:08 +1100
+
+golang-github-coreos-pkg (4-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Jelmer Vernooĳ ]
+  * Use secure copyright file specification URI.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Added myself to Uploaders.
+  * DH & compat to version 12.
+  * Testsuite: autopkgtest-pkg-go
+  * Priority: optional; Standards-Version: 4.4.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 25 Sep 2019 21:52:23 +1000
+
+golang-github-coreos-pkg (3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Tim Potter <tpot@hpe.com>  Thu, 09 Feb 2017 07:34:14 +1100
+
+golang-github-coreos-pkg (2-2) unstable; urgency=medium
+
+  * Add myself to Uploaders.
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 02 Oct 2016 22:27:03 +0000
+
+golang-github-coreos-pkg (2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * (Build-)Depends += "golang-golang-x-crypto-dev".
+  * Standards-Version: 3.9.8.
+  * Vcs-Git URL to HTTPS.
+  * Updated "watch" file.
+  * Simplified "rules" through use of "DH_GOLANG_EXCLUDES".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 19 Jun 2016 21:41:23 +1000
+
+golang-github-coreos-pkg (0.0~git20151028.0.2c77715-1) unstable; urgency=medium
+
+  * Initial release (Closes: #804108)
+
+ -- Tim Potter <tpot@hpe.com>  Thu, 05 Nov 2015 13:44:32 +1100

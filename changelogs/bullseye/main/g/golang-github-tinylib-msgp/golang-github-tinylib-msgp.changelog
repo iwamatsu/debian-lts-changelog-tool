@@ -1,0 +1,71 @@
+golang-github-tinylib-msgp (1.0.2-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+    Fixes: lintian: package-uses-old-debhelper-compat-version
+    See-also: https://lintian.debian.org/tags/package-uses-old-debhelper-compat-version.html
+  * Set debhelper-compat version in Build-Depends.
+    Fixes: lintian: uses-debhelper-compat-file
+    See-also: https://lintian.debian.org/tags/uses-debhelper-compat-file.html
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+    Fixes: lintian: upstream-metadata-file-is-missing
+    See-also: https://lintian.debian.org/tags/upstream-metadata-file-is-missing.html
+
+  [ Dmitry Smirnov ]
+  * Build-Depends += "golang-golang-x-mod-dev" (Closes: #954683)
+  * Rules-Requires-Root: no
+  * golang-ago --> golang-any
+  * Testsuite: autopkgtest-pkg-go
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 11 Apr 2020 16:26:55 +1000
+
+golang-github-tinylib-msgp (1.0.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Set Built-Using
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Mon, 05 Mar 2018 18:58:38 +0100
+
+golang-github-tinylib-msgp (1.0.2-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Jordi Mallach ]
+  * New upstream release (closes: #876820).
+  * Change package priorities to optional.
+  * Move to debhelper compat v11.
+  * Use https on URLs in copyright file.
+  * Update Standards-Version to 4.1.3.
+
+  [ Shengjing Zhu ]
+  * d/rules: copy _generated/search.sh to build.
+
+ -- Jordi Mallach <jordi@debian.org>  Fri, 19 Jan 2018 11:53:28 +0100
+
+golang-github-tinylib-msgp (1.0~beta-1) unstable; urgency=medium
+
+  * Update to 1.0-beta upstream release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 23 Oct 2015 16:12:45 -0700
+
+golang-github-tinylib-msgp (1.0~alpha-2) unstable; urgency=medium
+
+  * Add upstream patch to fix 32bit compilation
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 23 Oct 2015 15:43:51 -0700
+
+golang-github-tinylib-msgp (1.0~alpha-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Thu, 22 Oct 2015 11:13:24 -0700

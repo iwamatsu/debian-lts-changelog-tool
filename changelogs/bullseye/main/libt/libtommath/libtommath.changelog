@@ -1,0 +1,309 @@
+libtommath (1.2.0-6+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2023-36328: Prevent a series of integer overflow vulnerabilties that
+  * could have led attackers to execute arbitrary code and/or cause a denial of
+    service (DoS).
+  * Continuous integration changes:
+    * Add a debian/.gitlab-ci.yml.
+    * Update .gitlab-ci.yml to use the default, non-LTS, CI pipeline for now.
+    * Add blhc failures in CI workflow.
+
+ -- Chris Lamb <lamby@debian.org>  Mon, 26 Aug 2024 16:47:21 +0100
+
+libtommath (1.2.0-6) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Separate arch build from indep build. (Closes: #981786)
+
+  [ Pino Toscano ]
+  * do not ship .la files. (Closes: 968492)
+
+  [ Dominique Dumont ]
+  * declare compliance with policy 4.5.1
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 07 Feb 2021 11:58:15 +0100
+
+libtommath (1.2.0-5) unstable; urgency=medium
+
+  * make autopkgtests cross-test-friendly.
+    Thanks to Steve Langasek for the patch (Closes: 965131)
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 30 Jul 2020 14:56:24 +0200
+
+libtommath (1.2.0-4) unstable; urgency=medium
+
+  * make pdf build reproducible.
+    Thanks to Vagrant Cascadian for the patch (Closes: 962305)
+  * control: declare compliance with poliy 4.5.0
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 07 Jun 2020 18:29:38 +0200
+
+libtommath (1.2.0-3) unstable; urgency=medium
+
+  * fix autopkgtests script
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 06 Nov 2019 09:07:35 +0100
+
+libtommath (1.2.0-2) unstable; urgency=medium
+
+  * source only upload
+
+ -- Dominique Dumont <dod@debian.org>  Fri, 01 Nov 2019 10:02:45 +0100
+
+libtommath (1.2.0-1) unstable; urgency=medium
+
+  * New upstream version 1.2.0
+  * refreshed patches
+  * rm fix-compilation-and-linkage patch (applied upstream)
+  * ignore copyright info in LICENSE file
+  * update copyright for 1.2.0 version
+  * no longer install callgraph.txt in docs
+  * control:
+    * use new debhelper dependency declaration
+    * declare compliance with policy 4.4.1
+    * rename libtommath-docs package to -doc
+    * update libtommath-doc description
+    * build-depend on texlive-latex-extra
+  * rules:
+    * remove files built upstream
+    * hardening: append CPPFLAGS to CFLAGS
+    * build doc in verbose mode
+  * setup autopkgtests
+  * add symbols file using libtommath-1.1.0
+  * install libtommath.pc and .la in -dev package
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 26 Oct 2019 18:38:01 +0200
+
+libtommath (1.1.0-3) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: (Closes: #921699)
+    + Let dh_auto_build pass cross tools to make.
+    + Honour DEB_BUILD_OPTIONS=nocheck.
+
+  [ Dominique Dumont ]
+  * fix dh_clean call to clean libtool dir.
+    Thanks to Andreas Beckmann for the report (Closes: 921892)
+  * update dh_clean list
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 14 Feb 2019 11:36:43 +0100
+
+libtommath (1.1.0-2) unstable; urgency=medium
+
+  * Build a libtool to drop the libtool-bin dependency.
+    Thanks to Helmut Grohne for the patch (Closes: 912838)
+  * test with 'make test' and './test'
+    Thanks to Steffen Jaeckel for the head-ups
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 05 Feb 2019 10:53:16 +0100
+
+libtommath (1.1.0-1) unstable; urgency=medium
+
+  * New upstream version 1.1.0
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 29 Jan 2019 14:22:12 +0100
+
+libtommath (1.1.0~rc5-1) experimental; urgency=medium
+
+  * New upstream version 1.1.0~rc5
+  * copyright: add entry for mtest/mpi* (cme)
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 23 Jan 2019 10:23:46 +0100
+
+libtommath (1.1.0~rc3-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+
+  [ Dominique Dumont ]
+  * New upstream version 1.1.0~rc3
+  * copyright: remove unused public-domain license
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 22 Jan 2019 13:42:49 +0100
+
+libtommath (1.1.0~rc1-2) experimental; urgency=medium
+
+  * control: restore correct architecture in docs pkg
+  * control: set correctly docs pkg to Multi-Arch foreign
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 08 Jan 2019 19:26:37 +0100
+
+libtommath (1.1.0~rc1-1) experimental; urgency=medium
+
+  * New upstream version 1.1.0~rc1
+  * control:
+    * fix homepage link (Closes: #883452)
+    * update Vcs-Browser and Vcs-Git
+    * switch docs package to multi-arch foreign
+    * declare compliance with policy 4.3.0
+  * add patch to increase test time-out.
+    Thanks to "Manuel A. Fernandez Montecelo" <mafm@debian.org> (Closes: 894987)
+  * refresh patches
+  * fill-copyright-blanks:
+    * skips bn_mp_n_root files
+    * all *.[hc] files are Unlicense'd
+  * refreshed copyright
+  * bump compat to 12
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 08 Jan 2019 14:37:02 +0100
+
+libtommath (1.0.1-1) unstable; urgency=medium
+
+  * New upstream version 1.0.1
+  * refresh patch (file moved)
+  * refreshed x32 patch (cf #850723)
+  * rm latex_build patch (applied upstream)
+  * rules:
+    * use override_dh_auto_build target
+    * run testme.sh before build
+    * updated following upstream makefile changes
+  * control: set pkg-rakudo-team as Maintainer (Closes: #869287)
+    Thanks to jello for his work !
+  * watch: downloads sig file
+  * add upstream author public keys
+  * update install since doc files were moved
+  * add README.source
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 31 Aug 2017 13:51:53 +0200
+
+libtommath (1.0-4) unstable; urgency=medium
+
+  * control: added git urls
+  * add patch to fix shift error on x32 (Tx Thorsten Glaser)
+    See #850723 for details
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 17 Jan 2017 19:59:25 +0100
+
+libtommath (1.0-3) unstable; urgency=medium
+
+  * libtommath1 and *-dev package are now multiarch same
+  * control:
+    * updated Homepage to new project url
+    * update Standards-Version to 3.9.8
+  * sanitized urls in patch headers (cme)
+  * fix lib installation path for multiarch
+  * fix hardening
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 14 Sep 2016 19:40:46 +0200
+
+libtommath (1.0-2) unstable; urgency=medium
+
+  * rebuilt for unstable
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 06 Mar 2016 18:59:18 +0100
+
+libtommath (1.0-1) experimental; urgency=medium
+
+  * Imported Upstream version 1.0 (Closes: #813882)
+    * Warning: Some macros were removed from tommath.h
+  * copyright: moved to standard format
+  * control:
+    * refreshed with cme
+    * renamed bin pkg to libtommath1
+    + added dod to uploaders
+  * updated watch file to use github
+  * removed obsolete patches
+  * refreshed latex_build_fix patch
+  * added fix-mp-mod patch
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 01 Mar 2016 13:24:14 +0100
+
+libtommath (0.42.0-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * control: fix description (Closes:  #755756)
+  * control: removed duplicate build dependencies
+  * updated compat to 9
+  * control: updated std-versions to 3.9.6
+  * added patch to fix hardening
+  * added patch to fix latex build error (Closes: #790320)
+  * added patch fix-mp-radix-size patch (Closes: #796507)
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 29 Aug 2015 19:37:13 +0200
+
+libtommath (0.42.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build-depend on libtool-bin. Closes: #761770.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 09 Oct 2014 10:43:48 +0000
+
+libtommath (0.42.0-1) unstable; urgency=low
+
+  * New upstream release, closes: #508900.
+  * change override to optional, closes: #610549.
+  * debian/control: Bump Std-Ver
+    + Don't install libtommath.la
+  * debian/control: Add Homepage
+  * debian/watch: added
+
+ -- Joe Nahmias <jello@debian.org>  Sun, 30 Jan 2011 22:32:44 -0500
+
+libtommath (0.39-4) unstable; urgency=low
+
+  * Ack NMU, thanks!
+  * Upstream has disappeared :(
+    + debian/control: remove Homepage header
+    + debian/watch: removed
+  * debian/control: bump Std-Ver, no changes
+
+ -- Joe Nahmias <jello@debian.org>  Mon, 05 Jul 2010 21:49:15 -0400
+
+libtommath (0.39-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Revert "remove duplicate texlive-latex-recommended and ghostscript" from
+    previous NMU. (Closes: #583820)
+
+ -- Christine Spang <christine@debian.org>  Sat, 26 Jun 2010 13:36:59 -0400
+
+libtommath (0.39-3.1) unstable; urgency=low
+
+  [ Jari Aalto ]
+  * Non-maintainer upload.
+    - Move to packaging format "3.0 (quilt)".
+  * debian/compat
+    - Update to 7.
+  * Non-maintainer upload.
+  * debian/control
+    - (Build-Depends): Update to debhelper 7.1. Remove duplicate
+      texlive-latex-recommended and ghostscript.
+    - (Build-Depends-Indep): Remove duplicate libtiff-tools.
+    - (Depends): Add ${misc:Depends}.
+    - (Standards-Version): Update to 3.8.4.
+    - (libtommath0::Section): Remove; inherited from above.
+  * debian/copyright
+    - Update layout.
+    - Point to GPL-2.
+  * debian/rules
+    - (install): Update dh_clean to dh_prep.
+  * debian/source/format
+     - New file
+  * bx.tex
+    - Remove unused macro \undefined (FTBFS: Closes: #562349).
+      Patch thanks to Daniel Schepler <dschepler@gmail.com>.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 05 May 2010 19:10:42 +0300
+
+libtommath (0.39-3) unstable; urgency=low
+
+  * debian/control: work around auto-builders' brokenness by adding all the
+    build-dep-indeps to Build-Depends, really closes: #474413.
+
+ -- Joe Nahmias <jello@debian.org>  Wed, 21 May 2008 00:19:55 -0400
+
+libtommath (0.39-2) unstable; urgency=low
+
+  * debian/rules: install target should only depend on build-arch which caused
+    FTBFS on the buildds, closes: #474413.
+  * debian/rules: make build-indep and build-arch .PHONY targets
+  * debian/watch: add call to uupdate on new upstream version
+
+ -- Joe Nahmias <jello@debian.org>  Mon, 28 Apr 2008 02:11:12 -0400
+
+libtommath (0.39-1) unstable; urgency=low
+
+  * Initial release, closes: #472281.
+
+ -- Joe Nahmias <jello@debian.org>  Mon, 24 Mar 2008 21:54:22 -0400

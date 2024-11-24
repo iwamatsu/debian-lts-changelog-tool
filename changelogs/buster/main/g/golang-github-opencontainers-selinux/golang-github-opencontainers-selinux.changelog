@@ -1,0 +1,16 @@
+golang-github-opencontainers-selinux (1.0.0~rc1+git20170621.5.4a2974b-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2019-16884: runc, as used in Docker and other products, allows
+    AppArmor and SELinux restriction bypass because
+    libcontainer/rootfs_linux.go incorrectly checks mount targets, and
+    thus a malicious Docker image can mount over a /proc
+    directory. (Closes: #942027)
+
+ -- Sylvain Beucler <beuc@debian.org>  Thu, 16 Feb 2023 22:27:07 +0100
+
+golang-github-opencontainers-selinux (1.0.0~rc1+git20170621.5.4a2974b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #872440)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Thu, 17 Aug 2017 18:32:33 +0200

@@ -1,0 +1,860 @@
+spip (3.2.4-1+deb10u13) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2023-52322: XSS vulnerability because input from _request() is not
+    sanitized. (Closes: #1059331)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Fri, 15 Mar 2024 13:02:54 +0100
+
+spip (3.2.4-1+deb10u12) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport upstream security fixes from 4.1.10:
+    + Limit recursion depth in protege_champ().
+    + Avoid usage of unserialize() in security screen.
+    + Deny access to hidden files in supplied .htaccess file.
+    + Update security screen to 1.5.3.
+  * Backport upstream security fixes from 4.1.11:
+    + Refactor weeding out of credentials and other authentication data into
+      new function auth_desensibiliser_session() and use it in
+      auth_informer_login() as well.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 18 Dec 2023 01:09:20 +0100
+
+spip (3.2.4-1+deb10u11) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport fix from upstream regression release v3.2.19:
+    + fix (de)activation of plugins with dependencies.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Wed, 01 Mar 2023 03:34:16 +0100
+
+spip (3.2.4-1+deb10u10) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport security fixes from v3.2.17 [CVE-2023-24258]:
+    + fix SQL injection vulnerability in admin space;
+    + sanitize SQL values; and
+    + deny password change for authors without login.
+  * Backport security fixes from v3.2.18 [CVE-2023-27372]:
+    + fix remote code execution vulnerability in public and private spaces.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 27 Feb 2023 18:23:16 +0100
+
+spip (3.2.4-1+deb10u9) buster-security; urgency=medium
+
+  * Backport security fixes from 3.2.16
+    - Remote code execution
+    - XSS alowing priviledge escalation
+
+ -- David Prévot <taffit@debian.org>  Sat, 23 Jul 2022 09:44:41 +0200
+
+spip (3.2.4-1+deb10u8) buster-security; urgency=high
+
+  * Backport security fix from 3.2.15
+    - Sanitizing and other XSS protections
+
+ -- David Prévot <taffit@debian.org>  Tue, 24 May 2022 16:46:11 +0200
+
+spip (3.2.4-1+deb10u7) buster-security; urgency=high
+
+  * Backport security fix from 3.2.14
+    - arbitrary PHP code execution
+
+ -- David Prévot <taffit@debian.org>  Sat, 05 Mar 2022 17:17:35 +0100
+
+spip (3.2.4-1+deb10u6) buster; urgency=medium
+
+  * Document CVE fixed previously
+  * Backport security fixes (XSS) from 3.2.13
+
+ -- David Prévot <taffit@debian.org>  Sat, 05 Feb 2022 09:21:02 -0400
+
+spip (3.2.4-1+deb10u5) buster-security; urgency=high
+
+  * Backport security fixes from 3.2.12
+    - SQL injections
+    - remote code execution [CVE-2021-44123]
+    - XSS [CVE-2021-44118] [CVE-2021-44120]
+    - CSRF [CVE-2021-44122]
+
+ -- David Prévot <taffit@debian.org>  Wed, 15 Dec 2021 17:19:09 -0400
+
+spip (3.2.4-1+deb10u4) buster-security; urgency=high
+
+  * Document CVE IDs in previous changelog entries
+  * Backport security fixes from 3.2.9
+    - PHP injections, XSS and secrets stored in session file
+
+ -- David Prévot <taffit@debian.org>  Fri, 05 Feb 2021 11:35:35 -0400
+
+spip (3.2.4-1+deb10u3) buster-security; urgency=medium
+
+  * Backport security fixes from 3.2.8
+    - Critical security issue, allowing identified authors to execute
+      arbitrary PHP code [CVE-2020-28984]
+
+ -- David Prévot <taffit@debian.org>  Mon, 23 Nov 2020 12:10:16 -0400
+
+spip (3.2.4-1+deb10u2) buster-security; urgency=medium
+
+  * Backport security fix from 3.2.7
+    - Critical security fix, allowing identified authors to inject content
+      into database [CVE-2019-19830]
+    - Update security screen to 1.3.13
+  * Fix PHP 7.3 compatibility issue.
+    The regex were wrong, and started failing with PHP 7.3, causing plugins
+    to be disabled and impossible to be enable back on upgrade.
+
+ -- David Prévot <taffit@debian.org>  Thu, 12 Dec 2019 10:22:39 -1000
+
+spip (3.2.4-1+deb10u1) buster-security; urgency=medium
+
+  * Backport security fixes from 3.2.5
+    - Critical security fix, allowing unidentified visitor to modify any
+      published content and execute other modifications in database
+      [CVE-2019-16391]
+    - Other security fixes:
+      + better sanitization on redirections [CVE-2019-16393]
+      + don’t disclose if user exists when resetting password [CVE-2019-16394]
+      + better error message sanitization on login page [CVE-2019-16392]
+    - Update security screen to 1.3.12
+  * Add d/gbp.conf for buster
+  * Add CVE ID to previous changelog entry
+  * Refresh patch headers
+
+ -- David Prévot <taffit@debian.org>  Mon, 16 Sep 2019 11:45:48 -1000
+
+spip (3.2.4-1) unstable; urgency=medium
+
+  * Critical security fix allowing arbitrary code execution to any
+    identified visitor [CVE-2019-11071] (Closes: #926764)
+
+  [ ben.spip@gmail.com ]
+  * SPIP 3.2.4
+
+ -- David Prévot <taffit@debian.org>  Wed, 10 Apr 2019 14:21:19 +0900
+
+spip (3.2.3-1) unstable; urgency=medium
+
+  [ ben.spip@gmail.com ]
+  * SPIP 3.2.3 tag spip
+
+  [ David Prévot ]
+  * Update mutualisation to 1.4.5
+  * Update copyright
+  * Use debhelper-compat 12
+  * Update Standards-Version to 4.3.0
+
+ -- David Prévot <taffit@debian.org>  Thu, 24 Jan 2019 11:27:02 -1000
+
+spip (3.2.1-1) unstable; urgency=medium
+
+  [ David Prévot ]
+  * New upstream version
+  * Use priority optional
+  * Update mutualisation to 1.4.4
+  * Drop dead list from Maintainer (and Romain from Uploaders)
+    Closes: #899895
+  * Move project repository to salsa.d.o
+  * Use https whenever possible in debian/
+  * Use debhelper-compat 11
+  * Update Standards-Version to 4.2.1
+  * Depend on
+    - libjs-jquery-migrate-1
+    - libjs-moment
+    - node-js-cookie instead of libjs-jquery-cookie
+    - php-xml (split from php)
+  * Recommend default-mysql-server instead of mysql-server (Closes: #848450)
+  * Use shipped in version of php-html-safe
+  * Get rid of Cherokee configuration
+  * Use dh-apache2 to handle the default webserver configuration
+  * Drop old symlink conversions
+  * Update copyright
+  * Update minimisation
+  * Use rewrite for multisite
+  * Make chown non-recursive in postinst
+  * Drop trailing whitespace in changelog
+
+ -- David Prévot <taffit@debian.org>  Wed, 28 Nov 2018 16:37:40 -1000
+
+spip (3.1.4-2) unstable; urgency=medium
+
+  * Fix broken symlink with recent libjs-jquery-ui.
+    Thanks to Andreas Beckman (Closes: #857818)
+  * Backport security fixes from 3.2-alpha-1
+    - Reflected Cross Site Scripting Vulnerabilities in
+      /ecrire/exec/puce_statut.php and /ecrire/exec/info_plugin.php
+      [CVE-2016-9997] [CVE-2016-9998] (Closes: #848641)
+    - Cross-site scripting (XSS) vulnerability in ecrire/exec/plonger.php
+      [CVE-2016-9152] (Closes: #847156)
+  * Remove incorrect statement that those security issues had been fixed from
+    the previous changelog entry
+  * Remove incorrect execution bit for ecrire/inc/idna_convert.class.php
+
+ -- David Prévot <taffit@debian.org>  Wed, 26 Apr 2017 20:51:45 -1000
+
+spip (3.1.4-1) unstable; urgency=high
+
+  [ Adriano Rafael Gomes ]
+  * Add Brazilian Portuguese debconf templates translation (Closes: #829339)
+
+  [ David Prévot ]
+  * New upstream version 3.1.4, with security fix:
+    - Arbitrary PHP execution code
+  * Update mutualisation to 1.3.5
+  * Update copyright
+
+ -- David Prévot <taffit@debian.org>  Sat, 11 Mar 2017 08:24:16 -1000
+
+spip (3.1.3-1) unstable; urgency=high
+
+  * Upload stable 3.1 branch to unstable for Stretch
+  * Document CVE in previous changelog entry
+  * New upstream version 3.1.2, with non-critical XSS security fixes
+  * New upstream version 3.1.3, with security fixes:
+    - Exec Code Cross-Site Request Forgery [CVE-2016-7980]
+    - Reflected Cross-Site Scripting [CVE-2016-7981]
+    - File Enumeration / Path Traversal [CVE-2016-7982]
+    - Template Compiler/Composer PHP Code Execution [CVE-2016-7998]
+    - Server Side Request Forgery [CVE-2016-7999]
+  * Refresh mutualisation as of r99658
+  * Update Standards-Version to 3.9.8
+
+ -- David Prévot <taffit@debian.org>  Thu, 13 Oct 2016 07:33:27 -1000
+
+spip (3.1.1-1) experimental; urgency=high
+
+  * Imported Upstream version 3.1.1, with security fixes:
+    - PHP code injection [CVE-2016-3153]
+    - Objects injection via unserialize [CVE-2016-3154]
+  * Update mutualisation to 1.2.8
+  * Depend on php-* instead of php5-* for the php 7.0 transition
+  * Update copyright
+  * Update Standards-Version to 3.9.7
+
+ -- David Prévot <taffit@debian.org>  Thu, 10 Mar 2016 21:24:26 -0400
+
+spip (3.1.0-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1
+  * Refresh mutualisation as of r94388
+  * Update copyright (years)
+
+ -- David Prévot <taffit@debian.org>  Sun, 10 Jan 2016 11:46:47 -0400
+
+spip (3.1.0~rc3-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1.0~rc3
+
+ -- David Prévot <taffit@debian.org>  Thu, 10 Dec 2015 14:56:29 -0400
+
+spip (3.1.0~rc-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1.0~rc
+  * Update mutualisation to 1.2.6
+  * Update packaging to embedded jstree
+  * Update copyright
+  * Update watch URL
+
+ -- David Prévot <taffit@debian.org>  Sun, 01 Nov 2015 17:37:36 -0400
+
+spip (3.1.0~beta1-1) experimental; urgency=medium
+
+  [ erational@erational.org ]
+  * remplacement des http://doc.spip.org par http://code.spip.net (Francky)
+  * passage du copyright en 2015
+
+  [ David Prévot ]
+  * Use embedded partial copy of w3c-dtd-xhtml (Closes: #787179)
+  * Update mutualisation to 1.2.5
+  * Update copyright
+
+ -- David Prévot <taffit@debian.org>  Wed, 24 Jun 2015 09:11:00 -0400
+
+spip (3.1.0~beta-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1.0~beta
+  * Update mutualisation to 1.2.3
+  * Document upstream VCS
+  * Update copyright
+  * Minify new JavaScript file at build time
+
+ -- David Prévot <taffit@debian.org>  Sun, 10 May 2015 22:25:29 -0400
+
+spip (3.1.0~alpha-1) experimental; urgency=medium
+
+  * Adapt watch file for alpha
+  * Update mutualisation to 85970 (doc URL changed)
+  * Imported Upstream version 3.1.0~alpha
+
+ -- David Prévot <taffit@debian.org>  Tue, 11 Nov 2014 09:16:20 -0400
+
+spip (3.1~21775-1) experimental; urgency=medium
+
+  [ Frans Spiesschaert ]
+  * Add Dutch translation of debconf messages (Closes: #766642)
+
+  [ David Prévot ]
+  * Bump standards version to 3.9.6
+  * Exclude sourceless Flash and Silverlight files
+  * Imported Upstream version 3.1~21775
+  * Update copyright
+  * Update compressed JavaScript files
+  * Update symlinks
+  * Use libjs-mediaelement and php-getid3 instead of embedded copy
+
+ -- David Prévot <taffit@debian.org>  Tue, 04 Nov 2014 15:10:55 -0400
+
+spip (3.1~21533-1) experimental; urgency=medium
+
+  * Simplify install
+  * Fix faulty symlinks
+  * Imported Upstream version 3.1~21533
+
+ -- David Prévot <taffit@debian.org>  Tue, 26 Aug 2014 12:09:32 -0400
+
+spip (3.1~21513-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1~21513
+
+ -- David Prévot <taffit@debian.org>  Wed, 13 Aug 2014 12:09:11 -0400
+
+spip (3.1~21458-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1~21458
+  * Update copyright
+  * Update jQuery UI internal path
+
+ -- David Prévot <taffit@debian.org>  Wed, 30 Jul 2014 13:57:23 -0400
+
+spip (3.1~21406-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1~21406
+  * Revert "Document repack": fixed upstream
+
+ -- David Prévot <taffit@debian.org>  Mon, 16 Jun 2014 19:43:19 -0400
+
+spip (3.1~21361+dfsg-1) experimental; urgency=medium
+
+  * Use Files-Excluded feature instead of d/repack.sh
+  * Imported Upstream version 3.1~21361
+  * Strip away copyrighted ICC profiles
+  * Document repack
+
+ -- David Prévot <taffit@debian.org>  Mon, 12 May 2014 21:58:49 -0400
+
+spip (3.1~21294-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1~21294
+  * Reorder rules
+  * Depend on php-pclzip instead of libphp-pclzip
+
+ -- David Prévot <taffit@debian.org>  Sat, 10 May 2014 11:47:45 -0400
+
+spip (3.1~21281-1) experimental; urgency=medium
+
+  * Update mutualisation to 1.2.2
+  * Update copyright years
+  * Imported Upstream version 3.1~21281
+
+ -- David Prévot <taffit@debian.org>  Wed, 19 Mar 2014 14:45:36 -0400
+
+spip (3.1~21175-1) experimental; urgency=medium
+
+  * Document fixed security issue in 3.0.13
+  * Imported Upstream version 3.1~21175
+
+ -- David Prévot <taffit@debian.org>  Tue, 11 Feb 2014 16:14:24 -0400
+
+spip (3.1~21100-1) experimental; urgency=medium
+
+  * Update mutualisation (PHP < 5.3 compat)
+  * Imported Upstream version 3.1~21100
+  * Update copyright years
+
+ -- David Prévot <taffit@debian.org>  Sat, 11 Jan 2014 16:07:38 -0400
+
+spip (3.1~21086-1) experimental; urgency=medium
+
+  * Imported Upstream version 3.1~21086
+
+ -- David Prévot <taffit@debian.org>  Wed, 25 Dec 2013 15:48:44 -0400
+
+spip (3.1~20970-1) experimental; urgency=low
+
+  * Update repack.sh for 3.1
+  * Imported Upstream version 3.1~20970
+  * Remove libjs-ie7 dependency: plugins-dist/msie_compat is not shipped
+    anymore
+  * Use libjs-jquery-colorbox back: the embedded version has been updated
+  * Update packaging to 3.1 branch
+  * Refresh patches
+  * Factorize copyright
+
+ -- David Prévot <taffit@debian.org>  Sat, 16 Nov 2013 10:16:10 -0400
+
+spip (3.0.13-1) unstable; urgency=low
+
+  * Upload to unstable: Jessie will not be released with 2.1
+  * Document CVE in previous changelog entries
+  * Imported Upstream version 3.0.13:
+    - Fix XSS on signature from author [CVE-2013-7303] (Closes: #736170)
+
+ -- David Prévot <taffit@debian.org>  Tue, 12 Nov 2013 13:29:59 -0400
+
+spip (3.0.12-1) experimental; urgency=low
+
+  * Imported Upstream version 3.0.12 (Closes: #729172):
+    - Fix XSS on author page [CVE-2013-4556]
+  * Update security screen to 1.1.8:
+    - Avoid PHP injection in $connect [CVE-2013-4557]
+  * Use embedded jQuery ColorBox outdated version:
+    The current code actually depend on this version, and it doesn’t work
+    well with the version from the Debian package
+  * Recommend php5-sqlite, needed for DB export
+  * Handle patch set with gbp pq
+  * Update mutualisation’s translations
+  * Bump standards version to 3.9.5
+  * Use uglifyjs instead of yui-compressor
+  * Remove now useless README.source
+
+ -- David Prévot <taffit@debian.org>  Sat, 09 Nov 2013 15:42:46 -0400
+
+spip (3.0.11-1) experimental; urgency=low
+
+  * Imported Upstream version 3.0.11
+  * Update mutualisation’s copyright
+
+ -- David Prévot <taffit@debian.org>  Fri, 09 Aug 2013 22:45:09 +0200
+
+spip (3.0.10-2) experimental; urgency=low
+
+  * libjs-flot has been renamed into libjs-jquery-flot
+  * Transition towards apache 2.4 (Closes: #669794)
+  * Make symlinks relative (Policy 10.5)
+  * Enable /spip alias by default
+  * Make multisite.php PHP 5.5 compatible
+  * Refer to Apache-2.0 from /usr/share/common-licenses
+  * Update mutualisation to 1.2.1
+
+ -- David Prévot <taffit@debian.org>  Wed, 17 Jul 2013 18:04:10 -0400
+
+spip (3.0.10-1) experimental; urgency=low
+
+  * Imported Upstream version 3.0.10:
+    - Fix CSRF on logout [CVE-2013-4555]
+  * Document CVE in previous changelog entry
+
+ -- David Prévot <taffit@debian.org>  Mon, 27 May 2013 15:46:39 -0400
+
+spip (3.0.9-1) experimental; urgency=low
+
+  * New upstream version: fix privilege escalation (Closes: #709674)
+    [CVE-2013-2118]
+  * Minify new prive/javascript/login-sha-min.js at build time
+
+ -- David Prévot <taffit@debian.org>  Fri, 24 May 2013 22:25:48 -0400
+
+spip (3.0.8-1) experimental; urgency=low
+
+  * New major upstream version
+  * The web server should point to /usr/share/spip instead of /var/lib/spip
+  * security screen now part of upstream tarball
+  * extensions has moved into plugins-dist
+  * squelettes-dist now installed in /usr/share/spip
+  * debian/control:
+    - Depends on libjs-excanvas, libjs-ie7, libjs-flot, libjs-jquery-colorbox,
+      libjs-jquery-ui, libphp-pclzip, php-xml-htmlsax3, and w3c-dtd-xhtml
+    - Build-Depends on yui-compressor
+  * debian/rules:
+    - Delete new unneeded files
+    - Delete embedded copies and symlink to the new dependencies
+    - Minify JavaScript files
+    - Make dh_fixperms a bit more aggressive
+  * debian/copyright: Update
+  * debian/links, debian/repack.sh:
+    - Adapt to safehtml move
+    - Delete sourceless files from ie7-js
+  * debian/patches/: Refresh patches
+  * debian/examples: Move mutualisation/outils to examples
+  * debian/README.source:
+    - Renamed from debian/README.Debian-source
+    - Document get-orig-source target ie7-js removal
+
+ -- David Prévot <taffit@debian.org>  Tue, 07 May 2013 14:55:09 -0400
+
+spip (2.1.21-1) unstable; urgency=low
+
+  * New upstream version: various minor bugs fixed
+  * debian/control:
+    - Vcs-Git and Vcs-Browser updated to the Git repository
+    - Bump standards to 3.9.4
+  * debian/patches/: Refresh patches
+  * debian/templates: Remove mention of old apache and apache-ssl
+
+ -- David Prévot <taffit@debian.org>  Tue, 07 May 2013 13:21:53 -0400
+
+spip (2.1.20-1) experimental; urgency=low
+
+  * New upstream version: various minor bugs fixed
+  * debian/repack.sh: Automatise repack
+  * debian/copyright: Update year
+  * debian/patches/dont_display_next_version.patch: Refresh patch
+  * debian/patches/fix_displayed_version.patch, debian/rules: Improve version
+    substitution
+  * Update security screen file to 1.1.5
+
+ -- David Prévot <taffit@debian.org>  Tue, 02 Apr 2013 15:13:52 -0400
+
+spip (2.1.19-1) experimental; urgency=low
+
+  * New upstream version:
+    - #PARAMETRE_FORUM fix;
+    - various partial backup fixes;
+    - 42 new document types;
+    - array shortcut bug fix.
+  * Update security screen file to 1.1.4.
+  * Update mutualisation to r67950.
+  * Remove now useless preinst.
+
+ -- David Prévot <taffit@debian.org>  Mon, 26 Nov 2012 21:13:40 -0400
+
+spip (2.1.17-1) unstable; urgency=low
+
+  * New upstream version, fixes base disclosure (Closes: #683667).
+
+ -- David Prévot <taffit@debian.org>  Thu, 02 Aug 2012 12:34:29 -0400
+
+spip (2.1.16-1) unstable; urgency=high
+
+  * New upstream version:
+    - fixes PHP injection (Closes: #680118);
+    - fixes growing session directory;
+    - fixes PHP 5.4 compatibility.
+  * Update security screen file to 1.1.3.
+
+ -- David Prévot <taffit@debian.org>  Wed, 04 Jul 2012 08:42:01 -0400
+
+spip (2.1.15-1) unstable; urgency=high
+
+  * New upstream version, fixes cross site scripting.
+  Closes: #677290
+  * Update security screen file to 1.1.2.
+
+ -- David Prévot <taffit@debian.org>  Tue, 12 Jun 2012 19:16:49 -0400
+
+spip (2.1.14-2) unstable; urgency=low
+
+  * Don't display next upstream version in the private interface.
+  * Make the copyright compliant to format 1.0.
+
+ -- David Prévot <taffit@debian.org>  Wed, 06 Jun 2012 17:04:42 -0400
+
+spip (2.1.14-1) unstable; urgency=low
+
+  * New upstream version, fixes cross site scripting.
+  Closes: #672961
+  * Update security screen file to 1.1.0.
+  * Add CVE number to previous entry (#671264 related).
+
+ -- David Prévot <taffit@debian.org>  Mon, 14 May 2012 21:12:03 -0400
+
+spip (2.1.13-1) unstable; urgency=high
+
+  * New upstream version, fixes cross site scripting. [CVE-2012-2151]
+  Closes: #670110
+  * Fix path in README.
+  Closes: #651157
+  * Document more installation steps (partially address: #612467).
+  * Add DEP-3 compliant headers.
+  * Fix displayed version in the private interface.
+  * Bumped standards to 3.9.3.
+  * Update copyright.
+  * Move more links from debian/rules to debian/links.
+  * Update security screen file to 1.0.10.
+  * Update mutualisation.
+
+ -- David Prévot <taffit@debian.org>  Sun, 22 Apr 2012 22:02:42 -0400
+
+spip (2.1.12-1) unstable; urgency=high
+
+  * New upstream release, fixes privilege escalation and cross site scripting.
+  Closes: #649113
+  * Add self as uploader.
+  * Bumped standards to 3.9.2.
+  * Depend on and use fonts-dustin, libjs-jquery-cookie and libjs-jquery-form
+    instead of shipped ones.
+  * Use dh 7.
+  * Update security screen file to 1.0.6.
+
+ -- David Prévot <taffit@debian.org>  Thu, 17 Nov 2011 17:53:48 -0400
+
+spip (2.1.11-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+
+  [ Romain Beauxis ]
+  * New upstream release.
+  Closes: #646758
+  * Switch to dpkg-source 3.0 (quilt) format.
+
+  [ David Prévot ]
+  * Add Vcs-* control fields.
+  * Added da.po debconf translation, thanks to
+    Joe Hansen.
+  Closes: #623103
+
+ -- David Prévot <taffit@debian.org>  Wed, 26 Oct 2011 18:14:12 -0400
+
+spip (2.1.1-3) unstable; urgency=high
+
+  * Added security screen file (ecran_securite.php).
+  Fixes all known security issues in spip.
+  Closes: #609212, Closes: #610016
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 18 Jan 2011 14:01:35 -0600
+
+spip (2.1.1-2) unstable; urgency=high
+
+  * Added patch to fix int overflow
+    in articles' published date.
+    Thanks to David Prévot for reporting.
+  Closes: #597026
+
+ -- Romain Beauxis <toots@rastageeks.org>  Sat, 18 Sep 2010 15:08:53 -0500
+
+spip (2.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped standards to 3.9.0
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 03 Aug 2010 15:29:14 -0500
+
+spip (2.1-6) unstable; urgency=low
+
+  * There is no need to add a link to common/ in
+    each site's plugin directory.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Wed, 23 Jun 2010 02:03:09 +0200
+
+spip (2.1-5) unstable; urgency=high
+
+  * Added es.po debconf translation, thanks to
+    Ricardo Fraile.
+  Closes: #580617
+  * Fixed safehtml class instantiation to
+    use the packaged one. This issue lead
+    to failures so setting priority to
+    high to propagate quickly.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Sat, 05 Jun 2010 22:25:18 -0500
+
+spip (2.1-4) unstable; urgency=low
+
+  * Added a themes/ directory to install optional themes.
+  * Removed special chmod.php file not needed after the changes
+    in the previous upload.
+  * Now multisite can be defined using regexp.
+  * Install missing extensions/
+  * Added debian/watch.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 04 May 2010 11:05:59 -0500
+
+spip (2.1-3) unstable; urgency=low
+
+  * Fixed default rights for created directories and files.
+  * Fixed default directory for automatically installed plugins.
+  * Enabled short images option by default.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Thu, 29 Apr 2010 17:47:04 -0500
+
+spip (2.1-2) unstable; urgency=low
+
+  * Fixed plugins and mutualisation: the variable
+    _DIR_PLUGINS in mes_options.php is now called
+    _DIR_PLUGINS_SUPPL
+  * Fixed url_img_courtes. Thanks to David Prévot
+    for reporting and proposing a patch.
+  Closes: #577274
+
+ -- Romain Beauxis <toots@rastageeks.org>  Fri, 16 Apr 2010 17:14:11 -0500
+
+spip (2.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Removed safehtml patch, replaced by a symlink.
+  * Bumped standards to 3.8.4
+  * There is a bug with the mutualisation
+    and the plugins so uploading to experimental for now..
+
+ -- Romain Beauxis <toots@rastageeks.org>  Mon, 12 Apr 2010 02:44:56 +0200
+
+spip (2.0.10-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped standards version to 3.8.3
+
+ -- Romain Beauxis <toots@rastageeks.org>  Thu, 05 Nov 2009 16:08:03 -0600
+
+spip (2.0.9-1) unstable; urgency=high
+
+  * New upstream release, fixing security issue.
+  See: http://www.spip-contrib.net/SPIP-Security-Alert-new-version
+  for more details.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Sun, 09 Aug 2009 11:13:15 -0500
+
+spip (2.0.8-3) unstable; urgency=low
+
+  * Fixed bashism in spip_rm_site script.
+  Closes: #535885
+
+ -- Romain Beauxis <toots@rastageeks.org>  Fri, 31 Jul 2009 02:26:58 +0200
+
+spip (2.0.8-2) unstable; urgency=low
+
+  * Fix bashism in spip_add_site
+  Closes: #530193
+  * Added description of what exactly is SPIP
+    in long description.
+  Closes: #521682
+
+ -- Romain Beauxis <toots@rastageeks.org>  Fri, 19 Jun 2009 01:24:03 +0200
+
+spip (2.0.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped standards version to 3.8.2
+  * Bumped compat to 7
+
+ -- Romain Beauxis <toots@rastageeks.org>  Mon, 08 Jun 2009 17:40:44 +0200
+
+spip (2.0.7-1) unstable; urgency=high
+
+  * New upstream release.
+  * This release fixes security issues, hence setting
+    urgency to high.
+  * Added extra security options for apache2.conf
+
+ -- Romain Beauxis <toots@rastageeks.org>  Wed, 15 Apr 2009 23:34:13 -0400
+
+spip (2.0.6-2) unstable; urgency=low
+
+  * Fixed alias in apache.conf.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Wed, 18 Mar 2009 09:07:33 +0100
+
+spip (2.0.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Initial upload to unstable.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 17 Mar 2009 20:05:14 +0100
+
+spip (2.0.5-1) experimental; urgency=low
+
+  * New upstream version.
+  * Should upload to unstable quite soon.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Fri, 06 Mar 2009 20:06:46 +0100
+
+spip (2.0.3-1) experimental; urgency=low
+
+  * New upstream release.
+  * Added Italian debconf translations, thanks to Vincenzo Campanella !
+  Closes: #510291
+  * Added Basque debconf translations, thanks to Piarres Beobide !
+  Closes: #510299
+  * Added Czech debconf translations, thanks to Martin Šín !
+  Closes: #510301
+  * Added Swedish debconf translations, thanks to Martin Bagge !
+  Closes: #510302
+  * Added Finnish debconf translations, thanks to Esko Arajärvi !
+  Closes: #510384
+  * Added Galician debconf translations, thanks to Marce Villarino !
+  Closes: #510391
+  * Added German debconf translations, thanks to Helge Kreutzmann !
+  Closes: #510541
+  * Added Portuguese debconf translations, thanks to Miguel Figueiredo !
+  Closes: #510640
+  * Added Japanese debconf translations, thanks to Hideki Yamane !
+  Closes: #510892
+  * Added French debconf translations, thanks to Jean Guillou !
+  Closes: #511008
+  * Added Russian debconf translations, thanks to Yuri Kozlov !
+  Closes: #512165
+
+ -- Romain Beauxis <toots@rastageeks.org>  Sun, 18 Jan 2009 22:00:35 +0100
+
+spip (2.0.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Wed, 31 Dec 2008 04:18:22 +0100
+
+spip (2.0.0-1) experimental; urgency=low
+
+  * First release of the 2.0 branch !
+  * Moved dist/ to squelettes-dist/, added preinst
+    maintainer script to handle that when upgrading
+    from previous package.
+  * Updated debian/copyright with GPL version 3 or above.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Sat, 13 Dec 2008 03:25:47 +0100
+
+spip (2.0.0~beta12262-2) experimental; urgency=low
+
+  * Fixed safehtml inclusion patch
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 19 Aug 2008 11:56:54 +0200
+
+spip (2.0.0~beta12262-1) experimental; urgency=low
+
+  * New upstream release, first beta for 2.0.0 release
+  * Added options details for mes_options.php
+  * Added apache2.conf virtual host configuration file example
+  * Depends and use libjs-jquery instead of shipped one
+  * Partially fixed default mod for created file
+
+ -- Romain Beauxis <toots@rastageeks.org>  Thu, 31 Jul 2008 01:34:34 +0200
+
+spip (1.9.3~svn12054-1) experimental; urgency=low
+
+  * New upstream release.
+  * Updated standards version.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Sun, 13 Jul 2008 17:18:06 +0200
+
+spip (1.9.3~svn11347-2) experimental; urgency=low
+
+  * Added plugins support and directories
+
+ -- Romain Beauxis <toots@rastageeks.org>  Thu, 27 Mar 2008 12:16:26 +0100
+
+spip (1.9.3~svn11347-1) experimental; urgency=low
+
+  * New svn snapshot
+  * Added recommends to image conversion tools supported.
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 29 Jan 2008 02:49:10 +0100
+
+spip (1.9.3~svn11152-1) experimental; urgency=low
+
+  * New upstream release
+  * Updated standards to 3.7.3
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 29 Jan 2008 02:38:39 +0100
+
+spip (1.9.3~svn10413-2) experimental; urgency=low
+
+  * Patched source to work with php-html-safe
+
+ -- Romain Beauxis <toots@rastageeks.org>  Wed, 10 Oct 2007 02:58:22 +0200
+
+spip (1.9.3~svn10413-1) experimental; urgency=low
+
+  * Initial release (Closes: #426069)
+  * Temporaly removed file HTMLSax3.php
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 25 Sep 2007 00:31:03 +0200

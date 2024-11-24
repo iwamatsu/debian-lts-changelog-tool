@@ -1,0 +1,102 @@
+ruby-sanitize (5.2.1-2+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2023-36823 (Closes: #1041430)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Sun, 04 Feb 2024 20:01:01 +0100
+
+ruby-sanitize (5.2.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Reupload to unstable
+  * Add Breaks: ruby-gollum-lib (<< 4.2.7.9-2~)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 01 Dec 2020 20:05:08 +0530
+
+ruby-sanitize (5.2.1-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.2.1, no changes needed.
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+
+  [ Pirate Praveen ]
+  * New upstream version 5.2.1
+  * Drop patches applied upstream
+  * Bump minimum version of ruby-nokogumbo ro 2.0~
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 12 Nov 2020 16:41:09 +0530
+
+ruby-sanitize (4.6.6-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * fix: Don't treat :remove_contents as `true` when it's an Array
+  * feat: Remove useless filtered element content by default
+  * Fix sanitization bypass in HTML foreign content (CVE-2020-4054)
+    (Closes: #963808)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 12 Jul 2020 15:02:54 +0200
+
+ruby-sanitize (4.6.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix test against Nokogiri 1.10
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 07 Feb 2019 18:15:34 -0200
+
+ruby-sanitize (4.6.6-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 4.6.6
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 23 Aug 2018 15:36:48 +0530
+
+ruby-sanitize (4.6.5-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Cédric Boutillier ]
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Use https:// in Vcs-* fields
+
+  [ Pirate Praveen ]
+  * New upstream version 4.6.5 (Closes: #893610) (Fixes: CVE-2018-3740)
+  * Bump Standards-Version to 4.1.4 (no changes needed)
+  * Bump debhelper compatibility level to 11
+  * Use salsa.debian.org in Vcs-* fields
+  * Update gemwatch url
+  * Update dependencies, add Testsuite field
+  * Check dependencies during build
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 13 Jun 2018 16:27:12 +0530
+
+ruby-sanitize (2.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add fix-tests-sanitize.patch
+    - Make tests use Debian nokogiri syntax (Closes: #808450)
+  * Bump Standards Version (No changes).
+  * Fix Vcs-* links to use secure protocol.
+  * Bump debhelper compatibility.
+
+ -- Balasankar C <balasankarc@autistici.org>  Thu, 25 Feb 2016 11:34:19 +0530
+
+ruby-sanitize (2.1.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #739114)
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sat, 15 Feb 2014 23:39:50 +0100

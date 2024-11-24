@@ -1,0 +1,341 @@
+libitext5-java (5.5.13-1+deb10u1) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2021-43113:
+    It was discovered that the CompareTool of iText, a Java PDF library which
+    uses the external ghostscript software to compare PDFs at a pixel level,
+    allowed command injection when parsing a specially crafted filename.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 18 Jan 2023 20:38:34 +0100
+
+libitext5-java (5.5.13-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Andreas Tille ]
+  * New upstream version
+  * Fix watch file
+
+  [ Jochen Sprickerhof ]
+  * Build the new itext, pdfa and xmlworker modules
+  * Fixed the compatibility with Bouncy Castle
+  * New build dependency on libmockito-java
+  * Disabled the Xades tests
+  * Fixed some test failures
+  * Updated the path of the doc files
+
+  [ Emmanuel Bourg ]
+  * Set the source encoding to UTF-8
+  * Standards-Version updated to 4.2.1
+  * Use salsa.debian.org Vcs-* URLs
+  * Converted debian/copyright to the Copyright Format 1.0
+  * Removed the non-free sRGB color profile file from the upstream tarball
+    and use the equivalent one from icc-profiles-free for the tests
+  * Tightened the dependency on libbcprov-java
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 24 Sep 2018 17:19:56 +0200
+
+libitext5-java (5.5.6-4) unstable; urgency=medium
+
+  * Team upload.
+  * Correct mistake in dh_auto_test override. Replace dh_auto_build with
+    dh_auto_test.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 21 Mar 2018 13:47:12 +0100
+
+libitext5-java (5.5.6-3) unstable; urgency=medium
+
+  * Team upload.
+  * Switch to compat level 11.
+  * Declare compliance with Debian Policy 4.1.3.
+  * Use https for Vcs.
+  * Switch from cdbs to dh sequencer.
+    - This fixes the FTBFS with Java 9. (Closes: #893260)
+  * Remove empty maven.cleanIgnoreRules
+
+ -- Markus Koschany <apo@debian.org>  Wed, 21 Mar 2018 13:26:45 +0100
+
+libitext5-java (5.5.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add bouncycastle-1.51.patch and fix FTBFS with bouncycastle 1.51.
+  * Vcs-Browser: Use cgit and https.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 06 Dec 2015 17:08:20 +0100
+
+libitext5-java (5.5.6-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refreshed the patches
+  * debian/watch: Watch the release tags on Github
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 26 May 2015 22:18:48 +0200
+
+libitext5-java (5.5.3-2) unstable; urgency=medium
+
+  * Removed the unused build dependency on libcglib-java
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 03 Oct 2014 15:52:04 +0200
+
+libitext5-java (5.5.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Emmanuel Bourg ]
+  * New upstream release
+  * Refreshed remove-javadoc-page-tracking.patch
+  * Moved the package to Git
+
+  [ Andreas Tille ]
+  * Latest upstream release
+  * Drop two tests from upstream which prevent building:
+     - Drop test requiring online connection
+       Closes: #761172
+     - Drop test requiring xserver (new in this upstream version)
+  * Latest upstream seems to require new Build-Depends: libcglib-java
+  * Bumped standards version to 3.9.6
+
+ -- Andreas Tille <tille@debian.org>  Tue, 30 Sep 2014 15:25:21 +0200
+
+libitext5-java (5.5.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Refreshed the patch
+  * Added a patch to remove the doubleclick page tracking from the Javadoc
+  * Enabled the unit tests (requires ghostscript)
+  * Changed debian/orig-tar.sh to include the PDFs used by the tests
+  * Changed the optional dependencies of libitext5-java from recommended
+    to suggested
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 24 Feb 2014 10:37:07 +0100
+
+libitext5-java (5.4.5-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version updated to 3.9.5 (no changes)
+  * Switch to debhelper level 9
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 12 Dec 2013 12:07:29 +0100
+
+libitext5-java (5.4.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Use XZ compression for the upstream tarball
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 15 Sep 2013 00:27:00 +0200
+
+libitext5-java (5.4.3-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 26 Aug 2013 23:12:45 +0200
+
+libitext5-java (5.4.3-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 05 Aug 2013 01:22:43 +0200
+
+libitext5-java (5.4.2-1) experimental; urgency=low
+
+  * New upstream release
+    - New dependency on libxml-security-java (optional)
+  * debian/rules: Changed the get-orig-source target to call uscan
+  * debian/control: Canonical URLs for the Vcs-* fields
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 04 Jun 2013 01:29:57 +0200
+
+libitext5-java (5.4.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixed debian/orig-tar.sh to respect version number from uscan.
+  * Upload to unstable.
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Sun, 12 May 2013 22:57:28 +0100
+
+libitext5-java (5.4.0-1) experimental; urgency=low
+
+  [Emmanuel Bourg]
+  * New upstream release.
+  * Updated standards version to 3.9.4 (no changes needed)
+
+  [Andrew Ross]
+  * Build with maven-debian-helper.
+  * Install maven poms.
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Tue, 02 Apr 2013 21:04:57 +0100
+
+libitext5-java (5.0.6+svn4804-1) unstable; urgency=low
+
+  * New upstream release from SVN, with updated AGPL additional license term.
+  * Upstream is now just the core itext library (rups is not included).
+  * Moved to using the basic javahelper builder (upstream no longer
+    includes build.xml).
+  * Updated copyright file to cover afm font files and cmap files.
+  * Removed debian patches which are no longer required.
+  * Dropped binary package libitext5-rups-java from debian/control.
+  * Updated standards version to 3.9.2 (no changes needed)
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Tue, 12 Apr 2011 21:37:55 +0100
+
+libitext5-java (5.0.5-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #609840)
+  * Updated standards version to 3.9.1
+  * Updated debian/copyright
+  * Changed package name to libitext5-java to allow concurrent install
+    with version 2 of the itext library due to a major API change.
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Tue, 18 Jan 2011 22:22:37 +0000
+
+libitext-java (2.1.7-2) unstable; urgency=low
+
+  [ Michael Koch ]
+  * Removed Gerardo Curiel from Uploaders (Closes: #553081).
+
+  [ Onkar Shinde ]
+  * Move -gcj package from 'Recommends' to 'Suggests' as discussed on Debian
+    Java mailing list.
+  * Update standards version to 3.8.4.
+  * Convert direct code changes to patch.
+  * Remove simple-patchsys inclusion from rules file.
+  * Convert package to source format 3.0.
+
+ -- Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>  Tue, 18 May 2010 20:08:26 +0530
+
+libitext-java (2.1.7-1) unstable; urgency=low
+
+  * New upstream release (Closes: #549347).
+  * Build-Depends on libbctsp-java.
+  * Build-Depends on debhelper (>= 7).
+  * Added missing Depends on ${misc:Depends}.
+  * Added Vcs-Svn and Vcs-Browser fields.
+  * Updated Standards-Version 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Fri, 02 Oct 2009 21:23:15 +0200
+
+libitext-java (2.1.5-1) unstable; urgency=low
+
+  * New upstream version.
+  * Build packages natively compiled for gcj.
+  * Handle reading PDF's from stdin.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 27 Apr 2009 23:59:05 +0200
+
+libitext-java (2.1.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Adriaan Peeters <apeeters@lashout.net>  Sun, 23 Nov 2008 12:26:51 +0100
+
+libitext-java (2.1.3-1) unstable; urgency=low
+
+  [Adriaan Peeters]
+  * New upstream release (Closes: #447359)
+  * Removed patches:
+    - debian/patches/01_jpeg_encoder_classpath.patch
+    - debian/patches/02_ant_properties.patch
+  * debian/control:
+    - Added libitext-rtf-java and libitext-rups-java binary packages
+    - Added myself to Uploaders
+    - Added Homepage
+    - Bumped Standards-Version from 3.7.2 to 3.8.0, no changes needed
+    - Increased dephelper Build-Depends to >= 5.0.0
+    - Only use Build-Depends, do not depend on libservlet2.3-java, ecj
+    - Rewrote short and long descriptions
+  * debian/rules:
+    - Added DEB_ANT_BUILDFILE
+    - Removed ANT_ARGS
+    - Removed API_VERSION, use DEB_UPSTREAM_VERSION instead
+    - Compiled iText.jar is in lib/ instead of build/bin/
+    - Use dh_link instead of ln -s
+    - Added build targets for libitext-rtf-java and libitext-rups-java
+  * Bumped debian/compat from 4 to 5
+  * Added debian/watch
+
+  [Matthias Klose]
+  * (Build-)depend on default-jre/-jdk.
+
+  [ Torsten Werner ]
+  * Add missing Build-Depends.
+  * Add myself to Uploaders.
+  * Add copyright statement to debian/copyright.
+  * Some lintian fixes.
+  * Add more copyright and license information to debian/copyright.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 31 Aug 2008 01:03:45 +0200
+
+libitext-java (1.4.5-3) unstable; urgency=low
+
+  * Build-Depend on ecj instead of ecj-bootstrap. Closes: #442958.
+
+ -- Michael Koch <konqueror@gmx.de>  Tue, 18 Sep 2007 20:57:45 +0200
+
+libitext-java (1.4.5-2) unstable; urgency=low
+
+  * Removed Suggests on libitext-java-doc. This package doesn't exist.
+  * Removed two trailing empty lines.
+  * Added myself to Uploaders.
+
+ -- Michael Koch <konqueror@gmx.de>  Thu, 02 Aug 2007 07:30:43 +0200
+
+libitext-java (1.4.5-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules modified due to a new build.xml file
+  * Patched Pdfgraphics2d.java to remove privative dependencie on com.sun.image.codec.jpeg.*
+    (more information on
+    http://developer.classpath.org/mediation/ClasspathMigration#head-d4ee9efe53a641e29ffdcd96e985bf38bbc671c1 )
+  * ant/.ant.properties paths fixed
+  * Build package with the packages provided by java-gcj-compat-dev
+  * Removed unused README.Debian
+  * Removed unused debian/patches/01libitext-java-addbuildscript.patch
+
+
+ -- Gerardo Curiel <gcuriel@debianvenezuela.org>  Thu, 21 Sep 2006 00:08:53 -0400
+
+libitext-java (1.02b-5) unstable; urgency=low
+
+
+  * debian/rules,debian/control: Build package with Kaffe to be able
+    to move the package to main.
+  * debian/rules: Converted rules to the cdbs
+  * debian/libitext-java-doc.docs,libitext-java.dirs: Removed partly
+    generated files, and used the debhelpers direct in the rules.
+  * debian/patches/01libitext-java-addbuildscript.patch: Used a patch
+    instead to have this file direct to the diff.gz
+  * debian/rules: Renamed jar files like iTextXML.jar to
+    itext-xml-1.02b.jar
+  * debian/rules,debian/control: Depending on libservlet2.3-java
+
+ -- Stephan Michels <stephan@apache.org>  Thu, 23 Feb 2006 07:28:32 +0100
+
+libitext-java (1.02b-4) unstable; urgency=high
+
+  * Applied patch proposed by Andreas Jochens related to
+  FTBFS: JAVA_HOME is not defined correctly. (Closes: Bug#306296)
+
+ -- Christian Bayle <bayle@debian.org>  Mon, 25 Apr 2005 21:56:25 +0200
+
+libitext-java (1.02b-3) unstable; urgency=low
+
+  * Rebuild with .orig tarball
+
+ -- Christian Bayle <bayle@debian.org>  Thu, 19 Feb 2004 21:13:08 +0100
+
+libitext-java (1.02b-1) unstable; urgency=low
+
+  * Removed depend on gij-3.2 (closes #232871)
+  * New upstream version
+
+ -- Christian Bayle <bayle@debian.org>  Thu, 19 Feb 2004 20:40:48 +0100
+
+libitext-java (1.00-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Christian Bayle <bayle@debian.org>  Mon,  7 Jul 2003 00:47:01 +0200
+
+Local variables:
+mode: debian-changelog
+End:

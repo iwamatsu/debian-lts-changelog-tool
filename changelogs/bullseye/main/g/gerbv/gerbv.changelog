@@ -1,0 +1,379 @@
+gerbv (2.7.0-2+deb11u2) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix multiple vulnerbilities in RS-274X processing and the pick-and-place
+    parsing functionality: CVE-2021-40393, CVE-2021-40394, CVE-2021-40401,
+    CVE-2021-40403
+
+ -- Aron Xu <aron@debian.org>  Fri, 09 Dec 2022 15:47:59 +0800
+
+gerbv (2.7.0-2+deb11u1) bullseye; urgency=medium
+
+  * Build for bullseye
+  * [e983451] Rebuild patch queue from patch-queue branch
+    Added patch:
+    security/Fix-TALOS-2021-1402.patch
+    Fixing CVE-2021-40391
+  * [7d33020] d/gbp.conf: Adjust to branch debian/bullseye
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 05 Dec 2021 09:14:05 +0100
+
+gerbv (2.7.0-2) unstable; urgency=medium
+
+  [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
+  * [f3c7633] Add gcc10-extern.patch to use extern for global vars.
+    (Closes: #957267)
+  * [d4bc4e0] d/control: Bump Standards-Version to 4.5.0
+    No further changes required.
+  * [a4a40c9] Add Rules-Requires-Root: no
+    We don't need any fakeroot rights while package build.
+  * [f06e02f] debhelper: move over to dh-compat 12
+  * [b11ae8e] Remove trailing whitespaces
+  * [6d28787] debhelper: increase dh-compat to version 13
+  * [ce4181a] rebuild patch queue from patch-queue branch
+    renamed patch:
+    gcc10-extern.patch
+     -> fixes/gcc10-extern.patch
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 07 Jun 2020 10:01:13 +0200
+
+gerbv (2.7.0-1) unstable; urgency=medium
+
+  * [ac52385] d/gbp.conf: adding helper for git-buildpackage
+  * [bf02ed4] New upstream version 2.7.0
+    (Closes: #848953)
+  * [8514cb5] rebuild patch queue from patch-queue branch
+    added patches:
+    fixes/gerbv.desktop-Add-Keywords-entry.patch
+    fixes/gerbv.desktop-Add-main-category-to-desktop-file.patch
+    fixes/man-page-fix-misspelled-excercise-exercise.patch
+    fixes/Fix-Werror-format-security-problem.patch
+    renamed patches:
+    cross.patch->
+    debian-hacks/crossbuild-use-PKG_PROG_PKG_CONFIG-instead-of-AC_PATH_PRO.patch
+    0001-Desktop-file.patch ->
+    debian/patches/debian-hacks/gerbv.desktop-Remove-encoding-key.patch
+    0002-Fix-manpage.patch ->
+    debian/patches/fixes/man-page-correct-groff-syntax-for-escaping-of-hyphens.patch
+    removed patches:
+    0004-pnp-can-t-use-screen-units.patch
+  * [cf663cc] d/control: add myself to the Uploaders field
+    Thanks Gudjon I. Gudjonsson for acknowledge to add myself.
+  * [bee876e] d/control: small update to package description
+    (Closes: #703950)
+  * [5b0b4bb] d/README.source: adding packaging information
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 18 Feb 2019 17:57:45 +0100
+
+gerbv (2.6.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump standards version to 4.3.0
+    No further chnanges needed.
+  * Fix homepage and VCS in control file
+  * Update patch No-translation-available
+  * Fix spelling error in manpage
+  * Add keywords to desktop file
+  * Change main desktop category to development
+  * Remove unneded files
+  * Set DEB_BUILD_MAINT_OPTIONS for hardening
+  * Remove Ramakrishnan Muthukrishnan from the uploaders field
+    Thanks Ramakrishnan for all packaging work in the past!
+    (Closes: #859286)
+  * Change required debhelper version to >=12, also bumping compat version
+    accordingly
+  * Remove -No-translation-available patch, not needed.
+    Thanks to Carsten Schoenert for help with the packaging
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 09 Jan 2019 22:15:20 +0100
+
+gerbv (2.6.1-3) unstable; urgency=medium
+
+  * Add cross.patch to fix cross builds.
+    Thanks to Helmut Grohne <helmut@subdivi.de> (Closes: #879855)
+  * Update standards version to 4.1.1
+  * No need for autotools-dev sequence and dh-autoreconf dependency since we are using compat level 10
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 19 Nov 2017 09:58:28 +0100
+
+gerbv (2.6.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Convert patches to git-buildpackage format
+  * Add patch to fix FTBFS.
+    This is a cherry-pick from upstream's git repository, ID dd8f9fa.
+    (Closes: #851190)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Mon, 16 Jan 2017 09:47:02 +0100
+
+gerbv (2.6.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 2.6.1
+    - Refresh patches
+    - Remove non-existant translations
+  * Acknowledge NMU, thanks to Tobias Frost. (Closes: #819437)
+  * Apply changes from debian/2.5.0-1 to debian/2.6.0-1 again.
+    Those changes have accidentally been overwritten by Gudjon I. Gudjonsson.
+  * Remove Hamish Moffatt <hamish@debian.org> from Uploaders. (Closes: #831477)
+  * Update Vcs-* URLs
+  * Remove menu file
+  * Use debhelper v10 and dh-autoreconf
+  * Remove configure option --enable-exportpng, not supported anymore
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Mon, 26 Dec 2016 20:28:25 +0100
+
+gerbv (2.6.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * libpng1.6 transistion: Change B-D from libpng12-dev to libpng-dev
+    (Closes: #662346)
+  * Remove Wesley J. Landaker from Uploaders, thanks for his contributions.
+    (Closes: #759986)
+  * Add an icon to the menu file, patch from BTS (Closes: #768024)
+  * Fix homepage in d/control (Closes: #718261)
+
+ -- Tobias Frost <tobi@debian.org>  Mon, 28 Mar 2016 15:45:07 +0200
+
+gerbv (2.6.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.3
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Wed, 07 Mar 2012 07:25:24 +0100
+
+gerbv (2.5.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.2
+  * Add git and homepage fields to control file
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Rewrote both patches in quilt format
+  * Change debhelper dependency to 8
+  * Changed build targets according to new standard
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sat, 18 Jun 2011 11:32:33 +0200
+
+gerbv (2.4.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Set LDFLAGS to -ldl (Closes: #554484).
+  * Don't ship .la files (Closes: #621154).
+
+ -- Luk Claes <luk@debian.org>  Sat, 11 Jun 2011 12:17:52 +0200
+
+gerbv (2.4.0-1) unstable; urgency=low
+
+  [ Gudjon I. Gudjonsson ]
+  * New upstream release
+  * Bump standards version to 3.8.4
+  * Remove patch 02_fix_manpage, fixed in upstream
+  * Add misc depends
+
+  [ Wesley J. Landaker ]
+  * Override lintian warnings about the shared library. This package is small
+    enough that splitting it doesn't make sense.
+  * Add Gudjon to uploaders.
+  * Move to debhelper compat level 7.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Tue, 23 Feb 2010 11:02:37 -0700
+
+gerbv (2.3.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #539237, #272717, #404737)
+  * Remove patch 01_remove_education.dpatch, not needed
+  * Bump Standards-version to 3.8.3, no changes needed
+  * Remove dh_desktop
+  * Add menu file
+  * Remove patch targets in rules file, add Debian standard dpatch targets
+  * Add README.source
+  * Add call to dh_makeshlibs
+  * Remove patch 01_remove_education. Education main category is needed
+  * Add more information to copyright file
+  * rm config.guess and config.sub in clean target
+  * Exclude Makefile* from being installed to examples
+  * Add dependency on autotools-dev
+
+ -- Gudjon I. Gudjonsson <gudjon@gudjon.org>  Sun, 15 Nov 2009 22:41:24 +0100
+
+gerbv (2.0.1-3) unstable; urgency=low
+
+  * debian/control: made extra-xdg-menus as a recommendation instead of
+  dependency.
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Tue, 12 Feb 2008 22:44:38 +0530
+
+gerbv (2.0.1-2) unstable; urgency=low
+
+  * Added the patch from Peter Clifton <pcjc2@cam.ac.uk> (closes: #465275)
+    + debian/rules: Added dpatch infrastructure
+    + debian/control: Added build dependency on dpatch
+    + patches/01_remove_education.dpatch: Removed "Education" category
+    from .desktop file
+    + Add dependency on extra-xdg-menus, to provide an "Electronics" menu
+    + Removed manual copying of .desktop and icon file (install now does this)
+    + Added call to dh_icons, and bumped debhelper build-depends to 5.0.51
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Tue, 12 Feb 2008 08:48:56 +0530
+
+gerbv (2.0.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Sun, 10 Feb 2008 19:57:33 +0530
+
+gerbv (2.0.0-5) unstable; urgency=low
+
+  * debian/rules: More cleanups. It does not delete the config.* files
+  anymore. Instead it is copied from /usr/share/misc directory and used.
+  This should make buildd happy. Tested with pbuilder.
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Wed, 23 Jan 2008 23:15:19 +0530
+
+gerbv (2.0.0-4) unstable; urgency=low
+
+  * debian/rules: Minor cleanups. clean rules does distclean. Got missed out
+  in the last upload.
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Wed, 23 Jan 2008 10:08:46 +0530
+
+gerbv (2.0.0-3) unstable; urgency=low
+
+  * Makefile.am: distclean rule shouldn't remove `configure' script. So,
+  modified Makefile.am and regenerated the autotools generated files.
+  Also notified the upstream.
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Wed, 23 Jan 2008 08:38:25 +0530
+
+gerbv (2.0.0-2) unstable; urgency=low
+
+  * debian/rules: Minor cleanups to cleanly handle config.* files.
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Tue, 22 Jan 2008 22:56:36 +0530
+
+gerbv (2.0.0-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: package maintainer changed to Debian Electronics Team.
+
+ -- Ramakrishnan Muthukrishnan <rkrishnan@debian.org>  Mon, 21 Jan 2008 20:56:23 +0530
+
+gerbv (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+    * Fix incorrect display in some locales (closes: #374131, #302530)
+      * Urgency medium as this bug is "grave"
+    * Add desktop and icon files (closes: #367366)
+  * Updated standards-revision to 3.7.2
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 27 Aug 2006 11:06:41 +1000
+
+gerbv (1.0.1-2) unstable; urgency=low
+
+  * Removed build-dep for xlibs-dev (requires gtk only)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun,  8 Jan 2006 14:27:15 +1100
+
+gerbv (1.0.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #301281), now compiled with GTK+ 2.0
+    rather than 1.2
+  * Fixed FTBFS with gcc-4.0 (src/drill.c); thanks to Andreas Jochens
+    for the patch (closes: #286504)
+
+ -- Hamish Moffatt <hamish@debian.org>  Fri, 25 Mar 2005 23:06:53 +1100
+
+gerbv (0.16-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 15 Aug 2004 15:34:15 +1000
+
+gerbv (0.15-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun,  1 Feb 2004 14:16:20 +1100
+
+gerbv (0.14-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 24 Aug 2003 01:00:46 +1000
+
+gerbv (0.13-2) unstable; urgency=low
+
+  * Recompile for libpng package changes
+
+ -- Hamish Moffatt <hamish@debian.org>  Sat, 26 Apr 2003 13:02:32 +1000
+
+gerbv (0.13-1) unstable; urgency=low
+
+  * New upstream release
+  * Upgraded to debhelper 4
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 23 Mar 2003 23:59:05 +1100
+
+gerbv (0.12-1) unstable; urgency=low
+
+  * New upstream release (closes: #182939)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sat,  1 Mar 2003 14:12:48 +1100
+
+gerbv (0.11-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 24 Nov 2002 16:41:01 +1100
+
+gerbv (0.0.10-2) unstable; urgency=low
+
+  * Applied patch from the upstream author Stefan Petersen
+    <spe@stacken.kth.se> to correct assumptions about char signedness (closes:
+    #165052)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sat, 19 Oct 2002 11:42:18 +1000
+
+gerbv (0.0.10-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated standards-version to 3.5.7.
+
+ -- Hamish Moffatt <hamish@debian.org>  Tue, 15 Oct 2002 23:15:47 +1000
+
+gerbv (0.0.9-1) unstable; urgency=low
+
+  * New upstream release (closes: #149245)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun,  7 Jul 2002 12:37:13 +1000
+
+gerbv (0.0.8-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 30 Jun 2002 23:34:10 +1000
+
+gerbv (0.0.7-2) unstable; urgency=low
+
+  * Applied patch to fix problems with rendering arcs (closes: #142126)
+
+ -- Hamish Moffatt <hamish@debian.org>  Thu, 25 Apr 2002 10:36:12 +1000
+
+gerbv (0.0.7-1) unstable; urgency=low
+
+  * New upstream release
+  * Fixed capitalisation in the package description (closes: #124665)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 17 Feb 2002 14:10:37 +1100
+
+gerbv (0.0.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Mon, 17 Dec 2001 18:35:42 +1100
+
+gerbv (0.0.5-1) unstable; urgency=low
+
+  * First upload for Debian (closes: #120856)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sat, 24 Nov 2001 16:45:23 +1100

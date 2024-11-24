@@ -1,0 +1,22 @@
+pysha3 (1.0.2-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix a buffer overflow issue in SHA-3 CVE-2022-37454 (Closes: #1023030).
+
+ -- Stefano Rivera <stefanor@debian.org>  Sat, 29 Oct 2022 15:23:14 +0200
+
+pysha3 (1.0.2-2) unstable; urgency=medium
+
+  * Correct VCS URL fields.
+  * Remove suggestion for unrelated package.
+  * Enable upstream test suite during build.
+
+ -- Ben Finney <bignose@debian.org>  Wed, 23 Aug 2017 09:36:06 +1000
+
+pysha3 (1.0.2-1) unstable; urgency=medium
+
+  * The “سليمان الرشودي (Suliman Ibrahim al-Reshoudi)” release.
+  * Initial release.
+    Closes: bug#866518.
+
+ -- Ben Finney <bignose@debian.org>  Wed, 16 Aug 2017 22:59:19 +1000

@@ -1,0 +1,1874 @@
+texlive-bin (2020.20200327.54578-7+deb11u2) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS team
+  * Fix CVE-2023-32668: A document (compiled with the default settings)
+    was allowed to make arbitrary network requests.
+    This occurs because full access to the socket library was
+    permitted by default, as stated in the documentation.
+    (Closes: #1036470)
+  * Fix CVE-2024-25262: A heap buffer overflow was found via
+    the function ttfLoadHDMX:ttfdump. This vulnerability
+    allows attackers to cause a Denial of Service (DoS)
+    via supplying a crafted TTF file.
+    (Closes: #1064517)
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 29 Oct 2024 21:04:14 +0000
+
+texlive-bin (2020.20200327.54578-7+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix improperly secured shell-escape in LuaTeX (CVE-2023-32700)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 18 May 2023 11:50:03 +0200
+
+texlive-bin (2020.20200327.54578-7) unstable; urgency=medium
+
+  * Backport several security fixes for shell escape exploits in
+    xdvi, luatex, general write18 implementation.
+
+ -- Norbert Preining <norbert@preining.info>  Sat, 13 Mar 2021 09:31:55 +0900
+
+texlive-bin (2020.20200327.54578-6) unstable; urgency=medium
+
+  * Reduce B-D (Closes: #979607)
+    Thanks to Helmut Grohne for finding the minimal set.
+  * Bump standards version to 4.5.1, no changes necessary.
+
+ -- Norbert Preining <norbert@preining.info>  Sat, 16 Jan 2021 14:31:47 +0900
+
+texlive-bin (2020.20200327.54578-5) unstable; urgency=medium
+
+  * Replace "DEB_BUILD_OPTIONS=parallel=8" by "dh $@ ... --max-parallel=8".
+  * Add patch dvi2tty_man.diff to fix errors in manual page of dvi2tty.
+    (Closes: #958728)
+  * Change Maintainer field to "Debian TeX Task Force".
+  * Add manual page for mflua (using help2man).
+  * Lintian:
+    - I: capitalization-error-in-description-synopsis Tex TeX
+    - W: national-encoding (two files)
+    - P: silent-on-rules-requiring-root
+    - W: mismatched-override embedded-library
+    - W: groff-message usr/share/man/man1/detex.1.gz 76: warning:
+      can't find special character '..'
+    - W: wrong-manual-section usr/share/man/man1/axohelp.1.gz:1 1 != 1.1
+    - I: typo-in-manual-page usr/share/man/man1/dvi2tty.1.gz
+    - Override "W: no-manual-page"
+      + in case the page is provided from a different package
+      + page can only be found using apropos
+    - Override
+      "I: texlive-binaries: spare-manual-page usr/share/man/man1/cweb.1.gz"
+
+ -- Hilmar Preusse <hille42@web.de>  Wed, 23 Sep 2020 23:38:34 +0200
+
+texlive-bin (2020.20200327.54578-4) unstable; urgency=medium
+
+  * Add Conflict w/ texlive-luatex (<< 2020.20200329).
+    (Closes: #956884)
+  * Avoid massive parallel builds on powerpc, ppc64, sparc64. Limit
+    to -j8 (2nd try). This hopefully (Closes: #956605).
+
+ -- Hilmar Preusse <hille42@web.de>  Sat, 18 Apr 2020 07:38:25 +0200
+
+texlive-bin (2020.20200327.54578-3) unstable; urgency=medium
+
+  * Add Conflict w/ texlive-extra-utils (<< 2020.20200329).
+    (Closes: #956587)
+  * Avoid massive parallel builds on powerpc, ppc64, sparc64. Limit
+    to -j8. This hopefully Closes: #956605 .
+
+ -- Hilmar Preusse <hille42@web.de>  Wed, 15 Apr 2020 21:38:34 +0200
+
+texlive-bin (2020.20200327.54578-2) unstable; urgency=medium
+
+  * TeX Live 2020
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 30 Mar 2020 09:01:24 +0900
+
+texlive-bin (2020.20200327.54578-1) experimental; urgency=medium
+
+  [ Stephen Kitt ]
+  * luaharfbuzz in TeX Live 2020 needs
+    HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE which was added in 2.4.
+
+  [ Hilmar Preusse ]
+  * Add me to Uploaders
+
+  [ Norbert Preining ]
+  * New upstream version 2020.20200327.54578 - sources of TeX Live 2020 DVD
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 27 Mar 2020 18:04:20 +0900
+
+texlive-bin (2020.20200313.54259-2) experimental; urgency=medium
+
+  [ Hilmar Preusse ]
+  * Add --disable-luajithbtex for not $(LUAJIT_GOOD_ARCHS) (Closes: #953774)
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Mar 2020 06:30:35 +0900
+
+texlive-bin (2020.20200313.54259-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * TL 2020 source build
+  * Fix FTCBFS: Add texlive-binaries <cross> to Build-Depends to have
+    a native tangle. (Closes: #940691) (Thanks to Helmut Grohne)
+  * Change BD: libfreetype6-dev -> libfreetype-dev
+  * Update patches
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Drop unnecessary dependency on dh-autoreconf.
+  * Rely on pre-initialized dpkg-architecture variables.
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 13 Mar 2020 11:03:33 +0900
+
+texlive-bin (2019.20190605.51237-3) unstable; urgency=medium
+
+  [ Hilmar Preusse ]
+  * Stop building dvisvgm package to solve FTBFS on HURD
+    (Closes: #926701). It will be packaged separately (see #932968).
+    Add the new package to Recommends.
+  * Add patch to pdftex.man to document -synctex option (Closes: #772928).
+  * Patch by Gero Treuner <gt_72_debian.org@innocircle.com> (mp.w_epoch.patch)
+    MetaPost does not honour SOURCE_DATE_EPOCH (Closes: #890734).
+  * Patch by John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>
+    (sparc64-fix-alignment.patch) to enable the alignment fixes for Linux on
+    SPARC64 (Closes: #931873).
+
+  [ Norbert Preining ]
+  * Cherry pick session:
+    - lacheck: separate patterns for handling \def and \newcommand
+    - lacheck: version bump 1.29
+    - ptex: strict '! Improper alphabetic or KANJI constant.'
+    - eptex: version 190709 (add \ifincsname, revise \iffontchar and \fontchar)
+    - eptex.ech: more compatible with original e-TeX
+    - xdvi: don't use now-gone-from-ghostscript execute operator (from upstream)
+      (Closes: #940191)
+    - dvipdfmx: Fix a crash observed in add_ligature1_inverse_map()
+    - dvipdfmx: Fix a bug that OTL coverage data were sometimes not
+      read and were initialized to wrong values.
+    - dvipdfmx: Fix evaluation of option "-m" (Closes: #926642)
+    - dvipdfmx: workaround for problems in user defined resources
+    - gsftopk: gs-9.28(rc1) requires -dNOSAFER
+    - dvipdfmx: Take into account summertime. Always output color change code
+    - dvipdfmx: show appropriate message if unsupported pfa is used
+    - e-pTeX: e-pTeX 190908: \readline correctly handles Japanese characters
+    - ptexenc.c: updates from H. Kitagawa
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 18 Sep 2019 17:15:44 +0900
+
+texlive-bin (2019.20190605.51237-2) unstable; urgency=medium
+
+  * Cherry pick various fixes:
+    - dvipdfmx: Fix for compiler warnings. (S. Hirata)
+    - pmpost: Sync version number of upmpost with uptex
+    - dvipdfmx: Fix a bug that end of buffer check was wrong. (S. Hirata)
+    - dvisvgm: psdefs.cpp patch since GS_PDF_ProcSet was removed in
+    - dvipdfmx: Fix a bug that fake-bold is not handled properly in some
+      situations. (S. Hirata)
+    - xetex: lib/texmfmp.c: fix for \filedump of XeTeX
+    - xetex: lib/texmfmp.c: fix for \creationdate (XeTeX only)
+  * Silence synctex warning when no synctex file is present (Closes: #908964)
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 10 Jul 2019 09:59:23 +0900
+
+texlive-bin (2019.20190605.51237-1) experimental; urgency=medium
+
+  * New upstream version 2019.20190605.51237
+    - switch to 2019 branch not to follow development branch
+  * update patch
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 05 Jun 2019 12:11:38 +0900
+
+texlive-bin (2019.20190507.51032-1) experimental; urgency=medium
+
+  * New upstream version 2019.20190507.51032
+    - fixes to dvipdfmx and CFF data loading
+    - upTeX 1.25
+    - fixes to pTeX
+
+ -- Norbert Preining <norbert@preining.info>  Tue, 07 May 2019 14:45:59 +0900
+
+texlive-bin (2019.20190506.51016-1) experimental; urgency=medium
+
+  * New upstream version 2019.20190506.51016
+    - fixes to dvipdfmx and dvips
+  * update patches
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 06 May 2019 09:16:56 +0900
+
+texlive-bin (2019.20190408.50842-1) experimental; urgency=medium
+
+  * TeX Live 2019 release
+  * update/cleanup patches
+  * include luatex patch for tprint
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 08 Apr 2019 21:55:11 +0900
+
+texlive-bin (2019.20190311.50335-1) experimental; urgency=medium
+
+  * New upstream version 2019.20190311.50335
+  * update/cleanup patches
+  * bump breaks to 2018
+  * drop libtexlua52*, gone upstream
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 11 Mar 2019 17:01:22 +0900
+
+texlive-bin (2018.20181218.49446-2) unstable; urgency=medium
+
+  [ Hilmar Preuße ]
+  * Add patch_xdvi.1.in to use the correct style macro for a single
+    argument. (Closes: #919245)
+
+  [ Norbert Preining ]
+  * update VCS and my email
+
+ -- Norbert Preining <norbert@preining.info>  Sat, 02 Mar 2019 14:24:16 +0900
+
+texlive-bin (2018.20181218.49446-1) unstable; urgency=medium
+
+  * New upstream version 2018.20181218.49446
+    - reinstatiate old kpsewhich -var-value behaviour and
+      add -var-brace-value instead
+    - preloading fixes
+
+ -- Norbert Preining <preining@debian.org>  Tue, 18 Dec 2018 10:58:02 +0900
+
+texlive-bin (2018.20181214.49410-1) unstable; urgency=medium
+
+  * remove teckit on .orig building
+  * bump standards version, no changes necessary
+  * New upstream version 2018.20181214.49410
+  * update patches
+
+ -- Norbert Preining <preining@debian.org>  Fri, 14 Dec 2018 13:56:51 +0900
+
+texlive-bin (2018.20181104.49075-2) unstable; urgency=medium
+
+  * revert luatex to previous version (Closes: #913586)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 14 Nov 2018 00:36:35 +0900
+
+texlive-bin (2018.20181104.49075-1) unstable; urgency=medium
+
+  * New upstream version 2018.20181104.49075
+    (several dvipdfmx fixes, updates to dvisvgm, new luatex)
+  * depend on system teckit library
+
+ -- Norbert Preining <preining@debian.org>  Thu, 01 Nov 2018 17:25:01 +0900
+
+texlive-bin (2018.20180907.48586-2) unstable; urgency=medium
+
+  * cherry-pick from upstream:
+    - svn48676-uptex-fix-substring-bug
+    - svn48697-writet1-fix CVE-2018-17407 (Closes: #909317)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 19 Sep 2018 13:10:58 +0900
+
+texlive-bin (2018.20180907.48586-1) unstable; urgency=medium
+
+  * New upstream version 2018.20180907.48586 (Closes: #907784)
+  * include dvipdfmx toUnicode support fix
+  * fix building dvisvgm for non-texlive builds and external libs
+
+ -- Norbert Preining <preining@debian.org>  Sun, 09 Sep 2018 22:13:50 +0900
+
+texlive-bin (2018.20180824.48463-1) unstable; urgency=medium
+
+  * New upstream version 2018.20180824.48463
+  * remove upstream included patches
+
+ -- Norbert Preining <preining@debian.org>  Fri, 24 Aug 2018 11:12:56 +0900
+
+texlive-bin (2018.20180710.48169-1) unstable; urgency=medium
+
+  * New upstream checkout 2018.20180710.48169
+  * update patches, remove upstream ones
+
+ -- Norbert Preining <preining@debian.org>  Tue, 10 Jul 2018 11:43:24 +0900
+
+texlive-bin (2018.20180416.47457-5) unstable; urgency=medium
+
+  * Fix t4ht being completely broken due to %%~ expansion to
+    SELFAUTOPARENT (Closes: #902334)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 25 Jun 2018 15:36:03 +0900
+
+texlive-bin (2018.20180416.47457-4) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * cherry-picking fixed from upstream svn
+    - upstream-svn47712-dvidvi-error-reporting
+    - upstream-svn47723-dvidvi-cmd-line-error-reporting
+      better error reporting for dvidvi as well as gcc warning fixes
+    - upstream-svn47721-mendex30
+    - upstream-svn47722-mendex-rename-readme
+      mendex update to 3.0, switch default encoding to utf8
+    -	introduce the \expanded primitive:
+      upstream-svn47741-expanded-primitive-pdftex
+      upstream-svn47742-pdftex-expanded-test-fixes
+      upstream-svn47745-eptex-expanded
+    - upstream-svn47776-ptexenc-doc-fixes
+      fix links to upstream projects
+    - upstream-svn47799-dvipdfmx-try-suffix
+      let xdvipdfmx check .dvi and .xdv extensions like other progs
+
+  [ Hilmar Preusse ]
+  * Minor fixes for disdvi.1 (Closes: #899341), dt2dv.1 (Closes: #900043)
+    and gftodvi.1 (Closes: #900245)
+    Thanks to Bjarni Ingi Gislason.
+
+ -- Norbert Preining <preining@debian.org>  Tue, 29 May 2018 22:06:27 +0900
+
+texlive-bin (2018.20180416.47457-3) unstable; urgency=medium
+
+  * cherry-picking fixes from upstream svn:
+    - upstream-svn47469-dvipdfm-x-Fix-a-bug-which-causes-a-segfault-with-1-2
+      xetex segfaults with uncommon png formats
+      https://sourceforge.net/p/xetex/bugs/151/
+    - upstream-svn47476-m-tx-0.63a
+      update m-tx to 0.63a which fixes FTBFS on hurd (Closes: #896518)
+    - upstream-svn47477-ptexdir-fix-a-regression-for-discontinuous-kinsoku-t
+      ptex regression fix
+    - upstream-svn47506-typo
+      typo in the changelog name
+    -	upstream-svn47625-recover-to-give-tounicode-entries-for-ligatures
+      search didn't work for ligatures
+      https://tex.stackexchange.com/questions/430054/failing-search-for-words-with-ligatures-after-update
+    - upstream-svn47626-ptexdir-More-strict-check-kanji-token
+      inconsisten behavior of p-engines
+  * add information about SDE in tex.man and etex.man (Closes: #897627)
+  * use pkg-config as fallback for freetype configuration (Closes: #892446)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 07 May 2018 10:53:51 +0900
+
+texlive-bin (2018.20180416.47457-2) unstable; urgency=medium
+
+  * synctex fixes
+    - install synctex_version.h
+  * include upstream bug fix for m-tx (Closes: #896077)
+  * bump libsynctex soname to 2 (Closes: #895980)
+    - follow upstream in using synctex_parser_api_level
+
+ -- Norbert Preining <preining@debian.org>  Sat, 21 Apr 2018 07:34:39 +0900
+
+texlive-bin (2018.20180416.47457-1) unstable; urgency=medium
+
+  * New upstream version: Sources of TeX Live 2018: 2018.20180416.47457
+  * Upload to unstable
+
+ -- Norbert Preining <preining@debian.org>  Mon, 16 Apr 2018 13:00:49 +0900
+
+texlive-bin (2018.20180404.47274-1) experimental; urgency=medium
+
+  * New upstream version 2018.20180404.47274
+
+ -- Norbert Preining <preining@debian.org>  Wed, 04 Apr 2018 10:31:50 +0900
+
+texlive-bin (2018.20180313.46939-1) experimental; urgency=medium
+
+  * New upstream version 2018.20180313.46939
+  * update patches
+
+ -- Norbert Preining <preining@debian.org>  Tue, 13 Mar 2018 09:48:18 +0900
+
+texlive-bin (2018.20180119.46378-1) experimental; urgency=medium
+
+  * New upstream version 2018.20180119.46378
+  * update patches to 2018
+  * switch to included poppler, Debian's is too old
+  * build both libtexlua52 and libtexlua53
+  * update copyright for new embedded libs and packages
+
+ -- Norbert Preining <preining@debian.org>  Fri, 19 Jan 2018 13:08:35 +0900
+
+texlive-bin (2017.20170613.44572-8) unstable; urgency=medium
+
+  * support building without icu-config available (Closes: #879801)
+  * work around limitation so of (dh_)autoreconf by reimplementing parts
+    of the upstream provided reautoconf script logic
+  * clean up debian/rules (thanks Hilmar Preuße) after complete reautoconf
+
+ -- Norbert Preining <preining@debian.org>  Mon, 11 Dec 2017 11:14:24 +0900
+
+texlive-bin (2017.20170613.44572-7) unstable; urgency=medium
+
+  * make TL compatible to Poppler >= 0.59 (Closes: #883521)
+    - patches from upupstream Han The Thanh and adaptions by ArchLinux
+      Thanks to Hilmar Preuße for preparing and testing
+    - bump build-dep on libpoppler-private-dev to >= 0.59
+  * remove outdated deps on ruby, wish, python (Closes: #883051)
+  * bump standards version, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Wed, 06 Dec 2017 20:42:18 +0900
+
+texlive-bin (2017.20170613.44572-6) unstable; urgency=medium
+
+  * do not include cwd in PDF ID (Closes: #874102)
+  * bump standards version, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Mon, 04 Sep 2017 09:23:06 +0900
+
+texlive-bin (2017.20170613.44572-5) unstable; urgency=medium
+
+  * fix changelog mess-up.
+  * move tex4ht.jar building to src:texlive-extra to allow for
+    bootstrapping (Closes: #870786)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 09 Aug 2017 14:52:18 +0900
+
+texlive-bin (2017.20170613.44572-4) unstable; urgency=medium
+
+  * fix FTBFS with gcc7 (Closes: #870796)
+    Thanks Werner Fink for the patch and Hironobu Yamashita for pointing
+    me at it.
+  * bump standards version, no changes necessary
+
+
+ -- Norbert Preining <preining@debian.org>  Tue, 08 Aug 2017 07:54:46 +0900
+
+texlive-bin (2017.20170613.44572-3) unstable; urgency=medium
+
+  * fix typo in breaks (Closes: #867675)
+  * bump standards version, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Sun, 09 Jul 2017 22:54:57 +0900
+
+texlive-bin (2017.20170613.44572-2) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Norbert Preining <preining@debian.org>  Mon, 19 Jun 2017 16:32:49 +0900
+
+texlive-bin (2017.20170613.44572-1) experimental; urgency=medium
+
+  * New upstream version 2017.20170613.44572
+    - three fixes for luatex
+
+ -- Norbert Preining <preining@debian.org>  Tue, 13 Jun 2017 09:13:12 +0900
+
+texlive-bin (2017.20170524.44437-1) experimental; urgency=medium
+
+  * make-orig-tar: we are in 2017 now ;-)
+  * New upstream version 2017.20170524.44437
+  * update patches
+  * add fix for expose events from tex-k ml
+
+ -- Norbert Preining <preining@debian.org>  Sat, 27 May 2017 11:01:41 +0900
+
+texlive-bin (2016.20160513.41080.dfsg-2) unstable; urgency=medium
+
+  * cherrypick upstream svn43637 (Closes: #796490)
+    When embedding png images with alpha channel, pdftex did embed
+    twice as much memory and left the second half uninitialized.
+    Thanks to David Fifield for research and fix.
+
+ -- Norbert Preining <preining@debian.org>  Thu, 30 Mar 2017 10:02:29 +0900
+
+texlive-bin (2016.20160513.41080.dfsg-1) unstable; urgency=medium
+
+  * new upstream repackaging:
+    - drop SFConv from upstream tarball as it contains non-free files
+  * cherrypick several upstream fixes:
+    - svn42692..42695,42703 dvips: fix emstring initialization errors
+    - svn42711, 42715, 42720, 42723 fix various contact email addresses
+    - svn42784 upmendex: Cyrillic Extended-C for upmendex
+    - svn42803 dvipdfmx: update cid base font info
+  * fix five man-page lintian warnings
+
+ -- Norbert Preining <preining@debian.org>  Wed, 11 Jan 2017 22:45:03 +0900
+
+texlive-bin (2016.20160513.41080-8) unstable; urgency=medium
+
+  * cherrypick several upstream fixes:
+    - svn42380 use initstarttime in euptex
+    - svn42381 use initstarttime in eptex
+    - svn42383 use -1 for invalid epoch (dvips)
+    - svn42391 use -1 for invalid epoch (dvipdfmx)
+    - svn42488 - 42493 avoid access violation in (up)mendex
+    - svn42506 new random number primitives for e(u)ptex
+  * remove mips(el) from ICU broken list (Closes: #836454)
+    (Thanks to James Cowgill for tracking down and testing!)
+  * remove s390 special treatment, gcc has been fixed
+
+ -- Norbert Preining <preining@debian.org>  Tue, 15 Nov 2016 07:20:21 +0900
+
+texlive-bin (2016.20160513.41080-7) unstable; urgency=medium
+
+  * do not install tex4ht dangling symlinks, leave that to tl-htmlxml
+    (Closes: #835803)
+  * cherrypick several upstream fixes:
+    - svn41762 improve (e)ptex savepos
+    - svn41998 (e)ptex: allow only 8bit catcode
+    - svn42040 add ifmbox primitive to ptex
+    - svn42041 adapt eptex for ifmbox
+    - svn42110 fix tex4ht's compatibility with xetex
+    - svn42167 fix for mendex
+
+ -- Norbert Preining <preining@debian.org>  Sat, 01 Oct 2016 14:53:05 +0900
+
+texlive-bin (2016.20160513.41080-6) unstable; urgency=medium
+
+  * release to unstable
+
+ -- Norbert Preining <preining@debian.org>  Fri, 19 Aug 2016 13:00:34 +0900
+
+texlive-bin (2016.20160513.41080-5) experimental; urgency=medium
+
+  * fix pdftex segfaults with pdf docs with non-integer stemv values
+    - this is a problem introduced by poppler, upstream TeX Live
+    has not problem with this.
+  * build and install tex4ht, add java dependencies
+
+ -- Norbert Preining <preining@debian.org>  Mon, 15 Aug 2016 08:07:09 +0900
+
+texlive-bin (2016.20160513.41080-4) unstable; urgency=medium
+
+  * fix for upmendex segfaults (upstream svn 41497 and 41498)
+    - reactivate upmendex building for all archs
+    (Closes: #824791)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 20 Jun 2016 13:18:21 +0900
+
+texlive-bin (2016.20160513.41080-3) unstable; urgency=medium
+
+  * fix pdftex segfault on pdfmatch invocations (upstream svn 41418)
+  * rename SOURCE_DATE_EPOCH_TEX_PRIMITIVES to FORCE_SOURCE_DATE
+    as requested by reproducible-build. (upstream svn 41417)
+  * fix check_box bug in ptex (upstream svn 41295)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 14 Jun 2016 13:23:59 +0900
+
+texlive-bin (2016.20160513.41080-2) unstable; urgency=medium
+
+  * uniform luajit options
+  * try fixing test errors on icu-related progs
+  * break context << 2016 due to luatex incompatibility (Closes: #824474)
+  * syntax fix in rules
+  * try to fix build/test errors on mips(el) and sparc (Closes: #824260)
+    - make C(XX)FLAGS additive
+    - remove mips(el) from luajit archs (debian/rules and /control)
+    - disable upmendex on sparc/mips(el)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 18 May 2016 23:00:23 +0900
+
+texlive-bin (2016.20160513.41080-1) unstable; urgency=medium
+
+  * Imported Upstream version 2016.20160513.41080
+    - fix for xetex and luatex
+  * disable upstream included patch for dvipdfmx
+  * fix building on jit-unsupported archs, thanks to Thorsten Glaser
+    (Closes: #824166)
+
+ -- Norbert Preining <preining@debian.org>  Fri, 13 May 2016 19:57:37 +0900
+
+texlive-bin (2016.20160512.41045-1) unstable; urgency=medium
+
+  * break against old texlive (Closes: #820716)
+  * install a desktop file for xdvi (Thanks Pino Toscano, upupstream)
+  * imported Upstream version 2016.20160512.41045
+    support for suppressing time stamps (SOURCE_DATE_EPOCH) (Closes: #792202)
+  * add support for SOURCE_DATE_EPOCH also to luatex
+  * update patches
+  * bump standards version - no further changes necessary
+  * include a fix for dvipdfmx eating cid type2 font characters
+
+ -- Norbert Preining <preining@debian.org>  Thu, 12 May 2016 10:36:39 +0900
+
+texlive-bin (2016.20160409.40358-1) experimental; urgency=medium
+
+  * build gregorio, replace file in the old package (Closes: #815682)
+  * switch to system libraries for most libraries but libteckit
+    (which is only in experimental) (Closes: #810001)
+  * update patches
+
+ -- Norbert Preining <preining@debian.org>  Sat, 09 Apr 2016 17:06:21 +0900
+
+texlive-bin (2015.20160222.37495-1) unstable; urgency=medium
+
+  * drop transitional dummy luatex package (Closes: #804070)
+  * fix bashism in mktexlsr (thanks Thorsten Glaser) (Closes: #811092)
+  * switch back to system poppler
+  * reformat build-deps
+  * use system poppler again for building
+  * build musixtex, m-tx, pmx, and add replaces
+  * bump standards version, no changes necessary
+  * adjust git browser url
+
+ -- Norbert Preining <preining@debian.org>  Mon, 22 Feb 2016 21:59:40 +0900
+
+texlive-bin (2015.20150524.37493-7) unstable; urgency=medium
+
+  * Multi-arch conversion:
+    - bump dh dep to >= 9
+    - add Pre-Depends: ${misc:Pre-Depends} to all shlibs packages
+    - replace usr/lib with usr/lib/* throughout
+    - mark texlive-binaries (and dummy luatex) M-A: foreign
+    - mark all shlib and dev packages M-A: same
+    - move c-auto.h into /u/i/$triplet/kpathsea
+
+ -- Norbert Preining <preining@debian.org>  Wed, 14 Oct 2015 12:50:25 +0900
+
+texlive-bin (2015.20150524.37493-6) unstable; urgency=medium
+
+  * fix garbled output of vptovf and ovf2ovp (Closes: #795054)
+    Note, all the output is going to STDERR now.
+  * add several dvipdfm-x and type1 related upstream patches
+  * add dependency on t1utils (t1disasm) as dvipdfm* needs it for
+    the time being.
+
+ -- Norbert Preining <preining@debian.org>  Sun, 23 Aug 2015 13:41:45 +0900
+
+texlive-bin (2015.20150524.37493-5) unstable; urgency=medium
+
+  * mv c-auto.h back into /usr/include/kpathsea, we need a different
+    approach for multi-arch than upstream TeX Live, thanks Jakub Wilk.
+  * also remove the /usr/lib entry from the pkgconfig file for kpathsea
+
+ -- Norbert Preining <preining@debian.org>  Thu, 02 Jul 2015 08:46:11 +0900
+
+texlive-bin (2015.20150524.37493-4) unstable; urgency=medium
+
+  * fix missing c-auto.h install (Closes: #790294)
+  * add --fail-missing to dh_install call to make sure that we get
+    warned if new files are installed
+  * use mktemp instead of hard-coded tmp dir in dvitohp (Closes: #496899)
+  * do not install texconfig-dialog man page
+
+ -- Norbert Preining <preining@debian.org>  Tue, 30 Jun 2015 12:58:41 +0900
+
+texlive-bin (2015.20150524.37493-3) unstable; urgency=medium
+
+  * fix deps for archs were not luajittex is available (Closes: #790006)
+
+ -- Norbert Preining <preining@debian.org>  Fri, 26 Jun 2015 16:53:02 +0900
+
+texlive-bin (2015.20150524.37493-2) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Norbert Preining <preining@debian.org>  Thu, 25 Jun 2015 14:58:57 +0900
+
+texlive-bin (2015.20150524.37493-1) experimental; urgency=medium
+
+  * Imported Upstream version 2015.20150524.37493
+  * pin all of own libs to exact version
+  * add git support in make-orig-tar
+  * unfuzzify patches, disable relax luazlib version check
+  * re-include libpoppler in new sources, debian's version is too old
+    use --without-system-poppler and --with-system-xpdf
+    as we need system xpdf/poppler for pdftex/xetex
+  * add lintian overrides for the errors reported due to embedded libs
+  * build libtexlua and libtexluajit libraries
+  * bump tex-common dep to 6
+  * remove fmtutil code from postinst and use triggers
+  * add licenses of embedded libraries to debian/copyright
+
+ -- Norbert Preining <preining@debian.org>  Tue, 09 Jun 2015 09:15:02 +0900
+
+texlive-bin (2014.20140926.35254-6) unstable; urgency=high
+
+  * cherrypick security fix for libpng CVE-2015-0973 (Closes: #775673)
+    Restored a test on width that was removed from png.c at libpng-1.6.9
+
+ -- Norbert Preining <preining@debian.org>  Sun, 18 Jan 2015 23:45:42 +0900
+
+texlive-bin (2014.20140926.35254-5) unstable; urgency=high
+
+  * fix insecure temp file creation in mktexlsr (Closes: #775139)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 13 Jan 2015 07:32:13 +0900
+
+texlive-bin (2014.20140926.35254-4) unstable; urgency=high
+
+  * cherrypick security fix for libpng buffer overflow (Closes: #773824)
+    (CVE-2014-9495)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 24 Dec 2014 09:18:29 +0900
+
+texlive-bin (2014.20140926.35254-3) unstable; urgency=medium
+
+  * cherrypick fixes from upstream svn:
+    - fix enctex reading \^^ab control sequences
+    - fix mpost reading fontmap file multiple times (Closes: #767967)
+    - dvipdfmx fixes:
+      . fix pk support
+      . correct behaviour for subtractions in pkfont.c
+      . fix crash when gqpn is unset
+      . support for ghostscript 9.15
+      . fix bug in spc_dvips_at_end_page (wrong logic)
+  * bump standards version, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Thu, 06 Nov 2014 09:37:33 +0900
+
+texlive-bin (2014.20140926.35254-2) unstable; urgency=medium
+
+  * remove libxp build dep (Closes: #763304)
+  * Fix arm64 build by correctly qulifying neon code (Closes: #763711)
+    (Thanks to Wookey)
+
+ -- Norbert Preining <preining@debian.org>  Thu, 02 Oct 2014 14:26:50 +0900
+
+texlive-bin (2014.20140926.35254-1) unstable; urgency=medium
+
+  * Imported Upstream version 2014.20140926.35254
+  * Upload to unstable
+
+ -- Norbert Preining <preining@debian.org>  Fri, 26 Sep 2014 13:59:57 +0900
+
+texlive-bin (2014.20140923.35230-2) experimental; urgency=medium
+
+  * Remove --disable-largefile which breaks omegafonts on i386 archs
+
+ -- Norbert Preining <preining@debian.org>  Thu, 25 Sep 2014 16:32:55 +0900
+
+texlive-bin (2014.20140923.35230-1) experimental; urgency=medium
+
+  * Imported Upstream version 2014.20140923.35230
+  * update patches, remove included (u)pmpost entries
+
+ -- Norbert Preining <preining@debian.org>  Tue, 23 Sep 2014 11:05:13 +0900
+
+texlive-bin (2014.20140825.35035-1) experimental; urgency=medium
+
+  * include current svn status targeting TL2015:
+    - fixes memleak in synctex (Closes: #756761)
+    - fixes for support CID-keyed OTF fonts in xdvipdfmx
+
+ -- Norbert Preining <preining@debian.org>  Mon, 25 Aug 2014 10:57:04 +0900
+
+texlive-bin (2014.20140528.34243-6) UNRELEASED; urgency=medium
+
+  * cherrypick support CID-keyed OTF fonts in xdvipdfmx from upstream
+  * cherrypick compiler warning fix for above patch
+  * fix memleak in synctex (Closes: #756761), thanks Sebastian Ramacher
+  * cherrypick a fix for unicode encoding in CFF/Opentype fonts
+
+ -- Norbert Preining <preining@debian.org>  Mon, 04 Aug 2014 08:24:42 +0900
+
+texlive-bin (2014.20140528.34243-5) unstable; urgency=medium
+
+  * s390x: switch back to use standard gcc (4.9), but build with -O1
+  * cherrypick RTL/synctex reinstantiation from upstream
+
+ -- Norbert Preining <preining@debian.org>  Wed, 23 Jul 2014 08:19:17 +0900
+
+texlive-bin (2014.20140528.34243-4) unstable; urgency=medium
+
+  * include more upstream fixes for synctex shlib
+  * fix FTBFS on s390x due to gcc 4.9 (Closes: #753575)
+
+ -- Norbert Preining <preining@debian.org>  Fri, 04 Jul 2014 15:25:55 +0900
+
+texlive-bin (2014.20140528.34243-3) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * import three patches from luatex upupstream
+  * build luajittex based on whitelisting good archs
+    (Closes: #751150, #752041, #752065)
+  * Include upstream changes to support building synctex as shared
+    library, based on a patch by Sebastian Ramacher.
+
+  [ Sebastian Ramacher ]
+  * Build shared library for synctex_parser. (Closes: #749924)
+    - debian/control: Add packages for the shared library and development
+      files.
+    - debian/rules: Adopt for new binary packages.
+
+ -- Norbert Preining <preining@debian.org>  Sun, 29 Jun 2014 12:10:53 +0900
+
+texlive-bin (2014.20140528.34243-2) unstable; urgency=medium
+
+  * disable building of luajittex on s390x, hppa (Closes: #749718)
+  * bump depends on tex-common to 5.02 to make sure that we support
+    architectures without installed luajittex
+
+ -- Norbert Preining <preining@debian.org>  Fri, 30 May 2014 18:03:19 +0900
+
+texlive-bin (2014.20140528.34243-1) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Norbert Preining <preining@debian.org>  Wed, 28 May 2014 18:11:57 +0900
+
+texlive-bin (2014.20140522.34183-1) experimental; urgency=medium
+
+  * bump breaks to << 2014, and also break against tex-common << 5
+  * Imported Upstream version 2014.20140522.34183
+
+ -- Norbert Preining <preining@debian.org>  Thu, 22 May 2014 11:40:15 +0900
+
+texlive-bin (2014.20140512.33982-1) experimental; urgency=low
+
+  * fix missing epoch for build-dep on automake (Closes: #726513)
+  * libpng >= 1.4 not available in Debian or not default:
+    - reinclude libpng, gd, cairo, freetype2
+    - adjust build-deps
+    - adjust rules file
+  * update make-orig-tar for 2014: do not remove above mentioned
+    libs, but remove unused/separately packaged utils
+  * update patches for 2014, remove several outdated
+  * build with --disable-linked-scripts, and use patching of
+    Makefile.am file only for tl_scripts (texk/texlive/Makefile.am)
+  * build luatex again, we drop the independent package, build
+    transitional luatex package to ease upgrade
+  * bump standards version, no changes necessary
+  * add build-deps: llibxp-dev, libxi-dev for new xdvi
+  * don't remove X_PRE_LIBS from xdvik, otherwise linking breaks
+  * add versioned dependencies on libkpathsea6 and libptexenc1, otherwise
+    some binaries do not work
+  * import relax-zlib-check patch from luatex package
+
+ -- Norbert Preining <preining@debian.org>  Mon, 12 May 2014 13:19:46 +0900
+
+texlive-bin (2013.20130729.30972-2) unstable; urgency=low
+
+  * fix some bugs in man pages: mf, xdvi, synctex.5, mendex, detex
+    (Closes: #662846, #664961, #667981)
+  * fix a bug in mendex when range ops and macros are used (Closes: #534641)
+  * reinstatiate xdvi perl wrapper (Closes: #631271, #583188)
+  * pull several bug fixes from upstream svn, in particular fixes for
+    luatex (svn 31126, 31313, 31358), dvipdfmx (svn 31303), pdftex (svn 31313),
+    dvips (svn 31350, 31547)
+  * explicitely write out versioned dependencies on automake, autoconf,
+    libtool, and m4, to make sure we get successful builds
+
+ -- Norbert Preining <preining@debian.org>  Mon, 09 Sep 2013 15:18:50 +0900
+
+texlive-bin (2013.20130729.30972-1) unstable; urgency=low
+
+  * update make-orig-tar to use last-changed-rev svn number for
+    the last number in the version string
+  * switch to system harfbuzz library (Closes: #717962)
+    - remove halfbuzz library from source
+    - add build dependency on libharfbuzz-dev >= 0.9.18-3
+    - adjust debian/rules to build with system-harfbuzz
+  * add texinfo to build-deps, somehow timestamps can get screwed
+    which means that info files will be rebuild (Closes: #718251)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 30 Jul 2013 14:00:37 +0900
+
+texlive-bin (2013.20130722.31261-1) unstable; urgency=low
+
+  * allow for different origin in make-orig-tar
+  * Imported Upstream version 2013.20130722.31261
+    - fix for crash of luatex on x32 archs in certain cases
+    - update metapost to 1.803
+  * ship new pmpost patch for 1.803
+  * bump standards version, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Fri, 26 Jul 2013 14:39:43 +0900
+
+texlive-bin (2013.20130529.30792-1) unstable; urgency=low
+
+  * remove dependency on ed, seems not needed anymore (Closes: #546938)
+  * fix encoding of mendex man page (new b-d on recode) (Closes: #702202)
+  * fix strange output in tex.1 (Closes: #663157)
+  * upstream fixes (already in earlier TL2013 versions)
+    - xdvi now without libt1 (Closes: #668415)
+    - xdvi reacts on horizontal scroll events (Closes: #235757, #131338)
+    - dvips does not crash on input == output (Closes: #703212)
+  * upstream fix to luatex libio
+
+ -- Norbert Preining <preining@debian.org>  Wed, 29 May 2013 10:05:32 +0900
+
+texlive-bin (2013.20130523.30626-1) unstable; urgency=low
+
+  * update pmpost patch to fix png/svg output, thanks to Akira Kakuto
+    (Closes: #709273)
+  * disable ttf2pk and enable ttf2pk2, this allows us to get rid
+    of unsupported libfreetype(1), thanks again to Ondřej Surý.
+  * new upstream: remove biber binaries (Closes: #709274)
+  * fix postinst so that formats are again rebuild
+  * remove lintian-overrides, not needed anymore
+
+ -- Norbert Preining <preining@debian.org>  Thu, 23 May 2013 09:42:24 +0900
+
+texlive-bin (2013.20130522.30620-1) unstable; urgency=low
+
+  * remove libgd and t1lib copies by removing the need to configure
+    these libraries at all (Closes: #709145, #709146)
+    Thanks Ondřej Surý <ondrej@debian.org> for providing the patch.
+  * build with system zzlib and ice, remove embedded copies
+  * remove copies of cairo, pixman which are already unused
+  * re-include pmpost building, thanks to Akira Kakuto and
+    Hironori Kitagawa
+
+ -- Norbert Preining <preining@debian.org>  Wed, 22 May 2013 10:07:27 +0900
+
+texlive-bin (2013.20130521.30601-1) unstable; urgency=low
+
+  * break against old TeX Live and update search path (Closes: #709025)
+  * reenable in-tree libgd usage: after the libtiff4 vs libtiff5 chaos
+    has been fixed (in libgd?) it will be disabled again
+
+ -- Norbert Preining <preining@debian.org>  Tue, 21 May 2013 11:14:15 +0900
+
+texlive-bin (2013.20130516.30500-1) unstable; urgency=low
+
+  * new upstram checkout
+  * disable pmpost, no build support at the moment
+
+ -- Norbert Preining <preining@debian.org>  Thu, 16 May 2013 18:21:52 +0900
+
+texlive-bin (2012.20130315.29398-1) experimental; urgency=low
+
+  * import new upstream, add svn rev number as last version component
+  * add Vcs-fields (Closes: #695054)
+  * bump texlive-common dependency to 2012.20130315
+  * disable building texdoctk, fully build out of texlive-base
+
+ -- Norbert Preining <preining@debian.org>  Sat, 16 Mar 2013 09:53:14 +0900
+
+texlive-bin (2012.20121124-1) experimental; urgency=low
+
+  * depend on texlive-common >= 2012.20121120 to prohibit partial
+    update of only texlive-binaries (Closes: #694126)
+
+ -- Norbert Preining <preining@debian.org>  Sun, 25 Nov 2012 14:22:09 +0900
+
+texlive-bin (2012.20121120-1) experimental; urgency=low
+
+  * new upstream build
+
+ -- Norbert Preining <preining@debian.org>  Tue, 20 Nov 2012 17:57:16 +0900
+
+texlive-bin (2012.20120628-4) unstable; urgency=low
+
+  * add necessary break for update from wheezy (Closes: #689005)
+  * build dvisvgm with libgs support (build dep added, config option added)
+  * include a fixed and updated man page for updmap.cfg (Closes: #688893)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 20 Nov 2012 09:31:10 +0900
+
+texlive-bin (2012.20120628-3) unstable; urgency=low
+
+  * fix too short name space for cweave (original file has this fix
+    since 2008) (new patch cweave-fix-too-short-names)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 04 Sep 2012 10:32:59 +0900
+
+texlive-bin (2012.20120628-2) unstable; urgency=low
+
+  * cherrypick a bugfix from upstream for ptex kanji code scanning
+    (debian/quilt/upstream-fix-ptex-scanning)
+  * format and lintian fixes
+
+ -- Norbert Preining <preining@debian.org>  Thu, 26 Jul 2012 11:59:23 +0900
+
+texlive-bin (2012.20120628-1) unstable; urgency=low
+
+  * new upstream (some emergency fixes), the following patches have
+    been removed since they are included upstream: patch-icu, patch-pdftex,
+    fix-pipe-in-out-regression, upstream-fix-ini-synctex-segfault
+  * Build with -marm on armhf to fix lilypond FTBFS (Closes: #678604)
+    (Thanks Peter Michael Green)
+
+ -- Norbert Preining <preining@debian.org>  Thu, 28 Jun 2012 23:47:26 +0900
+
+texlive-bin (2012.20120623-2) unstable; urgency=low
+
+  * fix reading from and writing to pipes from within tex: new
+    patch fix-pipe-in-out-regression (Closes: #679065)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 26 Jun 2012 16:02:17 +0900
+
+texlive-bin (2012.20120623-1) unstable; urgency=low
+
+  * post release fixed from Peter Breitenlohner (will be included upstream):
+    - (patch-dvi2tty, patch-lacheck) Ken Brown <kbrow1i@gmail.com> has noteda
+    that already moderately long pathnames may yield buffer overruns in
+    lacheck and dvi2tty.
+    - (patch-icu) three ICU library files have been modified (undoing ICU
+    SVN commit 36090 from 2009-06-11), in order to solve all/most XeTeX
+    problems with Indic scripts.
+    - (patch-pdftex) a small change in pdftexdir/pdftosrc.cc required to
+    build pdfTeX with poppler >=0.18.4 (system-xpdf).  Note, however, that
+    building pdfTeX that way slightly reduces its capability to handle large
+    files (see README.config 1.6 and 3.4.2).
+  * update updmap man page (Closes: #677300)
+  * (pulled from upupstream cvs, patch xdvi-upupstream-fixes)
+    - Fixed bugs in property handling on 64-bit systems (related to source
+      specials).
+    - Added support for XkbBell, to make the console bell work again.
+
+ -- Norbert Preining <preining@debian.org>  Sat, 23 Jun 2012 12:57:25 +0900
+
+texlive-bin (2012.20120530-2) unstable; urgency=low
+
+  * call update-language in the postinstall (Closes: #675179)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 30 May 2012 21:34:07 +0900
+
+texlive-bin (2012.20120530-1) unstable; urgency=high
+
+  * new upstream snapshot (svn 26726)
+    exporting kpse_cnf_get (Closes: #675109)
+  * cnf.h is again installed, don't install it via libkpathsea-dev.install
+  * patch handling:
+    . removed: 41_maketexmf, 12_fix_epstopdf_invocation
+      both included upstream or not needed anymore
+    . new: set-e-fmtutil part of set-e-in-various-scripts that still
+      applies
+    . disabled: 57_texconfig_papersizes_for_upstream,
+      58_texconfig_papersizes_use_ucf, superseeded by 55_texconfig_stuff
+    . disabled: set-e-in-various-scripts: split into set-e-fmtutil
+      and a disabled part for texconfig
+
+ -- Norbert Preining <preining@debian.org>  Wed, 30 May 2012 11:02:05 +0900
+
+texlive-bin (2012.20120516-1) unstable; urgency=low
+
+  * new upstream snapshot based on TL2012 tlpretest
+  * remove outdated and not needed patches
+  * remove traces of debian internal mupdmap, we use the one that is now
+    shipped by default in TeX Live
+  * patch shipped updmap for correct perl module search path
+  * move patches from debian/patches to debian/quilt, add quilt as
+    build dep, and include quilt patching in debian/rules
+    this gets us rid of the "strange" parts of the 3.0 format
+    (see quilt vs dpkg-source fuzzyness acceptance).
+    Thanks to an unnamed dev who gave me the hint!
+  * disable build-wovp2ovf patch, included upstream
+  * (re)install cnf.h into libkpathsea-dev (Closes: #673016)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 16 May 2012 14:05:23 +0900
+
+texlive-bin (2011.20120510-1) unstable; urgency=low
+
+  * new upstream checkout: fix for dvipdfmx
+  * include debian/patches/xdvi-zoom-with-eps-figures.patch from Ubuntu,
+    but do not activate it. It makes xdvi crash on *every* zoom in Debian,
+    needs more investigation. Original reason: Make zooming with
+    Ghostscript 9.0x working correctly. EPS figures were cut off after
+    zooming and scrolling. (Taken from Ubuntu packaging, thanks Jeremy Bicha)
+    See http://bugs.ghostscript.com/show_bug.cgi?id=692540
+  * fix FTBFS on alpha (Closes: #672222)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 07 May 2012 12:52:39 +0900
+
+texlive-bin (2011.20120507-1) unstable; urgency=low
+
+  * new upstream checkout: uptex 1.10
+  * drop patches for config file inclusion in (x)dvipdfmx, included upstream
+  * add man page for etex
+  * include pmpost patches and build it
+  * adapt/unfuzzify patches for current sources
+  * disable mtx building, we have prepmx package in Debian
+
+ -- Norbert Preining <preining@debian.org>  Mon, 07 May 2012 10:47:49 +0900
+
+texlive-bin (2011.20120410-1) unstable; urgency=low
+
+  * new upstream checkout:
+    - remove decls of popen and pclose (Closes: #64524) (!yow, 5 digit bug!)
+    - do not declare getopt in C++, fixes FTBFS with g++ >= 4.7
+      (Closes: #667392)
+  * add patches (maybe to be included upstream) that allows inclusion of
+    one config file in another for (x)dvipdfmx. This will be
+    used by the paper code.
+  * fix description of libptexenc-dev package (Closes: #667694)
+  * remove xdvik patch, included upstream
+  * remove conflict with ptex-bin, we are building a transitional package now
+  * build with internal t1lib, as t1lib is going to disappear in
+    wheezy (Closes: #667912) (no, dropping xdvi is not an option!)
+    (add a lintian override otherwise this gives a lintian error)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 10 Apr 2012 10:16:01 +0900
+
+texlive-bin (2011.20120328-1) unstable; urgency=low
+
+  * build with system libgraphite, adapt build dependencies
+  * remove embedded source copies of several libs (Closes: #665792)
+  * remove .svn directories from orig tarball
+  * disabling pmx compilation (--disable-pmx in debian/rules)
+
+  [ Hilmar Preuße ]
+  * solve FTBFS on Hurd the ugly way, by hard coding PATH_MAX as
+    it is done in kpathsea (61_path_max.diff) (Closes: #665456)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 28 Mar 2012 18:10:05 +0900
+
+texlive-bin (2011.20120322-1) unstable; urgency=low
+
+  [ Hilmar Preuße ]
+  * Do not declare an versioned B-D for g++ on armel, reapplied
+  * we still need 60_unneeded_linking (new version based on am files)
+    (Closes: #664074)
+  * built using libpng15 (Closes: #662520) (Closes: #649949)
+  * use libpoppler-private-dev instead of libpoppler-dev (Closes: #660105)
+
+  List of fixed bugs in new TeX Live
+  * fix string corruption in Metapost (Closes: #632328)
+  * MP failed to create .mpx files for .mp files not in current dir
+    (Closes: #632658)
+  * bibtex is able to handle unicode (Closes: #382075)
+  * dvips info page describes debugging options correctly
+    (Closes: #269638)
+  * FTBFS on KFreeBSD fixed upstream (Closes: #663519)
+  * getnonfreefonts has been removed (Closes: #600339)
+
+ -- Norbert Preining <preining@debian.org>  Fri, 23 Mar 2012 08:35:10 +0900
+
+texlive-bin (2011.20120307-1) experimental; urgency=low
+
+  * new release, based on preliminary TL2012 status (TL2012/dev!)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 07 Mar 2012 08:33:48 +0900
+
+texlive-bin (2009-12) unstable; urgency=low
+
+  [ Frank Küster ]
+  * Make the error message more user-friendly when texconfig encounters
+    strange paper size definitions in config.ps (closes: #636328)
+
+  [ Hilmar Preuße ]
+  * Do not declare an versioned B-D for g++ on armel (Closes: #654746)
+  * Install manual page for vlna in /usr/share/man/cs/man1
+    (Closes: #597218)
+
+  [ Norbert Preining ]
+  * include fix for xetex breakage to backward incompatible zlib change
+    change build dependency to depend on zlib1g-dev with version, and
+    remove the alternative zlib-dev build dep
+    (Closes: #659680)
+  * bump standards version to 3.9.2, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Tue, 14 Feb 2012 08:24:30 +0900
+
+texlive-bin (2009-11) unstable; urgency=low
+
+  [ Hilmar Preuße ]
+  * disable the LFS support provided by upstream again, it is
+    really broken (Reopens: #618033). It:
+    - breaks pdflatex on big endian platforms (Closes: #637667)
+    - introduced an ABI change on 32-bit platforms (Closes: #637720)
+
+ -- Frank Küster <frank@debian.org>  Mon, 15 Aug 2011 21:48:13 +0200
+
+texlive-bin (2009-10) unstable; urgency=low
+
+  [ Hilmar Preuße ]
+  * xdvik compilation error with glibc-2.10 and gcc-4.4:
+    xdvik-22.84.16-open-mode.patch (Closes: #614257)
+  * comment the --disable-largefile switch in upstream build script
+    (partial_lfs_support.diff). This hopefully (Closes: #618033). dvips
+    still can't write files > 2GB (see #383781).
+  * we can use gcc-4.5 on armel too
+
+  [ Frank Küster ]
+  * Indicate in the description that this package needs a real TeX package
+    to function, and add a Recommends on texlive-base (closes: #593782)
+  * Make various upstream-provided scripts "set -e".  This closes: #136051
+    and is needed by the planned papersize patch to texconfig.
+  * The binaries pdftex, dvips, xdvi and dvipdfmx now respect the
+    system-wide paper setting as their default if there is no papersize
+    information in the input file (see #49149).  It is still highly
+    recommended to specify such information explicitly, e.g. using
+    hyperref.sty with LaTeX.
+
+ -- Frank Küster <frank@debian.org>  Thu, 28 Jul 2011 21:54:49 +0200
+
+texlive-bin (2009-9) unstable; urgency=high
+
+  * Add 73_tex_segfault patch, closes: #633011 (Frank Küster)
+    urgency set to high to fix this RC bug and help with poppler transition
+  * add texlive-binaries.lintian to override embedded lib t1lib
+
+ -- Norbert Preining <preining@debian.org>  Thu, 21 Jul 2011 00:10:10 +0900
+
+texlive-bin (2009-8) unstable; urgency=low
+
+  * add upstream patch from Mathias Kende fixing segfaults on MIPS
+    due to invalid C (Closes: #602566)
+    (debian/patches/upstream-tex-file_arg-passing-fix)
+
+ -- Norbert Preining <preining@debian.org>  Thu, 11 Nov 2010 00:00:35 +0900
+
+texlive-bin (2009-7) unstable; urgency=low
+
+  * add ed (and perl, texlive-common) to the list of dependencies (LP: #577305)
+    (Closes: #580732)
+  * remove texconfig warning/exit (with tlmgr link) statement and rely
+    on fmtutil being debianized (Closes: #588731)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 10 Aug 2010 17:09:47 +0900
+
+texlive-bin (2009-6) unstable; urgency=high
+
+  [ Frank Küster ]
+  * include a patch that allows texconfig to handle more default paper
+    settings.  This is intended to be submitted upstream, and to be used
+    to address #402994 (libpaper integration) [fk]
+
+  [ Norbert Preining ]
+  * include (lost) man pages for texconfig-dialog, devnag, bibtex8,
+    omfonts, otangle, pdfopen (no bug, but see #574796)
+  * add a patch upstream-web2c-tmpfilewithpid that fixes overwriting
+    files with -recorder in parallel builds (Closes: #575731).
+  * bump standards version to 3.8.4, no changes necessary
+  * bump build-dep on libpoppler to 0.12.4 (against my will!!)
+    (Closes: #577684)
+  * Fix CVE-2010-1440: this overrides the incomplete fix for CVE-2010-0793.
+
+  [ Security Team ]
+  Fixed in 2009-5+nmu1
+  * Fix CVE-2010-0827: buffer overflow in dvips (virtualfont.c).
+
+ -- Norbert Preining <preining@debian.org>  Sat, 01 May 2010 02:17:20 +0900
+
+texlive-bin (2009-5) unstable; urgency=low
+
+  * include a patch (from upstream) to fmtutil so that multiple
+    defined formats are accepted. That is the definitive fix for bug
+    #557091, but the other one is necessary, too.
+  * install synctex.5 man page
+  * manage bibtex with alternatives, code by Андрей Парамонов
+    (Closes: #539482)
+
+ -- Norbert Preining <preining@debian.org>  Sat, 26 Dec 2009 19:06:47 +0900
+
+texlive-bin (2009-4) unstable; urgency=low
+
+  * make texlive-binaries replace the (only in old-stable present)
+    freetype1-tools (Closes: #560975)
+  * take over forgotten patch from TL2007 for building on i386-hurd.
+    The patches are now icu-xetex_hurd.diff and detex-hurd.diff
+    (patches thanks to Samuel Thibault as already in TL2007, and
+    thanks for Hilmar for tracking that down) (Closes: #560800)
+  * add "-Wl,--no-relax" to LDFLAGS on alpha to fix a FTBFS, thanks to
+    Steve Langasek for the pointer (Closes: #557330) [hilmar-guest]
+  * resurrect etex which was lost (Closes: #561768)
+    - install etex from inst/bin/
+    - add etex.1 to debian as it is shipped in src:texlive-base
+  * include a fix for segfaults in mpost (Closes: #561500)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 21 Dec 2009 23:53:48 +0900
+
+texlive-bin (2009-3) unstable; urgency=low
+
+  * first upload to unstable
+  * replace/conflict/provide dvi2tty to make upgrades smooth (Closes: #559120)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 09 Dec 2009 23:04:26 +0900
+
+texlive-bin (2009-2) experimental; urgency=low
+
+  * add replace texlive-extra-utils (<< 2008) for dvi* (reported in bug
+    #557086)
+
+ -- Norbert Preining <preining@debian.org>  Sat, 21 Nov 2009 15:55:27 +0900
+
+texlive-bin (2009-1) experimental; urgency=low
+
+  [ Frank Küster ]
+  * New upstream (closes: #481060) version (pre-release, but not far from)
+    with lots of internal changes, hence the upload to experimental. This
+    upstream version fixes the following bugs:
+
+    - many manpage typos, with warm thanks and a virtual QA bouquet to
+      A. Costa <agcosta@gis.net>, closes: #450552, #450553, #450554,
+      #450555, #450556, #450557, #450558, #450559, #450560, #464351 (the
+      last was found by Joachim Breitner <nomeata@debian.org>
+
+      [xdvi bugs]
+    - closes: #336807, crashes with (breaklinks) hyperrefs
+    - closes: #357462, shrinkFactor 0 is broken
+    - closes: #361218, dies while printing
+    - closes: #342529, unnecessarily noisy in expert mode
+    - closes: #350292, please use cntl-wheel to zoom
+    - closes: #351672, please use shift-wheel to scroll left or right
+    - closes: #478176, transition to texlive has lost xdvi 'grid' feature
+    - closes: #461818, typo in oxdvi.1 and xdvi.1 man pages
+
+      [mixed executables]
+    - bibtex: Upstream added a patch that closes: #520920
+
+    - dvipdfm is now a symlink to dvipdfmx. Among other problems, this
+      closes: #485563
+
+    - closes: #421464, pdfetex: Not embedding Base-14 fonts creates
+      somewhat broken files
+    - closes: #518536, fresh upstream of pdftex is needed (latest stable
+      pdftex is 1.40.9 available)
+    - closes: #532074, 'man pdftex': missing .ds WB
+
+    - closes: #446617, texlive-metapost: Omits font encoding from output
+    - closes: #457711, texlive-metapost: mpost man page does not match reality
+
+    - closes: #507652, make math support working in xe(la)tex and lmodern
+      fonts
+    - closes: #489943, mktexpk does not work in directories containing
+      spaces
+    - closes: #536795, 'man texconfig' typos (the fix also affects a
+      Debian-specific patch)
+    - closes: #420836, "texdoc -s" is too slow, should use ls-R database
+
+    - closes: #459571, please include the TeXcount.pl script to do TeX
+      word count
+    - closes: #413652, a2ping: embedding all fonts
+    - closes: #542463, vlna program missing from texlive-lang-czechslovak
+
+  * The texlive-bin source package is now handled independently from the
+    other TeXLive source packages, i.e. it is not configured in
+    tpm2deb.cfg in our svn repository and the debian directory. Instead,
+    it now looks more like a standard compiled package and should be
+    easier to work on in case of security uploads or NMUs.
+  * This also means that some of it's older binary packages, like
+    texlive-metapost, have moved source package. By chance, this closes:
+    #517600, #517601
+  * Support a create-orig-source target in debian/rules.  The orig.tar.gz
+    is now either wget'ed if we are working on a released version, or
+    automatically created from a svn repository for development
+  * There are now only three binary packages, texlive-binaries and the two
+    library packages.  texlive-binaries Replaces/Conflicts/Provides
+    texlive-base-bin in order to get a working (if not smooth)
+    transition.
+  * Add Build-Depends: time, since the upstream Build script uses it
+  * Don't install the format links, they will generated by dh_installtex
+    in the other packages, also do not install the man pages for the
+    links
+  * do not install rungs, it is not necessary
+  * do not install script links, they will be shipped together with
+    the script itself
+  * Add patch 60_unneeded_linking. These needs testing!
+
+  [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
+  * debian/rules: use /usr/share/quilt/quilt.make provided by quilt and remove
+    patch-stamp & unpatch targets
+  * Install changelog into libkpathsea packages
+  * Add a README.source
+
+  [ Norbert Preining ]
+  * fix postinst update-alternatives, the xdvi-xaw does not have .bin anymore
+  * add texlive-binaries.prerm to remove the alternative
+  * add same version number to libkpathsea-dev deps on libkpathsea5 to make
+    lintian happy
+  * make texlive-binaries replace/conflict/provide dvipdfmx (in accordance
+    with the maintainer of dvipdfmx we will phase out dvipdfmx itself)
+  * new source package format "3.0 (quilt)" can be used (closes: #538557)
+  * Install copyright file
+  * add patch for libpoppler 0.12 (thanks to Ubuntu for inspiration)
+
+ -- Norbert Preining <preining@debian.org>  Fri, 13 Nov 2009 01:20:08 +0900
+
+texlive-bin (2007.dfsg.2-3) unstable; urgency=medium
+
+  * add missing source roadmap.fig of roadmap.eps in fontinst documentation
+    (Closes: #482915) (urgency medium due to RC bug)
+    (new patch add-missing-fontinst-source)
+
+ -- Norbert Preining <preining@debian.org>  Thu, 26 Jun 2008 23:14:59 +0200
+
+texlive-bin (2007.dfsg.2-2) unstable; urgency=low
+
+  * use local keyword in a policy-compliant way (Closes: #488023)
+    (urgency medium since RC bug)
+  * do not install fmtutil.cnf in texmf-texlive/web2c (Closes: #488035)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 25 Jun 2008 21:59:32 +0200
+
+texlive-bin (2007.dfsg.2-1) unstable; urgency=medium
+
+  * Let tl-metapost replace tl-context (closes: #484818). This is a RC
+    bug, hence medium urgency [fk]
+  * Fix shell scripting errors in texlive-base-bin's preinst script (one
+    fix actually is done in common.functions.preinst and affects all
+    packages, but didn't show up there). Closes: #484833 [fk]
+  * include sfd files necessary for other packages, but removed from
+    the archive with the imminent removal of freetype1-tools. That needs
+    a new .orig.tar.gz
+  * bump standards version to 3.8.0:
+    - rename README.Debian-source to README.source an explain how to change
+      something using quilt by refering to the quilt README.source
+    - add homepage field to control
+    - add a patch target to debian/rules
+  * add dversionmangle to debian/watch file to ignore the .dfsg.NN suffix
+
+ -- Norbert Preining <preining@debian.org>  Thu, 12 Jun 2008 18:12:50 +0200
+
+texlive-bin (2007.dfsg.1-4) unstable; urgency=low
+
+  * add mktexlsr-ignore-more-vcs patch that makes mktexlsr ignore not only
+    .svn, but also other VCS directories. Patch taken from upstream
+    (Closes: #481371) [np]
+  * Fix NEWS.Debian of texlive-base-bin to describe the issue of removed
+    conffiles better (closes: #482631) [fk]
+  * add a missing line to the tl2007.2 xetex patch, taken from upstream
+  * add a patch to xdvipdfmx to re-allow inclusion of tagged pdf images
+    (Closes: #483019) (big thanks to Jonathan Kew for tracking all this down)
+  * do not install xdvizilla(.1) (Closes: #477160)
+  * use gcc/g++-4.2 on armel to fix FTBFS (closes: #483939) (thanks Adeodato)
+
+ -- Norbert Preining <preining@debian.org>  Sun, 01 Jun 2008 16:29:49 +0200
+
+texlive-bin (2007.dfsg.1-3) unstable; urgency=low
+
+  * improve manpage of patgen (Closes: #450875)
+  * (really?) fix the watch file (Closes: #449621), thanks Raphael Geissert
+  * bump standards version to 3.7.3, no changes needed
+  * add texlive-common dependency to the -doc splitted packages,
+    otherwise configuration can fail due to missing update-updmap etc
+    (Closes: #457270) (Closes Ubuntu bug: 177674)
+  * include dviconcat and dviutils (orphaned package dviutils/seetex) and
+    provide/replace/conflict with dviutils (extra-utils)
+  * texlive-xetex recommends texlive-latex-base (Closes: #462610)
+  * add copies of supp-pdf.tex and supp-mis.tex from context 2008-01-28
+    to texlive-metapost so inclusion of metapost images in pdf(la)tex does
+    work without installation of context (Closes: #465107)
+  * fix perl warning in thumbpdf (patch: fix-thumbpdf-perlwarning)
+    (Closes: #469294)
+  * fix a segfault in ovp2ovf (patch: fix-ovp2ovf-segfault) (Closes: #470433)
+  * TeX Live 2007.2 release incorporation: fixes for xetex and xdvipdfmx,
+    new patches tl2007.2-xetex and tl2007.2-xdvipdfmx
+    (adapted from Jonathan Kew's original patches to work with poppler)
+  * add the LPPL to debian/copyright
+  * texlive-extra-utils now recommends ghostscript (Closes: #476954)
+  * fix skipping of all trees in mktexlsr with empty $HOME (Closes: #473548)
+  * add a patch for Sinhala support by Anuradha Ratnaweera
+    <anuradha@taprobane.org>, but keep it disabled until Jonathan gives me
+    the ok. This would close the bug #476957.
+
+ -- Norbert Preining <preining@debian.org>  Sun, 20 Apr 2008 20:14:04 +0200
+
+texlive-bin (2007.dfsg.1-2) unstable; urgency=low
+
+  * Update location of upstream iso.zip file in uscan watch file (closes:
+    #449621), thanks to Raphael Geissert <atomo64@gmail.com> [fk]
+  * switch to libpoppler-0.5.9 patch, since the new libpoppler (>= 0.6) is in
+    unstable, adjust build deps to libpoppler-dev >= 0.6 (Closes: #451588)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 19 Nov 2007 11:41:11 +0100
+
+texlive-bin (2007.dfsg.1-1) unstable; urgency=low
+
+  * disable pdftex character shifting (option G) in config.pdf
+    (Closes: #434891)
+  * rebuild new orig.tar.gz necessary to blacklist latexmp completely
+    (Closes: #436965)
+  * add patch gcc43-compile-fix to compilation of teckit with newer
+    gcc compilers (Closes: #441605) (patch taken from 007-12ubuntu3,
+    thanks Matthias Klose)
+  * implement doc splitting, so that we can build separate -doc packages
+    for every collection we want to [np]
+    splitting is done for: metapost, base-bin
+  * fix segfault of dvips -z on amd64 (patch applied upstream), thanks to
+    Bastien Roucaries for finding and providing a patch (Closes: #447081)
+    (Fixes: CVE-2007-5935)
+
+ -- Norbert Preining <preining@debian.org>  Mon, 22 Oct 2007 07:35:16 +0200
+
+texlive-bin (2007-14) unstable; urgency=low
+
+  * Really move Philokalia.otf to a fonts directory [fk]
+  * fix FTBFS on hurd-i386, adding patch icu-powerpc-buildfix-patch from
+    Samuel Thibault (Closes: #437949) [np]
+  * set LANG=C for the update-alternatives grepping, thanks Andreas Degert
+    (Closes: #438551) [np]
+  * Add missing quotes around the sed script in
+    texlive-base-bin.postinst(.pre) (Closes parts of #439205) [np]
+  * blacklist latexmp.pdf since no source is present (Closes: #436965) [np]
+
+ -- Norbert Preining <preining@debian.org>  Sat, 01 Sep 2007 11:40:57 +0200
+
+texlive-bin (2007-13) unstable; urgency=low
+
+  * let texlive-xetex depend on dvipdfmx (Closes: #430373)
+  * add xetex patch, included in release texlive 2007.1. This patch fixes
+    xetex crashes on big-endian 64bit archs, and crashes with some OT fonts.
+  * update a2ping script and it's man page (Closes: #412107)
+  * update config.ps from current svn (Closes: #431338)
+  * add lost texlive-extra-utils recommends dvidvi (thanks Lionel for
+    spotting this)
+  * include the fixes to dvilj(k) which are included in the TeX Live
+    security branch, this adds a patch dviljk-security-fixes
+  * Move Philokalia-Regular.otf from the documentation to a fonts
+    directory, thanks to Ralf Stubner (closes: #433138)
+  * duplicate the code to recreate missing conffiles pdftexconfig.tex,
+    config.ps from texlive-base-bin postinst in preinst (Closes: #425803,
+    #435156, #435081, #433889, #436235, #435719, #435081, #433889) [np]
+  * use see in texdoc for displaying of all types of files (Closes: #432037)
+  * adapt the menu entries to new policy
+
+ -- Norbert Preining <preining@debian.org>  Mon, 13 Aug 2007 16:26:41 +0200
+
+texlive-bin (2007-12) unstable; urgency=low
+
+  * Add a debian-specific patch for fmtutil which makes the --enable,
+    --disable and --edit commands work safely.  Furthermore, patch
+    texconfig to use update-texmf (closes: #409798) [fk]
+  * fix manpage of pkfix (Closes: #429587)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 20 Jun 2007 10:09:36 +0200
+
+texlive-bin (2007-11) unstable; urgency=low
+
+  * Refine the code to resurrect pdftexconfig.tex (no version check) and
+    properly document it in NEWS.Debian.
+  * Also resurrect config.ps, thanks to Bruce MacDonald
+    <b.macdonald@auckland.ac.nz> (closes: #427059) [fk]
+
+ -- Frank Küster <frank@debian.org>  Fri,  1 Jun 2007 17:32:35 +0200
+
+texlive-bin (2007-10) unstable; urgency=low
+
+  * don't install libkpathsea.la (Closes: #426006) [np]
+  * do not actually carry out the "preserve deleted conffile" due to the
+    tetex bug and too many busted installations, and resurrect the
+    critical conffile pdftexconfig.tex for sid users (Closes: #425781)
+    [np,fk]
+  * Add missing Depends of libkpathsea-dev on libkpathsea4 (closes:
+    #426710) [fk]
+
+ -- Frank Küster <frank@debian.org>  Wed, 30 May 2007 17:58:37 +0200
+
+texlive-bin (2007-9) unstable; urgency=low
+
+  * Make sure --enable-shared is not in effect in the subdirectories for
+    static-only libraries, in particular xetex's teckit.  Thanks to Aaron
+    M. Ucko <amu@alum.MIT.EDU> (closes: #425863) [fk]
+  * Move libkpathsea4 and the -dev package to the correct sections (libs
+    and libdevel, not tex) [np]
+
+ -- Frank Küster <frank@debian.org>  Thu, 24 May 2007 20:12:02 +0200
+
+texlive-bin (2007-8) unstable; urgency=low
+
+  * lang-indic: move bangfont.tex from doc to run files (Closes: #424031)
+  * lang-indic: add missing python header to ebong script (Closes: #423990)
+  * dpkg_md5sum in common-functions.preinst returns now the empty string
+    in case of an unknown conffile (could have been created by touch).
+    This should fix Ubuntu bug 111654. [np]
+  * Build with --enable-ipc to allow piping of output [fk]
+  * Build shared kpathsea library and include it in separate packages [fk]
+  * move bin-thumbpdf to texlive-base-bin (Closes: #424658) [np]
+  * texlive-extra-utils suggests gs-* for epstopdf (Closes: #423988) [np]
+  * replace patches/30_libpoppler with patches/30_libpoppler_new for
+    new libpoppler 0.5, make the build-dep libpoppler-dev (>= 0.5.4)
+    (Closes: #425065, #356079)
+  * add stricter dependencies to all packages: if in the final shipout
+    dep on a texlive package there is no version given, the value of
+    latest-version (from tpm2deb.cfg) of the source package is taken.
+    (Closes: #421969)
+  * remove cruft from control files (cweb, ctie, texdoctk)
+    (Closes: #241089, #249085)
+  * don't leave copies of conffiles in TEXMFDIST (Closes: #420139)
+  * add poppler to the pdftex banner (Closes: #420971)
+  * texlive-lang-indic depends on python
+  * remove the rpath entry in all the binaries
+  * add patch 64_fix_makempx_installation to fix the installation
+    of makempx script instead of the binary (thanks Sanjoy Mahajan)
+  * rework the xdvi conf file handling code to not "preserve removal"
+    when upgrading from older texlive versions (Closes: #425272)
+  * format generation reworked:
+    - texlive-base-bin does not provide formats anymore since all the
+      respective ini files are in texlive-base
+    - texlive-base takes the format generation
+
+ -- Norbert Preining <preining@debian.org>  Mon, 21 May 2007 14:17:19 +0200
+
+texlive-bin (2007-7) unstable; urgency=low
+
+  * fix typo in texlive-base-bin.postinst (Closes: #422929)
+
+ -- Norbert Preining <preining@debian.org>  Wed, 09 May 2007 00:59:49 +0200
+
+texlive-bin (2007-6) unstable; urgency=low
+
+  * Update patch 62_dvips_absolutepath_doc, it also fixes the manpage
+    now.  Thanks to Eric Cooper <ecc@cmu.edu> [fk].
+  * Add patch 63_texmf.cnf_for_comparison_temp from upstream.  The patched
+    file is only used for comparing with our generated texmf.cnf from
+    tex-common, and the upstream patch has been incorporated there [fk].
+  * remove 31_pdftex_gcc_ICE-on-alpha, recent revision of gcc have
+    fixed the FTBFS bug.
+  * move the debianize-updmap call in updmap after the syncWithTrees
+    function so that this function is also debianized. (Closes: #421184) [np]
+  * apply teTeX texdoctk.defaults patch to get texdoctk to use the right
+    programs (Closes: #421633) [np]
+  * add menu entry of xdvi, texdoctk, texconfig (Closes: #421634) [np]
+  * Bring dvips to version 5.96dev, 2007-05-06 (patch
+    32_dvips_fontbug_fix_upstream).  This fixes a problem with double
+    partial inclusion of fonts, and adds improvements for debugging such
+    problems (closes: #266718) [fk]
+
+ -- Frank Küster <frank@debian.org>  Mon,  7 May 2007 19:38:34 +0200
+
+texlive-bin (2007-5) unstable; urgency=low
+
+  * fix config file handling (Closes: #419826) [np]
+    - fix a bug in tpm2deb-bin.pl which prevented any config file handling
+    - fix another bug in tpm2deb-bin.pl which didn't install the config
+      file handling in the postrm script
+
+ -- Norbert Preining <preining@debian.org>  Wed, 18 Apr 2007 08:13:17 +0200
+
+texlive-bin (2007-4) unstable; urgency=low
+
+  * Add patch 31_pdftex_gcc_ICE-on-alpha to work around a bug in newer
+    gcc, thanks to Falk Hueffner <falk@debian.org> (closes: #419434) [fk]
+  * Since we take over xdvi from tetex-bin, we remove its xdvi alternative
+    in case it is present (closes: #419381) [fk]
+  * Remove any format or log files in /var/lib/texmf/web2c, they must be
+    in $engine subdirs now.  teTeX does not properly remove them (so this
+    closes: #333767), and they cause strange failures with context (see
+    #419059 and #418976) [fk]
+  * Add patch 62_dvips_absolutepath_doc to document the change in dvips'
+    file inclusion behavior in config.ps (closes: #418788)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 17 Apr 2007 13:17:16 +0200
+
+texlive-bin (2007-3) unstable; urgency=low
+
+  * Disable the comparison of texmf.cnf introduced in the last version.
+    It can still be run manually, but doing so at build time would make
+    texlive-bin FTBFS each time tex-common updates its files in texmf.d
+    [fk]
+  * Fix the friday 13 bugs: A bad coincidence combined a serious bug in
+    debhelper (#419060) produces buggy maintainer scripts in most
+    texlive packages. The debhelper bug is fixed, this
+    closes: #418981
+  * add texlive-font-utils replaces tetex-bin << 2007 (Closes: #418995)
+  * Add patch 51_fmtutil_keep_failedlog so that fmtutil will keep log
+    files even if no format file is created at all [fk]
+    (Closes: #419016)
+
+ -- Norbert Preining <preining@debian.org>  Sat, 14 Apr 2007 09:31:47 +0200
+
+texlive-bin (2007-2) unstable; urgency=low
+
+  * first upload of TeX Live 2007 to unstable
+
+  * fix xdvi.cfg config file transfer bug (Closes: #415906) [np]
+
+  * Added two scripts which allow to compare our upstream-provided
+    texmf.cnf (which will not be used) with the texmf.cnf generated from
+    tex-common's snippets, and let the build fail if both show other than
+    the known differences.  This is run in the clean and build targets and
+    allows to track upstream changes.
+
+    In order to build on non-clean systems, export
+    DEBIAN_NOCHECK_TEXMFCNF=true (or, actually, anything nonzero)
+    [fk]
+
+  * replace links of odvicopy.1 and odvitype.1 to the respective
+    man pages without o with a minimal manpage (Closes: #417274) [np]
+
+  * drop updated collection-binextra.tpm and bin-dvipos.tpm
+    into the source package tosolve the missing dvipos problem. [np]
+
+  * Fix missing build dependency on tex-common >= 1.3, thanks to Yannick
+    Roehlly for spotting this. [np]
+
+  * texlive-base-bin now suggests gs (or variants), postscript-viewers and
+    pdf viewers. [np] (Closes: #414473)
+
+  * do not compress documentation pdf files
+
+ -- Norbert Preining <preining@debian.org>  Tue, 10 Apr 2007 18:15:25 +0200
+
+texlive-bin (2007-1) experimental; urgency=low
+
+  * new upstream release
+  * Major changes:
+    - now includes XeTeX (new package texlive-xetex)
+    - pdfTeX 1.40
+    - MetaPost 1.0
+    - the Debian packages no longer include ConTeXt, but depend on the
+      separate context package instead.
+    - Totally reworked Debian packaging, in particular the Perl scripts.
+    - TeX Live now replaces teTeX and provides dummy packages for the
+      transition.
+    - configuration files from /etc/texmf/texlive have been moved to
+      the TDS-locations below /etc/texmf
+  * Patches:
+    - Move from dpatch to quilt
+    - update patch 30_libpoppler to the new pdftex.  This needs to be
+      extended to patch xetex as well!
+    - Drop patches 15_fmtutil_metapost_fix, 20_xpdf3.01pl1,
+      21b_pdftex_cjkfonts_overflow, 51_fmtutil_tempdir_in_texinputs
+      (applied upstream), 52_feynmf-perl-sec-fix (no longer included)
+    - all other patches unfuzzied (sometimes manually)
+  * Add patch 01_tmp_configure_without_installextra to bypass texlinks,
+    fmtutil and updmap invocations at build time [FK]
+  * include teTeXs perl script for /usr/bin/xdvi which supports compressed
+    dvi files (Closes: #412611) [NP]
+
+ -- Norbert Preining <preining@debian.org>  Wed, 21 Mar 2007 17:03:16 +0100
+
+texlive-bin (2005.dfsg.2-12) unstable; urgency=low
+
+  * blacklist dvidvi.tpm and add a recommend tl-extra-utils -> dvidvi
+    (Closes: #411537)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 20 Feb 2007 22:38:54 +0100
+
+texlive-bin (2005.dfsg.2-11) unstable; urgency=low
+
+  * The timezone patch from the last upload was wrong for 64bit
+    architectures.  Applied corrected patch from upstream, thanks to
+    Martin Michlmayr <tbm@cyrius.com> (closes: #409517) [frank]
+
+ -- Frank Küster <frank@debian.org>  Thu, 15 Feb 2007 14:07:50 +0100
+
+texlive-bin (2005.dfsg.2-10) unstable; urgency=low
+
+  * rebuild from old packaging machinery
+
+ -- Norbert Preining <preining@debian.org>  Wed, 10 Jan 2007 14:12:09 +0100
+
+texlive-bin (2005.dfsg.2-9) unstable; urgency=low
+
+  * Apply patch by Julian Gilbey <jdg@debian.org> to prevent mktexlsr from
+    creating ls-R in root's home directory (closes: #402925)
+  * Apply a patch by "Mark A. Wicks" <mwicks@kettering.edu> to fix a crash
+    of dvipdfm in half-hour timezones (Closes: #403267)
+
+ -- Norbert Preining <preining@debian.org>  Thu,  4 Jan 2007 00:47:50 +0100
+
+texlive-bin (2005.dfsg.2-8) unstable; urgency=low
+
+  * move bin-ttfutils to tl-font-utils, blacklist everything but ttf2afm,
+    add bin-ttfutils.tpm and ttf2afm.1 to the source package
+    (Closes: #402983) (Closes also ubuntu #75545)
+  * reinclude pslatex script and its manpage into texlive-base-bin.
+
+ -- Norbert Preining <preining@debian.org>  Thu, 28 Dec 2006 15:04:19 +0100
+
+texlive-bin (2005.dfsg.2-7) unstable; urgency=low
+
+  * change shebang for getnonfreefonts to /bin/bash (Closes: #398112)
+  * fix the texdoctk perl errors (Closes: #402651)
+  * include xdvi upstream fix for segfault on hitting g with -nogrey
+    (Closes: #369569)
+
+ -- Norbert Preining <preining@debian.org>  Tue, 12 Dec 2006 08:05:45 +0100
+
+texlive-bin (2005.dfsg.2-6) unstable; urgency=low
+
+  * Apply patch from upstream to pdftex that allows it to work properly
+    with CJK fonts with their large number of subfonts.  Many thanks to
+    Thanh Han The <hanthethanh@gmail.com>, Jie Luo
+    <luojie@nlsde.buaa.edu.cn> for the patch and many others for
+    debugging, in particular Danai SAE-HAN (韓達耐)
+    <danai.sae-han@edpnet.be> who reminded me.
+
+    This allows CJK-related packages to depend on texlive and
+    closes: #399967.
+  * Patch texdoctk so that it still works if documentation in TeXlive's as
+    well as teTeX's TEXMFDIST is present. Thanks to Braun Gabor
+    <braung@renyi.hu> for reporting and Ralf Stubner <ralf.stubner@web.de>
+    for ideas for fixing this (closes: #401930)
+
+ -- Frank Küster <frank@debian.org>  Wed,  6 Dec 2006 22:40:27 +0100
+
+texlive-bin (2005.dfsg.2-5) unstable; urgency=high
+
+  * Add Conflicts of texlive-omega on the aleph package (closes:
+    #400930), both provide the same binary.  In the long run, aleph should
+    be superseded by AFNIX.
+
+ -- Frank Küster <frank@debian.org>  Fri,  1 Dec 2006 14:34:22 +0100
+
+texlive-bin (2005.dfsg.2-4) unstable; urgency=low
+
+  * blacklist feynmf in tl-metapost and add a Recommends on the feynmf
+    package (closes: #400657)
+
+ -- Frank Küster <frank@debian.org>  Tue, 28 Nov 2006 14:52:03 +0100
+
+texlive-bin (2005.dfsg.2-3) unstable; urgency=low
+
+  * include fixes for superficially linked in libs
+  * extend texconfig man page and include some fixes from teTeX
+    (Closes: #396904)
+
+ -- Norbert Preining <preining@debian.org>  Tue,  7 Nov 2006 14:37:17 +0100
+
+texlive-bin (2005.dfsg.2-2) unstable; urgency=low
+
+  * update the debian patch for updmap(.1) (Closes: #393189)
+  * adjust built-in search paths of libkpathsea to the Debian defaults
+    (Closes: #392641)
+  * include patch for pdfetex to support newer TTF fonts (Closes: #394028)
+
+ -- Norbert Preining <preining@debian.org>  Thu, 19 Oct 2006 10:27:51 +0200
+
+texlive-bin (2005.dfsg.2-1) unstable; urgency=medium
+
+  * remove magic header of a2ping, thumbpdf, and pdfcrop
+  * report bugs together with tex-common, and report status of the
+    tetex packages. Fix some small things in bug.scripts.
+  * change uploader field to my debian.org email address
+  * blacklist lacheck in tl-extra-utils and add a recommend on lacheck
+  * blacklist dviconcat(.1) and dviselect(.1) files in tl-extra-utils
+    and recommend dviutils
+  * use xdvi.bin in the xdvi shell script, and use alternatives
+    system to set xdvi.bin to xdvi-xaw.bin (Closes: #391437)
+  * move bin-texdoc, ie texdoc and texdoctk, from tl-extra-utils to
+    texlive-base-bin (Closes: #391640)
+  * texlive-bin: include the already unpacked sources instead of the
+    source.tar.bz2. Changes to the clean target:
+    - don't remove unpack-stamp
+    - don't remove the whole build dir, only build/inst and build/Work
+    (Closes: #380227) (Thanks Frank for insisting!)
+  * Use tex-common's (>= 0.33) debianize-updmap (Closes: #391348)
+  * urgency set to medium to get these fixes to testing
+
+ -- Norbert Preining <preining@debian.org>  Mon,  9 Oct 2006 19:01:51 +0200
+
+texlive-bin (2005.dfsg.1-1) unstable; urgency=low
+
+  * remove fmtutil.cnf link (useless) and mktex.cnf link (taken from
+    tex-common) (Closes: #376524)
+  * add lintian override for wrong-name-for-upstream-changelog triggered
+    by CHANGES.packaging
+  * change maintainer to debian-tex-maint@l.d.o
+
+ -- Norbert Preining <preining@logic.at>  Thu,  3 Aug 2006 12:36:56 +0200
+
+texlive-bin (2005-2) unstable; urgency=low
+
+  * first upload to unstable, sponsored by
+    Frank Küster <frank@debian.org>
+  * texdoc support
+    - let tetex texdoc find documentation of texlive (Closes: #364776)
+    - include tetex texdoc patches (following of symlinks, security
+      fixes) (Closes: #356390)
+  * texlive-lang-polish conflicts with octave-forge as both provide
+    /usr/bin/mex, this is preliminary, a better solution must be
+    sought (Closes: #364059)
+  * change shell for the reportbug script to bash (Closes: #356391)
+  * fix installation of thumbpdf and pdfcrop (Closes: #352092)
+  * improve various descriptions (Closes: #354964)
+  * call the update-* programs in all postinst scripts, so that the
+    config files do not contain left-overs (Closes: #355266)
+  * fix creation of formats which in turn depend on the latex format
+    (Closes: #351707)
+  * remap the ibycus4.map TeX/MF input file from the fonts/map location
+    to the fonts/source location (Closes: #354652)
+  * depend on the updated lmodern package, thus making the fonts
+    available for X (Closes: #351727)
+  * lots of internal changes, important ones being:
+    - texlive packages now do not include files which have been
+      packaged for Debian already (eg cm-super, lmodern, musixtex)
+    - most packages can be used together with teTeX
+    - fix several upstream bugs
+    - generate license information for each file from the
+      TeX Catalogue (ongoing work)
+    for detailed changes see CHANGES.packaging in texlive-common
+
+ -- Norbert Preining <preining@logic.at>  Thu, 11 May 2006 00:12:10 +0200
+
+texlive-bin (2005-1) experimental; urgency=low
+
+  * First upload to experimental (Closes: #312897)
+
+ -- Norbert Preining <preining@logic.at>  Thu, 12 Jan 2006 17:30:22 +0100
+
+# vim:set fileencoding=utf-8: #
+# Local Variables:
+# coding: utf-8
+# mode: debian-changelog
+# End:

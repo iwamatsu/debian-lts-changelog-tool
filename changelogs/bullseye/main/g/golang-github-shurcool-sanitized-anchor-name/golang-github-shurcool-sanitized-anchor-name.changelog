@@ -1,0 +1,64 @@
+golang-github-shurcool-sanitized-anchor-name (1.0.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 1.0.0
+  * Add debian/watch to track upstream tarball
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Apply "cme fix dpkg" fixes
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Fri, 02 Aug 2019 08:24:08 -0600
+
+golang-github-shurcool-sanitized-anchor-name (0.0~git20170918.86672fc-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20170918.86672fc
+  * Bump Standards-Version to 4.1.1: Change package priority to optional
+  * Use debhelper (>= 10)
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+
+ -- Anthony Fok <foka@debian.org>  Tue, 24 Oct 2017 06:26:06 -0600
+
+golang-github-shurcool-sanitized-anchor-name (0.0~git20170515.0.541ff5e-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20170515.0.541ff5e
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright,
+    and revise formatting and wrapping per upstream LICENSE file.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 28 Jun 2017 05:32:16 -0600
+
+golang-github-shurcool-sanitized-anchor-name (0.0~git20160918.0.1dba4b3-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20160918.0.1dba4b3
+  * Refresh debian/control:
+    - Replace architecture-specific hack with golang-any in Build-Depends
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Remove unnecessary Built-Using in non-compiled -dev package
+
+ -- Anthony Fok <foka@debian.org>  Sun, 01 Jan 2017 19:21:36 -0700
+
+golang-github-shurcool-sanitized-anchor-name (0.0~git20151028.0.10ef21a-2) unstable; urgency=medium
+
+  * (Build-)Depends on gccgo where golang-go is not available
+
+ -- Anthony Fok <foka@debian.org>  Wed, 13 Jan 2016 11:16:46 -0700
+
+golang-github-shurcool-sanitized-anchor-name (0.0~git20151028.0.10ef21a-1) unstable; urgency=medium
+
+  * New upstream snapshot: Add LICENSE file
+
+ -- Anthony Fok <foka@debian.org>  Thu, 17 Dec 2015 04:05:21 -0700
+
+golang-github-shurcool-sanitized-anchor-name (0.0~git20150822.0.244f5ac-1) unstable; urgency=medium
+
+  * Initial release (Closes: #798173)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 06 Sep 2015 10:01:20 -0600

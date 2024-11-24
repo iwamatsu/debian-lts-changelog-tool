@@ -1,0 +1,26 @@
+golang-gopkg-yaml.v3 (3.0.0~git20200121.a6ecf24-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix failed test on 32 bit arch (Closes: #987005)
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Remove test dependency from -dev package
+  * Remove redundant line in d/rules
+  * Fix uscan watch file
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 16 Apr 2021 00:25:23 +0800
+
+golang-gopkg-yaml.v3 (3.0.0~git20200121.a6ecf24-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Daniel Swarbrick ]
+  * d/copyright: Fix / update copyright attribution
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Mon, 01 Jun 2020 15:10:00 -0300
+
+golang-gopkg-yaml.v3 (3.0.0~git20200121.a6ecf24-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #953424)
+
+ -- Daniel Swarbrick <daniel.swarbrick@cloud.ionos.com>  Tue, 10 Mar 2020 13:27:31 +0100

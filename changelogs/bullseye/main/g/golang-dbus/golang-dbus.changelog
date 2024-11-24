@@ -1,0 +1,87 @@
+golang-dbus (5.0.3-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * [95d1093] Set debhelper-compat version in Build-Depends.
+    Fixes: lintian: uses-debhelper-compat-file
+    See-also: https://lintian.debian.org/tags/uses-debhelper-compat-file.html
+  * [03e751f] Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+    Fixes: lintian: upstream-metadata-file-is-missing
+    See-also: https://lintian.debian.org/tags/upstream-metadata-file-is-missing.html
+  * [09d58c1] Apply multi-arch hints. + golang-dbus-dev: Add Multi-Arch: foreign.
+    Changes-By: lintian-brush
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 06 Feb 2021 14:58:54 +0000
+
+golang-dbus (5.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.1.
+  * Provides: golang-github-godbus-dbus-dev
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 15 Dec 2019 15:42:41 +1100
+
+golang-dbus (5.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * DH & compat to version 12.
+  * Priority: optional; Standards-Version: 4.4.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 09 Sep 2019 13:02:14 +1000
+
+golang-dbus (4.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  * New upstream release.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Mark package as autopkgtest-able.
+  * debian/control: Add myself to uploaders.
+  * debian/rules: Replace DH_GOPKG with XS-Go-Import-Path.
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Tue, 14 Nov 2017 14:24:50 +1300
+
+golang-dbus (3-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tianon Gravi ]
+  * Update Maintainer to be the pkg-go team proper
+  * Remove Built-Using from -dev package
+  * Update Build-Depends to use golang-any instead of golang-go
+
+ -- Paul Tagliamonte <paultag@debian.org>  Tue, 08 Aug 2017 20:16:48 -0700
+
+golang-dbus (3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 18:43:24 +1100
+
+golang-dbus (2-1) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Fri, 01 May 2015 19:05:21 -0600
+
+golang-dbus (2-1~exp1) experimental; urgency=low
+
+  * Upstream bump to v2
+  * Bump Standards-Version to 3.9.6
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sat, 31 Jan 2015 22:19:32 -0700
+
+golang-dbus (1-1) unstable; urgency=low
+
+  * Initial release (Closes: #744983).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Tue, 22 Apr 2014 23:04:32 -0400

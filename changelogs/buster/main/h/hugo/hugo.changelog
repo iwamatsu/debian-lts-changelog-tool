@@ -1,0 +1,631 @@
+hugo (0.55.6+really0.54.0-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-websocket 1.4.0-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 13 May 2023 23:35:47 +0200
+
+hugo (0.55.6+really0.54.0-1) unstable; urgency=medium
+
+  * Revert all changes between 0.54.0-1 and 0.55.6-2.
+    See https://bugs.debian.org/928227 for a rationale.
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 04 Jun 2019 21:16:36 +0200
+
+hugo (0.55.6-2) unstable; urgency=medium
+
+  * Increase "go test" timeout to 60m to accommodate slow mips builders,
+    namely mips-aql-04 and mips-aql-05.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 23 May 2019 14:51:17 -0600
+
+hugo (0.55.6-1) unstable; urgency=medium
+
+  * New upstream version 0.55.6
+
+ -- Anthony Fok <foka@debian.org>  Thu, 23 May 2019 11:25:31 -0600
+
+hugo (0.55.5-1) unstable; urgency=medium
+
+  * New upstream version 0.55.5
+  * Update dependency on blackfriday to >= 1.5.2~
+
+ -- Anthony Fok <foka@debian.org>  Sat, 11 May 2019 06:38:20 -0600
+
+hugo (0.55.4-1) unstable; urgency=medium
+
+  * New upstream version 0.55.4
+
+ -- Anthony Fok <foka@debian.org>  Thu, 25 Apr 2019 14:34:37 -0600
+
+hugo (0.55.3-1) unstable; urgency=medium
+
+  * New upstream version 0.55.3
+
+ -- Anthony Fok <foka@debian.org>  Thu, 25 Apr 2019 14:27:20 -0600
+
+hugo (0.55.2-1) unstable; urgency=medium
+
+  * New upstream version 0.55.2
+  * Add debian/missing-sources for app.bundle.js
+
+ -- Anthony Fok <foka@debian.org>  Thu, 25 Apr 2019 13:48:05 -0600
+
+hugo (0.55.1-1) unstable; urgency=medium
+
+  * New upstream version 0.55.1
+  * Update files list in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Apr 2019 13:36:44 -0600
+
+hugo (0.55.0-1) unstable; urgency=medium
+
+  * New upstream version 0.55.0
+  * Update dependencies as per upstream go.mod
+  * Update files list and copyright years in debian/copyright
+  * Refresh 004-increase-timeout-in-TestPageBundlerSiteRegular.patch
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Apr 2019 04:46:30 -0600
+
+hugo (0.54.0-1) unstable; urgency=medium
+
+  * New upstream version 0.54.0
+  * Update versioned dependencies on golang-github-spf13-afero-dev
+    and golang-github-alecthomas-chroma-dev
+
+ -- Anthony Fok <foka@debian.org>  Fri, 01 Feb 2019 11:13:18 -0700
+
+hugo (0.53-3) unstable; urgency=medium
+
+  [ Dr. Tobias Quathamer ]
+  * Revert hard dependency on golang-1.11, it's the default now.
+
+  [ Anthony Fok ]
+  * Bump Standards-Version to 4.3.0 (no change)
+  * Update Build-Depends of dh-golang to (>= 1.39~) for support for
+    Go 1.11 modules.  Previous workarounds in debian/rules are now removed.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 29 Dec 2018 17:35:19 -0700
+
+hugo (0.53-2) unstable; urgency=medium
+
+  * Fix the BuildDate that "hugo version" displays
+
+ -- Anthony Fok <foka@debian.org>  Tue, 25 Dec 2018 18:57:53 -0700
+
+hugo (0.53-1) unstable; urgency=medium
+
+  * New upstream version 0.53
+  * Update dependencies in debian/control
+  * Move app.bundle.js/* to app.js/* in debian/missing-sources
+  * Update Files lists in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Mon, 24 Dec 2018 07:05:59 -0700
+
+hugo (0.52-1) unstable; urgency=medium
+
+  * New upstream version 0.52
+  * Update dependency on golang-github-bep-go-tocss-dev (>= 0.6.0~)
+  * Refresh 004-increase-timeout-in-TestPageBundlerSiteRegular.patch
+  * Remove 005-remove-duplicate-mapstructure-dependency.patch
+  * Remove appveyor.yml from debian/copyright Files list
+
+ -- Anthony Fok <foka@debian.org>  Fri, 21 Dec 2018 08:59:29 -0700
+
+hugo (0.51-1) unstable; urgency=medium
+
+  * New upstream version 0.51
+  * Install go.mod to enable "minimal module compatibility"
+    This is required for handling github.com/tdewolff/minify/v2
+    and future v2+ modules even in GOPATH mode
+  * Backport upstream patch to remove duplicate mapstructure dependency
+  * Update dependencies
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Dec 2018 15:50:00 -0700
+
+hugo (0.50-1) unstable; urgency=medium
+
+  * New upstream version 0.50
+  * Refresh debian/patches/*, especially
+    004-increase-timeout-in-TestPageBundlerSiteRegular.patch where
+    hugolib/page_bundler_test.go was renamed to hugolib/pagebundler_test.go
+  * Update dependencies
+  * Update Files list in debian/copyright: snapcraft.yaml → snap/*
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Dec 2018 10:37:41 -0700
+
+hugo (0.49.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.49.2
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 22:57:20 -0700
+
+hugo (0.49.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.49.1
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 22:40:31 -0700
+
+hugo (0.49-1) unstable; urgency=medium
+
+  * New upstream version 0.49
+  * Update Files list in debian/copyright
+  * Update Maintainer address in debian/control
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 21:33:21 -0700
+
+hugo (0.48-1) unstable; urgency=medium
+
+  * New upstream version 0.48 (Closes: #908250)
+  * Build-Depends on golang-1.11-go instead of golang-any.
+    This is a temporary measure until Go 1.11, required by Hugo >= 0.48,
+    becomes the default in Debian.  Special thanks to Michael Hudson-Doyle
+    and Dr. Tobias Quathamer for their great work in packaging golang-1.11!
+  * Build-Depends on asciidoctor to avoid FTBFS with asciidoc.
+    Thanks to Vincent Danjean for the report and the fix! (Closes: #907478)
+  * Set GO111MODULE=off in debian/rules
+  * Add go.mod and go.sum to Files list in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 15:57:13 -0700
+
+hugo (0.47.1-2) unstable; urgency=medium
+
+  * Depend on golang-github-{bep-go-tocss,wellington-go-libsass}-dev.
+    These packages have been accepted into Debian,
+    so the embedded copies in golang-github-bep-go-tocss.patch
+    and golang-github-wellington-go-libsass.patch are now removed.
+  * Bump Standards-Version to 4.2.1 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Mon, 24 Sep 2018 21:41:10 -0600
+
+hugo (0.47.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.47.1:
+    - Fix .Site.Params case regression fdff0d3a @bep #5094
+    - Do not strip IE conditional statements 5a0ee2b9 @bep #5089
+
+ -- Anthony Fok <foka@debian.org>  Thu, 23 Aug 2018 17:24:39 -0600
+
+hugo (0.47-1) unstable; urgency=medium
+
+  * New upstream version 0.47: Hugo Reloaded
+    - Add minification support for the final rendered output
+      ("run hugo --minify").
+    - Fix a set of issues with live-reloading/partial rebuilds
+      when running "hugo server".
+  * Bump build-dependency on golang-github-alecthomas-chroma-dev
+    to version (>= 0.5.0).  Special thanks to
+    Dr. Tobias Quathamer <toddy@debian.org> for his timely update
+    of the golang-github-alecthomas-chroma package.
+  * Bump Standards-Version to 4.2.0 (no change)
+  * Add minifiers/* and publisher/* to Files list in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Sat, 18 Aug 2018 04:12:58 -0600
+
+hugo (0.46-1) unstable; urgency=medium
+
+  * New upstream version 0.46: Summer of Hugo
+    - Full SCSS/SASS import inheritance support, rework of Hugo Pipes
+      vs. multilingual, and more…
+  * Update versioned dependency on golang-github-alecthomas-chroma-dev
+
+ -- Anthony Fok <foka@debian.org>  Wed, 01 Aug 2018 07:38:57 -0600
+
+hugo (0.45.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.45.1:
+    - Add Page.FirstSection 016dd4a6 @bep
+    - Fix .Site.GetPage regression 04d4c08d @bep #4989
+    - Fix “borrow content from another language” issue c6b599a0 @bep #4986
+
+ -- Anthony Fok <foka@debian.org>  Thu, 26 Jul 2018 05:35:08 -0600
+
+hugo (0.45-1) unstable; urgency=medium
+
+  * New upstream version 0.45: Revival of ref, relref and GetPage.
+    Hugo 0.45 adds relative page lookups, language support in ref/relref
+    and several Hugo Pipes improvements.
+  * Link with system libsass1 shared library
+  * Remove "utils/*" listing from debian/copyright as per upstream
+
+ -- Anthony Fok <foka@debian.org>  Mon, 23 Jul 2018 10:03:49 -0600
+
+hugo (0.44-1) unstable; urgency=medium
+
+  * New upstream version 0.44: Friday the 13th Edition,
+    a sequel to the very popular Hugo Pipes Edition;
+    bug-fixes and enhancements…
+  * Add versioned dependency on golang-github-tdewolff-minify-dev
+    (>= 2.3.5-2~)
+  * Revert patch for "Remove empty hugolib/resources/ dir after
+    TestNewSiteDefaultLang" as it has been merged upstream.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 13 Jul 2018 17:15:26 -0600
+
+hugo (0.43-2) unstable; urgency=medium
+
+  * Fix failed autopkgtest due to missing vendor directory.
+    Also remove unneeded wellington/go-libsass/libsass-src directory
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Jul 2018 20:37:50 -0600
+
+hugo (0.43-1) unstable; urgency=medium
+
+  * New upstream version 0.43: Hugo Pipes!
+    “Hugo 0.43 adds a powerful and very simple to use Assets Pipeline
+     with Sass and SCSS with source map support, PostCSS and minification
+     and fingerprinting and Subresource Integrity and … much more.
+     Oh, did we mention that you can now do ad-hoc image processing
+     and execute text resources as Go templates?”
+  * Build hugo with the "extended" build tag for Sass/SCSS support
+  * Bump Standards-Version to 4.1.5 (no change)
+  * Add new dependencies to debian/control:
+     - golang-github-burntsushi-locker-dev
+     - golang-github-dsnet-golib-dev
+     - golang-github-mitchellh-hashstructure-dev
+     - golang-github-tdewolff-minify-dev
+    The following are the NEW queue, hence skipping for now:
+     - golang-github-bep-go-tocss-dev and
+     - golang-github-wellington-go-libsass-dev
+  * Update Files list in debian/copyright
+  * Remove empty hugolib/resources/ dir after TestNewSiteDefaultLang.
+    See https://github.com/gohugoio/hugo/pull/4922
+  * Build with our own copies of Sass-related libraries,
+    a temporary hack until golang-github-bep-go-tocss,
+    golang-github-wellington-go-libsass enter Debian,
+    and libsass 3.5.4-1 moves from Ubuntu "proposed" to "release".
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Jul 2018 01:13:17 -0600
+
+hugo (0.42.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.42.2:
+    - Fix broken server-reload on config changes.
+      This is a regression from Hugo 0.42. 3a7706b0 @bep #4878
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Jun 2018 16:20:40 -0600
+
+hugo (0.42.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.42.1:
+    - Reset the global pages cache on server rebuilds 128f14ef @bep #4845
+    - Do not fail server build when /static is missing 34ee27a7 @bep #4846
+
+ -- Anthony Fok <foka@debian.org>  Wed, 13 Jun 2018 07:44:44 -0600
+
+hugo (0.42-1) unstable; urgency=medium
+
+  * New upstream version 0.42: Theme Composition and Inheritance!
+  * Update versioned dependencies
+  * Refresh 004-increase-timeout-in-TestPageBundlerSiteRegular.patch
+  * Add langs/* to debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Tue, 12 Jun 2018 09:13:07 -0600
+
+hugo (0.41-1) unstable; urgency=medium
+
+  * New upstream version 0.41:
+    Add a new Privacy Configuration section to meet the new regulations
+    in the new General Data Protection Regulation (GDPR).
+  * Refresh 004-increase-timeout-in-TestPageBundlerSiteRegular.patch
+  * Add .github/SUPPORT.md to debian/copyright
+  * Install only /usr/bin/hugo and not /usr/bin/generate
+
+ -- Anthony Fok <foka@debian.org>  Mon, 28 May 2018 00:30:57 -0600
+
+hugo (0.40.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.40.3:
+    Fixes a rare, but possible Content truncation issue.
+    Hugo 0.40.3 fixes a possible .Content truncation issue introduced
+    in 0.40.1 90d0d830 @bep #4706. This should be very rare.
+    It has been reported by only one user on a synthetic site.
+    We have tested a number of big sites that does not show this problem
+    with 0.40.2, but this is serious enough to warrant a patch release.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 09 May 2018 06:18:04 -0600
+
+hugo (0.40.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.40.2
+    - Reset .Page.Scratch on live-reload 655983a2 @bep #4683
+    - Fix .WordCount, .FuzzyWordCount, .ReadingTime when summary marker
+      is set 001a28c2 @bep #4675 #4682
+
+ -- Anthony Fok <foka@debian.org>  Mon, 30 Apr 2018 06:48:09 -0600
+
+hugo (0.40.1-3) unstable; urgency=medium
+
+  * Increase TestPageBundlerSiteRegular timeout further to 10 minutes
+    (from 2 minutes) and hope it would not time out again
+    on Debian's slowest "mips" build daemon.
+    See https://github.com/gohugoio/hugo/issues/4672
+
+ -- Anthony Fok <foka@debian.org>  Thu, 26 Apr 2018 17:52:05 -0600
+
+hugo (0.40.1-2) unstable; urgency=medium
+
+  * Fix FTBFS on armel by increasing TestPageBundlerSiteRegular timeout
+    from 10 seconds to 120 seconds, and show warning if it does time out.
+    Special thanks to upstream author @bep for providing the solution.
+    (004-increase-timeout-in-TestPageBundlerSiteRegular.patch)
+    See https://github.com/gohugoio/hugo/issues/4672
+  * Increase "go test" timeout to 30m to prevent potential FTBFS
+    especially on "armel" and "mips".
+
+ -- Anthony Fok <foka@debian.org>  Thu, 26 Apr 2018 14:48:51 -0600
+
+hugo (0.40.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release 0.40.1
+
+ -- Anthony Fok <foka@debian.org>  Wed, 25 Apr 2018 11:16:11 -0600
+
+hugo (0.40-1) unstable; urgency=medium
+
+  * New upstream version 0.40
+  * Unlist removed files from debian/copyright.
+    See https://github.com/gohugoio/hugoDocs/issues/65
+
+ -- Anthony Fok <foka@debian.org>  Mon, 23 Apr 2018 06:59:59 -0600
+
+hugo (0.39-1) unstable; urgency=medium
+
+  * New upstream release 0.39: the Nat King Cole Stabilizer Edition
+  * Update debian/copyright as upstream changed LICENSE.md to LICENSE
+    for GitHub to be able to detect Hugo's Apache-2.0 license
+
+ -- Anthony Fok <foka@debian.org>  Mon, 16 Apr 2018 20:03:18 -0600
+
+hugo (0.38.2-1) unstable; urgency=medium
+
+  * New upstream bug-fix release 0.38.2
+  * Add new dependency golang-github-bep-debounce-dev
+
+ -- Anthony Fok <foka@debian.org>  Sun, 15 Apr 2018 23:17:40 -0600
+
+hugo (0.38-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.38
+  * Refresh debian/control
+    - Add new dependency on golang-github-sanity-io-litter-dev
+    - Update versioned dependency on golang-github-alecthomas-chroma-dev
+    - Apply "cme fix dpkg"
+    - Bump Standards-Version to 4.1.4 (no change)
+  * Update copyright year in debian/copyright
+  * Refresh 002-do-not-use-git-information-in-docs.patch
+  * Add 003-disable-TestPageWithLastmodFromGitInfo.patch
+
+ -- Anthony Fok <foka@debian.org>  Tue, 10 Apr 2018 07:34:08 -0600
+
+hugo (0.37.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release:
+     - Fixes SVG (and similar) handling as page resources.
+  * Prevent TestImageResize8BitPNG from failing on Ubuntu
+    by setting NO_PNG_PKG_MANGLE=1 to prevent pkgbinarymangler
+    from recompressing our test PNG image.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 08 Mar 2018 17:32:37 -0700
+
+hugo (0.37-2) unstable; urgency=medium
+
+  * Depend on golang-github-alecthomas-chroma (>= 0.3.0)
+    just as the upstream Hugo 0.37 does, for fixing a bug in yaml
+    highlighting. See https://github.com/gohugoio/hugo/issues/4418
+    and https://github.com/alecthomas/chroma/issues/119.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 01 Mar 2018 23:55:47 -0700
+
+hugo (0.37-1) unstable; urgency=medium
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.37
+
+  [ Anthony Fok ]
+  * Add new dependency: golang-github-muesli-smartcrop-dev
+    and newer version of golang-github-russross-blackfriday-dev (>= 1.5.1-1~)
+  * Add BuildDate (honoring SOURCE_DATE_EPOCH) to hugo
+  * Update debian/copyright:
+     - Add new docs/src/package-lock.json
+     - Document the Vernon Adams' authorship of Muli font
+     - Add a comment about the original source URL of gohugoioTheme
+     - Add copyright info for docs/themes/gohugoioTheme/src/js/hljs.js
+       and provide a reconstructed uncompressed source file
+     - Add missing sources for app.bundle.js and document their origins
+
+ -- Anthony Fok <foka@debian.org>  Thu, 01 Mar 2018 12:20:58 -0700
+
+hugo (0.35-1) unstable; urgency=medium
+
+  * New upstream version 0.35 (Closes: #861492)
+    - Update dependencies for new upstream version
+    - Add new patch to wrap overly long lines. This fixes a lintian error.
+    - Add lintian override for wrong error.
+  * Update d/copyright
+    - Add information for goHugoioTheme
+    - Add information for missing files
+    - Remove files which are no longer in upstream's tarball
+  * Remove special handling of MIPS architecture.
+    This reverts c15ac1c
+  * Use debhelper v11
+  * Update Standards-Version to 4.1.3, no changes needed
+  * Add testdata to DH_GOLANG_INSTALL_EXTRA
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Mon, 12 Feb 2018 22:24:30 +0100
+
+hugo (0.26-1) unstable; urgency=medium
+
+  * New upstream version 0.26
+  * Update dependencies:
+    - Replace golang-github-bep-inflect-dev with
+      golang-github-markbates-inflect-dev
+    - Add golang-github-jdkato-prose-dev
+  * Update Files listing in debian/copyright
+  * Upgrade debian/watch to version 4 format
+  * Reformat debian/control with "cme fix dpkg", and bump Standards-Version
+    to 4.1.1: Change -dev package priority from extra to optional
+  * Refresh 002-do-not-use-git-information-in-docs.patch
+  * Delete 003-accommodate-gccgo-in-TestMethodToName.patch which has been
+    accepted upstream, see https://github.com/gohugoio/hugo/pull/3747
+  * Delete 001-disable-google-analytics-in-docs.patch
+    which cannot be applied to Hugo's revamped documentation
+  * Disable "hugo -s docs" run because Git submodule
+    docs/themes/gohugoioTheme is not checked out
+
+ -- Anthony Fok <foka@debian.org>  Mon, 13 Nov 2017 11:45:19 -0700
+
+hugo (0.25.1-2) unstable; urgency=medium
+
+  * Add 003-accommodate-gccgo-in-TestMethodToName.patch
+    to allow the test to pass with gccgo.
+  * Get hugo to build on mips, mipsel and mips64el:
+     1. Add e.g. "-tags mipsle" as appropriate so that golang.org/x/sys/unix
+        builds correctly before the release of GCC 7.2 which hopefully
+        contains the harmonized GOARCH values for gccgo.
+        See https://github.com/golang/go/issues/18031
+     2. Run "go install" and "go test" in single thread and allow retries
+        to beat the "waitid: bad address" error on mips and mipsel.
+        See https://bugs.debian.org/867358
+
+ -- Anthony Fok <foka@debian.org>  Thu, 03 Aug 2017 02:06:42 -0600
+
+hugo (0.25.1-1) unstable; urgency=medium
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.25.1
+  * Rename -dev package to golang-github-gohugoio-hugo-dev following
+    upstream’s move from github.com/spf13/hugo to github.com/gohugoio/hugo
+    - Update Go-Import-Path
+    - Update source URL in debian/copyright
+    - Rename debhelper install file for -dev package
+  * Update Build-Deps
+    - golang-github-burntsushi-toml-dev
+    - golang-github-chaseadamsio-goorgeous-dev
+    - golang-github-hashicorp-go-immutable-radix-dev
+    - golang-golang-x-image-dev
+  * Add Testsuite: autopkgtest-pkg-go
+  * Update to Standards-Version 4.0.0: Use HTTPS URL for debian/copyright
+
+  [ Anthony Fok ]
+  * Special thanks to Dr. Tobias Quathamer who have created the following
+    new Debian package specifically for the new Hugo release:
+    - golang-github-chaseadamsio-goorgeous-dev
+    - golang-golang-x-image-dev
+  * Add Dr. Tobias Quathamer to the list of Uploaders
+  * Refresh 002-do-not-use-git-information-in-docs.patch
+  * Delete 003-update-dateFormat-test-expectations-for-epoch-values.patch
+    which was previously cherry-picked from upstream
+  * Add CI=true to skip new Git tests which upstream also skips on Travis CI
+  * Update debian/watch for the spf13 → gohugoio migration
+  * Update copyright year and files list in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Mon, 24 Jul 2017 16:38:35 -0600
+
+hugo (0.18.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.18.1
+    - Add new patch to prevent test failures, can be dropped with 0.19
+  * Enable parallel building again, it was not the source of the FTBFS
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 30 Dec 2016 17:01:10 +0100
+
+hugo (0.18-2) unstable; urgency=medium
+
+  * Disable parallel building to prevent FTBFS
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 24 Dec 2016 11:51:17 +0100
+
+hugo (0.18-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.18. Closes: #846552, #848406
+    - Update Build-Depends with currently needed packages
+    - Refresh patch
+    - Add new patch to disable git information in docs
+  * Use debhelper v10
+  * Disable network access during testing by using -test.short flag
+  * Remove no longer needed lintian override
+  * Update debian/copyright for new upstream files
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 22 Dec 2016 17:43:52 +0100
+
+hugo (0.16-2) unstable; urgency=medium
+
+  * Build with golang-any (>= 2:1.7~1)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 24 Aug 2016 10:49:32 -0600
+
+hugo (0.16-1) unstable; urgency=medium
+
+  * New upstream release
+  * Refresh dependencies in debian/control:
+    - Replace architecture-specific hack with golang-any in Build-Depends
+    - Remove old transitional alternate dependencies
+    - Update several versioned dependencies
+
+ -- Anthony Fok <foka@debian.org>  Sun, 12 Jun 2016 02:16:18 -0600
+
+hugo (0.15+git20160427.545.0903886-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Update debian/control
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-Git and Homepage fields
+    - New dependency on golang-github-kyokomi-emoji-dev
+    - Change dependency on golang-github-go-fsnotify-fsnotify-dev to
+      its new name golang-github-fsnotify-fsnotify-dev,
+      golang-pretty-dev to golang-github-kr-pretty-dev,
+      and golang-x-text-dev to golang-golang-x-text-dev
+  * Refresh 001-disable-google-analytics-in-docs.patch
+  * Refresh debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Sat, 30 Apr 2016 03:37:41 +0800
+
+hugo (0.15+git20160206.203.ed23711-1) unstable; urgency=high
+
+  * New upstream snapshot:
+     - Fix Hugo hang up with empty content directory
+  * Depend on a newer version of golang-github-spf13-afero-dev
+    (>= 0.0~git20160125.0.a5d3e7c) to ensure theme's static files
+    are synchronized
+  * Special thanks to Tatsushi Demachi (@tatsushid) for fixing
+    the two high-priority bugs listed above.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 06 Feb 2016 18:43:24 +0800
+
+hugo (0.15+git20160128.179.5def6d9-1) unstable; urgency=medium
+
+  * New upstream snapshot
+  * Update dependencies on latest Afero and Cobra with matching APIs
+    (Closes: #812645)
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Jan 2016 15:12:18 +0800
+
+hugo (0.15+git20160109.147.dd1d655-2) unstable; urgency=medium
+
+  * Allow the use of gccgo on architectures without golang-go
+  * Remove manual fixes to auto-generated hugo-server.1 man page
+    now that golang-github-cpuguy83-go-md2man-dev (1.0.5-1) is here
+  * Depends on latest golang-github-go-fsnotify-fsnotify-dev (>= 1.2.9)
+    for recent fixes
+
+ -- Anthony Fok <foka@debian.org>  Thu, 14 Jan 2016 05:46:38 -0700
+
+hugo (0.15+git20160109.147.dd1d655-1) unstable; urgency=medium
+
+  * Initial release, Take 2 (Closes: #798418)
+  * Install bash completion for Hugo
+
+ -- Anthony Fok <foka@debian.org>  Mon, 11 Jan 2016 16:09:38 -0700
+
+hugo (0.15+git20151224.105.1d6286b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #798418)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 24 Dec 2015 13:18:27 -0700

@@ -1,0 +1,245 @@
+wkhtmltopdf (0.12.5-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2020-21365: disable local filesystem access by default.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 24 Oct 2022 17:51:18 +0200
+
+wkhtmltopdf (0.12.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patch which fix wkhtmltopdf build against Qt >= 5.8
+  * Switch debhelper compatibility to 12
+  * Bump Standards-Version to 4.3.0
+  * Switch qt5-qmake build dependency to qt5-qmake-bin
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Thu, 14 Feb 2019 20:50:32 +0000
+
+wkhtmltopdf (0.12.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix FTCBFS: let dh_auto_configure run qmake with the right flags.
+    Thanks to Helmut Grohne for the patch (Closes: #886471)
+  * Fix long description to explain that it is not built against a
+    forked version of Qt (Closes: #826611)
+  * Add a patch to make wkhtmltopdf build against Qt >= 5.8
+  * Remove useless wkhtmltopdf-dbg binary package
+  * Change priority from extra to optional
+  * Bump Standards-Version to 4.1.3
+  * Fix debian/copyright Format URI (https)
+  * Update Vcs-Git and Vcs-Browser with new repository on salsa.debian.org
+  * Switch to https for Homepage field in debian/control
+  * Add debian/upstream/metadata
+  * Add some information on README.Debian about X Server bypass with
+    QT_QPA_* environment variables
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Tue, 27 Mar 2018 21:49:31 +0200
+
+wkhtmltopdf (0.12.3.2-3) unstable; urgency=medium
+
+  * Fix typos in long descriptions. Thanks to Victory for the suggestion.
+  * Bump Standards-Version to 3.9.8
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Mon, 19 Sep 2016 22:29:11 +0200
+
+wkhtmltopdf (0.12.3.2-2) unstable; urgency=medium
+
+  * Fix Vcs-(Git|Browser) fields pointing to the wrong URI. Thanks to
+    Ashish Kulkarni
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Wed, 13 Apr 2016 17:27:16 +0200
+
+wkhtmltopdf (0.12.3.2-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #816714)
+  * Remove unneeded Buid-Dep on qtquick1-5-dev. Thanks to Sune Vuorela
+    (Closes: #808780)
+  * Fix Vcs-(Git|Browser) fields to use secure URIs
+  * Enable hardening=+all build
+  * Bump Standards-Version to 3.9.7
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sat, 05 Mar 2016 12:58:40 +0100
+
+wkhtmltopdf (0.12.2.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sat, 18 Jul 2015 09:55:35 +0200
+
+wkhtmltopdf (0.12.2.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add new binary package wkhtmltopdf-dbg with debug symbols
+    (Closes: #781216, #781218)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Mon, 11 May 2015 19:45:31 +0200
+
+wkhtmltopdf (0.12.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Tue, 20 Jan 2015 20:22:53 +0100
+
+wkhtmltopdf (0.12.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refresh patches
+    - Remove patch to include QPrinter Support in build process (fixed
+      upstream)
+  * Bump Standards-Version to 3.9.6
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sun, 18 Jan 2015 00:50:38 +0100
+
+wkhtmltopdf (0.12.1-2) unstable; urgency=medium
+
+  * Add a patch to explicitely include QPrinter Support in build process
+    (Closes: #763216)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sun, 28 Sep 2014 19:53:07 +0200
+
+wkhtmltopdf (0.12.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - Refresh patches and remove patches merged upstream
+    - Adjust packaging to build manpages
+  * Build against QT5 instead of QT4
+  * Fixes in the LGPL-3 notice (debian/copyright)
+  * Move xserver Suggests to Recommends (Closes: #580226)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sun, 24 Aug 2014 18:42:45 +0200
+
+wkhtmltopdf (0.12.0-2) unstable; urgency=medium
+
+  * Fix the watch file (source code is now located at github)
+  * Fix debian/copyright (license is LGPL-3, not GPL-3)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Wed, 26 Mar 2014 20:16:57 +0100
+
+wkhtmltopdf (0.12.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #679755)
+  * Add patches to fix build failures and disable linking against the
+    shared library which is not mature enough to be packaged. Thanks to
+    Ashish Kulkarni for the patches.
+  * Add a patch to remove the git hash from the version
+  * Add a patch to fix some typos
+  * debian/control updates:
+    - update Homepage field
+    - update short and extended descriptions
+    - fix Vcs-Browser field
+  * Update debian/copyright according to the new release (switch to
+    DEP5 format)
+  * Bump Standards-Version to 3.9.5
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Tue, 25 Mar 2014 22:32:59 +0100
+
+wkhtmltopdf (0.9.9-4) unstable; urgency=low
+
+  * Fix a FTBFS triggered by a arch:any rebuild (Closes: #666321)
+  * Fix typo in debian/control (long description)
+  * Bump Standards-Version to 3.9.3
+  * Switch debhelper compat to v9
+  * Enabling hardened build flags
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Mon, 02 Apr 2012 20:23:26 +0000
+
+wkhtmltopdf (0.9.9-3) unstable; urgency=low
+
+  [ Cyril Brulebois ]
+  * Mention xvfb-run in README.Debian, which makes it trivial to run
+    wkhtmltopdf without X (Closes: #612235).
+
+  [ Emmanuel Bouthenot ]
+  * Convert patches to dep3 format.
+  * Add a missing dependency on libqtwebkit-dev (due to the recent split of
+    libqt4-dev) to fix a FTBFS (Closes: #618226).
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Thu, 24 Feb 2011 21:27:20 +0000
+
+wkhtmltopdf (0.9.9-2) unstable; urgency=low
+
+  * Add a patch to fix --encoding option (Closes: #599421).
+  * Bump Standards-Version to 3.9.1.
+  * Fix Vcs-Browser url.
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Tue, 12 Oct 2010 20:42:47 +0000
+
+wkhtmltopdf (0.9.9-1) unstable; urgency=low
+
+  * New upstream release (Closes: #581799)
+  * Fix debian/watch (take into account GoogleCode changes)
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Add a patch to fix some typos.
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Wed, 26 May 2010 20:25:29 +0000
+
+wkhtmltopdf (0.9.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Mon, 22 Mar 2010 19:11:21 +0000
+
+wkhtmltopdf (0.9.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Minor debian/copyright updates
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Thu, 11 Mar 2010 13:40:56 +0000
+
+wkhtmltopdf (0.9.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.8.4 (no changes)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Wed, 24 Feb 2010 01:00:06 +0100
+
+wkhtmltopdf (0.9.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove patch about manpage fixes (merged upstream)
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Thu, 28 Jan 2010 19:48:59 +0000
+
+wkhtmltopdf (0.9.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #551848)
+  * Add a patch to fix bugs with the manpage:
+    - hyphen used as minus sign
+    - standardization of the NAME section
+  * Add a README.source file about quilt usage with Debian patches.
+  * Bump Standards-Version to 3.8.3
+  * Maintainer became Debian Developer: adjust email, VCS and DM fields.
+
+ -- Emmanuel Bouthenot <kolter@debian.org>  Sat, 16 Jan 2010 11:43:12 +0000
+
+wkhtmltopdf (0.8.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove the patch which fix a segfault during start-up (fixed upstream).
+
+ -- Emmanuel Bouthenot <kolter@openics.org>  Thu, 06 Aug 2009 12:03:29 +0000
+
+wkhtmltopdf (0.8.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/copyright: manpage is no longer under GFDL.
+  * Update debian/control: bump Standards-Version to 3.8.2
+  * Add a patch (backported from svn trunk) to fix a segfault during
+    start-up.
+
+ -- Emmanuel Bouthenot <kolter@openics.org>  Mon, 13 Jul 2009 22:58:55 +0000
+
+wkhtmltopdf (0.8.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable.
+  * Improve debian/rules using dh7 overrides (update debhelper dependency
+    accordingly).
+
+ -- Emmanuel Bouthenot <kolter@openics.org>  Wed, 20 May 2009 21:31:18 +0200
+
+wkhtmltopdf (0.7.5-1) experimental; urgency=low
+
+  * Initial release (Closes: #514422)
+
+ -- Emmanuel Bouthenot <kolter@openics.org>  Wed, 29 Apr 2009 13:54:39 +0000

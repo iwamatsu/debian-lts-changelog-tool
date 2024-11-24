@@ -1,0 +1,75 @@
+node-url-parse (1.2.0-2+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2021-27515: Using backslash in the protocol is valid in the browser,
+    while url-parse thinks it’s a relative path.  An application that validates
+    a url using url-parse might pass a malicious link.  (Closes: #985110)
+  * CVE-2021-3664: url-parse mishandles certain uses of a single (back) slash
+    such as https:\ & https:/ and interprets the URI as a relative path.
+    Browsers accept a single backslash after the protocol, and treat it as a
+    normal slash, while url-parse sees it as a relative path.
+    (Closes: #991577)
+  * CVE-2022-0512: Incorrect handling of username and password can lead to
+    authorization bypass.
+  * CVE-2022-0639: A specially crafted URL with empty userinfo and no host can
+    be used to bypass authorization checks.
+  * CVE-2022-0686: A URL with a specified but empty port can be used to bypass
+    authorization checks.
+  * CVE-2022-0691: Leading control characters are not removed.  This allows an
+    attacker to bypass hostname checks and makes the `extractProtocol` method
+    return false positives.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Wed, 22 Feb 2023 23:16:53 +0100
+
+node-url-parse (1.2.0-2+deb10u1) buster; urgency=medium
+
+  * Add missing test dependency: mocha
+  * Fix insufficient validation and sanitization of user input
+    (Closes: CVE-2020-8124)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 01 Sep 2020 12:55:09 +0200
+
+node-url-parse (1.2.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 11
+  * Declare compliance with policy 4.3.0
+  * Add patch to fix bad URL parsing (Closes: #906058, CVE-2018-3774)
+  * Enable upstream tests using pkg-js-tools. This adds node-deep-eql,
+    node-object-inspect and node-pathval in build dependencies
+  * Fix VCS fields
+  * Fix debian/copyright format URL
+  * Fix description (trailing whitespaces)
+  * Add upstream/metadata
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 16 Apr 2019 10:18:36 +0200
+
+node-url-parse (1.2.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump standards, update section and priority
+  * Use github tarballs
+  * Use webpack instead of browserify
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 02 Jan 2018 21:25:10 +0530
+
+node-url-parse (1.0.5-2) unstable; urgency=medium
+
+  * debian/install: install more files into package
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 14 Feb 2016 16:07:46 +0100
+
+node-url-parse (1.0.5-1) unstable; urgency=medium
+
+  * new upstream version
+  * debian/control: use correct version numbers for dependencies
+                    (Closes: #801143)
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 06 Feb 2016 18:07:46 +0100
+
+node-url-parse (1.0.2-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 02 Sep 2015 18:07:46 +0200

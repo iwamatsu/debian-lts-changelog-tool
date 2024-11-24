@@ -1,0 +1,167 @@
+golang-github-aws-aws-sdk-go (1.36.33-1) unstable; urgency=medium
+
+  * New upstream version 1.36.33
+  * debian/watch: Try to fetch supposedly pristine gzip-compressed tarball
+  * Bump versioned dependency on golang-golang-x-net-dev as per go.mod
+
+ -- Anthony Fok <foka@debian.org>  Tue, 02 Feb 2021 15:28:02 -0700
+
+golang-github-aws-aws-sdk-go (1.36.15-1) unstable; urgency=medium
+
+  * New upstream version 1.36.15
+  * Drop repack suffix
+  * Update section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+  * No longer needs golang-github-go-sql-driver-mysql-dev
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 27 Dec 2020 02:17:48 +0800
+
+golang-github-aws-aws-sdk-go (1.35.0-1) unstable; urgency=medium
+
+  * New upstream version 1.35.0
+  * debian/gbp.conf: Disable overlay and custom export-dir etc.,
+    and set debian-branch to debian/sid for DEP-14 conformance
+  * Bump dependency: golang-github-jmespath-go-jmespath-dev (>= 0.4.0)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 22 Oct 2020 15:10:03 -0600
+
+golang-github-aws-aws-sdk-go (1.34.22-1) unstable; urgency=medium
+
+  * New upstream version 1.34.22
+  * Update dependencies according to go.mod
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+  * debian/copyright: Remove the now unneeded Files-Excluded field
+
+ -- Anthony Fok <foka@debian.org>  Sat, 19 Sep 2020 01:53:10 -0600
+
+golang-github-aws-aws-sdk-go (1.27.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.27.4
+  * Update debian/watch to version=4 and add filenamemangle option
+  * Update debian/copyright as upstream has removed doc-src/*
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Build-Depends: dh-golang (>= 1.31~) and simplify debian/rules
+  * Remove dependency on golang-github-go-ini-ini-dev and
+    golang-github-stretchr-testify-dev as per upstream
+  * Remove 32-bit fixes which have been applied upstream:
+    - 0003-fix-int64-alignment-on-32-bit-platforms.patch
+    - 0004-fix-int-overflow-on-32-bit-platforms.patch
+
+ -- Anthony Fok <foka@debian.org>  Fri, 21 Feb 2020 01:18:38 -0700
+
+golang-github-aws-aws-sdk-go (1.21.6+dfsg-2) unstable; urgency=medium
+
+  * Fix test failures on 32-bit platforms detected by Ubuntu autopkgtest:
+    - aws/csm: Fix int64 alignment of metricChan on 386 and arm
+    - service/ec2: Fix int overflow in minTime on 386 and arm
+  * Apply "cme fix dpkg" fixes:
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Remove alternative Build-Depends on golang-testify-dev
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Mon, 26 Aug 2019 05:29:37 -0600
+
+golang-github-aws-aws-sdk-go (1.21.6+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org.
+  * Bump Standards-Version to 4.4.0 (no change).
+  * Replace "MIT" with "Expat" as license short name in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 27 Jul 2019 08:17:42 -0600
+
+golang-github-aws-aws-sdk-go (1.16.18+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #918413).
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 13 Jan 2019 12:33:31 +0100
+
+golang-github-aws-aws-sdk-go (1.12.79+dfsg-1) unstable; urgency=medium
+
+  [ Alexandre Viau <aviau@debian.org> ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov <onlyjob@debian.org> ]
+  * New upstream release.
+  * debhelper & compat to version 11.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 09 Apr 2018 00:08:39 +1000
+
+golang-github-aws-aws-sdk-go (1.8.44+dfsg-1) UNRELEASED; urgency=medium
+
+  * New release (Closes: #875653).
+  * d/copyright: update missed copyright.
+  * Add golang-golang-x-net-dev to Build-Depends, new test depends.
+  * Update Standards-Version to 4.1.0
+    + Change Priority to optional.
+  * doc-src/aws-godoc/templates/godoc.html has same problem with
+    doc-src/plugin/templates/default/layout/html/footer.erb,
+    so exclude it from orig tarball, and add the dfsg version in
+    patch form.
+
+ -- Shengjing Zhu <i@zhsj.me>  Sat, 16 Sep 2017 01:32:02 +0800
+
+golang-github-aws-aws-sdk-go (1.4.22+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New release (Closes: #869800).
+  * d/control:
+    + Bump to 4.0.0 standard version (No change needed).
+    + Bump debhelper to 10.
+    + Fix pkg-go team's full name.
+    + Add myself to uploaders.
+    + Remove test dependency for dev package.
+    + Remove unnecessary build dependencies.
+    + Add autopkgtest-pkg-go.
+  * Bump to compat 10.
+
+ -- Shengjing Zhu <i@zhsj.me>  Mon, 07 Aug 2017 02:25:37 +0800
+
+golang-github-aws-aws-sdk-go (1.1.14+dfsg-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Martín Ferrari ]
+  * debian/control: Cull unneeded dependencies.
+  * debian/rules: Remove now unneeded exclude.
+  * Packaging refresh:
+    - Updated Standards-Version (no changes).
+    - Use new dh-golang features.
+    - Use golang-any.
+    - Remove more unneeded dependencies and Built-Using.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 25 Sep 2016 17:46:34 +0100
+
+golang-github-aws-aws-sdk-go (1.1.14+dfsg-1) unstable; urgency=medium
+
+  * New upstream release [March 2016] (Closes: #819215, #817790).
+  * rules: less aggressive build with GOMAXPROCS=1.
+  * Standards-Version: 3.9.7.
+  * (Build-)Depends:
+    - golang-golang-x-tools-dev
+    + golang-golang-x-tools-dev (>= 1:0.0~git20160315~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 25 Mar 2016 23:31:17 +1100
+
+golang-github-aws-aws-sdk-go (1.0.7+dfsg-1) unstable; urgency=medium
+
+  * New upstream release [December 2015].
+  * (Build-)Depends:
+    + golang-github-go-ini-ini-dev
+    + golang-github-jmespath-go-jmespath-dev
+    + golang-github-lsegal-gucumber-dev
+    + golang-github-smartystreets-goconvey-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 11 Feb 2016 14:55:41 +1100
+
+golang-github-aws-aws-sdk-go (0.9.9+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #798297).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 29 Sep 2015 12:34:07 +1000

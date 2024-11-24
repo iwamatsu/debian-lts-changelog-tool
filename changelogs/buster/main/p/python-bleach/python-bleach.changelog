@@ -1,0 +1,129 @@
+python-bleach (3.1.2-0+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * sanitizer: escape HTML comments (CVE-2021-23980) (Closes: #986251)
+  * tests: add tests for more eject tags for GHSA-vv2x-vrpj-qqpq
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 15 Apr 2021 20:57:08 +0200
+
+python-bleach (3.1.2-0+deb10u1) buster-security; urgency=high
+
+  * New upstream security release (Closes: #954236)
+    - Addresses CVE-2020-6816
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 19 Mar 2020 00:14:11 -0400
+
+python-bleach (3.1.1-0+deb10u1) buster-security; urgency=high
+
+  * New upstream security release (Closes: #951907)
+    - Addresses CVE-2020-6802
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 27 Feb 2020 05:53:52 -0500
+
+python-bleach (3.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - Update patches
+  * Set minimum python/python3-six version to >= 1.9~ in Build-Depends
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 15 Jan 2019 00:46:11 -0500
+
+python-bleach (3.0.2-2) unstable; urgency=medium
+
+  * python3-bleach Breaks python3-readme-renderer << 24.0
+  * Mark python-bleach-doc Multi-Arch: foreign
+  * Add debian/patches/remove-privacy-breach.patch to remove unnecessary
+    external references in documentation
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 28 Dec 2018 03:31:53 -0500
+
+python-bleach (3.0.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Scott Kitterman ]
+  * Add missing depends on python/3-pkg-resources
+  * Bump standards-version to 4.3.0 without further change
+  * Add autopkgtest
+  * New upstream release
+    - Bump minimum html5lib versions to 1.0.1 and add
+      debian/patches/no_vendored_html5lib.patch so we use the system
+      python/3-html5lib
+    - Manually add python/3-html5lib to depends
+    - Add vendored htmllib license/copyright information to debian/copyright
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 24 Dec 2018 18:45:57 -0500
+
+python-bleach (2.1.3-1) unstable; urgency=high
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+
+  [ Scott Kitterman ]
+  * New upstream release (Closes: #892252)
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 07 Mar 2018 14:07:14 -0500
+
+python-bleach (2.1.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump standards-version to 4.1.3 without further change
+  * Bump minimum debhelper version to 9 to match compat
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 09 Jan 2018 23:32:15 -0500
+
+python-bleach (2.0-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #844943)
+    - Update minimum htmlib5 version requirement
+    - Update debian/copyright
+    - Drop override of dh_auto_test and add pytest/3 and pytest/3-runner to
+      build-depends so tests still run
+    - Drop obsolete build-depends on python/3-nose
+  * Agreed maintainer change to DPMT
+    - Updated Vcs-* fields in debian/control
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 10 Mar 2017 14:08:47 -0500
+
+python-bleach (1.4.2-1) unstable; urgency=low
+
+  [ Per Andersson ]
+  * Bump debhelper compat level to 9 (level 8 is required in Build-Depends).
+  * Add extend-diff-ignore for egg.info in debian/source/options.
+  * d/watch: Use github.com, githubredir is deprecated.
+  * Use my @debian.org address.
+  * Use HTTPS protocol for Homepage and Vcs-* fields.
+
+  [ Christopher Baines ]
+  * New upstream release.
+    - Includes fix upstream fix for #798441 (Closes: #798441).
+  * Up standards version to 3.9.6, no changes required.
+
+ -- Per Andersson <avtobiff@debian.org>  Mon, 22 Feb 2016 20:38:36 +0100
+
+python-bleach (1.4-1) unstable; urgency=low
+
+  * New upstream release
+    - License changed to Apache License 2.0
+    - Add python*-six to Build-Dependends
+  * Shipping both python2 and python3 packages
+    - Add python3-html5lib to Build-Dependends
+  * Running tests during build
+    - Add python*-nose Build-Dependends
+  * Packaging license changed to Apache License 2.0
+  * Bumped Standards-Version to 3.9.5, no changes needed
+  * Add common doc package
+    - Binary packages suggests this package
+    - Add python*-sphinx to Build-Depends
+
+ -- Per Andersson <avtobiff@gmail.com>  Fri, 14 Feb 2014 00:59:20 +0100
+
+python-bleach (1.2.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #686902)
+
+ -- Per Andersson <avtobiff@gmail.com>  Sun, 09 Jun 2013 19:46:56 +0200

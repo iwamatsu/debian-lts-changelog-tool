@@ -1,0 +1,96 @@
+php-cas (1.3.6-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport patch for CVE-2022-39369. (Closes: #1023571)
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 08 Jul 2023 13:48:07 +0200
+
+php-cas (1.3.6-1) unstable; urgency=medium
+
+  * Update debian/watch
+  * New upstream version 1.3.6 (Closes: #868466, CVE-2017-1000071)
+  * Bump debhelper compatibility level to 11
+  * Declare compliance with policy 4.3.0
+  * Set me as maintainer (See: #757231)
+  * Drop old patches
+  * Update install
+  * Drop debian/examples
+  * Update docs
+  * Update debian/copyright
+  * Update VCS fields to salsa
+  * Add upstream/metadata
+  * Clean debian/rules
+  * Fix description
+  * Update homepage
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 10 Feb 2019 09:29:07 +0100
+
+php-cas (1.3.3-4) unstable; urgency=high
+
+  * QA upload.
+  * Updated dependencies for PHP7. (Closes: #821568)
+  * Updated Vcs-* after switch to collab-maint.
+  * Bumped policy to 3.9.8: No change required.
+  * Bumped compat level to 9.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Tue, 31 May 2016 23:22:00 +0200
+
+php-cas (1.3.3-3) unstable; urgency=low
+
+  * Orphaning
+
+ -- Olivier Berger <obergix@debian.org>  Sun, 24 Apr 2016 15:34:38 +0200
+
+php-cas (1.3.3-2) unstable; urgency=medium
+
+  * Fix upstream typo on TypeMismatchException, thanks to Florent Lartet
+    (Closes: #813405).
+
+ -- Olivier Berger <obergix@debian.org>  Sat, 06 Feb 2016 06:50:01 +0100
+
+php-cas (1.3.3-1) unstable; urgency=medium
+
+  * New upstream version (Closes:  #759718 (CVE-2014-4172)).
+  * Drop unneeded dependency on php-db (Closes: #759716).
+
+ -- Olivier Berger <olivier.berger@it-sudparis.eu>  Wed, 03 Sep 2014 13:37:14 +0200
+
+php-cas (1.3.2-2) unstable; urgency=low
+
+  * Upload to unstable (only minor changes vs previous experimental version).
+
+ -- Olivier Berger <obergix@debian.org>  Tue, 10 Sep 2013 09:48:53 +0200
+
+php-cas (1.3.2-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Olivier Berger <obergix@debian.org>  Sat, 26 Jan 2013 16:18:07 +0100
+
+php-cas (1.3.1-4) unstable; urgency=high
+
+  * Fix wrong call to setSslCaCert() thanks to Thijs Kinkhorst (Closes:
+    #698946).
+
+ -- Olivier Berger <obergix@debian.org>  Sat, 26 Jan 2013 15:43:53 +0100
+
+php-cas (1.3.1-3) unstable; urgency=high
+
+  * The previous upload missed the CVE-2012-5583 reference. Rewriting the
+    changelog message.
+
+ -- Olivier Berger <obergix@debian.org>  Wed, 12 Dec 2012 18:43:26 +0100
+
+php-cas (1.3.1-2) unstable; urgency=high
+
+  * Fix security problem on libcurl verification of SSL cert's hostname
+    (apply upstream fixes for issue #58 on github) (CVE-2012-5583 -
+    insecure usage of curl).
+
+ -- Olivier Berger <obergix@debian.org>  Fri, 30 Nov 2012 09:48:50 +0100
+
+php-cas (1.3.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #495542)
+
+ -- Olivier Berger <obergix@debian.org>  Wed, 13 Jun 2012 22:37:43 +0200

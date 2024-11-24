@@ -1,0 +1,30 @@
+ruby-image-processing (1.10.3-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Prevent remote shell execution in `#apply` (CVE-2022-24720)
+    (Closes: #1007225)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 30 Dec 2022 23:16:44 +0100
+
+ruby-image-processing (1.10.3-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Pirate Praveen ]
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+  * New upstream version 1.10.3 (Thanks to Antonio for the tip to try newer
+    upstream version and thanks to Daniel Leidert for confirming new upstream
+    fixes the test failure. Thanks to Utkarsh for updating ruby-vips.)
+  * Update minimum version of ruby-vips to 2.0.17
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 01 Apr 2020 00:13:13 +0530
+
+ruby-image-processing (1.9.0-1) experimental; urgency=medium
+
+  * Initial release (Closes: #930069)
+
+ -- Jongmin Kim <jmkim@pukyong.ac.kr>  Mon, 17 Jun 2019 18:05:46 +0900

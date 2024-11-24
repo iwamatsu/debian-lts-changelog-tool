@@ -1,0 +1,540 @@
+wpewebkit (2.38.6-1~deb11u1) bullseye-security; urgency=high
+
+  * Rebuild for bullseye-security.
+  * gcc 10 segfaults when building webkit in amd64 (see #1008098) so use
+    clang instead. Keep using gcc in other architectures because clang has
+    problems in at least i386, arm64 and mipsel (see #1010329 and
+    #1016811).
+    - debian/rules: Tell CMake to use clang.
+    - debian/control.in: Build depend on clang.
+  * Use libsoup2 instead of libsoup3:
+    - debian/rules: Set USE_SOUP_VERSION=2.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 02 May 2023 14:54:33 +0200
+
+wpewebkit (2.38.6-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2023-0003 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    - CVE-2022-0108, CVE-2022-32885, CVE-2023-27932, CVE-2023-27954,
+      CVE-2023-28205 (fixed in 2.38.6 and 2.40.1).
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 25 Apr 2023 09:17:43 +0200
+
+wpewebkit (2.38.5-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2023-0002 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    - CVE-2023-23529 (fixed in 2.38.5).
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 15 Feb 2023 22:52:14 +0100
+
+wpewebkit (2.38.4-1) unstable; urgency=high
+
+  * New upstream release.
+  * Update copyright information of all files.
+  * debian/control.in:
+    - Update Standards-Version to 4.6.2 (no changes).
+  * debian/rules:
+    - Build with -DENABLE_JIT=OFF -DENABLE_C_LOOP=ON. This uses the CLoop
+      Javascript interpreter in i386 for compatibility with old (non-SSE2)
+      CPUs.
+    - Explicitly disable lto. This is known to have caused problems in
+      WebKitGTK, although it's not a problem for Debian at the moment.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 02 Feb 2023 15:28:53 +0100
+
+wpewebkit (2.38.3-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Sat, 24 Dec 2022 16:38:03 +0100
+
+wpewebkit (2.38.2-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2022-0010 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    - CVE-2022-32888 and CVE-2022-32923 (fixed in 2.38.0).
+    - CVE-2022-42799, CVE-2022-42823 and CVE-2022-42824 (fixed in 2.38.2).
+  * Refresh all patches.
+  * debian/rules:
+    - Build with -DENABLE_UNIFIED_BUILDS=OFF on mips, mipsel and sh4, we
+      are having problems to build webkit due to lack of memory (#1020642).
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 04 Nov 2022 21:21:54 +0100
+
+wpewebkit (2.38.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 28 Oct 2022 11:50:16 +0200
+
+wpewebkit (2.38.0-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2022-0009 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    - CVE-2022-32891 (fixed in 2.36.5).
+    - CVE-2022-32886 and CVE-2022-32912 (fixed in 2.36.8).
+  * Refresh all patches.
+  * Update copyright information of all files.
+  * debian/gbp.conf:
+    - Update upstream branch name.
+  * debian/source/lintian-overrides:
+    - Update source-is-missing overrides.
+  * debian/control.in:
+    - Replace build dependency on gtk-doc-tools with gi-docgen,
+      gobject-introspection and libgirepository1.0-dev.
+  * debian/not-installed:
+    - Don't install the generated g-i files, at the moment we're only
+      using them to build the documentation.
+  * debian/libwpewebkit-1.0-doc.doc-base.*:
+    - Replace the old doc-base files with wpe-webkit, wpe-javascriptcore
+      and wpe-web-extension. Note that we are always shipping the 1.1 API
+      docs now, but the package name is still named 1.0-doc to make
+      backports easier.
+  * debian/libwpewebkit-1.0-doc.{install,links}:
+    - Install the docs in /usr/share/gtk-doc and link them from
+      /usr/share/doc.
+  * debian/rules:
+    - Add USE_PREBUILT_DOCS variable to allow using the prebuilt
+      documentation included in the upstream tarball when gi-docgen is
+      missing.
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 19 Sep 2022 22:16:34 +0200
+
+wpewebkit (2.36.7-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2022-0008 lists the following
+    security fixes in the latest versions of WPE WebKit
+    - CVE identifiers: CVE-2022-32893 (fixed in 2.36.7).
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 25 Aug 2022 14:57:57 +0200
+
+wpewebkit (2.36.6-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2022-0007 lists the following
+    security fixes in the latest versions of WPE WebKit
+    - CVE identifiers: CVE-2022-32792, CVE-2022-32816 and CVE-2022-2294
+      (fixed in 2.36.5).
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 10 Aug 2022 17:08:54 +0200
+
+wpewebkit (2.36.4-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2022-0006 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    - CVE-2022-22662 (fixed in 2.36.0).
+    - CVE-2022-22677 and CVE-2022-26710 (fixed in 2.36.4).
+  * Update format of lintian overrides (see #1007002).
+  * debian/control.in:
+    - Update Standards-Version to 4.6.1.0 (no changes).
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 06 Jul 2022 15:56:08 +0200
+
+wpewebkit (2.36.3-1) unstable; urgency=high
+
+  * New upstream release.
+  * debian/rules: lower memory requirements on sh4.
+  * Generate debian/control from debian/control.in depending on whether
+    we're making the soup2 (1.0 API) or soup3 (1.1 API) build.
+    - debian/rules: Add new target to generate debian/control.
+  * debian/control.in:
+    - Make the -dev package suggest libwpewebkit-1.0-doc
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 30 May 2022 14:57:19 +0200
+
+wpewebkit (2.36.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/rules:
+    - Reduce the number of parallel build jobs on Ubuntu's amd64 (thanks,
+      Jeremy Bicha).
+    - Re-enable unified builds in Debian/mipsel, the changes from Adrian
+      Bunk should be enough to make this build again.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 22 Apr 2022 01:04:27 +0200
+
+wpewebkit (2.36.0-2) unstable; urgency=medium
+
+  * debian/rules:
+    - Build with -Os, -g0 and ggc-min-expand=10 in mips / mipsel in order
+      to lower the memory requirements (thanks, Adrian Bunk).
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 05 Apr 2022 10:41:00 +0200
+
+wpewebkit (2.36.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian/gbp.conf:
+    + Update upstream branch name.
+  * Refresh all patches.
+  * Update copyright information of all files.
+  * debian/source/lintian-overrides:
+    + Update source-is-missing overrides.
+  * debian/libwpewebkit-1.0-3.symbols:
+    + Update symbols.
+  * debian/rules:
+    + Build with CMAKE_BUILD_WITH_INSTALL_RPATH=ON, otherwise builds are
+      not reproducible if they happen in different directories.
+    + Override the dh_auto_clean rule to remove all python cache files.
+    + Disable unified builds in Debian/mipsel and reduce the number of
+      parallel jobs in order to prevent running out of memory.
+  * Build the 1.1 API version of the packages. These use libsoup 3 instead
+    of libsoup 2 but are otherwise identical to the 1.0 API packages.
+    + debian/control:
+      - Add build dependency on libsoup-3.0-dev.
+      - Add entries for the new packages.
+    + debian/rules:
+      - Add commands to build both sets of packages.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 31 Mar 2022 11:54:08 +0200
+
+wpewebkit (2.34.6-1) unstable; urgency=high
+
+  * New upstream release.
+    + Fixes CVE-2022-22620.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 17 Feb 2022 19:59:16 +0100
+
+wpewebkit (2.34.5-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 09 Feb 2022 10:57:53 +0100
+
+wpewebkit (2.34.4-1) unstable; urgency=high
+
+  * New upstream release.
+  * Set the debhelper compatibility level to 12:
+    - Get rid of debian/compat.
+    - Add build dependency on debhelper-compat.
+  * debian/copyright:
+    + Update copyright years.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 21 Jan 2022 12:27:07 +0100
+
+wpewebkit (2.34.3-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 20 Dec 2021 00:29:38 +0100
+
+wpewebkit (2.34.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/fix-ftbfs-m68k.patch:
+    + Update patch.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 24 Nov 2021 16:41:46 +0100
+
+wpewebkit (2.34.1-1) unstable; urgency=high
+
+  * New upstream release.
+  * debian/gbp.conf:
+    + Update upstream branch name.
+  * Update copyright information of all files.
+  * Refresh all patches.
+  * debian/rules:
+    + Build with -O1 in sh3 and sh4 (see #995717).
+    + Build with -DUSE_SOUP2=ON.
+  * debian/control:
+    + Add build dependency on liblcms2-dev (see #880697).
+    + Update Standards-Version to 4.6.0.1 (no changes).
+  * debian/libwpewebkit-1.0-3.symbols:
+    + Update symbols.
+  * debian/libwpewebkit-1.0-3.lintian-overrides:
+    + Override library-not-linked-against-libc.
+  * debian/source/lintian-overrides:
+    + Update source-is-missing overrides.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 21 Oct 2021 12:38:01 +0200
+
+wpewebkit (2.32.4-1) unstable; urgency=high
+
+  * New upstream release.
+  * disable-external-audio-rendering.patch:
+    + Drop this patch now for bookworm.
+  * debian/source/lintian-overrides:
+    + Update source-is-missing overrides.
+
+ -- Alberto Garcia <berto@igalia.com>  Sat, 18 Sep 2021 12:32:31 +0200
+
+wpewebkit (2.32.3-2) unstable; urgency=high
+
+  * disable-external-audio-rendering.patch:
+    + Build without USE_WPEBACKEND_FDO_AUDIO_EXTENSION so the binary works
+      with the wpebackend-fdo version in bullseye (see #991555).
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 03 Aug 2021 01:09:44 +0200
+
+wpewebkit (2.32.3-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2021-0004 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    + CVE-2021-30666, CVE-2021-30761 (fixed in 2.26.0).
+    + CVE-2021-30762 (fixed in 2.28.0).
+    + CVE-2021-1817, CVE-2021-1820, CVE-2021-1825, CVE-2021-1826,
+      CVE-2021-30661 (fixed in 2.30.0).
+    + CVE-2021-21806 (fixed in 2.30.6).
+    + CVE-2021-30682 (fixed in 2.32.0).
+    + CVE-2021-30758 (fixed in 2.32.2).
+    + CVE-2021-21775, CVE-2021-21779, CVE-2021-30663, CVE-2021-30665,
+      CVE-2021-30689, CVE-2021-30720, CVE-2021-30734, CVE-2021-30744,
+      CVE-2021-30749, CVE-2021-30795, CVE-2021-30797, CVE-2021-30799
+      (fixed in 2.32.3).
+
+ -- Alberto Garcia <berto@igalia.com>  Sun, 25 Jul 2021 00:45:03 +0200
+
+wpewebkit (2.32.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 12 Jul 2021 22:06:41 +0200
+
+wpewebkit (2.32.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/revert-soname-change.patch:
+    + Drop this patch, this is now upstream.
+  * debian/patches/fix-ftbfs-m68k.patch:
+    + Update patch.
+
+ -- Alberto Garcia <berto@igalia.com>  Sat, 08 May 2021 16:53:58 +0200
+
+wpewebkit (2.32.0-2) unstable; urgency=medium
+
+  * debian/patches/fix-ftbfs-m68k.patch:
+    + Compile BytecodeGenerator.cpp without optimizations on m68k and sh4,
+      otherwise the build fails due to gcc bugs.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 22 Apr 2021 15:24:36 +0200
+
+wpewebkit (2.32.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian/gbp.conf:
+    + Update upstream branch name.
+  * Use -DFORCE_32BIT on 32-bit builds.
+    + This replaces debian/patches/fix-ftbfs-x86.patch.
+  * Refresh all patches.
+  * Update copyright information of all files.
+  * debian/control:
+    + Add build dependencies on libglib2.0-doc and libsoup2.4-doc.
+  * debian/libwpewebkit-1.0-3.symbols:
+    + Update symbols.
+  * debian/patches/revert-soname-change.patch:
+    + Revert upstream soname change.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 06 Apr 2021 11:20:35 +0200
+
+wpewebkit (2.30.6-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 19 Mar 2021 20:17:01 +0100
+
+wpewebkit (2.30.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/fix-mips-page-size.patch:
+    + Increase the page size from 4KB to 16KB on MIPS, this fixes a crash
+      with Loongson CPUs that don't support 4KB pages (See #977779).
+  * debian/watch:
+    + Set version to 4 (fixes older-debian-watch-file-standard).
+  * debian/control:
+    + Update Standards-Version to 4.5.1 (no changes).
+  * Update the minimum required versions of some packages:
+    + cmake from 3.3 to 3.10
+    + libsoup2.4-dev from 2.42.0 to 2.54.0.
+  * debian/copyright:
+    + Update copyright years.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 12 Feb 2021 10:23:16 +0100
+
+wpewebkit (2.30.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 16 Dec 2020 23:13:32 +0100
+
+wpewebkit (2.30.3-1) unstable; urgency=high
+
+  * New upstream release (Closes: #975134).
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 20 Nov 2020 16:59:13 +0100
+
+wpewebkit (2.30.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 23 Oct 2020 14:40:45 +0200
+
+wpewebkit (2.30.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh all patches.
+  * debian/control:
+    + Add build dependency on libsystemd-dev.
+  * debian/libwpewebkit-1.0-3.symbols:
+    + Update symbols.
+  * debian/gbp.conf:
+    + Update upstream branch name.
+  * debian/source/lintian-overrides:
+    + Remove mailing-list-obsolete-in-debian-infrastructure override.
+    + Update source-is-missing overrides.
+  * Update copyright information of all files.
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 14 Sep 2020 11:57:09 +0200
+
+wpewebkit (2.28.4-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 28 Jul 2020 23:33:56 +0200
+
+wpewebkit (2.28.3-1) unstable; urgency=high
+
+  * New upstream release.
+  * Don't build the documentation in binary-arch builds and with the nodoc
+    build profile.
+    + debian/control:
+      - Move gtk-doc-tools to Build-Depends-Indep.
+      - Add Build-Profiles: <!nodoc> to libwpewebkit-1.0-doc.
+    + debian/rules:
+      - Use dh_listpackages to decide whether to build the documentation.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 10 Jul 2020 10:21:25 +0200
+
+wpewebkit (2.28.2-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2020-0004 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    + CVE-2020-11793 (fixed in 2.28.1).
+  * debian/rules:
+    + Don't set -Wall or -Wl,--as-needed, these are already used by
+      default. Fixes the debian-rules-uses-as-needed-linker-flag lintian
+      warning.
+    + Include /usr/share/dpkg/buildflags.mk instead of setting the build
+      flags manually.
+  * debian/source/lintian-overrides:
+    + Override mailing-list-obsolete-in-debian-infrastructure.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 24 Apr 2020 20:30:40 +0200
+
+wpewebkit (2.28.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/use-python3.patch:
+    + Drop patch, this is now upstream.
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 13 Apr 2020 17:19:01 +0200
+
+wpewebkit (2.28.0-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2020-0003 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    + CVE-2020-10018 (fixed in 2.28.0).
+  * Refresh all patches.
+  * debian/gbp.conf:
+    + Update upstream branch name.
+  * debian/WebKitWebDriver.1:
+    + Fix grammar.
+  * debian/rules:
+    + Use -mlra -fno-move-loop-invariants in sh3 and sh4 builds (thanks,
+      Adrian Glaubitz).
+    + Use jdupes to remove duplicate files in libwpewebkit-1.0-doc.
+  * debian/source/lintian-overrides:
+    + Update source-is-missing overrides.
+  * debian/libwpewebkit-1.0-3.symbols:
+    + Update symbols.
+  * Update copyright information of all files.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 12 Mar 2020 21:58:05 +0100
+
+wpewebkit (2.26.4-1) unstable; urgency=high
+
+  * New upstream release.
+  * The WPE WebKit security advisory WSA-2020-0002 lists the following
+    security fixes in the latest versions of WPE WebKit:
+    + CVE-2020-3862, CVE-2020-3864, CVE-2020-3865, CVE-2020-3867,
+      CVE-2020-3868 (fixed in 2.26.4)
+  * debian/patches/prefer-pthread.patch:
+    + Enable THREADS_PREFER_PTHREAD_FLAG. This fixes a FTBFS in riscv64
+  * debian/control:
+    + Add branch name to the Vcs-Git field.
+    + Update Standards-Version to 4.5.0 (no changes).
+    + Make libwpewebkit-1.0-doc Multi-Arch: foreign.
+  * debian/copyright:
+    + Add Upstream-Contact.
+  * Add debian/upstream/metadata.
+
+ -- Alberto Garcia <berto@igalia.com>  Fri, 14 Feb 2020 16:04:27 +0100
+
+wpewebkit (2.26.3-1) unstable; urgency=high
+
+  * New upstream release.
+  * Build without the bubblewrap sandbox if the required dependencies are
+    not available:
+    + debian/rules:
+      - Pass -DENABLE_BUBBLEWRAP_SANDBOX depending on whether libseccomp
+        is installed.
+      - Add runtime dependencies on bubblewrap and xdg-dbus-proxy
+        conditionally to the status of ENABLE_BUBBLEWRAP_SANDBOX.
+    + debian/control:
+      - Don't require bubblewrap, xdg-dbus-proxy or libseccomp-dev in
+        alpha, ia64, m68k, riscv64, sh4 or sparc64.
+  * debian/patches/use-python3.patch:
+    + The unversioned python interpreter (i.e. Python 2) is not installed
+      by default anymore, so use Python 3 instead.
+  * debian/control:
+    + Remove build dependency on python.
+    + Add build dependency on libwayland-dev.
+    + Make libwpewebkit-1.0-dev depend on libwpe-1.0-dev.
+    + Add Rules-Requires-Root: no.
+  * debian/copyright:
+    + Update copyright years.
+  * debian/rules:
+    + Don't use the Gold linker on powerpc (see #949618).
+  * debian/patches/reduce-memory-overheads.patch:
+    + Reduce memory usage when not using the Gold linker (see #949621).
+  * debian/patches/fix-ftbfs-m68k.patch:
+    + Fix m68k build (see #949660).
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 23 Jan 2020 16:46:10 +0100
+
+wpewebkit (2.26.2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Refresh all patches.
+  * Update copyright information of all files.
+  * The soname has been bumped from .2 to .3, so rename the packages and
+    the references to the old value.
+  * debian/source/lintian-overrides:
+    + Update source-is-missing override.
+  * debian/control:
+    + Add build dependencies on bubblewrap, xdg-dbus-proxy and
+      libseccomp-dev (for ENABLE_BUBBLEWRAP_SANDBOX) and libatk1.0-dev and
+      libatk-bridge2.0-dev (for ENABLE_ACCESSIBILITY).
+    + Update Standards-Version to 4.4.1 (no changes).
+  * debian/libwpewebkit-1.0-3.symbols:
+    + Update symbols.
+  * debian/rules:
+    + Use -DWTF_CPU_ARM64_CORTEXA53=OFF to fix the arm64 build.
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 14 Nov 2019 15:09:07 +0200
+
+wpewebkit (2.24.2-1) experimental; urgency=medium
+
+  * Initial release (Closes: #930053)
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 11 Nov 2019 16:39:51 +0200

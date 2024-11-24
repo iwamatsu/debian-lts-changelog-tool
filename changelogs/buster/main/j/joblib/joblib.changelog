@@ -1,0 +1,300 @@
+joblib (0.13.0-2+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * Really fix CVE-2022-21797: (Closes: #1020820)
+
+ -- Helmut Grohne <helmut@subdivi.de>  Mon, 27 Mar 2023 15:31:46 +0200
+
+joblib (0.13.0-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-21797: Fix arbitrary code execution.
+    (Closes: #1020820)
+
+ -- Dominik George <natureshadow@debian.org>  Thu, 17 Nov 2022 11:28:23 +0100
+
+joblib (0.13.0-2) unstable; urgency=medium
+
+  * debian/patches/deb_xfail_test_nested_parallelism_limit (Closes: #926930)
+    - xfail a test failing on single core boxes. Thanks Santiago Vila
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Fri, 12 Apr 2019 10:54:23 -0400
+
+joblib (0.13.0-1) unstable; urgency=medium
+
+  * Fresh upstream release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 28 Nov 2018 20:45:46 -0500
+
+joblib (0.12.5-1) unstable; urgency=medium
+
+  * Fresh upstream minor release
+  * debian/control
+    + psutil to B-Depends and Recommends - could optionally be used to
+      better track child processes for termination by loky
+  * debian/copyright
+    + records for joblib/externals
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sat, 27 Oct 2018 20:54:08 -0400
+
+joblib (0.12.3-1) unstable; urgency=medium
+
+  * Fresh upstream minor release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 04 Sep 2018 12:42:16 -0400
+
+joblib (0.12.2-2) unstable; urgency=medium
+
+  * debian/control,compat
+    - boost to compat 9
+  * CP patch to remove fragile test failing on busy/build boxes
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 28 Aug 2018 23:51:42 -0400
+
+joblib (0.12.2-1) unstable; urgency=medium
+
+  * Fresh upstream release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 21 Aug 2018 13:33:07 -0400
+
+joblib (0.12.1-1) unstable; urgency=medium
+
+  * Fresh upstream release
+  * debian
+    + specify PYTHONPATH=$(CURDIR) while running the tests
+    + python-lz4 into b-depends and Recommends for python2 pkg
+    + cython{,3} into b-depends so that joblib/test/_openmp_test_helper
+      can setup
+  * debian/patches
+    + deb_collect_ignore_setup
+      to avoid failing to collect tests due to various troubles on older
+      systems
+  * debian/control
+    + procps to b-depends and depends
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Fri, 27 Jul 2018 19:34:47 -0400
+
+joblib (0.11-1) unstable; urgency=medium
+
+  * Fresh minor upstream release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Thu, 02 Nov 2017 16:40:09 -0400
+
+joblib (0.10.3+git55-g660fe5d-1) unstable; urgency=medium
+
+  * New upstream snapshot from 0.10.2-54-gca8a159 (0.10.2 was
+    released from a feature branch)
+    - should address random build failures (Closes: #846228)
+  * debian/{rules,control}
+    - upstream switched to py.test from nose
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 07 Dec 2016 14:52:19 -0500
+
+joblib (0.10.3-1) unstable; urgency=medium
+
+  * Fresh upstream release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sun, 13 Nov 2016 18:50:18 -0500
+
+joblib (0.10.2-1) unstable; urgency=medium
+
+  * Fresh upstream release
+  * debian/control
+    - debian policy 3.9.8
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Thu, 29 Sep 2016 21:06:40 -0400
+
+joblib (0.9.4-1) unstable; urgency=medium
+
+  * New (primarily bugfix) upstream release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 09 Feb 2016 10:09:59 -0500
+
+joblib (0.9.3-1) unstable; urgency=medium
+
+  * Fresh bugfix upstream release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Fri, 27 Nov 2015 12:16:19 -0500
+
+joblib (0.9.2-1) unstable; urgency=medium
+
+  * Fresh upstream release
+  * debian/
+    - Python 3.2 is no longer supported
+    - boosted policy to 3.9.6
+    - exclude testing test_nested_exception_dispatch since hangs seems randomly
+      https://github.com/joblib/joblib/issues/257
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Thu, 15 Oct 2015 17:44:53 -0400
+
+joblib (0.8.4-1) experimental; urgency=medium
+
+  * New upstream release (improves pickling on python3)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 24 Nov 2014 08:56:40 -0500
+
+joblib (0.8.3-1) unstable; urgency=medium
+
+  * New upstream minor release
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sat, 06 Sep 2014 20:10:23 -0400
+
+joblib (0.8.2+git7-g0211f4c-1) unstable; urgency=medium
+
+  * New post new release upstream snapshot from 0.8.2-7-g0211f4c.
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 15 Jul 2014 12:47:34 -0400
+
+joblib (0.8.1-2) unstable; urgency=medium
+
+  * Fixing rushed out upload which beared too much trust into dh*_python magic
+    - provide install targets/files for both python2 and python3
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 04 Jun 2014 15:22:41 -0400
+
+joblib (0.8.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * debian/rules
+    - invoke tests directly with nosetests due to a mysterious infinite
+      looping with "spawn" context in Python3.4
+      (https://github.com/joblib/joblib/issues/140)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 04 Jun 2014 09:26:48 -0400
+
+joblib (0.8.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+  * python3-joblib package for Python3 support
+  * debian/control
+    - boosted policy to 3.9.5
+    - switched away from pysupport
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 28 May 2014 08:52:38 -0400
+
+joblib (0.8.0~a3+git33-gc633f55-1) neurodebian-devel; urgency=medium
+
+  * New upstream snapshot from 0.8.0a3-33-gc633f55
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 09 Apr 2014 20:22:25 -0400
+
+joblib (0.7.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    - boost X-Python-Version to >=2.6 (for squeeze backport builds)
+    - rename XS-Vcs-* to Vcs-*
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 05 Aug 2013 12:47:58 -0400
+
+joblib (0.7.0+git14-g3e5784c-1) unstable; urgency=low
+
+  * A post-release snapshot -- contains few fixes on top of the released version.
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sat, 01 Jun 2013 11:44:26 -0400
+
+joblib (0.6.5-1) experimental; urgency=low
+
+  * New upstream bugfix release
+    - contains up_no_parallel_if_no_locking patch (dropped)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sun, 23 Sep 2012 11:24:00 -0400
+
+joblib (0.6.4-3) unstable; urgency=low
+
+  * debian/patches/up_no_parallel_if_no_locking -- needed more work for
+    python2.6 compatibility where the exception was not triggered.
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 23 Jul 2012 14:35:45 -0400
+
+joblib (0.6.4-2) unstable; urgency=low
+
+  * debian/patches/up_no_parallel_if_no_locking -- additional check for 
+    availability of locking mechanisms to decide upon using multiprocessing.
+    Needed for robust functioning on kfrebsd systems.
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 16 Jul 2012 22:59:47 -0400
+
+joblib (0.6.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Boosted policy compliance to 3.9.3 -- no changes
+  * debian/copyright - DEP5 v.1 compatibility tune ups
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 07 May 2012 22:32:10 -0400
+
+joblib (0.6.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Dropped patch up_python25_compatibility (adopted upstream)
+  * Run unittests against all requested versions of Python.
+    Changed to build-depend on python-all
+  * Provided XS-Python-Version: >= 2.5
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sun, 05 Feb 2012 15:44:54 -0500
+
+joblib (0.6.0~b3-1) unstable; urgency=low
+
+  * Fresh upstream beta releaase addressing compatibility issues with
+    python 2.5 and older numpy's.
+  * Forwarded upstream patch up_python25_compatibility
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Thu, 12 Jan 2012 10:19:06 -0500
+
+joblib (0.6.0~b2-1) unstable; urgency=low
+
+  * Fresh upstream beta release (used by sklearn)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Tue, 10 Jan 2012 17:37:07 -0500
+
+joblib (0.5.4-1) unstable; urgency=low
+
+  * Fresh upstream release
+  * Package is now clean without any spurious post-release changes
+    (Closes: #643170)
+  * Policy boost to 3.9.2 -- no changes
+  * debian/watch: adjusted for change in github layout
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 17 Oct 2011 19:21:36 -0400
+
+joblib (0.5.1-1) unstable; urgency=low
+
+  * Fresh upstream release
+  * Enforce python_distutils dh buildsystem (upstream has Makefile now)
+  * Handle 'nocheck' to avoid build-time testing
+  * Install CHANGES.rst as the upstream changelog
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Mon, 11 Apr 2011 17:11:12 -0400
+
+joblib (0.4.6-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 06 Apr 2011 14:02:37 -0400
+
+joblib (0.4.6-1) experimental; urgency=low
+
+  * Upcoming upstream bugfix release
+  * Added a patch for older distributions (e.g. lenny) to avoid
+    testing 1 failing doctest due non-memmaped automatically arrays
+    with older numpy releases
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Sun, 14 Nov 2010 01:23:01 -0500
+
+joblib (0.4.5-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - moved numpy into Recommends
+    - point -vcs to github
+    - policy boost to 3.9.1 -- no changes
+
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 06 Oct 2010 17:38:06 -0400
+
+joblib (0.4.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #590747). Includes 1 commit past 0.4.3 tag: test
+    interface in setup.py
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Wed, 28 Jul 2010 20:24:17 -0400

@@ -1,0 +1,443 @@
+tgt (1:1.0.80-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-45751
+    chap: Use proper entropy source
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 29 Nov 2024 23:03:02 +0100
+
+tgt (1:1.0.80-1) unstable; urgency=medium
+
+  * New upstream version 1.0.80
+    + Fix build with GCC 10
+    + Add helper to fill sense INFORMATION field
+    + Set INFORMATION field on COMPARE AND WRITE miscompare
+  * Drop patches merged upstream.
+     - 0008-Fix-build-with-gcc-10.patch
+     - 0009-Replace-__packed-with-__attribute__.patch
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 12 Nov 2020 18:56:52 +0200
+
+tgt (1:1.0.79-3) unstable; urgency=medium
+
+  * Fix FTBFS with GCC 10 (Closes: #957874)
+  * Bump Standards-Version to 4.5.0; no changes needed
+  * Bump debhelper-compat to 13; no changes needed
+  * d/copyright: bump debian/ years
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 17 Sep 2020 12:38:22 +0300
+
+tgt (1:1.0.79-2) unstable; urgency=medium
+
+  * Allow env to override pkg-config.
+    Thanks to Helmut Grohne (Closes: #932669)
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sun, 21 Jul 2019 17:11:45 -0300
+
+tgt (1:1.0.79-1) unstable; urgency=medium
+
+  * New upstream version 1.0.79 (Closes: #925839)
+  * Refresh patches and convert d/patches to gbp-pq layout
+  * Bump Standards-Version to 4.4.0; no changes needed
+  * Bump dh compat level to 12.
+    + Add Pre-Depends: ${misc:Pre-Depends} to allow dh to inject the
+      init-system-helpers pre-dependency
+  * B-D on libglusterfs-dev instead of glusterfs-common (Closes: #919666)
+  * d/rules: call dh_auto_build instead of make.
+    Thanks to Helmut Grohne (Closes: #919771)
+  * Fix build with GlusterFS 6
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Wed, 17 Jul 2019 13:19:03 -0300
+
+tgt (1:1.0.74-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Change Format URL to correct one
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Apollon Oikonomopoulos ]
+  * New upstream version 1.0.74
+  * Bump Standards-Version to 4.2.1; no changes needed
+  * d/copyright: bump debian/ years
+  * d/copyright: fix public domain license and filename typo
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sat, 08 Dec 2018 22:30:32 +0200
+
+tgt (1:1.0.73-1) unstable; urgency=medium
+
+  * New upstream version 1.0.73
+  * Bump dh compat to 11:
+     + Override dh_installsystemd to add --no-restart-on-upgrade
+     + Remove --with=systemd and drop B-D on dh-systemd
+     + Remove --parallel from dh, now enabled by default
+  * Bump Standards-Version to 4.1.3; no changes needed
+  * Migrate tgt-dbg to dbgsym
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 06 Mar 2018 00:12:22 +0200
+
+tgt (1:1.0.72-1) unstable; urgency=medium
+
+  * New upstream version (closes: #853680)
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Wed, 02 Aug 2017 20:12:08 -0400
+
+tgt (1:1.0.71-1) unstable; urgency=medium
+
+  [ Christian Ehrhardt ]
+  * fix tgt being killed when serving many targets (LP: #1559088)
+  * d/t/localtgt, d/t/control: add dep8 test that sets up targets and luns via
+    iscsi using rdwr/aio backends and runs fio read/write/verify
+    (LP: #1640785)
+
+  [ Apollon Oikonomopoulos ]
+  * New upstream version 1.0.71 (Closes: #864237)
+  * Merge delta from Ubuntu (Closes: #845298)
+  * Refresh patches
+  * Bump Standards to 4.0.0; no changes needed
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 04 Jul 2017 22:09:50 +0300
+
+tgt (1:1.0.69-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Validate the DataOut length in WRITE_SAME_1*
+    + WRITE_SAME_* TL==0 means all blocks from LBA until the end of device
+    + sheepdog: reject snapshot as a LUN to avoid deleting working VDI
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Fri, 11 Nov 2016 10:27:04 +0200
+
+tgt (1:1.0.68-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Sheepdog-related fixes.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 01 Nov 2016 01:05:03 +0200
+
+tgt (1:1.0.67-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Reject target names with invalid characters
+    + Disable NOP-IN and adjust state for closed connections
+  * Refresh fix-pie-build patch
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Wed, 07 Sep 2016 15:13:30 +0300
+
+tgt (1:1.0.66-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Fix iscsi-tcp unsolicited NOP-IN (ping) task leak
+    + Call tgt_event_del before closing the eventfd
+    + iscsi: fix segfault at conn_close
+    + iser: fix segfault when not passing options to iser param
+    + tgt-setup-lun: fix error when blocksize not given
+    + Fix accepting invalid block size
+    + Update tgt-setup-lun for AF 4K disks.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sun, 14 Aug 2016 13:52:35 +0300
+
+tgt (1:1.0.65-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Fix a memory leak on allocation failure.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Fri, 03 Jun 2016 19:09:41 +0300
+
+tgt (1:1.0.64-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Enable tgt-admin to bring up Gluster backing stores
+    + Fix argument conversion for command line options with integer arguments
+      (closes: #822160)
+    + timerfd support fixes
+  * Bump standards version to 3.9.8; no changes needed
+  * Enable all hardening flags
+    + Add d/patches/fix-pie-build to patch upstream's Makefile to allow -fPIE
+      builds
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 24 May 2016 12:04:40 +0300
+
+tgt (1:1.0.63-1) unstable; urgency=medium
+
+  * New upstream release:
+    + Do not fail on EACCESS on oom_adjust; tgtd can now run in a different
+      user namespace (Closes: #813368).
+  * d/control: Use HTTPS URLs for Vcs-* fields.
+  * d/tests: Check for aio support (alongside rbd and glusterfs).
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sun, 07 Feb 2016 03:23:45 +0200
+
+tgt (1:1.0.62-2) unstable; urgency=medium
+
+  * Enable aio support, thanks to Harald Dunkel! (Closes: #811404)
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 19 Jan 2016 11:22:35 +0200
+
+tgt (1:1.0.62-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Thu, 10 Dec 2015 23:44:42 +0200
+
+tgt (1:1.0.61-1) unstable; urgency=medium
+
+  * New upstream version:
+    + Fix crash when looking up removed targets
+  * Fix the `modules' DEP-8 test
+  * Allow stderr output in DEP-8 tests
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 03 Nov 2015 09:12:10 +0200
+
+tgt (1:1.0.60-1) unstable; urgency=medium
+
+  * New upstream version:
+
+    Changes in 1.0.59:
+     + iser: Clear tasks free list when closing the connection
+     + iser: Fix wrong access to the session discovery mode
+     + sheepdog: fix to update data_vdi_id after writing data object
+
+    Changes in 1.0.60:
+     + usr/libssc: Include fcntl.h for loff_t
+     + Correct the location of checkarch.sh in Makefile
+
+   * tgt.service: strip whitespace around equals signs.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Fri, 10 Jul 2015 14:14:49 +0300
+
+tgt (1:1.0.58-1) unstable; urgency=medium
+
+  * New upstream version:
+    + bs_aio: fix failure handling
+    + sheepdog: fine grained locking in write path
+    + mgmt: Create ipc socket parent dir if does not exists
+    + iser: Fix memory leak of addrinfo struct
+    + tgtd.c: allow oom adjust failures for non-root users
+    + mgmt: change ipc socket address
+    + mgmt.c: check that the connecting user is the same as the user tgtd
+      runs as
+    + Allow overriding the IPC socket path via TGT_IPC_SOCKET
+  * d/control: remove XS-Testsuite and rely on dpkg (>= 1.17.11) to fill it in
+    automatically
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Tue, 26 May 2015 12:35:44 +0300
+
+tgt (1:1.0.57-1) unstable; urgency=medium
+
+  * New upstream version:
+    + iser: fix tasks leak with all its resource.
+    + Set ExpCmdSn and MaxCmdSn in ISCSI_OP_R2T.
+  * Drop link-against-libsystemd.patch, merged upstream.
+  * d/copyright: bump debian/ copyright years.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Wed, 29 Apr 2015 11:53:21 +0300
+
+tgt (1:1.0.51-1) unstable; urgency=medium
+
+  * New upstream version:
+    + sheepdog: refresh invalidated inode in update_inode() path
+    + sheepdog: set a flag indicating requests are from tgt
+    + sheepdog: optimize reloading of inode
+    + SMC: add a new volume_tag parameter to storage slots
+    + SMC: add a smc backend template with an opcode whitelist
+  * initscript: have stop always shutdown tgt, regardless of initiators being
+    connected. Thus, forcedstop and stop are the same, also forcedrestart and
+    restart. Note that during upgrades we only stop tgtd when no initiators
+    are connected. (Closes: #762068)
+  * Bump standards to 3.9.6; no changes needed.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Mon, 13 Oct 2014 15:31:30 +0300
+
+tgt (1:1.0.50-1) unstable; urgency=medium
+
+  * New upstream version:
+    + DOCS: add an example dvd jukebox script
+    + MMC: add a dedicated backend for MMC so that supported-opcode map works
+    + sheepdog: protocol update for reviving backward compatibility
+    + sheepdog: support iSCSI multipath
+  * Initscript improvements:
+    + stop succeeds when not running (Closes: #758716)
+    + Use status_of_proc (Closes: #759585)
+    + Remove bashisms and use #!/bin/sh
+    + Use a pidfile, created by start-stop-daemon
+  * B-D on libsystemd-dev instead of libsystemd-daemon-dev and add a patch to
+    link against libsystemd. Fixes build against systemd >= 209.
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Mon, 15 Sep 2014 09:06:37 +0300
+
+tgt (1:1.0.49-1) unstable; urgency=medium
+
+  * New upstream version:
+    + rbd: allow assing a libvirt secret UUID or a cephx_key to bsopts
+    + sheepdog: add documentation
+    + sheepdog: enable write caching
+  * Build-depend on libdrmacm >= 1.0.16
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Sat, 23 Aug 2014 09:55:09 -0700
+
+tgt (1:1.0.48-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/t/control: modules test needs isolation-container
+  * Enable systemd notification support.
+    + d/rules: compile with SD_NOTIFY=1
+    + d/control: build-depend on libsystemd-daemon-dev
+    + d/tgt.service: change type to "notify" and remove the sleep statement
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Mon, 02 Jun 2014 11:01:44 +0300
+
+tgt (1:1.0.47-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Friendly takeover, encouraged by the previous maintainers. Thanks to
+    Frederik Schüler and Ben Hutchings for maintaining tgt!
+  * Update debian/ copyright information
+  * control: switch Vcs-* to collab-maint
+  * Remove redundant librados-dev build-dependency, it is pulled in by
+    librbd-dev.
+  * tgt Suggests: tgt-glusterfs, tgt-rbd
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Wed, 21 May 2014 23:19:12 +0300
+
+tgt (1:1.0.46-1) unstable; urgency=medium
+
+  * New upstream version
+    + Drop existing patches that were merged upstream
+      - CVE-2011-0001
+      - fix-tgt-admin-bashism
+      - make-tgt-setup-lun-executable
+    + Refresh conf-makefile patch
+    + Build-depend on xsltproc and docbook-xsl to build the manpages
+    + Remove FCOE and ISCSI feature parameters from debian/rules; FCOE support
+      has been dropped as of 1.0.19 and ISCSI is always built-in.
+  * Add myself to Uploaders, as discussed with Ben Hutchings.
+  * New patches
+    + use-dpkg-buildflags.patch: use hardened build flags where applicable
+      (closes: #656127)
+    + use-docbook-xsl.patch: use the XSLT stylesheets from docbook-xsl instead
+      of docbook.sf.net
+    + do-not-build-html-manpages.patch: do not build the HTML version of the
+      manpages
+  * Update package descriptions (closes: #653067)
+  * Convert debian/rules to dh sequencer
+    + Simplify debian/rules and remove DEB_BUILD_OPTIONS handling which is now
+      left up to dh
+  * Build with ceph/rados support (closes: #714868)
+    + New binary package, tgt-rbd, offering rbd support
+    + Build-Depend on librados-dev and librbd-dev
+  * Build with GlusterFS support
+    + New binary package, tgt-glusterfs, offering GlusterFS support
+    + Build-Depend on glusterfs-common
+  * New binary package, tgt-dbg, containing debug symbols for tgt
+  * Ship upstream's bash completion
+    + Build-Depend on bash-completion
+  * Add DEP-8 autopkgtests
+    + Import the DEP-8 tests from Ubuntu. Thanks to Yolanda Robla and Barry
+      Warsaw (closes: #710173, #710882)
+    + Drop the bashisms in the imported autopkgtests
+    + Drop the root-needed restriction, as it is not strictly required
+    + Add a test to check the rbd and glusterfs loadable modules
+  * Mark all packages as arch:linux-any
+  * Bump standards to 3.9.5 and compat to 9
+  * Update debian/watch to point to github
+  * debian/init: provide self (fixes lintian info)
+  * debian/copyright: update license information and convert to Format 1.0
+  * Initial systemd support
+  * Only restart tgt on upgrade when no initiators are connected
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Mon, 19 May 2014 15:41:46 +0300
+
+tgt (1:1.0.17-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Adds an init script:
+    - Depends: lsb-base
+    - Adds dh_installinit call in debian/rules
+    - adds debian/init
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 Apr 2013 23:25:08 +0800
+
+tgt (1:1.0.17-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Frederik Schüler <fs@debian.org>  Tue, 21 Jun 2011 11:44:56 +0200
+
+tgt (1:1.0.4-3) unstable; urgency=high
+
+  * iscsi: fix buffer overflow before login (CVE-2011-0001)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 21 Mar 2011 03:32:59 +0000
+
+tgt (1:1.0.4-2) unstable; urgency=low
+
+  * Fix bashism in tgt-admin, thanks to Chris Cheney (Closes: #589716)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 05 Sep 2010 22:13:52 +0100
+
+tgt (1:1.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Frederik Schüler <fs@debian.org>  Wed, 05 May 2010 09:04:59 +0200
+
+tgt (1:1.0.3-2) unstable; urgency=low
+
+  * Fix Format string vulnerability CVE-2010-0743.
+    (Closes: #576086)
+
+ -- Frederik Schüler <fs@debian.org>  Tue, 13 Apr 2010 10:54:19 +0200
+
+tgt (1:1.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Standards-Version to 3.8.4, no changes needed.
+  * Drop patches/tgtadm-usage-metasyntax.
+  * Add parallel build ability to debian/rules.
+  * Add watch file.
+
+ -- Frederik Schüler <fs@debian.org>  Mon, 29 Mar 2010 13:09:33 +0200
+
+tgt (1:1.0.0-2) unstable; urgency=low
+
+  * Depend on sg3-utils. (Closes: #565168)
+
+ -- Frederik Schüler <fs@debian.org>  Tue, 19 Jan 2010 19:36:40 +0100
+
+tgt (1:1.0.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Drop GPL digest patch, upstream has other implementation.
+  * Add dependency on libconfig-general-perl. (Closes: #560710)
+  * Build iSER driver, too.
+
+ -- Frederik Schüler <fs@debian.org>  Thu, 24 Dec 2009 16:34:17 +0100
+
+tgt (1:0.9.11-1) unstable; urgency=low
+
+  [ Ben Hutchings ]
+  * New upstream version (Closes: #501149)
+    - Adds -D_GNU_SOURCE to compiler options (Closes: #526562)
+  * Add myself to Uploaders
+  * Fix syntax of usage messages (Closes: #493375)
+  * Use GPL-compatible digest code instead of OpenSSL (Closes: #556294)
+  * Update Standards-Version to 3.8.3
+    - Add Homepage field
+  * Enable FCoE driver
+  * Update package description
+    - Fix grammar
+    - Mention 'SCSI' in the short description
+    - Update list of drivers
+
+  [ Frederik Schüler ]
+  * Switch to debhelper 7.
+
+ -- Frederik Schüler <fs@debian.org>  Wed, 09 Dec 2009 10:29:39 +0100
+
+tgt (20070924-1) unstable; urgency=low
+
+  [ Frederik Schüler ]
+  * Initial release (Closes: #436320)
+
+ -- Frederik Schüler <fs@debian.org>  Mon, 24 Sep 2007 20:04:05 +0200
+

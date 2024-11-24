@@ -1,0 +1,73 @@
+ruby-rack-cors (1.0.2-1+deb10u1) buster-security; urgency=high
+
+  * Unescape and resolve paths before resource checks.
+    (Fixes: CVE-2019-18978) (Closes: #944849)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Thu, 13 May 2021 15:24:15 +0530
+
+ruby-rack-cors (1.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump standards version to 4.1.4
+  * Updated copyright url to use https
+  * Updated debian/watch to version 4
+  * Updated homepage url to use https
+  * Updated vcs-git and vcs-browser to salsa urls
+
+ -- Hari Govind S <harigovindind@gmail.com>  Wed, 20 Jun 2018 06:51:55 +0000
+
+ruby-rack-cors (1.0.1-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Bump debhelper compat to 11 and standards version to 4.1.3
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 22 Feb 2018 14:46:19 +0530
+
+ruby-rack-cors (1.0.1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Sruthi Chandran <srud@disroot.org>  Sat, 30 Sep 2017 17:35:55 +0530
+
+ruby-rack-cors (0.4.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Sruthi Chandran <srud@disroot.org>  Tue, 27 Jun 2017 23:09:28 +0530
+
+ruby-rack-cors (0.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 13 Jul 2015 15:37:28 +0530
+
+ruby-rack-cors (0.3.1-2) unstable; urgency=medium
+
+  * Re-upload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 29 Apr 2015 19:16:26 +0530
+
+ruby-rack-cors (0.3.1-1) experimental; urgency=low
+
+  * New upstream release
+  * Bump standards to 3.9.6 (no changes)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 03 Apr 2015 17:21:18 +0530
+
+ruby-rack-cors (0.2.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump standards version to 3.9.5 (no changes)
+  * Bump build dep on gem2deb to >= 0.7.5~ (ruby all)
+  * Add ruby-mocha to build deps
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 24 Apr 2014 19:23:08 +0530
+
+ruby-rack-cors (0.2.7-1) unstable; urgency=low
+
+  * Initial release (Closes: #702572)
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Fri, 08 Mar 2013 20:03:05 +0530

@@ -1,0 +1,702 @@
+gtkwave (3.3.98+really3.3.118-0+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * New upstream release.
+    - Fixes multiple vulnerabilities:
+      CVE-2023-32650, CVE-2023-34087, CVE-2023-34436, CVE-2023-35004,
+      CVE-2023-35057, CVE-2023-35128, CVE-2023-35702, CVE-2023-35703,
+      CVE-2023-35704, CVE-2023-35955, CVE-2023-35956, CVE-2023-35957,
+      CVE-2023-35958, CVE-2023-35959, CVE-2023-35960, CVE-2023-35961,
+      CVE-2023-35962, CVE-2023-35963, CVE-2023-35964, CVE-2023-35969,
+      CVE-2023-35970, CVE-2023-35989, CVE-2023-35992, CVE-2023-35994,
+      CVE-2023-35995, CVE-2023-35996, CVE-2023-35997, CVE-2023-36746,
+      CVE-2023-36747, CVE-2023-36861, CVE-2023-36864, CVE-2023-36915,
+      CVE-2023-36916, CVE-2023-37282, CVE-2023-37416, CVE-2023-37417,
+      CVE-2023-37418, CVE-2023-37419, CVE-2023-37420, CVE-2023-37442,
+      CVE-2023-37443, CVE-2023-37444, CVE-2023-37445, CVE-2023-37446,
+      CVE-2023-37447, CVE-2023-37573, CVE-2023-37574, CVE-2023-37575,
+      CVE-2023-37576, CVE-2023-37577, CVE-2023-37578, CVE-2023-37921,
+      CVE-2023-37922, CVE-2023-37923, CVE-2023-38583, CVE-2023-38618,
+      CVE-2023-38619, CVE-2023-38620, CVE-2023-38621, CVE-2023-38622,
+      CVE-2023-38623, CVE-2023-38648, CVE-2023-38649, CVE-2023-38650,
+      CVE-2023-38651, CVE-2023-38652, CVE-2023-38653, CVE-2023-38657,
+      CVE-2023-39234, CVE-2023-39235, CVE-2023-39270, CVE-2023-39271,
+      CVE-2023-39272, CVE-2023-39273, CVE-2023-39274, CVE-2023-39275,
+      CVE-2023-39316, CVE-2023-39317, CVE-2023-39413, CVE-2023-39414,
+      CVE-2023-39443, CVE-2023-39444
+      (Closes: #1060407)
+  * Readd ghwdump for buster.
+
+ -- Adrian Bunk <bunk@debian.org>  Thu, 28 Mar 2024 23:03:07 +0200
+
+gtkwave (3.3.98-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bumped to compat level 12
+  * Update to standards version 4.3.0
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 14 Jan 2019 05:17:28 +0100
+
+gtkwave (3.3.97-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 17 Dec 2018 05:27:17 +0100
+
+gtkwave (3.3.96-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Thu, 22 Nov 2018 14:50:31 +0100
+
+gtkwave (3.3.95-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 04 Nov 2018 09:47:07 +0100
+
+gtkwave (3.3.94-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update standards version to 4.2.1
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 08 Sep 2018 12:49:24 +0200
+
+gtkwave (3.3.93-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated standards version to 4.2.0
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Tue, 07 Aug 2018 15:15:28 +0200
+
+gtkwave (3.3.92-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated standards version to 4.1.5
+  * Bumped compat level to 11
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 22 Jul 2018 02:25:53 +0200
+
+gtkwave (3.3.91-1) unstable; urgency=medium
+
+  * New upstream release
+    * Switch to gsettings instead of gconf. (Closes: #886067)
+  * Alioth switchover
+    * Move VCS to Salsa [Dima Kogan]
+    * Update maintainer to new alioth-lists.debian.net address
+
+ -- Jonathan McDowell <noodles@earth.li>  Fri, 08 Jun 2018 16:23:51 +0100
+
+gtkwave (3.3.86-1) unstable; urgency=medium
+
+  * New upstream releas3
+  * Update standards version to 4.1.1
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 15 Oct 2017 19:26:42 +0200
+
+gtkwave (3.3.83-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 3.3.83
+  * Update d/copyright
+  * Update to Standards-Version 4.1.0
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 29 Aug 2017 13:17:46 +0200
+
+gtkwave (3.3.82-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 3.3.82
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 16 Jul 2017 20:53:38 +0200
+
+gtkwave (3.3.81-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 3.3.81
+  * Add patch for exec key in desktop file
+  * Update Standards-Version to 4.0.0, no changes needed
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 01 Jul 2017 16:26:43 +0200
+
+gtkwave (3.3.79-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 3.3.79
+  * dh-autoreconf is now used by default
+  * Update d/copyright
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 10 Jan 2017 11:33:07 +0100
+
+gtkwave (3.3.78-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 3.3.78
+  * Update Vcs-* URLs to new location
+  * Remove Hamish Moffatt <hamish@debian.org> from Uploaders. (Closes: #831481)
+  * Use dh-autoreconf
+  * Use debhelper v10
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 29 Dec 2016 14:49:16 +0100
+
+gtkwave (3.3.66-1) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 13 Jul 2015 14:01:35 +0200
+
+gtkwave (3.3.65-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 26 Apr 2015 16:23:40 +0200
+
+gtkwave (3.3.65-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Fri, 24 Apr 2015 09:16:48 +0200
+
+gtkwave (3.3.64-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Thu, 27 Nov 2014 22:43:44 +0200
+
+gtkwave (3.3.63-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian/gbp.conf: set debian branch to experimental
+  * debian/control: Update my email address.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 17 Nov 2014 09:47:55 +0200
+
+gtkwave (3.3.62-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    + Removed Wesley J. Landaker from Uploaders list since he has retired.
+      (Closes: #759983)
+    + Bumped Standards-Version to 3.9.6
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 18 Sep 2014 09:21:31 +0300
+
+gtkwave (3.3.61-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Re-enable Judy array support.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 11 Aug 2014 12:42:37 +0300
+
+gtkwave (3.3.60-2) unstable; urgency=medium
+
+  * Added screenshot URL to upstream metadata.
+  * Disable Judy array support as it is broken on Debian.
+    see: #755099 (Closes: #756283)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Fri, 01 Aug 2014 11:19:43 +0300
+
+gtkwave (3.3.60-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/upstream/metadata: Add upstream metadata information
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 05 Jun 2014 12:03:19 +0300
+
+gtkwave (3.3.59-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 01 May 2014 10:23:27 +0200
+
+gtkwave (3.3.58-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 24 Mar 2014 11:10:29 +0200
+
+gtkwave (3.3.57-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 15 Feb 2014 16:38:11 +0200
+
+gtkwave (3.3.54-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 09 Jan 2014 14:44:17 +0200
+
+gtkwave (3.3.53-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Bumped Standards-Version to 3.9.5
+  * Remove debian/gtkwave.docs
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 21 Dec 2013 10:59:00 +0200
+
+gtkwave (3.3.50-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 24 Oct 2013 08:28:35 +0200
+
+gtkwave (3.3.49-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Fri, 13 Sep 2013 04:35:37 +0200
+
+gtkwave (3.3.48-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 24 Aug 2013 17:09:12 +0200
+
+gtkwave (3.3.47-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 11 Jun 2013 11:25:41 +0200
+
+gtkwave (3.3.46-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed outdated_config.diff, since upstream upgraded to autoconf 2.69
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 12 May 2013 13:01:24 +0200
+
+gtkwave (3.3.45-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 30 Mar 2013 22:21:16 +0200
+
+gtkwave (3.3.44-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 10 Mar 2013 10:56:46 +0200
+
+gtkwave (3.3.43-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 16 Feb 2013 20:52:57 +0200
+
+gtkwave (3.3.42-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    + Bumped Standards-Version to 3.9.4
+    + Use canonical URIs in VCS-* fields
+    + Remove obsolete DMUA field
+  * Added outdated_config.diff patch for config.{sub,guess} to call their
+    up-to-date versions.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 08 Jan 2013 13:14:55 +0200
+
+gtkwave (3.3.41-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 01 Nov 2012 16:01:56 +0200
+
+gtkwave (3.3.40-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 13 Sep 2012 12:33:48 +0200
+
+gtkwave (3.3.39-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 12 Aug 2012 14:44:39 +0200
+
+gtkwave (3.3.38-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 12 Jul 2012 09:05:08 +0200
+
+gtkwave (3.3.37-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 12 Jun 2012 13:38:01 +0200
+
+gtkwave (3.3.36-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: Use Debian redirector only.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 12 May 2012 10:32:02 +0200
+
+gtkwave (3.3.35-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 16 Apr 2012 10:35:25 +0200
+
+gtkwave (3.3.34-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Fri, 16 Mar 2012 00:09:00 +0200
+
+gtkwave (3.3.33-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Bumped Standards-Version to 3.9.3
+  * Bumped compat level to 9.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 03 Mar 2012 06:22:44 +0200
+
+gtkwave (3.3.32-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 19 Feb 2012 09:21:10 +0200
+
+gtkwave (3.3.31-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 06 Feb 2012 11:22:34 +0200
+
+gtkwave (3.3.30-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed desktop.diff patch: not needed in new upstream
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 18 Jan 2012 19:40:37 +0200
+
+gtkwave (3.3.29-1) unstable; urgency=low
+
+  * New upstream release.
+  * Enable GConf support
+    + debian/control: Added libgconf2-dev to Build-Deps
+    + debian/rules: Added --with-gconf to configure flags
+  * Added desktop.diff patch to install x-gtkwave-extension-*.desktop files in
+    $(xdgdatadir)/mimelnk/application
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 01 Jan 2012 16:18:58 +0200
+
+gtkwave (3.3.28-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 16 Nov 2011 18:06:28 +0200
+
+gtkwave (3.3.27-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 26 Oct 2011 05:45:42 +0200
+
+gtkwave (3.3.26-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 28 Sep 2011 07:53:33 +0200
+
+gtkwave (3.3.25-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 18 Sep 2011 16:03:47 +0200
+
+gtkwave (3.3.24-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 09 Aug 2011 11:11:19 +0200
+
+gtkwave (3.3.23-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 07 Jul 2011 13:50:30 +0200
+
+gtkwave (3.3.22-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 04 Jun 2011 13:04:22 +0200
+
+gtkwave (3.3.21-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped compat level to 8
+  * debian/control:
+    + Bumped Standards-Version to 3.9.2, no changes needed.
+    + Remove article from synopsis
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 01 May 2011 12:29:33 +0200
+
+gtkwave (3.3.20-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Fri, 25 Feb 2011 10:37:17 +0200
+
+gtkwave (3.3.19-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 07 Feb 2011 14:52:56 +0200
+
+gtkwave (3.3.18-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed amd64_asm_fix.diff patch, as it is applied upstream.
+  * debian/rules: Add --enable-struct-pack configure option only for archs
+    that support misaligned loads and stores.
+    List of archs is from: http://wiki.debian.org/ArchitectureSpecificsMemo
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 27 Dec 2010 16:06:37 +0200
+
+gtkwave (3.3.17-2) unstable; urgency=low
+
+  * Added patch amd64_asm_fix.diff from upstream CVS to fix x86_64
+    assembler =q vs =Q problem in lxt.c, also it fixes that
+    --disable-inline-asm did not propagate into compilation of src/lxt.c
+    (Closes: #606126)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 07 Dec 2010 07:04:43 +0200
+
+gtkwave (3.3.17-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 01 Dec 2010 11:09:18 +0200
+
+gtkwave (3.3.16-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Fri, 26 Nov 2010 08:27:39 +0200
+
+gtkwave (3.3.15-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 11 Nov 2010 19:48:48 +0200
+
+gtkwave (3.3.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable.
+  * Updated watch file
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 27 Oct 2010 22:24:20 +0200
+
+gtkwave (3.3.13-1) experimental; urgency=low
+
+  * Imported Upstream version 3.3.13
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 25 Sep 2010 07:33:55 +0300
+
+gtkwave (3.3.12-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/watch: Added a direct watch URL.
+  * debian/control: Bumped Standards-Version to 3.9.1, no changes needed.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 31 Aug 2010 17:11:32 +0200
+
+gtkwave (3.3.10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sat, 17 Jul 2010 05:53:13 +0300
+
+gtkwave (3.3.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: enable Judy array support
+  * debian/control:
+    + Bump Standards-Version to 3.9.0 (no changes needed)
+    + Add libjudy-dev to B-D
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Fri, 09 Jul 2010 15:48:25 +0300
+
+gtkwave (3.3.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 27 Jun 2010 05:59:19 +0300
+
+gtkwave (3.3.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 07 Jun 2010 11:54:55 +0300
+
+gtkwave (3.3.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Updated my email address
+  * Updated debian/copyright.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 05 May 2010 09:16:55 +0300
+
+gtkwave (3.3.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Added DM-Upload-Allowed field.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 20 Mar 2010 11:52:47 +0200
+
+gtkwave (3.3.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Fri, 19 Feb 2010 16:50:03 +0200
+
+gtkwave (3.3.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Bumped Standards-Version to 3.8.4
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 06 Feb 2010 09:10:28 +0200
+
+gtkwave (3.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove fix_typos.diff patch, as it got applied upstream.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Tue, 05 Jan 2010 08:42:54 +0200
+
+gtkwave (3.3.0-2) unstable; urgency=low
+
+  * debian/control: Added liblzma-dev to Build-Depends for VZT support, credits
+    to Iztok Jeras <iztok.jeras@gmail.com>
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 04 Jan 2010 13:54:58 +0200
+
+gtkwave (3.3.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to 3.0 (quilt) source format.
+  * debian/control:
+    + Added tk-dev to Build-Depends.
+    + Added Vcs-* fields.
+  * debian/rules: Added "-Wl,--as-needed" to LDFLAGS
+  * Added fix_typos.diff patch to fix typos in gtwave.1 manpage & vermin
+    binary.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Tue, 29 Dec 2009 08:42:33 +0200
+
+gtkwave (3.2.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #553509)
+  * debian/compat: Bumped to 7
+  * debian/control:
+    + Bump Standards-Version to 3.8.3, no changes needed.
+    + Build-Depend on debhelper (>= 7.0.50~) to support target overrides.
+    + Added myself to Uploaders.
+  * debian/rules: Simplified rules file
+  * Added debian/gtkwave.manpages, debian/gtkwave.docs
+  * Removed debian/gtkwave.dirs
+  * debian/copyright: refer to proper GPL-2 license file.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 01 Nov 2009 08:01:51 +0200
+
+gtkwave (3.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed unnecessary debian patches.
+  * Building with tcl support.
+  * Cleaned up debian rules.
+  * Ensured docs and examples install correctly.
+  * Updated to Debian Policy 3.8.0.0; no changes necessary.
+  * Fix building with large file support.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Thu, 26 Mar 2009 09:33:58 -0600
+
+gtkwave (3.1.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sun, 02 Nov 2008 18:58:51 -0700
+
+gtkwave (3.1.10-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Mon, 19 May 2008 19:55:59 -0600
+
+gtkwave (3.1.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixed debian/watch file not to erroneously pick up -doc tarballs.
+  * Added gperf to build-deps, since it is now needed.
+  * Updated Debian Policy to 3.7.3; no changes necessary.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Tue, 25 Mar 2008 19:19:15 -0600
+
+gtkwave (3.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Mon, 26 Nov 2007 13:42:11 -0700
+
+gtkwave (3.0.30-1) unstable; urgency=low
+
+  * New upstraem release.
+  * Use quilt for debian patches.
+  * Fixed debian/rules to handle changes in upstream build system.
+  * Removed incorrect new test in configure that breaks zlib support.
+  * Make debian/rules clean target remove generated tarball.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Wed, 15 Aug 2007 23:42:09 -0600
+
+gtkwave (3.0.27-1) unstable; urgency=low
+
+  * New upstream release
+    * Renames /usr/bin/vertex to vermin; fixes conflict with vertex binary
+      provided by vertex package (closes: #420346)
+  * Change maintainer to new electronics packaging team
+    <pkg-electronics-devel@lists.alioth.debian.org>
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 29 Apr 2007 16:44:19 +1000
+
+gtkwave (3.0.25-1) unstable; urgency=low
+
+  * New upstream release (closes: #404741)
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 15 Apr 2007 23:07:40 +1000
+
+gtkwave (1.3.81-1) unstable; urgency=low
+
+  * New upstream release (closes: #345771)
+  * Updated upstream source location and generally improved copyright file
+  * Removed build-dep for xlibs-dev, as gtkwave does not make any direct
+    X11 function calls but uses GTK+ for everything
+
+ -- Hamish Moffatt <hamish@debian.org>  Wed,  4 Jan 2006 00:29:10 +1100
+
+gtkwave (1.3.63-1) unstable; urgency=low
+
+  * New upstream release;
+    * builds with gcc-4.0 (closes: #286927)
+    * contains valid bug reporting address (closes: #288631)
+    * fixes display problems with large integers (closes: #276817)
+  * Modified src/Makefile_GTK2.in to use libbz2 and libz dynamic
+    libraries rather than building a local static version
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun,  7 Aug 2005 18:48:26 +1000
+
+gtkwave (1.3.34-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hamish Moffatt <hamish@debian.org>  Sun, 25 Jan 2004 16:03:49 +1100
+
+gtkwave (1.3.12-1) unstable; urgency=low
+
+  * First upload (closes: #129174)
+
+ -- Hamish Moffatt <hamish@debian.org>  Tue, 15 Jan 2002 23:08:25 +1100

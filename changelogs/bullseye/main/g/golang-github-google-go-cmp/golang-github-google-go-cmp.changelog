@@ -1,0 +1,61 @@
+golang-github-google-go-cmp (0.5.4-1) unstable; urgency=medium
+
+  [ Roger Shimizu ]
+  * d/control: Add "Rules-Requires-Root: no"
+
+  [ Anthony Fok ]
+  * New upstream version 0.5.4
+  * debian/control: Change Section from devel to golang
+  * Bump Standards-Version to 4.5.1 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 02 Dec 2020 00:51:48 -0700
+
+golang-github-google-go-cmp (0.5.2-1) unstable; urgency=medium
+
+  * New upstream version 0.5.2
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+
+ -- Anthony Fok <foka@debian.org>  Fri, 18 Sep 2020 15:03:26 -0600
+
+golang-github-google-go-cmp (0.4.0-1) unstable; urgency=medium
+
+  * New upstream version 0.4.0
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Add dependency on golang-golang-x-xerrors-dev
+
+ -- Anthony Fok <foka@debian.org>  Sat, 15 Feb 2020 17:59:56 -0700
+
+golang-github-google-go-cmp (0.3.1-1) unstable; urgency=medium
+
+  * New upstream version 0.3.1
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+
+ -- Anthony Fok <foka@debian.org>  Fri, 06 Sep 2019 09:07:05 -0600
+
+golang-github-google-go-cmp (0.3.0-1) unstable; urgency=medium
+
+  * New upstream version 0.3.0
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add myself to the list of Uploaders
+  * Change Build-Depends: debhelper (>= 11) to debhelper (>= 11~)
+  * Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sat, 27 Jul 2019 09:05:15 -0600
+
+golang-github-google-go-cmp (0.2.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Arnaud Rebillout ]
+  * New upstream version 0.2.0
+  * Bump compat
+  * Update control, add myself to uploaders
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Fri, 27 Apr 2018 18:22:08 +0700
+
+golang-github-google-go-cmp (0.1.0-1) unstable; urgency=medium
+
+  * Initial release. Closes: 874499
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 06 Sep 2017 14:40:13 +0000

@@ -1,0 +1,190 @@
+ruby-mini-magick (4.9.2-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Don't allow remote shell execution (CVE-2019-13574) (Closes: #931932)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 12 Jul 2019 17:31:30 +0200
+
+ruby-mini-magick (4.9.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump Standards-Version to 4.3.0
+  * New upstream version 4.9.2
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Thu, 27 Dec 2018 17:06:03 +0530
+
+ruby-mini-magick (4.8.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Add imagemagick-json-change.patch to fix conversion to json
+    (Closes: #892189)
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.1.3 (no changes needed)
+  * Use https in copyright format URL
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 18 Mar 2018 09:20:44 +0100
+
+ruby-mini-magick (4.8.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Sruthi Chandran <srud@disroot.org>  Sat, 09 Sep 2017 00:14:28 +0530
+
+ruby-mini-magick (4.7.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Enable autopkgtest
+
+ -- Sruthi Chandran <srud@disroot.org>  Wed, 28 Jun 2017 17:31:44 +0530
+
+ruby-mini-magick (4.5.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+  [ Balasankar C ]
+  * Add patch to skip failing trivial tests (workaround for #835078)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 01 Sep 2016 23:26:09 +0530
+
+ruby-mini-magick (4.4.0-1) unstable; urgency=medium
+
+  * New upstream minor release
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 06 Mar 2016 10:59:18 +0530
+
+ruby-mini-magick (4.3.6-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 09 Jan 2016 00:30:31 +0530
+
+ruby-mini-magick (4.3.6-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 Jan 2016 12:00:18 +0530
+
+ruby-mini-magick (4.3.3-2) unstable; urgency=medium
+
+  * Re-upload to unstable
+  * Check gemspec dependencies in build
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 20 Dec 2015 14:19:33 +0530
+
+ruby-mini-magick (4.3.3-1) experimental; urgency=medium
+
+  * New upstream release
+  * Add myself to uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 30 Oct 2015 02:57:06 +0530
+
+ruby-mini-magick (4.2.7-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Remove patch gemspec_loadpath.patch (applied already).
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 28 Aug 2015 21:50:17 +0530
+
+ruby-mini-magick (4.2.3-2~exp1) experimental; urgency=medium
+
+  * Team upload
+  * Reactivate tests in experimental, as it has ruby-rspec >= 3.1
+    + disable remove-unsuported-rspec-features patch
+    + re-enable debian/ruby-tests.rake
+    + add version >= 3.1~ to ruby-rspec build-dependency
+  * Drop ruby-subexec and add ruby-posix-spawn to dependencies and
+    build-dependencies
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 02 May 2015 23:44:39 +0200
+
+ruby-mini-magick (4.2.3-1) unstable; urgency=medium
+
+  * Team upload
+  * Imported Upstream version 4.2.3
+  * Ensure that version in the gemspec is correct (Closes: #781994)
+  * Tests still wait ruby-rspec >= 3.1 in unstable to be reactivated
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 29 Apr 2015 23:50:07 +0200
+
+ruby-mini-magick (4.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Re-upload to unstable.
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 29 Apr 2015 13:18:00 +0530
+
+ruby-mini-magick (4.2.0-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump standards version to 3.9.6 (no changes).
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 11 Apr 2015 22:04:42 +0530
+
+ruby-mini-magick (4.0.1-2) experimental; urgency=medium
+
+  * Team upload.
+  * Rebuild for fixing gemspec version.
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 30 Nov 2014 04:01:35 +0530
+
+ruby-mini-magick (4.0.1-1) experimental; urgency=medium
+
+  * Team upload..
+  * New upstream release.
+  * Refresh patches.
+  * Remove patche remove-erroneous-image-test (not needed).
+  * Add pry as build dependency.
+  * Disable tests (need rspec 3).
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 30 Nov 2014 03:46:24 +0530
+
+ruby-mini-magick (3.8.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ David Suárez ]
+  * New upstream version.
+  * Debian patches:
+    - Refresh 'remove-remote-tests' patch.
+    - Add 'remove-unsuported-rspec-features' patch.
+    - Add 'remove-erroneous-image-test' patch. (Closes: #761532)
+      Imagemagick identify command, now seems to return a fail status
+      if the image is not correct.
+  * debian/rules: remove rspec installed binary.
+  * debian/control: add graphicsmagick as build depend; needed for tests.
+
+ -- David Suárez <david.sephirot@gmail.com>  Sun, 05 Oct 2014 19:10:35 +0200
+
+ruby-mini-magick (3.7.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * ruby tests are moved from test/ to spec, refreshing patches
+  * updating Build-Dep to new requirements by upstream tests
+
+ -- Markus Tornow <tornow@riseup.net>  Thu, 19 Dec 2013 02:46:19 +0000
+
+ruby-mini-magick (3.6.0+gh-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/watch points to github, gemwatch has no README.md
+  * renaming and rewriting patch to remove require of rubygems
+
+ -- Markus Tornow <tornow@riseup.net>  Fri, 24 May 2013 15:14:46 +0200
+
+ruby-mini-magick (3.5.0-2) unstable; urgency=low
+
+  * Applying patch remove-remote-test by Felix Geyer (thanks to him)
+    to disable tests requiring network connectivity (Closes: #706517)
+
+ -- Markus Tornow <tornow@riseup.net>  Thu, 09 May 2013 17:51:29 +0200
+
+ruby-mini-magick (3.5.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #692057 )
+
+ -- Markus Tornow <tornow@riseup.net>  Wed, 31 Oct 2012 18:35:43 +0100

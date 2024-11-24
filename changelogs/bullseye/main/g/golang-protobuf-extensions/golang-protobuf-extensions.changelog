@@ -1,0 +1,84 @@
+golang-protobuf-extensions (1.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release 1.0.1
+    + remove external asset imports for tests. (Closes: #922389)
+  * Update copyright info for new version
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 16 Feb 2019 00:26:27 +0800
+
+golang-protobuf-extensions (1.0.0-3) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dr. Tobias Quathamer ]
+  * Use debhelper v11
+  * Update team name
+  * Update to Standards-Version 4.2.1
+    - Use HTTPS URL for d/copyright
+    - Use Priority: optional
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sat, 01 Dec 2018 19:41:18 +0100
+
+golang-protobuf-extensions (1.0.0-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Martín Ferrari ]
+  * debian/control: Fix Vcs-* fields.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+  * Replace $DH_GOPKG with XS-Go-Import-Path.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 01 Nov 2016 01:24:39 +0000
+
+golang-protobuf-extensions (1.0.0-1) unstable; urgency=medium
+
+  * First upstream release!
+  * Added debian/watch accordingly.
+  * debian/control: updated Standards-Version with no changes; added
+    XS-Go-Import-Path.
+
+ -- Martín Ferrari <tincho@debian.org>  Thu, 19 May 2016 03:33:20 +0000
+
+golang-protobuf-extensions (0+git20150513.fc2b8d3-4) unstable; urgency=medium
+
+  * debian/control: Migration to pkg-go team.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 21 Aug 2015 23:09:08 +0200
+
+golang-protobuf-extensions (0+git20150513.fc2b8d3-3) unstable; urgency=medium
+
+  * Fix breakage introduced by namespace change in golang-goprotobuf-dev.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 27 Jun 2015 10:20:56 +0000
+
+golang-protobuf-extensions (0+git20150513.fc2b8d3-2) unstable; urgency=medium
+
+  * Add missing binary dependency on golang-goprotobuf-dev.
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 13 May 2015 15:26:17 +0100
+
+golang-protobuf-extensions (0+git20150513.fc2b8d3-1) unstable; urgency=medium
+
+  * Updated to current upstream, which changes package naming.
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 13 May 2015 14:20:13 +0100
+
+golang-protobuf-extensions (0+git20150225.ba7d65a-2) unstable; urgency=medium
+
+  * Re-upload with corrected debian/copyright file.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 27 Feb 2015 00:44:49 +0000
+
+golang-protobuf-extensions (0+git20150225.ba7d65a-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #779235)
+
+ -- Martín Ferrari <tincho@debian.org>  Thu, 26 Feb 2015 02:29:41 +0000

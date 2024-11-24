@@ -1,0 +1,72 @@
+libhttp-daemon-perl (6.01-3+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2022-31081
+    improved Content-Length: handling in HTTP-header
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Thu, 29 Sep 2022 23:08:59 +0200
+
+libhttp-daemon-perl (6.01-3) unstable; urgency=medium
+
+  * Add versioned Breaks on libhttp-proxy-perl, librpc-xml-perl, and
+    libwww-mechanize-perl.
+    The test suites of these packages have issues with the IPv6 support in
+    HTTP::Daemon, so declare their older versions as broken in order to ensure
+    coordinated updates.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 02 Mar 2019 00:20:56 +0100
+
+libhttp-daemon-perl (6.01-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * debian/control: remove Nicholas Bamber from Uploaders on request of
+    the MIA team.
+  * Strip trailing slash from metacpan URLs.
+
+  [ Guillaume Bougard]
+  * Add d/upstream/metadata
+
+  [ Fabian Grünbichler ]
+  * switch to IO::Socket::IP to add IPv6 support (Closes: #667738)
+
+  [ gregor herrmann ]
+  * Add (build) dependency on libio-socket-ip-perl.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 4.3.0.
+  * Bump debhelper compatibility level to 11.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 28 Feb 2019 17:45:03 +0100
+
+libhttp-daemon-perl (6.01-1) unstable; urgency=low
+
+  * Team upload
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ Alessandro Ghedini ]
+  * New upstream release
+  * Bump debhelper compat level to 8
+  * Bump Standards-Version to 3.9.2
+  * One sorted dep per line
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Sun, 19 Feb 2012 19:28:44 +0100
+
+libhttp-daemon-perl (6.00-1) unstable; urgency=low
+
+  * Initial Release (Closes: #617520).
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Tue, 22 Mar 2011 23:25:10 +0000

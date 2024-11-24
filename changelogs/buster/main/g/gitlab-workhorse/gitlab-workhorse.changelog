@@ -1,0 +1,158 @@
+gitlab-workhorse (7.6.0+debian-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-websocket 1.4.0-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 14 May 2023 00:27:56 +0200
+
+gitlab-workhorse (7.6.0+debian-1) unstable; urgency=medium
+
+  * New upstream version 7.6.0+debian
+  * Set minimum version of golang-golang-x-sys-dev
+  * Remove unused overrides
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 18 Dec 2018 18:31:19 +0530
+
+gitlab-workhorse (7.4.0+debian-2) unstable; urgency=medium
+
+  * Reupload to unstable 
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 08 Dec 2018 12:34:45 +0530
+
+gitlab-workhorse (7.4.0+debian-1) experimental; urgency=medium
+
+  * New upstream version 7.4.0+debian
+  * Refresh patches
+  * Use embedded raven-go and grpc (from vendor directory, the packaged
+    versions need updates)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 05 Dec 2018 20:47:55 +0530
+
+gitlab-workhorse (6.1.1+debian-3) unstable; urgency=medium
+
+  * Add an autopkgtest to check if gitlab-workhorse is starting
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 24 Nov 2018 07:41:31 +0530
+
+gitlab-workhorse (6.1.1+debian-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 22 Nov 2018 13:29:23 +0530
+
+gitlab-workhorse (6.1.1+debian-1) experimental; urgency=medium
+
+  * New upstream version 6.1.1+debian
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 21 Nov 2018 11:47:04 +0530
+
+gitlab-workhorse (5.2.0+debian-2) unstable; urgency=medium
+
+  * Reupload to unstable 
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 17 Nov 2018 12:59:57 +0530
+
+gitlab-workhorse (5.2.0+debian-1) experimental; urgency=medium
+
+  * New upstream version  
+  * Standard version updated 
+
+ -- Manas Kashyap <manaskashyaptech@gmail.com>  Sat, 11 Aug 2018 05:35:21 +0000
+
+gitlab-workhorse (4.3.1+debian-1) unstable; urgency=medium
+
+  * New upstream version 
+
+ -- Manas Kashyap <manaskashyaptech@gmail.com>  Mon, 18 Jun 2018 23:52:53 +0000
+
+gitlab-workhorse (4.2.1+debian-2) unstable; urgency=medium
+
+  * Set minimum version of golang-any to 2:1.10~ (to help with
+    stretch-backports)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 03 Jun 2018 20:50:11 +0530
+
+gitlab-workhorse (4.2.1+debian-1) unstable; urgency=medium
+
+  * New upstream version 4.2.1+debian
+  * Fix watch file pattern
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 03 Jun 2018 20:35:30 +0530
+
+gitlab-workhorse (4.0.0+debian-1) unstable; urgency=medium
+
+  * New upstream version 4.0.0
+  * Switch vcs to go-team
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 28 Mar 2018 12:20:34 +0530
+
+gitlab-workhorse (3.8.0+debian-1) unstable; urgency=medium
+
+  [ Michael Stapelberg ]
+  * Switch to XS-Go-Import-Path
+
+  [ Pirate Praveen ]
+  * Update watch file for new download url pattern
+  * New upstream version 3.8.0
+  * Refresh patches
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 16 Mar 2018 19:11:00 +0530
+
+gitlab-workhorse (0.8.5+debian-3) unstable; urgency=medium
+
+  * Manually build on s390x (Closes: #843148) 
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 04 Nov 2016 17:09:13 +0530
+
+gitlab-workhorse (0.8.5+debian-2) unstable; urgency=medium
+
+  * Remove optional go-compiler from build dependency 
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 03 Nov 2016 11:44:07 +0530
+
+gitlab-workhorse (0.8.5+debian-1) unstable; urgency=medium
+
+  * New upstream release
+  * Switch build dep to golang-github-dgrijalva-jwt-go-v3-dev (Closes #841617)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 01 Nov 2016 10:52:16 +0530
+
+gitlab-workhorse (0.8.2+debian1-2) unstable; urgency=medium
+
+  * Reupload to unstable 
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 11 Oct 2016 16:01:41 +0530
+
+gitlab-workhorse (0.8.2+debian1-1) experimental; urgency=medium
+
+  * Use packaged raven-go and jwt-go (fix build failure in powerpc)
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 10 Oct 2016 12:42:47 +0530
+
+gitlab-workhorse (0.8.2-1) unstable; urgency=medium
+
+  * New upstream release 
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 30 Sep 2016 21:51:27 +0530
+
+gitlab-workhorse (0.7.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 3.9.8.
+  * Build using "dh-golang"; added "Built-Using" field, etc.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 18 Jul 2016 20:01:41 +1000
+
+gitlab-workhorse (0.6.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop patch: modify-paths.patch (merged upstream)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 10 Feb 2016 00:02:46 +0530
+
+gitlab-workhorse (0.5.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #808172)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 16 Dec 2015 12:32:37 +0530

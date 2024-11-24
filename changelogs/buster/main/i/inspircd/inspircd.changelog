@@ -1,0 +1,406 @@
+inspircd (2.0.27-1+deb10u1) buster-security; urgency=high
+
+  * Patch denial-of-service security vulnerabilities (Closes: #960650)
+    + in m_mysql (CVE-2019-20917 / InspIRCd Security Advisory 2019-02)
+    + in m_pgsql (CVE-2020-25269 / InspIRCd Security Advisory 2020-01)
+
+ -- Christian Barcenas <christian@cbarcenas.com>  Thu, 10 Sep 2020 22:59:09 -0700
+
+inspircd (2.0.27-1) unstable; urgency=medium
+
+  * New upstream version 2.0.27 (Closes: #910462)
+  * Add myself to uploaders
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Mon, 25 Feb 2019 21:28:51 +0100
+
+inspircd (2.0.24-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Fix maintainer address. Closes: #899965
+  * Remove alioth references and all uploaders who did not contribute
+    in this decade
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 17 Jun 2018 21:06:10 +0200
+
+inspircd (2.0.24-1) unstable; urgency=high
+
+  * Team upload
+  * New upstream version 2.0.24. Closes: #853455
+  * Fix filename in shipped MOTD file. Closes: #870851
+  * Remove Darren Blaber from the uploaders list. Closes: #858652
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Thu, 10 Aug 2017 17:18:09 +0200
+
+inspircd (2.0.23-3) UNRELEASED; urgency=medium
+
+  * tests: Add alarm and respond to PING
+  * debian/inspircd.conf: Don't log twice (Closes: #857758)
+  * Remove Bradley Smith as uploader (Closes: #674890)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Tue, 21 Mar 2017 23:45:33 +0100
+
+inspircd (2.0.23-2) unstable; urgency=medium
+
+  * Team upload
+  * Switch to default-libmysqlclient-dev and default-mysql-server metapackage.
+    Closes: #845855
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Mon, 12 Dec 2016 23:48:44 +0100
+
+inspircd (2.0.23-1) unstable; urgency=medium
+
+  * New upstream release, fixes a serious security vulnerability in m_sasl
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Tue, 06 Sep 2016 00:04:38 +0200
+
+inspircd (2.0.22-1) unstable; urgency=medium
+
+  * New upstream release, drop merged upstream 05_spelling_errors.diff
+  * Build-Depend on perl instead of perl-modules
+  * Set Documentation key to inspircd(1) for systemd unit file
+  * Bump standards version, no changes needed
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sun, 21 Aug 2016 18:54:22 +0200
+
+inspircd (2.0.21-1) unstable; urgency=medium
+
+  * New upstream release, drop picked 05_posix-tmpnam.diff
+  * Bump standards version, no changes needed
+  * Change Vcs-{Browser,Git} to use https instead of http/git
+  * Fix spelling-error-in-binary in m_spanningtree.so
+  * Override lintian hardening fortify for cmd_time.so does not use
+    fortify functions
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sun, 28 Feb 2016 10:43:21 +0100
+
+inspircd (2.0.20-5) unstable; urgency=medium
+
+  * Replace deprecated POSIX::tmpnam() call by File::Temp::tmpnam()
+    because perl >= 5.22 deprecated it (Closes: #809008)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Mon, 28 Dec 2015 16:22:59 +0100
+
+inspircd (2.0.20-4) unstable; urgency=medium
+
+  * Generate new inspircd-dev package to provide development headers in
+    /usr/include/inspircd (Closes: #800650)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Wed, 11 Nov 2015 14:55:17 +0100
+
+inspircd (2.0.20-3) unstable; urgency=medium
+
+  * Fix FTBFS on kfreebsd which looks for clang++ by always defining CXX to
+    g++ (unless already defined, let clang rebuilds) and pass it to configure
+  * Tests:
+    + debian/tests/control: needs root, enable inspircd and start inspircd
+    before testing it
+    + Remove XS-Testsuite control header (Testsuite automatically generated)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sun, 07 Jun 2015 12:26:46 +0200
+
+inspircd (2.0.20-2) unstable; urgency=medium
+
+  [ Guillaume Delacour ]
+  * Reproducible builds:
+    + 04_reproducible_builds.diff: Fix version don't set revision with unrelated
+    git packaging tags and only use kernel name (no hostname or	release)
+    + Set uid of irc user at configure time
+
+  [ Matt Arnold ]
+  * Add AppArmor profile, Thanks LaMont Jones (LP: #1456783)
+  * Update my email address, previous is unusable due to spam
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sat, 30 May 2015 15:53:33 +0200
+
+inspircd (2.0.20-1) unstable; urgency=medium
+
+  * New upstream release, drop 03_gnutls_crypt_api_instead_gcrypt.diff
+  * 04_reproducible_builds.diff: Remove message containing __{DATE,TIME}__ to do
+    reproducible builds and doesn't give such information to user
+  * Bump to Standards-Version 3.9.6 (no changes needed)
+  * Enable autopkgtest suite and provide minimal test client.pl
+  * Change Vcs-{Browser,Git}, as the packaging have been migrated to git
+  * Remove obsolete debian/README.source file
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Tue, 26 May 2015 20:54:00 +0200
+
+inspircd (2.0.17-2) unstable; urgency=medium
+
+  * Use an integer instead of seconds when calling sleep in initscript
+    (Closes: #772337)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sat, 06 Dec 2014 16:08:35 +0100
+
+inspircd (2.0.17-1) unstable; urgency=medium
+
+  * New upstream release
+  * Refresh debian/patches/03_gnutls_crypt_api_instead_gcrypt.diff and
+    cherry-pick upstream fix to use gnutls_rnd instead of gcry_randomize
+  * Refresh debian/patches/02_disable_rpath_for_extra_modules.diff
+   to only patch m_mysql as upstream use a DISABLE_RPATH environnement
+   variable that disable rpath in all other modules
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Fri, 05 Sep 2014 18:05:19 +0200
+
+inspircd (2.0.16-2) unstable; urgency=medium
+
+  * To re-enable hardening flags:
+    + Replace DEB_BUILD_HARDENING by DEB_BUILD_MAINT_OPTIONS to enable
+      dpkg-buildflags without pie
+    + debian/patches/01_dpkg-buildflags_support.diff: Patch upstream Makefile
+      template to use CPPFLAGS and custom LDFLAGS, CXXFLAGS; enable PIE on
+      inspircd binary only as libraries already compiled with PIC
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sun, 20 Jul 2014 23:23:42 +0200
+
+inspircd (2.0.16-1) unstable; urgency=low
+
+  [ Guillaume Delacour ]
+  * New upstream release (Closes: #724874), enable m_regex_stdlib new module
+    and repack tarball to remove docs/rfc/{rfc1035.txt,rfc1413.txt,rfc1459.txt}
+    as i re-introduce them a few years ago. Upstream removes dir at 7fea7c24c5
+  * Drop patches accepted upstream:
+    + debian/patches/01_spelling_error.diff
+    + debian/patches/03_CVE-2012-1836.diff (cherry-picked)
+    + debian/patches/04_FTBFS_kfreebsd.diff
+    + debian/patches/05_FTBFS_gcc-4.7.diff
+  * debian/docs: docs/README has moved to README.md
+  * debian/inspircd.examples: examples are now in docs/conf
+  * Bump debhelper compat to 9
+  * Remove Bradley Smith as uploaders (Closes: #674890)
+  * debian/watch: update based on sepwatch
+  * Add systemd support:
+    + Build-Depends on dh-systemd (>= 1.5)
+    + Add debian/inspircd.service, debian/inspircd.tmpfile to create
+      /run/inspircd directory at boot time
+    + debian/rules: call generic dh with "--with systemd"
+  * debian/control:
+    + Change Vcs-{Svn,Browser}, point to anonscm.debian.org and
+    bump to Standards-Version 3.9.5 (no changes needed)
+    + Drop Build-Depends on hardening-wrapper since dpkg-buildflags now
+    returns hardening build flags by default (already enabled in debian/rules)
+  * debian/patches/02_disable_rpath_for_extra_modules.diff: Refresh according
+    upstream modules changes
+  * debian/copyright: make it machine-readable
+  * debian/rules: compile binary with debuginfo as upstream don't
+    generate it by default; dh_strip overrided to generate a -dbg package
+
+  [ Andreas Metzler ]
+  * Build with debug symbols and optimization by using "make D=2 all" instead
+    of "make debug"; dh_strip overrided to generate a -dbg package
+  * 05_gnutls_crypt_api_instead_gcrypt.diff Apply/unfuzz upstream's
+    690c372f6ef246b43b477e3685c8e716431427ad to get rid of the dependency on
+    libgcrypt.
+  * Build against gnutls v3. Closes: #745948
+  * Show compiler commandline when building. As a nice side effect this
+    actually lets ccache speed up the build.
+  * Drop PIDFile entry from systemd service file, it should not be necessary
+    for the non-forking case.
+  * Mimic init-file trickery in inspircd.tmpfile. Pre-generate both pidfile
+    and logfile with correct user/permissions. The daemon cannot do so, since
+    it is lacking write permissions in /var/run and /var/log. Remove pidfile
+    in postrm purge.
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Wed, 16 Jul 2014 21:49:08 +0200
+
+inspircd (2.0.5-1) unstable; urgency=low
+
+  * debian/patches/04_FTBFS_kfreebsd.diff: Fix FTBFS on kfreebsd,
+    thanks Christoph Egger (Closes: #668689)
+  * debian/patches/05_FTBFS_gcc-4.7.diff: Fix FTBFS with gcc-4.7,
+    include <unistd.h>
+  * debian/watch: Update to github since upstream has moved the project
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sun, 15 Apr 2012 17:35:01 +0200
+
+inspircd (2.0.5-0.1) unstable; urgency=low
+
+  [ Guillaume Delacour ]
+  * Add myself to uploaders.
+  * Remove Mario Iseli to uploaders (officially MIA)
+  * New upstream release (Closes: #545233, #519910, #620960, #641299)
+  * debian/rules:
+    + Use hardening build options (DEB_BUILD_HARDENING)
+    + Use debhelper 8 template
+    + Delete unrecognized option "disable-rpath" on configure
+    + Add support for all DFSG extra modules
+      (mysql, sqlite, pgsql, ldap, pcre, geoip)
+      (Closes: #539569)
+    + Allow parallel build through DEB_BUILD_OPTIONS
+    + Don't remove docs/rfc in upstream tarball as the files are not installed
+  * debian/compat: Use debhelper version 8
+  * debian/control:
+    + Bump to Standards-Version 3.9.2 (no changes needed)
+    + Switch to dpkg-source 3.0 (quilt) format and drop dpatch Build-Depends
+    + Build-Depend on extra modules libraries: libldap2-dev, libpcre3-dev, 
+      libmysqlclient-dev, libpq-dev, libsqlite3-dev, libssl-dev, zlib1g-dev, 
+      libgeoip-dev, libtre-dev and split to 80 columns
+    + Build-Depends on hardening-wrapper
+    + Build-Depends on debhelper >= 8.0.0
+    + Depends on lsb-base (debian/inspircd.init)
+    + Suggests sqlite3, mysql-server, ldap-server, postgresql, gnutls-bin
+    + Remove ${shlibs:Depends} and add (= ${binary:Version}) for debugging 
+      symbols package
+    + Change Vcs-{Svn,Browser}, point to inspircd2 repository
+  * debian/patches:
+    - 01_fix_config_reload.dpatch: drop old upstream patch
+    - 02_fix_gnutls_config.dpatch: drop old upstream patch
+    - 03_use_pkg-config_gnutls.dpatch: drop old upstream patch
+    - 04_gcc44_fixes.dpatch: drop old upstream patch
+    + 01_spelling_error.diff: fix some spelling errors in modules
+    + 02_disable_rpath_for_extra_modules.diff: disable rpath for modules
+  * debian/inspircd.examples:
+    + Upstream examples files are now in docs/
+    + Provide upstream databases schemas examples
+  * debian/inspircd.init:
+    + Source /lib/lsb/init-functions and add status parameter
+    + Add dependency on $remote_fs in Required-St{art,op}
+    + Modify IRCDARGS to load /etc/inspircd/inspircd.conf
+    + Delete unnecessary spaces
+  * debian/README.Debian: Delete unnecessary spaces
+  * debian/inspircd.install: Copy configuration files to the right place
+  * debian/inspircd.1:
+    + Fix path of configuration file
+    + Delete unnecessary spaces
+  * debian/watch: update url to project website (SF not up2date)
+  * debian/README.source: use quilt to patch
+  * debian/inspircd.postrm: Don't remove /etc/inspircd as it may contains
+    locally added files
+  * debian/inspircd.conf: Update proposed default configuration due to
+    upstream changes (tags security, performance and log), line break to 80
+    and load absolute path for /etc/inspircd/inspircd.{motd,rules}
+
+  [ Jonathan Wiltshire ]
+  * Non-maintainer upload.
+    This is really sponsorship with an added patch, but technically still 
+    an NMU.
+  * Patch 03_CVE-2012-1836: protect against buffer overflow vulnerability
+    in src/dns.cpp (merge from upstream)
+    Closes: #667914 CVE-2012-1836
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Sat, 07 Apr 2012 22:25:39 +0100
+
+inspircd (1.1.22+dfsg-4) unstable; urgency=low
+
+  [ Matt Arnold ]
+  * 03_use_pkg-config_gnutls.dpatch fix gnutls ftbfs Closes: 529823.
+  * Add pkg-config to build-depends
+  * Bump standards version no change
+  * 04_gcc44_fixes.dpatch fix ftbfs on GCC 4.4 Closes: #505368
+    -- Patch thanks Martin Michlmayr
+
+  [ Bradley Smith ]
+  * Change section of inspircd-dbg to debug.
+  * Upgrade compat version to 7 and upgrade debhelper build-depends.
+  * Move dh_clean -k to dh_prep.
+
+ -- Bradley Smith <bradsmith@debian.org>  Mon, 22 Jun 2009 19:00:02 +0100
+
+inspircd (1.1.22+dfsg-3) unstable; urgency=low
+
+  * 02_fix_gnutls_config.dpatch - Fix configure script so GnuTLS module is
+    built. Closes: #510748.
+
+ -- Bradley Smith <bradsmith@debian.org>  Sun, 04 Jan 2009 19:00:13 +0000
+
+inspircd (1.1.22+dfsg-2) unstable; urgency=low
+
+  * 01_fix_config_reload.dpatch - Fix crash on config reload.
+
+ -- Bradley Smith <bradsmith@debian.org>  Mon, 15 Dec 2008 20:23:01 +0000
+
+inspircd (1.1.22+dfsg-1) unstable; urgency=low
+
+  [ Matt Arnold ]
+  * New upstream release.
+  * Remove nenolod from Uploaders as requested.
+  * Merge with upstream discontinue our patch series 02, 03.
+  * Upstream change to staticlly linked core. Closes: #506862.
+
+  [ Bradley Smith ]
+  * Add myself to uploaders.
+  * Misc whitespace fixes.
+
+ -- Bradley Smith <bradsmith@debian.org>  Wed, 03 Dec 2008 17:05:27 +0000
+
+inspircd (1.1.21+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - Upstream reported buffer overrun
+
+ -- Matt Arnold <mattarnold5@gmail.com>  Sat, 13 Sep 2008 14:11:16 -0400
+
+inspircd (1.1.20+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * add debian/README.source and 'source' target in debian/rules
+  * changed debian policy to 3.8.0
+
+ -- Giacomo Catenazzi <cate@debian.org>  Thu, 03 Jul 2008 09:02:48 +0200
+
+inspircd (1.1.19+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Darren Blaber <dmbtech@gmail.com>  Mon, 21 Apr 2008 12:51:01 -0500
+
+inspircd (1.1.18+dfsg-1) unstable; urgency=medium
+
+  * New stable upstream version, solve CVE-2008-1925
+
+ -- Giacomo Catenazzi <cate@debian.org>  Tue, 01 Apr 2008 08:57:37 +0200
+
+inspircd (1.1.17+dfsg-2) unstable; urgency=low
+
+  [ Giacomo Catenazzi ]
+  * init.d script: cleanup (remove bashism, add cron target, remove sleep,
+    remove unused exit)
+  * add debian/inspircd.logrotate, and remore logs on purge
+
+ -- Giacomo Catenazzi <cate@debian.org>  Fri, 28 Mar 2008 08:02:56 +0100
+
+inspircd (1.1.17+dfsg-1) unstable; urgency=low
+
+  [ Darren Blaber ]
+  * New upstream release, fix /etc/init.d/inspircd stop.
+  * Fix the postrm script so there is no duplicate update-rc.d
+  * Fix the manpage so there are no more errors in it
+
+  [ Matt Arnold ]
+  *  Fix prerm so it works (Closes: #466924)
+
+  [ Giacomo Catenazzi ]
+  * Added me as uploader
+  * Add again support of dpatch in debian/rules
+  * Build sources only once!
+  * Correct make clean target, not to include generated ./inspircd on sources
+  * Don't change permission of configuration files, when starting inspircd
+    (separation of policy and program).
+
+ -- Giacomo Catenazzi <cate@debian.org>  Thu, 06 Mar 2008 07:56:47 +0100
+
+inspircd (1.1.16+dfsg-1) unstable; urgency=low
+
+  [ William Pitcock ]
+  * New upstream release.
+    - Upstream has new --disable-rpath feature, dropped patch series.
+    - debian/rules: use --disable-rpath
+
+  [ Matt Arnold ]
+  * Add prerm script to stop ircd before removal
+
+ -- Matt Arnold <mattarnold5@gmail.com>  Thu, 17 Jan 2008 11:21:17 -0500
+
+inspircd (1.1.15+dfsg-1) unstable; urgency=low
+
+  [ Mario Iseli ]
+  * Initial release (Closes: #429317)
+
+  [ William Pitcock ]
+  * Prepare for uploading to unstable since Mario is on
+    vacation until 2008.
+
+  [ Darren Blaber ]
+  * Repackaged upstream tarball without non-free components (rfcs were removed)
+
+ -- Darren Blaber <dmbtech@gmail.com>  Thu, 20 Dec 2007 00:11:48 -0500

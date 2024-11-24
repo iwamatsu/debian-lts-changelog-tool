@@ -1,0 +1,44 @@
+golang-github-containerd-console (1.0.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Backport upstream patch to fix regression on s390x (Closes: #986502)
+  * Add Multi-Arch hint
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 10 Apr 2021 17:12:03 +0800
+
+golang-github-containerd-console (1.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.0.1
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 14 Nov 2020 16:23:25 +0800
+
+golang-github-containerd-console (1.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Arnaud Rebillout ]
+  * Bump golang-golang-x-sys-dev requirement.
+    We need these thinggies
+    unix.IoctlGetInt unix.IoctlGetTermios unix.IoctlSetTermios
+    unix.IoctlGetWinsize unix.Winsize unix.IoctlSetWinsize
+  * Bump golang-golang-x-sys-dev requirement in library as well.
+
+  [ Shengjing Zhu ]
+  * Remove vendor dir with Files-Excluded field in d/copyright
+  * New upstream version 1.0.0
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update debhelper-compat to 12
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add Requires-Requires-Root
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Apr 2020 11:33:32 +0800
+
+golang-github-containerd-console (0.0~git20170925.84eeaae-1) unstable; urgency=medium
+
+  * Initial release (Closes: #889944)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Mon, 12 Feb 2018 15:56:31 +0700

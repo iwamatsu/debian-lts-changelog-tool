@@ -1,0 +1,53 @@
+cjson (1.7.10-1.1+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2023-50471
+    segmentation violation in cJSON_InsertItemInArray()
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 27 Dec 2023 21:03:02 +0100
+
+cjson (1.7.10-1.1+deb10u1) buster; urgency=medium
+
+  * Cherry pick upstream commit 08d2bc766a82cd75764d036f9efef444590d1cf9,
+    which fixes an infinite loop regression introduced in the previous
+    patch. (Closes: #973442)
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 16 Jan 2021 17:33:31 -0500
+
+cjson (1.7.10-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Cherry pick upstream commit a43fa56a63920343d0ac8f8e73a6b0447867f459,
+    which contains fixes for CVEs (Closes: #928726)
+    + CVE-2019-11834
+    + CVE-2019-11835
+
+ -- Gordon Ball <gordon@chronitis.net>  Tue, 14 May 2019 08:52:20 +0000
+
+cjson (1.7.10-1) unstable; urgency=medium
+
+  * New upstream version 1.7.10
+
+ -- Yanhao Mo <yanhaocs@gmail.com>  Mon, 07 Jan 2019 16:17:56 +0800
+
+cjson (1.7.8-1) unstable; urgency=medium
+
+  * New upstream version 1.7.8
+  * Bump Standards-Version to 4.2.0 (no changes needed).
+  * Apply wrap-and-sort changes.
+
+ -- Yanhao Mo <yanhaocs@gmail.com>  Sun, 14 Oct 2018 11:11:09 +0800
+
+cjson (1.7.7-1) unstable; urgency=medium
+
+  * New upstream version 1.7.7
+    + Fix a memory leak when realloc fails.
+  * Bump Standards-Version to 4.2.0 (no changes needed).
+
+ -- Yanhao Mo <yanhaocs@gmail.com>  Thu, 23 Aug 2018 16:42:05 +0800
+
+cjson (1.7.5-1) unstable; urgency=medium
+
+  * Initial release. Closes: #870443
+
+ -- Yanhao Mo <yanhaocs@gmail.com>  Thu, 29 Mar 2018 22:53:48 +0800

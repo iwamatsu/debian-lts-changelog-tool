@@ -1,0 +1,866 @@
+viewvc (1.1.26-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2023-22456 & CVE-2023-22464: Prevent two potential cross-site scripting
+    vulnerabilities. The attack vectors involved files with unsafe names; names
+    that, when embedded into an HTML stream, could cause the browser to run
+    unwanted code.
+
+ -- Chris Lamb <lamby@debian.org>  Wed, 11 Jan 2023 08:16:21 +0000
+
+viewvc (1.1.26-1) unstable; urgency=medium
+
+  * Mangle Debian version in debian/watch
+  * New upstream version 1.1.26
+  * Refresh patches
+
+ -- Lev Lamberov <dogsleg@debian.org>  Sat, 28 Jan 2017 22:49:18 +0500
+
+viewvc (1.1.25+repack-1) unstable; urgency=medium
+
+  * Update debian/watch
+  * Add myself as a maintainer (Closes: 843441)
+  * Modernize Build-Depends field
+  * Use secure URLs for Vcs-Git and Vcs-Browser
+  * Rearrange dependencies
+  * Convert to machine-readable copyright
+  * Suggest default-mysql-server, not mysql-server
+  * New upstream version 1.1.25+repack
+  * Remove unnecessary debian/README.source
+  * Update README.Debian
+  * Refresh patches
+  * Remove obsolete debian/pycompat
+  * Move INSTALL documentation to README.Debian
+  * Bump Standards-Version to 3.9.8
+
+ -- Lev Lamberov <dogsleg@debian.org>  Thu, 10 Nov 2016 00:02:12 +0500
+
+viewvc (1.1.22-1) unstable; urgency=medium
+
+  * New upstream release (closes: #614509).  Main changes since last release
+    (1.1.5) are:
+    - Improved root look and SVN cache performance.
+    - New 'max_filesize_kbytes' and 'binary_mime_types' configuration options.
+    - Tarball generation improvements.
+    - File content handling improvements.
+    - Miscellaneous cvsdb improvements.
+    - Add Basic authentication support to standalone.py.
+    - The charset detection code is more robust.
+    - Remote SVN views are now more performant and robust.
+    - Added support for custom revision log markup rules.
+    - Use Pygments lexer-guessing functionality.
+    - Fixed a lot of bugs in corner cases.
+  * I'm not able to see any problems with TypeError, so closes: #706096.
+    Please reopen if it keeps happening.
+  * There was a problem in the migration code from viewcvs into viewvc, but by
+    now everyone is in viewvc 1.1, so I'm sad to say that this finally closes:
+    #409864, #410273, #410324.
+  * This release ships two new binaries in each package: a WSGI and a FCGI
+    additionally to the normal CGI program, to give you any possible option.
+  * debian/control:
+    - Removed ancient Replaces and Conflicts with versions 8-10 years old.
+    - Added Vcs-* fields.
+    - Bumped Standards-Version to 3.9.5.
+    - Rewritten Descriptions for both packages to reflect that now we ship 3
+      binaries.
+    - Add Depends on python, dh-python.
+  * debian/patches:
+    - Removed numbers from patches, remnants from the dpatch era, and appended
+      .patch suffix.
+    - Added DEP-3 headers to all of them.
+    - Patches rev2369, rev2547, rev2551, compression-content-length,
+      CVE-2012-3356, CVE-2012-3357 and CVE-2012-4533: Merged upstream.
+    - Remaining patches are resynced against current tree.
+    - shebang_wsgi_scripts.patch: Added to get rid of lintian warnings.
+  * debian/rules: Rewritten from scratch with latest abstractions in mind,
+    trying to mimic the old behavior.
+  * debian/NEWS: Removed.
+  * debian/source/format: Moved to 3.0 (quilt).
+  * debian/compat: Bumped to 9, modified debian/control.
+  * debian/watch: Added.
+
+ -- David Martínez Moreno <ender@debian.org>  Thu, 10 Jul 2014 21:42:45 +0200
+
+viewvc (1.1.5-1.4) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * CVE-2012-4533: Fix XSS in commit message view. Found and patch provided
+    by Nicolás Alvarez (closes: #69106).
+
+ -- Thijs Kinkhorst <thijs@debian.org>  Tue, 23 Oct 2012 08:19:39 +0000
+
+viewvc (1.1.5-1.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+
+  [ gregor herrmann ]
+  * [SECURITY] Fix "CVE-2012-3356 / CVE-2012-3357":
+    - CVE-2012-3356: * security fix: complete authz support for remote SVN views
+    - CVE-2012-3357: * security fix: log msg leak in SVN revision view with
+                     unreadable copy source
+    Add patches "CVE-2012-3356" and "CVE-2012-3357", taken from upstream svn.
+    (Closes: #679069)
+
+  [ Ben Hutchings ]
+  * view_query: No longer allow an undocumented URL parameter to
+    override the admin-declared SQL row limit, which could result
+    in excessive CPU usage and memory consumption (CVE-2009-5024)
+    (Closes: #671482)
+
+ -- Thijs Kinkhorst <thijs@debian.org>  Sun, 14 Oct 2012 20:12:07 +0000
+
+viewvc (1.1.5-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "viewvc runs extremely slowly (~15s per page)":
+    backport upstream commit r2471 as new patch compression-content-length:
+    don't set Content-Length when compression is used.
+    (Closes: #636805)
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 17 Aug 2012 16:21:49 +0200
+
+viewvc (1.1.5-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Backporting oneliner fix from version 1.1.6, r2369,
+    (escape): Ensure that the input is string-ified before doing string
+    transformations on it. (Closes: #601805)
+    Thanks to Tom Albers.
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Sat, 30 Oct 2010 12:12:36 +0200
+
+viewvc (1.1.5-1) unstable; urgency=medium
+
+  [ John Zaitseff ]
+  * New upstream release (closes: #532611, #575777, #575787, #576307).  This
+    solves CVE-2010-0004, CVE-2010-0005, CVE-2010-0736 and CVE-2010-0132.
+  * Extensive rewrite of files in the debian directory.  Updated to Debian
+    policy 3.8.4, updated all control files to Debhelper 7, rewrote
+    debian/rules for clarity (and to use Debhelper 7).
+  * Removed all references to Debconf, as previous versions of this
+    package violated Debian policy (section 10.7.3): /etc/viewvc/viewvc.conf
+    is a conffile, and maintainer scripts must NOT modify it at any time.
+  * Reorganised the installation files in /usr/lib/viewvc.  The CGI
+    programs are now links to files in /usr/lib/viewvc/cgi-bin.
+  * Packaged the Apache mod-python modules for optional use (in
+    /usr/lib/viewvc/mod-python).  See README.Debian for more information.
+  * Moved the static help documentation ("docroot") from /usr/share/viewvc
+    to /usr/share/viewvc/docroot, as per Webapps Policy, section 3.1.
+  * Updated the debian/patches subdirectory to remove patches no longer
+    relevant to ViewVC 1.1.x and to update those that still apply.
+  * debian/control:
+    - Removed the dependency on gawk, as that was only required for Debconf
+      configuration.
+    - Demoted the dependency on mime-support to "Suggests": ViewVC can use
+      it, if appropriately configured, but does not require it.
+    - Added a suggestion for the python-tk package: viewvc-standalone(1)
+      uses this when passed the "--gui" flag.
+    - Modified all dependencies as appropriate.  Depend on httpd-cgi, not
+      httpd, since the viewvc package needs a CGI server.  In addition,
+      python-egenix-mxdatetime is no longer needed (since ViewVC 1.0.x).
+    - Updated the XS-Python-Version field to "all" (Closes: #570573).
+    - ViewVC 1.1.x supports only python-pygments as a syntax highlighter,
+      not enscript.  Adjusted dependencies as appropriate.
+
+  [ David Martínez Moreno ]
+  * Changed history and added the CVE entry to the changelog for 1.0.9-1.
+  * debian/control:
+    - Moved Section to vcs in order to match the overrides.
+    - Make python-dev dependency just python.
+    - Removed dummy package viewcvs, it was already dummy in lenny.
+  * debian/viewcvs.*: Removed.
+  * debian/NEWS: Fixed version in John's entry and removed old news from 0.9.4.
+  * debian/README.source: Added.
+  * The new release also addresses in a different way how to show long
+    annotation messages (closes: #434301).
+  * Added debian/patches/92-no_strings_in_raise for fixing a couple of
+    occurrences of string exceptions in the code, no longer valid in Python
+    2.6, the default now (closes: #585366).
+
+ -- David Martínez Moreno <ender@debian.org>  Fri, 02 Jul 2010 02:24:34 +0200
+
+viewvc (1.0.9-1) unstable; urgency=high
+
+  * New upstream release (closes: #502257):
+    - CVE-2008-4325: Ignore arbitrary user-provided MIME types (closes:
+      #500779).
+    - Fixed bug in regexp searches.
+    - Fixed bug in handling of certain 'co' output.
+    - Fixed annotate code syntax error.
+    - Fixed mod_python import cycle.
+    - Fixed directory view sorting UI.
+    - Tolerate malformed Accept-Language headers.
+    - Fixed directory log views in revision-less Subversion repositories.
+    - Fixed exception in rev-sorted remote Subversion directory views.
+    - Security fixes: validate the 'view' parameter to avoid XSS attack
+      and avoid printing illegal parameter names and values (closes:
+      #545779).
+  * debian/control:
+    - Moved docbook-to-man from B-D-I to B-D, as it is in build target
+      (closes: #440188).
+    - Added B-D on quilt (>= 0.46-7) in order to have dh_quilt_*.
+    - Upgraded Standards-Version to 3.8.3.
+    - Added ${misc:Depends} to viewvc and viewvc-query.
+    - Bumped dependency on debhelper to >=6.
+    - Added Homepage.
+  * debian/rules:
+    - Moved patch targets into the XXI century: removed lots of old lines
+      by a couple of calls to dh_quilt_* helpers.
+  * debian/patches:
+    - Refreshed everything to get rid of errors and removed additional
+      options like -p0 (closes: #485187).
+    - 04_tarball_permission_fix: Added to series, closes: #482323.
+  * debian/viewvc.config: Removed prepended path to debconf-show.
+  * debian/compat: Upgraded to v6.
+  * debian/viewvc.postinst: Added set -e to catch up errors.
+
+ -- David Martínez Moreno <ender@debian.org>  Mon, 28 Sep 2009 05:24:27 +0200
+
+viewvc (1.0.5-0.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n bugs. Debconf translations:
+    - Portuguese. Closes: #489388
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 25 Sep 2008 07:03:03 +0200
+
+viewvc (1.0.5-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload to fix security, and pending l10n, issues
+
+  [ John Zaitseff ]
+  * New upstream release, originally packaged by the ZAP Group
+    (Closes: #471380, #463195).  Thanks to John Zaitseff for the patch
+    Fixed:
+    - CVE-2008-1290 - list CVS or SVN commits on "all-forbidden"
+      files
+    - CVE-2008-1291 - directly access hidden CVSROOT folders
+    - CVE-2008-1292 - expose restricted content via the revision
+      view, the log history, or the diff view
+  * Updated the following files in the debian/patches subdirectory:
+      series
+      02_py2html_activation
+      101_viewvc-install_Debian_paths
+      102_viewvc.conf_Debian_customization
+  * Updated debian/rules to install documentation in the docs directory
+    and example templates in templates-contrib.
+
+  [ Christian Perrier ]
+  * Debconf translations:
+    - Vietnamese. Closes: #426876
+  * [Lintian] Fix syntax in NEWS.Debian
+  * [Lintian] Replace obsolete ${Source-Version} variable by
+    ${source:Version}
+  * Finnish. Closes: #473466
+  * Basque. Closes: #476172
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 31 Mar 2008 08:42:29 +0200
+
+viewvc (1.0.3-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Apply the "forbidden" option on files as well, thanks to Chung-chieh Shan
+    for the patch (Closes: #416696).
+  * Really added quilt to build dependencies
+    (Closes: #426073, #409774, #419674).
+
+ -- Sebastian Harl <sh@tokkee.org>  Tue,  4 Sep 2007 17:34:21 +0200
+
+viewvc (1.0.3-2) unstable; urgency=low
+
+  * debian/control:
+    - It seems that the build dependency on quilt was lost in some internal
+      release.  Now it is back (closes: #409774).
+    - Added po-debconf to Build-Depends.
+  * Debconf translations:
+    - Updated Czech (closes: #409618).  Thanks, Miroslav Kure.
+    - Updated Swedish (closes: #409624).  Thanks, Daniel Nylander.
+    - Added Galician (closes: #409626).  Thanks, Jacobo Tarrío.
+    - Updated Japanese (closes: #409940).  Thanks, Hideki Yamane.
+    - Updated French (closes: #409949).  Thanks, Michel Grentzinger.
+    - Added Russian (closes: #409958).  Thanks, Yuri Kozlov.
+    - Added German (closes: #409979).  Thanks, Henrik Kröger.
+    - Updated Dutch (closes: #410034).  Thanks, Thijs Kinkhorst.
+    - Added Romanian (closes: #410136).  Thanks, Eddy Petrișor.
+  * debian/viewvc-config: Added -c/--config in order to have the possibility
+    to query a different config file.
+  * debian/viewvc.config, debian/viewvc.postinst: Rewrote the migration code
+    in order to make it compliant with the debconf Developers' Guide, in
+    particular:
+    "[...]the config script is run before the package is unpacked.[...]  The
+    config script should not need to modify the filesystem at all."
+    Now it simply saves viewcvs' information for later use in postinst, where
+    it moves viewcvs.conf into viewvc.conf (closes: #409836).
+
+ -- David Martínez Moreno <ender@debian.org>  Fri,  9 Feb 2007 02:45:37 +0100
+
+viewvc (1.0.3-1) unstable; urgency=low
+
+  * Sorry for the enormous delay.  Viewvc was in a bad shape and I was not in
+    the mood.  Let's try finally viewvc in unstable.
+  * New upstream release (closes: #388527, #397669).  Main changes since the
+    last snapshot are:
+    - Fixed issues with Subversion tarballs.
+    - Fixed annotate in several cases.
+    - Security fix: declare charset for views to avoid IE UTF7 XSS attacks.
+    - Minor documentation fixes.
+    - Lots of other fixes in RSS, CVS and XHTML code.
+  * debian/control:
+    - Build-Depends on quilt (closes: #386990).
+    - Added gawk to Depends in viewvc, in order to fix error when no roots are
+      present, and replaced awk by gawk in debian/viewvc.postinst.
+  * Renamed debian/README to debian/README.Debian.  Thanks, Romain Francoise
+    (closes: #386992).
+  * Included some parts of the diff from NMU 0.9.2+cvs.1.0.dev.2004.07.28-4.1
+    by Joey Hess to fix #384750 (already included with the fix for #380981).
+  * debian/patches: Removed 03_ValueErrorException_and_commitid patch, as it
+    was included in 1.0.3.
+
+ -- David Martínez Moreno <ender@debian.org>  Fri,  2 Feb 2007 18:29:19 +0100
+
+viewvc (0.9.4+svn20060318-1) experimental; urgency=low
+
+  * New SVN snapshot. ViewCVS project has become ViewVC, under tigris.org's
+    umbrella.  Fresh SVN checkout as of 18-03-2006, closes: #339537.  Main
+    changes were:
+    - All the files related to ViewCVS (viewcvs.conf, viewcvs.cgi and so on)
+      have been renamed to viewvc.whatever.
+    - Templates are Apache-agnostic, so this addresses part of #263268.
+    - There is no diff_font_face setting, thus closes: #229906.
+    - The templates no longer include invalid SGML comments.  Closes: #245550.
+    - The URLs are properly escaped now (closes: #363972).
+    - URLs in commit messages are no longer truncated (closes: #190975).
+    - I am not able to leave any lock in repositories, so I suppose this
+      closes: #280877.
+    - I suspect that #200691 was produced by problems with python-subversion.
+      Now it is working for me, so closes: #200691.
+    - I have no problems to see markup in log or annotate views.  Closes:
+      #204595.
+    - hide_attic shows or hides files inside the Attic always, including
+      subdirectories (closes: #178999).
+    - The layout is correct now (closes: #189544).
+    - Coloring works with diffs (closes: #344941).
+    - File size now appears in the detailed view (closes: #319250).
+    - svn_parent_path has been removed in favour of a wider 'root_parents'
+      parameter, valid for either CVS or Subversion.  Added to NEWS.Debian.
+      Closes: #264110.
+    - markup_stream_enscript does not longer exist as individual method.
+      Closes: #191455.
+    - Disabling annotation works now.  Closes: #321584.
+    - Fixed tarball generator so it doesn't include forbidden modules.
+      Closes: #295031.
+    - CVS branches now show correct information.  Closes: #217070.
+    - As far as I understood in #217049, the problem is that certain files
+      does not have Attic/ in their URL.  Now the file in Attic are shown as
+      every other file, but with proper FILE REMOVED labels, so this closes:
+      #217049.
+    - Added integrated RSS feeds.
+    - Make "default_root" option optional. When no root is specified, it shows
+      a page listing all available repositories.
+    - Added stricter parameter validation to lower likelihood of cross-site
+      scripting vulnerabilities.
+    - Added support for cvsweb's "mime_type=text/x-cvsweb-markup" URLs.
+    - Fixed incompatibility with enscript 1.6.3.
+    - Output "404 Not Found" errors instead of "403 Forbidden" errors to not
+      reveal whether forbidden paths exist.
+    - Cleaned up zombie processes from running enscript.
+    - Results from viewvc-query give now a correct path.  Closes: #181888.
+    - Lots of other fixes.
+  * This release is very close to ViewVC 1.0, and all the requests that
+    Richard A. Nelson made are in current snapshot, so I suppose that it
+    closes: #369744.
+  * Altered drastically the way that patches are stored.  Added infrastructure
+    to manage them with quilt.  This will cause for sure some headaches, as it
+    will be regressions and already fixed bugs in the present code, but the
+    old package was unmanageable.  Sorry for the annoyance.  If I made this, it
+    was for a better future. :-)
+  * "And now, the continuation!"
+  * I pushed several things present in unreleased packages to upstream, so the
+    diff size is small again. :-)
+  * debian/TODO: Added.
+  * debian/copyright: Clarified the difference between license and copyright,
+    and added some words about the name change.
+  * debian/rules: Changed DH_COMPAT=3 to debian/compat(=4).
+  * debian/po/*po: Replaced 'ViewCVS' by 'ViewVC'.
+  * debian/templates: All the templates now belong to viewvc/whatever.  Removed
+    svnparentpath, as it was not supported in the old packages and I prefer to
+    keep this situation for now.
+  * debian/po/vi.po: Added Vietnamese translation.  Thanks, Clytie Siddall!
+    (closes: #324077).
+  * debian/po/sv.po: Added Swedish translation.  Thanks, Daniel Nylander!
+    (closes: #332555).
+  * debian/po/es.po: Added Spanish translation.
+  * Created viewvc.config in order to transfer all the existing debconf
+    answers to the new hierarchy, and added code to viewcvs.postrm in order to
+    remove such questions when purged.  Thanks to Joey Hess for advice in this
+    situation.  Altered viewvc-config in order to use the new config file.
+    Robustified several routines that deal with debconf entries.  The
+    configuration system now is able to uncomment an entry.  I am not able to
+    reproduce several related bugs, so this closes: #296191, #270331.
+  * Fixed a greedy regular expression in viewvc-config that made full lines
+    disappear from the config file when at least an option was empty.
+  * Unified methods of obtaining list of roots in postinst and config scripts.
+  * debian/control:
+    - Renamed viewcvs to viewvc, and added a dummy viewcvs package for
+      upgrades.
+    - Rewrote some descriptions, and this surprisingly closes: #354752.
+    - Added '| debconf-2.0' to Depends in viewvc. Closes: #332137.
+    - Replaced in Build-Depends python2.3-subversion by new package
+      python-subversion.
+    - Moved python-subversion from Build-Depends to Depends.
+    - Upgraded Standards-Version to 3.7.2.1.
+  * Merged code from .diff.gz into debian/patches and with upstream in order to
+    deal with past bug reports.  This is only to make sure that I did not drop
+    something in the way...:
+    - #196975: robots exclusion
+    - #261986: viewcvs: Exception enumerating branches
+    - #284237: NMU: Security update for CAN-2004-0915
+    - #287771: [CAN-2004-1062]: cross site scripting security problem
+    - #289466: viewcvs: breaks config file on upgrade
+    - #293426: viewcvs: split log info from file content so it can be distinguished
+    - #293529: viewcvs: Please include svndbadmin
+    - #297032: viewcvs: Error message "UnknownReference: current_root"
+    - #303756: viewcvs: Unknown Reference: current_root (includes patch)
+  * Pushed to upstream an upgrade to embedded py2html to 0.8, and activated
+    processing for .py scripts. Closes: #282718.
+  * Call dh_python *before* dh_installdeb, so that *.py files are compiled
+    Closes: #245181.
+  * Applied patch fixing some typos in debian/templates.  Thanks, Tobias
+    Toedter and Clytie Siddall (closes: #251762, #324076).  While at it,
+    upstream replaced all the 'ViewCVS' strings by 'ViewVC' in the tree.
+  * Incorporate remaining pieces from doogie's NMU to packages, except the
+    setuid wrapper.  Closes: #294242.
+  * debian/viewvc.links: Add a link from /usr/share/viewvc to
+    /etc/viewvc/templates/docroot.
+  * Changed default path in ViewVC to /etc/viewvc/templates.  This change,
+    along with a commented out 'docroot' value in viewvc.conf by default,
+    allowed to simply make a symbolic link from /etc/viewvc/templates/docroot
+    to /usr/share/viewvc, and all the problems with CSS and images simply
+    vanished.  Reading the policy I was unable to find anything against this.
+    Yes, this is a performance penalty, as viewvc is serving images that
+    otherwise you could get directly from the web server, but it avoids to
+    deal with web server configurations.  Added a NEWS.Debian entry about this
+    subject.  I am grateful to say that it closes: #305130, #263268, #307092,
+    #307789, #232847, #274422.
+  * We do not fiddle with Apache config, thus also closes: #291358, #304680.
+  * Added a README.Debian with information about solving the performance hit
+    of having viewvc serving all the content, and with basic information about
+    viewvc (closes: #150214).  I think that adding this information also
+    closes: #241545 as well, because the other part is 'solved' as we do not
+    touch web server configurations anymore.
+  * Added a patch from 1.0.x branch to upgrade lib/vclib/bincvs/__init__.py:
+    - Fixed a ValueError exception raised (closes: #265271).
+    - Fixed parsing of recent CVS format (closes: #372655).
+  * Fixed building in order to support the new Python policy (closes: #380981):
+    - debian/control: Added python-support (>= 0.3) to B-D-I.  Bumped
+      dependency on debhelper (>= 5.0.37.2).
+    - Added an 'XB-Python-Version: ${python:Versions}' field to viewvc and
+      viewvc-query.
+    - Added an 'XS-Python-Version: current' field to viewvc and viewvc-query.
+    - debian/rules: Insert dh_pysupport before dh_python.
+    - debian/pycompat: Created with a content of '2'.
+  * Improved description for viewvc-query.  Closes: #293301.
+  * We do not rename query.cgi to viewvc-query.cgi (at least for the moment).
+    Closes: #194472.
+
+ -- David Martínez Moreno <ender@debian.org>  Mon, 14 Aug 2006 01:30:24 +0200
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-4.1) unstable; urgency=low
+
+  * NMU
+  * Updated for python transition, using python-support. Closes: #384750
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 30 Aug 2006 16:14:18 -0400
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-4) unstable; urgency=low
+
+  * File contents are now visible. Thanks, Marius Gedminas! (closes: #239968).
+  * debian/po/cs.po: Added Czech translation. Thanks, Miroslav Kure! (closes:
+    #318953).
+  * www/cgi/viewcvs.cgi: Added code to return response for robots in order to
+    not index the site. Thanks, Kai Hendry. Closes: #196975.
+  * templates/markup.ezt: Added a trivial patch to split log info from file
+    content. Thanks, Guillem Jover. Closes: #293426.
+  * viewcvs-install-debian: Include svndbadmin in the contents of the viewcvs
+    package (closes: #293529).
+  * debian/control:
+    - Update Standards-Version to 3.6.2.
+    - Added ${python:Depends} to viewcvs-query to shut up lintian.
+    - Build-Depends line was really Build-Depends-Indep.
+    - Added apache to Recommends, as Policy Manual says that it needs at least
+      one real package.
+
+ -- David Martínez Moreno <ender@debian.org>  Thu, 21 Jul 2005 17:15:21 +0200
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-3) unstable; urgency=low
+
+  * Sigh. Really change maintainer in debian/control. Thanks,
+    Martin Michlmayr.
+
+ -- David Martínez Moreno <ender@debian.org>  Fri, 17 Jun 2005 06:25:14 +0200
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-2) unstable; urgency=low
+
+  * New maintainer.
+
+ -- David Martínez Moreno <ender@debian.org>  Fri, 17 Jun 2005 00:26:29 +0200
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-1.5) unstable; urgency=medium
+
+  * NMU
+  * Urgency medium because it fixes an important bug and it would
+    be great if it still could get into sarge, even if it's frozen.
+  * Update templates/include/branch_form.ezt from upstream CVS so that viewcvs
+    actually shows files in CVS trees without backtraces
+    (closes: #303756).
+
+ -- Peter Palfrader <weasel@debian.org>  Tue, 24 May 2005 00:47:29 +0200
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-1.4) unstable; urgency=high
+
+  * NMU.
+  * Don't try to change the config file if there are vhosts configured.
+    This will most probably mess it up (Closes: #289466)
+  * Bug fix: "viewcvs: Updated Japanese po-debconf template translation
+    (ja.po)", thanks to Hideki Yamane (Closes: #241832).
+  * Bug fix: "Update of the french debconf translation", thanks to Michel
+    Grentzinger (Closes: #244514).
+  * Bug fix: "[INTL:nl] New po-debconf translation in Dutch for viewcvs.",
+    thanks to Tim Dijkstra (Closes: #289639).
+  * Copyright holder has changed, correct copyright file
+  * More changes by Christian Perrier:
+    + Remove dh-make boilerplate in copyright
+    + Remove initial capitals in packages description synopsis
+      and improve English slightly
+
+ -- Frank Lichtenheld <djpig@debian.org>  Fri, 21 Jan 2005 12:33:29 +0100
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-1.3) unstable; urgency=HIGH
+
+  * NMU.
+  * Fix cross-site-scripting hole in 404 not found pages. (CAN-2004-1062)
+    Closes: #287771
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 31 Dec 2004 15:21:28 -0500
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-1.2) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team
+  * Corrected code to honor hide_cvsroot and forbidden when making a
+    tarball [lib/viewcvs.py, CAN-2004-0915]
+
+ -- Martin Schulze <joey@infodrom.org>  Fri,  3 Dec 2004 10:15:22 +0100
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Fix error in lib/dbi.py which prevented it working with
+    python >= 2.3 (Closes: #273997) Patch from upstream CVS.
+  * Add some missing quotes in debian/po/ja.po
+
+ -- Frank Lichtenheld <djpig@debian.org>  Tue, 12 Oct 2004 18:54:30 +0200
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.28-1) unstable; urgency=low
+
+  * New upstream release
+  * fix *_pagesize (closes: #249722)
+  * /etc/apache2/conf.d/viewcvs: new added
+    Alias /doc/viewcvs/ /usr/share/viewcvs/
+  * README.Debian: Alias /doc/viewcvs/ /usr/share/viewcvs/
+  * templates/include/footer.ezt: use /doc/viewcvs/images/logo.png
+  * lib/viewcvs.py: fix handling '&' and '+' in URL htmlify
+
+ -- Takuo KITAME <kitame@debian.org>  Thu, 29 Jul 2004 17:01:18 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.07.01-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Takuo KITAME <kitame@debian.org>  Fri, 16 Jul 2004 17:29:29 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.03.24-2) unstable; urgency=high
+
+  * debian/config,postinst,preinst: Applied patch to fix #239967 (closes: #239967)
+  * urgency=high because of RC Bug fix
+
+ -- Takuo KITAME <kitame@debian.org>  Sun, 11 Jul 2004 02:03:25 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2004.03.24-1) unstable; urgency=low
+
+  * New upstream release
+  * fix operating with Subversion 0.37 and later. (Closes: #234906, #234937, #210303)
+    Thanks NMUing by Branden Robinson. (closes: #239526)
+  * fix query.ezt points to query.cgi (closes: #237162)
+  * install into /usr/lib/python2.3/site-packages/ (closes: #235518)
+  * remove useless README (closes: #211208)
+  * added nl,po ca.po and ja.po for debconf (closes: #219963, #236217, #225799)
+  * mentioned subversion in description (closes: #223752)
+  * ask svn_root in debconf
+
+ -- Takuo KITAME <kitame@debian.org>  Wed, 24 Mar 2004 12:37:26 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2003.08.26-1) unstable; urgency=low
+
+  * New upstream cvs checkout (closes: #202052)
+  * CGI script run with umask 0002
+  * build-depends
+  * switch to gettext format for the debconf templates (closes: #199127)
+  * added fr.po (closes: #200201)
+  * build-depends on pyhton2.3-subversion (closes: #206640)
+
+ -- Takuo KITAME <kitame@debian.org>  Sun, 14 Sep 2003 15:02:55 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2003.05.05-3) unstable; urgency=low
+
+  * Applied patch to fix svn support (closes: Bug#199201)
+
+ -- Takuo KITAME <kitame@debian.org>  Fri,  4 Jul 2003 11:40:12 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2003.05.05-2) unstable; urgency=low
+
+  * Fixed cp process in postinst (closes: #192512)
+
+ -- Takuo KITAME <kitame@debian.org>  Tue, 20 May 2003 11:52:45 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2003.05.05-1) unstable; urgency=low
+
+  * New upstream release
+  * Thanks Raphael Bossek <raphael.bossek@gmx.de> to following changes.
+    - Multiple repositories support fixed. [ViewCVSBug:705560,656677,624608]
+    - Tarball download fixed. (closes: #188908) [ViewCVSBug:724971]
+    - Blank site while markup unknown file extension fixed. [ViewCVSBug:724978,702915]
+    - PHP markup support improved as mentioned by ViewCVSBug 702915.
+    - Removed bug 175022 patch from sources due to trouble with repository
+      entries containing blanks. We are also depending on Python 2.2 where
+      the described problem doesn't exist anymore. [ViewCVSBug:724967]
+  * don't use examples as conffile template.(closes: #189861)
+
+ -- Takuo KITAME <kitame@debian.org>  Tue,  6 May 2003 16:09:39 +0900
+
+viewcvs (0.9.2+cvs.1.0.dev.2003.04.08-0.1) unstable; urgency=low
+
+  * New upstream release, includes svn support and bug fixes
+    (closes: #188021, #181649)
+  * lib/viewcvs.py: applied path for download support w/ py2.1(woody) (closes: #175022)
+  * debian/control: fix build-depends (closes: #188022)
+
+ -- Takuo KITAME <kitame@debian.org>  Thu, 10 Apr 2003 14:55:55 +0900
+
+viewcvs (0.9.2-8) unstable; urgency=low
+
+  * debian/rules: PYTHONDIR=/usr/lib/python2.2 (closes: #170344)
+
+ -- Takuo KITAME <kitame@northeye.org>  Sun, 24 Nov 2002 00:20:40 +0900
+
+viewcvs (0.9.2-7) unstable; urgency=low
+
+  * Depends on python-tk (closes: #154445)
+  * Build-Depends: python-dev (>= 2.2, << 2.3) (closes: #169851)
+  * Fix enscript option. (closes: #149980)
+  * Fix typo in debconf template (closes: #149870)
+  * Fix comments of viewcvs.conf for cvsgraph package (closes: #156307)
+  * improved colorised enscript support (closes: #169187)
+  * include INSTALL documentaion. (closes: #153592)
+  * change default cvsroot to /var/lib/cvs (closes: #150247)
+
+ -- Takuo KITAME <kitame@debian.org>  Fri, 22 Nov 2002 12:00:01 +0900
+
+viewcvs (0.9.2-6) unstable; urgency=low
+
+  * split out viewcvs-query.cgi into viewcvs-query. (closes: #147414, #147170)
+
+ -- Takuo KITAME <kitame@northeye.org>  Fri, 31 May 2002 16:02:29 +0900
+
+viewcvs (0.9.2-5) unstable; urgency=low
+
+  * fix enscript support (closes: #140354)
+  * fix Cross Site Scripting vulnerability
+
+ -- Takuo KITAME <kitame@northeye.org>  Wed, 24 Apr 2002 09:55:34 +0900
+
+viewcvs (0.9.2-4) unstable; urgency=low
+
+  * /etc/viewcvs/viewcvs.conf: do not mark as conffiles
+  * default cvs is /var/lib/cvs (closes: #141389)
+  * fix documents (closes: #141387)
+
+ -- Takuo KITAME <kitame@northeye.org>  Sun,  7 Apr 2002 02:22:45 +0900
+
+viewcvs (0.9.2-3) unstable; urgency=low
+
+  * added debconf chooser for Default CVS Root
+  * Implement disallowing to list modules of '/'
+    disallow_root = 0 (disable) or 1 (enable) # (default is disable)
+    It behave like SourceForge's viewcvs.
+  * read 'viewcvs.conf' of current directory when it exists.
+    It useful for VirtualHost.
+
+ -- Takuo KITAME <kitame@northeye.org>  Wed, 20 Feb 2002 18:54:32 +0900
+
+viewcvs (0.9.2-2) unstable; urgency=low
+
+  * Online documents and icons were moved to /usr/share/viewcvs/
+    And fixed README.Debian
+    (closes: #131332)
+  * debian/templates:
+    - added Note for icons directory.
+  * debian/links:
+    - /usr/share/viewcvs /usr/share/doc/viewcvs/html
+  * templates/*:
+    - use /viewcvs/icons/ instead of /doc/viewcvs/icons/
+    - don't use apache_pb.gif. use viewcvs's logo.png instead.
+
+ -- Takuo KITAME <kitame@northeye.org>  Wed, 30 Jan 2002 17:48:31 +0900
+
+viewcvs (0.9.2-1) unstable; urgency=low
+
+  * New upstream release (closes: #130851)
+  * applied fix icon path patch (#130851) Thanks.
+
+ -- Takuo KITAME <kitame@northeye.org>  Sun, 27 Jan 2002 15:37:20 +0900
+
+viewcvs (0.9.1-2) unstable; urgency=low
+
+  * cgi/viewcvs.conf.dist:
+    - default cvsgraph_conf is /etc/cvsgraph/cvsgraph.conf
+  * debian/control:
+    - Suggests: cvsgraph
+
+ -- Takuo KITAME <kitame@northeye.org>  Mon, 14 Jan 2002 03:20:05 +0900
+
+viewcvs (0.9.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #127147)
+  * viewcvs-install-debian:
+    - update with original.
+
+ -- Takuo KITAME <kitame@northeye.org>  Mon, 31 Dec 2001 12:14:55 +0900
+
+viewcvs (0.8-4) unstable; urgency=low
+
+  * debian/template:
+    - Fix grammer, boolean value, more detail for allow_tar.
+      and fix debconf manner. Thanks Joey Hess (closes: #126538, #126541)
+  * viewcvs-install-debian:
+    - install help_query.html (closes: #126572)
+
+ -- Takuo KITAME <kitame@northeye.org>  Fri, 28 Dec 2001 01:27:19 +0900
+
+viewcvs (0.8-3) unstable; urgency=low
+
+  * debian/config:
+    - remove duplicate code with postinst.
+  * lib/viewcvs.py:
+    - enscript_extensions: add '.rb' : 'ruby'
+
+ -- Takuo KITAME <kitame@northeye.org>  Fri, 21 Dec 2001 20:26:42 +0900
+
+viewcvs (0.8-2) unstable; urgency=low
+
+  * test /usr/lib/viewcvs/viewcvs-config when run it (closes: #123622)
+
+ -- Takuo KITAME <kitame@northeye.org>  Thu, 13 Dec 2001 02:10:42 +0900
+
+viewcvs (0.8-1) unstable; urgency=low
+
+  * New upstream release
+  * fix duplicate conffiles (closes: #108198)
+  * standalone.py will be installed as /usr/sbin/viewcvsd
+  * added manpage viewcvsd.8
+  * wrote a little documents README.Debian (closes: #66842, #109842)
+    wrote about Alias to icons dir (closes: #121105)
+  * move viewcvs.conf to /etc/viewcvs/
+  * renamed query.cgi to viewcvs-query.cgi (closes: #104146)
+  * install byte compiled py (pyc) into /usr/lib/python2.1/viewcvs (closes: #92742)
+  * install template into /etc/viewcvs/templates
+  * other files are into /usr/lib/viewcvs/
+  * use debconf to set cvs_roots, address, forbidden and allow_tar
+  * Build-Depends: + python2.1-dev
+  * Depends: debconf (>= 1.0)
+  * Depends: -httpd, Recommends: +httpd (viewcvsd not need httpd)
+  * default cvsroot is /var/cvsroot (closes: #117138)
+  * lib/viewcvs.py (view_doc): doc_directory is statically "/usr/share/doc/viewcvs"
+
+ -- Takuo KITAME <kitame@northeye.org>  Tue, 11 Dec 2001 17:06:12 +0900
+
+viewcvs (0.7-4) unstable; urgency=low
+
+  * Fix python2 issue. (closes: #118596)
+
+ -- Takuo KITAME <kitame@northeye.org>  Fri,  9 Nov 2001 18:01:18 +0900
+
+viewcvs (0.7-3) unstable; urgency=low
+
+  * Fix preinst.
+
+ -- Takuo KITAME <kitame@northeye.org>  Mon,  4 Jun 2001 19:19:47 +0900
+
+viewcvs (0.7-2) unstable; urgency=low
+
+  * Fixed Build-Depends (closes: Bug#99472)
+
+ -- Takuo KITAME <kitame@northeye.org>  Sat,  2 Jun 2001 02:38:56 +0900
+
+viewcvs (0.7-1) unstable; urgency=low
+
+  * New upstream release
+    some upstream bugs were fixed. (closes: Bug#67627,Bug#71124,Bug#80948,Bug#84425,Bug#66846)
+
+ -- Takuo KITAME <kitame@northeye.org>  Thu, 31 May 2001 10:34:53 +0900
+
+viewcvs (0.6-4) unstable; urgency=low
+
+  * Applied tarball generate patch By Akira Tanaka <akr@m17n.org>.
+
+ -- Takuo KITAME <kitame@northeye.org>  Sun, 22 Apr 2001 07:10:53 +0900
+
+viewcvs (0.6-3) unstable; urgency=low
+
+  * closes: Bug#85826: bashism in debian/rules
+
+ -- Takuo KITAME <kitame@northeye.org>  Wed, 28 Feb 2001 15:26:13 +0900
+
+viewcvs (0.6-2) unstable; urgency=low
+
+  * Added debian.jpg as log and {back,dir,text}.gif which from ViewCVS website.
+    Modified default viewcvs.conf. It remove apache dependency.
+    closes: Bug#66843, Bug#66845
+
+ -- Takuo KITAME <kitame@northeye.org>  Fri, 25 Aug 2000 18:57:17 +0900
+
+viewcvs (0.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Depends: python-base(>=1.5.2), closes: Bug#67298
+
+ -- Takuo KITAME <kitame@northeye.org>  Wed, 26 Jul 2000 00:29:03 +0900
+
+viewcvs (0.5-2) unstable; urgency=low
+
+  * debian/rules patch by Karl M. Hegbloom <karlheg@debian.org>
+   - fixes the ViewCVS mysql database support by ensuring that installed
+     paths are substituted into the scripts so it can find itself where
+     we've installed it for Debian.
+   - install from binary-indep rather than binary-arch target.
+   - move from /usr/lib/viewcvs to /usr/share/viewcvs
+   - clarify ambiguity in long description by saying "commit-logs" rather
+    than "change logs" (two words), because I thought it meant it would
+    let me edit typos in log entries from previous commits.
+  * closes: Bug#65734: [patch] Fix database support.
+    Thanks a lot, Karl.
+
+ -- Takuo KITAME <kitame@northeye.org>  Fri, 16 Jun 2000 15:02:16 +0900
+
+viewcvs (0.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Applied #64657 wishlist. (closes: Bug#64657)
+    Thanks, Tuomas Jormola <tj@sgic.fi>
+
+ -- Takuo KITAME <kitame@northeye.org>  Sat, 27 May 2000 22:58:22 +0900
+
+viewcvs (0.4-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Takuo KITAME <kitame@northeye.org>  Wed, 10 May 2000 05:42:29 +0900

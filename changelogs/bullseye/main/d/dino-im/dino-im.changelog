@@ -1,0 +1,248 @@
+dino-im (0.2.0-3+deb11u1) bullseye-security; urgency=high
+
+  * Fix for: [CVE-2023-28686] Insufficient message sender validation in
+    Dino (Closes: #1033370)
+
+ -- Martin <debacle@debian.org>  Fri, 24 Mar 2023 00:48:22 +0000
+
+dino-im (0.2.0-3) unstable; urgency=critical
+
+  * Fix file traversal issue on incoming file transfers (CVE-2021-33896)
+  * Don't remove characters after '#' in filename
+    Thanks to fiaxh (Dino upstream) for both patches!
+
+ -- Martin <debacle@debian.org>  Mon, 07 Jun 2021 17:43:27 +0000
+
+dino-im (0.2.0-2) unstable; urgency=medium
+
+  * Add upstream patch to adjust Real for latest vala version
+    (Closes: #985754)
+
+ -- Martin <debacle@debian.org>  Mon, 22 Mar 2021 22:38:23 +0000
+
+dino-im (0.2.0-1) unstable; urgency=medium
+
+  * New upstream release with nice features:
+    - Message correction: press cursor up key
+    - File sharing: drag and drop
+    - Encryption: better indication by lock and seal symbols
+    - Unread: number of unread messages is displayed
+    - Pending: "pending..." is displayed for unsent messages
+    More information: https://dino.im/blog/2020/11/dino-0.2-release/
+  * Add upstream signing key
+  * Delete obsolete patch
+
+ -- Martin <debacle@debian.org>  Fri, 13 Nov 2020 21:34:36 +0000
+
+dino-im (0.1.0-5) unstable; urgency=medium
+
+  * Fixes suggested by upstream:
+    - move metainfo to dino-im, and actually install .service file
+
+ -- Martin <debacle@debian.org>  Tue, 23 Jun 2020 22:34:27 +0000
+
+dino-im (0.1.0-4) unstable; urgency=medium
+
+  * Fixes suggested by upstream:
+    - add appdata metainfo
+    - rename dino to dino-im in .service file, too
+    - do not enable notification-sound plugin
+
+ -- Martin <debacle@debian.org>  Tue, 26 May 2020 23:50:36 +0000
+
+dino-im (0.1.0-3) unstable; urgency=medium
+
+  * Fix broken upload, too late for dcut...
+
+ -- Martin <debacle@debian.org>  Mon, 11 May 2020 08:43:46 +0000
+
+dino-im (0.1.0-2) unstable; urgency=medium
+
+  * Allow newer libsignal >= 2.3.2 (Closes: #960238)
+
+ -- Martin <debacle@debian.org>  Mon, 11 May 2020 07:55:14 +0000
+
+dino-im (0.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 30 Jan 2020 18:41:15 +0000
+
+dino-im (0.0.git20200109.3fc9bda-1) unstable; urgency=medium
+
+  * New upstream git snapshot (mainly bug fixes)
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 10 Jan 2020 23:09:55 +0000
+
+dino-im (0.0.git20191219.9565140-1) unstable; urgency=medium
+
+  * New upstream git snapshot (mainly bug fixes, app menu now contains a
+    "Keyboard Shortcuts" list)
+  * Last patch removed, already applied
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 19 Dec 2019 20:05:29 +0000
+
+dino-im (0.0.git20191119.f9c69a2-2) unstable; urgency=medium
+
+  * Apply patch to fix garbage in message input field
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 23 Nov 2019 19:02:57 +0000
+
+dino-im (0.0.git20191119.f9c69a2-1) unstable; urgency=medium
+
+  * New upstream git snapshot (mainly bug fixes)
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 21 Nov 2019 23:04:41 +0000
+
+dino-im (0.0.git20191028.388cc56-1) unstable; urgency=medium
+
+  * New upstream git snapshot (bug fixes)
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 01 Nov 2019 11:27:23 +0000
+
+dino-im (0.0.git20191002.7adb0e8-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+    - Includes support for XEP-0402: Bookmarks 2
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 05 Oct 2019 11:59:41 +0000
+
+dino-im (0.0.git20190916.f746ce7-2) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Improve cross building: Use cmake+ninja directly (Closes: #941399)
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 30 Sep 2019 08:09:10 +0000
+
+dino-im (0.0.git20190916.f746ce7-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+    - Includes support for XEP-0391: Jingle Encrypted Transports
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 17 Sep 2019 20:57:20 +0000
+
+dino-im (0.0.git20190911.2a70a4e-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+    - Fix check of source of a carbons message (CVE-2019-16235)
+    - Check roster push authorization (CVE-2019-16236)
+    - Fix check of source of MAM message (CVE-2019-16237)
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 11 Sep 2019 19:51:18 +0000
+
+dino-im (0.0.git20190909.9950742-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 09 Sep 2019 23:23:27 +0000
+
+dino-im (0.0.git20190718.1853ee8-2) unstable; urgency=medium
+
+  [ Dominik George ]
+  * Remove myself from Uploaders
+    + Added without consent or changelog
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 19 Jul 2019 08:06:21 +0000
+
+dino-im (0.0.git20190718.1853ee8-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 19 Jul 2019 07:19:58 +0000
+
+dino-im (0.0.git20190708.6c480b8-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+  * Depends on new libsignal-protocol-c
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 13 Jul 2019 22:14:11 +0000
+
+dino-im (0.0.git20181129-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 04 Dec 2018 22:27:07 +0000
+
+dino-im (0.0.git20181120-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 21 Nov 2018 09:26:25 +0000
+
+dino-im (0.0.git20181102-1) unstable; urgency=medium
+
+  * New upstream git snapshot (Closes: #909488)
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 05 Nov 2018 23:46:31 +0000
+
+dino-im (0.0.git20180921-1) unstable; urgency=medium
+
+  * New upstream git snapshot (Closes: #909488)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 07 Oct 2018 18:47:42 +0000
+
+dino-im (0.0.git20180904-1) unstable; urgency=medium
+
+  * New upstream git snapshot (Closes: #907935)
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 04 Sep 2018 20:02:20 +0000
+
+dino-im (0.0.git20180805-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 12 Aug 2018 00:06:25 +0000
+
+dino-im (0.0.git20180603-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 06 Jun 2018 17:48:50 +0000
+
+dino-im (0.0.git20180430-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+  * Bump standards version and dh compat
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 01 May 2018 20:49:49 +0000
+
+dino-im (0.0.git20180310-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 20 Mar 2018 22:52:15 +0000
+
+dino-im (0.0.git20180130-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+  * First upload to unstable
+  * Move packaging to Debian XMPP Maintainers, use salsa.debian.org
+  * Bump standards version
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 30 Jan 2018 22:42:17 +0000
+
+dino-im (0.0.git20171205-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 06 Dec 2017 22:00:30 +0000
+
+dino-im (0.0.git20171117-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+  * Add some useful recommends
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 18 Nov 2017 13:40:16 +0000
+
+dino-im (0.0.git20171101-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+  * dino-im depends on dino-im-common (Closes: #880716)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 04 Nov 2017 18:35:51 +0000
+
+dino-im (0.0.git20171023-1) experimental; urgency=medium
+
+  * Initial release. (Closes: #860055)
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 23 Oct 2017 21:56:37 +0000

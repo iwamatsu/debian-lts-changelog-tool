@@ -1,0 +1,537 @@
+mod-wsgi (4.6.5-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2022-2255
+    drop X-Client-IP header when is not a trusted header
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Mon, 12 Sep 2022 23:03:02 +0200
+
+mod-wsgi (4.6.5-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * [1156399] d/control: Set Vcs-* to salsa.debian.org
+  * [8d40d79] d/changelog: Remove trailing whitespaces
+  * [884363a] d/rules: Remove trailing whitespaces
+  * [dd1e447] Convert git repository from git-dpm to gbp layout
+
+  [ Chris Lamb ]
+  * [198441f] Remove trailing whitespaces.
+
+  [ Bernd Zeimetz ]
+  * [edb69c7] Removing manually generated changelog
+  * [acfabb5] Update upstream source from tag 'upstream/4.6.5'
+    Update to upstream version '4.6.5'
+    with Debian dir 154521a9e9f32e6ed349daeda7f53e913cd70e3c
+  * [d76c822] Add debian/.gitlab-ci.yml
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sun, 03 Feb 2019 00:30:51 +0100
+
+mod-wsgi (4.5.17-1) unstable; urgency=medium
+
+  [ Felix Geyer ]
+  * [0e844af] Remove myself from Uploaders.
+
+  [ Scott Kitterman ]
+  * [8a3cee5] * Fix min/max Python 3 version determination for multiple versions.   (closes: #866575)
+
+  [ Bernd Zeimetz ]
+  * [f2fada2] Merge tag 'upstream/4.5.17'
+    Upstream version 4.5.17
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sun, 09 Jul 2017 13:46:03 +0200
+
+mod-wsgi (4.5.11-1) unstable; urgency=medium
+
+  * [8d515a5] Merge tag 'upstream/4.5.11'
+    Upstream version 4.5.11
+
+ -- Bernd Zeimetz <bzed@debian.org>  Thu, 29 Dec 2016 21:45:11 +0100
+
+mod-wsgi (4.5.9-1) unstable; urgency=medium
+
+  * [ac3148d] Merge tag 'upstream/4.5.9'
+    Upstream version 4.5.9
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sat, 03 Dec 2016 19:29:05 +0100
+
+mod-wsgi (4.5.7-1) unstable; urgency=medium
+
+  [ SVN-Git Migration ]
+  * [ebb4318] Initialize git-dpm
+  * [2794e79] git-dpm config
+  * [94c1950] Update Vcs fields for git migration
+
+  [ Bernd Zeimetz ]
+  * [4b3b7b8] Merge tag 'upstream/4.4.21'
+    Upstream version 4.4.21
+  * [8c2e3d6] Merge remote-tracking branch 'origin/master'
+  * [8013cf8] Merge tag 'upstream/4.5.7'
+    Upstream version 4.5.7
+    Closes: #791617
+  * [1d01c26] Removing patches.
+  * [a148e62] snapshot changelog.
+  * [cffb965] remove changes in configure.ac
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sun, 25 Sep 2016 12:23:03 +0200
+
+mod-wsgi (4.4.13-0.1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Ran wrap-and-sort -t -a.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 15 Sep 2015 13:29:03 +0000
+
+mod-wsgi (4.3.0-1) unstable; urgency=medium
+
+  [ Felix Geyer ]
+  * Shorten the rules file using the dh(1) helper.
+  * Add autopkgtests.
+
+  [ Bernd Zeimetz ]
+  * New upstream release.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sun, 05 Oct 2014 12:28:04 +0200
+
+mod-wsgi (4.2.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use find instead of a simple cp to copy the source into build
+    directories.
+  * README was renamed to README.rst
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sat, 09 Aug 2014 11:11:36 +0200
+
+mod-wsgi (3.5-1) unstable; urgency=high
+
+  * New upstream release.
+    - Fixes CVE-2014-0240: Local privilege escalation when using daemon mode.
+  * Drop fix_crash_daemon_mode.patch, applied upstream.
+  * Refresh python-config.patch.
+  * Drop obsolete shlibs.local.
+  * Update watch file to check GitHub instead of Google Code.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+
+ -- Felix Geyer <fgeyer@debian.org>  Wed, 21 May 2014 21:45:05 +0200
+
+mod-wsgi (3.4-4) unstable; urgency=low
+
+  * Fix wsgi applications segfaulting when run in daemon mode under Apache 2.4.
+    Thanks to Stephan Adig. (Closes: #719304)
+    - Add fix_crash_daemon_mode.patch, cherry-picked from upstream.
+  * Add myself as uploader.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sat, 10 Aug 2013 18:17:01 +0200
+
+mod-wsgi (3.4-3) unstable; urgency=low
+
+  * Upload to unstable (python3 build dependency removed)
+  * Remove myself from Uploaders
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 30 May 2013 19:28:43 +0200
+
+mod-wsgi (3.4-2) experimental; urgency=low
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Felix Geyer ]
+  * Fix building against python3.3. Thanks to Dmitrijs Ledkovs for the
+    initial patch. (Closes: #692390)
+    - Add python-config.patch to make configure.ac query pythonX.Y-config
+      instead of python-distutils.
+  * Add support for Apache 2.4. Thanks to Ondřej Surý for the patch.
+    (Closes: #666818)
+  * Export build flags using /usr/share/dpkg/buildflags.mk.
+  * Bump Standards-Version to 3.9.4, no changes needed.
+
+  [ Piotr Ożarowski ]
+  * Add temporary python (>= 3.3) build dependency to make sure
+    python3-defaults from experimental is used during build
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 21 May 2013 22:03:58 +0200
+
+mod-wsgi (3.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * d/p/python-3.2-compat.patch: Dropped, superseded by new release.
+
+ -- Clint Byrum <clint@ubuntu.com>  Thu, 23 Aug 2012 16:34:39 -0700
+
+mod-wsgi (3.3-4) unstable; urgency=low
+
+  [ James Page ]
+  * Add a patch for Python 3.2 compatibility
+    - debian/patches/python-3.2-compat.patch: full patch to support
+      python >= 3.2 from Graham Dumpleton.
+  * Converted to source/format "3.0 (quilt)"
+
+  [ Piotr Ożarowski ]
+  * Add build-arch and build-indep targets in debian/rules
+  * Bump Standards-Version to 3.9.2 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 06 Oct 2011 20:38:03 +0200
+
+mod-wsgi (3.3-2) unstable; urgency=low
+
+  * Rebuild for Python 2.6.6 (Closes: #597915)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 26 Sep 2010 22:45:52 +0200
+
+mod-wsgi (3.3-1) unstable; urgency=low
+
+  [ Sameer Rahmani ]
+  * watch file fixed.
+
+  [ Bernd Zeimetz ]
+  * Ensure that the mod-wsgi symlink is updated to the current default Python
+    version while installing/upgrading the package. This is only necessary
+    in rare cases (when the default Python version was updated after the last
+    rebuild of mod-wsgi), but it needs to be handled properly.
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Move Python 3.X extension to new libapache2-mod-wsgi-py3 binary package
+  * Provide httpd-wsgi (see #588497)
+  * Bump Standards-Version to 3.9.1 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 18 Aug 2010 23:40:10 +0200
+
+mod-wsgi (3.2-2) unstable; urgency=low
+
+  * mod-wsgi needs to depend on libpython for Python > 2.5.
+    (Closes: #580425)
+
+ -- Bernd Zeimetz <bzed@debian.org>  Wed, 12 May 2010 18:12:36 +0200
+
+mod-wsgi (3.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Build Python 3.X version of the module
+    - python3-all-dev added to build dependencies
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 22 Mar 2010 20:05:19 +0100
+
+mod-wsgi (2.8-2) unstable; urgency=low
+
+  * Restart Apache instead of reloading config file in postinst (temporary
+    workaround for bug #558608)
+  * Section changed to "httpd"
+  * Bump Standards-Version to 3.8.4 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 01 Feb 2010 21:03:25 +0100
+
+mod-wsgi (3.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update wsgi.conf example.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sat, 19 Dec 2009 12:59:50 +0100
+
+mod-wsgi (2.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove postrm maintainer script, no longer needed as Lenny doesn't have
+    mod-wsgi.{conf,load} anymore and this script was removing new files (which
+    is handled by dpkg, closes: 558589)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 29 Nov 2009 14:07:48 +0100
+
+mod-wsgi (2.6-1) unstable; urgency=low
+
+  * New upstream release
+  * configure-apache-version.dpatch removed, no longer needed
+  * Bump Standards-Version to 3.8.3 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 11 Oct 2009 21:27:30 +0200
+
+mod-wsgi (2.5-1~lenny1) stable; urgency=medium
+
+  * Rebuild for Lenny (Closes: #526154)
+  * Add patch from upstream's mod_wsgi-2.X branch (revision 1352)
+    (decrement of reference count on NULL pointer)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 28 Aug 2009 23:17:18 +0200
+
+mod-wsgi (2.5-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * Updating patches to suit the new version.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sun, 17 May 2009 01:17:56 +0200
+
+mod-wsgi (2.4-1) unstable; urgency=low
+
+  [ Sandro Tosi ]
+  * Switch Vcs-Browser field to viewsvn
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Don't ignore errors in postrm maintainer script
+  * Standards-Version bumped to 3.8.1
+    + add debian/README.source file
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 18 Apr 2009 22:06:03 +0200
+
+mod-wsgi (2.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #496067). This upload covers the changes of
+    mod-wsgi 2.2 and 2.3.
+    mod-wsgi 2.2 is mainly bugfix-releases. The only exception is a backport
+    of one function from 3.0 which allows the setting of process names on *BSD
+    - this does not affect Linux.
+    mod-wsgi 2.3 fixes regressions which were introduced in 2.2.
+
+    Here follows a list of the bugfixes in 2.2:
+      1. Fix bug whereby if mod_python is loaded at same time as mod_wsgi the
+         WSGIImportScript directive can cause Apache child processes to crash.
+         For details see: http://code.google.com/p/modwsgi/issues/detail?id=91
+
+      2. Fix bug where mod_wsgi daemon process startup could fail due to old
+         stale UNIX listener socket file as described in:
+         http://code.google.com/p/modwsgi/issues/detail?id=77
+
+      3. Fix bug where listener socket file descriptors for daemon processes
+         were being leaked in Apache parent process on a graceful restart.
+         Also fixes problem where UNIX listener socket was left in filesystem
+         on both graceful restart and graceful shutdown. For details see:
+         http://code.google.com/p/modwsgi/issues/detail?id=95
+
+      4. Fix bug where response was truncated when a null character appeared
+         as first character in block of data being returned from
+         wsgi.file_wrapper.
+         Only occurred when code fell back to using iteration over supplied
+         file like object, rather than optimised method such as sendfile().
+         http://code.google.com/p/modwsgi/issues/detail?id=100
+
+    The following regressions/bugs of 2.2 were fixed in 2.3:
+
+      1. Fixed problem introduced in version 2.2 of mod_wsgi whereby use of
+         daemon mode would cause CGI scripts to fail. It is quite possible
+         that the bug could also have caused failures with other Apache
+         modules that relied on registering of cleanup functions against
+         Apache configuration memory pool.
+
+      2. (does not affect Linux)
+         When using setproctitle() on BSD systems, first argument should be
+         a printf style format string with values to fill out per format as
+         additional arguments. Code was supplying value to be displayed as
+         format string which meant that if it contained any printf type format
+         sequences, could cause process to crash as corresponding arguments
+         wouldn't have ben provided.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Sat, 23 Aug 2008 19:27:48 +0200
+
+mod-wsgi (2.1-2) unstable; urgency=medium
+
+  * Calling pyversions in postinst requires that 'python' is installed *and*
+    configured, so it would need to be added to Pre-Depends. As this is kinda
+    ugly, we ship the symlink to the module for the right Python version now
+    in the package. I assume that this will really fix #483197 now, I'm quite
+    sure that the broken link results from an error message of the
+    unconfigured python/pyversions. Shipping the symlink also makes sure that
+    it is available while Apache is configured (which may happen before
+    mod-wsgi is configured). (Closes: #483197, #491478)
+  * Drop the parts from the maintainer scripts which renamed the wsgi config
+    files (see #456737 for details) - as mod-wsgi was not released with Etch
+    and the fix was for a long enough time in testing, it should be safe to
+    remove them before Lenny.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Mon, 21 Jul 2008 01:20:43 +0200
+
+mod-wsgi (2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/libapache2-mod-wsgi.rtupdate:
+    - Fixing bashism. Thanks to Vitaliyi (Closes: #483197)
+  * debian/copyright:
+    - Removing full text of the Apache License, linking to
+      /usr/share/common-licenses/Apache-2.0 instead.
+  * debian/wsgi.conf:
+    - Removing WSGIPythonExecutable directive from the example configuration
+      as it does not exist in 2.X versions of mod-wsgi. Thanks to Martin
+      Tomasek for the report. (Closes: #488982)
+
+ -- Bernd Zeimetz <bzed@debian.org>  Mon, 07 Jul 2008 00:37:50 +0200
+
+mod-wsgi (2.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * Merging changes of the experimental uploads.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Fri, 21 Mar 2008 11:49:44 +0100
+
+mod-wsgi (2.0~c5-1) experimental; urgency=low
+
+  * New beta version.
+  * debian/control:
+    - Updating my email address.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Mon, 17 Mar 2008 23:55:10 +0100
+
+mod-wsgi (2.0~c4-2) experimental; urgency=low
+
+  * Rename mod_wsgi.load to wsgi.load to follow
+    /etc/apache2/mods-available best practise (sync with 1.3-2 from unstable)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 07 Jan 2008 16:36:35 +0100
+
+mod-wsgi (1.3-2) unstable; urgency=low
+
+  [ Sandro Tosi ]
+  * debian/control
+    - uniforming Vcs-Browser field
+
+  [ Piotr Ożarowski ]
+  * Rename mod_wsgi.load to wsgi.load (to follow
+    /etc/apache2/mods-available best practise, closes: 456737)
+  * Bump Standards-Version to 3.7.3 (no changes needed)
+  * Add myself to Uploaders
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 07 Jan 2008 16:24:51 +0100
+
+mod-wsgi (2.0~c4-1) experimental; urgency=low
+
+  * New beta version.
+  * debian/control:
+    - Updating my email address.
+    - Updating Standards-Version to 3.7.3.
+
+ -- Bernd Zeimetz <bzed@debian.org>  Fri, 14 Dec 2007 21:29:12 +0100
+
+mod-wsgi (2.0~c3-1) experimental; urgency=low
+
+  * New beta version.
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Sat, 17 Nov 2007 16:16:36 +0100
+
+mod-wsgi (1.3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Sat, 17 Nov 2007 16:15:06 +0100
+
+mod-wsgi (2.0~c2-1) experimental; urgency=low
+
+  * New beta version.
+  * debian/patches:
+    - Removing ap_thread_stacksize.dpatch as the issue is fixed by upstream
+      now.
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Thu, 08 Nov 2007 12:14:55 +0100
+
+mod-wsgi (2.0~c1-2) experimental; urgency=low
+
+  * debian/control: reverting the change from -1
+  * debian/patches:
+    - Adding ap_thread_stacksize.dpatch to allow us to build the module using
+      apache-threaded-dev. In the rare case that somebody would like to
+      configure the stack size of WSGIDaemonProcess, both ThreadStackSize and
+      stack-size option need to be set due to this change.
+      Thanks to the upstream author, Graham Dumpleton.
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Tue, 30 Oct 2007 22:11:50 +0100
+
+mod-wsgi (2.0~c1-1) experimental; urgency=low
+
+  [ Bernd Zeimetz ]
+  *  Beta version of the upcoming 2.0 version.
+
+  [ Piotr Ożarowski ]
+  * debian/control:
+    - move "apache2-mpm-worker | apache2-mpm-event" from Suggests to Depends
+      as 2.0~c1 doesn't work with apache2-mpm-prefork
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Tue, 30 Oct 2007 21:45:46 +0100
+
+mod-wsgi (1.2-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/watch:
+    - Only watching for updates of released versions now, beta versions go
+      into an experimental branch.
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Tue, 30 Oct 2007 03:04:20 +0100
+
+mod-wsgi (1.1-2) unstable; urgency=low
+
+  * Applying a patch from Josselin Mouette - thanks, introducing the
+    following changes
+    - Build the module for all supported python versions.
+    - Ship a rtupdate script to rotate to the new version when the python
+      version changes.
+    - Build-depend on python-all-dev.
+    (Closes: #445486)
+
+  * debian/control:
+    - Renaming XS-Vcs-* fields to Vcs-*, as they're supported by dpkg now
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Sat, 06 Oct 2007 15:16:00 +0200
+
+mod-wsgi (1.1-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control:
+    - Adding Homepage field, removing pseudo-field from description
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Mon, 01 Oct 2007 10:28:37 +0200
+
+mod-wsgi (1.0-2) unstable; urgency=low
+
+  * debian/control:
+    - Moving apache workers from Recommends to Suggests to make the package
+      installation more easy for those who really want to use PHP, which
+      depends on the preforking worker (Closes: #443105).
+    - Adding apache2 to Depends
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Tue, 18 Sep 2007 20:35:06 +0200
+
+mod-wsgi (1.0-1) unstable; urgency=low
+
+  * New upstream version - first stable release.
+  * debian/watch:
+    - Small fix to recognize versions correctly
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Wed, 05 Sep 2007 14:17:20 +0200
+
+mod-wsgi (1.0~c4-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/patches:
+    - Removing r413-error-log-fix.dpatch as this fix is included in the
+      upstream tarball
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Thu, 30 Aug 2007 17:20:36 +0200
+
+mod-wsgi (1.0~c2-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control:
+    - Removing autotools-dev build-dep, as configure relies on the information
+      provided by apxs2 and does not take care of config.sub or config.guess.
+  * debian/watch:
+    - Fixing filenamemangle to allow uscan to download the file
+  * debian/patches/makefile-destdir.dpatch,umask-fix.dpatch:
+    - Removing files, changes were added upstream
+  * debian/patches/r413-error-log-fix.dpatch:
+    - Adding patch from upstream's svn to fix a bug which could result in a
+      crash of mod-wsgi, for details see
+      http://code.google.com/p/modwsgi/issues/detail?id=24
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Sun, 12 Aug 2007 12:56:10 +0200
+
+mod-wsgi (1.0~c1-2) unstable; urgency=low
+
+  * debian/mod-wsgi.conf:
+    - Adding a config file for mod-wsgi to allow easy configuration for users
+  * debian/control:
+    - Adding apache2-mpm-worker | apache2-mpm-event as Recommends to provide a
+      fast default worker
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Tue, 31 Jul 2007 02:31:59 +0200
+
+mod-wsgi (1.0~c1-1) unstable; urgency=low
+
+  * Initial release (Closes: #415332)
+
+ -- Bernd Zeimetz <bernd@bzed.de>  Mon, 30 Jul 2007 16:22:40 +0200

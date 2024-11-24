@@ -1,0 +1,102 @@
+golang-text (0.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Replace golang-github-kr-pty-dev with golang-github-creack-pty-dev
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 27 Nov 2020 00:52:28 +0800
+
+golang-text (0.1.0-3) UNRELEASED; urgency=low
+
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sat, 06 Jun 2020 11:54:07 -0000
+
+golang-text (0.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Drop oldlibs golang-text-dev (Closes: #939236)
+  * Remove Tonnerre Lombard from Uploaders (Closes: #836491)
+  * Add Rules-Requires-Root
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Switch to debhelper-compat syntax
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Apr 2020 02:49:29 +0800
+
+golang-text (0.1.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream release 0.1.0
+  * Add debian/watch to track upstream release tarballs
+  * Apply "cme fix dpkg" fixes:
+     - Use secure HTTPS URL in debian/copyright;
+     - Change Priority from extra to optional;
+     - Update debhelper dependency to (>= 12~);
+     - Add Testsuite: autopkgtest-pkg-go;
+     - Bump Standards-Versions to 4.3.0 (no change), etc.
+  * Build-Depends on golang-any instead of golang-go
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Remove DH_GOPKG variable from debian/rules because debian/control
+    already specifies "XS-Go-Import-Path: github.com/kr/text"
+  * Add dependency on golang-github-kr-pty-dev in case
+    autopkgtest-pkg-go needs it to test mc/mc.go
+  * Remove DH_GOLANG_EXCLUDES of github.com/kr/text/mc from debian/rules
+
+ -- Anthony Fok <foka@debian.org>  Fri, 18 Jan 2019 01:00:00 -0700
+
+golang-text (0.0~git20150905.0.bb797dc-3) unstable; urgency=medium
+
+  * Add missing Replaces, Breaks and Provides fields for smoother
+    package transition.
+
+ -- Anthony Fok <foka@debian.org>  Thu, 28 Apr 2016 01:53:49 +0800
+
+golang-text (0.0~git20150905.0.bb797dc-2) unstable; urgency=medium
+
+  * Fix wrong package name in Depends field of transitional package
+    golang-text-dev.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 27 Apr 2016 23:39:44 +0800
+
+golang-text (0.0~git20150905.0.bb797dc-1) unstable; urgency=medium
+
+  [ Tonnerre LOMBARD ]
+  * debhelper changed its versioning schema with v9.
+
+  [ Anthony Fok ]
+  * New upstream snapshot
+  * Add debian/gbp.conf setting pristine-tar to True
+  * Update fields in debian/control
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-* fields
+    - Add XS-Go-Import-Path: github.com/kr/text
+    - Change Maintainer to Debian Go Packaging Team (pkg-go)
+    - Add myself as to the list of Uploaders
+  * List package name explicitly as "github.com/kr/text"
+    to avoid confusion with "golang.org/x/text"
+  * Transition package name to "golang-github-kr-text-dev"
+    for pkg-go policy compliance
+  * Merge patch by James Page to re-enable test suite execution
+    (Acknowledge 0.0~git20130502-1ubuntu1, Closes: #802460)
+  * Use DH_GOLANG_EXCLUDES instead of deleting mc manually
+
+ -- Anthony Fok <foka@debian.org>  Wed, 27 Apr 2016 16:27:50 +0800
+
+golang-text (0.0~git20130502-1ubuntu1) wily; urgency=medium
+
+  * Re-enable test suite execution during package build.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 20 Oct 2015 10:49:33 +0100
+
+golang-text (0.0~git20130502-1) unstable; urgency=low
+
+  * Initial release. Closes: #722984
+
+ -- Tonnerre Lombard <tonnerre@ancient-solutions.com>  Wed, 11 Sep 2013 03:05:15 +0200

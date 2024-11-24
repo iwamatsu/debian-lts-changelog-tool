@@ -1,0 +1,63 @@
+alabaster (0.7.8-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop python2 support; Closes: #936114
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 27 Mar 2020 23:22:09 -0400
+
+alabaster (0.7.8-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.8
+  * Update Standards-Version (no changes needed)
+  * Update Priority to match override
+  * Update debian/copyright file references
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Sat, 11 Jun 2016 23:18:07 -0400
+
+alabaster (0.7.7-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.7
+  * Update debian/copyright for setup.cfg
+  * Update debian/watch to use pypi.debian.net
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Thu, 03 Mar 2016 09:58:46 -0500
+
+alabaster (0.7.6-2) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Demote sphinx from Depends to Suggests. (Closes: #783794)
+  * Set priority to optional.
+
+  [ Jeremy T. Bouse ]
+  * Upgrade Standards-Version to 3.9.7 no changes needed
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Wed, 02 Mar 2016 19:18:51 -0500
+
+alabaster (0.7.6-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.6
+  * Update debian/copyright
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Wed, 08 Jul 2015 10:26:20 -0400
+
+alabaster (0.7.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.3
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Sun, 22 Mar 2015 23:54:17 -0400
+
+alabaster (0.7.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.2 (Closes: #780345)
+  * Update Standards-Version (no changes needed)
+  * README.md renamed to README.rst upstream
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Thu, 12 Mar 2015 22:22:27 -0400
+
+alabaster (0.6.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.6.1
+  * Initial release
+  * Add lintian overrides for layout template file
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Mon, 22 Sep 2014 14:38:33 -0400

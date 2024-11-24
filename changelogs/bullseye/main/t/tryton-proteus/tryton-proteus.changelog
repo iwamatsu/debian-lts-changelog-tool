@@ -1,0 +1,423 @@
+tryton-proteus (5.0.8-1+deb11u1) bullseye-security; urgency=high
+
+  * This release contains fixes for XML parsing vulnerabilities:
+    https://discuss.tryton.org/t/security-release-for-issue11219-and-issue11244/5059
+    https://bugs.tryton.org/issue11219 (CVE-2022-26661)
+    https://bugs.tryton.org/issue11244 (CVE-2022-26662)
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 09 Mar 2022 12:49:20 +0100
+
+tryton-proteus (5.0.8-1) unstable; urgency=medium
+
+  * Update year of debian copyright.
+  * Bump the Standards-Version to 4.5.0, no changes needed.
+  * Add Rules-Requires-Root: no to d/control.
+  * Merging upstream version 5.0.8.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Dec 2020 09:51:46 +0100
+
+tryton-proteus (5.0.7-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.7.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 03 Dec 2019 10:30:55 +0100
+
+tryton-proteus (5.0.5-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 04 Nov 2019 10:44:10 +0100
+
+tryton-proteus (5.0.4-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 21 Oct 2019 13:02:45 +0200
+
+tryton-proteus (5.0.3-2) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.4.0, no changes needed.
+  * Update year of debian copyright.
+  * Setting the branch in the watch file to the fixed version 5.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 22 Jul 2019 12:17:41 +0200
+
+tryton-proteus (5.0.3-1) unstable; urgency=medium
+
+  * Add the actual upstream maintainer key to signing-key.asc.
+  * Merging upstream version 5.0.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 23 Apr 2019 09:57:40 +0200
+
+tryton-proteus (5.0.2-1) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.3.0, no changes needed.
+  * Merging upstream version 5.0.2.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 20 Feb 2019 12:11:51 +0100
+
+tryton-proteus (5.0.1-3) unstable; urgency=medium
+
+  * Add missing test Depends.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 03 Jan 2019 21:28:19 +0100
+
+tryton-proteus (5.0.1-2) unstable; urgency=medium
+
+  * Run the package test suite as autopkgtest.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 01 Jan 2019 20:35:44 +0100
+
+tryton-proteus (5.0.1-1) unstable; urgency=medium
+
+  * Cleanup white space.
+  * Merging upstream version 5.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 03 Dec 2018 13:39:17 +0100
+
+tryton-proteus (5.0.0-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.0.
+  * Remove Build-Depends: python3-simplejson.
+  * Updating to Standards-Version: 4.2.1, no changes needed.
+  * Update signing-key.asc with the minimized actual upstream maintainer
+    key.
+  * Update man page.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 20 Nov 2018 17:08:41 +0100
+
+tryton-proteus (4.6.1-2) unstable; urgency=medium
+
+  * Remove tryton-server from Build-Depends.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 12 May 2018 22:46:32 +0200
+
+tryton-proteus (4.6.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.1.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 29 Mar 2018 23:49:21 +0200
+
+tryton-proteus (4.6.0-2) unstable; urgency=medium
+
+  * Update year of debian copyright.
+  * Updating to standards version 4.1.3, no changes needed.
+  * control: update Vcs-Browser and Vcs-Git
+  * Set the Maintainer address to team+tryton-team@tracker.debian.org.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 29 Mar 2018 21:15:22 +0200
+
+tryton-proteus (4.6.0-1) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.1.0, no changes needed.
+  * Bump the Standards-Version to 4.1.1, no changes needed.
+  * Merging upstream version 4.6.0.
+  * Updating debian/manpages.
+  * Use https in the watch file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 07 Nov 2017 10:20:48 +0100
+
+tryton-proteus (4.4.0-4) unstable; urgency=medium
+
+  * Switch to Python3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 18 Aug 2017 12:35:49 +0200
+
+tryton-proteus (4.4.0-3) unstable; urgency=medium
+
+  * Use the preferred https URL format in the copyright file.
+  * Bump the Standards-Version to 4.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Aug 2017 16:03:13 +0200
+
+tryton-proteus (4.4.0-2) unstable; urgency=medium
+
+  * Change the maintainer address to tryton-debian@lists.alioth.debian.org
+    (Closes: #865109).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 11 Jul 2017 12:36:31 +0200
+
+tryton-proteus (4.4.0-1) unstable; urgency=medium
+
+  * Add the actual upstream maintainer key to signing-key.asc.
+  * Merging upstream version 4.4.0.
+  * Updating debian/copyright.
+  * Updating debian/manpages.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 10 Jun 2017 23:30:15 +0200
+
+tryton-proteus (4.2.0-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.0.
+  * Updating the Depends for 4.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 05 Dec 2016 15:31:43 +0100
+
+tryton-proteus (4.0.3-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 08 Nov 2016 09:36:42 +0100
+
+tryton-proteus (4.0.2-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 03 Sep 2016 21:04:39 +0200
+
+tryton-proteus (4.0.1-1) unstable; urgency=medium
+
+  * Updating to Standards-Version: 3.9.8, no changes needed.
+  * Merging upstream version 4.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 05 Aug 2016 12:06:04 +0200
+
+tryton-proteus (4.0.0-1) unstable; urgency=medium
+
+  * Updating signing-key.asc with the actual upstream maintainer keys.
+  * Merging upstream version 4.0.0.
+  * Updating the copyright file.
+  * Adapting and improving the man page.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 30 May 2016 19:33:14 +0200
+
+tryton-proteus (3.8.1-2) unstable; urgency=medium
+
+  * Updating to standards version 3.9.7, no changes needed.
+  * Updating VCS-Browser to https and canonical cgit URL.
+  * Updating VCS-Git to https and canonical cgit URL.
+  * Removing the braces from the dh call.
+  * Removing the version constraint from python.
+  * Disable tests globally for all Python versions.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 08 Mar 2016 13:09:33 +0100
+
+tryton-proteus (3.8.1-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 17 Jan 2016 19:50:23 +0100
+
+tryton-proteus (3.8.0-1) unstable; urgency=medium
+
+  * Enabling tests on sqlite memory database.
+  * Merging upstream version 3.8.0.
+  * Disabling tests again and adding the explanation why we cannot run
+    them.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 13 Nov 2015 10:47:33 +0100
+
+tryton-proteus (3.6.1-1) unstable; urgency=medium
+
+  * Updating year of debian copyright.
+  * Adapting section naming in gbp.conf to current git-buildpackage.
+  * Merging upstream version 3.6.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 15 Jul 2015 14:14:54 +0200
+
+tryton-proteus (3.6.0-1) unstable; urgency=medium
+
+  * Wrapping and sorting control files (wrap-and-sort -bts).
+  * Merging upstream version 3.6.0.
+  * Updating manpage.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 26 Apr 2015 23:49:49 +0200
+
+tryton-proteus (3.4.3-1) unstable; urgency=medium
+
+  * Improving boilerplate in d/control (Closes: #771722).
+  * Merging upstream version 3.4.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 31 Mar 2015 14:30:53 +0200
+
+tryton-proteus (3.4.2-1) unstable; urgency=medium
+
+  * Adding actual upstream signing key.
+  * Merging upstream version 3.4.2.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 18 Feb 2015 10:40:06 +0100
+
+tryton-proteus (3.4.1-1) unstable; urgency=medium
+
+  * Merging upstream version 3.4.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 04 Dec 2014 19:20:04 +0100
+
+tryton-proteus (3.4.0-1) unstable; urgency=medium
+
+  * Adding actual upstream signing key.
+  * Updating to Standards-Version: 3.9.6, no changes needed.
+  * Merging upstream version 3.4.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 21 Oct 2014 20:24:42 +0200
+
+tryton-proteus (3.2.1-1) unstable; urgency=medium
+
+  * Updating signing key while using now plain .asc files instead of .pgp
+    binaries.
+  * Merging upstream version 3.2.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 02 Jul 2014 14:20:33 +0200
+
+tryton-proteus (3.2.0-1) unstable; urgency=medium
+
+  * Removing  LC_ALL=C.UTF-8 as build environment.
+  * Merging upstream version 3.2.0.
+  * Updating copyright.
+  * Bumping minimal required Python version to 2.7.
+  * Updating gbp.conf for usage of upstream tarball compression.
+  * Updating manpage.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 24 Apr 2014 15:30:23 +0200
+
+tryton-proteus (3.0.0-3) unstable; urgency=medium
+
+  * Updating year in debian copyright.
+  * Removing debian/source/options, we are building with dpkg defaults.
+  * Removing PYBUILD_DESTDIR_python2 from rules, it is no more needed.
+  * Adding pgp verification for uscan.
+  * Adding gbp.conf for usage with git-buildpackage.
+  * Rebuilding for missing binaries (Closes: #738565).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 10 Feb 2014 19:39:55 +0100
+
+tryton-proteus (3.0.0-2) unstable; urgency=low
+
+  * Pointing VCS fields to new location on alioth.debian.org.
+  * Using dpkg defaults for xz compression.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 02 Dec 2013 21:18:07 +0100
+
+tryton-proteus (3.0.0-1) unstable; urgency=low
+
+  * Merging upstream version 3.0.0.
+  * Updating to standards version 3.9.5, no changes needed.
+  * Changing to buildsystem pybuild.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 25 Nov 2013 17:55:58 +0100
+
+tryton-proteus (2.8.0-3) unstable; urgency=low
+
+  * Adapting the rules file to work also with git-buildpackage.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 06 Aug 2013 13:33:56 +0200
+
+tryton-proteus (2.8.0-2) unstable; urgency=low
+
+  * Removing needless empty line in rules.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 31 May 2013 17:27:39 +0200
+
+tryton-proteus (2.8.0-1) experimental; urgency=low
+
+  * Merging upstream version 2.8.0.
+  * Updating copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 02 May 2013 15:21:21 +0200
+
+tryton-proteus (2.6.1-3) experimental; urgency=low
+
+  * Removing Daniel from Uploaders. Thanks for your work! (Closes: #704409).
+  * Adding README.Debian to point out version dependency.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 27 Apr 2013 15:25:57 +0200
+
+tryton-proteus (2.6.1-2) experimental; urgency=low
+
+  * Updating Vcs-Git to correct address.
+  * Adding watch file. Thanks to Bart Martens <bartm@debian.org>.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 23 Mar 2013 14:01:35 +0100
+
+tryton-proteus (2.6.1-1) experimental; urgency=low
+
+  * Removing obsolete Dm-Upload-Allowed
+  * Updating to Standards-Version: 3.9.4, no changes needed.
+  * Merging upstream version 2.6.1.
+  * Updating copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 16 Feb 2013 21:44:45 +0100
+
+tryton-proteus (2.6.0-1) experimental; urgency=low
+
+  * Merging upstream version 2.6.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 24 Oct 2012 14:25:26 +0200
+
+tryton-proteus (2.4.1-2) experimental; urgency=low
+
+  [ Daniel Baumann ]
+  * Updating maintainers field.
+  * Updating vcs fields.
+  * Switching to xz compression.
+  * Updating to debhelper version 9.
+  * Correcting copyright file to match format version 1.0.
+
+  [ Mathias Behrle ]
+  * Adding python-dateutil to Build-Depends and Depends.
+  * Merging branch debian-wheezy-2.2 (Closes: #687745).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 17 Sep 2012 12:31:15 +0200
+
+tryton-proteus (2.4.1-1) experimental; urgency=low
+
+  * Merging upstream version 2.4.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 11 Sep 2012 13:20:01 +0200
+
+tryton-proteus (2.4.0-1) experimental; urgency=low
+
+  * Updating to Standards-Version: 3.9.3, no changes needed.
+  * Updating year in copyright.
+  * Adding Format header for DEP5.
+  * Merging upstream version 2.4.0.
+  * Updating Copyright.
+  * Updating Depends and Recommends.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 26 Apr 2012 19:33:55 +0200
+
+tryton-proteus (2.2.1-1) unstable; urgency=low
+
+  * Merging upstream version 2.2.1.
+  * Changing license to LGPL-3+ according to upstream.
+  * Bumping X-Python-Version to >=2.6.
+  * Merging upstream version 2.2.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 26 Dec 2011 13:56:23 +0100
+
+tryton-proteus (2.0.0-2) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Not wrapping uploaders field, it does not exceed 80 chars.
+  * Compacting copyright file.
+  * Moving to source format 3.0 (quilt).
+  * Updating manpage.
+
+  [ Mathias Behrle ]
+  * Moving from deprecated python-support to dh_python2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 14 Jul 2011 01:26:41 +0200
+
+tryton-proteus (2.0.0-1) unstable; urgency=low
+
+  * Updating to standards version 3.9.2.
+  * Merging upstream version 2.0.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 24 May 2011 21:37:33 +0200
+
+tryton-proteus (1.8.1-1) unstable; urgency=low
+
+  * Merging upstream version 1.8.1.
+  * Updating Copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 15 Feb 2011 13:19:51 +0100
+
+tryton-proteus (1.8.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 15 Jan 2011 15:16:31 +0100

@@ -1,0 +1,13 @@
+node-trim-newlines (1.0.0-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2021-33623: Fix a potential regular expression denial-of-service
+    (ReDoS) attack in trim-newlines' .end() method.
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 23 Dec 2022 08:51:22 +0000
+
+node-trim-newlines (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #841999)
+
+ -- Sruthi Chandran <srud@disroot.org>  Tue, 25 Oct 2016 12:09:53 +0530

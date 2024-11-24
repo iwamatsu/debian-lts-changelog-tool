@@ -1,0 +1,776 @@
+debian-security-support (1:10+2024.01.31) buster-security; urgency=medium
+
+  [ Santiago Ruano Rincón ]
+  * Mark salt as non-supported in buster. (MR: debian/debian-security-support!22)
+
+  [ Holger Levsen ]
+  * Add tiles to security-support-limited, Closes: #1057343.
+  * Drop debian/.gitlab-ci.yml.
+
+ -- Holger Levsen <holger@debian.org>  Wed, 31 Jan 2024 22:09:59 +0100
+
+debian-security-support (1:10+2023.13.12) buster-security; urgency=medium
+
+  [ Sylvain Beucler ]
+  * security-support-limited: add gnupg1, see #982258.
+
+  [ Markus Koschany ]
+  * Add pluxml to security-support-ended.deb10.
+
+  [ Emilio Pozuelo Monfort ]
+  * Add webkit2gtk to security-support-ended.deb10
+  * Move webkit2gtk into security-support-limited.
+
+  [ Santiago Ruano Rincón ]
+  * Mark samba support limited to non-AD DC uses cases. Closes: #1053109.
+
+  [ Markus Koschany ]
+  * EOL Tor for Buster.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 12 Dec 2023 22:01:44 +0100
+
+debian-security-support (1:10+2022.08.23) buster; urgency=medium
+
+  * Introduce release based versioning and add an epoch to achieve that.
+    See https://lists.debian.org/20200817100153.GA944@layer-acht.org and
+    follow-ups. Closes: #988321
+  * Makefile.PL: strip epoch from internal version just like ~deb10u1 etc are
+    also dropped.
+  * Update security-support-ended.deb10 from 1:12+2022.08.12 from unstable,
+    thus adding these packages to it:
+    - chromium
+    - ckeditor3
+    - gpac
+    - libspring-java
+    - slurm-llnl
+    - xen
+  * Update security-support-limited from 1:12+2022.08.12 from unstable,
+    thus adding:
+    - golang
+    - khtml
+  * Drop libv8-3.14, mosjz, mosjz24, swftools and webkitgtk from
+    security-support-limited as they were only present in stretch and earlier.
+  * Also drop glpi, ltp and wine-gecko-2.(21|24) from security-support-limited
+    as they were only present in jessie or earlier.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 23 Aug 2022 18:57:12 +0200
+
+debian-security-support (2020.06.21~deb10u1) buster; urgency=medium
+
+  * Rebuild for buster.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 10 Jul 2020 19:29:25 +0200
+
+debian-security-support (2020.06.21) unstable; urgency=medium
+
+  [ Mike Gabriel ]
+  * Add cinder (OpenStack component) to security-support-ended.deb8.
+
+ -- Holger Levsen <holger@debian.org>  Sun, 21 Jun 2020 18:02:22 +0200
+
+debian-security-support (2020.06.11) unstable; urgency=medium
+
+  * Also add unbound to security-support-ended.deb8 - see DSA 4694-1
+    and https://lists.debian.org/debian-lts/2020/06/msg00024.html and
+    follow-ups.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 11 Jun 2020 02:15:12 +0200
+
+debian-security-support (2020.06.09) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Add unbound to security-support-ended.deb9 (see DSA 4694-1).
+
+ -- Holger Levsen <holger@debian.org>  Tue, 09 Jun 2020 02:17:43 +0200
+
+debian-security-support (2020.05.22) unstable; urgency=medium
+
+  * Add pdns-recursor to security-support-ended.deb9 as explained in
+    DSA-4691-1.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 22 May 2020 12:34:55 +0200
+
+debian-security-support (2020.05.08) unstable; urgency=medium
+
+  [ Chris Lamb ]
+  * Mark OpenStack packages as being unsupported in LTS; "jessie lost support
+    from upstream just a few weeks after the release."
+
+ -- Holger Levsen <holger@debian.org>  Fri, 08 May 2020 15:14:41 +0200
+
+debian-security-support (2020.04.16) unstable; urgency=medium
+
+  * Add tor to security-support-ended.deb8 as well, see DSA 4644-1.
+  * Add libperlspeak-perl to security-support-ended.deb(8|9|10), because of
+    CVE-2020-10674 (#954238), also see #954297, #954298 and #954299.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 16 Apr 2020 02:16:25 +0200
+
+debian-security-support (2020.03.22) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Add tor to security-support-ended.deb9, see DSA 4644-1.
+
+ -- Holger Levsen <holger@debian.org>  Sun, 22 Mar 2020 10:15:38 +0100
+
+debian-security-support (2020.03.15) unstable; urgency=medium
+
+  [ Dmitry Smirnov ]
+  * security-support-limited/zoneminder: declare limited support behind an
+    authenticated HTTP zone (see #922724).
+
+  [ Daniel Shahaf ]
+  * Revert unintentional output change in #951874 4/4. Closes: #953732.
+
+ -- Holger Levsen <holger@debian.org>  Sun, 15 Mar 2020 11:03:43 +0100
+
+debian-security-support (2020.03.05) unstable; urgency=medium
+
+  [ Bastian Blank ]
+  * Add xen to security-support-ended.deb8.
+
+  [ Holger Levsen ]
+  * Correct bug closure for #951874 in 2020.02.25 changelog entry. #951772 was
+    already closed in 2020.02.21.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 05 Mar 2020 11:04:22 +0100
+
+debian-security-support (2020.02.25) unstable; urgency=medium
+
+  [ Daniel Shahaf ]
+  * Miscellaneous sh fixes, Closes: #951874.
+    - avoid implementation-defined behaviour.
+    - fix --version output, use defined variable.
+    - print errors and warnings to stderr.
+    - clarify an error message.
+
+  [ Holger Levsen ]
+  * postinst and check-support-status.hook: drop workaround for upgrades from
+    releases before 2016-03-30.
+  * check-support-status.in:
+    - drop code needed for supporting dpkg-query from squeeze.
+    - set DEB_LOWEST_VER_ID=8 as we dropped security-support-ended.deb7 in the
+      last upload.
+    - Don't exit gracefully if the detected Debian version is not supported,
+      instead issue a warning and continue, to both do the checks that can be
+      done and to not fail the package installation. Closes: #952383.
+  * po/debian-security-support.pot: drop removed string.
+  * Update all .po files for changed strings in the English original.
+  * Add "package-uses-old-debhelper-compat-version 11" to
+    source/lintian-overrides. The package shall be trivially buildable on
+    stable.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 25 Feb 2020 15:46:23 +0100
+
+debian-security-support (2020.02.21) unstable; urgency=medium
+
+  [ Holger Levsen ]
+  * Drop security-support-ended.deb7, we don't support wheezy anymore. (eLTS
+    is maintained outside Debian.)
+  * Add nodejs to security-support-ended.deb8 and .deb9.
+  * Use runuser instead of su. Closes: #890862. Thanks to Jakobus Schürz.
+  * Wrap long lines in changelog entries: 2015.04.04, thanks lintian-brush.
+  * Fix day-of-week for changelog entry 2015.04.04, thanks lintian-brush.
+
+  [ Daniel Shahaf ]
+  * Allow one to exclude specific packages from the check. Closes: #951442.
+  * Prefix "check-support-status: " to error messages. Closes: #951772.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 21 Feb 2020 18:38:55 +0100
+
+debian-security-support (2020.01.21) unstable; urgency=medium
+
+  [ Abhijith PA ]
+  * Add nethack to security-support-ended.deb8.
+
+  [ Salvatore Bonaccorso ]
+  * Mark xen as end-of-life for Stretch (DSA 4602-1).
+
+  [ Holger Levsen ]
+  * Improve describe of binutils' status in security-support-limited. Thanks
+    to Daniel Shahaf for the patch. Closes: #948634.
+  * Bump standards version to 4.5.0, no changes needed.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 21 Jan 2020 16:18:37 +0100
+
+debian-security-support (2019.12.12) unstable; urgency=medium
+
+  * security-support-limited: point to https://www.debian.org/releases/ \
+    buster/amd64/release-notes/ch-information.en.html#golang-static-linking
+    for golang* packages.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 12 Dec 2019 16:52:42 +0100
+
+debian-security-support (2019.11.16) unstable; urgency=medium
+
+  * Add chromium to security-support-ended.deb9.
+  * d/rules: update to NEXT_VERSION_ID=11.
+
+ -- Holger Levsen <holger@debian.org>  Sat, 16 Nov 2019 11:00:08 +0100
+
+debian-security-support (2019.11.15) unstable; urgency=medium
+
+  * Team upload.
+  * Add libqb to security-support-ended.deb8.
+
+ -- Roberto C. Sanchez <roberto@debian.org>  Fri, 15 Nov 2019 09:17:07 -0500
+
+debian-security-support (2019.11.01) unstable; urgency=medium
+
+  * Remove nodejs from security-support-limited as it is supported since the
+    Buster release. Closes: #931376.
+  * Add empty security-support-ended.deb11 file.
+  * check-support-status.in: set DEB_NEXT_VER_ID=11.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 01 Nov 2019 19:49:47 +0100
+
+debian-security-support (2019.10.31) unstable; urgency=medium
+
+  * Mark nodejs only suitable for trusted content. Closes: #931376.
+  * Add nasm-mozilla and nodejs-mozilla to security-support-ended.deb8
+    and security-support-ended.deb9 as they are only provided as build
+    dependency for Firefox/Thunderbird >= 68. Closes: #943365.
+  * Bump standards version to 4.4.1, no changes needed.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 31 Oct 2019 21:30:17 +0100
+
+debian-security-support (2019.06.13) unstable; urgency=medium
+
+  [ Emilio Pozuelo Monfort ]
+  * Add mysql-5.5 to security-support-ended.deb8.
+
+  * Translation updates:
+    - Danish, thanks to Joe Dalton. Closes: #929941.
+    - Czech, thanks to Michal Simunek. Closes: #930384.
+    - this means all included translations are uptodate, yay!
+
+ -- Holger Levsen <holger@debian.org>  Thu, 13 Jun 2019 18:27:05 +0200
+
+debian-security-support (2019.06.01) unstable; urgency=medium
+
+  * New translations:
+    - Swedish, thanks to Andreas Ronnquist. Closes: #929401.
+    - Dutch, thanks to Frans Spiesschaert. Closes: #929809.
+  * Translation updates:
+    - Russian, thanks to Yuri Kozlov. Closes: #929384.
+    - Japanese, thanks to Shinichi Sakata and victory.
+    - Portuguese, thanks to Américo Monteiro. Closes: #929404.
+    - Polish, thanks to Łukasz Dulny.
+    - Brasilian Portuguese, thanks to Adriano Rafael Gomes. Closes: #929765.
+    - Italian, thanks to Beatrice Torracca. Closes: #929812.
+
+ -- Holger Levsen <holger@debian.org>  Sat, 01 Jun 2019 17:44:00 +0200
+
+debian-security-support (2019.05.22) unstable; urgency=medium
+
+  * Mark jasperreports as end-of-life in Stretch as well. Closes: #884907.
+  * Explain in comments to check-support-status.hook and postinst that code
+    needs to be present in both files as the hook could be run before
+    postinst. #928968 has a longer explanation why and is used for tracking
+    that this will be properly fixed eventually.
+
+ -- Holger Levsen <holger@debian.org>  Wed, 22 May 2019 14:49:10 +0200
+
+debian-security-support (2019.05.14) unstable; urgency=medium
+
+  * check-support-status.in: don't fail if security-support-ended.debX does
+    not exist for the release d-s-s is running on. Closes: #927450.
+  * postinst and check-support-status.hook: add code to create the d-s-s
+    user's home directory if it doesn't exist, as schroot copies /etc/passwd
+    from the host without creating the user home directories. Closes: #928204.
+    Thanks to Santiago Vila.
+  * d/control: set myself as maintainer to formally adopt the package and drop
+    Christoph Biedl on his request. Many thanks for creating this package and
+    maintaining it, Christoph!
+
+ -- Holger Levsen <holger@debian.org>  Tue, 14 May 2019 11:48:37 +0200
+
+debian-security-support (2019.04.25) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Moritz Muehlenhoff ]
+  * Remove mozjs17 from security-support-limited, long gone, add
+    mozjs52 and mozjs60 instead.
+  * Remove webkitgtk from security-support-limited, covered by security
+    support now.
+  * Remove xulrunner from security-support-limited, long gone.
+  * Mark binutils as not covered by security support.
+
+  [ Holger Levsen ]
+  * check-support-status.in: set latest supported version to Debian 10 /
+    Buster. Closes: #927450.
+  * Add empty security-support-ended.deb10 file.
+  * Drop security-support-ended.deb6 as we don't support Squeeze anymore.
+
+ -- Holger Levsen <holger@debian.org>  Thu, 25 Apr 2019 11:36:54 +0200
+
+debian-security-support (2019.02.02) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Markus Koschany ]
+  * Mark spice-xpi as end-of-life for Jessie.
+  * Add edk2 to security-support-ended.deb8
+  * Add robocode to security-support-ended.deb8
+
+  [ Salvatore Bonaccorso ]
+  * Mark qtwebengine-opensource-src as limited-support.
+    Thanks to Benjamin Barenblat <bbaren@debian.org> (Closes: #926179)
+
+ -- Holger Levsen <holger@debian.org>  Tue, 02 Apr 2019 12:23:47 +0200
+
+debian-security-support (2019.02.01) unstable; urgency=medium
+
+  * Team upload.
+  * mark enigmail as unsupported in jessie
+
+ -- Antoine Beaupré <anarcat@debian.org>  Fri, 01 Feb 2019 11:13:03 -0500
+
+debian-security-support (2019.01.19) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Holger Levsen ]
+  * d/control:
+    - bump standards version to 4.3.0.
+    - bump debhelper compat to 11, use the new debhelper-compat(=11) notation
+      and drop d/compat.
+    - add "Rules-Requires-Root: no" to support building as non-root.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 18 Jan 2019 15:49:47 +0100
+
+debian-security-support (2018.11.25) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Markus Koschany ]
+  * Mark jasperreports as end-of-life in Jessie.
+
+  [ Salvatore Bonaccorso ]
+  * Mark webkit2gtk as unsupported in all releases. (Closes: #914567)
+
+  [ Holger Levsen ]
+  * Bump standards version to 4.2.1.
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field.
+  * d/changelog: Remove trailing whitespaces.
+
+ -- Holger Levsen <holger@debian.org>  Sun, 25 Nov 2018 18:31:48 +0100
+
+debian-security-support (2018.06.08) unstable; urgency=medium
+
+  * Add .gitlab-ci.yml configuration
+  * Mark jruby in jessie as end-of-life as per DSA-4219-1 (Closes: #901032)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 08 Jun 2018 14:38:29 +0200
+
+debian-security-support (2018.05.20) unstable; urgency=medium
+
+  * Mark vlc in jessie as end-of-life as per DSA 4203-1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 20 May 2018 11:19:32 +0200
+
+debian-security-support (2018.05.17) unstable; urgency=medium
+
+  [ Antoine Beaupré ]
+  * mark frontaccounting as unsupported
+
+  [ Markus Koschany ]
+  * Add xulrunner to security-support-ended.deb7
+
+  [ Salvatore Bonaccorso ]
+  * Mark redmine as end-of-life for Debian 8 (jessie) (Closes: #897609)
+  * Update Vcs-* headers for switch to salsa.debian.org
+  * Update German translations.
+    Thanks to Chris Leick <c.leick@vollbio.de> (Closes: #878321)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 17 May 2018 18:41:28 +0200
+
+debian-security-support (2018.01.29) unstable; urgency=medium
+
+  [ Markus Koschany ]
+  * Add teamspeak to security-support-ended.deb7
+  * Add libstruts1.2-java to security-support-ended.deb7.
+  * Add nvidia-graphics-drivers to security-support-ended.deb7.
+    Non-free is not supported
+  * Add glassfish to security-support-ended.deb7
+  * Mark jbossas4 as end-of-life in Wheezy.
+  * Mark jasperreports as unsupported in Wheezy.
+    No sponsor users it. Targeted fixes not possible because detailed
+    information about the vulnerabilities and their solution (patches) is not
+    available.
+
+  [ Salvatore Bonaccorso ]
+  * Mark chromium-browser as end-of-life for Debian 8 (Jessie)
+
+  [ Raphaël Hertzog ]
+  * Mark libnet-ping-external-perl as unsupported in wheezy.
+  * Mark mp3gain as unsupported in wheezy.
+
+  [ Emilio Pozuelo Monfort ]
+  * Mark tor as unsupported in wheezy.
+
+  [ Guido Günther ]
+  * Add swftools to security support limited
+    swftools is orphaned (#885088) and the security tracker is currently
+    counting 25 open CVEs. It is a useful tool with trusted content though.
+  * Bump standards version to 4.1.3.
+    No changes needed
+  * Bump debhelper compat level to 9 which is available in oldoldstable
+    (wheezy).
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 29 Jan 2018 17:05:46 +0100
+
+debian-security-support (2017.06.02) unstable; urgency=medium
+
+  [ Moritz Muehlenhoff ]
+  * Remove acidbase entry from security-support-limited, it's been removed
+    and is no longer present in any currently supported suite
+  * Mark trn as unsupported in jessie, it got removed in 8.6
+  * Mark sogo as unsupported in jessie, it got removed in 8.7
+  * Mark dotclear as unsupported in jessie, it got removed in 8.7
+
+  [ Raphaël Hertzog ]
+  * Mark autotrace as unsupported in wheezy.
+
+  [ Chris Lamb ]
+  * Mark ioquake3 as unsupported in wheezy.
+
+  [ Guido Günther ]
+  * Mark freebsd-* as unsupported in wheezy.
+  * Mark cgiemail as unsupported in jessie, it got removed in 8.8.
+  * Mark owncloud as unsupported in jessie, it got removed in 8.8.
+  * Mark owncloud-app as unsupported in jessie, it got removed in 8.8.
+  * d/control: Use https Git URL
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 02 Jun 2017 12:15:58 +0200
+
+debian-security-support (2017.01.03) unstable; urgency=medium
+
+  * Add Teeworlds to security-support-ended.deb7 because games are not
+  * In the test suite, don't use dates past 2038, some archs cannot
+    handle it. Closes: #849650
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Tue, 03 Jan 2017 20:28:34 +0100
+
+debian-security-support (2016.05.30~7) UNRELEASED; urgency=medium
+
+  * Team upload
+
+  [ Santiago Ruano Rincón ]
+  * Unify msgstrs in check-support-status.in and in debconf templates to avoid
+    duplicated translations.
+  * New po/{Makefile,PACKAGE,POTFILES} files taken from libintl-perl.
+    - debian/rules: clean and install translation files using po/Makefile.
+  * Enable updating po debconf templates during build time:
+    - debian/control: add Build-Depends on po-debconf.
+    - debian/rules: dh_clean: run debconf-updatepo.
+  * Bump Standards-Version: 3.9.8.
+  * Update Italian debconf templates translation.
+    Thanks to Beatrice Torracca <beatricet@libero.it> (Closes: #825726)
+  * Update Japanese debconf template translation (Closes: #826640)
+  * Avoiding printing blanck lines when there is nothing to report and no
+    --type is specified.  (Closes: #819275)
+
+  [ Markus Koschany ]
+  * Mark trn as unsupported in Wheezy LTS
+
+  [ Salvatore Bonaccorso ]
+  * Update Dutch debconf templates translation.
+    Thanks to Frans Spiesschaert <Frans.Spiesschaert@yucom.be> (Closes: #832277)
+
+  [ Chris Lamb ]
+  * Add inspircd to unsupported in wheezy.
+  * Add matrixssl to unsupported in Debian 7.0/wheezy.
+
+  [ Salvatore Bonaccorso ]
+  * Drop pidgin from packages list with limited security support.
+    Thanks to Raphaël Hertzog <hertzog@debian.org> (Closes: #838906)
+  * Mark virtualbox as end-of-life for Debian 8 (Jessie) (Closes: #842051)
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Mon, 30 May 2016 22:51:47 +0200
+
+debian-security-support (2016.05.24) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Santiago Ruano Rincón ]
+  * check-support-status.hook, debian-security-support.postinst: only
+    invoke --type earlyend when running a version that supports it,
+    i.e. >= 2016.03.30.
+  * check-support-status.hook: Make sure to run check-support-status
+    from an accessibe directory. Thanks to Raphaël Hertzog (Closes: #824081).
+  * Include missing earlyend debconf template.
+  * Update Spanish debconf template translation.
+  * Update French debconf template translation.
+  * Mark as not supported in Wheezy LTS:
+    - libv8
+    - mediawiki (also not supported in Jessie)
+    - vlc
+  * Update Danish debconf templates translation.
+    Thanks to Joe Dalton <joedalton2@yahoo.dk> (Closes: #824467)
+  * Update Telugu debconf templates translation.
+    Thanks to Praveen Illa <mail2ipn@gmail.com> (Closes: #824638)
+  * Update Polish debconf templates translation.
+    Thanks to Łukasz Dulny <BartekChom@poczta.onet.pl (Closes: #824864)
+
+  [ Markus Koschany ]
+  * Mark as not supported in Wheezy LTS:
+    - sogo
+
+  [ Salvatore Bonaccorso ]
+  * Update Russian debconf templates translations.
+    Thanks to Yuri Kozlov <yuray@komyakino.ru> (Closes: #824245)
+  * Update Portuguese debconf template translations.
+    Thanks to Américo Monteiro <a_monteiro@gmx.com> (Closes: #824145)
+  * Updated German debconf template translation.
+    Thanks to Chris Leick <c.leick@vollbio.de> (Closes: #824488)
+  * Update Brazilian Portuguese debconf templates translation.
+    Thanks to Adriano Rafael Gomes <adrianorg@arg.eti.br> (Closes: #824643)
+
+ -- Santiago Ruano Rincón <santiagorr@riseup.net>  Tue, 24 May 2016 19:53:10 +0200
+
+debian-security-support (2016.05.09+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Remove postrm file, accidentally included in the previous release
+    (Closes: #823563)
+
+ -- Santiago Ruano Rincón <santiagorr@riseup.net>  Mon, 09 May 2016 11:24:37 +0200
+
+debian-security-support (2016.05.04+nmu1) unstable; urgency=medium
+
+  * Unify binary package for all distributions. check-security-support
+    evaluates the debian version where it runs upon, or according to a
+    DEBIAN_VERSION env variable (Closes: #762594).
+    - Keep a symlink to security-support-ended to avoid backward issues.
+  * check-support-status, man page: Parse version from debian/changelog
+  * Update messages.po, Spanish and French translations.
+  * Update packages not supported in Wheezy LTS.
+
+ -- Santiago Ruano Rincón <santiagorr@riseup.net>  Wed, 04 May 2016 16:07:40 +0200
+
+debian-security-support (2016.03.30+nmu1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Mark virtualbox as unsupported in Wheezy (Closes: #812822)
+
+  [ Santiago Ruano Rincón ]
+  * Take into account future end of security support (Closes: #818843).
+    - Include early end support checks in t/check-support-status.t.
+    - Update man page.
+  * debian/rules: Generate right debian version from /etc/debian_version
+    (Closes: #819493).
+
+ -- Santiago Ruano Rincón <santiago@debian.org>  Wed, 30 Mar 2016 19:20:15 +0200
+
+debian-security-support (2016.01.07) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Mark typo3-src as unsupported in Wheezy.
+    Thanks to Holger Levsen <holger@layer-acht.org> (Closes: #793454)
+
+  [ Raphaël Hertzog ]
+  * Mark wine-gecko-2.21 and wine-gecko-2.24 as unsupported in all
+    releases. Closes: #804058
+  * Mark virtualbox-ose as unsupported in Squeeze (cf DLA 372-1).
+  * Mark qtwebkit-opensource-src as unsupported in all releases.
+    Closes: #799189
+  * Mark redmine as unsupported in squeeze and wheezy due to the fact that
+    it depends on rails which is not supported.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 07 Jan 2016 17:11:33 +0100
+
+debian-security-support (2015.07.11) unstable; urgency=medium
+
+  * Team upload.
+  * Add list of packages not supported in stretch.
+    The list ist empty for the time being.
+    Fixes "FTBFS: cp: cannot stat 'security-support-ended.deb9': No such
+    file or directory" when building in stretch and sid.
+    Thanks to Daniel Schepler <dschepler@gmail.com> for the report
+    (Closes: #792007)
+  * Declare compliance with Debian policy 3.9.6
+  * Use canonical URI for Vcs-Git field
+  * Add Vcs-Browser fields in debian/control file
+  * Prepare check-support-status for release
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 11 Jul 2015 15:00:48 +0200
+
+debian-security-support (2015.04.04) unstable; urgency=high
+
+  * Add wireshark to unsupported packages in Squeeze (Closes: #774312)
+  * Remove php5 and memcached from "limited support": Debian's PHP support is
+    not different from upstream's and is well understood by the community. The
+    same applies to memcached (Closes: #775582)
+  * Mark chromium-browser as unsupported in Wheezy (Closes: #776904). The
+    same applies to rails
+  * Mark piwigo as unsupported in Squeeze (Closes: #779104)
+  * Mark xulrunner as unsupported
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Sat, 04 Apr 2015 18:11:20 +0100
+
+debian-security-support (2014.12.17) unstable; urgency=high
+
+  * Add to list of packages not supported in squeeze-lts:
+    - src:qemu (Closes: #772858)
+    - src:textpattern (Closes: #773048)
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Wed, 17 Dec 2014 20:10:46 +0100
+
+debian-security-support (2014.12.08) unstable; urgency=high
+
+  * Remove remaining bashism. Closes: #772268
+  * limited support: mozjs* and libv8-3.14
+  * postinst: Have an (empty) triggered target
+  * Add list of packages not supported in jessie, empty for the
+    time being
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Mon, 08 Dec 2014 22:24:37 +0100
+
+debian-security-support (2014.11.07) unstable; urgency=high
+
+  * Check hook for existence before running it. Closes: #768391
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Fri, 07 Nov 2014 07:12:24 +0100
+
+debian-security-support (2014.11.04) unstable; urgency=high
+
+  * Closes an RC bug, urgency set to high
+  * Add src:axis2c to list of packages not supported in squeeze-lts.
+    Closes: #765374
+  * Use dpkg invoke hook instead of triggers. Thanks Guillem Jover
+    for the detailed explanations. Closes: #762031
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Tue, 04 Nov 2014 22:01:42 +0100
+
+debian-security-support (2014.10.26) unstable; urgency=low
+
+  * Features and Bugfixes
+    - Add VCS information
+    - Move manpage to man/ directory
+    - Declare the trigger "-noawait". See: #762031
+    - Use dpkg-query to retrieve the dpkg version number
+    - Override TMPDIR unless it has relaxed permissions. Closes: #763277
+  * limited support list
+    - Alter text for kde4libs, change webkit to webkitgtk
+    - Remove wireshark from list of packages with limited support
+  * l10n
+    - Prepare support for localized manpage, leave a note for
+      translators
+    - Swedish debconf template translation [Martin Bagge].
+      Closes: #762794
+    - Dutch debconf template translation [Paul Gevers]. Closes: #762927
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 26 Oct 2014 19:28:08 +0100
+
+debian-security-support (2014.09.11) UNRELEASED; urgency=low
+
+  * Add iceweasel to list of packages not supported in squeeze-lts
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Thu, 11 Sep 2014 23:30:20 +0200
+
+debian-security-support (2014.09.07) unstable; urgency=low
+
+  * Turkish debconf template translation [Mert Dirik]. Closes: #757511
+  * Add flashplugin-nonfree to list of packages not supported in
+    squeeze-lts
+  * Packaging: Migrate templating to Template Toolkit
+  * Handle --type without --list (Closes: #749894), fix parameter
+    passing
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 07 Sep 2014 14:40:55 +0200
+
+debian-security-support (2014.07.31) unstable; urgency=low
+
+  * Czech program translation (Michal Simunek). Closes: #752511
+  * Process substitution might fail in chroots, use temp files
+    instead. Closes: #753940
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Thu, 31 Jul 2014 23:28:13 +0200
+
+debian-security-support (2014.07.20) unstable; urgency=low
+
+  [ security-support lists ]
+  * Unsupported in squeeze-lts: turba2, xen-qemu-dm-4.0
+  * Fix support-ended list: Add ffmpeg
+  * Pretty-format security-support lists, also: Closes: #752143
+
+  [ features ]
+  * Run check program with specified shell
+  * Revert accidential re-introduction of #748960
+  * Fix system account check, thanks gregor herrmann. Closes: #753325
+  * Update package descriptions and message catalogs. Closes: #747697
+
+  [ Debconf translations ]
+  * Danish (Joe Hansen).  Closes: #750675
+  * Russian (Yuri Kozlov).  Closes: #750744
+  * German (Chris Leick).  Closes: #751166
+  * French (Julien Patriarca).  Closes: #751219
+  * Portuguese (Américo Monteiro).  Closes: #751824
+  * Polish (Michał Kułach).  Closes: #752089
+  * Czech (Michal Simunek).  Closes: #752155
+  * Italian (Beatrice Torracca).  Closes: #752174
+  * Brazilian Portuguese (Adriano Rafael Gomes).  Closes: #752200
+  * Spanish; (Matías Bellone).  Closes: #752268
+
+  [ Program translations ]
+  * Danish (Joe Hansen).  Closes: #750675
+  * Russian (Yuri Kozlov).  Closes: #750820
+  * Portuguese (Américo Monteiro).  Closes: #751824
+  * German (Chris Leick).  Closes: #751913
+  * French (Julien Patriarca).  Closes: #751950
+  * Polish (Michał Kułach).  Closes: #752113
+  * Italian (Beatrice Torracca).  Closes: #752233
+  * Brazilian Portuguese (Adriano Rafael Gomes).  Closes: #752365
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sun, 20 Jul 2014 09:27:28 +0200
+
+debian-security-support (2014.05.29) unstable; urgency=low
+
+  * Update messages catalog, thanks to Justin B Rye
+  * Ignore packages removed but not purged. Closes: #749551
+  * Test suite:
+    - Do the explanation spacing testcase right
+    - Assert check-support-status works for all awk variants (gawk,
+      mawk, original-awk)
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Thu, 29 May 2014 16:47:32 +0000
+
+debian-security-support (2014.05.27) unstable; urgency=low
+
+  * Set LC_ALL=C everywhere when a program call should be
+    l18n-agnostic. Closes: #748446
+  * Drop --dpkg* parameters, they are needed for tests only
+  * Update list of unsupported packages as per discussion on
+    debian-lts@lists.debian.org
+  * Update manpage, thanks to Justin B Rye for review and suggestions
+  * Rename "semaphore" to "status db" to reflect its actual function
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Tue, 27 May 2014 20:30:10 +0000
+
+debian-security-support (2014.05.24) unstable; urgency=low
+
+  * Update security support ended information from 2014.05.16+deb6u1
+  * Don't overtrim the explanative text. Closes: #748954
+  * Don't run the check program through a login shell. Closes: #748960
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Sat, 24 May 2014 12:50:41 +0000
+
+debian-security-support (2014.05.16) unstable; urgency=low
+
+  * Fix build error with older versions of Test::Command
+  * Add Debian Security Team to Uploaders:
+  * Update package description to reflect limited support, too
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Fri, 16 May 2014 19:11:53 +0000
+
+debian-security-support (2014.04.28) unstable; urgency=low
+
+  * Initial Release
+
+ -- Christoph Biedl <debian.axhn@manchmal.in-ulm.de>  Mon, 28 Apr 2014 18:41:19 +0000

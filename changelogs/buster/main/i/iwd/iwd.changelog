@@ -1,0 +1,140 @@
+iwd (0.14-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2023-52161: Fix an authentication bypass issue whereby adversaries
+    could gain unauthorised access to a protected home (ie. non-WPA2-Enterprise
+    etc.) WiFi network. (Closes: #1064062)
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 22 Feb 2024 12:54:16 +0000
+
+iwd (0.14-2) unstable; urgency=medium
+
+  * Build against external (lib)ell (Closes: #911057)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 18 Feb 2019 23:13:53 +0100
+
+iwd (0.14-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update disable-sae-test.patch to apply again
+  * Use a proper and new-style dh compat 12
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Jan 2019 13:00:11 +0100
+
+iwd (0.13-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop debian/patches/lfs.patch, merged upstream.
+  * Update disable-sae-test.patch to apply again
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 11 Dec 2018 16:53:47 +0100
+
+iwd (0.12-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 16 Nov 2018 15:15:04 +0100
+
+iwd (0.10-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 21 Oct 2018 14:56:09 +0200
+
+iwd (0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop debian/patches/dh_private.path
+    - now included in upstream release.
+  * Bump to (experimental) debhelper compat 12
+  * Drop libexecdir configure override
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 08 Oct 2018 16:24:43 +0200
+
+iwd (0.8-2) unstable; urgency=medium
+
+  * Replace d/p/dh_private.patch with upstream version
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 21 Sep 2018 11:30:48 +0200
+
+iwd (0.8-1) unstable; urgency=medium
+
+  * Properly escape libexecdir path configure argument
+  * New upstream release.
+  * Add debian/patches/dh_private.patch to fix build
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 20 Sep 2018 21:52:21 +0200
+
+iwd (0.7-2) unstable; urgency=medium
+
+  * Add debian/patches/disable-sae-test.patch
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 28 Aug 2018 21:34:59 +0200
+
+iwd (0.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.2.1
+  * Add debian/patches/lfs.patch
+    - enable large file support by adding AC_SYS_LARGEFILE to configure.ac
+  * Enable all hardening flags (incl. bindnow)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 27 Aug 2018 20:12:36 +0200
+
+iwd (0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 10 Aug 2018 22:11:58 +0200
+
+iwd (0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 10 Aug 2018 21:37:10 +0200
+
+iwd (0.4-1) unstable; urgency=medium
+
+  * Enable pristine-tar usage in gbp.conf
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 26 Jul 2018 14:46:46 +0200
+
+iwd (0.3-1) unstable; urgency=medium
+
+  * Add iwd wiki in upstream/metadata Documentation url
+  * New upstream release.
+  * Add postinst snippet to purge iwd.service state
+    - upstream changed the service from network-pre.target
+      to multi-user.target and we want to follow along.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 17 Jun 2018 15:19:59 +0200
+
+iwd (0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.1.4.
+  * Drop debian/patches, now part of upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 12 May 2018 09:26:41 +0200
+
+iwd (0.1-3) unstable; urgency=medium
+
+  * Make test-suite non-fatal
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 24 Apr 2018 18:22:44 +0200
+
+iwd (0.1-2) unstable; urgency=medium
+
+  * Fix mistakenly swapped Vcs-* field URIs.
+    Thanks to Chris Lamb for pointing it out
+  * Add missing build-dependency for systemd.pc
+  * Cherry-pick upstream commit hopefully fixing parrallel build
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 24 Apr 2018 09:21:43 +0200
+
+iwd (0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #894537)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 03 Apr 2018 11:08:50 +0200

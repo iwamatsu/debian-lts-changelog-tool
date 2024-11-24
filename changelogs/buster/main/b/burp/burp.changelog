@@ -1,0 +1,499 @@
+burp (2.1.32-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Copy fixes for CVE-2017-16516, CVE-2022-24795 & CVE-2023-33460 from yajl.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sat, 05 Aug 2023 12:46:01 +0100
+
+burp (2.1.32-2) unstable; urgency=medium
+
+  [ Calogero Lo Leggio ]
+  * fix debci problem when test 'burp-builtin-test'
+  * update 'Standards-Version' to respect the last Debian Policy
+  * inform of the incompatibility of burp server cert generated in Jessie
+
+ -- Calogero Lo Leggio <kalos@nerdrug.org>  Thu, 10 Jan 2019 19:42:45 +0000
+
+burp (2.1.32-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove Testsuite field, not needed anymore
+  * d/watch: Use https protocol
+
+  [ Calogero Lo Leggio (kalos) ]
+  * Imported Upstream version 2.1.32
+  * fix Lintian warnings
+  * fix path of a script in cron entry (Closes: #877005)
+
+ -- Calogero Lo Leggio (kalos) <kalos@nerdrug.org>  Sat, 05 Jan 2019 14:52:34 +0000
+
+burp (2.1.30-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.1.30 with latest debian directory
+  * Add debci/autopkgtest support using integrated burp test
+  * Disable unit test in the building phase. Closes: #884032
+
+ -- Calogero Lo Leggio (kalos) <kalos@nerdrug.org>  Tue, 06 Mar 2018 21:02:31 +0000
+
+burp (2.1.28-1) unstable; urgency=medium
+
+  [ Christoph Martin ]
+  * Move Vcs-* to Salsa
+
+  [ Calogero Lo Leggio (kalos) ]
+  * Imported Upstream version 2.1.28 with latest debian directory
+  * Migrated to systemd
+  * Use burp version 2.1.X as new stable release
+  * Change compat (debhelper compatibility levels) to 10
+  * Add new doc files
+
+ -- Calogero Lo Leggio (kalos) <kalos@nerdrug.org>  Fri, 02 Mar 2018 16:22:31 +0000
+
+burp (2.0.54-4) unstable; urgency=medium
+
+  [ Calogero Lo Leggio (kalos) ]
+  * file config error in summary_script cronjob - #855032
+
+ -- Calogero Lo Leggio (kalos) <kalos@nerdrug.org>  Mon, 13 Feb 2017 17:49:31 +0000
+
+burp (2.0.54-3) unstable; urgency=medium
+
+  * Added compatibility version issue in README.Debian file - bugfix #854303
+
+ -- Calogero Lo Leggio <kalos@nerdrug.org>  Sat, 11 Feb 2017 18:23:42 +0000
+
+burp (2.0.54-2) unstable; urgency=medium
+
+  * Removed old logrotate entry - bugfix #753557
+  * Enabled burp test suite
+
+ -- Calogero Lo Leggio <kalos@nerdrug.org>  Sat, 11 Feb 2017 18:17:26 +0000
+
+burp (2.0.54-1) unstable; urgency=medium
+
+  [ Calogero Lo Leggio (kalos) ]
+  * Updates only stable version of the burp - 2.0.X
+  * Imported Upstream version 2.0.54
+  * Remove duplicate CHANGELOG
+
+ -- Calogero Lo Leggio (kalos) <kalos@nerdrug.org>  Fri, 06 Jan 2017 11:16:08 +0000
+
+burp (2.0.52-1) unstable; urgency=medium
+
+  [ Calogero Lo Leggio (kalos) ]
+  * Imported Upstream version 2.0.52
+  * Added build dep: yajl.
+  * Updated client and server cron jobs.
+  * Updated copyright.
+  * Updated watch.
+  * Disabled burp test suite (problem with "check" in unstable).
+  * Removed all debian patches for burp version 1.
+
+  [ Christoph Martin ]
+  * depend on lsb-base
+  * add myself as uploader
+
+ -- Christoph Martin <martin@uni-mainz.de>  Fri, 30 Dec 2016 23:46:27 +0100
+
+burp (1.4.40-5) unstable; urgency=medium
+
+  * QA upload
+  * fix flags-32bit.patch
+  * fix build with openssl 1.1 (closes: #828255)
+
+ -- Christoph Martin <martin@uni-mainz.de>  Mon, 14 Nov 2016 12:24:58 +0100
+
+burp (1.4.40-4) unstable; urgency=medium
+
+  * QA upload.
+  * Revert using restart in logrotate, it breaks in-progress backup jobs.
+    (Reopens: #753557).
+
+ -- Adam Borowski <kilobyte@angband.pl>  Sat, 01 Oct 2016 02:29:15 +0200
+
+burp (1.4.40-3) unstable; urgency=medium
+
+  * QA upload.
+  * Fix FTBFS on 32-bit archs (Closes: #835036).
+  * Use restart not reload in logrotate, as the latter doesn't reopen the
+    log file (Closes: #753557).
+
+ -- Adam Borowski <kilobyte@angband.pl>  Sun, 25 Sep 2016 06:41:13 +0200
+
+burp (1.4.40-2) unstable; urgency=medium
+
+  * QA upload.
+  * Remove lock.patch from d/patches/series.
+    The burp 2.0.x series test suite fails when this patch is applied.
+    Please see commentary in #747672, which has been re-opened.
+  * Watch file now tracks 1.4.x series instead of old 1.3.x series.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 22 Jun 2016 14:46:32 +0900
+
+burp (1.4.40-1) unstable; urgency=medium
+
+  * QA upload.
+  * Set maintainer to QA team (see #820400).
+  * Package new upstream release (Closes: #774715) (LP: #1515876).
+    Upstream identifies version 1.4.40 as their "stable" release.
+  * Apply patch from Svante Signell to fix build on the GNU Hurd
+    (Closes: #675761, #747672).
+  * Add Recommends: openssl (Closes: #745376).
+  * Drop dpkg buildflags export from d/rules.
+    Not needed at debhelper compat 9.
+  * Drop build dependency on autotools-dev & dh --with entry.
+    Current debhelper has dh_update_autotools_config.
+  * Drop several unneeded flags & vars in override_dh_auto_configure target.
+  * Drop duplicate DH_VERBOSE setting in d/rules.
+  * Add dh's --parallel flag.
+  * Repair d/copyright:
+    - Move 'Files: *' paragraph to the top of the file
+    - Move src/win32/compat/getopt.c and src/win32/compat/sys/mtio.h
+      paragraphs to end of file
+    - Add myself to copyright for debian/ subdir
+    - Correct invalid shortname agplv3 -> AGPL-3
+    - Factor out AGPL-3 license to a License: paragraph.
+    - Correct invalid shortname Troy D. Hanson License -> custom1
+    - Correct copyright years for src/win32/compat/sys/mtio.h
+    - Correct some indentation and trailing whitespace
+  * Replace burp-dbg with automatically generated burp-dbgsym.
+    - Drop obsolete rules target override_dh_strip.
+    - Drop obsolete burp.install.
+    - Drop obsolete burp.dirs.
+    - Drop obsolete burp-dbg.maintscript.
+  * Drop endian.patch.
+    Merged upstream.
+  * Drop wait_for_backup_to_finish.patch.
+    Merged upstream.
+  * Refresh a patch.
+  * Bump standards version to 3.9.8 (no changes required).
+  * Update Vcs-* URIs.
+  * Add gbp.conf.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 15 Jun 2016 20:14:09 +0900
+
+burp (1.3.48-4.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New burp-dbg.mainscript with symlink_to_dir (Closes: #768247)
+    /usr/share/doc/burp-dbg was a symlink to burp up to 1.3.48-1, real dir in
+    1.3.48-2.
+  * debian/control: Add burp-dbg Pre-Depends: ${misc:Pre-Depends} for
+    maintscript.
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Sat, 15 Nov 2014 20:17:29 +0000
+
+burp (1.3.48-4) unstable; urgency=high
+
+  * Include "autotools-dev" addon for dh in debian/rules to allow
+    config.{sub,guess} to be regenerated. (Closes: #743873)
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Mon, 07 Apr 2014 19:39:01 +0200
+
+burp (1.3.48-3) unstable; urgency=medium
+
+  * Add missing "exit 0" statement in debian/init. (Closes: #742218)
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Sat, 05 Apr 2014 11:01:59 +0200
+
+burp (1.3.48-2) unstable; urgency=low
+
+  * Add patch to fix pointer casting in src/msg.c:transfer_gzfile_in
+    to fix FTBFS on 64-bit big-endian architectures (Closes: #740505):
+    - debian/patches/endian.patch
+  * Replace debian/patches/disable_tests.patch with debian/patches/fixskiptest,
+    so that only test 6 and 7 are skipped when there is no PRNG available.
+  * Add patch for the test function wait_for_backup_to_finish to check
+    for the existance of /var/spool/burp/testclient/lockfile instead
+    of the symlinks /var/spool/burp/testclient/{working,finishing}
+    (Closes: #740547):
+    - debian/patches/wait_for_backup_to_finish.patch
+  * Now using autoreconf for better portability:
+    - Change dh $@ to dh $@ --with autoreconf in debian/rules file.
+    - Add dependency on dh-autoreconf in debian/control.
+  * Change dh_verbose to 1 to solve compiler-flags-hidden warnings in
+    debian/rules file.
+  * Remove obsolete overrides in rules file:
+    - override_dh_auto_install
+    - override_dh_install
+    - override_dh_installdocs
+  * Using dh_auto_configure instead of just running ./configure with the
+    following options in debian/rules:
+    - prefix /usr
+    - sysconfdir /etc/burp
+    - sbindir $${prefix}/sbin
+    - mandir $${prefix}/share/man
+    - C/CPP/LD flags uses exported build flags
+  * Add debian/burp.install and debian/burp.dirs.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Mon, 03 Mar 2014 15:54:28 +0100
+
+burp (1.3.48-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix long delay in init script when the stop function is
+      invoked. (Closes: #687523)
+    - Add missing compiler and linker flags on armel, armhf, i386,
+      kfreebsd-amd64, powerpc and s390 architectures. (Closes: #675368)
+    - Fix bedup crashing with exit status 139. (Closes: #715678)
+    - Fix restoring of correct file times on Windows clients.
+
+  * Bump Standards-Version to 3.9.5.0:
+    - Add dependency on initscripts (>= 2.88dsf-13.3).
+  * Add Vcs-Browser field to debian/control.
+  * Bump dephelper version to 9:
+    - Fixes lintian reports about missing hardening of
+      binaries ("hardening-no-relro"). (Closes: #735128)
+  * Update address of FSF in debian/copyright. (Closes: #735129)
+  * Change copyright for files in debian/ from GPL-2 to AGPL-3.
+  * Add upstream patch to disable compile-time test when no
+    PRNG is available: (Closes: #675761)
+    - debian/patches/disable_tests.patch
+  * Add patch to display a list of available log files
+    when one or more compile-time tests have failed:
+    - debian/patches/showlogs.patch
+  * Adjust debian/watch file to track stable 1.3.x releases only,
+    the experimental 1.4.x releases are ignored.
+
+  * Changes in burp 1.3.46:
+    - Another bug fix for false failure notification - differentiate between
+      not getting a lock and getting an error when trying to get a lock.
+    - Turn off excessive logging on some restores.
+  * Changes in burp 1.3.44:
+    - Fix false failure notification when a client tries
+      to connect again while a backup is still in progress.
+  * Changes in burp 1.3.42:
+   - In backup phase 4, a 'deleteme' directory may already exist if the server
+     was previously interrupted whilst deleting it. If so, delete it before
+     attempting to rename anything to it.
+  * Changes in burp 1.3.40:
+   - Make the server request the whole file when ctime changes on Windows,
+     otherwise changes to metadata will not be registered when the file
+     contents are unchanged.
+   - Add 'delete' to the client help output.
+   - When backing up, open files and directories with O_NOATIME flag so that the
+     access time is not changed.
+   - Fix missing failure notification when the backup directory
+     cannot be created.
+  * Changes in burp 1.3.38:
+   - Fix long list and status monitor output when a directory argument is given.
+   - Fix restore problem with backups containing both compressed and
+     uncompressed files.
+   - Fix interrupted backups triggering a resume when a restore_client connects.
+   - Fix defaulting 'resume partial' to off.
+  * Changes in burp 1.3.36:
+   - Fix truncation of timestamps in the live status monitor.
+   - Default the 'resume partial' feature to being off, and add an option to
+     turn it on.
+  * Changes in burp 1.3.34:
+   - Contributions from Avi Rozen:
+     + Major autoconf cleanup.
+     + Initial support for cross-building Android targets.
+   - On the server, indicate where logging is occurring.
+   - Fix bedup segfaulting when using -m with no argument.
+  * Changes in burp 1.3.32:
+   - Fix status monitor segfault.
+   - Run timed backups with lower thread priority on Windows.
+   - Add 'vss_drives' option, which gives the ability to specify which Windows
+     drives get a VSS snapshot.
+  * Changes in burp 1.3.30:
+   - Add a warning when run on Windows without admin privileges.
+   - Perform fewer lstat()s on systems that support d_type (i.e. most
+     Linux systems) in order to speed up certain operations.
+   - Allow _FORTIFY_SOURCE to work.
+   - Fix problem with burp_ca.bat and repeated field names in burp.conf.
+   - Put registry keys back into the Windows installer.
+   - Fix for SIGHUP reload causing the server to go into non-forking mode.
+   - Mark backups which can be deleted.
+   - Add a client option for deleting backups which can be deleted.
+   - Add a 'client_can_delete' option on the server.
+   - Fix for using the wrong lock directory when 'directory' is
+     overridden for a client.
+  * Changes in burp 1.3.28:
+   - Add the ability to resume partially transferred files.
+   - Make sure 'timer conditions not met' message appears on the client.
+   - Fix turning off compression before resuming a backup.
+  * Changes in burp 1.3.26:
+    - When a read_blockdev option matches a symlink, backup the destination as
+      a raw block device.
+    - Avi Rozen's valgrind cleanup. Includes a fix for a bug in restore_client.c
+      where overwrite_ok checked the wrong stat struct when considering a FIFO.
+    - Add '-v' option to bedup (output the names of duplicate files).
+    - Add '-d' option to bedup (delete duplicates instead of hardlinking - not
+      for use on burp storage directories).
+  * Changes in burp 1.3.24:
+    - Fix strip_vss/split_vss truncating backups of changed files on Windows.
+    - Fix auto upgrade failing on Windows if autoupgrade_dir has been modified.
+    - Fix listing backups created with split_vss=1.
+    - Fix restoring uncompressed encrypted backups created with split_vss=1.
+    - Fix making backups with min_file_size and split_vss=1.
+    - Fix Debian init do_stop() function (Thanks Peter Maloney).
+    - Fix resuming backups where a file to patch has already been hard-linked
+      into place. Also get the client to report a more helpful message if
+      any similar problem occurs.
+    - Fix signal handler race conditions.
+    - Fix forkchild child not exiting when execv fails.
+    - Change run_script() code to take an array.
+    - Add server_script_pre_notify and server_script_post_notify options.
+    - Rework the test script so that it can test Windows clients as well.
+    - Let a Windows signal handler try to shut VSS down nicely on certain
+      signals such as Ctrl-C.
+    - Include an example server-side off-site rsync backup script. This is not
+      quite working properly yet but it may still be useful.
+    - Fix Windows preventing from going to sleep during a
+      backup. (Thanks Avi Rozen).
+    - Fix "unable to set datapath: (null)" backup
+      resuming issue. (Closes: #695641)
+    - Fix spelling error 'overriddden' in the
+      burp(8) manpage. (Closes: #685568)
+    - Fix error in client_can_list section in the
+      burp(8) manpage. (Closes: #694506)
+  * Changes in burp 1.3.22:
+    - Contributions from Avi Rozen:
+      + Add a '-j' option to format the long file-list as JSON. Intended
+        for use with burpfs (https://github.com/ZungBang/burpfs).
+      + Fix list/verify/restore when regex is long and/or
+        contains a colon.
+      + Fix split_vss backups being restored on a linux restore_client
+        with the -f (force) option. Prevents overwriting of the
+        destination file with the vss footer.
+    - Contributions for burp_ca from Patrick Koppen:
+      + Fix the size option.
+      + Use shell numeric comparison instead of string comparison.
+      + Added subjectAltName patch (in case it is needed outside of burp).
+  * Changes in burp 1.3.18:
+    - Fix "split/strip_vss = 1" on the client side always resulting in
+      all files being backed up.
+    - Make configure default to /usr as prefix.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Tue, 31 Dec 2013 16:42:30 +0100
+
+burp (1.3.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Fri, 08 Jun 2012 10:49:18 +0200
+
+burp (1.3.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop obsolete lintian overrides:
+    - non-standard-file-perm etc/burp/ssl_cert-client.pem 0600 != 0644
+    - non-standard-file-perm etc/burp/ssl_cert-server.pem 0600 != 0644
+  * Update debian/copyright to copyright format 1.0.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Tue, 29 May 2012 13:29:44 +0200
+
+burp (1.3.4-2) unstable; urgency=low
+
+  * Bump debhelper version to 8.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Fri, 04 May 2012 11:57:30 +0200
+
+burp (1.3.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fix make error during build process.
+    - Fix syntax of compression directive. (Closes: #665843)
+    - Allow alternative configuration file paths for burp-ca. (Closes: #669107)
+    - Tidy up "Raw partition". (Closes: #670598)
+    - Prevent client from browsing backups. (Closes: #670599)
+    - Prevent client from running a restore. (Closes: #670600)
+    - Fix "Document or implement ability to prevent *client* from initiating
+      manual backup". (Closes: #670601)
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Sat, 28 Apr 2012 09:22:05 +0200
+
+burp (1.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Respect noopt in DEB_BUILD_OPTIONS. (Closes: #661281)
+    - Make the server tell the client what extra_comms features it supports, so
+      that, in future, old servers are more likely to work with new clients.
+    - Improve 'make clean'.
+    - Add option to strip off leading-path components on restore.
+    - Fix a segfault that was happening on the server when SSL_accept() failed.
+    - Move burp and bedup to /usr/sbin.
+    - Move TODO list to https://github.com/grke/burp/issues.
+  * Bump Standards-Version to 3.9.3. (Closes: #661001)
+  * Add debug package. (Closes: #661267)
+  * Fix typo in logrotate script. (Closes: #660964)
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Mon, 27 Feb 2012 15:34:17 +0100
+
+burp (1.3.0+20120214git-1) unstable; urgency=low
+
+  * New upstream snapshot.
+    - Add 'exclude_fs =' option for Linux so that you can skip partitions
+      types (for example, tmpfs) without generating warnings.
+    - If recovery method 'resume' is set, but the includes/excludes change,
+      switch to 'use', then start a new backup.
+    - In the tests, check to see whether it looks like the server has finished
+      the backup before moving on, rather than just waiting for a set
+      amount of time. (Closes: #659462)
+    - Remove embedded uthash code. It's now pulled in through
+      a build dependency on uthash-dev. (Closes: #659454)
+  * Drop patches that have been merged upstream:
+    - debian/patches/add-missing-manpages
+    - debian/patches/adjust-sleep-intest-mode
+    - debian/patches/mailtolog
+    - debian/patches/varrunowndir
+  * Drop redundant init script debian/init.d.
+  * Rename init script debian/init.DEBIAN to debian/init.
+  * Add debian/patches/Backup-phase2-compilation-problem to
+    fix FTBFS on the buildds. (Closes: #659692)
+  * Add debian/patches/Updated-man-pages to clean up manpages.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Tue, 14 Feb 2012 15:47:01 +0100
+
+burp (1.3.0-3) unstable; urgency=low
+
+  * Add missing debian/patches/mailtolog to debian/patches/series.
+  * Remove Debian changelog entries from all Debian patches.
+  * Add Forwarded: and Last-Update: headers to debian/patches
+    where these are missing:
+    - debian/patches/add-missing-manpages
+    - debian/patches/adjust-sleep-intest-mode
+    - debian/patches/varrunowndir
+  * Raise sleep time after compiliation tests in
+    debian/patches/adjust-sleep-intest-mode from 30 to 50.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Sun, 12 Feb 2012 14:50:29 +0100
+
+burp (1.3.0-2) unstable; urgency=low
+
+  * Add Forwarded: and Last-Update: headers.
+  * Remove changelog entries from patches.
+  * Remove redundant file debian/README. (Closes: #659453)
+  * Remove blank MAILTO header in cronjob and redirect
+    output to /var/log/burp-client. (Closes: #659452)
+  * Add extra logrotate for /var/log/burp-client.
+  * Change /var/run to /run. (Closes: #659464)
+  * Thanks to Justin B Rye from the debian-l10n-english
+    team for helping with the linguistic support.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Sat, 11 Feb 2012 23:48:03 +0100
+
+burp (1.3.0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #658152)
+  * Import Debian packaging from upstream with the following changes:
+    - Fix file permissions in debian/rules for the burp configuration
+      files and spool directory (600 and 700 respectively).
+    - Remove empty TODO and README.
+    - Fix a typo in the control file.
+    - Add override_dh_auto_configure in debian/rules to enforce that the
+      configure script is called without any arguments. The configure
+      script sets the proper install prefix for the Debian build
+      automatically.
+    - Add a watch file.
+    - Add patch to move location of PID file.
+    - Fix lintian errors.
+    - Correct the debian/copyright file
+    - Switch source format to 3.0 (quilt).
+    - Add lintian override for non-standard-file-perm.
+      and non-standard-dir-perm.
+    - Add man pages for bedup and burp_ca.
+
+ -- Bastiaan Franciscus van den Dikkenberg <bas@dikkenberg.net>  Fri, 10 Feb 2012 17:14:13 +0100

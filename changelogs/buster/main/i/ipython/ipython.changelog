@@ -1,0 +1,99 @@
+ipython (5.8.0-1+deb10u1) buster-security; urgency=high
+
+  * Fixes CVE-2022-21699 (execution of config files from the current
+    directory, which might allow cross-user attacks if ipython is run from a
+    directory multiple users can write). Closes: #1004122
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 28 Jan 2022 14:37:34 +0000
+
+ipython (5.8.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * d/changelog: Remove trailing whitespaces
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Gordon Ball ]
+  * New upstream release
+  * Remove d/.git-dpm and move to git-buildpackage style master branch with
+    unapplied patches
+  * Update Standards-Version to 4.2.1
+  * Add lintian override for the README_STARTUP file, which is used by the
+    ipython startup directory skeleton
+
+  [ Nicolas Dandrimont ]
+  * Block network access when building sphinx docs
+
+ -- Nicolas Dandrimont <olasd@debian.org>  Wed, 17 Oct 2018 21:06:28 +0200
+
+ipython (5.5.0-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * New upstream release
+  * Update Standards-Version to 4.1.0
+  * Update debhelper compat to 10
+  * Set minimum python3 version to 3.3
+  * Use python3 sphinx for documentation, add ${sphinxdoc:Built-Using}
+    to documentation package
+  * Add autopkgtests for importability and simple syntax examples
+  * Install the upstream changelog
+  * Fix python2 pexpect dependency of python3-ipython
+  * Add myself to uploaders
+  * Add pydist-overrides file mapping IPython to python-ipython, and
+    equivalent for python3
+  * Quote arguments to ipython -c (closes: #843793)
+
+  [ Diane Trout ]
+  * Update debian/copyright for IPython/utils/_get_terminal_size.py
+
+ -- Gordon Ball <gordon@chronitis.net>  Thu, 26 Oct 2017 00:41:52 +0200
+
+ipython (5.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update wrapper scripts to avoid a deprecation warning.
+
+ -- Ximin Luo <infinity0@debian.org>  Mon, 31 Oct 2016 08:47:51 +0100
+
+ipython (5.1.0-1) experimental; urgency=medium
+
+  [ Julien Cristau ]
+  * Add missing dependencies.  dh_python{,3} does not handle PEP 496
+    environment markers, so these need to be added manually for now.
+
+  [ Julien Puydt ]
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 18 Aug 2016 07:06:56 +0200
+
+ipython (5.0.0-1) experimental; urgency=medium
+
+  [ Julien Cristau ]
+  * Add missing python3-pickleshare build-dep.
+
+  [ Julien Puydt ]
+  * Bump standards-version.
+  * New upstream release.
+  * Add missing python-backport-shutil-get-terminal-size and
+    python-sphinx-rtd-theme build-deps.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 21 Jul 2016 13:05:20 +0200
+
+ipython (4.1.2-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Julien Puydt ]
+  * New upstream version. (Closes: #780408)
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Julien Cristau ]
+  * Update to 4.1.2.
+  * Bump Standards-Version to 3.9.7.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 08 Apr 2016 13:36:06 +0200

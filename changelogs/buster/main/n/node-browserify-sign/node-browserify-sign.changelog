@@ -1,0 +1,22 @@
+node-browserify-sign (4.0.4-2+deb10u1) buster-security; urgency=medium
+
+  * Team upload
+  * Properly check the upper bound for DSA signatures (Closes: #1054667, CVE-2023-46234)
+
+ -- Yadd <yadd@debian.org>  Sun, 29 Oct 2023 07:33:48 +0400
+
+node-browserify-sign (4.0.4-2) unstable; urgency=medium
+
+  * Team upload
+  * Standards-Version 4.1.2
+  * Section: javascript
+  * Workaround unsupported openssl hashes
+  * Allow stderr in tests (Closes: #872898)
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 29 Dec 2017 16:31:01 +0100
+
+node-browserify-sign (4.0.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #864891)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 16 Jun 2017 21:59:43 +0530

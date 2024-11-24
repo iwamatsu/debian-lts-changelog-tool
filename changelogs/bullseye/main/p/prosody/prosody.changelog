@@ -1,0 +1,494 @@
+prosody (0.11.9-2+deb11u2) bullseye-security; urgency=medium
+
+  * CVE-2022-0217 fix memory leak (Closes: #1004173)
+
+ -- Victor Seva <vseva@debian.org>  Thu, 27 Jan 2022 18:09:08 +0100
+
+prosody (0.11.9-2+deb11u1) bullseye-security; urgency=high
+
+  * fix for https://prosody.im/security/advisory_20220113/
+    CVE-2022-0217
+
+ -- Victor Seva <vseva@debian.org>  Fri, 14 Jan 2022 12:39:19 +0100
+
+prosody (0.11.9-2) unstable; urgency=high
+
+  * fix for https://prosody.im/security/advisory_20210722/
+
+ -- Victor Seva <vseva@debian.org>  Fri, 23 Jul 2021 14:15:58 +0200
+
+prosody (0.11.9-1) unstable; urgency=high
+
+  * New upstream version 0.11.9 addressing several security issues
+    - https://prosody.im/security/advisory_20210512/
+    + CVE-2021-32918
+    + CVE-2021-32920
+    + CVE-2021-32921
+    + CVE-2021-32917
+    + CVE-2021-32919
+  * refresh patches
+
+ -- Victor Seva <vseva@debian.org>  Fri, 14 May 2021 09:17:12 +0200
+
+prosody (0.11.8-1) unstable; urgency=medium
+
+  * New upstream version 0.11.8
+
+ -- Victor Seva <vseva@debian.org>  Tue, 16 Feb 2021 14:26:08 +0100
+
+prosody (0.11.7-3) unstable; urgency=medium
+
+  [ Guillem Jover ]
+  * Do not use invoke-rc.d in logrotate script (Closes: #980401)
+
+ -- Victor Seva <vseva@debian.org>  Wed, 20 Jan 2021 11:59:22 +0100
+
+prosody (0.11.7-2) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Annotate test dependencies with <!nocheck>. (Closes: #980265)
+
+ -- Victor Seva <vseva@debian.org>  Mon, 18 Jan 2021 09:40:20 +0100
+
+prosody (0.11.7-1) unstable; urgency=medium
+
+  * New upstream version 0.11.7
+
+ -- Victor Seva <vseva@debian.org>  Fri, 02 Oct 2020 11:37:42 +0200
+
+prosody (0.11.6-1) unstable; urgency=medium
+
+  * New upstream version 0.11.6
+  * fix skip-systemd-native-flag-missing-pre-depends lintian warning
+
+ -- Victor Seva <vseva@debian.org>  Sat, 12 Sep 2020 13:46:10 +0200
+
+prosody (0.11.5-1) unstable; urgency=medium
+
+  * New upstream version 0.11.5
+  * prosody.service: Add -F to prevent daemonize (overrides config)
+  * prosody.init: Remove --background and force Prosody to daemonize using -D
+  * docs: add more documents
+  * debhelper 12 and Standards-Version to 4.5.0
+
+ -- Victor Seva <vseva@debian.org>  Wed, 25 Mar 2020 09:35:38 +0100
+
+prosody (0.11.4-1) unstable; urgency=medium
+
+  * fix debian-watch-uses-insecure-uri
+  * fix public-upstream-key-unusable
+  * fix spelling-error-in-copyright
+  * add upstream key from Zash
+  * New upstream version 0.11.4
+
+ -- Victor Seva <vseva@debian.org>  Mon, 20 Jan 2020 13:58:37 +0100
+
+prosody (0.11.3-1) unstable; urgency=medium
+
+  [ Martin ]
+  * [8ff2ca4] Fix maintainer email
+
+  [ Victor Seva ]
+  * [07ec12a] New upstream version 0.11.3 (closes: #942591)
+  * [747f583] don't replace localhost certificate (closes: #916465)
+
+ -- Victor Seva <vseva@debian.org>  Sun, 20 Oct 2019 16:28:49 +0200
+
+prosody (0.11.2-1) unstable; urgency=medium
+
+  * debian/gbp.conf: set debian and upstream branches
+  * New upstream version 0.11.2
+  * update maintainer with proper mail list (closes: #916515)
+  * fix debian/watch
+
+ -- Victor Seva <vseva@debian.org>  Wed, 09 Jan 2019 17:15:15 +0100
+
+prosody (0.11.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release,
+    with bugfixes for the CSI and traffic optimisations.
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 07 Dec 2018 21:22:00 +0000
+
+prosody (0.11.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Helmut Grohne ]
+  * Non-maintainer upload.
+  * Fix FTCBFS: Pass --c-compiler and --linker to ./configure.
+    (Closes: #912675)
+
+  [ W. Martin Borgert ]
+  * New upstream release with many new features,
+    among them support for PEP configuration by client, so that OMEMO
+    can work with non-contacts. (Closes: #873174)
+  * Add new build-deps: lua-busted, openssl.
+  * Use lua5.2 instead of lua5.1.
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 24 Nov 2018 11:11:14 +0000
+
+prosody (0.10.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Set Debian XMPP team as maintainer.
+  * Reverting fix for #851669, because it introduced other bugs
+    (closes: #899352, #899357, #899359).
+  * New upstream release (Closes: #900524), which fixes
+    CVE-2018-10847: insufficient stream header validation.
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 31 May 2018 20:57:00 +0000
+
+prosody (0.10.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 16 May 2018 14:22:54 +0300
+
+prosody (0.10.0-2) unstable; urgency=medium
+
+  * Move the prosody PID file to /run/prosody (closes: #883905).
+  * Exit the logrotate postrotate script with zero status if prosody isn't
+    running (closes: #888644).
+  * Add /usr/local/lib/prosody/modules to a modules search path for local
+    administrators. Remove VirtualHost example from the main config in favor
+    of subconfigs (closes: #827689).
+  * Copy the example snakeoil certificate to /etc/prosody/certs instead of
+    linking it. This helps not to add prosody to the ssl-cert group which may
+    be troubling from a security standpoint (closes: #851669).
+  * Add a systemd unit file, don't daemonize the server, letting systemd or
+    start-stop-daemon do that (closes: #851519).
+  * Bump the debhelper compatibility level to 11.
+  * Bump the standards version to 4.1.4.
+  * Fix the package VCS headers.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 27 Apr 2018 13:54:50 +0300
+
+prosody (0.10.0-1) unstable; urgency=medium
+
+  * [a2ca44a] New upstream version 0.10.0
+  * [d80d140] run restorecon when creating a new pid directory for SE Linux
+    (Closes: #859727)
+  * [338a603] add upstream/signing-key.asc as 4.1.0 mandates
+  * [67e4d05] set priority to optional conforming 4.0.1
+  * [6cf707a] refresh 0001-conf.patch
+  * [c04e9e9] update Standards Version to 4.1.1
+  * [037b463]  add libs for dh_auto_test to work
+  * [8e51731] fix lintian
+
+ -- Victor Seva <vseva@debian.org>  Fri, 13 Oct 2017 11:10:54 +0200
+
+prosody (0.10~hg745e0a783055-3) experimental; urgency=medium
+
+  * [1800745] Conflicts with old prosody-modules version (closes: #867678)
+
+ -- Victor Seva <vseva@debian.org>  Wed, 19 Jul 2017 18:25:48 +0200
+
+prosody (0.10~hg745e0a783055-2) experimental; urgency=medium
+
+  * [ac51124] fix typo at bitop dependency
+
+ -- Victor Seva <vseva@debian.org>  Mon, 19 Jun 2017 12:53:10 +0200
+
+prosody (0.10~hg745e0a783055-1) experimental; urgency=medium
+
+  * [24b852c] fix boot order for popular SQL servers (Closes: #743998)
+  * [50d6499] fix bashism at prosody.init and prevent word
+    splitting using quotes
+  * [1998209] New upstream version 0.10~hg745e0a783055 (Closes: #842963)
+  * [643e3c0] refresh debian patches
+  * [f5a1451] add lua5.1-bitop as dependency due to websocket module
+
+ -- Victor Seva <vseva@debian.org>  Tue, 30 May 2017 13:24:12 +0200
+
+prosody (0.9.12-2) unstable; urgency=medium
+
+  * [01d44c8] fix fails to initiate s2s when lua-event 0.4.3 is installed
+    backport fix from https://prosody.im/issues/issue/555
+    (Closes: #863475)
+
+ -- Victor Seva <vseva@debian.org>  Wed, 31 May 2017 09:33:41 +0200
+
+prosody (0.9.12-1) unstable; urgency=medium
+
+  * [e840660] New upstream version 0.9.12
+  * [5bab192] remove already applied patches
+  * [995f758] fix hardening warnings
+
+ -- Victor Seva <vseva@debian.org>  Wed, 11 Jan 2017 09:56:01 +0100
+
+prosody (0.9.11-2) unstable; urgency=medium
+
+  * [c239fbf] fix check incoming certificates valididy (Closes: #846470)
+
+ -- Victor Seva <vseva@debian.org>  Mon, 12 Dec 2016 09:03:29 +0100
+
+prosody (0.9.11-1) unstable; urgency=medium
+
+  * [f27016f] New upstream version 0.9.11
+  * [8234bea] add myself to uploaders list
+  * [90f1d05] update Standards-Version ( no changes needed )
+  * [bf05d9a] fix package-uses-deprecated-debhelper-compat-version.
+    wrap-and-sort -sat
+  * [77f3d3f] fix vcs-field-uses-insecure-uri
+  * [dc46868] fix init.d-script-needs-depends-on-lsb-base
+  * [64946c5] fix wildcard-matches-nothing-in-dep5-copyright
+    util-src/lsignal.c
+  * [d57b350] fix extended-description-is-probably-too-short
+
+ -- Victor Seva <vseva@debian.org>  Fri, 04 Nov 2016 08:53:23 +0100
+
+prosody (0.9.10-1) unstable; urgency=medium
+
+  * New upstream release fixing CVE-2016-0756 and a regression caused by the
+    previous fix of CVE-2016-1232.
+  * Turn the soft dependency on lua-sec to a hard one because using TLS
+    in XMPP is essentially mandatory now (closes: #734678).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 28 Jan 2016 09:47:26 +0300
+
+prosody (0.9.9-1) unstable; urgency=medium
+
+  * New upstream release fixing CVE-2016-1231 and CVE-2016-1232
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 08 Jan 2016 21:29:20 +0100
+
+prosody (0.9.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove the patch which validates UTF-8 strings before calling libidn
+    because it's already applied upstream:
+      - 0005-Validate-UTF-8-strings-before-calling-libidn.patch
+  * Remove from the package two patches already removed from the patch series:
+      - 0005-Disable-LuaExpat-buffering-if-possible.patch
+      - 0006-Also-disable-CharacterData-merging-after-stream-rest.patch
+  * Do not reload prosody configuration after its log is rotated if the daemon
+    is not actually running (closes: #763658).
+  * Rename the default snakeoil localhost certificate to localhost.crt to
+    match its name in the config file (closes: #748721).
+  * Apply upstream patch which fixes CNAME DNS record resolution
+    (closes: #787070):
+      - 0007-Fix-CNAME-DNS-lookup.patch
+  * Remove quilt from the package build dependencies.
+  * Bump the standards version to 3.9.6.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 02 Jun 2015 18:27:08 +0300
+
+prosody (0.9.7-2) unstable; urgency=high
+
+  * Apply upstream patch to validate UTF-8 strings before calling libidn
+    (related to CVE-2015-2059)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Sat, 28 Mar 2015 16:20:07 +0100
+
+prosody (0.9.7-1) unstable; urgency=medium
+
+  * New upstream release, really a minor fix over 0.9.6
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Sat, 25 Oct 2014 10:42:14 +0200
+
+prosody (0.9.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patches integrate upstream:
+      - 0005-Disable-LuaExpat-buffering-if-possible.patch
+      - 0006-Also-disable-CharacterData-merging-after-stream-rest.patch
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 24 Oct 2014 22:07:31 +0200
+
+prosody (0.9.4-1) unstable; urgency=high
+
+  * New upstream release
+  * Additional patches fixing a DOS:
+      - 0005-Disable-LuaExpat-buffering-if-possible.patch
+      - 0006-Also-disable-CharacterData-merging-after-stream-rest.patch
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Sat, 05 Apr 2014 12:53:47 +0200
+
+prosody (0.9.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix ejabberd2prosody path (LP: #1109051)
+  * Add Provides: xmpp-server (Closes: #737761)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 14 Mar 2014 16:26:25 +0100
+
+prosody (0.9.2-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #737260)
+  * Patches refreshed
+  * Copyright rewritten following format 1.0
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 10 Jan 2014 18:11:25 +0100
+
+prosody (0.9.1-1) unstable; urgency=low
+
+  * New upstream release including ipv6 support (Closes: #721970, #562161)
+  * Packaging moved to git (still collab maint)
+  * Add Vcs-* fields to control file
+  * Standards-Version bumped to 3.9.4, no changes needed
+  * Add delaycompress to logrotate file (Closes: #718703)
+  * Allow user to override IO/CPU scheduler and nice level using
+    /etc/default/prosody, as the upstream does
+  * Fix LSB init info adding $local_fs as a dependency
+  * Align package description with the one used by the upstream
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 16 Aug 2013 16:18:43 +0200
+
+prosody (0.9.0~rc5-2) unstable; urgency=low
+
+  * Configure prosody using --ostype=debian
+  * New patch to use dpkg-buildflags (activates hardening flags)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Mon, 12 Aug 2013 09:58:27 +0200
+
+prosody (0.9.0~rc5-1) unstable; urgency=low
+
+  * New upstream release candidate
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Thu, 27 Sep 2012 18:22:53 +0200
+
+prosody (0.8.2-4) unstable; urgency=low
+
+  [ Matthew James Wild ]
+  * Fix init script to expect 'lua5.1' as a process name
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 29 Jun 2012 20:26:21 +0200
+
+prosody (0.8.2-3) unstable; urgency=low
+
+  * Add patch prosody-lua51.patch to make prosody work even if lua5.2
+    is installed
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Fri, 29 Jun 2012 19:04:46 +0200
+
+prosody (0.8.2-2) unstable; urgency=low
+
+  [ Sergei Golovan ]
+  * Switched to the snakeoil SSL certificate for localhost server instead of
+    generating a separate one. This moves the responsibility of creating SSL
+    certificate and private key to the ssl-cert package (Closes: #638027,
+    #645853).
+  * Create localhost.cfg.lua symlink in /etc/prosody/conf.d directory in
+    postinstallation script and only on a new install to allow the local
+    admin removing it completely.
+  * Added lua-zlib, lua-dbi-postgresql, lua-dbi-mysql and lua-dbi-sqlite3 to
+    the suggested packages list. lua-zlib allows prosody to use XMPP stream
+    compression, the others let prosody store its data in an external
+    relational database.
+  * Bumped standards version to 3.9.3 (no changes needed).
+
+  [ Enrico Tassi ]
+  * Fix build dependency using the new Lua packages names
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 16 May 2012 22:07:24 +0400
+
+prosody (0.8.2-1) unstable; urgency=low
+
+  * New upstream bugfix release
+  * Fixed ssl cert generation in postinst (Closes: #596433)
+  * Bumped standards version to 3.9.2, no changes
+  * source format 3.0 (quilt)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Thu, 21 Jul 2011 21:55:57 +0200
+
+prosody (0.8.1-1) unstable; urgency=high
+
+  * New upstream release (Closes: #622638)
+  * Depend on lua-expat >= 1.2.0 to fix DoS attack (Closes: #629234)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Sat, 04 Jun 2011 18:42:47 +0200
+
+prosody (0.8.0-1) unstable; urgency=low
+
+  [ Matthew James Wild ]
+  * New upstream release. (closes: #614175, #620882)
+  * Relocate all Prosody modules into /usr/lib/prosody. (closes: #600370)
+
+  [ Enrico Tassi ]
+  * Removed prosody.dirs, usr/lib/lua/5.1/util/ not needed
+  * Bumped standards version to 3.9.1. no changes needed
+  * Added watch file
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Mon, 23 May 2011 10:07:42 +0200
+
+prosody (0.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Check username and process name along with pidfile before stopping
+    prosody daemon (closes: #580185).
+  * Strictened dependency on liblua5.1-filesystem0 to versions with fixed
+    umask bug in mkdir procedure (closes: #579087).
+  * Use an absolute SSL certificate and key paths in config example
+    /etc/prosody/conf.avail/example.com.cfg.lua (closes: #581682).
+  * Added $syslog dependency to the prosody init script.
+  * Added liblua5.1-event0 (which provides support for a large number of
+    network connections) to recommended dependencies.
+  * Bumped standards version to 3.9.0.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 05 Jul 2010 20:55:28 +0400
+
+prosody (0.6.2-2) unstable; urgency=low
+
+  * Fixed changing ownership and permissions of the old prosody config
+    file (closes: #578837).
+  * Added required-stop dependency on $remote_fs for prosody init script
+    because it requires /usr/bin/prosody existence to run. Also, removed
+    unnecessary dependency on $local_fs.
+  * Bumped standards version to 3.8.4.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 25 Apr 2010 10:37:20 +0400
+
+prosody (0.6.2-1) unstable; urgency=low
+
+  [ Enrico Tassi ]
+  * Fixed typo in config file. Thanks  Tollef Fog Heen (Closes: #563795)
+
+  [ Sergei Golovan ]
+  * New upstream release.
+  * Remove prosody group on package purge.
+  * Make /etc/prosody directory readable, so the config filename can be
+    completed in case user enters 'sudo vi /etc/prosody/pr<TAB>'. The config
+    file itself is world-unreadable now.
+  * Don't change ownership and permissions of prosody config, log and
+    database directories if they are overridden by dpkg-statoverride.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 18 Apr 2010 11:57:22 +0400
+
+prosody (0.6.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Replaced no_daemonize option by daemonize in the prosody config file.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 13 Dec 2009 16:23:07 +0300
+
+prosody (0.5.2-2) unstable; urgency=low
+
+  [ Enrico Tassi ]
+  * recommend liblua5.1-sec1 instead of liblua5.1-sec0
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Tue, 17 Nov 2009 10:11:50 +0100
+
+prosody (0.5.2-1) unstable; urgency=low
+
+  [ Sergei Golovan ]
+  * New upstream release.
+  * Change log rotating frequency to weekly, compress logs, and create log
+    files with adm group instead of prosody and with permissions 640.
+  * Added copyright note for util-src/lsignal.c file to debian/copyright
+    and reformatted it to fit 80 character lines.
+  * Added README.source which explains how to get patched source given the
+    pristine source and the series of patches in debian/patches.
+  * Bumped standards version to 3.8.3.
+
+  [ Matthew James Wild ]
+  * Suppress output of reload during logrotate, avoiding emails from cron.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 30 Sep 2009 20:44:14 +0400
+
+prosody (0.5.1-1) unstable; urgency=low
+
+  * Initial release (closes: #538130).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 31 Jul 2009 13:43:15 +0400

@@ -1,0 +1,41 @@
+golang-github-google-btree (1.0.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * DH & compat to version 12.
+  * Priority: optional; Standards-Version: 4.4.1
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 01 Dec 2019 12:51:18 +1100
+
+golang-github-google-btree (0.0~git20161217.0.316fb6d-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Anthony Fok ]
+  * New upstream snapshot
+  * Update debian/gbp.conf to do without a build-area directory
+  * Fix minor typo in package description as per README
+  * Remove reference to non-existent debian/patches/* in d/copyright
+  * Update debian/control:
+    - Add XS-Go-Import-Path field
+      and remove the corresponding DH_GOPKG variable in debian/rules
+    - Build-Depends on golang-any instead of golang-go
+      and remove unnecessary Depends on golang-go from -dev package
+    - Remove unnecessary Built-Using field for -dev package
+    - Use debhelper (>= 10)
+    - Bump Standards-Version to 4.0.0:
+      Use https form of the copyright-format URL in debian/copyright
+    - Add "Testsuite: autopkgtest-pkg-go"
+    - Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Fri, 28 Jul 2017 16:22:21 -0600
+
+golang-github-google-btree (0.0~git20150413.0.cc6329d-1) unstable; urgency=medium
+
+  * Initial release (Closes: #797553).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 31 Aug 2015 22:36:41 +1000

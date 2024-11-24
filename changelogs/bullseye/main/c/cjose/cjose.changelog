@@ -1,0 +1,63 @@
+cjose (0.6.1+dfsg1-1+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2023-37464 (Closes: #1041423)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Fri, 04 Aug 2023 15:43:36 +0200
+
+cjose (0.6.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version 0.6.1+dfsg1
+  * Import upstream patch from Upstream PR #78 (Closes: #890907)
+  * Update debhelper and Standards-Version
+  * Move Vcs-* to Salsa
+
+ -- Moritz Schlarb <schlarbm@uni-mainz.de>  Mon, 06 Aug 2018 15:35:23 +0200
+
+cjose (0.6.0+dfsg1-1) unstable; urgency=medium
+
+  * Update debian/control
+  * New upstream version 0.6.0+dfsg1
+  * Build against current OpenSSL 1.1
+  * Update symbols file
+  * Specify make test in d/t/control
+
+ -- Moritz Schlarb <schlarbm@uni-mainz.de>  Tue, 20 Feb 2018 12:18:21 +0100
+
+cjose (0.5.1+dfsg1-2) unstable; urgency=medium
+
+  * build against openssl 1.1 (closes: #851069)
+
+ -- Christoph Martin <martin@uni-mainz.de>  Tue, 14 Nov 2017 11:32:57 +0100
+
+cjose (0.5.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version 0.5.1+dfsg1
+  * Add gbp.conf and fix watch filenamemangling
+  * Make source DFSG-compliant
+  * Remove unused patch
+
+ -- Moritz Schlarb <schlarbm@uni-mainz.de>  Mon, 31 Jul 2017 15:32:47 +0200
+
+cjose (0.4.1-3) unstable; urgency=medium
+
+  * fix bad cast of pointer resulting in build problem for 64bit big
+    endian
+  * add library symbols file
+
+ -- Christoph Martin <martin@uni-mainz.de>  Mon, 23 Jan 2017 11:32:05 +0100
+
+cjose (0.4.1-2) unstable; urgency=medium
+
+  * increase timeout for build tests to make it build on slower archs
+
+ -- Christoph Martin <martin@uni-mainz.de>  Wed, 14 Dec 2016 09:53:08 +0100
+
+cjose (0.4.1-1) unstable; urgency=low
+
+  [ Matthew A. Miller ]
+  * Initial release.
+
+  [ Christoph Martin ]
+  * finalize Debian release (closes: #847562)
+
+ -- Christoph Martin <martin@uni-mainz.de>  Fri, 09 Dec 2016 16:11:22 +0100

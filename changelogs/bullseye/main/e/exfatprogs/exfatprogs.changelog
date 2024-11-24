@@ -1,0 +1,35 @@
+exfatprogs (1.1.0-1+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2023-45897: out-of-bounds write in read_file_dentry_set()
+
+ -- Adrian Bunk <bunk@debian.org>  Mon, 02 Sep 2024 17:14:19 +0300
+
+exfatprogs (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #982431)
+    Introduces new binaries dump.exfat and exfatlabel.
+  * Update Standards-Version to 4.5.1, updating debian/copyright.
+
+ -- Sven Hoexter <hoexter@debian.org>  Wed, 10 Feb 2021 09:32:31 +0100
+
+exfatprogs (1.0.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sven Hoexter <hoexter@debian.org>  Fri, 31 Jul 2020 10:13:02 +0200
+
+exfatprogs (1.0.3-2) unstable; urgency=medium
+
+  * Add exfatprogs release signing key.
+    ID D58529CC5376E36D6E1E6F6234F230FAF78E48D3
+    Hyunchul Lee (Exfatprogs Release Signing Key) <hyc.lee@gmail.com>
+  * Source-Only upload to allow testing migration post new processing.
+
+ -- Sven Hoexter <hoexter@debian.org>  Mon, 20 Jul 2020 09:30:07 +0200
+
+exfatprogs (1.0.3-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #964265)
+
+ -- Sven Hoexter <hoexter@debian.org>  Sun, 05 Jul 2020 21:41:15 +0200

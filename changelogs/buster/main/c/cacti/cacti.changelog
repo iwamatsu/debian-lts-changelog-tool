@@ -1,0 +1,2066 @@
+cacti (1.2.2+ds1-2+deb10u6) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2023-39357: When the column type is numeric, the sql_save function
+    directly utilizes user input. Many files and functions calling the
+    sql_save function do not perform prior validation of user input,
+    leading to the existence of multiple SQL injection vulnerabilities in
+    Cacti. This allows authenticated users to exploit these SQL injection
+    vulnerabilities to perform privilege escalation and remote code
+    execution.
+  * CVE-2023-39360: Stored Cross-Site-Scripting (XSS) Vulnerability allows
+    an authenticated user to poison data. The vulnerability is found in
+    `graphs_new.php`. Several validations are performed, but the
+    `returnto` parameter is directly passed to `form_save_button`. In
+    order to bypass this validation, returnto must contain
+    `host.php`.
+  * CVE-2023-39361: SQL injection discovered in graph_view.php. Since
+    guest users can access graph_view.php without authentication by
+    default, if guest users are being utilized in an enabled state, there
+    could be the potential for significant damage. Attackers may exploit
+    this vulnerability, and there may be povssibilities for actions such as
+    the usurpation of administrative privileges or remote code execution.
+  * CVE-2023-39362: An authenticated privileged user, can use a malicious
+    string in the SNMP options of a Device, performing command injection
+    and obtaining remote code execution on the underlying server. The
+    `lib/snmp.php` file has a set of functions, with similar behavior,
+    that accept in input some variables and place them into an `exec` call
+    without a proper escape or validation.
+  * CVE-2023-39364: Users with console access can be redirected to an
+    arbitrary website after a change password performed via a specifically
+    crafted URL. The `auth_changepassword.php` file accepts `ref` as a URL
+    parameter and reflects it in the form used to perform the change
+    password. It's value is used to perform a redirect via `header` PHP
+    function. A user can be tricked in performing the change password
+    operation, e.g., via a phishing message, and then interacting with the
+    malicious website where the redirection has been performed, e.g.,
+    downloading malwares, providing credentials, etc.
+  * CVE-2023-39365: Issues with Cacti Regular Expression validation
+    combined with the external links feature can lead to limited SQL
+    Injections and subsequent data leakage.
+  * CVE-2023-39513: Stored Cross-Site-Scripting (XSS) Vulnerability which
+    allows an authenticated user to poison data stored in the _cacti_'s
+    database. The script under `host.php` is used to monitor and manage
+    hosts in the _cacti_ app, hence displays useful information such as
+    data queries and verbose logs.
+  * CVE-2023-39515: Stored Cross-Site-Scripting (XSS) Vulnerability allows
+    an authenticated user to poison data stored in the cacti's
+    database. These data will be viewed by administrative cacti accounts
+    and execute JavaScript code in the victim's browser at view-time. The
+    script under `data_debug.php` displays data source related debugging
+    information such as _data source paths, polling settings, meta-data on
+    the data source_.
+  * CVE-2023-39516: Stored Cross-Site-Scripting (XSS) Vulnerability which
+    allows an authenticated user to poison data stored in the _cacti_'s
+    database. These data will be viewed by administrative _cacti_ accounts
+    and execute JavaScript code in the victim's browser at view-time. The
+    script under `data_sources.php` displays the data source management
+    information (e.g. data source path, polling configuration etc.) for
+    different data visualizations of the _cacti_ app.
+  * CVE-2023-49084: While using the detected SQL Injection and
+    insufficient processing of the include file path, it is possible to
+    execute arbitrary code on the server. Exploitation of the
+    vulnerability is possible for an authorized user. The vulnerable
+    component is the `link.php`. (Closes: #1059254)
+  * CVE-2023-49085: It is possible to execute arbitrary SQL code through
+    the `pollers.php` script. An authorized user may be able to execute
+    arbitrary SQL code. The vulnerable component is the `pollers.php`.
+  * CVE-2023-49086: Bypassing an earlier fix (CVE-2023-39360) that leads
+    to a DOM XSS attack. Exploitation of the vulnerability is possible for
+    an authorized user. The vulnerable component is the
+    `graphs_new.php`. (Closes: #1059254)
+  * CVE-2023-49088: The fix applied for CVE-2023-39515 in version 1.2.25
+    is incomplete as it enables an adversary to have a victim browser
+    execute malicious code when a victim user hovers their mouse over the
+    malicious data source path in `data_debug.php`.
+
+ -- Sylvain Beucler <beuc@debian.org>  Fri, 15 Mar 2024 10:18:20 +0100
+
+cacti (1.2.2+ds1-2+deb10u5) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-46169: A command injection vulnerability allows an unauthenticated
+    user to execute arbitrary code on a server running Cacti, if a poller_item
+    with the action type POLLER_ACTION_SCRIPT_PHP (2) is configured.
+    (Closes: #1025648)
+  * CVE-2022-0730: Under certain LDAP conditions, Cacti authentication can be
+    bypassed with certain credential types. (Closes: #1008693)
+  * CVE-2020-25706: A cross-site scripting (XSS) vulnerability was found in
+    templates_import.php.
+  * CVE-2020-23226: Multiple Cross Site Scripting (XSS) vulneratiblities were
+    found in reports_admin.php (1x), data_queries.php (2x), data_input.php (3x),
+    graph_templates.php (4x), graphs.php (5x), reports_admin.php (6x), and
+    data_input.php (7x).
+  * CVE-2020-8813: A guest user with the graph real-time privilege could execute
+    arbitrary OS commands via shell metacharacters in a cookie.  It remains
+    unclear how PHP 7.2 and later are affected. (Closes: #951832)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Thu, 29 Dec 2022 22:40:43 +0100
+
+cacti (1.2.2+ds1-2+deb10u4) buster; urgency=medium
+
+  * Add 0001-Fixing-Issue-4022.patch (Closes: #979998)
+    - CVE-2020-35701: SQL injection via data_debug.php
+  * Add 0001-Fixing-Issue-4019.patch
+    There are a few places in the current code where an attacker, once
+    having gained access to the Cacti database through a SQL injection,
+    could modify data in tables to possibly expose an stored XSS bug in
+    Cacti.
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 21 Jan 2021 20:16:38 +0100
+
+cacti (1.2.2+ds1-2+deb10u3) buster; urgency=medium
+
+  * Unix timestamps after Sep 13 2020 are rejected as graph start/end
+    arguments (Upstream bug #3245)
+  * CVE-2020-7237: Remote Code Execution (by privileged users) via shell
+    metacharacters in the Performance Boost Debug Log field of
+    poller_automation.php. OS commands are executed when a new poller
+    cycle begins. The attacker must be authenticated, and must have access
+    to modify the Performance Settings of the product. (Closes: #949997)
+  * CVE-2020-7106: XSS in data_sources.php, color_templates_item.php,
+    graphs.php, graph_items.php, lib/api_automation.php, user_admin.php,
+    and user_group_admin.php, as demonstrated by the description parameter
+    in data_sources.php (a raw string from the database that is displayed
+    by $header to trigger the XSS). (Closes: #949996)
+  * CVE-2020-13230: Disabling an user account does not immediately
+    invalidate any permissions granted to that account (e.g., permission
+    to view logs)
+  * CVE-2020-13231: auth_profile.php?action=edit allows CSRF for an admin
+    email change
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 18 Jun 2020 22:34:41 +0200
+
+cacti (1.2.2+ds1-2+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the Security Team.
+  * Acknowledgements to Paul Gevers!
+  * CVE-2019-17358: insufficient validation of form input leading to unsafe
+    unserialization operations and memory corruption (Closes: #947375).
+  * CVE-2019-17357: SQL injection vulnerability in graphs.php (Closes: #947374).
+  * CVE-2019-16723: Authentication bypass allows unprivileged users to view all
+    graphs (Closes: #941036).
+
+ -- Hugo Lefeuvre <hle@debian.org>  Sun, 29 Dec 2019 19:53:28 +0100
+
+cacti (1.2.2+ds1-2+deb10u1) buster; urgency=medium
+
+  * Depends i.s.o. Recommends on php-gmp as this is now a requirement of
+    the upstream code (Closes: #930252)
+  * Fix reading of snmp gauges (0001-Resolving-issue-2474.patch) (Closes:
+    #930254)
+  * Fix upgrade from stretch (0001-Resolving-issue-2482.patch); the
+    upgrade code attempted to drop a non-existing primary key (Closes:
+    #931702)
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 16 Jul 2019 21:40:32 +0200
+
+cacti (1.2.2+ds1-2) unstable; urgency=medium
+
+  * Add 0001-Resolving-Issue-2581.patch from upstream (Closes: #926700)
+    CVE-2019-11025: In clearFilter() in utilities.php no escaping occurs
+    before printing out the value of the SNMP community string (SNMP
+    Options) in the View poller cache, leading to XSS.
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 09 Apr 2019 20:42:38 +0200
+
+cacti (1.2.2+ds1-1) unstable; urgency=medium
+
+  * New upstream release 1.2.2
+  * tests: add one more exception for Ubuntu (Closes: #922437)
+  * Depend on fonts-fork-awesome instead of fonts-font-awesome (Closes:
+    #922779)
+  * Fix typo in debian.php.dist (Closes: #922651)
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 26 Feb 2019 21:48:07 +0100
+
+cacti (1.2.1+ds1-2) unstable; urgency=medium
+
+  * tests: add some items back that are seen on Ubuntu's setup
+  * Migrate from libjs-chartjs to libjs-chart.js due to bug #922288
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 14 Feb 2019 10:19:02 +0100
+
+cacti (1.2.1+ds1-1) unstable; urgency=medium
+
+  * New upstream release 1.2.1
+    - spikekiller is now a class (Closes: #916814)
+  * Upload to unstable
+  * Bump dependency on libphp-phpmailer
+  * Bump Standards (no changes)
+  * Declare R³: binary-targets (Thanks lintian)
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 27 Jan 2019 21:22:59 +0100
+
+cacti (1.2.0~beta4+ds1-1) experimental; urgency=medium
+
+  * New upstream release 1.2.0-beta4
+  * Refresh patches
+  * Disable internal log rotation by default as Debian uses its own log
+    rotate mechanism by default
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 02 Dec 2018 20:51:32 +0100
+
+cacti (1.2.0~beta2+ds1-1) experimental; urgency=medium
+
+  * New upstream release 1.2.0-beta1
+  * CVE-2009-4112: remote authenticated administrators can gain
+    privileges; circumvented via optional whitelisting (Closes: #561339)
+  * Refresh patches
+  * Drop most of
+    enable-system-jqueryui-by-putting-cacti-changes-in-main.css.patch
+  * Bump Standards to 4.2.1
+  * Bump debhelper compat level
+  * [tests] Add mysql-server test back but with
+    skip-not-installable. Debian has mariadb-server as
+    default-mysql-server so we definitely want to test that. Ubuntu has
+    mysql-server, so we also want to test that, but that isn't in
+    testing. (Closes: #903238)
+  * Drop recursive chown from postins (thanks lintian)
+  * Add perl-path.patch to make sh-bang in perl scripts compliant with
+    policy (thanks lintian)
+  * Add font-awesome-path.patch as the path to the css is slightly
+    different in the system version
+  * Add fix-update-for-beta-versions.patch to ensure updating works
+  * Adapt documentation building as upstream reworked it completely
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 28 Oct 2018 16:00:51 +0100
+
+cacti (1.1.38+ds1-2) unstable; urgency=medium
+
+  * [tests] Adapt for MariaDB 10.3 which triggers a new message in the
+    log that doesn't seem to result in different output otherwise
+  * [tests] Add mysql-server test back but with
+    skip-not-installable. Debian has mariadb-server as
+    default-mysql-server so we definitely want to test that. Ubuntu has
+    mysql-server, so we also want to test that, but that isn't in
+    testing. (Closes: #903238)
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 27 Dec 2018 20:33:59 +0100
+
+cacti (1.1.38+ds1-1) unstable; urgency=medium
+
+  * New upstream release 1.1.38
+  * [tests] Remove mysql-server test as it isn't available in testing
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 18 Apr 2018 12:03:05 +0200
+
+cacti (1.1.37+ds1-1) unstable; urgency=medium
+
+  * New upstream release 1.1.37
+  * CVE-2018-10059: (XSS) the get_current_page function in
+    lib/functions.php relies on $_SERVER['PHP_SELF'] instead of
+    $_SERVER['SCRIPT_NAME'] to determine a page name
+  * CVE-2018-10060: (XSS) does not properly reject unintended characters,
+    related to use of the sanitize_uri function in lib/functions.php
+  * CVE-2018-10061: (XSS) makes certain htmlspecialchars calls without the
+    ENT_QUOTES flag
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 12 Apr 2018 17:43:13 +0200
+
+cacti (1.1.36+ds1-1) unstable; urgency=medium
+
+  * New upstream release 1.1.36
+    - Refresh patches
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 28 Feb 2018 16:22:50 +0100
+
+cacti (1.1.35+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.35
+  * [tests] Fix for nofollow directive that prevented recursive crawl
+    (Closes: #889893)
+  * [tests] Prevent cron job from running
+  * Add 0001-issue-1336-Fix-issue-with-config-not-being-defined-1.patch
+    from upstream
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 13 Feb 2018 19:26:14 +0100
+
+cacti (1.1.34+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.34
+    - Includes updates for php7.2 (Closes: #889181)
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 06 Feb 2018 22:31:34 +0100
+
+cacti (1.1.31+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.31
+  * Update autopkgtest for new output since 1.1.29
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 17 Jan 2018 18:50:00 +0100
+
+cacti (1.1.30+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.30
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 05 Jan 2018 20:30:47 +0100
+
+cacti (1.1.29+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.29
+  * Refresh documentation tar ball
+  * Drop php-mysqlnd from alternative list of dependencies, it doesn't
+    exist
+  * Use dh-linktree embed-weakdep option to prevent strong dependencies
+    (requires dh-linktree 0.5)
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 27 Dec 2017 20:57:21 +0100
+
+cacti (1.1.28+ds1-3) unstable; urgency=medium
+
+  * Rebuild against new version of libjs-jquery-colorpicker (Closes:
+    #884756)
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 21 Dec 2017 21:16:13 +0100
+
+cacti (1.1.28+ds1-2) unstable; urgency=medium
+
+  * Add remove-global-mysql-command.patch (Closes: #882356)
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 24 Nov 2017 11:07:11 +0100
+
+cacti (1.1.28+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.28
+    - Drop applied patches
+  * [tests] Allow time out to happen in the logs as Ubuntu's autopkgtest
+    servers are often too slow
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 19 Nov 2017 21:34:10 +0100
+
+cacti (1.1.27+ds1-3) unstable; urgency=medium
+
+  * CVE-2017-16641: remote authenticated administrators can execute
+    arbitrary os commands via the path_rrdtool parameter in an action=save
+    request to settings.php (Closes: #881110)
+  * CVE-2017-16660: remote authenticated administrators can conduct Remote
+    Code Execution attacks by placing the Log Path under the web root, and
+    then making a remote_agent.php request containing PHP code in a
+    Client-ip header
+  * CVE-2017-16661: remote authenticated administrators can read arbitrary
+    files accessible by the web-server user by placing the Log Path into a
+    private directory, and then making a clog.php?filename= request
+  * CVE-2017-16785: reflected XSS via the PATH_INFO to host.php
+    (reintroduction of CVE-2017-15194)
+  * Bump standards to 4.1.1
+  * Set Priority to optional
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 14 Nov 2017 20:14:34 +0100
+
+cacti (1.1.27+ds1-2) unstable; urgency=medium
+
+  * Add upstream commit b44eb52 as 0001-Another-crack-at-issue-1039.patch
+    because they likely reintroduced part of CVE-2017-15194. Thanks to
+    autopkgtest
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 27 Oct 2017 14:41:48 +0200
+
+cacti (1.1.27+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.27
+   - Drop CVE-2017-15194.patch again
+  * [tests] Add new note to list of exceptions to fix failure
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 23 Oct 2017 20:52:49 +0200
+
+cacti (1.1.25+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.25
+  * Improve the override_dh_fixperms target as some files were
+    unintentionally missed and thus make cacti reproducible again
+  * CVE-2017-15194: XSS in global_session.php
+    - Add CVE-2017-15194.patch (Closes: #878304)
+    - Add check to autopkgtest
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 13 Oct 2017 21:09:04 +0200
+
+cacti (1.1.21+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.21
+  * Bump standards version to 4.1.0 (no changes)
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 08 Sep 2017 14:48:59 +0200
+
+cacti (1.1.18+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.18
+    - Drop patches from upstream and refresh the others
+  * Bump standards version to 4.0.1 (no changes)
+  * Stop installing csrf/LICENSE file (thanks lintian)
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 19 Aug 2017 18:46:41 +0200
+
+cacti (1.1.17+ds1-2) unstable; urgency=medium
+
+  * CVE-2017-12927 XSS vulnerability in spikekill.php (Closes: #872478)
+  * [tests] fix grep expression to unblock Ubuntu
+  * [tests] Add improve-boost-logging-on-fresh-installs.patch and don't
+    filter on the fixed messages
+  * Fix typo in previous changelog message
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 18 Aug 2017 21:15:23 +0200
+
+cacti (1.1.17+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.17
+  * Make the autopkgtest stricter now upstream reduced the noise
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 16 Aug 2017 14:04:31 +0200
+
+cacti (1.1.16+ds1-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fixes CVE-2017-12065 spikekill.php might allow remote attackers to
+      execute arbitrary code via the avgnan, outlier-start, or outlier-end
+      parameter (Closes: #870353)
+    - Fixes CVE-2017-12066 Cross-site scripting (XSS) vulnerability in
+      aggregate_graphs.php (Closes: #870354)
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 03 Aug 2017 09:38:54 -0400
+
+cacti (1.1.15+ds1-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fixes CVE-2017-11691 Cross-site scripting (XSS) vulnerability in
+      auth_profile.php (Closes: #869848)
+  * Lower the Depends on dbc to include ~ to ease backports
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 27 Jul 2017 10:40:05 -0400
+
+cacti (1.1.13+ds1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update documentation from upstream
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 14 Jul 2017 20:37:39 +0200
+
+cacti (1.1.12+ds1-1) unstable; urgency=medium
+
+  * New upstream release
+  * CVE-2017-10970 XSS vulnerability via link.php fixed (Closes: #867532)
+  * Add version to jquery-tablesorter
+  * Make sure that autopkgtests at least run again
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 07 Jul 2017 21:07:43 +0200
+
+cacti (1.1.10+ds1-6) unstable; urgency=medium
+
+  * Fix upgrade script to find the upgrade functions in the Debian file
+    layout (Closes: #866773) Thanks to ISHIKAWA Mutsumi
+  * Add upgrade code for grant on mysql.time_zone_name
+  * Bump version of dbconfig-common to ensure we have the fix for postinst
+    code working
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 04 Jul 2017 07:16:45 +0200
+
+cacti (1.1.10+ds1-5) unstable; urgency=medium
+
+  * Fix piuparts issue where the scripts are changed due to loading the
+    template files in the postinst script. See upstream bug #810. (Closes:
+    #866140)
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 27 Jun 2017 21:41:26 +0200
+
+cacti (1.1.10+ds1-4) unstable; urgency=medium
+
+  * Upload to unstable
+  * Bump standards version to 4.0.0 (no changes)
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 20 Jun 2017 21:45:13 +0200
+
+cacti (1.1.10+ds1-3) experimental; urgency=medium
+
+  * Add texlive-formats-extra to the BD to get /usr/bin/pdfjadetex on the
+    path ($HOME didn't solve it)
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 16 Jun 2017 17:35:31 +0200
+
+cacti (1.1.10+ds1-2) experimental; urgency=medium
+
+  * Define $HOME in d/rules to (hopefully) prevent FTBFS (which is
+    unfortunately unreproducible in any of the setups I tested)
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 15 Jun 2017 20:04:06 +0200
+
+cacti (1.1.10+ds1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Upstream uses a newer jquery-tablesorter then in Debian so some links
+    are not working (newer version is waiting in NEW) and once available
+    should be used as minimal required version
+  * Add cacti-spine and snmpd to suggests
+  * Use soft-links in for site/log and site/rra instead of patches
+  * Add missing depends (php-gd, php-json, php-ldap)
+  * Debian dropped suhosin long time ago, so stop patching for it
+  * Add select grant on mysql.time_zone_name
+  * Add default templates during install (got dropped upstream since
+    1.0.0)
+  * Add some paths to cacti settings during install to accommodate for the
+    by-pass of cacti/install web-page.
+  * Add note about time zones and the suggested manual action in NEWS and
+    README
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 13 Jun 2017 06:47:18 +0200
+
+cacti (1.1.5+ds1-2) experimental; urgency=medium
+
+  * Upload with fix from 0.8.8h+ds1-10:
+    Fix upgrades from before 0.8.8h+ds1-8; that version started to ship
+    symlinks to directories in libjs-jquery-jstree without making sure
+    dpkg handled that properly during upgrades (Closes: #861858)
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 05 May 2017 21:23:09 +0200
+
+cacti (1.1.5+ds1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Generate translations from source
+  * Bump compat level to 10
+  * Build documentation from source (requires second tar ball generated
+    from upstream git)
+  * Generate jQueryUI datepicker links instead of hardcoding them
+  * Don't install *.po files, they aren't used
+  * Add lintian overrides for script-non-executable to avoid carrying a
+    patch forever, while they shouldn't need to be executable in Debian
+  * Don't install useless examples (outside of doc tree even)
+  * Handle the new paper-plane theme as the other themes
+  * Clean up d/TODO a bit
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 03 May 2017 20:47:08 +0200
+
+cacti (1.1.3+ds1-1) experimental; urgency=medium
+
+  * New upstream release
+    - Drop loads of obsoleted patches
+    - Refresh or rework remaining patches
+  * Strip loads of embedded javascript projects and build and/or depend on
+    the proper Debian package
+  * Drop dependency on libadodb as upstream moved away from it
+  * Prepare to buid documentation
+  * Add patches to move adaptations in the embedded jquery-ui css file to
+    the cacti main.css file as upstream intents to support that
+  * Update d/TODO as not everything is done as I want it
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 17 Apr 2017 19:50:52 +0200
+
+cacti (0.8.8h+ds1-10) unstable; urgency=medium
+
+  * Fix upgrades from before 0.8.8h+ds1-8; that version started to ship
+    symlinks to directories in libjs-jquery-jstree without making sure
+    dpkg handled that properly during upgrades (Closes: #861858)
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 05 May 2017 13:55:33 +0200
+
+cacti (0.8.8h+ds1-9) unstable; urgency=medium
+
+  * Add enable_faster_polling_than_cron.patch to replace the use of the
+    deprecated split() function (Closes: #860271)
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 13 Apr 2017 22:05:30 +0200
+
+cacti (0.8.8h+ds1-8) unstable; urgency=medium
+
+  * Depend on libjs-jquery-jstree instead of using embedded version
+  * Replace use_debian_javascript_packages.patch with links to the Debian
+    packages instead (more transparent)
+  * Add fix_export_for_debian_packages.patch to avoid export failure
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 14 Dec 2016 21:20:24 +0100
+
+cacti (0.8.8h+ds1-7) unstable; urgency=medium
+
+  * Previous upload was screwed up. Doing it better this time I hope.
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 10 Dec 2016 07:47:07 +0100
+
+cacti (0.8.8h+ds1-6) unstable; urgency=medium
+
+  * Fix links for path change in libjs-jquery-ui-theme-ui-lightness,
+    hopefully bug #846515 will not get fixed
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 07 Dec 2016 21:44:51 +0100
+
+cacti (0.8.8h+ds1-5) unstable; urgency=medium
+
+  [ Emilio Pozuelo Monfort ]
+  * CVE-2016-2313-guest-auth.patch:
+    + Fix regression in the fix for CVE-2016-2313 that broke guest user
+      logins. Thanks to Matus Uhlar for the report. (Closes: #833420)
+
+  [ Paul Gevers ]
+  * Recommend default-mysql-server instead of MariaDB and MySQL
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 05 Sep 2016 21:10:12 +0200
+
+cacti (0.8.8h+ds1-4) unstable; urgency=medium
+
+  * Improve autopkgtest situation and avoid failure when it is not needed
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 16 Jun 2016 22:11:20 +0200
+
+cacti (0.8.8h+ds1-3) unstable; urgency=medium
+
+  * Save more log files during autopkgtesting
+  * Add check on errors during testing (Closes: #825644)
+  * Add javascript-common to Depends to ensure jquery is usable
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 10 Jun 2016 20:20:04 +0200
+
+cacti (0.8.8h+ds1-2) unstable; urgency=medium
+
+  * Update make_cacti_sql_mode-strict_compatible.patch to also drop
+    ONLY_FULL_GROUP_BY (Follow-up for LP: #1578144)
+  * Lower versioned dependency on libphp-adodb to be Ubuntu compatible
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 02 Jun 2016 22:06:59 +0200
+
+cacti (0.8.8h+ds1-1) unstable; urgency=medium
+
+  * New upstream release
+    - CVE-2016-3659 SQL Injection Vulnerability in graph_view.php (Closes:
+      #820521)
+  * Drop obsolete patches (applied upstream)
+  * Update tests to depend on javascript-common
+  * Don't test lighttpd for now
+  * Drop jquery.js from the source (wasn't used anyways in Debian), so no
+    need to document it in d/copyright
+  * Add make_cacti_sql_mode-strict_compatible.patch to enable cacti to
+    work with the default settings of MySQL 5.7 (LP: #1578144)
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 14 May 2016 22:26:35 +0200
+
+cacti (0.8.8g+ds1-3) unstable; urgency=medium
+
+  * Bump standards (no changes)
+  * Fix noninteractive install failure
+  * Reorder test Depends in the hope that MySQL|MariaDB-server get setup
+    before cacti
+  * Refresh all patches
+  * Take over patch 11_1571432_mysqli.patch from Ubuntu (although not
+    really needed anymore) to fix mysqli extension in the install script
+    (LP: #1571432)
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 29 Apr 2016 14:08:05 +0200
+
+cacti (0.8.8g+ds1-2) unstable; urgency=medium
+
+  [ Paul Gevers ]
+  * Next upstream version, strip include/js/jquery.js from source
+  * Make sure the web-interface doesn't ask unnecessary questions after
+    install (Closes: #783447)
+  * Use the MySQL connection password as initial password for the admin
+    user (Closes: #783446) and mention this in the NEWS.Debian file
+  * Improve fix for CVE-2016-2313 such that it doesn't cause a regression
+    for setups that rely on http authentication of users unknown to cacti.
+    - Add improve_fix_for_CVE-2016-2313.patch
+  * Full update of README.Debian
+  * CVE-2016-3172
+    - Add CVE-2016-3172_sql-injection-in-tree.php.patch (Closes: #818647)
+  * Update Brazilian Portuguese, thanks to Diego Neves (Closes: #816962)
+  * Drop old code in postinst to (re)move old configuration files this is
+    already fixed in jessie
+  * Bump version for libphp-adodb as mysqli doesn't work otherwise
+  * Add new php-xml & php-mbstring to Depends for php7.0
+  * Add add_rrdtool-1.5_to_utilities.php.patch to prevent error in
+    utilities.php with rrdtool version 1.5
+  * Remove Mahyuddin from uploaders (thanks for the fish)
+
+  [ Nishanth Aravamudan ]
+  * Update to PHP7.0 dependencies (LP: #1544352)
+  * Default to mysqli driver for database connection, as the mysql driver
+    has been removed in PHP7.0 (LP: #1544352) (Closes: #815987)
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 17 Apr 2016 19:55:43 +0200
+
+cacti (0.8.8g+ds1-1) unstable; urgency=medium
+
+  * New upstream release
+    - CVE-2016-2313 (closes: #814353)
+    - Drop included patches
+  * Update d/copyright with new years
+  * Enable installation on MariaDB by forcing the collation to latin1
+  * Add mariadb-server to list of recommends
+  * Update Vcs-* fields to https
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 26 Feb 2016 13:50:34 +0100
+
+cacti (0.8.8f+ds1-4) unstable; urgency=medium
+
+  * CVE-2015-8377: Fix SQL Injection vulnerability in graphs_new.php
+  * CVE-2015-8604: Fix SQL Injection vulnerability in graphs_new.php
+  * Depend on dbconfig-mysql or dbconfig-no-thanks instead of
+    dbconfig-common and mysql-client
+  * Bump compat level to 9
+  * Drop useless CFLAGS declaration in d/rules
+  * Drop cacti.sql_drop_tables_to_begin.patch as dbconfig-common now does
+    that.
+  * Add dependency on libjs-jquery now that version is high enough and
+    update use_debian_javascript_packages.patch to use it.
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 09 Jan 2016 13:16:04 +0100
+
+cacti (0.8.8f+ds1-3) unstable; urgency=high
+
+  * Add upstream patch to fix
+    - CVE-2015-8369 SQL Injection vulnerability in graph.php
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 12 Dec 2015 14:03:40 +0100
+
+cacti (0.8.8f+ds1-2) unstable; urgency=medium
+
+  * Update loadavg_multi_locale_friendly.patch (Closes: #793401)
+  * Add missing manual.css (Closes: #783416)
+  * Fix d/rules override_dh_*configure target (Wasn't ever run,
+    althought that wasn't too bad until now)
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 03 Aug 2015 19:58:53 +0200
+
+cacti (0.8.8f+ds1-1) unstable; urgency=medium
+
+  * New upstream release fixing some regressions in 0.8.8e
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 21 Jul 2015 21:59:40 +0200
+
+cacti (0.8.8e+ds1-1) unstable; urgency=high
+
+  * Imported Upstream version 0.8.8e
+    - CVE-2015-4634 multiple SQL Injection vulnerabilities
+  * Add new jquery scripts to Files-Exculded
+  * Refresh patches
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 15 Jul 2015 19:47:00 +0200
+
+cacti (0.8.8d+ds1-1) unstable; urgency=high
+
+  * Upload to unstable
+  * New upstream release
+    - CVE-2015-2665 Cross-site scripting (XSS) vulnerability in Cacti
+      before 0.8.8d allows remote attackers to inject arbitrary web script
+      or HTML via unspecified vectors.
+    - CVE-2015-4342 SQL Injection and Location header injection from cdef id
+    - CVE-2015-4454 SQL injection vulnerability in the
+      get_hash_graph_template function in lib/functions.php in Cacti before
+      0.8.8d allows remote attackers to execute arbitrary SQL commands via
+      the graph_template_id parameter to graph_templates.php.
+    - Unassigned CVE VN:JVN#78187936 / TN:JPCERT#98968540 Fixed SQL injection
+  * Remove Sean from the list of uploaders. Thanks for all the fish
+    (Closes: #773436)
+  * Fix d/p/07_cli-include-path.patch (LP: #1433665)
+  * Update debian/patches/fix_php_strict_warning_in_ping.patch for partial
+    upstream fix
+  * Include the virtual alternative for the recommends on mysql-server
+    (Closes: #781982)
+  * Upstream dropped unused javascripts, remove them from d/copyright
+  * Add patch to have upgrade script mention version 0.8.8d i.s.o. 0.8.8c
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 22 Jun 2015 19:59:13 +0200
+
+cacti (0.8.8c+ds1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Strip several parts from the upstream source
+    - convenience copies (javascript and adodb) that have a corresponding
+      package in Debian
+    - other unused javascript files (some lacking source)
+    - font files without source
+  * Drop patches now applied upstream
+  * Upstream now has a DFSG treeview, drop Debian patches
+  * Drop recommends on jquery (too old for this treeview, use
+    convenience copy in source)
+  * Add patch to use system versions of javascripts
+  * Update d/copyright
+  * Update standards to 3.9.6 (no changes)
+  * Update d/watch, d/rules and d/copyright to download and strip source
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 08 Dec 2014 21:28:05 +0100
+
+cacti (0.8.8b+dfsg-8) unstable; urgency=high
+
+  * CVE-2014-5261
+    Unsufficient input sanitation leads to shell command injection
+    possibilities
+  * CVE-2014-5262
+    Incomplete and incorrect input parsing leads to SQL injection attack
+    scenarios
+  * Fix for CVE-2014-5043 was incomplete, improve patch
+  * Change CVE-2014-4002 patch to include upstream updated commits
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 18 Aug 2014 19:57:43 +0200
+
+cacti (0.8.8b+dfsg-7) unstable; urgency=medium
+
+  * Fix regression caused by fixing CVE-2014-4002 at least plugin autom8
+    was unusable (Closes: #755032)
+  * Security update
+    - CVE-2014-5025 Cross Site Scripting Vulnerability
+    - CVE-2014-5026 Cross Site Scripting Vulnerability
+    - CVE-2014-5043 Cross Site Scripting Vulnerability
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 24 Jul 2014 21:56:48 +0200
+
+cacti (0.8.8b+dfsg-6) unstable; urgency=high
+
+  * Add alternative php5-mysql | php5-mysqlnd (Closes: #744067)
+  * Security update (Closes: #742768, #752573)
+    - CVE-2014-2327 Cross Site Request Forgery Vulnerability
+    - CVE-2014-4002 Cross-Site Scripting Vulnerability
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 25 Jun 2014 22:33:53 +0200
+
+cacti (0.8.8b+dfsg-5) unstable; urgency=high
+
+  * Fix postinst for lighttpd setups which fail on update due to
+    lighty-enable-mod exiting with non-zero if config is already loaded
+    (Closes: 743727)
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 06 Apr 2014 19:59:12 +0200
+
+cacti (0.8.8b+dfsg-4) unstable; urgency=high
+
+  * Security update (Closes: 743565)
+    - CVE-2014-2326 Cross-site scripting (XSS) vulnerability
+    - CVE-2014-2328 Unspecified Remote Command Execution Vulnerability
+    - CVE-2014-2708 SQL injection
+    - CVE-2014-2709 Unspecified Remote Command Execution Vulnerability
+  * Bump standards (no changes needed)
+  * Fix VCS-Browser field
+  * Fix license paragraph of jstree (Thanks lintian)
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 05 Apr 2014 13:03:22 +0200
+
+cacti (0.8.8b+dfsg-3) unstable; urgency=low
+
+  * Fix Cross site scripting (upstream bug 2383)
+    CVE-2013-5588
+  * Fix SQL injection in host.php (upstream bug 2383)
+    CVE-2013-5589
+  * Fix upgrade script in cli directory for latest releases
+  * Automatically upgrade database during package update (prevents upstream
+    bug 2377)
+  * The code to enable lighttpd configuration from LP: #1132415 was broken
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 27 Aug 2013 20:43:21 +0200
+
+cacti (0.8.8b+dfsg-2) unstable; urgency=low
+
+  * CVE-2013-1435 fix cause a regression in the handling of empty COMMENT
+    lines in the rrd legend. Fixed by upstream:
+    fix_COMMENT_in_graph_regression_from_CVE-2013-1435.patch (Closes: #719156)
+  * Update jquery stylesheet to provide the cacti background color
+
+ -- Paul Gevers <elbrus@debian.org>  Fri, 09 Aug 2013 22:34:26 +0200
+
+cacti (0.8.8b+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes SQL or command line injection via snmp settings or
+      graph creation or edition that allows privileged users to execute
+      arbitrary SQL commands or command line commands. CVE-2013-1434 and
+      CVE-2013-1435
+    - poller_cache_rebuild_on_install.patch included
+  * Add d/rules get-orig-source target and accompanying script
+  * Update japanese translation, thank victory (Closes: #717203)
+  * Update vcs-* fields (thanks lintian)
+  * Update standards (no changes needed)
+  * Update years and my address in d/copyright
+  * Allow any php5 SAPI provider to satify cacti dependency, thanks
+    Ondřej Surý (php5 maintainer). Thus reverting the solution to bug
+    #654843 as the original report was not a bug but a reporter mistake.
+    libapache2-mod-fcgid does not provide php5 SAPI.
+
+ -- Paul Gevers <elbrus@debian.org>  Wed, 07 Aug 2013 20:46:58 +0200
+
+cacti (0.8.8a+dfsg-7) unstable; urgency=low
+
+  * Fix typo in cacti.postrm which prevented proper purging (Closes: #707010)
+  * Update use_jquery_for_debian.patch to not load jquery-cookie if it is
+    not installed on the system (Closes: #708001)
+
+ -- Paul Gevers <elbrus@debian.org>  Sat, 18 May 2013 12:14:02 +0200
+
+cacti (0.8.8a+dfsg-6) unstable; urgency=low
+
+  * Improve maintenance scripts
+    - Prepare cacti configuration for Apache2.4 according to
+      http://wiki.debian.org/Apache/PackagingFor24
+    - Improve cacti.config to fix dpkg-reconfigure behavior for httpd's.
+    - Restart lighttpd if needed (LP: #1132415)
+    - Remove obsolete (Sarge) preinst code
+  * Fix the lighttpd config template for absolute path (see LP: #1132415)
+  * Lintian triggered improvements:
+    - Update watch file for +dfsg in the version
+    - Add dependency on mysql-client (next to virtual-mysql-client)
+  * Bug fixes:
+    - Add patch loadavg_multi_locale_friendly.patch to allow uptime script to
+      work independent of the local locale (Closes: #704057)
+    - Add patch fix_php_strict_warning_in_ping.patch to fix php 5.4 warnings
+      (Closes: #694159)
+    - Add patch poller_cache_rebuild_on_install.patch to start filling the
+      auto-generated graphs upon installation (Upstream: 2229)
+  * Move configuration files away from /usr/share/doc/cacti (policy 12.3)
+  * Remove obsolete RM-Upload-Allowed from d/control
+  * Revisited README.Debian
+
+ -- Paul Gevers <elbrus@debian.org>  Sun, 05 May 2013 16:41:13 +0200
+
+cacti (0.8.8a+dfsg-5) unstable; urgency=low
+
+  * Update debian/NEWS.Debian to explain the recommended packages for the tree,
+    which seem to be not installed by default upon upgrade, and make sure it is
+    actually installed.
+
+ -- Paul Gevers <elbrus@debian.org>  Thu, 11 Apr 2013 19:57:35 +0200
+
+cacti (0.8.8a+dfsg-4) unstable; urgency=low
+
+  * Improve jquery tree patch to show trees multilevel (Closes: #702690)
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 01 Apr 2013 08:03:11 +0200
+
+cacti (0.8.8a+dfsg-3) unstable; urgency=low
+
+  * Fixed typo in recommends libjs-jquery* i.s.o. libjs-query (Closes: #700999)
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 19 Feb 2013 20:33:20 +0100
+
+cacti (0.8.8a+dfsg-2) unstable; urgency=low
+
+  * Upload to unstable after acknowledge by the RT, see #694850.
+
+ -- Paul Gevers <elbrus@debian.org>  Tue, 29 Jan 2013 20:41:05 +0100
+
+cacti (0.8.8a+dfsg-1) experimental; urgency=low
+
+  * Removed non-dfsg-free treeview code from the upstream source (Closes:
+    #679980)
+  * Add jquery.jstree.js and four jstree theme files to the package to replace
+    the treeview functionality
+  * Update d/copyright to reflect above changes
+  * Add patches to use the jstree code
+    - replace_treeview_by_jquery.jstree.patch
+    - use_jquery_for_debian.patch
+  * Add libjs-jquery and libjs-jquery-cookie to recommends as they are needed by
+    jstree.
+  * Remove the logic to install plugins in /usr/local/share/cacti/plugins as the
+    implementation of chdir in php resolves symlinks (Closes: #681558).
+    - Update README.Debian and add NEWS.Debian and README.Plugins
+    - Update d/cacti.links and d/cacti.install
+  * Update my e-mail address to elbrus@debian.org
+
+ -- Paul Gevers <elbrus@debian.org>  Mon, 10 Dec 2012 22:48:48 +0100
+
+cacti (0.8.8a-3) unstable; urgency=low
+
+  * Update postrm with new debconf answers (Closes: #673764)
+
+ -- Paul Gevers <paul@climbing.nl>  Mon, 21 May 2012 20:22:18 +0200
+
+cacti (0.8.8a-2) unstable; urgency=low
+
+  * Use ts to timestamp poller errors in cron when available and add moreutils
+    to suggests.
+  * Add suhosin.memory_limit to cron and poller (Closes: #566609)
+  * Add dependency on ${perl:Depends} as the dependency on perl was missing
+  * Use a template based on config.php for debian.php creation to include
+    non-database options and get rid of 01_config.php.patch by creating link
+    to debian.php instead. Update two dependent patches.
+  * Add different sub folders to local resource in d/dirs
+  * Add cacti.sql_ensure_cron_works.patch to prevent failure of crontab after
+    install as the paths to rrdtool and php are not set.
+  * Add cacti.sql_drop_tables_to_begin.patch patch to work around bug 665742
+    where dbconfig-common does not drop the tables during reconfigure so we have
+    to do it on population of the database to prevent errors.
+  * Update d/copyright to include proper license info for jscalendar and
+    treeview (this last one needs action). Also update Cacti's license as it
+    has been GPL-2+ all along.
+  * Readded debconf question option for lighttpd lost in commit 98fed9b while
+    preventing the need to call for new translations. Use lower-case apache2 and
+    lighttpd as package names at the same time.
+  * Update 08_563955_local_data_id.patch with upstream bug number
+  * Improve rra removal on purge (one higher level directory) in postrm
+
+ -- Paul Gevers <paul@climbing.nl>  Sat, 19 May 2012 07:56:04 +0200
+
+cacti (0.8.8a-1) unstable; urgency=low
+
+  * New upstream release.
+    - Now includes plugin architecture (Closes: #406766)
+    - Don't use define_syslog_variables() (Closes: #668261)
+    - Allow external auth behind proxy (Closes: #660853)
+  * Update patches, remove last two now applied upstream
+  * Update d/watch to prevent selection of PIA tar ball
+  * Repaired old entries in d/changelog where non-ascii characters got mangled
+  * Remove d/s/local-options as they are for, well, local options
+  * Make link to cacti.sql instead of copying data again
+  * Remove unnecessary directories from dirs as they are generated as needed
+  * Clean up of debian rules for short-hand dh
+    - Moved permission and ownership fixes to override_dh_fixperms
+    - Use 644 and 755 instead of 640 and 750 as per policy (except for rra)
+    - Remove lib/adodb on clean (instead of build)
+    - Use debian/cacti.install to define which files to install where
+  * d/post(rm|inst) now also (un)registers with ufcr and clean-up of long
+    obsolete /etc/cacti/default-poller
+  * Append error output of poller to poller-error.log i.s.o overwriting
+    (Closes: #669339) and make sure the ownership/permissions are right
+  * Update README.Debian with info about plugin architecture
+
+ -- Paul Gevers <paul@climbing.nl>  Tue, 01 May 2012 09:57:18 +0200
+
+cacti (0.8.7i-3) unstable; urgency=low
+
+  [ Mahyuddin Susanto ]
+  * debian/patches/01_config.php.patch: refreshed to fix error
+    on upgrade because /etc/cacti/debian.php has been rewrite
+    during installation. (Closes: #654352), Thanks to Michael Reincke.
+  * debian/control: Move apache to recommends to allow other web-server to
+    be installed. (Closes: #654843)
+  * debian/cacti.templates: Updated debconf template and package description,
+    suggested by debian-l10n-english. (Closes: #653897)
+  * Update debconf translations:
+    - Spanish by Javier Fernández-Sanguino Peña (Closes: #656405)
+    - French by Christian Perrier (Closes: #657280)
+    - Polish by Michał Kułach. (Closes: #657294)
+    - Danish by Joe Hansen. (Closes: #657339)
+    - Dutch by Jeroen Schot. (Closes: #657468)
+    - Swedish by Martin Bagge. (Closes: #657546)
+    - Indonesian by Mahyuddin Susanto. (Closes: #657609)
+    - Russian by Yuri Kozlov. (Closes: #657705)
+
+  [ Sean Finney ]
+  * Remove lighttpd.conf at postrm purge time
+  * Add Paul Gevers to Uploaders field
+
+  [ Paul Gevers ]
+  * More updated debconf translations, thanks to Christian Perrier.
+    - German (Chris Leick).  (Closes: #658396)
+    - Czech (Miroslav Kure).  (Closes: #658752)
+    - Portuguese (Rui Branco).  (Closes: #659167)
+    - Italian (Beatrice Torracca).  (Closes: #659401)
+    - Basque (Iñaki Larrañaga Murgoitio).  (Closes: #660641)
+  * Bump Standard-Version to 3.9.3 (no changes).
+  * session_unregister was removed in php 5.4, add patch
+    11_remove_deprecated_session_unregister (Closes: #665280)
+  * Update d/rules to fix changed output from /usr/bin/file for PHP executable
+    files (Closes: #665243)
+
+ -- Paul Gevers <paul@climbing.nl>  Thu, 29 Mar 2012 20:55:17 +0200
+
+cacti (0.8.7i-2) unstable; urgency=low
+
+  * Cherry-pick upstream patches
+    - debian/patches/10_settings_checkbox.patch
+  * debian/patches/05_no-adodb.patch: Updates, add semicolon at line 190.
+    (Closes: #653863)
+  * Updated last changelog to mention security bug.
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Mon, 02 Jan 2012 14:11:15 +0700
+
+cacti (0.8.7i-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #642971)
+    - Fix Ping query. (Closes: #616320, #561488)
+    - Fix SQL injection issue in auth_login.php (Closes: #652371) this is
+      CVE-2011-4824
+  * debian/control:
+    - Bump Standard-Version to 3.9.2, no source changes.
+    - Change Maintainer to pkg-cacti. (Closes: #613857)
+    - Add Sean and myself as uploaders.
+    - Change Vcs-* to pkg-cacti.
+  * debian/copyright: Rewriting as per dep5 format.
+  * debian/source: Added to mentioning quilt patch system.
+  * debian/README.source: Deleted, not needed anymore
+  * debian/patches/09_use-utf8.patch: Use UTF-8 while creating database and
+    producing RRD, Thanks to Slavko <linux@slavino.sk>. (Closes: #604395)
+  * Refreshed pathces:
+    - debian/patches/01_config.php.patch
+    - debian/patches/05_no-adodb.patch
+    - debian/patches/06_config_settings.php_cactid_path.patch
+    - debian/patches/07_cli-include-path.patch (Closes: #604396)
+    - debian/patches/08_563955_local_data_id.patch (Closes: #563955)
+  * Drop patches apllied upstream:
+    - 606062_ping.pl.patch
+    - data_source_deactivate.patch
+    - graph_list_view.patch
+    - html_output.patch
+    - ldap_group_authenication.patch
+    - ping.patch
+    - poller_interval.patch
+    - script_server_command_line_parse.patch
+  * Add Lighttpd support:
+    - debian/docs: updated
+    - debian/cacti.lighttpd.conf: added
+    - debian/cacti.{postinst|postrm|templates}: updated
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Fri, 30 Dec 2011 16:47:42 +0700
+
+cacti (0.8.7g-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n issues. Debconf translations:
+    - French (Christian Perrier).  Closes: #614903
+    - German (Chris Leick).  Closes: #619663
+    - Russian (Yuri Kozlov).  Closes: #623795
+    - Indonesian (Mahyuddin Susanto).  Closes: #623886
+    - Japanese (Hideki Yamane).  Closes: #624821
+    - Danish (Joe Hansen).  Closes: #625482
+    - Dutch; (Luk Claes).  Closes: #625529
+    - Spanish; (Francisco Javier Cuadrado).  Closes: #627032
+    - Swedish (Martin Bagge / brother).  Closes: #628928
+    - Czech (Miroslav Kure).  Closes: #631596
+    - Basque (Ander Goñi).  Closes: #631900
+    - Portuguese (Rui Branco).  Closes: #631982
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 29 Jun 2011 06:57:56 +0200
+
+cacti (0.8.7g-2) unstable; urgency=low
+
+  * import 2 new "official" upstream patches
+  * Cherry-pick upstream fix for ping output parsing (Closes: #606062).
+  * Lintian:
+    - Update Standards-Version to 3.9.1 (no changes necessary)
+    - Bump versioned Build-Dep on debhelper to >= 5
+    - Update config and postrm maintainer scripts to run with set -e
+    - Remove un-needed chmodding of php files in debian/rules
+    - Ensure the non-php files in the scripts dir are executable
+    - Update debconf template description to remove question from text.
+    - Selectively fix executable permissions on some files in the cli dir
+    - Include a README.source mentioning quilt
+  * Update debconf choices and default value for webserver configuration
+  * Update all debian/po files after changing debconf template
+
+ -- Sean Finney <seanius@debian.org>  Sun, 20 Feb 2011 15:33:58 +0100
+
+cacti (0.8.7g-1) unstable; urgency=low
+
+  * New upstream release (Closes: #592465).
+  * Update context in 05_no-adodb.patch to remove fuzz.
+  * Remove "official" patches from previous release.
+  * Remove 563955_undefined_index_local_data_id.patch, incorporated upstream.
+  * Remove CVE-2010-2092.patch, incorporated upstream.
+  * Import new batch of "official" upstream patches.
+  * Update apache configuration to work in FastCGI deployments (Closes: #593203).
+     - thanks to Thijs Kinkhorst <thijs@uvt.nl> (Closes: #578909).
+
+ -- Sean Finney <seanius@debian.org>  Tue, 17 Aug 2010 22:22:02 +0200
+
+cacti (0.8.7e-4) unstable; urgency=high
+
+  * Forward-port fix for CVE-2010-2092 from stable package (Closes: #582691)
+
+ -- Sean Finney <seanius@debian.org>  Fri, 11 Jun 2010 21:08:02 +0000
+
+cacti (0.8.7e-3) unstable; urgency=high
+
+  * Import upstream fix for SQL injection vulnerability (no CVE assigned yet)
+     - thanks to Thijs Kinkhorst <thijs@uvt.nl> (Closes: #578909).
+
+ -- Sean Finney <seanius@debian.org>  Sat, 24 Apr 2010 17:54:20 +0200
+
+cacti (0.8.7e-2) unstable; urgency=low
+
+  * Import 2 new "official" patches from upstream
+  * Italian debconf translation
+    - thanks to Alessandro De Zorzi <lota@nonlontano.it> (Closes: #548447)
+  * Fix for "Undefined index: local_data_id in graphs_new.php"
+    - new debian patch 563955_undefined_index_local_data_id.patch
+    - thanks to Teodor MICU <mteodor@gmail.com> (Closes: #563955)
+  * Fix for "must not RE-add /etc/apache2/conf.d/cacti.conf link on upgrade"
+    - thanks to Patrick Schoenfeld <schoenfeld@debian.org> (Closes: #561477)
+  * Bump debhelper compatibility level to 5
+
+ -- Sean Finney <seanius@debian.org>  Sun, 24 Jan 2010 21:39:46 +0100
+
+cacti (0.8.7e-1) unstable; urgency=low
+
+  * New upstream release (Closes: #541490).
+
+  [ Sean Finney ]
+  * fix path to global.php in cli scripts (Closes: #525024).
+    - thanks to Jean-François Masure <Jean-Francois.Masure@telindus.fr>
+  * add a watch file to track upstream updates (Closes: #527066).
+    - thanks to Laurent Bigonville <bigon@debian.org>
+  * downgrade Depends on logrotate to a Recommends (Closes: #526997).
+    - thanks to Russ Allbery <rra@debian.org>
+  * updates to (eu,ru,ja) debconf translations
+     - eu: Piarres Beobide <pi@beobide.net> (Closes: #535636).
+     - ru: Yuri Kozlov <yuray@komyakino.ru> (Closes: #535820).
+     - ja: Hideki Yamane (Debian-JP) <henrich@debian.or.jp> (Closes: #546229).
+
+  [ Sander Klein ]
+  * Change location of docs/text to docs/txt
+  * Removed 'Official' patches for 0.8.7d since they are not needed anymore
+  * Import 'Official' patches for 0.8.7e
+  * Make cli-include-path.patch apply
+  * use ':' with chown instead of deprecated '.'
+  * suggested spelling/grammar changes from lintian for ./debian/control
+
+ -- Sean Finney <seanius@debian.org>  Mon, 14 Sep 2009 23:42:32 +0200
+
+cacti (0.8.7d-1) unstable; urgency=low
+
+  * Imported Upstream version 0.8.7d
+  * update/massage/remove patches for new upstream release
+  * import new "official" patches for 0.8.7d
+  * remove obsolete dependencies on php4 packages (Closes: #514342)
+  * update default apache config php options (Closes: #459594)
+  * add Homepage field to control file (Closes: #494811)
+  * add Suggests: php5-ldap for ldap authentication (Closes: #496854) -
+    thanks to Paul Nijjar <paul_nijjar@yahoo.ca>
+  * call ucf with --debconf-ok in postinst
+  * copy cli directory to /usr/share/cacti (Closes: #483556)
+  * add gbp.conf for git-buildpackage and friends
+
+ -- Sean Finney <seanius@debian.org>  Sun, 29 Mar 2009 17:51:10 +0200
+
+cacti (0.8.7b-2) unstable; urgency=low
+
+  * ack previous NMU, thanks Andreas.
+  * cacti packaging now in public git repository, updated Vcs-foo headers
+    in debian/control appropriately.
+  * update Standards-Version to 3.7.3.
+  * New upstream "official" patch: official_invalid-upgrade-path.patch
+  * New upstream "official" patch: official_snmp_auth_none_notice.patch
+
+ -- Sean Finney <seanius@debian.org>  Sat, 22 Mar 2008 23:58:08 +0100
+
+cacti (0.8.7b-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Move ucf call in cacti.postinst above db_stop to fix freeze during
+    installation. (Closes: #470066)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 17 Mar 2008 12:52:17 +0100
+
+cacti (0.8.7b-1) unstable; urgency=high
+
+  * New upstream release.  Fixes multiple security vulnerabilities (no
+    CVE references yet).  Closes: #465567.  Thanks to Alessandro Ogier for
+    the suggestion about the overzealous PHP_SELF checking.
+
+ -- Sean Finney <seanius@debian.org>  Wed, 13 Feb 2008 23:30:31 +0100
+
+cacti (0.8.7a-2) unstable; urgency=high
+
+  * Update errors in copyright information (closes: #457366).
+
+ -- Sean Finney <seanius@debian.org>  Sun, 30 Dec 2007 22:56:17 +0100
+
+cacti (0.8.7a-1) unstable; urgency=high
+
+  * New upstream release, including fixes for bugs and security issues.
+    Includes fix for CVE-2007-6035 (sql injection vulnerability)
+    Closes: #452085.
+
+ -- Sean Finney <seanius@debian.org>  Tue, 20 Nov 2007 18:20:13 +0100
+
+cacti (0.8.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * updated 06_config_settings.php_cactid_path.patch with an extra fix
+    for the cacti logfile path.
+
+ -- sean finney <seanius@debian.org>  Wed, 24 Oct 2007 20:15:19 +0200
+
+cacti (0.8.7~beta4-1~pre) experimental; urgency=low
+
+  * New upstream (beta) release
+  * Removed "official" patches incorporated into upstream version:
+    - 07_official_graph_debug_lockup_fix.patch
+    - 07_official_ping_php_version4_snmpgetnext.patch
+    - 07_official_thumbnail_graphs_not_working.patch
+    - 07_official_tree_console_missing_hosts.patch
+  * updated 06_config_settings.php_cactid_path.patch to use FHS compatible
+    locations as default values, removing the need for shipping
+    compatibility symlinks (closes: #366662).
+  * updated list of upstream docs and changelog location.
+  * Package now uses quilt instead of dpatch for add-on patch managment.
+
+ -- sean finney <seanius@debian.org>  Tue, 09 Oct 2007 19:39:49 +0200
+
+cacti (0.8.6j-1) unstable; urgency=low
+
+  * New upstream release.  Any further etch-targeted changes will be
+    handled in a seperate branch.
+  * The following patches are now obsolete:
+    - 07_official_poller_output_remainder.dpatch
+    - 07_official_import_template_argument_space_removal.dpatch
+    - 07_official_dec06-vulnerability-scripts-0.8.6i.dpatch
+    - 07_official_dec06-vulnerability-poller-0.8.6i.dpatch
+    - 08_svn_timespan_breakage_fix.dpatch
+  * The following new "official" patches are added:
+    - 07_official_graph_debug_lockup_fix.dpatch
+    - 07_official_ping_php_version4_snmpgetnext.dpatch
+    - 07_official_thumbnail_graphs_not_working.dpatch
+    - 07_official_tree_console_missing_hosts.dpatch
+
+ -- sean finney <seanius@debian.org>  Tue, 06 Mar 2007 19:00:03 +0100
+
+cacti (0.8.6i-4) unstable; urgency=medium
+
+  * don't unconditionally source the dbconfig-common helper script
+    in the cacti config script, which would at least require a
+    pre-depends, but ultimately isn't necessary (closes: #408550).
+
+ -- sean finney <seanius@debian.org>  Fri, 26 Jan 2007 23:25:11 +0100
+
+cacti (0.8.6i-3) unstable; urgency=high
+
+  * include the list of official patches from upstream which (among other
+    things) resolves multiple vulnerabilities in the poller and default
+    scripts (Closes: 404818).  thanks to Alex de Oliveira Silva for reporting
+    this, and Neil McGovern for a bit of consultation.
+  * security references:
+    - SA23528, CVE-2006-6799
+  * also include one extra changeset from svn which fixes a regression
+    introduced in the security patch.
+  * new patches:
+    - 07_official_dec06-vulnerability-scripts-0.8.6i.dpatch
+    - 07_official_dec06-vulnerability-poller-0.8.6i.dpatch
+    - 07_official_poller_output_remainder.dpatch
+    - 07_official_import_template_argument_space_removal.dpatch
+    - 08_svn_timespan_breakage_fix.dpatch
+
+ -- sean finney <seanius@debian.org>  Mon, 15 Jan 2007 15:36:25 +0100
+
+cacti (0.8.6i-2) unstable; urgency=low
+
+  * let cacti know where the cactid binary is, since it doesn't
+    seem to have a reasonable default an longer.
+
+ -- sean finney <seanius@debian.org>  Mon, 30 Oct 2006 23:18:55 +0100
+
+cacti (0.8.6i-1) unstable; urgency=low
+
+  * new upstream release
+  * no longer need the following patches:
+    - 06_official-fix_search_session_clear_issue.dpatch
+    - 07_official-fix_sql_syntax_related_to_default_rra_id.dpatch
+    - 08_official-mysql_5x_strict.dpatch
+    - 09_official-nth_percentile_empty_return_set_issue.dpatch
+    - 10_official-database_autoincrement_corruption.patch.dpatch
+
+
+ -- sean finney <seanius@debian.org>  Sat, 28 Oct 2006 15:05:46 +0200
+
+cacti (0.8.6h-6) unstable; urgency=low
+
+  * fix up debian/rules targets to comply with policy (closes: #395584).
+  * change build-depends-indep to build-depends for targets needed
+    in the clean rule.
+  * update standards-version to 3.7.2
+
+ -- sean finney <seanius@debian.org>  Fri, 22 Sep 2006 21:39:12 +0200
+
+cacti (0.8.6h-5) unstable; urgency=low
+
+  * fix for braindead bug in postrm script introduced by yours
+    truly.  fixed a bashism in there while i was at it (closes: #387540).
+    thanks to Olivier Berger for finding this.
+  * fix for non-essential dependencies (dbconfig-common) in the config
+    script (closes: #388214).
+  * updated portuguese brazillian templates, thanks to Andre Luis Lopes
+    for providing them (closes: #374020).
+
+ -- sean finney <seanius@debian.org>  Fri, 22 Sep 2006 21:04:19 +0200
+
+cacti (0.8.6h-4) unstable; urgency=low
+
+  * updated dependencies to allow any httpd-providing daemon to
+    satisfy the requirements for cacti.  that doesn't necessarily
+    mean any httpd will work, but i've heard from at least one
+    report that others do, and i'd like to make it easier for
+    others to test.  closes: #373886.
+  * updated postrm to handle cases where it's being purged without
+    its dependencies present.
+
+ -- sean finney <seanius@debian.org>  Tue, 29 Aug 2006 09:35:34 +0200
+
+cacti (0.8.6h-3) unstable; urgency=low
+
+  * official patch from upstream to fix database corruption and display some
+    users were having as a result of the differing version of adodb
+    in debian vs. the bundled version in cacti.  thanks to the upstream
+    authors for their help addressing the issue, and to Rene Cunningham
+    for testing out the initial version of the patch.
+    (closes: #364391, #351342)
+  * added note to README.Debian about potential unmet dependencies in
+    mixed php4/php5 environments (thanks to Uwe Storbeck), and also
+    about checking the cli configuration for the required modules (thanks
+    to Troy Poppe), and also about potential problems with the cli
+    poller and safe_mode (thanks to Birger Brunswiek) (closes: #359964).
+  * update package description to mention that it's likely that mysql-server
+    should also be installed unless cacti is to be configured against a
+    remote database system (closes: #349754).
+  * added a note to README.Debian about the initial user/pass, at the
+    suggestion of Jonas Genannt, thanks.  (closes: #352724).
+  * changed package dependencies to list apache2 as the first of the
+    series of apache-providing packages, and likewise reordered the
+    php/apache modules (closes: #356843).
+  * updated version of 08_official-mysql_5x_strict.dpatch which fixes
+    the breakage in ldap authentication reported by Matt Clauson, thanks.
+    (closes: #354663)
+
+ -- sean finney <seanius@debian.org>  Tue, 25 Apr 2006 19:30:50 +0200
+
+cacti (0.8.6h-2) unstable; urgency=low
+
+  * incorporated the following official upstream patches:
+    - 06_official-fix_search_session_clear_issue.dpatch
+    - 07_official-fix_sql_syntax_related_to_default_rra_id.dpatch
+    - 08_official-mysql_5x_strict.dpatch
+    - 09_official-nth_percentile_empty_return_set_issue.dpatch
+  * updated german debconf translation, thanks to
+    Mathias Klein (closes: #345786).
+  * typographical corrections to package description, thanks to
+    Jens Siedel (closes: #346007).
+
+ -- sean finney <seanius@debian.org>  Mon, 16 Jan 2006 16:02:44 +0100
+
+cacti (0.8.6h-1) unstable; urgency=low
+
+  * new upstream release.
+  * upstream now officially supports mysql-5.0 (closes: #336531).
+  * updated README.Debian with some information about zombie mysql
+    processes that some users have been experiencing when viewing
+    graphs (closes: #344519).
+  * updated 01_config.php.dpatch and 05_no-adodb.dpatch to apply to new
+    upstream version.
+  * removed "official" patches which are now incorporated into the
+    new upstream release:
+    - 06_official-short_open_tag_parse_error.dpatch
+    - 07_official-graph_properties_zoom.dpatch
+    - 08_official-script_server_snmp_auth.dpatch
+    - 09_official-mib_file_loading.dpatch
+  * added a db_stop to the postinst to help prevent hangs when
+    restarting apache2.
+
+ -- sean finney <seanius@debian.org>  Fri, 06 Jan 2006 08:24:29 +0100
+
+cacti (0.8.6g-3) unstable; urgency=low
+
+  * cacti now uses dbconfig-common, and thus once again ships with
+    automagical database support.
+  * Portuguese translation for cacti's debconf messages by LuíFerreira
+    (closes: #336836).
+  * new Swedish translations from Daniel Nylander (closes: #338668).
+
+ -- sean finney <seanius@debian.org>  Thu, 01 Dec 2005 14:59:40 +0100
+
+cacti (0.8.6g-2) unstable; urgency=low
+
+  * updated dependencies to allow working with the php5 family of packages.
+  * new spanish debconf translations from César Gómez Martín and the
+    debian-l10n-spanish mailing list (closes: #334384).
+  * added a note to README.Debian about possible breakage if rrdtool
+    is upgraded without changing cacti settings (closes: #335737).
+
+ -- sean finney <seanius@debian.org>  Sat, 29 Oct 2005 12:58:39 +0200
+
+cacti (0.8.6g-1) unstable; urgency=low
+
+  * new upstream release.
+  * upstream has re-implemented the limited snmpv3 support that previously
+    existed but was later removed (closes: #301165).
+  * removed patches that are now incorporated upstream:
+    - 03_dos2unix_on_scripts
+    - 06_cmd-snmp-data-sanity-fixes
+    - 07_snmp_alternate_port
+  * added the current list of upstream patches:
+    - 06_official-short_open_tag_parse_error
+    - 07_official-graph_properties_zoom
+    - 08_official-script_server_snmp_auth
+    - 09_official-mib_file_loading
+
+ -- sean finney <seanius@debian.org>  Sat, 24 Sep 2005 10:10:15 -0400
+
+cacti (0.8.6f-5) unstable; urgency=low
+
+  * fix cacti to explicitly depend on versions of libphp-adodb starting
+    at the version which silently changed the path.  thanks to
+    Mark Sheppard and Javier Fernández-Sanguino Peña for independantly
+    pointing this out (closes: #322707, #325376).
+  * fix cacti to depend on "virtual-mysql-client" virtual package, to
+    allow cacti to co-exist with the new mysql-5.0 series of packages.
+    thanks to Miah Gregory for pointing this out (closes: #326011).
+
+ -- sean finney <seanius@debian.org>  Fri, 02 Sep 2005 05:55:46 -0400
+
+cacti (0.8.6f-4) unstable; urgency=low
+
+  * cacti now properly depends on debconf.
+
+ -- sean finney <seanius@debian.org>  Mon, 08 Aug 2005 13:23:24 -0400
+
+cacti (0.8.6f-3) unstable; urgency=low
+
+  * fix to allow xml based check templates to work for hosts running
+    snmp on an alternate port.  thanks to Justin Hallet for the
+    patch (closes: #317689).
+  * for posterity, the security fixes included in 0.8.6e-1 addressed
+    the following CVE id's:
+    - CAN-2005-1524 (idefense remote file inclusion)
+    - CAN-2005-1525 (idefense SQL injection)
+    - CAN-2005-1526 (idefense remote code execution)
+  * updated include path for adodb configuration (closes #320782), thanks
+    to loïc lefort for reporting this.
+
+ -- sean finney <seanius@debian.org>  Mon, 01 Aug 2005 13:33:05 -0400
+
+cacti (0.8.6f-2) unstable; urgency=high
+
+  * new version of the upstream 'sanity checking' patches introduced
+    in 0.8.6e-2 (closes: #317253).
+  * the updated Czech debconf translation from Martin Sín somehow
+    got mixed up with the debconf translation for mysql.  fixed.
+    (closes: #317137).
+  * for posterity, the security updates included in the previous
+    update have the following CAN numbers assigned to them:
+    - CAN-2005-2148 (hardened-php advisories 032005 and 042005)
+    - CAN-2005-2149 (hardened-php advisory 052005)
+  * even though it's been like 5 days, and the previous version's urgency
+    was set to high, it has not entered testing, so urgency will remain
+    at this level.
+
+ -- sean finney <seanius@debian.org>  Thu, 07 Jul 2005 08:05:17 -0400
+
+cacti (0.8.6f-1) unstable; urgency=high
+
+  * new upstream release.
+  * this new version addresses the following security issues reported by the
+    php-hardened project:
+    - 032005: Cacti Multiple SQL Injection Vulnerabilities
+    - 042005: Cacti Remote Command Execution Vulnerability
+    - 052005: Cacti Authentication/Addslashes Bypass Vulnerability
+
+ -- sean finney <seanius@debian.org>  Sat, 02 Jul 2005 01:11:18 -0400
+
+cacti (0.8.6e-2) UNRELEASED; urgency=high
+
+  * updated standards version to 3.6.2
+  * patch for sanity checking of some of the cached database information,
+    which sometimes causes cmd.php based poller checks to hang and
+    eventually fail.
+
+ -- sean finney <seanius@debian.org>  Tue, 28 Jun 2005 00:54:57 -0400
+
+cacti (0.8.6e-1) unstable; urgency=high
+
+  * new upstream release.
+  * this release contains fixes for the arbitrary sql injection and input
+    validation vulnerabilities discovered in 0.8.6d.
+  * new Vietnamese debian translations from Clytie Siddall (closes: #313190).
+  * removed obsolete (and poorly written) debconf templates.  thanks
+    to Clytie Siddall for pointing these out (closes: #313191).
+  * updated Czech debconf translation from Martin Sín (closes: #314620).
+  * lintian fixes:
+    - include debhelper macro in preinst
+    - changelog converted to UTF-8 format.
+    - overrides file introduced, to ignore permissions on rra dir.
+
+ -- sean finney <seanius@debian.org>  Mon, 20 Jun 2005 22:30:05 -0400
+
+cacti (0.8.6d-1) unstable; urgency=low
+
+  * new upstream release.
+  * removed "official patches" patch, as they are now included in this version.
+  * the adodb code is now removed from the build tree instead of being patched
+    out of the source, which makes things a bit cleaner in the long run.
+  * document how to login after installation.  thanks to Jari Aalto for
+    mentioning this omission (closes: #309619).
+  * initial czech translation for cacti, thanks to Martin Sin (closes: #311095).
+  * have the cronjob output stderr to a logfile instead of stdout.  thanks
+    to Daniel van Eeden for helping find the best solution to this
+    (closes: #309425).
+
+ -- sean finney <seanius@debian.org>  Sat, 28 May 2005 19:42:30 -0400
+
+cacti (0.8.6c-8) unstable; urgency=low
+
+  * import of upstream patches was b0rken.  should be fixed up in this
+    release.
+  * removed the adodb code, as we're allready depending on libphp-adodb,
+    and should have been using that instead this whole time.  i also
+    updated the include statement in config.php to include adodb from
+    its new location.
+  * only change ownership/permissions of debian.php the first time it is
+    created (which should prevent local ownership/permission changes
+    later on from being silently overwritten)
+  * don't mask errors when you can't include debian.php
+  * don't throw away stderr from cacti's cron.d file, and change MAILTO
+    to send mail to root (otherwise it'd go to www-data).  thanks for
+    this and the preceding two fixes go to Mark Sheppard <mark@ddf.net>
+    (closes: #309194).
+
+ -- sean finney <seanius@debian.org>  Wed, 11 May 2005 17:54:51 -0400
+
+cacti (0.8.6c-7) unstable; urgency=low
+
+  * brought in the rest of the patches from the upstream authors.
+    this should fix the problem with graphing negative numbers, as
+    reported by Kelly Brown <kbbrown@anonymizerinc.com> (closes: #305561).
+  * updated dependency on php4-mysql to be versioned, to make dependencies
+    work better for woody users.  thanks to Vittorio R Tracy <vrt@srclab.com>
+    for mentioning this (closes: #302563).
+
+ -- sean finney <seanius@debian.org>  Wed, 06 Apr 2005 20:03:27 -0400
+
+cacti (0.8.6c-6) unstable; urgency=low
+
+  * updated french debconf translations, thanks for this to
+    Christian Perrier <bubulle@debian.org> (closes: #299895).
+  * updated portuguese brazillian templates, thanks to
+    Tiago Bortoletto Vaz <tiago@debian-ba.org> (closes: #301499).
+  * include upstream patch to fix tree browsing when authentication
+    is turned off.  thanks to Hannu Teulahti <teu@puv.fi> (closes: #300843).
+  * strip ^M's from the scripts, as it can mess up execution according
+    to Fred Blaise <fred.blaise@excilan.com>, thanks (closes: #300845).
+  * debian.php is now managed via ucf.
+  * generate_config is now always called in the postinst, so calling
+    dpkg-reconfigure should regenerate the contents of the config
+    file.  thanks to Mickael Marchand <marchand@kde.org> (closes: #300876).
+  * correction in README.Debian, thanks to Miah Gregory <mace@darksilence.net>
+    and all the other people who emailed me about this. (closes: #299834).
+  * no longer depend on wwwconfig-common, only support the conf.d style
+    of apache configuration.  this should as a side effect resolve the bug
+    reported by Tiago Bortoletto Vaz <tiago@debian-ba.org> (closes: #289156).
+
+ -- sean finney <seanius@debian.org>  Tue, 29 Mar 2005 22:00:28 -0500
+
+cacti (0.8.6c-5) unstable; urgency=high
+
+  * oops, let's not rm -rf the old scripts directory in the preinst,
+    instead try to remove the directory or fail gracefully if there
+    are still things in there.  thanks and an apology are due to
+    Gérald GARCIA <gege@gege.org> (closes: #300449).  this is a grave
+    severity bug, so urgency set to high.
+  * README.Debian updated to mention where custom user scripts should
+    go, so that they can stay out of my reach :)
+
+ -- sean finney <seanius@debian.org>  Mon, 21 Mar 2005 06:12:21 -0500
+
+cacti (0.8.6c-4) unstable; urgency=high
+
+  * turns out removing the symlink wasn't as easy, need to do a couple
+    extra things in the preinst otherwise dpkg will keep and follow
+    the symlink according to debian policy.
+  * minor fixes in the templates.
+
+ -- sean finney <seanius@debian.org>  Sun, 06 Mar 2005 12:21:01 -0500
+
+cacti (0.8.6c-3) unstable; urgency=high
+
+  * José de Paula Eufrásio Júnior <jose.junior@cidades.gov.br> found
+    that there's some voodoo with ereg that doesn't work in some
+    locales unless mbstring.func_overload is set to 0.  this
+    prevents cacti from installing, which gave the bug a grave
+    severity, thus again the high urgency. sigh.  thanks, josé
+    (closes: #298102).
+  * the script dir can't be a symlink after all, because it
+    breaks php scripts.  thanks to Bernardo Achirica <Berny@eDonkeyCentral.com>
+    for finding this out (closes: #298032).
+
+ -- sean finney <seanius@debian.org>  Fri, 04 Mar 2005 23:24:17 -0500
+
+cacti (0.8.6c-2) unstable; urgency=high
+
+  * removed unneccesary poller debconf cruft.
+  * otherwise the same as -1, but to unstable and urgency set to high
+    as foretold in the previous changelog entry (closes rc bug).
+
+ -- sean finney <seanius@debian.org>  Thu, 03 Mar 2005 14:21:01 -0500
+
+cacti (0.8.6c-1) experimental; urgency=low
+
+  * new upstream release (closes: #271661).
+  * the cacti source package no longer produces cacti-cactid, which is
+    provided by a seperate upstream tarball.
+  * cacti site stuff now in /usr/share/cacti/site, which frees
+    up /usr/share for non-site related stuff.
+  * automagical install/upgrades of the mysql database are disabled
+    for the time being.  see README.Debian for the rationale.
+  * start to bring in ucf for managing config files.
+  * no longer have a need for /etc/cacti/default-poller, as this is
+    now handled completely inside the application (closes: #292365).
+  * rrd files are now stored in /var/lib/cacti/rra, as they can
+    not be reconstituted from scratch.  this closes an rc bug, so priority
+    on this package will be set to high when it goes into unstable, which
+    will be the next upload (closes: #297470).
+  * documentation provided for what you need to do if you're upgrading
+    from a 0.6.x version of cacti.  i can't guarantee that it will
+    work, but it did for me, and this is probably the best you're
+    going to get (closes: #226404).
+  * various README.Debian updates.
+  * cacti online documentation now made online to symlinking to where
+    it already exists in /usr/share/doc.
+
+ -- sean finney <seanius@debian.org>  Fri, 25 Feb 2005 19:26:57 -0500
+
+cacti (0.8.5a-9) unstable; urgency=low
+
+  * new maintainer has adopted the package (closes: #292770)
+  * fixed dependencies against mysql-client, so cacti now depends
+    mysql client or mysql-client-4.1 (i'm hesitant to use
+    virtual-mysql-client since i think mysql-client < 3.23 might
+    not work).  thanks to Robert Loomans <bts-cacti@zots.net>,
+    Olaf van der Spek <OvdSpek@LIACS.NL>, and the mysql maintainer
+    Christian Hammers <ch@debian.org> for pointing this out.
+    (closes: #293750, #285002).
+  * no longer use delaycompress in the logrotate script, since
+    there's not much use to leaving it uncompressed by default
+    and it's a lot of data.  thanks, Gustavo Franco <stratus@acm.org>
+    (closes: #275045).
+
+ -- sean finney <seanius@debian.org>  Sat, 19 Feb 2005 19:37:54 -0500
+
+cacti (0.8.5a-8) unstable; urgency=high
+
+  * Update pt_BR, nl debconf translations. (Closes: #270277, #270787)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Sat, 11 Sep 2004 00:18:12 +0200
+
+cacti (0.8.5a-7) unstable; urgency=low
+
+  * Update french translation. (Closes: #268801)
+  * Checking for short tags in cacti/debian.php and fix them if needed. (Closes: #269480)
+  * debian/README.Debian: add a new section about php short tags
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu,  2 Sep 2004 23:27:27 +0200
+
+cacti (0.8.5a-6) unstable; urgency=high
+
+  * Don't know why it was last: change priority from extra to optional
+  * debian/README.Debian: spell checking, add docu for php4-cli
+  * ship a new script which check for php4-mysql support and print a
+    error message to the poller logfile. With the modification of the
+    readme file I think the bug can be closed. (Closes: #267009)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Thu, 26 Aug 2004 22:52:38 +0200
+
+cacti (0.8.5a-5) unstable; urgency=high
+
+  * debian/control: change priority from extra to optional
+  * replace Brazilian Portuguese translation. (Closes: #264090)
+  * debian/cacti.templates: Add new choice "None" to the webserver question.
+    This gives the user a chance to use his own webserver. (Closes: #255971)
+  * If we search for a local installed mysql-server check for packages
+    which are installed or on hold. (Closes: #263262)
+  * Fix some errors while removing include line from httpd.conf file. Also,
+    print an error message if this doesn't work. New installations should
+    use apache/conf.d anyway. (Closes: #253202)
+  * SECURITY-UPDATE: Fix SQL Injection in CACTI. (Closes: #267758)
+    Original upstream patch:
+       http://cvs.raxnet.net/cgi-bin/viewcvs.cgi/cacti/auth_login.php.diff?r1=1.48&r2=1.49
+    Full-Disclosure:
+       http://archives.neohapsis.com/archives/fulldisclosure/2004-08/0717.html
+  * cacti.apache.conf: Change some php4 settings to make cacti more robust/secure.
+  * /etc/cacti/debian.php: create long php4 tags '<?php' per default.
+  * running debconf2po-update
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 23 Jun 2004 08:46:37 +0200
+
+cacti (0.8.5a-4) unstable; urgency=low
+
+  * Change package priority to extra.
+  * Change cronjob. The output of the poller job is now appended to the
+    logfile
+  * Update french debconf translation: fr.po. (Closes: #253585)
+  * Add debconf translation: pt_BR.po. Don't know, which language
+    this is :-) (Closes: #252021, #252017)
+  * Backport cacti cvs fix (#0000176) into debian version. This will fix
+    compatiblity problem with the output of the df command and long device
+    names. (Closes: #254856)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue, 22 Jun 2004 23:26:17 +0200
+
+cacti (0.8.5a-3) unstable; urgency=low
+
+  * Fix type in package description. (Closes: #249590)
+  * Update dutch debconf translation. (Closes: #250652)
+
+ -- Thorsten Sauter <tsauter@debian.org>  Wed, 26 May 2004 11:49:27 +0200
+
+cacti (0.8.5a-2) unstable; urgency=low
+
+  * Fix error in the cron script
+    - poll.sh isn't in the default path, we need ./poll.sh here
+    - make sure the cacti directory exists, otherwise we will get
+      a lot of error messages from cron. (Closes: #246982)
+  * Depend also on apache2. Still depend on php4-cgi, we need both
+    packages: php4 and php4-cgi. (Closes: #227295)
+  * Make the package apache2 "safe". Depend on php4 or libapache2-mod-php4
+  * Include apache2 howto into debian/README.Debian.
+  * Update templates, maintainer scripts to install config files for apache2
+    too. Update german translation
+  * cactid: remove upstream installation docu
+
+ -- Thorsten Sauter <tsauter@debian.org>  Mon, 17 May 2004 11:12:05 +0200
+
+cacti (0.8.5a-1) unstable; urgency=low
+
+  * New upstream version.
+  * Include new dutch debconf translation: nl.po. (Closes: #245916)
+  * Insert new dependency on php4-snmp which removes a lot of extra cpu usage.
+    Thanks Rafael D'Halleweyn. (Closes: #228948)
+  * Update debconf template and german/french translations.
+    Thanks Christian Perrier. (Closes: #225890)
+  * Including the new multi-threading poller (cactid). This binary can collect
+    multiple datasources at the same time. (Closes: #186013, #237055)
+    The program is not in the core release and not marked as stable, that's
+    why I include it in an extra debian package.
+  * The MySQL admin password is now removed from debconf database, if the user
+    decide to not store it. (Closes: #224214)
+  * The new poll.sh script report the output from the poller into a logfile.
+    Maybe not the best solution, but so we don't loose any output. (Closes: #234726)
+  * The new package containts the install/ directory also. This is useful,
+    if we're not upgrading from 0.8.4 but from an other version. (Closes: #227737)
+  * Insert an upgrade path from 0.8.4 and 0.8.5, this is done via sql scripts
+    in updscripts/
+  * A new poll.sh script is used for cronjobs. This script use either cacti
+    or the new cactid poller (depends on the default-poller file).
+  * During upgrade the databases are dumped/backuped.
+  * Update build system. Change to cdbs system.
+  * Update README.Debian file.
+  * Update Build-Depends/Depends
+
+ -- Thorsten Sauter <tsauter@debian.org>  Mon, 26 Apr 2004 10:48:58 +0200
+
+cacti (0.8.4-2) unstable; urgency=low
+
+  * Print a warning message, if cacti is upgraded from an old version
+  * extend debian/README.Debian with upgrade database instructions
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue, 30 Dec 2003 13:44:55 +0100
+
+cacti (0.8.4-1) unstable; urgency=low
+
+  * New maintainer. (Closes: #196199)
+  * New upstream version. (Closes: #198777)
+  * debian/changelog:
+    - convert to UTF-8
+  * debian/control:
+    - update standards version
+    - update build dependencies
+    - insert new logrotate dependency
+    - depend on libphp-adodb, which is also in the archive
+    - add apache-perl to apache dependency list. (Closes: #204290)
+  * debian/rules: rewrite the way to install the files into the package
+  * debian/cacti.cron.d:
+    - make the script a little bit more robust. (Closes: #211249)
+  * debian/README.Debian:
+    - replace most parts of the text.
+  * debian/cacti.apache.conf:
+    - reformat the file a little bit
+    - remove unused phtml extension
+  * debian/cacti.logrotate:
+    - reformat the file
+
+ -- Thorsten Sauter <tsauter@debian.org>  Tue,  2 Dec 2003 11:24:49 +0100
+
+cacti (0.6.8a-13.1) unstable; urgency=low
+
+  * NMU
+  * Rewrote debconf templates to more standard english with the help of
+    debian-l10n-english. Former templates have been left for future reference
+    Closes: #189401
+  * French debconf templates update. Closes: #197119
+  * More secure temp file handling in postrm. Thanks lintian.
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 16 Jun 2003 22:54:11 +0200
+
+cacti (0.6.8a-13) unstable; urgency=low
+
+  * Orphan this package
+
+ -- Igor Genibel <igenibel@debian.org>  Thu,  5 Jun 2003 11:58:50 +0200
+
+cacti (0.6.8a-12) unstable; urgency=low
+
+  * Missed to close bug #183287 (Closes: #183287)
+
+ -- Igor Genibel <igenibel@debian.org>  Wed, 19 Mar 2003 09:32:25 +0100
+
+cacti (0.6.8a-11) unstable; urgency=low
+
+  * remove quote in cron.php in order to be run in safe_mode
+    and /var/log/httpd/access_log -> /var/log/apache/access_log in
+    scripts/webhits (Closes: #177791)
+  * fix non installation when no mysql server is present when localhost
+    installation (Closes: #183288, #184324)
+  * fix non removal when no mysql server found (in localhost installation)
+    (Closes: #183288)
+  * fix loop when upgrading and mysql-server != localhost (Closes: #179561)
+  * use po-debconf
+
+ -- Igor Genibel <igenibel@debian.org>  Mon, 17 Mar 2003 15:00:55 +0100
+
+cacti (0.6.8a-10) unstable; urgency=low
+
+  * Fix various packaging mistakes
+    - Mention that mysql is not installed on local systems (complement to the
+    #172414)
+    - Provide a good cacti.sql (Closes: #166296)
+    - config.php is only store in /etc/cacti (Closes: #172410)
+    - Provide somes explanations for scripts provided in the package
+      (see the README.Debian file) (Closes: #167814)
+  * Standards-Version: 3.5.8
+
+ -- Igor Genibel <igenibel@debian.org>  Sun,  5 Jan 2003 21:15:49 +0100
+
+cacti (0.6.8a-9) unstable; urgency=low
+
+  * Fix extra OID in parameter. Thanks to Roberto Moreda
+  <moreda@alfa21.com> (Closes: #162873)
+
+ -- Igor Genibel <igenibel@debian.org>  Mon, 30 Sep 2002 16:51:36 +0200
+
+cacti (0.6.8a-8) unstable; urgency=low
+
+  * Fix typo in postinst file (Closes: #162574)
+
+ -- Igor Genibel <igenibel@debian.org>  Fri, 27 Sep 2002 12:20:28 +0200
+
+cacti (0.6.8a-7) unstable; urgency=low
+
+  * fix broken regexp in include/snmp_functions.php
+  * force the use of external snmp functions
+
+ -- Igor Genibel <igenibel@debian.org>  Thu, 26 Sep 2002 17:39:03 +0200
+
+cacti (0.6.8a-6) unstable; urgency=low
+
+  * apply a patch provided by Blaine Kahle <blaine@binary.net> in order to
+    cleanly use net-snmp5
+
+ -- Igor Genibel <igenibel@debian.org>  Thu, 26 Sep 2002 16:50:24 +0200
+
+cacti (0.6.8a-5) unstable; urgency=low
+
+  * re-add lost patch provided by Adam Conrad in order to bypass the php4-cgi
+    installation bug (related bugs: #147385, #147261, #129883 and #145465)
+    (Closes: #154822)
+
+ -- Igor Genibel <igenibel@debian.org>  Thu, 26 Sep 2002 16:10:05 +0200
+
+cacti (0.6.8a-4) unstable; urgency=low
+
+  * New recommends on iputils-ping (because of the "-w" ping option)
+    (Closes: #161278, #161279)
+  * New Standards (3.5.7.0)
+  * DH_COMPAT 4
+
+ -- Igor Genibel <igenibel@debian.org>  Thu, 26 Sep 2002 12:35:46 +0200
+
+cacti (0.6.8a-3) unstable; urgency=low
+
+  * Fix type in postinst file (Closes: #160694)
+  * Add missing ; in include/rrd_functions.php file (Closes: #160703)
+
+ -- Igor Genibel <igenibel@debian.org>  Tue, 17 Sep 2002 17:51:09 +0200
+
+cacti (0.6.8a-2) unstable; urgency=high
+
+  * Security upload:
+    really fix the arbitrary program code execution.
+
+ -- Igor Genibel <igenibel@debian.org>  Tue, 10 Sep 2002 09:57:00 +0200
+
+cacti (0.6.8a-1) unstable; urgency=high
+
+  * Security Upload:
+    prevent executing arbitrary program code under the user id of the web
+    server.
+
+ -- Igor Genibel <igenibel@debian.org>  Mon,  9 Sep 2002 14:39:37 +0200
+
+cacti (0.6.8-10) unstable; urgency=high
+
+  * fix the wrong setcookie() call (Closes: #157740)
+  * force the use of net-snmp tool instead of using native broken php-snmp
+    functions (Closes: #157383,#157381)
+  * urgency=high because cacti is not usable with the php-snmp functions
+
+ -- Igor Genibel <igor@genibel.org>  Thu, 22 Aug 2002 17:20:32 +0200
+
+cacti (0.6.8-9) unstable; urgency=low
+
+  * The «I'm too lame and stupid» version
+  * really add the «if exists» statement
+
+ -- Igor Genibel <igenibel@debian.org>  Mon, 19 Aug 2002 16:03:44 +0200
+
+cacti (0.6.8-8) unstable; urgency=low
+
+  * add a «if exists» when dropping the database (for partial installation)
+
+ -- Igor Genibel <igenibel@debian.org>  Mon, 19 Aug 2002 15:46:58 +0200
+
+cacti (0.6.8-7) unstable; urgency=low
+
+  * Fix uninstallable package with calling mysql differently (Closes: #156951)
+
+ -- Igor Genibel <igenibel@debian.org>  Mon, 19 Aug 2002 14:41:08 +0200
+
+cacti (0.6.8-6) unstable; urgency=low
+
+  * move php-cgi bug workaround from include/database.php to
+    include/config.php in order to fix the html export bug
+  * put strict dependency on mysql-client (because of SQL query)
+    (Closes: #149787)
+
+ -- Igor Genibel <igenibel@debian.org>  Wed, 12 Jun 2002 19:40:29 +0200
+
+cacti (0.6.8-5) unstable; urgency=low
+
+  * ask for password confirmation.
+  * Test if provided password for mysql is Ok. (Closes: #148862)
+  * add two scripts
+
+ -- Igor Genibel <igenibel@debian.org>  Mon,  3 Jun 2002 14:11:28 +0200
+
+cacti (0.6.8-4) unstable; urgency=low
+
+  * put php_flag short_open_tag On in apache.conf file (Closes: #147283)
+  * fix SQL entry for webhits script
+
+ -- Igor Genibel <igenibel@debian.org>  Fri, 17 May 2002 18:45:17 +0200
+
+cacti (0.6.8-3) unstable; urgency=low
+
+  * provide the get_stat_for_interface.pl script (I'm too lame)
+
+ -- Igor Genibel <igenibel@debian.org>  Fri, 17 May 2002 18:36:44 +0200
+
+cacti (0.6.8-2) unstable; urgency=low
+
+  * Suppress and fix wrong SQL inserts. (Closes: #147259,#147262)
+    Thanks to Guillaume <mail@stereo.lu>
+  * Applied a patch provided by Adam Conrad in order to bypass php4-cgi
+    installation bug
+
+ -- Igor Genibel <igenibel@debian.org>  Fri, 17 May 2002 16:19:14 +0200
+
+cacti (0.6.8-1) unstable; urgency=low
+
+  * New upstream version (Closes: #146799)
+  * add new script that fetches informations directly from /proc (Luc
+    Saillard)
+  * patch auth_login.php in order to move php4 dependency from Depends to
+    Recommends. Now only php4-cgi package is mandatory. (Luc Saillard)
+  * Standards-Version: 3.5.6.0
+
+ -- Igor Genibel <igenibel@debian.org>  Mon, 13 May 2002 16:03:13 +0200
+
+cacti (0.6.7-2) unstable; urgency=low
+
+  * add snmp to dependencies
+  * fix logrotate broken file
+  * add a note in README.Debian concerning php4-cgi installation
+
+ -- Igor Genibel <igor@genibel.org>  Fri,  5 Apr 2002 12:59:51 +0200
+
+cacti (0.6.7-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #140461)
+
+ -- Igor Genibel <igor@genibel.org>  Wed,  3 Apr 2002 15:04:11 +0200

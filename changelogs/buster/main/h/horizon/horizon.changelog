@@ -1,0 +1,1035 @@
+horizon (3:14.0.2-3+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2022-45582: Open Redirect vulnerability via the success_url
+    parameter.
+  * Add DEP-8 tests (inspired by debian/rules).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Thu, 30 Nov 2023 22:02:12 +0100
+
+horizon (3:14.0.2-3+deb10u2) buster-security; urgency=medium
+
+  * CVE-2020-29565: Open redirect in workflow forms (OSSA-2020-008). Applied
+    upstream patch Fix_open_redirect.patch (Closes: #976872).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Dec 2020 21:10:43 +0100
+
+horizon (3:14.0.2-3+deb10u1) buster; urgency=medium
+
+  [ Michal Arbet ]
+  * Fix change of WEBROOT in horizon
+
+  [ Thomas Goirand ]
+  * Do not have debian local_settings.d/*.py files as CONFFILEs, as we're
+    editing them depending on the debconf answers (ie: we need to edit the
+    WEBROOT variable).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 31 Dec 2019 17:07:32 +0100
+
+horizon (3:14.0.2-3) unstable; urgency=medium
+
+  * openstack-dashboard: Add Breaks against obsolete packages from Stretch:
+    python-app-catalog-ui, python-designate-dashboard, python-ironic-ui,
+    python-murano-dashboard, python-zaqar-ui (Closes: #925226). Thanks a lot
+    to Andreas Beckmann for his report, patch and tests.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 25 Mar 2019 21:44:52 +0100
+
+horizon (3:14.0.2-2) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * d/openstack-dashboard.postinst:
+      - Make symlinks creation dynamically (Closes: #921661).
+  * d/control:
+      - openstack-dashboard-apache: Update dependency
+      - openstack-dashboard now breaks old plugins
+  * d/openstack-dashboard.postinst:
+     - Delete /usr/share/openstack-dashboard/openstack_dashboard
+  * d/openstack-dashboard.links: Remove it
+  * d/openstack-dashboard.prerm:
+     - Add deletion of symlinks
+  * d/openstack-dashboard.postrm:
+     - Add deletion of some files
+  * d/openstack-dashboard-apache.postinst:
+     - Collect static and compress not needed
+       in a package, this is done in it's
+       dependency package openstack-dashboard
+
+  [ Thomas Goirand ]
+  * Add fix-broken-log.warning.patch.
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Fri, 08 Feb 2019 13:36:59 +0100
+
+horizon (3:14.0.2-1) unstable; urgency=medium
+
+  * New upstream version
+  * d/patches: Add fix-unhashable-key-warning.patch
+  * d/patches: Add fix-horizon-osprofiler-support.patch
+  * d/patches: Add fix-django-auth-middleware-monkey-patching.patch
+  * d/control: Add me to uploaders field
+  * d/control: Add me to copyright file
+  * Redesign openstack-dashboard:
+      - Enabled files now in /etc/openstack-dashboard/
+  * d/rules: Add tests, change tests execution
+  * d/openstack-dashboard.triggers: Update paths
+  * d/rules: Move settings from local_settings.py
+             to local_settings.d as debian specific
+  * openstack-dashboard-apache: Move logs to separate dir
+  * openstack-dashboard-apache: Move dashboard paths
+  * Fixes (Closes: #915023)
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Mon, 04 Feb 2019 19:50:30 +0100
+
+horizon (3:14.0.0-7) unstable; urgency=medium
+
+  * Fix horizon group and user creation, so it doesn't fail if the user or
+    group already exist.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Jan 2019 17:18:31 +0100
+
+horizon (3:14.0.0-6) unstable; urgency=medium
+
+  * Updated Debconf template translations with thanks to:
+    - German: Chris Leick <c.leick@vollbio.de> (Closes: #910621).
+    - Portuguese: Américo Monteiro <a_monteiro@gmx.com> (Closes: #910364).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Jan 2019 09:25:32 +0100
+
+horizon (3:14.0.0-5) unstable; urgency=medium
+
+  * Add version for python-ironic-ui (<< 3.3.0) to allow transition
+    (Closes: #910225).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 30 Oct 2018 12:03:26 +0100
+
+horizon (3:14.0.0-4) unstable; urgency=medium
+
+  * Add conflicts+breaks for older versions of ironic-ui (Closes: #910225).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 10 Oct 2018 20:44:11 +0200
+
+horizon (3:14.0.0-3) unstable; urgency=medium
+
+  * Add admin_info_check_required_service_for_network_tab.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 09 Sep 2018 22:08:42 +0200
+
+horizon (3:14.0.0-2) unstable; urgency=medium
+
+  * Remove legacy lessc folder and symlink (Closes: #857532).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 05 Sep 2018 23:16:08 +0200
+
+horizon (3:14.0.0-1) unstable; urgency=medium
+
+  * Add Allow_to_start_UT_with_Django_2.1.patch.
+  * fr.po debconf translation, thanks to Alban Vidal (Closes: #898828).
+  * Fixed incorrect name of apache default virtual host in the English debconf
+    templates, thanks to Alban Vidal (Closes: #898282).
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 05 Sep 2018 15:42:02 +0200
+
+horizon (3:14.0.0~rc2-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Rebased fix-dashboard-django-wsgi.patch.
+  * Removed patches applied upstream:
+    - fix-py3-issues.patch
+    - fix-upload-image.patch
+  * Use python3 -m coverage to run tests.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 24 Aug 2018 20:06:22 +0200
+
+horizon (3:13.0.1-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+  [ Thomas Goirand ]
+  * Add Conflicts:, Breaks: and Provides: python-django-horizon,
+    python-django-openstack-auth, python3-django-openstack-auth to give hints
+    to apt to ease upgrade from Stretch as per Andreas Beckmann report
+    (Closes: #905183).
+  * Added find $(CURDIR)/debian -iname .eslintrc -delete.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 14 Aug 2018 14:17:23 +0000
+
+horizon (3:13.0.1-1) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * New upstream version
+  * Add fix-upload-image.patch (Closes: #899975).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 30 May 2018 16:40:53 +0200
+
+horizon (3:13.0.0-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Thomas Goirand ]
+  * Allow a2ensite / a2dissite to fail, because puppet-openstack is destroying
+    what the package does. We'll try to fix puppet later.
+
+  [ Michal Arbet ]
+  * Add fix-py3-issues.patch
+
+  [ David Rabel ]
+  * Update debconf translation nl.po (Closes: #895460)
+
+ -- David Rabel <david.rabel@noresoft.com>  Thu, 03 May 2018 19:10:23 +0200
+
+horizon (3:13.0.0-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * Add || true when running invoke-rc.d --quiet apache2 reload, because when
+    using puppet-horizon, Apache may be not running.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Apr 2018 22:06:55 +0200
+
+horizon (3:13.0.0-2) unstable; urgency=medium
+
+  * Re-upload to make sure we get the fix of 3:13.0.0~rc2-2.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 12 Mar 2018 13:04:55 +0000
+
+horizon (3:13.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 12 Mar 2018 12:52:17 +0000
+
+horizon (3:13.0.0~rc2-2) unstable; urgency=medium
+
+  * Fix apt-get install crash if python 3 isn't installed, and we install
+    Horizon at the same time.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Feb 2018 21:48:04 +0100
+
+horizon (3:13.0.0~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 27 Feb 2018 12:14:11 +0000
+
+horizon (3:13.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https in Format
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Rebased/refreshed patches.
+  * ./run_tests.sh is gone from upstream: call manage.py to run tests.
+  * Standards-Version is now 4.1.3.
+  * Switched to Python 3.
+  * Fixed debian/copyright holders list and years.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Feb 2018 08:31:04 +0000
+
+horizon (3:12.0.2-1) unstable; urgency=medium
+
+  [ David Rabel ]
+  * Update debconf translations
+   - de (Closes: #885146)
+   - fr (Closes: #887560)
+   - nl (Closes: #882651)
+   - ru (Closes: #883993)
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Remove pull_catalog_avoid_internet_access_during_module_loading.patch
+    applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 25 Jan 2018 12:58:53 +0000
+
+horizon (3:12.0.0-6) unstable; urgency=medium
+
+  * Drop python-pint which isn't needed and FTBFS.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 21 Dec 2017 19:23:02 +0000
+
+horizon (3:12.0.0-5) unstable; urgency=medium
+
+  * Set http{s,}_proxy during tests.
+  * Add upstream patch to avoid internet access during unit test suite module
+    import (Closes: #882266).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 21 Nov 2017 08:04:26 +0000
+
+horizon (3:12.0.0-4) unstable; urgency=medium
+
+  * Fixed debian/openstack-dashboard.templates. Huge thanks to Justin for his
+    perfect work on the English templates.
+  * Fixed installing in non-interactive mode (Closes: #881816).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 15 Nov 2017 21:53:27 +0000
+
+horizon (3:12.0.0-3) unstable; urgency=medium
+
+  * Manage the ALLOWED_HOSTS directive with debconf.
+  * Add <!nocheck> for b-d needed for unit tests only.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 10 Nov 2017 16:51:01 +0000
+
+horizon (3:12.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable:
+    - Fixes FTBFS (Closes: #868975).
+    - Can be installed (Closes: #867254).
+    - Delete instance in table works (Closes: #862387).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 28 Oct 2017 21:14:53 +0000
+
+horizon (3:12.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updating vcs fields.
+  * Running wrap-and-sort -bast.
+  * Updating maintainer field.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Deprecating priority extra as per policy 4.0.1.
+  * Updating standards version to 4.1.1.
+  * Fixed (build-)depends for this release.
+  * Remove obsolete patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 12 Oct 2017 17:12:58 +0200
+
+horizon (3:10.0.1-1) unstable; urgency=high
+
+  [ Ivan Udovichenko ]
+  * Sync to the latest version from stable/newton.
+
+  [ Thomas Goirand ]
+  * CVE-2017-7400: XSS in federation mappings UI. Applied upstream patch:
+    Remove dangerous safestring declaration (Closes: #859559).
+  * Updated Italian translation of debconf messages (Closes: #846931).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 04 Apr 2017 23:47:20 +0200
+
+horizon (3:10.0.0-2) unstable; urgency=medium
+
+  * Added missing path in debian/openstack-dashboard.triggers.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Oct 2016 17:35:09 +0200
+
+horizon (3:10.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 06 Oct 2016 17:51:41 +0200
+
+horizon (3:10.0.0~rc2-3) unstable; urgency=medium
+
+  * Uploading to unstable (Closes: #832338).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 04 Oct 2016 09:39:39 +0200
+
+horizon (3:10.0.0~rc2-2) experimental; urgency=medium
+
+  * Add patch to use /tmp for the SECRET_KEY during tests, instead of the
+    openstack_dashboard/test folder, which isn't suitable for plugins, and
+    which would make them FTBFS.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 29 Sep 2016 11:45:54 +0200
+
+horizon (3:10.0.0~rc2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release, including 3 new XStatic packages.
+  * Using OpenStack's Gerrit as VCS URLs.
+  * .gitreview file points to deb-horizon in OpenStack Gerrit.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 13 Sep 2016 22:13:09 +0200
+
+horizon (3:10.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Updated Danish translation of debconf templates (Closes: #830639).
+  * Remove CVE-2016-4428_Escape_angularjs_templating_in_unsafe_HTML.patch
+    applied upstream.
+  * Add BaseCommand.option_list-is-gone-from-django1.10.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 11 Jul 2016 14:24:50 +0200
+
+horizon (3:10.0.0~b1-3) experimental; urgency=medium
+
+  * Adds CVE-2016-4428_Escape_angularjs_templating_in_unsafe_HTML.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 29 Jun 2016 14:51:26 +0200
+
+horizon (3:10.0.0~b1-2) experimental; urgency=medium
+
+  * Increasing the EPOC after an unfortunate upload to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 28 Jun 2016 08:02:20 +0000
+
+horizon (2:10.0.0~b1-1) unstable; urgency=medium
+
+  [ Ivan Udovichenko ]
+  * New upstream release.
+  * Fix (build-)dependencies.
+
+  [ Thomas Goirand ]
+  * Removed Fix_remaining_Django_1.9_test_failures.patch applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 10 Jun 2016 16:39:20 +0200
+
+horizon (2:9.0.0-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Changed source URL to https protocol
+
+  [ Ivan Udovichenko ]
+  * d/openstack-dashboard.{preinst,postinst,postrm},
+      openstack-dashboard-apache.{preinst,postinst,postrm}:
+      - Pass the correct version to dpkg-maintscript-helper script.
+  * d/openstack-dashboard.postinst:
+      - Check if django.utils.log.NullHandler class is being used and
+        replace it with logging.NullHandler class if it is true. (Closes: #822907)
+
+  [ Thomas Goirand ]
+  * Horizon doesn't build with python-django-nose in Jessie, so increasing the
+    build-depends version to >= 1.4.3.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 31 May 2016 13:43:46 +0200
+
+horizon (2:9.0.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+
+  [ Ivan Udovichenko ]
+  * d/openstack-dashboard-apache.postinst: Revert changes. (Closes: #820845)
+    - Do not modify provided Apache configuration files.
+    - Enable site provided by openstack-dashboard-alias-only.conf .
+  * d/openstack-dashboard.triggers: Trigger package configuration
+                                    only once. (Closes: #821868)
+  * d/control: Fix documentation build by adding git to build-dependencies.
+  * Add myself to Uploaders field.
+  * Uploading to unstable.
+
+ -- Ivan Udovichenko <iudovichenko@mirantis.com>  Wed, 13 Apr 2016 23:34:27 +0300
+
+horizon (2:9.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Apr 2016 21:18:30 +0200
+
+horizon (2:9.0.0~rc2-1) unstable; urgency=medium
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Uploading to unstable (Closes: #809575).
+  * Also copy openstack_dashboard/dashboards/project/static/dashboard/project
+    which were not packaged.
+  * Updated nl.po debconf translation (Closes: #805465).
+  * Updated ja.po debconf translation (Closes: #816070).
+  * Added pt_BR.po debconf translation (Closes: #816942).
+  * Removed unused license in debian/copyright.
+
+  [ Ivan Udovichenko ]
+  * d/control: Add python-xstatic-magic-search dependency.
+               Move memcached and openstack-dashboard-apache to Suggests field.
+  * d/openstack-dashboard-apache.postinst:
+      - Delete the .secret_ket_store file if exists.
+      - Make www-data the owner of /var/lib/openstack-dashboard/secret-key and
+        /var/lib/openstack-dashboard/static directories.
+      - Set new alias to Horizon static files.
+      - Call collectstatic with --clear and --noinput options.
+  * d/openstack-dashboard.{preinst,postinst,postrm},
+      openstack-dashboard-apache.{preinst,postinst,postrm}:
+      - Remove /usr/share/openstack-dashboard/static directory and create a
+        link to /var/lib/openstack-dashboard/static directory to make it
+        compatible with Ubuntu OpenStack Puppet manifests.
+  * d/rules: Do not copy/create additional files/links with/to static files.
+  * d/openstack-dashboard.links: Remove all links except a link to
+    /usr/bin/lessc binary.
+  * d/debian/apache-sites-available/*.conf:
+      - Change/add alias path to static files.
+      - Update permissions according to Apache 2.4 improvements.
+      - Change user/group to www-data .
+
+ -- Ivan Udovichenko <iudovichenko@mirantis.com>  Wed, 30 Mar 2016 22:23:48 +0300
+
+horizon (2:9.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URLs (https).
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Added python-selenium as build-depends, to satisfy the imports.
+  * Fixed debian/copyright.
+  * Added patch: Fix_remaining_Django_1.9_test_failures.patch
+  * Standards-Version: 3.9.7 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Mar 2016 16:56:53 +0800
+
+horizon (2:8.0.0-3) unstable; urgency=medium
+
+  * Updated pt.po debconf translation (Closes: #802419).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 13 Nov 2015 10:36:16 +0100
+
+horizon (2:8.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Disabled apache config properly on removal.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 Oct 2015 07:21:51 +0000
+
+horizon (2:8.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 15 Oct 2015 16:49:49 +0200
+
+horizon (2:8.0.0~rc2-2) experimental; urgency=medium
+
+  * Do not set /etc/.../local_settings.py as CONFFILES (Closes: #801543).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 13 Oct 2015 08:46:21 +0000
+
+horizon (2:8.0.0~rc2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed the issue with the file
+    /var/lib/openstack-dashboard/secret-key/.secret_key_store not being
+    writeable. What seems to happen is that compress, which is run as root,
+    writes that file.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 08 Oct 2015 21:52:34 +0000
+
+horizon (2:8.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed Improving_find_static_robustness.patch applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 26 Sep 2015 16:05:12 +0200
+
+horizon (2:8.0.0~b3-7) experimental; urgency=medium
+
+  * openstack-dashboard-apache now also Depends: apache2.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Sep 2015 13:25:46 +0200
+
+horizon (2:8.0.0~b3-6) experimental; urgency=medium
+
+  * Added a horizon-doc package.
+  * Fixed debian/rules dpkg-parsechangelog to be compatible with Ubuntu.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Sep 2015 08:50:12 +0200
+
+horizon (2:8.0.0~b3-5) experimental; urgency=medium
+
+  * Increasing EPOCH to match the one of Ubuntu.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 Sep 2015 19:28:12 +0000
+
+horizon (1:8.0.0~b3-4) experimental; urgency=medium
+
+  * Now also allowing Horizon to be installed in /horizon, not just on the
+    takeover of webroot. This will be the default.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 Sep 2015 13:27:52 +0000
+
+horizon (1:8.0.0~b3-3) experimental; urgency=medium
+
+  * Also adds symlink to the fonts-roboto-fontface and materialdesignicons
+    folders to avoid any 404. Horizon is now fully working with the material
+    theme (though the user got to run compress by hand after changing the
+    theme in local_settings.py).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 Sep 2015 09:33:32 +0000
+
+horizon (1:8.0.0~b3-2) experimental; urgency=medium
+
+  * Added Improving_find_static_robustness.patch.
+  * Removed all instances of pyshared, now using lib/python2.7 instead.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 21 Sep 2015 13:21:22 +0000
+
+horizon (1:8.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fix (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 07 Sep 2015 14:27:34 +0200
+
+horizon (1:8.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Remobed build-conflicts on python-unittest2.
+  * Removed the manual copy of the angular folder in debian/rules.
+  * Declares incompatibility with Django 1.8.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 03 Aug 2015 16:16:25 +0200
+
+horizon (2015.1.0+2015.06.09.git15.e63af6c598-1) unstable; urgency=medium
+
+  * New upstream release (packaging 15th commit since 2015.1.0: e63af6c598):
+    - CVE-2015-3219: Fixes XSS in Horizon Heat stack creation (Closes: #788306)
+  * Fixed double entry in openstack-dashboard.triggers.
+  * Dropped patch applied upstream:
+    - Persistent_XSS_in_Horizon_metadata_dashboard.patch
+  * Added Build-Conflicts: python-rednose.
+  * Standards-Version is now 3.9.6 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 08 Jun 2015 16:26:13 +0200
+
+horizon (2015.1.0-2) unstable; urgency=high
+
+  * Added update for the sv.po debconf translations (Closes: #781680).
+  * Added upstream patch for CVE-2015-3988 (Closes: #786741):
+    Persistent_XSS_in_Horizon_metadata_dashboard.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 12 May 2015 23:23:46 +0200
+
+horizon (2015.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Apr 2015 21:57:20 +0000
+
+horizon (2015.1~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Fixed (build-)depends for this release.
+  * Removed upstream-applied patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 25 Dec 2014 17:36:23 +0800
+
+horizon (2014.2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Removed Update_WSGI_app_creation_to_be_compatible_with_Django_1.7.patch
+    applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 14 Dec 2014 11:44:10 +0000
+
+horizon (2014.2-3) experimental; urgency=medium
+
+  * CVE-2014-8124: Horizon denial of service attack through login page. Applied
+    upstream patch (Closes: #772710).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 10 Dec 2014 19:53:49 +0800
+
+horizon (2014.2-2) experimental; urgency=medium
+
+  * Added a trigger thing when a javascript lib is updated.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 02 Dec 2014 19:03:08 +0800
+
+horizon (2014.2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Added Update_WSGI_app_creation_to_be_compatible_with_Django_1.7.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 16 Oct 2014 14:56:33 +0000
+
+horizon (2014.2~rc2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * New debian/compile-messages to build the .mo files which were removed
+    upstream.
+  * Mangling upstream rc and beta versions in watch file.
+  * Fixed bootstrap-datepicker (build-)depends.
+  * Adds Remove_selenium_dependency_when_not_using_selenium_tests.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 05 Oct 2014 14:32:50 +0800
+
+horizon (2014.2~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Added missing python-xstatic-bootstrap-datepicker depends.
+  * Updated (build-)depends for this release.
+  * Removed all Django 1.7 fix-up, as they were applied upstream. Only
+    disable-failed-django-1.7-test.patch remains, as nobody was able to work
+    on it and solve it.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 04 Oct 2014 11:46:51 +0800
+
+horizon (2014.2~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed fix-python-m-coverage.patch FINALLY applied upstream !!! :)
+  * Added 0008_Handle_TypeError_from_table_column_summation_code.patch.
+  * Added 0009_Fix-TypeError-SecurityGroup-object-is-not-iterable-t.patch
+  * Added disable-failed-django-1.7-test.patch
+  * Note: there's still 2 unit test errors, one about selenium not being
+    installed, which can be safely ignored (Selenium is non-free, and Horizon
+    can't build-depend on it), and the 2nd one is about Trove flavors, which
+    isn't crytical IMO.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 01 Jul 2014 16:06:08 +0800
+
+horizon (2014.1.1-2) unstable; urgency=medium
+
+  * Updated de.po thanks to Chris Leick <c.leick@vollbio.de> (Closes: #751163).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 11 Jun 2014 12:24:13 +0800
+
+horizon (2014.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed Use_escapejs_filter_on_JavaScript_strings.patch applied upstream.
+  * Now needs python-six >= 1.6.0.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Jun 2014 23:16:43 +0800
+
+horizon (2014.1-2) unstable; urgency=medium
+
+  * Added Use_escapejs_filter_on_JavaScript_strings.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 21 May 2014 08:42:42 +0800
+
+horizon (2014.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 09 Apr 2014 17:32:13 +0800
+
+horizon (2014.1~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Reviewed (build-)depends for this release.
+  * Refreshed fix-python-m-coverage.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 Apr 2014 18:24:26 +0800
+
+horizon (2014.1~b3-2) experimental; urgency=low
+
+  * Fixed MANIFEST.in which was missing the openstack_dashboard *.py.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 18 Mar 2014 00:44:21 +0800
+
+horizon (2014.1~b3-1) experimental; urgency=low
+
+  [ Gonéri Le Bouder ]
+  * Compress the CSS and JS during the postinst (Closes: #739698)
+   - Turns COMPRESS_OFFLINE to True since we now pre-compress the
+    CSS and the JS
+   - call "manage.py compress" in the post-inst script
+  * avoid openstack-dashboard-apache.postinst failure if the default vhost
+    has been removed.
+  * Add myself in Uploaders
+  * run horizon with the horizon user/group
+  * Bump standard version, no change needed
+  * Call debconf-updatepo to refresh the i18n template
+
+  [ Thomas Goirand ]
+  * New upstream release (Icehouse beta 3).
+  * Removes CVE-2013-6858 patch applied upstream.
+  * Refreshed patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Mar 2014 11:34:49 +0000
+
+horizon (2013.2-2) unstable; urgency=high
+
+  * CVE-2013-6858: persistent XSS vulnerability. Applies upstream patch: Fix
+    bug by escaping strings from Nova before displaying them (Closes: #730752).
+  * Adds debconf translations updates, with warm thanks to:
+    - French, Julien Patriarca <leatherface@debian.org> (Closes: #726711).
+    - Italian, Beatrice Torracca <beatricet@libero.it> (Closes: #726829).
+  * New debconf translations, with warm thanks to:
+    - Portuguese, Américo Monteiro <a_monteiro@gmx.com> (Closes: #729911).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 04 Dec 2013 20:43:44 +0800
+
+horizon (2013.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 18 Oct 2013 00:15:57 +0800
+
+horizon (2013.2~rc3-1) experimental; urgency=low
+
+  * New upstream pre-release.
+  * Now running the upstream unit tests, and added a debian/source/options file
+    with extend-diff-ignore = "[.]*.secret_key_store"
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 17 Oct 2013 11:27:06 +0800
+
+horizon (2013.2~rc2-1) experimental; urgency=low
+
+  * New upstream pre-release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 16 Oct 2013 23:17:44 +0800
+
+horizon (2013.2~rc1-2) experimental; urgency=low
+
+  * Now creates /var/lib/openstack-dashboard/secret-key in the postinst, and
+    sets this path as default in /etc/openstack-dashbaord/local_settings.py,
+    instead of the path in /usr/share (Closes: #726373).
+  * Debconf translations updates:
+    - Czech, thanks to Michal Šimůnek (Closes: #726124).
+    - Danish, thanks to Joe Dalton (Closes: #725988).
+    - Russian, thanks to Yuri Kozlov (Closes: #725878).
+  * Added new debconf translation:
+    - Swedish, thanks to Martin Bagge (Closes: #725101).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 13 Oct 2013 22:48:35 +0800
+
+horizon (2013.2~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Lots of dependencies adjustments.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Oct 2013 09:22:10 +0000
+
+horizon (2013.1.3-2) unstable; urgency=low
+
+  * Added new French debconf translation (Closes: #722421).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 25 Sep 2013 17:30:14 +0800
+
+horizon (2013.1.3-1) unstable; urgency=low
+
+  * New upstream point release.
+  * Added a few Debconf translations:
+    - japaneese, thanks to victory (Closes: #719723).
+    - Danish, thanks to Joe Dalton (Closes: #720012).
+    - Italian, thanks to Beatrice Torracca (Closes: #720644).
+    - Czech, thanks to Michal Šimůnek (Closes: #721223).
+    - Russian, thanks to Yuri Kozlov (Closes: #721306).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 30 Aug 2013 16:52:24 +0800
+
+horizon (2013.1.2-4) unstable; urgency=low
+
+  * Fixes prerm so that it uninstalls the correct .conf files for apache, since
+    old apache vhost has been rename because of apache 2.4. Also remove the old
+    ones as a transition, but using || true to avoid failure (Closes: #669836).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 19 Jul 2013 01:06:46 +0800
+
+horizon (2013.1.2-3) unstable; urgency=low
+
+  * Now works with Sid apache 2.4 (Closes: #669836).
+  * Debconf and long description rewrite from the debian-l10n-english team: a
+    big thanks to them (Closes: #709000).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 14 Jul 2013 06:13:46 +0000
+
+horizon (2013.1.2-2) unstable; urgency=low
+
+  * Added a /etc/default/openstack-dashboard-apache to save the values of
+    debconf about setting-up the Apache vhosts.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 15 Jun 2013 02:45:58 +0800
+
+horizon (2013.1.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Ran wrap-and-sort.
+  * Also rm -rf /var/lib/horizon on purge (Closes: #668760).
+  * Removed chown -R, does more selective chown instead.
+  * Removes "a2ensite default" in postrm (Closes: #708632).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 May 2013 11:23:28 +0800
+
+horizon (2013.1.1-2) unstable; urgency=low
+
+  * Added missing symlink to /var for the css and js dynamic generation folder.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 21 May 2013 12:51:27 +0800
+
+horizon (2013.1.1-1) unstable; urgency=low
+
+  * Uploading to unstable.
+  * New upstream release.
+  * Removes the build of static CSS and JS, as they are done dynamically.
+  * Cleans better the package now (rebuild twice should work).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 16 May 2013 14:14:58 +0000
+
+horizon (2013.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Kills the COMPRESS_OFFLINE = True patch, no longer needed.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 28 Jan 2013 22:39:15 +0800
+
+horizon (2012.2.1-1) experimental; urgency=low
+
+  * New upstream release 2012.2.1
+  * Recommends: memcached and use it as default on localhost.
+  * Rewrote Apache vhost, diables apache "default" vhost by default, (probably
+  we should ask for permission to do that using debconf).
+  * Now writing css and js script in /var, plus we aren't doing chown www-data
+  of all the static, but only css + js in /var.
+  * Now asking using debconf if we should disable the default apache vhost,
+  and activate the Dasboard, and if we should use SSL or not.
+  * Added missing dependency on node-less.
+  * The package had only Build-Depends:, now setting lots of them in
+  Build-Depends-Indep: as it should be.
+  * Using pkgos.make in debian/rules.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 02 Dec 2012 11:59:19 +0000
+
+horizon (2012.2~rc1-1) experimental; urgency=low
+
+  [ Mehdi Abaakouk ]
+  * New upstream version
+  * Remove CVE-2012-3540 fixed by upstream
+  [ Thomas Goirand ]
+  * Now using xz compression level 9 for the debs.
+
+ -- Mehdi Abaakouk <sileht@sileht.net>  Mon, 10 Sep 2012 17:56:09 +0200
+
+horizon (2012.1.1-5) unstable; urgency=low
+
+  * Add the /static/horizon alias to the apache host definition. Without
+    it the javascript files cannot be found and most of the dashboard
+    functions are not working.
+
+ -- Loic Dachary (OuoU) <loic@debian.org>  Tue, 04 Sep 2012 13:47:54 +0200
+
+horizon (2012.1.1-4) unstable; urgency=high
+
+  * CVE-2012-3540: added patch: Disallow login redirects to anywhere other than
+  the same origin (Closes: #686050).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 28 Aug 2012 03:05:44 +0000
+
+horizon (2012.1.1-3) unstable; urgency=low
+
+  [ Thomas Goirand ]
+  * Added missing (build-)dependencies (took what was in the Ubuntu package and
+  which seems to be missing in Debian).
+  * Fixed missing license in debian/copyright.
+  * Added a get-vcs-source target in debian/rules.
+  * Fixed debian/copyright header.
+
+  [ Loic Dachary (OuoU) ]
+  * Add compression = xz to debian/gbp.conf
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 08 Jul 2012 18:05:14 +0000
+
+horizon (2012.1.1-2) unstable; urgency=low
+
+  * Add a /static alias to serve the static files. By default django is
+    configured in debug mode and will serve the static files. However,
+    when it is configured in production mode, it will no longer serve them
+    and it is expected that apache will take care of it. (Closes: #679440).
+  * Add Loic Dachary as Uploader
+
+ -- Loic Dachary (OuoU) <loic@debian.org>  Fri, 29 Jun 2012 10:23:33 +0200
+
+horizon (2012.1.1-1) unstable; urgency=low
+
+  [ Julien Danjou ]
+  * Remove useless dependency on openstackx
+  * Fix clean target
+
+  [ Mehdi Abaakouk ]
+  * New upsteam release
+  * Remove patches fixed upstream: CVE_2012-2094, CVE_2012-2144.
+  * Add gbp configuration file
+  * Clean horizon user home directory on purge. Closes: #668760
+  * Add Mehdi Abaakouk as Uploader
+
+ -- Julien Danjou <acid@debian.org>  Mon, 25 Jun 2012 13:13:35 +0200
+
+horizon (2012.1-4) unstable; urgency=low
+
+  * Fixed CVE_2012-2144. Closes: #671604
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Sat, 05 May 2012 12:02:08 +0200
+
+horizon (2012.1-3) unstable; urgency=low
+
+  * Fixed CVE_2012-2094
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Tue, 17 Apr 2012 19:38:18 +0200
+
+horizon (2012.1-2) unstable; urgency=low
+
+  * Make openstack-dashboard depends on the same version of
+    python-django-horizon, otherwise it just fails to work most of the
+    time, since upstream doesn't guarantee it'd work.
+
+ -- Julien Danjou <acid@debian.org>  Mon, 16 Apr 2012 16:11:45 +0200
+
+horizon (2012.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Mon, 09 Apr 2012 09:29:59 +0200
+
+horizon (2012.1~rc2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Wed, 04 Apr 2012 10:46:08 +0200
+
+horizon (2012.1~rc1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Tue, 20 Mar 2012 18:29:45 +0100
+
+horizon (2012.1~e4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe@debian.org>  Fri, 02 Mar 2012 08:42:48 +0100
+
+horizon (2012.1~e3-3) unstable; urgency=low
+
+  * Added manage.py to openstack-dashboard pkg
+
+ -- Ghe Rivero <ghe@debian.org>  Sun, 29 Jan 2012 10:26:12 +0100
+
+horizon (2012.1~e3-2) unstable; urgency=low
+
+  *Fixed typo in libjs-jquery
+
+ -- Ghe Rivero <ghe@debian.org>  Thu, 26 Jan 2012 16:40:21 +0100
+
+horizon (2012.1~e3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe@debian.org>  Thu, 26 Jan 2012 14:37:30 +0100
+
+horizon (2012.1~e2-2) unstable; urgency=low
+
+  * Rebuild to not depends on python-openstack-compute
+
+ -- Julien Danjou <acid@debian.org>  Mon, 19 Dec 2011 09:43:45 +0100
+
+horizon (2012.1~e2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Julien Danjou <acid@debian.org>  Fri, 16 Dec 2011 10:16:19 +0100
+
+horizon (2012.1~e1-1) unstable; urgency=low
+
+  * Initial release (Closes: #649897, #649994)
+
+ -- Julien Danjou <acid@debian.org>  Fri, 25 Nov 2011 11:30:34 +0100

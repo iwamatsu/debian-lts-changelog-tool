@@ -1,0 +1,86 @@
+golang-pretty (0.2.1+git20200831.59b4212-1) unstable; urgency=medium
+
+  * debian/watch: Remove extraneous hyphen in package name
+  * New upstream version 0.2.1+git20200831.59b4212
+    - Needed by golang-check.v1 to "avoid cycle bug",
+      see "diff: detect cycles in the values being compared"
+      at https://github.com/kr/pretty/pull/64
+  * Vendor in fmtsort from github.com/rogpeppe/go-internal v1.6.2 to avoid
+    a dependency loop involving golang-github-rogpeppe-go-internal-dev,
+    golang-gopkg-errgo.v2-dev and golang-gopkg-check.v1-dev
+  * Update golang-github-kr-text-dev dependency to (>= 0.1.0) as per go.mod
+  * Add myself to debian/copyright and update copyright years
+
+ -- Anthony Fok <foka@debian.org>  Mon, 09 Nov 2020 13:30:15 -0700
+
+golang-pretty (0.2.1-1) unstable; urgency=medium
+
+  * New upstream version 0.2.1
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+
+ -- Anthony Fok <foka@debian.org>  Fri, 18 Sep 2020 15:25:33 -0600
+
+golang-pretty (0.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields:
+    Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.2.0
+  * Remove oldlibs golang-pretty-dev (Closes: #939235)
+  * Remove Tonnerre Lombard from Uploaders (Closes: #836490)
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Add Rules-Requires-Root
+  * Update Standards-Version to 4.5.0 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Apr 2020 02:10:30 +0800
+
+golang-pretty (0.1.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.1.0
+  * Add debian/watch
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright,
+    adding "Testsuite: autopkgtest-pkg-go" field,
+    setting Priority to optional, bumping Standards-Version to 4.2.1,
+    and using secure https URL in debian/copyright, etc.
+  * Build-Depends on golang-any instead of golang-go
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 19:51:49 -0700
+
+golang-pretty (0.0~git20160325.0.add1dbc-1) unstable; urgency=medium
+
+  [ Tonnerre LOMBARD ]
+  * It appears it doesn't really hurt anymore to run the tests.
+    (Fix committed in 2013. Closes: #802459)
+  * debhelper changed its versioning schema with v9.
+
+  [ Anthony Fok ]
+  * New upstream version
+  * Add debian/gbp.conf setting pristine-tar to True
+  * Update fields in debian/control:
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Use secure https URLs for Vcs-* fields
+    - Add XS-Go-Import-Path: github.com/kr/pretty
+    - Change Maintainer to Debian Go Packaging Team (pkg-go)
+    - Add myself as to the list of Uploaders
+  * Update debian/copyright
+  * Rename golang-pretty-dev to golang-github-kr-pretty-dev
+    for pkg-go policy compliance.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Apr 2016 13:12:37 +0800
+
+golang-pretty (0.0~git20130613-1) unstable; urgency=low
+
+  * Initial release. Closes: #722983
+
+ -- Tonnerre Lombard <tonnerre@ancient-solutions.com>  Wed, 11 Sep 2013 02:36:12 +0200

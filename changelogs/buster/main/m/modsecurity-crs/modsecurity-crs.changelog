@@ -1,0 +1,146 @@
+modsecurity-crs (3.2.3-0+deb10u3) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * New upstream release packaged as backporting fixes is not feasible.
+    - Security fixes:
+      - CVE-2018-16384 (Closes: #924352)
+      - CVE-2021-35368 (Closes: #992000)
+      - CVE-2022-39955, CVE-2022-39956, CVE-2022-39957 and CVE-2022-39958
+        (Closes: #1021137)
+    - Cherry-pick upstream fix for CVE-2020-22669
+    - Patches droped, as already included in the new version:
+      CVE-2021-35368.patch, CVE-2019-13464.patch
+  * Add a Breaks: relation to older libapache2-mod-security2, as a recent
+    update is required for CVE-2022-39956. See also DLA-3283-1.
+  * Add postinst/postrm: reload apache2, if apache2 and mod_security2 is
+    enabled.
+
+ -- Tobias Frost <tobi@debian.org>  Mon, 30 Jan 2023 18:31:10 +0100
+
+modsecurity-crs (3.1.0-1+deb10u2) buster; urgency=medium
+
+  * Add upstream patch to fix request body bypass
+    CVE-2021-35368 (Closes: #992000)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 24 Aug 2021 12:37:59 +0200
+
+modsecurity-crs (3.1.0-1+deb10u1) buster; urgency=medium
+
+  * Add upstream patch to fix php script upload rules.
+    CVE-2019-13464 (Closes: #943773)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sun, 03 Nov 2019 14:34:05 +0100
+
+modsecurity-crs (3.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump debian/compat and Build-Dep on debhelper to 11
+  * Bumped Standards-Version to 4.2.1.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 27 Nov 2018 09:12:54 +0100
+
+modsecurity-crs (3.0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add "python" as Suggests to make lintian happy.
+  * Bumped Standards-Version to 4.1.0. Changed Priority to "optional".
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 10 Oct 2017 09:59:46 +0200
+
+modsecurity-crs (3.0.0-3) unstable; urgency=medium
+
+  * Add KNOWN_BUGS file to package
+  * Demote libapache2-mod-security2's Dependency to Recommends so nginx
+    users can install modsecurity-crs. (Closes: #807033)
+  * Move crs-setup and EXCLUSION-RULES to /etc/modsecurity/crs to ease
+    user editing and package upgrading.
+  * Add new file owasp-crs.load which Includes the required files to get
+    OWASP CRS working.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Wed, 21 Dec 2016 11:23:50 +0100
+
+modsecurity-crs (3.0.0-2) unstable; urgency=medium
+
+  * Improve README.Debian to avoid including conf files twice.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 17 Nov 2016 13:30:39 +0100
+
+modsecurity-crs (3.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 14 Nov 2016 19:17:48 +0100
+
+modsecurity-crs (2.2.9-2) unstable; urgency=medium
+
+  * patches/fix_826710.patch. Remove typo in rule 981063.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 19 Sep 2016 19:43:05 +0200
+
+modsecurity-crs (2.2.9-1) unstable; urgency=medium
+
+  * New upstream version
+  * Change Depends from libapache2-modsecurity to
+    libapache2-mod-security2.
+  * Bump dependency version on libapache2-mod-security2.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 23 Sep 2014 13:22:17 +0200
+
+modsecurity-crs (2.2.8-1) unstable; urgency=low
+
+  * New upstream version
+  * Update perl_path patch
+  * Fix path to GeoLiteCity.dat (Closes: #705248)
+  * Add geoip-database-contrib to Suggests
+  * Fix path to arachni_integration.lua (Closes: #705249)
+  * Fix path to appsensor_request_exception_enforce.lua (Closes: #705250)
+  * Update debian/rules and debian/watch
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 12 Jul 2013 10:36:51 +0200
+
+modsecurity-crs (2.2.5-2) unstable; urgency=low
+
+  * Update debian/copyright with right license.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 02 Jul 2012 17:18:35 +0200
+
+modsecurity-crs (2.2.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 18 Jun 2012 11:44:26 +0200
+
+modsecurity-crs (2.2.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Include activated_rules/ directory for alternate way to handle
+    rules inclusion
+  * Bumped Standards-Version to 3.9.3
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 16 Mar 2012 17:23:57 +0100
+
+modsecurity-crs (2.2.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 20 Dec 2011 07:47:43 +0100
+
+modsecurity-crs (2.2.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Added >= 2.6.0 to libapache2-modsecurity dependency (Closes: #640837)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sun, 02 Oct 2011 12:16:35 +0200
+
+modsecurity-crs (2.2.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Bumped Standards-Version to 3.9.2
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 16 Jun 2011 17:55:02 +0200
+
+modsecurity-crs (2.1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #620252)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 31 Mar 2011 16:42:48 +0200

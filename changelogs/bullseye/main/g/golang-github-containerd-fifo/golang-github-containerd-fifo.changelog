@@ -1,0 +1,50 @@
+golang-github-containerd-fifo (0.0~git20201026.0724c46-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20201026.0724c46
+  * Bump Standards-Version to 4.5.1 (no changes)
+  * Add golang-golang-x-sys-dev to Depends
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 26 Nov 2020 00:36:06 +0800
+
+golang-github-containerd-fifo (0.0~git20200410.f15a329-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.0~git20200410.f15a329
+  * Drop unused Depends and Build-Depends
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Update debhelper compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 21:45:17 +0800
+
+golang-github-containerd-fifo (0.0~git20190816.bda0ff6-2) unstable; urgency=medium
+
+  * Team upload.
+  * upload to unstable
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 07 Jan 2020 11:30:59 +0800
+
+golang-github-containerd-fifo (0.0~git20190816.bda0ff6-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20190816.bda0ff6
+  * Use git mode in watch file
+  * Update team address to team+pkg-go@tracker.debian.org
+  * Update debhelper compat to 12 with new syntax
+  * Update Standards-Version to 4.4.1 (no changes)
+  * Add Rules-Requires-Root
+  * Remove unused Files-Excluded filed in copyright file
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 04 Jan 2020 03:36:15 +0800
+
+golang-github-containerd-fifo (0.0~git20170714.fbfb6a1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #890310)
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Tue, 13 Feb 2018 17:05:10 +0700

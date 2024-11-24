@@ -1,0 +1,786 @@
+tryton-client (5.0.5-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix possible denial of service:
+    Cédric Krier has found that trytond accepts compressed content from
+    unauthenticated requests which makes it vulnerable to zip bomb attacks.
+    This patch allows only to send gzip content within a session.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 30 Jun 2024 23:53:50 +0200
+
+tryton-client (5.0.5-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 23 Jan 2019 15:52:11 +0100
+
+tryton-client (5.0.4-1) unstable; urgency=medium
+
+  * Add default-dbus-session-bus to Suggests.
+  * Bump Standards-Version to 4.3.0.
+  * Merging upstream version 5.0.4.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 06 Jan 2019 13:17:04 +0100
+
+tryton-client (5.0.3-2) unstable; urgency=medium
+
+  * Add a simple smoke test as autopkgtest.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 01 Jan 2019 20:34:46 +0100
+
+tryton-client (5.0.3-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 03 Dec 2018 13:30:46 +0100
+
+tryton-client (5.0.2-1) unstable; urgency=medium
+
+  * Merging upstream version 5.0.0.
+  * Updating copyright file.
+  * Merging upstream version 5.0.1.
+    Contains a fix for security issue
+    https://bugs.tryton.org/issue7792
+    https://discuss.tryton.org/t/security-release-for-issue7792
+    No CVE available so far.
+  * Updating to Standards-Version: 4.2.1, no changes needed.
+  * Update signing-key.asc with the minimized actual upstream maintainer
+    key.
+  * Merging upstream version 5.0.2.
+  * Refresh patches.
+  * Remove X-Python-Version, the client runs now under Python3 >= 3.4.
+  * Update (Build-)Depends in d/control for Python3 and GTK3.
+  * Update d/rules for Python3.
+  * Add 03-disable-version-check.patch.
+  * Update the man page for 5.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 20 Nov 2018 13:03:14 +0100
+
+tryton-client (4.6.5-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 04 Apr 2018 18:47:54 +0200
+
+tryton-client (4.6.4-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.4.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 29 Mar 2018 23:44:38 +0200
+
+tryton-client (4.6.2-2) unstable; urgency=medium
+
+  * Update year of debian copyright.
+  * Updating to standards version 4.1.3, no changes needed.
+  * control: update Vcs-Browser and Vcs-Git
+  * Set the Maintainer address to team+tryton-team@tracker.debian.org.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 29 Mar 2018 21:14:22 +0200
+
+tryton-client (4.6.2-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 06 Jan 2018 11:25:02 +0100
+
+tryton-client (4.6.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.6.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 12 Dec 2017 19:03:12 +0100
+
+tryton-client (4.6.0-1) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.1.1, no changes needed.
+  * Merging upstream version 4.6.0.
+  * Updating debian/manpages.
+  * Refresh patches.
+  * Use BD python3-sphinx instead of deprecated python-sphinx.
+  * Use https in the watch file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 07 Nov 2017 10:19:41 +0100
+
+tryton-client (4.4.2-1) unstable; urgency=medium
+
+  * Bump the Standards-Version to 4.1.0, no changes needed.
+  * Merging upstream version 4.4.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 05 Oct 2017 11:50:41 +0200
+
+tryton-client (4.4.1-2) unstable; urgency=medium
+
+  * Use the preferred https URL format in the copyright file.
+  * Bump the Standards-Version to 4.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Aug 2017 16:02:27 +0200
+
+tryton-client (4.4.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.4.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 17 Aug 2017 11:44:35 +0200
+
+tryton-client (4.4.0-2) unstable; urgency=medium
+
+  * Change the maintainer address to tryton-debian@lists.alioth.debian.org
+    (Closes: #865109).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 11 Jul 2017 12:35:53 +0200
+
+tryton-client (4.4.0-1) unstable; urgency=medium
+
+  * Merging upstream version 4.4.0.
+  * Updating debian/copyright.
+  * Updating debian/manpages.
+  * Refreshing patches.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 10 Jun 2017 23:29:21 +0200
+
+tryton-client (4.2.4-1) unstable; urgency=medium
+
+  * Add the actual upstream maintainer key to signing-key.asc.
+  * Merging upstream version 4.2.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 14 Mar 2017 10:59:02 +0100
+
+tryton-client (4.2.3-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.3.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 08 Feb 2017 11:02:22 +0100
+
+tryton-client (4.2.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 04 Jan 2017 12:47:41 +0100
+
+tryton-client (4.2.0-2) unstable; urgency=medium
+
+  * Replace fixed Python paths by dynamic paths.
+  * Use rather the -r switch of py*versions to get the unique and correct
+    Python version.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 19 Dec 2016 10:37:05 +0100
+
+tryton-client (4.2.0-1) unstable; urgency=medium
+
+  * Merging upstream version 4.2.0.
+  * Updating the Depends for 4.2.
+  * Refreshing patches.
+  * Updating the man page for 4.2.
+  * Improve README.Debian for the fingerprint handling.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 05 Dec 2016 19:50:38 +0100
+
+tryton-client (4.0.6-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.6.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 08 Nov 2016 09:31:17 +0100
+
+tryton-client (4.0.5-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 03 Oct 2016 12:46:25 +0200
+
+tryton-client (4.0.4-2) unstable; urgency=medium
+
+  * Refreshing 02-icon-search-path.patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 06 Sep 2016 14:37:23 +0200
+
+tryton-client (4.0.4-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 03 Sep 2016 21:00:16 +0200
+
+tryton-client (4.0.3-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 05 Aug 2016 11:55:37 +0200
+
+tryton-client (4.0.2-1) unstable; urgency=medium
+
+  * Updating to Standards-Version: 3.9.8, no changes needed.
+  * Merging upstream version 4.0.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 11 Jul 2016 19:30:26 +0200
+
+tryton-client (4.0.1-1) unstable; urgency=medium
+
+  * Merging upstream version 4.0.0.
+  * Merging upstream version 4.0.1.
+  * Updating the copyright file.
+  * Adapting and improving the man page.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 30 May 2016 18:56:54 +0200
+
+tryton-client (3.8.6-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.6.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 09 Apr 2016 19:21:06 +0200
+
+tryton-client (3.8.5-1) unstable; urgency=medium
+
+  * Updating signing-key.asc with the actual upstream maintainer keys.
+  * Merging upstream version 3.8.5.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 15 Mar 2016 20:26:11 +0100
+
+tryton-client (3.8.4-2) unstable; urgency=medium
+
+  * Updating to standards version 3.9.7, no changes needed.
+  * Updating VCS-Browser to https and canonical cgit URL.
+  * Updating VCS-Git to https and canonical cgit URL.
+  * Removing the braces from the dh call.
+  * Removing the version constraint from python.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 08 Mar 2016 13:08:18 +0100
+
+tryton-client (3.8.4-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 10 Feb 2016 18:55:44 +0100
+
+tryton-client (3.8.3-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.3.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 17 Jan 2016 19:40:11 +0100
+
+tryton-client (3.8.2-1) unstable; urgency=medium
+
+  * Merging upstream version 3.8.0.
+  * Merging upstream version 3.8.1.
+  * Merging upstream version 3.8.2.
+  * Adapting the icon search path for version 3.8.
+  * Moving files to their policy conforming place in the rules file.
+  * Adapting the svg path in copyright to their new location.
+  * Actualisation of the man page.
+  * Adding python-chardet to Depends.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 12 Nov 2015 19:06:28 +0100
+
+tryton-client (3.6.3-1) unstable; urgency=medium
+
+  * Merging upstream version 3.6.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 20 Sep 2015 19:45:37 +0200
+
+tryton-client (3.6.2-1) unstable; urgency=medium
+
+  * Adapting section naming in gbp.conf to current git-buildpackage.
+  * Merging upstream version 3.6.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 15 Jul 2015 12:37:46 +0200
+
+tryton-client (3.6.1-1) unstable; urgency=medium
+
+  * Updating year of debian copyright.
+  * Merging upstream version 3.6.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 20 May 2015 14:55:29 +0200
+
+tryton-client (3.6.0-1) unstable; urgency=medium
+
+  * Wrapping and sorting control files (wrap-and-sort -bts).
+  * Merging upstream version 3.6.0.
+  * Updating manpage.
+  * Refreshing debian patches.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 26 Apr 2015 23:48:53 +0200
+
+tryton-client (3.4.3-1) unstable; urgency=medium
+
+  * Improving boilerplate in d/control (Closes: #771722).
+  * Removing TODO from docs prospectively, they are about to be removed
+    upstream.
+  * Merging upstream version 3.4.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 31 Mar 2015 14:13:54 +0200
+
+tryton-client (3.4.2-1) unstable; urgency=medium
+
+  * Adding actual upstream signing key.
+  * Merging upstream version 3.4.2.
+  * Updating copyright file.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 17 Feb 2015 21:16:10 +0100
+
+tryton-client (3.4.1-1) unstable; urgency=medium
+
+  * Merging upstream version 3.4.1.
+  * Refreshing 02-icon-directory.patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 04 Dec 2014 18:04:47 +0100
+
+tryton-client (3.4.0-1) unstable; urgency=medium
+
+  * Merging upstream version 3.4.0.
+  * Refreshing and adapting patches for version 3.4.
+  * Updating man page.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 21 Oct 2014 20:23:37 +0200
+
+tryton-client (3.2.4-1) unstable; urgency=medium
+
+  * Adding actual upstream signing key.
+  * Updating to Standards-Version: 3.9.6, no changes needed.
+  * Merging upstream version 3.2.4.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 08 Oct 2014 13:49:05 +0200
+
+tryton-client (3.2.3-1) unstable; urgency=medium
+
+  * Merging upstream version 3.2.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 26 Aug 2014 13:50:36 +0200
+
+tryton-client (3.2.2-1) unstable; urgency=medium
+
+  * Merging upstream version 3.2.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 02 Jul 2014 13:46:55 +0200
+
+tryton-client (3.2.1-1) unstable; urgency=medium
+
+  * Updating signing key while using now plain .asc files instead of .pgp
+    binaries.
+  * Merging upstream version 3.2.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 12 May 2014 16:32:50 +0200
+
+tryton-client (3.2.0-1) unstable; urgency=medium
+
+  * Merging upstream version 3.2.0.
+  * Updating gbp.conf for usage of upstream tarball compression.
+  * Updating Depends and Recommends for version 3.2.
+  * Adapting and refreshing patches.
+  * Updating manpage.
+  * Adding hint for SSL check of the client in README.Debian.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 24 Apr 2014 15:25:19 +0200
+
+tryton-client (3.0.3-1) unstable; urgency=medium
+
+  * Removing  LC_ALL=C.UTF-8 as build environment.
+  * Merging upstream version 3.0.3.
+  * Updating copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 16 Apr 2014 15:10:02 +0200
+
+tryton-client (3.0.2-2) unstable; urgency=medium
+
+  * Updating year in debian copyright.
+  * Removing debian/source/options, we are building with dpkg defaults.
+  * Removing PYBUILD_DESTDIR_python2 from rules, it is no more needed.
+  * Adding pgp verification for uscan.
+  * Adding gbp.conf for usage with git-buildpackage.
+  * Adding python-goocalendar to Recommends, it is now in Debian main.
+  * Re-enabling PYBUILD_DESTDIR_python2, it is needed in a multibinary
+    package.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 12 Mar 2014 12:37:39 +0100
+
+tryton-client (3.0.2-1) unstable; urgency=low
+
+  * Merging upstream version 3.0.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 11 Dec 2013 12:56:48 +0100
+
+tryton-client (3.0.1-2) unstable; urgency=low
+
+  * Pointing VCS fields to new location on alioth.debian.org.
+  * Using dpkg defaults for xz compression.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 02 Dec 2013 21:14:54 +0100
+
+tryton-client (3.0.1-1) unstable; urgency=low
+
+  * Adding doc packages to Suggests.
+  * Merging upstream version 3.0.0.
+  * Merging upstream version 3.0.1.
+  * Updating copyright.
+  * Refreshing patches.
+  * Updating manpage.
+  * Updating to standards version 3.9.5, no changes needed.
+  * Changing to buildsystem pybuild.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 25 Nov 2013 18:02:20 +0100
+
+tryton-client (2.8.4-1) unstable; urgency=high
+
+  * Merging upstream version 2.8.4.
+  * Contains the security patch to sanitize correctly the file extension
+    of temporary files received by the server
+    (s. https://bugs.tryton.org/issue3446).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 03 Nov 2013 20:53:23 +0100
+
+tryton-client (2.8.3-1) unstable; urgency=low
+
+  * Merging upstream version 2.8.3.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 13 Oct 2013 20:24:01 +0200
+
+tryton-client (2.8.2-1) unstable; urgency=low
+
+  * Moving sphinx-build to override_dh_auto_build.
+  * Removing pydist-overrides, it is no more needed.
+  * Adapting the rules file to work also with git-buildpackage.
+  * Merging upstream version 2.8.2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 05 Aug 2013 21:23:00 +0200
+
+tryton-client (2.8.1-1) unstable; urgency=low
+
+  * Merging upstream version 2.8.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 10 Jun 2013 14:01:07 +0200
+
+tryton-client (2.8.0-2) unstable; urgency=low
+
+  * Builduing new package tryton-client-doc from sphinx documentation.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Fri, 31 May 2013 17:25:50 +0200
+
+tryton-client (2.8.0-1) experimental; urgency=low
+
+  * Merging upstream version 2.8.0.
+  * Updating copyright.
+  * Refreshing patches.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 02 May 2013 15:19:19 +0200
+
+tryton-client (2.6.2-4) experimental; urgency=low
+
+  * Correcting pixmap link of tryton-icon.png. Thanks to Ilya Melnikov.
+  * Adding README.Debian to point out version dependency.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 27 Apr 2013 15:27:07 +0200
+
+tryton-client (2.6.2-3) experimental; urgency=low
+
+  * Removing Daniel from Uploaders. Thanks for your work! (Closes: #704359).
+  * Changing Depends from librsvg2-2 to librsvg2-common.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 22 Apr 2013 12:36:42 +0200
+
+tryton-client (2.6.2-2) experimental; urgency=low
+
+  * Updating Vcs-Git to correct address.
+  * Adding watch file. Thanks to Bart Martens <bartm@debian.org>.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 23 Mar 2013 13:59:57 +0100
+
+tryton-client (2.6.2-1) experimental; urgency=low
+
+  * Removing obsolete Dm-Upload-Allowed
+  * Updating and adding options to man page (Closes: #691555).
+  * Updating to Standards-Version: 3.9.4, no changes needed.
+  * Merging upstream version 2.6.1.
+  * Merging upstream version 2.6.2.
+  * Updating copyright.
+  * Correcting filling and indentation in man page.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 17 Feb 2013 12:43:53 +0100
+
+tryton-client (2.6.0-1) experimental; urgency=low
+
+  * Merging upstream version 2.6.0.
+  * Refreshing 02-icon-directory.patch.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Wed, 24 Oct 2012 14:23:44 +0200
+
+tryton-client (2.4.1-2) experimental; urgency=low
+
+  [ Daniel Baumann ]
+  * Updating maintainers field.
+  * Updating vcs fields.
+  * Switching to xz compression.
+  * Updating to debhelper version 9.
+  * Correcting copyright file to match format version 1.0.
+
+  [ Mathias Behrle ]
+  * Merging branch debian-wheezy-2.2 (Closes: #687760).
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 17 Sep 2012 12:11:27 +0200
+
+tryton-client (2.4.1-1) experimental; urgency=low
+
+  * Merging upstream version 2.4.1.
+  * Removing 03-language-files.patch, patch went upstream.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 11 Sep 2012 13:52:51 +0200
+
+tryton-client (2.4.0-1) experimental; urgency=low
+
+  * Updating to Standards-Version: 3.9.3, no changes needed.
+  * Updating year in copyright.
+  * Adding Format header for DEP5.
+  * Merging upstream version 2.4.0.
+  * Updating Copyright.
+  * Setting X-Python-Version: >= 2.7 for weakrefset.
+  * Moving python-simplejson to Recommends.
+  * Removing 03-replace-tryton-preferences-svg.patch, went upstream.
+  * Refreshing patches.
+  * Adding 03-language-files.patch to copy correctly language files.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sat, 28 Apr 2012 11:52:11 +0200
+
+tryton-client (2.2.1-1) unstable; urgency=low
+
+  * Refreshing 02-icon-directory.patch.
+  * Merging upstream version 2.2.1.
+  * Bumping X-Python-Version to >=2.6.
+  * Updating version in man page.
+  * Rediffing 02-icon-directory.patch.
+  * Replacing tryton-preferences.svg with supposed candidate
+    (s. http://bugs.tryton.org/roundup/issue2245).
+  * Updating copyright.
+  * Reverting all changes made for "Replacing non-DFSG compliant graphics",
+    patch went upstream.
+  * Merging upstream version 2.2.0.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 26 Dec 2011 13:51:05 +0100
+
+tryton-client (2.0.2+dfsg-1) unstable; urgency=low
+
+  * Merging upstream version 2.0.2+dfsg.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Mon, 03 Oct 2011 14:50:42 +0200
+
+tryton-client (2.0.1+dfsg-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Moving to source format 3.0 (quilt).
+  * Not wrapping uploaders field, it does not exceed 80 chars.
+  * Compacting copyright file.
+  * Updating manpage.
+  * Alinging entries in debhelper install file.
+  * Also updating version number in manpage.
+
+  [ Mathias Behrle ]
+  * Merging upstream version 2.0.1+dfsg.
+  * Replacing non-DFSG compliant graphics in share/pixmaps/tryton by linking
+    to tango-icon-theme or by replacing with DFSG compliant placeholders.
+
+  [ Daniel Baumann ]
+  * Correcting installation location of icons.
+
+  [ Mathias Behrle ]
+  * Adding sources for png and ico in debian/icons.
+  * Correcting installation path for pixmap files.
+  * Adding sources and correcting path in include_binaries.
+  * Correcting setup.py for installation location of icons.
+  * Moving from deprecated python-support to dh_python2, thanks to
+    Charlie Smotherman <cjsmo@cableone.net> (Closes: #632775).
+
+  [ Daniel Baumann ]
+  * Correcting dh_auto_clean override in rules.
+  * Moving X-Python-Version field to the end of the source package stanza.
+  * Using braces in rules for consistency reasons.
+  * Rediffing icon-directory.patch.
+  * Installing tryton.desktop as tryton-client.desktop for consistency reasons.
+
+  [ Mathias Behrle ]
+  * Silencing package matcher of dh_python2.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Thu, 14 Jul 2011 14:58:32 +0200
+
+tryton-client (2.0.1-1) unstable; urgency=low
+
+  * Merging upstream version 2.0.1.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Sun, 05 Jun 2011 13:17:08 +0200
+
+tryton-client (2.0.0-1) unstable; urgency=low
+
+  * Changing recommends from openoffice.org to libreoffice.
+  * Adding libreoffice-calc to Recommends.
+  * Updating to standards version 3.9.2.
+  * Merging upstream version 2.0.0.
+  * Updating Copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 24 May 2011 21:27:55 +0200
+
+tryton-client (1.8.1-1) unstable; urgency=low
+
+  * Changing my email address.
+  * Correcting path for tryton icon.
+  * Updating description for menu.
+  * Merging upstream version 1.8.1.
+  * Updating Copyright.
+
+ -- Mathias Behrle <mathiasb@m9s.biz>  Tue, 15 Feb 2011 12:59:16 +0100
+
+tryton-client (1.8.0-1) experimental; urgency=low
+
+  * Updating to debhelper version 8.
+  * Updating to standards version 3.9.1.
+  * Switching to source format 3.0 (quilt).
+  * Merging upstream version 1.8.0.
+  * Updating version and date header in manpage.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 12 Nov 2010 12:39:48 +0100
+
+tryton-client (1.6.1-1) unstable; urgency=low
+
+  * Wrapping copyright.
+  * Updating standards version to 3.9.0.
+  * Merging upstream version 1.6.1.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 06 Aug 2010 16:33:11 +0200
+
+tryton-client (1.6.0-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Adding Dm-Upload-Allowed in control in preparation for Mathias.
+
+  [ Mathias Behrle ]
+  * Merging upstream version 1.6.0.
+  * Updating copyright.
+  * Updating depends.
+  * Updating date and version header in manpage.
+
+ -- Mathias Behrle <mathiasb@mbsolutions.selfip.biz>  Mon, 10 May 2010 16:38:29 +0200
+
+tryton-client (1.4.3-1) unstable; urgency=low
+
+  * Merging upstream version 1.4.3.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 31 Mar 2010 23:58:04 +0200
+
+tryton-client (1.4.2-1) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Removing python-openssl from recommends.
+
+  [ Daniel Baumann ]
+  * Updating year in copyright file.
+  * Removing unneeded python-all-dev from build-depends.
+  * Updating to standards 3.8.4.
+  * Merging upstream version 1.4.2.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 20 Feb 2010 09:39:45 +0100
+
+tryton-client (1.4.1-1) unstable; urgency=low
+
+  [ Mathias Behrle ]
+  * Adding odt and pdf viewers to Recommends.
+
+  [ Daniel Baumann ]
+  * Wrapping recommends.
+  * Merging upstream version 1.4.1.
+  * Updating README.source.
+  * Adding explicit debian source version 1.0 until switch to 3.0.
+
+ -- Daniel Baumann <daniel@debian.org>  Wed, 25 Nov 2009 12:39:35 +0100
+
+tryton-client (1.4.0-1) unstable; urgency=low
+
+  * Merging upstream version 1.4.0.
+  * Removing desktop.patch, went upstream.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 19 Oct 2009 21:16:34 +0200
+
+tryton-client (1.2.2-2) unstable; urgency=low
+
+  * Adding python-openssl to recommends.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 18 Oct 2009 14:09:03 +0200
+
+tryton-client (1.2.2-1) unstable; urgency=low
+
+  * Updating to standards version 3.8.3.
+  * Adding maintainer homepage field to control.
+  * Adding README.source.
+  * Merging upstream version 1.2.2.
+  * Moving maintainer homepage field to copyright.
+  * Updating README.source.
+  * Using ascii only characters in copyright.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 05 Sep 2009 09:35:44 +0200
+
+tryton-client (1.2.1-3) unstable; urgency=low
+
+  * Updating maintainer field.
+  * Updating vcs fields.
+  * Wrapping lines in control.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 10 Aug 2009 19:22:28 +0200
+
+tryton-client (1.2.1-2) unstable; urgency=low
+
+  * Minimizing rules file.
+  * Adding patch to remove double entry in desktop file.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 26 Jul 2009 19:38:13 +0200
+
+tryton-client (1.2.1-1) unstable; urgency=low
+
+  * Updating to build with python2.6.
+  * Updating package to standards version 3.8.2.
+  * Merging upstream version 1.2.1.
+  * Updating date and version in manpage header.
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 10 Jul 2009 14:11:27 +0200
+
+tryton-client (1.2.0-1) unstable; urgency=low
+
+  [ Daniel Baumann ]
+  * Merging upstream version 1.2.0.
+  * Removing own desktop file, using newly added one from upstream.
+  * Tidy rules files.
+  * Updating version information in manpage.
+  * Updating copyright file for new upstream release.
+  * Including TODO file in docs.
+
+  [ Mathias Behrle ]
+  * Updating application description.
+
+  [ Daniel Baumann ]
+  * Correcting wrapping of control file.
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 21 Apr 2009 19:23:00 +0200
+
+tryton-client (1.0.3-2) unstable; urgency=low
+
+  * Adding Mathias to uploaders.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 28 Mar 2009 16:15:00 +0100
+
+tryton-client (1.0.3-1) unstable; urgency=low
+
+  * Merging upstream version 1.0.3.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 23 Mar 2009 07:48:00 +0100
+
+tryton-client (1.0.2-1) unstable; urgency=low
+
+  * Merging upstream version 1.0.2.
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 23 Mar 2009 06:35:00 +0100
+
+tryton-client (1.0.1-1) unstable; urgency=low
+
+  * Merging upstream version 1.0.1.
+  * Updating standards to 3.8.1.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 22 Mar 2009 22:42:00 +0100
+
+tryton-client (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #506095).
+
+ -- Daniel Baumann <daniel@debian.org>  Mon, 12 Jan 2009 15:49:00 -0500

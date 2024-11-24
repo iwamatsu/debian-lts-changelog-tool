@@ -1,0 +1,59 @@
+golang-gopkg-square-go-jose.v2 (2.5.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add workaround for testing with Go1.15 (Closes: #971168)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 04 Oct 2020 15:41:39 +0800
+
+golang-gopkg-square-go-jose.v2 (2.5.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+    Fixes: lintian: upstream-metadata-file-is-missing
+
+  [ Shengjing Zhu ]
+  * Remove repack in uscan watch, not needed
+  * New upstream version 2.5.1
+  * Reduce unneeded Depends
+    - Drop golang-gopkg-alecthomas-kingpin.v2-dev from Build-Depends
+    - Drop golang-gopkg-alecthomas-kingpin.v2-dev and
+      golang-github-stretchr-testify-dev from Depends
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Bump debhelper-compat to 13
+  * Bump Standards-Version to 4.5.0 (no changes)
+  * Add Rules-Requires-Root
+  * Add golang-github-google-go-cmp-dev to Build-Depends
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 31 May 2020 16:20:39 +0800
+
+golang-gopkg-square-go-jose.v2 (2.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 25 Dec 2019 14:22:42 +1100
+
+golang-gopkg-square-go-jose.v2 (2.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 16 Dec 2019 11:43:31 +1100
+
+golang-gopkg-square-go-jose.v2 (2.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    + fixed FTBFS in TestVectorsRSA (Closes: #919053).
+  * Standards-Version: 4.4.1.
+  * DH & compat to version 12.
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 21 Oct 2019 02:05:48 +1100
+
+golang-gopkg-square-go-jose.v2 (2.1.6-1) unstable; urgency=medium
+
+  [ Michael Stapelberg ]
+  * Initial release (Closes: #879551).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 08 Jun 2018 13:23:19 +1000

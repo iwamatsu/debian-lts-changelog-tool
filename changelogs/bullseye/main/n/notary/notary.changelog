@@ -1,0 +1,120 @@
+notary (0.6.1~ds2-6) unstable; urgency=medium
+
+  * Team upload.
+  * Disabled failing "TestNetworkError" (Closes: #954692).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 18 Apr 2020 11:35:33 +1000
+
+notary (0.6.1~ds2-5) unstable; urgency=medium
+
+  [ Dmitry Smirnov ]
+  * New patch to fix FTBFS with golang-github-docker-distribution-dev >= 2.7.1
+    (Closes: #944346).
+
+  [ Arnaud Rebillout ]
+  * Vendor prometheus-client-golang
+  * New upstream version 0.6.1~ds2
+  * Add upstream patch to fix test for go 1.13
+  * Add upstream patch to build against latest docker/distribution
+  * Add vendored NOTICE file
+  * Make sure keys and certificates are not executable
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Thu, 06 Feb 2020 08:53:34 +0700
+
+notary (0.6.1~ds1-4) unstable; urgency=medium
+
+  * Team upload.
+  * Backport fix from upstream to fix ftbfs with Go 1.12.
+  * Add myself to uploaders.
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Tue, 27 Aug 2019 20:47:14 +1200
+
+notary (0.6.1~ds1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Regenerate some test certs since they are expired (Closes: #924119)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 04 Apr 2019 00:12:00 +0800
+
+notary (0.6.1~ds1-2) unstable; urgency=medium
+
+  * New upstream patch to remove "golang-ed25519-dev" dependency.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 11 Jul 2018 11:34:36 +1000
+
+notary (0.6.1~ds1-1) unstable; urgency=medium
+
+  * Team upload
+  * Fixed FTBFS (Closes: #861546, #835782).
+
+  [ Dmitry Smirnov ]
+  * New namespace github.com/theupdateframework/notary
+  * Provides: golang-github-theupdateframework-notary-dev
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional.
+  * Updates Vcs URLs.
+  * golang-go --> golang-any
+  * debhelper to version 11; compat to version 10.
+  * logrus dependency update.
+  * new patch to disable failing networking test.
+  * L: duplicate-short-description
+  * Build-Depends:
+    - golang-github-docker-distribution-dev
+
+  [ Arnaud Rebillout ]
+  * New upstream version 0.6.1~ds1
+  * Remove patches applied upstream
+  * Remove obsolete patches
+  * lintian: no more embedded yaml, add a few overrides
+  * docs: include changelog and roadmap
+  * rules: install test fixtures explicitly instead of using INSTALL_ALL
+  * rules: enable pkcs11 build tag
+  * rules: enable tests
+  * control: update dependencies
+  * control: update description
+  * control: add myself to uploaders
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 20 Jun 2018 01:16:39 +1000
+
+notary (0.2.0~ds1-1) unstable; urgency=medium
+
+  [ Tianon Gravi ]
+  * Update to 0.2.0 upstream release
+
+  [ Paul Tagliamonte ]
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 02 Apr 2018 16:03:02 -0400
+
+notary (0.1~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #818439).
+
+  [ Tim Potter ]
+  * Update to latest upstream version and add new dependencies
+    (Closes: #810777).
+  * Refresh d/patches to reflect upstream work and run more tests.
+
+  [ Dmitry Smirnov ]
+  * Standards-Version: 3.9.7.
+  * Build-Depends += "golang-github-bugsnag-bugsnag-go-dev".
+  * Dropped obsolete "no-bugsnag.patch".
+  * Ignore test failures.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 17 Mar 2016 18:45:06 +1100
+
+notary (0.0~git20150801.0.8e8122e-2) unstable; urgency=medium
+
+  * Swap Build-Depends relations for buildability
+
+ -- Tianon Gravi <tianon@debian.org>  Wed, 28 Oct 2015 10:35:25 -0700
+
+notary (0.0~git20150801.0.8e8122e-1) unstable; urgency=medium
+
+  * Initial release (Closes: #797660)
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 23 Oct 2015 07:22:08 -0700

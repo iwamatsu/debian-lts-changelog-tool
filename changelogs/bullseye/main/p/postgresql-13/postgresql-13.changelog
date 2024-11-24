@@ -1,0 +1,618 @@
+postgresql-13 (13.18-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream version 13.18.
+
+    + Restore functionality of ALTER {ROLE|DATABASE} SET role
+
+      The fix for CVE-2024-10978 accidentally caused settings for role to not
+      be applied if they come from non-interactive sources, including previous
+      ALTER {ROLE|DATABASE} commands and the PGOPTIONS environment variable.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 19 Nov 2024 15:36:12 +0100
+
+postgresql-13 (13.17-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream version 13.17.
+
+    + Ensure cached plans are marked as dependent on the calling role when RLS
+      applies to a non-top-level table reference (Nathan Bossart)
+
+      If a CTE, subquery, sublink, security invoker view, or coercion
+      projection in a query references a table with row-level security
+      policies, we neglected to mark the resulting plan as potentially
+      dependent on which role is executing it.  This could lead to later query
+      executions in the same session using the wrong plan, and then returning
+      or hiding rows that should have been hidden or returned instead.
+
+      The PostgreSQL Project thanks Wolfgang Walther for reporting this
+      problem. (CVE-2024-10976)
+
+    + Make libpq discard error messages received during SSL or GSS protocol
+      negotiation (Jacob Champion)
+
+      An error message received before encryption negotiation is completed
+      might have been injected by a man-in-the-middle, rather than being real
+      server output.  Reporting it opens the door to various security hazards;
+      for example, the message might spoof a query result that a careless user
+      could mistake for correct output.  The best answer seems to be to
+      discard such data and rely only on libpq's own report of the connection
+      failure.
+
+      The PostgreSQL Project thanks Jacob Champion for reporting this problem.
+      (CVE-2024-10977)
+
+    + Fix unintended interactions between SET SESSION AUTHORIZATION and SET
+      ROLE (Tom Lane)
+
+      The SQL standard mandates that SET SESSION AUTHORIZATION have a
+      side-effect of doing SET ROLE NONE.  Our implementation of that was
+      flawed, creating more interaction between the two settings than
+      intended. Notably, rolling back a transaction that had done SET SESSION
+      AUTHORIZATION would revert ROLE to NONE even if that had not been the
+      previous state, so that the effective user ID might now be different
+      from what it had been before the transaction.  Transiently setting
+      session_authorization in a function SET clause had a similar effect. A
+      related bug was that if a parallel worker inspected
+      current_setting('role'), it saw none even when it should see something
+      else.
+
+      The PostgreSQL Project thanks Tom Lane for reporting this problem.
+      (CVE-2024-10978)
+
+    + Prevent trusted PL/Perl code from changing environment variables
+      (Andrew Dunstan, Noah Misch)
+
+      The ability to manipulate process environment variables such as PATH
+      gives an attacker opportunities to execute arbitrary code.  Therefore,
+      trusted PLs must not offer the ability to do that.  To fix plperl,
+      replace %ENV with a tied hash that rejects any modification attempt with
+      a warning. Untrusted plperlu retains the ability to change the
+      environment.
+
+      The PostgreSQL Project thanks Coby Abrams for reporting this problem.
+      (CVE-2024-10979)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 12 Nov 2024 15:12:10 +0100
+
+postgresql-13 (13.16-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream version.
+
+    + Prevent unauthorized code execution during pg_dump (Masahiko Sawada)
+
+      An attacker able to create and drop non-temporary objects could inject
+      SQL code that would be executed by a concurrent pg_dump session with the
+      privileges of the role running pg_dump (which is often a superuser).
+      The attack involves replacing a sequence or similar object with a view
+      or foreign table that will execute malicious code.  To prevent this,
+      introduce a new server parameter restrict_nonsystem_relation_kind that
+      can disable expansion of non-builtin views as well as access to foreign
+      tables, and teach pg_dump to set it when available.  Note that the
+      attack is prevented only if both pg_dump and the server it is dumping
+      from are new enough to have this fix.
+
+      The PostgreSQL Project thanks Noah Misch for reporting this problem.
+      (CVE-2024-7348)
+
+ -- Christoph Berg <myon@debian.org>  Wed, 07 Aug 2024 16:09:15 +0200
+
+postgresql-13 (13.15-0+deb11u1) bullseye; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 07 May 2024 12:11:56 +0200
+
+postgresql-13 (13.14-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream version.
+
+    * Tighten security restrictions within REFRESH MATERIALIZED VIEW
+      CONCURRENTLY (Heikki Linnakangas)
+
+      One step of a concurrent refresh command was run under weak security
+      restrictions.  If a materialized view's owner could persuade a superuser
+      or other high-privileged user to perform a concurrent refresh on that
+      view, the view's owner could control code executed with the privileges
+      of the user running REFRESH. Fix things so that all user-determined code
+      is run as the view's owner, as expected.
+
+      The PostgreSQL Project thanks Pedro Gallegos for reporting this problem.
+      (CVE-2024-0985)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 06 Feb 2024 13:54:51 +0100
+
+postgresql-13 (13.13-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream version.
+
+    * Fix handling of unknown-type arguments in DISTINCT "any" aggregate
+      functions (Tom Lane)
+
+      This error led to a text-type value being interpreted as an unknown-type
+      value (that is, a zero-terminated string) at runtime.  This could result
+      in disclosure of server memory following the text value.
+
+      The PostgreSQL Project thanks Jingzhou Fu for reporting this problem.
+      (CVE-2023-5868)
+
+    * Detect integer overflow while computing new array dimensions
+      (Tom Lane)
+
+      When assigning new elements to array subscripts that are outside the
+      current array bounds, an undetected integer overflow could occur in edge
+      cases.  Memory stomps that are potentially exploitable for arbitrary
+      code execution are possible, and so is disclosure of server memory.
+
+      The PostgreSQL Project thanks Pedro Gallegos for reporting this problem.
+      (CVE-2023-5869)
+
+    * Prevent the pg_signal_backend role from signalling background workers
+      and autovacuum processes (Noah Misch, Jelte Fennema-Nio)
+
+      The documentation says that pg_signal_backend
+      cannot issue signals to superuser-owned processes.  It was able to
+      signal these background processes, though, because they advertise a
+      role OID of zero.  Treat that as indicating superuser ownership.
+      The security implications of cancelling one of these process types
+      are fairly small so far as the core code goes (we'll just start
+      another one), but extensions might add background workers that are
+      more vulnerable.
+
+      Also ensure that the is_superuser parameter is set correctly in such
+      processes.  No specific security consequences are known for that
+      oversight, but it might be significant for some extensions.
+
+      The PostgreSQL Project thanks Hemanth Sandrana and Mahendrakar
+      Srinivasarao for reporting this problem. (CVE-2023-5870)
+
+    * Fix misbehavior during recursive page split in GiST index build
+      (Heikki Linnakangas)
+
+      Fix a case where the location of a page downlink was incorrectly
+      tracked, and introduce some logic to allow recovering from such
+      situations rather than silently doing the wrong thing.  This error could
+      result in incorrect answers from subsequent index searches. It may be
+      advisable to reindex all GiST indexes after installing this update.
+
+    * Prevent de-duplication of btree index entries for interval columns
+
+      There are interval values that are distinguishable but compare equal,
+      for example 24:00:00 and 1 day.  This breaks assumptions made by btree
+      de-duplication, so interval columns need to be excluded from
+      de-duplication.  This oversight can cause incorrect results from
+      index-only scans.  Moreover, after updating amcheck will report an error
+      for almost all such indexes.  Users should reindex any btree indexes on
+      interval columns.
+
+  * Rebase debian/patches/libpgport-pkglibdir.
+  * Remove failing test 039_end_of_wal.
+  * Adjust lintian overrides to work with old+new format.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 07 Nov 2023 14:45:51 +0100
+
+postgresql-13 (13.12-0+deb11u1) bullseye; urgency=medium
+
+  * New upstream version.
+
+    + Disallow substituting a schema or owner name into an extension script if
+      the name contains a quote, backslash, or dollar sign (Noah Misch)
+
+      This restriction guards against SQL-injection hazards for trusted
+      extensions.
+
+      The PostgreSQL Project thanks Micah Gate, Valerie Woolard, Tim
+      Carey-Smith, and Christoph Berg for reporting this problem.
+      (CVE-2023-39417)
+
+ -- Christoph Berg <myon@debian.org>  Sun, 01 Oct 2023 21:59:50 +0200
+
+postgresql-13 (13.11-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream version.
+
+    + Prevent CREATE SCHEMA from defeating changes in search_path
+      (Report and fix by Alexander Lakhin, CVE-2023-2454)
+
+      Within a CREATE SCHEMA command, objects in the prevailing search_path,
+      as well as those in the newly-created schema, would be visible even
+      within a called function or script that attempted to set a secure
+      search_path.  This could allow any user having permission to create a
+      schema to hijack the privileges of a security definer function or
+      extension script.
+
+    + Enforce row-level security policies correctly after inlining a
+      set-returning function (Report by Wolfgang Walther, CVE-2023-2455)
+
+      If a set-returning SQL-language function refers to a table having
+      row-level security policies, and it can be inlined into a calling query,
+      those RLS policies would not get enforced properly in some cases
+      involving re-using a cached plan under a different role. This could
+      allow a user to see or modify rows that should have been invisible.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 10 May 2023 20:35:39 +0200
+
+postgresql-13 (13.10-0+deb11u1) bullseye; urgency=medium
+
+  * New upstream version.
+
+    + libpq can leak memory contents after GSSAPI transport encryption
+      initiation fails (Jacob Champion)
+
+      A modified server, or an unauthenticated man-in-the-middle, can send a
+      not-zero-terminated error message during setup of GSSAPI (Kerberos)
+      transport encryption.  libpq will then copy that string, as well as
+      following bytes in application memory up to the next zero byte, to its
+      error report. Depending on what the calling application does with the
+      error report, this could result in disclosure of application memory
+      contents.  There is also a small probability of a crash due to reading
+      beyond the end of memory.  Fix by properly zero-terminating the server
+      message. (CVE-2022-41862)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 07 Feb 2023 15:28:39 +0100
+
+postgresql-13 (13.9-0+deb11u1) bullseye; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 09 Nov 2022 10:00:43 +0100
+
+postgresql-13 (13.8-0+deb11u1) bullseye; urgency=medium
+
+  * New upstream version.
+
+    + Do not let extension scripts replace objects not already belonging to
+      the extension (Tom Lane) (CVE-2022-2625)
+
+      This change prevents extension scripts from doing CREATE OR REPLACE if
+      there is an existing object that does not belong to the extension.  It
+      also prevents CREATE IF NOT EXISTS in the same situation.  This prevents
+      a form of trojan-horse attack in which a hostile database user could
+      become the owner of an extension object and then modify it to compromise
+      future uses of the object by other users.  As a side benefit, it also
+      reduces the risk of accidentally replacing objects one did not mean to.
+
+      The PostgreSQL Project thanks Sven Klemm for reporting this problem.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 11 Aug 2022 14:00:26 +0200
+
+postgresql-13 (13.7-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream release.
+
+    * Confine additional operations within security restricted operation
+      sandboxes (Sergey Shinderuk, Noah Misch)
+
+      Autovacuum, CLUSTER, CREATE INDEX, REINDEX, REFRESH MATERIALIZED VIEW,
+      and pg_amcheck activated the security restricted operation protection
+      mechanism too late, or even not at all in some code paths. A user having
+      permission to create non-temporary objects within a database could
+      define an object that would execute arbitrary SQL code with superuser
+      permissions the next time that autovacuum processed the object, or that
+      some superuser ran one of the affected commands against it.
+
+      The PostgreSQL Project thanks Alexander Lakhin for reporting this
+      problem. (CVE-2022-1552)
+
+    * Fix default signature length for gist_ltree_ops indexes
+      (Tomas Vondra, Alexander Korotkov)
+
+      The default signature length (hash size) for GiST indexes on ltree
+      columns was accidentally changed while upgrading that operator class to
+      support operator class parameters. If any operations had been done on
+      such an index without first upgrading the ltree extension to version
+      1.2, they were done assuming that the signature length was 28 bytes
+      rather than the intended 8.  This means it is very likely that such
+      indexes are now corrupt.  For safety we recommend re-indexing all GiST
+      indexes on ltree columns after installing this update.  (Note that GiST
+      indexes on ltree[] columns, that is arrays of ltree, are not affected.)
+
+ -- Christoph Berg <myon@debian.org>  Wed, 11 May 2022 15:03:33 +0200
+
+postgresql-13 (13.5-0+deb11u1) bullseye-security; urgency=medium
+
+  * New upstream security release.
+
+    + Make the server and libpq reject extraneous data after an SSL or GSS
+      encryption handshake (Tom Lane)
+
+      A man-in-the-middle with the ability to inject data into the TCP
+      connection could stuff some cleartext data into the start of a
+      supposedly encryption-protected database session.
+
+      This could be abused to send faked SQL commands to the server, although
+      that would only work if the server did not demand any authentication
+      data.  (However, a server relying on SSL certificate authentication
+      might well not do so.) (CVE-2021-23214)
+
+      This could probably be abused to inject faked responses to the client's
+      first few queries, although other details of libpq's behavior make that
+      harder than it sounds.  A different line of attack is to exfiltrate the
+      client's password, or other sensitive data that might be sent early in
+      the session.  That has been shown to be possible with a server
+      vulnerable to CVE-2021-23214. (CVE-2021-23222)
+
+      The PostgreSQL Project thanks Jacob Champion for reporting these
+      problems.
+
+  * Flatten debian/*.lintian-overrides symlinks to fix salsa CI.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 17 Aug 2021 14:04:37 +0200
+
+postgresql-13 (13.4-0+deb11u1) bullseye; urgency=medium
+
+  * New upstream version.
+
+    + Fix mis-planning of repeated application of a projection step (Tom Lane)
+
+      The planner could create an incorrect plan in cases where two
+      ProjectionPaths were stacked on top of each other.  The only known way
+      to trigger that situation involves parallel sort operations, but there
+      may be other instances.  The result would be crashes or incorrect query
+      results. Disclosure of server memory contents is also possible.
+      (CVE-2021-3677)
+
+    + Disallow SSL renegotiation more completely (Michael Paquier)
+
+      SSL renegotiation has been disabled for some time, but the server would
+      still cooperate with a client-initiated renegotiation request. A
+      maliciously crafted renegotiation request could result in a server crash
+      (see OpenSSL issue CVE-2021-3449).  Disable the feature altogether on
+      OpenSSL versions that permit doing so, which are 1.1.0h and newer.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 18 May 2021 13:56:18 +0200
+
+postgresql-13 (13.3-1) unstable; urgency=medium
+
+  * New upstream version.
+
+    + Prevent integer overflows in array subscripting calculations (Tom Lane)
+
+      The array code previously did not complain about cases where an array's
+      lower bound plus length overflows an integer.  This resulted in later
+      entries in the array becoming inaccessible (since their subscripts could
+      not be written as integers), but more importantly it confused subsequent
+      assignment operations.  This could lead to memory overwrites, with
+      ensuing crashes or unwanted data modifications. (CVE-2021-32027)
+
+    + Fix mishandling of junk columns in INSERT ... ON CONFLICT ... UPDATE
+      target lists (Tom Lane)
+
+      If the UPDATE list contains any multi-column sub-selects (which give
+      rise to junk columns in addition to the results proper), the UPDATE path
+      would end up storing tuples that include the values of the extra junk
+      columns. That's fairly harmless in the short run, but if new columns are
+      added to the table then the values would become accessible, possibly
+      leading to malfunctions if they don't match the datatypes of the added
+      columns.
+
+      In addition, in versions supporting cross-partition updates, a
+      cross-partition update triggered by such a case had the reverse problem:
+      the junk columns were removed from the target list, typically causing an
+      immediate crash due to malfunction of the multi-column sub-select
+      mechanism. (CVE-2021-32028)
+
+    + Fix possibly-incorrect computation of UPDATE ... RETURNING outputs for
+      joined cross-partition updates (Amit Langote, Etsuro Fujita)
+
+      If an UPDATE for a partitioned table caused a row to be moved to another
+      partition with a physically different row type (for example, one with a
+      different set of dropped columns), computation of RETURNING results for
+      that row could produce errors or wrong answers.  No error is observed
+      unless the UPDATE involves other tables being joined to the target
+      table. (CVE-2021-32029)
+
+  * Mark libio-pty-perl and libipc-run-perl as <!nocheck>. (Closes: #988121)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 11 May 2021 22:10:35 +0200
+
+postgresql-13 (13.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+    + Fix failure to check per-column SELECT privileges in some join queries
+      (Tom Lane)
+
+      In some cases involving joins, the parser failed to record all the
+      columns read by a query in the column-usage bitmaps that are used for
+      permissions checking.  Although the executor would still insist on some
+      sort of SELECT privilege to run the query, this meant that a user having
+      SELECT privilege on only one column of a table could nonetheless read
+      all its columns through a suitably crafted query.
+
+      A stored view that is subject to this problem will have incomplete
+      column-usage bitmaps, and thus permissions will still not be enforced
+      properly on the view after updating.  In installations that depend on
+      column-level permissions for security, it is recommended to CREATE OR
+      REPLACE all user-defined views to cause them to be re-parsed.
+
+      The PostgreSQL Project thanks Sven Klemm for reporting this problem.
+      (CVE-2021-20229)
+
+    + Fix information leakage in constraint-violation error messages
+      (Heikki Linnakangas)
+
+      If an UPDATE command attempts to move a row to a different partition but
+      finds that it violates some constraint on the new partition, and the
+      columns in that partition are in different physical positions than in
+      the parent table, the error message could reveal the contents of columns
+      that the user does not have SELECT privilege on. (CVE-2021-3393)
+
+    + Fix incorrect detection of concurrent page splits while inserting into a
+      GiST index (Heikki Linnakangas)
+
+      Concurrent insertions could lead to a corrupt index with entries placed
+      in the wrong pages.  It's recommended to reindex any GiST index that's
+      been subject to concurrent insertions.
+
+    + Fix CREATE INDEX CONCURRENTLY to wait for concurrent prepared
+      transactions (Andrey Borodin)
+
+      At the point where CREATE INDEX CONCURRENTLY waits for all concurrent
+      transactions to complete so that it can see rows they inserted, it must
+      also wait for all prepared transactions to complete, for the same
+      reason.  Its failure to do so meant that rows inserted by prepared
+      transactions might be omitted from the new index, causing queries
+      relying on the index to miss such rows. In installations that have
+      enabled prepared transactions (max_prepared_transactions > 0), it's
+      recommended to reindex any concurrently-built indexes in case this
+      problem occurred when they were built.
+
+  [ Christoph Berg ]
+  * Remove obsolete --enable-integer-datetimes configure option.
+    (Closes: #974988)
+  * Modernize server package description.
+  * Use xsltproc --nonet.
+  * run-testsuite: Test only this version.
+
+  [ Helmut Grohne ]
+  * Reduce Build-Depends: (Closes: #979456)
+    + gdb is only used for testing.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 10 Feb 2021 17:33:55 +0100
+
+postgresql-13 (13.1-1) unstable; urgency=medium
+
+  * New upstream version.
+    + Fixes timetz regression test failures. (Closes: #974063)
+
+    + Block DECLARE CURSOR ... WITH HOLD and firing of deferred triggers
+      within index expressions and materialized view queries (Noah Misch)
+
+      This is essentially a leak in the security restricted operation sandbox
+      mechanism.  An attacker having permission to create non-temporary SQL
+      objects could parlay this leak to execute arbitrary SQL code as a
+      superuser.
+
+      The PostgreSQL Project thanks Etienne Stalmans for reporting this
+      problem. (CVE-2020-25695)
+
+    + Fix usage of complex connection-string parameters in pg_dump,
+      pg_restore, clusterdb, reindexdb, and vacuumdb (Tom Lane)
+
+      The -d parameter of pg_dump and pg_restore, or the --maintenance-db
+      parameter of the other programs mentioned, can be a connection string
+      containing multiple connection parameters rather than just a database
+      name.  In cases where these programs need to initiate additional
+      connections, such as parallel processing or processing of multiple
+      databases, the connection string was forgotten and just the basic
+      connection parameters (database name, host, port, and username) were
+      used for the additional connections.  This could lead to connection
+      failures if the connection string included any other essential
+      information, such as non-default SSL or GSS parameters. Worse, the
+      connection might succeed but not be encrypted as intended, or be
+      vulnerable to man-in-the-middle attacks that the intended connection
+      parameters would have prevented. (CVE-2020-25694)
+
+    + When psql's \connect command re-uses connection parameters, ensure that
+      all non-overridden parameters from a previous connection string are
+      re-used (Tom Lane)
+
+      This avoids cases where reconnection might fail due to omission of
+      relevant parameters, such as non-default SSL or GSS options. Worse, the
+      reconnection might succeed but not be encrypted as intended, or be
+      vulnerable to man-in-the-middle attacks that the intended connection
+      parameters would have prevented. This is largely the same problem as
+      just cited for pg_dump et al, although psql's behavior is more complex
+      since the user may intentionally override some connection parameters.
+      (CVE-2020-25694)
+
+    + Prevent psql's \gset command from modifying specially-treated variables
+      (Noah Misch)
+
+      \gset without a prefix would overwrite whatever variables the server
+      told it to.  Thus, a compromised server could set specially-treated
+      variables such as PROMPT1, giving the ability to execute arbitrary shell
+      code in the user's session.
+
+      The PostgreSQL Project thanks Nick Cleaton for reporting this problem.
+      (CVE-2020-25696)
+
+  * Show only log files on failure.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 10 Nov 2020 13:45:55 +0100
+
+postgresql-13 (13.0-6) unstable; urgency=medium
+
+  * Use readline instead of libedit in psql. OpenSSL is considered a system
+    library now which voids the GPL-2 linking conflict.
+    http://meetbot.debian.net/debian-ftp/2020/debian-ftp.2020-03-13-20.02.html
+  * Disable JIT on powerpc riscv64 sparc64 again.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 20 Oct 2020 10:51:32 +0200
+
+postgresql-13 (13.0-5) unstable; urgency=medium
+
+  * Bump LLVM version to 11.
+  * Enable JIT on powerpc riscv64 s390x sparc64.
+  * Cherry-pick upstream llvmjit fixes, thanks Andres!
+
+ -- Christoph Berg <myon@debian.org>  Fri, 16 Oct 2020 11:07:06 +0200
+
+postgresql-13 (13.0-4) unstable; urgency=medium
+
+  * Add extension_destdir to postgresql.conf.sample file.
+  * R³: no.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 13 Oct 2020 22:05:47 +0200
+
+postgresql-13 (13.0-3) unstable; urgency=medium
+
+  * extension_destdir: Allow ALTER EXTENSION ... UPDATE;
+
+ -- Christoph Berg <myon@debian.org>  Thu, 08 Oct 2020 00:16:33 +0200
+
+postgresql-13 (13.0-2) unstable; urgency=medium
+
+  * Force JITing of all queries at test time.
+  * Disable JIT on s390x, it's broken with LLVM 10.
+    https://www.postgresql.org/message-id/20200925152907.GI293907%40msg.df7cb.de
+
+ -- Christoph Berg <myon@debian.org>  Fri, 25 Sep 2020 23:43:22 +0200
+
+postgresql-13 (13.0-1) unstable; urgency=medium
+
+  * First PostgreSQL 13 stable release.
+  * Update extension_destdir to look both in destdir and original location.
+  * Drop build-time kerberos test, too unstable.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 24 Sep 2020 12:00:45 +0200
+
+postgresql-13 (13~rc1-1) experimental; urgency=medium
+
+  * Release candidate.
+  * New GUC extension_destdir: Path to prepend for extension loading
+
+    This directory is prepended to paths when loading extensions (control
+    and SQL files), and to the '$libdir' directive when loading modules that
+    back functions. The location is made configurable to allow build-time
+    testing of extensions that do not have been installed to their proper
+    location yet.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 15 Sep 2020 22:56:40 +0200
+
+postgresql-13 (13~beta3-1) experimental; urgency=medium
+
+  * New beta release.
+  * Extend lintian overrides to client, plperl, and pltcl.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 16 Jul 2020 13:23:46 +0200
+
+postgresql-13 (13~beta2-2) experimental; urgency=medium
+
+  * Drop ldap-utils and slapd from build-dependencies while the "extra" ldap
+    test isn't run.
+  * Print backtrace from coredumps at build-time when tests crash.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 15 Jul 2020 17:14:45 +0200
+
+postgresql-13 (13~beta2-1) experimental; urgency=medium
+
+  * New beta release.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 24 Jun 2020 16:19:12 +0200
+
+postgresql-13 (13~beta1-1) experimental; urgency=medium
+
+  * New major upstream version 13; packaging based on postgresql-12.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 19 May 2020 15:22:03 +0200

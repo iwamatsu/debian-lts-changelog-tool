@@ -1,0 +1,51 @@
+sniproxy (0.6.0-2+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2023-25076 (Closes: #1033752)
+    fix buffer overflow while handling wildcard backend hosts
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 29 Apr 2023 19:03:02 +0200
+
+sniproxy (0.6.0-2) unstable; urgency=medium
+
+  * Fix "ftbfs with GCC-10" by applying patch
+    debian/patches/01_fix_gcc-10-build.patch that has been taken from upstream
+    repository commit 711dd14 (Closes: #957821)
+  * debian/control: bump Standards-Version to 4.5.0 (no changes)
+  * update debian/copyright
+  * Add systemd unit in debian/sniproxy.service
+
+ -- Jan Dittberner <jandd@debian.org>  Thu, 23 Jul 2020 22:27:57 +0200
+
+sniproxy (0.6.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Jan Dittberner ]
+  * New upstream release
+  * Update debian/copyright
+  * Add debian/gbp.conf for git-buildpackage
+  * Fix policy violation by removing ENABLED=0 from
+    debian/sniproxy.default and using dh_installinit --no-enable in
+    debian/rules and bumping the required debhelper version to support
+    this functionality, bump debian/compat to 11
+  * debian/control: remove unneeded Build-Depends dh-autoreconf
+  * Bump Standards-Version (no changes)
+
+ -- Jan Dittberner <jandd@debian.org>  Thu, 10 Jan 2019 21:18:35 +0100
+
+sniproxy (0.5.0-2) unstable; urgency=medium
+
+  * Fix "Incomplete debian/copyright?" by adding all git contributors (Closes:
+    #861382)
+
+ -- Jan Dittberner <jandd@debian.org>  Sat, 29 Apr 2017 15:35:54 +0200
+
+sniproxy (0.5.0-1) unstable; urgency=medium
+
+  * Initial packaging for Debian (Closes: #808132)
+  * Package git version
+
+ -- Jan Dittberner <jandd@debian.org>  Mon, 24 Apr 2017 23:55:11 +0200

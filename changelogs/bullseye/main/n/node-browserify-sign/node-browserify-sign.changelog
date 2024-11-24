@@ -1,0 +1,50 @@
+node-browserify-sign (4.2.1-1+deb11u1) bullseye-security; urgency=high
+
+  * Team upload
+  * Properly check the upper bound for DSA signatures
+    (Closes: #1054667, CVE-2023-46234)
+
+ -- Yadd <yadd@debian.org>  Mon, 30 Oct 2023 06:52:31 +0400
+
+node-browserify-sign (4.2.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Fix field name typos in debian/copyright.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs auto install
+  * New upstream version 4.2.1
+  * Drop patch
+  * Add dependencies to node-readable-stream and node-safe-buffer
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 19 Dec 2020 12:51:39 +0100
+
+node-browserify-sign (4.0.4-2) unstable; urgency=medium
+
+  * Team upload
+  * Standards-Version 4.1.2
+  * Section: javascript
+  * Workaround unsupported openssl hashes
+  * Allow stderr in tests (Closes: #872898)
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 29 Dec 2017 16:31:01 +0100
+
+node-browserify-sign (4.0.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #864891)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 16 Jun 2017 21:59:43 +0530

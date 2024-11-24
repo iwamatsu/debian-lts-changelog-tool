@@ -1,0 +1,151 @@
+golang-github-mattn-go-isatty (0.0.12-1) unstable; urgency=medium
+
+  * New upstream version 0.0.12
+  * Update versioned dependency on golang-golang-x-sys-dev
+  * Add "Rules-Requires-Root: no" to debian/control
+
+ -- Anthony Fok <foka@debian.org>  Mon, 25 May 2020 20:06:23 -0600
+
+golang-github-mattn-go-isatty (0.0.11-1) unstable; urgency=medium
+
+  * New upstream version 0.0.11
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Update dependency on golang-golang-x-sys-dev
+    to (>= 0.0~git20191026.33540a1~) as per go.mod
+
+ -- Anthony Fok <foka@debian.org>  Fri, 21 Feb 2020 13:37:48 -0700
+
+golang-github-mattn-go-isatty (0.0.8-2) unstable; urgency=medium
+
+  * Team upload.
+  * Remove myself from uploaders.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Sep 2019 18:26:38 -0400
+
+golang-github-mattn-go-isatty (0.0.8-1) unstable; urgency=medium
+
+  * New upstream version 0.0.8
+
+ -- Anthony Fok <foka@debian.org>  Sat, 27 Jul 2019 09:22:05 -0600
+
+golang-github-mattn-go-isatty (0.0.7+really0.0.7-1) unstable; urgency=medium
+
+  * Revert to upstream version 0.0.7 now that Debian 10 "buster" is released.
+    See https://bugs.debian.org/928227 for background information.
+  * Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 11 Jul 2019 12:13:12 -0600
+
+golang-github-mattn-go-isatty (0.0.7+really0.0.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Revert all changes between 0.0.4-1 and 0.0.7-1.
+    See https://bugs.debian.org/928227 for a rationale.
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 02 Jun 2019 23:10:40 +0200
+
+golang-github-mattn-go-isatty (0.0.7-1) unstable; urgency=medium
+
+  * New upstream version 0.0.7
+  * Bump Standards-Version to 4.3.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Apr 2019 04:05:57 -0600
+
+golang-github-mattn-go-isatty (0.0.4-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * d/changelog: remove trailing whitespaces
+
+  [ Michael Stapelberg ]
+  * update debian/gitlab-ci.yml (using salsa.debian.org/go-team/ci/cmd/ci)
+
+  [ Anthony Fok ]
+  * New upstream version 0.0.4 (released 2017-11-06)
+  * Apply "cme fix dpkg" fixes to d/control and d/copyright
+  * Build-Depends on golang-any instead of golang-go
+  * Update Maintainer address in debian/control
+  * Use debhelper (>= 11~)
+  * Bump Standards-Version to 4.2.1 (no change)
+  * Remove debian/source/options
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Dec 2018 09:50:17 -0700
+
+golang-github-mattn-go-isatty (0.0.3-4) unstable; urgency=medium
+
+  * Depend on golang-golang-x-sys-dev (for ppc64).
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 11 Feb 2018 11:43:56 -0500
+
+golang-github-mattn-go-isatty (0.0.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:36:27 -0500
+
+golang-github-mattn-go-isatty (0.0.3-2) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 16:19:33 -0500
+
+golang-github-mattn-go-isatty (0.0.3-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Testsuite: autopkgtest-pkg-go.
+  * Move to salsa.debian.org.
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 30 Dec 2017 02:47:44 -0500
+
+golang-github-mattn-go-isatty (0.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Tim Potter ]
+  * Add Source field in d/copyright for upstream source location
+  * Add B-D on newer version dh-golang to build in jessie-backports
+
+  [ Martín Ferrari ]
+  *  Add missing changelog entries.
+
+  [ Diego M. Rodriguez ]
+  * Update debian/watch
+  * New upstream version 0.0.2 (Closes: #862768)
+  * Bump Standards-Version to 3.9.8
+  * Add myself to uploaders
+
+ -- Diego M. Rodriguez <diego.plan9@gmail.com>  Wed, 21 Jun 2017 13:49:04 +0200
+
+golang-github-mattn-go-isatty (0.0.1-1) unstable; urgency=medium
+
+  * New upstream version
+  * Adapted watch file
+  * Replaced Vcs-Git and Vcs-Browser urls by secure (https) urls
+  * Replaced my email by @debian.org
+  * Make use of XS-Go-Import-Path
+  * Bumped Standards-Version to 3.9.7
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 21 Mar 2016 23:43:38 -0400
+
+golang-github-mattn-go-isatty (0.0~git20150813.0.7fcbc72-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Fernando Ike <fike@midstorm.org>  Thu, 13 Aug 2015 21:45:38 -0300
+
+golang-github-mattn-go-isatty (0.0~git20150409.0.ae0b1f8-1) unstable; urgency=medium
+
+  [ Fernando Ike ]
+  * New upstream tarball
+
+  [ Alexandre Viau ]
+  * Initial release (Closes: #781204)
+
+ -- Fernando Ike <fike@midstorm.org>  Fri, 31 Jul 2015 11:17:32 -0300

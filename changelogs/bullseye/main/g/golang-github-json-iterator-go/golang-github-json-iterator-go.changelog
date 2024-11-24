@@ -1,0 +1,36 @@
+golang-github-json-iterator-go (1.1.10-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to disable test failed on go1.15. (Closes: #971157)
+    See more info at
+    https://github.com/json-iterator/go/issues/463#issuecomment-703259456
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 06 Oct 2020 20:41:35 +0800
+
+golang-github-json-iterator-go (1.1.10-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release. (Closes: #954549)
+  * Remove test Depends from -dev package
+    - golang-github-davecgh-go-spew-dev
+    - golang-github-google-gofuzz-dev
+    - golang-github-stretchr-testify-dev
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add Rules-Requires-Root
+  * Bump debhelper-compat to 13
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 19 Jun 2020 14:07:47 +0800
+
+golang-github-json-iterator-go (1.1.4-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #904103.
+  * debian/control: Add new dependencies.
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 01 Aug 2018 03:49:37 +0000
+
+golang-github-json-iterator-go (1.0.6-1) unstable; urgency=medium
+
+  * Initial release (Closes: #901072)
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 10 Jun 2018 15:24:54 +0000

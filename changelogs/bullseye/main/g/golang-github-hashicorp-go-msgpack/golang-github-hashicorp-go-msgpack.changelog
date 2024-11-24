@@ -1,0 +1,74 @@
+golang-github-hashicorp-go-msgpack (0.5.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 4.4.1.
+  * DH & compat to version 12.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 23 Oct 2019 20:44:00 +1100
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-7) unstable; urgency=medium
+
+  * Team upload.
+  * Remove myself from uploaders.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Sep 2019 17:56:58 -0400
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-6) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:49:21 -0500
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-5) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 16:30:13 -0500
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-4) unstable; urgency=medium
+
+  * Fix dead VCS-* URLs.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 07 Jan 2018 13:39:02 -0500
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-3) unstable; urgency=medium
+
+  * Move to salsa.debian.org.
+  * Change my email to @debian.org.
+  * Priority extra -> optional.
+  * Testsuite: autopkgtest-pkg-go.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 30 Dec 2017 03:42:18 -0500
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-2) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Michael Stapelberg ]
+  * debian/control: drop bogus built-using
+  * Add myself to uploaders
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 06 May 2017 16:46:21 +0200
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518.0.fa3f638-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Team upload
+  * New upstream snapshot (Closes: #822931)
+  * Standards-Version: 3.9.8
+  * Update VCS-Browser to https
+  * Add d/watch file
+
+  [ Alexandre Viau ]
+  * set VCS-Git url to https
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 15 Apr 2016 13:37:05 +1000
+
+golang-github-hashicorp-go-msgpack (0.0~git20150518-1) unstable; urgency=low
+
+  * Initial release. (Closes: #792640)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Fri, 27 Mar 2015 14:47:24 -0400

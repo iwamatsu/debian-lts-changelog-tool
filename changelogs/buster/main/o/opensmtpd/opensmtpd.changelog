@@ -1,0 +1,300 @@
+opensmtpd (6.0.3p1-5+deb10u4) buster-security; urgency=high
+
+  * Fix LPE and RCE vulnerability (Closes: #952453) (CVE-2020-8794)
+    An out of bounds read in smtpd allows an attacker to inject arbitrary
+    commands into the envelope file which are then executed as root.
+    Separately, missing privilege revocation in smtpctl allows arbitrary
+    commands to be run with the _smtpq group.
+    OpenBSD 6.6 errata 021:
+    https://ftp.openbsd.org/pub/OpenBSD/patches/6.6/common/021_smtpd_envelope.patch.sig
+
+ -- Ryan Kavanagh <rak@debian.org>  Tue, 25 Feb 2020 11:12:06 -0500
+
+opensmtpd (6.0.3p1-5+deb10u3) buster-security; urgency=high
+
+  * Fix two major security bugs (Closes: #950121) (CVE-2020-7247)
+    1. smtpd can crash on opportunistic TLS downgrade, causing a denial of
+       service. OpenBSD 6.6 errata 018:
+       https://ftp.openbsd.org/pub/OpenBSD/patches/6.6/common/018_smtpd_tls.patch.sig
+    2. Fix privilege escalation vulnerability: An incorrect check allows an
+       attacker to trick mbox delivery into executing arbitrary commands as
+       root and lmtp delivery into executing arbitrary commands as an
+       unprivileged user. OpenBSD 6.6 errata 019:
+       https://ftp.openbsd.org/pub/OpenBSD/patches/6.6/common/019_smtpd_exec.patch.sig
+
+ -- Ryan Kavanagh <rak@debian.org>  Tue, 28 Jan 2020 19:44:11 -0500
+
+opensmtpd (6.0.3p1-5+deb10u2) buster; urgency=medium
+
+  * Handle non-zero exit code from hostname during config phase
+    (Closes: #948824)
+
+ -- Ryan Kavanagh <rak@debian.org>  Thu, 23 Jan 2020 16:36:09 -0500
+
+opensmtpd (6.0.3p1-5+deb10u1) buster; urgency=medium
+
+  * Warn users of change of smtpd.conf syntax (Closes: #944268)
+  * Install smtpctl setgid opensmtpq (Closes: #945910)
+
+ -- Ryan Kavanagh <rak@debian.org>  Sat, 21 Dec 2019 17:41:55 -0500
+
+opensmtpd (6.0.3p1-5) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+  [ Ryan Kavanagh ]
+  * Handle empty strings in postinst (Closes: #921429)
+  * Handle missing /etc/mailname (Closes: #913318)
+  * Update init script dependencies in comments
+  * Bump standards-version to 4.3.0; no changes required
+  * Drop check for ancient package version from postinst
+  * No longer install documentation for migration from version 5.3 to 5.4
+
+ -- Ryan Kavanagh <rak@debian.org>  Wed, 06 Feb 2019 10:16:39 -0500
+
+opensmtpd (6.0.3p1-4) unstable; urgency=medium
+
+  * Don't use 'smtpctl stop' in the init script either (Closes: #893367)
+  * Bump standards version to 4.1.4
+
+ -- Ryan Kavanagh <rak@debian.org>  Mon, 30 Apr 2018 12:31:18 -0400
+
+opensmtpd (6.0.3p1-3) unstable; urgency=medium
+
+  * Update build-depends to not require OpenSSL be version 1.0
+
+ -- Ryan Kavanagh <rak@debian.org>  Thu, 22 Mar 2018 19:19:25 -0400
+
+opensmtpd (6.0.3p1-2) unstable; urgency=medium
+
+  * Fix the stop target in the systemd service (Closes: #893367)
+  * Update Vcs-* fields to point to salsa
+  * Enable OpenSSL 1.1 support, 11_ssl_1.1.diff (Closes: #859544)
+    Thanks to Sebastian Andrzej Siewior for the patch.
+  * Conflict with sendmail-base: provides various commands such as
+    "newaliases" that could cause confusion with our own commands
+    (Closes: #888290)
+
+ -- Ryan Kavanagh <rak@debian.org>  Sun, 18 Mar 2018 13:53:00 -0400
+
+opensmtpd (6.0.3p1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated copyright years
+  * Added documentation key to smtpd systemd unit file
+
+ -- Ryan Kavanagh <rak@debian.org>  Tue, 16 Jan 2018 12:18:40 -0500
+
+opensmtpd (6.0.2p1-3) unstable; urgency=medium
+
+  * Set Git branch in Vcs-Git to debian/sid
+  * Bump debhelper build-dependency to >= 11 and compat to 11
+  * Drop dh-autoreconf: not needed with dh >= 11
+  * Bump standards-version to 4.1.3
+  * Added systemd unit file (Closes: #733315, #871311)
+  * Change priority to optional
+  * Use https for URLs in debian/watch and for Homepage
+  * Turn on all hardening options
+  * Suggest ca-certificates, which provides /etc/ssl/certs/ca-certificates.crt
+
+ -- Ryan Kavanagh <rak@debian.org>  Sun, 07 Jan 2018 18:00:29 -0500
+
+opensmtpd (6.0.2p1-2) unstable; urgency=medium
+
+  * Let smtpd create its spool directory tree instead of shipping it.
+    This fixes errors regarding directories with incorrect owners.
+    Thanks to Harald Dunkel for a patch. (Closes: #843978)
+  * Actually remove the spool directory on purge.
+
+ -- Ryan Kavanagh <rak@debian.org>  Tue, 07 Mar 2017 09:33:17 -0500
+
+opensmtpd (6.0.2p1-1) unstable; urgency=medium
+
+  * Added Brazilian Portuguese debconf templates translation (Closes: #829336)
+  * Added missing dependency on ed (Closes: #834280)
+  * Switch B-D to libssl1.0-dev while upstream determines how to best
+    transition to OpenSSL 1.1 (Closes: #828473)
+  * Fix manpage formatting issues (Closes: #832008)
+  * Added missing dependency on lsb-base
+  * Add missing build-dependency on zlib1g-dev
+  * Add lintian override for spelling mistake in copyright text
+
+ -- Ryan Kavanagh <rak@debian.org>  Fri, 25 Nov 2016 15:51:28 -0500
+
+opensmtpd (5.9.2p1-1) unstable; urgency=medium
+
+  * New upstream release
+    + Drop 04_no_mailq.diff, 11_smtpd.conf.5_typo.diff: no longer needed
+  * Make debian-branch for sid debian/sid
+  * Updated copyright holders
+  * Updated standards-version to 3.9.8
+  * Fix bug in getalias() in debian/config
+  * Don't install empty /usr/bin in opensmtpd package
+  * Update lintian override for missing-license-paragraph-in-dep5-copyright
+  * Update our configure options to reflect name changes
+  * Install missing links to smtpctl for makemap and newaliases
+  * opensmtpd now requires different permissions and ownership for the offline
+    queue and purge directories; update these accordingly
+
+ -- Ryan Kavanagh <rak@debian.org>  Sat, 11 Jun 2016 14:21:51 -0400
+
+opensmtpd (5.7.3p2-1) unstable; urgency=medium
+
+  * New upstream release
+    + Fixes segfault when relaying mail (Closes: #813398)
+  * Make Vcs-* URLs secure
+  * 'fortify' hardening option no longer detects false-positive buffer
+    overflow when processing offline queue. Reenabling.
+    + Accordingly, drop unneeded hardening-no-fortify overrides.
+
+ -- Ryan Kavanagh <rak@debian.org>  Thu, 11 Feb 2016 09:09:22 -0500
+
+opensmtpd (5.7.3p1-1) unstable; urgency=high
+
+  * New upstream release
+    + Fixes security issues (Closes: #800787, CVE-2015-7687). This point
+      release also features fixes to security issues that weren't part of the
+      Qualsys audit.
+    + No longer have conflicting declarations of fatal in source
+      (Closes: #749810)
+  * Drop 02_hyphen_as_minus_sign.diff, 06_man_cleanup.diff,
+    11_compile_warnings.diff, 12_ssl_check.diff. All applied upstream
+  * Updated 07_automake_missing_options.diff to reflect changes to upstream
+    source
+  * Fix typo in manpage, 11_smtpd.conf.5_typo.diff
+  * Update the copyright file
+  * Drop our local copy of the upstream changelog
+  * Recommend opensmtpd-extras: the tables and filters have been forked off
+    into a separate project upstream
+  * (Build-)Depend on libasr: this library has also forked off into a
+    stand-alone project
+  * Drop useless build-dependencies on autoconf/automake/libtool: these are
+    already brought in by dh-autoreconf
+  * Update lintian overrides: we drop overrides for filters moved to
+    opensmtpd-extras, add overrides due to a broken dep5 check, and
+    override spelling-error-in-copyright (the error is in the license text)
+  * Update configure options in rules to continue building the db table and
+    makemap
+
+ -- Ryan Kavanagh <rak@debian.org>  Sun, 01 Nov 2015 20:56:47 -0500
+
+opensmtpd (5.4.2p1-4) unstable; urgency=medium
+
+  * Don't abort on unseen flags in debconf (Closes: #770939)
+  * Added Dutch translations. (Closes: #767303)
+    Thanks to Frans Spiesschaert <Frans.Spiesschaert@yucom.be>
+  * Bump standards version to 3.9.6
+  * Updated debian/copyright to conform to dep5
+
+ -- Ryan Kavanagh <rak@debian.org>  Fri, 06 Feb 2015 13:04:56 -0500
+
+opensmtpd (5.4.2p1-3) unstable; urgency=medium
+
+  * Specify location of CA certificates when running ./configure; fixes broken
+    certificate verification when establishing encrypted connection (Closes:
+    #756069)
+
+ -- Ryan Kavanagh <rak@debian.org>  Sat, 26 Jul 2014 12:08:25 +0200
+
+opensmtpd (5.4.2p1-2) unstable; urgency=medium
+
+  * Disable fortify, fixes sigabort on buffer overflow false positive
+  * Fix broken SSL version check, 12_ssl_check.diff (Closes: #748150)
+
+ -- Ryan Kavanagh <rak@debian.org>  Wed, 11 Jun 2014 21:30:20 +0200
+
+opensmtpd (5.4.2p1-1) unstable; urgency=medium
+
+  * Imported Upstream version 5.4.2p1
+    + Drop 05_no_smtpscript.diff, no longer needed
+    + Drop 08_man_errors.diff, applied upstream
+    + Drop 09_hyphens_in_man.diff, applied upstream
+  * This build against the new openssl package permits opensmtpd to start
+    again (Closes: #748513); the underlying problem has been reported upstream
+  * Install CONFIG-UPDATE.txt.gz (Closes: #741238)
+  * Get rid of unnecessary compile time warnings, 11_compile_warnings.diff
+    (Closes: #747666). Thanks to Benny Baumann for the patch.
+  * Update copyright file with new holders and years
+  * Update lintian overrides with new false positives for hyphens in man
+    pages.
+
+ -- Ryan Kavanagh <rak@debian.org>  Thu, 22 May 2014 21:34:02 +0200
+
+opensmtpd (5.4.1p1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #732989)
+  * Updated copyright file
+  * Drop the following patches:
+    + 01_binary_typos.diff, applied upstream
+    + 03_no_hardlinks.diff, applied upstream
+    + 07_mailname.diff, applied upstream
+    + 08_empty_alias.diff, applied upstream
+    + 10_automake_114.diff, no longer needed
+    + 11_sys-mount.h_hurd.diff, applied upstream
+    + 12_kfreebsd-hurd_crypt.h.diff, applied upstream
+    + 13_reserve_inodes.diff, applied upstream
+    + 14_syslog_prognames.diff, applied upstream
+  * Add missing automake options, 07_automake_missing_options.diff, and use
+    dh-autoreconf to update the autotools files
+  * Fix man errors due to unknown command, 08_man_errors.diff
+  * Don't use hyphens as minus signs, 09_hyphens_in_man.diff, and override
+    lintian's false-positives due to the mdoc format
+  * Update the path to aliases in the default smtpd.conf to reflect the
+    location specified by Debian policy, 10_smtpd.conf.diff
+  * Update debian/rules with new configure option names
+  * We no longer need the opensmtpf user; no longer create it and delete the
+    account on upgrade from 5.3.3p1
+  * Added translations:
+    + Spanish (Closes: #727017)
+      Thanks to Camaleón <noelamac@gmail.com>
+    + Portuguese (Closes: #729923)
+      Thanks to Américo Monteiro <a_monteiro@gmx.com>
+    + German (Closes: #730452)
+      Thanks to Chris Leick <c.leick@vollbio.de>
+  * Update standards version to 3.9.5
+  * Install the upstream changelog / release notes
+  * Added a NEWS file advising users of the changes to config and refer to
+    (included) config upgrade notes based on those from the opensmtpd wiki
+
+ -- Ryan Kavanagh <rak@debian.org>  Sun, 02 Feb 2014 09:57:15 -0500
+
+opensmtpd (5.3.3p1-4) unstable; urgency=low
+
+  * Added French translations (Closes: #724343)
+    Thanks to Jean-Pierre Giraud <jean-pierregiraud@neuf.fr>
+  * Added Swedish translation (Closes: #725103)
+    Thanks to Martin Bagge <brother@bsnet.se>
+  * Don't truncate process names in syslog, 14_syslog_prognames.diff
+    (Closes: #724062)
+
+ -- Ryan Kavanagh <rak@debian.org>  Sun, 20 Oct 2013 08:07:22 -0400
+
+opensmtpd (5.3.3p1-3) unstable; urgency=low
+
+  * Fix filesystem queue issue on btrfs, 13_reserve_inodes.diff
+    (Closes: #723893)
+
+ -- Ryan Kavanagh <rak@debian.org>  Sat, 21 Sep 2013 09:58:14 -0400
+
+opensmtpd (5.3.3p1-2) unstable; urgency=low
+
+  * The BSD-4-clause license is actually BSD-3-clause + restrictions; update
+    debian/copyright accordingly
+  * Added Russian translations (Closes: #721269);
+    Thanks Yuri Kozlov <yuray@komyakino.ru>
+  * Fix FTBFS on hurd-i386 due to missing sys/mount.h,
+    11_sys-mount.h_hurd.diff
+  * Check if -lcrypt is needed on GNU/kFreeBSD, GNU/Hurd; fixes FTBFS,
+    12_kfreebsd-hurd_crypt.h.diff
+  * Drop the -r (--relative) argument to ln, it isn't supported on all
+    architectures yet and was causing a FTBFS on those architectures, affects
+    03_no_hardlinks.diff and 04_no_mailq.diff
+
+ -- Ryan Kavanagh <rak@debian.org>  Tue, 10 Sep 2013 19:00:18 -0400
+
+opensmtpd (5.3.3p1-1) unstable; urgency=low
+
+  * Initial release (Closes: #706985)
+
+ -- Ryan Kavanagh <rak@debian.org>  Sat, 07 Sep 2013 12:29:01 -0400

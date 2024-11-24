@@ -1,0 +1,61 @@
+golang-github-hashicorp-go-multierror (1.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Shengjing Zhu ]
+  * Update uscan watch file to version 4
+  * New upstream version 1.1.0
+  * Update Section to golang
+  * Bump debhelper-compat to 13
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Add Rules-Requires-Root
+  * Use /usr/share/common-licenses/MPL-2.0 in copyright
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 31 Jan 2021 01:38:22 +0800
+
+golang-github-hashicorp-go-multierror (1.0.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 1.0.0
+  * Update debian/{copyright,watch} to use pristine source tarball.
+  * Apply "cme fix dpkg" fixes: Set Priority to optional,
+    bump Standards-Version to 4.3.0, update debhelper to (>= 12~),
+    use secure https copyright file specification URI, etc.
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add myself to the list of Uploaders
+  * Add versioned dependency on golang-github-hashicorp-errwrap-dev
+
+ -- Anthony Fok <foka@debian.org>  Tue, 01 Jan 2019 00:06:21 -0700
+
+golang-github-hashicorp-go-multierror (0.0~git20161216.0.ed90515+ds-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20161216.0.ed90515
+  * Refresh debian/control
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Change golang-go to golang-any in Build-Depends
+  * Exclude vendored-in dependencies added since Aug 2016
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Jan 2017 20:44:25 -0700
+
+golang-github-hashicorp-go-multierror (0.0~git20150916.0.d30f099-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Mon, 09 Nov 2015 09:32:12 -0800

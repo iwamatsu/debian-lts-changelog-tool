@@ -1,0 +1,155 @@
+php-horde-mime-viewer (2.2.2-3+deb10u1) buster-security; urgency=high
+
+  * CVE-2022-26874: Prevent an XSS vulnerability due to a relaxed matching
+    rules in XSLT documents.
+
+ -- Chris Lamb <lamby@debian.org>  Wed, 31 Aug 2022 08:00:07 +0100
+
+php-horde-mime-viewer (2.2.2-3) unstable; urgency=medium
+
+  * Update Standards-Version to 4.1.4, no change
+  * Update Maintainer field
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 15 May 2018 01:21:55 +0200
+
+php-horde-mime-viewer (2.2.2-2) unstable; urgency=medium
+
+  * Update Standards-Version to 4.1.3, no change
+  * Upgrade debhelper to compat 11
+  * Update Vcs-* fields
+  * Use secure copyright format URI
+  * Replace "Priority: extra" by "Priority: optional"
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 05 Apr 2018 12:45:13 +0200
+
+php-horde-mime-viewer (2.2.2-1) unstable; urgency=medium
+
+  * New upstream version 2.2.2
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 26 Sep 2017 22:02:28 +0200
+
+php-horde-mime-viewer (2.2.1-1) unstable; urgency=high
+
+  * New upstream version 2.2.1
+    + SECURITY: Don't render SVG images in the browser to avoid XSS attacks.
+      Closes: #837149 and urgency set to high.
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 09 Sep 2016 13:13:37 +0200
+
+php-horde-mime-viewer (2.1.3-2) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.8, no change
+  * Updated d/watch to use https
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 07 Jun 2016 23:55:58 +0200
+
+php-horde-mime-viewer (2.1.3-1) unstable; urgency=medium
+
+  * New upstream version 2.1.3
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 26 Mar 2016 11:03:41 +0100
+
+php-horde-mime-viewer (2.1.2-2) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.7, no change
+  * Use secure Vcs-* fields
+  * Rebuild with newer pkg-php-tools for the PHP 7 transition
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 12 Mar 2016 23:50:40 +0100
+
+php-horde-mime-viewer (2.1.2-1) unstable; urgency=medium
+
+  * New upstream version 2.1.2
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 03 Feb 2016 21:34:57 +0100
+
+php-horde-mime-viewer (2.1.1-2) unstable; urgency=medium
+
+  * Upgaded to debhelper compat 9
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 24 Oct 2015 15:56:03 +0200
+
+php-horde-mime-viewer (2.1.1-1) unstable; urgency=medium
+
+  * Update gbp.conf
+  * New upstream version 2.1.1
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 09 Aug 2015 22:59:00 +0200
+
+php-horde-mime-viewer (2.1.0-1) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.6, no change
+  * New upstream version 2.1.0
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 04 May 2015 21:16:44 +0200
+
+php-horde-mime-viewer (2.0.7-2) unstable; urgency=medium
+
+  * Update Standards-Version, no change
+  * Update Vcs-Browser to use cgit instead of gitweb
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 26 Aug 2014 20:48:21 +0200
+
+php-horde-mime-viewer (2.0.7-1) unstable; urgency=medium
+
+  * New upstream version 2.0.7
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 05 Jun 2014 20:35:30 +0200
+
+php-horde-mime-viewer (2.0.6-1) unstable; urgency=medium
+
+  * New upstream version 2.0.6
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 13 Apr 2014 09:22:05 +0200
+
+php-horde-mime-viewer (2.0.5-1) unstable; urgency=low
+
+  * Use pristine-tar
+  * New upstream version 2.0.5
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 06 Jun 2013 08:27:43 +0200
+
+php-horde-mime-viewer (2.0.4-1) unstable; urgency=low
+
+  * New upstream version 2.0.4
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 07 Apr 2013 16:26:03 +0200
+
+php-horde-mime-viewer (2.0.2-1) unstable; urgency=low
+
+  * New upstream version 2.0.2
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 10 Jan 2013 22:14:20 +0100
+
+php-horde-mime-viewer (2.0.1-2) unstable; urgency=low
+
+  * Add a description of Horde in long description
+  * Updated Standards-Version to 3.9.4, no changes
+  * Replace horde4 by PEAR in git reporitory path
+  * Fix Horde Homepage
+  * Remove debian/pearrc, not needed with latest php-horde-role
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 09 Jan 2013 20:58:18 +0100
+
+php-horde-mime-viewer (2.0.1-1) unstable; urgency=low
+
+  * New upstream version 2.0.1
+  * Build-depends on php-horde-role (Closes: #666625)
+  * Fixed watchfile
+  * Updated Standards-Version to 3.9.3: no change
+  * Updated copyright format URL
+  * Updated debian/pearrc to install Horde apps in /usr/share/horde
+    instead of /usr/share/horde4
+  * Updated Homepage
+  * Added Vcs-* fields
+  * Removed extra license files
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 30 Nov 2012 21:47:27 +0100
+
+php-horde-mime-viewer (1.0.8-1) unstable; urgency=low
+
+  * Horde_Mime_Viewer package.
+  * Initial packaging (Closes: #635802)
+  * Copyright file by Soren Stoutner and Jay Barksdale
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 10 Jan 2012 22:29:26 +0100

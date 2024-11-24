@@ -1,0 +1,212 @@
+postorius (1.3.4-2+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2021-40347: Check a user owns the email they are trying to
+    unsubscribe (Fixes: #993746)
+
+ -- Jonas Meurer <jonas@freesources.org>  Thu, 09 Sep 2021 14:04:00 +0200
+
+postorius (1.3.4-2) unstable; urgency=medium
+
+  [ Pierre-Elliott Bécue ]
+  * Use bootstrap4 instead of bootstrap3. (Closes: #983895)
+  * Compile the LC_MESSAGES via django-admin at build time. (Closes: #983848)
+
+ -- Jonas Meurer <jonas@freesources.org>  Mon, 08 Mar 2021 16:35:40 +0100
+
+postorius (1.3.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control, d/tests/control: Update (build-)dependencies
+  * d/p/0002-Remove-cloudflare-dependency-from-the-frontent.patch: remove
+    obsolete patch
+
+ -- Jonas Meurer <jonas@freesources.org>  Fri, 05 Feb 2021 01:02:15 +0100
+
+postorius (1.3.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control: Bump Standards-Version to 4.5.1
+  * d/upstream/signing-key.asc: Re-export as minimal key
+  * d/rules: Replace all glyphicons-halflings-regular font files with symlinks
+    to the files from package fonts-glyphicons-halflings
+  * d/tests: Fix tests, update test dependencies (Closes: #976097)
+  * d/p/0002-Remove-cloudflare-dependency-from-the-frontent.patch:
+    Remove cloudflare dependency from the frontend
+  * d/missing-sources/popper-v1.11.0.js: Add missing popperjs source file
+
+ -- Jonas Meurer <jonas@freesources.org>  Sun, 17 Jan 2021 14:52:58 +0100
+
+postorius (1.3.2-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Use glyphicons-halflings from fonts-glyphicons-halflings (Closes: #962881)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Sat, 18 Jul 2020 13:56:26 +0200
+
+postorius (1.3.2-2) unstable; urgency=medium
+
+  * d/control:
+    - Update the install dependencies as postorius can't work with
+      mailmanclient < 3.3.0 (Closes: #951106)
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Wed, 12 Feb 2020 13:52:08 +0100
+
+postorius (1.3.2-1) unstable; urgency=medium
+
+  * New upstream release 1.3.2
+  * d/control:
+    - Switch to debhelper-compat (version 12) instead of debian/compat
+    - Bump Standards-Version to 4.4.1
+    - Update build dependencies
+  * d/t/*:
+    - Script autopkgtest to make it work with the new test environment
+      (Closes: #949437)
+  * d/rules:
+    - Remove upstream's shipped html5shiv library in favour of the packaged
+      one
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Mon, 10 Feb 2020 23:44:20 +0100
+
+postorius (1.2.4-1) unstable; urgency=medium
+
+  * New upstream release 1.2.4
+    - (Build-)Depends on python3-mailmanclient >= 3.2.2
+  * d/p/0002-Template-API-set-encoding.patch:
+    - Remove, got incorporated upstream
+
+ -- Jonas Meurer <jonas@freesources.org>  Mon, 11 Feb 2019 01:09:05 +0100
+
+postorius (1.2.2-4) unstable; urgency=medium
+
+  * d/control:
+    - Bump Standards-Version to 4.3.0, no changes required
+  * d/p/0002-Template-API-set-encoding.patch:
+    - Backport upstream patch to fix template encoding
+
+ -- Jonas Meurer <jonas@freesources.org>  Sun, 23 Dec 2018 23:27:41 +0100
+
+postorius (1.2.2-3) unstable; urgency=medium
+
+  * d/control:
+    - Use ${sphinxdoc:Depends} instead of an explicit dependency on
+      python3-sphinx-rtd-theme (Closes: #891374)
+    - Add my Debian address to the uploaders field instead of my Crans one.
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Thu, 18 Oct 2018 11:12:24 +0200
+
+postorius (1.2.2-2) unstable; urgency=medium
+
+  * d/tests/control:
+    - Fix test command to actually run tests (drop "shell").
+
+ -- Jonas Meurer <jonas@freesources.org>  Sun, 23 Sep 2018 19:56:03 +0200
+
+postorius (1.2.2-1) unstable; urgency=medium
+
+  [ Pierre-Elliott Bécue ]
+  * New upstream release 1.2.1
+    - Comes with full python3 support
+  * d/control:
+    - Updated (Build-)?Dependencies due to python3 migration
+    - Drop X-Python-Version
+    - Bump Standards-Version to 4.1.5. No changes required
+
+  [ Jonas Meurer ]
+  * New upstream release 1.2.2
+  * d/control:
+    - Bump standards-version to 4.2.1, no changes required
+    - Add versioned (build-)depends on python3-mailmanclient >= 3.2.0
+    - Update (Build-)Depends to python3 packages
+    - Add Conflicts/Replaces python-django-postorius
+  * d/rules:
+    - Migrate build system to python3
+    - Remove pycache files after running testsuite
+  * d/source/lintian-overrides:
+    - remove obsolete python2 lintian overrides
+
+ -- Jonas Meurer <jonas@freesources.org>  Mon, 17 Sep 2018 13:08:16 +0200
+
+postorius (1.1.2-3) unstable; urgency=medium
+
+  [ Jonas Meurer ]
+  * d/control:
+    - Don't recommend mailman3, recommend mailman3-web instead.
+
+  [ Pierre-Elliott Bécue ]
+  * d/control:
+    - Raise debhelper build dependency level to 11
+  * d/compat: Bump to 11
+  * d/s/lintian-overrides: Add an override for the missing python3 package.
+  * d/rules:
+    - Add a rule to move the static directory in /usr/share and link against
+      it in /usr/lib/…
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Fri, 16 Mar 2018 16:57:27 +0100
+
+postorius (1.1.2-2) unstable; urgency=medium
+
+  * Add dependency on python-sphinx-rtd-theme on the binary package
+    (Closes: #891374)
+  * d/control:
+    - update Vcs links to salsa
+    - Add dependency on fonts-glewlwyd
+  * Add a rule to replace a font file by a link to the fonts-glewlwyd
+    associate file
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Wed, 28 Feb 2018 19:18:24 +0100
+
+postorius (1.1.2-1) unstable; urgency=medium
+
+  [ Jonas Meurer ]
+  * d/patches/0002-example_project-Fix-path-to-urls-for-tests.patch: Dropped,
+    we're using --pythonpath=build_area instead now.
+  * d/tests/control: Add restriction 'allow-stderr' to 'django-admin test'
+    test command.
+  * d/rules: Run 'django-admin test' as build-time test.
+
+  [ Pierre-Elliott Bécue ]
+  * mmclient is a django command called via manage.py, removing the link
+  * New upstream release 1.1.2.
+  * Add a d/source/local-options file to unapply the patches after the build.
+  * d/control:
+    - Bump Standards-Version to 4.1.3.
+    - Enforce python-django dep version to be << 1:1.12
+  * Move the d/python-django-postorius.links file into d/links
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Sat, 06 Jan 2018 21:32:19 +0100
+
+postorius (1.1.1-1) unstable; urgency=medium
+
+  [ Pierre-Elliott Bécue ]
+  * Install upstream changelog with dh.
+  * Add a link to mmclient in /usr/bin
+
+  [ Jonas Meurer ]
+  * New upstream bugfix release 1.1.1.
+    * Drop d/patches/0001-local-js-files.patch, got applied upstream.
+    * d/patches/0001-README.rst-remove-embedded-images.patch: Remove
+      embedded images from README.rst.
+    * d/contrib/*: Remove JS libraries html5shiv and respond, both now
+      shipped upstream.
+  * d/copyright: Update copyright statements for JS libraries
+  * d/patches/0002-example_project-Fix-path-to-urls-for-tests.patch:
+    Fix path to urls module to run postorius testsuite.
+  * d/tests/control: Add new test that runs postorius testsuite.
+  * d/control: Bump standards-version to 4.1.2, no changes needed.
+  * d/upstream/signing-key.asc: Replace upstream GnuPG signing key from
+    Barry Warsaw (FP: 8417 157E DBE7 3D9E AC1E  539B 126E B563 A74B 06BF)
+    with the one from
+    Abhilash Raj (FP: 541E A044 8453 394F F77A  0ECC 9D9B 2BA0 61D0 A67C).
+
+ -- Jonas Meurer <mejo@debian.org>  Thu, 14 Dec 2017 12:43:19 +0100
+
+postorius (1.1.0-1) unstable; urgency=low
+
+  [ Pierre-Elliott Bécue ]
+  * Initial release (Closes: #799285)
+
+  [ Jonas Meurer ]
+  * Update to upstream version 1.1.0
+
+ -- Jonas Meurer <mejo@debian.org>  Mon, 02 Oct 2017 21:03:11 +0200

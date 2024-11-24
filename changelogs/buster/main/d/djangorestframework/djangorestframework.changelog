@@ -1,0 +1,296 @@
+djangorestframework (3.9.0-1+deb10u1) buster-security; urgency=medium
+
+  * Backport 4bb9a3c48427867ef1e46f7dee945a4c25a4f9b8 to fix cross-site
+    scripting caused by disabled autoescaping in the default DRF
+    Browsable API view templates (no CVE yet)
+  * Backport ae649336b110afe21b9429f2554052f31a9dfaf9 to address
+    CVE-2020-25626 
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Thu, 21 Jul 2022 14:24:42 +0200
+
+djangorestframework (3.9.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pierre-Elliott Bécue ]
+  * New upstream release: 3.9.0
+    - d/control:
+      + Add python{,3}-yaml as a build-dependency
+      + Add python{,3}-yaml as a Recommend
+      + Add python{,3}-psycopg2 as a Recommend
+    - d/rules:
+      + changelog moved from docs/topics/release-notes.md
+        to docs/community/release-notes.md
+    - Updated patches
+  * d/control:
+    - Bump Standards-Version to 4.2.1.
+  * d/rules:
+    - Replace the fonts in dh_python{2,3} to make sure the links are in the
+      appropriate /usr/lib/pythonX dirs
+  * d/s/lintian-overrides:
+    - Remove wildcard source-is-missing
+
+  [ Dmitry Shachnev ]
+  * Use the default mkdocs theme, the custom one is incompatible with
+    mkdocs 1.0 (closes: #916621).
+  * Use dh_mkdocs for symlinking static files.
+
+ -- Pierre-Elliott Bécue <peb@debian.org>  Tue, 25 Dec 2018 01:20:40 +0100
+
+djangorestframework (3.8.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/rules:
+    - Remove duplicate symlinks
+    - Remove all symlinks to font-awesome, as the newest version of
+      font-awesome is not backward compatible. Use the package's embedded ones
+      instead, for now.
+    - Sets the fontawesome fonts permissions right (remove the executable bit)
+  * d/control:
+    - Remove bin-dependency on fonts-font-awesome package for now.
+    - Bump Standards-Version to 4.1.4. No change required.
+  * d/patches:
+    - Patches rebased accordingly to the new release.
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Tue, 05 Jun 2018 13:27:06 +0200
+
+djangorestframework (3.8.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Brian May <bam@debian.org>  Thu, 03 May 2018 17:30:32 +1000
+
+djangorestframework (3.7.7-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Pierre-Elliott Bécue ]
+  * Merge all patches
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Mon, 12 Mar 2018 20:47:33 +0100
+
+djangorestframework (3.7.7-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version: 3.7.7. (Closes: #865588, #880558)
+  * Add d/patches/0003 to fix a lot of privacy breaches
+  * d/contrib/docs/img/whole-structure.jpg added
+  * d/control:
+    - dh dependency to 11
+    - Add missing build dependency on python3?-coreapi
+    - Tidy all dependencies and versions
+    - Add dependencies on javascript/fonts libraries to fit d/rules needs
+  * d/compat to 11
+  * d/copyright:
+    - Use https link for copyright format
+    - Updates of years, and adding the contrib/ image
+  * d/rules:
+    - Add rules to remove embedded contents that are packaged and link to the
+      packaged ones.
+    - Add upstream's changelog to the packages
+  * d/python-djangorestframework-doc.doc-base:
+    - Fixes file paths since d/compat is to 11
+  * d/missing-sources:
+    - Removes jquery 1.11.3
+    - Add missing sources, and cleans a lintian error that is not fixable.
+
+ -- Pierre-Elliott Bécue <becue@crans.org>  Sat, 03 Feb 2018 16:31:01 +0100
+
+djangorestframework (3.4.0-2) unstable; urgency=medium
+
+  * Don't move grid.png to wrong spot in python3 package. Closes: #858811.
+
+ -- Brian May <bam@debian.org>  Mon, 27 Mar 2017 18:15:43 +1100
+
+djangorestframework (3.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update standards version to 3.9.8
+  * Update source for jquery-1.12.4.js
+  * Fix FTBFS. Closes: #830633.
+
+ -- Brian May <bam@debian.org>  Fri, 15 Jul 2016 19:44:22 +1000
+
+djangorestframework (3.3.2-2) unstable; urgency=medium
+
+  * Fix FTBFS by setting LC_CTYPE and LC_ALL. Closes: #812672.
+
+ -- Brian May <bam@debian.org>  Tue, 26 Jan 2016 15:50:22 +1100
+
+djangorestframework (3.3.2-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Brian May <bam@debian.org>  Sun, 03 Jan 2016 13:54:05 +1100
+
+djangorestframework (3.3.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Brian May <bam@debian.org>  Thu, 19 Nov 2015 08:24:02 +1100
+
+djangorestframework (3.3.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Brian May <bam@debian.org>  Fri, 30 Oct 2015 20:05:35 +1100
+
+djangorestframework (3.2.2-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Python 3.5 fix applied.
+  * Builds fine with Django1.8. Closes: #801927.
+
+ -- Brian May <bam@debian.org>  Mon, 17 Aug 2015 16:28:00 +1000
+
+djangorestframework (3.0.5-2) unstable; urgency=medium
+
+  * Add VCS-* headers.
+
+ -- Brian May <bam@debian.org>  Mon, 17 Aug 2015 13:41:15 +1000
+
+djangorestframework (3.0.5-1) unstable; urgency=medium
+
+  * Change maintainer to make package DPMT maintained, with permission of
+    current maintainer - see #756886.
+
+ -- Brian May <bam@debian.org>  Fri, 07 Aug 2015 10:42:13 +1000
+
+djangorestframework (3.0.5-0.2) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix broken links to media files. Remove debian/*.links, these symlinks are
+    no longer relevant.
+
+ -- Brian May <bam@debian.org>  Mon, 16 Mar 2015 14:20:11 +1100
+
+djangorestframework (3.0.5-0.1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.
+
+ -- Brian May <bam@debian.org>  Sun, 15 Mar 2015 18:49:15 +1100
+
+djangorestframework (2.4.3-2) unstable; urgency=medium
+
+  * Supported Python3 (Closes: #756886)
+    - Appended python3-djangorestframework.
+  * debian/control
+    - Build-Depends
+      * Appended: python3-all, python3-setuptools, python3-django,
+        python3-markdown, python3-defusedxml, python3-django-filters,
+        python3-django-guardian, dh-python.
+      * Removed: quilt.
+    - Updated dependencies of python-django >= 1.3 to >= 1.4.2.
+  * debian/rules
+    - Updated for using pybuild.
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Mon, 13 Oct 2014 16:03:47 +0900
+
+djangorestframework (2.4.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Ensure it works with Django 1.7 (Closes: #755616)
+  * debian/control
+    - Standards-Version: Bump version to 3.9.6.
+  * Deleted debian/patches/disable-oauth2-and-oauth-provider.patch.
+    - Upstream changed supports OAuth.
+  * debian/rules
+    - Changed run_tests.py path at override_dh_auto_test.
+  * Added debian/run_tests.py, debian/test_settings.py
+    - For override_dh_auto_test.
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Mon, 13 Oct 2014 09:45:40 +0900
+
+djangorestframework (2.3.14-3) unstable; urgency=medium
+
+  * Fixed Broken symlink for grid.png (Closes: #760548)
+    - debian/rules
+      * Appended override_dh_python2 target.
+    - Thanks for Michael Fladischer <FladischerMichael@fladi.at>
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Fri, 05 Sep 2014 19:00:17 +0900
+
+djangorestframework (2.3.14-2) unstable; urgency=medium
+
+  * Fixed depends on insecure and unmaintained python-oauth2 (Closes: #758387)
+    - Dropped dependencies of python-oauth2, python-django-oauth-plus.
+    - Added debian/patches/disable-oauth2-and-oauth-provider.patch.
+    - Thanks for Brian May <brian@microcomaustralia.com.au>
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Thu, 04 Sep 2014 14:22:37 +0900
+
+djangorestframework (2.3.14-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Sat, 19 Jul 2014 15:10:40 +0900
+
+djangorestframework (2.3.13-2) unstable; urgency=medium
+
+  * Fixed FTBFS No module named xmlrunner.extra.djangotestrunner
+   (Closes: #747957)
+    - Append python-xmlrunner to Build-Depends.
+  * Fixed source-is-missing docs/js/prettify-1.0.js.
+    - Uncompressed file is included in append_uncompressed_js_libraries.patch,
+      but lintian is not detect file (docs/js/prettify-1.0-uncompressed.js).
+    - So added prettify-1.0.js uncompressed file to debian/missing-sources/.
+  * Added debian/patches/remove_remote_resources.patch.
+  * Fixed image-file-in-usr-lib.
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Wed, 11 Jun 2014 12:21:13 +0900
+
+djangorestframework (2.3.13-1) unstable; urgency=medium
+
+  * New upstream release
+  * Append dependency to python-djangorestframework
+    - python-pil to Build-Depends, Depends.
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Fri, 14 Mar 2014 00:34:32 +0900
+
+djangorestframework (2.3.12-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixed FTBFS with django 1.6 (Closes: #729829)
+  * debian/control
+    - Update Standards-Version.
+    - Update X-Python-Version 2.6 to 2.7.
+    - Append dependency to python-djangorestframework-doc
+      * python-markdown to Depends
+    - Append dependency to python-djangorestframework
+      * Depends, Build-Depends
+        - python-django-guardian, python-oauth2, python-django-oauth-plus
+      * quilt to Build-Depends.
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Fri, 24 Jan 2014 00:03:39 +0900
+
+djangorestframework (2.3.7-2) unstable; urgency=low
+
+  * Append dependency to python-djangorestframework (Closes: #723820)
+    - debian/control: Append "Suggests: python-djangorestframework-doc"
+    - Thanks to Ben Finney <ben+debian@benfinney.id.au> for reporting.
+  * Change depends on python-django-filters (Closes: #723824)
+    - debian/control: change "django-filter" to "python-django-filters"
+    - Thanks to Ben Finney <ben+debian@benfinney.id.au> for reporting.
+  * Change some dependencies to Recommends in python-djangorestframework
+    - debian/control:
+      * Move python-yaml, python-defusedxml, python-django-filters
+        to Recommends.
+      * Append python-markdown to Recommends.
+      * Append python-defusedxml, python-django-filters to Build-Depends.
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Fri, 27 Sep 2013 18:43:28 +0900
+
+djangorestframework (2.3.7-1) unstable; urgency=low
+
+  * Initial release (Closes: #717551)
+  * debian/patches:
+    - change_resouce_path_of_html_documents.patch
+    - fixes_layout.patch
+    - remove_google_analytics.patch
+    - append_uncompressed_js_libraries.patch
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Tue, 03 Sep 2013 18:57:28 +0900

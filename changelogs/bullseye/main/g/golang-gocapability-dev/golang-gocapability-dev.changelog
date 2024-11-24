@@ -1,0 +1,97 @@
+golang-gocapability-dev (0.0+git20200815.42c35b4-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields.
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.0+git20200815.42c35b4
+  * Update maintainer email address to team+pkg-go@tracker.debian.org
+  * Add Rules-Requires-Root
+  * Update Standards-Version to 4.5.0
+  * Update debhelper-compat to 13
+  * Exclude enumgen when building
+  * Fix synopsis-is-a-sentence
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 23 Aug 2020 01:15:48 +0800
+
+golang-gocapability-dev (0.0+git20180916.d983527-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream snapshot.
+  * Added "watch" file to track HEAD of master.
+  * Set Golang team as Maintainer (Closes: #899288).
+  * Priority: optional; Standards-Version: 4.4.1.
+  * DH & compat to version 12.
+  * Testsuite: autopkgtest-pkg-go
+  * Re-enabled tests.
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 09 Oct 2019 19:24:11 +1100
+
+golang-gocapability-dev (0.0~git20160928.0.e7cb7fa-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build-Dep on golang-any, not golang
+  * Switch to XS-Go-Import-Path
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 10 Feb 2018 18:38:06 +0100
+
+golang-gocapability-dev (0.0~git20160928.0.e7cb7fa-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * New upstream snapshot.
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 21 Feb 2017 16:01:47 +1100
+
+golang-gocapability-dev (0.0~git20150716.0.2c00dae-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream snapshot (Closes: #823464).
+  * Update standards version to 3.9.8
+  * Remove duplicate copy of license in d/copyright
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 24 May 2016 10:59:59 +1000
+
+golang-gocapability-dev (0.0~git20150506.1.66ef2aa-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version (0.0~git20150506.1.66ef2aa).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 20 May 2015 02:58:32 -0600
+
+golang-gocapability-dev (0.0~git20150323.1.8e4cdcb-1) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sat, 02 May 2015 23:58:21 -0600
+
+golang-gocapability-dev (0.0~git20150323.1.8e4cdcb-1~exp1) experimental; urgency=low
+
+  * Team upload.
+  * New upstream version (0.0~git20150323.1.8e4cdcb).
+  * Bump Standards-Version to 3.9.6.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 01 Apr 2015 10:57:35 -0600
+
+golang-gocapability-dev (0.0~git20140516-1) unstable; urgency=low
+
+  * New upstream version (0.0~git20140516).
+
+ -- Johan Euphrosine <proppy@google.com>  Tue, 27 May 2014 16:17:07 -0700
+
+golang-gocapability-dev (0.0~git20130208-1) unstable; urgency=low
+
+  * Initial release (Closes: #735407)
+
+ -- Johan Euphrosine <proppy@google.com>  Wed, 15 Jan 2014 00:17:34 -0800

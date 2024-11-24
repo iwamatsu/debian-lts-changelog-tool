@@ -1,0 +1,297 @@
+xerces-c (3.2.2+debian-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2018-1311: Use-after-free on external DTD scan.  This replaces
+    RedHat's mitigation patch (which had a memory leak). (Closes: #947431)
+  * Fix CVE-2023-37536: Integer overflows in DFAContentModel class.
+  * Upstream tests: Cherry-pick upstream patch to fix NetAccessorTest to exit
+    with non-zero status in case of error.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Thu, 28 Dec 2023 22:12:50 +0100
+
+xerces-c (3.2.2+debian-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload.
+  * CVE-2018-1311 mitigation: fix use-after-free vulnerability when
+    processing external DTD, at the expense of a memory leak.  Users may
+    mitigate both by setting the XERCES_DISABLE_DTD environment variable.
+
+ -- Sylvain Beucler <beuc@debian.org>  Tue, 15 Dec 2020 15:55:44 +0100
+
+xerces-c (3.2.2+debian-1) unstable; urgency=medium
+
+  * New upstream version 3.2.2+debian Closes: 909202
+  * Add gbp.conf
+  * Update VCS URLs
+  * Update maintainer email
+  * Remove duplicate VCS URL
+  * Update standards to 4.2.1 (no changes needed)
+
+ -- William Blough <bblough@debian.org>  Wed, 19 Sep 2018 15:19:49 -0400
+
+xerces-c (3.2.1+debian-2) unstable; urgency=medium
+
+  * Fixes regression related to SSE2 detection/support, which
+    causes a baseline violation on i386.  Closes: 895068
+  * Update to policy 4.1.4 (no changes)
+  * Update to debhelper compat 11
+  * Simplify installation of NOTICE files
+
+ -- William Blough <devel@blough.us>  Thu, 26 Apr 2018 01:02:02 -0400
+
+xerces-c (3.2.1+debian-1) unstable; urgency=medium
+
+  * New upstream release.  Closes: 891841
+    Fixes CVE-2017-12627  Closes: 894050
+  * Update to policy 4.1.3 (no changes)
+  * Remove patch that was applied upstream
+  * Lintian fixes:
+    - remove trailing whitespace in changelog
+    - install NOTICE file
+    - change watch file to use https
+
+ -- William Blough <devel@blough.us>  Wed, 28 Mar 2018 17:56:05 -0400
+
+xerces-c (3.2.0+debian-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- William Blough <devel@blough.us>  Fri, 10 Nov 2017 14:04:36 -0500
+
+xerces-c (3.2.0+debian-1) experimental; urgency=medium
+
+  * New upstream version
+  * Update to policy 4.1.1
+    - Change d/copyright Format URL to use https
+  * Remove patches that have been applied upstream
+  * Set dh compat to 10
+  * Patch: Fix test failures for parallel builds (forwarded)
+
+ -- William Blough <devel@blough.us>  Thu, 12 Oct 2017 01:49:25 -0400
+
+xerces-c (3.1.4+debian-2) unstable; urgency=medium
+
+  * Fix AC_LANG_SOURCE warnings.
+  * Override dh_auto_clean to also clean generated doc directory.
+    Closes: 847799
+  * Fix segfault in PSVIWriter. Closes: 715592
+  * Use -O1 on s390x to work around Bug: 833754
+  * Add hardening=+all build option
+  * Remove lintian override that was no longer needed
+
+ -- William Blough <devel@blough.us>  Sun, 11 Dec 2016 14:38:45 -0500
+
+xerces-c (3.1.4+debian-1) unstable; urgency=medium
+
+  * New upstream release
+  * Removed patches that are no longer needed (applied upstream)
+  * Compile with curl support to allow accessing https urls.  Closes: #821380
+  * Added patch to fix some compiler warnings (forwarded upstream)
+
+ -- William Blough <devel@blough.us>  Mon, 07 Nov 2016 20:38:09 -0500
+
+xerces-c (3.1.3+debian-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * CVE-2016-4463: Apache Xerces-C XML Parser Crashes on Malformed DTD
+    (Closes: #828990)
+  * Enable the ability to disable DTD processing through the use of an env
+    variable
+  * Add NEWS.Debian entry to document the XERCES_DISABLE_DTD variable
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 01 Jul 2016 14:28:51 +0200
+
+xerces-c (3.1.3+debian-2) unstable; urgency=medium
+
+  * Fix CVE-2016-2099: Exception handling mistake in DTDScanner.
+    Closes: #823863
+  * Update standards version to 3.9.8 (no changes needed)
+
+ -- William Blough <devel@blough.us>  Tue, 10 May 2016 00:34:51 -0400
+
+xerces-c (3.1.3+debian-1) unstable; urgency=medium
+
+  * New upstream version.
+    Fixes CVE-2016-0729: Apache Xerces-C XML Parser Crashes on Malformed
+    Input.  Closes: #815907
+  * Add build dependency on libatk-wrapper-java. Closes: #816021
+  * Updated standards version to 3.9.7 (no updates needed)
+  * Lintian fixes
+      d/copyright
+        fix typo in filename
+        fix duplicate license short name
+        add .svn to excluded files
+
+ -- William Blough <devel@blough.us>  Sat, 27 Feb 2016 00:48:56 -0500
+
+xerces-c (3.1.2+debian-1) unstable; urgency=medium
+
+  * New maintainer. Closes: #777698
+  * New upstream version
+  * Update standards version to 3.9.6, no changes required.
+  * Add watchfile and upstream signing key.  Closes: #744092
+    Thanks to David Gilman <dgilman@gilslotd.com> for the patch
+  * Remove redundant Build-dep entry (Lintian fix)
+  * Removed HURD patch since it was applied upstream
+  * Removed patch for CVE-2015-0252 since it was applied upstream
+  * Add patch to fix memcpy undefined behavior (upstream bug XERCESC-2049)
+  * Change from cdbs to dh
+  * Added more info to doc package description (Lintian fix)
+  * Change to DEP5 copyright format
+  * Added lintian override for false positive (hardening)
+  * Build docs from scratch
+  * Repack upstream source to remove 3rd party libs and prebuilt docs per
+      policy
+  * Lintian cleanup - removed duplicate files, removed embedded jquery
+
+
+ -- William Blough <devel@blough.us>  Mon, 12 Oct 2015 12:02:34 -0400
+
+xerces-c (3.1.1-5.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Add CVE-2015-0252.patch patch.
+    CVE-2015-0252: Apache Xerces-C XML parser crashes on malformed input.
+    (Closes: #780827)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 20 Mar 2015 19:40:31 +0100
+
+xerces-c (3.1.1-5) unstable; urgency=medium
+
+  * Apply upstream patch for PATH_MAX to enable compilation on GNU hurd.
+    (Closes: #636568)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Wed, 08 Jan 2014 15:48:01 -0500
+
+xerces-c (3.1.1-4) unstable; urgency=low
+
+  * Update standards version to 3.9.5.  Opting for shlibs files because of
+    C++ interface.  No changes required.
+  * Depend on dh-autoreconf. (Closes: #733024)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Tue, 24 Dec 2013 20:59:37 -0500
+
+xerces-c (3.1.1-3) unstable; urgency=low
+
+  * Update standards version to 3.9.3.
+  * Enable hardening flags
+  * Multiarch
+
+ -- Jay Berkenbilt <qjb@debian.org>  Fri, 29 Jun 2012 21:15:58 -0400
+
+xerces-c (3.1.1-2) unstable; urgency=low
+
+  * Stop installing .la files since no reverse dependencies are using them
+    anymore.  (Closes: #657663)
+  * Update standards version to 3.9.2.  No changes required.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 28 Jan 2012 10:15:59 -0500
+
+xerces-c (3.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 01 May 2010 08:39:53 -0400
+
+xerces-c (3.1.0-3) unstable; urgency=low
+
+  * Invoke configure with --disable-sse2 to disable sse2 extensions on
+    platforms for which they not are enabled by default.  This enables
+    xerces-c to work on older ix86 processors in particular.  This does
+    not disable sse2 extensions on systems for which they are enabled by
+    default, such as amd64 and ia64. (Closes: #574857)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Fri, 09 Apr 2010 22:11:54 -0400
+
+xerces-c (3.1.0-2) unstable; urgency=low
+
+  * Fix importNode so that it works with xmlns=""; patch from upstream.
+    (Closes: #572293)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 06 Mar 2010 12:44:16 -0500
+
+xerces-c (3.1.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated standards version to 3.8.4.  No changes required.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 06 Feb 2010 16:46:23 -0500
+
+xerces-c (3.1.0~rc1-1) unstable; urgency=low
+
+  * New upstream release; public release candidate uploaded at request of
+    upstream.
+  * Updated source format to '3.0 (quilt)'
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 05 Dec 2009 14:58:32 -0500
+
+xerces-c (3.0.1-2) unstable; urgency=low
+
+  * Add dependency for libxerces-c-dev on libicu-dev.  (Closes: #540964)
+  * Update standards to 3.8.3.  No changes required.
+  * Apply patch to correct CVE-2009-1885: DoS attack from nested DTDs.
+    (Closes: #540297)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Fri, 21 Aug 2009 17:47:51 -0400
+
+xerces-c (3.0.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sun, 22 Feb 2009 16:52:23 -0500
+
+xerces-c (3.0.0-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Jay Berkenbilt <qjb@debian.org>  Fri, 03 Oct 2008 18:24:57 -0400
+
+xerces-c (3.0.0~b2-1) experimental; urgency=low
+
+  * New upstream release
+  * Stopped using tarball in tarball, switched patchsys to quilt, and
+    created README.source.  Updated standards version to 3.8.0.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 02 Aug 2008 09:12:24 -0400
+
+xerces-c (3.0.0~b1-6) experimental; urgency=low
+
+  * Regenerate Makefile.in from patched Makefile.am.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Tue, 24 Jun 2008 10:56:57 -0400
+
+xerces-c (3.0.0~b1-5) experimental; urgency=low
+
+  * Add another change from upstream to address ICU-related failures.
+  * Replace Apache License with reference to file in common-licenses.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Mon, 23 Jun 2008 10:43:50 -0400
+
+xerces-c (3.0.0~b1-4) experimental; urgency=low
+
+  * Pull in all changes from upstream svn.  See if this addresses ongoing
+    build failures.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 03 May 2008 09:46:49 -0400
+
+xerces-c (3.0.0~b1-3) experimental; urgency=low
+
+  * Fix signature of main.  (Closes: #478418)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Mon, 28 Apr 2008 22:14:15 -0400
+
+xerces-c (3.0.0~b1-2) experimental; urgency=low
+
+  * Apply patch from upstream to handle ICU makefile's use of .o or .ao
+    for non-PIC object files on various platforms.  (Closes: #474756)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sun, 27 Apr 2008 21:01:48 -0400
+
+xerces-c (3.0.0~b1-1) experimental; urgency=low
+
+  * Initial release of re-organized xerces packages.  Going forward, any
+    given debian release will contain only one version of xerces-c at any
+    given major version number.  This source package, xerces-c, will
+    always correspond to the latest version.
+
+ -- Jay Berkenbilt <qjb@debian.org>  Sat, 22 Mar 2008 11:23:13 -0400

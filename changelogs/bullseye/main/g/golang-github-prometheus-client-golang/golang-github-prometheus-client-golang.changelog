@@ -1,0 +1,190 @@
+golang-github-prometheus-client-golang (1.9.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Switch to debian/watch version 4
+  * Indent debian/watch file
+  * Mark -dev package as Multi-Arch: foreign
+
+ -- Guillem Jover <gjover@sipwise.com>  Tue, 26 Jan 2021 20:16:02 +0100
+
+golang-github-prometheus-client-golang (1.9.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release. Closes: #974426
+  * Use '' instead of `' in text
+  * Move note about license location on Debian systems into a Comment field
+  * Update gitlab-ci.yml from latest upstream
+  * Switch Section to golang
+  * Switch to Standards-Version 4.5.1 (no changes needed)
+  * Move non-transitional dependency alternatives first
+  * Update gitignore entries
+  * Do not enable DH_VERBOSE by default
+
+ -- Guillem Jover <gjover@sipwise.com>  Sat, 23 Jan 2021 03:58:27 +0100
+
+golang-github-prometheus-client-golang (1.7.1-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository-Browse.
+
+  [ Lucas Kanashiro ]
+  * New upstream release.
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Thu, 23 Jul 2020 16:04:56 -0300
+
+golang-github-prometheus-client-golang (1.6.0-1) unstable; urgency=medium
+
+  [ Lucas Kanashiro ]
+  * New upstream release.
+  * Add myself to the Uploaders list
+  * Bump debhelper compatibility level to 13
+  * Add version constraint to golang-github-prometheus-client-model-dev
+  * Update version constraint of golang-github-prometheus-common-dev
+  * Declare compliance with Debian Policy 4.5.0
+  * Update years of the upstream copyright
+
+  [ Daniel Swarbrick ]
+  * Add myself to Uploaders
+  * Update maintainer email addresses / names
+
+ -- Martina Ferrari <tina@debian.org>  Mon, 22 Jun 2020 12:15:18 +0000
+
+golang-github-prometheus-client-golang (1.2.1-3) unstable; urgency=medium
+
+  * debian/control: Add Breaks for API changes.
+
+ -- Martina Ferrari <tina@debian.org>  Sun, 03 Nov 2019 01:17:15 +0000
+
+golang-github-prometheus-client-golang (1.2.1-2) unstable; urgency=medium
+
+  * Update minimum version of common library, which fixes a bug.
+
+ -- Martina Ferrari <tina@debian.org>  Tue, 29 Oct 2019 16:04:50 +0000
+
+golang-github-prometheus-client-golang (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove transitional golang-prometheus-client-dev package. Closes:
+    #939220
+  * Name update.
+  * Automatic cme fixes.
+  * Refresh and clean obsolete patches.
+  * Remove unneeded debian/install file.
+  * Add new dependencies.
+
+ -- Martina Ferrari <tina@debian.org>  Tue, 29 Oct 2019 09:40:40 +0000
+
+golang-github-prometheus-client-golang (0.9.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/gbp.conf: Stop using pristine-tar.
+
+ -- Martina Ferrari <tina@debian.org>  Fri, 19 Oct 2018 15:32:22 +0000
+
+golang-github-prometheus-client-golang (0.9.0~pre1+git20180417.82f5ff1-2) unstable; urgency=medium
+
+  * Release to unstable, as the new -common fails without it.
+
+ -- Martina Ferrari <tina@debian.org>  Wed, 23 May 2018 16:26:49 +0000
+
+golang-github-prometheus-client-golang (0.9.0~pre1+git20180417.82f5ff1-1) experimental; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Martina Ferrari ]
+  * Upload a snapshot of upstream repository, required by
+    prometheus-alertmanager.
+  * Skip test that accesses the network.
+  * Depend on latest common lib.
+  * Automated cme fixes.
+  * Upgrade dh compat to 11.
+  * Update debian/docs.
+
+ -- Martina Ferrari <tina@debian.org>  Sat, 19 May 2018 15:28:08 +0000
+
+golang-github-prometheus-client-golang (0.8.0-2) unstable; urgency=medium
+
+  * Disable flaky test. Closes: 854687.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Mark package as autopkgtest-able.
+  * debian/copyright: Format uses http protocol instead of https.
+  * A few formatting fixes from cme.
+  * debian/rules: Remove unneeded stuff.
+  * Add gbp.conf to reflect workflow and structure.
+
+ -- Martina Ferrari <tina@debian.org>  Mon, 28 Aug 2017 16:54:26 +0000
+
+golang-github-prometheus-client-golang (0.8.0-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Martina Ferrari ]
+  * New upstream release, which does not require repackaging any more.
+  * Rename source and binary packages, to match policy.
+  * debian/control: Update dependencies, Vcs links, add transitional package.
+  * Update and simplify packaging.
+  * debian/copyright: remove now obsolete entries.
+  * Remove now unneeded patches.
+
+ -- Martina Ferrari <tina@debian.org>  Thu, 18 Aug 2016 12:06:03 +0000
+
+golang-prometheus-client (0.7.0+ds-4) unstable; urgency=medium
+
+  * Switch to use the golang-github-prometheus-client-model-dev package.
+  * Update Standards-Version with no changes.
+  * Add XS-Go-Import-Path field.
+  * Add lintian overrides for compressed test files.
+
+ -- Martina Ferrari <tina@debian.org>  Fri, 06 May 2016 18:15:35 +0000
+
+golang-prometheus-client (0.7.0+ds-3) unstable; urgency=medium
+
+  * Add -common as new dependency, remove the private copy of the model
+    protobuf.
+  * Skip another flaky test.
+
+ -- Martina Ferrari <tina@debian.org>  Mon, 11 Jan 2016 19:13:47 +0000
+
+golang-prometheus-client (0.7.0+ds-2) unstable; urgency=medium
+
+  * Disable flaky TestSummaryDecay test. Closes: #796421.
+
+ -- Martina Ferrari <tina@debian.org>  Sat, 22 Aug 2015 09:41:21 +0000
+
+golang-prometheus-client (0.7.0+ds-1) unstable; urgency=medium
+
+  * debian/control: Migration to pkg-go team.
+  * Add missing test data.
+  * New upstream version.
+
+ -- Martina Ferrari <tina@debian.org>  Sat, 22 Aug 2015 00:10:11 +0200
+
+golang-prometheus-client (0.6.0+ds-1) unstable; urgency=medium
+
+  * New upstream release, which includes an incompatible change in metric
+    fingerprints, so invalidates all past storage. This is not a problem yet,
+    because prometheus is still not uploaded to Debian.
+  * debian/patches: Refresh, remove unneeded patch.
+  * Upstream now vendors all dependencies: remove the ones already in Debian.
+  * New patch: Fix import path for remaining vendored dependencies.
+  * Update watchfile for repackaging mangle.
+  * Add missing binary dependencies.
+  * Reduce the length of the vendored dependencies import names.
+  * Fix bug in which the compiled protocol buffer was not found by code using
+    this package.
+
+ -- Martina Ferrari <tina@debian.org>  Mon, 29 Jun 2015 16:19:04 +0000
+
+golang-prometheus-client (0.2.0-1+1) unstable; urgency=medium
+
+  * Re-build with current versions of build dependencies.
+
+ -- Martina Ferrari <tina@debian.org>  Sun, 01 Mar 2015 13:43:22 +0000
+
+golang-prometheus-client (0.2.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #779260)
+
+ -- Martina Ferrari <tina@debian.org>  Thu, 26 Feb 2015 14:12:39 +0000

@@ -1,0 +1,827 @@
+dropbear (2018.76-5+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add patch to add option to disable trivial auth methods.
+    (Fixes: CVE-2021-36369)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Fri, 28 Oct 2022 17:29:39 +0530
+
+dropbear (2018.76-5+deb10u1) buster; urgency=medium
+
+  * Backport security fix for CVE-2019-12953: Inconsistent failure delay that
+    may lead to revealing valid usernames.  The fix limits password length to
+    100 bytes.  (Closes: #1009062.)
+    Cherry-picked from https://hg.ucc.asn.au/dropbear/rev/228b086794b7 .
+  * d/gbp.conf: Set debian-branch = debian/buster.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Wed, 06 Apr 2022 20:54:24 +0200
+
+dropbear (2018.76-5) unstable; urgency=medium
+
+  * Put custom options, such as SFTPSERVER_PATH, in localoptions.h not in
+    debian/rules.  Regression since 2018.76-1, cf. upstream's CHANGES file.
+    (Closes: #915826.)
+  * debian/upstream/signing-key.asc: Minimize upstream's OpenPGP certificate.
+  * debian/control: Bump Standards-Version to 4.3.0 (no changes necessary).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Tue, 12 Feb 2019 13:06:15 +0100
+
+dropbear (2018.76-4) unstable; urgency=medium
+
+  * Backport security fix for CVE-2018-15599: The recv_msg_userauth_request
+    function in svr-auth.c in Dropbear through 2018.76 is prone to a user
+    enumeration vulnerability because username validity affects how fields in
+    SSH_MSG_USERAUTH messages are handled.  (Closes: #906890.)
+    Cherry-picked from https://secure.ucc.asn.au/hg/dropbear/rev/5d2d1021ca00 .
+  * debian/control: Bump Standards-Version to 4.2.0 (no changes necessary).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Fri, 24 Aug 2018 14:36:51 +0200
+
+dropbear (2018.76-3) unstable; urgency=medium
+
+  * debian/initramfs/bottom-dropbear:
+    + Read and parse /proc/*/stat instead of ps(1)'s output, as ps(1) options
+      differ between Debian and Ubunt's busybox.  Thanks to 'eviljoel' for the
+      patch. (LP: #1652091.)
+    + Normalize paths before comparison.  This fixes dropbear shutdown on
+      initramfs images with an usrmerge layout, such as images made by
+      mkinitramfs(8) from initramfs-tools-core 0.132.
+  * debian/control: Bump Standards-Version to 4.1.5 (no changes necessary).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 30 Jul 2018 17:09:02 +0800
+
+dropbear (2018.76-2) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 4.1.4 (no changes necessary).
+    + Migrate Vcs-Browser and Vcs-Git from Alioth to Salsa.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Tue, 05 Jun 2018 18:15:34 +0200
+
+dropbear (2018.76-1) unstable; urgency=low
+
+  * New upstream release.  Configuration/compatibility changes:
+    + "dropbear -r" option for hostkeys no longer attempts to load the default
+      hostkey paths as well. If desired these can be specified manually.
+    + group1-sha1 key exchange is disabled in the server by default since the
+      fixed 1024-bit group may be susceptible to attacks
+    + twofish ciphers are now disabled in the default configuration
+    + Default generated ECDSA key size is now 256 (rather than 521)
+      for better interoperability
+    + Minimum RSA key length has been increased to 1024 bits
+    See https://dropbear.nl/mirror/CHANGES for the full changelog.
+  * debian/control: bump Standards-Version to 4.1.3 (no changes necessary).
+  * debian/dropbear-bin.docs: Remove TODO file.
+  * debian/rules: Explicitly append "-fPIE -pie" to the LDFLAGS.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 05 Mar 2018 14:36:19 +0100
+
+dropbear (2017.75-3) unstable; urgency=low
+
+  * debian/control:
+    + Remove hardcoding of libtomcryptX/libtommathY in dropbear-bin's Depends.
+      (Closes: #879221.)
+    + Bump Standards-Version to 4.1.1.  Changes:
+      - Replace dropbear's Priority from extra to optional (inherited from
+        source package paragraph).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sun, 22 Oct 2017 14:30:10 +0200
+
+dropbear (2017.75-2) unstable; urgency=low
+
+  * dropbear-initramfs:
+    + init-bottom script: in the init-bottom script, send a SIGTERM to all
+      process groups the leader of which is a child of the dropbear process,
+      to ensure that all children of all SSH sessions are terminated (before
+      dropear itself is killed).
+    + postinst: don't print the reminder to check "ip=" boot parameter if it's
+      already found in /proc/cmdline.
+    + premount script: log to standard error if the 'debug' environment
+      variable is set.
+    + premount script: boot method (local or NFS) is in environment variable
+      'BOOT' not 'boot'.
+    + On local mounts, don't bring down the network before dropbear was
+      terminated (at init-bottom stage, not at local-bottom stage).  Bringing
+      down the network while an SSH session is still active makes clients hang
+      until the connection times out.
+    + init-bottom script: log which network interfaces are being brought down.
+    + init-bottom script: replace xargs(1) with a while loop as it's
+      apparently not included in Ubuntu's busybox.  (LP: #1652091)
+    + Compile with '--disable-bundled-libtom' to use system libtomcrypt /
+      libtommath.  (Closes: #870035)
+  * debian/control: bump Standards-Version to 4.0.0 (no changes necessary).
+  * debian/{control,dropbear-bin.install,dropbear-bin.manpages}: apply
+    wrap-and-sort(1).
+
+ -- Guilhem Moulin <guilhem@debian.org>  Tue, 08 Aug 2017 21:59:06 +0200
+
+dropbear (2017.75-1) unstable; urgency=medium
+
+  * New upstream release.  Remove quilt patches CVE-2017-9078 and
+    CVE-2017-9079, previously backported from 2017.75 to 2016.74-5.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sat, 17 Jun 2017 12:36:10 +0200
+
+dropbear (2016.74-5) unstable; urgency=high
+
+  * Backport security fixes from 2017.75 (closes: #862970):
+    - CVE-2017-9078: Fix double-free in server TCP listener cleanup
+      A double-free in the server could be triggered by an authenticated user
+      if dropbear is running with -a (Allow connections to forwarded ports
+      from any host) This could potentially allow arbitrary code execution as
+      root by an authenticated user.
+    - CVE-2017-9079: Fix information disclosure with ~/.ssh/authorized_keys
+      symlink.
+      Dropbear parsed authorized_keys as root, even if it were a symlink. The
+      fix is to switch to user permissions when opening authorized_keys
+      A user could symlink their ~/.ssh/authorized_keys to a root-owned file
+      they couldn't normally read. If they managed to get that file to contain
+      valid authorized_keys with command= options it might be possible to read
+      other contents of that file.
+      This information disclosure is to an already authenticated user.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Fri, 19 May 2017 23:41:21 +0200
+
+dropbear (2016.74-4) unstable; urgency=medium
+
+  * Also trigger maintainer scripts when upgrading from dropbear
+    2014.65-1+deb8u1, by changing the upper bound from 2014.65-1 to
+    2015.68-1~.  (Closes: #862544)
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Sun, 14 May 2017 16:56:40 +0200
+
+dropbear (2016.74-3) unstable; urgency=high
+
+  * debian/copyright: add missing paragraphs to match upstream's LICENSE file.
+    (Closes: #860406.)
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Sun, 16 Apr 2017 12:22:56 +0200
+
+dropbear (2016.74-2) unstable; urgency=low
+
+  * Tolerate lack of boot script config file /etc/dropbear-initramfs/config.
+    This can happen when dropbear-initramfs is upgraded (from <2016.73-1)
+    along with the kernel, and the kernel is configured before
+    dropbear-initramfs, cf. #841503.
+  * debian/control: Add Depends: lsb-base (>= 3.0-6) for dropbear-run.
+  * debian/README.Debian, debian/copyright: upgrade the homepage URI to
+    https://.
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Tue, 13 Dec 2016 23:44:50 +0100
+
+dropbear (2016.74-1) unstable; urgency=medium
+
+  [ Matt Johnston ]
+  * New upstream release.
+
+  [ Guilhem Moulin ]
+  * debian/control:
+    + Bump Standards-Version to 3.9.8 (no changes necessary).
+  * Fix initramfs hostkey path in changelog and NEWS file.  Patch from Lukáš
+    Krejza.  (Closes: #830826.)
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Fri, 29 Jul 2016 10:29:42 +0200
+
+dropbear (2016.73-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+
+  [ Guilhem Moulin ]
+  * dropbear-initramfs, dropbear-run:
+    + In the postinst script, only generate host keys when all three key types
+      (DSS, RSA, ECDSA) are missing.  For instance if an RSA host key is
+      present, a missing DSS host key will not be automatically generated.
+    + Change architecture from 'any' to 'all' and remove --link-doc.  This
+      enables dropbear-initramfs to have its own NEWS file.
+  * dropbear-run:
+    + Use dh_installdirs to create /etc/dropbear.
+  * dropbear-initramfs:
+    + Take host keys (resp. authorized_keys) from /etc/dropbear-initramfs
+      instead of /etc/initramfs-tools/etc/dropbear (resp.
+      /etc/initramfs-tools/root/.ssh).
+      These files are automatically moved on upgrade.
+      This is done following the initramfs-tools maintainers' request (see
+      #807527) that hook and boot script configuration files be stored outside
+      the /etc/initramfs-tools directory.
+    + Move hook script initramfs configuration from
+      /etc/initramfs-tools/conf-hooks.d/dropbear to
+      /usr/share/initramfs-tools/conf-hooks.d/dropbear.  As a consequence, the
+      file is no longer recognized as a user configuration file; it is only
+      used to set a restrictive umask (to avoid disclosing the host keys) and
+      to force the use of busybox.
+    + Use /etc/dropbear-initramfs/config as initramfs boot script
+      configuration.  For backward compatibility setting dropbear options in
+      /etc/initramfs-tools/initramfs.conf is still supported for now (but
+      sourcing this file causes the hook to print a warning).
+      (Closes: #819320.)
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Wed, 13 Apr 2016 19:00:06 +0200
+
+dropbear (2016.72-1) unstable; urgency=high
+
+  [ Matt Johnston ]
+  * New upstream release, fixing a xauth command injection vulnerability.  See
+    also http://www.openwall.com/lists/oss-security/2016/03/10/8
+
+  [ Guilhem Moulin ]
+  * debian/control:
+    + Bump Standards-Version to 3.9.7 (no changes necessary).
+    + Change Vcs-Git URI from git:// to https://.
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Thu, 10 Mar 2016 22:14:47 +0100
+
+dropbear (2015.71-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+
+  [ Guilhem Moulin ]
+  * dropbear-initramfs:
+    + init-premount script: on local mounts, fork before
+      'configure_networking', so a user with access to the keyboard doesn't
+      need to wait for ipconfig to terminate to enter the passphrase.
+      (Closes: #806884.)  It doesn't affect our fix to #584780 since
+      'configure_networking' and 'dropbear' run sequentially in the same
+      process.
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Fri, 18 Dec 2015 13:10:57 +0100
+
+dropbear (2015.70-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+
+  [ Guilhem Moulin ]
+  * dropbear-initramfs:
+    + Take dropbear options from the DROPBEAR_OPTIONS environment variable,
+      for consistency with DROPBEAR_IFDOWN.  For backward compatibility the
+      value of $PKGOPTION_dropbear_OPTION is used when DROPBEAR_OPTIONS is
+      unset.
+    + Take ownership of cryptsetup's /usr/share/doc/cryptsetup/README.remote
+      and ship it as /usr/share/doc/dropbear-initramfs/README.initramfs .
+  * debian/patches:
+    + 0001-dbclient.1-dbclient-uses-compression-if-compiled-with.diff: Remove
+      patch applied upstream.
+    + 0002-dropbearkey.8-mention-y-option-add-example.diff: Remove patch
+      applied upstream.
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Thu, 26 Nov 2015 17:06:59 +0100
+
+dropbear (2015.68-1) unstable; urgency=low
+
+  * New co-maintainer.
+
+  [ Matt Johnston ]
+  * New upstream release.  (Closes: #631858, #775222.)
+
+  [ Guilhem Moulin ]
+  * debian/source/format: 3.0 (quilt)
+  * debian/compat: 9
+  * debian/control:
+    + Bump Standards-Version to 3.9.6 (no changes necessary).
+    + Add Homepage, Vcs-Git, and Vcs-Browser fields.
+  * debian/copyright: add machine-readable file.
+  * Split up package in dropbear-bin (binaries), dropbear-run (init scripts)
+    and dropbear-initramfs (initramfs integration).  'dropbear' is now a
+    transitional dummy package depending on on dropbear-run and
+    dropbear-initramfs.  (Closes: #692932.)
+  * Refactor the package using dh_* tools, including dh_autoreconf.  (Closes:
+    #689618, #777324, #793006, #793917.)
+  * Add 'Multi-Arch: foreign' tags.
+  * dropbear-run:
+    + Add a status option to the /etc/init.d script.
+    + Pass key files with -r not -d in /etc/init.d script.  (Closes: #761143.)
+    + Post-installation script: Generate missing ECDSA in addition to RSA and
+      DSS host keys.  (Closes: #776976.)
+  * dropbear-initramfs:
+    + No longer mark /usr/share/initramfs-tools/conf-hooks.d/dropbear as a
+      configuration file, since it violates the Debian Policy Manual section
+      10.7.2.  (Regression from 2014.64-1.)  Instead, move the file to
+      /etc/initramfs-tools/conf-hooks.d/dropbear and add a symlink in
+      /usr/share/initramfs-tools/conf-hooks.d.
+    + Delete debian/initramfs/premount-devpts, since /dev/pts in mounted by
+      init since initramfs-tools 0.94.  (Closes: #632656, #797939.)
+    + Auto-generate host keys in the postinstall script, not when runing
+      update-initramfs.  Pass the '-R' option (via $PKGOPTION_dropbear_OPTION)
+      for the old behavior.  Also, print fingerprint and ASCII art for
+      generated keys (if ssh-keygen is available).
+    + Revert ad2fb1c and remove warning about changing host key.  Users
+      shouldn't be encouraged to use the same keys in the encrypted partition
+      and in the initramfs.  The proper fix is to use an alternative port or
+      UserKnownHostFile.
+    + Set ~root to `mktemp -d "$DESTDIR/root-XXXXXX"` to avoid collisions with
+      $rootmnt.  (Closes: #558115.)
+    + Exit gracefully if $IP is 'none' or 'off'.  (Closes: #692932.)
+    + Start dropbear with flag -s to explicitly disable password logins.
+    + Terminate all children before killing dropbear, to avoid stalled SSH
+      connections.  (Closes: #735203.)
+    + Run configure_networking in the foreground.  (Closes: #584780, #626181,
+      #739519.)
+    + Bring down interfaces and flush IP routes and addresses before exiting
+      the ramdisk, to avoid dirty network configuration in the regular kernel.
+      (Closes: #715048, #720987, #720988.)  The interfaces considered are
+      those matching the $DROPBEAR_IFDOWN shell pattern (default: '*'); the
+      special value 'none' keeps all interfaces up and preserves routing
+      tables and addresses.
+
+ -- Guilhem Moulin <guilhem@guilhem.org>  Sat, 03 Oct 2015 20:47:33 +0200
+
+dropbear (2014.65-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release (closes: #757780).
+
+  [ Gerrit Pape ]
+  * debian/diff/0003-options.h-use-usr-bin-xauth-instead-of...diff:
+    remove; applied upstream.
+  * debian/control: Standards-Version: 3.9.5.0.
+
+ -- Gerrit Pape <pape@smarden.org>  Mon, 11 Aug 2014 20:50:11 +0000
+
+dropbear (2014.64-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release (closes: #748826, #756561)..
+
+  [ Gerrit Pape ]
+  * debian/diff/: update.
+  * debian/initramfs/premount-devpts: apply patch from
+    https://launchpadlibrarian.net/107177971/dropbear_lp933903_precise_1.debdiff:
+    duplicate mount /dev/pts in initramfs (thx Mario 'BitKoenig' Holbe,
+    Guy Roussin, closes: #632656).
+  * debian/dropbear.postinst: apply patch from Karl O. Pinc: dropbear's
+    cryptroot setup does not use the system's host keys (closes:
+    #714899).
+  * debian/initramfs/dropbear-hook: apply patch from Karl O. Pinc:
+    There is no warning when the cryptroot host key differs from the
+    regular host key (closes: #714900).
+  * debian/dropbear.postrm: apply patch from Karl O. Pinc: dropbear does
+    not remove initramfs host keys on package purge (closes: #714945).
+  * debian/initramfs/premount-dropbear: apply half of patch from
+    Robert.Heinzmann: allow option specification for dropbear in
+    /etc/initramfs-tools/initramfs.conf (closes: #614981).
+  * debian/dropbear.conffiles: add
+    /usr/share/initramfs-tools/conf-hooks.d/dropbear (thx Karl O. Pinc,
+    closes: #715047).
+  * debian/rules: apply patch from Matthias Klose: please allow the
+    package to cross build (closes: #729845).
+
+ -- Gerrit Pape <pape@smarden.org>  Fri, 01 Aug 2014 12:44:51 +0000
+
+dropbear (2013.60-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+
+  [ Gerrit Pape ]
+  * debian/diff/0004-cve-2013-4421.diff, 0005-user-disclosure.diff:
+    remove; fixed upstream.
+  * debian/dropbear.postinst: don't fail if initramfs-tools it not
+    installed (closes: #692653).
+
+ -- Gerrit Pape <pape@smarden.org>  Fri, 25 Oct 2013 15:00:48 +0000
+
+dropbear (2012.55-1.4) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix cve-2013-4421: memory exhaustion issue (closes: #726019).
+  * Fix timing delays that may reveal whether a user account is valid
+    (closes: #726118).
+
+ -- Michael Gilbert <mgilbert@debian.org>  Wed, 16 Oct 2013 03:29:42 +0000
+
+dropbear (2012.55-1.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix initramfs hook when multiple variant of libc are installed.
+    All credits due to Helmut Grohne for the report and the solution.
+    (Closes: #682964)
+
+ -- Jérémy Bobbio <lunar@debian.org>  Thu, 08 Nov 2012 10:45:01 +0100
+
+dropbear (2012.55-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Unbreak initramfs hook when upgrading from Squeeze.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Tue, 25 Sep 2012 16:53:18 +0200
+
+dropbear (2012.55-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Adjust initramfs hook to work with multi-arch. Initial patch by
+    Michael Stapelberg. (Closes: #630581)
+
+ -- Jérémy Bobbio <lunar@debian.org>  Tue, 25 Sep 2012 09:17:06 +0200
+
+dropbear (2012.55-1) unstable; urgency=high
+
+  * New upstream release.
+    * Fix use-after-free bug that could be triggered if command="..."
+      authorized_keys restrictions are used.  Could allow arbitrary
+      code execution or bypass of the command="..." restriction to an
+      authenticated user.  This bug affects releases 0.52 onwards.
+      Ref CVE-2012-0920 (closes: #661150).  Thanks to Danny Fullerton
+      of Mantor Organization for reporting the bug.
+
+ -- Gerrit Pape <pape@smarden.org>  Mon, 27 Feb 2012 14:18:53 +0000
+
+dropbear (2011.54-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * new upstream release.
+    * Added ALLOW_BLANK_PASSWORD option. Dropbear also now allows public
+      key logins to accounts with a blank password. Thanks to Rob
+      Landley (closes: #555889).
+    * Bind to sockets with IPV6_V6ONLY so that it works properly on
+      systems regardless of the system-wide setting (closes: #636696).
+
+  [ Gerrit Pape ]
+  * debian/control: Standards-Version: 3.9.2.0.
+
+ -- Gerrit Pape <pape@smarden.org>  Wed, 16 Nov 2011 12:36:03 +0000
+
+dropbear (0.53.1-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+    * SSH_ORIGINAL_COMMAND environment variable is set by the server
+      when an authorized_keys command is specified (closes: #604524).
+
+  [ Gerrit Pape ]
+  * debian/rules: add --enable-bundled-libtom option to ./configure.
+  * debian/rules: remove -DXAUTH_COMMAND="/usr/bin/X11/xauth -q from
+    CFLAGS (workaround ./configure stupidity; closes: #625192).
+  * debian/diff/0003-options.h-use-usr-bin-xauth-instead-of...diff: new;
+    use /usr/bin/xauth instead of /usr/bin/X11/xauth for XAUTH_COMMAND
+    (closes: #614355).
+
+ -- Gerrit Pape <pape@smarden.org>  Mon, 02 May 2011 16:35:14 +0000
+
+dropbear (0.52-5) unstable; urgency=low
+
+  [ debian@x.ray.net ]
+  * debian/dropbear.postinst: initramfs-tools uses a conf-hooks.d/
+    directory for mkinitramfs ('compiletime') configuration, so to be
+    sure to read the whole/correct config we need to source the files
+    in there too, additionally to initramfs.conf (closes: #575504).
+  * debian/initramfs/dropbear-conf: set UMASK=0077 (closes: #578117).
+
+  [ Gerrit Pape ]
+  * debian/control: Standards-Version: 3.8.4.0.
+
+ -- Gerrit Pape <pape@smarden.org>  Sun, 18 Apr 2010 23:04:36 +0000
+
+dropbear (0.52-4) unstable; urgency=low
+
+  * debian/initramfs/dropbear-hook: allow more than one public key in
+    initramfs (thx Chris for the patch; closes: #548309).
+
+ -- Gerrit Pape <pape@smarden.org>  Tue, 06 Oct 2009 01:51:42 +0000
+
+dropbear (0.52-3) unstable; urgency=low
+
+  * debian/rules: configure: add XAUTH_COMMAND="/usr/bin/X11/xauth -q"
+    to CFLAGS (thx Axel Beckert, Colin Watson; closes: #532900).
+  * debian/dropbear.init: Improve abort messages due to
+    /etc/default/dropbear::NO_START (thx Jari Aalto for the patch;
+    closes: #541432).
+  * debian/control: Provides: ssh-server (thx Steffen Moeller; closes:
+    #543174)
+  * debian/control: Suggests: xauth (thx Francis Russell; closes:
+    #508233).
+
+ -- Gerrit Pape <pape@smarden.org>  Thu, 24 Sep 2009 14:37:17 +0000
+
+dropbear (0.52-2) unstable; urgency=medium
+
+  * debian/initramfs/premount-dropbear: run configure_networking in the
+    background (thx debian@x.ray.net, closes: #514213, #524728).
+  * debian/control: Standards-Version: 3.8.2.0.
+
+ -- Gerrit Pape <pape@smarden.org>  Sun, 28 Jun 2009 23:22:39 +0000
+
+dropbear (0.52-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+    * dbclient.1: mention optional 'command' argument (closes: #495823).
+
+  [ Gerrit Pape ]
+  * debian/diff/0001-dbclient.1-dbclient-uses-compression-if...diff:
+    new; dbclient.1: dbclient uses compression if compiled with zlib
+    support (thx Luca Capello, closes: #495825).
+  * debian/initramfs/*: new; cryptroot remote unlocking on boot feature
+    (thx debian@x.ray.net).
+  * debian/rules: install debian/initramfs/* (thx debian@x.ray.net).
+  * debian/control: Suggests: udev (for cryptroot support, thx
+    debian@x.ray.net).
+  * debian/dropbear.postinst: conditionally run update-initramfs -u
+    (for cryptroot support, thx debian@x.ray.net. closes: #465903).
+  * debian/diff/0002-dropbearkey.8-mention-y-option-add-example.diff:
+    new; mention -y option, add example (thx debian@x.ray.net).
+
+ -- Gerrit Pape <pape@smarden.org>  Wed, 19 Nov 2008 20:58:59 +0000
+
+dropbear (0.51-1) unstable; urgency=low
+
+  [ Matt Johnston ]
+  * New upstream release.
+    - Wait until a process exits before the server closes a connection,
+      so that an exit code can be sent. This fixes problems with exit
+      codes not being returned, which could cause scp to fail (closes:
+      #448397, #472483).
+
+  [ Gerrit Pape ]
+  * debian/dropbear.postinst: don't print an error message if the
+    update-service program is not installed (thx Matt).
+
+ -- Gerrit Pape <pape@smarden.org>  Thu, 27 Mar 2008 20:08:06 +0000
+
+dropbear (0.50-4) unstable; urgency=low
+
+  * debian/dropbear.init: apply patch from Petter Reinholdtsen: add LSB
+    formatted dependency info in init.d script (closes: #466257).
+  * debian/rules: no longer include symlinks for ./supervise/ subdirectories.
+  * debian/dropbear.postinst: upgrade from << 0.50-4: if dropbear is managed
+    by runit, remove service, and re-add using update-service(8).
+  * debian/control: Standards-Version: 3.7.3.0.
+  * debian/rules: target clean: don't ignore errors but check for readable
+    ./Makefile.
+
+ -- Gerrit Pape <pape@smarden.org>  Thu, 06 Mar 2008 19:06:58 +0000
+
+dropbear (0.50-3) unstable; urgency=low
+
+  * debian/dropbear.init: use the update-service(8) program from the runit
+    package instead of directly checking for the symlink in /var/service/.
+  * debian/README.runit: talk about update-service(8) instead of symlinks
+    in /var/service/.
+
+ -- Gerrit Pape <pape@smarden.org>  Fri, 15 Feb 2008 00:32:37 +0000
+
+dropbear (0.50-2) unstable; urgency=low
+
+  * debian/dropbear.README.Debian: no longer talk about entropy from
+    /dev/random, /dev/urandom is now used by default (thx Joey Hess,
+    closes: #441515).
+
+ -- Gerrit Pape <pape@smarden.org>  Mon, 24 Sep 2007 16:49:17 +0000
+
+dropbear (0.50-1) unstable; urgency=low
+
+  * debian/README.runit: minor.
+  * new upstream version.
+  * debian/diff/0001-options.h-use-dev-urandom-instead-of-dev-random-a.diff:
+    remove; fixed upstream.
+
+ -- Gerrit Pape <pape@smarden.org>  Thu, 09 Aug 2007 23:01:01 +0000
+
+dropbear (0.49-2) unstable; urgency=low
+
+  * debian/rules: apply diffs from debian/diff/ with patch -p1 instead of
+    -p0.
+  * debian/diff/0001-options.h-use-dev-urandom-instead-of-dev-random-a.diff:
+    new; options.h: use /dev/urandom instead of /dev/random as
+    DROPBEAR_RANDOM_DEV (closes: #386976).
+  * debian/rules: target clean: remove libtomcrypt/Makefile,
+    libtommath/Makefile.
+
+ -- Gerrit Pape <pape@smarden.org>  Sat, 09 Jun 2007 08:59:59 +0000
+
+dropbear (0.49-1) unstable; urgency=high
+
+  * new upstream release, fixes
+    * CVE-2007-1099: dropbear dbclient insufficient warning on hostkey
+      mismatch (closes: #412899).
+    * dbclient uses static "Password:" prompt instead of using the server's
+      prompt (closes: #394996).
+  * debian/control: Suggests: openssh-client, not ssh (closes: #405686);
+    Standards-Version: 3.7.2.2.
+  * debian/README.Debian: ssh -> openssh-server, openssh-client; remove
+    'Replacing OpenSSH "sshd" with Dropbear' part, this is simply done by not
+    installing the openssh-server package.
+  * debian/README.runit: runsvstat -> sv status.
+
+ -- Gerrit Pape <pape@smarden.org>  Fri,  2 Mar 2007 20:48:18 +0000
+
+dropbear (0.48.1-1) unstable; urgency=medium
+
+  * new upstream point release.
+    * Compile fix for scp
+  * debian/diff/dbclient.1.diff: new: document -R option to dbclient
+    accurately (thx Markus Schaber; closes: #351882).
+  * debian/dropbear.README.Debian: document a workaround for systems with
+    possibly blocking /dev/random device (closes: #355414)..
+
+ -- Gerrit Pape <pape@smarden.org>  Sun, 16 Apr 2006 16:16:40 +0000
+
+dropbear (0.48-1) unstable; urgency=medium
+
+  * New upstream release.
+  * SECURITY: Improve handling of denial of service attempts from a single
+    IP.
+
+  * debian/implicit: update to revision 1.11.
+  * new upstream release updates to scp from OpenSSH 4.3p2 - fixes a
+    security issue where use of system() could cause users to execute
+    arbitrary code through malformed filenames; CVE-2006-0225 (see also
+    #349645); the scp binary is not provided by this package though.
+
+ -- Gerrit Pape <pape@smarden.org>  Fri, 10 Mar 2006 22:00:32 +0000
+
+dropbear (0.47-1) unstable; urgency=high
+
+  * New upstream release.
+  * SECURITY: Fix incorrect buffer sizing; CVE-2005-4178.
+
+ -- Matt Johnston <matt@ucc.asn.au>  Thu, 8 Dec 2005 19:20:21 +0800
+
+dropbear (0.46-2) unstable; urgency=low
+
+  * debian/control: Standards-Version: 3.6.2.1; update descriptions to
+    mention included server and client (thx Tino Keitel).
+  * debian/dropbear.init: allow '/etc/init.d/dropbear stop' even though
+    'NO_START is not set to zero.' (closes: #336723).
+
+ -- Gerrit Pape <pape@smarden.org>  Tue,  6 Dec 2005 13:30:49 +0000
+
+dropbear (0.46-1) unstable; urgency=medium
+
+  * New upstream release, various fixes.
+  * debian/diff/dbclient-usage-typo.diff, debian/diff/manpages.diff: remove;
+    obsolete.
+  * debian/dbclient.1: move to ./dbclient.1.
+
+ -- Matt Johnston <matt@ucc.asn.au>  Fri, 8 July 2005 21:32:55 +0800
+
+dropbear (0.45-3) unstable; urgency=low
+
+  * debian/dropbear.init: init script prints human readable message in case
+    it's disabled (closes: #309099).
+  * debian/dropbear.postinst: configure: restart service through init script
+    instead of start.
+  * debian/dropbear.prerm: set -u -> set -e.
+
+ -- Gerrit Pape <pape@smarden.org>  Wed, 25 May 2005 22:38:17 +0000
+
+dropbear (0.45-2) unstable; urgency=low
+
+  * Matt Johnston:
+    * New upstream release, various fixes.
+
+ -- Gerrit Pape <pape@smarden.org>  Sat, 12 Mar 2005 15:17:55 +0000
+
+dropbear (0.44-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: install /usr/bin/dbclient; handle possible patches more
+    gracefully; install debian/dbclient.1 man page; enable target patch;
+    minor.
+  * debian/implicit: update to revision 1.10.
+  * debian/dbclient.1: new; man page.
+  * debian/diff/dbclient-usage-typo.diff: new; fix typo.
+  * debian/diff/manpages.diff: new; add references to dbclient man page.
+
+ -- Gerrit Pape <pape@smarden.org>  Sat,  8 Jan 2005 22:50:43 +0000
+
+dropbear (0.43-2) unstable; urgency=high
+
+  * Matt Johnston:
+    * New upstream release 0.43
+    * SECURITY: Don't attempt to free uninitialised buffers in DSS verification
+      code
+    * Handle portforwarding to servers which don't send any initial data
+      (Closes: #258426)
+  * debian/dropbear.postinst: remove code causing bothersome warning on
+    package install (closes: #256752).
+  * debian/README.Debian.diet: new; how to build with the diet libc.
+  * debian/dropbear.docs: add debian/README.Debian.diet.
+  * debian/rules: support "diet" in DEB_BUILD_OPTIONS; minor cleanup.
+
+ -- Gerrit Pape <pape@smarden.org>  Sat, 17 Jul 2004 19:31:19 +0000
+
+dropbear (0.42-1) unstable; urgency=low
+
+  * New upstream release 0.42.
+  * debian/diff/cvs-20040520.diff: remove; obsolete.
+  * debian/rules: disable target patch.
+
+ -- Matt Johnston <matt@ucc.asn.au>  Wed, 16 June 2004 12:44:54 +0800
+
+dropbear (0.41-3) unstable; urgency=low
+
+  * 1st upload to the Debian archive (closes: #216553).
+  * debian/diff/cvs-20040520.diff: new; stable cvs snapshot.
+  * debian/rules: new target patch: apply diffs in debian/diff/, reverse
+    apply in target clean; install man pages.
+  * debian/control: Priority: optional.
+
+ -- Gerrit Pape <pape@smarden.org>  Sun, 23 May 2004 08:32:37 +0000
+
+dropbear (0.41-2) unstable; urgency=low
+
+  * new maintainer.
+  * debian/control: no longer Build-Depends: debhelper; Build-Depends:
+    libz-dev; Standards-Version: 3.6.1.0; Suggests: runit; update
+    descriptions.
+  * debian/rules: stop using debhelper, use implicit rules; cleanup;
+    install dropbearconvert into /usr/lib/dropbear/.
+  * debian/impicit: new; implicit rules.
+  * debian/copyright.in: adapt.
+  * debian/dropbear.init: minor adaptions; test for dropbear service
+    directory.
+  * debian/README.runit: new; how to use dropbear with runit.
+  * debian/README.Debian, debian/docs: rename to debian/dropbear.*.
+  * debian/dropbear.docs: add debian/README.runit
+  * debian/conffiles: rename to debian/dropbear.conffiles; add init
+    script, and run scripts.
+  * debian/postinst: rename to debian/dropbear.postinst; adapt; use
+    invloke-rc.d dropbear start.
+  * debian/dropbear.prerm: new; invoke-rc.d dropbear stop.
+  * debian/postrm: rename to debian/dropbear.postrm; adapt; clean up
+    service directories.
+  * debian/compat, debian/dirs, dropbear.default: remove; obsolete.
+
+ -- Gerrit Pape <pape@smarden.org>  Sun, 16 May 2004 16:50:55 +0000
+
+dropbear (0.41-1) unstable; urgency=low
+
+  * Updated to 0.41 release.
+  * Various minor fixes
+
+ -- Matt Johnston <matt@ucc.asn.au>  Mon, 19 Jan 2004 23:20:54 +0800
+
+dropbear (0.39-1) unstable; urgency=low
+
+  * updated to 0.39 release. Some new features, some bugfixes.
+
+ -- Matt Johnston <matt@ucc.asn.au>  Tue, 16 Dec 2003 16:20:54 +0800
+
+dropbear (0.38-1) unstable; urgency=medium
+
+  * updated to 0.38 release - various important bugfixes
+
+ -- Matt Johnston <matt@ucc.asn.au>  Sat, 11 Oct 2003 16:28:54 +0800
+
+dropbear (0.37-1) unstable; urgency=medium
+
+  * updated to 0.37 release - various important bugfixes
+
+ -- Matt Johnston <matt@ucc.asn.au>  Wed, 24 Sept 2003 19:43:54 +0800
+
+dropbear (0.36-1) unstable; urgency=high
+
+  * updated to 0.36 release - various important bugfixes
+
+ -- Matt Johnston <matt@ucc.asn.au>  Tues, 19 Aug 2003 12:20:54 +0800
+
+dropbear (0.35-1) unstable; urgency=high
+
+  * updated to 0.35 release - contains fix for remotely exploitable
+    vulnerability.
+
+ -- Matt Johnston <matt@ucc.asn.au>  Sun, 17 Aug 2003 05:37:47 +0800
+
+dropbear (0.34-1) unstable; urgency=medium
+
+  * updated to 0.34 release
+
+ -- Matt Johnston <matt@ucc.asn.au>  Fri, 15 Aug 2003 15:10:00 +0800
+
+dropbear (0.33-1) unstable; urgency=medium
+
+  * updated to 0.33 release
+
+ -- Matt Johnston <matt@ucc.asn.au>  Sun, 22 Jun 2003 22:22:00 +0800
+
+dropbear (0.32cvs-1) unstable; urgency=medium
+
+  * now maintained in UCC CVS
+  * debian/copyright.in file added, generated from LICENSE
+
+ -- Grahame Bowland <grahame@angrygoats.net>  Tue, 21 Jun 2003 17:57:02 +0800
+
+dropbear (0.32cvs-1) unstable; urgency=medium
+
+  * sync with CVS
+  * fixes X crash bug
+
+ -- Grahame Bowland <grahame@angrygoats.net>  Tue, 20 Jun 2003 15:04:47 +0800
+
+dropbear (0.32-2) unstable; urgency=low
+
+  * fix creation of host keys to use correct names in /etc/dropbear
+  * init script "restart" function fixed
+  * purging this package now deletes the host keys and /etc/dropbear
+  * change priority in debian/control to 'standard'
+
+ -- Grahame Bowland <grahame@angrygoats.net>  Tue, 17 Jun 2003 15:04:47 +0800
+
+dropbear (0.32-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Grahame Bowland <grahame@angrygoats.net>  Tue, 17 Jun 2003 15:04:47 +0800
+

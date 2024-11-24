@@ -1,0 +1,26 @@
+golang-blackfriday-v2 (2.0.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Move Go-Import-Path to github.com/russross/blackfriday/v2.
+    This makes golang-github-russross-blackfriday-v2-dev co-installable
+    with golang-github-russross-blackfriday-dev
+    Same as the change in go-md2man-v2 2.0.0+ds-3
+    The Conflicts on -dev causes golang-github-spf13-cobra and
+    golang-github-urfave-cli failed to migrate to testing
+    https://lists.debian.org/debian-go/2020/10/msg00015.html
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 25 Oct 2020 02:50:30 +0800
+
+golang-blackfriday-v2 (2.0.1-2) UNRELEASED; urgency=low
+
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Mon, 07 Sep 2020 05:58:15 -0000
+
+golang-blackfriday-v2 (2.0.1-1) experimental; urgency=medium
+
+  * Package the v2 branch, to co-exist with existing packages and allow
+    smooth transition. Closes: #964938
+    For further discussion, please see #965113
+
+ -- Reinhard Tartler <siretart@tauware.de>  Thu, 16 Jul 2020 09:53:14 -0400

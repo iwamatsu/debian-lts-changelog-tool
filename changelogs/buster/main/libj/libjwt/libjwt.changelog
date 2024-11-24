@@ -1,0 +1,63 @@
+libjwt (1.10.1-1+deb10u1) buster-security; urgency=medium
+
+  * CVE-2024-25189 (Closes: #1063534)
+    fix a timing side channel via strcmp()
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 24 Feb 2024 09:03:02 +0100
+
+libjwt (1.10.1-1) sid; urgency=medium
+
+  * New upstream release
+  * debian/control: bump standard to 4.3.0 (no changes)
+  * debian/*.symbols: add "* Build-Depends-Package:"
+
+  [Nicolas Mora]
+  * debian/control: add new package libjwt-gnutls, libjwt with gnutls backend
+  * debian/rules: run dh_auto_tests on build
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 13 Jan 2019 15:13:51 +0100
+
+libjwt (1.9.0-4) unstable; urgency=medium
+
+  * debian/control: use correct salsa VCS URLs
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 14 Dec 2018 18:20:04 +0100
+
+libjwt (1.9.0-3) unstable; urgency=medium
+
+  * debian/copyright: upstream changed license to MPL 2.0
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 01 Dec 2018 22:20:04 +0100
+
+libjwt (1.9.0-2) unstable; urgency=medium
+
+  * debian/control: bump standard to 4.2.1 (no changes)
+  * debian/control: add salsa VCS URLs
+  * debian/*install: multiarchify files
+  * debian/control: add "Multi-Arch: same" for libjwt-dev
+                    (this was suggested by the Multiarch hinter)
+  * add symbols file
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 21 Nov 2018 19:20:04 +0100
+
+libjwt (1.9.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: use dh11
+  * debian/control: bump standard to 4.1.3 (no changes)
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 27 Jan 2018 19:31:04 +0100
+
+libjwt (1.8.0+dfsg-2) unstable; urgency=medium
+
+  * debian/control: bump standard to 4.1.0 (no changes)
+  * debian/control: add VCS URLs
+  * debian/control: set team as maintainer
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 03 Sep 2017 20:32:33 +0200
+
+libjwt (1.8.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Tue, 25 Jul 2017 19:32:33 +0200

@@ -1,0 +1,45 @@
+golang-github-google-shlex (0.0~git20191202.e7afc7f-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Apply multi-arch hints. + golang-github-google-shlex-dev: Add Multi-Arch:
+    foreign.
+
+  [ Arnaud Rebillout ]
+  * Add watch file
+  * Drop debian/links
+  * Update gitlab-ci.yml
+  * Section = golang
+  * Update Go Team email address
+  * Bump debhelper compat
+  * Standards-Version = 4.5.1
+  * Rules-Requires-Root = no
+  * Testsuite = autopkgtest-pkg-go
+  * Drop shlibs:Depends from -dev package
+  * Nitpick, reorder fields in d/control
+  * New upstream version 0.0~git20191202.e7afc7f
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Fri, 08 Jan 2021 15:27:50 +0700
+
+golang-github-google-shlex (0.0~git20150127.0.6f45313-2) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * Fix broken watchfile.
+
+ -- Anthony Fok <foka@debian.org>  Sat, 15 Oct 2016 03:30:58 -0600
+
+golang-github-google-shlex (0.0~git20150127.0.6f45313-1) unstable; urgency=medium
+
+  * Initial release (Closes: #826613)
+
+ -- Anthony Fok <foka@debian.org>  Mon, 06 Jun 2016 18:55:17 -0600

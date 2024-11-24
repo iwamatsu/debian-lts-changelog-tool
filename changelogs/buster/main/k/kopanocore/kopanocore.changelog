@@ -1,0 +1,813 @@
+kopanocore (8.7.0-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2019-19907: out of bounds read.
+  * CVE-2022-26562: authentication bypass. Patch from Andreas Rönnquist
+    (closes: #1016973).
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 06 Mar 2023 14:31:07 +0100
+
+kopanocore (8.7.0-3) unstable; urgency=medium
+
+  [ Julian Andres Klode ]
+  * [0a74ec0] kopano-search apparmor profile: Account for usrmerge
+    Adjust the AA profile for kopano-search so it does also work on systems
+    with a merged /usr folder.
+    (Closes: #927215)
+
+  [ Carsten Schoenert ]
+  * [bf56cb6] d/control: switch Simon as Uploader with Mark
+  * [8acc590] kopano-libs.symbols: update symbols to 8.7.0(-3)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 25 Apr 2019 08:51:01 +0200
+
+kopanocore (8.7.0-2) unstable; urgency=medium
+
+  * [546e3ba] apparmor: kopano-server: allowing signaling
+  * [8684c6e] apparmor: fix profile for kopano-search
+    (Closes: #922313)
+  * [c86f098] d/rules: expand dh_clean so we can build multiple times
+    (Closes: #913750)
+  * [bc20a0c] kopano-libs.symbols: update symbols to 8.7.0(-2)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Tue, 19 Feb 2019 18:59:07 +0100
+
+kopanocore (8.7.0-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [80f58ba] New upstream version 8.7.0
+  * [48214e0] kopano-libs.symbols: update symbols to 8.7.0
+
+  [ Gianfranco Costamagna ]
+  * [b68a083] d/kopano-utils.install: change substitution variable
+    (Closes: #920189)
+  * [1e7d135] d/rules: adjust the systemd unit folder to use
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 27 Jan 2019 07:51:34 +0100
+
+kopanocore (8.6.92-1) unstable; urgency=medium
+
+  * [7a44c71] New upstream version 8.6.92
+  * [37acb2d] rebuild patch queue from patch-queue branch
+    added patches:
+    tmpfiles.conf-don-t-add-var-run-kopano.patch
+    spelling-accomodate-accommodate.patch
+    spelling-allows-to-allows-one-to.patch
+    spelling-fix-seperated-separated.patch
+  * [d9c07f8] kopano-libs.symbols: update symbols to 8.6.92
+  * [5571111] d/control: increase Standards-Version to 4.3.0
+    No further changes needed.
+  * [0a40554] d/control: increase to debhelper version 12 in B-D
+    As now debhelper is now available with version 12 adjust the Build-Depends.
+  * [4d6066b] apparmor kopano-search: sorting entries, add more rules
+    Sort the entries so they are better sorted alphabetical and entries are
+    in the some order of existing folders within the file system root folder.
+    Also adding more obvious rules after some analysis of dmesg lines which
+    did hold denied access messages.
+  * [ff84436] kopano-common: turn package into Architecture: all
+    This package does not have any Architecture specific files and can be
+    shipped as Architecture independent package.
+  * [1824d58] autopkgtest: use kopano-storeadm for creating the store
+    Small adjustment within the autopkgtest smoke script to use the "correct"
+    command for the creation of the user store.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 12 Jan 2019 10:26:04 +0100
+
+kopanocore (8.6.91-1) unstable; urgency=medium
+
+  * [07e91b4] New upstream version 8.6.91
+  * [d304356] rebuild patch queue from patch-queue branch
+    removed patches (applied upstream):
+    Python3-fixes.patch
+    Use-proper-python-pkg-config.patch
+  * [db3d5f0] kopano-libs.symbols: update symbols to 8.6.91
+  * [30338ed] autopkgtest: adding kopano-utils to test target
+    The kopano-utils package need to be added as an explicit dependency
+    for the test target, otherwise the output of kopano-cli can't get tested.
+  * [c2a39b1] d/kopano-server: remove /v/lib/k/attachments on purging
+  * [a8cfa34] d/kopano-common: remove /v/log/kopano on purging
+  * [b52d45d] kopano-server: use logrotate config from upstream
+    We can drop the logrotate script we've added long ago by our self.
+  * [e8929c2] d/rules: normalize sed call
+    Without that we can't substitute the PHP version in the php-mapi.postrm
+    script within the build.
+  * [c803d6d] php-mapi: add a postrm script
+    Adding a postrm script which will disable all possible enabled module
+    usage of the provided mapi module if the package get purged.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 23 Dec 2018 20:01:31 +0100
+
+kopanocore (8.6.90-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [c96dd73] d/watch: update file due changed upstream behaviour
+    Modify the URI for the Kopano Core packages on GitHub to track the
+    'releases' instead of 'tags'. Bump file also to version 4 compliance.
+  * [1390c07] New upstream version 8.6.90
+  * [9cf27a9] rebuild patch queue from patch-queue branch
+    updated patch:
+    debian/Run-deamons-as-user-group-kopano.patch
+  * [d6e0199] d/control: adjusting build dependencies
+    The build requires now libhx-dev and python-setuptools, package libopt-dev
+    isn't needed any more.
+  * [a87daf8] d/control: increase Standards-Version to 4.2.1
+    No further changes needed.
+  * [d04c7ff] kopano libs: update installation of libraries
+    The libraries libkc{mapi,ssl,sync}.so aren't created any longer, but there
+    is libkcpyplug.so as a new library.
+  * [4e86b06] d/rules: detect PHP_VERSION dynamically
+    Try to detect the current used PHP version while building the packages so
+    this can be used later elsewhere.
+  * [5d7f853] d/kopano-utils: adjust install for bash-completion
+    The origin of the Bash completion files has been moved by upstream which
+    is almost right but still needs some adjustment for the packaging.
+  * [6af9235] kopano-libs.symbols: update symbols to 8.6.90
+  * [13f712c] d/kopano-dagent: remove already commented out stuff
+    Remove dead entries from the install sequencer file. We won't ever install
+    files into /usr/bin/ with an file extension.
+  * [cef6661] d/kopano-server: add additional man pages and AppArmor file
+    New man pages provided by upstream for the kopano-server package, regarding
+    kopano-{coredump,cfgchecker}. Also installing the provided apparmor files
+    into /u/s/d/kopano-server/example-config/apparmor.d.
+  * [d1233ee] d/kopano-utils: add kopano-ibrule
+    Adding related files for kopano-ibrule (Inbox rule inspection and
+    manipulation utility) to kopano-utils.
+  * [595874f] move over to dh 12
+    Let's start moving over to debhelper 12, even it's not released finally.
+    A lot of useful additions are made (especially a improved dh-missing
+    helper).
+  * [f0f09cb] d/control: adding various Pre-Depends: ${misc:Pre-Depends}
+    Some packages (mainly with systemd units) need the Pre-Depends variable
+    so deb-systemd-invoke can do the right thing while installation or
+    update.
+  * [50f775e] install various systemd unit files
+    More systemd unit files are distributed by upstream, as for
+    kopano-{dagent,gateway,ical,monitor,search,server,spooler}.
+  * [604265d] d/rules: remove *.la file more globally before install
+
+  [ Guido Günther ]
+  * [879b464] Drop unused configure options
+    Options '--with-userscript-prefix' and '--enable-unicode' are not used
+    and available any more.
+  * [f5fc83a] Switch to python3
+    Drop all Python2 packages we have provided until the previous upload and
+    move them all into Python3 based packages. Thus the following changes are
+    happen by this change:
+    python-kopano  -->  python3-kopano
+    python-mapi    -->  python3-mapi
+
+  [ Carsten Schoenert ]
+  * [bedd577] usr.sbin.kopano-server: update kopano-server apparmor profile
+    Updating the AppArmor profile for kopano-server. Thanks Teun Kloosterman
+    for this update.
+    (Closes: #907400)
+  * [cd8cf58] d/rules: remove zarafa things from tmp install folder
+    We don't serve any Zarafa related packages or files thus we can ignore
+    them and simply remove the related Python3 files before installing the
+    content into the binary packages.
+  * [5d37847] d/k-common.install: also install kopano-tmpfiles.conf
+    More common used files that coming by the new upstream version.
+  * [ee31d38] d/k-dagent.install: install the correct cfg file
+    The configuration file was renamed to autorespond.cfg, adjust the
+    installation accordingly.
+  * [1bfd5fc] d/k-presence.install: install also Unit file
+    Installing the systemd Unit file for k-presence now too, it was already
+    prepared tough.
+  * [6954f17] d/k-server.install.in: fix install for userscripts
+    The userscripts are installed now into /usr/lib instead to /etc.
+  * [6209c21] d/k-libs.symbols: updating after switch over to Python3
+    Updating the entries due changed library names libkcpyconv-{2.7->3.6}.so
+    and libkcpydirector-{2.7->3.6}.so.
+  * [2510d5d] d/k-presence.install: adjust install of systemd unit
+    The Unit file needs to go into /lib/systemd/system.
+  * [7016d94] apparmor: allowing access to Python files
+    The kopano-dagent profile needs read rights on the associated plugin files.
+  * [b6c31fe] d/control: additional dependency for kopano-python
+    python3-tz is now additional needed.
+  * [26a0f00] autopkgtest: add new needed step for testing
+    After the user is added to the database a store
+    (kopano-admin --create-store) is also needed to be created for the user
+    now. Adding this requirement to the autopkgtest.
+  * [0a6587e] d/k-utils.install: add new files to install
+    The binaries kscriptrun and mapitime are platform depended linked and act
+    like private libs, thus they get installed like any other private library
+    into usr/lib/MULTIARCH/kopano.
+
+  [ Guido Günther ]
+  * [0276892] Use dh_python3
+    Due the move over to python3 based packages adjust the controlling of the
+    build like using of ${python3:Depends} variable.
+    To create a better usable installation layout of the Python3 related files
+    within the upstream source another patch is added to the patch queue
+    (which is also forwarded upstream). The related sequencer files for
+    installing the Python3 binary packages got updated due the changes to
+    installation of the upstream source.
+  * [f740a86] kopano-utils: Add ${perl:Depends}
+    kopano-utils should benefit from adding ${perl:Depends} to the Depends
+    field.
+  * [5535f06] dh_python3
+    Extend the control file with more dh_python3 related additions.
+  * [b966595] Ignore python3-rest for now
+    Adding Python3 related kopano_rest files to not-installed so they get
+    ignored by dh-missing for now.
+  * [ea9ab85] Use packaged versions of lockfile and daemon
+    Ignore the provided files from Kopano and use the Debian packages instead.
+  * [21f9602] Use python3 everywhere
+    Hard code the shebang for using python3 in all Python files which did have
+    used a shebang of /usr/bin/python in the upstream source.
+    Added these modifications to the patch queue.
+  * [e3827c1] autopkgtests: install all packages
+    Install all created packages while the autopkgtest and do a check of the
+    option '--help' for the Python based files.
+  * [a659ed6] apparmor: Be less strict on the Python binary and module paths
+    Be more flexible with the Python version within the profile for
+    kopano-search so the profile is usable in Python2 and Python3 environments.
+  * [76e61f3] Python3 fixes
+    One more patch for the patch queue related to the usage of Python3.
+  * [cc63fb0] Depend on python3-bdbdb3
+    Adding a additional package dependency to kopano-{backup,search,spamd}.
+  * [91b4939] d/rules: Don't hardcode Python 3 version
+    Related to [cd8cf58], after the modifications to the patch queue stuff get
+    installed into usr/lib/python3 and thus the deletion of the old zarafa
+    stuff needs an update in d/rules.
+  * [2328c55] Don't ship upstreams apparmor profiles as examples
+    Ignore the apparmor example config installation for k-server, upstream will
+    adopt the changes made by Debian and Contributors.
+  * [875be0f] kopano-search: Ship xslt for plain text conversion
+
+  [ Carsten Schoenert ]
+  * [182324e] d/k-dev.links.in remove obsolete sequencer file
+    The file ldapmsplugin.so isn't shipped by upstream any more and we can drop
+    the complete sequencer file as this was the only content.
+    (Closes: #909622)
+  * [45707a7] Revert "d/rules: detect PHP_VERSION dynamically"
+    Revert commit [4e86b06] so the patches provided by Ondřej Surý can apply,
+    we will need the variable PHP_VERSION anyhow later again.
+
+  [ Ondřej Surý ]
+  * [7c6aaea] Use default Debian PHP version provided by php-dev
+    The provided patch was needing some adjustment as the sed call was getting
+    broken otherwise.
+    (Closes: 911360)
+  * [a736023] Use wildcard to catch files for php-mapi.php
+
+  [ Carsten Schoenert ]
+  * [59dd0ea] kopano libs: update lintian override for libraries
+    Adjust the lintian override due the changed library name after the Python2
+    -> Python3 change.
+  * [7d840e4] d/k-common.postinst: adding a override for SQL config
+    Now the kopano-server is running as user 'kopano' the database access
+    configuration file needs a modification of the owner and access rights.
+  * [84fb468] kopano-server: do recursive chown on folder
+    Also by the changed owner the kopano-server is running it has been shown
+    the SysV init script for kopano-server needs also get modified so
+    /var/lib/kopano can get accessed by kopano-server.
+  * [ca0138f] systemd units: ignore some upstream service files
+    At least for kopano-{dagent,presence,server} we have some more
+    instructions within the unit files which ensures the correct behaviour
+    while installation or package updates.
+  * [4a03fd1] python3-mapi: be relaxed on the python minor version
+    Just be lazy on The Python version and catch all 3.* versions while
+    installing the python3-mapi files.
+  * [a02f58e] kopano-libs.symbols: move over to Python 3.7 libraries
+  * [2aebe5d] kopano-libs.symbols: adding information about dependency
+    Adding Build-Depends-Package information.
+  * [2e4e8d1] dh-php: change file extension php-mapi.{php->ini}
+    The file extension needed for using dh_php seems to have changed again,
+    Accordingly to the output of dh it's need to be *.ini or *.so.
+  * [6f2fa25] php-mapi: adjust .install sequencer file
+    Even after the change of the file extension for php-mapi the previous
+    working dh_php call isn't working. So adding again a variable @PHP_VERSION@
+    which will get substituted within debian/rules.
+  * [d741a68] d/rules: (re-)introduce PHP_VERSION variable
+    Adding the old functionality to read out the PHP version from php-dev and
+    use this variable to be substituted in php-mapi sequencer files.
+    It's a hack yes, but currently the only way to get the things dynamically
+    handled.
+
+  [ Jelle van der Waa ]
+  * [575c8dd] debian: Add missing perl dep's of kopano-migration-imap
+  * [768f43a] debian: Add python3-pil as recommends
+
+  [ Carsten Schoenert ]
+  * [73bb2c3,507bfd8,41e094a] autopkgtests: various modifications on the
+    autopkgtests so we can check the packages successfully
+  * [67890b7] kopano-server.postinst: add optional dbc_debug line
+    No functional change, just adding a line with a comment block about
+    dbg_debug=1, useful in case we need to debug some dbconfig-common
+    behaviour.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 17 Dec 2018 10:27:52 +0100
+
+kopanocore (8.6.5-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [6d49674] New upstream version 8.6.5
+  * [4ea513a] debian/control: increase Standards-Version to 4.1.5
+    No further changes needed.
+  * [c1e1ab8] update Maintainers to new contact address
+    Updating the Maintainer email address to
+    pkg-giraffe-maintainers@alioth-lists.debian.net.
+  * [4132ff9] d/kopano-utils.install: adding new content for 'oof'
+    New binary 'kopano-oof' was added by upstream, adding the binary and
+    corresponding man page to kopano-utils.
+  * [d60e3f7] d/kopano-server.install: adding man page for mapi.7
+    There is a new man page available we will put into kopano-server, we don't
+    have a package kopano-common like upstream has.
+  * [fc807fa] kopano-libs.symbols: update symbols to 8.6.5
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 28 Jul 2018 21:20:29 +0800
+
+kopanocore (8.6.2-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [a20fb40] New upstream version 8.6.2
+  * [c670a19] kopano-utils: add new binary kopano-dbadm to package
+    There is a new binary kopano-dbadm shipped by upstream, places within
+    kopano-utils. 
+  * [c85dde6] kopano-libs.symbols: update symbols to 8.6.2
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 09 Jun 2018 09:07:29 +0200
+
+kopanocore (8.6.1-2) unstable; urgency=medium
+
+  [ Roel van Meer ]
+  * [716db3e] control: Depend on versioned libjsoncpp-dev
+  * [c0a7d41] control: adding Breaks: kopano-lang on kopano-l10n
+  * [a31d5df] control: adding Breaks: kopano-client on kopano-libs
+    All these addition are helpful for people which creating own backports based
+    on the Debian packages. So one day we will also benefit from these
+    enhancements.
+
+  [ Carsten Schoenert ]
+  * [1fb8fef] debian/control: increase Standards-Version to 4.1.4
+    No further changes needed.
+  * [f6e32ce] kopano-spamd: adding new package spamd
+    There is a new package about a Spam learning daemon prepared and created.
+  * [6ab9a14] kopano-utils.install: add new provided binaries and man-pages
+    Several new binaries targeting the utilities for kopanoserver are added by
+    upstream.
+  * [f535729] kopano-dagent.install: add new shipped files
+    Also the dagent got new additional files in /usr/sbin.
+  * [391f2ad] kopano-search.install: add new shipped file
+    The search tools will get a new binary file based on Python. Currently not
+    really shipped as the file is using *.py as file extension and will replace
+    some other file. Right now it's unclear which file will be replaced.
+  * [c5196b3] python-kopano: add depending package python-dateutil
+    (Closes: #896347)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 17 May 2018 16:14:59 +0200
+
+kopanocore (8.6.1-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [c7d2d88] New upstream version 8.6.1
+  * [b77327d] kopano-libs.symbols: update symbols to 8.6.1
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 07 Apr 2018 16:50:26 +0200
+
+kopanocore (8.6.0-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [b769101] New upstream version 8.6.0
+  * [5d05a8a] rebuild patch queue from patch-queue branch
+    Removing debian/add-debian-to-with-distro-switch.patch from the patch queue
+    as upstream has removed this configure switch.
+  * [c83ebd3] debian/control: Adding new packages to Build-Depends
+    The built requires now libjsoncpp-dev and libpopt-dev.
+  * [b1d1d3a] kopano-common.install: remove non existing cron file
+    The file etc/cron.daily/kopano-client-update isn't shipped any more, this
+    requires a modification of the install sequence.
+  * [89589f1] remove unneded configure option
+    This is related to the removed configure option mentioned above, removing
+    Debian specific argument from the configuration.
+  * [65f4d66] kopano-libs.symbols: update symbols to 8.6.0
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Fri, 16 Mar 2018 13:21:24 +0100
+
+kopanocore (8.5.4-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [820314e] New upstream version 8.5.4
+  * [7b74a9a] rebuild patch queue from patch-queue branch
+    Removing a patch which was needed after importing of 8.5.3 t get the
+    binaries built from the source.
+
+  [ Christian Ehrhardt ]
+  * [b3994d1] fix apparmor deny on mprotect
+  * [f228f92] fix apparmor deny due to disconnected path
+  * [2d9e11b] allow (read only) on some proc entries for new features in 8.5.2
+
+  [ Carsten Schoenert ]
+  * [2a3da23] d/kopano-utils: adding man page to the install
+  * [27fa323] kopano-libs.symbols: update symbols to 8.5.4
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 05 Mar 2018 18:10:05 +0100
+
+kopanocore (8.5.3-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [23de50a] New upstream version 8.5.3
+  * [6dfed86] rebuild patch queue from patch-queue branch
+  * [794ad2e] kopano-libs.symbols: update symbols to 8.5.3
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 01 Mar 2018 20:39:10 +0100
+
+kopanocore (8.5.2-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [dc2050f] d/watch: mangle also trailing dot sign
+    A small needed adjustment to the watch files, without this the version gets
+    a trailing dot appended and uscan will find always a (faked) higher
+    version.
+  * [2b6b5a1] New upstream version 8.5.2
+  * [9cb0fb6] debian/rules: remove '--parallel' on dh $@
+    No need to add '--parallel' into the main default target since we are
+    using debhelper 10.
+  * [ecd2b00] kopano-libs.symbols: update symbols to 8.5.2
+  * [17f530c] lintian: adding additional override for kopano-libs
+    Ignore the warning about the not matching soname for the package name.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Fri, 16 Feb 2018 20:20:35 +0100
+
+kopanocore (8.5.0-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [46d25ff] New upstream version 8.5.0
+    Upstream version 8.5.0 has changes to getting successful built with
+    libical3. (Closes: #883957)
+  * [0006cb3] kopano-libs.symbols: update symbols to 8.5.0
+  * [5df0116] Build-Depends: use php-dev instead of php7.0-dev
+    We previously wanted to use PHP7.0, now that PHP7.2 has entered unstable
+    and the kopanocore source is able to work also with PHP7.2 we can switch
+    to virtual package php-dev. (Closes: #881010)
+  * [309dc85] debian/rules: tuning the build rules a bit for using PHP7.2
+    Make the build environment more flexible so we don't need to change PHP
+    related versions later in various places and use instead variables for that.
+  * [64f8cfb] php-mapi.php: use the provided strings from d/rules
+    Make that sequencer file use the variables from above commit.
+
+  <cherry-picked from Ubuntu>
+  [ Steve Langasek ]
+  * [dcddfd7] apparmor: make .so includes follow multiarch paths
+  * [3acae51] debian/kopano-server.dirs: create /var/lib/kopano/attachments,
+    not just /var/lib/kopano
+  * [279055d] debian/kopano-server.kopano-server.service: chown the subdirectory
+
+  <cherry-picked from Ubuntu>
+  [ Christian Ehrhardt ]
+  * [138b4b4] allow kopano_userscripts to reach mysql.sock (follow disconnects)
+  * [2f66b8e] allow dagent to follow disconnect for mysql
+  * [0f4c12a] allow search to follow disconnect for mysql
+  * [b61b5b5] apparmor: allow kopano-dagent
+  * [f7cbdcd] allow dagent to reach kopano server socket (Closes: #882496)
+
+  [ Carsten Schoenert ]
+  * [48c34c7] kopano-search: remove magic.py before install
+    Do not include magic.py in kopano-search and use package python-magic that
+    is providing this file now. (Closes: #889835)
+  * [4b47ee7] debian/control: keep Depends fields alphabetical
+    Just cosmetic and no functional changes.
+  * [7e8b810] Add .travis.yml from <http://travis.debian.net>
+    (cherry picked from debian/experimental)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 08 Feb 2018 18:50:56 +0100
+
+kopanocore (8.5.0~8.4.99-1) experimental; urgency=medium
+
+  [ Guido Günther ]
+  * [4133b28] uscan: switch to https
+  * [a84434e] uscan: Match on beta versions and ignore .90 "betas"
+  * [00bf6e9] New upstream version 8.4.0~beta1
+  * [5b3f0bd] Drop patches applied upstream
+  * [c747e30] Work around configs not being installed into /etc anymore
+  * [0a93d46] kopano-dev: Depend on kopano-libs (Closes: #877454)
+
+  [ Carsten Schoenert ]
+  * [01c57cc] debian/control: increase Standards-Version to 4.1.1
+  * [e557347] debian/control: put l10n package into section localization
+  * [9b5661d] bump debhelper >= 10.8
+  * [94fa459] debian/control: remove obsolete B-D due debhelper 10.8
+  * [d811958] debian/watch: update due changed GitHub organisation
+  * [0658e79] New upstream version 8.5.0~8.4.99
+  * [ac0e580] rebuild patch queue from patch-queue branch
+  * [be1217a] d/rules: modify targets due changes by upstream
+    Upstream configures parts of the installation with a configure switch
+    --with-distro for version 8.5.x which we need to adopt a bit. Also there
+    is no file etc/kopano/server.cfg any longer which we need to adjust.
+  * [2398c56] debian/control: increase Standards-Version to 4.1.3
+  * [cc5f326] kopano-presence: add new binary package
+  * [0cbbb2e] additional copyright information for SysV and Systemd files
+    We need to use some own Systemd service and Sysv init files, adding them
+    to the copyright information.
+  * [e11dee9] remove references on non existing libkchl.so.0
+  * [6ca7d64] d/kopano-search.install: add extra folder for install
+  * [f14d688] d/kopano-backup.install: extend the scope for install
+  * [a521404] *.inf: some files have been moved inside the FS
+  * [2b1f151] adjust library name changes for installing
+    Some libraries names have changed and are renamed which we need to reflect
+    in the install sequencer files.
+  * [413e8ab] d/python-mapi.install: pick up also libfreebusy files here
+    Installing the libfreebusy Python related files into python-mapi.
+  * [a7b3ec7] remove no longer needed override_dh_fixperms-arch
+    The files zcontacts.inf isn't shipped any more and thus makes the override
+    here obsolete.
+  * [b130447] add small stupid QS tool
+    Adding a small scipt to check installed files within the packages.
+  * [bfba596] kopano-libs.symbols: update symbols to 8.5.0~8.4.99
+  * [fa985f4] Add .travis.yml from <http://travis.debian.net>
+  * [dd03c73] Add /.travis.yml to extend-diff-ignore in debian/source/options.
+  * [7a29d2a] d/copyright: small update due upstream changes
+  * [e860925] debian/control: remove unused variables in Depends fields
+  * [116925c] debian/control: remove X(B)-Python-Version Supported Versions
+  * [c9598d7] debian/control: adjust Vcs fields to salsa.debian.org
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 29 Jan 2018 19:31:46 +0100
+
+kopanocore (8.3.4-4) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [bab2c19] move dh_fixperms to arch depended
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Mon, 23 Oct 2017 21:00:49 +0200
+
+kopanocore (8.3.4-3) unstable; urgency=medium
+
+  [ Guido Günther ]
+  * [75a1b00] kopano-dev: Depend on kopano-libs (Closes: #877454)
+    Obviously needs the -dev package needs a depending on the library package.
+    Without those libraries no real development is possible. 
+  * [e2098a7] kopano-search: drop dependencies on essential packages
+    The dependencies on various now partially essential packages aren't needed
+    and can be dropped.
+    (Closes: #877549)
+  * [6d4dc9b] uscan: switch to https
+  * [cf57093] uscan: Match on beta versions and ignore .90 "betas"
+    Be more open for beta versions too, but ignore versions of *.90 which are
+    like final pre versions for the next release.
+
+  [ Carsten Schoenert ]
+  * [9414114] debian/control: increase Standards-Version to 4.1.1
+    No further changes are needed.
+  * [3e273da] debian/control: put l10n package into section localization
+  * [1e61e46] debian/watch: update due changed GitHub organization
+    Upstream has changed their team name on GitHub to 'Kopano-dev', adopt this
+    change into the watch file so uscan can reach valid content again.
+  * [4e8f2db] bump debhelper >= 10.8
+  * [3136c81] debian/control: remove obsolete B-D due debhelper 10.8
+    New debhelper versions have a automatic dependency on autotools-dev,
+    dh-{autoreconf,systemd} and we don't need them explicitly in B-D.
+  * [3ff17ac] debian/rules: remove zcontacts.inf from kopano-server
+    This configuration file is already used by kopano-contacts and we don't
+    need to ship it in kopano-server again.
+    (Closes: #876480)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 22 Oct 2017 18:27:15 +0200
+
+kopanocore (8.3.4-2) unstable; urgency=medium
+
+  * [a8cd857] Version libvmime build-dep (Closes: #875454)
+  * [e8ba560,236d51a] Add apparmor profiles for kopano-{server,dagent,source}
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 28 Sep 2017 13:50:11 +0200
+
+kopanocore (8.3.4-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [ffe603c] New upstream version 8.3.4
+  * [c23daaf] rebuild patch queue from patch-queue branch
+    Modified patch:
+       - Add-include-for-database-configuration.patch
+  * [69be9b9] debian/control: adding version B-D on libvmime-dev
+    (Closes: #875454)
+  * [f581cd2] debian/kopano-libs.symbols: update symbols to 8.3.4-1
+    (Closes: #875453)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Tue, 12 Sep 2017 20:52:31 +0200
+
+kopanocore (8.3.3-1) unstable; urgency=medium
+
+  [ Guido Günther ]
+  * [3fb8819] backup,search: Depend python-dateutil
+    The packages kopano-{backup,search} needing dateutil from python-dateutil
+    to work properly, so ensure we depend on that.
+
+  [ Felix Bartels ]
+  * [6fde1a7] kopano-core: no need for depending kopano-archiver
+    The archiver functions are mostly not needed in typical installation of
+    the core package, we don#t need to depend on.
+  * [d1ab087] syncing /etc/default/kopano with upstream
+  * [3bba4ba] kopano-core: improve the package description
+
+  [ Carsten Schoenert ]
+  * [e3b5796] New upstream version 8.3.3
+  * [5418e96] debian/kopano-libs.symbols: update symbols to 8.3.3-1
+  * [516fcf5] Uploaders: update email address of Mark
+  * [da6b474] Revert "debian/kopano-libs: adding one more override"
+    The previous added lintian override isn't needed any more.
+  * [16ff4e3] debian/control: increase Standards-Version to 4.0.1
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 03 Sep 2017 16:01:30 +0200
+
+kopanocore (8.3.2-1) unstable; urgency=medium
+
+  [ Carsten Schoenert ]
+  * [32b1d1d] rebuild patch queue from patch-queue branch
+    Modified patches:
+       - OpenSSL-Make-SSLv2-conditional.patch
+    (Closes: #861849)
+  * [491f616] kopano-server.postrm: missed substitute for kopano
+    (Closes: #863958)
+  * [85aaecc] debian/control: rename package php7.0-mapi to php-mapi
+    (Closes: #861775)
+  * [860645f] debian/control: mark some packages Multi-Arch: same
+  * [3e029cd] debian/control: let kopano-dev conflict with libmapi-dev
+    (Closes: #857377)
+  * [caf7313] New upstream version 8.3.1
+  * [2bd9fee] New upstream version 8.3.2
+  * [edc4753] rebuild patch queue from patch-queue branch
+    Update patches:
+       - Be-pessimistic-about-daemon-startup.patch
+       - build-support-gsoap-2.8.36.patch
+       - server.cfg-prepare-later-M-A-substition-while-built.patch
+    Removed patches (fixed upstream):
+       - OpenSSL-Make-SSLv2-conditional.patch
+       - change-shebang-to-usr-bin-php7.0.patch
+       - fixup-spelling-issues-against-8.1.0.patch
+       - kopano-cachestat-update-docstring-remove-diff-function.patch
+       - remove-undocummented-sk_SSL_COMP_free-call.patch
+  * [f964415] debian/watch: use the GitHub mirror from Kopano
+  * [58e6a07] Build-Depends: remove no longer needed packages
+    Upstream doesn't need Boost and Google perftools anymore.
+    Drop deps, will allow us to build on more architectures as well.
+  * [8f12375] d/rules: remove obsolete configure options
+    As the Google perftools aren't needed any longer also the old configuration
+    option for tcmalloc are gone, but also no extra option for python and swig
+    must be set.
+  * [494c1c7] debian/copyright: update due upstream adjustments
+  * [7bea455] debian/kopano-libs.override: 'iff' is correct word.
+    Upstream is will rework this part to make this override obsolete.
+  * [35b751b] Reshuffle libs
+    Some existing libraries are gone since > 8.1.0, new libraries need to
+    be added.
+  * [fb4d747] kopano-server: move some config files into private folder
+  * [05fce39] kopano-utils.install: add new tools to package
+  * [ec0aba0] debian/php-mapi.install; adjust installation folder
+  * [999ece1] debian/rules: Tell dh where to find the private libs
+  * [a957574] debian/rules: remove more *.la files
+  * [7abd16f] debian/rules: don't build non existing man pages
+    We don't need to build manpages any longer, upstream is providing them now
+    groff
+  * [9ece6b8] debian/rules: remove unused variable
+  * [9a0dd4b] debian/rules: use helper from dpkg for version selecting
+  * [729a53a] kopano-utils needs a lintian-overrides
+  * [9ac7b85] debian/control: increase Standards-Version to 4.0.0
+  * [ad19ed5, 7deeb41] debian/kopano-libs.symbols: update symbols to 8.3.2-1
+    (Closes: #871276)
+  * [740b113] debian/control: update gsoap related Build-Depends
+  * [4402ae6] debian/watch: fixup meaning and spelling in comment
+  * [7c83655] debian/rules: use make magic for transforming *.in files
+  * [2745d43] rebuild patch queue from patch-queue branch
+    Splitting up the patches into Debian specific and more generic fix-up
+    patches.
+    Removed patches (obsolete after upstream version 8.3.2):
+       - adding-.NOTPARALLEL-target-to-swig-python-Makefiel.am.patch
+       - adjust-search-path-for-php-config-script-on-php7.0.patch
+       - build-support-gsoap-2.8.36.patch
+
+  [ Guido Günther ]
+  * [44087f3] Don't redefine __FD_SETSIZE,
+    so we can enable hardening.
+  * [398e021] autopkgtests: Start mysql server
+  * [bbc3c29] Drop fixes/Be-pessimistic-about-daemon-startup.patch
+    Fixed slightly different upstream.
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 10 Aug 2017 12:33:45 -0400
+
+kopanocore (8.1.0-3) unstable; urgency=medium
+
+  [ Guido Günther ]
+  * [6480d2c] Add db_stop calls to avoid hangs in postinst
+  * [8dc1334] autopkgtests: Move test output past package installation so it's
+    simpler to grasp whats being tested.
+
+  [ Mark Dufour ]
+  * [e6170d3] debian/copyright: add some still missed files.
+    Copyright information for some subfolders in swig/ differs from the other
+    Kopano source files.
+    Some parts of swig/python/kopano/kopano/__init__.py are written by other
+    authors than Kopano.
+    Reorder the licenses in alphabetical order.
+  * [a9b88b0] rename package kopano-search-plus to kopano-search.
+
+  [ Carsten Schoenert ]
+  * php7.0-mapi: use dh-php.
+  * [85aec63] Fix segfault on cleanup. New patch:
+    remove-undocummented-sk_SSL_COMP_free-call.patch
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 19 Jan 2017 13:59:07 +0100
+
+kopanocore (8.1.0-2) unstable; urgency=medium
+
+  [ Guido Günther ]
+  * [d8ac69c] Add README.source
+  * [43106e0] Add links to alioth and upstream
+  * [b673725] gbp.conf: Switch to upstream/latest
+  * [4793176] autopkgtests: install kopano-backup and be less verbose
+  * [4ca7a79] Unbreak backup test by using an existing user
+
+  [ Mark Dufour ]
+  * [51b8d14] add basic user backup/restore test for kopano-backup
+  * [9490f3d] kopanocore: enable configure switch for using PHP7.
+
+  [ Carsten Schoenert ]
+  * [bdac342] kopano-utils.install: Install kopano-cachestat
+    (Closes: #842357)
+  * [5d9e3a0] d/rules: be less verbose while dh_install.
+  * [6fabdfa] d/control: update mysql-client related Build-Depends.
+  * [45912cb] d/control: adding some versioned depends on lsb-base.
+  * [2263a17] d/control: update Recommends and Depends on mysql-{client,server}
+  * [decea40] kopano-*.{install,links}: moving dh sequencer more to M-A.
+  * [538c362,a8617f1] Update patches:
+       Replace use-changed-function-name-after-gsoap-2.8.35.patch
+       with build-support-gsoap-2.8.36.patch from upstream
+    New patches:
+       - fixup-spelling-issues-against-8.1.0.patch
+       - kopano-cachestat-update-docstring-remove-diff-function.patch
+       - adjust-search-path-for-php-config-script-on-php7.0.patch
+       - change-shebang-to-usr-bin-php7.0.patch
+       - OpenSSL-Make-SSLv2-conditional.patch
+  * [d43221d] Add lintian override for 'Nam' which is a Vietnamese word
+  * [a02a65f,82b7164,9940348] Swith to PHP7
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 25 Dec 2016 19:52:54 +0100
+
+kopanocore (8.1.0-1) unstable; urgency=medium
+
+  [ Jelle van der Waa ]
+  * [d221042] Do not install non-existant zarafa-ws initscripts
+
+  [ Carsten Schoenert ]
+  * [9ec08e8] d/copyright: add missed info for MIT licensed file.
+    Thanks: Luke Faraone
+  * [043d4ba] d/copyright: restructure the Expat license
+  * [08659c2] d/copyright: add MPL-1.1 license text
+  * [d09487c] d/gbp.conf: add content to filter for import
+  * [090b6ee] Import Upstream version 7.2.3.657+dfsg1
+  * [fb14761] Update patches:
+    added:
+       adding-.NOTPARALLEL-target-to-swig-python-Makefiel.am.patch
+       adding-additional-c-flags-for-C-11.patch
+       adding-additional-changes-due-gsoap-2.8.30.patch
+       bash-completion-remove-shebang-from-file.patch
+       use-changed-function-name-after-gsoap-2.8.35.patch
+    removed:
+       Remove-archiver-related-code.patch
+       Remove-references-to-licensed.patch
+       Rename-libmapi-to-libzarafa_mapi.patch
+       adding-additional-c-flags-for-C-11.patch
+       adding-additional-changes-due-gsoap-2.8.30.patch
+    changed patches (partially adopted upstream):
+       Be-pessimistic-about-daemon-startup.patch
+       Run-deamons-as-user-group-kopano.patch
+  * [3995a58] debian/control: add xmlto to Build-Depends
+  * [494dbd0] debian/zarafa-libs.install: add new libzcp_py*.so.* libs
+  * [f99ae76] debian/zarafa-dev.install: add new libzcp_py*.so libs
+  * [24f145d] debian/rules: override for dh_shlibdeps.  Otherwise not all
+    related libraries will be found.
+  * [6e0e785] debian/gbp.conf: prepare config for kopano 8.0
+  * [f17c04f] Import upstream version 8.0.1
+  * [754d187] debian/control: switch from Zarafa to Kopano naming.
+  * [8647842] debian/compat: use dh 9 compat
+  * [57292e9] debian/copyright: update based on recent upstream version
+  * [5ad12a7] debian/rules: adopt zarafa to kopano specific name change.
+  * [69a6e97] debian/rules: enable the hardening functionality (partially)
+  * [184d3a8] kopano-server: create /var/run/kopano before starting.
+  * [5826098] kopano-server: applying M-A paths for plugins in server.cfg.
+  * [b18ddf1] debian/kopano-server: remove no longer used directory.
+  * [42c6766] New upstream version 8.1.0
+  * [38bcad1] debian/control: add versioned B-D if libgsoap-dev.
+
+  [ Guido Günther ]
+  * [1f9d92d] Ship kopano-backup as well
+  * [985bed1] Ship kopano-archiver as well
+  * [4423913] d/control: Remove unneeded Testsuite: field
+  * [1a8d414] d/control: Rename to Kopano Core
+  * [cc5f0a1] Drop debug package in favour of autogenerated dbgsyms
+  * [698cb0a] Name source package kopanocore
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 05 Oct 2016 18:11:14 +0200
+
+zarafa (7.2.1+dfsg1-1) experimental; urgency=medium
+
+  * [e44d3da] watch: Handle released upstream tarballs.  They carry a SVN
+    revision as well. Also filter out the PHP web client.
+  * [4b82a45] New upstream version 7.2.1+dfsg1
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 03 Nov 2015 09:34:17 +0100
+
+zarafa (7.2.1~RC51272+dfsg1-1) experimental; urgency=low
+
+  * Initial upload to experimental (Closes: #658433)
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 01 Nov 2015 13:31:52 +0100

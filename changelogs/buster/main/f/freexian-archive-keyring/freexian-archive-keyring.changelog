@@ -1,0 +1,39 @@
+freexian-archive-keyring (2022.06.08) stretch; urgency=medium
+
+  * Update location of git repository
+  * Update the GPG keys to expire in december 2027
+    | pub   rsa4096 2018-05-28 [SC] [expire : 2027-12-05]
+    |       AB597C4F6F3380BD4B2BEBC2A07310D369055D5A
+    | uid           Extended LTS Repository <sysadmin@freexian.com>
+    |
+    | pub   rsa4096 2020-08-14 [SCEA] [expire : 2027-12-06]
+    |       135709AE1EB277A46E71572620DC56A105636A88
+    | uid           PHP LTS <php-support@freexian.com>
+
+ -- Raphaël Hertzog <raphael@freexian.com>  Wed, 08 Jun 2022 16:46:25 +0200
+
+freexian-archive-keyring (2020.09.19) jessie; urgency=medium
+
+  * Add the public key for the repositories on php.freexian.com
+
+ -- Raphaël Hertzog <raphael@freexian.com>  Sat, 19 Sep 2020 14:42:59 +0200
+
+freexian-archive-keyring (2020.06.14) jessie; urgency=medium
+
+  * Update expiration date to 2025:
+    | sec   rsa4096 2018-05-28 [SC] [expires: 2025-07-18]
+    |      AB597C4F6F3380BD4B2BEBC2A07310D369055D5A
+    | uid           [ultimate] Extended LTS Repository <sysadmin@freexian.com>
+  * Bump Standards-Version to 4.5.0
+  * Switch to debhelper compat level 12
+
+ -- Raphaël Hertzog <raphael@freexian.com>  Sun, 14 Jun 2020 17:03:04 +0200
+
+freexian-archive-keyring (2018.05.29) wheezy; urgency=medium
+
+  * Initial release with following key:
+    | pub   rsa4096 2018-05-28 [SC] [expires: 2023-05-27]
+    |      AB597C4F6F3380BD4B2BEBC2A07310D369055D5A
+    | uid           [ultimate] Extended LTS Repository <sysadmin@freexian.com>
+
+ -- Raphaël Hertzog <raphael@freexian.com>  Tue, 29 May 2018 15:43:41 +0200

@@ -1,0 +1,816 @@
+needrestart (3.5-4+deb11u5) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * core: fix regression of false positives for processes running in chroot or
+    mountns (Closes: #1087918, #1088047, #1088012, #1087917, #1087958,
+    #1087957)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 02 Dec 2024 21:08:14 +0100
+
+needrestart (3.5-4+deb11u4) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Address local privilege escalation vulnerabilities from any unprivileged
+    user to root (CVE-2024-48990, CVE-2024-48992, CVE-2024-48991,
+    CVE-2024-11003):
+    - core: prevent race condition on /proc/$PID/exec evaluation
+    - interp: do not set PYTHONPATH environment variable to prevent a LPE
+    - interp: do not set RUBYLIB environment variable to prevent a LPE
+    - interp: chdir into empty directory to prevent python parsing arbitrary
+      files
+    - interp: drop usage of Module::ScanDeps to prevent LPE
+  * debian/control: Drop Depends on libmodule-scandeps-perl
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 14 Nov 2024 12:33:05 +0100
+
+needrestart (3.5-4+deb11u3) bullseye; urgency=medium
+
+  * Add patch 10-amd-reporting from George Robbert to fix a Perl warning on
+    AMD64 systems.
+    Closes: #1026927
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 08 Feb 2023 12:20:03 +0100
+
+needrestart (3.5-4+deb11u2) bullseye; urgency=medium
+
+  * Add upstream patch 09-cgroupv2 to fix broken detection with cgroupv2.
+    Closes: #1005953
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 18 May 2022 08:32:47 +0200
+
+needrestart (3.5-4+deb11u1) bullseye-security; urgency=high
+
+  * Add patch 08-anchor-interp-re to fix not anchored regular expressions.
+    This fixes CVE-2022-30688.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 13 May 2022 10:50:07 +0200
+
+needrestart (3.5-4) unstable; urgency=medium
+
+  * New source only upload.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 12 Apr 2021 10:04:21 +0200
+
+needrestart (3.5-3) unstable; urgency=medium
+
+  * debian/watch: Adjust github URL.
+  * Add stable upstream patch 02-ruby-relative-path to fix detection for ruby
+    script started from relative paths.
+  * Add stable upstream patch 03-fix-wrong-default-comment to fix comment for
+    default value of skip_mapfiles.
+  * Add stable upstream patch 04-verbose-and-verbosity-confusion to fix
+    verbose/verbosity confusion in needrestart.conf.
+  * Add stable upstream patch 05-ignore-nvidia-memfd to ignore memfd used by
+    nvidia binary drivers.
+  * Add stable upstream patch 06-dont-restart-bluetooth to ignore restarting
+    bluetooth by default.
+  * Add stable upstream patch 07-runit to add support for runit.
+    Closes: #972685
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 09 Apr 2021 11:17:52 +0200
+
+needrestart (3.5-2) unstable; urgency=medium
+
+  * Adjust lintian overrides.
+  * Bump Standards-Version to 4.5.1.
+  * Bump debhelper-compat to level 13.
+  * Update debian/watch file standard to version 4.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 19 Nov 2020 14:59:15 +0100
+
+needrestart (3.5-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Drop merged patch 02-ignore-networking.
+    - Drop merged patch 03-typo-env-var.
+    - Drop merged patch 04-restore-cwd.
+    - Drop merged patch 05-strip-leading-zeroes.
+    - Check for pending AMD microcode updates.
+      Closes: #886611
+    - Ignore mapped files in temporary directories.
+      Closes: #925408
+    - Negative repeat count does nothing.
+      Closes: #942759
+  * Install new configuration files.
+  * Overwrite lintian warning executable-in-usr-lib.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 31 Mar 2020 11:24:03 +0200
+
+needrestart (3.4-6) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.5.0.
+  * Use the new debhelper-compat notation, and drop the d/compat file.
+  * Adjust source lintian-overrides.
+  * Set Rules-Requires-Root: no.
+  * Adjust lintian overrides.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 23 Jan 2020 16:33:08 +0100
+
+needrestart (3.4-5) unstable; urgency=medium
+
+  * Remove 3.4-3~bpo9+1 changelog entry.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 24 May 2019 11:56:40 +0200
+
+needrestart (3.4-4) unstable; urgency=medium
+
+  * Add upstream patch 05-strip-leading-zeroes to remove leading zero before
+    testing in map_files.
+    Closes: #928225
+  * Merge 3.4-3~bpo9+1 changelog.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 09 May 2019 11:18:46 +0200
+
+needrestart (3.4-3) unstable; urgency=medium
+
+  * Add upstream patch 04-restore-cwd to restore the cwd when skipping
+    processes with unavailable cwd.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Apr 2019 11:12:17 +0200
+
+needrestart (3.4-2) unstable; urgency=medium
+
+  * Add upstream patch 02-ignore-networking: Do not restart networking.service.
+    Closes: #922725
+  * Add upstream patch 03-typo-env-var: Fix typo in man page for env variable
+    DEBIAN_FRONT(END).
+    Closes: #923853
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 28 Mar 2019 15:56:40 +0100
+
+needrestart (3.4-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Skip needrestart in apt hook if system is shutting down.
+      Closes: #914753
+    - Do restart systemd-journald again.
+      Closes: #898818
+    - Complains when the microcode is newer than what Debian has.
+      Closes: #906958
+    - Complains about microcode updates on systems with microcode for multiple
+      CPUs in initramfs.
+      Closes: #907372
+    - Do not restart oneshot services from systemd-cron.
+      Closes: #917073
+  * Bump Standards-Version to 4.3.0.
+  * Add ex/nagios/needrestart-nagios as documentation example.
+    Closes: #916845
+  * Bump debian/compat to level 12.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 11 Feb 2019 10:05:34 +0100
+
+needrestart (3.3-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.2.1.
+  * Merge 3.3-1~bpo9+1 changelog.
+  * Add NEWS file for the configuration change, that services are not restarted
+    anymore in non-interactive mode with the default configuration.
+    Closes: #894444
+  * Fix typo in long description.
+    Closes: #913322
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 15 Nov 2018 11:18:54 +0100
+
+needrestart (3.3-1~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 26 Jul 2018 14:33:37 +0200
+
+needrestart (3.3-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixed ignored configuration files.
+      Closes: #901999, #902031, #902049
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 25 Jun 2018 15:02:46 +0200
+
+needrestart (3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Filter microcode for CPU signature and flags.
+      Closes: #900298
+    - Do not leak fd into restarted services.
+      Closes: #893152
+  * Merge 3.1-1~bpo9+1 changelog.
+  * Bump Standards-Version to 4.1.4.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 19 Jun 2018 08:42:24 +0200
+
+needrestart (3.1-1~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 11 Apr 2018 11:15:33 +0200
+
+needrestart (3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix uninitialized value in batch mode.
+      Closes: #891923
+    - Fixes nagios plugin mode issues invalid output when non root.
+      Closes: #881043
+    - Fix uninitialized value.
+      Closes: #886402
+  * Merge 3.0-1~bpo9+1 and 2.11-3+deb9u1 changelog.
+  * Correct lintian override tag.
+  * Move lintian-overrides file to the source directory.
+  * Use HTTPS for copyright format URI.
+  * Update Suggests and Description with microcode feature.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 05 Apr 2018 10:53:04 +0200
+
+needrestart (3.0-1~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports.
+    - Use debhelper version 10.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 15 Mar 2018 14:41:13 +0100
+
+needrestart (3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 26 Feb 2018 12:11:33 +0100
+
+needrestart (2.11+git20180213-1) experimental; urgency=medium
+
+  * New upstream git snapshot.
+    - Possible to override the configured restart mode using the
+      NEEDRESTART_MODE environment variable.
+      Closes: #866105
+    - Check for pending Intel microcode updates.
+      Closes: #886445
+    - Ignore special filename mappings used by recent versions of KDE
+      plasmashell.
+      Closes: #879091
+    - Fix handling of library mappings if target does not exist.
+      Closes: #878700
+    - Add missing unnamed device major numbers (fix for OpenVZ).
+      Closes: #876452
+    - Do not call GetTerminalSize() if STDOUT is not a TTY.
+      Closes: #859387
+    - Fix switch from interactive to list mode if debconf is run
+      noninteractive.
+      Closes: #876459
+    - Add documentation on restart mode if run non-interactive.
+      Closes: #842512
+    - Fix typo in man page.
+      Closes: #885448
+    - Drop merged patch 03-perl-warning.
+    - Drop merged patch 04-ignore-systemd-services.
+    - Drop merged patch 02-install-restart-d.
+  * Add dependency on binutils.
+    Closes: #887677
+  * Bump debian/compat to level 11.
+  * Bump Standards-Version to 4.1.3 (no changes required).
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 13 Feb 2018 14:10:34 +0100
+
+needrestart (2.11-4) unstable; urgency=medium
+
+  * Bump debian/compat to level 10.
+  * Bump Standards-Version to 4.0.0 (no changes required).
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 27 Jul 2017 15:41:42 +0200
+
+needrestart (2.11-3+deb9u1) stretch; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix switching to list mode if debconf is run non-interactively.
+    (Closes: #876459)
+
+ -- Dominik George <nik@naturalnet.de>  Wed, 28 Feb 2018 22:48:43 +0100
+
+needrestart (2.11-3) unstable; urgency=high
+
+  * Add patch 03-perl-warning to fix a warning from Perl triggered in version
+    5.20.
+  * Merge 2.11-2~bpo8+1 changelog.
+  * Add patch 04-ignore-systemd-services to ignore apt-daily.service,
+    apt-daily-upgrade.service, unattended-upgrades.service and
+    rc-local.service.
+    Closes: #862840, #852864
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 26 May 2017 15:45:04 +0200
+
+needrestart (2.11-2~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * Add patch 03-perl-warning to fix a warning from Perl triggered in version
+    5.20.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 06 Feb 2017 10:42:32 +0100
+
+needrestart (2.11-2) unstable; urgency=high
+
+  * Add patch 02-install-restart-d to fix installation of restart.d/ script
+    files.
+    Closes: #851866
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 24 Jan 2017 10:15:01 +0100
+
+needrestart (2.11-1) unstable; urgency=high
+
+  * New upstream release.
+    - Add display-manager 'lxdm' to override.
+      Closes: #845996
+    - Fix wrong regex quotation in default configuration file.
+      Closes: #844283
+  * Remove merged patch 01-spelling-error.
+  * Add patch 01-use-invoke-rc-d to honor policy-rc.d.
+    Closes: #850948
+  * Add a recommend on libpam-systemd to make user session work reliable.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 Jan 2017 16:03:16 +0100
+
+needrestart (2.10-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Do not use Text::Wrap while printing restart commands.
+      Closes: #838622
+    - Do really restart services in automatic mode.
+      Closes: #838355
+  * Merge 2.9-1~bpo8+1 changelog.
+  * Add patch 01-spelling-error to fix a few spelling errors.
+  * Install upstream doc files.
+    Closes: #842511
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 09 Nov 2016 11:10:38 +0100
+
+needrestart (2.9-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 05 Oct 2016 16:07:01 +0200
+
+needrestart (2.9-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes systemctl_combine option.
+      Closes: #826526
+    - Fixes reports unchanged backport kernel as changed.
+      Closes: #827162
+    - Fixes false positive orcexec files in /run.
+      Closes: #828103
+    - Improve performance when checking interpreters by not running multiple
+      times for the same script.
+      Closes: #826247
+    - Allow usage of different config file when run from APT.
+      Closes: #826220
+    - Ignore services in override_rc in Nagios plugin mode.
+      Closes: #827023
+    - Do not restart lxcfs by default
+      Closes: #832166
+    - Remove merged patch 01-getterminalsize-workaround.
+  * Merge 2.8-1~bpo8+1 changelog.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 06 Sep 2016 11:05:43 +0200
+
+needrestart (2.8-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 24 May 2016 09:31:12 +0200
+
+needrestart (2.8-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Disable mail notification by default (notify.conf).
+    - Restart SysV init services on systemd using systemctl.
+      Closes: #818853
+    - Add a easy UI mode hiding technical details for non-technical users.
+      Closes: #819824
+    - Add xendomains to override_rc.
+      Closes: #817807
+    - Improve getopts parsing to remove "Uknown option:" warnings.
+      Closes: #817927
+    - Fix bashisms in /etc/needrestart/notify.d/*.
+      Closes: #818001
+  * Merge 2.7-1~bpo8+1 changelog.
+  * Bump Standards-Version to 3.9.8 (no changes required).
+  * Add upstream patch 01-getterminalsize-workaround to work around the
+    libterm-readkey-perl bug #824564.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 May 2016 18:54:20 +0200
+
+needrestart (2.7-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 23 Mar 2016 14:56:19 +0100
+
+needrestart (2.7-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Add dependency on gettext-base and libintl-perl.
+    - Install notify.conf file.
+    - Install new locale mo files.
+    - Add display-manager 'slim' to override.
+      Closes: #816061
+    - Allow systemd service names with dots in them.
+      Closes: #816630
+    - Add russian translation.
+      Closes: #815086
+    - Notification scripts can be disabled globaly (see notify.conf).
+      Closes: #787297
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 10 Mar 2016 19:36:03 +0100
+
+needrestart (2.6-1) unstable; urgency=high
+
+  * New upstream release.
+    - Don't notify system users via email.
+      Closes: #812399
+    - Don't restart services in interactive restart mode while debconf's
+      noninteractive frontend is used.
+      Closes: #803249
+    - Fix broken detection of old mappings due to regression introduced in 2.3.
+      Closes: #810970
+  * Bump Standards-Version to 3.9.7 (no changes required).
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Feb 2016 09:53:35 +0100
+
+needrestart (2.5-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix broken kernel detection due to syntax error.
+      Closes: #810031
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 08 Jan 2016 09:39:24 +0100
+
+needrestart (2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Add override for systemd-logind due to another systemd regression.
+      Closes: #800718
+    - Fix grammar in hook scripts.
+      Closes: #805980
+  * Fix kernel detection on non x86* arch by adding a new depdency on xz-utils.
+    Closes: #800720
+  * Remove doubled line in long description.
+    Closes: #799898
+  * Remove libfile-slurp-perl dependency again. It is not required anymore.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 04 Jan 2016 12:00:42 +0100
+
+needrestart (2.3-2) unstable; urgency=medium
+
+  * Add missing dependency on libfile-slurp-perl.
+    Closes: #799733
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 22 Sep 2015 10:05:37 +0200
+
+needrestart (2.3-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Processes using chroot were always detected as obsolete
+      since missing binaries in /proc/PID/root/.
+       Closes: #786584
+    - Add lightdm to override.
+      Closes: #791649
+    - Do not try container detection in user mode.
+      Closes: #791665
+    - Remove unsupported HTML markups from notifications.
+      Closes: #791664
+    - Add a quiet option to drop any progress messages.
+      Closes: #791708
+    - Do not handle user services as system services.
+      Closes: #792032
+    - Prevent killing user services.
+      Closes: #788380
+  * Merge 1.2-8+deb8u1 changelog.
+  * Extend long description.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 21 Sep 2015 14:19:11 +0200
+
+needrestart (2.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Ignore apt-get.
+      Closes: #784237
+    - Add override for systemd's emergency.service and rescue.service.
+      Closes: #784437
+    - Ignore Oil Runtime Compiler's JIT files.
+      Closes: #786374
+    - Fix 2c037bc did broke the progressbar.
+      Closes: #768124
+    - Detect and suggest to restart containers (docker and LXC).
+      Closes: #783181
+    - Use /proc/$PID/root to scan for files fixing false positives on
+      containers (i.e. LXC) using bind mounts.
+      Closes: #783181
+    - Skip scanning files with Interp/* if cwd is unknown.
+      Closes: #779832
+    - Add kernel hints option not requiring an acknowledgement by the user.
+      Closes: #769811
+    - Take version number comparing stuff from Dpkg::Version to compare kernel
+      versions correctly.
+      Closes: #781657
+    - Improve restart query in interactive mode (stdio).
+      Closes: #772859
+  * Add needrestart-session to suggests.
+  * Add again missing usr/share/polkit-1/actions directory.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 22 May 2015 19:18:00 +0200
+
+needrestart (2.0-2) unstable; urgency=low
+
+  * Merge 1.2-7~bpo70+1 and 1.2-8 changelog.
+  * Uploading to unstable.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 26 Apr 2015 13:58:14 +0200
+
+needrestart (2.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Merge 1.2-5, 1.2-6 and 1.2-7 changelog.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 27 Jan 2015 18:59:50 +0100
+
+needrestart (1.2+git20141115-1) experimental; urgency=high
+
+  * New upstream git snapshot.
+    - Fixed division by zero, which causes the debconf prompt to hang, if no
+      kernel image was found.
+      Closes: #767370
+    - Fixed Perl warnings, if no TTY is available.
+      Closes: #768124
+  * Merge 1.2-3 and 1.2-4 changelog.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 15 Nov 2014 22:02:01 +0100
+
+needrestart (1.2+git20141031-1) experimental; urgency=low
+
+  * New upstream git snapshot.
+    - Add new /etc/needrestart/notify.d directory.
+    - Add suggest on libnotify-bin.
+    - Regression in list mode solved.
+      Closes: #764042
+    - conf.d directory added.
+      Closes: #764043
+    - Fixed display of running kernel.
+      Closes: #764917
+    - Don't blacklist services by default, but use a new override_rc option to
+      don't restart some critical services by default.
+      Closes: #763937
+  * Merge 1.2-2~bpo70+1 changelog.
+  * Use DEP5 copyright format.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 31 Oct 2014 18:40:58 +0100
+
+needrestart (1.2-8+deb8u1) stable; urgency=low
+  * Add patch 17-fix-interp-use-undef-in-chdir to fix warnings and errors if a
+    process has not got a valid cwd.
+    Closes: #779832
+  * Add patch 18-fix-kernel-version-sorting to fix the Linux kernel version
+    sorting, so that 4.0 is also considered to be higher than 3.19.x.
+    Closes: #781657
+  * Add patch 20-fix-perl-warning-dangling-kernel to fix Perl warnings while
+    scanning dangling kernel symlinks.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 27 May 2015 19:21:57 +0200
+
+needrestart (1.2-8) unstable; urgency=low
+
+  * Add patch 16-fix-progressbar-regression to improve detection if invoked
+    noninteractive and prevent debconf tried to be used in such cases. The
+    reload action is set to list only if it was inter-active.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 24 Mar 2015 10:24:33 +0100
+
+needrestart (1.2-7~bpo70+1) wheezy-backports; urgency=low
+
+  * Rebuild for wheezy-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 Mar 2015 15:38:23 +0100
+
+needrestart (1.2-7) unstable; urgency=low
+
+  * Add missing second patch 15-fix-progressbar-non-interactive to fix #768124.
+    The patch was not completely added with 1.2-3.
+    Closes: #768124
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Dec 2014 21:44:56 +0100
+
+needrestart (1.2-6) unstable; urgency=high
+
+  * Add patch 10-respect-override-auto to not restart services with overrides
+    in auto mode.
+    Closes: #770937
+  * Add patch 11-systemd-journald-workaround to add systemd-journald to
+    override_rc as a workaround tue to #771122.
+    Closes: #771254
+  * Add patch 12-ignore-systemd-user-sessions to ignore user sessions.
+    Closes: #771348
+  * Add patch 13-falsepos-aio-fix to skip POSIX async I/O mappings to prevent
+    false positive restarts.
+  * Add patch 14-wpa_supplicant-override to ignore wpa_supplicant.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 04 Dec 2014 14:07:10 +0100
+
+needrestart (1.2-5) unstable; urgency=high
+
+  * Add patch 08-fix-broken-debconf to fix a debconf hang up if no kernel image
+    is available.
+    Closes: #767370
+  * Add patch 09-add-some-overrides to prevent automatic restarts of gettys and
+    mythtv-backend.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 20 Nov 2014 18:08:36 +0100
+
+needrestart (1.2-4) unstable; urgency=low
+
+  * Install missing conf.d directory.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 11 Nov 2014 23:56:34 +0100
+
+needrestart (1.2-3) unstable; urgency=low
+
+  * Add patch 01-add-conf.d-directory to support conf.d directory.
+    Closes: #764043
+  * Add patch 02-regression-commands-in-list-mode to fix a regression in list
+    mode.
+    Closes: #764042
+  * Add patch 03-fix-empty-kernel-version-string to fix displaying the running
+    kernel version.
+    Closes: #764917
+  * Add patch 04-prefer-services-over-rc.d to prevent restarting services
+    twice.
+  * Add patch 05-dont-blacklist-services which adds support for the new
+    override_rc option and does not automatic restart services.
+    Closes: #763937
+  * Add patch 06-fix-version-number-string to fix the reported version number.
+  * Add patch 07-fix-warnings-without-tty to fix Perl warnings, if no TTY is
+    available.
+    Closes: #768124
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 11 Nov 2014 23:48:14 +0100
+
+needrestart (1.2-2~bpo70+1) wheezy-backports; urgency=low
+
+  * Rebuild for wheezy-backports.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 23 Oct 2014 11:18:32 +0200
+
+needrestart (1.2-2) unstable; urgency=medium
+
+  * Add missing dependency on libterm-readkey-perl.
+    Closes: #763865
+  * Bump Standards-Version to 3.9.6 (no changes required).
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 12 Oct 2014 12:37:54 +0200
+
+needrestart (1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Drop dependency on Term::ProgressBar::Simple.
+      Closes: #761192
+    - Add po-debconf build dependency for translations.
+      Closes: #761068
+    - Fix blacklist to match upgraded binaries (dpkg).
+      Closes: #761346
+    - Fix detection of unit names on systemd 215+.
+      Closes: #762312
+    - Handle restarts of systemd manager and sysv init using
+      their specific commands.
+      Closes: #762528
+  * Use debian/tmp/ as DESTDIR.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 29 Sep 2014 18:44:34 +0200
+
+needrestart (1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Ignore DHCP clients.
+      Closes: #752111
+  * Remove conffile /etc/needrestart/hook.d/30-pacman.
+    Closes: #752114
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 20 Aug 2014 09:32:10 +0200
+
+needrestart (1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Add new dependency on libterm-progressbar-simple-perl.
+    - Fix grammar errors and use a additional debconf template.
+      Closes: #748652
+    - Ignore device ID for unnamed devices due to broken implementation on
+      btrfs.
+      Closes: #750734
+    - Skip scanning of needrestart process.
+      Closes: #751877
+    - Drop UI specific progress indicators, use Term::ProgressBar::Simple to
+      minimize disruption of the terminal.
+      Closes: #748758
+    - Fix include path retrieval on python3.
+      Closes: #750589
+  * Add versioned dependency on dpkg to a version which supports status-logger.
+    Closes: #751851
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 19 Jun 2014 15:41:50 +0200
+
+needrestart (0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Removed dependency on binutils.
+    - Fixed Perl warning.
+      Closes: #746363
+    - Read kernel version from x86 kernel boot header and handle uncompressed
+      kernel images.
+      Closes: #746550
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 12 May 2014 10:05:05 +0200
+
+needrestart (0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes non-numeric argument on progress_prep call.
+      Closes: #744961
+    - Detect running on obsolete kernel.
+      Closes: #745270
+    - Add new dependencies on libmodule-scandeps-perl, libsort-naturally-perl
+      and libproc-processtable-perl.
+  * Sync debian/copyright.
+  * Add dependency on binutils.
+  * Package long description enhanced.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 28 Apr 2014 10:30:23 +0200
+
+needrestart (0.7-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Improved verbose option.
+      Closes: #744000
+    - Default UI option added.
+      Closes: #744001
+    - Apply blacklist while processing parent processes.
+      Closes: #744002
+  * Drop merged patch 01-makefile-fix.
+  * Add reportbug script.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 15 Apr 2014 09:26:55 +0200
+
+needrestart (0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Use systemd if available and print full restart commands in list mode.
+      Closes: #731028
+    - Drop merged patch 02-blacklist-lightdm.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 08 Apr 2014 09:48:05 +0200
+
+needrestart (0.5-2) unstable; urgency=medium
+
+  * Add upstream patch 02-blacklist-lightdm to blacklist lightdm.
+    Closes: #735027
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 03 Apr 2014 10:58:12 +0200
+
+needrestart (0.5-1) unstable; urgency=high
+
+  * New upstream release.
+    - Prevent config file to break dpkg after removing needrestart.
+      Closes: #732461
+    - Handle LSB tags case insensitivly.
+      Closes: #731165
+  * Overwrite debian-watch-may-check-gpg-signature warning. There is no GPG
+    signature available.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 03 Jan 2014 11:27:02 +0100
+
+needrestart (0.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixed spelling errors.
+      Closes: #723935
+    - sudo excluded from list.
+      Closes: #725937
+    - Fixed return handling if readline is used as debconf frontent.
+      Closes: #729997
+  * Bump Standards-Version to 3.9.5 (no changes needed).
+  * Don't explicitly request xz compression - dpkg 1.17 does this by default.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 02 Dec 2013 14:02:36 +0100
+
+needrestart (0.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixed argument handling.
+      Closes: #721809
+    - Fixed missdetection of restart needing daemons and added a blacklist.
+      Closes: #721810
+    - Add new dependency libmodule-find-perl.
+    - The manpage has been merged.
+    - Add patch 01-makefile-fix to fix PREFIX and DESTDIR of the installed Perl
+      modules.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 Sep 2013 10:33:19 +0200
+
+needrestart (0.2-1) unstable; urgency=low
+
+  * Initial release.
+    Closes: #719673
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 14 Aug 2013 10:18:14 +0200

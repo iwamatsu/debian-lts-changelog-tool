@@ -1,0 +1,39 @@
+lib3mf (1.8.1+ds-3+deb10u1) buster-security; urgency=high
+
+  * Fix use-after-free (CVE-2021-21772), backporting fix from v2.1.1
+    (Closes: #985092)
+
+ -- Kristian Nielsen <knielsen@knielsen-hq.org>  Mon, 05 Apr 2021 12:55:40 +0200
+
+lib3mf (1.8.1+ds-3) unstable; urgency=medium
+
+  * Update symbol file for amd64 (Closes: #924841)
+
+ -- Torsten Paul <Torsten.Paul@gmx.de>  Tue, 26 Mar 2019 01:08:07 +0100
+
+lib3mf (1.8.1+ds-2) unstable; urgency=medium
+
+  * Update symbol file for hurd, kfreebsd, powerpc and ppc64
+  * Fix lintian warning symbols-file-missing-build-depends-package-field
+
+ -- Torsten Paul <Torsten.Paul@gmx.de>  Sun, 20 Jan 2019 18:42:40 +0100
+
+lib3mf (1.8.1+ds-1) unstable; urgency=medium
+
+  * New upstream version 1.8.1
+  * Drop all patches as all changes are included upstream now via
+    https://github.com/3MFConsortium/lib3mf/pull/114
+  * Add upstream NEWS from github release page
+  * Add Files-Excluded for removed libzip and zlib source
+  * Address more of the pedantic lintian warnings
+  * Update symbol file using pkgkde-symbolshelper
+  * Bump debhelper compatibility to version 12
+  * Bump standards version to 4.3.0
+
+ -- Torsten Paul <Torsten.Paul@gmx.de>  Sun, 13 Jan 2019 19:22:14 +0100
+
+lib3mf (1.8.0+ds-1) unstable; urgency=low
+
+  * Initial release. (Closes: #917649)
+
+ -- Torsten Paul <Torsten.Paul@gmx.de>  Tue, 01 Jan 2019 15:47:11 +0100

@@ -1,0 +1,172 @@
+libxmlrpc3-java (3.1.3-9+deb10u1) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2019-17570:
+    An untrusted deserialization was found in the
+    org.apache.xmlrpc.parser.XmlRpcResponseParser:addResult method of Apache
+    XML-RPC (aka ws-xmlrpc) library. A malicious XML-RPC server could target a
+    XML-RPC client causing it to execute arbitrary code.
+
+    Clients that expect to get server-side exceptions need to set the
+    enabledForExceptions property to true in order to process serialized
+    exception messages. (Closes: #949089)
+
+ -- Markus Koschany <apo@debian.org>  Thu, 06 Feb 2020 17:57:54 +0100
+
+libxmlrpc3-java (3.1.3-9) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Emmanuel Bourg ]
+  * Removed the unused build dependency on libmaven-install-plugin-java
+
+  [ Markus Koschany ]
+  * Switch to compat level 10.
+  * Declare compliance with Debian Policy 4.1.2.
+  * Add jaxb-api.patch. Add jaxb-api as a dependency because
+    with Java 9 it is no longer on the default classpath.
+    Thanks to Chris West for the report. (Closes: #874662)
+  * Build-Depend on libjaxb-java.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 21 Dec 2017 12:41:51 +0100
+
+libxmlrpc3-java (3.1.3-8) unstable; urgency=medium
+
+  * Transition to the Servlet API 3.1 (Closes: #801038)
+  * Build with the DH sequencer instead of CDBS
+  * Standards-Version updated to 3.9.8
+  * Moved the package to Git
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 23 Jun 2016 12:27:45 +0200
+
+libxmlrpc3-java (3.1.3-7) unstable; urgency=medium
+
+  * Fixed a test failure with Java 8
+  * Standards-Version updated to 3.9.5 (no changes)
+  * Switch to debhelper level 9
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 13 May 2014 13:15:36 +0200
+
+libxmlrpc3-java (3.1.3-6) unstable; urgency=low
+
+  * Removed the dependency on libjaxme-java
+  * Removed the dependency on libapache-pom-java
+  * Build with maven-debian-helper (Closes: #670223)
+  * Added a build dependency on libmaven-install-plugin-java
+    (required to build the aggregated Javadoc)
+  * jh_manifest is now used to add OSGi metadata to the manifests
+  * Removed the unused build steps for the old *-gcj packages
+  * Updated Standards-Version to 3.9.4 (no changes)
+  * Use canonical URLs for the Vcs-* fields
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 27 Jun 2013 13:47:56 +0200
+
+libxmlrpc3-java (3.1.3-5) unstable; urgency=low
+
+  * Install maven metadata:
+    - d/control: Build-Depends on maven-repo-helper.
+    - d/control: Depends on libapache-pom-java.
+    - d/rules: Use mh_install to install JAR and POM.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Mon, 12 Dec 2011 23:27:49 +0100
+
+libxmlrpc3-java (3.1.3-4) unstable; urgency=low
+
+  [ Jakub Adam ]
+  * Add OSGi metadata to JAR manifests
+
+  [ Damien Raude-Morvan ]
+  * Fix "java.lang.IllegalStateException: Failed to locate resource:
+    XmlRpcClient.properties": filter property file in d/build.xml (Closes:
+    #581487)
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 19 Nov 2011 17:45:17 +0100
+
+libxmlrpc3-java (3.1.3-3) unstable; urgency=low
+
+  [ Damien Raude-Morvan ]
+  * d/control: Drop Depends on any JRE as a Java library don't need to
+    depends on a runtime (Java Policy)
+
+  [ Torsten Werner ]
+  * Update Standards-Version: 3.9.2.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 26 Sep 2011 21:11:07 +0200
+
+libxmlrpc3-java (3.1.3-2) unstable; urgency=low
+
+  * Let 'maintainers' start with uppercase M.
+  * Remove Thomas from uploaders.
+  * Do no longer build the *-gcj packages. (Closes: #559967)
+  * Switch to source format 3.0.
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 10 Apr 2010 23:52:56 +0200
+
+libxmlrpc3-java (3.1.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version: to 3.8.4 (no changes needed)
+  * Javadoc:
+    - Build-Depends on default-jdk-doc
+    - Link generated Javadoc with it
+    - libxmlrpc3-java-doc now Recommends default-jdk-doc
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 20 Feb 2010 22:52:07 +0100
+
+libxmlrpc3-java (3.1.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build-Depends on debhelper (>= 7).
+  * Update Standards-Version: 3.8.3
+    - Add 'get-orig-source' target in debian/rules
+  * Add myself as Uploaders.
+  * Register API Javadoc with doc-base.
+  * Depends on libservlet-2.5-java instead of 2.4.
+  * Reword short description of *-gcj packages.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 03 Oct 2009 13:18:39 +0200
+
+libxmlrpc3-java (3.1-3) unstable; urgency=low
+
+  * Add myself to Uploaders.
+  * Add missing Depends: ${misc:Depends}.
+  * Do no longer quote the full text of the Apache license.
+  * Change Section: java.
+  * Update Standards-Version: 3.8.2.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 03 Aug 2009 22:20:42 +0200
+
+libxmlrpc3-java (3.1-2) unstable; urgency=low
+
+  * Build-depends on default-jdk-builddep, and set JAVA_HOME to
+    /usr/lib/jvm/default-java. Closes: #477895.
+  * Remove unneeded gcj build-dependency.
+  * Add missing © in debian/copyright to fix lintian warning.
+  * Bump Standards-Version: to 3.7.3. No changes needed.
+
+ -- Thomas Girard <thomas.g.girard@free.fr>  Sun, 27 Apr 2008 20:12:28 +0000
+
+libxmlrpc3-java (3.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add Homepage:, Vcs-Svn: and Vcs-Browser: control fields.
+
+ -- Thomas Girard <thomas.g.girard@free.fr>  Wed, 24 Oct 2007 11:56:17 +0000
+
+libxmlrpc3-java (3.0-2) unstable; urgency=low
+
+  * Add missing dependencies.
+  * Ajust sections: all packages belong to the libs section except for
+    libxmlrpc3-java-doc which is in doc.
+  * New packages:
+    o libxmlrpc3-common-java-gcj
+    o libxmlrpc3-client-java-gcj
+    o libxmlrpc3-server-java-gcj
+
+ -- Thomas Girard <thomas.g.girard@free.fr>  Wed, 08 Aug 2007 15:32:41 +0200
+
+libxmlrpc3-java (3.0-1) unstable; urgency=low
+
+  * Initial release. Closes: #430136.
+
+ -- Thomas Girard <thomas.g.girard@free.fr>  Fri, 22 Jun 2007 17:27:08 +0200

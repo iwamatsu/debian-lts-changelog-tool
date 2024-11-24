@@ -1,0 +1,77 @@
+golang-github-vbatts-tar-split (0.11.1-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 05 Feb 2021 03:00:47 +0000
+
+golang-github-vbatts-tar-split (0.11.1-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release
+  * Standards-Version: 4.4.0
+  * DH & compat to version 12
+  * Added myself to uploaders
+  * Testsuite: autopkgtest-pkg-go
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 12 Sep 2019 13:16:52 +1000
+
+golang-github-vbatts-tar-split (0.10.2-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+  * Remove Built-Using from arch:all -dev package
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.10.2
+    - Fixes FTBFS with header mismatch. Closes: #876818
+    - Refresh patch
+  * Use debhelper v10
+  * Update team name
+  * Update to Standards-Version 4.1.1
+    - Use HTTPS URL for d/copyright
+    - Use Priority: optional
+  * Use golang-any instead of golang-go
+  * Update build dependencies
+  * Use wrap-and-sort for d/control
+  * Update d/copyright
+  * Fix typo in description, spotted by lintian
+  * Remove unneeded extra license file
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 30 Nov 2017 21:21:16 +0100
+
+golang-github-vbatts-tar-split (0.9.13-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 3.9.7.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 19 Mar 2016 14:35:13 +1100
+
+golang-github-vbatts-tar-split (0.9.10-1) unstable; urgency=medium
+
+  * Update to 0.9.10 upstream release
+
+ -- Tianon Gravi <tianon@debian.org>  Sat, 24 Oct 2015 11:00:17 -0700
+
+golang-github-vbatts-tar-split (0.9.7-2) unstable; urgency=medium
+
+  * Swap Build-Depends relation order to appease buildds (Closes: #798725);
+    thanks Aaron!
+
+ -- Tianon Gravi <tianon@debian.org>  Mon, 05 Oct 2015 01:40:31 -0700
+
+golang-github-vbatts-tar-split (0.9.7-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Tue, 08 Sep 2015 20:50:03 -0700

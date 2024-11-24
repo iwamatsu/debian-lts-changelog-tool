@@ -1,0 +1,60 @@
+golang-github-fluent-fluent-logger-golang (1.5.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rules-Requires-Root: no.
+  * Standards-Version: 4.5.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 29 Feb 2020 01:27:56 +1100
+
+golang-github-fluent-fluent-logger-golang (1.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+  * Added myself to Uploaders.
+  * Invoke "go generate" on build.
+  * Build-Depends += "msgp".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 12 Sep 2019 21:42:13 +1000
+
+golang-github-fluent-fluent-logger-golang (1.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Testsuite: autopkgtest-pkg-go
+  * debhelper & compat to version 11.
+  * Standards-Version: 4.1.4; Priority: optional.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 11 Jun 2018 03:34:17 +1000
+
+golang-github-fluent-fluent-logger-golang (1.1.0-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 19:51:11 +0300
+
+golang-github-fluent-fluent-logger-golang (1.1.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release (Closes: #823469)
+  * Update to standards version 3.9.8
+  * Add docs, move examples into /usr/share/doc directory
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 17 May 2016 12:29:09 +1000
+
+golang-github-fluent-fluent-logger-golang (1.0.0-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 23 Oct 2015 15:19:45 -0700

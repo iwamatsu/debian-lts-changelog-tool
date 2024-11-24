@@ -1,0 +1,69 @@
+network-manager-ssh (1.2.10-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Privilege escalation because extra options are mishandled (CVE-2020-9355)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 04 Mar 2020 23:07:31 +0100
+
+network-manager-ssh (1.2.10-1) unstable; urgency=high
+
+  * New upstream release (Closes: #928747)
+
+ -- Lennart Weller <lhw@ring0.de>  Fri, 10 May 2019 10:28:16 +0200
+
+network-manager-ssh (1.2.8-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Lennart Weller <lhw@ring0.de>  Tue, 20 Nov 2018 12:22:10 +0100
+
+network-manager-ssh (1.2.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Move appdata to metainfo directory
+
+ -- Lennart Weller <lhw@ring0.de>  Tue, 15 May 2018 11:43:39 +0200
+
+network-manager-ssh (1.2.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Disable libnm-glib support (Closes: #862841)
+  * Drop obsolete Build-Depends on libgnome-keyring-dev (Closes: #862839)
+
+ -- Lennart Weller <lhw@ring0.de>  Wed, 24 May 2017 12:16:08 +0200
+
+network-manager-ssh (1.2.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Lennart Weller <lhw@ring0.de>  Thu, 11 Aug 2016 13:04:30 +0200
+
+network-manager-ssh (1.2.0-3) unstable; urgency=low
+
+  * Changed debian/control Vcs lines to cgit
+
+ -- Lennart Weller <lhw@ring0.de>  Fri, 01 Jul 2016 13:42:00 +0200
+
+network-manager-ssh (1.2.0-2) unstable; urgency=medium
+
+  * Added Replace and Breaks to network-manager-ssh-gnome	(Closes: #826736)
+
+ -- Lennart Weller <lhw@ring0.de>  Fri, 01 Jul 2016 11:40:34 +0200
+
+network-manager-ssh (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Moved Vcs to collab-maint 
+  * Enabled build hardening
+  * Updated debian Standards-Version to 3.9.8
+  * Updated build dependencies and removed duplicates
+  * Build with configure option --enable-absolute-paths
+  * Moved dialog to -gnome package
+
+ -- Lennart Weller <lhw@ring0.de>  Mon, 18 Apr 2016 13:56:36 +0200
+
+network-manager-ssh (0.9.4-1) unstable; urgency=low
+
+  * Initial release. (Closes: #725396)
+
+ -- Lennart Weller <lhw@ring0.de>  Tue, 01 Dec 2015 12:06:25 +0100

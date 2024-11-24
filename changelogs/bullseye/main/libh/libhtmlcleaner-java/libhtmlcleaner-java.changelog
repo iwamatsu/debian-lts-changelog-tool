@@ -1,0 +1,102 @@
+libhtmlcleaner-java (2.24-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload.
+  * Fix CVE-2023-34624:
+    A security vulnerability has been discovered in libhtmlcleaner-java, a Java
+    HTML parser library. An attacker was able to cause a denial of service
+    (StackOverflowError) if the parser runs on user supplied input with deeply
+    nested HTML elements. This update introduces a new nesting depth limit
+    which can be overridden in cleaner properties.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 07 Aug 2023 18:27:07 +0200
+
+libhtmlcleaner-java (2.24-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Update renamed lintian tag names in lintian overrides.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Alexandre Rossi ]
+  * New upstream version 2.24
+  * drop patch fix-testsuite-transformer-indent (integrated upstream)
+  * update policy compliance to 4.5.0 (nothing to do)
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Wed, 29 Apr 2020 14:56:39 +0200
+
+libhtmlcleaner-java (2.23-1) unstable; urgency=medium
+
+  * update the debhelper-compat level to 12
+  * fix d/watch
+  * New upstream version 2.23
+  * drop example.xml patch (restored upstream)
+  * correctly reference libjdom2.jar
+  * workaround test suite failure
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Wed, 11 Sep 2019 12:50:59 +0200
+
+libhtmlcleaner-java (2.22-2) unstable; urgency=medium
+
+  * fix watch file
+  * mark doc pkg as Multi-Arch foreign
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Mon, 12 Aug 2019 16:14:30 +0200
+
+libhtmlcleaner-java (2.22-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/watch: Use https protocol
+
+  [ Alexandre Rossi ]
+  * update d/watch to match upstream src filename change
+  * New upstream version 2.22
+  * drop fix-tests-with-java9 (applied upstream)
+  * fix testsuite by adding missing example.xml file
+  * do not embed another copy of jquery in -doc pkg
+  * update to policy 4.4.0 (nothing to do)
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Mon, 08 Jul 2019 14:40:44 +0000
+
+libhtmlcleaner-java (2.21-5) unstable; urgency=medium
+
+  * fix missing java in testbed
+  * Update to policy 4.2.1.0 (nothing to do)
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Wed, 26 Sep 2018 12:21:19 +0200
+
+libhtmlcleaner-java (2.21-4) unstable; urgency=medium
+
+  * add upstream bug info to fix-tests-with-java9
+  * fix lintian insecure-copyright-format-uri
+  * add autopkgtest test
+  * depend on jquery and jquery-ui for doc pkg
+  * ignore source-is-missing lintian error for test data
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Tue, 25 Sep 2018 10:16:22 +0200
+
+libhtmlcleaner-java (2.21-3) unstable; urgency=medium
+
+  * Add patch to fix test suite with java9 (Closes: #895899).
+  * Update standards version to 4.1.4 (nothing to do).
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Tue, 24 Apr 2018 09:39:05 +0200
+
+libhtmlcleaner-java (2.21-2) unstable; urgency=medium
+
+  * Mention src/test/resources/test23.html in debian/copyright
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Mon, 05 Feb 2018 10:14:46 +0100
+
+libhtmlcleaner-java (2.21-1) unstable; urgency=low
+
+  * New upstream version.
+  * Update standards version.
+  * Move to the maven build system.
+  * Build API documentation.
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Mon, 08 Jan 2018 14:36:54 +0100
+
+libhtmlcleaner-java (2.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #707093).
+
+ -- Alexandre Rossi <alexandre.rossi@gmail.com>  Thu, 26 May 2011 15:05:58 +0200

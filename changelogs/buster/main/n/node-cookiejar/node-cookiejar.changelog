@@ -1,0 +1,23 @@
+node-cookiejar (2.0.1-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2022-25901: Prevent a Regular Expression Denial of Service (ReDoS)
+    attack that was possible via passing a large cookie value to the
+    Cookie.parse function.
+
+ -- Chris Lamb <lamby@debian.org>  Mon, 11 Sep 2023 12:40:50 -0700
+
+node-cookiejar (2.0.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.0.1
+  * Bump Standards-Version 3.9.6
+  * debian/watch: fix dversionmangle
+  * Add autopkgtest suite
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Sun, 12 Oct 2014 12:08:51 +0200
+
+node-cookiejar (1.3.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #750211)
+
+ -- Leo Iannacone <l3on@ubuntu.com>  Sat, 07 Jun 2014 15:37:21 +0200

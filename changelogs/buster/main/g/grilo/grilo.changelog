@@ -1,0 +1,411 @@
+grilo (0.3.7-1+deb10u1) buster-security; urgency=high
+
+  * fix-tls-cert-validation.patch:
+    - Fix TLS cert validation not being done for any network call
+      (Closes: #992971, CVE-2021-39365).
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 26 Aug 2021 22:49:03 +0200
+
+grilo (0.3.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use Meson instead of Autotools:
+    - debian/rules: Convert dh_auto_configure parameters from autotools to
+      meson.
+    - debian/control: Replace build dependency on autoconf-archive with
+      meson and require debhelper >= 10.3.
+    - Drop autoconf-macros.patch.
+  * debian/control:
+    - Update Standards-Version to 4.2.1 (no changes).
+    - Update libglib2.0-dev build dependency to 2.44.
+    - Drop build dependency on intltool, it's no longer needed.
+  * debian/libgrilo-0.3-0.install:
+    - Install files in /usr/share/locale.
+  * debian/libgrilo-0.3-0.docs:
+    - Don't install the README file, these are just build instructions.
+  * debian/libgrilo-0.3-dev.install:
+    - This library no longer produces static .a files.
+  * debian/rules:
+    - Run dh_missing with --fail-missing.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 27 Nov 2018 10:55:33 +0200
+
+grilo (0.3.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    - Add Vcs-* fields.
+    - Update Standards-Version to 4.1.5 (changes: support for "nodoc").
+  * debian/rules:
+    - Add support for the "nodoc" build option.
+    - Run gtkdocize before autoreconf.
+  * libgrilo-0.3-0.symbols:
+    - Update symbols file.
+  * Set compatibility level to 10:
+    - debian/rules: don't pass --parallel nor --with autoreconf do dh.
+    - debian/control: require dh >= 10 and drop build dependency on
+      dh-autoreconf.
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 30 Jul 2018 11:16:23 +0300
+
+grilo (0.3.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 25 Jul 2018 10:35:41 +0200
+
+grilo (0.3.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/gir1.2-grilo-0.3.lintian-overrides:
+    - Override typelib-package-name-does-not-match.
+  * debian/libgrilo-0.3-dev.lintian-overrides:
+    - Override gir-missing-typelib-dependency.
+  * debian/copyright:
+    - Use https for the Format and Source URLs.
+
+ -- Alberto Garcia <berto@igalia.com>  Sun, 27 Aug 2017 14:11:03 +0300
+
+grilo (0.3.3-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 20 Jun 2017 01:26:05 +0300
+
+grilo (0.3.3-1) experimental; urgency=medium
+
+  * New upstream version.
+  * check-for-throttling-only-if-set.patch:
+    - Remove, this has been merged upstream.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 22 Feb 2017 13:54:48 +0200
+
+grilo (0.3.2-2) unstable; urgency=medium
+
+  * autoconf-macros.patch:
+    - Remove obsolete autoconf macros (Closes: #830056).
+  * check-for-throttling-only-if-set.patch:
+    - Fix crash in grl-net (Closes: #838814). Thanks, Sam Morris.
+  * debian/control:
+    - Add build dependencies ou autoconf-archive and intltool
+      (Closes: #837830).
+
+ -- Alberto Garcia <berto@igalia.com>  Sun, 25 Sep 2016 23:20:03 +0200
+
+grilo (0.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/watch:
+    - Use https://download.gnome.org/
+
+ -- Alberto Garcia <berto@igalia.com>  Mon, 12 Sep 2016 10:18:06 +0300
+
+grilo (0.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/rules:
+    - Don't override dh_shlibdeps, pass '--with gir' to dh instead.
+  * debian/control:
+    - Update Standards-Version to 3.9.8 (no changes).
+  * libgrilo-0.3-0.symbols:
+    - Update symbols file.
+  * debian/copyright:
+    - Update copyright years and add missing attributions.
+
+ -- Alberto Garcia <berto@igalia.com>  Sun, 19 Jun 2016 16:06:08 +0300
+
+grilo (0.3.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 19 Apr 2016 14:54:17 +0200
+
+grilo (0.3.0-1) experimental; urgency=medium
+
+  * New upstream release.
+    - Rename all packages from *-0.2 to *-0.3.
+  * debian/control:
+    - Add build dependency on liboauth-dev.
+    - Make libgrilo-0.3-doc conflict with libgrilo-0.2-doc.
+    - Downgrade build dependency on debhelper to >= 9, we are not
+      overriding dh_strip anymore.
+  * debian/copyright:
+    - Update copyright years.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 02 Mar 2016 13:46:05 +0200
+
+grilo (0.2.15-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    - Update homepage link.
+    - Update Standards-Version to 3.9.7 (no changes).
+  * debian/libgrilo-0.2-1.symbols:
+    - Update.
+  * debian/rules:
+    - Enable all hardening flags.
+  * Migrate to automatic -dbgsym packages:
+    - debian/control:
+      + Remove the entries for libgrilo-0.2-1-dbg.
+      + Require debhelper >= 9.20151219.
+    - debian/rules:
+      + Replace --dbg-package with --ddeb-migration in dh_strip.
+  * Enable vala again:
+    - debian/rules:
+      + Pass --enable-vala to configure.
+    - debian/control:
+      + Add valac to the list of build dependencies.
+    - debian/libgrilo-0.2-dev.install:
+      + Install the files from /usr/share/vala.
+
+ -- Alberto Garcia <berto@igalia.com>  Sun, 28 Feb 2016 00:54:53 +0200
+
+grilo (0.2.14-1) unstable; urgency=medium
+
+  [ Alberto Garcia ]
+  * New upstream release.
+  * debian/copyright:
+    - Update copyright years.
+
+  [ Chris Lamb ]
+  * debian/control:
+    - Fix spelling of ${shlibs:Depends} (Closes: #792966).
+
+ -- Alberto Garcia <berto@igalia.com>  Thu, 24 Sep 2015 11:35:53 +0300
+
+grilo (0.2.12-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 26 May 2015 02:38:45 +0200
+
+grilo (0.2.12-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop manpages.patch, it's already included in this release.
+  * debian/control:
+    - Update Standards-Version to 3.9.6 (no changes).
+  * debian/libgrilo-0.2-1.symbols:
+    - Update.
+  * debian/libgrilo-0.2-dev.install,
+    debian/control,
+    debian/rules:
+    - Disable Vala in this release since it requires valac >= 0.27 which
+      is not in Debian yet.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 18 Feb 2015 09:04:10 +0200
+
+grilo (0.2.11-2) unstable; urgency=medium
+
+  * Make all packages multi-arch compliant, now that gobject-introspection
+    supports it:
+    - debian/gir1.2-grilo-0.2.install: update path of typelib files.
+    - debian/control: build depend on gobject-introspection >= 1.41.4 and
+      add Multi-Arch: same field to gir1.2-grilo-0.2 and libgrilo-0.2-dev.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 23 Sep 2014 11:56:18 +0300
+
+grilo (0.2.11-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/libgrilo-0.2-1.symbols: update.
+  * Install the Grilo test UI and Grilo launch binaries:
+    - debian/control: add build dependency on libgtk-3-dev and update
+      description.
+    - debian/libgrilo-0.2-bin.install: install the binaries.
+  * debian/rules:
+    - Enable parallel builds.
+    - Don't override dh_install, it's no longer necessary.
+  * debian/patches/manpages.patch:
+    - Add manpages for all commands.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 26 Aug 2014 20:41:54 +0300
+
+grilo (0.2.10-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control: update build dependency on libglib2.0-dev to 2.34.
+  * debian/libgrilo-0.2-1.symbols: update.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 19 Mar 2014 16:12:33 +0200
+
+grilo (0.2.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop drop-libvala.patch, this is already integrated in this release.
+  * debian/rules: disable Automake's silent rules.
+
+ -- Alberto Garcia <berto@igalia.com>  Tue, 18 Feb 2014 23:27:55 +0200
+
+grilo (0.2.8-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #739025, #739028).
+  * debian/control:
+    - Update Standards-Version to 3.9.5 (no changes).
+    - Bump build dependency on libglib2.0-dev to 2.32.
+    - Add build dependency on libtotem-plparser-dev.
+    - Build depend on the generic valac package, there's no need for any
+      specific version of Vala.
+  * Don't require libvala, it's not used by Grilo at all.
+    - debian/patches/drop-libvala.patch: remove check in configure.ac
+    - debian/control: remove build dependency.
+  * debian/libgrilo-0.2-1.symbols: update.
+  * debian/copyright: update copyright years.
+
+ -- Alberto Garcia <berto@igalia.com>  Sat, 15 Feb 2014 18:06:20 +0200
+
+grilo (0.2.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update my e-mail address in debian/*.
+  * Remove libsoup.patch, it's no longer relevant for this release.
+  * debian/libgrilo-0.2-1.symbols: update.
+
+ -- Alberto Garcia <berto@igalia.com>  Wed, 18 Sep 2013 01:18:10 +0300
+
+grilo (0.2.6-2) unstable; urgency=low
+
+  * libsoup.patch: fix FTBFS with libsoup < 2.42.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Wed, 29 May 2013 16:53:43 +0200
+
+grilo (0.2.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable.
+  * debian/libgrilo-0.2-1.symbols: add symbols file.
+    - debian/rules: remove the dh_makeshlibs override.
+  * debian/control:
+    - Set build dependency on Vala to 0.20 (Closes: #709692).
+    - Build depend on libglib >= 2.29.10.
+    - Downgrade grilo plugins from recommended to suggested. Just because
+      a program supports Grilo does not mean that it has a strong dependency
+      on its plugins.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Wed, 29 May 2013 02:28:34 +0200
+
+grilo (0.2.5-2) experimental; urgency=low
+
+  [ Jonny Lamb ]
+  * Add libgrilo-0.2-1-dbg debug package (Closes: #704511).
+
+ -- Alberto Garcia <agarcia@igalia.com>  Tue, 02 Apr 2013 17:30:41 +0300
+
+grilo (0.2.5-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control: update Standards-Version to 3.9.4 (no changes).
+  * debian/copyright: update copyright years.
+  * Build with dh-autoreconf to ensure that the autotools helper files are
+    being regenerated (this fixes lintian outdated-autotools-helper-file).
+    - debian/rules: pass '--with autoreconf' to dh.
+    - debian/control: add build dependency on dh-autoreconf.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Wed, 20 Mar 2013 11:04:26 +0200
+
+grilo (0.2.4-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Sat, 01 Dec 2012 13:22:37 +0200
+
+grilo (0.2.3-1) experimental; urgency=low
+
+  * New upstream version.
+  * debian/rules: new API, bump package version in dh_makeshlibs.
+  * debian/rules: configure with --disable-debug, otherwise it's enabled
+    by default.
+  * Drop all lintian-overrides files, there are no longer hardening
+    warnings.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Mon, 12 Nov 2012 18:12:56 +0200
+
+grilo (0.2.2-1) experimental; urgency=low
+
+  * New upstream release, first in the 0.2 series in Debian.
+  * debian/*: rename everything from *grilo-0.1* to *grilo-0.2*.
+  * debian/control: make libgrilo-0.2-doc conflict with libgrilo-0.1-doc,
+    they can't be installed at the same time.
+  * debian/control: remove the DM-Upload-Allowed field, it's now obsolete.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Fri, 12 Oct 2012 16:42:22 +0300
+
+grilo (0.1.20-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Fri, 17 Aug 2012 10:09:18 +0300
+
+grilo (0.1.19-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build using Vala 0.16:
+    - debian/control: update build dependencies.
+    - debian/rules: install Vala API files in /usr/share/vala/vapi.
+    - debian/libgrilo-0.1-dev.install: update path of Vala API files.
+  * Create a new libgrilo-0.1-bin package and move grl-inspect-0.1 there.
+    - debian/rules: rename manpage to match the binary name.
+  * Drop libgrilo-0.1-0.shlibs and use dh_makeshlibs to generate a shlibs
+    file.
+  * Multi-arch support:
+    - debian/compat: set compatibility level to 9.
+    - debian/control: build depend on debhelper >= 9.
+    - debian/control: Add Multi-Arch and Pre-Depends fields to
+      libgrilo-0.1-0.
+    - debian/libgrilo-0.1-{0,dev}.install: replace usr/lib/ with
+      usr/lib/*/.
+    - bump shlibs to 0.1.19 and break grilo-plugins-0.1 << 0.1.19.
+  * libgrilo-0.1-{0,bin}.lintian-overrides: ignore the
+    hardening-no-stackprotector warning, Grilo does not use character
+    arrays on the stack.
+  * debian/copyright: update copyright years and add section for Debian
+    files.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Thu, 24 May 2012 18:05:32 +0200
+
+grilo (0.1.18-2) unstable; urgency=low
+
+  * debian/control: build using Vala 0.14 (Closes: #663307).
+  * debian/libgrilo-0.1-dev.install: update path of Vala API files.
+  * debian/control: update Standards-Version to 3.9.3.
+  * debian/control: change section of gir1.2-grilo-0.1 to 'introspection'.
+  * debian/copyright: update debian copyright format URL.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Sat, 10 Mar 2012 16:19:10 +0200
+
+grilo (0.1.18-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: scan for .xz files, upstream no longer uses bz2.
+  * debian/copyright: rewrite using the machine-readable format.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Sat, 10 Dec 2011 15:14:51 +0200
+
+grilo (0.1.17-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/libgrilo-0.1-0.shlibs: new API, bump shlibs to 0.1.17.
+  * debian/libgrilo-0.1-doc.doc-base.grilo-libs: the grilo-libs manual
+    doesn't exist anymore since it has been merged into the main one.
+  * debian/libgrilo-0.1-doc.links: ditto.
+  * debian/control: this release breaks grilo-plugins-0.1 << 0.1.17 since
+    now plugin XML files are located in a different place.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Mon, 05 Sep 2011 23:25:51 +0300
+
+grilo (0.1.16-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/{grl-inspect.1,libgrilo-0.1-0.manpages,libgrilo-0.1-0.install}:
+    use manpage shipped by upstream.
+  * debian/libgrilo-0.1-0.shlibs: new API, bump shlibs to 0.1.16.
+  * debian/copyright: Author(s) => Authors.
+
+ -- Alberto Garcia <agarcia@igalia.com>  Sat, 02 Jul 2011 13:48:46 +0300
+
+grilo (0.1.15-1) unstable; urgency=low
+
+  * Initial release (Closes: #573737, #629396).
+
+ -- Alberto Garcia <agarcia@igalia.com>  Thu, 16 Jun 2011 12:26:33 +0300

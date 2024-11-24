@@ -1,0 +1,75 @@
+golang-github-hashicorp-go-cleanhttp (0.5.2-1) unstable; urgency=medium
+
+  [ Debian Janitor (Jelmer Vernooĳ) ]
+  * Apply multi-arch hints.
+    + golang-github-hashicorp-go-cleanhttp-dev: Add Multi-Arch: foreign.
+
+  [ Anthony Fok ]
+  * New upstream version 0.5.2
+  * debian/control:
+    - Change Section from devel to golang
+    - Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+    - Bump Standards-Version to 4.5.1 (no change)
+    - Add "Rules-Requires-Root: no"
+  * Remove upstream "Fix tests against newer Go" patch which is in v0.5.2
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+
+ -- Anthony Fok <foka@debian.org>  Wed, 10 Feb 2021 00:53:25 -0700
+
+golang-github-hashicorp-go-cleanhttp (0.5.1-1) unstable; urgency=medium
+
+  * New upstream release + patch.
+  * DH & compat to version 12.
+  * Standards-Version: 4.4.1.
+  * docs: install README.
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 20 Oct 2019 19:06:56 +1100
+
+golang-github-hashicorp-go-cleanhttp (0.5.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Apply patch from upstream to fix FTBFS with Go 1.11.6.
+    (Closes: #926379)
+
+ -- Chris Hofstaedtler <zeha@debian.org>  Sat, 06 Apr 2019 16:24:28 +0000
+
+golang-github-hashicorp-go-cleanhttp (0.5.0-1) unstable; urgency=medium
+
+  * New upstream version 0.5.0
+  * Apply "cme fix dpkg" fixes to debian/control,
+    bumping Standards-Version to 4.3.0, etc.
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Mon, 31 Dec 2018 23:25:09 -0700
+
+golang-github-hashicorp-go-cleanhttp (0.0~git20171219.d5fe4b57-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream version snapshot.
+  * golang-go --> golang-any
+  * Testsuite: autopkgtest-pkg-go
+  * debhelper & compat to version 11
+  * Standards-Version: 4.1.4; Priority: optional
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 26 Jun 2018 15:29:52 +1000
+
+golang-github-hashicorp-go-cleanhttp (0.0~git20160217.0.875fb67-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+  * Standards-Version: 3.9.7.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 18 Mar 2016 19:21:15 +1100
+
+golang-github-hashicorp-go-cleanhttp (0.0~git20151022.0.5df5ddc-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 06 Nov 2015 16:14:44 -0800

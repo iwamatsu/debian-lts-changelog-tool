@@ -1,0 +1,146 @@
+yajl (2.1.0-3+deb10u2) buster-security; urgency=medium
+
+  [Tobias Frost]
+  * Non-maintainer upload by the LTS Security Team.
+  * Cherry pick John's CVE fixes from 2.1.0-4
+  * Fix for CVE-2023-33460 was incomplete, also fix the second memory leak.
+
+  [John Stamp]
+  * Patch CVE-2017-16516 and CVE-2022-24795 (Closes: #1040036)
+
+ -- Tobias Frost <tobi@debian.org>  Tue, 11 Jul 2023 19:13:09 +0200
+
+yajl (2.1.0-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Import upstream patch for CVE-2023-33460. (Closes: #1039984)
+
+ -- Tobias Frost <tobi@debian.org>  Sun, 02 Jul 2023 13:47:46 +0200
+
+yajl (2.1.0-3) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Use secure URI in Vcs control header.
+  * Use secure copyright file specification URI.
+
+  [ John Stamp ]
+  * Bump debhelper compat to 11.
+    - Remove unneeded --parallel argument in debian/rules.
+  * Transition to automatic debug packages.
+  * Bump Standards-Version to 4.2.1
+    - Add Rules-Requires-Root field, and set it to "no".
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Tue, 02 Oct 2018 15:51:58 -0700
+
+yajl (2.1.0-2) unstable; urgency=medium
+
+  * Change priority to optional (Closes: #758958)
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Sat, 23 Aug 2014 21:09:50 -0700
+
+yajl (2.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Update symbols file.
+  * Update manpages for json_reformat, json_verify.
+  * Minor updates to debian/copyright.
+  * Clean up debian/rules
+    - Fix up variable assignments
+    - Add -fvisibility=hidden to DEB_CFLAGS_MAINT_APPEND so clang doesn't
+      export extraneous symbols.
+  * Bump Standards-Version to 3.9.5.  No changes needed.
+  * Mark libyajl-dev as Multi-Arch: same
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Tue, 29 Apr 2014 17:06:00 -0700
+
+yajl (2.0.4-4) unstable; urgency=low
+
+  * Fix cmake configuration to install the lib in the right path
+    (Closes: #712082)
+  * Update debian/watch file.  Thanks to Bart Martens.
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Wed, 12 Jun 2013 14:05:18 -0700
+
+yajl (2.0.4-3) unstable; urgency=low
+
+  * Add missing Multi-Arch field for libyajl2 and libyajl2-dbg
+    (Closes: #697380)
+  * Use versioned copyright format uri in debian/copyright
+  * Bump debhelper compat to version 9
+  * Rewrite debian/rules using tiny dh style.
+  * Bump Standards-Version to 3.9.4.  No further changes needed.
+  * Support for cross-compilation (Closes: #702357)
+    - Adapt Ian Campbell's patch to use CMakeCross toolchain file when cross
+      compiling.
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Tue, 04 Jun 2013 09:51:24 -0700
+
+yajl (2.0.4-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Thu, 26 Jan 2012 17:47:08 -0800
+
+yajl (2.0.4-1) experimental; urgency=low
+
+  * New upstream (Closes: #634176)
+    - Relicenced under ISC license terms
+  * Bump package name with soname change
+  * Update symbols file
+  * Update man page for json_reformat
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Wed, 21 Dec 2011 17:07:23 -0800
+
+yajl (1.0.12-2) unstable; urgency=low
+
+  * Fix missing backslash that prevented verbose makefiles (Closes: #647445)
+  * Use the default build flags from dpkg-buildflags
+  * Revert debian/compat to 7
+  * Update upstream's copyright date in debian/copyright
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Thu, 03 Nov 2011 19:22:20 -0700
+
+yajl (1.0.12-1) unstable; urgency=low
+
+  * New upstream
+  * Remove non-pic-static-lib.patch. Applied upstream.
+  * Add misc:Depends to dev and doc packages
+  * Use source format 3.0 (quilt)
+  * Bump Standards-Version to 3.9.2. No changes needed.
+  * Add libyajl1.symbols file
+  * Transition to multiarch
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Tue, 19 Jul 2011 10:55:54 -0700
+
+yajl (1.0.8-1) unstable; urgency=low
+
+  * New upstream
+  * Bump shlibs
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Sat, 26 Dec 2009 16:40:49 -0800
+
+yajl (1.0.6+git20090925-1) unstable; urgency=low
+
+  * New upstream
+  * Drop README.Debian: upstream removed non-free files
+  * Drop relaxed-integer-tests.patch (merged upstream)
+  * Update manpages
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Tue, 06 Oct 2009 11:11:58 -0700
+
+yajl (1.0.5.dfsg-2) unstable; urgency=low
+
+  * Bump Standards-Version to 3.8.3.  No changes needed.
+  * Add README.source
+  * Dynamically link the tools to the lib (Closes: #544721)
+  * Make extended description more detailed and remove unnecessary Section
+    field.
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Tue, 08 Sep 2009 11:59:46 -0700
+
+yajl (1.0.5.dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #537199)
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Wed, 05 Aug 2009 15:12:56 -0700

@@ -1,0 +1,40 @@
+golang-github-samuel-go-zookeeper (0.0~git20180130.c4fab1a-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * d/control:
+    + Bump Standards-Version.
+    + Fix testsuite-autopkgtest-missing.
+  * d/copyright:
+    + Switch the copyright-format URL to https.
+    + Drop copyright section about removed files.
+  * Add d/gbp.conf.
+
+ -- Mpampis Kostas <charkost.rb@gmail.com>  Tue, 06 Mar 2018 10:26:14 +0200
+
+golang-github-samuel-go-zookeeper (0.0~git20161029.0.1d7be4e-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+  * Remove Built-Using from arch:all -dev package
+
+  [ Martín Ferrari ]
+  * Merge upstream branch, so work is possible.
+  * Add myself to Uploaders.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+  * Use XS-Go-Import-Path.
+  * Remove useless watch file.
+  * New upstream release.
+  * Disable again tests, as they require the zookeeper java files, and they
+    still fail to start the server.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 04 Nov 2016 03:13:44 +0000
+
+golang-github-samuel-go-zookeeper (0.0~git20150817.0.177002e-1) unstable; urgency=medium
+
+  * Initial release (Closes: #798127).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Sep 2015 01:22:48 +1000

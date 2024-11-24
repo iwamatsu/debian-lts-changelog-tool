@@ -1,0 +1,379 @@
+consul (1.8.7+dfsg1-2) unstable; urgency=medium
+
+  * Add patch for CVE-2020-25864 (Closes: #987351)
+
+ -- Valentin Vidic <vvidic@debian.org>  Sat, 24 Apr 2021 12:06:56 +0200
+
+consul (1.8.7+dfsg1-1) unstable; urgency=medium
+
+  [ Arnaud Rebillout ]
+  * New upstream release [1.8.7].
+  * Drop obsolete Build-Depends and Files-Excluded, per uscan
+  * Rework Build-Depends and Files-Excluded
+  * Drop a few more Build-Depends
+  * Drop aws-sdk vendoring
+  * Drop custom dh_configure target
+  * Cleanup obsolete patches
+  * Add lintian-overrides for consul (field-too-long Built-Using)
+  * Tidy up debian/copyright a bit
+  * Adjust sections, consul -> 'admin', -dev -> 'golang'
+  * Drop obsolete Build-Depends requirements
+  * Bump Standards-Version
+
+  [ Dmitry Smirnov ]
+  * Disabled unreliable "TestCacheRateLimit".
+
+  [ Arnaud Rebillout ]
+  * Fix patch regarding "TestCacheRateLimit"
+  * Revert "Add upstream git details, feed it to the build command"
+  * Set git commit and git commit year from debian pkg info
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Sun, 10 Jan 2021 22:37:17 +0700
+
+consul (1.8.6+dfsg1-1) unstable; urgency=medium
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Build-Depends:
+    + golang-github-coreos-go-oidc-dev
+    + golang-github-patrickmn-go-cache-dev
+    + golang-golang-x-time-dev (>= 0.0+git20200630~)
+    = golang-github-hashicorp-go-memdb-dev (>= 1.2.1~)
+    = golang-github-hashicorp-memberlist-dev (>= 0.2.2~)
+    = golang-github-hashicorp-serf-dev (>= 0.9.4~)
+    = golang-github-mitchellh-cli-dev (>= 1.1.1~)
+    = golang-github-mitchellh-go-testing-interface-dev (>= 1.14.1~)
+    + procps
+  * fixed hclog-related FTBFS (Closes: #964873).
+
+  [ Arnaud Rebillout ]
+  * New upstream release [1.8.6] (Closes: #975584).
+  * Update patches
+  * Add upstream git details, feed it to the build command
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Thu, 03 Dec 2020 14:22:00 +0700
+
+consul (1.7.4+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Excluded "command/debug" from testing (test runs too long on armhf).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 11 Jun 2020 15:43:28 +1000
+
+consul (1.7.3+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Disabled unreliable "TestAgent_ServiceHTTPChecksNotification".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 17 May 2020 21:41:36 +1000
+
+consul (1.7.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.5.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 10 Apr 2020 11:37:13 +1000
+
+consul (1.7.1+dfsg1-2) unstable; urgency=medium
+
+  * Disabled failing "TestTakeReturn" (Closes: #954712).
+  * Disabled few more spontaneously failing tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 26 Mar 2020 20:56:59 +1100
+
+consul (1.7.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Disabled broken/unhelpful "autopkgtest-pkg-go" testsuite.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 26 Feb 2020 16:41:40 +1100
+
+consul (1.7.0+dfsg1-2) unstable; urgency=medium
+
+  * Excluded few unreliable tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 24 Feb 2020 11:21:58 +1100
+
+consul (1.7.0+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+    + fixed CVE-2020-7219
+    + fixed CVE-2020-7955
+  * Build-Depends:
+    + golang-github-pierrec-lz4-dev
+    = golang-github-hashicorp-go-rootcerts-dev (>= 1.0.2~)
+    = golang-github-miekg-dns-dev (>= 1.1.26~)
+  * Use bundled "github.com/aws/aws-sdk-go".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 20 Feb 2020 09:22:11 +1100
+
+consul (1.5.2+dfsg2-14) unstable; urgency=medium
+
+  * Disabled "TestKVSEndpoint_ListKeys".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 03 Jan 2020 08:52:20 +1100
+
+consul (1.5.2+dfsg2-13) unstable; urgency=medium
+
+  * Disabled "TestCatalogConnectServiceNodes_Filter"
+  * Un-vendored "golang-github-hashicorp-go-plugin-dev".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 03 Jan 2020 06:14:06 +1100
+
+consul (1.5.2+dfsg1-12) unstable; urgency=medium
+
+  * Disabled "TestAgent_RegisterCheck_Scripts" due to timeout on armhf.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 28 Dec 2019 11:38:34 +1100
+
+consul (1.5.2+dfsg1-11) unstable; urgency=medium
+
+  * Disabled few more randomly failing tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 28 Dec 2019 08:05:37 +1100
+
+consul (1.5.2+dfsg1-10) unstable; urgency=medium
+
+  * Disabled more unreliable tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 27 Dec 2019 23:07:59 +1100
+
+consul (1.5.2+dfsg1-9) unstable; urgency=medium
+
+  * rules: ignore test failures on [mipsel,mips64el].
+  * Disabled more spontaneously failing tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 27 Dec 2019 18:48:08 +1100
+
+consul (1.5.2+dfsg1-8) unstable; urgency=medium
+
+  * Disabled more spontaneously failing tests.
+  * Increased test timeout to 8m.
+  * Set HOME to "debian/tmp".
+  * DH to version 12.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 27 Dec 2019 16:02:14 +1100
+
+consul (1.5.2+dfsg1-7) unstable; urgency=medium
+
+  * Minor example update
+  * Disabled more spontaneously failing tests.
+  * Removed unused "golang-github-hashicorp-go-reap-dev" from Build-Depends.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 27 Dec 2019 11:13:10 +1100
+
+consul (1.5.2+dfsg1-6) unstable; urgency=medium
+
+  * Disabled "TestLockCommand_ChildExitCode" after spurious failure on
+    armel.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 01 Dec 2019 10:53:18 +1100
+
+consul (1.5.2+dfsg1-5) unstable; urgency=medium
+
+  * Disabled more spontaneously failing tests.
+  * Increased test timeout to 7m.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 01 Dec 2019 02:37:50 +1100
+
+consul (1.5.2+dfsg1-4) unstable; urgency=medium
+
+  * Disabled few spontaneously failing tests.
+  * Excluded "agent/cache" from testing.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 30 Nov 2019 14:52:05 +1100
+
+consul (1.5.2+dfsg1-3) unstable; urgency=medium
+
+  * Disabled "TestHealthServiceNodes_Filter".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 30 Nov 2019 13:20:52 +1100
+
+consul (1.5.2+dfsg1-2) unstable; urgency=medium
+
+  * copyright: removed obsolete paragraph.
+  * Disabled unreliable tests following failures on various architectures.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 30 Nov 2019 08:11:06 +1100
+
+consul (1.5.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Build-Depends += "golang-gopkg-square-go-jose.v2-dev".
+  * Added lintian-override for "field-too-long Built-Using".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 29 Nov 2019 19:14:00 +1100
+
+consul (1.4.5+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Service hardening.
+  * Introduced init script.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 28 Nov 2019 16:02:25 +1100
+
+consul (1.4.4~dfsg3-5) unstable; urgency=medium
+
+  * Disabled more unstable tests.
+  * Remove vendored "github.com/vmware/vic".
+  * Removed "golang-github-vmware-govmomi-dev" from Build-Depends.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 19 Nov 2019 10:36:32 +1100
+
+consul (1.4.4~dfsg2-4) unstable; urgency=medium
+
+  * Disabled more failing tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 15 Nov 2019 08:18:21 +1100
+
+consul (1.4.4~dfsg2-3) unstable; urgency=medium
+
+  * rules: run "make proto" before build.
+  * Run more tests and disable more randomly failing ones.
+  * New patch to fix FTBFS with "golang-github-hashicorp-go-discover-dev".
+  * Tighten dependencies versioning.
+  * Added missing Build-Depends (Closes: #910714).
+    Thanks, Steve Langasek.
+  * Build-Depends:
+    - golang-github-fsouza-go-dockerclient-dev
+    - golang-github-jeffail-gabs-dev
+    - golang-github-posener-complete-dev
+    - golang-github-sergi-go-diff-dev
+    = golang-github-hashicorp-go-cleanhttp-dev (>= 0.5.1~)
+    = golang-github-hashicorp-go-msgpack-dev (>= 0.5.5~)
+    + golang-github-ghodss-yaml-dev
+    + golang-github-hashicorp-go-discover-dev
+    + golang-github-jefferai-jsonx-dev
+    + golang-github-spf13-pflag-dev
+    + mockery
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 14 Nov 2019 19:58:28 +1100
+
+consul (1.4.4~dfsg1-2) unstable; urgency=medium
+
+  * Disabled few unreliable tests due to random failures.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 20 Oct 2019 11:44:13 +1100
+
+consul (1.4.4~dfsg1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #912259).
+  * Added missing B-Deps (Closes: #910714).
+    Thanks, Steve Langasek.
+  * Standards-Version: 4.4.1.
+  * Added more config examples.
+  * Added README.source with note about staying in sync with Nomad.
+  * Re-enabled tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 19 Oct 2019 21:02:23 +1100
+
+consul (1.0.7~dfsg1-5) unstable; urgency=medium
+
+  * Install bash-completion(s).
+  * .service hardening.
+  * Install log_level.hcl conffile.
+  * Install documentation.
+  * postinst: chown "/var/lib/consul".
+  * postinst: adduser improvements.
+  * Disabled all tests (too slow; very unreliable).
+  * Test with "-failfast" to abort on first failure.
+  * Standards-Version: 4.2.0.
+  * Un-bundled "golang-github-mitchellh-go-testing-interface-dev".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 17 Aug 2018 20:07:57 +1000
+
+consul (1.0.7~dfsg-4) unstable; urgency=medium
+
+  * More patches to disable failing tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 29 Jun 2018 17:25:34 +1000
+
+consul (1.0.7~dfsg-3) unstable; urgency=medium
+
+  * Patchworks to fix/skip failing tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 29 Jun 2018 16:09:23 +1000
+
+consul (1.0.7~dfsg-2) unstable; urgency=medium
+
+  * dev/Depends += "golang-github-hashicorp-go-rootcerts-dev".
+  * Install .service file, create "consul" user; Depends += "adduser".
+  * New patch to disable spuriously failing test.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 29 Jun 2018 13:56:51 +1000
+
+consul (1.0.7~dfsg-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release [April 2018].
+    + fixed test failures (Closes: #871687).
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional
+  * debhelper & compat to version 11.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 27 Jun 2018 21:04:29 +1000
+
+consul (0.6.4~dfsg-4) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Correct the Vcs-Git and Vcs-Browser URL to the correct URI.
+
+  [ Martín Ferrari ]
+  * Add myself to Uploaders.
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+  * Add versioned dependency on golang-golang-x-sys-dev, to solve build
+    issues in arm64.
+  * Drop old package name in dependencies.
+  * Disable test that runs so long it gets killed.
+  * Disable tests that access the network.
+
+ -- Konstantinos Margaritis <markos@debian.org>  Thu, 10 Aug 2017 13:33:16 +0300
+
+consul (0.6.4~dfsg-3) unstable; urgency=medium
+
+  * Added "golang-github-hashicorp-go-cleanhttp-dev" to -dev's Depends.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 18 Jun 2016 20:47:29 +1000
+
+consul (0.6.4~dfsg-2) unstable; urgency=medium
+
+  * Drop "consul/command" and corresponding Depends from -dev package.
+  * New patch with post-0.6.4 API changes.
+  * Standards-Version: 3.9.8.
+  * Vcs-Git URL to HTTPS.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 15 Jun 2016 20:32:00 +1000
+
+consul (0.6.4~dfsg-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Remove unneeded dependency on golang-github-armon-gomdb-dev
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * (Build-)Depends:
+    + golang-github-hashicorp-go-uuid-dev
+    + golang-github-hashicorp-hil-dev
+    + golang-github-mitchellh-copystructure-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 11 Apr 2016 16:45:53 +1000
+
+consul (0.6.3~dfsg-2) unstable; urgency=medium
+
+  * Drop unused "consul-migrate".
+  * (Build-)Depends:
+    - golang-github-hashicorp-consul-migrate-dev
+  * Standards-Version: 3.9.7.
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 23 Mar 2016 16:41:11 +1100
+
+consul (0.6.3~dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #804277).
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 06 Nov 2015 12:20:36 -0800

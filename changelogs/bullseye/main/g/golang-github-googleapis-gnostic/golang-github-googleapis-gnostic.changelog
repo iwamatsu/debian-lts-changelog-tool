@@ -1,0 +1,36 @@
+golang-github-googleapis-gnostic (0.2.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+
+  [ Anthony Fok ]
+  * Apply "cme fix dpkg" fixes:
+    - Organize debian/control fields
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+    - Bump Standards-Version to 4.5.1 (no change)
+    - Remove leading slashes from d/golang-github-googleapis-gnostic-dev.install
+  * debian/control:
+    - Update Maintainer email address to team+pkg-go@tracker.debian.org
+    - Change Section from devel to golang
+    - Add "Rules-Requires-Root: no" to debian/control
+    - Add myself to the list of Uploaders
+  * Fix autopkgtest failure with go1.15
+    by adding missing "jsonschema" and "apps/petstore-builder" directories
+    to debian/golang-github-googleapis-gnostic-dev.install .
+    "go list" in go1.15 would return an empty list when a non-existent
+    directory is specified on the command line.
+  * debian/rules:
+    - Remove unneeded override_dh_auto_test
+    - Skip "dh_auto_install --destdir=debian/tmp" altogether
+      because it does not do anything useful with the current packaging
+      but triggers dh_missing errors with debhelper-compat 13
+  * debian/copyright: Remove never-used "Files-Excluded: Godeps/_workspace"
+
+ -- Anthony Fok <foka@debian.org>  Thu, 24 Dec 2020 04:40:42 -0700
+
+golang-github-googleapis-gnostic (0.2.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #901421).
+    Thanks, Arnaud Rebillout.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 18 Jun 2018 14:27:24 +1000

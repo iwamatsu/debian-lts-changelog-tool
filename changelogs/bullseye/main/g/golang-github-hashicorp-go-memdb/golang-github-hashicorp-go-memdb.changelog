@@ -1,0 +1,55 @@
+golang-github-hashicorp-go-memdb (1.2.1-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Wrap long lines in changelog entries: 0.0~git20170123.0.c01f56b-2.
+
+  [ Dmitry Smirnov ]
+  * New upstream release
+  * Rules-Requires-Root: no
+  * Standards-Version: 4.5.0
+  * Added "watch" file
+  * Build-Depends:
+    = golang-github-hashicorp-go-immutable-radix-dev (>= 1.3.0~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 06 Oct 2020 20:07:23 +1100
+
+golang-github-hashicorp-go-memdb (0.0~git20180224.1289e7ff-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream snapshot
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional
+  * debhelper & compat to version 11
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 26 Jun 2018 15:57:19 +1000
+
+golang-github-hashicorp-go-memdb (0.0~git20170123.0.c01f56b-2) unstable; urgency=medium
+
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 14:12:20 +0300
+
+golang-github-hashicorp-go-memdb (0.0~git20170123.0.c01f56b-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * New upstream snapshot.
+  * Standards-Version: 3.9.8
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 25 Jan 2017 09:11:43 +1100
+
+golang-github-hashicorp-go-memdb (0.0~git20160301.0.98f52f5-1) unstable; urgency=medium
+
+  * Initial release (Closes: #816822).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 01:14:37 +1100

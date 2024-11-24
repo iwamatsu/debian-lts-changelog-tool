@@ -1,0 +1,670 @@
+mbedtls (2.16.9-0~deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2019-16910, CVE-2019-18222, CVE-2020-10932, CVE-2020-10941,
+    CVE-2020-16150, CVE-2020-36421, CVE-2020-36422, CVE-2020-36423,
+    CVE-2020-36424, CVE-2020-36425, CVE-2020-36426, CVE-2020-36475,
+    CVE-2020-36476, CVE-2020-36478, CVE-2021-24119, CVE-2021-43666,
+    CVE-2021-44732, CVE-2022-35409.
+    Multiple security vulnerabilities have been discovered in mbedtls,
+    a lightweight crypto and SSL/TLS library, which may allow attackers to
+    obtain sensitive information like the RSA private key or cause a
+    denial of service (application or server crash).
+
+ -- Markus Koschany <apo@debian.org>  Sun, 25 Dec 2022 22:34:42 +0100
+
+mbedtls (2.16.9-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * New upstream release
+  * Fixes CVE-2020-10932 (Closes: #963159)
+  * Fixes CVE-2020-16150 (Closes: #972806)
+  * Updated watch and Homepage to new github upstream
+  * Updated symbols file (two new for 2.6.19)
+
+ -- Wookey <wookey@debian.org>  Thu, 17 Dec 2020 18:55:19 +0000
+
+mbedtls (2.16.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- James Cowgill <jcowgill@debian.org>  Sat, 29 Feb 2020 22:26:47 +0000
+
+mbedtls (2.16.4-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes CVE-2019-18222 - Side channel attack on ECDSA.
+
+  * d/control: Bump standards version to 4.5.0.
+  * d/libmbedcrypto3.symbols: Add new mbedtls_mpi_lt_mpi_ct symbol.
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 28 Jan 2020 23:38:13 +0000
+
+mbedtls (2.16.3-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes CVE-2019-16910 - Side channel attack on deterministic
+      ECDSA. (Closes: #941265)
+
+  * d/libmbedcrypto3.symbols:
+    - Add new mbedtls_ecdsa_sign_det_ext symbol.
+
+ -- James Cowgill <jcowgill@debian.org>  Sat, 28 Sep 2019 21:39:18 +0100
+
+mbedtls (2.16.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+  * d/control: Use debhelper compat 12.
+  * d/libmbedx509-0.symbols: Add new test symbols.
+  * d/not-installed: Add file listing mbedTLS programs.
+
+ -- James Cowgill <jcowgill@debian.org>  Mon, 15 Jul 2019 23:18:37 +0100
+
+mbedtls (2.16.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+  * d/control: Bump standards to 4.3.0.
+  * d/libmbedcrypto3.symbols, d/libmbedtls12.symbols:
+    - Add new symbols found in 2.16.
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 08 Jan 2019 09:25:34 +0000
+
+mbedtls (2.14.1-2) unstable; urgency=medium
+
+  [ Aurelien Jarno ]
+  * bn_mul.h: require at least ARMv6 to enable the ARM DSP code.
+    - Fixes FTBFS on armel.
+
+ -- James Cowgill <jcowgill@debian.org>  Fri, 07 Dec 2018 20:01:11 +0000
+
+mbedtls (2.14.1-1) unstable; urgency=high
+
+  * New upstream release.
+    - Fixes CVE-2018-19608 - Local timing attack on RSA decryption.
+      (Closes: #915796)
+
+  * d/libmbedcrypto3.symbols, d/libmbedx509-0.symbols:
+    - Add new symbols found in 2.14.1.
+
+ -- James Cowgill <jcowgill@debian.org>  Fri, 07 Dec 2018 10:24:44 +0000
+
+mbedtls (2.13.0-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- James Cowgill <jcowgill@debian.org>  Thu, 04 Oct 2018 18:06:06 +0100
+
+mbedtls (2.13.0-2) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP.
+
+  [ James Cowgill ]
+  * d/control:
+    - Revert "Require all 3 mbedtls libraries to be the same version" to
+      make the transition easier.
+  * d/libmbed{crypto,tls}*.symbols:
+    - Update all symbol versions to 2.13.
+
+ -- James Cowgill <jcowgill@debian.org>  Mon, 01 Oct 2018 20:08:37 +0100
+
+mbedtls (2.13.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Rename libraries due to upstream SONAME bump.
+
+  * d/control:
+    - Remove obsolete Breaks from libmbedcrypto3.
+    - Bump standards version.
+    - Move faketime build-dependency to Build-Depends-Arch.
+    - Build-depend on python3.
+  * d/gbp.conf: Remove.
+  * d/libmbedtls12.symbols: Symbol updates for 2.13.
+  * d/rules: use sed to adjust config.h.
+  * d/patches: Drop 02_revert-soversion-bumps.patch.
+  * d/source: Add files for dgit-maint-merge workflow.
+
+ -- James Cowgill <jcowgill@debian.org>  Wed, 19 Sep 2018 19:58:12 +0100
+
+mbedtls (2.12.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes CVE-2018-0497 and CVE-2018-0498. (Closes: #904821)
+
+  * debian/control: Bump standards version to 4.1.5.
+  * debian/patches: Refresh patches.
+  * debian/libmbedcrypto1.symbols:
+    - Add new symbols.
+    - Remove the internal mbedtls_threading_gmtime_mutex symbol.
+
+ -- James Cowgill <jcowgill@debian.org>  Sat, 28 Jul 2018 21:38:20 +0800
+
+mbedtls (2.11.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+  * debian/control:
+    - Require all 3 mbedtls libraries to be the same version.
+  * debian/patches:
+    - Refresh 01_config.patch.
+    - Update SOVERSION patch to revert changes from 2.11.0.
+  * debian/*.symbols:
+    - Add new public symbols in 2.11.
+    - Update internal symbol versions.
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 10 Jul 2018 20:43:19 +0100
+
+mbedtls (2.9.0-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Revert libmbedcrypto ABI bump.
+    - Add patch to revert upstream SOVERSION bump.
+    - Revert package rename in 2.9.0-1.
+
+ -- James Cowgill <jcowgill@debian.org>  Sun, 27 May 2018 14:38:38 +0100
+
+mbedtls (2.9.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Rename libmbedcrypto1 to libmbedcrypto2 due to SONAME bump.
+
+  * debian/libmbedtls10.symbols:
+    - Add new symbols.
+  * debian/patches:
+    - Refresh config patch.
+
+ -- James Cowgill <jcowgill@debian.org>  Wed, 09 May 2018 20:18:13 +0100
+
+mbedtls (2.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+  * debian/control:
+    - Bump standards version to 4.1.4.
+    - Set Rules-Requires-Root: no.
+  * debian/libmbedcrypto1.symbols:
+    - Add new symbols in 2.8.
+  * debian/patches:
+    - Refresh config patch.
+    - Drop 02_dhm-Fix-typo-in-RFC-5114-constants.patch - applied upstream.
+  * debian/rules:
+    - Use /usr/share/dpkg/architecture.mk to get DEB_HOST_MULTIARCH.
+    - Clean apidoc directory using debian/clean file.
+
+ -- James Cowgill <jcowgill@debian.org>  Mon, 09 Apr 2018 21:06:36 +0100
+
+mbedtls (2.7.0-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * debian/patches/02_dhm-Fix-typo-in-RFC-5114-constants.patch:
+    - Add patch to fix typo in RFC 5114 constants.
+
+ -- James Cowgill <jcowgill@debian.org>  Thu, 15 Feb 2018 18:32:16 +0000
+
+mbedtls (2.7.0-1) experimental; urgency=medium
+
+  * New upstream release.
+    - Fixes CVE-2018-0488. (Closes: #890287)
+    - Fixes CVE-2018-0487. (Closes: #890288)
+  * Rename libmbedcrypto0 to libmbedcrypto1 due to SONAME bump.
+
+  * debian/compat:
+    - Use debhelper compat 11.
+  * debian/control:
+    - Switch to salsa.debian.org Vcs URLs.
+    - Bump standards version to 4.1.3.
+    - Drop useless Testsuite field in debian/control.
+  * debian/copyright:
+    - Update copyright dates.
+  * debian/libmbedtls-doc.*:
+    - Fix various paths to work with the new documentation location used
+      by debhelper 11.
+  * debian/patches:
+    - Refresh config patch.
+  * debian/*.symbols:
+    - Add symbols updates for libmbedtls10.
+    - Rewrite symbols libmbedcrypto1 symbols file.
+
+ -- James Cowgill <jcowgill@debian.org>  Wed, 14 Feb 2018 09:25:58 +0000
+
+mbedtls (2.6.0-1) unstable; urgency=high
+
+  * New upstream version.
+    - Fixes possible authentication bypass if a peer supplies a certificate
+      chain with more than 8 intermediates. (Closes: #873557)
+
+  * debian/copyright:
+    - Update copyright dates.
+    - Use https Format URL.
+  * debian/control:
+    - Bump standards to 4.1.0 (no changes required).
+    - Use debhelper compat 10.
+  * debian/libmbedcrypto0.symbols:
+    - Add new symbols from 2.6.0.
+  * debian/patches:
+    - Refresh config patch.
+    - Drop all stubs patches - upstream reverted the ABI breakage.
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 29 Aug 2017 16:09:30 +0100
+
+mbedtls (2.5.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+  * debian/control:
+    - Bump standards to 4.0.0 (no changes required).
+  * debian/patches:
+    - Refresh config patch.
+    - Add patches to maintain the ABI.
+  * debian/rules:
+    - Enable static library build. (Closes: #860302)
+    - Pass upstream release date to faketime instead of a fixed date.
+  * debian/*.symbols:
+    - Add new symbols from mbedTLS 2.5.
+  * debian/tests:
+    - Test static library in autopkgtests.
+
+ -- James Cowgill <jcowgill@debian.org>  Thu, 22 Jun 2017 11:30:56 +0100
+
+mbedtls (2.4.2-1) unstable; urgency=high
+
+  * New upstream version.
+    - Fixes CVE-2017-2784 - freeing of memory allocated on the stack when
+      validating a public key with a secp224k1 curve. (Closes: #857560)
+
+  * debian/rules:
+    - Run testsuite inside faketime to prevent it suddenly failing in the
+      future. Thanks Niels Thykier!
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 14 Mar 2017 10:54:33 +0000
+
+mbedtls (2.4.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+  * debian/control:
+    - Mark libmbedtls-doc multi-arch foreign.
+  * debian/libmbedtls10.symbols:
+    - Add new symbols found in 2.4.
+  * debian/patches:
+    - Drop 02_ssl_time_t.patch - alternate fix applied upstream.
+    - Refresh 01_config.patch.
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 18 Oct 2016 20:16:37 +0100
+
+mbedtls (2.3.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+  * debian/copyright:
+    - Update dates and my email address.
+  * debian/patches:
+    - Refresh 01_config.patch.
+    - Drop 02_x32.patch -- applied upstream.
+    - Add 02_ssl_time_t.patch. Fixes compile error when including
+      mbedtls/ssl.h.
+
+ -- James Cowgill <jcowgill@debian.org>  Tue, 28 Jun 2016 18:11:54 +0100
+
+mbedtls (2.2.1-3) unstable; urgency=medium
+
+  * debian/control:
+    - Use my debian.org email address.
+    - Bump standards to 3.9.8 (no changes).
+  * debian/patches:
+    - Add 02_x32.patch to fix FTBFS on x32.
+  * debian/rules:
+    - Enable all hardening options.
+
+ -- James Cowgill <jcowgill@debian.org>  Wed, 18 May 2016 17:21:39 +0100
+
+mbedtls (2.2.1-2) unstable; urgency=medium
+
+  * debian/control:
+    - Use secure Vcs-Git URL.
+  * debian/libmbedcrypto0.lintian-override:
+    - Drop now that lintian itself has been fixed.
+  * debian/rules:
+    - Don't build arch:any packages in arch:all build.
+  * debian/*.symbols:
+    - Drop unnecessary patch level from symbol file versions.
+  * debian/tests:
+    - Add an autopkgtest which compiles and runs the selftest program.
+
+ -- James Cowgill <james410@cowgill.org.uk>  Sat, 16 Jan 2016 00:12:49 +0000
+
+mbedtls (2.2.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- James Cowgill <james410@cowgill.org.uk>  Tue, 05 Jan 2016 13:15:33 +0000
+
+mbedtls (2.2.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+  * debian/changelog:
+    - Include changelog entries from the polarssl package.
+  * debian/*.symbols:
+    - Add new symbols introduced in 2.2.
+  * debian/rules:
+    - Don't build documentation in binary-only builds.
+
+ -- James Cowgill <james410@cowgill.org.uk>  Tue, 15 Dec 2015 14:43:09 +0000
+
+mbedtls (2.1.2-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #801420)
+
+ -- James Cowgill <james410@cowgill.org.uk>  Fri, 16 Oct 2015 12:55:27 +0100
+
+polarssl (1.3.9-2.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Add CVE-2015-1182.patch patch.
+    CVE-2015-1182: Denial of service and possible remote code execution
+    using crafted certificates. (Closes: #775776)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 21 Jan 2015 22:09:05 +0100
+
+polarssl (1.3.9-2) unstable; urgency=medium
+
+  * Disabled POLARSSL_SSL_PROTO_SSL3 at compile time to prevent potential
+    attacks, TLS considered standard for clients now, and consistency w/
+    OpenSSL in Debian
+
+ -- Roland Stigge <stigge@antcom.de>  Fri, 07 Nov 2014 10:28:34 +0100
+
+polarssl (1.3.9-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 05 Nov 2014 18:34:31 +0100
+
+polarssl (1.3.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: Adjust package description, thanks to Paul Bakker
+    (upstream)
+  * Removed CVE-2014-4911.patch (integrated upstream)
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 31 Aug 2014 14:13:55 +0200
+
+polarssl (1.3.7-2.1) unstable; urgency=high
+
+  * Non-maintainer upload with maintainers approval.
+  * Add CVE-2014-4911.patch patch.
+    CVE-2014-4911: Fix Denial of Service against GCM enabled servers (and
+    clients). (Closes: #754655)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 15 Jul 2014 21:39:13 +0200
+
+polarssl (1.3.7-2) unstable; urgency=medium
+
+  * Enabled POLARSSL_THREADING_C and POLARSSL_THREADING_PTHREAD in config,
+    recommended for Debian by upstream
+
+ -- Roland Stigge <stigge@antcom.de>  Mon, 05 May 2014 21:35:56 +0200
+
+polarssl (1.3.7-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #745720)
+  * Fixed .so link in libpolarssl-dev.links (Closes: #745716)
+
+ -- Roland Stigge <stigge@antcom.de>  Fri, 02 May 2014 16:36:34 +0200
+
+polarssl (1.3.6-1) unstable; urgency=medium
+
+  * New upstream release, SONAME version 6
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 12 Apr 2014 10:18:43 +0200
+
+polarssl (1.3.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 02 Feb 2014 11:42:57 +0100
+
+polarssl (1.3.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.9.5
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 01 Jan 2014 19:07:10 +0100
+
+polarssl (1.3.2-1) unstable; urgency=low
+
+  * New upstream release
+  * New SONAME (and adjustment to upstream SONAME counting) required new
+    libpolarssl5
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 05 Nov 2013 22:08:08 +0100
+
+polarssl (1.3.1-2) unstable; urgency=low
+
+  * Fixed FTBFS on big endian arches via upstream patch (Closes: #727116)
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 22 Oct 2013 16:56:09 +0200
+
+polarssl (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes CVE-2013-5914, CVE-2013-5915 (Closes: #725359)
+    - Fixes CVE-2013-4623 (Closes: #719954)
+    - Fixes CVE-2009-3555 (Closes: #704946)
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 16 Oct 2013 19:35:28 +0200
+
+polarssl (1.2.8-2) unstable; urgency=low
+
+  * Activate HAVEGE config option manually, needed since 1.2.8
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 23 Jun 2013 11:11:31 +0200
+
+polarssl (1.2.8-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 22 Jun 2013 14:18:26 +0200
+
+polarssl (1.2.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 05 May 2013 14:05:39 +0200
+
+polarssl (1.2.6-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.9.4
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 12 Mar 2013 20:37:01 +0100
+
+polarssl (1.2.5-1) experimental; urgency=low
+
+  * New upstream release (Closes: #699887)
+  * Fixes CVE-2013-0169: Lucky 13 TLS protocol timing flaw
+    (Including CVE-2013-1621 and CVE-2013-1622)
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 06 Feb 2013 21:13:35 +0100
+
+polarssl (1.2.4-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 26 Jan 2013 14:56:16 +0100
+
+polarssl (1.2.3-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 01 Dec 2012 11:07:42 +0100
+
+polarssl (1.2.2-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 25 Nov 2012 11:22:55 +0100
+
+polarssl (1.2.0-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Build-Depends: debhelper (>= 9) (debian/compat also)
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 03 Nov 2012 14:41:30 +0100
+
+polarssl (1.1.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 02 Jun 2012 12:46:22 +0200
+
+polarssl (1.1.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 01 May 2012 16:59:47 +0200
+
+polarssl (1.1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.9.3
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 28 Apr 2012 12:46:20 +0200
+
+polarssl (1.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 24 Jan 2012 00:19:31 +0100
+
+polarssl (1.1.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated debian/copyright
+  * Removed the following patches (fixed upstream now):
+    - 04-fix-type-rename.patch
+    - 05-fix-testsuite-hangs.patch
+
+ -- Roland Stigge <stigge@antcom.de>  Fri, 23 Dec 2011 18:11:18 +0100
+
+polarssl (1.0.0-3) unstable; urgency=low
+
+  * Added patch to fix testsuite hangs on s390x and sparc64, thanks
+    to Aurelien Jarno (Closes: #650045)
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 27 Nov 2011 19:36:02 +0100
+
+polarssl (1.0.0-2) unstable; urgency=low
+
+  * Fixed bad SO file link in libpolarssl-dev
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 13 Nov 2011 13:54:08 +0100
+
+polarssl (1.0.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Thu, 11 Aug 2011 23:10:01 +0200
+
+polarssl (0.14.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #616114)
+  * New maintainer (Closes: #615247)
+  * Fixed debian/watch, thanks to Mats Erik Andersson (Closes: #620983)
+  * debian/control: Standards-Version: 3.9.2
+  * Source format: 3.0 (quilt)
+  * Included binaries in libpolarssl-runtime
+  * Included shared library in libpolarssl0
+  * Added testsuite build/run to build process
+
+ -- Roland Stigge <stigge@antcom.de>  Mon, 25 Jul 2011 10:28:54 +0200
+
+polarssl (0.12.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use dh --with quilt for sexyness.
+  * Bump standards-version, no change needed.
+  * Tighten up dh build depend version.
+  * Add debian/README.source.
+  * Update watch file.
+  * Refresh patches.
+
+ -- Arnaud Cornet <acornet@debian.org>  Sat, 07 Nov 2009 22:38:20 +0000
+
+polarssl (0.11.1-1) unstable; urgency=low
+
+  * Fork xyssl package to polarssl to reflect upstream fork/takeover (Closes:
+    #536697).
+  * Refresh patches.
+  * Switch to DH 7.
+  * Bump Standards-Version, no change needed.
+
+ -- Arnaud Cornet <acornet@debian.org>  Thu, 16 Jul 2009 14:34:32 +0200
+
+xyssl (0.9-2) unstable; urgency=low
+
+  * Include md2 and md4 hashes algorithms (Closes: #496328).
+
+ -- Arnaud Cornet <acornet@debian.org>  Mon, 25 Aug 2008 18:28:22 +0200
+
+xyssl (0.9-1) unstable; urgency=low
+
+  * Add Homepage header.
+  * Fix watch file to match tarball name change (Closes: #453609).
+  * New Upstream Version
+  * Move libxyssl-dev to libdevel section.
+  * Move standards-version to 3.7.3 (no change).
+  * Licence change from LGPL to GPL, fix debian/copyright.
+
+ -- Arnaud Cornet <acornet@debian.org>  Mon, 22 Oct 2007 23:35:33 +0200
+
+xyssl (0.8-1) unstable; urgency=low
+
+  * New Upstream Version
+  * Drop makefile-install.patch.
+  * Update my mail address.
+
+ -- Arnaud Cornet <acornet@debian.org>  Mon, 22 Oct 2007 23:22:53 +0200
+
+xyssl (0.7-1) unstable; urgency=low
+
+  * New Upstream Version.
+  * Switch to quilt patch system.
+  * Dropped old makefile fix. Made new makefile fix in makefile-install.patch.
+  * Updated examples list.
+
+ -- Arnaud Cornet <arnaud.cornet@gmail.com>  Sun, 08 Jul 2007 17:59:16 +0200
+
+xyssl (0.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Make watchfile stricter.
+  * makefile.patch: Fix completly wrong Makefile.
+
+ -- Arnaud Cornet <arnaud.cornet@gmail.com>  Sun, 08 Apr 2007 11:39:33 +0200
+
+xyssl (0.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * No need for a dfsg anymore (files removed upstream).
+  * Now build/works on all archs (Closes:#402467).
+
+ -- Arnaud Cornet <arnaud.cornet@gmail.com>  Mon,  1 Jan 2007 15:22:48 +0100
+
+xyssl (0.2.dfsg.1-1) unstable; urgency=low
+
+  * New upstream release
+  * New architectures supported: arm and mips.
+  * Removed files that had an unclear copyright and licence from source
+    tarball (hence the dfsg in version).
+
+ -- Arnaud Cornet <arnaud.cornet@gmail.com>  Fri,  8 Dec 2006 00:08:22 +0100
+
+xyssl (0.1-1) unstable; urgency=low
+
+  * Initial release. (Closes:#396927)
+
+ -- Arnaud Cornet <arnaud.cornet@gmail.com>  Thu, 02 Nov 2006 19:36:08 +0100

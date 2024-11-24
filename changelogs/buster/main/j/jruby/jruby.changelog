@@ -1,0 +1,570 @@
+jruby (9.1.17.0-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2017-17742, CVE-2019-16254: HTTP Response Splitting attacks
+    in the HTTP server of WEBrick.
+  * CVE-2019-16201: Regular Expression Denial of Service vulnerability
+    of WEBrick's Digest access authentication.
+  * CVE-2019-16255: Code injection vulnerability of Shell#[]
+    and Shell#test.
+  * CVE-2020-25613: HTTP Request Smuggling attack in WEBrick.
+  * CVE-2021-31810: Trusting FTP PASV responses vulnerability in Net::FTP.
+  * CVE-2021-32066: Net::IMAP did not raise an exception when StartTLS
+    fails with an an unknown response.
+  * CVE-2023-28755: Quadratic backtracking on invalid URI.
+  * CVE-2023-28756: The Time parser mishandled invalid strings that have
+    specific characters.
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 30 Apr 2023 20:10:09 +0300
+
+jruby (9.1.17.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * debian/patches
+    - add 0017-fix-rubygem-vulnerabilities.patch to fix CVEs (Closes: #925987)
+      (CVE-2019-8320 CVE-2019-8321 CVE-2019-8322 CVE-2019-8323 CVE-2019-8324
+       CVE-2019-8325)
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 29 May 2019 08:06:41 +0900
+
+jruby (9.1.17.0-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Directory traversal vulnerability in install_location (CVE-2018-1000073)
+    (Closes: #925986)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 01 May 2019 11:25:03 +0200
+
+jruby (9.1.17.0-2) unstable; urgency=medium
+
+  * Annotate the javax.annotation.Generated patch.
+  * Bump the dependency on jnr-posix to 3.0.44 due to utimensat.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Tue, 26 Feb 2019 10:24:15 +0100
+
+jruby (9.1.17.0-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #893244).
+  * Refresh patches.
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Move source package lintian overrides to debian/source.
+  * Update Vcs-* to point to Salsa.
+  * Use debhelper compat level 12.
+  * Bump Standards-Version to 4.3.0.
+  * Depend on libmodulator-java.
+  * Use javax.annotation.processing.Generated from Java SE 9
+    (Closes: #917702).
+  * Disable a part of the SkinnyMethodAdapter test.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 25 Feb 2019 21:38:40 +0100
+
+jruby (9.1.13.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix FTBFS with Java 9. (Closes: #875588)
+  * Bump Standards-Version to 4.1.1. No changes were required.
+  * Refresh patches:
+    - d/p/0004-Add-missing-maven-artifacts-pom-files.patch
+    - d/p/0008-Configure-unit-tests-to-run-at-build-time.patch
+
+ -- Miguel Landaeta <nomadium@debian.org>  Wed, 04 Oct 2017 19:52:57 +0100
+
+jruby (9.1.8.0-3) unstable; urgency=medium
+
+  * Fix dependencies on ruby-psych and add dependencies on libpsych-java.
+  * Update versioned dependency on maven-assembly-plugin.
+  * Refresh patches:
+    - d/p/0004-Add-missing-maven-artifacts-pom-files.patch
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sun, 17 Sep 2017 16:01:51 +0100
+
+jruby (9.1.8.0-2) unstable; urgency=medium
+
+  * Fix FTBFS caused by an unresolved dependency on an outdated version
+    of libmaven-assembly-plugin-java.
+  * Break dependency loop by temporarily demoting dependency on ruby-psych
+    to Suggests. (Closes: #869486).
+
+ -- Miguel Landaeta <nomadium@debian.org>  Fri, 28 Jul 2017 18:36:45 +0100
+
+jruby (9.1.8.0-1) unstable; urgency=medium
+
+  * Upload to unstable. (Closes: #867652).
+  * Prevent FTBFS errors caused by maven-bundle-plugin incompatibility with
+    jar files shipping module definition files. The following patch was
+    introduced as temporary workaround: d/p/FELIX-5430.patch.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 22 Jul 2017 11:18:39 +0100
+
+jruby (9.1.8.0-1~exp3) experimental; urgency=medium
+
+  * Allow tests failures again. This is unfortunate but the package
+    is not ready for doing source only uploads and expect no failures from
+    the extense test suite run at buildd nodes during build time.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Fri, 21 Apr 2017 18:47:49 +0100
+
+jruby (9.1.8.0-1~exp2) experimental; urgency=medium
+
+  * Don't ignore failures from MRI tests suite.
+    However, a few tests were excluded, so an additional patch was introduced:
+    0010-Exclude-mri-tests-failing-in-debian.patch
+  * Reintroduce B-D on locales-all.
+  * Enable additional JRuby tests tasks:
+    - Drop patch 0009-Bundle-psych-java-extension.patch.
+    - Add dependencies on:
+      + ruby-jar-dependencies
+      + ruby-json (>= 2.0.1+dfsg-4~)
+      + ruby-psych
+    - Drop explicit dependency on libruby-2.3.
+    - Add Build-Conflicts on open-infrastructure-locales-c.utf-8.
+    - Simplify several d/rules targets.
+    - Add more patches:
+      + 0011-Disable-failed-tests-in-sbuild.patch
+      + 0012-Disable-jruby-flaky-tests.patch
+      + 0013-Disable-regression-flaky-tests.patch
+
+ -- Miguel Landaeta <nomadium@debian.org>  Mon, 17 Apr 2017 21:09:18 +0100
+
+jruby (9.1.8.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+    Drop patch 0003-Disable-truffle-module.patch since is no longer needed.
+  * Add dependency on libunsafe-fences-java.
+  * Update versioned dependency on libjnr-posix-java to (>= 3.0.36~).
+  * Remove references to truffle module since it has been removed.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 11 Mar 2017 12:32:31 +0000
+
+jruby (9.1.6.0-1~exp3) experimental; urgency=medium
+
+  * Add versioned dependency on jruby-openssl (>= 0.9.17~).
+  * Add dependency on ruby-jar-dependencies.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Tue, 07 Mar 2017 22:00:21 +0000
+
+jruby (9.1.6.0-1~exp2) experimental; urgency=medium
+
+  * Don't hard-code libyaml-snake-java version in psych stdlib module.
+  * Bundle psych Java native extension:
+    - Add patch 0009-Bundle-psych-java-extension.patch.
+    - Add again dependency on libyaml-snake-java.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 04 Mar 2017 11:39:19 +0000
+
+jruby (9.1.6.0-1~exp1) experimental; urgency=medium
+
+  The "better late than never" release.
+
+  * New upstream release. (Closes: #792150)
+  * Update uploaders list.
+    Thanks to Tim Potter for his effort to package 1.7.x releases.
+  * Bump debhelper compat level to 10.
+  * Update dependencies lists:
+    - Since 9.0.0.0 release, at least java7-runtime is needed to run jruby.
+    - New dependencies on:
+      + libdirgra-java
+      + libjitescript-java
+      + libjzlib-java
+      + libmaven-source-plugin-java
+      + libosgi-core-java
+      + libruby2.3
+      + rake
+      + ruby-test-unit
+    - Update versioned dependencies on:
+      + debhelper (>= 10~)
+      + libbytelist-java (>= 1.0.13~)
+      + libinvokebinder-java (>= 1.7~)
+      + libjffi-java
+      + libjnr-constants-java (>= 0.9.5~)
+      + libjnr-ffi-java (>= 2.1.1~)
+      + libjnr-netdb-java
+      + libjnr-posix-java (>= 3.0.32~)
+      + libjnr-unixsocket-java (>= 0.14~)
+      + libjnr-x86asm-java
+    - Drop explicit dependencies on:
+      + bnd
+      + libjgrapht0.8-java
+      + libjline2-java
+      + libmaven-compiler-plugin-java (>= 3.2~)
+      + libmaven-install-plugin-java
+      + libproperties-maven-plugin-java
+      + libyaml-snake-java
+      + libyecht-java (>= 1.0~)
+      + locales-all
+      + maven-repo-helper
+      + netbase
+      + ruby-minitest
+      + ruby-minitest-excludes
+      + yydebug
+  * Refresh d/copyright file.
+  * Rework all the patches, almost all of them were dropped since they
+    were not necessary anymore. Also, upstream switched their build system
+    to polyglot-maven, so new ones were introduced.
+  * Update d/rules.
+  * Update package description.
+  * Update lintian overrides.
+  * Drop jruby-core-noasm Maven artifact, is not provided by upstream
+    anymore.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 11 Feb 2017 16:38:10 +0000
+
+jruby (1.7.26-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Miguel Landaeta ]
+  * New upstream release.
+  * Fix FTBFS due to changes introduced in yecht 1.1 and snakeyaml 1.7.
+    (Closes: #821181).
+  * Drop Provides: ruby-interpreter in jruby binary package.
+    (Closes: #839567).
+  * Build with default-jdk now it has finally switched to Java 8.
+  * Bump Standards-Version to 3.9.8. No changes were required.
+  * Use https URLs with Vcs-* fields.
+  * Refresh patches:
+    - Add new patch:
+      + d/patches/0007-Enable-test-suites.patch.
+      + d/patches/0012-Disable-outdated-specs.patch.
+  * Run more unit tests during build time.
+    The suit test spec:ruby:fast is ran from now on.
+
+  [ Emmanuel Bourg ]
+  * Depend on libasm-java (>= 5.0) instead of libasm4-java.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 12 Nov 2016 20:33:13 +0000
+
+jruby (1.7.22-2) unstable; urgency=medium
+
+  * Build with maven-debian-helper 2.
+    - Simplify packaging.
+    - Avoid occasional FTBFS errors caused by changes in Maven.
+  * Fix an FTBFS caused by some unit tests not working correctly in pbuilder.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Mon, 28 Dec 2015 17:20:15 -0300
+
+jruby (1.7.22-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Install jruby-stdlib Maven artifact. (Closes: #792906).
+    - Added a lintian override for codeless-jar warning.
+  * Install jruby-noasm Maven artifact.
+  * Install correct jruby-core Maven artifact.
+  * Install jruby-core-noasm Maven artifact.
+  * Install jruby-complete Maven artifact.
+  * Add B-D on libmaven-install-plugin-java.
+  * Add versioned B-D on maven (>= 3.3~).
+
+ -- Miguel Landaeta <nomadium@debian.org>  Wed, 16 Sep 2015 21:19:33 -0300
+
+jruby (1.7.21-2) unstable; urgency=high
+
+  * Fix FTBFS due to Maven 3.3.x changes. (Closes: #792788).
+  * Provide full cryptographic support:
+    - Add Recommends on jruby-openssl. (Closes: #743746).
+    - Add Build-Depends on jruby-openssl for unit tests during build-time.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Tue, 14 Jul 2015 20:20:23 -0300
+
+jruby (1.7.21-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add missing dependencies for jruby binary package. (Closes: #771694).
+  * Add Provides: ruby-interpreter for jruby binary package.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Wed, 08 Jul 2015 20:59:46 -0300
+
+jruby (1.7.20.1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Add missing dependencies for jruby binary package.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 20 Jun 2015 19:42:50 -0300
+
+jruby (1.7.20.1-1) experimental; urgency=medium
+
+  * New upstream release.
+    This release updates Rubygems included copy to 2.4.8 in order to address
+    CVE-2015-1855, to resolve some problems with wildcard matching of
+    hostnames.
+  * Add new patch:
+    - 0009-Disable-bigdecimal-divmod-spec-failing-test.patch.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Thu, 18 Jun 2015 21:34:53 -0300
+
+jruby (1.7.19-1) experimental; urgency=medium
+
+  * New upstream release. (Closes: #636554, #773131, #750749).
+  * Add /usr/lib/ruby/vendor_ruby to the default $LOAD_PATH. (Closes: #663342).
+  * Switch build system to Maven, upstream doesn't maintain Ant one anymore:
+    - Add B-D on: maven, maven-{debian,repo}-helper and several maven plugins.
+    - Replace cdbs with debhelper.
+  * Enable full testing during build time.
+  * Remove outdated packaging files:
+    - d/dirs, d/links, d/NEWS.Debian and a couple of lintian overrides.
+  * Refresh patches:
+    - Update d/patches/0001-Fix-shebang-lines.patch.
+    - Drop unnecessary patches, some of them were merged at upstream:
+      + d/patches/0004-replace-bundled-libraries.patch
+      + d/patches/0005-ignore-test-failures.patch
+      + d/patches/0006-do-not-build-InvokeDynamicSupport.java.patch
+      + d/patches/0007-use-unversioned-jarjar.jar.patch
+      + d/patches/0008-CVE-2011-4838.patch
+      + d/patches/0009-CVE-2012-5370.patch
+      + d/patches/0010-jruby-Set-FD_CLOEXEC-correctly-using-F_SETFD-not-F_S.patch
+      + d/patches/0011-java7-compat.patch
+      + d/patches/0012-nailgun.patch
+  * Update Uploaders list:
+    - Remove Sebastien Delafond. Thanks for your work on this package!
+    - Remove Torsten Werner. Thanks for your work on this package!
+    - Add Tim Potter. Welcome aboard!
+  * Update d/watch file.
+  * Update d/README.Debian file.
+  * Add get-orig-source target to d/rules.
+  * Update Build-Depends:
+    - Replace dependency on openjdk-7-jdk with openjdk-8-jdk.
+      Otherwise jruby will not even compile.
+    - Replace libjaffl-java with libjnr-ffi-java.
+    - Replace libjline-java with libjline2-java.
+    - Update to libyecht-java to (>= 1.0~).
+    - Update to nailgun (>= 0.9.1~).
+    - Update to bytelist (>= 1.0.12~).
+    - Update to jffi (>= 1.2.7~).
+    - Update to jnr-posix (>= 3.0.9~).
+    - Add libyaml-snake-java.
+    - Add libinvokebinder-java.
+    - Replace libasm3-java with libasm4-java.
+    - Add libjnr-x86asm-java.
+    - Update libjnr-netdb-java to (>= 1.1.4~).
+    - Add liblivetribe-jsr223-java.
+    - Add ruby-rspec and ruby-minitest.
+    - Add locales-all.
+  * Update copyright file.
+  * Remove unnecessary preinst and postinst scripts.
+  * Update package description.
+  * Ship a copy of jquery library since the source package contains a
+    minified copy. This is to avoid lintian warnings, during build time
+    a link symbolic to libjs-jquery is deployed.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sun, 31 May 2015 19:37:41 -0300
+
+jruby (1.5.6-10) unstable; urgency=medium
+
+  * Add myself to Uploaders list.
+  * Replace dependency on libconstantine-java with libjnr-constants-java.
+  * Refresh patches:
+    - d/p/0003-do-not-install-gems.patch.
+    - d/p/0004-replace-bundled-libraries.patch.
+    - d/p/0012-nailgun.patch.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sat, 02 May 2015 17:37:51 -0300
+
+jruby (1.5.6-9) unstable; urgency=medium
+
+  * Team upload.
+  * Build-depend on openjdk-7-jdk >= 7u71-2.5.3 (closes: #759947).
+    This version restores the "apt" tool.
+    - Thank you to Michael Gilbert for the patch.
+
+ -- tony mancill <tmancill@debian.org>  Sat, 01 Nov 2014 19:55:32 -0700
+
+jruby (1.5.6-8) unstable; urgency=medium
+
+  [ tony mancill ]
+  * Team upload.
+  * Recommend "ri" instead of "ri1.8" (ruby interpreter)
+  * Use DH9 instead of version 6.
+  * Rebuild against a non-broken joda-time. (Closes: #729171)
+  * Bump Standards-Version to 3.9.6 (no changes).
+
+  [ Emmanuel Bourg ]
+  * Removed the build dependency on libemma-java
+
+ -- tony mancill <tmancill@debian.org>  Mon, 27 Oct 2014 23:27:54 -0700
+
+jruby (1.5.6-7) unstable; urgency=low
+
+  * Team upload.
+  * Provide maven artifacts. (Closes: #737424).
+
+ -- Miguel Landaeta <nomadium@debian.org>  Sun, 02 Feb 2014 21:37:46 -0300
+
+jruby (1.5.6-6) unstable; urgency=low
+
+  * Team upload.
+
+  [ tony mancill ]
+  * Apply patch to set FD_CLOEXEC correctly using F_SETFD not F_SETFL.
+    - Thank you to Guillem Jover. (Closes: #696283)
+
+  [ gregor herrmann ]
+  * Apply all changes from the Ubuntu package:
+    - Depend on default-jre.
+    - Add patch 0011-java7-compat.patch. Fix build issue with OpenJDK 7.
+      Thanks, Julian Taylor.
+    - Add patch 0012-nailgun.patch. Use unversioned nailgun.jar.
+      Thanks, Julian Taylor.
+      Change re the Ubuntu version: nailgun.jar instead of nailgun-0.9.0.jar.
+      (Closes: #713159)
+  * debian/control: use canonical URLs for Vcs-*.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 01 Nov 2013 17:55:29 +0100
+
+jruby (1.5.6-5) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch for CVE-2012-5370: Use PerlHash instead of MurmurHash
+    (that is vulnerable to DoS attacks). (Closes: #694694)
+    [Patch adapted from 5e4aab28 upstream]
+
+ -- Martin Quinson <mquinson@debian.org>  Tue, 11 Dec 2012 21:22:36 +0100
+
+jruby (1.5.6-4) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch for CVE-2011-4838 (Closes: #686867)
+    - Thanks to Moritz Muehlenhoff
+
+ -- tony mancill <tmancill@debian.org>  Thu, 20 Sep 2012 13:36:31 -0700
+
+jruby (1.5.6-3) unstable; urgency=low
+
+  [Miguel Landaeta]
+  * Team upload.
+  * Switch to default-jdk. (Closes: #655823).
+
+  [tony mancill]
+  * Bump Standards-Version to 3.9.2 (no changes).
+  * Address lintian warning in d/copyright (update path to GPL-2).
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Sat, 14 Jan 2012 14:13:54 -0430
+
+jruby (1.5.6-2) unstable; urgency=high
+
+  * Add workaround for strange dpkg-source error. (Closes: #643516)
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 04 Oct 2011 22:24:31 +0200
+
+jruby (1.5.6-1) unstable; urgency=low
+
+  * New upstream version (Closes: #636554)
+  * Document licenses and copyright holders of code in
+    jruby-launcher-1.0.3-java.gem.
+  * Change debian/watch to read tags from github. Remove get-orig-source
+    target from debian/rules because we mirror the github repo in our repo.
+  * Use cdbs to build the package.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 20 Sep 2011 21:17:04 +0200
+
+jruby (1.5.1+dfsg4-2) unstable; urgency=low
+
+  * Use yecht-ruby.jar for building.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 18 Sep 2011 19:24:44 +0200
+
+jruby (1.5.1+dfsg4-1) unstable; urgency=low
+
+  * Remove bundled yecht.jar from orig tarball.
+  * Move package to main.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 18 Sep 2011 00:01:11 +0200
+
+jruby (1.5.1+dfsg3-1) unstable; urgency=low
+
+  * Remove bundled jnr-netdb.jar from orig tarball.
+  * Add Depends: libjffi-jni.
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 17 Sep 2011 17:34:12 +0200
+
+jruby (1.5.1+dfsg2-1) experimental; urgency=low
+
+  * Remove bundled jnr-posix.jar from orig tarball.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 14 Sep 2011 20:32:31 +0200
+
+jruby (1.5.1+dfsg1-1) experimental; urgency=low
+
+  * Replace more prebuilt jars by Build-Depends.
+  * Modify 0002-jruby_home-is-at-a-specific-location-on-Debian.patch to avoid
+    test failures.
+  * Add get-orig-source target.
+  * Clean more files in clean target.
+  * Clean up debian/copyright.
+  * Do not build InvokeDynamicSupport.java because it requires some backport
+    (jsr292-mock.jar) from Java7.
+  * Replace rdocs by a symlink and add Recommends: ri1.8.
+  * Add a patch for the unversioned jarjar.jar.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 13 Sep 2011 22:43:35 +0200
+
+jruby (1.5.1-1) unstable; urgency=low
+
+  [ Hideki Yamane ]
+  * use already packaged jar files to build jruby.
+    add "Build-Depends: libasm3-java, libcommons-logging-java, libjarjar-java,
+    libjoda-time-java, junit4, libemma-java, libbsf-java, libjline-java, bnd,
+    libconstantine-java" (Closes: #581390)
+
+  [ Torsten Werner ]
+  * New upstream release
+  * Changed Maintainer to pkg-java-maintainers with the agreement of Sebastien.
+  * Add Sebastien and myself to the Uploaders list.
+  * Add Vcs headers to debian/control.
+  * Remove bin/jruby in clean target.
+  * Convert patches to dep3 format.
+  * Remove unneeded jar files from orig tarball.
+  * Define JAVA_HOME and set it to default-java.
+  * Run tests during build.
+    - Upgrade Build-Depends: ant to ant-optional.
+    - Add Build-Depends: netbase.
+    - Add a patch to ignore test failures.
+    - Set CLASSPATH=/usr/share/java/junit4.jar in debian/rules.
+
+ -- Torsten Werner <twerner@debian.org>  Fri, 30 Jul 2010 03:07:08 +0200
+
+jruby (1.5.0~rc3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #581360).
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 12 May 2010 15:56:25 +0200
+
+jruby (1.5.0~rc1-1) unstable; urgency=low
+
+  * New upstream release candidate.
+  * Moved to 4.0 (quilt) source format.
+  * Updated watch file.
+  * Bumped-up Standards-Version.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 20 Apr 2010 18:01:51 +0200
+
+jruby (1.4.0-2) unstable; urgency=low
+
+  * Make sure we're comptaible with a 1.5 JRE (Closes: #563028); thanks to
+    Shyamal Prasad <shyamal@member.fsf.org> for the patch.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 11 Jan 2010 14:44:34 +0100
+
+jruby (1.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated watch file.
+  * Updated copyright file to reflect addition of new third-party jars.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 10 Dec 2009 12:34:42 +0100
+
+jruby (1.3.1-2) unstable; urgency=low
+
+  * Moving to non-free, with detailed debian/copyright (Closes: #551618).
+  * Got rid of jruby alternatives as provided by older jruby1.x.
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 09 Dec 2009 17:30:55 +0100
+
+jruby (1.3.1-1) unstable; urgency=low
+
+  * First release (Closes: #548734).
+  * Move to non-free (See #527977).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 19 Oct 2009 15:41:51 +0200

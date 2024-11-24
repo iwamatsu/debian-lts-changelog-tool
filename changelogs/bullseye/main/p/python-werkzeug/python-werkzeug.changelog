@@ -1,0 +1,427 @@
+python-werkzeug (1.0.1+dfsg1-2+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * don't strip leading = when parsing cookie (CVE-2023-23934)
+    (Closes: #1031370)
+  * limit the maximum number of multipart form parts (CVE-2023-25577)
+    (Closes: #1031370)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 14 Jun 2023 15:06:21 +0200
+
+python-werkzeug (1.0.1+dfsg1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 14 Jul 2020 09:40:21 +0200
+
+python-werkzeug (1.0.1+dfsg1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Sync with unstable (Closes: #938261).
+  * Bump upstream compat level to 13.
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 22 May 2020 09:18:21 +0200
+
+python-werkzeug (1.0.0+dfsg1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Remove python{,3}-termcolor from depends.
+  * Disable sphinxcontrib.log_cabinet extension.
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 12 Feb 2020 17:42:37 +0100
+
+python-werkzeug (0.16.1+dfsg1-2) unstable; urgency=medium
+
+  * Drop python2 support; Closes: #938261
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 27 Mar 2020 10:10:50 -0400
+
+python-werkzeug (0.16.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add python3-pytest-timeout to B-D.
+  * Workaround missing python-pytest-timeout for Python 2 tests.
+  * Bump Standards-Version to 4.5.0 (no changes).
+  * d/control: Add Rules-Requires-Root: no.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 30 Jan 2020 10:15:01 +0100
+
+python-werkzeug (0.16.0+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Enable sphinx-issues extension.
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 29 Oct 2019 06:18:26 +0100
+
+python-werkzeug (0.15.6+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #940935, CVE-2019-14806)
+  * Bump debhelper compat level to 12 and use debhelper-compat
+  * wrap-and-sort -ast
+  * Drop upstream applied patches:
+    - 0002-Use-local-copies-of-object.inv-for-building-document.patch
+    - xprocess-skip.patch
+  * Add python3-pallets-sphinx-themes to B-D
+  * Skip test_windows_get_args_for_reloading test: It doesn't work
+  * d/copyright:
+    - Fix upstream licensing for new upstream release
+    - Bump my copyright years
+  * d/rules: Install docs inside override_dh_sphinxdoc and not
+    override_dh_install
+  * Bump Standards-Version to 4.4.1.
+  * Disable sphinx-issues extension until python-sphinx-issues hits unstable.
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 23 Oct 2019 17:32:04 +0200
+
+python-werkzeug (0.14.1+dfsg1-4) unstable; urgency=medium
+
+  * Don't run xprocess tests without xprocess (Closes: #915776)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 21 Dec 2018 21:02:47 +0100
+
+python-werkzeug (0.14.1+dfsg1-3) unstable; urgency=medium
+
+  * Move documentation back to /usr/share/python-werkzeug-doc and keep
+    symlinks from /usr/share/python{,3}-werkzeug/ (Closes: #910211)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 05 Oct 2018 10:20:18 +0200
+
+python-werkzeug (0.14.1+dfsg1-2) unstable; urgency=medium
+
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Bump debhelper compat level to 11
+  * Bump standards version to 4.2.1 (no changes)
+  * Add upstream metadata
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 29 Sep 2018 20:04:43 +0200
+
+python-werkzeug (0.14.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Don't reset http{,s}_proxy, pybuild sets it correctly
+  * Use Python 3 version of Sphinx for building docs
+  * Standards-Version is 4.1.3 now (no changes needed)
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 09 Jan 2018 14:37:11 +0100
+
+python-werkzeug (0.13+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove Priority: extra which is deprecated
+  * Standards-Version is 4.1.2 now
+  * d/copyright: Fixed for new release
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 09 Dec 2017 14:17:13 +0100
+
+python-werkzeug (0.12.2+dfsg1-2) unstable; urgency=medium
+
+  * Uploading to unstable
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 20 Jun 2017 12:41:46 +0200
+
+python-werkzeug (0.12.2+dfsg1-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 03 Jun 2017 14:08:47 +0200
+
+python-werkzeug (0.12.1+dfsg1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Add python{,3}-termcolor and python{,3}-watchdog to Suggests
+  * d/copyright: Bump copyright years
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 08 Apr 2017 13:45:45 +0200
+
+python-werkzeug (0.11.15+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 02 Jan 2017 11:08:13 +0100
+
+python-werkzeug (0.11.13+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bumped debhelper version to 10
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 28 Dec 2016 22:39:18 +0100
+
+python-werkzeug (0.11.11+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 08 Sep 2016 20:11:19 +0200
+
+python-werkzeug (0.11.10+dfsg1-2) unstable; urgency=medium
+
+  * d/{control,copyright}: Use my @debian.org email address
+  * Use local copies of object.inv for building documentation
+    (Closes: #830612)
+  * Removed pre-wheezy versioned depends
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 11 Jul 2016 07:30:48 +0200
+
+python-werkzeug (0.11.10+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Ondřej Nový <novy@ondrej.org>  Wed, 25 May 2016 22:33:48 +0200
+
+python-werkzeug (0.11.9+dfsg1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * New upstream release
+  * Fixed VCS URL (https)
+  * d/watch: Moved from pypi to github, which contains Werkzeug theme
+  * d/copyright
+    - Fixed Files-Excluded for new upstream release
+    - Added myself to Debian part
+  * Added AUTHORS file to all binary packages
+  * Added myself as uploader
+  * Standards-Version is 3.9.8 now (no change)
+  * X-Python-Version bumped to 2.6
+  * Changed description of Py2/Py3/docs packages to distinguish between them
+  * Enabled autopkgtest-pkg-python testsuite
+  * Changed Conflicts to Breaks for -doc package
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 04 May 2016 22:53:02 +0200
+
+python-werkzeug (0.10.4+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release (closes: 792802)
+    - drop no longer needed 13218de4.patch and 0bad0c25.patch
+    - add missing docs/_themes to the upstream tarball
+  * Remove ubuntu.ttf, jquery.js and Werkzeug.egg-info via Files-Excluded in
+    debian/copyright (egg-info one closes: 671254)
+  * debian/watch: use pypi.debian.net redirector
+  * debian/rules: remove no longer needed get-orig-source and use
+    debian/python{3,}-werkzeug.links files instead of override_dh_python
+  * Replace Noah with DPMT in Maintainer (thanks Noah for all your work)
+  * Standards-Version bumped to 3.9.6 (no changes needed)
+  * Add python{3,}-requests and python{3,}-pytest to Build-Depends
+    (upstream switched test suite to py.tests)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 20 Jul 2015 21:09:06 +0200
+
+python-werkzeug (0.9.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove b23efe87 patch (no longer needed)
+  * Add 13218dea patch to fix tests on Python 3.4 (closes: 745852)
+  * Add maxsize fix for Python 3 (backported 0bad0c25 commit)
+  * Hardcode LC_ALL to C.UTF-8 while invoking tests to workaround pbuilder's
+    ancient defaults (closes: 739077)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 10 Jun 2014 20:47:05 +0200
+
+python-werkzeug (0.9.4+dfsg-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Start memcached for tests, thanks to Sebastian Ramacher for the patch
+    (Closes: #725594)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Mon, 06 Jan 2014 19:01:32 +0100
+
+python-werkzeug (0.9.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * Backport b23efe87 commit to fix failing test on Python 3.3
+  * Standards-Version bumped to 3.9.5 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 03 Dec 2013 19:33:17 +0100
+
+python-werkzeug (0.9.3+dfsg-2) unstable; urgency=low
+
+  * Add python3-werkzeug binary package
+  * Move docs and examples to new python-werkzeug-doc binary package
+  * Switch to pybuild buildsystem
+  * Add redis and memcached related packages to Build-Depends (used in tests)
+  * Set debhelper compatibility level to 9
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 08 Aug 2013 17:13:05 +0200
+
+python-werkzeug (0.9.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 26 Jul 2013 00:03:35 +0200
+
+python-werkzeug (0.9.2+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 22 Jul 2013 19:26:28 +0200
+
+python-werkzeug (0.9.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * Run tests with LC_ALL=C.UTF-8
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 16 Jun 2013 11:51:23 +0200
+
+python-werkzeug (0.9+dfsg-1) unstable; urgency=low
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Suggest new packages:
+    - python-greenlet (used in werkzeug.contrib.iterio)
+    - python-redis (used in werkzeug.contrib.cache)
+    - python-pylibmc (as an alternative to python-memcache,
+      used in werkzeug.contrib.cache)
+  * Recommend python-pyinotify (used in werkzeug.serving)
+  * Remove Werkzeug.egg-info in clean target
+  * Minimum required Python version bumped to 2.5 (due to with statements)
+  * Standards-Version bumped to 3.9.4 (no changes needed)
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Piotr Ożarowski <piotr@debian.org>  Thu, 13 Jun 2013 22:04:15 +0200
+
+python-werkzeug (0.8.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 05 Feb 2012 23:33:49 +0100
+
+python-werkzeug (0.8.2+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 08 Jan 2012 20:10:33 +0100
+
+python-werkzeug (0.8.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - no longer double quotes location header during redirects. Closes: #594172
+    - ubuntu.ttf removed from upstream tarball (cannot regenerate this file
+      using free tools), get-orig-source target added to debian/rules
+    - compatible with ipython 0.11. Closes: 636470
+  * Bump minimum debhelper version to 8.1.0 (which no longer compresses
+    objects.inv files, closes: #608751)
+  * Switch from dh_pysupport to dh_python2
+  * Source format changed to 3.0 (quilt)
+  * Let dh_sphinxdoc handle documentation files, python-sphinx build
+    dependency bumped to 1.0.7+dfsg-1
+  * Standards-Version bumped to 3.9.2 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 16 Oct 2011 15:01:03 +0200
+
+python-werkzeug (0.6.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 23 Apr 2010 19:53:19 +0200
+
+python-werkzeug (0.6.1-1) unstable; urgency=low
+
+  * New upstream release
+    - supports IPv6 addresses. Closes: #569336
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 13 Apr 2010 21:35:42 +0200
+
+python-werkzeug (0.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Add python-openssl to Recommends
+  * Add python-memcache to Suggests
+  * Add "python (>= 2.6)" as an alternative dependency to python-simplejson
+  * Remove MacOS DS store and resource fork files in clean rule
+  * Standards-Version bumped to 3.8.4 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 19 Feb 2010 18:55:34 +0100
+
+python-werkzeug (0.5.1-1) unstable; urgency=low
+
+  [ Noah Slater ]
+  * New upstream release (0.5). Closes: #536465
+  * Updated debian/control, removed Depends on python-wsgiref.
+  * Updated debian/control, updated Build-Depends on debhelper to 7.2.11.
+  * Updated debian/rules, use /usr/share/pyshared directory. Closes: #517302
+
+  [ Piotr Ożarowski ]
+  * New upstream release (0.5.1)
+  * New build dependencies:
+    - python-simplejson (to build docs)
+    - python-nose and python-lxml (to run tests)
+  * Use dh sequencer instead of CDBS. Closes: #526577
+  * Standards-Version bumped to 3.8.2 (no changes needed)
+  * Add myself to Uploaders
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 07 Aug 2009 19:44:53 +0200
+
+python-werkzeug (0.4.1-1) experimental; urgency=low
+
+  * New upstream release. Closes: #511553
+  * Added debian/README.source file.
+  * Updated debian/control, updated Vcs-Browser.
+  * Updated debian/control, updated Description.
+  * Updated debian/copyright, updated for latest format proposal.
+  * Updated debian/rules, improved uscan options for get-orig-source.
+
+ -- Noah Slater <nslater@tumbolia.org>  Sun, 18 Jan 2009 20:01:23 +0000
+
+python-werkzeug (0.3.1-1) unstable; urgency=high
+
+  * New upstream release, fixes a security issue.
+
+ -- Noah Slater <nslater@tumbolia.org>  Wed, 25 Jun 2008 19:32:07 +0100
+
+python-werkzeug (0.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Moved documentation to standard location.
+  * Fixed shared file permissions.
+  * Updated debian/control, updated Suggests.
+  * Updated debian/control, updated Standards-Version to 3.8.0.
+  * Updated debian/copyright, updated for latest format proposal.
+
+ -- Noah Slater <nslater@tumbolia.org>  Tue, 17 Jun 2008 22:35:18 +0100
+
+python-werkzeug (0.2-2) unstable; urgency=low
+
+  * Updated debian/control, updated Depends. Closes: #468704
+
+ -- Noah Slater <nslater@tumbolia.org>  Tue, 04 Mar 2008 23:40:55 +0000
+
+python-werkzeug (0.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated debian/control, updated Uploaders.
+  * Updated debian/control, updated Vcs-Browser.
+  * Updated debian/control, updated Depends.
+
+ -- Noah Slater <nslater@tumbolia.org>  Mon, 25 Feb 2008 10:30:54 +0000
+
+python-werkzeug (0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added debian/watch file.
+  * Updated debian/control, added Recommends.
+  * Updated debian/control, added Suggests.
+  * Updated debian/control, updated Standards-Version to 3.7.3.
+  * Updated debian/control, updated Build-Depends-Indep.
+
+ -- Noah Slater <nslater@tumbolia.org>  Fri, 28 Dec 2007 11:09:34 +0000
+
+python-werkzeug (0.1~svn3830-2) unstable; urgency=low
+
+  * Updated debian/control, added Homepage.
+  * Updated debian/control, added Vcs-Svn.
+  * Updated debian/control, added Vcs-Browser.
+  * Updated debian/control, updated Build-Depends.
+  * Updated debian/control, removed additional Priority.
+  * Updated debian/copyright, changed ordering of sections.
+
+ -- Noah Slater <nslater@tumbolia.org>  Sat, 03 Nov 2007 01:10:16 +0000
+
+python-werkzeug (0.1~svn3830-1) experimental; urgency=low
+
+  * Initial release. Closes: #433991
+
+ -- Noah Slater <nslater@tumbolia.org>  Fri, 20 Jul 2007 20:53:52 +0100

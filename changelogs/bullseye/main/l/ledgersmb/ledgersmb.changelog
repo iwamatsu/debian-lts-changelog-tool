@@ -1,0 +1,1049 @@
+ledgersmb (1.6.9+ds-2+deb11u3) bullseye-security; urgency=medium
+
+  * Fix a regression in the display of some search results
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Mon, 30 Aug 2021 15:19:14 +0200
+
+ledgersmb (1.6.9+ds-2+deb11u2) bullseye-security; urgency=medium
+
+  * Fix CVE-2021-3731, thanks to Erik Huelsmann
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Sun, 22 Aug 2021 20:58:22 +0200
+
+ledgersmb (1.6.9+ds-2+deb11u1) bullseye-security; urgency=medium
+
+  * Fix CVE-2021-3693 and CVE-2021-3694, thanks to Erik Huelsmann
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Thu, 19 Aug 2021 21:02:41 +0200
+
+ledgersmb (1.6.9+ds-2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Erik Huelsmann ]
+  * Fix Missing old/bin/ directory on 1.6 package (Closes: #981608)
+
+ -- Chris Hofstaedtler <zeha@debian.org>  Wed, 10 Feb 2021 23:10:53 +0000
+
+ledgersmb (1.6.9+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Declare compliance with Debian Policy 4.3.0, no changes required.
+  * Resolve issue with trailing spaces in the debian/changelog file.
+
+ -- Robert James Clay <jame@rocasa.us>  Wed, 26 Dec 2018 20:45:30 -0500
+
+ledgersmb (1.6.8+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Updated the debconf debian/po/pl.po file.
+  * Updated the debconf debian/po/sv.po file.
+  * Updated the debconf debian/po/it.po file. (Closes: #914460)
+  * Updated the debconf debian/po/pt.po file. (Closes: #915262)
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 16 Dec 2018 19:05:05 -0500
+
+ledgersmb (1.6.6+ds-2) unstable; urgency=medium
+
+  * Add a ".proverc" filename to the debian/clean file.
+  * Add "cp t/.proverc ./"  to the 'override_dh_auto_configure' target in
+    debian/rules.
+  * Remove 'override_dh_auto_test' from debian/rules to facilitate the basic
+    upstream tests.
+  * Changes to debian/control:
+    + Remove duplication of 'postgresql' from the Suggests stanza.
+    + Derive Build-Depends-Indep from the Depends and Recommends stanzas
+      and also include the libtest-bdd-cucumber-perl, libtest-trap-perl,
+      libtap-parser-sourcehandler-pgtap-perl, libdbd-mock-perl, and the
+      libdbd-mock-perl packages.
+    + Add 'lighttpd' & 'varnish' to the Web Proxies in the Recommends stanza.
+    + Add 'texlive-latex-recommended' & 'texlive-xetex' to the Build-Depends
+      stanza.
+    + Add packages libio-stringy-perl, libdata-uuid-perl, libtext-markdown-perl,
+      and libplack-middleware-reverseproxy-perl to the Depends stanza.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 12 Nov 2018 04:55:42 -0500
+
+ledgersmb (1.6.6+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * In the 12 Oct 2018 stanza of the debian/changelog; correct miss-spelling
+    at debian/ledgersmb.init item and add missing items for debian/control
+    and debian/rules.
+  * Changes in debian/control:
+    + Add the 'libversion-compare-perl' package as a Depends.
+    + Add the 'libplack-request-withencoding-perl' package as a Depends.
+  * Add chmod of the 'utils/devel/ledgersmb-server-development.psgi' file
+    to debian/rules.
+  * Install all of the upstream 'utils/' directory in debian/ledgersmb.install
+    instead of just two subdirectories. (Closes: #911047)
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 21 Oct 2018 20:12:23 -0400
+
+ledgersmb (1.6.5+ds-1) unstable; urgency=medium
+
+  * New series 1.6.x Upstream Release (Closes: #903744)
+  * Update the debian/ledgersmb.install for the new upstream version.
+  * Redo debian/patches/10_lsmb-config.patch for new upstream version.
+  * Redo debian/patches/15_lsmb-service.patch for new upstream version.
+  * Declare compliance with Debian Policy 4.2.1, no changes required.
+  * Update debian/watch to use the 'download.ledgersmb.org' release site and
+    for the new 1.6.x series upstream. (Closes: #868724)
+  * Changes in debian/control:
+    + Add libhtml-escape-perl as a Depends.
+    + Remove unneeded packages ledgersmb-1.5-apache | ledgersmb-1.5-nginx.
+    + Replace 'libfile-mimeinfo-perl' with 'libmime-types-perl' in Depends.
+  * Changes in debian/ledgersmb.init:
+    + Correct wording of the Short-Description.
+    + Correct setting of the WORKING_DIRECTORY parameter.
+    + Update the setting of the 'APP' variable for new upstream.
+  * Change debian/rules target from 'get-orig-source' to 'get-original-source'
+    and update the reference to it in debian/README.source.
+  * Update the 'override_dh_fixperms' target in debian/rules for new upstream.
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 12 Oct 2018 19:12:01 -0400
+
+ledgersmb (1.5.21+ds-2) unstable; urgency=medium
+
+  * Updated the debconf debian/po/es.po file.
+  * Updated the debconf debian/po/ru.po file. (Closes: #904708)
+  * Updated the debconf debian/po/cs.po file. (Closes: #905098)
+  * Updated the debconf debian/po/da.po file. (Closes: #905893)
+  * Updated the debconf debian/po/de.po file. (Closes: #906576)
+  * Updated the debconf debian/po/fr.po file. (Closes: #905637)
+  * Updated the debconf debian/po/pt_BR.po file. (Closes: #905870)
+  * Updated the debconf debian/po/nl.po file. (Closes: #906061)
+  * Add/update the debian/po/* information in the debian/copyright file.
+  * Declare compliance with Debian Policy 4.2.0, no changes required.
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 24 Aug 2018 21:57:06 -0400
+
+ledgersmb (1.5.21+ds-1) unstable; urgency=medium
+
+  * New series 1.5.x Upstream Release (Closes: #874664)
+    + Along with an explicit requirement for liblatex-driver-perl >= 0.300.2,
+      resolves the issue with printing to PDF or Postscript. (Closes: #821251)
+  * Updated the debian/po/* files using 'debconf-updatepo'.
+  * Rewrote the debian/ledgersmb.config file for new upstream.
+  * Add '--with systemd' to dh invocation line in debian/rules
+  * Adapt the maintainer scripts for the new 1.5.x series upstream.
+  * Add a debian/ledgersmb.init and a debian/ledgersmb.default file.
+  * Removed debian/adm/apache-vhost.conf as the file itself is now in upstream.
+  * Rewrite and/or rename or delete debian/patches/* for new upstream version.
+  * Add capability to select setting for Web Proxy to use during installation.
+  * Remove debian/ledgersmb.starman-ledgersmb.service as it is now in upstream
+    and add installing a patched version of that upstream version.
+  * Update the links in 'debian/ledgersmb.links' related to embedded dojo files.
+  * Edited the README.Debian file, adding a new introduction at the beginning as
+    well as a new section specifically regarding accessing the application via
+    a web proxy and otherwise updating it for the new upstream version.
+  * Changes in debian/copyright:
+    + Update copyright years as necessary for new upstream.
+    + Add a stanza for the 'debian/ledgersmb.default' file.
+    + Add 'David Godfrey' & 'Nick Prater' to the Core Team in the source stanza.
+    + Correct the License entry in the 'debian/*' stanza to 'GPL-2+' and update
+      its comment about why that was done.
+    + Update 'Files-Excluded' in debian/copyright related to the embedded dojo
+      files to reflect the new version 1.5.x series upstream.
+  * Changes in debian/control:
+    + Include 'liblocale-codes-perl' package as a Depends. (Closes: #903273)
+    + Change debhelper Build-Depends from '>= 9' to '>= 9.20160709'.
+    + Include as 'Depends': libmoosex-nonmoose-perl, libcgi-emulate-psgi-per',
+      libplack-builder-conditionals-perl.
+    + Update dojo requirement from libjs-dojo-dojox to libjs-dojo-dijit.
+    + Drop explicit 'Depends' on 'liberror-perl' as not being necessary.
+    + Drop 'libparse-recdescent-perl' as a Recommends as it is no longer needed.
+    + Drop the version being required for the Perl requirement in 'Depends'.
+    + Explicitly add 'liblatex-driver-perl (>= 0.300.2)' to Recommends section.
+    + Include the PGObject* Perl modules required for the new 1.5.x series
+      upstream as Depends: libpgobject-perl, libpgobject-simple-perl,
+      libpgobject-simple-role-perl, libpgobject-type-bigfloat-perl,
+      libpgobject-type-bytestring-perl, libpgobject-type-datetime-perl,
+      libpgobject-util-dbmethod-perl, and libpgobject-util-dbadmin-perl.
+  * Changes in debian/templates for new upstream version series:
+    + Update the example URL in the admin_login stanza.
+    + Update the example URL in the admin_password stanza.
+    + Drop the debconf_install stanza but add a lsmb_proxy stanza.
+
+ -- Robert James Clay <jame@rocasa.us>  Thu, 12 Jul 2018 19:38:40 -0400
+
+ledgersmb (1.4.42+ds-2) unstable; urgency=medium
+
+  * Declare compliance with Debian Policy 4.1.4.
+  * Change the Priority in debian/control from "extra" back to "optional".
+  * Correct 'neccessary' as 'necessary' in debian/patches/05_confdir.patch.
+  * Change 'Maintainer' to "LedgerSMB Core Team <devel@lists.ledgersmb.org>" in
+    debian/control. (Closes: #899564)
+
+ -- Robert James Clay <jame@rocasa.us>  Thu, 31 May 2018 16:52:03 -0400
+
+ledgersmb (1.4.42+ds-1) unstable; urgency=low
+
+  * New upstream release.
+  * Declare compliance with Debian Policy 4.1.1
+  * Update debian/watch for correct 'new' upstream at GitHub.
+  * Remove 'Vcs-Svn' entry from debian/control as no longer necessary.
+  * Update Vcs-Browser in debian/control for correct 'new' upstream at GitHub.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 08 Oct 2017 04:52:24 +0000
+
+ledgersmb (1.4.41+ds-1) unstable; urgency=low
+
+  * New Upstream Release
+    - Resolves Perl related issue regarding 'current directory' no longer being
+      in the include path ("INC"). (Closes: #844276)
+  * Add installation of a apache-vhost.conf file.
+  * Add an 'Vcs-Git' entry to the debian/control file.
+  * Add installation of a starman-ledgersmb.service file.
+  * Correct parameter quoting in the debian/adm/config-lsmb-db-user.sh file.
+  * Add note regarding experimental use of 'starman' to debian/README.Debian.
+  * Use 'pg_roles/rolname' instead of the 'pg_user/usename' database/field in
+    the config-lsmb-db-user.sh file,
+  * Correct the debian/changelog entry for v1.4.34+ds-1, adding that it was
+    for a new upstream release.
+
+ -- Robert James Clay <jame@rocasa.us>  Thu, 11 May 2017 14:35:11 -0400
+
+ledgersmb (1.4.34+ds-2) unstable; urgency=medium
+
+  * Move libjson-xs-perl from 'Depends' to 'Recommends' in debian/control.
+
+ -- Robert James Clay <jame@rocasa.us>  Thu, 10 Nov 2016 05:29:29 -0500
+
+ledgersmb (1.4.34+ds-1) unstable; urgency=medium
+
+  * New Upstream Release
+  * Remove 'libmodule-install-perl' from 'Build-Depends' in debian/control.
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 29 Oct 2016 13:50:23 -0400
+
+ledgersmb (1.4.33+ds-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 26 Aug 2016 12:04:28 -0400
+
+ledgersmb (1.4.33+ds-1) unstable; urgency=medium
+
+  * New Upstream Release
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 20 Aug 2016 12:40:38 -0400
+
+ledgersmb (1.4.32+ds-1) unstable; urgency=medium
+
+  * New Upstream Release.
+  * Changes in debian/control:
+    - Remove 'Replaces: ledgersmb' from the binary stanza as it is no longer
+      necessary.
+    - Change the package Priority from 'optional' to 'extra' to comply with
+      policy section 2.5.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 08 Aug 2016 13:01:00 -0400
+
+ledgersmb (1.4.31+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 30 Jul 2016 23:11:08 -0400
+
+ledgersmb (1.4.30+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Initial package update for v1.4.x versions. (Closes: #773363)
+  * Update debhelper version from '8' to '9'.
+  * Changes to debian/patches:
+    - Refresh debian/patches/05_confdir.patch for new upstream release.
+    - Corrected apache 2.4 related lines in debian/patches/10_httpdconf.patch.
+    - Update 20_BashPath.patch for new upstream tools/regen_db_docs.sh script.
+    - Remove debian/patches/22_SpellingErrors.patch as it is no longer needed.
+  * Changes in debian/control:
+    - Added to Recommends: libtex-encode-perl.
+    - Added to Suggests: libx12-parser-perl, starlet.
+    - Added to Depends: libjs-dojo-dojox, libjson-xs-perl | libjson-perl,
+      libmoose-perl, libnumber-format-perl,libnamespace-autoclean-perl,
+      libcarp-always-perl, starman, adduser, ucf.
+    - Drop dh-linktree,libjs-prototype,libjs-scriptaculous from Build-Depends.
+    - Drop libio-stringy-perl & libhtml-parser-perl from Depends.
+    - Minor edit to long description, pointing to README.Debian.
+  * Changes in debian/copyright:
+    - Update copyright years for the '* Files' stanza.
+    - Remove references related to libjs-prototype & libjs-scriptaculous.
+    - Change Upstream-Contact to 'ledger-smb-devel@lists.sourceforge.net'.
+    - Add 'Files-Excluded' section for embedded 'dojo' javascript libraries.
+    - Remove the separate locale/po/*.po stanzas as they are no longer needed
+      because the files are now being refreshed with each upstream release.
+  * Changes in debian/rules:
+   - Add override for dh_auto_build.
+   - Add new target for 'get-orig-source'.
+   - Make override_dh_auto_configure a bare target.
+   - Correct permissions of tools/*.psgi in override_dh_fixperms stanza.
+   - Correct permissions of lsmb-request.pl in override_dh_fixperms stanza.
+   - Correct permissions of *.html files as necessary in override_dh_fixperms
+     stanza.
+   - Remove changing ownership for /var/lib/ledgersmb in override_dh_fixperms
+     stanza.
+  * Changes in debian/ledgersmb.postinst:
+   - Change where ledgersmb.conf is enabled for apache 2.4.
+   - Remove no longer needed references to /var/lib/ledgersmb.
+   - Use 'ucf' to register the package apache configuration files as necesssary.
+  * Changes in debian/ledgersmb.preinst:
+   - Add 'ledgersmb' system user as necessary.
+   - Remove unnecessary v1.3.18-1 related stanza.
+   - Correct the package version referenced for the apache config file rename
+     to 1.3.18-2.
+  * Changes in debian/ledgersmb.postrm:
+   - Purge 'ledgersmb' system user as necessary.
+   - Purge and deregister the package apache configuration files.
+   - Rewrite the comments for removing the package apache symbolic links.
+   - Correct the package version referenced for the apache config file rename
+     to 1.3.18-2.
+  * Changes in debian/ledgersmb.lintian-overrides:
+   - Add entry for experimental Lintian result 'duplicate-files'.
+  * Remove debian/source.lintian-overrides as it is no longer necessary.
+  * Add symbolic link to the README.Debian file from the install directory to
+    debian/ledgersmb.links.
+  * Update debian/README.Debian to reflect package changes for LedgerSMB v1.4.
+  * Rewrite debian/README.source regarding repacking the 'orig' source archive.
+  * Remove references to pos.conf.pl as it is no longer in upstream.
+  * Remove references to Net::TCLink in debian/README.Debian and debian/control
+    as it is no longer being used.
+  * Add debian/upstream/signing-key.asc for upstream gpg release signing key.
+  * Add pgpsigurlmangle, dversionmangle, & repacksuffix options to debian/watch.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 18 Jul 2016 14:51:49 -0400
+
+ledgersmb (1.3.47-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Changes to debian/control:
+    - Set the Vcs-Browser URL to use 'https' instead of 'http'.
+    - Set Standards-Version to 3.9.8, no package changes required.
+    - Change texlive-xetex from 'Suggests' to 'Recommends' to work around issues
+      with using liblatex-driver-perl needed for printing.
+  * Changes to debian/copyright:
+    - Add 'Nick Prater' copyright information.
+    - Correct spelling of 'Portugese' to 'Portuguese'.
+    - Update end years in debian/copyright as necessary.
+  * Changes to debian/patches/*:
+    - Create debian/patches/22_SpellingErrors.patch.
+    - Add 'Origin: vendor' to the debian/patches/*.patch files.
+    - Remove unneeded line 5 in debian/patches/20_BashPath.patch.
+    - Refresh debian/patches/10_httpdconf.patch for updated package.
+    - Set default for the 'contrib_dir' setting in 05_confdir.patch to be for
+      v9.5 instead of v9.1.
+  * Correct spelling of 'authorative' as 'authoritative' in the file
+    debian/README.Debian.
+  * Default to 'true' in debian/templates to automatically configure package.
+  * Changes to debian/ledgersmb.preinst and debian/ledgersmb.postrm:
+    - Update the package version to v1.3.18-2 that is being checked for in the
+      ledgersmb apache config file renaming.
+  * Changes to debian/ledgersmb.postinst:
+    - Explicitly do 'db_stop' after operations with debconf have completed.
+    - Rewrite how apache 2.4 modules are enabled and how the apache v2.2 related
+      configuration files are handled. (Closes: #800036, #819481, LP#1513691)
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 08 Apr 2016 11:15:15 -0400
+
+ledgersmb (1.3.46-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Robert James Clay <jame@rocasa.us>  Tue, 26 May 2015 09:36:37 -0400
+
+ledgersmb (1.3.46-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #771822)
+    - Fixes 'Duplicate message' errors in locale/po/hu.po. (Closes: #752063)
+  * Add new Dutch debconf translation. (Closes: #767242)
+  * Changes to debian/README.Debian:
+    - Add a note regarding the texlive-xetex package.
+    - Update note regarding the contrib_dir directive.
+    - Add a note about the usage of the template files.
+  * Correct a copyright email address in the debian/copyright file.
+  * Set permissions on ledgersmb/bin/gl.pl correctly in debian/rules.
+  * Change how the LedgerSMB Database administrative user related processing is
+    being done, including dropping the use of dbconfig-common for the database
+    related processing. (Closes: #698298, #758140, LP#1078817)
+  * Update how the Apache related processing is done in the maintainer scripts.
+  * Set default for contrib_dir in 05_confdir.patch to be for PostgreSQL v9.4
+    instead of PostgreSQL v9.1.
+  * Remove the use of drop_statoverride function from the maintainer scripts.
+  * Changes in debian/control:
+    - Add texlive-xetex package as a suggested package.
+    - Add libjs-prototype & libjs-scriptaculous to Build-Depends.
+    - Add dpkg equal to version 1.15.7.2 or above as a Pre-Depends.
+    - Set Standards-Version to 3.9.6 in debian/control, no changes required.
+  * Use dh-linktree for embedded libjs-prototype and libjs-libjs-scriptaculous
+    libraries.
+  * Only include the overrides for the 'custom' empty directories in the
+    ledgersmb.lintian-overrides.
+
+ -- Robert James Clay <jame@rocasa.us>  Wed, 29 Apr 2015 01:36:52 -0400
+
+ledgersmb (1.3.40-1) unstable; urgency=medium
+
+  * New upstream release.
+    - 'Duplicate entry' error fixed in the locale/po/es_AR.po file.
+  * Rewrite the 'purge' stanza in the debian/ledgersmb.postrm script.
+  * Correct package version for the mv_conffile stanzas in maintainer scripts.
+  * Add debian/ledgersmb.doc-base.database to register database information.
+  * Correct errors installing the httpd configuration files for Apache v2.2 and
+    v2.4. (Closes: #749347)
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 21 Jun 2014 13:17:56 -0400
+
+ledgersmb (1.3.39-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #732997)
+  * Changes to debian/copyright:
+    - Update the LedgerSMB Core Team related information.
+    - Add a file stanza for the locale/po/es_AR.po file.
+    - Add an entry for utils/notify_short/.*pl and it README file.
+    - Add an entry for the tools/prepare-company-database.* scripts.
+  * Changes to debian/control:
+    - Update Standards-Version in debian/control.
+    - Add the libplack-perl package as a Suggests.
+    - Update the Vcs-Svn base URL from 'svn.debian.org' to 'anomscm.debian.org'.
+  * Changes to debian/rules:
+    - Add line to make tools/system/lsmb* scripts executables.
+    - Remove the line used to copy the ledgersmb.conf.template file as it is
+      no longer needed.
+  * Changes to debian/patches/:
+    - Add usage of 'Last-Update' field in all *.patch files.
+    - Update default 'contrib-dir' to be for Postgresql 9.3 in 05_confdir.patch.
+    - Add 20_BashPath.patch to resolve bash path issues in tools/ scripts.
+    - Add 21_lsmb_13-fcgi-conf.patch for setting its directory paths.
+  * Update packaging for installation of ledgersmb-httpd configuration for
+    Apache v2.2 and v2.4. (Closes: #725758)
+  * Changes to debian/ledgersmb.docs:
+   - Add README.git to the installed documents list.
+   - Add README.plack to the installed documents list.
+  * Register the release notes using debian/ledgersmb.doc-base.notes.
+  * Add empty directory 'UI/logout/' to ledgersmb.lintian-overrides file.
+  * Update README.Debian, TODO.Debian, and NEWS.Debian files for new release.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 21 Apr 2014 17:56:33 -0400
+
+ledgersmb (1.3.25-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add new Japanese debconf translation. (Closes: #693146)
+  * Changes to debian/patches/:
+    - Refresh 05_confdir.patch for new upstream release.
+    - Remove 20_Makefile-PL.patch as it is not currently needed.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 09 Dec 2012 11:29:46 -0500
+
+ledgersmb (1.3.23-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated Standards-Version to 3.9.4 in debian/control, no changes needed.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 28 Oct 2012 16:17:30 -0400
+
+ledgersmb (1.3.21-2) unstable; urgency=low
+
+  * Make indentation consistent in all maintainer scripts.
+  * Changes to debian/patches/:
+    - Add 20_Makefile-PL.patch for a version reference issue in Makefile.PL.
+    - Update 10_httpdconf.patch templates path to /var/lib/ledgersmb/templates.
+  * Changes for debian/ledgersmb.preinst:
+    - Correct version being checked against for css/templates softlinks removal.
+    - Update how the old_version variable is being used for the version checks.
+  * Changes for debian/control:
+    - Add accidently removed libtemplate-plugin-latex-perl back into Recommends.
+    - Add accidently removed libimage-size-perl back into Suggests.
+
+ -- Robert James Clay <jame@rocasa.us>  Tue, 28 Aug 2012 13:45:43 -0400
+
+ledgersmb (1.3.21-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #682274)
+    - Fix for System/Defaults denial of service advisory. (Closes: #683357)
+    - Fixes for es_AR translation, duplicate keys removed. (Closes: #678281)
+    - Fixed discarded input/bad label on 1.2 upgrade screen. (Closes: #677098)
+  * Changes to debian/patches/:
+    - Updated 05_confdir.patch for the new fs_cssdir configuration item.
+  * Changes for debian/control:
+    - Update the URL in the Vcs-Browser entry.
+  * Changes for debian/ledgersmb.preinst:
+    - Add setting of an old_version variable for use in the script.
+    - Move templates/* to /var/lib/ledgersmb if necessary during upgrade.
+    - Remove old ledgersmb css and/or templates symbolic links as necessary.
+  * Changes for debian/ledgersmb.postinst:
+    - Update source path for when creating working css & templates directories.
+  * Remove setting symbolic link to /var/lib/ledgersmb/css in ledgersmb.links.
+  * Move installation of css & templates directories using ledgersmb.examples
+    to using ledgersmb.install.
+  * Update path for the distribution templates directory in debian/rules.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 06 Aug 2012 20:29:50 -0400
+
+ledgersmb (1.3.18-2) unstable; urgency=low
+
+  * Debconf templates and debian/control reviewed by the debian-l10n-
+    english team as part of the Smith review project. (Closes: #674023)
+  * Debconf translation updates:
+    - Brazilian Portuguese (Adriano Rafael Gomes). (Closes: #677793)
+    - Czech (Michal Simunek). (Closes: #676494)
+    - Danish (Joe Dalton). (Closes: #678841)
+    - Galician (Jorge Barreiro). (Closes: #678597)
+    - French (Julien Patriarca). (Closes: #677953)
+    - German (Erik Pfannenstein). (Closes: #678547)
+    - Italian (Beatrice Torracca). (Closes: #678442)
+    - Polish (Michał Kułach). (Closes: #676511)
+    - Portuguese (Miguel Figueiredo). (Closes: #677839)
+    - Russian (Yuri Kozlov). (Closes: #676662)
+    - Slovak (Ivan Masár). (Closes: #678488)
+    - Spanish; (Camaleón). (Closes: #678265)
+    - Swedish (Martin Bagge / brother). (Closes: #676556)
+  * Update debian/watch to exclude development snapshots. (Closes: #677612)
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 07 Jul 2012 20:21:58 -0400
+
+ledgersmb (1.3.18-1) unstable; urgency=low
+
+  * Changes to debian/patches/:
+    - Update 05_confdir.patch for the new cssdir configuration item.
+    - Update 10_httpdconf.patch for the new cssdir configuration item.
+  * Changes to debian/ledgersmb.postinst:
+    - Add code that creates the initial default set of css files from the
+      example files.
+    - Correct a typo in the similar code for /var/lib/ledgersmb/templates.
+  * Add the application css directory to the debian/ledgersmb.examples file
+    and remove it from the debian/ledgersmb.install file.
+  * Add code in ledgersmb.postrm to remove /var/lib/ledgersmb/css during
+    a package purge.  (Like for /var/lib/ledgersmb/templates, which was
+    actually added with 1.3.17-1.)
+  * Removed the no longer needed references to libexcel-template-plus-perl from
+    debian/control and debian/README.Debian.
+  * Removed blib/man3/LedgerSMB::Template::XLS.3pm from ledgersmb.manpages.
+  * Add the removal of empty example language specifc template directories to
+    debian/rules.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 10 Jun 2012 22:51:41 -0400
+
+ledgersmb (1.3.17-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add a note regarding libimage-size-perl to README.Debian.
+  * Changes to debian/patches/05_confdir.patch:
+    - Update the templates path to be /var/lib/ledgersmb/templates.
+  * No longer need to set ownership of /etc/ledgersmb/templates in debian/rules.
+  * Add the application templates directory to the debian/ledgersmb.examples
+    file and remove it from the debian/ledgersmb.install file.
+  * Changes to debian/control:
+    - Add libtemplate-plugin-latex-perl module to Recommends.
+    - Add the libexcel-template-plus-perl and libimage-size-perl modules
+      to Suggests.
+  * Add code in ledgersmb.postinst to create the initial default set of
+    templates from the example templates.
+  * Add code with debian/ledgersmb.preinst to, if it exists, move the
+    directory /etc/ledgersmb/templates to /var/lib/ledgersmb.
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 02 Jun 2012 20:59:37 -0400
+
+ledgersmb (1.3.16-1) unstable; urgency=low
+
+  * New upstream release.
+  * Resolves package ITP. (Closes: #406935)
+  * Update and rewrite debian/TODO and README.Debian.
+  * Update debian/NEWS, debian/templates and README.Debian regarding the initial
+    configuration of the package.
+  * Add update of PostgreSQL contrib_dir variable to patches/05_confdir.patch.
+
+ -- Robert James Clay <jame@rocasa.us>  Tue, 08 May 2012 07:55:30 -0400
+
+ledgersmb (1.3.15-2) unstable; urgency=low
+
+  * Rewrite LedgerSMB README.Debian, including database related information.
+  * Correct debconf variable lsmb_debconf to debconf_install in debian/postinst.
+  * Changes for debian/patches/*:
+    - Renumber 15_httpdconf.patch as 10_httpdconf.patch.
+    - Add 15_UI-setup-credentials.patch to set 'ledgersmb' as the default
+      database superuser for setup.pl.
+
+ -- Robert James Clay <jame@rocasa.us>  Wed, 18 Apr 2012 18:58:20 -0400
+
+ledgersmb (1.3.15-1) experimental; urgency=low
+
+  * New upstream release.
+  * Change the variable names used in the debconf/dbconfig scripting.
+  * Correct permissions for ledgersmb/tools/*.pl files in debian/rules.
+  * Changes for debian/patches/*:
+    - Remove 10_Makefile-PL.patch as it is no longer needed.
+    - Remove 20_LedgerSMB-Form-pod.patch as its issue has been resolved.
+    - Remove unneeded 8* series patch files resulting from an incomplete merge.
+
+ -- Robert James Clay <jame@rocasa.us>  Tue, 17 Apr 2012 16:11:20 -0400
+
+ledgersmb (1.3.14-2) experimental; urgency=low
+
+  * Add initial version of the debian/NEWS file.
+  * Update and rewrite of debian/README.Debian.
+  * Changes to debian/ledgersmb.postinst:
+    - Rewrite the statoverride version check.
+    - Change how the version variable is being used.
+    - Update how apache is restarted when that is needed.
+  * Add patches/20_LedgerSMB-Form-pod.patch to correct spelling errors.
+  * Add lintian override for empty directory ledgersmb/sql/coa/ar/gifi/.
+  * Initial addition of experimental debconf/dbconfig usage to ledgersmb.
+  * Add a symbolic link from /usr/share/ledgersmb/css to the directory
+    /var/lib/ledgersmb/css.
+
+ -- Robert James Clay <jame@rocasa.us>  Wed, 11 Apr 2012 16:37:30 -0400
+
+ledgersmb (1.3.14-1) experimental; urgency=low
+
+  * New upstream release.
+  * Correct the current active Uploaders list in LedgerSMB debian/control.
+  * Besides as examples; also install utils/ directory to /usr/share/ledgersmb.
+  * Changes for debian/patches/*:
+    - Correct working directory paths in 15_httpdconf.patch.
+    - Remove the current documentation (POD) patches as they are no longer
+      necessary.
+
+ -- Robert James Clay <jame@rocasa.us>  Tue, 03 Apr 2012 17:40:30 -0400
+
+ledgersmb (1.3.13-1) experimental; urgency=low
+
+  * New upstream release.
+  * Correct formatting issues in the debian/copyright file.
+  * Do not install doc/manual/*tex source files with package.
+  * Changes for debian/patches/*:
+    - Add patching of ledgersmb.conf.default to 05_confdir.patch.
+    - Update 10_Makefile-PL.patch against the new version of Makefile.PL.
+  * Changes to debian/rules:
+    - Remove the sed code for patching the ledgersmb.conf.default file from
+      the override_dh_auto_configure target.
+
+ -- Robert James Clay <jame@rocasa.us>  Wed, 21 Mar 2012 20:45:18 -0400
+
+ledgersmb (1.3.12-1) experimental; urgency=low
+
+  * New upstream release.
+  * Move removal of the no longer used statoverrides to ledgersmb.postinst.
+  * Correct how the /var/lib/ledgersmb/spool and /var/lib/ledgersmb/users
+    subdirectories are installed.
+  * Rewrote the LedgerSMB debian/copyright in accordance with DEP-5.
+  * Changes to debian/ledgersmb.postinst:
+    - Remove the unneeded code that conditionally installed pos.conf.pl.
+    - Remove the code that attempted install a copy of ledgersmb-httpd.conf.
+  * Changes for debian/patches/*:
+    - Add setting the templates base directory to 05_confdir.patch.
+    - Added 10_Makefile-PL.patch to correct issue with an incorrect version
+      number being listed in Makefile.PL.
+  * Changes to debian/rules:
+    - Create a copy of ledgersmb-httpd.conf.template as ledgersmb-httpd.conf.
+    - Set ownership of installed /var/lib/ledgersmb/* to www-data:www-data.
+    - Set ownership of installed /etc/ledgersmb/templates to www-data:www-data.
+    - Change how the unneeded directories LedgerSMB/Assets and LedgerSMB/Entity
+      are removed.
+  * Changes to debian/control:
+    - Rewrote the short and long package descriptions.
+    - Updated the Standards-Version to 3.9.3, no changes required.
+
+ -- Robert James Clay <jame@rocasa.us>  Wed, 14 Mar 2012 13:30:17 -0400
+
+ledgersmb (1.3.11-1) experimental; urgency=low
+
+  * New upstream release.
+  * Changes for debian/patches/*:
+    - Remove unneeded changes from the 15_httpdconf.patch file.
+    - The nine patches for the scripts/* files are no longer needed. Removed.
+  * Changes for debian/clean:
+    - Add the debian/clean file for use by dh_clean during package builds.
+    - Remove the created pos.conf.pl file during the package build cleanup.
+    - Remove the created ledgersmb.conf and ledgersmb-httpd.conf files using
+      dh_clean instead of directly in debian/rules.
+  * Changes to debian/ledgersmb.postinst:
+    - Correct the whitespace indentation in the script.
+    - Simplify the section using a2enmod to enable mod_rewrite.
+  * Changes to debian/ledgersmb.postrm:
+    - Correct the whitespace indentation in the script.
+  * Changes to debian/ledgersmb.install:
+    - Install default pos.conf.pl configuration file to /etc/ledgersmb.
+  * Changes to debian/ledgersmb.links:
+    - Install symbolic link for the pos.conf.pl configuration file.
+  * Changes to debian/rules:
+    - Remove the override_dh_auto_clean target as it is no longer needed.
+    - Change how Build.PL is removed in the override_dh_auto_configure target.
+    - Create default pos.conf.pl file in the override_dh_auto_configure target.
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 01 Mar 2012 14:26:52 -0500
+
+ledgersmb (1.3.10-1) experimental; urgency=low
+
+  * New upstream release.
+  * Install pos.conf.pl.template as an example file.
+  * Correct softlink for the ledgersmb-httpd.conf file.
+
+ -- Robert James Clay <jame@rocasa.us>  Tue, 17 Jan 2012 19:38:09 -0500
+
+ledgersmb (1.3.9-2) experimental; urgency=low
+
+  * Change debhelper compatibility to 8.
+  * Changes to debian/control:
+    - Change debhelper Build-Depends to >= 8.
+    - Change web server dependency to 'apache2 | httpd-cgi'.
+    - Make the postgresql related Depends/Suggests unversioned.
+  * Changes to debian/postrm:
+    - Rewrite how the old dpkg-statoverride usage is being dealt with.
+  * Changes to debian/postinst:
+    - Do not use dpkg-statoverride to set default permissions.
+    - If Apache is present, configure it for use with LedgerSMB.
+  * Changes to debian/rules:
+    - Changed to using dh and a mimimal debian/rules.
+    - Do not install MIT-LICENSE file from the embedded Scriptaculous library.
+    - Do permissions corrections here instead of in the maintenance scripts
+      and do them in the override_dh_fixperms target.
+  * Changes to debian/copyright:
+    - Update the end year for my debian directory copyright information.
+    - Add information regarding the embedded Scriptaculous Javascript library.
+  * Changes to debian/ledgersmb.lintian-override:
+    - Override the package-contains-empty-directory Lintian Warnings for the
+      directories scripts/custom and LedgerSMB/Reconciliation/CSV/Formats.
+    - Remove the override related to the Scriptaculous license file.
+  * Change how the ledgersmb-httpd.conf file is installed.
+  * Include patches for some application cgi script shebang issues.
+  * Include patches for application documentation spelling & NAME entry issues.
+  * Use debian/ledgersmb.manpages to list the man pages to be installed.
+  * Prefix binary-package specific file names in the debian directory with
+    the package name.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 15 Jan 2012 13:38:19 -0500
+
+ledgersmb (1.3.9-1) experimental; urgency=low
+
+  * New upstream release.
+  * Clean up the debian/watch control file.
+  * Changes to debian/rules:
+    - Add build-arch and build-indep targets.
+    - Add a call for dh_perl to the binary-indep target.
+    - Add removal of created ledgersmb-httpd.conf to clean target.
+    - Run 'make distclean' in the clean target if the created Makefile
+      is present.
+  * Changes to debian/control:
+    - Add ${perl:Depends} to the Depends line.
+    - Change the Recommends for the lpr package to a Suggests.
+    - Updated the Standards-Version to 3.9.2, no changes needed.
+    - Remove ${shlibs:Depends} from Depends line as it is unneeded.
+    - Replace the Recommends for a mail-transport-agent with
+      "default-mta | mail-transport-agent".
+  * Correct spelling error and correct missing note about upstream release
+    in the 1.3.8-1 entry for the debian/changelog.
+  * Override Lintian warnings regarding the embedded Scriptaculous Javascript
+    library until LedgerSMB can be tested with the versions available in Debian.
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 24 Dec 2011 13:40:35 -0500
+
+ledgersmb (1.3.8-1) experimental; urgency=low
+
+  * New upstream release.
+  * Added a debian/TODO file.
+  * Do not install v1.3.x INSTALL file with package.
+  * Update debian/patches/05_confdir.patch for v1.3.8.
+  * Minor edit to the short description in debian/control.
+  * Reorganize Depends and Recommends entries in debian/control.
+  * Replace XML::Twig package references with OpenOffice::OODoc.
+  * Update to v1.3.x README.Debian adapted from v1.3 INSTALL file.
+  * Add ledgersmb-httpd.conf.template to debian/ledgersmb.examples.
+  * Create default ledgersmb-httpd.conf from ledgersmb-httpd.conf.template.
+  * Remove chmod of /etc/ledgersmb/*.pl from postinst as no longer necessary.
+  * Upstream no longer providing an HTML version of the manual, so remove that
+    entry in debian/ledgersmb.doc-base.
+
+ -- Robert James Clay <jame@rocasa.us>  Thu, 15 Dec 2011 14:58:50 -0500
+
+ledgersmb (1.3.0-1) experimental; urgency=low
+
+  * New upstream release, first in the v1.3 series.
+  * Initial adaptation of the Debian packaging to the new version as neccessary.
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 05 Nov 2011 22:42:43 -0400
+
+ledgersmb (1.2.25-1) stable; urgency=low
+
+  * New upstream release, which includes corrections for sql injection issue.
+  * Updated Standards-Version in debian/control to 3.9.1; no changes required.
+  * Updated copyright years as necessary to include 2011 in debian/copyright.
+  * Use dpkg-statoverride and postinst to set /etc/ledgersmb/* permissions.
+  * Use dh_lintian in debian/rules to install ledgersmb.lintian-overrides.
+  * Updated debhelper compatibility to 7 and Build-Depends to 7.0.50.
+  * Updated the package Depends and Recommends in debian/control.
+  * Updated the README.Debian file and added a Debian TODO file.
+  * Updated as neccessary for how files installation is done.
+  * Changed package patching system from dpatch to quilt.
+  * Change 'dh_clean -k' to dh_prep in debian/rules.
+  * Switch to dpkg-source 3.0 (quilt) format.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 23 Oct 2011 15:49:46 -0400
+
+ledgersmb (1.2.24-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated the debian/patches/15_httpdconf.dpatch patch.
+  * Updated Depends line in debian/control:  added libconfig-any-perl,
+    changed libhtml-parser-perl to libhtml-linkextractor-perl, added
+    libdata-dumper-simple-perl.
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 01 Oct 2011 17:35:37 -0400
+
+ledgersmb (1.2.23-1) unstable; urgency=low
+
+  * New upstream release
+  * Cleanup newline issue in debian/links file.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 28 Sep 2011 09:43:37 -0400
+
+ledgersmb (1.2.22-1) unstable; urgency=low
+
+  * New upstream release
+  * Add note to README.source about how the source archive is currently
+    being created.
+
+ -- Robert James Clay <jame@rocasa.us>  Mon, 28 Sep 2011 08:19:11 -0400
+
+ledgersmb (1.2.21-1) unstable; urgency=low
+
+  * New upstream release
+  * Detailed the Debian packaging copyright in debian/copyright.
+
+ -- Robert James Clay <jame@rocasa.us>  Sun, 21 Mar 2010 21:16:00 -0400
+
+ledgersmb (1.2.20-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 20 Feb 2010 11:40:38 -0500
+
+ledgersmb (1.2.19-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 13 Feb 2010 12:08:25 -0500
+
+ledgersmb (1.2.18-1) unstable; urgency=low
+
+  [ Robert James Clay ]
+  * Added index.html link to doc/ledgersmb/html_manual/LedgerSMB-manual.html
+  * Added HTML format section to ledgersmb.doc-base
+
+  [ Elizabeth Krumbach ]
+  * New upstream release
+
+ -- Elizabeth Krumbach <lyz@princessleia.com>  Mon, 06 Apr 2009 00:16:23 +0000
+
+ledgersmb (1.2.17-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Elizabeth Bevilacqua <lyz@princessleia.com>  Thu, 20 Nov 2008 00:32:03 +0000
+
+ledgersmb (1.2.16-1) unstable; urgency=low
+
+  [ Roberto C. Sanchez ]
+  * Update to Standards-Version 3.8.0
+    + Add README.source
+
+  [ Elizabeth Bevilacqua ]
+  * New upstream release
+  * Edited README.Debian for better clarity
+
+ -- Elizabeth Bevilacqua <lyz@princessleia.com>  Sun, 14 Sep 2008 14:27:08 +0000
+
+ledgersmb (1.2.15-2) unstable; urgency=low
+
+  * Added postgres-8.3 to depends and suggests
+
+ -- Elizabeth Bevilacqua <lyz@princessleia.com>  Fri, 29 Aug 2008 02:19:03 +0000
+
+ledgersmb (1.2.15-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Elizabeth Bevilacqua <lyz@princessleia.com>  Tue, 26 Aug 2008 18:48:58 +0000
+
+ledgersmb (1.2.14-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Elizabeth Bevilacqua <lyz@princessleia.com>  Fri, 22 Aug 2008 02:16:15 +0000
+
+ledgersmb (1.2.13-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Elizabeth Bevilacqua <lyz@princessleia.com>  Tue, 08 Apr 2008 19:02:35 +0000
+
+ledgersmb (1.2.5-2) unstable; urgency=low
+
+  * Adding 1.2.5 hotfixes
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 28 May 2007 18:09:32 -0400
+
+ledgersmb (1.2.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Wed, 09 May 2007 14:00:32 -0400
+
+ledgersmb (1.2.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Fri, 04 May 2007 12:16:32 -0400
+
+ledgersmb (1.2.3-2) unstable; urgency=low
+
+  * Adding README.Ubuntu
+  * Changing package defaults to disabling LaTeX
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Thu, 19 Apr 2007 11:44:32 -0400
+
+ledgersmb (1.2.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Sun, 15 Apr 2007 23:27:32 -0400
+
+ledgersmb (1.2.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Wed, 11 Mar 2007 00:23:32 -0400
+
+ledgersmb (1.2.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 09 Mar 2007 18:12:32 -0400
+
+ledgersmb (1.2.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Wed, 04 Mar 2007 00:00:32 -0400
+
+ledgersmb (1.1.99rc5.2-3) unstable; urgency=low
+
+  * Fix another packaging error
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Fri, 23 Mar 2007 15:01:22 -0500
+
+ledgersmb (1.1.99rc5.2-2) unstable; urgency=low
+
+  * Fix packaging error
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Fri, 23 Mar 2007 14:41:22 -0500
+
+ledgersmb (1.1.99rc5.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Renaming the package to match the first phase of upstream renaming
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Fri, 23 Mar 2007 14:26:22 -0500
+
+ledger-smb (1.1.99rc1-2) unstable; urgency=low
+
+  * Fixing PostgreSQL server dependencies
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Fri, 23 Feb 2006 22:46:22 -0500
+
+ledger-smb (1.1.99rc1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Fri, 23 Feb 2006 22:22:22 -0500
+
+ledger-smb (1.1.99beta4-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Sun, 28 Jan 2006 14:01:57 -0500
+
+ledger-smb (1.1.99beta3-2) unstable; urgency=low
+
+  * Add updates to db upgrade script to work with current code
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Thu, 23 Nov 2006 13:02:13 -0500
+
+ledger-smb (1.1.99beta3-1) unstable; urgency=low
+
+  * New upstream version
+  * Removed image directory patch for more testing
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Thu, 23 Nov 2006 12:39:13 -0500
+
+ledger-smb (1.1.99beta2-6) unstable; urgency=low
+
+  * Fixing package LaTeX dependencies
+  * Fixing permissions in /var/lib/ledger-smb
+  * Fixing default configuration error
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Sat, 18 Nov 2006 21:39:13 -0500
+
+ledger-smb (1.1.99beta2-5) unstable; urgency=low
+
+  * Fixing image directory changes
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Sat, 18 Nov 2006 13:00:06 -0500
+
+ledger-smb (1.1.99beta2-4) unstable; urgency=low
+
+  * Add some upstream fixes
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Sat, 18 Nov 2006 12:46:22 -0500
+
+ledger-smb (1.1.99beta2-3) unstable; urgency=low
+
+  * Adjust required versions of perl and postgresql-client and sundry
+    packaging fixes
+  * Move template images to /var/lib/ledger-smb/images
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Sat, 18 Nov 2006 12:18:22 -0500
+
+ledger-smb (1.1.99beta2-2) unstable; urgency=low
+
+  * Adjust permissions of installed files
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Wed, 15 Nov 2006 17:28:22 -0500
+
+ledger-smb (1.1.99beta2-1) unstable; urgency=low
+
+  * Adding initial set up instructions to README.Debian
+  * New upstream version
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Wed, 15 Nov 2006 14:24:53 -0500
+
+ledger-smb (1.1.99beta1-5) unstable; urgency=low
+
+  * Fix templates directory location
+  * Increasing amount of included docs in /usr/share/doc/ledger-smb
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 13 Nov 2006 21:01:55 -0500
+
+ledger-smb (1.1.99beta1-4) unstable; urgency=low
+
+  * Fixing syntax in default config
+  * Adjusting post(inst|rm) to reload apache2
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 13 Nov 2006 19:34:59 -0500
+
+ledger-smb (1.1.99beta1-3) unstable; urgency=low
+
+  * Fixing package versions
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 13 Nov 2006 19:09:41 -0500
+
+ledger-smb (1.1.99beta1-2) unstable; urgency=low
+
+  * Fixing package versions
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 13 Nov 2006 19:05:48 -0500
+
+ledger-smb (1.1.99beta1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Seneca Cunningham <tetragon@ledgersmb.org>  Mon, 13 Nov 2006 15:29:53 -0500

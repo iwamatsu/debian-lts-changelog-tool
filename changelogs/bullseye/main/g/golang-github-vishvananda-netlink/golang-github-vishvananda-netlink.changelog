@@ -1,0 +1,89 @@
+golang-github-vishvananda-netlink (1.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Bump debhelper-compat to 13
+  * Add Rules-Requires-Root
+  * Backport AddProtocol in conntrack package
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 11 Jan 2021 00:53:12 +0800
+
+golang-github-vishvananda-netlink (1.1.0-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 19 Jan 2020 19:08:38 +1100
+
+golang-github-vishvananda-netlink (1.0.0+git20181030.023a6da-1) unstable; urgency=medium
+
+  * New upstream snapshot, as required by "containernetworking-plugins".
+  * DH & compat to version 12.
+  * Standards-Version: 4.4.0.
+  * Added myself to Uploaders.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 12 Sep 2019 09:43:55 +1000
+
+golang-github-vishvananda-netlink (1.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4; Priority: optional.
+  * debhelper & compat to version 11.
+  * Added "watch" file.
+  * (Build-)Depends:
+    + golang-golang-x-sys-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 12 Jun 2018 19:29:41 +1000
+
+golang-github-vishvananda-netlink (0.0~git20170117.0.ebdfb74-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 25 Jan 2017 14:39:09 +1100
+
+golang-github-vishvananda-netlink (0.0~git20160629.0.e73bad4-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * New upstream snapshot.
+  * Standards-Version: 3.9.8
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 30 Nov 2016 14:34:42 +1100
+
+golang-github-vishvananda-netlink (0.0~git20160306.0.4fdf23c-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+  * Standards-Version: 3.9.7
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 19:20:08 +1100
+
+golang-github-vishvananda-netlink (0.0~git20150820.0.1e2e08e-1) unstable; urgency=medium
+
+  * Update to newer upstream commit.
+
+ -- Tianon Gravi <tianon@debian.org>  Sun, 06 Sep 2015 14:17:08 -0700
+
+golang-github-vishvananda-netlink (0.0~git20150513.1.991a7a2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #787055).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Thu, 28 May 2015 00:20:56 -0700

@@ -1,0 +1,14 @@
+golang-gopkg-retry.v1 (0.0~git20161025.0.c09f6b8-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 04:08:58 +0100
+
+golang-gopkg-retry.v1 (0.0~git20161025.0.c09f6b8-1) unstable; urgency=medium
+
+  * Initial release (Closes: #848629)
+  * Add d/patches/0001-reduce-dependencies.patch to be able to run the tests
+    without lots of packaging work. 
+
+ -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 19 Dec 2016 12:16:34 +1300

@@ -1,0 +1,82 @@
+puma (3.12.0-2+deb10u3) buster-security; urgency=medium
+
+  * Non-maintainer upload by the Debian LTS Team.
+  * Fix CVE-2021-29509, CVE-2021-41136, CVE-2022-23634, CVE-2022-24790
+
+ -- Abhijith PA <abhijith@debian.org>  Sat, 27 Aug 2022 20:35:08 +0530
+
+puma (3.12.0-2+deb10u2) buster; urgency=medium
+
+  * Team upload.
+  * d/patches/0009-disable-tests-failing-in-single-cpu.patch: Add author and
+    bug tracker information.
+  * d/patches/CVE-2020-5247.patch: Add patch to fix CVE-2020-5247.
+    - Fix header value could inject their own HTTP response (closes: #952766).
+  * d/patches/CVE-2020-5249.patch: Add patch to fix CVE-2020-5249.
+    - Fix splitting newlines in headers and another vector for HTTP injection
+      (closes: #953122).
+  * d/patches/CVE-2020-11076.patch: Add patch to fix CVE-2020-11076.
+    - Better handle client input to fix HTTP Smuggling via Transfer-Encoding
+      header (closes: #972102).
+  * d/patches/CVE-2020-11077.patch: Add patch to fix CVE-2020-11077.
+    - Reduce ambiguity of headers to fix HTTP Smuggling via Transfer-Encoding
+      header (closes: #972102).
+  * d/patches/series: Enable new patches.
+
+ -- Daniel Leidert <dleidert@debian.org>  Thu, 15 Oct 2020 23:39:36 +0200
+
+puma (3.12.0-2+deb10u1) buster; urgency=medium
+
+  * Team upload.
+  * d/control (Vcs-Git): Add branch.
+  * d/patches/CVE-2019-16770.patch: Add patch.
+    - Backport fix for CVE-2019-16770 from upstream (closes: #946312).
+  * d/patches/series: Add patch.
+
+ -- Daniel Leidert <dleidert@debian.org>  Wed, 04 Mar 2020 00:15:43 +0100
+
+puma (3.12.0-2) unstable; urgency=medium
+
+  * Disable tests failing in single cpu (Closes: #921931)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 10 Feb 2019 18:56:47 +0530
+
+puma (3.12.0-1) unstable; urgency=medium
+
+  [ Balint Reczey ]
+  * New upstream version 3.12.0
+  * Refresh patches
+
+  [ Pirate Praveen ]
+  * Fix OpenSSL 1.1.1 test failures with upstream patch (Closes: #900156)
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Add myself to uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 10 Feb 2019 10:56:59 +0530
+
+puma (3.11.3-1) unstable; urgency=medium
+
+  * Team upload
+  * Remove myself from Uploaders:
+  * New upstream version 3.11.3
+  * Build against libssl-dev instead of libssl1.0-dev (Closes: #859542)
+  * Refresh packaging files with `dh-make-ruby -wo .`
+    * Bump debhelper compat to 11
+    * Change Vcs-* to point to salsa.debian.org
+    * Use standard debian/ruby-tests.rake
+      * drop build-dependency on ruby-hoe
+  * Refresh patches
+  * New patches:
+    - 0006-test-helper.rb-drop-bundler-usage.patch
+    - 0007-test-test_cli.rb-disable-test-that-fails-randomly.patch
+  * Replace 0001-test_puma_server_ssl-update-for-newer-versions-of-Op.patch
+    with 0001-test_puma_server_ssl-disable-test-that-takes-too-lon.patch
+
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 28 Mar 2018 18:53:22 -0300
+
+puma (3.6.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #720336)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Nov 2016 16:47:06 -0200

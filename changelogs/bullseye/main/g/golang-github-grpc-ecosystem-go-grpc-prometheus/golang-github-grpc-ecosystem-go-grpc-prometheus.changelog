@@ -1,0 +1,77 @@
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.2.0+git20191002.6af20e3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add Rules-Requires-Root
+  * Remove unused Depends which are imported by examples
+  * Bump golang-google-grpc-dev and golang-goprotobuf-dev (Closes: #954565)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 19 Apr 2020 18:14:08 +0800
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.2.0+git20191002.6af20e3-2) unstable; urgency=medium
+
+  * Team upload.
+  * debian/rules: Re-enable installing of examples, as autopkgtests need
+    them.
+
+ -- Martina Ferrari <tincho@debian.org>  Sun, 03 Nov 2019 20:11:33 +0000
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.2.0+git20191002.6af20e3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot that fixes compilation errors from using now-removed
+    deprecated Prometheus APIs.
+  * Update repo layout to current team standards.
+  * Do not build or install examples as gocode, only as examples.
+  * Remove patch as test was fixed in 989df13.
+  * Automated cme fixes.
+
+ -- Martina Ferrari <tincho@debian.org>  Sat, 02 Nov 2019 22:28:19 +0000
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.2.0-3) unstable; urgency=medium
+
+  * Disabled "TestServerInterceptorSuite" (Closes: #902466).
+    Previous attempts to fix were ineffective... Thanks, Santiago Vila.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 07 Jul 2018 10:48:24 +1000
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.2.0-2) unstable; urgency=medium
+
+  * New patch to fix unreliable test (Closes: #902466).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 06 Jul 2018 20:31:34 +1000
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+    + fixed FTBFS (Closes: #902466).
+  * Testsuite: autopkgtest-pkg-go
+  * Standards-Version: 4.1.4
+  * debhelper & compat to version 11
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 04 Jul 2018 13:08:20 +1000
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.1+git20170826.0dafe0d-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.1+git20170826.0dafe0d
+    - Fixes failing test. Closes: #858630
+  * Update to Standards-Version 4.1.1
+    - Use HTTPS URL for d/copyright
+    - Use Priority: optional
+  * Use wrap-and-sort
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Tue, 21 Nov 2017 08:46:36 +0100
+
+golang-github-grpc-ecosystem-go-grpc-prometheus (1.1+git20160910.0.6b7015e-1) unstable; urgency=medium
+
+  * Initial release (Closes: #854645)
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 08 Feb 2017 19:54:35 +1100

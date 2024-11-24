@@ -1,0 +1,30 @@
+flask-security (1.7.5-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Backport fix for CVE-2021-23385 (Closes: #1021279).
+  * Add debian/.gitlab-ci.yml.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Mon, 28 Aug 2023 11:44:00 +0100
+
+flask-security (1.7.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Put debian/* under MIT.
+  * Disable mongodb build dependencies, needed for tests not yet executed.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 24 Jan 2018 11:38:20 +0100
+
+flask-security (1.7.5-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Adrian Vondendriesch ]
+  * Initial package version.
+
+  [ Christoph Berg ]
+  * Package intentionally not updated to version 3.0.0 yet as the new
+    flask-babelex dependency is still under discussion.
+    https://github.com/mattupstate/flask-security/issues/715
+  * Remove .DS_Store files.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 02 Jan 2018 14:06:47 +0100

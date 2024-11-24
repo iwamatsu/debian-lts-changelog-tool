@@ -1,0 +1,209 @@
+python-nbxmpp (2.0.2-1+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2021-41055 (Gajim crashes on message correction in MUC when
+    message id == replace id)
+
+ -- Martin <debacle@debian.org>  Wed, 19 Jan 2022 20:06:23 +0000
+
+python-nbxmpp (2.0.2-1) unstable; urgency=medium
+
+  * New upstream bug fix release
+
+ -- Martin <debacle@debian.org>  Fri, 19 Feb 2021 00:18:57 +0000
+
+python-nbxmpp (2.0.1-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Martin <debacle@debian.org>  Sun, 07 Feb 2021 17:27:05 +0000
+
+python-nbxmpp (2.0.0-1) unstable; urgency=medium
+
+  * New upstream version, for Gajim 1.3.0
+
+ -- Martin <debacle@debian.org>  Thu, 31 Dec 2020 14:17:08 +0000
+
+python-nbxmpp (1.0.2-1) unstable; urgency=medium
+
+  * New upstream version, mostly bug fixes
+  * Depend on libglib2.0-0 >= 2.60 (Closes: #969232)
+
+ -- Martin <debacle@debian.org>  Tue, 08 Sep 2020 18:20:17 +0000
+
+python-nbxmpp (1.0.1-1) unstable; urgency=medium
+
+  * New upstream version, mostly bug fixes
+
+ -- Martin <debacle@debian.org>  Wed, 08 Jul 2020 07:17:02 +0000
+
+python-nbxmpp (1.0.0-1) unstable; urgency=medium
+
+  * New upstream version, mostly rewritten compared to 0.6.x
+    (Known issue: Currently no client cert support)
+
+ -- Martin <debacle@debian.org>  Sun, 21 Jun 2020 15:33:42 +0000
+
+python-nbxmpp (0.9.95~20020429.5303bb12-1) experimental; urgency=medium
+
+  * New master snapshot (needed for compatibility with latest gajim)
+
+ -- Martin <debacle@debian.org>  Wed, 29 Apr 2020 22:09:00 +0000
+
+python-nbxmpp (0.9.94~20200425.ac3f42d4-1) experimental; urgency=medium
+
+  * New master snapshot (minor bug fixes)
+
+ -- Martin <debacle@debian.org>  Wed, 29 Apr 2020 17:54:46 +0000
+
+python-nbxmpp (0.9.94~20200419.b70acbc1-1) experimental; urgency=medium
+
+  * Upstream master snapshot
+
+ -- Martin <debacle@debian.org>  Wed, 22 Apr 2020 00:23:50 +0000
+
+python-nbxmpp (0.6.10-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop python2 support; Closes: #935210
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 06 Oct 2019 14:33:39 -0400
+
+python-nbxmpp (0.6.10-1) unstable; urgency=medium
+
+  * New upstream bug fix release
+    - Add support for domain based name in features for GSSAPI
+    - Fix usage of BOSH
+    - Fix Jingle hash namespace
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 19 Feb 2019 08:46:41 +0000
+
+python-nbxmpp (0.6.9-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 08 Jan 2019 21:52:01 +0000
+
+python-nbxmpp (0.6.8-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 11 Oct 2018 21:11:33 +0000
+
+python-nbxmpp (0.6.7-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 20 Aug 2018 22:48:10 +0000
+
+python-nbxmpp (0.6.6-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 20 May 2018 08:26:27 +0000
+
+python-nbxmpp (0.6.5+git20180501-1) unstable; urgency=medium
+
+  * New upstream snapshot, needed by Gajim master
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 10 May 2018 14:04:01 +0000
+
+python-nbxmpp (0.6.5-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bump standards version
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 01 May 2018 07:05:53 +0000
+
+python-nbxmpp (0.6.4-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 18 Mar 2018 11:01:35 +0000
+
+python-nbxmpp (0.6.3-1) unstable; urgency=medium
+
+  * New upstream version, featuring:
+    - Add ALPN and SNI support for when using DirectTLS
+    - Bugfixes
+  * Move packaging to Debian XMPP Maintainers, use salsa.debian.org
+  * Bump standards version
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 29 Jan 2018 22:26:17 +0000
+
+python-nbxmpp (0.6.2-1) unstable; urgency=medium
+
+  * New upstream version. Bug fix release.
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 27 Dec 2017 22:57:24 +0000
+
+python-nbxmpp (0.6.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 30 Nov 2017 00:24:09 +0000
+
+python-nbxmpp (0.6.0+git20171022-1) unstable; urgency=medium
+
+  * New upstream snapshot, needed by latest Gajim master
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 09 Nov 2017 21:29:04 +0000
+
+python-nbxmpp (0.6.0-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #872827). O.5.6 tagged, but not uploaded.
+  * Changed maintainer to Gajim team.
+  * Update to current standards and dh version, no changes.
+  * New upstream homepage.
+    [ Tanguy Ortolo <tanguy+debian@ortolo.eu>, 2016-10-28 ]
+  * debian/watch: use new upstream repository.
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 25 Sep 2017 21:45:32 +0000
+
+python-nbxmpp (0.5.4-1) unstable; urgency=medium
+
+  * New upstream version.
+  * debian/control:
+     - update Standards-Version to 3.9.8 (no change needed).
+     - switch Vcs-* to HTTPS.
+  * debian/python-nbxmpp-doc.links: of two identical files, make one a symlink
+    to the other.
+
+ -- Tanguy Ortolo <tanguy+debian@ortolo.eu>  Thu, 13 Oct 2016 15:16:38 +0200
+
+python-nbxmpp (0.5.3-1) unstable; urgency=medium
+
+  [ Filip Pytloun ]
+  * New upstream version
+  * Require python3-gi for successful test run; closes: #802146
+
+  [ Tanguy Ortolo ]
+  * debian/patches: remove fix-raise-statements.patch against removed file
+    nbxmpp/xmpp_stringprep.py, therefore no longer needed.
+  * debian/copyright: remove entries related to removed file
+    nbxmpp/xmpp_stringprep.py.
+
+ -- Tanguy Ortolo <tanguy+debian@ortolo.eu>  Sun, 10 Jan 2016 16:44:41 +0100
+
+python-nbxmpp (0.5.1-2) unstable; urgency=medium
+
+  * Build for python2 and python3 (thanks to W. Martin Borgert for notifying
+    me that python3 was supported).
+  * debian/control:
+     - update the Vcs-* URLs (add .git suffix).
+     - build-depend on python3-all.
+     - split in three binary packages (python2, python3 and doc).
+     - recomment python-openssl (and python3-openssl).
+  * debian/python-nbxmpp.doc-base, debian/python-nbxmpp.docs: rename to
+    python-nbxmpp-doc.doc-base, python-nbxmpp-doc.docs to install
+    documentation to the documentation package.
+  * debian/rules: use pybuild to build for python2 and python3.
+  * debian/patches/fix-raise-statements.patch: fix old syntax of raise
+    statement which was incompatible with python 3.4.
+
+ -- Tanguy Ortolo <tanguy+debian@ortolo.eu>  Wed, 15 Oct 2014 23:27:47 +0200
+
+python-nbxmpp (0.5.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #672847)
+
+ -- Tanguy Ortolo <tanguy+debian@ortolo.eu>  Wed, 15 Oct 2014 09:37:00 +0200

@@ -1,0 +1,836 @@
+org-mode (9.4.0+dfsg-1+deb11u3) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * org-link-expand-abbrev: Do not evaluate arbitrary unsafe Elisp code
+    (CVE-2024-39331) (Closes: #1074136)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 25 Jun 2024 09:19:27 +0200
+
+org-mode (9.4.0+dfsg-1+deb11u2) bullseye; urgency=high
+
+  * Team upload.
+  * Fix CVE-2024-30203, CVE-2024-30204 & CVE-2024-30205 (Closes: #1067663).
+    - Require Emacs 1:27.1+1-3.1+deb11u3 to ensure we get the whole fix.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Tue, 30 Apr 2024 09:08:33 +0100
+
+org-mode (9.4.0+dfsg-1+deb11u1) bullseye; urgency=medium
+
+  * Team upload.
+  * Fix Org Mode command injection vulnerability CVE-2023-28617 by backporting
+    0004-Org-Mode-vulnerability-CVE-2023-28617-is-fixed.patch like src:emacs
+    did (Closes: #1033341).  Thanks to Rob Browning's work in that package,
+    fixing org-mode was trivially easy!
+
+ -- Nicholas D Steeves <sten@debian.org>  Thu, 03 Aug 2023 09:28:47 -0400
+
+org-mode (9.4.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.4.0+dfsg
+  * Bump-up Standards-Version
+  
+ -- Sebastien Delafond <seb@debian.org>  Thu, 24 Sep 2020 16:07:33 +0200
+
+org-mode (9.3.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.3.1+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 16 Jan 2020 09:07:04 +0100
+
+org-mode (9.3+dfsg-2) unstable; urgency=medium
+
+  [ Nicholas D Steeves ]
+  * Restore the functionality provided by org-notmuch (Closes: #948027)
+  * Install ol-bookmark.el, ol-elisp-symbol.el, ol-git-link.el, ol-man.el,
+    ol-mew.el, ol-notmuch.el, ol-vm.el, ol-wl.el using debian/elpa.  All
+    of these files previously had an "org-" prefix where they now have
+    "ol-".
+  * Add an entry to debian/NEWS to notify users of the requirement to
+    update their configuration due to the renamed libraries noted above.
+  * Update debian/copyright to add missing info for ol-git-link.el and
+    ol-notmuch.el
+  * Drop contrib/lisp/org-drill.el from dh-elpa installed files.  See
+    #947017 for the RFP bug for org-drill.  Ideally it should be packaged
+    and this Debian revision of org-mode should either depend or recommend
+    elpa-org-drill.
+  * finalise NEWS
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 05 Jan 2020 17:56:54 +0100
+
+org-mode (9.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.3+dfsg
+  * Bump up Standards-Version
+  * Rename debian/NEWS.debian to debian/NEWS
+  * Clean up debian/copyright
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 20 Dec 2019 15:47:16 +0100
+
+org-mode (9.2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.2.3+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 02 Apr 2019 16:21:32 +0200
+
+org-mode (9.2.2+dfsg-2) unstable; urgency=medium
+
+  * d/elpa: manually list contrib files, so we can exclude problematic
+    ones (Closes: #925592)
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 27 Mar 2019 11:33:41 +0100
+
+org-mode (9.2.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.2.2+dfsg
+  * Remove patch 40-use_correct_upstream_version
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 26 Mar 2019 14:47:11 +0100
+
+org-mode (9.1.14+dfsg-3) unstable; urgency=medium
+
+  [ Nicholas D Steeves ]
+  * Fix wrongly declared ELPA version (9.1.11 was declared)
+
+  [ Sébastien Delafond ]
+  * Remove old 9.1.11 files (Closes: #908508)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 11 Sep 2018 09:38:46 +0200
+
+org-mode (9.1.14+dfsg-2) unstable; urgency=medium
+
+  * Set version to 9.1.14 in org-pkg.el
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 09 Sep 2018 11:04:38 +0200
+
+org-mode (9.1.14+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.1.14+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 23 Aug 2018 14:06:26 +0200
+
+org-mode (9.1.13+dfsg-1) unstable; urgency=medium
+
+  * Update Vcs-* to point to emacsen-team directory on salsa
+  * Update maintainer field to Debian Emacsen team
+    <debian-emacsen@lists.debian.org>
+  * One maintainer field shall be enough
+  * New upstream version 9.1.13+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 21 Jun 2018 15:07:51 +0200
+
+org-mode (9.1.11+dfsg-1) unstable; urgency=medium
+
+  * Fix copyright
+  * New upstream version 9.1.11+dfsg
+  * Set version to 9.1.11 in org-pkg.el
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 24 Apr 2018 16:18:05 +0200
+
+org-mode (9.1.9+dfsg-1) unstable; urgency=medium
+
+  * Switch to DEP 14
+  * Update Vcs-* to point to salsa.d.o
+  * Use https for watch URL
+  * New upstream version 9.1.9+dfsg
+  * Bump-up Standards-Version
+  * Use https for source URL
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 30 Mar 2018 14:56:22 +0200
+
+org-mode (9.1.7+dfsg-1) unstable; urgency=medium
+
+  * Document copyright attributions for testing/
+  * Remove obsolete README.Debian entry about contrib/ not being enabled by default (Closes: #887333)
+  * Add texinfo to Suggests: (Closes: #880626)
+  * New upstream version 9.1.7+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 05 Mar 2018 09:18:06 +0100
+
+org-mode (9.1.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.1.6+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 05 Jan 2018 10:53:45 +0100
+
+org-mode (9.1.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 9.1.5+dfsg
+  * Bump-up Standards-Version
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 03 Jan 2018 11:41:37 +0100
+
+org-mode (9.1.2+dfsg-2) sid; urgency=medium
+
+  * Remove ob-sclang.el for now (Closes: #878017)
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 09 Oct 2017 09:35:06 +0200
+
+org-mode (9.1.2+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 9.1.2+dfsg
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 07 Oct 2017 10:23:08 +0200
+
+org-mode (9.0.9+dfsg-4) unstable; urgency=low
+
+  * Team upload.
+  * Depend on elpa-htmlize.
+  * Add override to avoid installing bundled version of htmlize.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 20 Sep 2017 10:37:48 -0700
+
+org-mode (9.0.9+dfsg-3) unstable; urgency=medium
+
+  * Switch to team maintenance: Debian Emacs addons team <pkg-emacsen-addons@lists.alioth.debian.org>
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 03 Aug 2017 11:26:08 -0400
+
+org-mode (9.0.9+dfsg-2) unstable; urgency=medium
+
+  * Switch to dh-elpa (Closes: #829288, #610699)
+  * Bump-Up Standards-Version
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 02 Aug 2017 15:06:50 -0400
+
+org-mode (9.0.9+dfsg-1) unstable; urgency=medium
+
+  [ Nicholas D Steeves ]
+  * debian/watch: Switch to version 4, and add repacksuffix=+dfsg
+    - When repacking dfsg-free source, repack with xz
+  * Switch to copyright-format 1.0, because this allows using
+    Files-Excluded to strip non-dfsg source
+  * New upstream version 9.0.9+dfsg
+
+  [ Sebastien Delafond ]
+
+ -- Sebastien Delafond <seb@untangle.com>  Wed, 02 Aug 2017 14:47:03 -0400
+
+org-mode (9.0.3-2) unstable; urgency=medium
+
+  * Correct Vcs-Git URL
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 28 Dec 2016 09:37:47 +0100
+
+org-mode (9.0.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 9.0.3
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 28 Dec 2016 09:22:51 +0100
+
+org-mode (9.0.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 9.0.2
+  * Switch to HTTPS for Vcs-*
+  * Bump debhelper compatibility level to 9
+  * Bump up Standards-Version
+  * Use dh_prep instead of dh_clean -k
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 18 Dec 2016 18:15:55 +0100
+
+org-mode (9.0-3) unstable; urgency=medium
+
+  * Binary-Depend on emacs25 also (Closes: #847092)
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 07 Dec 2016 17:35:05 +0100
+
+org-mode (9.0-2) unstable; urgency=medium
+
+  * Add alternate dependency on emacs25 (Closes: #847092)
+  * Remove alternate dependency on emacs23
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 05 Dec 2016 15:44:32 +0100
+
+org-mode (9.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 9.0 (Closes: #843029)
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 07 Nov 2016 10:42:00 +0100
+
+org-mode (8.3.4-1) unstable; urgency=medium
+
+  * Imported Upstream version 8.3.4 (Closes: #818305)
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 16 Mar 2016 09:54:10 +0100
+
+org-mode (8.3.3-4) unstable; urgency=medium
+
+  * Suggest org-mode-doc (Closes: #816550)
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 03 Mar 2016 09:29:56 +0100
+
+org-mode (8.3.3-3) unstable; urgency=medium
+
+  * Remove support for emacs23 (Closes: #815093) 
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 19 Feb 2016 18:22:38 +0100
+
+org-mode (8.3.3-2) unstable; urgency=medium
+
+  * Remove support for emacs23 (Closes: #815093)
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 18 Feb 2016 18:23:58 +0100
+
+org-mode (8.3.3-1) unstable; urgency=medium
+
+  * Imported new upstream version 8.3.3
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 10 Feb 2016 18:54:55 +0100
+
+org-mode (8.3.2-1) unstable; urgency=medium
+
+  * New upstream version 8.3.2
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 27 Nov 2015 17:40:59 +0100
+
+org-mode (8.3.1-2) unstable; urgency=medium
+
+  * easypg is not in the archive anymore (Closes: #798831)
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 14 Sep 2015 11:11:38 +0200
+
+org-mode (8.3.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Do not ship obsolete ditaa.jar (Closes: #792069)
+  * Detail relationship between org versions shipped in emacs and in
+    org-mode (Closes: #772989)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 25 Aug 2015 14:02:17 +0200
+
+org-mode (8.2.10-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 13 Oct 2014 11:04:09 +0200
+
+org-mode (8.2.7c-1) unstable; urgency=medium
+
+  * New upstream version 8.2.7c
+  * Add texlive-latex-extra and texlive-fonts-recommended to Suggests:
+    (Closes: #759353)
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 27 Aug 2014 12:04:44 +0200
+
+org-mode (8.2.7b-2) unstable; urgency=medium
+
+  * Add Vcs-* information
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 14 Jul 2014 11:45:20 +0200
+
+org-mode (8.2.7b-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 25 Jun 2014 09:34:50 +0200
+
+org-mode (8.2.7a-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #752032)
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 21 Jun 2014 11:08:09 +0200
+
+org-mode (8.2.7-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #751014)
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 14 Jun 2014 12:50:57 +0200
+
+org-mode (8.2.6-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #644238)
+  * Depend on emacsen-common >= 2.0.8, and add debian/emacsen-compat
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 13 Jun 2014 13:20:31 +0200
+
+org-mode (8.2.5h-2) unstable; urgency=low
+
+  * Bring back dependency on emacsen-common
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 19 May 2014 22:47:22 +0200
+
+org-mode (8.2.5h-1) unstable; urgency=low
+
+  * New upstream release
+  * Add a Suggests:texlive-latex-extra (Closes: #740867)
+  * Bump Standards-Version
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 02 Apr 2014 13:03:49 +0200
+
+org-mode (8.2.4-1) unstable; urgency=low
+
+  * New upstream release (Closes: #729725)
+  * Conflict with older emacsen-common (Comment: #732699)
+  * Tweak auto-mode-alist regex (Closes: #719038)
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 29 Dec 2013 17:44:50 +0100
+
+org-mode (8.2.1-2) unstable; urgency=low
+
+  * Hrm, really recommend texlive-generic-recommended and
+    texlive-latex-recommended (Closes: #725126)
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 09 Dec 2013 11:46:24 +0100
+
+org-mode (8.2.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Do not support emacs22 anymore (Closes: #719037)
+  * Recommend texlive-generic-recommended and texlive-latex-recommended
+    (Closes: #725126)
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 27 Oct 2013 17:14:14 +0100
+
+org-mode (8.0.7-2) unstable; urgency=low
+
+  * Do not Recommend remember-el anymore, as it's obsolete with Org 8.x
+    (Closes: #721787).
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 10 Sep 2013 22:34:03 +0200
+
+org-mode (8.0.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 11 Aug 2013 16:27:56 +0200
+
+org-mode (8.0.6-3) unstable; urgency=low
+
+  * Remove copyright notice for the Org documentation, since it now lives
+    in its own org-mode-doc package in non-free
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 16 Jul 2013 10:55:16 +0200
+
+org-mode (8.0.6-2) unstable; urgency=low
+
+  * Add emacs-snapshot as an acceptable dependency, not just a build
+    dependency (Closes: #712187)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 16 Jul 2013 08:56:59 +0200
+
+org-mode (8.0.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove non-free documentation (Closes: #709494), and mention that in
+    NEWS.Debian
+  * Add emacs-snapshot as an acceptable version of emacs (Closes: #712187)
+  * Bumped up Standards-Version
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 15 Jul 2013 13:51:17 +0200
+
+org-mode (7.9.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 30 Oct 2012 08:45:52 +0100
+
+org-mode (7.9.1-3) unstable; urgency=low
+
+  * Fix FTBFS since org-mode now requires emacs to be built (Closes:
+    #691768)
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 29 Oct 2012 16:19:40 +0100
+
+org-mode (7.9.1-2) unstable; urgency=low
+
+  * Also generate the PDF reference card (Closes: #690030)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 09 Oct 2012 10:55:13 +0200
+
+org-mode (7.9.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #685154, #668496, #688673)
+  * Updated watch file again
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 13 Sep 2012 14:53:00 +0200
+
+org-mode (7.8.11-2) unstable; urgency=low
+
+  * Fix dependencies to include current versions of emacs in unstable
+    (Closes: #682713)
+  * Proper watch file
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 13 Aug 2012 12:32:11 +0200
+
+org-mode (7.8.11-1) unstable; urgency=low
+
+  * New upstream release
+  * Simpler debian/watch file
+  
+ -- Sebastien Delafond <seb@debian.org>  Wed, 20 Jun 2012 11:36:07 +0200
+
+org-mode (7.8.09-1) unstable; urgency=low
+
+  * New upstream release (Closes: #670270)
+  * Updated debian/watch file
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 25 Apr 2012 15:20:15 +0200
+
+org-mode (7.8.06-2) unstable; urgency=low
+
+  * Really fix the style files (Closes: #655652)
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 26 Mar 2012 10:56:00 +0200
+
+org-mode (7.8.06-1) unstable; urgency=low
+
+  * New upstream release (Closes: #655652)
+  * Bumped up Standards-Version.
+  
+ -- Sebastien Delafond <seb@debian.org>  Sun, 25 Mar 2012 17:10:16 +0200
+
+org-mode (7.7-3) unstable; urgency=low
+
+  * More conventional debian/rules, not requiring root; thanks Colin
+    Watson <cjwatson@ubuntu.com> for the patch (Closes: #648425)
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 11 Nov 2011 15:09:35 +0100
+
+org-mode (7.7-2) unstable; urgency=low
+
+  * Fix FTBFS (Closes: #643235)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 27 Sep 2011 11:27:02 +0200
+
+org-mode (7.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 10 Sep 2011 15:30:43 +0200
+
+org-mode (7.6-1) unstable; urgency=low
+
+  * New upstream release (Closes: #632158).
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 07 Jul 2011 15:45:26 +0200
+
+org-mode (7.5-2) unstable; urgency=low
+
+  * Also install .el files (Closes: #623376).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 09 May 2011 12:18:52 +0200
+
+org-mode (7.5-1) unstable; urgency=low
+
+  * New upstream release (Closes: #623208).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 18 Apr 2011 14:52:41 +0200
+
+org-mode (7.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Handle ditaa more nicely (Closes: #607258).
+  
+ -- Sebastien Delafond <seb@debian.org>  Wed, 22 Dec 2010 14:13:18 +0100
+
+org-mode (7.3-3) unstable; urgency=low
+
+  * Explicitly exclude xemacs from byte-compilation (Closes: #602803).
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 12 Nov 2010 11:35:10 +0100
+
+org-mode (7.3-2) unstable; urgency=low
+
+  * Do not support xemacs21 anymore; the upstream changelog clearly mentions
+    that "XEmacs support requires the XEmacs development version", which
+    is not packaged for Debian (Closes: #602803).
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 10 Nov 2010 16:23:30 +0100
+
+org-mode (7.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #602196).
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 07 Nov 2010 18:17:47 +0100
+
+org-mode (7.01h-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped up Standards-Version.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 07 Sep 2010 14:46:10 +0200
+
+org-mode (7.01g-1) unstable; urgency=low
+
+  * New upstream release (Closes: #589853).
+  * Bumped up Standards-Version.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 22 Jul 2010 14:14:51 +0200
+
+org-mode (6.36c-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 19 May 2010 13:31:31 +0200
+
+org-mode (6.35i-1) unstable; urgency=low
+
+  * New upstream release.
+  * Do not include org-freemind for xemacs (Closes: #577496).
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 13 Apr 2010 15:09:27 +0200
+
+org-mode (6.35h-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 12 Apr 2010 10:33:56 +0200
+
+org-mode (6.35g-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 10 Apr 2010 12:15:35 +0200
+
+org-mode (6.35f-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed incorrect Vcs-* info.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 08 Apr 2010 12:48:18 +0200
+
+org-mode (6.34c-4) unstable; urgency=low
+
+  * Proper unescaping in links (Closes: #572404.)
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 05 Mar 2010 10:45:05 +0100
+
+org-mode (6.34c-3) unstable; urgency=low
+
+  * Swith to 3.0(quilt) source format.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 02 Mar 2010 08:29:45 +0100
+
+org-mode (6.34c-2) unstable; urgency=low
+
+  * Add easypg as a Suggest, to enable org-crypt functionalities.
+  * Bumped up Standards-Version.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 16 Feb 2010 16:25:35 +0100
+
+org-mode (6.34c-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 29 Jan 2010 15:48:44 +0100
+
+org-mode (6.33f-2) unstable; urgency=low
+
+  * New upstream release.
+  * Remove ditaa.jar from both the source and binary packages, as its
+    source code is not available (Closes: #565250). Seems 528117 crept
+    back somehow.
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 29 Jan 2010 15:41:21 +0100
+
+org-mode (6.32b-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 29 Oct 2009 10:22:45 +0100
+
+org-mode (6.31a-3) unstable; urgency=low
+
+  * Add ORed dependency on emacs-snapshot (Closes: #551729).
+  * Removed explicit version-depend on dpkg.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 22 Oct 2009 21:15:59 +0200
+
+org-mode (6.31a-2) unstable; urgency=low
+
+  * New Vcs-Git and Homepage fields in debian/control.
+  * Lintian cleanups.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 19 Oct 2009 16:13:16 +0200
+
+org-mode (6.31a-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 08 Oct 2009 14:45:55 +0200
+
+org-mode (6.31-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 30 Sep 2009 21:05:03 +0200
+
+org-mode (6.30e-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 28 Sep 2009 16:57:29 +0200
+
+org-mode (6.29c+1-3) unstable; urgency=low
+
+  * Doh: emacs 23, not emacs-23 (Closes: #541651).
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 16 Aug 2009 17:34:50 +0200
+
+org-mode (6.29c+1-2) unstable; urgency=low
+
+  * OR'ed depend on emacs23 as well (Closes: #541651).
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 15 Aug 2009 11:44:49 +0200
+
+org-mode (6.29c+1-1) unstable; urgency=low
+
+  * Clarify licensing of org-mode's documentation in debian/copyright, and
+    correct packaging bug in 6.27a-1 and 6.29c-1 where the wrong,
+    GFDL-only version of the manual was accidentally included (Closes:
+    #540736).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 10 Aug 2009 12:38:39 +0200
+
+org-mode (6.29c-1) unstable; urgency=low
+
+  * New upstream release
+  * Bumped up standards revision.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 10 Aug 2009 09:02:41 +0200
+
+org-mode (6.27a-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 16 Jun 2009 12:47:51 +0200
+
+org-mode (6.26d-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove ditaa.jar from both the source and binary packages, as its
+    source code is not available (Closes: #528117).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 11 May 2009 02:16:35 -0700
+
+org-mode (6.26a-4) unstable; urgency=low
+
+  * xemacs21 is fine, as it has url.el.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 21 Apr 2009 05:35:05 -0700
+
+org-mode (6.26a-3) unstable; urgency=low
+
+  * Do not support emacs21 and xemacs21 anymore; upstream author mentioned
+    he will "not willingly break Emacs 21 support, but no longer will make
+    any effort to adapt code for it" (Closes: #524951).
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 21 Apr 2009 05:25:46 -0700
+
+org-mode (6.26a-2) unstable; urgency=low
+
+  * Fix void symbol in startup file; thanks Antonio P. P. Almeida for the
+    patch (Closes: #524941).
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 21 Apr 2009 02:10:47 -0700
+
+org-mode (6.26a-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 20 Apr 2009 00:08:53 -0700
+
+org-mode (6.25e-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 09 Apr 2009 11:23:38 -0700
+
+org-mode (6.24b-1) unstable; urgency=low
+
+  * New upstream release (Closes: #519559).
+  * Update watch file so it doesn't match the snapshot release.
+  * Remove .DS_Store accidentally included in upstream tarball.
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 13 Mar 2009 06:53:16 -0700
+
+org-mode (6.21b-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 02 Feb 2009 14:10:42 -0800
+
+org-mode (6.19b-1) unstable; urgency=low
+
+  * New upstream release.
+  * Do not byte-compile *.el file more than once, and log said compilation
+    to a temp file (inspired from emacs-goodies-el's install script).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 26 Jan 2009 08:41:17 -0800
+
+org-mode (6.17c-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated debian/watch to account for index.html renaming to index.html.
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 18 Jan 2009 19:01:30 -0800
+
+org-mode (6.16c-1) unstable; urgency=low
+
+  * New upstream release
+  * Ship up-to-date version of the manual (Closes: #508758).
+  
+ -- Sebastien Delafond <seb@debian.org>  Sun, 28 Dec 2008 06:24:35 -0800
+
+org-mode (6.14-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 14 Dec 2008 13:15:23 -0800
+
+org-mode (6.12b-1) unstable; urgency=low
+
+  * New upstream version (Closes: #506368).
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 20 Nov 2008 15:17:51 -0800
+
+org-mode (6.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Updated debian/watch so it doesn't break uscan from latest devscripts
+    (Closes: #503235).
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 24 Oct 2008 12:12:44 -0700
+
+org-mode (6.09a-1) unstable; urgency=low
+
+  * New upstream version.
+  * Alternate dependency on emacs-snapshot (Closes: #502137).
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 14 Oct 2008 09:51:48 -0700
+
+org-mode (6.06b-1) unstable; urgency=low
+
+  * New upstream version (Closes: #490096).
+  * Added debian/watch file.
+  * Better autoload mechanism through "(require 'org-install)".
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 15 Aug 2008 11:44:09 -0700
+
+org-mode (6.05-2) unstable; urgency=low
+
+  * List all copyright holders for the contributions in a separate stanza
+    in debian/copyright.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 17 Jun 2008 12:36:30 -0700
+
+org-mode (6.05-1) unstable; urgency=low
+
+  * Package the dual-licensed (GPL+GFDL) version of the manual (many
+    thanks to Carsten Dominik for providing this).
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 17 Jun 2008 08:55:36 -0700
+
+org-mode (6.02b-2) unstable; urgency=low
+
+  * Explicitely mention that org's documentation is licensed under the
+    GFDL with no Invariant Sections.
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 23 May 2008 08:05:26 -0700
+
+org-mode (6.02b-1) unstable; urgency=low
+
+  * Initial Release (Closes: #477504, #445329).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 12 May 2008 17:02:07 -0700
+

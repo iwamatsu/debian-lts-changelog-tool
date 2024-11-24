@@ -1,0 +1,28 @@
+libspreadsheet-parsexlsx-perl (0.27-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2024-22368: Out-of-memory condition during parsing of a crafted
+    XLSX document.
+  * Fix CVE-2024-23525: XXE attacks due to missing ‘no_xxe’ option of
+    XML::Twig. (Closes: #1061098)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sat, 27 Jan 2024 14:40:25 +0100
+
+libspreadsheet-parsexlsx-perl (0.27-2) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Lucas Kanashiro ]
+  * Bump debhelper compatibility level to 11
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Thu, 26 Apr 2018 13:14:11 -0300
+
+libspreadsheet-parsexlsx-perl (0.27-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #865823)
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Sat, 24 Jun 2017 23:26:30 -0300

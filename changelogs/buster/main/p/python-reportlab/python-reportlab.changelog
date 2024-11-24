@@ -1,0 +1,449 @@
+python-reportlab (3.5.13-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2019-19450: code injection in paraparser.py allows code execution.
+  * Fix CVE-2020-28463: Server-side Request Forgery (SSRF) via <img> tags.
+    New settings ‘trustedHosts’ and ‘trustedSchemes’ are added to explicitely
+    define an allowlist.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Fri, 29 Sep 2023 18:13:41 +0200
+
+python-reportlab (3.5.13-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Address remote code execution in colors.py (CVE-2019-17626)
+    (Closes: #942763)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 24 Apr 2020 22:29:45 +0200
+
+python-reportlab (3.5.13-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 18 Jan 2019 11:03:19 +0100
+
+python-reportlab (3.5.12-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 11 Dec 2018 12:21:20 +0100
+
+python-reportlab (3.5.11-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 30 Nov 2018 11:32:52 +0100
+
+python-reportlab (3.5.9-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 18 Oct 2018 12:29:12 +0200
+
+python-reportlab (3.5.6-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 21 Aug 2018 10:27:40 +0200
+
+python-reportlab (3.5.5-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 20 Aug 2018 15:43:48 +0200
+
+python-reportlab (3.5.4-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 14 Aug 2018 14:03:10 +0200
+
+python-reportlab (3.5.2-1) unstable; urgency=medium
+
+  * New upstream version, complete sources again.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 28 Jul 2018 09:49:54 +0200
+
+python-reportlab (3.5.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Re-add the src/rl_addons, docs, demos and tools directories from the
+    upstream repository, not shipped in the upstream tarball anymore.
+  * Fix lintian warnings.
+  * Build renderPM using the internal libart sources. Closes: #885787.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 21 Jul 2018 16:24:04 +0200
+
+python-reportlab (3.4.0-3) unstable; urgency=medium
+
+  * Fix dependencies, removing pip and setuptools.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 22 May 2017 12:33:21 -0700
+
+python-reportlab (3.4.0-2) unstable; urgency=medium
+
+  * Build docs using Python3.
+  * python-reportlab-doc: Install basic.css. LP: #1692123.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 20 May 2017 10:17:37 -0700
+
+python-reportlab (3.4.0-1) experimental; urgency=medium
+
+  * New upstream version.
+  * Bump standards and debhelper version.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 17 Mar 2017 12:12:13 +0100
+
+python-reportlab (3.3.0-2) unstable; urgency=medium
+
+  * Honour SOURCE_DATE_EPOCH environment variable. Closes: #828756.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 17 Mar 2017 12:12:13 +0100
+
+python-reportlab (3.3.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 18 Feb 2016 00:41:28 +0100
+
+python-reportlab (3.2.0-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Fix crash when getting transparency for some PNG images. Closes: #785023.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 04 Jun 2015 00:54:01 +0200
+
+python-reportlab (3.1.44-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 27 Feb 2015 03:43:03 +0100
+
+python-reportlab (3.1.8-3) unstable; urgency=medium
+
+  * Build-depend on dh-python.
+  * Make architecture dependent package M-A: same.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 18 Aug 2014 16:44:06 +0200
+
+python-reportlab (3.1.8-2) unstable; urgency=medium
+
+  * Let renderPM find (replacements for) standard PostScript fonts
+    (Jakub Wilk). Closes: #745985.
+  * python{,3}-renderpm: Recommend gsfonts.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 11 Aug 2014 23:31:24 +0200
+
+python-reportlab (3.1.8-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 11 Aug 2014 23:16:46 +0200
+
+python-reportlab (3.0-1) unstable; urgency=medium
+
+  * reportlab 3.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 18 Feb 2014 14:46:38 +0100
+
+python-reportlab (3.0~b1-1) unstable; urgency=medium
+
+  * reportlab 3.0 beta1 release.
+  * Let the -reportlab packages depend on the -reportlab-accel packages.
+    Closes: #738404, #738418, #738586.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 12 Feb 2014 20:23:27 +0100
+
+python-reportlab (3.0~a1-1) unstable; urgency=medium
+
+  * reportlab 3.0 alpha1 release.
+  * Build python3 packages.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 05 Feb 2014 10:00:02 +0100
+
+python-reportlab (2.7-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 23 Nov 2013 09:42:48 +0100
+
+python-reportlab (2.6-1) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 31 Jan 2013 21:08:28 +0100
+
+python-reportlab (2.5-1.1) unstable; urgency=low
+
+  * Non-maintainer upload to unstable (with maintainer's approval)
+  * Add python-sphinx to Build-Depends-Indep (for docs)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 16 Apr 2011 13:00:22 +0200
+
+python-reportlab (2.5-1) experimental; urgency=low
+
+  * New upstream version.
+  * Add installed fonts to reportlab's font search paths. Closes: #603413.
+  * Build the docs again. Closes: #571637.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 06 Dec 2010 12:45:44 +0100
+
+python-reportlab (2.4-4) unstable; urgency=low
+
+  * Don't include the font description files. Closes: #595072.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 17 Sep 2010 12:35:59 +0200
+
+python-reportlab (2.4-3) unstable; urgency=low
+
+  * Don't try to download font files during the build. Closes: #593612.
+  * Fix two bugs running the examples (Yaroslav Halchenko). Closes: #534578.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 23 Aug 2010 11:54:20 +0200
+
+python-reportlab (2.4-2) unstable; urgency=low
+
+  * Build using dh_python2 instead of dh_pycentral, bump python build
+    dependency. Closes: #551691.
+  * Update watch files. Closes: #487307.
+  * Raise ValueError's instead of string exceptions. Closes: #585326.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 26 Jul 2010 12:05:54 +0200
+
+python-reportlab (2.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 16 Feb 2010 23:32:55 +0100
+
+python-reportlab (2.3-1) unstable; urgency=low
+
+  * New upstream version. Closes: #501276.
+    - Fixes: PDFImage.getImageData() uses "sys" without importing it.
+      Closes: #241735.
+    - Fixes: CMAP file for japnese encodings. Closes: #292964.
+    - Fixes layouting crash. Closes: #495443.
+    - Uses free translation of the Odyssey text. Closes: #498551.
+  * Examples and demos are in the -doc package. Closes: #279377.
+  * Import sgmlop unqulified. Closes: #484025.
+  * python-renderpm packaged and recommended by python-reportlab.
+    Closes: #279376, #228054, #228056.
+  * Use python.mk macros for packaging. Closes: #547851.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 27 Sep 2009 10:27:13 +0200
+
+python-reportlab (2.2-2) unstable; urgency=low
+
+  * Adjust build dependencies for binary arch packages. Closes: #502636
+  * Require python 2.4 or newer. Closes: #502133.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 19 Oct 2008 23:16:31 +0200
+
+python-reportlab (2.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Build the reportlab-accel and renderpm extensions from this source.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 23 Sep 2008 17:58:12 +0200
+
+python-reportlab (2.1dfsg-2) unstable; urgency=low
+
+  * Don't depend on python-xml; a slower parser is included in the source.
+    Closes: #468614.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 27 Apr 2008 18:02:35 +0200
+
+python-reportlab (2.1dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+    - Doesn't contain the RML_UserGuide.pdf. Closes: #349075.
+    - reportlab.graphics.barcode module installed. Closes: #387014.
+    - Avoid warning with reserved keyword. Closes: #435742.
+    - BaseDocTemplate: Set author, title, subject and keywords on its
+      canvas. Closes: #349747.
+  * Depend on ttf-dustin, ttf-bitstream-vera, do not include copies of
+    the fonts. Closes: #457923.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 28 Jan 2008 21:03:56 +0100
+
+python-reportlab (2.0dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 16 Jul 2006 15:31:03 +0200
+
+python-reportlab (1.20debian-7) unstable; urgency=low
+
+  * python-reportlab: Add conflict/replaces to the versioned packages.
+    Closes: #374222.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 18 Jun 2006 02:12:33 +0000
+
+python-reportlab (1.20debian-6) unstable; urgency=low
+
+  * Switch maintainer and uploader.
+  * Convert to updated python policy, using python-central (the
+    extension reportlab-accel goes into the same direcory).
+    Closes: #373350.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 16 Jun 2006 23:31:54 +0200
+
+python-reportlab (1.20debian-5) unstable; urgency=low
+
+  * Imported python-reportlab package into debian python-modules svn repository
+  * debian/control: added Debian Python Modules Team to Uploaders
+
+ -- Igor Stroh <jenner@debian.org>  Sun, 16 Apr 2006 13:19:23 +0200
+
+python-reportlab (1.20debian-4) unstable; urgency=low
+
+  * Added Type1 and TT font paths to reportlab/rl_config, thanks
+    to Nicolas Chauvat and Samuele Giovanni Tonon (closes: #174639)
+
+ -- Igor Stroh <jenner@debian.org>  Wed, 12 Apr 2006 22:32:32 +0200
+
+python-reportlab (1.20debian-3) unstable; urgency=low
+
+  * Drop python2.1 and python2.2 packages.
+  * README.Debian: point to the -doc package (closes: #258404).
+  * Fix drawing of stacked 3D bars (Felipe Almeida Lessa). Closes: #349831).
+
+ -- Matthias Klose <doko@debian.org>  Thu,  2 Feb 2006 20:29:54 +0000
+
+python-reportlab (1.20debian-2) unstable; urgency=low
+
+  * New maintainer 
+  * Fixed README.Debian
+  * added debian/compat
+  * debian/control: bumped Standards-Version to 3.6.2
+  * debian/rules: moved pythonpoint demos to python-reportlab-doc
+
+ -- Igor Stroh <jenner@debian.org>  Tue, 26 Jul 2005 12:51:54 +0200
+
+python-reportlab (1.20debian-1) unstable; urgency=low
+
+  * New upstream version.
+  * Add me as uploader.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 30 Jan 2005 21:25:17 +0100
+
+python-reportlab (1.19debian-0.2) unstable; urgency=low
+
+  * Fix bug in routine handling page breaks (closes Ubuntu #5274).
+
+ -- Matthias Klose <doko@debian.org>  Wed, 12 Jan 2005 23:01:21 +0100
+
+python-reportlab (1.19debian-0.1) unstable; urgency=low
+
+  * NMU.
+  * New upstream version.
+  * Change section to python (closes: #218651).
+  * Add dependencies on shared libraries (closes: #213305).
+  * Add recommends on python-imaging (closes: #158656).
+  * Include the demos in the doc package, don't include the testsuite
+    and documentation sources in the pythonX.Y-reportlab packages.
+    Get the source package, if you need it ...
+
+ -- Matthias Klose <doko@debian.org>  Sat,  7 Feb 2004 09:20:25 +0100
+
+python-reportlab (1.18debian-1.1) unstable; urgency=low
+
+  * Rebuild against python 2.3 (closes: #205742).
+
+ -- Josselin Mouette <joss@debian.org>  Mon, 18 Aug 2003 16:23:57 +0200
+
+python-reportlab (1.18debian-1) unstable; urgency=low
+
+  * New upstream version 1.18. As in 1.17debian, I removed the files with
+    offending licenses in the Debian .orig.tar.gz.
+  * Correct the conflicts with older python-reportlab packages.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed, 16 Jul 2003 10:31:18 +0200
+
+python-reportlab (1.17debian-2) unstable; urgency=low
+
+  * Make packages conflict with older python-reportlab package.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed, 16 Jul 2003 09:45:44 +0200
+
+python-reportlab (1.17debian-1) unstable; urgency=low
+
+  * New upstream version.
+  * Due to license problems, I had to make changes to the upstream tarball:
+    - I had to remove three fonts from the font directory. They have been
+      replaced by free GPL fonts by Dustin Norlander.
+    - I had to remove the English translation of Homer's Odyssey by some
+      fake text.
+    Consequently, the pdf documentation and the source code has been adapted
+    to use the new fonts as well.
+  * This is not a pristine upstream tarball. To make this clear, I changed the
+    package version into 1.17debian.
+  * Provide python2.1, python2.2 and python2.3 versions of the package. Split
+    of the documentation into a separate package (PDF format).
+
+ -- Gregor Hoffleit <flight@debian.org>  Sun,  4 May 2003 12:26:04 +0200
+
+python-reportlab (1.15-2) unstable; urgency=low
+
+  * Bump up to Python 2.2, which is the new default Python version in
+    unstable (closes: #161564, #158891).
+
+ -- Gregor Hoffleit <flight@debian.org>  Tue, 24 Sep 2002 14:48:53 +0200
+
+python-reportlab (1.15-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gregor Hoffleit <flight@debian.org>  Tue,  3 Sep 2002 22:03:56 +0200
+
+python-reportlab (1.13-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed,  3 Apr 2002 14:25:32 +0200
+
+python-reportlab (1.11-2) unstable; urgency=low
+
+  * Include the tools directory (closes: #128948).
+
+ -- Gregor Hoffleit <flight@debian.org>  Tue, 15 Jan 2002 10:22:16 +0100
+
+python-reportlab (1.11-1) unstable; urgency=low
+
+  * New upstream version.
+  * Correct a spelling mistake in package description (closes: #125284).
+
+ -- Gregor Hoffleit <flight@debian.org>  Sat, 29 Dec 2001 13:02:48 +0100
+
+python-reportlab (1.10-2) unstable; urgency=low
+
+  * Fix rules in order to use /usr/bin/python2.1 during build
+    (closes: #119997).
+
+ -- Gregor Hoffleit <flight@debian.org>  Thu, 22 Nov 2001 00:28:18 +0100
+
+python-reportlab (1.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Recompiled for new default Python 2.1 (closes: #119212).
+  * Change dependencies accordingly (e.g. python-egenix-mxtexttools).
+
+ -- Gregor Hoffleit <flight@debian.org>  Fri, 16 Nov 2001 11:12:24 +0100
+
+python-reportlab (1.08-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed, 20 Jun 2001 20:15:25 +0200
+
+python-reportlab (1.07-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Gregor Hoffleit <flight@debian.org>  Sun, 17 Jun 2001 22:02:15 +0200
+
+python-reportlab (1.01-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Gregor Hoffleit <flight@debian.org>  Wed, 11 Oct 2000 14:48:23 +0200

@@ -1,0 +1,27 @@
+node-eventsource (0.2.1-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-1650: Exposure of Sensitive Information (such as cookie &
+    authorisation headers) to an Unauthorized Actor.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sun, 11 Dec 2022 13:30:15 +0100
+
+node-eventsource (0.2.1-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 19 Jun 2016 18:12:38 +0200
+
+node-eventsource (0.2.0-1) unstable; urgency=medium
+
+  * new upstream version
+  * debian/control: use secure VCS-URLs
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 19 Feb 2016 18:12:38 +0100
+
+node-eventsource (0.1.6-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 02 Sep 2015 18:12:38 +0200
+

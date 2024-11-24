@@ -1,0 +1,54 @@
+golang-github-xeipuuv-gojsonschema (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.2.0
+  * Point Vcs-* urls to salsa.debian.org.
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Bump debhelper-compat to 12
+  * Update Standards-Version to 4.5.0
+  * Change priority to optional
+  * Add Rules-Requires-Root
+  * Add autopkgtest-pkg-go
+  * Remove golang-github-stretchr-testify-dev from Depends
+  * Add uscan watch file
+  * Remove old patches
+  * Fix file-contains-trailing-whitespace in d/rules
+  * Update copyright for new release
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sun, 22 Mar 2020 23:02:33 +0800
+
+golang-github-xeipuuv-gojsonschema (0.0~git20170210.0.6b67b3f-2) unstable; urgency=medium
+
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Wed, 09 Aug 2017 12:30:43 +0300
+
+golang-github-xeipuuv-gojsonschema (0.0~git20170210.0.6b67b3f-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Stephen Gelman <ssgelm@gmail.com>  Mon, 03 Jul 2017 06:10:13 +0000
+
+golang-github-xeipuuv-gojsonschema (0.0~git20161105.0.3a08926-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 12 Nov 2016 21:06:16 +1100
+
+golang-github-xeipuuv-gojsonschema (0.0~git20160323.0.93e72a7-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Dmitry Smirnov ]
+  * Standards-Version: 3.9.8.
+  * Do not ignore failures in tests.
+  * New patch to disable networking test (Closes: #830678).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 14 Jul 2016 19:12:23 +1000
+
+golang-github-xeipuuv-gojsonschema (0.0~git20160323.0.93e72a7-1) unstable; urgency=medium
+
+  * Initial release (Closes: #819055).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 23 Mar 2016 21:11:06 +1100

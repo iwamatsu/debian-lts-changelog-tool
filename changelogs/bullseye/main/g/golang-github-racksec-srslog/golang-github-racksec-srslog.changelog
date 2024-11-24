@@ -1,0 +1,43 @@
+golang-github-racksec-srslog (0.0~git20180709.a4725f0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Arnaud Rebillout ]
+  * Add a watch file
+  * Drop gbp.conf
+  * New upstream version 0.0~git20180709.a4725f0
+  * Update gitlab-ci.yml
+  * Update everything in d/rules
+  * Update control file
+  * Nitpick, reorder some fields in d/control
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Fri, 08 Jan 2021 14:33:52 +0700
+
+golang-github-racksec-srslog (0.0~git20160120.0.259aed1-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Wed, 09 Aug 2017 01:18:09 +0300
+
+golang-github-racksec-srslog (0.0~git20160120.0.259aed1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #816889).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 21:27:32 +1100

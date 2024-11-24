@@ -1,0 +1,50 @@
+aom (1.0.0-3+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2024-5171: Integer overflows
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 31 Jul 2024 22:12:43 +0300
+
+aom (1.0.0-3+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2020-36130, CVE-2020-36131, CVE-2020-36133, CVE-2020-36135,
+    CVE-2021-30473, CVE-2021-30474 and CVE-2021-30475.
+    Multiple security vulnerabilities have been discovered in aom, the AV1
+    Video Codec Library. Buffer overflows, use-after-free and NULL pointer
+    dereferences may cause a denial of service or other unspecified impact if a
+    malformed multimedia file is processed.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 05 Sep 2023 23:45:05 +0200
+
+aom (1.0.0-3) unstable; urgency=medium
+
+  [ John Paul Adrian Glaubitz ]
+  * d/rules: Disable AltVec on powerpcspe.
+
+ -- James Cowgill <jcowgill@debian.org>  Thu, 04 Oct 2018 18:21:30 +0100
+
+aom (1.0.0-2) unstable; urgency=medium
+
+  * Cherry-pick upstream commit to fix FTBFS on ppc64el.
+  * d/control:
+    - Use correct Maintainer.
+    - Bump standards version.
+  * d/rules:
+    - Workaround broken 32-bit ARM architecture detection.
+    - Disable optimizations on x32 to fix FTBFS.
+  * d/tests:
+    - control: make library-build depend on build-essential.
+    - encode-decode: fix target size.
+    - library-build: Remove useless include.
+    - library-build: Make some function args const.
+    - library-build: Test number of generated packets.
+    - library-build: Add copyright notice.
+
+ -- James Cowgill <jcowgill@debian.org>  Thu, 20 Sep 2018 09:58:42 +0100
+
+aom (1.0.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #905096)
+
+ -- James Cowgill <jcowgill@debian.org>  Sun, 12 Aug 2018 18:18:57 +0100

@@ -1,0 +1,52 @@
+golang-gopkg-inf.v0 (0.9.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Add uscan watch file
+  * New upstream version 0.9.1
+  * Update Section to golang
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Add Multi-Arch hint
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 28 Jan 2021 01:14:26 +0800
+
+golang-gopkg-inf.v0 (0.9.0-4) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Add upstream metadata.
+  * Use debhelper 12.
+
+  [ Sascha Steinbiss ]
+  * Use debhelper 13.
+  * Bump Standards-Version.
+  * Remove unused Files-Excluded in d/copyright,
+  * Add Rules-Requires-Root.
+
+ -- Sascha Steinbiss <satta@debian.org>  Sun, 06 Sep 2020 17:32:40 +0200
+
+golang-gopkg-inf.v0 (0.9.0-3) unstable; urgency=medium
+
+  * Add Replaces/Breaks for golang-speter-go-exp-math-dec-inf-dev.
+    This supersedes the mentioned package, which up to now also Provided
+    golang-gopkg-inf.v0-dev but with an older upstream version.
+    Thanks to Dmitry Smirnov for the hint.
+    Closes: #903010
+
+ -- Sascha Steinbiss <satta@debian.org>  Fri, 31 Aug 2018 15:40:19 +0200
+
+golang-gopkg-inf.v0 (0.9.0-2) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Sascha Steinbiss ]
+  * Use debhelper 11.
+  * Bump Standards-Version.
+
+ -- Sascha Steinbiss <satta@debian.org>  Wed, 04 Jul 2018 18:13:38 +0200
+
+golang-gopkg-inf.v0 (0.9.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #878386)
+
+ -- Sascha Steinbiss <satta@debian.org>  Fri, 13 Oct 2017 11:32:59 +0200

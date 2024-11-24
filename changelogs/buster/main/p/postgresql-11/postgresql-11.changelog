@@ -1,0 +1,638 @@
+postgresql-11 (11.22-0+deb10u3) buster; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * Fix race condition in pg_dump in PostgreSQL that allows an object creator
+    to execute arbitrary SQL functions as the user running pg_dump, which is
+    often a superuser. (CVE-2024-7348)
+
+ -- Roberto C. Sánchez <roberto@debian.org>  Fri, 30 Aug 2024 15:53:22 -0400
+
+postgresql-11 (11.22-0+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-0985: REFRESH MATERIALIZED VIEW CONCURRENTLY privilege escalation
+
+ -- Adrian Bunk <bunk@debian.org>  Mon, 18 Mar 2024 14:39:21 +0200
+
+postgresql-11 (11.22-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+    * This is expected to be the last PostgreSQL release in the 11.X series.
+      Users are encouraged to update to a newer release branch soon.
+
+    * Fix handling of unknown-type arguments in DISTINCT "any" aggregate
+      functions (Tom Lane)
+
+      This error led to a text-type value being interpreted as an unknown-type
+      value (that is, a zero-terminated string) at runtime.  This could result
+      in disclosure of server memory following the text value.
+
+      The PostgreSQL Project thanks Jingzhou Fu for reporting this problem.
+      (CVE-2023-5868)
+
+    * Detect integer overflow while computing new array dimensions
+      (Tom Lane)
+
+      When assigning new elements to array subscripts that are outside the
+      current array bounds, an undetected integer overflow could occur in edge
+      cases.  Memory stomps that are potentially exploitable for arbitrary
+      code execution are possible, and so is disclosure of server memory.
+
+      The PostgreSQL Project thanks Pedro Gallegos for reporting this problem.
+      (CVE-2023-5869)
+
+    * Prevent the pg_signal_backend role from signalling background workers
+      and autovacuum processes (Noah Misch, Jelte Fennema-Nio)
+
+      The documentation says that pg_signal_backend
+      cannot issue signals to superuser-owned processes.  It was able to
+      signal these background processes, though, because they advertise a
+      role OID of zero.  Treat that as indicating superuser ownership.
+      The security implications of cancelling one of these process types
+      are fairly small so far as the core code goes (we'll just start
+      another one), but extensions might add background workers that are
+      more vulnerable.
+
+      Also ensure that the is_superuser parameter is set correctly in such
+      processes.  No specific security consequences are known for that
+      oversight, but it might be significant for some extensions.
+
+      The PostgreSQL Project thanks Hemanth Sandrana and Mahendrakar
+      Srinivasarao for reporting this problem. (CVE-2023-5870)
+
+  * Rebase debian/patches/libpgport-pkglibdir.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 07 Nov 2023 14:50:52 +0100
+
+postgresql-11 (11.21-0+deb10u2) buster-security; urgency=medium
+
+  * Fix changelog of last upload, the original version mistakenly repeated the
+    information from 11.20.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 02 Oct 2023 16:15:27 +0200
+
+postgresql-11 (11.21-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+    + Disallow substituting a schema or owner name into an extension script if
+      the name contains a quote, backslash, or dollar sign (Noah Misch)
+
+      This restriction guards against SQL-injection hazards for trusted
+      extensions.
+
+      The PostgreSQL Project thanks Micah Gate, Valerie Woolard, Tim
+      Carey-Smith, and Christoph Berg for reporting this problem.
+      (CVE-2023-39417)
+
+ -- Christoph Berg <myon@debian.org>  Sun, 01 Oct 2023 22:05:23 +0200
+
+postgresql-11 (11.20-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+    + Prevent CREATE SCHEMA from defeating changes in search_path
+      (Report and fix by Alexander Lakhin, CVE-2023-2454)
+
+      Within a CREATE SCHEMA command, objects in the prevailing search_path,
+      as well as those in the newly-created schema, would be visible even
+      within a called function or script that attempted to set a secure
+      search_path.  This could allow any user having permission to create a
+      schema to hijack the privileges of a security definer function or
+      extension script.
+
+    + Enforce row-level security policies correctly after inlining a
+      set-returning function (Report by Wolfgang Walther, CVE-2023-2455)
+
+      If a set-returning SQL-language function refers to a table having
+      row-level security policies, and it can be inlined into a calling query,
+      those RLS policies would not get enforced properly in some cases
+      involving re-using a cached plan under a different role. This could
+      allow a user to see or modify rows that should have been invisible.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 10 May 2023 21:04:02 +0200
+
+postgresql-11 (11.19-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+    + libpq can leak memory contents after GSSAPI transport encryption
+      initiation fails (Jacob Champion)
+
+      A modified server, or an unauthenticated man-in-the-middle, can send a
+      not-zero-terminated error message during setup of GSSAPI (Kerberos)
+      transport encryption.  libpq will then copy that string, as well as
+      following bytes in application memory up to the next zero byte, to its
+      error report. Depending on what the calling application does with the
+      error report, this could result in disclosure of application memory
+      contents.  There is also a small probability of a crash due to reading
+      beyond the end of memory.  Fix by properly zero-terminating the server
+      message. (CVE-2022-41862)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 07 Feb 2023 17:14:48 +0100
+
+postgresql-11 (11.18-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 09 Nov 2022 10:09:35 +0100
+
+postgresql-11 (11.17-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+    + Do not let extension scripts replace objects not already belonging to
+      the extension (Tom Lane) (CVE-2022-2625)
+
+      This change prevents extension scripts from doing CREATE OR REPLACE if
+      there is an existing object that does not belong to the extension.  It
+      also prevents CREATE IF NOT EXISTS in the same situation.  This prevents
+      a form of trojan-horse attack in which a hostile database user could
+      become the owner of an extension object and then modify it to compromise
+      future uses of the object by other users.  As a side benefit, it also
+      reduces the risk of accidentally replacing objects one did not mean to.
+
+      The PostgreSQL Project thanks Sven Klemm for reporting this problem.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 11 Aug 2022 14:03:50 +0200
+
+postgresql-11 (11.16-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream release.
+
+    * Confine additional operations within security restricted operation
+      sandboxes (Sergey Shinderuk, Noah Misch)
+
+      Autovacuum, CLUSTER, CREATE INDEX, REINDEX, REFRESH MATERIALIZED VIEW,
+      and pg_amcheck activated the security restricted operation protection
+      mechanism too late, or even not at all in some code paths. A user having
+      permission to create non-temporary objects within a database could
+      define an object that would execute arbitrary SQL code with superuser
+      permissions the next time that autovacuum processed the object, or that
+      some superuser ran one of the affected commands against it.
+
+      The PostgreSQL Project thanks Alexander Lakhin for reporting this
+      problem. (CVE-2022-1552)
+
+ -- Christoph Berg <myon@debian.org>  Wed, 11 May 2022 15:15:30 +0200
+
+postgresql-11 (11.14-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream security release.
+
+    + Make the server and libpq reject extraneous data after an SSL or GSS
+      encryption handshake (Tom Lane)
+
+      A man-in-the-middle with the ability to inject data into the TCP
+      connection could stuff some cleartext data into the start of a
+      supposedly encryption-protected database session.
+
+      This could be abused to send faked SQL commands to the server, although
+      that would only work if the server did not demand any authentication
+      data.  (However, a server relying on SSL certificate authentication
+      might well not do so.) (CVE-2021-23214)
+
+      This could probably be abused to inject faked responses to the client's
+      first few queries, although other details of libpq's behavior make that
+      harder than it sounds.  A different line of attack is to exfiltrate the
+      client's password, or other sensitive data that might be sent early in
+      the session.  That has been shown to be possible with a server
+      vulnerable to CVE-2021-23214. (CVE-2021-23222)
+
+      The PostgreSQL Project thanks Jacob Champion for reporting these
+      problems.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 11 Nov 2021 12:53:26 +0100
+
+postgresql-11 (11.13-0+deb10u1) buster; urgency=medium
+
+  * New upstream version.
+
+    + Fix mis-planning of repeated application of a projection step (Tom Lane)
+
+      The planner could create an incorrect plan in cases where two
+      ProjectionPaths were stacked on top of each other.  The only known way
+      to trigger that situation involves parallel sort operations, but there
+      may be other instances.  The result would be crashes or incorrect query
+      results. Disclosure of server memory contents is also possible.
+      (CVE-2021-3677)
+
+    + Disallow SSL renegotiation more completely (Michael Paquier)
+
+      SSL renegotiation has been disabled for some time, but the server would
+      still cooperate with a client-initiated renegotiation request. A
+      maliciously crafted renegotiation request could result in a server crash
+      (see OpenSSL issue CVE-2021-3449).  Disable the feature altogether on
+      OpenSSL versions that permit doing so, which are 1.1.0h and newer.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 26 Aug 2021 14:55:09 +0200
+
+postgresql-11 (11.12-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+
+    + Prevent integer overflows in array subscripting calculations (Tom Lane)
+
+      The array code previously did not complain about cases where an array's
+      lower bound plus length overflows an integer.  This resulted in later
+      entries in the array becoming inaccessible (since their subscripts could
+      not be written as integers), but more importantly it confused subsequent
+      assignment operations.  This could lead to memory overwrites, with
+      ensuing crashes or unwanted data modifications. (CVE-2021-32027)
+
+    + Fix mishandling of junk columns in INSERT ... ON CONFLICT ... UPDATE
+      target lists (Tom Lane)
+
+      If the UPDATE list contains any multi-column sub-selects (which give
+      rise to junk columns in addition to the results proper), the UPDATE path
+      would end up storing tuples that include the values of the extra junk
+      columns. That's fairly harmless in the short run, but if new columns are
+      added to the table then the values would become accessible, possibly
+      leading to malfunctions if they don't match the datatypes of the added
+      columns.
+
+      In addition, in versions supporting cross-partition updates, a
+      cross-partition update triggered by such a case had the reverse problem:
+      the junk columns were removed from the target list, typically causing an
+      immediate crash due to malfunction of the multi-column sub-select
+      mechanism. (CVE-2021-32028)
+
+    + Fix possibly-incorrect computation of UPDATE ... RETURNING outputs for
+      joined cross-partition updates (Amit Langote, Etsuro Fujita)
+
+      If an UPDATE for a partitioned table caused a row to be moved to another
+      partition with a physically different row type (for example, one with a
+      different set of dropped columns), computation of RETURNING results for
+      that row could produce errors or wrong answers.  No error is observed
+      unless the UPDATE involves other tables being joined to the target
+      table. (CVE-2021-32029)
+
+ -- Christoph Berg <myon@debian.org>  Wed, 12 May 2021 16:42:10 +0200
+
+postgresql-11 (11.11-0+deb10u1) buster; urgency=medium
+
+  * New upstream version.
+
+    + Fix information leakage in constraint-violation error messages
+      (Heikki Linnakangas)
+
+      If an UPDATE command attempts to move a row to a different partition but
+      finds that it violates some constraint on the new partition, and the
+      columns in that partition are in different physical positions than in
+      the parent table, the error message could reveal the contents of columns
+      that the user does not have SELECT privilege on. (CVE-2021-3393)
+
+    + Fix CREATE INDEX CONCURRENTLY to wait for concurrent prepared
+      transactions (Andrey Borodin)
+
+      At the point where CREATE INDEX CONCURRENTLY waits for all concurrent
+      transactions to complete so that it can see rows they inserted, it must
+      also wait for all prepared transactions to complete, for the same
+      reason.  Its failure to do so meant that rows inserted by prepared
+      transactions might be omitted from the new index, causing queries
+      relying on the index to miss such rows. In installations that have
+      enabled prepared transactions (max_prepared_transactions > 0), it's
+      recommended to reindex any concurrently-built indexes in case this
+      problem occurred when they were built.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 10 Feb 2021 17:49:21 +0100
+
+postgresql-11 (11.10-0+deb10u1) buster; urgency=medium
+
+  * New upstream version.
+    + Fixes timetz regression test failures. (Closes: #974063)
+
+    + Block DECLARE CURSOR ... WITH HOLD and firing of deferred triggers
+      within index expressions and materialized view queries (Noah Misch)
+
+      This is essentially a leak in the security restricted operation sandbox
+      mechanism.  An attacker having permission to create non-temporary SQL
+      objects could parlay this leak to execute arbitrary SQL code as a
+      superuser.
+
+      The PostgreSQL Project thanks Etienne Stalmans for reporting this
+      problem. (CVE-2020-25695)
+
+    + Fix usage of complex connection-string parameters in pg_dump,
+      pg_restore, clusterdb, reindexdb, and vacuumdb (Tom Lane)
+
+      The -d parameter of pg_dump and pg_restore, or the --maintenance-db
+      parameter of the other programs mentioned, can be a connection string
+      containing multiple connection parameters rather than just a database
+      name.  In cases where these programs need to initiate additional
+      connections, such as parallel processing or processing of multiple
+      databases, the connection string was forgotten and just the basic
+      connection parameters (database name, host, port, and username) were
+      used for the additional connections.  This could lead to connection
+      failures if the connection string included any other essential
+      information, such as non-default SSL or GSS parameters. Worse, the
+      connection might succeed but not be encrypted as intended, or be
+      vulnerable to man-in-the-middle attacks that the intended connection
+      parameters would have prevented. (CVE-2020-25694)
+
+    + When psql's \connect command re-uses connection parameters, ensure that
+      all non-overridden parameters from a previous connection string are
+      re-used (Tom Lane)
+
+      This avoids cases where reconnection might fail due to omission of
+      relevant parameters, such as non-default SSL or GSS options. Worse, the
+      reconnection might succeed but not be encrypted as intended, or be
+      vulnerable to man-in-the-middle attacks that the intended connection
+      parameters would have prevented. This is largely the same problem as
+      just cited for pg_dump et al, although psql's behavior is more complex
+      since the user may intentionally override some connection parameters.
+      (CVE-2020-25694)
+
+    + Prevent psql's \gset command from modifying specially-treated variables
+      (Noah Misch)
+
+      \gset without a prefix would overwrite whatever variables the server
+      told it to.  Thus, a compromised server could set specially-treated
+      variables such as PROMPT1, giving the ability to execute arbitrary shell
+      code in the user's session.
+
+      The PostgreSQL Project thanks Nick Cleaton for reporting this problem.
+      (CVE-2020-25696)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 01 Dec 2020 10:04:12 +0100
+
+postgresql-11 (11.9-0+deb10u1) buster; urgency=medium
+
+  * New upstream version.
+    + Set a secure search_path in logical replication walsenders and apply
+      workers (Noah Misch)
+
+      A malicious user of either the publisher or subscriber database could
+      potentially cause execution of arbitrary SQL code by the role running
+      replication, which is often a superuser.  Some of the risks here are
+      equivalent to those described in CVE-2018-1058, and are mitigated in
+      this patch by ensuring that the replication sender and receiver execute
+      with empty search_path settings. (As with CVE-2018-1058, that change
+      might cause problems for under-qualified names used in replicated
+      tables' DDL.)  Other risks are inherent in replicating objects that
+      belong to untrusted roles; the most we can do is document that there is
+      a hazard to consider. (CVE-2020-14349)
+
+    + Make contrib modules' installation scripts more secure (Tom Lane)
+
+      Attacks similar to those described in CVE-2018-1058 could be carried out
+      against an extension installation script, if the attacker can create
+      objects in either the extension's target schema or the schema of some
+      prerequisite extension.  Since extensions often require superuser
+      privilege to install, this can open a path to obtaining superuser
+      privilege.  To mitigate this risk, be more careful about the search_path
+      used to run an installation script; disable check_function_bodies within
+      the script; and fix catalog-adjustment queries used in some contrib
+      modules to ensure they are secure.  Also provide documentation to help
+      third-party extension authors make their installation scripts secure.
+      This is not a complete solution; extensions that depend on other
+      extensions can still be at risk if installed carelessly.
+      (CVE-2020-14350)
+
+ -- Christoph Berg <myon@debian.org>  Thu, 13 Aug 2020 15:56:23 +0200
+
+postgresql-11 (11.7-0+deb10u1) buster-security; urgency=medium
+
+  * New upstream version.
+    + Add missing permissions checks for ALTER ... DEPENDS ON EXTENSION.
+
+      Marking an object as dependent on an extension did not have any
+      privilege check whatsoever.  This oversight allowed any user to mark
+      routines, triggers, materialized views, or indexes as droppable by
+      anyone able to drop an extension.  Require that the calling user own the
+      specified object (and hence have privilege to drop it). (CVE-2020-1720)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 11 Feb 2020 13:48:46 +0100
+
+postgresql-11 (11.6-0+deb10u1) buster; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 18 Nov 2019 11:16:59 +0100
+
+postgresql-11 (11.5-1+deb10u1) buster-security; urgency=high
+
+  * New upstream security release.
+    + Fixes regression in ALTER TABLE on multiple columns. (Closes: #932247)
+
+    + No longer picks "UCT" as timezone spelling. (Closes: #929953)
+
+    + Require schema qualification to cast to a temporary type when using
+      functional cast syntax (Noah Misch)
+
+      We have long required invocations of temporary functions to explicitly
+      specify the temporary schema, that is pg_temp.func_name(args). Require
+      this as well for casting to temporary types using functional notation,
+      for example pg_temp.type_name(arg). Otherwise it's possible to capture a
+      function call using a temporary object, allowing privilege escalation in
+      much the same ways that we blocked in CVE-2007-2138. (CVE-2019-10208)
+
+    + Fix execution of hashed subplans that require cross-type comparison
+      (Tom Lane, Andreas Seltenreich)
+
+      Hashed subplans used the outer query's original comparison operator to
+      compare entries of the hash table.  This is the wrong thing if that
+      operator is cross-type, since all the hash table entries will be of the
+      subquery's output type.  For the set of hashable cross-type operators in
+      core PostgreSQL, this mistake seems nearly harmless on 64-bit machines,
+      but it can result in crashes or perhaps unauthorized disclosure of
+      server memory on 32-bit machines.  Extensions might provide hashable
+      cross-type operators that create larger risks. (CVE-2019-10209)
+
+ -- Christoph Berg <myon@debian.org>  Thu, 08 Aug 2019 15:22:02 +0200
+
+postgresql-11 (11.4-1) unstable; urgency=medium
+
+  * New upstream version.
+    + Fix buffer-overflow hazards in SCRAM verifier parsing
+      (Jonathan Katz, Heikki Linnakangas, Michael Paquier)
+
+      Any authenticated user could cause a stack-based buffer overflow by
+      changing their own password to a purpose-crafted value.  In addition to
+      the ability to crash the PostgreSQL server, this could suffice for
+      executing arbitrary code as the PostgreSQL operating system account.
+
+      A similar overflow hazard existed in libpq, which could allow a rogue
+      server to crash a client or perhaps execute arbitrary code as the
+      client's operating system account.
+
+      The PostgreSQL Project thanks Alexander Lakhin for reporting this
+      problem.  (CVE-2019-10164)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 18 Jun 2019 11:03:14 +0200
+
+postgresql-11 (11.3-1) unstable; urgency=medium
+
+  * New upstream version.
+    + Prevent row-level security policies from being bypassed via selectivity
+      estimators (Dean Rasheed)
+
+      Some of the planner's selectivity estimators apply user-defined
+      operators to values found in pg_statistic (e.g., most-common values).
+      A leaky operator therefore can disclose some of the entries in a data
+      column, even if the calling user lacks permission to read that column.
+      In CVE-2017-7484 we added restrictions to forestall that, but we failed
+      to consider the effects of row-level security.  A user who has SQL
+      permission to read a column, but who is forbidden to see certain rows
+      due to RLS policy, might still learn something about those rows'
+      contents via a leaky operator.  This patch further tightens the rules,
+      allowing leaky operators to be applied to statistics data only when
+      there is no relevant RLS policy.  (CVE-2019-10130)
+
+    + Avoid access to already-freed memory during partition routing error
+      reports (Michael Paquier)
+
+      This mistake could lead to a crash, and in principle it might be
+      possible to use it to disclose server memory contents. (CVE-2019-10129)
+
+ -- Christoph Berg <myon@debian.org>  Tue, 07 May 2019 12:04:34 +0200
+
+postgresql-11 (11.2-2) unstable; urgency=medium
+
+  * Allow overriding the startup command suggested by initdb.
+    (See: #872660)
+
+ -- Christoph Berg <myon@debian.org>  Fri, 01 Mar 2019 18:59:15 +0100
+
+postgresql-11 (11.2-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Add Breaks on modules needing recompilation against heap_getattr().
+  * Debconf translations:
+    + ru by Lev Lamberov. (Closes: #920893)
+    + nl by Frans Spiesschaert. (Closes: #921090)
+    + fr by Jean-Pierre Giraud. (Closes: #920499)
+    + pt_BR by Adriano Rafael Gomes. (Closes: #920541)
+  * Update PostgreSQL Maintainers address.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 30 Jan 2019 13:23:14 +0100
+
+postgresql-11 (11.1-3) unstable; urgency=medium
+
+  * Debconf translations:
+    + pt by Américo Monteiro. (Closes: #919338)
+    + de by Helge Kreutzmann. (Closes: #919770)
+  * Document src/backend/snowball/libstemmer origin and licensing.
+    (Closes: #626732)
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Mon, 28 Jan 2019 09:54:04 +0100
+
+postgresql-11 (11.1-2) unstable; urgency=medium
+
+  * Drop explicit xz compression for .debs.
+  * Depend on locales | locales-all. Suggested by Elrond, thanks!
+    (Closes: #916655)
+  * Build-Depend on tcl-dev instead of on a specific version.
+  * initdb doesn't like LANG and LC_ALL to contradict, unset LANG and
+    LC_CTYPE at test time. (Closes: #917764)
+  * On purge, ask the user if they want to remove clusters. (Closes: #911940)
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 09 Jan 2019 16:35:51 +0100
+
+postgresql-11 (11.1-1) unstable; urgency=medium
+
+  * New upstream version.
+    + Ensure proper quoting of transition table names when pg_dump emits
+      CREATE TRIGGER ... REFERENCING commands. (CVE-2018-16850)
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 06 Nov 2018 14:57:57 +0100
+
+postgresql-11 (11.0-1) unstable; urgency=medium
+
+  * First PostgreSQL 11 stable release.
+  * Bump postgresql-11's postgresql-common dependency to 194 so we have a
+    "supported-versions" script that lists 11 as supported.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 17 Oct 2018 22:43:19 +0200
+
+postgresql-11 (11~rc1-1) unstable; urgency=medium
+
+  * First PostgreSQL 11 release candidate.
+  * configure: Hard-code paths to /bin/mkdir -p and /bin/tar.
+  * Disable JIT on riscv64 (llvm 7 not built yet), and powerpcspe (clang does
+    not load pyconfig.h because it doesn't define __SPE__), see
+    https://buildd.debian.org/status/fetch.php?pkg=postgresql-11&arch=powerpcspe&ver=11%7Ebeta4-2&stamp=1537447357&raw=0
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 10 Oct 2018 10:40:03 +0200
+
+postgresql-11 (11~beta4-2) experimental; urgency=medium
+
+  * control, postgresql-11.install: Don't use llvm for JIT on x32 (crashes)
+    https://buildd.debian.org/status/fetch.php?pkg=postgresql-11&arch=x32&ver=11~beta3-2&stamp=1537286634&raw=0
+    (See also http://lists.llvm.org/pipermail/llvm-dev/2018-September/126424.html)
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Thu, 20 Sep 2018 09:51:38 +0200
+
+postgresql-11 (11~beta4-1) experimental; urgency=medium
+
+  * Fourth PostgreSQL 11 beta release. JIT support is enabled at compile time,
+    but disabled at runtime by default. "SET jit = on;" to enable.
+  * rules: Remove llvm 7 hard-coding, package can detect version 7 now.
+  * control, postgresql-11.install: Don't use llvm for JIT on alpha (llvm does
+    not support the architecture), powerpc (dies with illegal instruction)
+    https://buildd.debian.org/status/fetch.php?pkg=postgresql-11&arch=powerpc&ver=11%7Ebeta3-2&stamp=1537008595&raw=0
+    sparc64 (Invalid data was encountered while parsing the file)
+    https://buildd.debian.org/status/fetch.php?pkg=postgresql-11&arch=sparc64&ver=11~beta3-2&stamp=1537018656&raw=0
+  * Remove regress-python3-mangle.mk from plpython3 package, it's also in
+    -server-dev.
+  * Install usr/share/locale/*/LC_MESSAGES/pg_verify_checksums-*.mo.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 18 Sep 2018 12:51:34 +0200
+
+postgresql-11 (11~beta3-2) experimental; urgency=medium
+
+  * Revert module_srcdir hack, rely on pg_buildext for reproducible PGXS
+    module builds instead.
+  * Enable dtrace support.
+  * psql uses sensible-editor, depend on sensible-utils.
+  * Add lintian overrides for plugins that link no external libraries.
+  * Bump llvm version to 7, architectures !hppa !hurd-i386 !ia64
+    !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4.
+
+ -- Christoph Berg <myon@debian.org>  Sat, 15 Sep 2018 11:35:06 +0200
+
+postgresql-11 (11~beta3-1) experimental; urgency=medium
+
+  * Third PostgreSQL 11 beta release.
+  * Filter -fdebug-prefix-map and -ffile-prefix-map in more places, and make
+    PGXS modules build reproducibly.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 07 Aug 2018 10:31:55 +0200
+
+postgresql-11 (11~beta2-2) experimental; urgency=medium
+
+  * Drop support for tcl8.5.
+  * Use dh_auto_configure to correctly seed the build architecture.
+  * Hard-code llvm version, we need the server-dev package to depend on the
+    version used at compile time.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Fri, 13 Jul 2018 14:08:10 +0200
+
+postgresql-11 (11~beta2-1) experimental; urgency=medium
+
+  * Second PostgreSQL 11 beta release.
+  * Add new pgtypes header and symbol.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 25 Jun 2018 21:18:58 +0200
+
+postgresql-11 (11~beta1-2) experimental; urgency=medium
+
+  * Disable llvm jit everywhere except on amd64 and i386. Other platforms need
+    r328687 merged into llvm first.
+    http://llvm.org/viewvc/llvm-project?view=revision&revision=328687
+  * Remove version checking for libselinux1-dev, 2.1.10 is old enough now.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 23 May 2018 13:09:47 +0200
+
+postgresql-11 (11~beta1-1) experimental; urgency=medium
+
+  * First PostgreSQL 11 beta release.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 22 May 2018 14:19:08 +0200
+
+postgresql-11 (11~~devel-1) UNRELEASED; urgency=medium
+
+  * New major upstream version 11; packaging based on postgresql-10.
+
+ -- Christoph Berg <myon@debian.org>  Fri, 11 Aug 2017 20:37:42 +0200

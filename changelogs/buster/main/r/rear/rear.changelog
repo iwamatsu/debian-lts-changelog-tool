@@ -1,0 +1,79 @@
+rear (2.4+dfsg-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the Debian LTS Team.
+  * Fix CVE-2024-23301
+
+ -- Abhijith PA <abhijith@debian.org>  Sat, 03 Feb 2024 14:21:52 +0530
+
+rear (2.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 2.4+dfsg
+  * Move doc to comply with Debian Policy 3.9.7
+  * Upgrade compat level
+  * Bump Standards-Version
+
+ -- Frédéric Bonnard <frediz@debian.org>  Fri, 11 Jan 2019 17:02:12 +0100
+
+rear (2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 2.3+dfsg
+  * Drop all patches
+  * Fix lintian error
+  * Update maintainer mail
+  * Update copyright information
+  * Update dependencies.
+    Thanks to Alban Vidal and Andreas Henriksson (Closes: #881978, #887216)
+  * Remove .gitignore install exclusion
+  * Follow upstream /etc/rear permissions
+  * Fix configuration file permissions
+  * Use https instead of http URL
+  * Import example files properly
+  * Add Vcs-Browser and Vcs-Git URLs
+
+ -- Frédéric Bonnard <frediz@debian.org>  Wed, 21 Feb 2018 10:09:24 +0100
+
+rear (2.2+dfsg-2) unstable; urgency=medium
+
+  * d/control : upgrade Standards-Version to 4.0.1
+  * d/ : fix lintian debian-files-list-in-source
+  * d/p/fix-reproducibility-issue.patch : use asciidoc -a footer-style=none
+
+ -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Tue, 22 Aug 2017 09:22:37 +0000
+
+rear (2.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #872031)
+  * d/copyright : upstream simplified the licensing and moved to GPL-3+ almost
+    everywhere. Copyright changed to stick to AUTHORS file.
+  * d/control :
+    - switch from iproute to iproute2 (Closes: #862849)
+    - add Recommends on extlinux for USB backup (Closes: #872030)
+    - add Depends on fdisk | util-linux (<< 2.29.2-3~) (Closes: #872104)
+    - upgraded Standards-Version to 4.0.0
+    - add Multi-Arch for rear binary package
+
+ -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Wed, 16 Aug 2017 09:58:51 +0000
+
+rear (2.00+dfsg-2) unstable; urgency=medium
+
+  * d/control : move xmlto to Build-Depends, since it's needed for man
+    generation and man is part of the "any" part of the rear package (Closes:
+    #851209)
+
+ -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Fri, 13 Jan 2017 09:22:44 +0000
+
+rear (2.00+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control : use asciidoc-base instead of asciidoc and move it to
+    Build-Depends (Closes: #849303)
+  * d/watch : fix and take +dfsg into account correctly
+  * d/control, d/changelog : fixed accents in my firstname
+
+ -- Frédéric Bonnard <frediz@linux.vnet.ibm.com>  Tue, 10 Jan 2017 15:12:34 +0100
+
+rear (1.19+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #683422)
+
+ -- Frederic Bonnard <frediz@linux.vnet.ibm.com>  Tue, 13 Dec 2016 12:50:51 +0000

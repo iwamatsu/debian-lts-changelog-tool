@@ -1,0 +1,264 @@
+php-horde-turba (4.2.23-1+deb10u1) buster-security; urgency=high
+
+  * CVE-2022-30287: Prevent a potential arbitrary deserialization
+    vulnerability. (Closes: #1012279)
+
+ -- Chris Lamb <lamby@debian.org>  Wed, 31 Aug 2022 08:57:36 +0100
+
+php-horde-turba (4.2.23-1) unstable; urgency=medium
+
+  * New upstream version 4.2.23
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 25 Oct 2018 21:50:13 +0200
+
+php-horde-turba (4.2.22-1) unstable; urgency=medium
+
+  * New upstream version 4.2.22
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 08 Oct 2018 10:20:19 +0200
+
+php-horde-turba (4.2.21-3) unstable; urgency=medium
+
+  * Update Standards-Version to 4.1.4, no change
+  * Update Maintainer field
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 15 May 2018 17:02:35 +0200
+
+php-horde-turba (4.2.21-2) unstable; urgency=medium
+
+  * Update Standards-Version to 4.1.3, no change
+  * Upgrade debhelper to compat 11
+  * Update Vcs-* fields
+  * Use secure copyright format URI
+  * Replace "Priority: extra" by "Priority: optional"
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 06 Apr 2018 13:26:11 +0200
+
+php-horde-turba (4.2.21-1) unstable; urgency=medium
+
+  * New upstream version 4.2.21
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 27 Sep 2017 21:58:34 +0200
+
+php-horde-turba (4.2.20-1) unstable; urgency=medium
+
+  * New upstream version 4.2.20
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 01 Aug 2017 22:50:19 +0200
+
+php-horde-turba (4.2.19-1) unstable; urgency=medium
+
+  * New upstream version 4.2.19
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 01 Jul 2017 22:33:16 +0200
+
+php-horde-turba (4.2.18-1) unstable; urgency=medium
+
+  * New upstream version 4.2.18
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 18 Dec 2016 23:07:14 +0100
+
+php-horde-turba (4.2.17-1) unstable; urgency=medium
+
+  * New upstream version 4.2.17
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 03 Nov 2016 21:52:18 +0100
+
+php-horde-turba (4.2.16-1) unstable; urgency=medium
+
+  * New upstream version 4.2.16
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 10 Oct 2016 10:42:06 +0200
+
+php-horde-turba (4.2.15-1) unstable; urgency=medium
+
+  * New upstream version 4.2.15
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 07 Jul 2016 21:44:19 +0200
+
+php-horde-turba (4.2.14-2) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.8, no change
+  * Updated d/watch to use https
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 09 Jun 2016 21:42:08 +0200
+
+php-horde-turba (4.2.14-1) unstable; urgency=medium
+
+  * New upstream version 4.2.14
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 06 Apr 2016 08:48:17 +0200
+
+php-horde-turba (4.2.12-3) unstable; urgency=medium
+
+  * Fix debian/tests/control: php-sqlite -> php-sqlite3
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 20 Mar 2016 00:26:01 +0100
+
+php-horde-turba (4.2.12-2) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.7, no change
+  * Use secure Vcs-* fields
+  * Rebuild with newer pkg-php-tools for the PHP 7 transition
+  * Replace php5-* by php-* in d/tests/control
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 13 Mar 2016 20:51:22 +0100
+
+php-horde-turba (4.2.12-1) unstable; urgency=medium
+
+  * New upstream version 4.2.12
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 06 Feb 2016 22:30:58 +0100
+
+php-horde-turba (4.2.11-1) unstable; urgency=medium
+
+  * New upstream version 4.2.11
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 02 Nov 2015 07:36:07 +0100
+
+php-horde-turba (4.2.10-1) unstable; urgency=medium
+
+  * Upgaded to debhelper compat 9
+  * New upstream version 4.2.10
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 24 Oct 2015 07:51:11 +0200
+
+php-horde-turba (4.2.8-2) unstable; urgency=medium
+
+  * Added php5-sqlite depends to phpunit test
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 12 Oct 2015 08:24:31 +0200
+
+php-horde-turba (4.2.8-1) unstable; urgency=medium
+
+  * New upstream version 4.2.8
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 17 Aug 2015 20:08:56 +0200
+
+php-horde-turba (4.2.7-2) unstable; urgency=medium
+
+  * Remove XS-Testsuite header in d/control
+  * Update gbp.conf
+  * Use override_dh_link instead of dh deprecated --until/--after
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 10 Aug 2015 01:31:42 +0200
+
+php-horde-turba (4.2.7-1) unstable; urgency=medium
+
+  * New upstream version 4.2.7
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 21 Jun 2015 15:18:58 +0200
+
+php-horde-turba (4.2.6-1) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.6, no change
+  * New upstream version 4.2.6
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 05 May 2015 09:20:06 +0200
+
+php-horde-turba (4.2.2-3) unstable; urgency=medium
+
+  * Fixed DEP-8 tests, by removing "set -x"
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 11 Oct 2014 15:07:56 +0200
+
+php-horde-turba (4.2.2-2) unstable; urgency=medium
+
+  * Fixed DEP-8 tests
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 13 Sep 2014 15:41:55 +0200
+
+php-horde-turba (4.2.2-1) unstable; urgency=medium
+
+  * New upstream version 4.2.2
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 08 Sep 2014 08:37:39 +0200
+
+php-horde-turba (4.2.1-2) unstable; urgency=medium
+
+  * Update Standards-Version, no change
+  * Update Vcs-Browser to use cgit instead of gitweb
+  * Add dep-8 (automatic as-installed package testing)
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 27 Aug 2014 07:50:38 +0200
+
+php-horde-turba (4.2.1-1) unstable; urgency=medium
+
+  * New upstream version 4.2.1
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 05 Aug 2014 12:18:37 +0200
+
+php-horde-turba (4.2.0-1) unstable; urgency=medium
+
+  * New upstream version 4.2.0
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 16 Jul 2014 00:10:56 +0200
+
+php-horde-turba (4.2.0~beta1-1) unstable; urgency=medium
+
+  * New upstream version 4.2.0~beta1
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 09 Jun 2014 10:32:21 +0200
+
+php-horde-turba (4.1.4-1) unstable; urgency=medium
+
+  * New upstream version 4.1.4
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 12 Mar 2014 07:14:23 +0100
+
+php-horde-turba (4.1.3-1) unstable; urgency=low
+
+  * New upstream version 4.1.3
+
+ -- Mathieu Parent <sathieu@debian.org>  Tue, 29 Oct 2013 22:05:21 +0100
+
+php-horde-turba (4.1.2-1) unstable; urgency=low
+
+  * New upstream version 4.1.2
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 29 Aug 2013 08:06:46 +0200
+
+php-horde-turba (4.1.1-1) unstable; urgency=low
+
+  * New upstream version 4.1.1
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 11 Aug 2013 13:16:25 +0200
+
+php-horde-turba (4.1.0-1) unstable; urgency=low
+
+  * New upstream version 4.1.0
+  * Use pristine-tar
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 12 Jun 2013 22:21:46 +0200
+
+php-horde-turba (4.0.3-1) unstable; urgency=low
+
+  * New upstream version 4.0.3
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 07 Apr 2013 17:52:37 +0200
+
+php-horde-turba (4.0.2-1) unstable; urgency=low
+
+  * New upstream version 4.0.2
+
+ -- Mathieu Parent <sathieu@debian.org>  Thu, 10 Jan 2013 23:14:41 +0100
+
+php-horde-turba (4.0.1-2) unstable; urgency=low
+
+  * Add a description of Horde in long description
+  * Updated Standards-Version to 3.9.4, no changes
+  * Replace horde4 by PEAR in git reporitory path
+  * Fix Horde Homepage
+  * Fix FTBFS due to rm failure with older pkg-php-tools (Closes: #697774).
+    Thanks to Chris J Arges.
+  * Remove debian/pearrc, not needed with latest php-horde-role
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 09 Jan 2013 21:17:14 +0100
+
+php-horde-turba (4.0.1-1) unstable; urgency=low
+
+  * turba package
+  * Initial packaging (Closes: #657376)
+  * Copyright file by Soren Stoutner and Jay Barksdale
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 01 Dec 2012 11:46:30 +0100

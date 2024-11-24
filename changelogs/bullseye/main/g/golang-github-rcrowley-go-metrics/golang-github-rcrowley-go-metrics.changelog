@@ -1,0 +1,29 @@
+golang-github-rcrowley-go-metrics (0.0~git20180125.8732c61-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Christos Trochalakis ]
+  * Disable debian/watch since upstream doesn't tag releases
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Reinhard Tartler ]
+  * Fix test on !amd64, Closes: #976543
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 13 Dec 2020 22:26:02 -0500
+
+golang-github-rcrowley-go-metrics (0.0~git20180125.8732c61-2) unstable; urgency=medium
+
+  * Add Conflicts & Replaces golang-metrics-dev (Closes: #824628)
+
+ -- Mpampis Kostas <charkost.rb@gmail.com>  Mon, 12 Mar 2018 15:13:07 +0200
+
+golang-github-rcrowley-go-metrics (0.0~git20180125.8732c61-1) unstable; urgency=medium
+
+  * Initial release (Closes:  #891914)
+
+ -- Mpampis Kostas <charkost.rb@gmail.com>  Mon, 05 Mar 2018 11:42:47 +0200

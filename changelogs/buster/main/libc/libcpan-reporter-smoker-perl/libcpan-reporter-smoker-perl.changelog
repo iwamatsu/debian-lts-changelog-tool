@@ -1,0 +1,85 @@
+libcpan-reporter-smoker-perl (0.29-1+deb10u1) buster-security; urgency=medium
+
+  * Non maintainer upload by ELTS team
+  * Add salsa CI.
+  * Fix FTBFS with newer perl
+    (Closes: #1014293)
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 01 Nov 2024 15:39:45 +0000
+
+libcpan-reporter-smoker-perl (0.29-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Nuno Carvalho ]
+  * Import upstream version 0.29.
+  * debian/control: declare compliance with Debian Policy 4.1.0.
+  * Update years of upstream copyright.
+
+  [ gregor herrmann ]
+  * Switch some URLs in debian/* to HTTPS. Thanks to duck.
+
+ -- Nuno Carvalho <smash@cpan.org>  Fri, 01 Sep 2017 11:45:01 +0100
+
+libcpan-reporter-smoker-perl (0.28-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Import upstream version 0.28.
+  * Update years of upstream copyright.
+  * Bump debhelper compatibility level to 9.
+  * Drop version constraint for libtest-reporter-perl.
+    Already satisfied in unstable.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 30 Apr 2016 11:33:33 +0200
+
+libcpan-reporter-smoker-perl (0.27-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Marius Gavrilescu ]
+  * New upstream release 0.26
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Add debian/upstream/metadata
+  * Import upstream version 0.27
+  * Update filename in debian/libcpan-reporter-smoker-perl.docs.
+  * Update year of upstream copyright.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Mark package as autopkgtest-able.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 06 May 2015 20:47:21 +0200
+
+libcpan-reporter-smoker-perl (0.25-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Marius Gavrilescu ]
+  * Imported Upstream version 0.25
+
+  [ gregor herrmann ]
+  * Update list of installed upstream docs after rename.
+  * Update year of upstream copyright.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 25 Dec 2013 16:36:05 +0100
+
+libcpan-reporter-smoker-perl (0.24-1) unstable; urgency=low
+
+  * Initial Release (Closes: #713910).
+
+ -- Marius Gavrilescu <marius@ieval.ro>  Mon, 24 Jun 2013 10:18:32 +0300

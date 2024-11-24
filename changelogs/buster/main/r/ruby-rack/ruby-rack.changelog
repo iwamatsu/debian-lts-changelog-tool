@@ -1,0 +1,333 @@
+ruby-rack (2.0.6-3+deb10u4) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-25126: ReDoS in Content Type header parsing
+  * CVE-2024-26141: Reject Range headers which are too large
+  * CVE-2024-26146: ReDoS in Accept header parsing
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 28 Apr 2024 23:04:31 +0300
+
+ruby-rack (2.0.6-3+deb10u3) buster-security; urgency=high
+
+  [ Scarlett Moore ]
+  * Non-maintainer upload by the LTS team.
+  * Add patch to limit all multipart parts, not just files.
+    (Fixes: CVE-2023-27530)
+  * Add patch to split headers on commas, then strip the strings in
+    order to avoid ReDoS issues.
+    (Fixes:CVE-2023-27539)
+
+   [ Utkarsh Gupta ]
+   * Supervise the upload.
+   * Refresh patches, fix d/ch, and fix patch headers.
+
+ -- Scarlett Moore <sgmoore@debian.org>  Tue, 28 Mar 2023 07:01:58 -0700
+
+ruby-rack (2.0.6-3+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team. (Closes: #1029832)
+  * Add patch to use Dir.entries instead of Dir[glob] to prevent
+    user-specified glob metacharactersfix. (Fixes: CVE-2020-8161)
+  * When parsing cookies, only decode the values. Patch utils to fix
+    cookie parsing. (Fixes: CVE-2020-8184) (Closes: #963477)
+  * Add patch to fix ReDoS in Rack::Utils.get_byte_ranges.
+    (Fixes: CVE-2022-44570)
+  * Add patch to fix ReDoS vulnerability in multipart parser.
+    (Fixes: CVE-2022-44571)
+  * Add patch to forbid control characters in attributes.
+    (Fixes: CVE-2022-44572)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Mon, 30 Jan 2023 05:46:25 +0530
+
+ruby-rack (2.0.6-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * CVE-2022-30122: Prevent a Denial of Service (DoS) vulnerability in the HTTP
+    multipart parsing.
+  * CVE-2022-30123: Prevent a potential shell escape sequence injection
+    vulnerability caused through the logging system.
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 27 Aug 2022 12:16:16 +0530
+
+ruby-rack (2.0.6-3) unstable; urgency=medium
+
+  * Team upload.
+  * add Breaks: ruby-sinatra (<< 2), as ruby-sinatra 1.x does not work with
+    ruby-rack 2.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 11 Jan 2019 10:11:26 -0300
+
+ruby-rack (2.0.6-2) unstable; urgency=medium
+
+  * Team upload
+  * Re-upload to unstable 
+
+ -- Sruthi Chandran <srud@disroot.org>  Thu, 03 Jan 2019 21:42:53 +0530
+
+ruby-rack (2.0.6-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Remove CVE-2018-16471.patch already applied upstream
+
+ -- Sruthi Chandran <srud@disroot.org>  Mon, 24 Dec 2018 22:11:29 +0530
+
+ruby-rack (2.0.5-2) experimental; urgency=medium
+
+  * CVE-2018-16471: Prevent a possible XSS vulnerability where a malicious
+    request could impact the HTTP/HTTPS scheme returned to the underlying
+    application. (Closes: #913005)
+  * debian/control:
+    - Add myself to Uploaders.
+    - Bump Standards-Version to 4.2.1.
+    - wrap-and-sort -sa.
+  * Drop trailing whitespace in debian/changelog.
+  * Use HTTPS URI in debian/copyright.
+
+ -- Chris Lamb <lamby@debian.org>  Wed, 21 Nov 2018 14:58:29 +0100
+
+ruby-rack (2.0.5-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Drop 0001-Fix-Params_Depth.patch (applied upstream)
+
+  [ Sruthi Chandran ]
+  * New upstream release
+
+ -- Sruthi Chandran <srud@disroot.org>  Tue, 01 May 2018 17:10:47 +0530
+
+ruby-rack (1.6.4-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * Use https:// in Vcs-* fields
+  * Run wrap-and-sort on packaging files
+
+  [ Christian Hofstaedtler ]
+  * Remove uninstallable ruby-memcache-client from test dependencies
+  * Bump Standards-Version to 3.9.8
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 13 Jul 2016 01:59:31 +0200
+
+ruby-rack (1.6.4-3) unstable; urgency=medium
+
+  * Team upload
+  * Bump compat. version to 9
+  * Update Debian packaging using dh-make-ruby
+  * d/control:
+      Update Vcs-* fields (switch to cgit and https everywhere)
+      Bump Standards-Version to 3.9.7 (no changes)
+      Move to ruby-dalli (memcache-client is deprecated)
+        ROM for ruby-memcache-client
+        https://github.com/rack/rack/issues/1025
+      Remove librack-ruby* relations (those packages are long gone)
+
+ -- Sebastien Badia <seb@sebian.fr>  Thu, 03 Mar 2016 16:24:53 -0300
+
+ruby-rack (1.6.4-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 12 Dec 2015 16:08:31 -0200
+
+ruby-rack (1.6.4-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Refresh patch (part merged upstream)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 07 Aug 2015 01:16:26 +0530
+
+ruby-rack (1.5.2-4) unstable; urgency=medium
+
+  * Add patch: Fix upstream Issue 631
+    - uninitialized constant Rack::Response::BodyProxy
+  * Create cherry-picked patch for Security Fix (Closes: #789311)
+    - CVE-2015-3225: 1-4-deep_params.patch
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 29 Jul 2015 17:32:29 +0900
+
+ruby-rack (1.5.2-3) unstable; urgency=medium
+
+  * add myself to Uploaders:
+  * debian/ruby-tests.rake: run all tests instead of a subset of them
+  * debian/tests/control: add a gem2deb-test-runner test
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 17 Oct 2014 09:41:28 -0300
+
+ruby-rack (1.5.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rebuild with recent gem2deb to make package visible to Rubygems on all
+    Ruby interpreters
+  * Drop transitional packages
+  * Add autopkgtest smoke test
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 24 Jul 2014 19:24:55 -0300
+
+ruby-rack (1.5.2-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * debian/control: remove obsolete DM-Upload-Allowed flag
+  * use canonical URI in Vcs-* fields
+
+  [ Christian Hofstaedtler ]
+  * New upstream release.
+  * Removed all patches, already applied upstream.
+
+ -- Christian Hofstaedtler <christian@hofstaedtler.name>  Mon, 03 Jun 2013 15:56:09 +0200
+
+ruby-rack (1.4.1-2.1) unstable; urgency=high
+
+  [ KURASHIKI Satoru ]
+  * Non-maintainer upload.
+  * Create cherry-picked patches for Security Fix (Closes: #700173 #700226).
+    - CVE-2013-0262: 0004-Prevent-symlink-path-traversals.patch
+    - CVE-2013-0263: 0005-Use-secure_compare-for-hmac-comparison.patch
+
+  [ Youhei SASAKI ]
+  * Create cherry-picked patches for Security Fix (Closes: #698440).
+    - CVE-2012-6109: 0001-Fix-parsing-performance-for-unquoted-filenames.patch
+    - CVE-2013-0183: 0002-multipart-parser-avoid-unbounded-gets-method.patch
+    - CVE-2013-0184: 0003-Reimplement-auth-scheme-fix.patch
+
+ -- KURASHIKI Satoru <lurdan@gmail.com>  Wed, 20 Feb 2013 20:56:31 +0900
+
+ruby-rack (1.4.1-2) unstable; urgency=low
+
+  * Bump build dependency on gem2deb to >= 0.3.0~
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 25 Jun 2012 15:07:51 -0300
+
+ruby-rack (1.4.1-1) unstable; urgency=low
+
+  * New Upstream version 1.4.1
+  * Bump standard version: 3.9.3
+  * Add Build-Depends: rake, bacon, ruby-memcache-client, thin
+  * Add d/s/local-options: Update patch handling
+  * Update ruby-tests.rb to ruby-tests.rake: running full test
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Wed, 07 Mar 2012 01:00:16 +0900
+
+ruby-rack (1.4.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #653963).
+
+ -- Paul van Tilburg <paulvt@debian.org>  Tue, 03 Jan 2012 22:39:13 +0100
+
+ruby-rack (1.3.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix my email address.
+  * Fix priority of transitional packages.
+  * TESTS ARE DISABLED: many dependencies required for tests are not
+    packaged yet.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Wed, 21 Dec 2011 10:52:37 +0100
+
+ruby-rack (1.3.1-1) unstable; urgency=low
+
+  * New upstream release: 1.3.1
+  * Bump Standard version: 3.9.2
+  * Add me to Uploaders
+  * Add ruby-bacon to Build-Depends
+  * Add manpage for rackup Closes: #606910
+    - Thanks to Glido Fiorito <fiorito.g@gmail.com>
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 26 Jul 2011 00:57:23 +0900
+
+ruby-rack (1.2.2-2) unstable; urgency=low
+
+  * Add transitional packages from librack-ruby.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Tue, 26 Apr 2011 16:34:08 +0200
+
+ruby-rack (1.2.2-1) unstable; urgency=low
+
+  * Switch to gem2deb-based packaging. Rename source and binary package.
+  * libopenssl-ruby was merged in the main ruby package. Closes: #574960
+    Closes: #592416.
+  * new upstream release.
+  * TESTS ARE DISABLED: many dependencies required for tests are not
+    packaged yet.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Tue, 26 Apr 2011 15:44:15 +0200
+
+librack-ruby (1.1.0-4) unstable; urgency=low
+
+  * Team upload.
+  * This package is now maintained within the Debian/Ruby Extras team.
+  * debian/control:
+    - Added the team (and myself) to the uploaders.
+    - Updated the Vcs-* fields.
+  * Version the dependency between librack-ruby and librack-ruby1.8.
+    Closes: #583553
+  * Rename the 1.9.1 binary to rackup1.9.1
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sat, 18 Sep 2010 08:31:46 +0200
+
+librack-ruby (1.1.0-3) unstable; urgency=low
+
+  * adopt package
+  * add Conflicts/Replaces from librack-ruby1.9.1 to librack-ruby1.9
+    because of /usr/bin/rackup1.9 (Closes: #570435)
+
+ -- Ryan Niebur <ryan@debian.org>  Sat, 13 Mar 2010 12:14:56 -0800
+
+librack-ruby (1.1.0-2) unstable; urgency=low
+
+  * Move to ruby1.9.1 (Closes: #569884).
+  * Removed unused lintian override.
+  * Bumped up Standards-Version.
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 15 Feb 2010 19:42:49 +0100
+
+librack-ruby (1.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 08 Jan 2010 18:50:25 +0100
+
+librack-ruby (1.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped up Standards revision.
+  * Moved to CDBS.
+  * Lintian cleanups.
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 21 Oct 2009 11:36:29 +0200
+
+librack-ruby (1.0.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added debian/watch file.
+  * Bumped up Standards version to 3.8.1.
+  * BUmped up debhelper compat level to 6.
+  * Moved to section "ruby".
+  * Added proper versioned dependency on debhelper (for dh_lintian).
+  * Updated short description for librack-ruby1.8.
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 28 Apr 2009 02:14:00 -0700
+
+librack-ruby (0.9.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #516855).
+
+ -- Sebastien Delafond <seb@debian.org>  Mon, 23 Feb 2009 19:29:20 -0800
+
+librack-ruby (0.3.0-2) unstable; urgency=low
+
+  * Corrected short description for librack-ruby1.8
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 07 May 2008 14:13:26 -0700
+
+librack-ruby (0.3.0-1) unstable; urgency=low
+
+  * Initial Release (Closes: #480035).
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 07 May 2008 11:28:30 -0700

@@ -1,0 +1,277 @@
+python-mechanize (1:0.2.5-3+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2021-32837: ReDoS (Regular Expression Denial of Service) when
+    parsing a malformed auth header.
+  * Tests: Backport upstream commits to use twisted.web (twisted.web2 has been
+    discontinued) and fix pull parser tests.  This fixes DEP-8 tests for
+    buster.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Tue, 20 Jun 2023 15:40:20 +0200
+
+python-mechanize (1:0.2.5-3) unstable; urgency=low
+
+  * debian/control:
+    + Depend on python-mechanize >= 0.2.0 for python-clientform to make
+      sure that the former is upgraded even when only the latter is upgraded.
+      Closes: #684616.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Mon, 27 Aug 2012 15:18:27 +0900
+
+python-mechanize (1:0.2.5-2) unstable; urgency=low
+
+  * Following the merge of ClientForm into mechanize, add a transitional
+    dummy package to replace python-clientform.
+    + Add debian/NEWS for updating source code based on ClientForm.
+    + Add epoch as deprecated version of clientform is greater than mechanize.
+  * debian/control:
+    + Bump Standards-Version to 3.9.3.
+      - debian/copyright: Update Format URL following DEP-5 release.
+    + Add Vcs-Browser field.
+  * Add debian/source/options to ignore changes in *.egg-info directory
+    otherwise building twice fails.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Tue, 13 Mar 2012 10:19:55 +0900
+
+python-mechanize (0.2.5-1) unstable; urgency=low
+
+  [ Arnaud Fontaine ]
+  * Convert debian/changelog to DEP5 format and add missing licenses.
+  * Wrap Build-Depends and Uploaders control fields.
+  * Add myself as Uploaders.
+
+  [ Brian Sutherland ]
+  * New upstream release (Closes: #595928,#465206)
+  * Fix watch file to point at pypi
+  * Change e-mail address to brian@vanguardistas.net.
+  * Use Homepage header to point to mechanize homepage rather than including
+    it in the long description. Closes: #615362
+  * Remove dependency on python-clientform, it's included in mechanize now and
+    deprecated as an external project.
+  * Switch to dpkg-source 3.0 (quilt) format from dpatch.
+  * Convert from python-central to debhelper 7 and dh_python2 (Closes: #617013)
+  * Add debian/tests
+
+ -- Arnaud Fontaine <arnau@debian.org>  Mon, 05 Sep 2011 12:28:25 +0900
+
+python-mechanize (0.1.11-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Be less selective when renaming *.egg-info files (closes: #552912).
+
+ -- Jakub Wilk <ubanus@users.sf.net>  Mon, 21 Dec 2009 20:35:08 +0100
+
+python-mechanize (0.1.11-1) unstable; urgency=low
+
+  * New upstream release, uploaded to unstable.
+    - Closes: #518945.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 22 Sep 2009 00:14:06 +0200
+
+python-mechanize (0.1.11-0ubuntu1) jaunty; urgency=low
+
+  [ Ken VanDine ]
+  * New upstream release (LP: #337918)
+    - Fix quadratic performance in number of .read() calls (and add an
+      automated performance test).
+    - Add support for Python 2.6: Raise URLError on file: URL errors,
+      not IOError (port of upstream urllib2 fix).  Add support for
+      Python 2.6's per-connection timeouts: Add timeout arguments to
+      urlopen(), Request constructor, .open(), and .open_novisit().
+    - Drop support for Python 2.3
+    - Add Content-length header to Request object (httplib bug that
+      prevented doing that was fixed in Python 2.4).  There's no
+      change is what is actually sent over the wire here, just in what
+      headers get added to the Request object.
+    - Fix AttributeError on .retrieve() with a Request (as opposed to
+      URL string) argument
+    - Don't change CookieJar state in .make_cookies().
+    - Fix AttributeError in case where .make_cookies() or
+      .cookies_for_request() is called before other methods like
+      .extract_cookies() or .make_cookie_header()
+    - Fixes affecting version cookie-attribute
+      (http://bugs.python.org/issue3924).
+    - Silence module logging's "no handlers could be found for logger
+      mechanize" warning in a way that doesn't clobber attempts to set
+      log level sometimes
+    - Don't use private attribute of request in request upgrade
+      handler (what was I thinking??)
+    - Don't call setup() on import of setup.py
+    - Add new public function effective_request_host
+    - Add .get_policy() method to CookieJar
+    - Add method CookieJar.cookies_for_request()
+    - Fix documented interface required of requests and responses (and
+      add some tests for this!)
+    - Allow either .is_unverifiable() or .unverifiable on request
+      objects (preferring the former)
+    - Note that there's a new functional test for digest auth, which
+      fails when run against the sourceforge site (which is the
+      default).  It looks like this reflects the fact that digest auth
+      has been fairly broken since it was introduced in urllib2.  I
+      don't plan to fix this myself.
+    - Fix ImportError if sqlite3 not available
+    - Fix a couple of functional tests not to wait 5 seconds each
+    - Close sockets.  This only affects Python 2.5 (and later) -
+      earlier versions of Python were unaffected.  See
+      http://bugs.python.org/issue1627441
+    - Make title parsing follow Firefox behaviour wrt child
+      elements (previously the behaviour differed between Factory and
+      RobustFactory).
+    - Fix BeautifulSoup RobustLinksFactory (hence RobustFactory) link
+      text parsing for case of link text containing tags (Titus Brown)
+    - Fix issue where more tags after <title> caused default parser to
+      raise an exception
+    - Handle missing cookie max-age value.  Previously, a warning was
+      emitted in this case.
+    - Fix thoroughly broken digest auth (still need functional
+      test!) (trebor74hr@...)
+    - Handle cookies containing embedded tabs in mozilla format files
+    - Remove an assertion about mozilla format cookies file
+      contents (raise LoadError instead)
+    - Fix MechanizeRobotFileParser.set_opener()
+    - Fix selection of global form using .select_form() (Titus Brown)
+    - Log skipped Refreshes
+    - Stop tests from clobbering files that happen to be lying around
+      in cwd (!)
+    - Use SO_REUSEADDR for local test server.
+    - Raise exception if local test server fails to start.
+    - Tests no longer (accidentally) depend on third-party coverage
+      module
+    - Add convenience method Browser.open_local_file(filename)
+    - Add experimental support for Firefox 3 cookie jars
+      ("cookies.sqlite").  Requires Python 2.5
+    - Fix a _gzip.py NameError (gzip support is experimental)
+  * debian/patches/drop-Gopher.dpatch:
+      * removed, fixed upstream
+
+  [ Martin Pitt ]
+  * debian/control: Fix XS-Python-Version to only build for Python >= 2.5.
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 09 Mar 2009 16:34:31 -0400
+
+python-mechanize (0.1.7b-3ubuntu1) jaunty; urgency=low
+
+  * Add drop-Gopher.dpatch: Drop GopherError and GopherHandler, since
+    Python 2.6's version does not define that any more. (LP: #336225)
+  * debian/rules: Use glob instead of hardcoded site-packages/, python2.6 uses
+    dist-packages now.
+  * debian/rules: Supply --install-layout=deb.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Sun, 01 Mar 2009 18:17:43 +0100
+
+python-mechanize (0.1.7b-3) unstable; urgency=low
+
+  * Rebuild to move files into /usr/share/pyshared. Closes: #490495.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 12 Jul 2008 13:33:14 +0200
+
+python-mechanize (0.1.7b-2) unstable; urgency=low
+
+  * debian/patches/mechanize_seek.dpatch: applied a patch from the twill
+    maintainer to add file.seek(0)  because ``file'' position may not be at
+    the beginning; thanks Arnaud Fontaine. (Closes: #456944)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Tue, 18 Dec 2007 19:15:17 +0100
+
+python-mechanize (0.1.7b-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #446523)
+  * Ship functional tests in examples. (Closes: #449551)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Tue, 18 Dec 2007 14:23:11 +0100
+
+python-mechanize (0.1.6b-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #418457)
+  * Drop obsolete patch to mechanize/_html.py, mechanize/_util.py and
+    mechanize/_mechanize.py.
+  * Re-generate README.txt using "lynx -dump" as upstream forget to do it.
+  * Use dh_installexamples to install examples instead of dh_installdocs.
+  * Remove dh_python from debian/rules.
+  * Update python-clientform dependency.
+  * Update email address in Uploaders.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Tue, 10 Apr 2007 01:34:43 +0200
+
+python-mechanize (0.1.2b-2) unstable; urgency=low
+
+  [ Brian Sutherland ]
+  * Remove unused python-clientcookie and python-pullparser dependencies
+    as they are included in this version.
+  * Add these files to installed documentation:
+        GeneralFAQ.html
+        README.html
+        README.txt
+        doc.html
+        0.1-changes.txt
+        examples
+
+  [ Jérémy Bobbio ]
+  * Move python-setuptools to Build-Depends. (Closes: #392628)
+  * Add XS-Vcs-Svn field to debian/control.
+
+ -- Jérémy Bobbio <jeremy.bobbio@etu.upmc.fr>  Sat, 14 Oct 2006 04:32:09 +0200
+
+python-mechanize (0.1.2b-1) unstable; urgency=low
+
+  * New upstream release, patched to be compatible with Zope 3.3.0.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Fri, 29 Sep 2006 14:40:53 +0200
+
+python-mechanize (0.0.11a-3) unstable; urgency=low
+
+  * Update to new python policy using python-central (Closes: 373327)
+  * Revert debian specific patch and build with setuptools.
+
+ -- Brian Sutherland <jinty@web.de>  Wed, 14 Jun 2006 17:34:14 +0200
+
+python-mechanize (0.0.11a-2) unstable; urgency=low
+
+  [Brian Sutherland]
+  * New upstream version (closes: #334241).
+  * Added watch file.
+  * Upstream changed setup.py to use easy_setup:
+    - Remove the build deps clientform, clientcookie, pullparser. Hooray!
+  * Patch the setup.py to use distutils instead of setuptools.
+    (Temporary workaround until setuptools supports
+    --single-version-externally-managed.)
+  * Bump dependencies in to the ones mentioned in setup.py.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Fri,  3 Feb 2006 10:58:35 +0000
+
+python-mechanize (0.0.11a-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Fabio Tranchitella <kobold@debian.org>  Wed, 18 Jan 2006 15:37:33 +0000
+
+python-mechanize (0.0.11a-1) unstable; urgency=low
+
+  * New upstream version (closes: #334241).
+  * Added watch file.
+  * Upstream changed setup.py to use easy_setup:
+    - Remove the build deps clientform, clientcookie, pullparser. Hooray!
+  * Patch the setup.py to use distutils instead of setuptools.
+    (Temporary workaround until setuptools supports
+    --single-version-externally-managed.)
+  * Bump dependencies in to the ones mentioned in setup.py.
+
+ -- Brian Sutherland <jinty@web.de>  Fri, 30 Dec 2005 12:33:16 +0100
+
+python-mechanize (0.0.9a-2) unstable; urgency=low
+
+  * Build for python2.4 as well.
+
+ -- Brian Sutherland <jinty@web.de>  Tue, 27 Dec 2005 19:09:00 +0100
+
+python-mechanize (0.0.9a-1) unstable; urgency=low
+
+  * Initial packaging.
+
+ -- Brian Sutherland <jinty@web.de>  Mon, 24 Oct 2005 12:52:25 +0200
+
+python-skeleton (0.0.0.0-1) unstable; urgency=low
+
+  * Initial creation of skeleton python packaging dir.
+
+ -- Brian Sutherland <jinty@web.de>  Sat,  6 Aug 2005 02:14:33 +0100

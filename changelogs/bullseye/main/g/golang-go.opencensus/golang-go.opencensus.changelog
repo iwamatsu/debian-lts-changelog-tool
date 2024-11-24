@@ -1,0 +1,53 @@
+golang-go.opencensus (0.22.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * debian patch skip_flaky_test.patch skips Test_Worker_MultiExport
+    in stats/view. The test is flaky, occasionally failing.
+    See Debian Bug#988250, upstream Issue#1259.
+
+ -- Drew Parsons <dparsons@debian.org>  Fri, 14 May 2021 23:11:30 +0200
+
+golang-go.opencensus (0.22.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 4.5.0
+  * debhelper compatibility level 13
+  * Depends: golang-github-golang-groupcache-dev
+    to provide lru instead of golang-github-hashicorp-golang-lru-dev
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 30 Sep 2020 11:43:15 +0800
+
+golang-go.opencensus (0.22.0-1) unstable; urgency=medium
+
+  * New upstream version 0.22.0
+  * Apply "cme fix dpkg" fixes:
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Set DH_GOLANG_EXCLUDES_ALL to false in debian/rules to maintain the
+    same behaviour with debhelper compatibility 11 to 12
+  * Fix source package name filenamemangle field of debian/watch
+  * Add myself to the list of Uploaders
+  * Remove Debian patches as they have been accepted upstream 
+    or are no longer relevant after the move of exporters out from core,
+    see https://github.com/census-instrumentation/opencensus-go/pull/1118
+  * Update dependencies according to go.mod
+  * Update copyright years and remove unused Files-Excluded in debian/copyright
+  * Remove obsolete exporter directories from DH_GOLANG_EXCLUDES in debian/rules
+  * Disable test GET and POST calls to https://example.com/
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Jul 2019 06:07:59 -0600
+
+golang-go.opencensus (0.19.0-2) unstable; urgency=medium
+
+  * Increase the timeout on TestHandlerImplementsHTTPCloseNotify test to make
+    it less flaky. (Closes: #921575)
+  * Update copyright years
+
+ -- Stephen Gelman <ssgelm@debian.org>  Thu, 07 Feb 2019 00:15:03 -0600
+
+golang-go.opencensus (0.19.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #920783)
+
+ -- Stephen Gelman <ssgelm@debian.org>  Mon, 04 Feb 2019 01:37:45 -0600

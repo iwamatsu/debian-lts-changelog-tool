@@ -1,0 +1,95 @@
+golang-github-opencontainers-selinux (1.8.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 1.8.0
+  * Drop build tag selinux
+  * Set section to golang
+  * Update gitlab-ci.yml
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Wed, 06 Jan 2021 22:11:06 +0700
+
+golang-github-opencontainers-selinux (1.6.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.6.0
+  * Bump debhelper-compat to 13
+  * Add missing Depends when building with selinux tags
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 17 Aug 2020 23:10:54 +0800
+
+golang-github-opencontainers-selinux (1.5.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * upload to unstable.
+
+ -- Reinhard Tartler <siretart@tauware.de>  Thu, 09 Jul 2020 07:33:22 -0400
+
+golang-github-opencontainers-selinux (1.5.1-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Reinhard Tartler ]
+  * New upstream version 1.5.1 (Closes: #958217)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 19 Apr 2020 17:28:14 -0400
+
+golang-github-opencontainers-selinux (1.3.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.3.1
+  * Exclude vendor dir from upstream tarball
+  * Switch to debhelper-compat syntax
+  * Add Rules-Requires-Root
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Remove patches applied by upstream
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 29 Jan 2020 00:45:25 +0800
+
+golang-github-opencontainers-selinux (1.3.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Backport upstream commit for CVE-2019-16884 (Closes: #942027).
+  * Remove unused lintian override.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 10 Oct 2019 02:01:26 +0800
+
+golang-github-opencontainers-selinux (1.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 09 Sep 2019 15:07:59 +1000
+
+golang-github-opencontainers-selinux (1.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 07 Jul 2019 17:17:48 -0400
+
+golang-github-opencontainers-selinux (1.0.0-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * Standards-Version: 4.1.4; Priority: optional.
+
+  [ Reinhard Tartler ]
+  * New upstream version (Closes: #901745).
+
+ -- Reinhard Tartler <siretart@tauware.de>  Fri, 11 Jan 2019 16:53:23 -0500
+
+golang-github-opencontainers-selinux (1.0.0~rc1+git20170621.5.4a2974b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #872440)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Thu, 17 Aug 2017 18:32:33 +0200

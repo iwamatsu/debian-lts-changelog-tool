@@ -1,0 +1,50 @@
+golang-github-docker-go-events (0.0~git20190806.e31b211-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Arnaud Rebillout ]
+  * Set minimal requirement for golang-github-sirupsen-logrus-dev.
+
+  [ Shengjing Zhu ]
+  * Use uscan git mode to watch HEAD version
+  * New upstream version 0.0~git20190806.e31b211
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update debhelper compat to 12
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add Rules-Requires-Root
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Apr 2020 11:55:19 +0800
+
+golang-github-docker-go-events (0.0~git20170721.0.9461782-2) UNRELEASED; urgency=medium
+
+  * Point Vcs-* urls to salsa.debian.org.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 02 Apr 2018 15:56:25 -0400
+
+golang-github-docker-go-events (0.0~git20170721.0.9461782-1) unstable; urgency=medium
+
+  * Add watch file
+  * Set priority to optional
+  * Bump dh-helper required version
+  * Bump standards version
+  * Bump compat
+  * Add testuite autopkgtest-pkg-go
+  * Update copyright
+  * Add myself to uploaders and copyright
+  * New upstream version 0.0~git20170721.0.9461782
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Thu, 22 Feb 2018 19:17:55 +0700
+
+golang-github-docker-go-events (0.0~git20160331.0.882f161-2) unstable; urgency=medium
+
+  * Team upload
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Wed, 09 Aug 2017 17:18:40 +0300
+
+golang-github-docker-go-events (0.0~git20160331.0.882f161-1) unstable; urgency=medium
+
+  * Initial release (Closes: #822289)
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 18 Nov 2016 13:40:01 +1100

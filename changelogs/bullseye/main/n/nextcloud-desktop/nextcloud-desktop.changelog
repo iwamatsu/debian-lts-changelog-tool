@@ -1,0 +1,182 @@
+nextcloud-desktop (3.1.1-2+deb11u1) bullseye-security; urgency=high
+
+  * Add backported patch to fix CVE-2021-22895 (Closes: #989846).
+  * Add backported patch to fix CVE-2021-32728 with small modifications to
+    match for Debian.
+
+ -- Sandro Knauß <hefee@debian.org>  Sun, 22 Aug 2021 19:59:32 +0200
+
+nextcloud-desktop (3.1.1-2) unstable; urgency=medium
+
+  * Add two upstream patches to fix CVE-2021-22879 (Closes: #987274):
+    013f3cea70acfe7b701cb73c93744d5ff5c0c213
+    e97b7d8a25d3ef0d8c52b6399f304a42a5d4f212
+    into Validate-sensitive-URLs-to-onle-allow-http-s-schemes.patch
+    with small modifications to apply to the version in Debian
+
+ -- Sandro Knauß <hefee@debian.org>  Sat, 08 May 2021 19:39:35 +0200
+
+nextcloud-desktop (3.1.1-1) unstable; urgency=medium
+
+  [ Christian Göttsche ]
+  * New upstream version 3.1.1
+  * Refresh patches and refactor version patch
+  * Add patch to drop Qt5::GuiPrivate dependency
+  * Ignore deprecated-declarations warnings
+  * Update standards version to 4.5.1, no changes needed.
+  * Fix misspelling
+  * Please blhc
+
+  [ Sandro Knauß ]
+  * Disable updater via CMake BUILD_UPDATER and not via patch.
+  * Rename patches to have a clear order.
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 19 Jan 2021 14:56:40 +0100
+
+nextcloud-desktop (3.0.1-3) unstable; urgency=medium
+
+  * Fix typo: qml-module-qtqml-modules2 -> qml-module-qtqml-models2.
+    (Closes: #970900)
+
+ -- Sandro Knauß <hefee@debian.org>  Sat, 26 Sep 2020 13:18:40 +0200
+
+nextcloud-desktop (3.0.1-2) unstable; urgency=medium
+
+  * Add missing qml dependencies. (Closes: #969576)
+  * fix typo
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 24 Sep 2020 21:22:24 +0200
+
+nextcloud-desktop (3.0.1-1) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * New upstream release (Closes: #968240).
+  * Use dh-sequence-addon to simplify rules.
+  * Remove upstream applied patch.
+  * Update patches.
+  * update copyright to reflect changes in 3.0.1.
+  * Update lintian-overrides
+  * Use jdupes to remove duplicates in doc package.
+
+  [ Christian Göttsche ]
+  * Add libqt5svg5-dev and qtquickcontrols2-5-dev to build-dependencies
+  * Adjust .desktop installation name
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 02 Sep 2020 15:27:42 +0200
+
+nextcloud-desktop (2.6.4-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #955303).
+  * Update patch hunks.
+  * Update patch 0004-sane-cmake.patch for new upstream version.
+  * Update renamed lintian tag names in lintian overrides.
+  * Set upstream metadata fields: Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+  * Bump to dephelper 13.
+  * delete .buildinfo after dh_sphinxdoc and not inside dh_missing.
+  * Remove dh-python3 from build-depdends.
+  * Add Built-Using: ${sphinxdoc:Built-Using} to the document package.
+
+ -- Sandro Knauß <hefee@debian.org>  Mon, 04 May 2020 00:11:20 +0200
+
+nextcloud-desktop (2.6.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove upstream applied patches.
+  * Update patch hunks.
+  * Update 0004-sane-cmake.patch for 2.6.2.
+  * Upstream actually ships gz and not xz tarballs.
+  * Add Rules-Requires-Root: no.
+  * Add upstream metadata file.
+
+ -- Sandro Knauß <hefee@debian.org>  Sun, 12 Jan 2020 12:28:23 +0100
+
+nextcloud-desktop (2.6.1-3) experimental; urgency=medium
+
+  * Use python3-caja instead of python-caja (Closes: #945674).
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 17 Dec 2019 22:28:22 +0100
+
+nextcloud-desktop (2.6.1-2) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * Add upstream patch upstream_Fix_remote_wipe_keychain_storage.patch
+    (Closes: #946220):
+    Fix gnome-keyring-daemon swamping due to permanent rewrite of remote
+    wipe password.
+
+ -- Sandro Knauß <hefee@debian.org>  Sat, 07 Dec 2019 17:10:33 +0100
+
+nextcloud-desktop (2.6.1-1) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * Update depdends from python-natuilus -> python3-nautilus. (Closes: #942776)
+
+  [ Alf Gaida ]
+  * New upstream version 2.6.1
+  * removed 0004-disable-git-hash-display.patch - will be superseeded
+  * Make upstream cmake a bit more sane, introducing external version number
+  * Fixed FTBFS in tests because of a wrong include
+  * Fixed debian/rules - use newly instroduced EXTERNAL_VERSION
+  * Fixed debian/watch - replaced template with package name
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 17 Nov 2019 20:35:13 +0100
+
+nextcloud-desktop (2.6.0-1) unstable; urgency=medium
+
+  [ Alf Gaida ]
+  * New upstream release
+  * Added myself as uploader
+  * Added build dependency libcloudproviders-dev (Closes: #941577)
+  * Added some build dependencies for libcloudproviders:
+    - appstream, needed for libcloudproviders tests
+    - libdbus-1-dev
+    - pkg-config
+  * Added build dependency texlive-latex-base to silence cmake a bit more
+  * Added gbp.conf and some comments in README.source
+  * Switched dh_missing to --fail-missing and installed or removed the
+    missed files
+
+  [ Sandro Knauß ]
+  * Update copyright file
+  * Bump Standards version to 4.4.1 (no changes needed).
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 03 Oct 2019 15:12:56 +0200
+
+nextcloud-desktop (2.5.3-1) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * New upstream release.
+  * Make nextcloud-desktop-cmd depend on nextcloud-desktop-common.
+    Thanks to Calogero Lo Leggio (Closes: #932108)
+  * Remove upstream applied patches.
+  * Update copyright file.
+  * Bump to Debhelper-compat 12.
+  * Bump Standards_Version to 4.4.0.
+  * Remove useless comment
+  * Fix wrong path in copyright file.
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 29 Aug 2019 20:15:33 +0200
+
+nextcloud-desktop (2.5.1-3) unstable; urgency=medium
+
+  * Fix "Subfolders of moved folders not synced" (Closes: #929079)
+    Added 0005-Fixed-Issue-1000-Subfolders-of-moved-folders-not-syn.patch
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 16 May 2019 16:14:50 +0200
+
+nextcloud-desktop (2.5.1-2) unstable; urgency=medium
+
+  [ Adrian Heine ]
+  * Fix VCS urls
+
+  [ Louis-Philippe Véronneau ]
+  * Add man page (Closes: #921344)
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 12 Feb 2019 23:54:02 +0100
+
+nextcloud-desktop (2.5.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #847613)
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 15 Jan 2019 22:32:03 +0100

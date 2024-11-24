@@ -1,0 +1,145 @@
+neomutt (20180716+dfsg.1-1+deb10u1) buster-security; urgency=high
+
+  * debian/patches:
+    + security/CVE-2020-14093.patch: handle the relevant CVE by removing a
+      potential MITM attack with IMAP.
+    + security/handle-startts.patch: fixes a not yet published CVE where the
+      socket was not completely cleared after STARTTLS
+
+ -- Antonio Radici <antonio@debian.org>  Sat, 20 Jun 2020 07:42:44 +0200
+
+neomutt (20180716+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Important security updates for POP and IMAP users.
+
+ -- Antonio Radici <antonio@debian.org>  Wed, 18 Jul 2018 22:15:56 +0100
+
+neomutt (20180622+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches: all patches refreshed
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 08 Jul 2018 07:21:03 +0100
+
+neomutt (20180512+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches: all patches refreshed
+  * debian/rules: remove --enable-fcntl not supported anymore.
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 27 May 2018 16:05:40 +0100
+
+neomutt (20180323+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches:
+    + dropped all patches in neomutt-devel/, they are upstream
+  * debian/rules:
+    + set EXTRA_CFLAGS_FOR_BUILD and EXTRA_LDFLAGS_FOR_BUILD to build doc/
+      properly.
+    + explicitly set mandir until I figure out the autosetup bug that does
+      not export ${prefix}.
+
+ -- Antonio Radici <antonio@debian.org>  Sat, 24 Mar 2018 08:45:38 +0000
+
+neomutt (20180223+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control:
+    + Alioth deprecation: changed mailing list to neomutt@packages.debian.org
+    + Changed VCS-* fields as we moved to salsa.debian.org
+    + Add missing libxml2-utils to build-dep for xmlcatalog dependency.
+    + Standards-Version upgraded to 4.1.3, no changes required.
+  * debian/patches:
+    + All patches refreshed
+    + Added neomutt-devel/0006-default-setlocale-to-C.patch to deal with a
+      test failing due to missing locale.
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 04 Mar 2018 14:59:49 +0000
+
+neomutt (20171215+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream release, fixes a couple of bugs.
+  * debian/patches:
+    + removed the previous neomutt-devel patch
+    + removed debian-specific/566076-build_doc_adjustments.patch as we are now
+      using autosetup.
+
+ -- Antonio Radici <antonio@debian.org>  Fri, 15 Dec 2017 22:21:32 +0000
+
+neomutt (20171208+dfsg.1-2) unstable; urgency=medium
+
+  * debian/patches:
+    + neomutt-devel/884324-fix-write-fcc-segfault.patch (Closes: 884324).
+
+ -- Antonio Radici <antonio@debian.org>  Fri, 15 Dec 2017 07:27:49 +0000
+
+neomutt (20171208+dfsg.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * debian/patches:
+    + all refreshed, removed some autosetup related patches that
+      are now upstream (in neomutt-devel/).
+    + removed debian-specifc/882690-use_fqdn_from_etc_mailname.patch also
+      upstream.
+
+ -- Antonio Radici <antonio@debian.org>  Sat, 09 Dec 2017 08:34:25 +0000
+
+neomutt (20171027+dfsg.1-4) unstable; urgency=medium
+
+  * debian/patches:
+    + neomutt-devel/0006-autosetup-fix-check-for-missing-sendmail.patch: fix
+      autosetup build in relation to sendmail path (Closes: 883007).
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 03 Dec 2017 10:19:31 +0000
+
+neomutt (20171027+dfsg.1-3) unstable; urgency=medium
+
+  * debian/patches:
+    + neomutt-devel/0005-add-flags-to-cc-for-build.patch: add the correct
+      flags when building makedoc.
+    + debian-specific/882690-use_fqdn_from_etc_mailname.patch: small tweak to
+      address the resolution of https://github.com/neomutt/neomutt/issues/974.
+  * debian/control:
+    + Standards-Version updated to 4.1.2, no changes required.
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 03 Dec 2017 09:20:39 +0000
+
+neomutt (20171027+dfsg.1-2) unstable; urgency=medium
+
+  * debian/patches:
+    + neomutt-devel/0001-autosetup-fix-out-of-tree-build.patch:
+      imported an upstream patch to fix an issue with doc/ not building out of
+      tree.
+    + a set of 3 other patches (000[234]-.*) by Julian Klode to build
+      correctly with autosetup.
+    + debian-specific/882690-use_fqdn_from_etc_mailname.patch to properly set
+      the hostname from /etc/mailname.
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 26 Nov 2017 07:20:16 +0000
+
+neomutt (20171027+dfsg.1-1) unstable; urgency=medium
+
+  * Removed generated autosetup/jimsh0.c to comply with DFSG (Closes: 882717).
+    + The file was replaced with a B-D on jimsh.
+
+ -- Antonio Radici <antonio@debian.org>  Sun, 26 Nov 2017 06:24:32 +0000
+
+neomutt (20171027-2) unstable; urgency=medium
+
+  * debian/rules: switch to configure.autosetup and remove the dependency from
+    dh-autoreconf; autosetup is becoming the official configure script for
+    neomutt.
+  * debian/neomutt.clean: get rid of the temporary configure link created by
+    debian/rules
+  * debian/compat: switched to 10
+  * debian/copyright: fixed the duplicate license problem
+
+ -- Antonio Radici <antonio@debian.org>  Sat, 25 Nov 2017 19:38:29 +0000
+
+neomutt (20171027-1) unstable; urgency=medium
+
+  * Initial release (Closes: 882300)
+
+ -- Antonio Radici <antonio@debian.org>  Wed, 22 Nov 2017 20:50:29 +0000

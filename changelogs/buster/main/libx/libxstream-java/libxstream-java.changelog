@@ -1,0 +1,267 @@
+libxstream-java (1.4.11.1-1+deb10u4) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2022-41966:
+    XStream serializes Java objects to XML and back again. Versions prior to
+    1.4.11.1-1+deb10u4 may allow a remote attacker to terminate the application
+    with a stack overflow error, resulting in a denial of service only via
+    manipulation of the processed input stream. The attack uses the hash code
+    implementation for collections and maps to force recursive hash calculation
+    causing a stack overflow. This issue is patched in version
+    1.4.11.1-1+deb10u4 which handles the stack overflow and raises an
+    InputManipulationException instead. A potential workaround for users who
+    only use HashMap or HashSet and whose XML refers these only as default map
+    or set, is to change the default implementation of java.util.Map and
+    java.util per the code example in the referenced advisory. However, this
+    implies that your application does not care about the implementation of the
+    map and all elements are
+    comparable. (Closes: #1027754)
+
+ -- Markus Koschany <apo@debian.org>  Wed, 11 Jan 2023 14:52:21 +0100
+
+libxstream-java (1.4.11.1-1+deb10u3) buster-security; urgency=high
+
+  * Team upload.
+  * Enable the security whitelist by default to prevent RCE vulnerabilities.
+    XStream no longer uses a blacklist because it cannot be secured for general
+    purpose.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 08 Nov 2021 12:31:13 +0100
+
+libxstream-java (1.4.11.1-1+deb10u2) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2020-26258:
+    XStream is vulnerable to a Server-Side Forgery Request which can be
+    activated when unmarshalling. The vulnerability may allow a remote attacker
+    to request data from internal resources that are not publicly available
+    only by manipulating the processed input stream.
+  * Fix CVE-2020-26259:
+    Xstream is vulnerable to an Arbitrary File Deletion on the local host when
+    unmarshalling. The vulnerability may allow a remote attacker to delete
+    arbitrary known files on the host as long as the executing process has
+    sufficient rights only by manipulating the processed input stream.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 31 Dec 2020 14:15:35 +0100
+
+libxstream-java (1.4.11.1-1+deb10u1) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2020-26217:
+    It was found that XStream is vulnerable to Remote Code Execution. The
+    vulnerability may allow a remote attacker to run arbitrary shell commands
+    only by manipulating the processed input stream. Users who rely on
+    blocklists are affected (the default in Debian). We strongly recommend to
+    use the whitelist approach of XStream's Security Framework because there
+    are likely more class combinations the blacklist approach may not address.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 01 Dec 2020 23:35:51 +0100
+
+libxstream-java (1.4.11.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.4.11.1.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 11 Nov 2018 00:04:59 +0100
+
+libxstream-java (1.4.11-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.4.11.
+  * Switch to compat level 11.
+  * Declare compliance with Debian Policy 4.2.1.
+  * Build-depend on libjaxb-api-java to fix FTBFS with Java 11.
+    (Closes: #912377)
+  * Add a new maven rule for xpp3 to fix a FTBFS.
+  * Remove Damien Raude-Morvan from Uploaders. (Closes: #889445)
+
+ -- Markus Koschany <apo@debian.org>  Sat, 10 Nov 2018 22:56:01 +0100
+
+libxstream-java (1.4.10-1) unstable; urgency=medium
+
+  * New upstream release
+    - Removed CVE-2017-7957.patch (fixed upstream)
+  * Standards-Version updated to 3.9.8
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 20 Jun 2017 10:22:33 +0200
+
+libxstream-java (1.4.9-2) unstable; urgency=medium
+
+  * Fixed CVE-2017-7957: Attempts to create an instance of the primitive
+    type 'void' during unmarshalling lead to a remote application crash.
+    (Closes: #861521)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 02 May 2017 16:52:35 +0200
+
+libxstream-java (1.4.9-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fixes CVE-2016-3674: XML External Entity vulnerability (Closes: #819455)
+    - Ignore the new xstream-jmh module
+    - Updated the Maven rules
+  * No longer build the xstream-benchmark module (never used in Debian)
+  * Build with maven-debian-helper
+  * Depend on libcglib-nodep-java instead of libcglib3-java
+  * Standards-Version updated to 3.9.7 (no changes)
+  * Use secure Vcs-* fields
+  * Updated the old references to codehaus.org
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 29 Mar 2016 12:05:49 +0200
+
+libxstream-java (1.4.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Added a patch to compile with Java 7
+  * Moved the package to Git
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 29 Apr 2015 17:53:25 +0200
+
+libxstream-java (1.4.7-2) unstable; urgency=medium
+
+  * Depend on libcglib3-java instead of libcglib-java
+  * Standards-Version updated to 3.9.6 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 29 Sep 2014 19:53:09 +0200
+
+libxstream-java (1.4.7-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes CVE-2013-7285 (Closes: #734821)
+    - Added a dependency on libjdom2-java
+  * Standards-Version updated to 3.9.5 (no changes)
+  * Use XZ compression for the upstream tarball
+  * Build depend on debhelper >= 9
+  * debian/copyright: Updated to the Copyright Format 1.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 12 Mar 2014 14:06:33 +0100
+
+libxstream-java (1.4.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Update Standards-Version: 3.9.4 (no changes)
+  * Use canonical URLs for the Vcs-* fields
+  * debian/rules: Improved the clean target to allow rebuilds
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 02 Jul 2013 22:38:00 +0200
+
+libxstream-java (1.4.2-1) unstable; urgency=low
+
+  [ tony mancill ]
+  * Remove Michael Koch from Uploaders (Closes: #654106)
+  * Update Standards-Version: 3.9.3.
+
+  [ Damien Raude-Morvan ]
+  * New upstream release (Closes: #655908)
+    - Add Build-Depends on libstax-java, libwoodstox-java, libstax2-api-java
+      and libkxml2-java (and Suggests).
+  * Use maven-ant-helper for build:
+    - Add Build-Depends on maven-ant-helper.
+    - New debian/build.xml.
+    - Drop patch on MANIFEST.MF update and use jh_manifest.
+    - Add Build-Depends on javahelper.
+  * Add myself as Uploader.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Mon, 28 May 2012 23:14:16 +0200
+
+libxstream-java (1.3.1-7) unstable; urgency=low
+
+  * Switch to source format 3.0.
+  * Update Standards-Version: 3.9.1.
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 18 Aug 2011 15:01:00 +0200
+
+libxstream-java (1.3.1-6) unstable; urgency=low
+
+  [ Onkar Shinde ]
+  * debian/control
+    - Add quilt build dependency.
+  * debian/rules
+    - Include patchsys-quilt.mk rule.
+  * debian/patches/01_fix_classpath.diff
+    - Add appropriate jar files in classpath using manifest attribute.
+      (LP: #457660)
+  * debian/patches/series
+    - Create new and include the new patch added.
+  * debian/README.source
+    - Add to comply with policy.
+
+  [ Michael Koch ]
+  * Added myself to Uploaders.
+
+ -- Michael Koch <konqueror@gmx.de>  Wed, 04 Nov 2009 21:10:05 +0100
+
+libxstream-java (1.3.1-5) unstable; urgency=low
+
+  * Switch to default-jdk
+  * Build-Depends: replace cglib2.1 with cglib (Closes: #550613)
+  * Bump Standards-Version to 3.8.3
+  * Bump dh compat to 7
+
+ -- Varun Hiremath <varun@debian.org>  Thu, 15 Oct 2009 14:35:55 -0400
+
+libxstream-java (1.3.1-4) unstable; urgency=low
+
+  * Add missing dependencies to Depends and Suggests
+
+ -- Ludovic Claude <ludovic.claude@laposte.net>  Fri, 14 Aug 2009 23:30:34 +0100
+
+libxstream-java (1.3.1-3) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 09 Aug 2009 12:57:52 +0200
+
+libxstream-java (1.3.1-2) experimental; urgency=low
+
+  * Change section to java
+  * Bump up Standards-Version to 3.8.2
+  * Add ${misc:Depends} to Depends to clear Lintian warnings
+  * Remove Depends on Java runtimes as it is a library
+  * Add the Maven POM to the package
+  * Add a Build-Depends-Indep dependency on maven-repo-helper
+
+ -- Ludovic Claude <ludovic.claude@laposte.net>  Tue, 28 Jul 2009 20:51:09 +0100
+
+libxstream-java (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Minor cleanups
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 01 Jan 2009 01:20:34 +0100
+
+libxstream-java (1.3-4) unstable; urgency=low
+
+  * Fix java bytecode / java runtime version mismatch by setting -source
+    and -target to 1.5 (Closes: #503789)
+
+ -- Varun Hiremath <varun@debian.org>  Sat, 01 Nov 2008 11:41:26 -0400
+
+libxstream-java (1.3-3) unstable; urgency=low
+
+  * Really move package to main.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 11 Aug 2008 18:13:41 +0200
+
+libxstream-java (1.3-2) unstable; urgency=low
+
+  * Build package with OpenJDK now.
+  * Move package to main.
+  * Bump Standards-Version: 3.8.0 (no changes needed).
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 11 Aug 2008 17:50:31 +0200
+
+libxstream-java (1.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Add myself to Uploaders
+  * Bump Standards-Version to 3.7.3
+  * Remove patches/encoding.diff - not required
+
+ -- Varun Hiremath <varun@debian.org>  Thu, 28 Feb 2008 15:30:34 +0530
+
+libxstream-java (1.2.2-1) unstable; urgency=low
+
+  * initial version (Closes: #453149)
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 24 Nov 2007 00:01:40 +0100

@@ -1,0 +1,104 @@
+golang-websocket (1.4.0-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2020-27813: An integer overflow vulnerability exists with the length
+    of websocket frames received via a websocket connection. An attacker would
+    use this flaw to cause a denial of service attack on an HTTP Server allowing
+    websocket connections.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 13 May 2023 19:37:52 +0200
+
+golang-websocket (1.4.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 1.4.0
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright.
+    Adding "Testsuite: autopkgtest-pkg-go" field, setting Priority to
+    optional, bumping Standards-Version to 4.2.1, etc.
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 20:16:56 -0700
+
+golang-websocket (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Update debian/control:
+    - Use debhelper (>= 10)
+    - Add "Testsuite: autopkgtest-pkg-go"
+  * Update debian/gbp.conf to do without a ../build-area/ directory
+
+ -- Anthony Fok <foka@debian.org>  Fri, 04 Aug 2017 00:43:40 -0600
+
+golang-websocket (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Anthony Fok <foka@debian.org>  Sun, 01 Jan 2017 19:35:17 -0700
+
+golang-websocket (1.0.0+git20160606.12.a687089-1) unstable; urgency=medium
+
+  * New upstream version
+  * Transition golang-websocket-dev to golang-github-gorilla-websocket-dev
+    as per pkg-go policy
+  * Remove non-working special handling of examples files
+
+ -- Anthony Fok <foka@debian.org>  Fri, 10 Jun 2016 18:28:12 -0600
+
+golang-websocket (1.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Dmitry Smirnov ]
+  * Add "watch" file; upstream tagged first release.
+    See https://github.com/gorilla/websocket/issues/131
+
+  [ Anthony Fok ]
+  * New upstream release
+  * Refresh debian/control
+    - Use secure https URL for Vcs-Git field too
+    - Replace golang-go with golang-any in Build-Depends
+    - Add XS-Go-Import-Path: github.com/gorilla/websocket
+    - Remove dpkg-dev from Depends
+  * Add "-O--buildsystem=golang" in debian/rules override rules
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Fri, 10 Jun 2016 15:18:48 -0600
+
+golang-websocket (0.0~git20160302.0.c45a635-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Added missing dh_auto_build call.
+
+  [ Dmitry Smirnov ]
+  * New upstream snapshot.
+  * Dropped "Built-Using" from -dev package.
+  * Modernised Vcs-Browser URL.
+  * Standards-Version: 3.9.8
+  * Added "gbp.conf".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 15 May 2016 20:23:16 +1000
+
+golang-websocket (0.0~git20150811.0.b6ab76f-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #745586).
+  * Removed unused shlibs:depends.
+  * debian/compat bumped to 9
+  * standards bumped to 3.9.6
+  * Added homepage link
+  * Also remove docs for examples (fixes privacy breach)
+  * Changed architecture from any to all
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Tue, 01 Sep 2015 10:01:50 -0400
+
+golang-websocket (0.0~git20140119-1) unstable; urgency=low
+
+  * Initial package. Closes: #720943.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 19 Jan 2014 14:42:03 +0100

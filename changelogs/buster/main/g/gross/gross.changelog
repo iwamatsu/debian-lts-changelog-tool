@@ -1,0 +1,54 @@
+gross (1.0.2-4.1~deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * Rebuild for buster-security.
+
+ -- Adrian Bunk <bunk@debian.org>  Mon, 25 Mar 2024 13:49:43 +0200
+
+gross (1.0.2-4.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * CVE-2023-52159: Stack-based buffer overflow (Closes: #1067115)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 23 Mar 2024 23:23:34 +0200
+
+gross (1.0.2-4) unstable; urgency=low
+
+  * debian/README: fixed a typo (Closes: 670596)
+  * debian/patches/0003-change-default-user.patch:
+    + use 'gross' as default user (Closes: 620368, 614790)
+  * debian/rules:
+    + enable milter when building the package (Closes: 620367)
+    + hardening enabled by using a higher dh version
+  * debian/control:
+    + switched my email to debian.org
+    + bumped Standards-Version to 3.9.6, no changes required
+    + bumped DH to >= 9
+
+ -- Antonio Radici <antonio@debian.org>  Sat, 25 Oct 2014 08:04:36 +0000
+
+gross (1.0.2-3) unstable; urgency=low
+
+  * debian/source/options: ignoring our changes to config.{sub,guess}
+    (Closes: 643146).
+  * debian/rules: removed the override_dh_clean section due to the above
+    changes.
+  * debian/control:
+    + Standards-Version bumped to 3.9.3, no change required.
+    + switched my mail to antonio@debian.org.
+
+ -- Antonio Radici <antonio@debian.org>  Mon, 19 Mar 2012 20:24:53 +0000
+
+gross (1.0.2-2) unstable; urgency=low
+
+  * debian/rules: updating config.{sub,guess} (Closes: 583762)
+  * debian/README.Debian and debian/control modified to note that Sendmail 
+    is supported (Closes: 584597)
+
+ -- Antonio Radici <antonio@dyne.org>  Mon, 07 Jun 2010 16:36:30 +0100
+
+gross (1.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: 548972)
+
+ -- Antonio Radici <antonio@dyne.org>  Mon, 17 May 2010 21:34:46 +0100

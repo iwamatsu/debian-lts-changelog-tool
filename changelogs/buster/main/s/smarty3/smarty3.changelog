@@ -1,0 +1,277 @@
+smarty3 (3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u3) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Security Team.
+  * CVE-2018-25047 - XSS vulnerability. Closes: 1019897)
+    (The fix in the deb10u2 upload was incomplete.)
+  * CVE-2023-28447 - JavaScript injection (Closes: #1033964)
+  * CVE-2024-35226 - PHP Code injection by untrusted template authors
+    (Closes: #1072530)
+  * Add simple autopkgtests for the three CVEs.
+
+ -- Tobias Frost <tobi@debian.org>  Sun, 17 Nov 2024 12:23:14 +0100
+
+smarty3 (3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2018-25047: Prevent a XSS vulnerability when generating "mailto:"
+    links. (Closes: #1019897)
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 05 Jan 2023 17:38:52 +0000
+
+smarty3 (3.1.33+20180830.1.3a78a21f+selfpack1-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload.
+  * Fix the following CVE:
+    - CVE-2021-21408: template authors could run restricted static php methods
+    - CVE-2021-29454: template authors could run arbitrary PHP code by crafting
+                      a malicious math string
+    - CVE-2022-29221: template authors could inject php code by choosing a
+                      malicious {block} name or {include} file name
+    - CVE-2021-26119: Sandbox Escape because $smarty.template_object can be
+                      accessed in sandbox mode
+    - CVE-2021-26120: code injection via an unexpected function name
+
+ -- Markus Koschany <apo@debian.org>  Sun, 29 May 2022 13:13:32 +0200
+
+smarty3 (3.1.33+20180830.1.3a78a21f+selfpack1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - CVE-2018-16831: Don't bypass trusted directories with "../". (Closes:
+      #908698).
+  * debian/control:
+    + Bump Standards-Version: to 4.2.1. No changes needed.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 17 Sep 2018 13:04:18 +0200
+
+smarty3 (3.1.32+20180424.1.ac9d4b58+selfpack1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/*: White-space clean-up at EOL.
+  * debian/patches:
+    + Drop 0001_CVE-2017-1000480.patch. Applied upstream.
+  * debian/rules:
+    + Avoid using dpkg-parsechangelog.
+  * debian/copyright:
+    + Update copyright attributions.
+    + Use secure URI to obtain copyright references.
+    + Add global Comment: field. Explain about brokenness of upstream tarballs.
+  * debian/control:
+    + Update Vcs-*: fields. Packaging Git has been migrated to
+      salsa.debian.org.
+    + Bump Standards-Version: to 4.1.4. No changes needed.
+  * debian/{control,compat}:
+    + Bump DH version level to 11.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 27 May 2018 23:21:33 +0200
+
+smarty3 (3.1.31+20161214.1.c7d42e4+selfpack1-3) unstable; urgency=medium
+
+  * debian/patches:
+    + Add 0001_CVE-2017-1000480.patch. Fixes CVE-2017-1000480. (Closes:
+      #886460).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 14 Jan 2018 11:13:16 +0100
+
+smarty3 (3.1.31+20161214.1.c7d42e4+selfpack1-2) unstable; urgency=medium
+
+  * Re-upload to Debian unstable to enforce package rebuild (as we don't
+    have binNMUs for arch:all packages).
+
+  * debian/control:
+    + Update versioned B-D on smarty-lexer (>=  3.1.30+dfsg1-1.1~).
+      This is to assure correct lexer/parser generation which was broken by
+      smarty-lexer 3.1.30+dfsg1-1. See Debian bug #847571 for further
+      reference.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 21 Mar 2017 10:13:01 +0100
+
+smarty3 (3.1.31+20161214.1.c7d42e4+selfpack1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/rules:
+    + Self-pack orig tarball from Git commit, due to broken upstream
+      tarball generation on Github. For details see:
+      https://github.com/smarty-php/smarty/issues/325
+  * debian/copyright:
+    + Update copyright attributions.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Tue, 24 Jan 2017 21:17:51 +0100
+
+smarty3 (3.1.30-1) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Update versioned B-D:
+    + smarty-lexert (>= 3.1.30+dfsg1-1~).
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 25 Nov 2016 19:52:30 +0100
+
+smarty3 (3.1.30-1~exp1) experimental; urgency=medium
+
+  * New upstream release. Upload to experimental for testing with
+    GOsa, FusionDirectory and other web portals that depend on Smarty3.
+  * debian/copyright:
+    + Update copyright attributions.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Thu, 20 Oct 2016 14:00:22 +0200
+
+smarty3 (3.1.29-2) unstable; urgency=medium
+
+  * Re-upload unchanged to unstable.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 07 Oct 2016 14:03:44 +0200
+
+smarty3 (3.1.29-1) experimental; urgency=medium
+
+  * New upstream release. (Closes: #825250).
+  * debian/smarty3-lexer:
+    + Remove shipped-with .plex and .y files for template and configfile
+      parser/lexer. This version uses smarty-lexer src:package at build
+      time instead.
+  * debian/control:
+    + Add B-D pkg-php-tools (for dh_phpcomposer)
+    + Versioned B-D: debhelper (>= 9).
+    + Use encrypted URLs for Vcs-*: field.
+    + Bump Standards: to 3.9.8. No changes needed.
+  * debian/{control,rules}:
+    + Create internal lexer and parser PHP code at package build time (using
+      B-D smarty-lexer). (Closes: #765730). This also solves issues in Debian
+      package smarty3 3.1.21-1 caused by lexer/parser PHP files using the old
+      trigger_error class API of Smarty.class.php. (Closes: #799282).
+  * debian/smarty3.{install,docs}:
+    + Use debhelper for installing bin:package files.
+  * debian/compat:
+    + Bump to DH version level 9.
+  * debian/watch:
+    + Upstream location has changed, now on Github.
+  * debian/rules:
+    + Use pure debhelper, with phpcomposer.
+    + Make package build idempotent.
+  * debian/copyright:
+    + Update copyright attributions.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 30 May 2016 14:03:16 +0200
+
+smarty3 (3.1.21-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload in coordination with the maintainer.
+  * Update depends and README.Debian for the php 7.0 transition. Thanks to
+    Wolfgang Schweer for the patch! (Closes: #821660)
+
+ -- Holger Levsen <holger@debian.org>  Mon, 23 May 2016 11:32:02 +0200
+
+smarty3 (3.1.21-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #765920).
+  * debian/smarty3-lexer:
+    + Add 4 files from smarty3 SVN that are used to generate some PHP
+      files in the upstream tarball. See README.lexer for details.
+      (Closes: #636148).
+  * debian/copyright:
+    + Add copyright information for debian/smarty3-lexer/*.
+    + Fix upstream license (LGPL-3 -> LGPL-3+) after reading the upstream-
+      shipped COPYING.lib file more thoroughly.
+    + Relicense debian/* under same license as upstream sources (LGPL-3+).
+  * debian/control:
+    + Bump Standards: to 3.9.6. No changes needed.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 19 Oct 2014 23:45:18 +0200
+
+smarty3 (3.1.19-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Obtain upstream sources as zip files from upstream. Stop checking out
+      SVN tags. This change drops three embedded PHP libraries and files with
+      problematic PHP licenses. (Closes: #752614).
+  * debian/control:
+    + Alioth-canonicalize Vcs-Git field.
+    + Bump Standards: to 3.9.5. No changes needed.
+  * lintian:
+    + Drop unused override: embedded-php-library.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 04 Aug 2014 21:32:20 +0200
+
+smarty3 (3.1.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * /debian/control:
+    + Use my DD address in Maintainer: field.
+    + Bump Standards: to 3.9.4. No changes needed.
+  * /debian/patches:
+    + Drop patch: 001_escape-smarty-exception-messages.patch, included in new
+      upstream release.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 06 May 2013 10:19:14 +0200
+
+smarty3 (3.1.10-2) unstable; urgency=low
+
+  * Fix CVE-2012-4437: Add patch 001_escape-smarty-exception-messages.patch.
+    Closes: #688153.
+
+ -- Mike Gabriel <mike.gabriel@das-netzwerkteam.de>  Sat, 22 Sep 2012 21:32:58 +0200
+
+smarty3 (3.1.10-1) unstable; urgency=low
+
+  * New upstream release. Closes: #678095.
+
+ -- Mike Gabriel <mike.gabriel@das-netzwerkteam.de>  Tue, 19 Jun 2012 16:41:06 +0200
+
+smarty3 (3.1.8-2) unstable; urgency=low
+
+  * Package smarty3 provides smarty (closes: #657536).
+  * Make /debian/copyright machine parsable, explicitly names files that
+    have dissenting licenses, license /debian folder under GPLv2+.
+
+ -- Mike Gabriel <mike.gabriel@das-netzwerkteam.de>  Thu, 17 May 2012 00:32:29 +0200
+
+smarty3 (3.1.8-1) experimental; urgency=low
+
+  * New upstream release (rev. 4611).
+  * New package maintainer (closes: #668200).
+  * Add watch file (closes: #657385).
+  * Add Vcs-* lines to control file.
+  * Add README.source that explains how we obtain code from
+    upstream SVN. Make sure all upstream source files are
+    shipped with the Debian source package (closes: #636148).
+
+ -- Mike Gabriel <mike.gabriel@das-netzwerkteam.de>  Thu, 10 May 2012 10:44:55 +0200
+
+smarty3 (3.1.0-1) experimental; urgency=low
+
+  * New upstream release (rev. 4284)
+  * Used the code source from subversion (Closes: #636148)
+  * debian/copyright:
+    + added LexerGenerator copyright
+    + added ParserGenerator copyright
+  * Fixed security holes:
+    + multiple unspecified vulnerabilities (CVE-2009-5052, CVE-2009-5053,
+      CVE-2010-4722, CVE-2010-4724, CVE-2010-4726)
+    + not consider the umask value when setting the permissions of files
+      (CVE-2009-5054)
+    + not prevent access to the dynamic and private object members of an
+      assigned object (CVE-2010-4723)
+    + not properly handle an on value of the asp_tags option in the php.ini file
+      (CVE-2010-4725)
+    + not properly handle the <?php and ?> tags (CVE-2010-4727)
+
+ -- Thierry Randrianiriana <thierry@debian.org>  Sat, 17 Sep 2011 21:22:11 +0300
+
+smarty3 (3.0.8-1) unstable; urgency=low
+
+  * New upstream release (Closes: #631619)
+  * Bumped Standards-Version to 3.9.2
+  * Updated licence to LGPL-3
+
+ -- Thierry Randrianiriana <thierry@debian.org>  Wed, 20 Jul 2011 11:29:24 +0300
+
+smarty3 (3.0~rc1-2) unstable; urgency=low
+
+  * Bumped Standards-Version to 3.9.1
+  * Removed debian/watch
+
+ -- Thierry Randrianiriana <thierry@debian.org>  Tue, 21 Sep 2010 14:45:44 +0300
+
+smarty3 (3.0~rc1-1) unstable; urgency=low
+
+  * Initial release (Closes: #580754)
+
+ -- Thierry Randrianiriana <thierry@debian.org>  Sat, 08 May 2010 14:36:04 +0300

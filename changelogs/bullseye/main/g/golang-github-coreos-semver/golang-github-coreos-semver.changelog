@@ -1,0 +1,64 @@
+golang-github-coreos-semver (0.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * mark usr/bin/go-semver in debian/not-installed
+  * Standards-Version: 4.5.0
+  * debhelper compatibility level 13
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Sep 2020 10:39:47 +0800
+
+golang-github-coreos-semver (0.2.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Point Vcs-* urls to salsa.debian.org.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Apr 2018 12:05:38 -0400
+
+golang-github-coreos-semver (0.2.0-2) unstable; urgency=medium
+
+  * Breaks/Replaces a higher version of golang-go-semver-dev
+    to ensure smooth upgrade from "stretch". (Closes: #866394)
+
+ -- Anthony Fok <foka@debian.org>  Fri, 04 Aug 2017 00:24:28 -0600
+
+golang-github-coreos-semver (0.2.0-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Team upload.
+  * New upstream release.
+  * Add new golang-gopkg-yaml.v2-dev B-D for updated test suite.
+
+  [ Anthony Fok ]
+  * Build-Depends on golang-any instead of golang-go
+    and remove the corresponding DH_GOPKG variable in debian/rules
+  * Update debian/control:
+    - Use debhelper (>= 10)
+    - Bump Standards-Version to 4.0.0:
+      Use https form of the copyright-format URL in debian/copyright
+    - Update Vcs-Browser URL from gitweb to cgit
+    - Add XS-Go-Import-Path field,
+      and remove the corresponding DH_GOPKG variable in debian/rules
+    - Add "Testsuite: autopkgtest-pkg-go"
+    - Add myself to the list of Uploaders
+  * Add debian/watch
+
+ -- Anthony Fok <foka@debian.org>  Thu, 03 Aug 2017 23:55:54 -0600
+
+golang-github-coreos-semver (0.0~git20150304-2) unstable; urgency=medium
+
+  * Rename package in line with new naming policy.
+    (golang-go-semver-dev -> golang-github-coreos-go-semver-dev)
+  * d/control:
+    - Update standards version
+    - Update my email address in uploaders
+    - Use https for Vcs-* URIs
+    - Remove Built-Using field for -dev package
+
+ -- Tim Potter <tpot@hpe.com>  Mon, 19 Jun 2017 13:40:09 +1000
+
+golang-go-semver (0.0~git20150304-1) unstable; urgency=medium
+
+  * Initial release (Closes: #784392)
+
+ -- Tim Potter <tpot@hp.com>  Wed, 06 May 2015 11:31:07 +1000

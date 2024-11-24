@@ -1,0 +1,194 @@
+ruby-httparty (0.18.1-2+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-22049: multipart/form-data request tampering
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 28 Sep 2024 03:21:32 +0300
+
+ruby-httparty (0.18.1-2) unstable; urgency=medium
+
+  * Indicate that this version breaks (tests of) ruby-gitlab << 4.16.1
+    (Closes: #974093)
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 17 Nov 2020 08:26:10 +0100
+
+ruby-httparty (0.18.1-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+  * Use github as source in watch file to fetch specs
+  * New upstream version 0.18.1
+  * Refresh packaging
+    + debhelper-compatibility level set to 13
+    + Standards-Version bumped to 4.5.0 (no changes needed)
+    + Use gem install layout
+  * Refresh git-in-gemspecs.patch and skip_failing_test.patch
+  * Do not exclude google.html, removed upstream
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 02 Oct 2020 13:31:26 +0200
+
+ruby-httparty (0.17.0-1) unstable; urgency=medium
+
+  * New upstream version 0.17.0
+  * Drop fix-openssl-tests.patch, applied upstream
+  * Unfuzz skip_failing_test.patch
+  * Add no_pry_in_specs.patch to not require pry in tests
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 06 Sep 2019 10:40:44 +0200
+
+ruby-httparty (0.16.4-3) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Cédric Boutillier ]
+  * Add missing dependency on ruby-mime-types
+  * Bump debhelper from old 11 to 12.
+  * Add upstream/metadata
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 26 Aug 2019 11:47:23 +0200
+
+ruby-httparty (0.16.4-2) unstable; urgency=medium
+
+  * Team upload
+  * Reupload to unstable
+  * Bump Standards-Version to 4.4.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 11 Aug 2019 09:06:23 +0000
+
+ruby-httparty (0.16.4-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Manas Kashyap ]
+  * New upstream version 0.16.4
+
+  [ Jongmin Kim ]
+  * Refresh patches for new upstream version
+  * Fix lintian pedantic: file-contains-trailing-whitespace
+  * Add missing docs
+
+ -- Jongmin Kim <jmkim@pukyong.ac.kr>  Fri, 17 May 2019 06:54:41 +0900
+
+ruby-httparty (0.16.2+dfsg1-3) unstable; urgency=medium
+
+  * Team upload
+  * Fix test failure with openssl 1.1.1 (upstream patch)
+  * Enable openssl tests again
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 21 Mar 2019 15:27:28 +0530
+
+ruby-httparty (0.16.2+dfsg1-2) unstable; urgency=medium
+
+  * Team upload
+  * Disable tests that fail with OpenSSL 1.1.1 (Closes: #912239)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 16 Nov 2018 22:33:44 +0530
+
+ruby-httparty (0.16.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version 0.16.2+dfsg1
+    + Repack to remove nonfree spec/fixtures/google.html
+  * Use https for homepage (updated) and copyright format
+  * Move debian/watch to gemwatch.debian.net
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+  * Use salsa.debian.org in Vcs-* fields
+  * Refresh skip_failing_test.patch
+  * Add replacement for the removed google.html fixture file
+  * Add encoding.patch, forcing encoding to UTF-8 to fix tests on default
+    build environments
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 16 Aug 2018 06:29:31 +0200
+
+ruby-httparty (0.15.6-1) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Bump Standards-Version to 4.1.2 (no changes needed)
+  * Use https in watch file
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 26 Dec 2017 00:03:14 +0100
+
+ruby-httparty (0.15.6-1~exp1) experimental; urgency=medium
+
+  * New upstream version 0.15.6
+  * Bump Standards-Version to 4.1.1 (no changes needed)
+  * Bump debhelper compatibility level to 10
+  * Refresh skip_failing_test.patch
+  * New patch git-in-gemspecs.patch to remove use of git in gemspecs
+  * Build-depend on ruby-webmock
+  * Use DEB_VERSION_UPSTREAM instead of parsing changelog
+  * Test gem dependencies when running tests
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 25 Nov 2017 10:41:34 +0100
+
+ruby-httparty (0.13.7-2) unstable; urgency=medium
+
+  * Relax dependency version in gem dependency on json.
+    This fixes loading httparty with the gem command (Closes: #864723)
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 25 Nov 2017 00:30:18 +0100
+
+ruby-httparty (0.13.7-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.13.7
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.8 (no changes needed)
+  * Run wrap-and-sort on packaging files
+  * Set Testsuite field to autopkgtest-pkg-ruby
+
+ -- Cédric Boutillier <boutil@debian.org>  Tue, 07 Jun 2016 10:57:29 +0200
+
+ruby-httparty (0.13.5-1) unstable; urgency=medium
+
+  * Reupload to unstable.
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 05 Jul 2015 14:31:22 +0200
+
+ruby-httparty (0.13.5-1~exp1) experimental; urgency=medium
+
+  * Imported Upstream version 0.13.5
+    + now uses rspec3
+    + upload to experimental until rspec3 is in unstable
+  * skip all old patches, add skip_failing_test.patch
+  * bump Standards-Version to 3.9.6
+  * add build-dep on ruby-simplecov
+  * remove coverage/ dir upon cleaning
+  * wrap and sort fields in debian/control
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 25 May 2015 00:03:03 +0200
+
+ruby-httparty (0.13.0-2) unstable; urgency=medium
+
+  * Add spec_convert_nil_to_empty_string.patch to fix a FTBFS caused by the
+    addition of a string with nil in a test. (Closes: #747734)
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 16 Jun 2014 01:01:57 +0200
+
+ruby-httparty (0.13.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.13.0
+  * Refresh clean_spec_helper.patch and newer_rspec.patch
+  * Add exception_spec.patch to adapt a new spec to RSpec 2.0
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 28 Feb 2014 11:42:16 +0100
+
+ruby-httparty (0.12.0-2) unstable; urgency=medium
+
+  * Add copyright notice for website/css/common.css
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 24 Jan 2014 14:50:01 +0100
+
+ruby-httparty (0.12.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #712096)
+
+ -- Cédric Boutillier <boutil@debian.org>  Sat, 11 Jan 2014 07:33:58 +0100

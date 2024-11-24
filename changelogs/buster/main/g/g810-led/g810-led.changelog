@@ -1,0 +1,42 @@
+g810-led (0.3.3-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add patch to rely on uaccess to control device access.
+    (Fixes: CVE-2022-46338) (Closes: #1024998)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 03 Dec 2022 02:08:58 +0530
+
+g810-led (0.3.3-2) unstable; urgency=medium
+
+  * The development package needs to depend on the library package, add
+    the appropriate dependency. Closes: #924191 (thanks to Andreas
+    Beckmann).
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 10 Mar 2019 18:55:30 +0100
+
+g810-led (0.3.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * The library packages are co-installable, mark them as such.
+
+ -- Stephen Kitt <skitt@debian.org>  Sat, 16 Feb 2019 14:47:28 +0100
+
+g810-led (0.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Adjust symbols for 32-bit architectures.
+
+ -- Stephen Kitt <skitt@debian.org>  Wed, 16 Jan 2019 21:47:33 +0100
+
+g810-led (0.3.1-2) unstable; urgency=medium
+
+  * Avoid failing the build when systemd isn’t installed.
+    Closes: #919421.
+
+ -- Stephen Kitt <skitt@debian.org>  Tue, 15 Jan 2019 23:16:52 +0100
+
+g810-led (0.3.1-1) unstable; urgency=medium
+
+  * Initial release. Closes: #856158.
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 13 Jan 2019 18:18:56 +0100

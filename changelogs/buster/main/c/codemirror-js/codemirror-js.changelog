@@ -1,0 +1,65 @@
+codemirror-js (5.43.0-1+deb10u1) buster-security; urgency=high
+
+  * Backport patch from 5.58.2 for CVE-2020-7760
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 06 Nov 2020 16:14:17 +0000
+
+codemirror-js (5.43.0-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * New upstream release.
+  * Add myself to uploaders.
+  * Standards-Version: 4.3.0
+  * The javascript library is now built using rollup. Due to a small
+    incompatibility between the debian rollup version and the package's
+    expected version, the source has had to be patched in one place to avoid a
+    syntax construct that otherwise caused the build to fail.
+  * Declare Rules-Requires-Root: no
+  * Move d/source.lintian-overrides -> d/source/lintian-overrides
+  * Update VCS URLs to salsa.d.o
+  * Remove d/compat, depend on debhelper-compat (= 12)
+  * Add a trivial autopkgtest that the rollup-generated library exists, and is
+    valid javascript according to `nodejs -c`
+  * Remove demos which depend on external scripts which are partly or wholly
+    unpackaged in debian
+  * Patch the requirejs demo to use libjs-requirejs, and suggest that package
+  * Fix relative paths in examples to actually point to the installed library
+
+  [ Xavier Guimard ]
+  * Replace references to "MIT" with "Expat" in d/copyright
+  * Add d/upstream/metadata
+
+ -- Gordon Ball <gordon@chronitis.net>  Mon, 18 Feb 2019 22:31:01 +0100
+
+codemirror-js (5.19.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New(er) upstream release. This is the latest version using the old
+    buildsystem, which avoids unpackaged dependencies (Closes: #801119).
+  * DH compat 10.
+  * Standards-Version: 4.1.1, priority extra -> optional.
+  * Update URLs in d/control, d/copyright
+  * Section web -> javascript
+  * Add several lintian overrides for excessive line lengths; these
+    appear to be legitimate, mostly lists of language keywords, etc.
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 03 Nov 2017 13:38:07 +0000
+
+codemirror-js (5.4.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release [June 2015] (Closes: #738711).
+  * Standards-Version: 3.9.6.
+  * dh & compat to version 9.
+  * Canonical Vcs URLs.
+  * Updated/corrected "debian/watch" file.
+  * Added "debian/gbp.conf".
+  * Preserve upstream directory structure (Closes: #673278).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 01 Jul 2015 13:03:29 +1000
+
+codemirror-js (2.23-1) unstable; urgency=low
+
+  * Initial release (Closes: #629445)
+
+ -- David Paleino <dapal@debian.org>  Thu, 12 Apr 2012 12:25:28 +0200

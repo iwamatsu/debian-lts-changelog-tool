@@ -1,0 +1,436 @@
+opendmarc (1.3.2-6+deb10u4) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add missing db_stop from postinst script that was causing the installation
+    or upgrade of the package to hang. This was an issue that seemingly
+    predated previous LTS updates, and may have depended upon the user's
+    Debconf "frontend" setting. (Closes: #965284)
+
+ -- Chris Lamb <lamby@debian.org>  Wed, 30 Aug 2023 08:40:24 -0700
+
+opendmarc (1.3.2-6+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * CVE-2020-12272: Prevent an issue that allowed attackers to inject
+    authentication results to provide false information about the domain that
+    originated an email message. This was caused by incorrect parsing and
+    interpretation of SPF/DKIM authentication results. (Closes: #977767)
+  * Add autopkgtests.
+
+ -- Chris Lamb <lamby@debian.org>  Mon, 28 Aug 2023 10:22:16 -0700
+
+opendmarc (1.3.2-6+deb10u2) buster; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * In opendmarc_xml_parse(), ensure NULL-termination of the buffer passed.
+    (Fixes: CVE-2020-12460) (Closes: #966464)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sun, 25 Apr 2021 13:36:57 +0530
+
+opendmarc (1.3.2-6+deb10u1) buster-security; urgency=high
+
+  * CVE-2019-16378: https://github.com/trusteddomainproject/OpenDMARC/pull/48
+    to address incorrect DMARC pass results with multi-from mail (Closes:
+    #940081)
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 19 Sep 2019 01:31:48 -0400
+
+opendmarc (1.3.2-6) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Remove unused ticket181.patch from patch directory
+  * Correct d/patches/ticket168.patch description
+
+  [ Chris Leick ]
+  * [INTL:de] Initial German debconf translation (Closes: #917284)
+
+  [ Portuguese Translation Team ]
+  * [INTL:pt] Portuguese translation for debconf messages (Closes: #918615)
+
+  [ Jean-Pierre Giraud ]
+  * [INTL:fr] French debconf templates translation (Closes: #918691)
+
+  [ Frans Spiesschaert ]
+  * [INTL:nl] Dutch translation of debconf messages (Closes: #919302)
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 19 Jan 2019 01:21:27 -0500
+
+opendmarc (1.3.2-5) unstable; urgency=medium
+
+  * Use dbconfig to automatically set up the database for generating aggregate
+    reports (Closes: #879241)
+    - Thanks to Jack Bates for the patch
+  * Update patches based on Juri Haberland's review of pending upstream
+    changes and the current Debian patch set:
+    - Drop debian/patches/ticket174.patch, already fixed in 1.3.2 another way
+    - Add debian/patches/ticket137.patch, fix auth-res parsing
+    - Add debian/patches/ticket146.patch, adds a '--input' parameter to
+      opendmarc-import
+    - Add debian/patches/ticket203.patch, opendmarc-reports would send
+      multiple reports to the same address if given multiple times in a rua
+      tag - patch marks such dmarc records invalid
+    - Add debian/patches/ticket204.patch, fix the import tool, so that domains
+      are always entered in lower case 
+    - Add debian/patches/ticket207.patch, correct opendmarc-report domain used
+      in <policy_published> 
+    - Add debian/patches/ticket208.patch, adds a new option to ignore mail to
+      a given email address to prevent report loops
+    - Add debian/patches/ticket212.patch, fixes a memory leak in
+      opendmarc_tld_read_file() 
+    - Add debian/patches/ticket227.patch, fixes segfault in opendmarc_policy_
+      parse_dmarc() that occurs under certain circumstances 
+  * Fix various references to opendkim  (Closes: #905361, #903253)
+  * Bump standards-version to 4.2.1 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 17 Dec 2018 02:14:56 -0500
+
+opendmarc (1.3.2-4) unstable; urgency=medium
+
+  * Add Vcs-* for salsa
+  * Bump standards-version to 4.1.3 without further change
+  * Drop rddmarc exmample script binary and ship examples in opendmarc
+    (LP: #1611806)
+  * Switch to 3.0 (quilt) source package format
+  * Enable all hardening options (Closes: #880524), thanks to Jack Bates for
+    the patch
+  * Bump compat to 10 so that systemd, autoreconf, and parallel fun are
+    handeled automatically (Closes: #878473), Thanks to Jack Bates for
+    the patch
+  * Change package priority to optional to match override
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 11 Mar 2018 15:35:42 -0400
+
+opendmarc (1.3.2-3) unstable; urgency=medium
+
+  * Update opendmarc service file so changes in opendmarc.conf are used and
+    update opendmarc.conf to match values previously hard-coded in the service
+    file and better align to the organization in the upstream example
+    configuration (Closes: #863612)
+    - Thanks to Jack Bates for the patch
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 11 Dec 2017 14:22:44 -0500
+
+opendmarc (1.3.2-2) unstable; urgency=medium
+
+  * Do not remove /etc/default/opendkim on upgrade since it is a conffile
+    because policy 10.7.3 (Closes: #863173)
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 22 May 2017 18:11:58 -0400
+
+opendmarc (1.3.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - Update debian/copyright (added 2017)
+    - Remove patches applied upstrea (debian/patches/ticket095.patch,
+      ticket165_incomplete.patch, ticket166.patch, ticket185.patch, and
+      ticket187.patch)
+  * Update README.Debian to point to use of opendmarc.service.d/overrride.conf
+    with systemd (Closes:  #856489, #856057)
+  * Update README.Debian to explain that TCP sockets bound to a specific IP
+    address will not work if that address is not bound to a network connection
+    and how to work avoid startup issues if network initialization is too slow
+   (Closes: #856488)
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 13 Mar 2017 21:44:33 -0400
+
+opendmarc (1.3.2~Beta1-2) unstable; urgency=medium
+
+  * Add debian/patches/ticket193.patch to fix compatibility with mysql strict
+    mode
+    - Update openmarc.docs for new README and schema update files
+  * Add debian/patches/ticket159.patch so that history file location is taken
+    from opendmarc.conf rather than hard coded
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 07 Jan 2017 11:36:04 -0500
+
+opendmarc (1.3.2~Beta1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patches applied upstream (debian/patches/ticket181.patch,
+    ticket186.patch, ticket188.patch, ticket194.patch, ticket195.patch, and
+    ticket196.patch
+  * Update debian/copyright
+  * Fix symbols-file-contains-debian-revision in debian/libopendmarc2.symbols
+  * Update debian/opendmarc.docs for removal of reports/mkdb.mysql
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 07 Jan 2017 01:06:55 -0500
+
+opendmarc (1.3.2~Beta0+dfsg-5) unstable; urgency=medium
+
+  * Fix opendmarc.service so it will successfully start opendmarc in the
+    absence of the (usually present) override file
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 06 Dec 2016 20:20:21 -0500
+
+opendmarc (1.3.2~Beta0+dfsg-4) unstable; urgency=medium
+
+  * Fix debiam/rules so linking to libspf2 actually works
+  * Additional patches from the upstream bug tracker:
+    - Correct SPF related processing issues with IPv6
+      https://sf.net/p/opendmarc/tickets/95/
+    - Complete correction for #165: Fix logic in checking which SPF,
+      identifier was used: debian/patches/ticket165_incomplete.patch
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 03 Dec 2016 20:54:45 -0500
+
+opendmarc (1.3.2~Beta0+dfsg-3) unstable; urgency=medium
+
+  * Fixup opendmarc.service installation and update based on changes from the
+    opendkim package (Closes: #843247, #843327)
+    - /etc/default/opendmarc will be removed on systems using systemd (see
+      opendmarc.NEWS)
+  * Create run dir on install in postinst
+  * Only override dh_fixperms instead of dh_install as it is more correct and
+    only override for -arch, not indep to fix indep only build (Closes:
+    #843366)
+    - Thanks to Santiago Vila for the report and the fix
+  * Cherry-pick additional changes from upstream bug tracker:
+    - Correct processing if a domain has a size limit on its ruf address
+      https://sourceforge.net/p/opendmarc/tickets/174/
+    - Correct error in help processing for opendmarc-reports
+      https://sourceforge.net/p/opendmarc/tickets/181/
+    - Fix segfaults when invoked for local/ignored hosts (Closes: #843330)
+      https://sourceforge.net/p/opendmarc/tickets/185/
+    - Fix bug in dmarcf_config_reload function
+      https://sourceforge.net/p/opendmarc/tickets/186/
+    - Fix compile and functional fix for SPF result logging (more complete
+      replacement for current fix_compile.patch)
+      https://sourceforge.net/p/opendmarc/tickets/187/
+    - Fix issue with deleting zip file too early in opendmarc-reports
+      https://sourceforge.net/p/opendmarc/tickets/188/
+    - Fix history file SPF results (use AR format)
+      https://sourceforge.net/p/opendmarc/tickets/195/
+    - Fix issue with wrong DMARC state in Auth-Res header
+      https://sourceforge.net/p/opendmarc/tickets/194/
+    - Fix RecordAllMessages = false so it works
+      https://sourceforge.net/p/opendmarc/tickets/196/
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 08 Nov 2016 00:48:22 -0500
+
+opendmarc (1.3.2~Beta0+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable
+    - Despite being a beta, it appears to be more reliable than the previous
+      release
+  * Replace TimeoutStartSec=10 with Restart=on-failure in
+    opendmarc.service to give more time for initial start-up and to make
+    sure opendmarc starts eventually See #837376
+  * Fix group permissions on /var/run/opendmarc See #837375
+  * Generate opendkim.service in postinst instead of shipping it in the
+    package See #837374
+  * Correct executability of opendmarc.service.generate
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 30 Oct 2016 08:47:07 -0400
+
+opendmarc (1.3.2~Beta0+dfsg-1) experimental; urgency=medium
+
+  * New upstream beta release
+    - Drop patches for incorporated changes
+    - Refresh remaining patches
+    - Update libopendmarc2.symbols
+  * Add systemd service file
+    - Parameters generated from /etc/default/opendmarc based on opendkim
+      implementation
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 20 Jul 2016 01:39:28 -0400
+
+opendmarc (1.3.1+dfsg-4) unstable; urgency=medium
+
+  * Set CONFIG_SHELL=/bin/sh to work around captures_shell_variable_in_autofoo
+    _script and make the build reproducible
+  * Bump standards version to 3.9.8 without further change
+  * Update debian/watch so it is working again
+  * Add reviewed patches from sourceforge tickets since a new upstream release
+    seems to be nowhere in sight.
+    - Adds new RejectString option to define custom text for rejection reason
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 02 Jul 2016 22:52:59 -0400
+
+opendmarc (1.3.1+dfsg-3) unstable; urgency=medium
+
+  * Use system public suffix list so organizational domain can be determined
+    - Add publicsuffix to opendmarc depends
+    - Add PublicSuffixList to installed opendmarc.conf
+  * Fix use of Debian revision in libopendmarc2.symbols
+  * Update debian/watch (thanks to bartm)
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 26 Jan 2016 17:06:30 -0500
+
+opendmarc (1.3.1+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * Add debian/patches/fix-incompatible-pointer-type
+    - Thanks to Sebastian A. Siewior for the patch
+  * Fix enabling of SPF: update configure and add new symbols
+    (Closes: #781048)
+    - Thanks to  Christophe Wolfhugel for both the report and the fix
+  * Update installed opendmarc.conf to use the term FailureReports vice
+    ForensiceReports (Closes: #783180)
+    - Thanks to Olaf Zaplinski for the report
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 23 Apr 2015 13:41:35 -0400
+
+opendmarc (1.3.1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release (Closes: #761444, #761451)
+  * Bump standards version to 3.9.6 without further change)
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 23 Feb 2015 16:52:23 -0500
+
+opendmarc (1.3.0+dfsg-1) unstable; urgency=medium
+
+  * Upload to unstable
+  * New upstream release
+    - Drop debian/patches/missing_include.patch, incorporated upstream
+    - Update for new soname (rename libopendmarc1 to libopendmarc2, update
+      libopendmarc-dev depends, and rename install/symbols files)
+  * Update debian/copyright
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 01 Aug 2014 03:03:09 -0400
+
+opendmarc (1.3.0~beta4+dfsg-2) experimental; urgency=medium
+
+  * Update debian/patches/missing_include.patch to move the build-config.h
+    before the STRL checks in opendmarc/config.c and test.c
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 30 Jul 2014 15:45:28 -0400
+
+opendmarc (1.3.0~beta4+dfsg-1) experimental; urgency=medium
+
+  * New upstream beta release
+  * Patch configure.ac to add tests for presence of libbsd/string.h and
+    use USE_BSD_H and USE_STRL_H to select the correct include
+    - Based on similar changes done for opendkim
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 30 Jul 2014 12:00:37 -0400
+
+opendmarc (1.3.0~beta3+dfsg-1) experimental; urgency=medium
+
+  * New upstream beta release
+    - Repacked tarball to remove non-free internet draft
+    - Updated debian/libopendmarc1.symbols
+    - Enable new internal SPF checking with libspf2
+      - Add libspf2-dev to build-depends
+      - Adjust configure in debian/rules
+  * Update standards version to 3.9.5 without further change
+  * Enable use of syslog by default
+  * Run as opendmarc:opendmarc by default
+  * Decluttered installed configuration file
+  * Improved rddmarc package description
+
+ -- Scott Kitterman <scott@kitterman.com>  Sat, 19 Jul 2014 02:18:01 -0400
+
+opendmarc (1.2.0+dfsg-1) unstable; urgency=medium
+
+  * Upload to Unstable
+  * New upstream release
+    - Repacked tarball to remove non-free internet draft
+    - Fixes hard coded parameters in dmarcfail (Closes: #720392)
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 17 Mar 2014 20:38:42 -0400
+
+opendmarc (1.2.0~beta3+dfsg-1) experimental; urgency=low
+
+  * New upstream beta release
+    - Repack upstream tarball to remove non-free IETF draft
+    - Add libbsd-dev to build-depends to use system strlcat/strlcpy
+    - Update libopendkim1.symbols
+    - Fixes hard coded parameters in dmarcfail (Closes: #720392)
+  * Move dmarcfail and rddmarc to /usr/share/doc as suggested by upstream
+  * Update package descriptions
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 13 Mar 2014 00:27:01 -0400
+
+opendmarc (1.1.3-1) unstable; urgency=low
+
+  * New upstream release
+    - Update draft-dmarc-base version number in opendmarc.docs
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 14 Apr 2013 18:34:00 -0400
+
+opendmarc (1.1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 01 Apr 2013 10:58:46 -0400
+
+opendmarc (1.1.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/watch now that we don't mangle the version anymore
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 18 Mar 2013 22:04:19 -0400
+
+opendmarc (1.1.0-1) unstable; urgency=low
+
+  * Uploading to unstable
+  * New upstream final release
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 08 Mar 2013 13:40:54 -0500
+
+opendmarc (1.1.0~beta2-1) experimental; urgency=low
+
+  * New upstream beta release
+    - Drop debian/patches/warnings_fix.patch since it is included upstream
+    - Update debian/copyright
+    - Update for new library SO name libopendmarc0* -> libopendmarc1
+    - Update symbols file
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 28 Feb 2013 03:24:00 -0500
+
+opendmarc (1.1.0~beta1-2) experimental; urgency=low
+
+  * Fix borked dh_autoreconf change in debian/rules in the last upload
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 12 Feb 2013 00:21:10 -0500
+
+opendmarc (1.1.0~beta1-1) experimental; urgency=low
+
+  * New upstream beta release
+    - Update symbols file
+    - Update debian/copyright
+  * Add debian/patches/warnings_fix.patch for upstream changes made post-
+    release to address compiler warnings
+  * Update debian/rules for better cross-building support, based on changes
+    from Adam Conrad for opendkim
+    - Add dh-autoreconf to build-depends
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 11 Feb 2013 15:27:52 -0500
+
+opendmarc (1.1.0~beta0-1) experimental; urgency=low
+
+  * New upstream beta release
+    - Repacking on longer required because DMARC specification license is now
+      included in the upstream tarball
+    - Update symbols file
+    - Re-enable tests since they no longer require network access
+    - Added new reports/mkdb.mysql setup script to debian/opendmarc.docs
+  * Include MySQL schema files and readme in /usr/share/doc/opendmarc to
+    support DMARC aggregate reporting
+  * Update debian/README.Debian
+  * Set umask in opendmarc.conf so Unix socket has proper permissions
+  * Fix libopendmarc-dev package description to be about opendmarc and not
+    opendkim (Closes: #699278)
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 06 Feb 2013 10:24:23 -0500
+
+opendmarc (1.0.1+dfsg-3) unstable; urgency=low
+
+  * Upload to unstable
+  * Correct option for using installed configuration file in
+    debian/opendmarc.init
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 12 Dec 2012 18:48:33 -0500
+
+opendmarc (1.0.1+dfsg-2) experimental; urgency=low
+
+  * Disable opendmarc tests since they require network access
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 12 Dec 2012 00:49:42 -0500
+
+opendmarc (1.0.1+dfsg-1) experimental; urgency=low
+
+  * Initial release (Closes: #692940)
+  * Repacked upstream tarball to add license for DMARC specification
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 23 Jul 2012 18:17:11 -0400

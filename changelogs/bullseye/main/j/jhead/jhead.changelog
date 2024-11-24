@@ -1,0 +1,555 @@
+jhead (1:3.04-6+deb11u1) bullseye-security; urgency=medium
+
+  * New maintainer.
+  * Add patch fix_cve_2021_34055 to fix CVE-2021-34055 (Closes: #1024272).
+  * Add patch fix_cve_2022_41751 to fix CVE-2022-41751 (Closes: #1022028,
+    #1023303).
+
+ -- Joachim Reichel <reichel@debian.org>  Sun, 04 Dec 2022 10:35:31 +0100
+
+jhead (1:3.04-6) unstable; urgency=medium
+
+  * QA upload (Salzburg BSP).
+  * CVE-2021-3496: check access boundaries in ProcessCanonMakerNoteDir().
+    Closes: #986923.
+  * Check IPTC lengths. Closes: #968999.
+  * Allocate extra room when reading JPEG sections to avoid overflows.
+    Closes: #972617.
+
+ -- Stephen Kitt <skitt@debian.org>  Sat, 24 Apr 2021 14:59:38 +0200
+
+jhead (1:3.04-5) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Fix day-of-week for changelog entry 1.5-2.
+  * Update watch file format version to 4.
+  * Use secure URI in debian/watch.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 04 Feb 2021 02:09:26 +0000
+
+jhead (1:3.04-4) unstable; urgency=medium
+
+  * d/control: Orphaning the package. See #969027
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 26 Aug 2020 11:52:50 +0200
+
+jhead (1:3.04-3) unstable; urgency=medium
+
+  * Fix "A Segmentation fault error in jhead 1:3.04-2" patch in d/p/02_exif.c
+    (Closes: #967971)
+  * Fix "A Segmentation fault error in jhead 1:3.04-2" same patch as above
+    (Closes: #967924)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 07 Aug 2020 22:00:26 +0200
+
+jhead (1:3.04-2) unstable; urgency=medium
+
+  * Fix "Heap-buffer-overflow in jhead-3.04" (Closes: #953352)
+    patch in d/p/01_gpsinfo.c
+  * d/control: Standards-Version: 4.3.0 -> 4.5.0. No change needed
+  * d/control: use debhelper-compat (= 12) instead of level 11
+  * d/control: add Rules-Requires-Root: no
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 08 Mar 2020 22:20:20 +0100
+
+jhead (1:3.04-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix "CVE-2019-19035" in new upstream (Closes: #944961)
+  * d/p/30_spelling: removed, included upstream
+  * d/p/29_reproducible: removed, included upstream
+  * d/p/28_spelling: removed, included upstream
+  * d/p/26_makefile: removed, included upstream
+  * d/p/25_makefile: removed, included upstream
+  * d/p/27_documentation: removed, included upstream
+  * d/p/32_crash_in_gpsinfo: removed, included upstream
+  * d/p/33_fix_908176: removed, included upstream
+  * d/p/34_buffer_overflow: removed, included upstream
+  * d/p/35_fix_alloc_size: removed, fix included upstream
+  * d/p/36_CVE-2019-1010301rm: removed, included upstream
+  * d/p/37_CVE-2019-1010302rm: removed, included upstream
+  * d/control: Standards-Version: 4.2.1 -> 4.3.0. No change needed
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 22 Nov 2019 17:41:30 +0100
+
+jhead (1:3.03-3) unstable; urgency=medium
+
+  * rebuild for source only upload
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 03 Aug 2019 14:53:14 +0200
+
+jhead (1:3.03-2) unstable; urgency=medium
+
+  * d/p/36_CVE-2019-1010301 Fix "CVE-2019-1010301" (Closes: #932145)
+  * d/p/37_CVE-2019-1010302 Fix "CVE-2019-1010302" (Closes: #932146)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 02 Aug 2019 18:24:02 +0200
+
+jhead (1:3.03-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/patches/31_CVE-2016-3822 and 0008-heap-buffer-overflow.patch are now
+    applied upstream
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 17 Apr 2019 20:49:51 +0200
+
+jhead (1:3.00-8) unstable; urgency=medium
+
+  * Fix "Interger overflow while running jhead" (Closes: #907925)
+    debian/patches/32_crash_in_gpsinfo fix CVE-2018-17088
+  * Fix "Buffer Overflow while running jhead" (Closes: #908176)
+    debian/patches/33_fix_908176 fix CVE-2018-16554
+  * Fix another buffer overflow
+    debian/patches/34_buffer_overflow
+  * Upgrade debhelper version from 9 to 11
+  * debian/control: Standards-Version: 3.9.8 -> 4.2.1. No change needed.
+  * debian/patches/35_fix_alloc_size: patch from Fedora to fix a compiler
+    warning
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 19 Sep 2018 19:55:26 +0200
+
+jhead (1:3.00-7) unstable; urgency=medium
+
+  * d/control: Set Vcs-* to salsa.debian.org
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 25 Mar 2018 16:50:07 +0200
+
+jhead (1:3.00-6) unstable; urgency=medium
+
+  * Reformat patches for gbp pq
+  * Fix heap buffer overflow (Closes: #889272)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 03 Feb 2018 10:46:05 +0100
+
+jhead (1:3.00-5) unstable; urgency=medium
+
+  * Migrate the Debian packging from SVN to GIT
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Mon, 18 Dec 2017 11:02:30 +0100
+
+jhead (1:3.00-4) unstable; urgency=medium
+
+  * Fix "CVE-2016-3822" Apply patch from Google (Closes: #858213)
+  * debian/patches/30_spelling: fix another spelling issue reported by
+    lintian
+  * debian/control: Standards-Version: 3.9.6 -> 3.9.8. No change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Mon, 20 Mar 2017 20:26:16 +0100
+
+jhead (1:3.00-3) unstable; urgency=medium
+
+  * Fix "Please (Build-)Depend on libjpeg-turbo-progs instead of libjpeg-
+    progs" changed Depends: (Closes: #813390)
+  * debian/patches/30_spelling: Fix spelling reported by lintian
+  * debian/patches/26_makefile & debian/rules: correctly call dpkg-buildflags
+    to fix lintian reported issues about hardening
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 02 Feb 2016 18:53:55 +0100
+
+jhead (1:3.00-2) unstable; urgency=medium
+
+  * debian/patches/29_reproducible: remove the use of __DATE__ to make the
+    build reproducible
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 30 Sep 2015 09:41:17 +0200
+
+jhead (1:3.00-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches/28_spelling: Fix spelling mistake reported by lintian
+  * debian/control: Standards-Version: 3.9.3 -> 3.9.6. no change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 20 May 2015 21:31:56 +0200
+
+jhead (1:2.97-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 16 Mar 2013 14:45:00 +0100
+
+jhead (1:2.96-2) unstable; urgency=low
+
+  * Fix "documentation still hints at old "-nf" renaming functionality"
+    Apply attached patch (Closes: #691607)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 28 Oct 2012 10:28:57 +0100
+
+jhead (1:2.96-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches/26_makefile: Use flags set by dpkg-buildflags to enable
+    automatic hardening
+  * debian/compat: update from 7 to 9 to enable automatic hardening
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 28 Jul 2012 09:25:22 +0200
+
+jhead (1:2.95-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix "jhead -cmd 'jpegtran -progressive &i > &o' P1080931.JPG remove
+    Date/Time Original exif tag and others" fixed upstream (Closes: #662110)
+  * debian/control: Standards-Version: 3.9.2 -> 3.9.3. No change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 24 Mar 2012 11:50:13 +0100
+
+jhead (1:2.93-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches/25_makefile: new patch
+  * debian/control: remove Build-Depends: quilt since we use source format
+    "3.0 (quilt)"
+  * debian/control: Standards-Version: 3.9.1 -> 3.9.2. no change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 04 Dec 2011 17:09:13 +0100
+
+jhead (1:2.90-3) unstable; urgency=low
+
+  * Fix "Can't run mogrify from graphicsmagick." add a Suggests: imagemagick
+    (Closes: #463225)
+  * debian/rules: use a minimal version
+  * Standards-Version: 3.8.4 -> 3.9.1. No change needed.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 27 Mar 2011 20:22:56 +0200
+
+jhead (1:2.90-2) unstable; urgency=low
+
+  * debian/patches/24_jhead.1: Fix "confusing manpage" (Closes: #570608)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 21 Feb 2010 16:15:40 +0100
+
+jhead (1:2.90-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches/* removed. They are now included upstream.
+  * debian/patches/23_jhead.1: fix manpage-has-errors-from-man
+    usr/share/man/man1/jhead.1.gz 54: warning: macro `&'' not defined
+  * debian/control: Standards-Version: 3.8.3 -> 3.8.4. no change needed
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 05 Feb 2010 18:54:04 +0100
+
+jhead (1:2.88-2) unstable; urgency=low
+
+  * debian/control: add Depends: ${misc:Depends}
+    W: jhead source: debhelper-but-no-misc-depends jhead
+  * debian/patches/21_jhead.c: fix a spelling typo
+  * debian/patches/22_jhead.1: fix hyphen-used-as-minus-sign
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 03 Jan 2010 17:03:59 +0100
+
+jhead (1:2.88-1) unstable; urgency=low
+
+  * New upstream release
+    - debian/patches/30_buffer_overflow: patch included upstream
+  * debian/control: Standards-Version: 3.8.1 -> 3.8.3. No change needed.
+  * Move to "3.0 (quilt)" source format
+  * Use an epoch number since 2.88 < 2.875
+  * debian/patches/20_jhead.1: use DEP-3 format
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 29 Nov 2009 18:28:42 +0100
+
+jhead (2.875-2) unstable; urgency=low
+
+  * Fix "segmentation fault on corrupt input file" patch from upstream
+    debian/patches/30_buffer_overflow (Closes: #530401)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 31 May 2009 17:36:13 +0200
+
+jhead (2.875-1) unstable; urgency=low
+
+  * New upstream release
+   - Fix "document Nonfatal Error: Illegal subdirectory link" the error
+     message is now explicit that the erorr is in EXIF data and not the file
+     system (Closes: #525724)
+  * update from debhelper 4 to 7
+  * Standards-Version: 3.7.3 -> 3.8.1
+   - add support of noopt, nostrip and parallel= in DEB_BUILD_OPTIONS
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Thu, 30 Apr 2009 19:59:57 +0200
+
+jhead (2.87-1) unstable; urgency=low
+
+  * New upstream release
+   - Closes: #517990: jhead: -ce broken (fix released in 2.87)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 07 Mar 2009 14:10:41 +0100
+
+jhead (2.86-2) unstable; urgency=low
+
+  * debian/patches/20_jhead.1: Closes: #515659
+    "jhead: Manpage error in '-te' example"
+  * use quilt again
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 18 Feb 2009 15:55:26 +0000
+
+jhead (2.86-1) unstable; urgency=low
+
+  * New upstream release
+  * remove patches 01_makefile, 07_jhead.1, 08_jhead.1, 09_long_int,
+    10_jhead.1 since they are now included upstream
+  * do not use quilt anymore (no patch needed)
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 15 Feb 2009 14:45:20 +0100
+
+jhead (2.85-1) unstable; urgency=low
+
+  * New upstream release
+   - Closes: #504194 "CVE-2008-4640: insecure file handling"
+  * debian/patches/11_jhead.c.dpatch: removed since included upstream
+  * debian/*: change from dpatch to quilt
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Thu, 06 Nov 2008 21:51:09 +0100
+
+jhead (2.84-2) unstable; urgency=high
+
+  * urgency high since it fixes a security RC bug: CVE-2008-4641
+  * debian/patches/11_jhead.c.dpatch: Closes: #503645: jhead: CVE-2008-4641
+    command injection via filename and insecure file handling
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 31 Oct 2008 19:53:26 +0100
+
+jhead (2.84-1) unstable; urgency=high
+
+  * New upstream release
+   - Closes: #502353 "Security issues fixed in 2.84"
+   - Fix CVE-2008-4575: "Buffer overflow in the DoCommand function in jhead
+   before 2.84 might allow context-dependent attackers to cause a denial of
+   service (crash) via (1) a long -cmd argument and (2) possibly other
+   unspecified vectors."
+  * debian/patches/05_jhead.1.dpatch: removed since applied upstream
+  * debian/patches/10_jhead.1.dpatch: update since not all from
+    05_jhead.1.dpatch has been included upstream
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Thu, 16 Oct 2008 21:13:02 +0200
+
+jhead (2.82-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/patches/09_long_int.dpatch: avoid some compiler warnings
+  * debian/patches/10_jhead.1.dpatch: avoid a lintian warning
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 24 May 2008 14:01:01 +0200
+
+jhead (2.80-1) unstable; urgency=low
+
+  * New upstream realease
+   - remove debian/patches/06_jhead_c.dpatch: included upstream
+  * debian/control: add the Homepage: field
+  * debian/patches/0{5,7,8}_jhead.1.dpatch add dpatch description
+  * debian/control: Standards-Version: 3.7.2 -> 3.7.3
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Thu, 06 Dec 2007 22:04:01 +0100
+
+jhead (2.70-2) unstable; urgency=low
+
+  * debian/patches/07_jhead.1.dpatch: Closes: #435072: "jhead: date+time format
+    for -da needs / separator"
+  * debian/patches/08_jhead.1.dpatch: Closes: #435073: "jhead: -da example in
+    man page reverses the dates"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 12 Aug 2007 13:14:44 +0200
+
+jhead (2.70-1) unstable; urgency=low
+
+  * New upstream realease
+   - Closes: #425990: "Please provide new upstream release"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 25 May 2007 16:25:47 +0200
+
+jhead (2.60-4) unstable; urgency=low
+
+  * debian/patches/06_jhead_c.dpatch: change "yyyy:mmm:dd" in "yyyy:mm:dd"
+    Closes: #404527: "jhead: typo in error message for option -ts"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 26 Dec 2006 10:23:05 +0100
+
+jhead (2.60-3) unstable; urgency=low
+
+  * debian/patches/05_jhead.1.dpatch: update. Closes: #400534: jhead: Typos in
+    man page
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue, 28 Nov 2006 21:43:01 +0100
+
+jhead (2.60-2) unstable; urgency=low
+
+  * debian/patches/05_jhead.1.dpatch: update. Closes: #379516: jhead: Example
+    in man page has mistakes
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Tue,  1 Aug 2006 22:33:49 +0200
+
+jhead (2.60-1) unstable; urgency=low
+
+  * New upstream realease
+  * debian/patches/05_jhead.1.dpatch
+    - Closes: #367580: jhead: man page typo: "thumbail" -> "thumbnail"
+    - Closes: #367581: jhead: Typo in man page: "Regnerate" -> "Regenerate"
+    - Closes: #367582: jhead: Typo in readme.txt: "Liscence" -> "Licence"
+    - Closes: #367587: jhead: Documentation of -rt is confused.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 17 May 2006 23:28:13 +0200
+
+jhead (2.50-1) unstable; urgency=low
+
+  * rename upstream version 2.5 in 2.50 since 2.5 < 2.44 according to Debian
+    Installer <installer@ftp-master.debian.org>
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 26 Feb 2006 17:46:24 +0100
+
+jhead (2.5-1) unstable; urgency=low
+
+  * New upstream version
+   - debian/patches/02_jhead.1.dpatch: patch included upstream
+   - debian/patches/03_jhead.c.dpatch: patch included upstream
+  * debian/patches/04_cast.dpatch: the compilation failed because of a cast
+  * debian/compat: 3 -> 4
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun, 26 Feb 2006 17:21:48 +0100
+
+jhead (2.44-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/patches/02_jhead.1.dpatch: include a patch. Closes: #329704
+    "Typo fix: "freindly" --> "friendly" in the man page"
+  * debian/control: Standards-Version: 3.6.1 -> 3.6.2: no change
+  * debian/patches/03_jhead.c.dpatch: keep the access rights of the original
+    file. Closes: #330242 "jhead -ce changes file permissions"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun,  9 Oct 2005 00:17:14 +0200
+
+jhead (2.41-1) unstable; urgency=low
+
+  * New upstream release
+   - Closes: #284541 "zophImport: gets camera model wrong"
+  * debian/patches/02_jhead.1.dpatch: Closes: #314640 "Typo in manual page
+    (of->or)"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 17 Jun 2005 20:00:42 +0200
+
+jhead (2.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 17 Jun 2005 16:28:38 +0200
+
+jhead (2.3-2) unstable; urgency=low
+
+  * debian/control: add Depends: libjpeg-progs
+    Closes: #292617 "missing dependency (libjpeg-progs)"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 28 Jan 2005 12:09:19 +0100
+
+jhead (2.3-1) unstable; urgency=low
+
+  * New upstream release
+   - Closes: #290571 "New upstream release"
+   - Closes: #274055 "Shouldn't touch read-only files"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sat, 15 Jan 2005 16:42:52 +0100
+
+jhead (2.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/copyright: update to sync the copyright statement with upstream
+    readme.txt
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Wed, 14 Jul 2004 14:34:43 +0200
+
+jhead (2.1-4) unstable; urgency=low
+
+  * debian/patches/03_jhead.1.dpatch: some typos corrections for jhead.1
+    Closes: #244627
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Mon, 19 Apr 2004 16:32:14 +0200
+
+jhead (2.1-3) unstable; urgency=low
+
+  * debian/patches/02_usage.html.dpatch: correct usage.html, Closes: #162340
+   - s/Jpeg/JPEG/
+   - s/exif/Exif/
+   - s/ImageMagic/ImageMagick/
+   - s/dos/DOS/
+  * debian/patches/03_jhead.1.dpatch: correct jhead.1, Closes: #233002
+   - s/Jpeg/JPEG/
+   - s/exif/Exif/
+   - and some other mistakes
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 20 Feb 2004 15:20:34 +0100
+
+jhead (2.1-2) unstable; urgency=low
+
+  * debian/control: change maintainer :-)
+  * acknowledge my own NMU: Closes: #162026, #202794, #161801, #189049,
+    #188514, #162234
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun,  1 Feb 2004 17:25:59 +0100
+
+jhead (2.1-1) unstable; urgency=low
+
+  * New maintainer. Thanks to Dave Baker.
+  * New upstream release
+   - Closes: #162026 "New upstream available..."
+   - Closes: #202794 "new release 2.0 available"
+   - Closes: #161801 "enhanced file renaming"
+  * debian/copyright:
+   - update copyright from upstream readme.txt
+   - use upstream email format as in readme.txt. Closes: #189049 "Upstream
+   author objects to have his email address listed in the documentation."
+  * debian/docs: include changes.txt in the package. Closes: #188514
+  * debian/control: Standards-Version: 3.5.2 -> 3.6.1
+  * debian/jhead.sgml:
+   - removed since upstream distribute a manpage
+   - so no need to patch jhead.sgml anymore, Closes: #162234 "manpage omits
+   some options"
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Sun,  1 Feb 2004 16:37:09 +0100
+
+jhead (1.8-2) unstable; urgency=low
+
+  * Typos corrected in usage.html and man page.  (Closes: #160289)
+
+ -- Dave Baker <dsb3@debian.org>  Tue, 24 Sep 2002 22:42:03 -0400
+
+jhead (1.8-1) unstable; urgency=low
+
+  * New upstream release (Closes: #151062)
+  * Preliminary package for new binary - documentation (not included
+    in upstream source) has not yet been updated.
+
+ -- Dave Baker <dsb3@debian.org>  Tue,  6 Aug 2002 09:29:53 -0400
+
+jhead (1.6-2) unstable; urgency=low
+
+  * Bugfix - added "-f Makefile" to debian/rules to avoid using original
+    "makefile" from upstream which doesn't do all that we need it to.
+    Closes: #132353
+
+ -- Dave Baker <dsb3@debian.org>  Mon,  4 Feb 2002 13:51:23 -0500
+
+jhead (1.6-1) unstable; urgency=low
+
+  * New upstream release (Closes: #131048)
+
+ -- Dave Baker <dsb3@debian.org>  Sat, 26 Jan 2002 21:25:21 -0500
+
+jhead (1.5.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Dave Baker <dsb3@debian.org>  Wed,  9 Jan 2002 12:35:57 -0500
+
+jhead (1.5-2) unstable; urgency=low
+
+  * Updated debian/copyright file with text from readme.txt (not webpage)
+    that I think more accurately expresses the author's wishes.
+  * Makefile changes, Added 'upstream' URL to description.
+
+ -- Dave Baker <dsb3@debian.org>  Sat, 05 Jan 2002 00:29:47 -0500
+
+jhead (1.5-1) unstable; urgency=low
+
+  * Initial Release.
+  * Closes: #127228  (ITP announcement)
+
+ -- Dave Baker <dsb3@debian.org>  Sun, 30 Dec 2001 16:17:45 -0500

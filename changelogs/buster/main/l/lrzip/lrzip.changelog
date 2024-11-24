@@ -1,0 +1,267 @@
+lrzip (0.631+git180528-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Security updates:
+    Two issues that allow remote attackers to cause a denial of service via a
+    crafted lrz file:
+    - CVE-2018-5786: Resolve a potential infinite loop and application hang in the
+      get_fileinfo function.
+    - CVE-2021-27345: Resolve a null pointer dereference.
+    * CVE-2021-27347: Resolve a use after free.
+    - CVE-2020-25467: Resolve a null pointer dereference.
+    - CVE-2022-26291: Resolve a multiple concurrency use-after-free.
+    A memory corruption issue:
+    - CVE-2022-28044: Resolve a potential heap corruption.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 12 May 2022 20:53:05 -0400
+
+lrzip (0.631+git180528-1) unstable; urgency=high
+
+  * Git snapshot release to fix security issue:
+    - CVE-2018-11496: heap use after free in read_stream() .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 29 May 2018 14:39:27 +0000
+
+lrzip (0.631+git180517-1) unstable; urgency=high
+
+  * Git snapshot release to fix security issues:
+    - CVE-2017-8842: divide-by-zero in bufRead::get() (closes: #863156),
+    - CVE-2017-8843: NULL pointer dereference in join_pthread()
+      (closes: #863155),
+    - CVE-2017-8844: heap-based buffer overflow write in read_1g()
+      (closes: #863153),
+    - CVE-2017-8845: invalid memory read in lzo_decompress_buf()
+      (closes: #863151),
+    - CVE-2017-8846: use-after-free in read_stream() (closes: #863150),
+    - CVE-2017-8847: NULL pointer dereference in bufRead::get()
+      (closes: #863145),
+    - CVE-2017-9928: stack buffer overflow in get_fileinfo() (closes: #866022),
+    - CVE-2017-9929: another stack buffer overflow in get_fileinfo()
+      (closes: #866020),
+    - CVE-2018-5650: infinite loop from crafted/corrupt archive in
+      unzip_match() (closes: #887065),
+    - CVE-2018-5747: use-after-free in ucompthread() (closes: #898451),
+    - CVE-2018-5786: infinite loop in get_fileinfo() (closes: #888506),
+    - CVE-2018-9058: infinite loop in runzip_fd() ,
+    - CVE-2018-10685: use-after-free in lzma_decompress_buf()
+      (closes: #897645).
+  * Update homepage location.
+  * Update debhelper level to 11:
+    - don't need dh_installman anymore,
+    - remove dh-autoreconf build dependency,
+    - remove autotools-dev build dependency.
+  * Update Standards-Version to 4.1.4 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 17 May 2018 15:42:06 +0000
+
+lrzip (0.631-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 14 Nov 2016 00:20:43 +0000
+
+lrzip (0.630-1) unstable; urgency=low
+
+  * New upstream release.
+  * (De)compressing to/from stdin/stdout works again (closes: #742698).
+  * Update Standards-Version to 3.9.8 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 21 Aug 2016 06:13:08 +0000
+
+lrzip (0.621-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixes memory handling with fuzzed archives (closes: #774040).
+  * Update copyright .
+  * Update Standards-Version to 3.9.6 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 25 Apr 2015 17:22:00 +0000
+
+lrzip (0.616-1) unstable; urgency=low
+
+  * New upstream release, fixes manpage typos (closes: #655295).
+  * Use dh-autoreconf to update config.{sub,guess} (closes: #727925).
+  * Update Standards-Version to 3.9.5 .
+  * New maintainer (closes: #742878).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 28 Mar 2014 18:38:44 +0100
+
+lrzip (0.608-2) unstable; urgency=low
+
+  * debian/compat
+    - Update to 9
+  * debian/control
+    - (Build-Depends): update to debhelper 9, dpkg-dev 1.16.1.
+  * debian/copyright
+    - (Source, X-Upstream-Vcs-Git): Update location.
+    - (debian/*): Update year.
+  * debian/rules
+    - Use hardened CFLAGS (release goal).
+      http://wiki.debian.org/ReleaseGoals/SecurityHardeningBuildFlags
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 08 Feb 2012 17:25:07 -0500
+
+lrzip (0.608-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 24 Oct 2011 17:22:16 +0300
+
+lrzip (0.607+20110921+gita28def8-1) unstable; urgency=low
+
+  * New upstream release
+    - On hurd-i386 missing mremap (FTBFS; Closes: #642271).
+  * debian/patches
+    - (bash completion.d): Delete; accepted upstream.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 21 Sep 2011 10:01:26 +0300
+
+lrzip (0.607+20110917+git79c2e9a-2) unstable; urgency=low
+
+  * debian/rules:
+   - (override_dh_auto_install): do not install bash completion; already
+     in package bash-completion (Closes: #642062).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 19 Sep 2011 12:39:37 +0300
+
+lrzip (0.607+20110917+git79c2e9a-1) unstable; urgency=low
+
+  [Jari Aalto]
+  * New upstream release.
+    - Packaged from upstream VCS due to fixed in the build system.
+  * debian/copyright
+    - (Format): update URL.
+    - (debian/*): Add license.
+  * debian/rules
+    - (override_dh_auto_configure): Simplify if-test.
+    - (override_dh_auto_install): remove ChangeLog as this is already
+      handled by dh_installchangelogs; would cause duplicate (lintian).
+
+  [tony mancill]
+  * add completion.d.patch
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sun, 18 Sep 2011 10:22:48 +0300
+
+lrzip (0.603+2011.0423+git7ed977b-1) unstable; urgency=low
+
+  * New upstream snapshot.
+    - Fix failure to compress big files (Closes: #623745).
+  * debian/control
+    - (Build-Depends): Add automake, autoconf, libtool.
+  * debian/rules
+    - (override_dh_auto_configure): New. For snapshot packaging.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 26 Apr 2011 10:30:59 +0300
+
+lrzip (0.602-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - (Standards-Version): 3.9.2.
+  * debian/copyright
+    - Update to official DEP5.
+    - Clarify LZMA licence.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 21 Apr 2011 19:54:41 +0300
+
+lrzip (0.552+20110217+gitcd8b086-1) unstable; urgency=low
+
+  * Snapshot from upstream version control repository.
+    - Fix FTBFS on kFreeBSD (Closes: #607978).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 17 Feb 2011 15:19:46 +0200
+
+lrzip (0.552-1) unstable; urgency=low
+
+  * New upstream release
+    - Fix data loss with large files (Closes: #611980).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 17 Feb 2011 15:18:28 +0200
+
+lrzip (0.551-1) unstable; urgency=low
+
+  * New upstream release (Closes: #607063).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 14 Dec 2010 17:43:54 +0200
+
+lrzip (0.530-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/*.mk
+    - Remove. File no longer needed or accepted upstream.
+  * debian/patches
+    - Remove. Included in upstream sources.
+  * debian/rules
+    - Clean up targets due to removed *.mk files.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 13 Nov 2010 18:28:36 +0200
+
+lrzip (0.47-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules:
+    - (override_dh_auto_build): New.
+  * debian/patches
+    - (10): Refresh. Define NO_ASSEMBLER.
+    - (20): Remove. Accepted upstream.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 27 Oct 2010 19:35:52 +0300
+
+lrzip (0.46-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/compat
+    - Update to 8.
+  * debian/control
+    - (Build-Depends): update to debhelper 8.
+    - (Standards-Version): 3.9.1.
+  * debian/copyright
+    - Cosmetic changes.
+  * debian/patches
+    - (20): New. Rewrite symlink handling in Makefile.in::install target.
+  * debian/rules
+    - Remove extra targets that can be handled by dh(1).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 26 Oct 2010 18:55:29 +0300
+
+lrzip (0.45-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/*.pod
+    - Delete files. Accepted by upstream.
+  * debian/copyright
+    - (X-Upstream-Vc-Git): New field.
+  * debian/patches
+    - (Number 00, 01, 20): Delete files. Accepted by upstream
+      (Closes: #573204, #573203, #573200, #573198, #573197).
+  * debian/rules
+    - (man): Delete target. Upstream accepted all manual pages.
+    - (override_dh_auto_install): New; convert from 'install'.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 30 Mar 2010 16:26:08 +0300
+
+lrzip (0.44-2) unstable; urgency=medium
+
+  * debian/debian-autotools.mk
+    - New helper macros.
+  * debian/control
+    - (Build-Depends): update to 7.1.
+    - (Standards-Version): update to 3.8.4.
+  * debian/license.sh
+    - Update find options.
+  * debian/pod2man.mk
+    - Add PODDATE
+  * debian/repack.sh
+    - Adjust comments.
+  * debian/rules
+    - (override_dh_auto_configure): New rule. Use new config.{sub,guess}
+      files at configure time. (FTBFS AVR32; Closes: #566652).
+    - (override_dh_auto_clean): Preserve original files.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 22:12:00 +0200
+
+lrzip (0.44-1) unstable; urgency=low
+
+  * Initial release (Closes: #455457).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 09 Jan 2010 19:31:52 +0200

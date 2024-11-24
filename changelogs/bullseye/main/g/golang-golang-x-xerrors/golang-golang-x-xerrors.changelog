@@ -1,0 +1,27 @@
+golang-golang-x-xerrors (0.0~git20191204.9bdfabe-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20191204.9bdfabe
+  * debian/gbp.conf: Set debian-branch to debian/sid
+    for DEP-14 conformance.
+  * debian/control: Bump Standards-Version to 4.5.0 (no change)
+  * debian/copyright: Remove unused File-Excluded: Godeps/_workspace
+
+ -- Anthony Fok <foka@debian.org>  Sat, 15 Feb 2020 17:58:32 -0700
+
+golang-golang-x-xerrors (0.0~git20190717.a985d34-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20190717.a985d34
+  * Add debian/watch
+  * Apply "cme fix dpkg" fixes
+    - Bump Standards-Version to 4.4.0 (no change)
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Rename license short name "BSD-3" to "BSD-3-clause" in debian/copyright
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Jul 2019 02:35:25 -0600
+
+golang-golang-x-xerrors (0.0~git20190410.1f06c39-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Thu, 02 May 2019 22:55:39 +0200

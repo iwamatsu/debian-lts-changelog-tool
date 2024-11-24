@@ -1,0 +1,211 @@
+packer (1.3.4+dfsg-4+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 13:03:35 +0200
+
+packer (1.3.4+dfsg-4) unstable; urgency=medium
+
+  * Update patches to show error info for disabled features
+  * Add README.Debian to clarify the difference between upstream version
+  * Remove outdated command description in manpage
+  * Add patch to skip flaky TestBuildStdin
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 01 Mar 2019 23:57:16 +0800
+
+packer (1.3.4+dfsg-3) unstable; urgency=medium
+
+  * Disable slow tests on mips too
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 09 Feb 2019 09:59:50 +0800
+
+packer (1.3.4+dfsg-2) unstable; urgency=medium
+
+  * Disable timeout test on mipsel
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 09 Feb 2019 07:58:39 +0800
+
+packer (1.3.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.3.4+dfsg
+  * Exclude tencentcloud and hcloud builder.
+    Since the dependencies are not packaged
+  * Vendor old mapstructure to workaround regression in new version
+  * Add patch to disable sed func in template.
+    Since the dependencies are not packaged
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 09 Feb 2019 00:16:11 +0800
+
+packer (1.3.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.3.1+dfsg.
+  * Update my email to zhsj@debian.org.
+  * Update Standards-Version to 4.2.1. (no changes)
+  * Drop pandoc from Build-Depends, install markdown doc as is.
+  * Add patch to disable consul/vault/xz related plugins,
+    lack of new dependencies.
+  * Add patch to skip test which relies on /dev/tty.
+  * Add patch to fix flaky test in TestHook_cancelWhileRun.
+  * Refresh openstack patch, add back token variable.
+  * Refresh Build-Depends for new release.
+    + Add golang-github-google-go-cmp-dev.
+    + Add golang-github-google-uuid-dev.
+    + Add golang-gopkg-cheggaaa-pb.v1-dev.
+    + Bump golang-github-gophercloud-gophercloud-dev to
+      0.0~git20180917.45f1c769.
+    + Bump golang-golang-x-oauth2-dev to 0.0~git20180821.d2e6202.
+    + Bump golang-golang-x-oauth2-google-dev 0.0~git20180821.d2e6202.
+    + Bump golang-google-api-dev to 0.0~git20180916.19ff876.
+  * Remove no longer used Build-Depends.
+  * Bump golang-github-christrenkamp-goxpath-dev and drop old patch.
+  * Bump golang-github-denverdino-aliyungo-dev and drop old patch.
+  * Drop azure packages from Build-Depends, since the plugin was disabled.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 21 Sep 2018 19:54:44 +0800
+
+packer (1.2.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.2.5+dfsg (Closes: #877451)
+  * d/control: add goxpath and govmomi
+  * d/control: remove xmlpath.v2 from Build-Depends
+  * d/control: change mailinglist, VCS, Standards-Version
+  * d/compat: update to 11
+  * d/rules: exclude disabled plugins
+  * d/patches: refresh patches
+    + temporarily disable azure arm plugin
+    + also disable oneandone, ncloud, oracle-oci, oracle-classic,
+      profitbricks, scaleway, triton for lacking dependencies.
+  * d/examples: add ansible
+
+ -- Shengjing Zhu <i@zhsj.me>  Tue, 31 Jul 2018 14:40:49 +0800
+
+packer (1.0.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.0.4+dfsg
+  * Refresh patches with new upstream release
+  * Enable bgzf compress
+    + Add golang-github-biogo-hts-dev to Build-Depends
+  * Bump azure-sdk, autorest version in Build-Depends
+  * d/rules: fix testdata include wildcard
+  * Update Standards-Version to 4.1.0 (no changes)
+  * Update description from official intro
+    Remove detailed builder info which is often changed, avoid
+    increasing the work for translators
+  * d/copyright: Add missing post-processor/checksum files copyright
+
+ -- Shengjing Zhu <i@zhsj.me>  Wed, 13 Sep 2017 21:42:03 +0800
+
+packer (1.0.2+dfsg-1) unstable; urgency=medium
+
+  * Adopt package (Closes: #865337)
+  * New upstream version 1.0.2+dfsg
+  * Drop golang-github-mitchellh-packer-dev, it's useless and
+    no other packages depend on it.
+  * d/packer.examples: Add alicloud example
+  * d/packer.install:
+    + Only install /usr/bin/packer
+    + Drop /usr/lib/packer/{example, packer, scripts}
+  * d/copyright:
+    + Add myself to copyright holder
+    + Remove full copy of MPL-2.0
+    + builder/azure/pkcs12/pkcs8_test.go is BSD-3-Clause licensed
+    + Use https in format url
+  * d/compat: Update compat to 10
+  * d/control:
+    + Add myself to uploader
+    + Update standard version to 4.0.1
+      * Change priority to optional
+    + Change section to utils
+    + Update depends to new version
+    + Add autopkgtest-pkg-go
+  * d/rules:
+    + Use find to include all test-fixtures
+    + Remove disabled plugins source
+  * d/patches:
+    + Add 0001-disable-telemetry-report.patch
+    + Add 0002-disable-aws-AssumeRoleTokenProvider.patch
+    + Add 0003-disable-1and1-profitbrick-triton-builder-plugin.patch
+    + Add 0004-fix-build-on-old-azure-sdk.patch
+    + Add 0005-Fix-amazon-chroot-builder-test.patch
+    + Add 0006-Disable-bgzf-compress.patch
+    + Add 0007-Skip-tests-needing-writable-HOME-dir.patch
+    + Drop Specify-InsecureIgnoreHostKey-for-HostKeyCallback.patch
+    + Drop patches/fix-tails-import-path.patch
+    + Drop handle-ABI-change-of-golang-golang-x-crypto-dev.patch
+    + Drop update-ssh-client-usage-for-new-crypto-ssh-version.patch
+
+ -- Shengjing Zhu <i@zhsj.me>  Tue, 22 Aug 2017 14:38:37 +0800
+
+packer (0.10.2+dfsg-6) unstable; urgency=medium
+
+  * deb/patches:
+    - Backport two more patches to handle ABI change of
+      golang-golang-x-crypto-dev (Closes: #861282).
+
+ -- Roger Shimizu <rogershimizu@gmail.com>  Fri, 26 May 2017 09:08:48 +0900
+
+packer (0.10.2+dfsg-5) unstable; urgency=medium
+
+  * Team upload.
+  * deb/patches:
+    + Add patch to handle ABI change of golang-golang-x-crypto-dev,
+      due to CVE security fix. (Closes: #861282)
+  * deb/control:
+    + Bump up version of golang-golang-x-crypto-dev in Build-Depends
+      and Depends.
+
+ -- Roger Shimizu <rogershimizu@gmail.com>  Mon, 15 May 2017 00:51:19 +0900
+
+packer (0.10.2+dfsg-4) unstable; urgency=medium
+
+  * deb/rules: disable a flaky test in packer/rpc/mux_broker_test.go
+    (Closes: #858018).
+
+ -- Daniel Stender <stender@debian.org>  Wed, 05 Apr 2017 08:18:59 +0200
+
+packer (0.10.2+dfsg-3) unstable; urgency=medium
+
+  * deb/rules: expand timeout for tests (Closes: #853135).
+
+ -- Daniel Stender <stender@debian.org>  Mon, 30 Jan 2017 09:21:12 +0100
+
+packer (0.10.2+dfsg-2) unstable; urgency=medium
+
+  * get build time tests passing through (Closes: #852072):
+    + add export for DH_GOLANG_INSTALL_EXTRA to include test-fixtures.
+    + set $HOME for dh_auto_test.
+    + remove failsafe for dh_auto_test.
+
+ -- Daniel Stender <stender@debian.org>  Sun, 29 Jan 2017 22:59:31 +0100
+
+packer (0.10.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control:
+    + add dep against new golang-golang-x-oauth2-google-dev.
+    + add version to golang-golang-x-oauth2-dev (catch missing breaks).
+    + correct a typo in package description.
+  * deb/watch:
+    + fix filenamemangle, add repacksuffix.
+
+ -- Daniel Stender <stender@debian.org>  Tue, 15 Nov 2016 18:14:05 +0100
+
+packer (0.10.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control:
+    + added azure-sdk-for-go, azure-go-autorest (vendoring
+      both not needed anymore), and azure-go-ntlmssp to build and
+      source package deps, removed dep against dgrijalva-jwt-go.
+    + corrected typo in package description.
+  * deb/copyright: dropped paragraphs for vendored packages.
+  * deb/README.source: dropped info on vendored packages.
+
+ -- Daniel Stender <stender@debian.org>  Tue, 10 May 2016 10:53:02 +0200
+
+packer (0.10.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #740753).
+
+ -- Daniel Stender <stender@debian.org>  Tue, 26 Apr 2016 16:08:50 +0200

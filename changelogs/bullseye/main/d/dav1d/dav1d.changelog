@@ -1,0 +1,52 @@
+dav1d (0.7.1-3+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2024-1580 (Closes: #1064310)
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Fri, 03 May 2024 21:56:52 +0200
+
+dav1d (0.7.1-3) unstable; urgency=high
+
+  * Team upload.
+  * Disable asm code on x32, it hasn’t been ported there (Closes: #964576)
+
+ -- Thorsten Glaser <tg@mirbsd.de>  Wed, 08 Jul 2020 23:07:41 +0200
+
+dav1d (0.7.1-2) unstable; urgency=medium
+
+  * Update homepage in d/control
+  * Increase test timeout (Closes: #964249)
+
+ -- Dylan Aïssi <daissi@debian.org>  Sat, 04 Jul 2020 22:39:36 +0200
+
+dav1d (0.7.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.7.1
+  * Bump debhelper version to 13
+  * Cosmetically re-order fields
+  * Install examples to libdav1d-dev
+  * Suppress spelling error false positive
+  * Add upstream metadata file
+
+ -- Vasyl Gello <vasek.gello@gmail.com>  Fri, 03 Jul 2020 21:18:02 +0200
+
+dav1d (0.7.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump minimal nasm version to 2.14.
+  * Update d/copyright.
+  * Bump Standards-Version to 4.5.0.
+  * Bump SONAME to libdav1d4.
+  * Add salsa-ci file (routine-update)
+  * Rules-Requires-Root: no (routine-update)
+
+ -- Dylan Aïssi <daissi@debian.org>  Fri, 22 May 2020 14:54:50 +0200
+
+dav1d (0.5.2-1) unstable; urgency=medium
+
+  * Initial Debian release. (Closes: #916333)
+  * Clarify the AOM patent license which is not a copyright
+    license but rather an "optional extra" which grants
+    users patent rights under some extra conditions.
+
+ -- Dylan Aïssi <daissi@debian.org>  Sat, 11 Jan 2020 16:30:36 +0100

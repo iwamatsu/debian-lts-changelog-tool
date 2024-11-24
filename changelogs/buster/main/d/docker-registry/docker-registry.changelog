@@ -1,0 +1,153 @@
+docker-registry (2.6.2~ds1-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2023-2253: A malicious user can submit an unreasonably
+    large value for `n` in '/v2/_catalog' causing the allocation
+    of a massive string array, possibly causing a denial of
+    service through excessive use of memory (Closes: #1035956)
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 07 Jun 2023 19:44:21 +0000
+
+docker-registry (2.6.2~ds1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New patch to fix logrus imports.
+  * (Build-)Depends:
+    = golang-github-bshuster-repo-logrus-logstash-hook-dev (>= 0.4.1)
+    = golang-github-sirupsen-logrus-dev (>= 1.0.2~)
+  * Standards-Version: 4.1.4
+  * Priority: optional
+  * DH to version 11; compat to version 10.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 05 May 2018 23:49:53 +1000
+
+docker-registry (2.6.2~ds1-1) unstable; urgency=medium
+
+  [ Tianon Gravi ]
+  * Update to 2.6.2 upstream release
+    - Fixes CVE-2017-11468 (Closes: #869242)
+    - https://github.com/docker/distribution/releases/tag/v2.6.2
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Wed, 09 Aug 2017 17:29:31 +0300
+
+docker-registry (2.6.0~rc.1+git20161216.38.28602af3-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+
+ -- Tim Potter <tpot@hpe.com>  Mon, 30 Jan 2017 15:04:02 +1100
+
+docker-registry (2.4.1~ds1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Nicolas Braud-Santoni ]
+  * Fixed conffiles permissions (Closes: #806261).
+  * Removed tests that access the network (Closes: #830209).
+  * Fix config directory permissions.
+    Thanks to Rhonda for the guidance
+  * Enable tests on all archs.
+
+  [ Dmitry Smirnov ]
+  * Fixed daemon start command in .service and .init scripts.
+  * Use dh-systemd.
+  * --parallel build/test.
+  * Patch config file to allow "delete" by default.
+  * Added myself to Uploaders.
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 18 Aug 2016 14:00:44 +1000
+
+docker-registry (2.4.1~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Removed "Built-Using" from -dev package.
+  * Build-Depends:
+    + golang-github-aws-aws-sdk-go-dev
+    - golang-github-adroll-goamz-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 15 Jun 2016 15:35:44 +1000
+
+docker-registry (2.3.1~ds2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Dropped unused dependency on "golang-github-docker-docker-dev"
+    to avoid circular dependency with Docker.
+  * Standards-Version: 3.9.8.
+  * Vcs-Git URL to HTTPS.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 12 Jun 2016 19:10:11 +1000
+
+docker-registry (2.3.1~ds2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Ship with vendored azure-sdk-for-go/storage (Closes: #822146).
+
+ -- Daniel Stender <stender@debian.org>  Sun, 24 Apr 2016 17:32:07 +0200
+
+docker-registry (2.3.1~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 31 Mar 2016 12:55:53 +1100
+
+docker-registry (2.3.0~ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * (Build-)Depends += golang-github-bugsnag-bugsnag-go-dev.
+  * Removed "no-bugsnag.patch".
+  * Removed obsolete "1125.patch".
+  * Standards-Version: 3.9.7.
+  * Install documentation.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 09 Mar 2016 11:34:37 +1100
+
+docker-registry (2.2.0~ds1-2) unstable; urgency=medium
+
+  * Simplify "BASE" in sysvinit script for better compatibility
+
+ -- Tianon Gravi <tianon@debian.org>  Tue, 08 Mar 2016 06:43:13 -0800
+
+docker-registry (2.2.0~ds1-1) unstable; urgency=medium
+
+  * Update to 2.2.0 upstream release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 19 Feb 2016 09:10:29 -0800
+
+docker-registry (2.1.1~ds1-4) unstable; urgency=medium
+
+  * Add empty "/var/lib/docker-registry" directory so it gets purged
+    appropriately (Closes: #803446)
+
+ -- Tianon Gravi <tianon@debian.org>  Tue, 03 Nov 2015 22:28:48 -0800
+
+docker-registry (2.1.1~ds1-3) unstable; urgency=medium
+
+  * Skip tests on architectures other than amd64
+
+ -- Tianon Gravi <tianon@debian.org>  Sat, 24 Oct 2015 13:21:25 -0700
+
+docker-registry (2.1.1~ds1-2) unstable; urgency=medium
+
+  * Swap "Build-Depends" to fix buildd building (Closes: #802796)
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 23 Oct 2015 13:27:33 -0700
+
+docker-registry (2.1.1~ds1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #757829)
+
+ -- Tianon Gravi <tianon@debian.org>  Thu, 17 Sep 2015 14:30:57 -0700

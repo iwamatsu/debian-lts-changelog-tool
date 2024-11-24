@@ -1,0 +1,499 @@
+libpgjava (42.2.5-2+deb10u4) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2024-1597:
+    A possible SQL injection vulnerability was found in libpgjava, the
+    PostgreSQL JDBC Driver. It allows an attacker to inject SQL if using
+    PreferQueryMode=SIMPLE which is not the default mode. In the default mode
+    there is no vulnerability.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 09 May 2024 22:40:41 +0200
+
+libpgjava (42.2.5-2+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Add patch to fix createTempFile vulnerability on unix like
+    systems where temporary files can be read by other users
+    on the system. (Fixes: CVE-2022-41946)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sat, 03 Dec 2022 02:27:18 +0530
+
+libpgjava (42.2.5-2+deb10u2) buster-security; urgency=high
+
+  * CVE-2022-31197: Prevent a SQL injection vulnerability caused by the lack of
+    escaping of column names. A malicious user could have crafted a schema that
+    caused an application to execute commands as a privileged user.
+    (Closes: #1016662)
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 07 Oct 2022 10:46:08 -0700
+
+libpgjava (42.2.5-2+deb10u1) buster-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2022-26520:
+    An attacker (who controls the jdbc URL or properties) can call
+    java.util.logging.FileHandler to write to arbitrary files through the
+    loggerFile and loggerLevel connection properties.
+  * Fix CVE-2022-21724:
+    The JDBC driver did not verify if certain classes implemented the expected
+    interface before instantiating the class. This can lead to code execution
+    loaded via arbitrary classes.
+  * CVE-2020-13692: Fix XXE vulnerability in PgSQLXML by disabling external
+    access and doctypes. (Closes: #962828)
+
+ -- Markus Koschany <apo@debian.org>  Sun, 03 Jul 2022 23:59:18 +0200
+
+libpgjava (42.2.5-2) unstable; urgency=medium
+
+  * Update PostgreSQL Maintainers address.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 07 Feb 2019 10:54:50 +0100
+
+libpgjava (42.2.5-1) unstable; urgency=medium
+
+  * New upstream security release: added server hostname verification for
+    non-default SSL factories in `sslmode=verify-full` (CVE-2018-10936)
+    https://github.com/pgjdbc/pgjdbc/commit/cdeeaca47dc3bc6f727c79a582c9e4123099526e
+
+ -- Christoph Berg <myon@debian.org>  Mon, 27 Aug 2018 21:20:17 +0200
+
+libpgjava (42.2.4-2) unstable; urgency=medium
+
+  * Ignore javadoc warnings, they are for unused files anyway. (Closes: #906377)
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Mon, 27 Aug 2018 16:55:02 +0200
+
+libpgjava (42.2.4-1) unstable; urgency=medium
+
+  * New upstream version.
+  * debian/libpostgresql-jdbc-java.poms: Remove ubenchmark, gone from source.
+  * debian/watch: Fetch upstream tarball from github.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 18 Jul 2018 13:11:13 +0200
+
+libpgjava (42.2.2-4) unstable; urgency=medium
+
+  * pgjdbc/pom.xml: "provided" made the shade plugin also remove the bundled
+    scram dependency. Revert that change, and declare the dependency to be
+    "optional" instead. That way, we bundle scram, and do not require
+    reverse-dependencies to install libscram-java. Again thanks Emmanuel Bourg!
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Wed, 06 Jun 2018 14:42:47 +0200
+
+libpgjava (42.2.2-3) unstable; urgency=medium
+
+  * pgjdbc/pom.xml: Manually patch scram dependency scope to be "provided"
+    instead of relying on maven.rules. (Closes: #900615, induced by #900763,
+    thanks Emmanuel Bourg.)
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 05 Jun 2018 09:47:56 +0200
+
+libpgjava (42.2.2-2) unstable; urgency=medium
+
+  * debian/maven.rules: Set scram scope to "provided" to properly remove the
+    runtime dependency on libscram-java. Thanks Kai-Chung Yan!
+  * Mark as Multi-Arch: foreign.
+  * libpostgresql-jdbc-java embeds classes from libscram-java. Note the
+    version used in Built-Using.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 29 May 2018 23:13:10 +0200
+
+libpgjava (42.2.2-1) unstable; urgency=medium
+
+  * New upstream version.
+    + Fixes test problen in pgpool2: WARNING: An illegal reflective access
+      operation has occurred (Closes: #894327)
+  * Add myself and pkg-postgresql to Uploaders.
+  * Refresh debian/patches/01-missing-pom-configuration.patch.
+  * Add B-D libmaven-shade-plugin-java and libscram-java.
+  * libjdbc-postgresql-java: remove ${maven:Depends}, it would resolve to
+    libscram-java (>> $ver) which is bundled in postgresql.jar anyway.
+  * debian/maven.properties: Switch to source 8 to enable lambda expressions.
+  * debian/tests/: Test scram-sha-256 authentication using sqlline.
+  * Update Vcs URLs and Standards-Version.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 30 Apr 2018 22:29:11 +0200
+
+libpgjava (9.4.1212-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #813365)
+    - Refreshed the patches
+    - Build with Maven instead of Ant
+  * No longer build the JDBC 3 jar, default to JDBC 4 (Closes: #820943, #820942)
+  * Updated the package description (Closes: #783456)
+  * Removed the dummy libpg-java package
+  * Removed the suggested dependency on postgresql
+  * Standards-Version updated to 3.9.8
+  * Switch to debhelper level 10
+  * Use secure Vcs-* URLs
+  * Converted debian/copyright to the Copyright Format 1.0
+  * Rewrote debian/watch to fetch the new releases directly from Git
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 09 Jan 2017 19:54:54 +0100
+
+libpgjava (9.2-1002-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump standards version to 3.9.4 (no changes).
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Sun, 12 May 2013 18:05:06 +0100
+
+libpgjava (9.1-902-1) experimental; urgency=low
+
+  [ Thomas Koch ]
+  * new upstream version
+  * switch packaging to git
+  * update debhelper and compat to 9
+  * use debian/clean
+  * use PACKAGE.links to add symlink to *-jdbc3.jar
+  * Install artifacts to /u/s/maven-repo (Closes: #683631)
+
+  [ Andrew Ross ]
+  * Update Vcs-Browser
+  * Refresh patches
+  * Remove Arnaud Vandyck from Uploaders
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Fri, 17 Aug 2012 22:16:00 +0100
+
+libpgjava (9.1-901-2) unstable; urgency=low
+
+  * Provide transitional package libpg-java (closes: #659324)
+  * Bump standards version to 3.9.3 (no changes).
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Fri, 20 Jul 2012 21:09:40 -0400
+
+libpgjava (9.1-901-1) unstable; urgency=low
+
+  * New upstream release. (closes: #645854)
+  * Change binary package name to libpostgresql-jdbc-java.
+      (closes: #336245)
+  * Remove Michael Koch from Uploaders. (closes: #654090)
+  * Bump standards version to 3.9.2 (no changes).
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Sat, 24 Dec 2011 23:33:56 +0000
+
+libpgjava (8.4-702-1) unstable; urgency=low
+
+  * New upstream release (closes: #612643)
+  * Build JDBC4 libraries in addition to JDBC3.
+  * Use debhelper and javahelper rather than cdbs
+  * Updated Standards-Version to 3.9.1.
+  * Don't depend on a jre (to match current java package policy)
+  * Added myself to Uploaders.
+  * Changed source format to 3.0 (quilt).
+  * Added a package containing the public API documentation.
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Sat, 12 Feb 2011 16:41:22 +0000
+
+libpgjava (8.4-701-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed all old unused JDBC2 stuff.
+  * Moved java-gcj-compat-dev and ant to Build-Depends.
+  * Make libpg-java Depends on default-jre-headless and its headless
+    friends.
+  * Build-Depends on debhelper >= 7.
+  * Moved package to section 'java'.
+  * Updated Standards-Version to 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Sat, 26 Sep 2009 13:39:36 +0200
+
+libpgjava (8.2-504-2) unstable; urgency=low
+
+  * Updated description to mention PostgreSQL 8.3 as supported.
+    Closes: #398348
+  * Removed libpgjava transitional package. Closes: #477557
+  * Moved debhelper and cdbs from Build-Depends-Indep to Build-Depends.
+  * Added Homepage, Vcs-Svn and Vcs-Browser fields.
+  * Added watch file.
+  * Added myself to Uploaders.
+  * Removed Stafan and Wolfgang from Uploaders.
+  * Updated Standards-Version to 3.7.3
+  * Updated debhelper level to 5.
+
+ -- Michael Koch <konqueror@gmx.de>  Sat, 26 Apr 2008 22:01:11 +0200
+
+libpgjava (8.2-504-1) unstable; urgency=low
+
+  * New upstream version, supporting Postgresql 8.2.
+  * Build using java-gcj-compat-dev.
+
+ -- Matthias Klose <doko@debian.org>  Sat,  6 Jan 2007 15:03:58 +0100
+
+libpgjava (8.1-405-1) unstable; urgency=low
+
+  * Drop support for the old jdbc2 driver (can be reverted if wanted)
+    (closes: #358345).
+  * New upstream (thanks to Wolfgang Baer).
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Tue, 25 Apr 2006 00:07:07 +0200
+
+libpgjava (8.1-404-1) unstable; urgency=low
+
+  * New upstream release (closes: #340739)
+  * Removed build.compiler property in debian/rules as preset in kaffe
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Tue, 29 Nov 2005 14:41:36 +0100
+
+libpgjava (8.0-312-1) unstable; urgency=low
+
+  * New upstream release
+    + Supports Postgresql 7.2 up to 8.0 releases
+    + Upstream supplies its own source packages for the jdbc driver 
+      starting with release 8.0 - no longer extracted from postgresql
+  * Changed library name to comply with java policy (closes: #275417)
+    + Added conflicts, replaces with old binary
+    + Changed debian/rules and debhelper files accordingly
+    + Added dummy package libpgjava for transition
+  * Updated everything to the new source package structure
+  * Updated copyright license and download location
+  * Updated control file for minimum supported version 7.2
+  * Deleted README.Debian - no longer needed
+  * Dropped patches:
+    + 01_getInfo_exception_fix.patch - JDBC 1 no longer implemented
+    + 02_jikes_jdbc2-optional_compilefix.patch - no longer needed
+  * Modified/New patches:
+    + Renamed 03_BuildXml.patch to 01_BuildXml.patch and updated
+    + 02_PSQLException_JDK13.patch (depends on 01_BuildXml.patch)
+  * postgresql.jar now links to the JDBC 3 jar (added NEWS)
+  * Changed build-dep libant1.6-java to ant (control, rules)
+  * Standards-Version: 3.6.2 - no changes
+
+  * Upload sponsored by Petter Reinholdtsen
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Wed, 10 Aug 2005 20:52:08 +0200
+
+libpgjava (7.4.7-3) unstable; urgency=low
+
+  * Built with sources...
+
+ -- Arnaud Vandyck <avdyk@debian.org>  Thu, 21 Apr 2005 14:25:11 +0200
+
+libpgjava (7.4.7-2) unstable; urgency=low
+
+  * Build with free vm's:
+    - Updated README.Debian
+    - Included README.jdbc2-interface explaining why these old java.sql.*
+      source files are included, why they are needed and from where they come.
+  * Move to main (closes: #300753)
+  * Added patch to fix jikes compile error in JDBC2 optional classes
+    (02_jikes_jdbc2-optional_compilefix.patch)
+  * Build JDBC2 with optional classes but without SSL support
+    Building with SSL support would prevent running the JDBC2 driver on 
+    jdk1.3 runtimes without SSL extensions or using the -Xverify:none flag  
+  * Build.xml (03_BuildXml.patch):
+    - Patched to allow explicit selection of JDBC specification
+      with -Djdbc2=true or -Djdbc3=true arguments during build
+    - Patched to allow explicit selection of SSL usage during
+      compile time with -Dssl=true (JDBC2 build has to be built without SSL)
+    - Patched to allow explicit selection of compile target version with
+      -Dtarget=1.3 for JDBC2 and -Dtarget=1.4 for JDBC3 
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Tue, 19 Apr 2005 20:28:25 +0200
+
+libpgjava (7.4.7-1) unstable; urgency=medium
+
+  * New upstream release (closes: #275154)
+    Changelog mentions jdbc fixes for 7.4.3 and 7.4.4
+  * Changed debian/rules that only build once to prevent false compilation
+    of jdbc2 driver with jdbc3 classes (closes: #302710)
+  * avdyk: added Wolfgang and myself to the uploaders
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Sat,  2 Apr 2005 18:14:29 +0200
+
+libpgjava (7.4.2-1) unstable; urgency=low
+
+  * New upstream release (closes: #242448)
+  * Apply patch from Adam Heath to fix NullPointerException in
+    org.postgresql.jdbc1.AbstractJdbc1DatabaseMetaData.getIndexInfo()
+    (closes: #238961)
+  * Updated debian/copyright
+  * Use libant1.6-java instead of libant1.5-java for building
+  * 
+
+ -- Stefan Gybas <sgybas@debian.org>  Mon, 19 Apr 2004 19:40:03 +0200
+
+libpgjava (7.4-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 7.4)
+    + Fixes extraction of column width and decimal digits for numeric and
+      decimal column types in AbstractJdbc1DatabaseMetaData (closes: #188510)
+    + Fixes setting of FK_NAME in AbstractJdbc1DatabaseMetaData
+      (closes: #197825)
+  * Set Maintainer: to Debian Java Maintainers and added myself to uploaders
+  * Switch debian/rules to CDBS, but not using the Ant class
+  * Use the new libant1.5-java for building instead of calling the
+    /usr/bin/ant script
+  * Use the JDK 1.4 package from Blackdown for building and enable SSL support
+    for the JDBC3 driver
+  * Make the directory layout for the examples match the package name
+    (closes: #205057)
+  * Updated the long description
+  * Fix a spelling error in the previous changelog entry
+  * Standards-Version: 3.6.1
+    + Moved Build-Depends-Indep to Build-Depends
+
+ -- Stefan Gybas <sgybas@debian.org>  Tue, 18 Nov 2003 23:35:23 +0100
+
+libpgjava (7.3-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 7.3)
+  * Build a JDBC2 and a JDBC3 (with DataSource) version in serparate JARs
+    and mention this in the long package description
+  * Build with debhelper >= 4.1.0 to get rid of /usr/doc compatibility
+    symlinks
+  * Use Jikes 1.15 as Java compiler
+  * Depend on java1-runtime | java2-runtime instead of java-common
+  * Added Takashi Okamoto and Ola Lundqvist as uploaders
+  * Standards-Version: 3.5.8 (no changes required)
+
+ -- Stefan Gybas <sgybas@debian.org>  Mon,  2 Dec 2002 22:00:12 +0100
+
+libpgjava (7.2-2) unstable; urgency=low
+
+  * Fixed NullPointerException in DatabaseMetaData.getIndexInfo() - this is
+    already fixed in upstream CVS (closes: #147100)
+  * Note: There are no JDBC updates in PostgreSQL 7.2.1 so this is still
+    the current release.
+  * The package can now be compiled with j2sdk1.3 1.3.1-1.1 (which has
+    JAVA_HOME set to /usr/lib/j2se/1.3) and 1.3.1-1 (which has JAVA_HOME set
+    to /usr/lib/j2sdk1.3).
+
+ -- Stefan Gybas <sgybas@debian.org>  Fri, 24 May 2002 16:24:58 +0200
+
+libpgjava (7.2-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 7.2)
+  * Call ant directly instead of using the Makefile
+  * Changed Build-Depends to Build-Depends-Indep (found by Lintian)
+  * Install the JAR as postgresql-7.2.jar and create a symlink as suggested
+    by the latest Java policy
+  * Depend on java-common instead of java-virtual-machine as this package
+    contains just a library
+  * Compile the classes with optimization and debug symbols
+
+ -- Stefan Gybas <sgybas@debian.org>  Wed,  6 Feb 2002 23:43:06 +0100
+
+libpgjava (7.1.3-2) unstable; urgency=low
+
+  * Added DEF_PGPORT to Makefile.global, this is used in Driver.java.in.
+    A NumberFormatException was thrown when trying to open a JDBC
+    connection without specifying a port. Thanks to Andreas Leitner for
+    investigating this problem!
+  * Adapted to new j2sdk1.3 JAVA_HOME (/usr/lib/j2se/1.3)
+
+ -- Stefan Gybas <sgybas@debian.org>  Tue, 25 Sep 2001 22:27:28 +0200
+
+libpgjava (7.1.3-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 7.1.3)
+  * Moved to contrib again as the build process requires ant from contrib
+  * Now that we are in contrib, build using JDK 1.3 to get advanced
+    JDBC 2.0 features
+  * Standards-Version: 3.5.6 (no changes required)
+  * Use debhelper V3
+
+ -- Stefan Gybas <sgybas@debian.org>  Thu, 13 Sep 2001 14:01:58 +0200
+
+libpgjava (7.0.2-3) unstable; urgency=low
+
+  * Don't build javadoc documentation any longer, so the package can be built
+    using only free tools (the documentation is for internal classes only)
+  * Moved from contrib/libs to libs (no longer depends on non-free packages)
+  * Updated README.Debian
+
+ -- Stefan Gybas <sgybas@debian.org>  Tue, 12 Sep 2000 16:45:58 +0200
+
+libpgjava (7.0.2-2) unstable; urgency=low
+
+  * This time really apply Adam's getTimestamp() patch (closes: #67670)
+
+ -- Stefan Gybas <sgybas@debian.org>  Sun, 27 Aug 2000 18:42:56 +0200
+
+libpgjava (7.0.2-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 7.0.2)
+    + getTimestamp() in ResultSet fixed (closes: #67670, thanks go to
+      Adam Heath for the patch)
+  * Added encoding support (closes: #66980, thanks go to Kaz Sasayama
+    for the patch)
+  * Standards-Version: 3.2.1 (no changes required)
+  * Updated debian/rules to debhelper V2
+
+ -- Stefan Gybas <sgybas@debian.org>  Fri, 25 Aug 2000 15:41:23 +0200
+
+libpgjava (7.0-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 7.0)
+    - The Driver class is now org.postgresql.Driver instead of
+      postgresql.Driver - you need to change your sources!
+  * Updated package description and README.Debian
+
+ -- Stefan Gybas <sgybas@debian.org>  Wed, 17 May 2000 10:15:56 +0000
+
+libpgjava (6.5.3-2) unstable; urgency=low
+
+  * Now suggest instead of depend on postgresql since you can access a
+    remote database (closes: #53322)
+
+ -- Stefan Gybas <sgybas@debian.org>  Thu, 30 Dec 1999 23:54:45 +0100
+
+libpgjava (6.5.3-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 6.5.3)
+    - The only change is that getDatabaseProductVersion() returns the
+      new version number
+  * Updated postgresql dependency to >= 6.5.3
+  * Standards-Version 3.1.1 (no changes required)
+  * Fixed typo in previous changelog
+  * Corrected build dependencies: jikes -> java-compiler
+
+ -- Stefan Gybas <sgybas@debian.org>  Sun,  5 Dec 1999 15:37:25 +0100
+
+libpgjava (6.5.2-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 6.5.2)
+    (closes: #45549)
+  * New maintainer
+  * The package is actually architecture independent
+  * Standards-Version 3.1.0
+    - FHS (built using debhelper 2.0.40+)
+    - Added build dependencies
+  * Conforms to the Debian Java Policy 1.0 (closes: #44470, #45548)
+    - Install JAR file in /usr/share/java
+    - Depend on java-virtual-machine instead of jdk1.1
+  * Install upstream changelog and javadoc documentation
+
+ -- Stefan Gybas <sgybas@debian.org>  Sun,  7 Nov 1999 13:49:32 +0100
+
+libpgjava (6.5-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 6.5)
+
+ -- Oliver Elphick <Oliver.Elphick@lfix.co.uk>  Wed, 30 Jun 1999 22:15:34 +0100
+
+libpgjava (6.4.2-1) unstable; urgency=low
+
+  * New upstream release (extracted from the source of PostgreSQL 6.4.2).
+
+ -- Oliver Elphick <Oliver.Elphick@lfix.co.uk>  Sat,  3 Oct 1998 11:13:42 +0100
+
+libpgjava (6.3.2-2) unstable; urgency=low
+
+  * Changed dependency from jdk-runtime to jdk1.1
+
+ -- Oliver Elphick <Oliver.Elphick@lfix.co.uk>  Sat,  3 Oct 1998 11:13:42 +0100
+
+libpgjava (6.3.2-1) frozen unstable; urgency=low
+
+  * 6.3.2-1 Upstream bugfixing release
+
+ -- Oliver Elphick <Oliver.Elphick@lfix.co.uk>  Mon, 20 Apr 1998 17:17:30 +0100
+
+libpgjava (6.3.1-5) frozen unstable; urgency=low
+
+  * Separated libpgjava from postgresql because of its dependency for
+    compilation on non-free jdk.
+
+ -- Oliver Elphick <Oliver.Elphick@lfix.co.uk>  Tue, 31 Mar 1998 22:58:25 +0100

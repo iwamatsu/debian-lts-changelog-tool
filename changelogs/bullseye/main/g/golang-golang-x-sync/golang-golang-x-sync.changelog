@@ -1,0 +1,64 @@
+golang-golang-x-sync (0.0~git20210220.036812b-1) unstable; urgency=medium
+
+  [ Debian Janitor (Jelmer Vernooĳ), Helmut Grohne ]
+  * Apply multi-arch hints;
+    + golang-golang-x-sync-dev: Add Multi-Arch: foreign (Closes: #983400)
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20210220.036812b
+  * Bump debhelper dependency to "Build-Depends: debhelper-compat (= 13)"
+  * Bump Standards-Version to 4.5.1 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Tue, 23 Feb 2021 10:28:19 -0700
+
+golang-golang-x-sync (0.0~git20190911.cd5d95a-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20190911.cd5d95a
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Bump Standards-Version to 4.5.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Fri, 21 Feb 2020 06:34:42 -0700
+
+golang-golang-x-sync (0.0~git20190423.1122301-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20190423.1122301
+  * Add debian/watch
+  * Remove Lintian override debian-watch-file-is-missing
+  * Apply "cme fix dpkg" fixes
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Remove dependency on golang-golang-x-net-dev
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Jul 2019 02:29:19 -0600
+
+golang-golang-x-sync (0.0~git20171101.fd80eb9-1) unstable; urgency=medium
+
+  * Adopt package for the Debian Go team. (Closes: #889482)
+  * New upstream version 0.0~git20171101.fd80eb9
+    - Include README.md instead of README
+  * Update to Standards-Version 4.1.3
+    - Use HTTPS URL for d/copyright
+    - Use Priority optional
+  * Use debhelper v11
+  * Update d/copyright
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 04 Feb 2018 22:18:00 +0100
+
+golang-golang-x-sync (0.0~git20170317.0.5a06fca-2) unstable; urgency=medium
+
+  * Remove Michael Lustfield from Uploaders list.
+  * Orphaning package.
+
+ -- Michael Lustfield <michael@lustfield.net>  Sat, 03 Feb 2018 12:13:34 -0600
+
+golang-golang-x-sync (0.0~git20170317.0.5a06fca-1) unstable; urgency=medium
+
+  * Initial release (Closes: #859211)
+
+ -- Michael Lustfield <michael@lustfield.net>  Fri, 31 Mar 2017 12:52:45 -0500

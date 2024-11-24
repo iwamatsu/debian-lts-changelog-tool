@@ -1,0 +1,715 @@
+dcmtk (3.6.4-2.1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2021-41687: Incorrect freeing of memory
+  * CVE-2021-41688: Incorrect freeing of memory
+  * CVE-2021-41689: NULL pointer dereference
+  * CVE-2021-41690: Incorrect freeing of memory
+  * CVE-2022-2121: NULL pointer dereference
+  * CVE-2022-43272: Memory leak in single process mode
+  * CVE-2024-28130: Segmentation faults due to incorrect typecast
+  * CVE-2024-34508: Segmentation fault via invalid DIMSE message
+  * CVE-2024-34509: Segmentation fault via invalid DIMSE message
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 26 Jun 2024 21:22:32 +0300
+
+dcmtk (3.6.4-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Revert to convenient charls copy for now. Closes: #923433
+
+ -- Mathieu Malaterre <malat@debian.org>  Tue, 28 May 2019 21:39:19 +0200
+
+dcmtk (3.6.4-2) unstable; urgency=medium
+
+  * d/rules,d/p/03: Fix DATADIC path, Closes: #913304
+
+ -- Gert Wollny <gewo@debian.org>  Sat, 19 Jan 2019 10:36:10 +0100
+
+dcmtk (3.6.4-1) unstable; urgency=medium
+
+  * d/p/09: Fix build with CharLS 2.0
+  * Upload to unstable
+
+ -- Gert Wollny <gewo@debian.org>  Sat, 12 Jan 2019 16:10:06 +0100
+
+dcmtk (3.6.4-1~exp1) experimental; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Move source package lintian overrides to debian/source.
+  * Trim trailing whitespace.
+
+  [ Gert Wollny ]
+  * New upstream version 3.6.4
+  * d/p: Update patches for new release and remove old patches 
+  * d/control: Update lib package name 
+  * d/rules: Change dict install directory to new lib name 
+  * d/dcmtk.postinst: Disable running chown recursively
+  * d/copyright: Add new libcmr files with non-OFFICE copyright
+
+ -- Gert Wollny <gewo@debian.org>  Sun, 23 Dec 2018 10:43:41 +0100
+
+dcmtk (3.6.3-1~exp1) experimental; urgency=medium
+
+  * d/* correct by running 'git fix dpkg'
+  * d/watch: update link (thanks Pedro Fernando Arizpe Gómez)
+  * New upstream version 3.6.3
+  * d/patches: Update patches to apply to new version
+  * d/ .gitlab-ci.yml: Add this CI file
+  * p/d/03: Set DATDIC in CMakeLists.txt
+  * d/ Update SO version to 13
+  * d/p/03: Correct install path
+  * d/copyright: Update for added and moved files
+
+ -- Gert Wollny <gewo@debian.org>  Sat, 11 Aug 2018 09:35:25 +0200
+
+dcmtk (3.6.2-3) unstable; urgency=medium
+
+  * d/control: Remove Juergen Salk from uploaders, Closes: #846787
+  * d/p/08: set CANONICAL_HOST_TYPE from cmake, Closes: #859203
+  * d/p/09: Fix format errors, Closes: #865418
+  * d/p/10:Add fix for possible string overflow
+
+ -- Gert Wollny <gewo@debian.org>  Wed, 06 Sep 2017 10:09:08 +0000
+
+dcmtk (3.6.2-2) unstable; urgency=medium
+
+  * d/rules: install examples in arch-indep build to fix -A build
+
+ -- Gert Wollny <gewo@debian.org>  Tue, 22 Aug 2017 12:46:09 +0000
+
+dcmtk (3.6.2-1) unstable; urgency=medium
+
+  * Upload to unstable
+  * d/control: Standards version 4.1.0 (no changes needed)
+
+ -- Gert Wollny <gewo@debian.org>  Tue, 22 Aug 2017 10:05:31 +0000
+
+dcmtk (3.6.2-1~exp1) experimental; urgency=medium
+
+  * Update d/watch
+  * New upstream version 3.6.2 Closes: #868867
+  * d/p/* refresh patches
+  * drop d/p/09_ because it was applied upstream
+  * s/* update SO version
+  * d/copyright: add new files to copyright
+  * d/rules: drop more test programs and add manpage for msgserv
+  * d/rules enable use of C++11 features
+  * d/control: Add build dependency on help2man
+
+ -- Gert Wollny <gewo@debian.org>  Wed, 02 Aug 2017 13:48:47 +0000
+
+dcmtk (3.6.1~20170228-2) unstable; urgency=medium
+
+  * d/p/09: Improve numerical stability by rounding the time to
+    the six decimal digits supported by dicom. Closes: #859204
+    #865452
+  * d/control: Correct dependency on libssl-dev for libdcmtk-dev
+  * d/control: Update standards version (no action needed)
+  * d/control: cme fix dpkg-control
+
+ -- Gert Wollny <gewo@debian.org>  Thu, 22 Jun 2017 07:55:04 +0000
+
+dcmtk (3.6.1~20170228-1) unstable; urgency=medium
+
+  * Upload to unstable Closes: #747167
+  * d/rules: correctly enabling private tags, Closes: #859201
+  * d/rules: enable C++11 build
+
+ -- Gert Wollny <gewo@debian.org>  Tue, 20 Jun 2017 18:58:39 +0000
+
+dcmtk (3.6.1~20170228-1~exp1) experimental; urgency=medium
+
+  [ Gert Wollny ]
+  * Set dependency to libssl-dev, Closes: #851083
+  * Update patches to new upstream
+  * d/p/02: correct calls to JpegLsEncode because system CharLS
+    interface of the bundled version differs from Debian version
+  * New upstream version 3.6.1~20170228
+  * Change to libdcmtk11 because of soname change
+  * Remove d/p/09 patch
+  * d/* Update package names and build rules to new SO-version
+  * d/copyright: mention Frank Vanden Berghen and his AFPL license
+      Thanks for spotting this: Thorsten Alteholz
+  * d/control: update self e-mail address in uploaders
+  * d/copyright: Add copyright information for new files
+
+  [ Mathieu Malaterre ]
+  * d/control: Remove self from Uploaders
+
+ -- Gert Wollny <gewo@debian.org>  Mon, 20 Feb 2017 13:15:40 +0100
+
+dcmtk (3.6.1~20160216-2) unstable; urgency=medium
+
+  * d/p/08: remove SYSTEM_PROCESSOR usage for reproducible builds
+  * d/p/09: add patch to enable compileing against openssl-1.1
+    Closes: #828281
+  * d/p/04: update patch to remove duplicate entries
+  * d/rules: add hardening flags
+  * d/control: change conflict with libinsighttoolkit4-dev to breaks
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Sun, 03 Jul 2016 13:58:34 +0000
+
+dcmtk (3.6.1~20160216-1) experimental; urgency=medium
+
+  [ Gert Wollny ]
+  * New upstream version
+  * d/p/*: rebase patches
+  * d/p/06: Update patch to use ABI version as part of the library name
+  * d/*: Update files to correspond to new soversion 8.
+    Jumping from 5 to 8 because upstream uses 8.
+  * d/copyright: Update copyright information
+  * d/control: update standards version to 3.9.8
+  * d/control + d/rules: drop dbg package in favour of antomatic ones
+
+  [ Mattia Rizzolo ]
+  * d/control: Use secure URIs (https) in Vcs-Git.
+  * d/libdcmtk5.dirs: removed as useless.
+  * d/dcmtk.preinst: 'set -e' in the script instead of the shebang,
+    fixes lintian's maintainer-script-without-set-e
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Sun, 08 May 2016 21:59:06 +0000
+
+dcmtk (3.6.1~20150924-5) unstable; urgency=medium
+
+  * d/libdcmtk-dev revert last change since ITK-4.9 now supports
+    properly the dcmtk*.cmake files.
+  * d/control: conflict with older versions of libinsighttoolkit-dev
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Sat, 30 Jan 2016 23:11:21 +0100
+
+dcmtk (3.6.1~20150924-4) unstable; urgency=medium
+
+  * Do not install DCMTK*.cmake files, they break things.
+    cmake's FindDCMTK handles this case better without these files.
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Tue, 05 Jan 2016 21:42:56 +0100
+
+dcmtk (3.6.1~20150924-2) unstable; urgency=medium
+
+  * Update internal use of DCMDICT path Closes: #807691
+  * Correct Apache-2.0 copyright
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Fri, 11 Dec 2015 17:42:45 +0100
+
+dcmtk (3.6.1~20150924-1) unstable; urgency=medium
+
+  * New upstream version
+  * Move vcs to git
+  * Remove dcmtk-www, because it is no longer provided by upstream
+  * Because of ABI change rename library package to libdcmtk5
+  * Add libcharls-dev to libdcmtk-dev dependencies (reason: see below)
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Tue, 01 Dec 2015 02:46:03 +0100
+
+dcmtk (3.6.1~20150629-7) unstable; urgency=medium
+
+  * d/control: Add more dependencies to libdcmtk-dev, because the
+    cmake based build system creates a cmake use file that pulls in
+    these libraries for linking.
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Sun, 29 Nov 2015 21:16:37 +0100
+
+dcmtk (3.6.1~20150629-6) unstable; urgency=medium
+
+  * Change Provides:libdcmtk-dev to Provides:libdcmtk2-dev Closes: #805718
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Sat, 21 Nov 2015 13:58:54 +0100
+
+dcmtk (3.6.1~20150629-5) unstable; urgency=medium
+
+  * d/control: Add conflict/replace for libdcmtk4-dev
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Thu, 12 Nov 2015 13:30:12 +0100
+
+dcmtk (3.6.1~20150629-4) unstable; urgency=medium
+
+  * Add patch soversion_abi.patch to change not only the library file
+    name but also in the cmake related files.
+  * Add patch dont_export.. to not export all executables for cmake
+    Closes: #803304
+  * d/rules: remove code to add abi-suffix to libraries on install
+  * Add Gert Wollny to uploaders
+
+ -- Gert Wollny <gw.fossdev@gmail.com>  Thu, 29 Oct 2015 11:51:54 +0100
+
+dcmtk (3.6.1~20150629-3) unstable; urgency=medium
+
+  * Adapt prerm script for dash
+    Closes: #803008
+  * small DEP5 fixes
+
+ -- Andreas Tille <tille@debian.org>  Mon, 26 Oct 2015 12:11:22 +0100
+
+dcmtk (3.6.1~20150629-2) unstable; urgency=medium
+
+  * debian/copyright: DEP5
+  * unversioned -dev package
+    Closes: #800481
+  * Inform users about non-backward compatible changes in dcmtk database
+    when using dcmqrscp
+    Closes: #799039
+  * suppress lintian warnings no-symbols-control-file
+  * create empty dir /var/lib/dcmtk/db in package
+    Closes: #801735
+
+ -- Andreas Tille <tille@debian.org>  Fri, 23 Oct 2015 23:29:57 +0200
+
+dcmtk (3.6.1~20150629-1) unstable; urgency=medium
+
+  * New upstream version
+  * cme fix dpkg-control
+  * libdcmtk4-dev conflicts libdcmtk2-dev
+    Closes: #769151
+  * Do gcc-5 transition on new version
+  * Conflicts/Replaces: libdcmtk3
+    Closes: #754583
+  * Do not hardcode path to invoke-rc.d in maintainer scripts
+  * Fix apache configuration (thanks for the patch to HAYASHI Kentaro
+    <kenhys@gmail.com>)
+    Closes:  #779700
+  * Apply patch to fix performance problem (thanks for the patch to
+    Sebastien Jodogne <s.jodogne@chu.ulg.ac.be>)
+    Closes: #785400)
+  * Enable reproducible build (Thanks for the patch to Maria Valentina Marin
+    <marivalenm@gmail.com>)
+    Closes: #790133
+
+ -- Andreas Tille <tille@debian.org>  Sun, 13 Sep 2015 20:31:57 +0200
+
+dcmtk (3.6.1~20140617-3) experimental; urgency=low
+
+  * Fix building/running on sparc.
+  * Really remove md5 files from doxygen HTML output
+
+ -- Mathieu Malaterre <malat@debian.org>  Mon, 07 Jul 2014 09:09:49 +0200
+
+dcmtk (3.6.1~20140617-2) experimental; urgency=low
+
+  * Fix SIGSEGV on sparc
+  * Fix removal of md5 files on buildds
+
+ -- Mathieu Malaterre <malat@debian.org>  Tue, 01 Jul 2014 11:15:54 +0200
+
+dcmtk (3.6.1~20140617-1) experimental; urgency=low
+
+  * New snapshot. Use ABI=4 as per upstream
+  * Refreshed patches, removed applied upstream
+
+ -- Mathieu Malaterre <malat@debian.org>  Wed, 18 Jun 2014 08:44:51 +0200
+
+dcmtk (3.6.1~20131114-7) experimental; urgency=low
+
+  * Bump Std-Vers to 3.9.5, no changes needed
+  * Fix failing SCP test. Closes: #740342
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 28 Feb 2014 13:19:20 +0100
+
+dcmtk (3.6.1~20131114-6) experimental; urgency=low
+
+  * Remove non-ASCII char. Closes: #732673
+  * Fix setuid return value. Closes: #731434
+  * Update old copyright. Closes: #732672
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 27 Feb 2014 17:33:18 +0100
+
+dcmtk (3.6.1~20131114-5) experimental; urgency=low
+
+  * Increase timeout a little to fix issue on s390x
+    + d/p/timeout.patch
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 20 Dec 2013 11:02:48 +0100
+
+dcmtk (3.6.1~20131114-4) experimental; urgency=low
+
+  * Import patch from git (upstream)
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 19 Dec 2013 17:33:18 +0100
+
+dcmtk (3.6.1~20131114-3) experimental; urgency=low
+
+  * Another round of compilation fixes. Closes: #731434
+  * Fix installation. Closes: #731752
+  * Another attempt at fixing test. Closes: #730582
+
+ -- Mathieu Malaterre <malat@debian.org>  Tue, 10 Dec 2013 15:15:52 +0100
+
+dcmtk (3.6.1~20131114-2) experimental; urgency=low
+
+  * Fix failing test (ofstd_markup_6). Closes: #730582
+  * Remove some spelling error in man pages. Closes: #730635
+  * Remove CMake overriding our compilation flags. Closes: #730636
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 05 Dec 2013 12:50:28 +0100
+
+dcmtk (3.6.1~20131114-1) experimental; urgency=low
+
+  * New snapshot. Closes: #723091, #715039
+  * Refresh patches
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 22 Nov 2013 19:55:25 +0100
+
+dcmtk (3.6.1~20121102-5) experimental; urgency=low
+
+  * Fix jquery.js removal when executing build-indep
+
+ -- Mathieu Malaterre <malat@debian.org>  Wed, 04 Sep 2013 09:08:29 +0200
+
+dcmtk (3.6.1~20121102-4) experimental; urgency=low
+
+  * Fix buffer overflow in StudyInstanceUID. Closes: #715011
+  * Fix apache 2.4 transition. Closes: #669740
+  * Fix -doc installation. Closes: #717968
+
+ -- Mathieu Malaterre <malat@debian.org>  Mon, 02 Sep 2013 11:13:46 +0200
+
+dcmtk (3.6.1~20121102-3) experimental; urgency=low
+
+  * fix lintian warning about jquery.js (doxygen generated)
+  * remove internal tests suite from dcmtk package
+  * cope with cmake and #701231
+  * Update patch d/p/bug706062.patch. Closes: #706062
+  * Upgrade for apache 2.4. Closes: #669740
+
+ -- Mathieu Malaterre <malat@debian.org>  Wed, 19 Jun 2013 13:51:22 +0200
+
+dcmtk (3.6.1~20121102-2) experimental; urgency=low
+
+  * Install *.dic to versioned dir (See #709123)
+  * Add preliminary work to get iconv support
+
+ -- Mathieu Malaterre <malat@debian.org>  Fri, 31 May 2013 17:39:30 +0200
+
+dcmtk (3.6.1~20121102-1) experimental; urgency=low
+
+  * Use new dh syntax
+  * Run w-a-s. Use B-D-I for doxygen
+  * Switch to cmake build system (allows parallel builds). Closes: #701801
+  * Use system CharLS. Closes: #705923
+  * Use SOP class uid with option. Closes: #706062
+
+ -- Mathieu Malaterre <malat@debian.org>  Wed, 15 May 2013 10:34:58 +0200
+
+dcmtk (3.6.0-13) unstable; urgency=low
+
+  * Remove d/README.source, since source-format 3.0
+  * Update dcmtk-www README for install instructions
+  * Remove obsolete DMUA flag
+  * Bump Std-Vers to 3.9.4, no changes needed
+  * Provide a debug package. Closes: #690733
+  * Fix SIGSEGV. Closes: #703716
+
+ -- Mathieu Malaterre <malat@debian.org>  Wed, 15 May 2013 10:10:29 +0200
+
+dcmtk (3.6.0-12) unstable; urgency=low
+
+  [ Andrey Rahmatullin ]
+  * Fix underlinked libraries. Closes: #677721
+   - debian/patches/underlink.patch
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 20 Dec 2012 13:20:45 +0100
+
+dcmtk (3.6.0-11) unstable; urgency=low
+
+  * Fix compilation with gcc 4.7. Closes: #674361
+   - debian/patches/bug674361.patch
+  * Make sure to link against libxml2. Closes: #510120
+  * Fix some underlinking. Closes: #674586
+   - debian/patches/underlink.patch
+
+ -- Mathieu Malaterre <malat@debian.org>  Thu, 31 May 2012 11:31:16 +0200
+
+dcmtk (3.6.0-10) unstable; urgency=low
+
+  [ Andreas Tille ]
+  * debian/dcmtk.prerm: when purging dirs in /var/lib need to be
+    removed in advance. Closes: #660346
+
+  [ Mathieu Malaterre ]
+  * Use libpng-dev. Closes: #662296
+  * Use libtiff-dev for transition to tiff5
+  * Bump Std-Vers to 3.9.3. No changes needed
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Tue, 06 Mar 2012 23:01:59 +0100
+
+dcmtk (3.6.0-9) unstable; urgency=low
+
+  * Remove dot wrapper, not required anymore.
+  * Generate doc using svg instead of png to save disk space
+  * Fix compilation. Thanks to Bhavani Shankar. Closes: #646316
+  * Fix VCS URLs
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Wed, 23 Nov 2011 16:31:18 +0100
+
+dcmtk (3.6.0-8) unstable; urgency=low
+
+  * Adding a storescp daemon
+  * Remove convenient copy of CharLS. Closes: #631100
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Tue, 19 Jul 2011 17:08:19 +0200
+
+dcmtk (3.6.0-7) unstable; urgency=low
+
+  * Add a patch (from current git/master) to fix a regression. Closes: #630781
+  * Another fix to remove symlink only if exists
+  * Remove deprecated lintian override
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Fri, 17 Jun 2011 14:43:37 +0200
+
+dcmtk (3.6.0-6) unstable; urgency=low
+
+  * Make sure OFFIS_DCMTK_VERSION_NUMBER is really a number. Closes: #628168
+  * Update Standard Version to 3.9.2. No changes needed
+  * Fix some lintian errors in control file
+  * Fix piuparts reports on remaining dcmtk apache configuration file
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Tue, 31 May 2011 23:28:12 +0200
+
+dcmtk (3.6.0-5) unstable; urgency=low
+
+  * Fix invalid dep. to apache with apache2
+  * Remove explicit `invoke-rc.d dcmqrscp stop` since it makes package
+    un-removable. Let dh_installinit handles it
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Mon, 28 Mar 2011 15:33:06 +0200
+
+dcmtk (3.6.0-4) unstable; urgency=low
+
+  * new release fixes segfault. Closes: #615977
+  * Update README. Closes: #618686
+  * 3.6.0 is already packaged. Closes: #610855
+  * Update postrm script. Closes: #618688
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Thu, 17 Mar 2011 17:32:48 +0100
+
+dcmtk (3.6.0-3) unstable; urgency=low
+
+  * Properly conflict with dcmtk 3.5.4 and libdcmtk2
+  * Remove reference to issue with UNIX FHS
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Tue, 08 Mar 2011 17:14:24 +0100
+
+dcmtk (3.6.0-2) experimental; urgency=low
+
+  * Update copyright to reflects 3.6.0 changes
+  * Update dcmtk.NEWS to reflects 3.6.0 news
+  * Minor update to dcmtk.README.Debian for build instructions
+  * Minor cosmetic changes to the patch series
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Tue, 08 Feb 2011 19:20:13 +0100
+
+dcmtk (3.6.0-1) experimental; urgency=low
+
+  [ Mathieu Malaterre ]
+  * New upstream: 3.6.0
+  * Update SONAME to 2.0.0 because of change in log4cplus::Logger::addAppender
+  * Fix lintian errors on misc:Depends
+  * Fix lintian errors on init.d script
+  * Add a patch to link wth png/tiff libraries
+  * Update perl path patch
+  * debian/control: Update standards-version to 3.9.1
+  * Fix new naming convention for this release
+  * Add get-orig-source target in rules file
+  * Fix CHANGES numbering into something more flexible for later revs.
+  * Move *.dic file to the libdcmtk2 package
+  * Switch to dpkg-source 3.0 (quilt) format
+
+  [ Andreas Tille ]
+  * make sure *.dic file shwo up only in libdcmtk2 package
+  * Add -f to rm statement in clean target
+
+ -- Andreas Tille <tille@debian.org>  Fri, 04 Feb 2011 22:24:40 +0100
+
+dcmtk (3.5.4-4) unstable; urgency=low
+
+  [Andreas Tille]
+  * Group maintenance according to Debian Med group policy
+  * Added myself as Uploader
+  * VCS fields
+  * Standards-Version: 3.8.3 (Added README.source)
+  * debhelper >= 7
+  * Add passive mode to watch file
+  * make use of dh_install
+  * debian/patches/05_no_www_docs.patch: Just do not install those
+    files we do not need in the docs of the package in the first
+    place instead of removing them later
+  * Removed some lintian warnings
+  * debian/patches/06_old_patches_from_diff_gz.patch: Move changes
+    from diff.gz to quilt patches
+  * Remove unused config files from previous versions according to
+    http://wiki.debian.org/DpkgConffileHandling
+    (The former handling in preinst triggered a lintian error)
+  * debian/dcmtk.NEWS: Reformating according to developers reference
+    6.3.4. Supplementing changelogs with NEWS.Debian files
+  * debian/{01_buildsystem_changes,01_fix_perl_script_path,02_dcmtk_3.5.4-3}.patch
+    split up patches of former maintainer into maintainable pieces
+  * Build-Depends: graphviz
+  * debian/dot: Hack to enable png:gd graphics in doxygen which was
+    told to be more compact and readable.  The hack contains also
+    working code to create SVG, but I failed to patch the HTML files
+    to render SVG files
+  * debian/libdcmtk1.lintian-overrides: we bundle more than
+    one library in this package so the warning is void
+  * debian/rules: Try to make backups of original files in config
+    but failed for two remaining files (no idea why)
+  * Move all files of dcmtk-www to /usr/lib/dcmtk/cgi-bin and
+    provide apache configuration which enable easy access via
+    http://localhost/dcmtk_wlm/
+    Closes: #553495
+
+  [Mathieu Malaterre]
+  * debian/rules would not honor DEB_BUILD_OPTIONS=nostrip, since
+    original Makefiles would hardcode call to `strip` directly
+    instead rely on dh_strip instead and remove direct call to
+    `strip` from Makefiles.
+    Closes: #511668, #436758
+
+ -- Andreas Tille <tille@debian.org>  Wed, 02 Dec 2009 09:54:56 +0100
+
+dcmtk (3.5.4-3) unstable; urgency=low
+
+  * debian/control: Update standards-version to 3.7.2
+  * debian/dcmqrscp.init: Add LSB keyword section
+  * dcmnet/apps/{findscu,movescu}.cc: Apply patches in order
+    to fix --add-override-key bug (reported by Mike Miller
+    <mmiller3@iupui.edu>)
+    Closes: #429041
+  * debian/dcmtk.prerm: Stop dcmqrscp/imagectn more sanely
+  * debian/control: Replace ${Source-Version} by ${binary:Version}
+
+ -- Juergen Salk <jsa@debian.org>  Sun, 22 Jul 2007 20:41:22 +0200
+
+dcmtk (3.5.4-2) unstable; urgency=low
+
+  * debian/control: Added build dependency on autotools-dev
+  * debian/rules: Modified clean target to put config.{sub,guess} below ./config
+  * dcmdata/libsrc/Makefile.in: Modified distclean target to delete dicom.tmp as well
+  * debian/rules: Fixed installation path for include files
+  * debian/dcmtk.postinst: Fixed add{user,group} options to reveal possible error msgs
+    (reported by Lars Wirzenius <liw@iki.fi>)
+    Closes: #353288
+  * debian/control: Removed 'Uploaders: field.
+    | From: Pablo Sau <psau@cadpet.es>
+    | Subject: Re: dcmtk
+    | Date: Thu, 19 Jan 2006 16:41:06 +0100
+    | To: Juergen Salk <jsa@debian.org>
+    | Hi Juergen:
+    | > I am still keeping you as an active co-maintainer for the Debian
+    | > dcmtk packages in the debian/control file. Would you mind, if I
+    | > drop your name from the control file in one of the next releases?
+    | >
+    | Of course, you must do it!
+    | Thanks for your support of dcmtk and best regards.
+    | Pablo
+
+ -- Juergen Salk <jsa@debian.org>  Sun, 15 Jan 2006 17:31:38 +0000
+
+dcmtk (3.5.4-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/dcmtk.NEWS: Added
+  * debian/copyright: Updated according to upstream's COPYRIGHT file
+  * debian/control: Unversioned build-dependency on libssl (now uses
+    OPENSSL_VERSION_NUMBER macro)
+  * debian/rules: Incremented SONAME version number (DcmFileFormat::loadFile changed)
+  * debian/rules: Changed dh_installinit --name argument to dcmqrscp
+  * debian/README.debian: Updated to reflect imagectn -> dcmqrscp transition
+  * debian/dcmtk.postinst: Added code for imagectn -> dcmqrscp transition
+  * debian/dcmtk.preinst: Created to handle imagectn -> dcmqrscp transition
+  * debian/dcmtk.postrm: Created to handle imagectn -> dcmqrscp transition
+  * debian/imagectn.init: Replaced by dcmqrscp.init
+  * debian/imagectn.default: Replaced by dcmqrscp.default
+  * debian/dcmtk.postinst: Added code to handle dcmtk user/group creation more sanely
+  * debian/control: Adjusted 'Maintainer:' field
+  * config/Makefile.def: Adjusted datadir and docdir
+  * dcmdata/libsrc/Makefile.in: Fixed bug for dicom.dic installation path
+  * dcmdata/apps/Makefile.in: Adjusted dcm2xml.dtd and dumppat.txt install paths
+  * dcmsr/apps/Makefile.in: Adjusted dsr2xml.xsd install path
+  * dcmwlm/perl/*.p[lh]: Adjusted perl hashbangs in CGI scripts
+  * dcmwlm/perl/prefs.ph: Adjusted cgi_path, html_path and data_path
+  * dcmqrdb/etc/dcmqrscp.cfg: Added UserName/GroupName config parameters
+  * dcmqrdb/etc/dcmqrscp.cfg: Commented out and adjusted example configuration
+  * dcmqrdb/docs/dcmqrcnf.txt: Adjusted UserName/GroupName examples
+  * dcmwlm/wlistdb/OFFIS: Added newline to prevent lintian "zero-bye" warning
+
+ -- Juergen Salk <jsa@debian.org>  Tue, 20 Dec 2005 20:29:15 +0000
+
+dcmtk (3.5.3-5) unstable; urgency=low
+
+  * ./dcmsign/libsrc/sicert.cc: Constified d2i_X509 argument to fix build
+    problems with libssl-0.9.8
+  Closes: #335399
+  * debian/control: Versioned build-depend on libssl (>= 0.9.8-1)
+  * ./dcmnet/etc/storescp.cfg: Added missing Verification SOP Class
+
+ -- Juergen Salk <juergen.salk@gmx.de>  Mon, 24 Oct 2005 20:16:56 +0000
+
+dcmtk (3.5.3-4) unstable; urgency=low
+
+  * debian/control: Added dependency on adduser for dcmtk package
+  * debian/control: Update Standards-Version to 3.6.2
+  * debian/{control,rules}: Renamed libdcmtk0 to libdcmtk0c2 (gcc/g++-4.0 transition)
+  * debian/control: Added Conflicts/Replaces with previous non-c2 version
+  * config/{configure.in,aclocal.m4,include/cfunix.h.in},
+    ofstd/libsrc/ofthread.cc: Backport HAVE_POINTER_TYPE_PTHREAD_T patch
+    from CVS version to fix build problems with gcc/g++-4.0
+
+ -- Juergen Salk <juergen.salk@gmx.de>  Sun, 22 May 2005 22:02:31 +0200
+
+dcmtk (3.5.3-3) unstable; urgency=low
+
+  * debian/rules: Utilized binary-indep target for -doc package
+    (suggested by Marc 'HE' Brockschmidt <he@debian.org>)
+  * debian/rules: Introduced {build,install}-{indep,arch} targets
+  * debian/rules: Removed unneeded dh_* calls from binary-arch target
+  * Removed stale debian/*.install files
+
+ -- Juergen Salk <juergen.salk@gmx.de>  Mon, 25 Apr 2005 20:13:09 +0200
+
+dcmtk (3.5.3-2) unstable; urgency=medium
+
+  * Added imagectn UserName/GroupName security patch
+  * Modified imagectn.cfg to reflect imagectn patch
+  * Modified debian/rules to create imagectn storage area
+  * Updated imagectn/docs/ctnconf.txt
+  * Fixed parser bug in CNF_readConfigLines()
+    (reported by R.M. Rutschmann <Roland.Rutschmann@psychologie.uni-regensburg.de>)
+  * Added debian/dcmtk.postinst script to create dcmtk system user/group
+  * Added debian/imagectn.init and debian/imagectn.default
+    (suggested by  R.M. Rutschmann <Roland.Rutschmann@psychologie.uni-regensburg.de>)
+  * Updated debian/README.Debian
+  * Removed stale lintian override file
+  * Swapped 'Maintainer:' and 'Uploaders:' field
+    | From: Pablo Sau <psau@cadpet.es>
+    | Subject: Re: New (inofficial) dcmtk packages available
+    | Date: Thu, 31 Mar 2005 16:44:50 +0200
+    | > >> Why is Juergen "not official"?
+    | > > Historical reasons. It was Pablo who has filed the ITP for dcmtk
+    | > > initially. That's why we assigned maintainership to him for the
+    | > > first release.
+    | > If I understand Pablo right than he agreed that you will be put
+    | > in the Maintainer field.  Pablo, correct me if I'm wrong.
+    | Yes of course,I filed the ITP for dcmtk initially but absolutely all
+    | work has been made by Juergen, so I think he must to be in the
+    | Maintainer field.
+    | Thanks Juergen for your great work and best regards to all of you.
+
+ -- Juergen Salk <juergen.salk@gmx.de>  Sat, 19 Mar 2005 22:58:21 +0100
+
+dcmtk (3.5.3-1) unstable; urgency=low
+
+  * Initial Release.
+  Closes: #278914
+  * Adjusted toplevel Makefile and config/Makefile.def.in to fix $DESTDIR problems
+  * Fixed bug in config/configure.in for DCM_DICT_DEFAULT_PATH
+  * Modified dcmdata/libsrc/Makefile.in to adjust dicom.dic install path
+  * Modified dcmdata/apps/Makefile.in to adjust dcm2xml.dtd and dumppat.txt install paths
+  * Modified dcmsr/apps/Makefile.in to adjust dsr2xml.xsd install path
+  * Modified dcmwlm/Makefile.in to prevent wwwapps from being installed in ${bindir}.
+  * Set GENERATE_HTMLHELP = NO in doxygen/htmldocs to avoid index.hh?.gz cruft
+  * Adjusted hashbangs in dcmwlm/perl CGI scripts
+  * Adjusted cgi_path, html_path and data_path in dcmwlm/perl/prefs.ph
+  * Added newline in dcmwlm/wlistdb/OFFIS to prevent lintian "zero-bye" warning
+
+ -- Juergen Salk <juergen.salk@gmx.de>  Sat, 30 Oct 2004 11:02:48 +0200
+

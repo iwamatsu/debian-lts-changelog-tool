@@ -1,0 +1,259 @@
+cairosvg (2.5.0-1.1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Don't allow fetching external files unless explicitly asked for
+    (CVE-2023-27586) (Closes: #1033295)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 23 Mar 2023 20:51:51 +0100
+
+cairosvg (2.5.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Don't use overlapping groups for regular expressions (CVE-2021-21236)
+    (Closes: #979597)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 16 Jan 2021 09:45:26 +0100
+
+cairosvg (2.5.0-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Refresh patches.
+  * Bump debhelper version to 13.
+  * Bump Standards-Version to 4.5.1.
+  * Use uscan version 4.
+  * Set Rules-Requires-Root: no.
+
+ -- Michael Fladischer <fladi@debian.org>  Mon, 30 Nov 2020 17:51:18 +0100
+
+cairosvg (2.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Purge whole cairosvg alternatives left over from prior versions
+    (Closes: #924231).
+  * Clean up pytest artifacts to allow two builds in a row.
+  * Bump Standards-Version to 4.4.1.
+
+ -- Michael Fladischer <fladi@debian.org>  Mon, 14 Oct 2019 20:51:00 +0200
+
+cairosvg (2.4.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Reupload without binaries to allow migration.
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Sat, 10 Aug 2019 22:05:32 +0500
+
+cairosvg (2.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable.
+  * Bump debhelper compatibility and version to 12 and switch to
+    debhelper-compat.
+  * Bump Standards-Version to 4.4.0.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 17 Jul 2019 11:15:10 +0200
+
+cairosvg (2.3.0-1~exp1) experimental; urgency=low
+
+  * New upstream release.
+  * Refresh patches.
+  * Clean up files in CairoSVG.egg-info to allow two builds in a row.
+
+ -- Michael Fladischer <fladi@debian.org>  Sat, 23 Feb 2019 17:09:46 +0100
+
+cairosvg (2.2.1-1~exp2) experimental; urgency=medium
+
+  * Remove postinst/prerm scripts for python3-cairosvg,
+    /usr/bin/cairosvg is now provided by its own binary package.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 02 Jan 2019 12:48:02 +0100
+
+cairosvg (2.2.1-1~exp1) experimental; urgency=low
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Piotr Ożarowski ]
+  * Add dh-python to Build-Depends
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Add debian/gbp.conf.
+  * Use github.com in d/watch.
+  * Remove lintian override for missing GPG signature check on source
+    tarball to serve as a reminder to improve on this.
+  * Add patch to remove pytest options for plugins not packaged for
+    Debian.
+  * Bump debhelper compatibility and version to 11.
+  * Bump Standards-Version to 4.3.0.
+  * Remove Python2 package as its no longer supported by upstream.
+  * Add separate package for cairosvg script.
+  * Clean up files to allow two builds in a row.
+  * Run wrap-and-sort -bast to reduce diff size of future changes.
+  * Enable autopkgtest-pkg-python testsuite.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 27 Dec 2018 21:39:18 +0100
+
+cairosvg (1.0.20-1) unstable; urgency=low
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Bump Standards-Version to 3.9.7.
+  * Use https in Vcs-Git field.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 31 Mar 2016 19:25:36 +0200
+
+cairosvg (1.0.19-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix upstream import done with gbp to work with git-dpm.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 04 Nov 2015 12:53:56 +0100
+
+cairosvg (1.0.17-2) unstable; urgency=low
+
+  * Add missing Depend on python(3)-lxml.
+
+ -- Michael Fladischer <fladi@debian.org>  Sun, 11 Oct 2015 10:46:57 +0200
+
+cairosvg (1.0.17-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Depend on python(3)-cairo instead of python(3)-cairocffi as they are the
+    cairo bindings preferred by upstream. (Closes: #800882)
+  * Use pypi.debian.net service for uscan. This source tarball differs
+    from the one on github as far as it does not include the W3C SVG
+    test suite which seems to be DFSG-incompatible.
+  * Remove python-cairo, python-nose, python3-cairo and python3-nose
+    from Build-depends now that the test suite is no longer part of the
+    source tarball.
+  * Update Vcs-* fields to point to new git repository.
+
+ -- Michael Fladischer <fladi@debian.org>  Sun, 11 Oct 2015 10:01:25 +0200
+
+cairosvg (1.0.16-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Fladischer <fladi@debian.org>  Sat, 15 Aug 2015 11:51:19 +0200
+
+cairosvg (1.0.15-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Michael Fladischer <fladi@debian.org>  Mon, 29 Jun 2015 20:59:38 +0200
+
+cairosvg (1.0.14-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 18 Jun 2015 09:26:24 +0200
+
+cairosvg (1.0.13-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.6.
+  * Use github repository for uscan.
+  * Change my email address to fladi@debian.org.
+  * Update years in d/copyright.
+
+ -- Michael Fladischer <fladi@debian.org>  Mon, 18 May 2015 14:25:38 +0200
+
+cairosvg (1.0.9-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Thu, 14 Aug 2014 15:44:26 +0200
+
+cairosvg (1.0.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Wrap Depends fields.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Mon, 19 May 2014 12:28:55 +0200
+
+cairosvg (1.0.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add lintian override for missing PGP signatures.
+  * Remove PHONY from override targets in d/rules.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Thu, 13 Mar 2014 20:38:21 +0100
+
+cairosvg (1.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update year in d/copyright.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Wed, 12 Feb 2014 09:41:27 +0100
+
+cairosvg (1.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Thu, 05 Dec 2013 11:07:00 +0100
+
+cairosvg (1.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards version to 3.9.5.
+  * Fix name and version to referenced LGPL-3 file in d/copyright.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Wed, 27 Nov 2013 12:14:53 +0100
+
+cairosvg (1.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Install upstream changelog.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Tue, 01 Oct 2013 11:53:35 +0200
+
+cairosvg (1.0-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Fix a typo in the package description.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Clean up generated manpages to allow two builds in a row.
+  * Drop versioned Build-Depends on python-all and python3-all as there
+    are no prior versions available since Wheezy.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Mon, 23 Sep 2013 18:25:56 +0200
+
+cairosvg (0.5-1) unstable; urgency=low
+
+  [ Michael Fladischer ]
+  * New upstream release (Closes: #707425).
+  * Bump Standards Version to 3.9.4.
+  * Update year in d/copyright.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Wed, 08 May 2013 08:22:22 +0200
+
+cairosvg (0.4.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #676344).
+
+ -- Michael Fladischer <FladischerMichael@fladi.at>  Mon, 11 Jun 2012 22:11:46 +0200

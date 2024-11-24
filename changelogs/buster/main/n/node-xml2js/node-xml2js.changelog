@@ -1,0 +1,51 @@
+node-xml2js (0.2.8-1.1+deb11u1~deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * Rebuild for buster-security.
+
+ -- Adrian Bunk <bunk@debian.org>  Thu, 14 Mar 2024 20:48:47 +0200
+
+node-xml2js (0.2.8-1.1+deb11u1) bullseye; urgency=medium
+
+  * Team upload
+  * Add patch to prevent prototype pollution (Closes: #1034148, CVE-2023-0842)
+
+ -- Yadd <yadd@debian.org>  Wed, 26 Jul 2023 08:27:13 +0400
+
+node-xml2js (0.2.8-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 01:47:54 +0100
+
+node-xml2js (0.2.8-1) unstable; urgency=low
+
+  * Upstream update
+  * control:
+    + rephrase description
+    + canonicalize Vcs fields
+  * copyright: rename MIT to Expat
+  * watch github directly
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 23 Sep 2013 02:25:13 +0200
+
+node-xml2js (0.1.13-2) unstable; urgency=low
+
+  * Standards-Version bump to 3.9.4, no changes needed
+  * Updated debian/copyright
+  * Fixed typos in long description (Closes: #650069)
+
+ -- David Paleino <dapal@debian.org>  Thu, 20 Sep 2012 12:37:35 +0200
+
+node-xml2js (0.1.13-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- David Paleino <dapal@debian.org>  Sat, 31 Dec 2011 12:35:40 +0100
+
+node-xml2js (0.1.11-1) unstable; urgency=low
+
+  * Initial release (Closes: #646398)
+
+ -- David Paleino <dapal@debian.org>  Sun, 23 Oct 2011 23:16:26 +0200

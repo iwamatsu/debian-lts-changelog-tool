@@ -1,0 +1,118 @@
+jupyter-core (4.4.0-2+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-39286: Fix arbitrarycode execution when loading config files.
+    (Closes: #1023361)
+
+ -- Dominik George <natureshadow@debian.org>  Thu, 17 Nov 2022 12:16:23 +0100
+
+jupyter-core (4.4.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Fix Format URL to correct one
+
+  [ Julien Puydt ]
+  * Add copyright for shutil_which.py (Closes: #889620).
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Tue, 20 Feb 2018 09:29:31 +0100
+
+jupyter-core (4.4.0-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * New upstream release
+  * Bump Standards-Version to 4.1.2 (no changes)
+  * Disable use of unpackaged sphinxcontrib_github_alt package for docs
+  * Recommend python{,3}-pip (used by jupyter-troubleshoot)
+  * Add a "jupyter" metapackage which has dependencies on the basic set
+    of jupyter packages
+  * Install the upstream changelog
+
+  [ Julien Puydt ]
+  * Update copyright years
+  * Use https for copyright format link
+
+ -- Gordon Ball <gordon@chronitis.net>  Thu, 07 Dec 2017 08:22:23 +0000
+
+jupyter-core (4.3.0-1) unstable; urgency=medium
+
+  [ Julien Puydt ]
+  * New upstream release.
+  * Bump d/watch to version 4.
+  * Mark the -doc package as Multi-Arch: foreign (following hinter).
+
+  [ Gordon Ball ]
+  * Add myself to uploaders.
+  * Set minimum python3 version to 3.3
+  * Bump Standards-Version to 4.1.0 (no changes)
+  * Use debhelper compat level 10
+  * Add Testsuite: autopkgtest-pkg-python (autodep8 test only)
+  * Add pydist-overrides mapping jupyter_core to python-jupyter-core
+    and python3 equivalent
+  * Use python3 sphinx for documentation, add ${sphinxdoc:Built-Using}
+    to documentation package
+  * Switch build-dependencies on ipython to python-ipython (and
+    python3 equivalent)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Mon, 04 Sep 2017 09:59:00 +0200
+
+jupyter-core (4.2.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Gordon Ball <gordon@chronitis.net>  Sun, 04 Dec 2016 12:18:25 +0100
+
+jupyter-core (4.2.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix ENV_CONFIG_PATH for Debian systems, we never use /usr/etc.
+
+ -- Ximin Luo <infinity0@debian.org>  Sat, 03 Dec 2016 15:28:26 +0100
+
+jupyter-core (4.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Tobias Hansen <thansen@debian.org>  Wed, 02 Nov 2016 11:44:26 +0000
+
+jupyter-core (4.2.0-1) experimental; urgency=medium
+
+  * Switched the uploaders/maintainer fields.
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 17 Sep 2016 10:21:05 +0200
+
+jupyter-core (4.1.1-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 18 Aug 2016 06:49:07 +0200
+
+jupyter-core (4.1.0-2) experimental; urgency=medium
+
+  * Bump standards-version to 3.9.8.
+  * Point d/watch to upstream's github repository.
+  * Add depend on python-backports-shutil-get-terminal-size.
+  * Add a manpage for jupyter-troubleshoot.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Thu, 21 Jul 2016 10:38:21 +0200
+
+jupyter-core (4.1.0-1) experimental; urgency=medium
+
+  [ Julien Puydt ]
+  * Initial release. (Closes: #799470)
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Julien Cristau ]
+  * Team upload
+  * Update from 4.0.6 to 4.1.0
+  * Add DPMT to Uploaders
+  * Bump Standards-Version to 3.9.7.
+  * Install new jupyter-troubleshoot entry point.
+  * Use dh_install instead of PYBUILD_NAME.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 08 Apr 2016 11:41:06 +0200

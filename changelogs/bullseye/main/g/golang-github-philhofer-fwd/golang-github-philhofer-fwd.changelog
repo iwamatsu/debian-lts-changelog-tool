@@ -1,0 +1,41 @@
+golang-github-philhofer-fwd (1.1.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * New upstream snapshot for Docker 17.05.0-ce.
+  * Standards-Version: 3.9.8
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Apply multi-arch hints. + golang-github-philhofer-fwd-dev: Add Multi-Arch:
+    foreign.
+
+  [ Arnaud Rebillout ]
+  * Add watch file
+  * Update gitlab-ci.yml
+  * Update upstream/metadata
+  * Update Go Team email address
+  * Bump debhelper compat
+  * Section = golang
+  * Standards-Version = 4.5.1
+  * Testsuite = autopkgtest-pkg-go
+  * Rules-Requires-Root = no
+  * Drop shlibs:Depends from -dev package
+  * Build-Depends on golang-any instead of golang-go
+  * Nitpick, reorder some fields in d/control
+  * New upstream version 1.1.1
+
+ -- Arnaud Rebillout <elboulangero@gmail.com>  Fri, 08 Jan 2021 14:31:32 +0700
+
+golang-github-philhofer-fwd (0.0~git20151005.0.8fd9a4b-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Wed, 21 Oct 2015 08:52:08 -0700

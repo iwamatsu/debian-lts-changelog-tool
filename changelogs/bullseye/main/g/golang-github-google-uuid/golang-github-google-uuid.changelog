@@ -1,0 +1,42 @@
+golang-github-google-uuid (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.2.0.
+
+ -- Arthur Diniz <arthurbdiniz@gmail.com>  Thu, 28 Jan 2021 21:29:03 -0300
+
+golang-github-google-uuid (1.1.5-1) unstable; urgency=medium
+
+  * Team upload
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+  * Apply multi-arch hints. + golang-github-google-uuid-dev:
+    Add Multi-Arch: foreign.
+
+  [ Arthur Diniz ]
+  * New upstream version 1.1.5
+  * debian/control:
+    - Bump debhelper compatibility level to 13
+    - Declare compliance with debian policy 4.5.1
+    - Set Rules-Requires-Root to no
+  * debian/watch: Bump to version 4
+  * debian/copyright: Update copyright year
+
+ -- Arthur Diniz <arthurbdiniz@gmail.com>  Thu, 28 Jan 2021 20:36:29 -0300
+
+golang-github-google-uuid (1.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 24 Sep 2019 12:56:39 +1000
+
+golang-github-google-uuid (0.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #900385).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 30 May 2018 11:48:22 +1000

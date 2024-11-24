@@ -1,0 +1,122 @@
+mat2 (0.8.0-3+deb10u1) buster-security; urgency=medium
+
+  * CVE-2022-35410
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Thu, 14 Jul 2022 21:11:24 +0200
+
+mat2 (0.8.0-3) unstable; urgency=medium
+
+  * Upload to unstable. This adds a new binary package 'mat' which handles
+    the transition from mat to mat2. (Closes: #910493)
+
+ -- Jonas Meurer <jonas@freesources.org>  Fri, 01 Mar 2019 18:57:47 +0100
+
+mat2 (0.8.0-2) experimental; urgency=medium
+
+  * d/control:
+    - Handle transition from mat to mat2: declare that mat2 breaks and
+      replaces mat << 0.8.0-2~, and ship a transitional package mat which
+      pulls in mat2. This upload targets experimental, to not interrupt the
+      ongoing migration process of 0.8.0-1.
+      For more details and discussion, see #910493.
+
+ -- Georg Faerber <georg@riseup.net>  Fri, 01 Mar 2019 15:33:38 +0000
+
+mat2 (0.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control:
+    - Recommend python-nautilus to make use of the Nautilus extension.
+    - Sort supported file formats in the description alphabetically.
+    - Mention new support for .epub files in the description.
+  * d/mat2.install:
+    - Install the Nautilus extension. (Closes: #910491)
+  * d/patches:
+    - Add patch to make the Nautilus extension work with Python 2.7, as
+      python-nautilus still builds against it in Debian buster. This is an
+      important step to handle the transition from mat to mat2.
+      Thanks a lot for input, comments and review to intrigeri, Daniel Kahn
+      Gillmor, Julien Voisin and Jonas Meurer!
+
+ -- Georg Faerber <georg@riseup.net>  Thu, 28 Feb 2019 11:22:10 +0000
+
+mat2 (0.7.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control:
+    - Drop obsolete build dependency on debhelper, satisfied by
+      debhelper-compat since 0.6.0-1.
+    - Recommend bubblewrap to sandbox external processes, according to
+      upstream implementation.
+    - Extend description to mention new support for .wmv, .gif and .html
+      files.
+    - Bump Standards-Version to 4.3.0, no changes required.
+  * d/copyright:
+    - Bump years to include 2019.
+  * d/gitlab-ci.yml:
+    - Don't run CI on tags and only if files inside debian/ were modified.
+  * d/tests/control:
+    - Add TODO to test bubblewrap integration once the Debian CI
+      infrastructure provides systems with the 'isolation-machine'
+      restriction.
+  * d/watch:
+    - Explicitly pull .tar.gz, as this is the only upstream tarball which is
+      signed, in contrast to tarballs automatically created by GitLab.
+
+ -- Georg Faerber <georg@riseup.net>  Sun, 17 Feb 2019 20:40:41 +0000
+
+mat2 (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control:
+    - Add debhelper-compat as build dependency.
+    - Declare that the build doesn't need root privileges.
+    - Mention '.mp4' support in description.
+  * d/compat:
+    - Drop obsolete compat control file.
+  * d/gitlab-ci.yml:
+    - Drop custom config, rely on the "Salsa CI Team".
+  * d/u/signing-key.asc:
+    - Use clean and minimal key to remove cruft. Thanks, lintian.
+  * d/watch:
+    - Use '@ARCHIVE_EXT@' substitution.
+    - Relax archive name regex, due to inconsistent upstream naming scheme.
+
+ -- Georg Faerber <georg@riseup.net>  Sat, 10 Nov 2018 13:33:52 +0000
+
+mat2 (0.5.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control:
+    - Add 'ffmpeg' as a build dependency and as a suggested package to clean
+      '.avi' files.
+    - Add '.avi' to list of supported file formats.
+  * d/mat2.docs:
+    - Install documentation about implementation and threat model.
+  * d/patches:
+    - Drop patches, released upstream.
+  * d/t/control:
+    - Install 'ffmpeg' to check cleaning of '.avi' files.
+  * d/gitlab-ci.yml:
+    - Checkout the git 'pristine-tar' branch before the build.
+
+  [ Jonas Meurer ]
+  * d/gbp.conf:
+    - Enable 'pristine-tar = True'.
+
+ -- Georg Faerber <georg@riseup.net>  Tue, 23 Oct 2018 18:27:37 +0000
+
+mat2 (0.4.0-2) unstable; urgency=medium
+
+  [ Jonas Meurer ]
+  * d/copyright:
+    * Explicitly list copyright holders for the mat2 logo. (Closes: #910376)
+
+ -- Georg Faerber <georg@riseup.net>  Sun, 07 Oct 2018 18:36:57 +0000
+
+mat2 (0.4.0-1) unstable; urgency=medium
+
+  [ Georg Faerber + Jonas Meurer ]
+  * Initial release. (Closes: #898622)
+
+ -- Georg Faerber <georg@riseup.net>  Thu, 04 Oct 2018 23:39:09 +0200

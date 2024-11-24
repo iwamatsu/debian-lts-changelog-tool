@@ -1,0 +1,765 @@
+symfony (3.4.22+dfsg-2+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2023-46734:
+    Pierre Rudloff discovered a potential XSS vulnerability in Symfony, a PHP
+    framework. Some Twig filters in CodeExtension use `is_safe=html` but do not
+    actually ensure their input is safe. Symfony now escapes the output of the
+    affected filters.
+
+ -- Markus Koschany <apo@debian.org>  Fri, 24 Nov 2023 16:51:31 +0100
+
+symfony (3.4.22+dfsg-2+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2021-21424: The ability to enumerate users was possible without
+    relevant permissions due to different exception messages depending on
+    whether the user existed or not.  It was also possible to enumerate users
+    by using a timing attack, by comparing time elapsed when authenticating an
+    existing user and authenticating a non-existing user.  403s are now
+    returned whether the user exists or not if a user cannot switch to a user
+    or if the user does not exist.
+  * Fix CVE-2022-24894: The Symfony HTTP cache system acts as a reverse proxy:
+    it caches HTTP responses (including headers) and returns them to clients.
+    In a recent `AbstractSessionListener` change, the response might now contain
+    a `Set-Cookie header`.  If the Symfony HTTP cache system is enabled, this
+    header might be stored and returned to some other clients.  An attacker can
+    use this vulnerability to retrieve the victim's session.
+    The `HttpStore` constructor now takes a parameter containing a list of
+    private headers (by default `Set-Cookie`) that are removed from the HTTP
+    response headers.
+  * Fix CVE-2022-24895: When authenticating users Symfony by default
+    regenerates the session ID upon login, but preserves the rest of session
+    attributes.  CSRF tokens were not cleared upon login, which could enable
+    same-site attackers to bypass the CSRF protection mechanism by performing
+    an attack similar to a session-fixation.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Tue, 11 Jul 2023 01:15:17 +0200
+
+symfony (3.4.22+dfsg-2+deb10u1) buster-security; urgency=medium
+
+  * Drop failing tests with recent PHP (Closes: #930003)
+  * Backport security fixes from 3.4.35
+    - [HttpKernel] Use constant time comparison in UriSigner [CVE-2019-18887]
+    - [Cache] forbid serializing AbstractAdapter and TagAwareAdapter instances
+      [CVE-2019-18889]
+    - [HttpFoundation] fix guessing mime-types of files with leading dash
+      [CVE-2019-18888]
+
+ -- David Prévot <taffit@debian.org>  Wed, 13 Nov 2019 09:10:15 -1000
+
+symfony (3.4.22+dfsg-2) unstable; urgency=medium
+
+  * Drop incorrect and useless overrides
+  * Fix global autoload
+  * Backport security fixes from 3.4.25
+    - Escape validation messages in the PHP templating engine [CVE-2019-10909]
+    - Check service IDs are valid [CVE-2019-10910]
+    - Add a separator in the remember me cookie hash [CVE-2019-10911]
+    - Prevent destructors with side-effects from being unserialized
+      [CVE-2019-10912]
+    - Reject invalid HTTP method overrides [CVE-2019-10913]
+  * Workaround PHP bug causing the testsuite to fail (Closes: #926883)
+
+ -- David Prévot <taffit@debian.org>  Thu, 18 Apr 2019 21:14:25 +0900
+
+symfony (3.4.22+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * switched array() to [] (Closes: #919816)
+  * updated VERSION for 3.4.22
+
+  [ David Prévot ]
+  * Update dependency override
+
+ -- David Prévot <taffit@debian.org>  Fri, 08 Feb 2019 17:20:53 -1000
+
+symfony (3.4.21+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.21
+
+  [ Christian Flothmann ]
+  * update year in license files
+
+  [ David Prévot ]
+  * Use debian/clean for directories
+  * Update copyright (years)
+  * Use debhelper-compat 12
+  * Update Standards-Version to 4.3.0
+
+  [ Kunal Mehta ]
+  * Remove and replace php-symfony-polyfill-* dependencies (Closes: #821138)
+
+ -- David Prévot <taffit@debian.org>  Tue, 08 Jan 2019 04:27:51 +1100
+
+symfony (3.4.20+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.20
+
+  [ Nicolas Grekas ]
+  * [Form] Filter file uploads out of regular form types [CVE-2018-19789]
+
+  [ Christian Flothmann ]
+  * [Security\Http] detect bad redirect targets using backslashes
+    [CVE-2018-19790]
+
+  [ David Prévot ]
+  * Keep tracking v3 branch for Buster
+
+ -- David Prévot <taffit@debian.org>  Thu, 06 Dec 2018 15:03:33 -1000
+
+symfony (3.4.19+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.19
+    - fix the testsuite with PHP 7.3 (Closes: #914273)
+
+ -- David Prévot <taffit@debian.org>  Wed, 28 Nov 2018 15:26:40 -1000
+
+symfony (3.4.17+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.17
+
+  [ Albert Casdemont ]
+  * [PHPUnitBridge] Fix microtime() format
+
+  [ David Prévot ]
+  * Use https in Format
+
+ -- David Prévot <taffit@debian.org>  Sat, 06 Oct 2018 09:48:54 -1000
+
+symfony (3.4.16+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.16
+
+  [ David Prévot ]
+  * Use debhelper-compat 11
+  * Drop get-orig-source target
+  * Update fixes with recent PHPUnit
+
+ -- David Prévot <taffit@debian.org>  Tue, 02 Oct 2018 22:54:50 -1000
+
+symfony (3.4.15+dfsg-2) unstable; urgency=medium
+
+  * Add more tests to tty group
+
+ -- David Prévot <taffit@debian.org>  Sat, 01 Sep 2018 08:09:52 -1000
+
+symfony (3.4.15+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.15
+
+  [ David Prévot ]
+  * Don’t fail on deprecated notice (Closes: #905425)
+  * Update dependency override
+  * Update Standards-Version to 4.2.1
+
+ -- David Prévot <taffit@debian.org>  Fri, 31 Aug 2018 15:24:14 -1000
+
+symfony (3.4.14+dfsg-1) unstable; urgency=medium
+
+  * New upstream version fixing two security issues:
+    - [CVE-2018-14773] Remove support for legacy and risky HTTP headers
+    - [CVE-2018-14774] Possible host header injection when using HttpCache
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.14
+
+  [ David Prévot ]
+  * Update dependency override
+  * Update Standards-Version to 4.2.0
+
+ -- David Prévot <taffit@debian.org>  Fri, 03 Aug 2018 12:52:59 +0800
+
+symfony (3.4.13+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.13
+
+  [ David Prévot ]
+  * Drop test currently failing on CI
+  * Update dependency override
+
+ -- David Prévot <taffit@debian.org>  Wed, 25 Jul 2018 11:50:50 +0800
+
+symfony (3.4.12+dfsg-1) unstable; urgency=medium
+
+  * New upstream version fixing several security issues:
+    - [CVE-2018-11385] Session Fixation Issue for Guard Authentication
+    - [CVE-2018-11386] Denial of service when using PDOSessionHandler
+    - [CVE-2018-11406] CSRF Token Fixation
+    - [CVE-2018-11407] Unauthorized access on a misconfigured LDAP
+      server when using an empty password
+    - [CVE-2018-11408] Open redirect vulnerability on security handlers
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.12
+
+  [ Gert de Pagter ]
+  * Use symfony/polyfill-ctype
+
+  [ David Prévot ]
+  * Blacklist projectservicecontainer for ci
+  * Update dependency override
+  * Update homemade autoload.php files for php-symfony-polyfill-ctype
+  * Update dependency overrides
+  * Update Standards-Version to 4.1.5
+  * Add php-symfony-polyfill-ctype build-dependency
+  * Fix and workaround tests with recent PHPUnit
+  * Drop inexistant php-mongo for Build-Conflicts (Closes: #827782)
+
+  [ Daniel Bannert ]
+  * [PHPunit] suite variable should be used (Closes: #896108)
+
+ -- David Prévot <taffit@debian.org>  Sun, 22 Jul 2018 11:29:08 +0800
+
+symfony (3.4.6+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.6
+
+  [ David Prévot ]
+  * Update dependency overrides
+  * Blacklist projectservicecontainer for tests
+  * Make sure to load SymfonyTestsListener
+  * Move project repository to salsa.d.o
+  * Update Standards-Version to 4.1.3
+  * Fix testsuite with native PHP 7.2
+
+ -- David Prévot <taffit@debian.org>  Mon, 05 Mar 2018 16:46:15 -1000
+
+symfony (3.4.3+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.3
+
+  [ David Prévot ]
+  * Update versioned dependencies
+  * Update copyright (years)
+
+ -- David Prévot <taffit@debian.org>  Sat, 06 Jan 2018 15:32:31 +0530
+
+symfony (3.4.2+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.2
+
+  [ David Prévot ]
+  * Update homemade autoload.php files for new suggested packages
+
+ -- David Prévot <taffit@debian.org>  Fri, 15 Dec 2017 14:28:24 -1000
+
+symfony (3.4.1+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.1
+
+  [ David Prévot ]
+  * Add missing dependency for ci
+  * Update Standards-Version to 4.1.2
+
+ -- David Prévot <taffit@debian.org>  Tue, 05 Dec 2017 16:12:52 -1000
+
+symfony (3.4.0+dfsg-1) unstable; urgency=medium
+
+  * Upload stable version to unstable
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.0
+
+ -- David Prévot <taffit@debian.org>  Thu, 30 Nov 2017 14:45:36 -1000
+
+symfony (3.4.0~rc2+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.0-RC2
+
+  [ David Prévot ]
+  * Update versioned dependencies
+  * Build-depend on recent phpunit
+  * Build-Depend on php-phpdbg for the testsuite
+
+ -- David Prévot <taffit@debian.org>  Sat, 25 Nov 2017 19:52:11 -1000
+
+symfony (3.4.0~rc1+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.0-RC1
+
+  [ David Prévot ]
+  * Update dependency overrides
+  * Update test patches
+
+ -- David Prévot <taffit@debian.org>  Thu, 23 Nov 2017 11:29:17 -1000
+
+symfony (3.4.0~beta1+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.4.0-BETA1
+
+  [ Jérémy Derussé ]
+  * [Lock] Re-add the Lock component in 3.4
+
+  [ David Prévot ]
+  * Stick to version 3
+  * Update dependencies
+  * Update homemade autoload.php files
+  * Update Homepage URLs
+  * New php-symfony-lock package
+  * Update images licenses
+  * Drop more tests currently failing
+
+ -- David Prévot <taffit@debian.org>  Sun, 22 Oct 2017 13:55:42 -1000
+
+symfony (3.3.10+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.3.10
+
+  [ David Prévot ]
+  * Update Standards-Version to 4.1.1
+  * Drop Form test currently failing
+
+ -- David Prévot <taffit@debian.org>  Tue, 10 Oct 2017 22:03:41 -1000
+
+symfony (3.3.9+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.3.9
+
+  [ David Prévot ]
+  * Update dependency overrides
+  * Update homemade autoload.php files
+  * Update source for new binary packages:
+    - php-symfony-dotenv
+    - php-symfony-web-link
+    - php-symfony-workflow
+    - php-symfony-web-server-bundle
+  * Don’t ship new phpunit wrapper
+  * Update components homepage
+  * Install (and load) Symfony/Bundle/FullStack.php in php-symfony
+  * Handle another way to embed SVG for copyright check
+  * Update debian/licensing/image-checksums.dcf
+  * Update copyright
+  * Add new build-dependencies
+  * Ship Test classes
+  * Update Standards-Version to 4.1.0
+  * Update php-symfony-cache description
+  * Adapt phpunit call
+  * Add patches to workaround the lack of Composer environment for tests
+  * Drop more tests currently failing
+  * Drop README.Debian containing advice about using a now deprecated component
+
+ -- David Prévot <taffit@debian.org>  Fri, 22 Sep 2017 17:14:57 -1000
+
+symfony (3.1.1+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.1.1
+
+ -- David Prévot <taffit@debian.org>  Fri, 17 Jun 2016 15:11:02 -0400
+
+symfony (3.1.0+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.1.0
+
+ -- David Prévot <taffit@debian.org>  Tue, 31 May 2016 11:52:34 -0400
+
+symfony (3.1.0~rc1+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.1.0-RC1
+
+  [ David Prévot ]
+  * Add php-redis to Build-Conflicts since it requires a functional server
+    in order to pass the test suite.
+
+ -- David Prévot <taffit@debian.org>  Sun, 29 May 2016 08:18:14 -0400
+
+symfony (3.1.0~beta1+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 3.1.0-BETA1
+
+  [ David Prévot ]
+  * Handle pre-releases
+  * Adapt dependencies to updated composer.json files
+  * Add php-symfony-cache and php-symfony-inflector
+  * Update Homepage URLs
+  * Update autoload.php for tests
+  * Add php-gd as build-dependency to pass more tests
+  * Use verbose test mode to get skipped reasons
+
+ -- David Prévot <taffit@debian.org>  Sun, 15 May 2016 16:37:21 -0400
+
+symfony (3.0.6+dfsg-1) experimental; urgency=high
+
+  [ Fabien Potencier ]
+  * bumped Symfony version to 3.0.6
+  * limited the maximum length of a submitted username [CVE-2016-4423]
+
+  [ Charles Sarrazin ]
+  * Fixed issue with blank password with Ldap [CVE-2016-2403]
+
+  [ David Prévot ]
+  * Build-depend on php-apcu-bc to pass more tests
+
+ -- David Prévot <taffit@debian.org>  Wed, 11 May 2016 10:47:34 -0400
+
+symfony (3.0.5+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * bumped Symfony version to 3.0.5
+
+  [ David Prévot ]
+  * Update Standards-Version to 3.9.8
+
+ -- David Prévot <taffit@debian.org>  Tue, 03 May 2016 15:10:45 -0400
+
+symfony (3.0.4+dfsg-2) experimental; urgency=medium
+
+  * Get rid of php5-symfony-debug binary extension that has been
+    deprecated for PHP 7.0
+
+ -- Ondřej Surý <ondrej@debian.org>  Fri, 15 Apr 2016 16:44:02 +0200
+
+symfony (3.0.4+dfsg-1) experimental; urgency=medium
+
+  * Upload non-LTS version to experimental
+
+  [ Fabien Potencier ]
+  * bumped Symfony version to 3.0.4
+
+  [ David Prévot ]
+  * Track latest stable version
+  * Drop require-dev and tests directories from homemade static
+    autoload.php files
+  * Drop patch to workaround “OR-ed versions are not supported”
+  * Install Security changelog in sub-components
+  * Update copyright
+  * Drop php-symfony-locale and php-symfony-swiftmailer-bridge
+  * Update main autoload.php and build-dependencies
+  * Update version overrides and static autoload.php files
+  * php-symfony-security only ships a static autoload.php now
+  * Load all Bridges for the tests
+
+ -- David Prévot <taffit@debian.org>  Sat, 02 Apr 2016 16:56:36 -0400
+
+symfony (2.8.4+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * bumped Symfony version to 2.8.4
+
+  [ Daniel Beyer ]
+  * Drop no longer needed patch to remove content from README.md files
+    - Remove-content-from-README.md-files.patch
+
+  [ David Prévot ]
+  * Drop now useless upstream README
+  * Update homemade static autoload.php
+  * Depend on php-phpdocumentor-reflection for running more tests
+  * Exclude group dns-sensitive
+
+ -- David Prévot <taffit@debian.org>  Thu, 31 Mar 2016 19:25:29 -0400
+
+symfony (2.8.3+dfsg-1) unstable; urgency=medium
+
+  * Upload to unstable since everything should be in place now
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.8.3
+
+  [ David Prévot ]
+  * Explicit dependency on php5-common (Closes: #811431)
+  * Update homemade static autoload.php
+  * PHP 7.0 transition:
+    - Drop some now useless php-* build-dependencies
+    - Build with recent pkg-php-tools
+
+  [ Daniel Beyer ]
+  * Drop patch to fix broken test in VarDumper (no longer needed)
+    - VarDumper-Fix-tests-on-PHP-7.patch
+
+  [ Marco Pivetta ]
+  * #17676 - making the proxy instantiation compatible with ProxyManager 2.x
+    by detecting proxy features
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Tue, 22 Mar 2016 17:43:00 +0100
+
+symfony (2.8.2+dfsg-1) experimental; urgency=medium
+
+  * Upload new branch to experimental
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.8.2
+
+  [ Daniel Beyer ]
+  * Bump Standards-Version: in d/control (no changes needed)
+  * Remove licensing for the no longer used Glyphish icons from d/copyright
+  * Remove license CC-BY-3.0-US from d/copyright (no longer used)
+  * Update debian/copyright for symfony 2.8
+  * Add patch to fix broken test in the VarDumper component
+    - VarDumper-Fix-tests-on-PHP-7.patch
+  * Add patch to fix broken memcache session handler in HttpFoundation
+    - HttpFoundation-Fix-incompatibility-with-php-memcache.patch
+  * Use php7 for building (Closes: #814799)
+  * Use php7 for DEP-8 (as-installed) tests
+  * Use php5 for DEP-8 (as-installed) tests against php5-symfony-debug
+  * Skip tests (build time and DEP-8) for component PropertyInfo
+  * Add php-symfony-property-info
+  * Add php-symfony-ldap
+  * Update build and DEP-8 dependencies for Symfony 2.8
+
+  [ David Prévot ]
+  * Add CVE entry for previous changelog entry
+  * Use the now packaged php-random-lib (via php-symfony-polyfill-php70)
+    instead of an embedded copy
+  * Add php-symfony-security-{core,csrf,guard,http}, php-symfony-security is
+    becoming almost a metapackage
+  * Add php-symfony, almost a metapackage depending on every component,
+    shipping upgrading notes
+
+ -- David Prévot <taffit@debian.org>  Sun, 21 Feb 2016 10:40:09 -0400
+
+symfony (2.7.9+dfsg-1) unstable; urgency=high
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.9
+    Fix insecure fallback from SecureRandom when OpenSSL fails [CVE-2016-1902]
+
+  [ Daniel Beyer ]
+  * Drop patch to skip broken tests in the Process component (no longer needed)
+    - Skip-broken-tests-in-Process-component.patch
+  * Add patch to provide function random_bytes() for php 5
+    - Embed-paragonie-random_compat-into-the-security-comp.patch
+  * Add a README.Debian (Closes: #806903)
+
+  [ David Prévot ]
+  * Update autoload and dependencies for php-symfony-framework-bundle
+  * Update copyright (years)
+  * Add copyright entry for embedded paragonie/random_compat
+
+ -- David Prévot <taffit@debian.org>  Sun, 17 Jan 2016 16:23:58 -0400
+
+symfony (2.7.7+dfsg-1) unstable; urgency=high
+
+  [ Christian Flothmann ]
+  * Vulnerability in Security Remember-Me Service [CVE-2015-8125]
+    - fix potential timing attack issue
+    - mitigate CSRF timing attack vulnerability
+    - prevent timing attacks in digest auth listener
+  * Session Fixation in the "Remember Me" Login Feature [CVE-2015-8124]
+    - migrate session after remember me authentication
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.7
+
+  [ Daniel Beyer ]
+  * Pin debian/watch to stable 2.x releases of Symfony
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Tue, 24 Nov 2015 08:10:09 +0100
+
+symfony (2.7.6+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.6
+
+  [ David Prévot ]
+  * Update phpunit calls with regard to network access
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sun, 08 Nov 2015 15:14:54 +0100
+
+symfony (2.7.5+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.5
+
+  [ David Prévot ]
+  * debian/control:
+    - Drop now useless transitional dummy packages
+      (php-symfony-classloader and php-symfony-eventdispatcher)
+    - php5-mongo makes the tests fail, since it requires a set up
+      MongoDB server
+  * debian/test/control: Add missing php-doctrine-data-fixtures
+    dependency for CI
+
+  [ Daniel Beyer ]
+  * Correct incomplete autoloading for php-symfony-asset
+  * Run tests parallel during build time, similar to how upstream does it
+  * Run DEP-8 (as-installed) tests parallel, similar to how upstream does it
+  * Remove prefixed 'NNNN-'-numbering for Debian patches
+  * Use a simplistic vendor/autoload.php to run tests during build time.
+    This is to make sure we use the autoload.php files generated by phpab
+    and additionally eliminates the need to generate a vendor/autoload.php
+    using phpab during build time. Instead we use now use a symbolic link
+    for vendor/autoload.php pointing to debian/autoload.build.php.
+  * Include tests in autoload.php files generated by phpab
+  * Use a simplistic vendor/autoload.php for DEP-8 (as-installed) tests.
+    This ensures we use the autoload.php files generated by phpab during
+    DEP-8 (as-installed) test. Additionally we no longer need to generate
+    a vendor/autoload.php using phpab. Instead we now simply use a symbolic
+    link for vendor/autoload.php pointing to debian/autoload.DEP-8.php.
+  * Add new patch fixing wrong autoloader detection used by some tests
+    - FrameworkBundle-SecurityBundle-Don-t-try-to-include-.patch
+  * Drop temporary workaround patch (no longer needed)
+    - Temporary-workaround.patch
+  * Update patch to skip additional tests needing network
+    - group-online-for-test-failing-without-network.patch
+  * Add new patch to skip broken tests in the Process component
+    - Skip-broken-tests-in-Process-component.patch
+  * Provide missing meta.json for php-symfony-intl
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Fri, 02 Oct 2015 20:41:11 -0400
+
+symfony (2.7.1+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.1
+
+ -- David Prévot <taffit@debian.org>  Sun, 14 Jun 2015 17:15:34 -0400
+
+symfony (2.7.0+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.0
+
+  [ David Prévot ]
+  * Adapt minimal version in CI for unstable
+
+ -- David Prévot <taffit@debian.org>  Sun, 31 May 2015 09:36:15 -0400
+
+symfony (2.7.0~beta2+dfsg-2) unstable; urgency=high
+
+  [ Daniel Beyer ]
+  * Add patch to fix ESI unauthorized access [CVE-2015-4050]
+    - 0007-HttpKernel-Do-not-call-the-FragmentListener-if-_cont.patch
+
+  [ David Prévot ]
+  * Override php-symfony-security-* as php-symfony-security
+
+ -- David Prévot <taffit@debian.org>  Wed, 27 May 2015 09:05:23 -0400
+
+symfony (2.7.0~beta2+dfsg-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.7.0-BETA2
+
+  [ David Prévot ]
+  * Use HTTPS for homepage
+  * Adapt minimal versions to unstable, and upload to unstble
+
+ -- David Prévot <taffit@debian.org>  Mon, 18 May 2015 23:00:16 -0400
+
+symfony (2.7.0~beta1+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * [Asset] added the component
+  * removed Propel bridge from Symfony Core
+  * updated VERSION for 2.7.0-BETA1
+
+  [ Nicolas Grekas ]
+  * [PhpUnitBridge] new bridge for testing with PHPUnit
+
+  [ David Prévot ]
+  * Add php-symfony-asset
+  * Add php-symfony-phpunit-bridge
+  * Remove php-symfony-propel1-bridge
+  * Provide php5-symfony-debug extension
+  * Provide homemade autoload.php for all Composer packages
+  * Drop extension sources from php-symfony-debug
+  * Drop php-symfony2-yaml reference
+  * Bump minimal php-twig version as needed for tests
+
+  [ Daniel Beyer ]
+  * Add SVG support to the image license checker
+  * Update copyright (year) of the image license checker script
+  * Update debian/copyright for symfony 2.7
+
+ -- David Prévot <taffit@debian.org>  Mon, 13 Apr 2015 18:26:01 -0400
+
+symfony (2.6.6+dfsg-1) experimental; urgency=medium
+
+  [ Fabien Potencier ]
+  * updated VERSION for 2.6.6
+
+  [ David Prévot ]
+  * Correct FTBFS fix attribution in previous changelog entry
+
+  [ Nicolas Grekas ]
+  * Safe escaping of fragments for eval()
+
+  [ James Gilliland ]
+  * isFromTrustedProxy to confirm request came from a trusted proxy.
+
+ -- David Prévot <taffit@debian.org>  Wed, 01 Apr 2015 16:34:09 -0400
+
+symfony (2.6.4+dfsg-1) experimental; urgency=low
+
+  * Upload to experimental to respect the freeze
+  * Provide new binary packages:
+    - php-symfony-debug-bundle
+    - php-symfony-expression-language
+    - php-symfony-var-dumper
+
+  [ Daniel Beyer ]
+  * Validate that all new images and icons are properly licensed.
+  * Let php-symfony-security provide 4 new versioned virtual packages
+    - php-symfony-security-acl
+    - php-symfony-security-core
+    - php-symfony-security-csrf
+    - php-symfony-security-http
+  * Add new build-dependencies needed for tests
+    - php-doctrine-bundle
+    - php-email-validator
+    - php5-sqlite
+  * Update patches (add proper Symfony prefix in vendor/autoload.php)
+    - 0001-Add-a-vendor-autoload.php-needed-to-run-tests-during.patch
+    - DEP-8/Use-installed-class-for-DEP-8-tests.patch
+  * Add pkg-php-tools-overrides for egulias/email-validator
+  * Fix FTBFS as in 2.3 (Closes: #775625)
+
+  [ David Prévot ]
+  * Track latest version in debian/watch
+  * New upstream version
+  * Provide a get-orig-source target
+  * Update copyright (years)
+  * Workaround “OR-ed versions are not supported”
+  * Use recent php-proxy-manager and phpunit for tests
+  * Update dependencies for DEP-8 tests
+
+ -- David Prévot <taffit@debian.org>  Fri, 06 Feb 2015 14:28:33 -0400
+
+symfony (2.3.21+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+  * Update build-dependencies (add php5-intl, drop php-symfony-icu and
+    icu-devtools)
+  * Exclude tests of type intl-data
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sun, 26 Oct 2014 17:08:18 +0100
+
+symfony (2.3.20+dfsg-1) unstable; urgency=low
+
+  [ Daniel Beyer ]
+  * New upstream version.
+  * Drop patches (adopted upstream)
+     - 0001-SwiftmailerBridge-Bump-allowed-versions-of-swiftmail.patch
+     - 0004-Finder-Escape-location-for-regex-searches.patch
+  * Fix DEP-8 tests failing if no tty is present
+
+  [ David Prévot ]
+  * Use repacksuffix feature of uscan
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sat, 11 Oct 2014 01:44:50 +0200
+
+symfony (2.3.19+dfsg-1) unstable; urgency=low
+
+  * Initial release. (Closes: #513646)
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sun, 07 Sep 2014 18:34:19 +0200

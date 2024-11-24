@@ -1,0 +1,482 @@
+modsecurity-apache (2.9.3-3+deb11u1) bullseye-security; urgency=high
+
+  * Added json_depth_limit.patch
+    Fixes CVE--2021-42717
+
+ -- Ervin Hegedus <airween@gmail.com>  Wed, 01 Dec 2021 16:04:02 +0100
+
+modsecurity-apache (2.9.3-3) unstable; urgency=medium
+
+  * Add upstream patch to fix Segfault when using SecRemoteRules.
+    (Closes: #970833)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 10 Dec 2020 19:14:15 +0100
+
+modsecurity-apache (2.9.3-2) unstable; urgency=medium
+
+  * Added `--enable-pcre-jit` option to configure script
+
+ -- Ervin Hegedus <airween@gmail.com>  Sun, 17 May 2020 19:47:56 +0000
+
+modsecurity-apache (2.9.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bumped to debhelper compatibility level 11, removed build-dep on
+    dh-autoreconf.
+  * Bumped Standards-Version to 4.2.1
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 10 Dec 2018 20:21:48 +0100
+
+modsecurity-apache (2.9.2-2) unstable; urgency=medium
+
+  * Change CRS IncludeOptional to wildcard to get the desired behaviour (not
+    failing when CRS not present). Thanks Walter Kleynscheldt for pointing
+    this out. (Closes: #874542)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 17 Sep 2018 09:11:12 +0200
+
+modsecurity-apache (2.9.2-1) unstable; urgency=medium
+
+  * New upstream release. Remove logging patch.
+  * Removed no longer needed libapache2-modsecurity transitional package.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Wed, 11 Oct 2017 12:53:50 +0200
+
+modsecurity-apache (2.9.1-3) unstable; urgency=medium
+
+  * Apply upstream (#1216) patch to fix errors on logging.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 29 Jun 2017 11:19:57 +0200
+
+modsecurity-apache (2.9.1-2) unstable; urgency=medium
+
+  * security2.load: Remove no longer needed load of libxml2.so.2
+  * improve_defaults.patch: Increase PCRE limits, reorder SecAuditLogParts
+    Thanks Christian Folini for the suggestions!
+  * Add IncludeOptional directive for modsecurity-crs package.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 20 Dec 2016 17:14:15 +0100
+
+modsecurity-apache (2.9.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 19 Sep 2016 19:04:01 +0200
+
+modsecurity-apache (2.9.0-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #790116)
+  * Removed mlogc_TLS1.2.patch, not needed anymore.
+  * Remove old (no longer applied) patches from debian/patches
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 07 Jul 2015 12:26:36 +0200
+
+modsecurity-apache (2.8.0-4) unstable; urgency=medium
+
+  * Apply upstream patch to make mlogc use TLS 1.2 instead of SSL v3.
+  * Add support for JSON. (Closes: #765605)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 04 Nov 2014 12:54:04 +0100
+
+modsecurity-apache (2.8.0-3) unstable; urgency=medium
+
+  * Add explicit Build-Dep on libpcre3-dev since libaprutil1-dev no longer
+    does. (Closes: #765122)
+  * Add pkg-config to Build-Dep so that lua support is picked up correctly.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 13 Oct 2014 20:19:23 +0200
+
+modsecurity-apache (2.8.0-2) unstable; urgency=medium
+
+  * Move libapache2-mod-security2.maintscript to
+    libapache2-modsecurity.maintscript, since the previous conffiles
+    were in the latter.
+  * libapache2-modsecurity. Remove dangling symlinks in mods-enabled on
+    upgrades.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 03 Oct 2014 11:44:24 +0200
+
+modsecurity-apache (2.8.0-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 21 Apr 2014 18:35:38 +0200
+
+modsecurity-apache (2.7.7-2) unstable; urgency=medium
+
+  * Use dh-autoreconf to fix FTBFS on ppc64el. (Closes: #734573)
+    Thanks Logan Rosen for the patch.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Wed, 15 Jan 2014 10:18:58 +0100
+
+modsecurity-apache (2.7.7-1) unstable; urgency=low
+
+  * New upstream version
+  * Bumped Standards-Version to 3.9.5
+  * Renamed binary package so that it follows naming standards
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 19 Dec 2013 17:09:28 +0100
+
+modsecurity-apache (2.7.5-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 11 Oct 2013 11:24:43 +0200
+
+modsecurity-apache (2.7.4-1) unstable; urgency=low
+
+  * New upstream version.
+  * Remove doc-base since doc files were removed upstream.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 01 Jul 2013 17:14:29 +0200
+
+modsecurity-apache (2.6.6-9) unstable; urgency=high
+
+  * Applied upstream patch to fix NULL pointer dereference.
+    CVE-2013-2765. (Closes: #710217)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 04 Jun 2013 09:34:41 +0200
+
+modsecurity-apache (2.6.6-8) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 28 May 2013 18:20:39 +0200
+
+modsecurity-apache (2.6.6-7) experimental; urgency=low
+
+  [Arno Töll]
+  * Add support for Apache 2.4 using the patch provided by Ondřej Surý
+    (Closes: #666848)
+  * Move apache2 configuration files to their canonical name:
+    - mod-security.load -> security2.load
+    - mod-security.conf -> security2.conf
+    Thus, also slightly raise the debhelper build dependency to 8.1.
+  * Update security2.conf for changes in Apache 2.4
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 23 May 2013 13:38:35 +0200
+
+modsecurity-apache (2.6.6-6) unstable; urgency=high
+
+  * Applied upstream patch to fix XXE attacks. CVE-2013-1915
+    Thanks Thomas Goirand for backporting the patch.
+    (Closes: #704625)
+    Adds new SecXmlExternalEntity option which by default (Off) disables
+    the external entity load task executed by libxml2.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sat, 06 Apr 2013 11:09:12 +0200
+
+modsecurity-apache (2.6.6-5) unstable; urgency=high
+
+  * Applied upstream patch to fix multipart/invalid part
+    ruleset bypass. CVE-2012-4528. (Closes: #691146)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 22 Oct 2012 16:23:19 +0200
+
+modsecurity-apache (2.6.6-4) unstable; urgency=low
+
+  * Fix dangling symlink to /usr/share/doc/mod-security-common.
+    (Closes: #687866)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 01 Oct 2012 18:05:09 +0200
+
+modsecurity-apache (2.6.6-3) unstable; urgency=low
+
+  * Relicense debian/* files to ASLv2 to avoid conflicts with upstream
+    license.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 12 Jul 2012 13:05:20 +0200
+
+modsecurity-apache (2.6.6-2) unstable; urgency=low
+
+  * Updated debian/copyright with right license.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 02 Jul 2012 17:23:08 +0200
+
+modsecurity-apache (2.6.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove patches/fix_non_linux.patch. Applied upstream.
+  * debian/rules: cleanup.
+  * Add hardening flags to build process.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 15 Jun 2012 12:34:20 +0200
+
+modsecurity-apache (2.6.5-2) unstable; urgency=low
+
+  * mod-security.load: removed /usr/lib/ from libxml2's LoadFile path.
+    (Closes: #670247)
+  * README.Debian: Fix name of example configuration file.
+    (Closes: #668938, #659858)
+  * debian/control: Remove mention to modsecurity-common.
+    (Closes: #662862)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 03 May 2012 17:36:01 +0200
+
+modsecurity-apache (2.6.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 20 Mar 2012 20:05:09 +0100
+
+modsecurity-apache (2.6.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Apply patch by Peter Michael Green to fix FTBFS on non-linux
+    kernels. (Closes: #631649, #654719)
+  * Added doc-base entry
+  * Set Priority to extra for transitional libapache-mod-security
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 16 Mar 2012 13:26:32 +0100
+
+modsecurity-apache (2.6.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Include mlogc (still missing manpage). (Closes: #645875)
+  * postinst: changed force-reload to restart to avoid apache from segfaulting
+    when upgrading modsecurity module (Closes: #574376)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Wed, 28 Dec 2011 16:51:11 +0100
+
+modsecurity-apache (2.6.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #634844)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sun, 02 Oct 2011 11:34:03 +0200
+
+modsecurity-apache (2.6.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #627858, #607763)
+  * Bumped Standards-Version to 3.9.2
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 16 Jun 2011 13:58:40 +0200
+
+modsecurity-apache (2.5.13-1) unstable; urgency=low
+
+  * The "Rename the whole thing" release
+    Move to libapache2- for the binary package to match the rest of
+    Apache 2.x modules.
+    Rename the source package to its current name, modsecurity-apache,
+    since the former source name came from very old versions (1.x).
+    Also allowing the future modsecurity-crs to have a more related source
+    name.  (Closes: #516540)
+  * Merge documentation in libapache2-modsecurity temporarily.
+    mod-security-common is going away. modsecurity-crs will soon come.
+  * New upstream release
+  * debian/control:
+    - Added Homepage field
+    - Bumped Standards-Version to 3.9.1
+  * Added watch file
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Wed, 23 Mar 2011 18:36:29 +0100
+
+libapache-mod-security (2.5.12-1) unstable; urgency=low
+
+  * New upstream release. Fixes several security issues.
+    (Closes: #569658)
+  * Moved to dpkg-source 3.0 (quilt).
+  * Bumped Standards-Version to 3.8.4.0
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 11 Mar 2010 13:36:25 +0100
+
+libapache-mod-security (2.5.11-1) unstable; urgency=low
+
+  * New upstream release
+  * Changed section to httpd (from web)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 12 Nov 2009 11:50:33 +0100
+
+libapache-mod-security (2.5.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control: remove mod-security-common dependency on
+    libapache-mod-security. (Closes: #529064)
+  * liblua correctly detected on build now. (Closes: #524913)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 01 Oct 2009 12:57:44 +0200
+
+libapache-mod-security (2.5.9-1) unstable; urgency=high
+
+  * New upstream release. (Closes: #512472)
+    Urgency high due to it fixing multiple remote DoS.
+    Bugtraq ID: 34096
+  * Moved to debhelper compatibility level 7:
+    - echo 7 > debian/compat
+    - Added ${misc:Depends} to debian/control
+    - Bumped debhelper version dependency in debian/control
+  * Fixed long description formatting. (Closes: #516540)
+  * Prepared build of mlogc, not releasing this time due to
+    urgency of release and missing man page.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 23 Mar 2009 09:56:42 +0100
+
+libapache-mod-security (2.5.6-1) unstable; urgency=low
+
+  * The 'Back to the archive!' Release (Closes: #487431)
+  * Drop '2' from package name, now libapache-mod-security
+  * New upstream release
+    - Includes a new licensing exception that allows binary
+      distribution with licenses not compatible with GPLv2,
+      such as Apache's. See MODSECURITY_LICENSING_EXCEPTION
+  * Removed debian/bug and debian/rules entry to install bug
+    handling when out of the archive.
+  * Bumped Standards-Version to 3.8.0.0
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 08 Aug 2008 13:31:56 +0200
+
+libapache-mod-security2 (2.5.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Tue, 10 Jun 2008 17:21:48 +0200
+
+libapache-mod-security2 (2.5.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Added liblua5.1-0-dev to Build-Depends
+  * Added apache2-prefork-dev as Build-Depends alternative
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sun, 09 Mar 2008 19:41:47 +0100
+
+libapache-mod-security2 (2.1.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu, 31 Jan 2008 16:27:29 +0100
+
+libapache-mod-security2 (2.1.2-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 06 Aug 2007 21:55:28 +0200
+
+libapache-mod-security2 (2.1.0-1) unstable; urgency=low
+
+  * New upstream version
+  * Added Core Rules to examples directory
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sun,  4 Mar 2007 15:17:08 +0100
+
+libapache-mod-security2 (2.0.4-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sat, 18 Nov 2006 11:00:21 +0100
+
+libapache-mod-security2 (2.0.3-1) unstable; urgency=low
+
+  * Initial release (Only available for Apache 2.x)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 06 Nov 2006 17:55:54 +0100
+
+libapache-mod-security (1.9.4-2) unstable; urgency=low
+
+  * Moved to apache2.2-common
+  * Fixed Depends between libapache2-mod-security, libapache-mod-security and
+    mod-security-common, so they can be binNMUed
+  * Bumped Standards-Version to 3.7.2.2
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Mon, 30 Oct 2006 16:52:16 +0100
+
+libapache-mod-security (1.9.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added bug control files to avoid spamming Debian's BTS.
+    Thanks Daniel Baumann for the patch.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Thu,  1 Jun 2006 09:29:40 +0200
+
+libapache-mod-security (1.9.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+    Note: Added extra .0 to version number to ease upgrading from -rc3
+    packages.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri, 27 Jan 2006 14:32:04 +0100
+
+libapache-mod-security (1.9.2-rc3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Moved away from Debian's archive due to license problems.
+    (You may find updates @ http://inittab.org/debian)
+  * Removed tests, as upstream did. Removed README.debian as it
+    only mentioned tests.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sat, 14 Jan 2006 21:44:50 +0100
+
+libapache-mod-security (1.8.7-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #285365)
+  * Fixes several security issues, thus the urgency.
+  * Set proper permissions on test suite scripts (Closes: #304195)
+  * Corrected minor typo in README.Debian (Closes: #304196)
+  * debian/control: Reworded packages descriptions to be more useful.
+    (Closes: #304445)
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Sun, 10 Apr 2005 12:28:03 +0200
+
+libapache-mod-security (1.8.4-2) unstable; urgency=medium
+
+  * New maintainer (Closes: #303613)
+  * Thanks Adam Conrad for helping with the apache2
+    LFS transition. (Closes: #267353)
+  * Patched apache2/mod_security.c to include regex.h and build
+    correctly. (Closes: #297983). Thanks Andreas Jochens.
+    This was RC, thus the urgency.
+
+ -- Alberto Gonzalez Iniesta <agi@inittab.org>  Fri,  8 Apr 2005 08:48:11 +0200
+
+libapache-mod-security (1.8.4-1.1) unstable; urgency=high
+
+  * NMU: Back out the ill-fated apache2 LFS transition. (closes: #267353)
+  * Bump the apache2-threaded-dev build-dep to (>= 2.0.50-10)
+
+ -- Adam Conrad <adconrad@0c3.net>  Sun, 22 Aug 2004 22:49:06 -0700
+
+libapache-mod-security (1.8.4-1) unstable; urgency=medium
+
+  * Upload/fixes on maintainer's behalf (hence non-NMU version)
+  * New upstream version (Closes: #256414)
+  * Rebuilt with latest apache2-dev (Closes: #266187)
+  * Change apache2-dev build-dep to apache2-threaded-dev, as the
+    former is a virtual package, and can't have a versioned dep.
+
+ -- Adam Conrad <adconrad@0c3.net>  Tue, 17 Aug 2004 05:42:20 -0600
+
+libapache-mod-security (1.7.1-1) unstable; urgency=low
+
+  * New upstream version
+  * Fix example http.conf path references in README.Debian (Closes: #216464)
+  * Fix upstream url in copyright file
+  * Also install new util directory with snort2modsec scripts
+  * Added doc-base support for pdf documentation
+  * Updated to use modules-config for apache 1.x instead of deprecated apacheconfig
+  * Added http.example from CVS as upstream forgot to update it in tarball and
+    there was some failing new tests
+
+ -- Bruno Rodrigues <bruno.rodrigues@litux.org>  Wed, 22 Oct 2003 14:29:09 +0100
+
+libapache-mod-security (1.6-1) unstable; urgency=low
+
+  * New upstream version (1.5 and 1.5.1 missed due to old information in
+    old site; new site at http://www.modsecurity.org)
+  * Fix typo in description (Closes: #195860)
+  * Bumped Standards-Version to 3.6.1
+  * Since 1.5, mod_security supports apache 2.x, so there's a corresponding
+    new libapache2-mod-security and a -common package
+
+ -- Bruno Rodrigues <bruno.rodrigues@litux.org>  Mon, 29 Sep 2003 14:48:32 +0100
+
+libapache-mod-security (1.4.2-1) unstable; urgency=low
+
+  * New upstream version
+  * New package (Closes: #178722)
+  * Fixed a bug in postrm
+
+ -- Bruno Rodrigues <bruno.rodrigues@litux.org>  Wed, 19 Mar 2003 02:51:55 +0000
+
+libapache-mod-security (1.4-0) unstable; urgency=low
+
+  * Initial release
+
+ -- Bruno Rodrigues <bruno.rodrigues@litux.org>  Tue, 28 Jan 2003 04:22:39 +0000

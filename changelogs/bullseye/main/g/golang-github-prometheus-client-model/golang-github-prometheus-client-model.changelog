@@ -1,0 +1,64 @@
+golang-github-prometheus-client-model (0.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository-Browse.
+
+  [ Guillem Jover ]
+  * Move note about license location on Debian systems into a Comment field
+  * Mark -dev package as Multi-Arch:foreign
+  * Switch to Standards-Version 4.5.1 (no changes needed)
+  * Decapitalize synopsis first word
+  * Update gitlab-ci.yml from latest upstream version
+  * Set the build directory to _build
+  * Update gitignore entries
+
+ -- Guillem Jover <gjover@sipwise.com>  Fri, 29 Jan 2021 23:23:41 +0100
+
+golang-github-prometheus-client-model (0.2.0-1) unstable; urgency=medium
+
+  [ Daniel Swarbrick ]
+  * New upstream release.
+  * Update Standards-Version to 4.5.0 (no changes).
+  * Bump debhelper-compat version to 13.
+  * Add debian/watch file.
+  * Add debian/upstream/metadata file.
+  * Update maintainer email addresses / names.
+  * Add myself to uploaders.
+
+ -- Martina Ferrari <tina@debian.org>  Wed, 17 Jun 2020 14:45:18 +0000
+
+golang-github-prometheus-client-model (0.0.2+git20171117.99fa1f4-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Martina Ferrari ]
+  * Stop using pristine-tar, rename branches.
+  * New upstream snapshot; only trivial changes.
+  * Use go generate to avoid depending on special make rules.
+  * Automated cme fixes.
+  * Raise dh compat to 11.
+
+ -- Martina Ferrari <tina@debian.org>  Mon, 21 May 2018 14:05:44 +0000
+
+golang-github-prometheus-client-model (0.0.2+git20150212.12.fa8ad6f-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Martina Ferrari ]
+  * Add myself to Uploaders.
+  * Make dependency on dh-golang versioned (XS-Go-Import-Path support).
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+
+ -- Martina Ferrari <tina@debian.org>  Sun, 23 Oct 2016 23:29:29 +0200
+
+golang-github-prometheus-client-model (0.0.2+git20150212.12.fa8ad6f-1) unstable; urgency=medium
+
+  * Initial release (Closes: #818580).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 18 Mar 2016 20:50:32 +1100

@@ -1,0 +1,55 @@
+golang-github-docker-go-metrics (0.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Dmitry Smirnov ]
+  * Standards-Version: 4.4.1
+  * DH & compat to version 12
+
+  [ Shengjing Zhu ]
+  * New upstream version 0.0.1
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Use debhelper-compat syntax
+  * Add Rules-Requires-Root
+  * Fix lintian incomplete-creative-commons-license
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 16 Apr 2020 12:08:40 +0800
+
+golang-github-docker-go-metrics (0.0~git20180209.399ea8c-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * Standards-Version: 4.1.4.
+  * New upstream snapshot (Closes: #900597)
+    + fixes FTBFS "cannot use prometheus.Observer as type prometheus.Histogram".
+  * (Build-)Depends:
+    = golang-github-prometheus-client-golang-dev (>= 0.9.0~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 11 Jun 2018 10:29:38 +1000
+
+golang-github-docker-go-metrics (0.0~git20170503.0.d466d4f-1) unstable; urgency=medium
+
+  * Bump compat
+  * Update copyright
+  * Set priority to optional
+  * Bump debhelper requirement
+  * Bump standards version
+  * Add testsuite
+  * Update watch file
+  * Add myself to uploaders
+  * Remove shlibs:Depends from the library package
+  * New upstream version 0.0~git20170503.0.d466d4f
+  * Update copyright for documentation
+
+ -- Arnaud Rebillout <arnaud.rebillout@collabora.com>  Wed, 14 Mar 2018 09:12:53 +0700
+
+golang-github-docker-go-metrics (0.0~git20161110.0.0f35294-1) unstable; urgency=medium
+
+  * Initial release (Closes: #853911)
+
+ -- Tim Potter <tpot@hpe.com>  Mon, 19 Dec 2016 14:24:54 +1100

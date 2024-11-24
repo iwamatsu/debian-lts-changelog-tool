@@ -1,0 +1,161 @@
+ndpi (2.6-3+deb10u1) buster-security; urgency=medium
+
+  * [7ab9156] CVE-2020-15472: fix heap-based buffer over-read.
+                              in ndpi_search_h323.
+  * [f0e40e9] CVE-2020-15476: fix heap-based buffer over-read
+                              in ndpi_search_oracle.
+
+ -- Anton Gladky <gladk@debian.org>  Sat, 27 Aug 2022 21:33:48 +0200
+
+ndpi (2.6-3) unstable; urgency=medium
+
+  * Add packet-direction.patch and quic.patch to fix big-endian-related bugs.
+  * Disable tests that have inconsistent behavior across architecture due to
+    broken sorting in the test code.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Wed, 16 Jan 2019 01:48:34 -0800
+
+ndpi (2.6-2) unstable; urgency=medium
+
+  * Remove no longer needed build-dep on xdelta.
+  * Fix reference-after-free in ndpiReader and optimistically re-enable all
+    tests succeeding on amd64 and i386.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Tue, 15 Jan 2019 01:04:36 -0800
+
+ndpi (2.6-1) unstable; urgency=medium
+
+  [ Bernd Zeimetz ]
+  * [e941738] Update upstream source from tag 'upstream/2.6'
+    Update to upstream version '2.6'
+    with Debian dir ebb088f5b1a1a88743e71021b4a9c252b397527e
+    This will also hopefully fix all test issues.
+    Closes: #886133
+  * [a7ca26d] Removing patches as they don't apply anymore.
+  * [52af6ea] Disable binary patches for tests
+  * [61b7054] Install into /usr
+  * [9a430fe] Add patch to fix prefix in Makefile.
+  * [647cd1a] Fix and activate tests.
+  * [65e0c54] Updating git info
+  * [e54c89d] Updating symbols file.
+  * [f0451ce] Add gitlab CI file.
+  * [9a4a0f1] Disable tests which are broken on big endian.
+  * [d58ddad] Disabling another test.
+
+  [ Ludovico Cavedon ]
+  * Change SONAME and lib package name to include minory library version.
+  * Use libwireshark-dev to determine wireshak plugin path.
+  * Add define-have-json-c.patch to ensure ndpiReader is compiled with JSON
+    support.
+  * Link ndpiReader dynamically against libndpi and avoid lnking against
+    unnecessary C++ libraries.
+  * Stop adding libcache.h to -dev package.
+  * Add DEP3 header to patches/fix-makefile-prefix.
+  * Check DEB_BUILD_OPTIONS before running tests.
+  * Update Standards-Version to 4.3.0.
+  * Update debian/copyright for new upstream code.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Mon, 14 Jan 2019 11:17:02 -0800
+
+ndpi (2.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.2 (Closes: #878128, #878124).
+  * Update watch file to fetch new versions from github.
+  * Update copyright file.
+  * Add Multi-Arch flags in control file.
+  * Add libndpi-wireshark with wireshark dissector.
+  * Bump Standards-Version to 4.1.2.
+  * Update and refresh patches.
+  * Stop using dh-autoreconf (automatically called by autogen.sh).
+  * Add no-configure-after-autogen.patch to prevent autogen.sh from
+    automatically invoking configure.
+  * Update export-additional-symbols.patch, adding new required exported
+    symbols in libndpi.sym.
+  * Bump libndpi SONAME to 5.
+  * Use pkg-info.mk for parsing changelog.
+  * Patch nintendo.pcap and skype-conference-call.pcap to make sure libpcap is
+    able to open them during tests, based on
+    https://github.com/ntop/nDPI/issues/462#issuecomment-332552609.
+  * Embded libcache.h into libndpi includes, as it is included by
+    ndpi_typedefs.h.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Tue, 26 Dec 2017 02:10:48 +0100
+
+ndpi (1.8-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.8
+  * Update copyright.
+  * Refresh and update pacthes.
+  * Remove export-additional-symbols.patch (merged upstream).
+  * Update Standards-Version to 3.9.8.
+  * Update symbols file for libndpi3.
+  * Bump SONAME to libndpi4.
+  * Enable all build hardening.
+  * Migrate to libndpi-dbgsym.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Sat, 10 Dec 2016 20:08:44 -0800
+
+ndpi (1.7.1~git20151130.6f3d5a7-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.7.1~git20151130.6f3d5a7
+  * Support fetching a specific version from upstream git.
+  * Refresh patches.
+  * Update copyright.
+  * Update symbols list.
+  * Add add-missing-headers.patch to include ndpi_includes.h.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Fri, 25 Dec 2015 21:00:52 +0100
+
+ndpi (1.6-1) unstable; urgency=low
+
+  * Imported Upstream version 1.6
+  * Update copyright with the removal of embedded json-c.
+  * Remove pcap-linking.patch and export-additional-symbols.patch (merged
+    upstream).
+  * Update json-c-use-system.patch and example-link-dynamic.patch for new
+    upstream code.
+  * Update debian/watch file for new upstrm tarball name.
+  * Update docs and copyright.
+  * Bump SONAME to 2 and update symbol file.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Tue, 09 Sep 2014 16:55:57 -0700
+
+ndpi (1.5.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.5.0
+  * Update copyright.
+  * Add README.Debian to point to upstream documentation.
+  * Update library symbols.
+  * Update Standards-Version to 3.9.5.
+  * Add ndpiReader.c example.
+  * Build ndpiReader into separate package libndpi-bin
+  * Update watch file for new stable release.
+  * Update debian/rules get-orig-source to support invoking uscan.
+  * Rename library package to libndpi1a.
+  * Remove all previous patches.
+  * Add example-link-dynamic.patch for dynamically linking examples against
+    libndpi.
+  * Add json-c-use-system.patch for using system libjson-c.
+  * Add pcap-linking.patch to avoid linking libndpi against libpcap.
+  * Include ndpiReader in libndpi-bin package.
+  * Add man page for ndpiReader.
+  * Add export-additional-symbols.patch to export ndpi_set_proto_defaults
+    symbol.
+  * Add Build-Depends on libpcap-dev and pkg-config.
+  * Add libndpi-dbg package with debug symbols.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Thu, 14 Aug 2014 00:12:37 -0700
+
+ndpi (1.4.0+svn6932-1) unstable; urgency=low
+
+  * New upstream release (synced with ntopng 1.1).
+  * Update symbols file.
+  * Remove unused substitution variable in control file.
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Mon, 11 Nov 2013 23:20:11 -0800
+
+ndpi (1.4.0+svn6712-1) unstable; urgency=low
+
+  * Initial release. Thanks to Raphaël Hertzog. (Closes: #721551)
+
+ -- Ludovico Cavedon <cavedon@debian.org>  Sun, 01 Sep 2013 23:06:24 +0200

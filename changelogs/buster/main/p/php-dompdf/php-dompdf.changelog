@@ -1,0 +1,86 @@
+php-dompdf (0.6.2+dfsg-3+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2021-3838 fix was incomplete in handling fonts vulnerabilty.
+    Backport needed to further backport upstream chroot changes,
+    conjointly with ubuntu security team.
+    Thanks to Camila Camargo de Matos.
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 10 Aug 2023 17:46:54 +0000
+
+php-dompdf (0.6.2+dfsg-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2021-3838: php-dompdf was vulnerable to Deserialization
+    of Untrusted Data.
+  * Fix CVE-2022-2400: php-dompdf was vulnerable to
+    External Control of File Name thus loading unallowed file.
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 13 Jul 2023 19:57:57 +0000
+
+php-dompdf (0.6.2+dfsg-3) unstable; urgency=medium
+
+  * [8b6277c] Fix font loading during build (Closes: #820691)
+  * [8b84346] Update dependencies for PHP 7 (Closes: #821571, #821696)
+
+ -- Markus Frosch <lazyfrosch@debian.org>  Tue, 19 Apr 2016 21:14:52 +0200
+
+php-dompdf (0.6.2+dfsg-2) unstable; urgency=medium
+
+  * [a922437] Update php-font-lib dependency to ~0.2
+
+ -- Markus Frosch <lazyfrosch@debian.org>  Mon, 29 Feb 2016 14:38:08 +0100
+
+php-dompdf (0.6.2+dfsg-1) unstable; urgency=medium
+
+  [ David Prévot ]
+  * [dd91f93] Revert "Add ownCloud for Debian to uploaders"
+  * [315a84c] Drop now useless minimal version for php-font-lib
+  * [a470548] Fix watch file
+
+  [ Markus Frosch ]
+  * [9bd8627] Update watch to exclude beta releases and mark them dfsg
+  * [d1a2d1a] Adopt package within the PHP team (Closes: #748604)
+  * [9f53a9a] Imported Upstream version 0.6.2+dfsg, which fixes:
+    * CVE-2014-5013
+    * CVE-2014-5012
+    * CVE-2014-5011
+    * CVE-2014-2383
+    (Closes: #813849)
+  * [a4b6496] Update copyright to not mention DFSG removed files
+  * [9fdc430] Bump standards version to 3.9.7
+
+ -- Markus Frosch <lazyfrosch@debian.org>  Sun, 28 Feb 2016 18:09:26 +0100
+
+php-dompdf (0.6.1+dfsg-2) unstable; urgency=medium
+
+  * Document security issue fixed in last upstream version, and upload to
+    unstable.
+
+ -- David Prévot <taffit@debian.org>  Wed, 23 Apr 2014 15:23:50 -0400
+
+php-dompdf (0.6.1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release, uploaded to experimental because of the php-font-lib
+    dependency:
+    - Fixes an arbitrary file read vulnerability, that requires
+      DOMPDF_ENABLE_REMOTE (disabled by default) to be enabled.
+      (Closes: #745619) [CVE-2014-2383]
+  * Add ownCloud for Debian to uploaders
+  * Bump standards version to 3.9.5
+  * Use Files-Excluded feature of uscan
+  * Use phpcomposer from pkg-php-tools
+  * Ship upstream README.md
+  * Update dependencies, as recommended upstream
+  * Update copyright
+  * Acknowledge upstream separation of cache and fonts
+  * Update upstream changelog
+  * Use internal CSS in example
+
+ -- David Prévot <taffit@debian.org>  Sat, 12 Apr 2014 14:32:12 -0400
+
+php-dompdf (0.6.0~beta3+dfsg0-1) unstable; urgency=low
+
+  * Initial release (Closes: #567928)
+
+ -- David Prévot <taffit@debian.org>  Sat, 23 Nov 2013 10:00:18 -0400

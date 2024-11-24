@@ -1,0 +1,239 @@
+debian-lan-config (0.25+deb10u1) buster-security; urgency=high
+
+  * Fix kadmin access rules.
+  * Add NEWS file.
+
+ -- Andreas B. Mundt <andi@debian.org>  Fri, 27 Dec 2019 14:21:49 +0100
+
+debian-lan-config (0.25) unstable; urgency=medium
+
+  * Remove some packages from NFSROOT; fix fstab entries.
+  * Fixes for diskless clients.
+  * Use NFSv4 to serve FAI config space.
+  * Add 'Multi-Arch: foreign' to 'debian/control'.
+  * Upgrade to icinga2 and icinga2-classicui.
+
+ -- Andreas B. Mundt <andi@debian.org>  Sun, 21 Oct 2018 08:13:37 +0300
+
+debian-lan-config (0.24) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Andreas B. Mundt ]
+  * Update 'README.Debian', switch from stretch to buster.
+  * Update package name and selection.
+  * Remove di-netboot-assistant setup, keep it a separate project.
+  * Eliminate the use of cfengine scripts.
+  * Bump Standards-Version to 4.2.1 and dh compat level to 11.
+  * Import some updates from FAI upstream.
+  * Updates and fixes in the config space for buster.
+  * Remove CUPS_{CLIENT,SERVER} and MAIL_SERVER classes.
+  * Fix sssd autofs (default schema changed).
+  * Add 'haveged' to avoid low entropy failures.
+  * Rely on auto detection for idmapd, gssd and svcgssd.
+  * Index 'sudoHost' in slapd.
+  * Set 'SUDO_FORCE_REMOVE=yes' to be able to replace 'sudo'.
+
+ -- Andreas B. Mundt <andi@debian.org>  Sat, 06 Oct 2018 19:37:17 +0300
+
+debian-lan-config (0.23) unstable; urgency=medium
+
+  [ Andreas B. Mundt ]
+  * Fix diskless clients (closes: #774033).
+  * Updates and fixes for GOsa².
+  * Fixes for fai-cd.
+
+  [ Afif Elghraoui ]
+  * Use correct http root in APT_REPO_DIR
+  * Prevent HOSTNAME from evaluating to FQDN (from FAI 5 updates)
+
+  [ Andreas B. Mundt ]
+  * Updates and fixes for icinga.
+  * Fix shorewall setup.
+  * Update package selection.
+  * Use ldap as fallback for automounts.
+  * First step towards nbd swap activation.
+
+ -- Andreas B. Mundt <andi@debian.org>  Tue, 24 Jan 2017 14:00:06 +0100
+
+debian-lan-config (0.22) unstable; urgency=medium
+
+  * Disable backports.
+  * Remove separate /usr partition.
+  * Rename *.source to *.sh (FAI upstream change).
+  * Fixes for di-netboot-assistant.
+  * Updates and fixes for stretch and FAI upstream.
+  * Handle dynamic NIC labels.
+  * Fixes and updates for squid and dhcp-server.
+  * Fix shorewall NIC labels.
+  * Fix NFSROOT and PXE booting.
+  * Switch autofs to sssd caching.
+  * Remove unburden-home-dir, cleanup, iceweases → firefox.
+  * Switch to systemd-networkd.
+  * Temporary fixes and workarounds.
+  * Add note to README.
+  * Bump Stanards-Version to 3.9.8 (no changes needed).
+
+ -- Andreas B. Mundt <andi@debian.org>  Wed, 10 Aug 2016 13:14:15 +0200
+
+debian-lan-config (0.21) unstable; urgency=medium
+
+  * Set LC_ALL=C before executing sss_cache:  It fails without if run by
+    www-data.
+  * Switch to the next Debian release: 'stretch'.
+  * Replace 'http.debian.net' by 'httpredir.debian.org'.
+  * Add libcgi-fast-perl to make the zoom in munin work.
+
+ -- Andreas B. Mundt <andi@debian.org>  Thu, 28 May 2015 14:52:33 +0200
+
+debian-lan-config (0.20) unstable; urgency=medium
+
+  * Switch to sssd everywhere (cf. #759544).
+  * Fix package names on i386.
+  * Workarounds: #759424 (di-n-a) removed, #774033 (deadlock) added.
+  * Invalidate the sssd cache when adding/removing content.
+  * Fix ordering to succeed in single cfengine pass.
+  * Make conversion more robust.  Allow arbitrary hostnames.
+
+ -- Andreas B. Mundt <andi@debian.org>  Sun, 03 May 2015 11:13:43 +0200
+
+debian-lan-config (0.19) unstable; urgency=medium
+
+  * Adapt to the format of '/etc/debian_version' (closes: #774035).
+  * Enable 'jessie' repositories for di-netboot-assistant.
+  * Preseed the grub installation and fix PXE-boot from the local disk.
+
+ -- Andreas B. Mundt <andi@debian.org>  Wed, 31 Dec 2014 10:38:21 +0100
+
+debian-lan-config (0.18) unstable; urgency=medium
+
+  * Work around broken di-netboot-assistant only if necessary to avoid
+    problems with the (expected) fixed di-netboot-assistant package.
+  * Enable SSL for the dovecot imap server.  The dovecot package switched
+    to no SSL by default.
+
+ -- Andreas B. Mundt <andi@debian.org>  Fri, 05 Dec 2014 14:02:20 +0100
+
+debian-lan-config (0.17) unstable; urgency=medium
+
+  * Update package selection:  Standard Gnome desktop on clients.
+  * Increase minimal size of some partitions.
+  * Use Debian default umask, remove modification scripts.
+  * Minor modifications and cosmetics. Merge FAI upstream.
+  * Restore capabilities that get lost in the base.tar.xz archive.
+  * Bump Standards-Version to 3.9.6 (no changes needed).
+
+ -- Andreas B. Mundt <andi@debian.org>  Thu, 23 Oct 2014 08:44:10 +0200
+
+debian-lan-config (0.16) unstable; urgency=medium
+
+  * Merge FAI modifications.
+  * Mount /sys and /proc in the chroot to avoid warnings.
+  * CUPS:
+    - Fix false positive CUPS warning in icinga.
+    - Fix access to CUPS in combination with systemd.
+  * Chroots:
+    - Simplify the setup and do not use 'rc.local'.
+    - Add note in motd.
+  * Optional PXE installation method (debian-installer and preseeding).
+  * Do not switch on unburden-home-dir by default.
+  * Pam-script fixes/updates.
+  * Use gdm3 by default on clients (better systemd integration).
+
+ -- Andreas B. Mundt <andi@debian.org>  Sun, 05 Oct 2014 12:30:04 +0200
+
+debian-lan-config (0.15) unstable; urgency=medium
+
+  * Merge FAI 4.2, no non-free firmware, minor fixes and improvements.
+  * Reduce default squid disk cache and increase root partition size.
+  * Switch to NFSv4 everywhere.
+  * Improve the setup of the chroots for FAI and diskless machines.
+  * Implement SSHFS_CLIENT class for diskless clients.  Modify default
+    restrictions for ssh access (needed for sshfs).
+  * Remove initramfs-tools and memtest86+ from package list.
+  * Make sure dnsmasq listens on the internal interface (gateway).
+
+ -- Andreas B. Mundt <andi@debian.org>  Thu, 19 Jun 2014 11:04:56 +0200
+
+debian-lan-config (0.14) unstable; urgency=medium
+
+  * Switch from apt-cacher-ng to Squid as package cache.
+  * Switch to jessie repositories.  Dracut by default in the chroots.
+  * Merge with FAI 4.1 examples config space, fixes for jessie.
+  * Implement unburden-home-dir.
+  * Add hook to remove old partition tables before installation.
+  * Add check if the network (APT repository) is available.
+  * Icinga:  Check if diskless machines need any package updates.  Do not
+    send notifications for hosts that are switched on and off.
+  * Improved kerberos machine key distribution.
+  * Bump Standards-Version to 3.9.5 (no changes needed).
+
+ -- Andreas B. Mundt <andi@debian.org>  Thu, 15 May 2014 14:25:03 +0200
+
+debian-lan-config (0.13) unstable; urgency=low
+
+  * Fix timeout in PXE menu.
+  * Rearrange squid cfengine script to make it succeed in a single run.
+  * Increase squid cache size.
+  * Add FIREWALL class and the new machine 'gateway', a simple
+    gateway/firewall.
+  * Enable shorewall for the 'two-interfaces'-setup.
+  * Fix permission problem when executing '/etc/rc.local' manually.
+  * Add some packages to DESKTOP, DISKLESS_CLIENT and EDU class.
+
+ -- Andreas B. Mundt <andi@debian.org>  Thu, 01 Aug 2013 21:02:25 +0200
+
+debian-lan-config (0.12) unstable; urgency=low
+
+  * Implement ROAMING class, which allows using machines off-line.
+  * Add roaming machine installation to the PXE-boot menu.
+  * Switch to dynamic DNS updates.  Improve DHCPd configuration and
+    improve handling of unknown machines that do not provide a hostname.
+  * Enable disk cache for squid.
+
+ -- Andreas B. Mundt <andi@debian.org>  Sat, 08 Jun 2013 08:23:39 +0200
+
+debian-lan-config (0.11) unstable; urgency=low
+
+  * Fix lintian warnings and errors.
+  * Config space:  Add localization class FR_BELGIAN, thanks to Julien
+    Lambot.  Create certificate for dovecot and replace the default one.
+    Do not add unnecessary modules to '/etc/modules'.  Use default options
+    for NFSv4 mounts.
+  * Enable 'dialog' to choose setup variant during installation or
+    conversion.  Non-interactive installations are possible by providing
+    the necessary FAI variables as kernel boot parameters.  Thanks to
+    Andreas Schockenhoff.
+  * Small fixes and improvements.
+
+ -- Andreas B. Mundt <andi@debian.org>  Mon, 20 May 2013 20:45:09 +0200
+
+debian-lan-config (0.10) unstable; urgency=low
+
+  * Remove disk checks for diskless clients in munin.
+  * Increase the default size range of /boot and /var partitions.
+  * Improve debian-lan script (distribution of Kerberos keytabs).
+  * Packaging:  Team maintenance.  Bump debian/compat to 9.
+  * Small fixes/improvements, cleanup and cosmetics (Closes: #705891):
+    - Only allow signed APT repositories.
+    - Fix permissions for the public key of the local APT repository.
+    - Enable the local APT repository for the 'mainserver'.
+    - Rename some scripts for consistency, typos, ... .
+    - Remove workaround for apt-cacher-ng as it is not needed anymore.
+    - Add acpi-support-base package.
+  * Rework the creation of self-signed certificates (subjectAltName=...).
+  * Add link to the GOsa password changing page on the Debian-LAN intranet
+    site and make it the default home page on the clients.
+  * Many thanks to Andreas Schockenhoff, Julien Lambot and Michael Welsh
+    Duggan for various valuable input.
+
+ -- Andreas B. Mundt <andi@debian.org>  Sat, 04 May 2013 14:38:17 +0200
+
+debian-lan-config (0.9) experimental; urgency=low
+
+  * Initial packaged release.
+
+ -- Andreas B. Mundt <andi@debian.org>  Mon, 25 Mar 2013 14:17:37 +0100

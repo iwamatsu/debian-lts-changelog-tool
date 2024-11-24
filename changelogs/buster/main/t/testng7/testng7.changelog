@@ -1,0 +1,232 @@
+testng7 (7.5-2~deb10u1) buster-security; urgency=medium
+
+  * Rebuild for buster. Needed by latest OpenJDK 17 LTS releases.
+  * Revert to debhelper-compat = 12.
+  * Build-Depend on libjsr305-java.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 27 Jul 2023 14:42:27 +0200
+
+testng7 (7.5-2) unstable; urgency=medium
+
+  * Source-only upload.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 15 Jun 2023 20:21:39 +0200
+
+testng7 (7.5-1) unstable; urgency=medium
+
+  * New upstream release 7.5, packaged as a separate source and binary,
+    required for jtreg version 6 and 7 (LP: #2012320). Closes: #990538.
+  * d/p/build-with-gradle.patch: provide Groovy Gradle build.
+
+ -- Vladimir Petko <vladimir.petko@canonical.com>  Tue, 13 Jun 2023 07:59:17 +0200
+
+testng (6.9.12-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Tiago Stürmer Daitx ]
+  * d/p/remove-guava-dependency-pr1086.patch: apply upstream patch to
+    remove guava dependency (Closes: #905675, LP: #1785896)
+
+ -- tony mancill <tmancill@debian.org>  Wed, 08 Aug 2018 06:24:23 -0700
+
+testng (6.9.12-3) unstable; urgency=medium
+
+  * Team upload.
+  * Use the non relocated jcommander artifact to help Gradle (Closes: #895886)
+  * Standards-Version updated to 4.1.5
+  * Switch to debhelper level 11
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 30 Jul 2018 17:53:55 +0200
+
+testng (6.9.12-2) unstable; urgency=medium
+
+  * Team upload.
+  * Added a relocation pom redirecting the version '6.x' to 'debian'
+  * Standards-Version updated to 4.1.0
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 15 Sep 2017 11:17:33 +0200
+
+testng (6.9.12-1) unstable; urgency=medium
+
+  * Fix Vcs download URL
+  * New upstream release
+
+ -- Eugene Zhukov <eugene@debian.org>  Fri, 08 Jul 2016 14:51:20 +0200
+
+testng (6.9.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version updated to 3.9.7 (no changes)
+  * d/control:
+    - Use https Vcs URLs
+    - Remove redundant Build-Depends-Indep
+    - Use my d.o email
+  * Update version_java.patch with 6.9.10 version
+
+ -- Eugene Zhukov <eugene@debian.org>  Sun, 03 Apr 2016 10:15:02 +0300
+
+testng (6.9.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add copy-rename-maven-plugin to d/maven.ignoreRules
+  * Add patch for Version.java
+  * Switch away from CDBS build system
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Tue, 18 Aug 2015 10:27:45 +0000
+
+testng (6.9.4-2) unstable; urgency=medium
+
+  * maven.properties: Add UTF-8 source encoding
+  * d/control: Add build dependency on libbuild-helper-maven-plugin-java
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Wed, 03 Jun 2015 07:41:21 +0000
+
+testng (6.9.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * maven.ignoreRules: Add maven-release-plugin, assertj-core
+  * maven.properties: Remove maven.compiler.target=1.5
+  * maven.rules: Drop no_aop classifier for guice dependency
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Mon, 01 Jun 2015 07:21:10 +0000
+
+testng (6.8.21-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Wed, 06 May 2015 11:26:59 +0000
+
+testng (6.8.20-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Tue, 03 Feb 2015 13:25:20 +0000
+
+testng (6.8.17-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Fri, 23 Jan 2015 20:29:58 +0000
+
+testng (6.8.13-1) experimental; urgency=medium
+
+  [ tony mancill ]
+  * Add explicit build-dep on ant. (Closes: #771260)
+
+  [ Eugene Zhukov ]
+  * New upstream release
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Sat, 03 Jan 2015 17:43:11 +0000
+
+testng (6.8.8-3) unstable; urgency=low
+
+  * Dropped orig-tar.sh in favor of jh_repack in d/watch
+  * Added source for jquery-1.7.1.min.js (Closes: #769831)
+  * Standards-Version updated to version 3.9.6
+  * Updated debhelper to version 9 in d/control
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Mon, 17 Nov 2014 11:43:10 +0000
+
+testng (6.8.8-2) unstable; urgency=low
+
+  * Description updated.
+  * Switched from bsh (pulls in Java runtime) to libbsh-java dependency
+    (Closes: #684427)
+  * Switched to orig-tar.sh in d/watch to exclude jquery-1.7.1.min.js
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Thu, 24 Apr 2014 08:53:40 +0000
+
+testng (6.8.8-1) unstable; urgency=low
+
+  * Team upload
+  * New upstream release
+  * Removed orig-tar.sh in favor of jh_repack in d/watch
+  * Standards-Version updated to version 3.9.5
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Fri, 14 Mar 2014 12:08:55 +0000
+
+testng (6.8.7-2) unstable; urgency=low
+
+  * Team upload
+  * Upload to unstable
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Mon, 21 Oct 2013 15:53:15 +0200
+
+testng (6.8.7-1) experimental; urgency=low
+
+  * Team upload.
+  * Package adoption (Closes: #705103)
+  * New upstream release (Closes: #579122)
+  * repackaged with maven-debian-helper
+  * dropped all previous patches
+
+ -- Eugene Zhukov <jevgeni.zh@gmail.com>  Sat, 07 Sep 2013 10:42:29 +0000
+
+testng (5.11+dfsg-3) unstable; urgency=low
+
+  * Sync from Ubuntu (Closes: #605369, #639046)
+  * Standards-Version updated to version 3.9.2
+  * Package moved under the pkg-java team (thanks Marcus)
+  * Add myself as maintainer
+  * Fix a bad detection of the JVM path (LP: #888128)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 20 Dec 2011 00:39:49 +0100
+
+testng (5.11+dfsg-2ubuntu2) oneiric; urgency=low
+
+  * Fix FTBFS (LP: #829508):
+    - d/patches/debian/junitconvertor-test-fix.diff: Switch from use of
+      deprecated parameters attribute in @Test to using @Parameters to
+      ensure that JUnitConvertor Test passes.
+
+ -- James Page <james.page@ubuntu.com>  Tue, 20 Sep 2011 12:15:27 +0100
+
+testng (5.11+dfsg-2ubuntu1) natty; urgency=low
+
+  * debian/rules: updated to use ant-nodeps to fix FTBFS (LP: #674382)
+
+ -- James Page <james.page@canonical.com>  Fri, 12 Nov 2010 08:08:26 +0000
+
+testng (5.11+dfsg-2) unstable; urgency=low
+
+  * Fix non-threadsafe test. Thanks to Lucas Nussbaum. (Closes: #593040).
+
+ -- Marcus Better <marcus@better.se>  Mon, 16 Aug 2010 10:52:51 +0200
+
+testng (5.11+dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+  * Switch to source format 3.0 (quilt). Thanks to Raphael
+    Hertzog. (Closes: #538708)
+  * Disable tests that fail with qdox 1.11. Thanks to Daniel Schepler
+    (Closes: #577477).
+  * debian/control: Bump standards-version (no changed needed).
+
+ -- Marcus Better <marcus@better.se>  Sun, 25 Apr 2010 09:42:04 +0200
+
+testng (5.10+dfsg-2) unstable; urgency=low
+
+  * Install Maven repository metadata. Thanks to Ludovic Claude.
+  * debian/control: Bump standards-version.
+
+ -- Marcus Better <marcus@better.se>  Mon, 07 Sep 2009 10:33:28 +0200
+
+testng (5.10+dfsg-1) unstable; urgency=low
+
+  * Changed section to "java".
+  * debian/rules: Make it work with debhelper 7.3.5. (Closes: #538016)
+  * Use qdox 1.9 and add a patch for the API changes. Thanks to Ludovic
+    Claude.
+  * debian/control: Bump policy version to 3.8.2.
+  * debian/control: Build with default-jdk.
+
+ -- Marcus Better <marcus@better.se>  Thu, 23 Jul 2009 12:11:17 +0200
+
+testng (5.9+dfsg-1) unstable; urgency=low
+
+  * Initial release. (Closes: #465326)
+
+ -- Marcus Better <marcus@better.se>  Mon, 04 May 2009 10:47:43 +0200

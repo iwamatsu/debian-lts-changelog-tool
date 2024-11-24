@@ -1,0 +1,939 @@
+ldm (2:2.18.06-1+deb10u1) buster-security; urgency=medium
+
+  * Add patch fixing root access when LDM_USERNAME is unset.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 29 Dec 2019 15:21:51 -0800
+
+ldm (2:2.18.06-1) unstable; urgency=medium
+
+  * New upstream version.
+
+  [ Kim B. Heino ]
+  * Flush log file after each write.
+  * Fix gcc warnings.
+  * Makefile: use same ldmplugdir value as in src/plugins/.
+  * screen.d/ldm: make sure nc's input is null, hide "Connection refused"
+    error.
+  * Fixes for LDM_PASSWORD_HASH.
+
+  [ Vagrant Cascadian ]
+  * debian/control:
+    - Update Maintainer address (Closes: #899563).
+    - Update Standards-Version to 4.1.4, no changes needed.
+  * Remove un-used kfreebsd patch.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Thu, 07 Jun 2018 15:09:48 -0700
+
+ldm (2:2.2.19-1) unstable; urgency=medium
+
+  * New upstream version.
+    - screen.d/ldm: Improvements to argument processing.
+    - ldminfod: Support python3.
+    - Switch to use /run/ltsp.
+
+  * debian/patches: Remove patches applied upstream.
+  * Switch to python3:
+    - Patch ldminfod and generate_locale_list.py to use python3.
+    - Add Depends and Build-Depends on python3.
+  * Patch to use C.UTF-8 locale when generating locale lists.
+  * Add debian/watch file tracking git tags.
+  * debian/control: Update Standards-Version to 4.1.1:
+    - Set priority to optional, as extra is deprecated.
+  * Switch to debhelper compat level 10.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 29 Nov 2017 17:07:14 -0800
+
+ldm (2:2.2.18-2) unstable; urgency=medium
+
+  * Add patches from upstream to support multi-seat.
+  * Remove debian/watch file, as Ubuntu is no longer making new releases.
+  * Update Standards-Version to 3.9.8, no changes needed.
+  * Enable hardening build flags.
+  * Switch to git, update Vcs-* entries.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 05 Dec 2016 19:34:36 +0200
+
+ldm (2:2.2.18-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Display LDM only in the first monitor (LP: #693151).
+    - DesktopNames replaced X-LightDM-DesktopName in xsession files
+      (GNOME: #727546).
+    - Fix invalid syntax in .dmrc parsing the default session.
+
+  * debian/control: Update Vcs-Browser to use https URL.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 07 Feb 2016 11:51:40 -0800
+
+ldm (2:2.2.17-1) unstable; urgency=medium
+
+  * New upstream version:
+    - ldm-script: Fix locale issues by matching against alphanumeric
+      characters (LP: #1491066).
+    - screen.d/ldm: Fix LDM_DIRECTX with Xorg 1.17+, which no longer opens
+      a listening TCP socket by default (LP: #1449282).
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Thu, 08 Oct 2015 13:59:43 -0700
+
+ldm (2:2.2.16-1) experimental; urgency=medium
+
+  * New upstream version:
+    - Generalize LDM_12HOURCLOCK to LDM_CLOCK_FORMAT.
+    - Export DESKTOP_SESSION and XDG_CURRENT_DESKTOP to the client.
+  * Drop Remove-rc.d-hook-to-set-LIBGL_ALWAYS_INDIRECT-true-a.patch,
+    applied upstream.
+  * Use X-Vendor-Recommends to allow for variation between packages built
+    on Ubuntu and Debian.
+  * debian/copyright:
+    - Reorder to fix lintian warnings and better follow copyright-format
+      1.0.
+    - Updated with newer copyright holders.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 19 Aug 2015 12:01:03 +0200
+
+ldm (2:2.2.15-2) unstable; urgency=medium
+
+  * Add patch to remove hook to set LIBGL_ALWAYS_INDIRECT=true, as it
+    causes several common desktops to fail (Closes: #767764).
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 08 Feb 2015 23:19:42 -0800
+
+ldm (2:2.2.15-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Display error message on failed login (LP: #1325388).
+      Thanks to Jakob Unterwurzacher!
+
+    - Remove check for halting when SHUTDOWN_TIME is set, implemented in
+      LTSP instead (LP: #604908).
+
+    - Compare desktop session against available local sessions when
+      running as a fat client (LP: #1272889).
+
+  * debian/control: Update Standards-Version to 3.9.6, no changes needed.
+  * Remove patch to disable listening on tcp, applied upstream.
+  * Update debian/copyright.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 22 Oct 2014 00:45:45 -0700
+
+ldm (2:2.2.14-2) unstable; urgency=medium
+
+  * Add patch from upstream to disable listening on tcp when not using
+    LDM_DIRECTX.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 15 Sep 2014 14:09:56 -0500
+
+ldm (2:2.2.14-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Add feature to hash passwords for use with localapps and fat clients.
+      Thanks to ben-Nabiy Derush.
+
+  * debian/rules:
+    - Use dpkg-vendor --derives-from Ubuntu to set VENDOR,
+      to better handle Debian/Ubuntu derivatives.
+    - Allow architecture independent builds to succeed even if some files
+      built by arch specific targets are missing.
+
+  * ldm-server: Recommend mate-desktop-environment in preference to other
+    sessions.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Tue, 05 Aug 2014 22:38:48 -0700
+
+ldm (2:2.2.13-1) unstable; urgency=low
+
+  * New upstream version:
+    - Support logind for fat clients (LP: #1274267).
+
+  * Use debhelper compat level 9.
+  * Use dpkg-vendor instead of lsb_release to determine vendor.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 22 Feb 2014 21:12:18 -0800
+
+ldm (2:2.2.12-1) unstable; urgency=low
+
+  * New upstream version (Closes: #725927):
+    - Updated translations.
+    - Look for distinct server ip (LP: #1098349).
+      Thanks to Phil Sharfstein.
+    - Avoid Xorg crashes caused by nouveau dri (LP: #1072711).
+
+  * Remove patches/automake-force-update.patch, applied upstream.
+  * Fix spelling of "relevant" in ldm-server package description.
+    Thanks to Pascal De Vuyst. (Closes: #700456).
+  * Recommend ldm-themes only when building on Debian.
+  * update Standards-version to 3.9.5:
+      - Dropped DM-Upload-Alowed field from debian/control.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 24 Nov 2013 18:15:02 -0800
+
+ldm (2:2.2.11-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Run automake with -f so that it updates config.guess/config.sub (closes:
+    #725927).
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 14 Nov 2013 11:00:19 +0000
+
+ldm (2:2.2.11-2) unstable; urgency=low
+
+  * Recommend a version of ldm-themes that uses the Joy theme by default.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 13 Jul 2012 11:31:49 -0600
+
+ldm (2:2.2.11-1) unstable; urgency=low
+
+  * New upstream version:
+    - Implement custom LDM menus with LDM_MENU_ITEM_[0-9] and
+      LDM_MENU_COMMAND_[0-9] environment variables.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Wed, 27 Jun 2012 17:32:57 -0500
+
+ldm (2:2.2.10-1) unstable; urgency=low
+
+  * New upstream version:
+    - Use hostnames in LDM_SERVER.
+    - Remove ssh-hostchecker, which allowed for one LDM server to
+      man-in-the-middle other LDM servers.
+    - ldminfod: Do not display hidden or invalid sessions (LP#991745).
+    - Improved session selection handling:
+      + Only save the session to the user's ~/.dmrc if it was selected from
+        the login menu (LP#981049).
+      + LDM_SESSION may now also be used to specify a desktop file from
+        /usr/share/xsessions.
+      + LDM_FORCE_SESSION forces the session to use a specific desktop file,
+        and does not display the session selection menu if set.
+    - Implement LDM_FORCE_LANGUAGE, which overrides user defined language
+      setting in ~/.dmrc, and hides the Language selection menu in the
+      greeter. (LP#282884).
+    - Thanks to Floris Bos for the following patches:
+      + Fix segfault with timeoutbox.
+      + Close greeter on login failure.
+      + Fix bug when searching for plugins on certain filesystems.
+
+  * debian/rules: Use dpkg-buildflags to set CPPFLAGS, LDFLAGS and CFLAGS,
+    enabling hardening for *most* LDM related binaries.
+  * Remove extremely outdated README.source.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 04 Jun 2012 15:06:32 -0700
+
+ldm (2:2.2.9-1) unstable; urgency=low
+
+  * New upstream version:
+    - Don't use indirect rendering for fat clients.
+    - X51-opengl: Fix broken client environment (LP: #979472).
+    - Only enable xcompmgr if LDM_XCOMPMGR boolean is set appropriately.
+    - ldm-script: source ltsp-client-functions, falling back to
+      ltsp-common-functions if not available.
+
+  * Update debian/patches/remove-hackish-gettext-function.
+  * Update debian/copyright.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 13 Apr 2012 09:37:55 -0700
+
+ldm (2:2.2.8-1) unstable; urgency=low
+
+  * New upstream version:
+    - Fix bug causing passwords with @ in them to fail (LP: #948507).
+    - Turn on compositing if xcompmgr is present.
+    - Force indirect rendering when using LDM_DIRECTX.
+    - Drop mouse events in wwm too.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 30 Mar 2012 09:31:27 -0700
+
+ldm (2:2.2.7-1) unstable; urgency=high
+
+  * New upstream version:
+    - Remove all keybindings from wwm, which allowed spawning an xterm as root.
+      Fixes CVE-2012-1166. Thanks to Tenho Tuhkala for reporting the issue.
+  * Add dependency on procps, as pgrep is used by several rc.d hooks.
+  * Update Standards-version to 3.9.3, no changes necessary.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 12 Mar 2012 13:27:11 -0700
+
+ldm (2:2.2.6-1) unstable; urgency=low
+
+  * New upstream version:
+    - Replace default LDM theme background.
+    - Rewrite X50-dmrc-processing (LP: #820417).
+    - Don't use -fp on poweroff/reboot, for clean shutdown.
+
+  * Remove patches applied upstream:
+    - ldminfod-for-fatclients
+    - fatclient-env-vars
+  * debian/watch: Remove entry to check Fedora, as it is wildly out of date.
+  * debian/control: Remove inactive maintainers from Uploaders. Thanks for all
+    past contributions, and welcome back any time!
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 24 Feb 2012 17:03:33 -0800
+
+ldm (2:2.2.5-2) unstable; urgency=low
+
+  * Add patches from upstream:
+    - Export LTSP_FATCLIENT and LTSP_CLIENT_MAC to client env if they're set.
+    - Use /usr/share/ldm/ldminfod for fatclients to detect available sessions.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 10 Feb 2012 12:33:47 -0800
+
+ldm (2:2.2.5-1) unstable; urgency=low
+
+  * New upstream version:
+    - Fall back to english language and territory names if translation
+      fails when generating locale lists.
+    - Use exec /bin/sh rather than spawning a sub-process for initial session.
+    - Install ltsp-cluster-info.
+    - Fix error message displayed at login. LP#872473
+    - Port I01-nbd-checkupdate to consistent variable names.
+    - Add ssh-hostchecker, tool to match SSH host keys without checking
+      the host part.
+    - Set pointer to the middle of the screen on startup.
+
+  * debian/rules: Convert to using debhelper overrides.
+  * debian/rules: use dh-autoreconf to ensure configure scripts are up to date.
+  * Switch to using clearlooks:
+    - Recommend gtk2-engines.
+    - Drop patch to use ubuntulooks.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 03 Feb 2012 15:55:09 -0800
+
+ldm (2:2.2.4-1) unstable; urgency=low
+
+  * New upstream version:
+    - Add support for named nbd devices.
+    - Ignore LDM_LIMIT_ONE_SESSION if USER = root (LP: #716456).
+    - Fix python3 support in generate_locale_list.py.
+    - Detect nc version for nc -q capability.
+    - Add Danish (da) translation by Dennis Duggen.
+    - Add Dutch (nl) translation by Jan Middelkoop.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 08 Aug 2011 18:01:12 +0200
+
+ldm (2:2.2.2-2) unstable; urgency=low
+
+  [ Luk Claes ]
+  * Don't ship .la files (Closes: #621544).
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 01 Jul 2011 15:41:53 -0700
+
+ldm (2:2.2.2-1) unstable; urgency=low
+
+  * New upstream version:
+    - Fix default LDM language handling.
+    - Fix handling of LDM session selection.
+    - Use new LTSP logo for ltsp theme.
+    - Updated translations:
+      + Basque (eu), by Iñaki Larrañaga Murgoitio (Closes: #619382).
+      + Portuguese (pt), by Pedro Ribeiro (Closes: #618605).
+      + Russian (ru), by Yuri Kozlov (Closes: #618585).
+      + Spanish (es), by José L. Redrejo Rodríguez (Closes: #618448).
+      + Greek (el), by Alkis Georgopoulos.
+      + Polish (pl), by Piotr Drąg.
+      + Finnish (fi), by Ville-Pekka Vainio.
+      + Norwegian Bokmål (nb), by Klaus Ade Johnstad (Closes: #618383).
+      + Slovak (sk), by Slavko (Closes: #618408).
+      + German (de), by Wolfgang Schweer (Closes: #618400).
+      + French (fr), by Stéphane Graber.
+
+  * debian/control:
+    - Switch to DM-Upload-Allowed.
+    - Update Vcs-Bzr and Vcs-Browser.
+    - Update Standards-Version to 3.9.2, no changes.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Fri, 03 Jun 2011 15:41:29 -0700
+
+ldm (2:2.2.1-1) unstable; urgency=low
+
+  * New upstream version:
+    - Split backend into plugins (rdesktop and ssh)
+    - Improve theme engine (support fallback to default theme)
+    - Switch to using a minimal window manager
+    - Update translations and translation templates
+    - Huge code cleanup
+    - Switch to a new logging infrastructure
+    - Update for ltsp-remoteapps support
+    - Update for fatclient support (use local ldminfod)
+    - ldminfod: Always return Exec and not TryExec
+    - rc.d: Always send quoted session name to Xsession
+
+  * Refresh ubuntulooks-engine patch.
+  * Remove patches applied upstream:
+    - ldm_limit_one_session_prompt
+    - update-swedish-translation
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 27 Feb 2011 12:22:38 -0800
+
+ldm (2:2.1.2-2) unstable; urgency=low
+
+   * Apply patches from upstream:
+     - Updated Swedish (sv) translation by Martin Bagge (Closes: #579299).
+     - fix LDM_LIMIT_ONE_SESSION=false.
+
+   * Update Standards-Version to 3.9.1:
+     - Switch Conflicts to proper Breaks + Replaces, to ensure proper upgrades.
+
+   * Switch to source format 3.0 (quilt).
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Thu, 05 Aug 2010 23:33:54 -0400
+
+ldm (2:2.1.2-1) unstable; urgency=low
+
+  * New upstream version:
+    - Generate upstream changelog.
+    - Simplify translation strings by removing untranslateable markup.
+
+    - Updated translations:
+      + Norwegian Bokmål (nb), by Klaus Ade Johnstad.
+      + Portuguese (pt), by Pedro Ribeiro (Closes: #576999).
+      + Basque (eu), by Iñaki Larrañaga Murgoitio (Closes: #576951).
+      + German (de), by Wolfgang Schweer (Closes: #576783).
+      + German (de), by Wolfgang Schweer (Closes: #576783).
+      + Japanese (ja), by Noriko Mizumoto.
+      + Polish (pl), by Piotr Drąg.
+      + Russian (ru), by Yuri Kozlov (Closes: #576562).
+      + Finnish (fi), by Ville-Pekka Vainio.
+      + Spanish (es), by José L. Redrejo Rodríguez.
+      + Greek (el), by Alkis Georgopoulos.
+
+    - New translations:
+      + Italian (it), by Vincenzo Campanella (Closes: #577543).
+      + Slovak (sk), by Slavko (Closes: #577705).
+
+  * Drop un-used call in ldm-server's postinst to debconf confmodule.
+    (Closes: #552031)
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Mon, 19 Apr 2010 15:28:59 -0700
+
+ldm (2:2.1.1-1) unstable; urgency=low
+
+  * New upstream version:
+    - fatclients:
+      + Unmount removable devices at logoff.
+      + Properly mark X sessions as active for ConsoleKit/PolicyKit.
+    - ltsp-cluster-info:
+      + Check that getltscfg-cluster.conf exists before including it.
+    - Check for NBD_ROOT_PORT instead of NBD_PORT, which was ambiguously
+      used in LTSP for both NBD root and NBD swap.
+
+  * Add debian/source/format and set to 1.0.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sun, 04 Apr 2010 17:20:56 -0700
+
+ldm (2:2.1-1) unstable; urgency=low
+
+  * New upstream version:
+    - Optimize hook script to make fewer external binary calls.
+    - Set LTSP_ALSA_DEFAULT environment variable when using pulseaudio, to
+      simplify alsa compatibility configuration.
+    - Add Chinese (zh) translation by Zhao Xiaoqi.
+    - Improved hook to check for an updated NBD image.
+    - Properly save and restore the IFS variable when used.
+
+  * debian/control:
+    - Update email address to use vagrant@debian.org.
+    - Update Standards-Version to 3.8.4, no changes necessary.
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Thu, 18 Feb 2010 23:00:34 -0800
+
+ldm (2:2.0.52-1) unstable; urgency=low
+
+  * New upstream version:
+    - Force poweroff and reboot instead of going through init.
+    - Provide a way to reboot or halt from within the session.
+    - ldm-dialog:
+      + Set the root cursor.
+      + Do not display in taskbar.
+      + Default to empty title.
+      + Make the window not resizable.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 14 Dec 2009 11:35:12 -0800
+
+ldm (2:2.0.48-1) unstable; urgency=low
+
+  * New upstream version:
+    - Updated Vietnamese (vi) translation by Clytie Siddall (Closes: #548200).
+    - Updated French (fr) translation by Stéphane Graber.
+    - Configure to use remote scanner support with saned.
+    - Added logout actions.
+    - Added handling of LDM_SSHOPTIONS.
+    - Minimal implementation of LTSP fat client.
+
+  * debian/control:
+    - Update Vcs-Bzr to use nosmart+http, as bzr.debian.org doesn't support
+      plain http bzr URLs.
+    - Switch Vcs-Browser URL to use bzr.debian.org
+
+  * remove fatclient patch, included upstream.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 02 Oct 2009 13:19:38 -0700
+
+ldm (2:2.0.45-1) unstable; urgency=low
+
+  * new upstream version:
+    - Strip spaces from beginning and end of entered username, to prevent
+      problems with scripts.
+    - Implement pre-ssh hooks used to execute actions before the SSH connection
+      is established.
+    - Add LTSP_CLIENT_HOSTNAME environment variable containing the hostname.
+
+  * update ldm-server package description to distinguish it from ldm.
+
+  * remove locale-from-screen patch, as it is handled in ltsp now.
+
+  * add patch from upstream to add support for local logins, also known
+    as fat clients.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 04 Sep 2009 14:48:29 -0700
+
+ldm (2:2.0.44-1) unstable; urgency=low
+
+  * new upstream version:
+    - Add support for both png and jpg theme files
+    - Fix ldm hanging on logout
+    - Implement SHUTDOWN_TIME for ldm
+
+  * drop patches, fixed upstream:
+    - revert-upstream-logout
+    - remove-mktemp-for-xauth
+
+  * update Standards-Version to 3.8.3, no changes necessary.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 21 Aug 2009 13:15:50 -0700
+
+ldm (2:2.0.42-2) unstable; urgency=low
+
+  * patch from upstream to remove useless call to mktemp, which breaks with
+    mktemp from coreutils.
+
+  * Remove Otavio Salvador from uploaders, at Otavio's request. many thanks for
+    all previous and future contributions!
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sun, 09 Aug 2009 19:20:46 +0200
+
+ldm (2:2.0.42-1) unstable; urgency=low
+
+  * new upstream version:
+    - Revert nomad session selection patch, as it caused logins to fail.
+    - Implement per session Xauthority directory.
+    - Add compiz support detection.
+
+  * remove copy of ldminfod manpage, as we use upstream's version now.
+  * drop patch to revert nomad session selection, reverted upstream.
+  * add patch to revert hanging logout bug, as it caused logins to fail.
+  * update Standards-Version to 3.8.2, no changes necessary.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sat, 18 Jul 2009 10:29:27 +0200
+
+ldm (2:2.0.40-2) unstable; urgency=low
+
+  * apply patch to remove buggy eval_gettext function. instead, always use
+    eval_gettext function from gettext.sh. depend on gettext-base to ensure
+    gettext.sh is present.  (Closes: #530981)
+
+  * remove largely un-used code to generate debian/control.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Thu, 28 May 2009 23:52:30 -0700
+
+ldm (2:2.0.40-1) unstable; urgency=low
+
+  * new upstream version:
+    - updated Basque (eu) translation by Piarres Beobide and
+      Iñaki Larrañaga Murgoitio (Closes: #522393)
+    - added manpage for ldm-dialog
+
+  * add patch reverting changes to Nomad/xrdp session selection, as it caused
+    logins to hang.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 18 May 2009 15:46:02 -0700
+
+ldm (2:2.0.39-1) unstable; urgency=low
+
+  * new upstream version:
+    - support for Nomad/xrdp by Jigish Gohil.
+    - updated translations:
+      + German (de), by Wolfgang Schweer (Closes: #519067)
+      + Polish (pl), by Piotr Drąg
+      + Russian (ru), by Yuri Kozlov (Closes: #521647)
+      + Portuguese (pt), by Pedro Ribeiro (Closes: #519335)
+      + French (fr), by Stéphane Graber
+      + Swedish (sv), by Daniel Nylander (Closes: #519018)
+      + Spanish (es), by José L. Redrejo (Closes: #519093)
+      + Greek (el), by Alkis Georgopoulos
+      + Japanese (ja), by Noriko Mizumoto
+      + Basque (eu), by Piarres Beobide (Closes: #519033)
+
+  * updated to Debian Policy 3.8.1, no changes needed.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 01 Apr 2009 08:54:55 -0700
+
+ldm (2:2.0.38-1) unstable; urgency=low
+
+  * new upstream version:
+    - fix to not change X cursor when run from VNC
+
+  * improved package descriptions
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 06 Mar 2009 15:56:35 -0800
+
+ldm (2:2.0.37-2) experimental; urgency=low
+
+  * added ldm-server package
+    - install ldminfod, which is used by ldm to determine available locales
+      and sessions
+    - conflict with versions of ltsp-server that previously included ldminfod
+    - recommend appropriate packages for login sessions, local device access
+      and remote sound
+
+  * updated debian/rules to handle multiple binary packages (thanks to Ryan
+    Niebur)
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 02 Mar 2009 09:13:37 -0800
+
+ldm (2:2.0.37-1) unstable; urgency=low
+
+  * new upstream version:
+    - updated copyright and license notices
+    - make ldm-dialog translatable
+
+  [ Ryan Niebur ]
+  * update debian/copyright and switch to the machine readable copyright
+    format
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 25 Feb 2009 15:05:44 -0800
+
+ldm (2:2.0.33-1) experimental; urgency=low
+
+  * New upstream version
+    - fix a race condition in ldm_wait, which was causing the logout
+      to hang on some thin clients
+    - updated Greek and French translations
+    - display the languages in a human friendly way (as opposed to just
+      displaying the locale code) on the language selection window
+    - ldm rc.d scripts are now translateable
+
+  [ Ryan Niebur ]
+  * switch debian/rules to debhelper 7
+  * add Homepage field
+  * add Build-Depends: iso-codes, locales, python
+
+  [ Vagrant Cascadian ]
+  * patch from Ryan Niebur: add Makefile targets needed by debhelper 7
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sat, 31 Jan 2009 21:16:39 -0800
+
+ldm (2:2.0.28-1) experimental; urgency=low
+
+  * new upstream version:
+    - updated ltsp theme
+    - only allow ldm hooks that consist of numbers, letters, underscores and
+      hyphens, which prevents backup files from getting executed.
+
+  * recommend dmz-cursor-theme
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 09 Jan 2009 21:37:58 -0800
+
+ldm (2:2.0.27-1) experimental; urgency=low
+
+  * new upstream version:
+    - updates to theme handling
+    - disable the username/password entry box instead of hiding it
+
+  * ltsp theme updates:
+    - add patch to use ubuntulooks engine.
+    - recommend gtk2-engines-ubuntulooks, as it makes the theme look
+      considerably nicer, though it works without it installed, too.
+
+  * drop dependency on gtk2-engines-clearlooks, which has never actually been
+    used.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sun, 28 Dec 2008 17:53:55 -0800
+
+ldm (2:2.0.24-1) experimental; urgency=low
+
+  * new upstream version:
+    - no longer propmt for changes in session or language
+    - display guest login button as a button
+    - send the greeter the quit command
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Tue, 16 Dec 2008 12:59:08 -0800
+
+ldm (2:2.0.23-1) experimental; urgency=low
+
+  * new upstream version:
+    - Fix broken LDM_DIRECTX
+    - use ldm-dialog for interactive scripts
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sat, 13 Dec 2008 17:24:03 -0800
+
+ldm (2:2.0.21-1) experimental; urgency=low
+
+  * new upstream version:
+    - display session names for session selection
+    - preserve user session and language defaults across logins
+
+  * debian/watch: poll fedora and ubuntu for new upstream versions
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Tue, 09 Dec 2008 12:40:31 -0800
+
+ldm (2:2.0.19-1) experimental; urgency=low
+
+  * new upstream version:
+    - drop x keyboard settings script, which is now handled in ltsp.
+    - ltsp-cluster scripts added
+    - use smaller background image for ltsp theme
+  * updated locale-from-screen patch
+  * add debian/watch file explaining how to find current version.
+  * use proper VCS-* headers.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 24 Nov 2008 11:11:25 -0800
+
+ldm (2:2.0.18-1) experimental; urgency=low
+
+  * new upstream version:
+    - move X server handling out of ldm and into screen script
+    - properly handle session logout (Closes: #471793)
+    - option to use syslog
+    - use ltsp's xinitrc wrapper if present
+    - allow selecting server for guest logins
+    - don't force reboot and poweroff
+    - hide entry field and prompt after we get a username and password
+    - treat <tab> key like enter, to emulate GDM behavior
+  * updated locale-from-screen patch
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Thu, 13 Nov 2008 12:59:25 -0800
+
+ldm (2:2.0.16-1) experimental; urgency=low
+
+  * new upstream version:
+    - handle Xsession passed via ldminfod
+    - ldm initialization scripts:
+      + ensure X is up and running
+      + enable/disable the numlock key
+      + handle keyboard settings using setxkbmap
+    - simpler handling of timed logins (LDM_LOGIN_TIMEOUT)
+    - revert fix to login field location, as it causes problems with some
+      themes.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 31 Oct 2008 20:49:30 -0700
+
+ldm (2:2.0.13-1) experimental; urgency=low
+
+  * new upstream version:
+    - option to restrict which users may log in
+    - fix login field location with wide logos
+  * remove patches applied upstream:
+    - startup-hooks
+    - xsession-with-selected-session
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 08 Oct 2008 14:39:48 -0700
+
+ldm (2:2.0.12-2) experimental; urgency=low
+
+  * apply patch to use /etc/X11/Xsession when selecting session from menu
+  * added README.source describing use of dpatch
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Tue, 23 Sep 2008 23:10:25 -0700
+
+ldm (2:2.0.12-1) experimental; urgency=low
+
+  * new upstream version:
+    - fix crash on x86_64
+    - avoid ldm segfaulting when X fails
+  * add Ryan Niebur to Uploaders
+  * add patch from Gideon Romm to run hook scripts before login and after X
+    has started
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 17 Sep 2008 12:27:14 -0700
+
+ldm (2:2.0.11-1) experimental; urgency=low
+
+  * new upstream version:
+    - drop localapps hook (moved to ltsp)
+    - added hook to limit logins to a single user
+    - added hook to start a debugging terminal
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 11 Aug 2008 10:41:57 -0700
+
+ldm (2:2.0.9-1) experimental; urgency=low
+
+  * new upstream version:
+    - cleaner handling of ssh interaction:
+      + fixes tcsh logins (Closes: #490897)
+      + fixes password expiry (Closes: #482553)
+  * updated standards-version to 3.8.0, no changes needed.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 06 Aug 2008 16:07:50 -0700
+
+ldm (2:2.0.6-4) unstable; urgency=medium
+
+  * remove debian.old dir accidentally added in previous upload.
+  * urgency medium to get important changes into lenny.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sat, 11 Oct 2008 14:20:11 -0700
+
+ldm (2:2.0.6-3) unstable; urgency=low
+
+  * backported patch from upstream to use /etc/X11/Xsession when user has
+    selected a session from login menu. (Closes: #499995)
+  * add debian/README.source explaining use of dpatch
+  * add Ryan Niebur to Uploaders
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 29 Sep 2008 09:00:50 -0700
+
+ldm (2:2.0.6-2) unstable; urgency=low
+
+  * apply patch to allow for cleanly disconnecting ssh session, so pam
+    sessions to properly register logouts. thanks to Pascal Legrand for the
+    report. (Closes: #471793)
+  * updated Standards-Version to 3.8.0, no changes needed.
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 20 Aug 2008 16:29:22 -0700
+
+ldm (2:2.0.6-1) unstable; urgency=low
+
+  * new upstream version:
+    - added Greek translation by Alkis Georgopoulos
+
+  * patch to get locale settings if not already defined
+
+  * apply patch to partially fix password expiry. thanks to John S. Skogtvedt.
+    (debian bug #482553)
+
+  * drop patches for backwards compatibility with old ltsp versions
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 30 May 2008 15:42:23 -0700
+
+ldm (2:2.0.5-1) unstable; urgency=low
+
+  * new upstream version:
+    - added Russion translation by Yuri Kozlov (Closes: #477987)
+    - really add Portuguese (Closes: #476166)
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sun, 04 May 2008 23:15:05 -0700
+
+ldm (2:2.0.3-1) unstable; urgency=low
+
+  * new upstream version:
+    - new and updated translations:
+      + Vietnamese, by Clytie Siddall (Closes: #477330)
+      + French, by Jean-Baka Domelevo-Entfellner (Closes: #477285)
+      + Portuguese, by Pedro Ribeiro (Closes: #476166)
+      + Polish, by Piotr Drąg
+      + Finnish, by Ville-Pekka Vainio
+      + Japanese, by Noriko Mizumoto
+  * recommend netcat as it is used in ltsp screen scripts
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 23 Apr 2008 00:08:33 -0500
+
+ldm (2:2.0.1-1) experimental; urgency=low
+
+  * new upstream version:
+    - fix localization support (Closes: #473674, 432708)
+      thanks to Wolfgang Schweer for the patch
+    - translations:
+      + German, by Wolfgang Schweer
+      + Spanish, by José "L. Redrejo" Rodríguez
+      + Hungarian, by SZERVÁC Attila (Closes: #473821)
+      + Basque, by Piarres Beobide (Closes: #473921)
+      + Swedish, by Daniel Nylander (Closes: 474005)
+      + Norwegian Bokmål, by Klaus Ade Johnstad
+  * build-depend on intltool
+  * use "make install" to install most files
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sat,  5 Apr 2008 20:38:27 +0200
+
+ldm (2:0.1~bzr20080326-1) unstable; urgency=low
+
+  * new upstream:
+    - use xauth when using unencrypted X sessions rather than disabling access
+      control restrictions. (Closes: #469462)
+    - support arbitrary xserver options
+    - use common X code for ltsp screen script
+
+  * drop fix-access-control patch (applied upstream)
+
+  * compatibility with old ltsp versions:
+    - include modified copies of screen-x-common and ltsp-common-functions
+    - update old-ltsp-compatibility patch, add old-ltsp-xauth-compatibility
+      patch to ensure ldm screen script and xauth code works with all ltsp
+      versions
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Wed, 26 Mar 2008 06:16:17 -0700
+
+ldm (2:0.1~bzr20080308-1) unstable; urgency=high
+
+  * urgency set to high, as it fixes an RC/security bug, and upstream updates
+    are minor.
+
+  * new upstream:
+    - move ldm screen.d script to /usr/share/ltsp/screen.d
+      + keep symlink to old location
+      + patch to work with either /usr/share or /usr/lib
+    - move ldm-script and rc.d scripts back to /usr/share/ldm
+    - change LDM_ALLOW_GUEST variable to LDM_GUESTLOGIN
+
+  * patch fixing X access security bug (Closes: #469462)
+
+  * debian/rules, debian/control:
+    - add support for and depend on dpatch
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Sat,  8 Mar 2008 21:42:40 -0500
+
+ldm (2:0.1~bzr20080219-1) unstable; urgency=low
+
+  * new upstream release from bzr:
+    - install ldmgtkgreeter and ldm-scripts in /usr/lib
+    - fixed autologin using slightly modified patch by Francis Giraldeau
+      (Closes: #462760)
+    - patch from SZABO Zsolt to fix login using ssh keys
+      (Closes: #462764)
+    - LDM_THEME variable to override default ldm theme
+    - LDM_ALLOW_GUEST variable to display a "Guest Login" button that behaves
+      similarly to autologin when pressed.
+    - thanks to Ryan Niebur for help with autologin, ldm theme and guest login
+      code
+    - only ask password once. (thanks to Oliver Gravert for the patch)
+    - do not display month or date on login screen. (idea from Gideon Romm)
+    - when displaying status message, make entry fields not editable.
+      (patch from Gideon Romm)
+
+  * debian/control:
+    - conflict with older versions of ltsp-client-core, as it also shipped an
+      ldm screen.d script
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Tue, 19 Feb 2008 22:18:05 -0800
+
+ldm (2:0.1~bzr20071217-3) unstable; urgency=medium
+
+  * install man pages in the binary-arch target
+  * allow debian-maintainer uploads
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Fri, 25 Jan 2008 09:34:19 -0800
+
+ldm (2:0.1~bzr20071217-2) unstable; urgency=low
+
+  * change priority to extra, as ldm qualifies as "specialized requirements"
+  * drop ltspfs related ldm hook scripts (moved to ltspfsd package)
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Thu, 10 Jan 2008 16:00:03 -0800
+
+ldm (2:0.1~bzr20071217-1+lenny1) testing-security; urgency=low
+
+  * backport patches from sid:
+    - patch fixing X access security bug (Closes: #469462)
+    - add support for and build-depend on dpatch
+    - include ltsp screen script (previously in ltsp-client-core
+      package, needed to start ldm)
+    - drop ltspfs related ldm hook scripts (moved to ltspfsd package,
+      which conflicts with ldm <= 2:0.1~bzr20071217-1)
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 17 Mar 2008 14:24:04 -0700
+
+ldm (2:0.1~bzr20071217-1) unstable; urgency=low
+
+  * new upstream release from bzr branch:
+    http://bazaar.launchpad.net/~ltsp-upstream/ltsp/ldm-trunk/
+  * split ldm into separate source package
+    (see ltsp changelog for previous history)
+  * new French translation by Jean-Baka Domelevo-Entfellner (Closes: 454571)
+
+ -- Vagrant Cascadian <vagrant@freegeek.org>  Mon, 17 Dec 2007 16:38:53 -0800

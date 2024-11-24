@@ -1,0 +1,761 @@
+astropy (3.1.2-2+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload on the Debian LTS team.
+  * CVE-2023-41334: Prevent a remote code execution vulnerability. Improper
+    input validation in the TranformGraph().to_dot_graph function could have
+    led to arbitary command execution, as values were passed as the first
+    argument to subprocess.Popen. Although an error will be raised, the command
+    or script will still be executed successfully.
+  * Add debian/.gitlab-ci.yml.
+
+ -- Chris Lamb <lamby@debian.org>  Tue, 30 Apr 2024 16:41:10 +0100
+
+astropy (3.1.2-2) unstable; urgency=medium
+
+  * Fix problem with tables on big endian archs
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 27 Feb 2019 22:39:47 +0100
+
+astropy (3.1.2-1) unstable; urgency=low
+
+  * Add gitlab-ci.yml
+  * New upstream bugfix version 3.1.2. Rediff patches
+  * Push compat to 12
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 25 Feb 2019 20:20:50 +0100
+
+astropy (3.1.1-1) unstable; urgency=medium
+
+  * New upstream version 3.1.1. Rediff patches
+  * Adjust build dependency versions
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 11 Jan 2019 09:47:01 +0100
+
+astropy (3.1-3) unstable; urgency=medium
+
+  * Spellfix: distutil*s*
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 30 Dec 2018 20:54:00 +0100
+
+astropy (3.1-2) unstable; urgency=medium
+
+  * Add python3-distutil to requirements
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 30 Dec 2018 00:11:39 +0100
+
+astropy (3.1-1) unstable; urgency=medium
+
+  * New upstream version 3.1. Rediff patches
+  * Drop Disable-tests-that-fail-on-s390x.patch: Fixed in scipy
+  * Drop Mark-all-known-test-failures-as-xfail.patch: Fixed in numpy
+  * Push Standards-Version to 4.3.0. No changes needed
+  * Ensure we support the new matmul ufunc in numpy 1.16. Closes: #917466
+  * Add sphinx-astropy build dependency
+  * Remove outdated paragraphs from d/copyright
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 26 Dec 2018 21:09:53 +0100
+
+astropy (3.0.5-1) unstable; urgency=medium
+
+  * Update reference to astropy paper 2
+  * Set minimal version of numpy to 1.10
+  * Updates for wcslib 6
+  * New upstream version 3.0.5. Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 08 Nov 2018 20:52:24 +0100
+
+astropy (3.0.4-3) unstable; urgency=medium
+
+  * Unrestrict last, forgotten s390x test xfail
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 11 Aug 2018 21:23:14 +0200
+
+astropy (3.0.4-2) unstable; urgency=medium
+
+  * Mark failures on s390x as not strict: they succeed on Ubuntu
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 11 Aug 2018 10:31:38 +0200
+
+astropy (3.0.4-1) unstable; urgency=low
+
+  * New upstream version 3.0.4. Rediff patches
+  * Unlimit max Python version
+  * Push Standards-Version to 4.2.0. No changes needed.
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 04 Aug 2018 07:25:55 +0800
+
+astropy (3.0.3-5) unstable; urgency=low
+
+  * Disable tests that fail on s390x
+  * Remove remote content from whatsnew page
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 31 Jul 2018 19:50:02 +0800
+
+astropy (3.0.3-4) unstable; urgency=low
+
+  * Temporarily limit Python version to <3.7
+  * Push Standards-Version to 4.1.5. No changes needed.
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 31 Jul 2018 14:53:55 +0800
+
+astropy (3.0.3-3) unstable; urgency=low
+
+  * Disable more write modes in CI test
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 04 Jun 2018 10:26:51 +0200
+
+astropy (3.0.3-2) unstable; urgency=low
+
+  * Disable known CI test failure
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 02 Jun 2018 06:40:03 -0700
+
+astropy (3.0.3-1) unstable; urgency=low
+
+  * New upstream version 3.0.3. Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 01 Jun 2018 16:29:03 -0700
+
+astropy (3.0.2-2) unstable; urgency=low
+
+  * Explicitly generate PLY files
+  * Disable float128 test due to numpy representation bug
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 17 May 2018 13:20:41 +0200
+
+astropy (3.0.2-1) unstable; urgency=medium
+
+  * Put use_system_libs into setup.cfg. Closes: #898475
+  * Cleanup all ply generated files
+  * New upstream version 3.0.2. Rediff patches
+  * Push Standards-Version to 4.1.4. No changes needed.
+  * Remove outdated X-Python3-Version
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 15 May 2018 11:08:40 +0200
+
+astropy (3.0-3) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Use dh_python3-ply to generate ply dependency
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 25 Feb 2018 13:12:36 +0100
+
+astropy (3.0-2) unstable; urgency=medium
+
+  * Mark all known test failures as xfail
+  * Add astropy examples
+  * Push debhelper compat to 11
+  * Remove unused lintian-overrides
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 16 Feb 2018 11:08:09 +0100
+
+astropy (3.0-1) unstable; urgency=low
+
+  * Create a new source package for the Python 3 version
+  * New upstream version 3.0. Rediff patches
+  * Update VCS fields to use salsa.d.o
+  * Don't remove generic_lextab.py and generic_parsetab.py
+  * Add pytest-astropy build dependencies
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 13 Feb 2018 14:36:43 +0100
+
+python-astropy (2.0.3-1) unstable; urgency=low
+
+  * New upstream version 2.0.3
+  * Rediff patches
+  * Remove http proxy from d/rules to allow localhost connections
+  * Use the packaged MathJax
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 19 Dec 2017 11:35:47 +0100
+
+python-astropy (2.0.2-2) unstable; urgency=medium
+
+  * Push Standards-Version to 4.1.2. Change remaining URLs to use https
+  * Otherwise unchanged upload for python3.6 transition. Closes: #883403
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 05 Dec 2017 11:16:34 +0100
+
+python-astropy (2.0.2-1) unstable; urgency=medium
+
+  * New upstream version 2.0.2
+  * Rediff patches
+  * Push Standards-Version to 4.1.0. No changes needed.
+  * Shorten message to compare for recent h5py.
+  * Rebuiold against current Python versions. Closes: #875317
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 11 Sep 2017 20:39:28 +0200
+
+python-astropy (2.0.1-2) unstable; urgency=medium
+
+  * Changing parametrized tests pytest 3.2.0 compatible
+  * Change astropy home URL to https
+  * Push standards-version to 4.0.1. No changes needed.
+  * Adjust several dependency versions
+  * Reimplement reportinfo() in doctestplus extension (Closes: #871995)
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 17 Aug 2017 09:53:02 +0200
+
+python-astropy (2.0.1-1) unstable; urgency=low
+
+  * Change upstream GPG key to Brigitta Sipocz
+  * New upstream version 2.0.1
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 31 Jul 2017 09:36:34 +0200
+
+python-astropy (2.0-2) unstable; urgency=low
+
+  * Re-disable test_socketblocker (see upstream #4193).
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 13 Jul 2017 09:19:57 +0200
+
+python-astropy (2.0-1) unstable; urgency=low
+
+  * New upstream version 2.0. Switch back to unstable
+  * Rediff patches
+  * Re-enable sphinx build
+  * Update d/changelog. Change copyright of debian files to BSD-3-Clause
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 10 Jul 2017 10:21:30 +0200
+
+python-astropy (2.0~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate 2.0~rc1
+  * Rediff patches
+  * Temporarily re-enable almost all test to see if they are fixed
+  * Temporarily disable sphinx build
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 28 Jun 2017 08:38:02 +0200
+
+python-astropy (1.3.3-1) unstable; urgency=low
+
+  [ Leo Singer ]
+  * Enable Matplotlib tests
+  * Add build dependency on h5py to enable related unit tests
+  * Qualify dependency on pytest >= 2.7.0 because the unit tests
+    make use of parameterize ids as a callable, a feature that was
+    added in that version. See also:
+    https://docs.pytest.org/en/latest/changelog.html#id156
+
+  [ Ole Streicher ]
+  * New upstream version 1.3.3
+  * Rediff patches
+  * Push Standards-Version to 4.0.0. No changes needed
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 20 Jun 2017 20:58:21 +0200
+
+python-astropy (1.3-8) unstable; urgency=medium
+
+  * Switch to unstable. Closes: #852550
+  * Revert unrelated "Improved detection of ascii fast_reader in non-fast
+    parsers"
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 25 Jan 2017 16:17:26 +0100
+
+python-astropy (1.3-8~exp2) experimental; urgency=medium
+
+  * Fix pytest section, finally re-enabling doctests
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 19 Jan 2017 17:27:30 +0100
+
+python-astropy (1.3-8~exp1) experimental; urgency=medium
+
+  * Switch to experimental for some tests
+  * Try to fix doctest failures
+  * Improved detection of ascii fast_reader in non-fast parsers
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 19 Jan 2017 09:57:22 +0100
+
+python-astropy (1.3-7) unstable; urgency=medium
+
+  * Allow stderr in all tests
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 15 Jan 2017 14:35:17 +0100
+
+python-astropy (1.3-6) unstable; urgency=medium
+
+  * Override missing-build-dependency-for-dh_-command
+  * Add python-astropy-affiliated to suggestions
+  * Add pytest to package dependencies
+  * Fix default value for remote_data option. Closes: #849501
+  * Remove wcslib 4.24 compatibility property. Closes: #844525
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 14 Jan 2017 11:28:01 +0100
+
+python-astropy (1.3-5) unstable; urgency=medium
+
+  * Manually add dependencies for external packages
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 12 Jan 2017 22:51:46 +0100
+
+python-astropy (1.3-4) unstable; urgency=medium
+
+  * Mark doc package as Multi-Arch: foreign as suggested by Multiarch hinter
+  * Remove wcsaxes suggestions since this is now part of astropy
+  * Use external modules instead of convenience copies. Closes: #849502
+  * Temporarily disable doctests (not working with pytest 3.0.5)
+  * Remove explicite dh_strip_nondeterminism
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 12 Jan 2017 12:17:23 +0100
+
+python-astropy (1.3-3) unstable; urgency=medium
+
+  * Ensure NUMPY_LT_1_12 works for beta prerelease. Closes: #849271
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 29 Dec 2016 09:52:44 +0100
+
+python-astropy (1.3-2) unstable; urgency=low
+
+  * Disable TestDisplayWorldCoordinate.test_cube_coords to fix FTBFS on MIPS
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 23 Dec 2016 17:58:24 +0100
+
+python-astropy (1.3-1) unstable; urgency=low
+
+  * New upstream version 1.3
+  * Switch back to unstable
+  * Rediff patches
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 23 Dec 2016 15:13:46 +0100
+
+python-astropy (1.3~rc1-1) experimental; urgency=low
+
+  * Add python3-pkg-resources to astropy-tools dependencies. Closes: #839746
+  * Disable failing VO SSL test to avoid FTBFS with recent Python release.
+    Closes: #844984
+  * New upstream version 1.3~rc1
+  * Rediff patches
+  * Re-enable WCS.all_world2pix test (should be fixed now)
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 13 Dec 2016 09:44:29 +0100
+
+python-astropy (1.2.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 23 Jun 2016 09:48:06 +0200
+
+python-astropy (1.2-1) unstable; urgency=low
+
+  * New upstream version. Switch back to unstable
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 20 Jun 2016 15:10:14 +0200
+
+python-astropy (1.2~rc1-3) experimental; urgency=low
+
+  * Re-enable unfixed yet tests
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 16 Jun 2016 14:06:19 +0200
+
+python-astropy (1.2~rc1-2) experimental; urgency=low
+
+  * Temporarily disable all xfail marks
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 14 Jun 2016 21:32:33 +0200
+
+python-astropy (1.2~rc1-1) experimental; urgency=low
+
+  * New upstream RC. Switch to experimental
+  * Install Python 3 versions of the scripts
+  * Push Standards-Version to 3.9.8. No changes needed
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 12 Jun 2016 10:32:16 +0200
+
+python-astropy (1.1.2-1) unstable; urgency=low
+
+  * Add ASCL-Id
+  * New upstream version
+  * Fix cfitsio related tests. Closes: #816715
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 11 Mar 2016 10:54:46 +0100
+
+python-astropy (1.1.1-3) unstable; urgency=medium
+
+  * Fix for newer pytest. Closes: #812648
+  * Fix for wcslib 5.13
+  * Fix for known test issue with new numpy
+  * Push standards-version to 3.9.7. No changes needed.
+  * Adjust VCS entries in d/control
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 14 Feb 2016 15:09:01 +0100
+
+python-astropy (1.1.1-2) unstable; urgency=low
+
+  * Fix dependency of python-astropy-utils on python-astropy
+  * Finally fix test failure
+  * Switch back to unstable since bugfix is approved upstream
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 14 Jan 2016 23:06:52 +0100
+
+python-astropy (1.1.1-1~exp1) experimental; urgency=low
+
+  * New upstream version
+  * Depend python-astropy-utils on python-astropy of the same version.
+    Closes: #807834
+  * Revert astropy.wcs to 1.1 to workaround test failure
+  * Switch to experimental since WCS seems to be buggy
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 14 Jan 2016 11:14:05 +0100
+
+python-astropy (1.1-1) unstable; urgency=low
+
+  * New upstream version
+  * Switch back to unstable
+
+ -- Ole Streicher <olebole@debian.org>  Sat, 12 Dec 2015 10:02:22 +0100
+
+python-astropy (1.1~rc2-1) experimental; urgency=low
+
+  * New upstream RC version
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 08 Dec 2015 09:29:29 +0100
+
+python-astropy (1.1~rc1-1) experimental; urgency=low
+
+  * New upstream RC version
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 24 Nov 2015 21:09:40 +0100
+
+python-astropy (1.1~b1-1) experimental; urgency=low
+
+  * New upstream beta version
+  * [Martin Pitt] Ignore stderr for python3 test to avoid failing on
+    the ResourceWarning stderr message. Closes: #803068
+
+ -- Ole Streicher <olebole@debian.org>  Fri, 16 Oct 2015 08:58:30 +0200
+
+python-astropy (1.0.5-2) unstable; urgency=low
+
+  * Fix FTBS on i386
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 08 Oct 2015 15:44:51 +0200
+
+python-astropy (1.0.5-1) unstable; urgency=low
+
+  * New upstream version, providing Python-3.5 compatibility. Closes: #800727
+  * Limit wcslib-dev version to pre-5 releases
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 06 Oct 2015 13:26:14 +0200
+
+python-astropy (1.0.4-1) unstable; urgency=low
+
+  * New upstream version
+  * Re-enable dh_strip_nondeterminism override. See #791574 for details.
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 27 Aug 2015 10:32:44 +0200
+
+python-astropy (1.0.3-3) unstable; urgency=low
+
+  * Extend Suggests, and build/test-depend on scipy for more extended tests
+  * Fix conflicts/replaces of astropy-utils with pyfits-utils. Closes: #790530
+  * Temporarily remove dh_strip_nondeterminism
+  * Override image-file-in-usr-lib lintian
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 16 Jul 2015 10:46:32 +0200
+
+python-astropy (1.0.3-2) unstable; urgency=low
+
+  * Fix FTBS with hurd-i386
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 24 Jun 2015 10:38:18 +0200
+
+python-astropy (1.0.3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 07 Jun 2015 17:55:56 +0200
+
+python-astropy (1.0.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Create upstream/metadata with bibliographic information
+  * Create debci control file
+  * New binary package astropy-utils. Conflicts with pyfits-utils.
+  * Package png files as well. Closes: #783573
+  * switch back to unstable
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 16 Apr 2015 22:15:02 +0200
+
+python-astropy (1.0-1~exp) experimental; urgency=low
+
+  * New upstream version.
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 19 Feb 2015 09:09:44 +0100
+
+python-astropy (1.0~rc2-1) experimental; urgency=medium
+
+  * New upstream release candidate
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 12 Feb 2015 09:26:56 +0100
+
+python-astropy (1.0~rc1-3) experimental; urgency=low
+
+  * Fix last FTBS on Hurd
+
+ -- Ole Streicher <olebole@debian.org>  Thu, 05 Feb 2015 21:41:57 +0100
+
+python-astropy (1.0~rc1-2) experimental; urgency=low
+
+  * Fix FTBS on several platforms
+  * Disable failing tests (temporartily)
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 01 Feb 2015 11:13:52 +0100
+
+python-astropy (1.0~rc1-1) experimental; urgency=low
+
+  * New upstream release candidate
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 28 Jan 2015 09:17:42 +0100
+
+python-astropy (0.4.2-2) unstable; urgency=medium
+
+  * Don't set defalt SSL protocol in vo/samp/client.py. Closes: #775780
+
+ -- Ole Streicher <olebole@debian.org>  Mon, 19 Jan 2015 21:07:18 +0100
+
+python-astropy (0.4.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build-depend on libcfitsio-dev instead of libcfitsio3-dev. Closes: #761716
+  * Upgrade to Standards-Version 3.9.6 (no changes needed)
+
+ -- Ole Streicher <olebole@debian.org>  Wed, 24 Sep 2014 14:49:35 +0200
+
+python-astropy (0.4.1+dfsg2-1) unstable; urgency=low
+
+  * Remove astropy-helper and use external dependency. Closes: #761055
+  * Support numpy 1.9. Closes: #761392
+  * Update uploaders email address
+
+ -- Ole Streicher <olebole@debian.org>  Sun, 14 Sep 2014 13:50:29 +0200
+
+python-astropy (0.4.1+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+  * Exclude precompiled files from source tarball
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sun, 10 Aug 2014 10:22:07 +0200
+
+python-astropy (0.4-4) unstable; urgency=low
+
+  * build-depend on wcslib >= 4.23. Closes: #755485
+
+ -- Ole Streicher <debian@liska.ath.cx>  Tue, 22 Jul 2014 17:22:16 +0200
+
+python-astropy (0.4-3) unstable; urgency=low
+
+  * Revert build-depends-indep since it does not work yet.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 18 Jul 2014 16:50:55 +0200
+
+python-astropy (0.4-2) unstable; urgency=low
+
+  * Fix locale on build
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 18 Jul 2014 09:16:16 +0200
+
+python-astropy (0.4-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 16 Jul 2014 20:21:39 +0200
+
+python-astropy (0.4~rc2-3) experimental; urgency=low
+
+  * Convert from python-support to dh_python
+
+ -- Ole Streicher <debian@liska.ath.cx>  Mon, 14 Jul 2014 09:46:47 +0200
+
+python-astropy (0.4~rc2-2) experimental; urgency=low
+
+  * Fix FTBS on powerpc, s390
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sun, 13 Jul 2014 18:56:28 +0200
+
+python-astropy (0.4~rc2-1) experimental; urgency=low
+
+  * New upstream prerelease
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sat, 12 Jul 2014 18:51:26 +0200
+
+python-astropy (0.4~rc1-2) experimental; urgency=low
+
+  * Fix FTBS on powerpc and s390x
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 09 Jul 2014 13:16:06 +0200
+
+python-astropy (0.4~rc1-1) experimental; urgency=low
+
+  * New upstream prerelease
+  * Adjust watch file for prerelease
+
+ -- Ole Streicher <debian@liska.ath.cx>  Mon, 07 Jul 2014 16:07:05 +0200
+
+python-astropy (0.3.2-3) unstable; urgency=low
+
+  * Fix checksum calculation and test on 32-bit
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sat, 17 May 2014 17:05:58 +0200
+
+python-astropy (0.3.2-2) unstable; urgency=low
+
+  * Mark known failures as xfail.
+  * Change maintainer and VCS location to debian-astro
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 14 May 2014 14:47:35 +0200
+
+python-astropy (0.3.2-1) unstable; urgency=low
+
+  * New upstream version. Closes: #743554
+  * Don't repack since all sources are included now
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 14 May 2014 09:21:18 +0200
+
+python-astropy (0.3.1+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Ole Streicher <debian@liska.ath.cx>  Thu, 06 Mar 2014 11:40:55 +0100
+
+python-astropy (0.3+dfsg-3) unstable; urgency=low
+
+  * Re-integrate 0.3-6 fixes which were left out by another mistake :-)
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 24 Jan 2014 11:31:26 +0100
+
+python-astropy (0.3+dfsg-2) unstable; urgency=low
+
+  * Re-integrate 0.3-5 fixes which were left out by mistake
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 24 Jan 2014 11:11:46 +0100
+
+python-astropy (0.3+dfsg-1) unstable; urgency=low
+
+  * Remove sourceless files jqery*.js. Closes: #735770
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 24 Jan 2014 09:43:27 +0100
+
+python-astropy (0.3-6) unstable; urgency=low
+
+  * Fix another FTBS causes on python-3.4.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Thu, 16 Jan 2014 16:27:55 +0100
+
+python-astropy (0.3-5) unstable; urgency=low
+
+  * Include upstream fixes to build on python-3.4. Closes: #734293
+  * Upgrade to Standards-Version 3.9.5 (no changes needed)
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 15 Jan 2014 09:57:05 +0100
+
+python-astropy (0.3-4) unstable; urgency=low
+
+  * Mark known s390 failures as xfail.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 20 Dec 2013 10:43:16 +0100
+
+python-astropy (0.3-3) unstable; urgency=low
+
+  * Fix vo_test.py for big endian.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Tue, 10 Dec 2013 11:23:38 +0100
+
+python-astropy (0.3-2) unstable; urgency=low
+
+  * Fix doctest and mark other known test failures on big endian until
+    they get fixed upstream.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Mon, 09 Dec 2013 14:23:04 +0100
+
+python-astropy (0.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Remove legacy packages that are no longer supported upstream.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sat, 30 Nov 2013 12:56:34 +0100
+
+python-astropy (0.2.5-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sun, 27 Oct 2013 18:29:01 +0100
+
+python-astropy (0.2.4-3) unstable; urgency=low
+
+  * Fix "Conflicts" of python3-astropy-legacy. Closes: #719770
+
+ -- Ole Streicher <debian@liska.ath.cx>  Thu, 15 Aug 2013 14:33:37 +0200
+
+python-astropy (0.2.4-2) unstable; urgency=low
+
+  * Enable python3 packages
+
+ -- Ole Streicher <debian@liska.ath.cx>  Mon, 05 Aug 2013 21:04:23 +0200
+
+python-astropy (0.2.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 26 Jul 2013 17:41:26 +0200
+
+python-astropy (0.2.3-2~1) experimental; urgency=low
+
+  * Fix FTBS on MIPS and MIPSEL
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 21 Jun 2013 16:31:15 +0200
+
+python-astropy (0.2.3-1) unstable; urgency=low
+
+  * New upstream version; incorporates all previous patches
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 07 Jun 2013 14:40:05 +0200
+
+python-astropy (0.2.1-1) unstable; urgency=low
+
+  * Fix FTBS (unit test failure) on HURD
+  * Change distribution to unstable
+
+ -- Ole Streicher <debian@liska.ath.cx>  Tue, 30 Apr 2013 10:36:01 +0200
+
+python-astropy (0.2.1-1~exp6) experimental; urgency=low
+
+  * Fix FTBS (unit test failure) on MIPS
+
+ -- Ole Streicher <debian@liska.ath.cx>  Fri, 26 Apr 2013 09:57:59 +0200
+
+python-astropy (0.2.1-1~exp5) experimental; urgency=low
+
+  * Fix FTBS (unit test failure) on bigendian machines
+
+ -- Ole Streicher <debian@liska.ath.cx>  Mon, 22 Apr 2013 19:37:00 +0200
+
+python-astropy (0.2.1-1~exp4) experimental; urgency=low
+
+  * Fix FTBS (unit test failure) on Hurd
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sun, 14 Apr 2013 18:39:00 +0200
+
+python-astropy (0.2.1-1~exp3) experimental; urgency=low
+
+  * Suggest optional packages
+
+ -- Ole Streicher <debian@liska.ath.cx>  Sun, 14 Apr 2013 12:17:00 +0200
+
+python-astropy (0.2.1-1~exp2) experimental; urgency=low
+
+  * increase test verbosity to catch bigendian FTBS
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 10 Apr 2013 16:21:00 +0200
+
+python-astropy (0.2.1-1~exp1) experimental; urgency=low
+
+  * New upstream release
+  * Infrastructure to build python3 packages (but py3 still disabled)
+  * Fix FTBS: set a writeable HOME + MPLCONFIGDIR
+
+ -- Ole Streicher <debian@liska.ath.cx>  Thu, 10 Apr 2013 09:10:00 +0200
+
+python-astropy (0.2~b2-1) experimental; urgency=low
+
+  * Initial release. (Closes: #678168)
+
+ -- Ole Streicher <debian@liska.ath.cx>  Wed, 30 Jan 2013 10:00:00 +0100

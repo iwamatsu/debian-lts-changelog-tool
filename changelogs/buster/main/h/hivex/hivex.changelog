@@ -1,0 +1,352 @@
+hivex (1.3.18-1+deb10u1) buster-security; urgency=medium
+
+  * Add upstream patch to fix CVE-2021-3504 (Closes: #988024)
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 18 Apr 2021 18:28:19 +0200
+
+hivex (1.3.18-1) unstable; urgency=medium
+
+  * New upstream version 1.3.18
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 03 Feb 2019 17:11:32 +0100
+
+hivex (1.3.17-1) unstable; urgency=medium
+
+  * New upstream version 1.3.17
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 23 Jan 2019 11:09:33 +0100
+
+hivex (1.3.16-1) unstable; urgency=medium
+
+  * New upstream version 1.3.16
+  * Update watch file
+  * Bump Debhelper compat level
+  * Replace dh_install --fail-missing
+  * Bump Standards-Version
+  * Add patch to fix Perl path in hivexregedit
+  * Ignore Python3 bindings for dh_makeshlibs
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 22 Jan 2019 16:23:27 +0100
+
+hivex (1.3.15-1) unstable; urgency=medium
+
+  * New upstream version 1.3.15
+  * Bump Standards-Version
+  * Migrate VCS to salsa.debian.org
+  * Drop patch integrated upstream
+  * Change Priority to optional
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 26 Feb 2018 20:38:20 +0100
+
+hivex (1.3.14-4) unstable; urgency=medium
+
+  * Reduce number of configure/make/install runs
+  * Bump Standards-Version
+  * debian/rules: Explicitly specify buildsystem
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 10 Dec 2017 00:41:04 +0100
+
+hivex (1.3.14-3) unstable; urgency=medium
+
+  * Set SOURCE_DATE_EPOCH by include pkg-info.mk into debian/rules.
+    This should ensure reproducible timestamps in manpages.
+    (Closes: #874236)
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 05 Sep 2017 21:47:42 +0200
+
+hivex (1.3.14-2) unstable; urgency=medium
+
+  * Update Vcs-*
+  * Modernize package: DH compat level, Standards-Version
+  * Add missing symbols to .symbols file
+  * Fix typo in libhivex-ocaml-dev description
+  * Drop -dbg package
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 28 Aug 2017 20:09:55 +0200
+
+hivex (1.3.14-1) unstable; urgency=medium
+
+  * New upstream version 1.3.14
+  * Bump Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 18 Feb 2017 11:15:20 +0100
+
+hivex (1.3.13-2) unstable; urgency=medium
+
+  * Fix ruby-hivex installation (Closes: #819261)
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 25 Mar 2016 20:47:43 +0100
+
+hivex (1.3.13-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 30 Oct 2015 19:20:12 +0100
+
+hivex (1.3.12-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 06 Oct 2015 21:47:21 +0200
+
+hivex (1.3.11-1) unstable; urgency=medium
+
+  * New upstream version
+  * Bumped Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 31 Oct 2014 09:23:47 +0100
+
+hivex (1.3.10-2) unstable; urgency=medium
+
+  [ Niko Tyni ]
+  * Don't hardcode /usr/lib/perl5 in debian/libwin-hivex-perl.install
+    (Closes: #752015)
+  
+  [ Hilko Bengen ]
+  * Updated rule for finding Ruby variants
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 18 Jun 2014 22:48:12 +0200
+
+hivex (1.3.10-1) unstable; urgency=medium
+
+  * New upstream version
+  * Cleared patch queue
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 23 Apr 2014 17:24:36 +0200
+
+hivex (1.3.9-2) unstable; urgency=medium
+
+  * Added patches from upstream trunk
+    - Python bindings regression
+    - Bump value size limit, fix error message
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 07 Feb 2014 18:14:54 +0100
+
+hivex (1.3.9-1) unstable; urgency=medium
+
+  * New upstream version
+  * All local patches have been integrated upstream
+  * Updated symbols file
+  * Install Ruby bindings to vendor directory
+  * Bumped Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 17 Jan 2014 16:10:25 +0100
+
+hivex (1.3.8-1) unstable; urgency=low
+
+  * New upstream version
+  * Added symbols file
+  * Cleaned up patch queue
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 27 Jul 2013 10:13:00 +0200
+
+hivex (1.3.7-5) unstable; urgency=low
+
+  * Finished support for python3 bindings, thanks to Scott Kitterman
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 24 May 2013 01:42:44 +0200
+
+hivex (1.3.7-4) unstable; urgency=low
+
+  * Added patch to build Python3 extensions with PEP-3149-compliant suffix
+    (Closes: #709516)
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 24 May 2013 01:00:22 +0200
+
+hivex (1.3.7-3) unstable; urgency=low
+
+  * Added patch to fix FTBFS due to usage of obsolete rake/rdoctask,
+    rake/gempackagetask (Closes: #709388)
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 23 May 2013 16:07:56 +0200
+
+hivex (1.3.7-2) unstable; urgency=low
+
+  * Added patches
+    - Fix build on Python 3.3 (Closes: #692387)
+    - Make sure that HTML documentation is correctly generated
+  
+ -- Hilko Bengen <bengen@debian.org>  Thu, 09 May 2013 12:12:30 +0200
+
+hivex (1.3.7-1) unstable; urgency=low
+
+  * New upstream version
+  * Removed Python ABI patch that was picked up by upstream.
+  * Use ./configure --disable-xxx switches
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 04 Jan 2013 21:28:45 +0100
+
+hivex (1.3.6-3) unstable; urgency=low
+
+  * [dea9b81] Removed autoreconf patch, changed build to use dh-autoreconf
+  * [e99b7fc] Added patch to configure.ac to correctly determine libpython
+    name (Closes: #681791)
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 16 Jul 2012 20:39:09 +0200
+
+hivex (1.3.6-2) unstable; urgency=low
+
+  * [7de8ea3] changed pattern in .install files so that the multiarch
+    directories on Hurd (i386-gnu) are picked up (Cloese: #677434)
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 14 Jun 2012 23:39:38 +0200
+
+hivex (1.3.6-1) unstable; urgency=low
+
+  * New upstream version
+  * [8d9e348] Added a method for determining available Ruby versions at
+    build time
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 13 Jun 2012 18:50:29 +0200
+
+hivex (1.3.5-2) unstable; urgency=low
+
+  * [a4864dc] Fixed debian/rules so that Ruby 1.9.1 bindings are built
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 18 Mar 2012 18:38:27 +0100
+
+hivex (1.3.5-1) unstable; urgency=low
+
+  * New upstream version
+  * [3488703] Added ruby-hivex package
+  * [d0bdba9] Rebased patch queue, added Ruby fixes
+  * [46bed8b] Bumped Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 15 Mar 2012 17:21:17 +0100
+
+hivex (1.3.3-2) unstable; urgency=low
+
+  * [c8b597a] corrected dh call
+  * [891d3fd] Converted package for multiarch, following
+    <http://wiki.debian.org/Multiarch/Implementation>
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 02 Feb 2012 20:57:32 +0100
+
+hivex (1.3.3-1) unstable; urgency=low
+
+  * New upstream version
+  * [1f9e20f] Cleared patch queue, added gnulib fix
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 01 Dec 2011 22:09:50 +0100
+
+hivex (1.3.2-3) unstable; urgency=low
+
+  * [c2e1061] Fixed typo in description (Closes: #648985)
+  * [c107de5] Added upstream's fix for Python3 support
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 19 Nov 2011 22:15:15 +0100
+
+hivex (1.3.2-2) unstable; urgency=low
+
+  * [b88d8f1] Disabled building of Python3 bindings for now
+    (Closes: #646383)
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 16 Nov 2011 16:59:44 +0100
+
+hivex (1.3.2-1) unstable; urgency=low
+
+  * New upstream version
+  * [163d9e6] Added fix from upstream git that enables the hivexsh build.
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 26 Oct 2011 14:02:29 +0200
+
+hivex (1.3.1-1) unstable; urgency=low
+
+  * Imported New upstream version
+  * [2c61bd6] Gave package to Debian Libvirt Maintainers group; added
+    myself to Uploaders
+  * [7246494] Added Vcs-* fields to debian/control
+  * [0c303eb] Discarded patches that have been integrated upstream
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 27 Aug 2011 16:59:17 +0200
+
+hivex (1.3.0-3) unstable; urgency=low
+
+  * [8155d72] The O_CLOEXEC "fix" had a typo.
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 21 Aug 2011 23:56:54 +0200
+
+hivex (1.3.0-2) unstable; urgency=low
+
+  * [739ed5b] Added fix for platforms that do not have O_CLOEXEC
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 21 Aug 2011 23:13:25 +0200
+
+hivex (1.3.0-1) unstable; urgency=low
+
+  * New upstream version
+  * [c632d25] Disabled Ruby bindings since we don't have a way of building
+    them in a separate build directory yet.
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 21 Aug 2011 20:13:11 +0200
+
+hivex (1.2.8-1) unstable; urgency=low
+
+  * New upstream version
+  * [abf06f8] Modified debian/rules targets to use separate build
+    directories, enabled building Python bindings for multiple versions
+  * [5d4f8b3] Discarded patches integrated by upstream, added fix for
+    python3
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 12 Aug 2011 18:33:21 +0200
+
+hivex (1.2.7-2) unstable; urgency=low
+
+  * [2416ed8] Switched to 3.0 (quilt) format
+  * [04d56f3] Fixed FTBFS with Perl 5.14, using patch from upstream git.
+    Closes: #636650
+  * [c867a2f] Useed OCaml build fixes from upstream git
+  * [2b83743] Python: don't build static library, .so.0.0, symlinks
+  * [2980f63] Switched handling of Python bindings to dh_python2
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 06 Aug 2011 18:01:07 +0200
+
+hivex (1.2.7-1) unstable; urgency=low
+
+  * New upstream version
+  * A different approach was chosen for fixing the FTBFS issue on FreeBSD
+    and other systems.
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 21 May 2011 21:10:13 +0200
+
+hivex (1.2.6-3) unstable; urgency=low
+
+  * Replaced ENOKEY constant so hivex should compile on the kfreebsd
+    architectures.
+  * Fixed install target for systems without native OCaml compiler.
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 13 May 2011 01:29:14 +0200
+
+hivex (1.2.6-2) unstable; urgency=low
+
+  * Added missing build-dependency.
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 13 May 2011 00:41:41 +0200
+
+hivex (1.2.6-1) unstable; urgency=low
+
+  * New upstream version
+  * Python bindings
+  * Switched source format to 1.0.
+  * Provided patches to upstream that allow building on big-endian
+    architectures and on arhitectures where no native OCaml compilers are
+    available. (Closes: #589809)
+  * No longer include .la files in libhivex-dev. (Closes: #621653)
+  * Made libhivex conflict against old unofficial libguestfs package
+    (Closes: #602443)
+
+ -- Hilko Bengen <bengen@debian.org>  Thu, 12 May 2011 22:54:29 +0200
+
+hivex (1.2.2+git20100712-2) unstable; urgency=low
+
+  * Added missing build dependencies. How embarrassing. Closes: #589546
+  * Reverted unnecessary patch to perl/run-perl-tests script
+  * Added gnulib to debian/copyright
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 19 Jul 2010 12:47:34 +0200
+
+hivex (1.2.2+git20100712-1) unstable; urgency=low
+
+  * Initial release (Closes: #573070)
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 17 Jul 2010 16:12:37 +0200

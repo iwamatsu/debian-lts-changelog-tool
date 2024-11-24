@@ -1,0 +1,263 @@
+aptly (1.3.0+ds1-2.2~deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 12:24:29 +0200
+
+aptly (1.3.0+ds1-2.2~deb10u1) buster; urgency=medium
+
+  * Non-maintainer upload.
+  * Rebuild for buster.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 20 May 2019 02:22:34 +0800
+
+aptly (1.3.0+ds1-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add patch to fix DB backwards compatibility (Closes: #911924)
+  * Fix struct field tag typo
+  * Update debian/NEWS about DB compatibility
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 16 Apr 2019 00:18:23 +0800
+
+aptly (1.3.0+ds1-2.1) unstable; urgency=medium
+
+  [ Shengjing Zhu ]
+  * Non-maintainer upload.
+  * Add patch to fix UUID struct field not encoded in msgpack (Closes: #923866)
+
+  [ Tobias Frost ]
+  * Prepare upload.
+
+ -- Tobias Frost <tobi@debian.org>  Fri, 05 Apr 2019 17:19:14 +0200
+
+aptly (1.3.0+ds1-2) unstable; urgency=medium
+
+  * Add NEWS to warn about database compatibility.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 26 Oct 2018 13:22:38 -0400
+
+aptly (1.3.0+ds1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+
+  [ Alexandre Viau ]
+  * d/watch: Append +ds suffix.
+  * d/copyright: ignore vendor/*. (Closes: #902128)
+  * d/copyright: remove vendor/* sections.
+  * d/copyright: MIT -> Expat.
+  * d/control: add vendor/* build dependencies.
+  * Patch: Use Debian's uuid package.
+  * Patch: Use Debian's lzma package.
+  * d/rules: remove trailing whitespace.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 15 Oct 2018 11:54:03 -0400
+
+aptly (1.3.0-6) unstable; urgency=medium
+
+  * Combine autodep8 and autopkgtest.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Jun 2018 18:11:41 -0400
+
+aptly (1.3.0-5) unstable; urgency=medium
+
+  * Fix syntax-error-in-dep5-copyright.
+  * Fix unnecessary-testsuite-autopkgtest-field.
+  * Fix broken autopkgtest.
+  * Depend on gpgv1.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 26 Jun 2018 23:01:36 -0400
+
+aptly (1.3.0-4) unstable; urgency=medium
+
+  * Document #902128 in debian/copyright
+  * Point debian/watch to new git repo on GitHub
+  * Add simple autopkgtest
+  * Add debian/.gitlab-ci.yml
+  * Depend on gnupg1 (Closes: #902419)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 26 Jun 2018 14:24:34 +0200
+
+aptly (1.3.0-3) unstable; urgency=medium
+
+  * Create aptly-api package. (Closes: #902032)
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 22 Jun 2018 13:51:50 -0400
+
+aptly (1.3.0-2) unstable; urgency=medium
+
+  * Team upload, many thanks to Alexandre Viau for this work
+  * Switch to dh-golang. (Closes: #902038)
+  * Fix vcs-field-not-canonical.
+  * Fix insecure-copyright-format-uri.
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 22 Jun 2018 13:53:11 +0200
+
+aptly (1.3.0-1) unstable; urgency=medium
+
+  * Fix copyright
+  * New upstream version 1.3.0
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 21 Jun 2018 15:14:57 +0200
+
+aptly (1.2.0-4) unstable; urgency=medium
+
+  * Enable Built-Using in debian/control (thanks M. Staperberg)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 06 Mar 2018 10:10:42 +0100
+
+aptly (1.2.0-3) unstable; urgency=medium
+
+  * Switch to DEP 14
+  * Update Vcs-* to point to salsa.d.o
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 16 Feb 2018 17:02:25 +0100
+
+aptly (1.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Build-Depend on golang-any, not golang
+  * Set XS-Go-Import-Path
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 10 Feb 2018 18:41:37 +0100
+
+aptly (1.2.0-1) unstable; urgency=medium
+
+  * New upstream version 1.2.0
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 03 Jan 2018 13:43:30 +0100
+
+aptly (1.1.1-2) unstable; urgency=medium
+
+  * Support both uncompressed control.tar, and xz-compressed
+    control.tar.xz. Thanks to Boyuan Yang for the patch (Closes: 879718)
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 02 Nov 2017 13:23:29 +0100
+
+aptly (1.1.1-1) unstable; urgency=medium
+
+  * New upstream version 1.1.1
+  * Use bash-completion snippet from upstream
+  * Bump up Standards-Version
+  * Update debian/copyright
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 02 Nov 2017 09:03:23 +0100
+
+aptly (1.0.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 1.0.1
+  * Update debian/copyright
+  * Adapt debian/rules
+  * Update Vcs-Git
+  * Bump-up Standards-Version
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 18 Jul 2017 11:53:29 +0200
+
+aptly (0.9.7-1) unstable; urgency=medium
+
+  * Imported new upstream version 0.9.7
+  * Add new licenses and copyrights info
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 24 May 2016 09:17:08 +0200
+
+aptly (0.9.6-1) unstable; urgency=medium
+
+  * Import new upstream version 0.9.6
+  * Add dependency on xz-utils
+  * Licenses and copyrights
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 10 Feb 2016 18:28:51 +0100
+
+aptly (0.9.5-2) unstable; urgency=medium
+
+  * Remove empty component in GOPATH (Closes: #793838)
+
+  [ Sebastien Delafond ]
+
+ -- Sebastien Delafond <seb@debian.org>  Sun, 16 Aug 2015 18:42:22 +0200
+
+aptly (0.9.5-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.9.5
+  * Up-to-date bash completion
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 15 May 2015 10:46:51 +0200
+
+aptly (0.9.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.9.1
+  * Document licenses and copyrights for new dependencies
+  * Suggest graphviz
+  * Proper name for bash-completion file
+  * Bump-up Standards-Version
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 02 May 2015 12:57:16 +0200
+
+aptly (0.8-3) unstable; urgency=medium
+
+  * Correct Vcs-Browser entry (Closes: #764622)
+  * Correct dependency from "gpg" to "gnupg" (Closes: #764619)
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 09 Oct 2014 18:41:38 +0200
+
+aptly (0.8-2) unstable; urgency=medium
+
+  * Add missing dependencies on bzip2, gpg and gpgv
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 09 Oct 2014 11:15:21 +0200
+
+aptly (0.8-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.8
+  * Document new copyrights and licenses
+  * Add bash completion snippet
+  * Reference full paths in debian/copyright, and remove unused
+    references, so lintian does not complain
+
+ -- Sebastien Delafond <seb@debian.org>  Sat, 04 Oct 2014 17:46:24 +0200
+
+aptly (0.7.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.7.1
+  * Add copyright information for new libraries
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 10 Sep 2014 10:03:27 +0200
+
+aptly (0.5-5) unstable; urgency=medium
+
+  * Turn off verbose mode
+  * Correct Vcs-* information
+  * gocov is licensed MIT, not BSD-3
+  * Add missing MIT license text
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 09 Sep 2014 09:20:40 +0200
+
+aptly (0.5-4) unstable; urgency=medium
+
+  * Collect licenses by going over files one by one
+  * Use packaged golang-go.tools
+
+ -- Sebastien Delafond <seb@debian.org>  Thu, 10 Jul 2014 00:49:09 +0200
+
+aptly (0.5-3) unstable; urgency=low
+
+  * Licensing:
+    - goleveldb is BSD-2, not BSD-3
+    - _vendor/src/code.google.com/p/gographviz/scanner/scanner is BSD-3,
+      copyright 2009 The Go Authors
+
+ -- Sebastien Delafond <seb@debian.org>  Wed, 28 May 2014 10:04:01 +0200
+
+aptly (0.5-2) unstable; urgency=low
+
+  * Go interpreter not needed at runtime
+
+ -- Sebastien Delafond <seb@debian.org>  Fri, 02 May 2014 12:04:02 +0200
+
+aptly (0.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #746343)
+
+ -- Sebastien Delafond <seb@debian.org>  Tue, 29 Apr 2014 15:47:31 +0200

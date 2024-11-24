@@ -1,0 +1,359 @@
+wireless-regdb (2022.04.08-2~deb10u1) buster-security; urgency=medium
+
+  [ Ben Hutchings ]
+  * Backport to buster:
+    - Revert "Remove support for loading through crda"
+    - Add my signature for regulatory.bin
+    - Revert "Add wireless-regdb-udeb package for use in the installer"
+    - Revert "Run scripts with Python 3"
+    - Add python-future to Build-Depends
+    - d/salsa-ci.yml: Set RELEASE to buster and disable reprotest
+    - Revert "d/wireless-regdb.postinst: Remove regular files installed by d-i"
+    - d/tests/control: Disable check-signatures test case
+
+  [ Tobias Frost ]
+  * Prepare package for the LTS Security Team
+
+ -- Tobias Frost <tobi@debian.org>  Thu, 09 Mar 2023 16:55:03 +0100
+
+wireless-regdb (2022.04.08-2) unstable; urgency=medium
+
+  * debian/tests: Add check that regulatory.db signatures are valid
+  * d/wireless-regdb.postinst: Remove regular files installed by d-i
+    (Closes: #1012601)
+
+ -- Ben Hutchings <benh@debian.org>  Thu, 30 Jun 2022 00:01:25 +0200
+
+wireless-regdb (2022.04.08-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Raise DFS TX power limit to 250 mW (24 dBm) for the US
+    - Update regulatory rules for Croatia (HR) on 6GHz
+    - Update regulatory rules for France (FR) on 6 and 60 GHz
+    - add support for US S1G channels
+    - add 802.11ah bands to world regulatory domain
+    - Update regulatory rules for Spain (ES) on 6GHz
+    - Update regulatory rules for South Korea (KR)
+    - Update regulatory rules for China (CN) (Closes: #1006127)
+    - Update regulatory rules for the Netherlands (NL) on 6GHz
+    - Update regulatory rules for Israel (IL)
+    - Update regulatory rules for Australia (AU)
+  * d/salsa-ci.yml: Add CI configuration for salsa.debian.org
+  * Remove support for loading through crda (Closes: #973551, #1004347)
+  * d/.gitignore: Ignore another debhelper temporary file
+
+ -- Ben Hutchings <benh@debian.org>  Sat, 04 Jun 2022 23:59:01 +0100
+
+wireless-regdb (2021.08.28-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #986208):
+    - Update regulatory rules for Egypt (EG), Croatia (HR), Pakistan (PK)
+      on 5GHz, Great Britain (GB), Kazakhstan (KZ), Ukraine (UA), Cuba (CU)
+      on 5Ghz, Germany (DE) on 6GHz, Norway (NO) on 6 and 60 GHz, Ecuador (EC)
+    - US: restore channel 12 & 13 limitation
+    - US: remove PTMP-ONLY from 5850-5895 MHz
+    - US: reduce bandwidth for 5730-5850 and 5850-5895 MHz
+    - ES: Update CNAF regulation url
+
+ -- Romain Perier <romain.perier@gmail.com>  Fri, 17 Sep 2021 18:30:37 +0200
+
+wireless-regdb (2020.04.29-2) unstable; urgency=medium
+
+  * Re-upload without binary packages (SourceOnlyUpload)
+
+ -- Romain Perier <romain.perier@gmail.com>  Tue, 30 Jun 2020 19:34:44 +0200
+
+wireless-regdb (2020.04.29-1) unstable; urgency=medium
+
+  [ Romain Perier ]
+  * New upstream version:
+    - GB: Extend to cover DMG channels 5 & 6
+    - Update regulatory rules for Russia (RU), Indonesia (ID), Singapore (SG),
+      United States (US) on 2.4/5G.
+    - Harmonize ranges of CEPT countries (stand of July 2019)
+    - Fix ranges of EU countries as they are harmonized since 2014
+    - Extend 5470-5725 MHz range to 5730 MHz for Taiwan (TW)
+    - Fix overlapping ranges for Switzerland and Liechtenstein
+  * Rebased enable_recording_and_using_an_external_signature.patch onto
+    2020.04.29
+  * Rebased run-scripts-with-python-3.patch onto 2020.04.29
+  * debian/gbp.conf: Rename old style config section
+
+  [ Debian Janitor ]
+  * Add missing ${misc:Depends} to Depends for wireless-regdb-udeb.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Repository.
+  * Update standards version to 4.5.0, no changes needed.
+  * Remove Priority on wireless-regdb-udeb that duplicates source.
+
+ -- Romain Perier <romain.perier@gmail.com>  Sun, 24 May 2020 13:15:10 +0200
+
+wireless-regdb (2019.06.03-3) unstable; urgency=medium
+
+  * Re-upload without self-built binary packages
+
+ -- Ben Hutchings <benh@debian.org>  Sun, 12 Apr 2020 19:28:35 +0100
+
+wireless-regdb (2019.06.03-2) unstable; urgency=medium
+
+  [ Ben Hutchings ]
+  * Add wireless-regdb-udeb package for use in the installer
+  * debian/control: Use my debian.org email in Maintainers field
+  * debian/control: Change to team-maintained, with me and Romain as
+    Uploaders
+  * debian/README.source: Update instructions for setting REGDB_AUTHOR
+
+  [ Romain Perier ]
+  * debian/certs: Add my certificate
+  * debian/rules: Get REGDB_AUTHOR by using dpkg-parsechangelog
+
+ -- Ben Hutchings <benh@debian.org>  Tue, 31 Mar 2020 20:39:33 +0100
+
+wireless-regdb (2019.06.03-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #949553):
+    - Install regulatory.db and regulatory.db.p7s to /lib/firmware
+      (Closes: #892229)
+    - Update rules for Australia (AU), Canada (CA), Switzerland (CH),
+      Germany (DE), Denmark (DK), Spain (ES), Finland (FI), France (FR),
+      Hungary (HU), India (IN), Japan (JP), Republic of Korea (KR),
+      Kazakhstan (KZ), Lithuania (LI), Panama (PA), Portugal (PT),
+      Qatar (QA), Sweden (SE), Singapore (SG), Turkey (TR), Taiwan (TW),
+      and United States (US)
+    - Add ETSI WMM rules and apply them to various territories
+    - Make scripts compatible with Python 3
+  * debian/control: Point Vcs URLs to Salsa
+  * Drop "Set both PASSIVE_SCAN and NO_IBSS flags in binary database",
+    only needed for compatibility with wheezy
+  * debian/rules: Use $(MAKE) for recursive make
+  * debian/patches: Refresh and update for Python 3 compatibility
+  * Run scripts with Python 3 (Closes: #938829)
+  * Expect Debian regulatory.db detached signature in source package
+  * debian/rules: Build under debian/build to avoid overwriting shipped
+    binaries
+  * debian/rules: Only build regulatory.{bin,db} during binary build
+  * debian/rules: Update exclusion of custom public keys from the package
+  * debian/rules: Verify that our binaries match upstream unless db.txt is
+    patched
+  * Install upstream and Debian versions of regulatory.db as alternatives
+  * debian/contol: Rewrite package description
+  * debian/copyright: Use https: scheme in Format
+  * Add upstream public key and enable signature checking in debian/watch
+  * debian/control: Set Rules-Requires-Root: no
+  * debian/control: Update Standards-Version to 4.4.1
+  * lintian: Override orig-tarball-missing-upstream-signature warning as
+    this is blocked by bug #882694
+  * Add and use a static certificate for my signing key
+  * debian/README.source: Introduce a shell variable for author ID
+  * debian/README.source: Update to cover the certificate
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 30 Jan 2020 20:47:17 +0100
+
+wireless-regdb (2016.06.10-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #830288)
+    - Update rules for Hong Kong (HK): assign to ETSI DFS region
+    - Update rules for South Africa (ZA): remove DFS requirement and increase
+      transmit power limit for channels 100..140 (5490-5710 MHz)
+    - Update rules for Taiwan (TW): extend the 2.4 GHz and 5 GHz bands; change
+      transmit power limits for parts of the 5 GHz band; re-assign to FCC DFS
+      region
+    - Update rules for United States (US): increase transmit power limit for
+      channels 36..48 (5170-5250 MHz)
+    - Update rules for Uruguay (UY): remove channels 100..144 (5490-5730 MHz)
+    - Update rules for Russia (RU): enable VHT80 in 5 GHz band and VHT160
+      for channel 50 (5170-5330 MHz)
+    - Update rules for Ukraine (UA): enable VHT80 in 5 GHz band and VHT160
+      for channels 46..54 (5150-5350 MHz) and 114..118 (5490-5670 MHz)
+    - Update rules for Malaysia (MY): change transmit power limit for the
+      5 GHz band; enable VHT80 in 5 GHz band and VHT160 for channels 50
+      (5170-5330 MHz) and 114 (5490-5650 MHz)
+    - Update rules for Greenland (GL): enable VHT160 for channels 50
+      (5170-5330 MHz) and 114..126 (5490-5710 MHz)
+    - Update rules for Croatia (HR) and Finland (FI): extend the 2.4 GHz and
+      5 GHz bands; increase transmit power limit for channels 34..48
+      (5150-5250 MHz); add NO-OUTDOOR flag for channels 34..64 (5150-5350 MHz)
+    - Fix world regulatory domain: correct the channel width for channels
+      12..13 (2457-2482 MHz)
+    - Add rules for Cuba (CU)
+    - Update rules for Germany (DE) and Netherlands (NL): add channels
+      147..165 (5725-5875 MHz)
+    - Update rules for Bulgaria (BG): increase transmit power limit for
+      channels 36..48 (5170-5250 MHz); add NO-OUTDOOR flag for 60 GHz band
+    - Update rules for Republic of Korea (KR): add 60 GHz band
+  * debian/control: Change Vcs-Git and Vcs-Browser to canonical HTTP-S URLs
+  * debian/copyright: Change Source to HTTP-S URL
+  * Use debhelper compatibility level 9
+  * debian/control: Update Standards-Version to 3.9.8; no changes needed
+  * Remove obsolete postinst script
+  * debian/control: Update Homepage
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 04 Dec 2016 23:47:35 +0000
+
+wireless-regdb (2015.07.20-1) unstable; urgency=medium
+
+  * New upstream version
+    - Update rules for Armenia (AM), Bahrain (BH), Costa Rica (CR),
+      Ecuador (EC), Guam (GU), Sri Lanka (LK), El Salvador (SV): disable VHT
+      in 5 GHz band
+    - Update rules for Australia (AU), New Zealand (NZ): assign to ETSI DFS
+      region
+    - Update rules for Bulgaria (BG): add channels 147..173 (5725-5875 MHz)
+    - Update rules for Canada (CA): remove channels 120..134 (5600-5650 MHz)
+    - Update rules for Egypt (EG): disable VHT80
+    - Update rules for Indonesia (ID), Democratic People's Republic of Korea
+      (KP): disable VHT
+    - Update rules for Japan (JP): add 60 GHz band
+    - Update rules for Macao (MO): assign to ETSI FCC region; add channels
+      100..144 (5490-5730 MHz); enable VHT80 and VHT160 in 5 GHz band
+    - Add rules for Maldives (MV), Nigeria (NG), Tanzania (TZ) and Samoa (WS)
+    - Update rules for Russia (RU): disable VHT80; add 60 GHz band
+    - Update rules for United States (US): re-add channels 100..144
+      (5490-5730 MHz)
+  * Generate a detached signature at source preparation time and append
+    it when building the binary package (thanks to Jérémy Bobbio)
+    (Closes: #725803)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 30 Aug 2015 10:20:04 +0100
+
+wireless-regdb (2014.11.18-1) unstable; urgency=medium
+
+  * New upstream version
+    - Update world regulatory domain: re-enable VHT80 on channel 42
+      (5210 MHz) (regression in 2014.05.19); enable VHT80 on channel 58
+      (5290 MHz) and VHT160 on channel 50 (5250 MHz) (requires Linux 3.15)
+    - Enable VHT160 on channel 50 (5250 MHz) for many countries
+      (requires Linux 3.15)
+    - Update rules for Bulgaria (BG): add channels 100..140 (5490-5710 MHz)
+    - Add rules for American Samoa (AS), Bermuda (BM), The Bahamas (BS),
+      Christmas Island (CX), Ethiopia (ET), French Guiana (GF),
+      Guadeloupe (GP), Cayman Islands (KY), Mongolia (MN),
+      Northern Mariana Islands (MP), Martinique (MQ), Mauritius (MU),
+      Malawi (MW), Nicaragua (NI), French Polynesia (PF), Paraguay (PY),
+      Reunion (RE), Suriname (SR), Uganda (UG), U.S. Virgin Islands (VI)
+      and Mayotte (YT)
+    - Update rules for countries using ETSI regulations in 60 GHz band:
+      increase frequency range to 57-66 GHz and remove NO-OUTDOOR flag
+  * debian/copyright: Update upstream maintainer and git repository
+    addresses
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 01 Jan 2015 23:51:50 +0000
+
+wireless-regdb (2014.10.07-1) unstable; urgency=medium
+
+  * New upstream version
+    - Update rules for Spain (ES): increase max EIRP in one frequency range
+    - Add rules for Anguilla (AI), Dominica (DM), Saint Kitts and Nevis (KN),
+      Saint Lucia (LC), Lesotho (LS), Marshall Islands (MH), Moldova (MD),
+      Saint Pierre and Miquelon (PM), Turks and Caicos Islands (TC),
+      Saint Vincent and the Grenadines (VC), and Wallis and Futuna (WF)
+    - Update rules for Saint Barthélemy (BL): increase frequency range and
+      max EIRP on 5 GHz band; assign to ETSI DFS region
+    - Update rules for Bolivia (BO): reduce max EIRP in 2.4 GHz band;
+      increase frequency range in 5 GHz band
+    - Update rules for Andorra (AD): add 2.4 GHz and 5 GHz bands
+    - Update rules for Republic of Korea (KR): add channel 165 (5825 MHz)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 12 Oct 2014 01:19:26 +0100
+
+wireless-regdb (2014.06.13-1) unstable; urgency=medium
+
+  * New upstream version
+    - Correct removal of NO-OFDM and DFS flags from some rules
+      (regression in 2013.11.27)
+    - Add channels 52..64 and 100..144 in 5 GHz band to world regulatory
+      domain
+    - Update rules for Norway (NO): increase frequency range on 5 GHz band
+      and add 17 GHz band
+    - Update rules for Uzbekistan (UZ)
+    - Add rules for Afghanistan (AF), Burkina Faso (BF), Bhutan (BT),
+      Central African Republic (CF), Côte d'Ivoire (CI), Micronesia (FM),
+      Ghana (GH), Guyana (GY), Montenegro (ME), Mauritania (MR), Palau (PW),
+      Senegal (SN), Chad (TD), Togo (TG) and Vanuatu (VU)
+    - Update rules for Venezuela (VE): increase max EIRP in some frequency
+      ranges
+    - Update rules for Haiti (HT)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 05 Oct 2014 23:52:43 +0100
+
+wireless-regdb (2013.11.27-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #729089)
+    - Enable VHT80 for many countries where it is permitted
+    - Enable 5 GHz band for Albania (AL), Bangladesh (BD), Algeria (DZ),
+      Indonesia (ID), Morocco (MA), Zimbabwe (ZW)
+    - Enable HT40 in 5 GHz band for Russian Federation (RU)
+    - Enable VHT80 for world roaming
+    - Remove obsolete country code CS (Serbia and Montenegro)
+    - Add 60 GHz band channels 1-3 for world roaming
+    - Remove antenna gain
+    - Add many countries to DFS regions
+    - Increase frequency range on 5 GHz for many countries
+    - Increase max EIRP on 2.4 GHz for Canada (CA), Dominican Republic (DO),
+      Grenada (GD), Guatemala (GT), Guam (GU), Panama (PA), Puerto Rico (PR),
+      Taiwan (TW), United States (US) and Uzbekistan (UZ)
+    - Increase max EIRP on part or all of 5 GHz band for Grenada (GD),
+      Honduras (HN), Jamaica (JM), Sri Lanka (LK), Monaco (MC), Mexico (MX),
+      Papua New Guinea (PG), Trinidad and Tobago (TT), Uruguay (UY),
+      Uzbekistan (UZ) and Venezuela (VE)
+    - Enable HT40 in 2.4 GHz band for Republic of Korea (KR)
+    - Reduce max EIRP on 5 GHz for Bulgaria (BG), Brunei Darussalam (BN)
+    - Reduce 5 GHz band for Bulgaria (BG), Oman (OM)
+    - Remove middle of 5 GHz band for United States (US)
+    - Correct max EIRP and reduce 5 GHz band for Saudi Arabia (SA),
+      South Africa (ZA)
+    - Reduce max EIRP and increase frequency range on 2.4 GHz for
+      Colombia (CO) and Mexico (MX)
+    - Correct max EIRP and frequency range on 5 GHz for Kenya (KE)
+  * Remove the backward-compatible 'EU' regulatory domain; drivers
+    should all be generating specific country codes, and the domain
+    is no longer up-to-date with ETSI regulations
+  * Set both PASSIVE_SCAN and NO_IBSS flags in binary database
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 24 Feb 2014 22:39:31 +0000
+
+wireless-regdb (2013.02.13-1) unstable; urgency=low
+
+  * New upstream version
+    - Add master DFS region information
+    - Add regulations for Rwanda (RW)
+    - Enable HT40 on channels 8-13 in Japan (JP)
+    - Update regulations for Ukraine (UA)
+    - Remove wrong 10 MHz rule for Japan (JP)
+    - Add regulatory rules for US, China (CN) and ETSI members on 60 GHz band
+    - Update regulatory rules for Spain (ES) on 5 GHz and 2.4 GHz
+    - Allow 40 MHz on world roaming channels 12/13
+    - Add specific data for Serbia (RS) for the 2.4 GHz and 5 GHz bands
+  * debian/control: Set Multi-Arch: foreign, thanks to Tim Gardner
+  * debian/watch: Point to new download location on kernel.org
+    - Switch to xz-compressed tarballs
+  * debian/control: Update fragment in Homepage URL (Closes: #655029)
+  * Update policy version to 3.9.4
+    - debian/copyright: Update to 1.0 format (no changes required)
+  * debian/copyright: Remove unreferenced GPL-2 text
+  * debian/copyright: Add my copyright to Debian packaging
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 30 Jun 2013 20:27:44 +0100
+
+wireless-regdb (2011.04.28-1) unstable; urgency=low
+
+  * New upstream version (Closes: #626816)
+    - Update regulatory rules for Netherlands (NL)
+    - web/Regulatory.py is now under the ISC licence
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 17 May 2011 02:40:08 +0100
+
+wireless-regdb (2010.11.24-2) unstable; urgency=low
+
+  * debian/copyright: Correct licence of web/Regulatory.py
+  * debian/control: Add references to git repository
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 12 Apr 2011 00:15:21 +0100
+
+wireless-regdb (2010.11.24-1) unstable; urgency=low
+
+  * Initial release (Closes: #572220)
+    - Most packaging was done by Kel Modderman and Stefan Lippers-Hollmann
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 11 Apr 2011 14:09:21 +0100

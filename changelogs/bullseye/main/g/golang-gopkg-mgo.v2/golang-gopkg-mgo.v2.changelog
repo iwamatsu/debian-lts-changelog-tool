@@ -1,0 +1,105 @@
+golang-gopkg-mgo.v2 (2016.08.01-7) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Wrap long lines in changelog entries: 2016.08.01-5, 2016.08.01-2.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 06 Feb 2021 03:46:48 +0000
+
+golang-gopkg-mgo.v2 (2016.08.01-6) unstable; urgency=medium
+
+  * Team upload.
+  * Removed myself from uploaders.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Sep 2019 19:16:30 -0400
+
+golang-gopkg-mgo.v2 (2016.08.01-5) unstable; urgency=medium
+
+  * Restore
+    d/patches/0001-fix-integer-constant-overflow-on-32-bit-systems.patch,
+    mistakenly not added to the git repo.
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Mon, 12 Feb 2018 09:42:20 +1300
+
+golang-gopkg-mgo.v2 (2016.08.01-4) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:09:34 -0500
+
+golang-gopkg-mgo.v2 (2016.08.01-3) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 15:12:29 -0500
+
+golang-gopkg-mgo.v2 (2016.08.01-2) unstable; urgency=medium
+
+  * Backport
+    d/patches/0001-fix-integer-constant-overflow-on-32-bit-systems.patch from
+    upstream to fix builds of dependencies on 32-bit systems. (Closes: 886432)
+  * Add myself to Uploaders.
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Tue, 09 Jan 2018 09:38:03 +1300
+
+golang-gopkg-mgo.v2 (2016.08.01-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * d/copyright: mention internal/json.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Dec 2017 21:25:55 -0500
+
+golang-gopkg-mgo.v2 (2016.02.04-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Move to salsa.debian.org.
+  * Use XS-Go-Import-Path.
+  * Fix priority-extra-is-replaced-by-priority-optional.
+
+ -- Alexandre Viau <aviau@debian.org>  Fri, 29 Dec 2017 21:06:46 -0500
+
+golang-gopkg-mgo.v2 (2016.02.04-1) unstable; urgency=medium
+
+  * New upstream version
+  * Changed Vcs-Git and Vcs-Browser to secure (https) URLs
+  * Bumped Standards-Version to 3.9.8
+  * Set d/compat to 9
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 25 Jun 2016 23:02:20 +0200
+
+golang-gopkg-mgo.v2 (2015.12.06-1) unstable; urgency=medium
+
+  * Switch to using pristine-tar
+  * New upstream release
+  * Changed my email to aviau@debian.org
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 06 Jan 2016 14:18:54 -0500
+
+golang-gopkg-mgo.v2 (2015.06.03-3) unstable; urgency=low
+
+  * Removed unused mognodb dependency (Closes: #803388)
+  * Added watch file
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Wed, 04 Nov 2015 12:39:24 -0800
+
+golang-gopkg-mgo.v2 (2015.06.03-2) unstable; urgency=medium
+
+  * Added missing copyright section for internal/sasl/sspi_windows.*
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Thu, 23 Jul 2015 13:28:47 -0400
+
+golang-gopkg-mgo.v2 (2015.06.03-1) unstable; urgency=low
+
+  [ James Page ]
+  * Initial release (Closes: #732684).
+
+  [ Alexandre Viau ]
+  * Added launchpad.net/mgo symlink
+  * Packaged newer upstream version
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Sat, 18 Jul 2015 23:30:05 -0400

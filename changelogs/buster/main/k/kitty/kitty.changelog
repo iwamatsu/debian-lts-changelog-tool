@@ -1,0 +1,109 @@
+kitty (0.13.3-1+deb10u1) buster-security; urgency=high
+
+  * Backport security fix for CVE-2020-35605
+    + Fix arbitrary command execution via graphics protocol
+
+ -- James McCoy <jamessan@debian.org>  Thu, 24 Dec 2020 11:59:03 -0500
+
+kitty (0.13.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Declare compliance with Policy 4.3.0, no changes needed
+
+ -- James McCoy <jamessan@debian.org>  Thu, 24 Jan 2019 23:16:31 -0500
+
+kitty (0.13.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add python3-pil to Build-Depends for tests
+  * Update kitty's homepage.
+    Thanks to Chris Lamb for the patch (Closes: #911848)
+
+ -- James McCoy <jamessan@debian.org>  Sun, 16 Dec 2018 20:40:07 -0500
+
+kitty (0.12.3-1) unstable; urgency=medium
+
+  * New upstream release
+    + Add support for IME via IBus, enabled by setting GLFW_IM_MODULE=ibus
+    + New command, kitty + complete, to export shell completion for bash, zsh,
+      and fish
+  * control: Add libdbus-1-dev to Build-Depends for IBus support
+  * rules: Disable verbose builds for DEB_BUILD_OPTIONS=terse
+  * Declare compliance with Policy 4.2.1
+
+ -- James McCoy <jamessan@debian.org>  Sun, 30 Sep 2018 09:36:30 -0400
+
+kitty (0.11.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Register kitty's HTML docs with doc-base
+  * lintian: Add ${misc:Depends} to kitty-terminfo
+
+ -- James McCoy <jamessan@debian.org>  Sun, 15 Jul 2018 08:55:48 -0400
+
+kitty (0.11.2-3) unstable; urgency=medium
+
+  * Avoid stripping PayPal pixel when not building docs
+  * Declare compliance with Policy 4.1.5, no changes needed
+
+ -- James McCoy <jamessan@debian.org>  Wed, 04 Jul 2018 19:42:34 -0400
+
+kitty (0.11.2-2) unstable; urgency=medium
+
+  * Move python3-sphinx to Build-Depends, since arch builds also build docs.
+
+ -- James McCoy <jamessan@debian.org>  Wed, 04 Jul 2018 18:05:21 -0400
+
+kitty (0.11.2-1) unstable; urgency=medium
+
+  * New upstream release
+    + Lenna image removed
+    + Accepts -T to set the terminal's title
+  * Update copyright for new release
+  * Replace manual doc generation with upstream's docs target
+  * Install example kitty.conf from new location
+  * Enable dh sphinxdoc addon
+  * lintian:
+    + Remove PayPal tracking pixel from support.html
+    + Disable the "Fork me" ribbon
+  * Add kitty as an alternative for x-terminal-emulator. (Closes: #900704)
+
+ -- James McCoy <jamessan@debian.org>  Wed, 04 Jul 2018 14:02:55 -0400
+
+kitty (0.10.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- James McCoy <jamessan@debian.org>  Wed, 30 May 2018 22:17:18 -0400
+
+kitty (0.9.1-1) unstable; urgency=medium
+
+  [ upstream ]
+  * Fix build failures related to unsigned char or big-endian platforms.
+    (Closes: #896099)
+  * New kitten for performing/viewing diffs
+  * Output GL version when running with --debug-gl (to help with #897381)
+
+  [ James McCoy ]
+  * rules:
+    + Override upstream's CFLAGS instead of augmenting them
+    + Export CPPFLAGS independently, now that upstream's buildsystem
+      explicitly handles them
+  * Add a watch file
+  * Update d/copyright for 0.9.1
+  * control:
+    + Add libx11-xcb-dev to Build-Depends instead of relying on it implicitly
+      being installed
+    * Recommend kitty-doc from kitty package so documentation is typically
+      available
+  * Convert asciidoc files into html documentation (Closes: #897003)
+    + Add asciidoctor to Build-Depends-Indep
+    + Create new kitty-doc package
+
+ -- James McCoy <jamessan@debian.org>  Mon, 07 May 2018 22:54:49 -0400
+
+kitty (0.9.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #886311)
+
+ -- James McCoy <jamessan@debian.org>  Wed, 18 Apr 2018 23:46:22 -0400

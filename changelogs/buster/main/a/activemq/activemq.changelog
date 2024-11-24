@@ -1,0 +1,473 @@
+activemq (5.15.16-0+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Security Team.
+  * activemq: enable salsa-ci
+  * activemq: add patch to fix CVE-2022-41678
+
+ -- Arturo Borrero Gonzalez <arturo@debian.org>  Mon, 25 Nov 2024 23:03:59 +0100
+
+activemq (5.15.16-0+deb10u1) buster-security; urgency=high
+
+  * Team upload.
+  * New upstream version 5.15.16.
+  * Fix CVE-2020-13920:
+    Apache ActiveMQ uses LocateRegistry.createRegistry() to create the JMX RMI
+    registry and binds the server to the "jmxrmi" entry. It is possible to
+    connect to the registry without authentication and call the rebind method
+    to rebind jmxrmi to something else. If an attacker creates another server
+    to proxy the original, and bound that, he effectively becomes a man in the
+    middle and is able to intercept the credentials when an user connects.
+  * Fix CVE-2021-26117:
+    The optional ActiveMQ LDAP login module can be configured to use anonymous
+    access to the LDAP server. In this case the anonymous context is used to
+    verify a valid users password in error, resulting in no check on the
+    password.
+  * Fix CVE-2023-46604:
+    The Java OpenWire protocol marshaller is vulnerable to Remote Code
+    Execution. This vulnerability may allow a remote attacker with network
+    access to either a Java-based OpenWire broker or client to run arbitrary
+    shell commands by manipulating serialized class types in the OpenWire
+    protocol to cause either the client or the broker (respectively) to
+    instantiate any class on the classpath.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 20 Nov 2023 09:33:33 +0100
+
+activemq (5.15.8-2) unstable; urgency=medium
+
+  * Team upload
+  * Replace commons-httpclient symlink with httpclient and remove libstax-java
+    from Build-Depends because this package is only required for activemq-rar
+    which we currently ignore.
+  * activemq: Explicitly depend on libgeronimo-jacc-1.1-spec-java to fix a
+    broken symlink. Thanks to Andreas Beckmann for the report.
+    (Closes: #916777)
+  * Declare compliance with Debian Policy 4.3.0.
+
+ -- Markus Koschany <apo@debian.org>  Fri, 28 Dec 2018 21:39:42 +0100
+
+activemq (5.15.8-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.15.8.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 19 Nov 2018 16:26:52 +0100
+
+activemq (5.15.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.15.7.
+  * Fix FTBFS with OpenJDK 11 by build-depending on libjaxb-java and
+    libgeronimo-annotation-1.3-spec-java. (Closes: #912642)
+  * Add java11.patch.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 03 Nov 2018 00:24:44 +0100
+
+activemq (5.15.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.15.6.
+    - Fix CVE-2018-11775: ActiveMQ Client: Missing TLS Hostname Verification.
+      Thanks to Salvatore Bonaccorso for the report. (Closes: #908950)
+  * Declare compliance with Debian Policy 4.2.1.
+  * Add a new patch and fix the current FTBFS because debian/maven.rules does
+    not work as expected with maven plugins. (Closes: #907688)
+
+ -- Markus Koschany <apo@debian.org>  Tue, 18 Sep 2018 20:56:32 +0200
+
+activemq (5.15.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * Support new ACTIVEMQ_OUT variable in activemq-options file.
+    Fixes startup error of activemq daemon process.
+    Thanks to Chris Donoghue for the report. (Closes: #901366)
+
+ -- Markus Koschany <apo@debian.org>  Tue, 12 Jun 2018 16:21:56 +0200
+
+activemq (5.15.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.15.4.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 04 Jun 2018 22:30:12 +0200
+
+activemq (5.15.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Drop libactivemq-java-doc and work around the FTBFS with Java 9.
+    (Closes: #893236)
+  * Enable activemq-jdbc-store module.
+    Add optional dependencies on commons-pool and commons-dbcp.
+    Fix broken commons-pool2.jar symlink.
+    Thanks to Michail Bachmann for the report and patch. (Closes: #895028)
+
+ -- Markus Koschany <apo@debian.org>  Tue, 24 Apr 2018 12:39:58 +0200
+
+activemq (5.15.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.15.3.
+    - Fix CVE-2017-15709: Information Leak
+      When using the OpenWire protocol it was found that certain system details
+      (such as the OS and kernel version) are exposed as plain text. Thanks to
+      Salvatore Bonaccorso for the report. (Closes: 890352)
+  * Remove libjosql-java-doc from B-D because it is gone.
+    Thanks to Andreas Beckmann for the report. (Closes: #891114)
+  * Use compat level 11.
+  * Declare compliance with Debian Policy 4.1.3.
+  * Install NOTICE file.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 06 Mar 2018 20:26:39 +0100
+
+activemq (5.15.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Added the missing dependency on libcommons-net-java due to #884182
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 12 Dec 2017 13:54:33 +0100
+
+activemq (5.15.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+  * Depend on the Geronimo spec jars instead of glassfish-javaee
+  * Removed the unused build dependency on libmaven-enforcer-plugin-java
+  * Simplified the Maven rules
+  * Standards-Version updated to 4.1.2
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 12 Dec 2017 11:01:48 +0100
+
+activemq (5.14.5-3) unstable; urgency=medium
+
+  * Team upload.
+  * Adjust maven.rules entry for jmdns to address FTBFS (Closes: #871346)
+
+ -- tony mancill <tmancill@debian.org>  Sun, 20 Aug 2017 20:57:58 -0700
+
+activemq (5.14.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+  * Declare compliance with Debian Policy 4.0.0.
+  * Use https for Format field.
+  * Add debian/clean and ensure that activemq can be built twice in a row.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 22 Jun 2017 13:47:25 +0200
+
+activemq (5.14.5-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.14.5.
+  * Drop CVE-2017-7559.patch. Applied upstream.
+  * Fix CVE version typo in last changelog entry. (Closes: #861786)
+
+ -- Markus Koschany <apo@debian.org>  Sat, 20 May 2017 23:23:07 +0200
+
+activemq (5.14.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix CVE-2015-7559.
+    DoS in client via shutdown command.
+    Thanks to Salvatore Bonaccorso for the report. (Closes: #860866)
+
+ -- Markus Koschany <apo@debian.org>  Fri, 21 Apr 2017 16:24:41 +0200
+
+activemq (5.14.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * libactivemq-java: Depend on libshiro-java and symlink system jar files
+    into /usr/share/activemq directory.
+  * maven.ignoreRules: Don't ignore shiro and log4j modules.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 08 Jan 2017 20:21:27 +0100
+
+activemq (5.14.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * Build the shiro and log4j-appender modules
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 22 Dec 2016 12:41:01 +0100
+
+activemq (5.14.2+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.14.2+dfsg.
+
+ -- Markus Koschany <apo@debian.org>  Fri, 09 Dec 2016 23:54:01 +0100
+
+activemq (5.14.1+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 5.14.1+dfsg.
+  * activemq: Fix Lintian error and depend on lsb-base since the init script
+    requires it.
+  * Remove libaxis-java and libaxis-java-doc from Build-Depends. Apparently
+    they are not needed anymore.
+
+ -- Markus Koschany <apo@debian.org>  Thu, 06 Oct 2016 22:27:04 +0200
+
+activemq (5.14.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * activemq: Depend on liblog4j1.2-java to ensure that logging works
+    out-of-the-box. (Closes: #839244)
+  * Fix symlink and replace commons-pool.jar with commons-pool2.jar.
+  * Switch to compat level 10.
+
+ -- Markus Koschany <apo@debian.org>  Fri, 30 Sep 2016 21:35:06 +0200
+
+activemq (5.14.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 5.14.0+dfsg.
+  * Rebase and simplify disable-broker-test-dependency.patch.
+  * libactivemq-java.poms: Remove obsolete fileserver module.
+  * Ignore activemq-cf module.
+  * Build-Depend on libjmdns-java and do not ignore it anymore.
+  * Drop exclude-jmdns.patch
+  * activemq: Symlink jmdns.jar into optional lib directory.
+  * Add activemq-client-jar.patch and use type jar for packaging instead of
+    bundle to avoid a build failure..
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Sep 2016 12:54:44 +0200
+
+activemq (5.13.4+dfsg-2) unstable; urgency=medium
+
+  * Change the maven rule for org.springframework to use the debian version.
+    (Closes: #832367)
+
+ -- Markus Koschany <apo@debian.org>  Sun, 24 Jul 2016 21:25:20 +0200
+
+activemq (5.13.4+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 5.13.4+dfsg.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 24 Jul 2016 06:38:18 +0200
+
+activemq (5.13.3+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 5.13.3+dfsg.
+  * Enable stomp module. (Closes: #825382).
+  * Update README.Debian.
+  * Drop disable-jetty-all-dependency.patch and ignore jetty-all artifact
+    instead.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 26 Jun 2016 15:45:05 +0200
+
+activemq (5.13.2+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Enable activemq-fileserver, activemq-mqtt, activemq-ra and activemq-spring
+    modules.
+  * Update disable-broker-test-dependency.patch
+  * Build-Depend on libjetty9-java for fileserver module.
+  * Add libqdox-java, libservlet3.1-java, libmqtt-client-java,
+    libhawtdispatch-java and libzookeeper-java to Build-Depends.
+  * Add disable-jetty-all-dependency.patch.
+  * Really add init-debian-default-values.patch.
+  * activemq-options: Use default-java for JAVA_HOME variable.
+  * Drop exclude-geronimo-jca.patch.
+  * maven.ignoreRules: Ignore
+    - org.linkedin
+    - org.jencks
+    - org.springframework.osgi
+    - org-paho
+  * Add activemq-spring.patch and remove code from activemq-pool which is not
+    available.
+  * Update activemq.links and symlink all necessary jars into ACTIVEMQ_HOME
+    directory.
+  * Depend on missing spring dependencies, libhawtbuf-java, libxbean-java and
+    libactivemq-protobuf-java.
+  * Remove unused debian/main.xml file.
+
+ -- Markus Koschany <apo@debian.org>  Sat, 19 Mar 2016 19:44:32 +0100
+
+activemq (5.13.2+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    - Fixes FTBFS. (Closes: #808636)
+    - Fixes CVE-2015-5254: unsafe deserialization and all other security
+      vulnerabilities. (Closes: #809733)
+  * Switch from cdbs to dh sequencer.
+  * Use Files-Excluded mechanism and drop orig-tar.sh
+  * Vcs-fields: Use https.
+  * Use java7-runtime-headless as alternative dependency for activemq.
+  * Declare compliance with Debian Policy 3.9.7.
+  * Remove debian/maven.cleanIgnoreRules.
+  * debian/patches:
+    - Drop all CVE-* patches. Fixed upstream.
+    - Drop activemq-admin.patch because this file does not exist anymore.
+    - Drop disable_some_modules.diff and disable modules with
+      libactivemq-java.poms instead.
+    - Drop exclude-* patches.
+    - Rebase init_debian_default_values.diff.
+    - Drop javadoc_links.diff because the activemq-core module does not exist
+      anymore.
+    - Add disable-broker-test-dependency.patch and disable test dependencies
+      which would cause a FTBFS.
+    - Add exclude-geronimo-jca.patch and remove code that depends on geronimo
+      jca.
+    - Add exclude-jmdns.patch and remove code that depends on jmdns.
+  * wrap-and-sort -sa.
+  * Add libderby-java to Build-Depends.
+  * activemq-options: Use OpenJDK 8 as the default Java implementation.
+  * Update debian/watch and point to the new repository at github.
+  * activemq.postrm: Do not delete system users and groups on purge.
+  * activemq.postrm: Remove /etc/activemq on purge. (Closes: #770455)
+
+ -- Markus Koschany <apo@debian.org>  Sun, 13 Mar 2016 22:53:35 +0100
+
+activemq (5.6.0+dfsg1-5) unstable; urgency=medium
+
+  * Team upload.
+  * Add missing build-dep on libregexp-java. (Closes: #802858)
+  * Use libcommons-net-java (>= 3).  (Closes: #800764)
+  * Use libhttpclient-java instead of libcommons-httpclient-java.
+    (Closes: #800977)
+
+ -- tony mancill <tmancill@debian.org>  Sun, 25 Oct 2015 11:44:36 -0700
+
+activemq (5.6.0+dfsg1-4+deb8u1) jessie-security; urgency=high
+
+  * Team upload.
+  * Fixed CVE-2014-3576: DoS via unauthenticated remote shutdown command
+    (Closes: #792857)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 03 Aug 2015 19:17:04 +0200
+
+activemq (5.6.0+dfsg1-4) unstable; urgency=high
+
+  * Team upload.
+  * Fixed security issues (Closes: #777196)
+    - CVE-2014-3612: JAAS LDAPLoginModule allows empty password authentication
+    - CVE-2014-3600: XML External Entity expansion when evaluating XPath
+      expressions
+  * Standards-Version updated to 3.9.6 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 18 Feb 2015 20:04:38 +0100
+
+activemq (5.6.0+dfsg1-3) unstable; urgency=high
+
+  * Team upload.
+  * Disable JMX by default (Closes: #769887)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 21 Nov 2014 14:02:16 +0100
+
+activemq (5.6.0+dfsg1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Install links to asm4 jars in /usr/share/activemq/lib/optional
+    (Closes: #763156)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 29 Sep 2014 11:48:17 +0200
+
+activemq (5.6.0+dfsg1-1) unstable; urgency=medium
+
+  [ Emmanuel Bourg ]
+  * Team upload.
+  * Switch to debhelper level 9
+  * debian/control:
+    - Standards-Version updated to 3.9.5 (no changes)
+    - Use canonical URLs for the Vcs-* fields
+    - Replaced the dependency on openjdk-6-jre-headless by default-jre-headless
+  * Use XZ compression for the upstream tarball
+
+  [ Eugene Zhukov ]
+  * Removed non-sourced .js files (Closes: #735227)
+
+  [ tony mancill ]
+  * Tweak debian/watch to match dfsgX.
+
+ -- tony mancill <tmancill@debian.org>  Wed, 27 Aug 2014 11:08:32 -0700
+
+activemq (5.6.0+dfsg-1) unstable; urgency=low
+
+  * New upstream release:
+    - Refresh all patches.
+    - Drop d/patches/CVE-2011-4605.diff: merged upstream.
+    - d/patches/exclude_mqtt.diff: Disable MQTT transport.
+    - d/patches/exclude_leveldb.diff: Disable LevelDB Store.
+  * d/maven.rules: Upgrade internal components version.
+  * Build-Depends on libxstream-java (>= 1.4).
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Fri, 25 May 2012 00:47:55 +0200
+
+activemq (5.5.0+dfsg-7) unstable; urgency=low
+
+  [ Ulrich Dangel ]
+  * Install the activemq-{core,console,run} and kahadb jar files to
+    /usr/share/java.  (Closes: #668943)
+    - Add the necessary --java-lib flag to d/libactivemq-java.poms
+
+  [ Damien Raude-Morvan ]
+  * Thanks to Ulrich Dangel for RC bugfix, upload to unstable.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Tue, 01 May 2012 14:38:27 +0200
+
+activemq (5.5.0+dfsg-6) unstable; urgency=low
+
+  * d/patches/activemq-admin.patch: Fix activemq-admin "unexpected operator"
+    (Closes: #662698). Thanks to Mathieu Mitchell.
+  * Bump Standards-Version to 3.9.3: no changes needed.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sun, 01 Apr 2012 20:26:10 +0200
+
+activemq (5.5.0+dfsg-5) unstable; urgency=high
+
+  * Fix CVE-2011-4905 (potential Denial of Service) by backporting upstream
+    patch on failover feature. (Closes: #655495).
+  * Set urgency=high for security fix.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sun, 15 Jan 2012 19:38:21 +0100
+
+activemq (5.5.0+dfsg-4) unstable; urgency=low
+
+  * d/activemq.init: Merge change proposed by Jonas Genannt to allow
+    console startup, useful for debugging purposes. (Closes: #645241).
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Wed, 26 Oct 2011 21:13:20 +0200
+
+activemq (5.5.0+dfsg-3) unstable; urgency=low
+
+  * d/control: Wrap-and-sort Build-Depends.
+  * d/activemq.links: Since libasm3-java package now provide splited JAR
+    also link all ASM3 jars (Closes: #644834).
+  * d/maven.rules:
+    - Don't replace osgi artifacts since they are now provided by
+    official osgi-core package.
+    - Force 2.1.1 version of maven-war-plugin.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Tue, 11 Oct 2011 23:11:16 +0200
+
+activemq (5.5.0+dfsg-2) unstable; urgency=low
+
+  * Drop d/patches/exclude_xsd_install.diff and install XSD files into JAR.
+  * Build-Depends on libxbean-java 3.7 for maven-xbean-plugin.
+  * Add new "activemq" package to start ActiveMQ server:
+    - d/activemq.{postinst,prerm}: Create a activemq system user
+    - d/activemq.{install,links}: Install activemq and activemq-admin commands
+      to /usr/bin/, set /usr/share/activemq/ as ACTIVEMQ_HOME and install
+      many examples into /usr/share/doc/activemq/examples/.
+    - d/activemq.README.Debian: Describe how to setup an alternative
+      instance (Closes: #634868).
+    - Provide a way to handle multi-instances of activemq. Each directory
+      inside /etc/activemq/instances-enabled/ will be started as an
+      instance with its own configuration. Thanks to Jonas Genannt for patch.
+  * d/patches/javadoc_links.diff: Update links to system-wide Javadoc.
+  * d/libactivemq-java.README.Debian: Describe disabled features regarding
+    upstream package.
+  * d/control: Don't use package name in synospis.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sun, 04 Sep 2011 18:50:59 +0200
+
+activemq (5.5.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #627778).
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Tue, 21 Jun 2011 00:32:12 +0200

@@ -1,0 +1,504 @@
+zeromq3 (4.3.1-4+deb10u3) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2021-20234: Memory leak in client induced by malicious server(s)
+  * CVE-2021-20235: Heap overflow when receiving malformed ZMTP v1 packets
+  * CVE-2021-20237: Memory leak in PUB server induced by malicious client(s)
+
+ -- Adrian Bunk <bunk@debian.org>  Fri, 27 Sep 2024 18:05:08 +0300
+
+zeromq3 (4.3.1-4+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * zeromq connects peer before handshake is completed (CVE-2020-15166)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 06 Sep 2020 13:22:41 +0200
+
+zeromq3 (4.3.1-4+deb10u1) buster-security; urgency=high
+
+  [ Luca Boccassi <bluca@debian.org> ]
+  * Fix CVE-2019-13132: application metadata not parsed correctly when using
+    CURVE.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 06 Jul 2019 14:13:37 +0000
+
+zeromq3 (4.3.1-4) unstable; urgency=medium
+
+  [ Luca Boccassi <bluca@debian.org> ]
+  * Fix GSSAPI support build (closes: #925914).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 28 Mar 2019 16:37:09 +0000
+
+zeromq3 (4.3.1-3) unstable; urgency=medium
+
+  [ Luca Boccassi <bluca@debian.org> ]
+  * Patch to prefer CXX11 atomics for PPC64 and RISC-V architectures.
+  * test_pair_ipc fails on GNU/Hurd due to wildcard bind, mark it as XFAIL.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 26 Jan 2019 12:49:45 +0000
+
+zeromq3 (4.3.1-2) unstable; urgency=medium
+
+  * Update libzmq3-dev dependency.
+
+  [ Luca Boccassi <bluca@debian.org> ]
+  * Fix self tests failures.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 13 Jan 2019 18:19:53 +0000
+
+zeromq3 (4.3.1-1) unstable; urgency=high
+
+  * New upstream release.
+  * Fix pointer overflow in zmq::v2_decoder_t::size_ready() leading to
+    remote code execution (closes: #919098).
+  * Update library symbols.
+  * Update Standards-Version to 4.3.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 12 Jan 2019 17:37:00 +0000
+
+zeromq3 (4.2.5-2) unstable; urgency=medium
+
+  * Update Standards-Version to 4.1.5 .
+
+  [ Luca Boccassi <luca.boccassi@gmail.com> ]
+  * Stop libstdc++ symbols from being exported on Debian/[Hurd|kFreeBSD]
+    (closes: #902380).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 25 Aug 2018 17:46:56 +0000
+
+zeromq3 (4.2.5-1) unstable; urgency=medium
+
+  * New upstream release (closes: #894244).
+  * Update watch file.
+  * Disable Vcs-* fields for now (closes: #791997, #844108).
+  * Don't specify parallel to debhelper.
+  * Update Standards-Version to 4.1.3 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 27 Mar 2018 18:56:19 +0000
+
+zeromq3 (4.2.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Build with NACK-Oriented Reliable Multicast (NORM) support
+    (closes: #884300).
+  * Build with Kerberos V5 Generic Security Services API (GSSAPI) support.
+  * Update libzmq5 symbols for kFreeBSD.
+  * Update debhelper level to 11 .
+  * Update Standards-Version to 4.1.2:
+    - remove libzmq5-dbg package and use the auto-generated one.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 17 Dec 2017 11:51:16 +0000
+
+zeromq3 (4.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove no_IPv6_on_Hurd.patch as applied upstream.
+  * Remove dh-autoreconf build dependency.
+  * Update Standards-Version to 4.0.0 and debhelper level to 10 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 18 Sep 2017 17:17:13 +0000
+
+zeromq3 (4.2.1-4) unstable; urgency=medium
+
+  * Backport upstream fix to disable experimental zmq_poll implementation
+    (closes: #861416).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 28 Apr 2017 18:52:42 +0000
+
+zeromq3 (4.2.1-3) unstable; urgency=medium
+
+  * Compile with OpenPGM support (closes: #856023).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 24 Feb 2017 17:35:03 +0000
+
+zeromq3 (4.2.1-2) unstable; urgency=low
+
+  * Backport upstream fix for Hurd FTBFS (closes: #849860).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 01 Jan 2017 15:53:54 +0000
+
+zeromq3 (4.2.1-1) unstable; urgency=low
+
+  * New upstream, bugfix release.
+  * Sync with Ubuntu.
+
+  [ Steve Langasek <steve.langasek@ubuntu.com> ]
+  * Never use hard-coded local port numbers in tests.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 31 Dec 2016 16:03:21 +0000
+
+zeromq3 (4.2.0-2) unstable; urgency=low
+
+  * Update library symbols for kfreebsd-i386 .
+  * Add xmlto and asciidoc to build depends to generate manpages
+    (closes: #844104).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 12 Nov 2016 23:13:55 +0000
+
+zeromq3 (4.2.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #843157).
+  * Update library symbols.
+  * Drop merged in patches.
+  * Update remaining patches.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Fri, 04 Nov 2016 15:30:31 +0000
+
+zeromq3 (4.1.5-2) unstable; urgency=low
+
+  * Use Sodium crypto library for CURVE security (closes: #827830).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 27 Jun 2016 19:19:12 +0000
+
+zeromq3 (4.1.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop gcc6-fix.patch as this release contains it.
+  * Update Hurd support patch.
+  * Update watch file (closes: #827526).
+  * Update Standards-Version to 3.9.8 .
+  * Keep rebuildable.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 18 Jun 2016 09:43:48 +0000
+
+zeromq3 (4.1.4-7) unstable; urgency=medium
+
+  * Switch back libzmq5-dev package name to libzmq3-dev for the transition
+    (closes: #818187).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 14 Mar 2016 20:48:59 +0100
+
+zeromq3 (4.1.4-6) unstable; urgency=low
+
+  * Fix FTBFS with GCC 6 (closes: #812049).
+  * Update kFreeBSD symbols.
+  * Only conflict / replace the development package with the previous soname
+    version.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 28 Feb 2016 16:26:56 +0100
+
+zeromq3 (4.1.4-5) unstable; urgency=low
+
+  * Update the zmq.hpp C++ header wrapper.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 24 Feb 2016 22:32:08 +0100
+
+zeromq3 (4.1.4-4) unstable; urgency=low
+
+  * Make self-test failures non-fatal and verbose (closes: #815494).
+  * Keep rebuildable.
+
+  [ Steven Chamberlain <steven@pyro.eu.org> ]
+  * Fix kFreeBSD FTBFS (closes: #815495).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 22 Feb 2016 17:51:44 +0100
+
+zeromq3 (4.1.4-3) unstable; urgency=low
+
+  * Disable buildd failing tests.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 21 Feb 2016 13:46:33 +0100
+
+zeromq3 (4.1.4-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Builds on Hurd (closes: #799235).
+  * Update copyright file.
+  * Update Standards-Version to 3.9.7 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 21 Feb 2016 09:13:38 +0100
+
+zeromq3 (4.1.4-1) experimental; urgency=low
+
+  * New upstream release (closes: #790839).
+  * Use patch to Hurd build support.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 20 Jan 2016 18:58:46 +0100
+
+zeromq3 (4.1.2-1) experimental; urgency=low
+
+  * New upstream release (closes: #790839).
+  * Library transition to version 5 of soname.
+  * Update symbols for libzmq5 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 11 Jul 2015 11:00:09 +0000
+
+zeromq3 (4.0.5+dfsg-3) unstable; urgency=high
+
+  * V3 protocol handler vulnerable to downgrade attacks, use upstream
+    backported fix for this issue (closes: #784366).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 05 May 2015 21:06:02 +0000
+
+zeromq3 (4.0.5+dfsg-2) unstable; urgency=medium
+
+  * Don't use test_security_curve to prevent FTBFS.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 23 Oct 2014 06:29:29 +0000
+
+zeromq3 (4.0.5+dfsg-1) unstable; urgency=high
+
+  * New upstream release with important fixes, including:
+    - CVE-2014-7202 - stream_engine.cpp security can be downgraded,
+    - CVE-2014-7203 - curve messages can be replayed.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 22 Oct 2014 15:07:39 +0000
+
+zeromq3 (4.0.4+dfsg-3) unstable; urgency=medium
+
+  * Build with libsodium for crypto support (closes: #744969).
+  * Update Standards-Version to 3.9.6 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 20 Oct 2014 19:16:16 +0000
+
+zeromq3 (4.0.4+dfsg-2) unstable; urgency=low
+
+  * Honour nocheck option in DEB_BUILD_OPTIONS .
+  * New maintainer (closes: #741746).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 20 Mar 2014 14:51:15 +0000
+
+zeromq3 (4.0.4+dfsg-1) unstable; urgency=medium
+
+  * QA upload; orphan the package
+    - Upload to unstable
+  * New upstream release
+  * Update repack.stub script
+  * Drop 02_fix-exported-symbols.patch and 03_fix-s390-rdtsc.patch
+    (merged upstream)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 16 Mar 2014 14:02:28 +0100
+
+zeromq3 (4.0.3+dfsg-1) experimental; urgency=medium
+
+  * New upstream release (Closes: #736353)
+  * Drop 01_shutdown-race.patch (merged upstream)
+  * Update *.symbols file
+  * Don't install README anymore
+  * Update copyright file
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Wed, 05 Feb 2014 22:06:16 +0100
+
+zeromq3 (3.2.4+dfsg-4) unstable; urgency=medium
+
+  * Update Standards-Version to 3.9.5 (no changes needed)
+  * Add 03_fix-s390-rdtsc.patch to fix FTBFS on s390x (Closes: #734521)
+  * Re-enable tests on s390x
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 12 Jan 2014 13:21:34 +0100
+
+zeromq3 (3.2.4+dfsg-3) unstable; urgency=medium
+
+  * Do not export C++ symbols (Closes: #732654)
+  * Use dh-autoreconf instead of autotools-dev
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Fri, 20 Dec 2013 19:11:09 +0100
+
+zeromq3 (3.2.4+dfsg-2) unstable; urgency=medium
+
+  * Fix vcs-field-not-canonical
+  * Add symbols file
+  * Add 01_shutdown-race.patch to fix a race condition on shutdown
+    (Closes: #732576)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Thu, 19 Dec 2013 13:42:12 +0100
+
+zeromq3 (3.2.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * Update the zmq.hpp C++ header
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Fri, 20 Sep 2013 13:56:16 +0200
+
+zeromq3 (3.2.3+dfsg-2) unstable; urgency=low
+
+  * Make test failures non-fatal on kfreebsd and s390/s390x
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 14 May 2013 15:42:02 +0200
+
+zeromq3 (3.2.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - Change connection failure test to use an invalid hostname
+      (Closes: #705561)
+  * Fix typo in libzmq3-dbg description (Closes: #696731)
+  * Provide the zmq.hpp C++ header again (Closes: #697743)
+  * Upload to unstable
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Fri, 03 May 2013 13:00:43 +0200
+
+zeromq3 (3.2.2+dfsg-1) experimental; urgency=low
+
+  * New upstream release (Closes: #694087)
+  * Do not mangle upstream version anymore
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sat, 24 Nov 2012 17:07:58 +0100
+
+zeromq3 (3.2.1~rc2+dfsg-1) experimental; urgency=low
+
+  * New upstream RC release (Closes: #690704)
+  * Bump Standards-Version to 3.9.4 (no changes needed)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 16 Oct 2012 19:49:30 +0200
+
+zeromq3 (3.2.0~rc1+dfsg-1) experimental; urgency=low
+
+  * New upstream RC release
+  * Use repack.{local,stub} instead of get-orig-source rule
+  * Add 01_fix-unused-variable-error.patch
+  * Remove build dependency on uuid-dev (no more needed)
+  * Add 02_check-ifdef-SO_NOSIGPIPE.patch to fix kfreebsd build
+  * Add 03_fix-test_shutdown_stress-segfault.patch
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 12 Jun 2012 10:53:58 +0200
+
+zeromq3 (3.1.0~beta+dfsg-2) experimental; urgency=low
+
+  * libzmq3-dev Conflicts with libzmq-dev (Closes: #676160)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 05 Jun 2012 09:29:58 +0200
+
+zeromq3 (3.1.0~beta+dfsg-1) experimental; urgency=low
+
+  * Initial ZeroMQ v3 packaging (Closes: #661503)
+    - Update get-orig-source rule and watch file
+    - Rename binary packages to new SONAME
+    - Update Vcs-* headers too
+    - Update copyright file
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Mon, 04 Jun 2012 21:21:09 +0200
+
+zeromq (2.2.0+dfsg-2) unstable; urgency=low
+
+  * Make -dev package Multi-Arch: same too (Closes: #674601)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 03 Jun 2012 13:29:40 +0200
+
+zeromq (2.2.0+dfsg-1) unstable; urgency=low
+
+  * New maintainer (Closes: #673619)
+  * Repack upstream tarball to remove bundled openpgm tarball and xmlParser
+    - Mangle dversion in watch file
+  * Switch to short-form dh rules file
+    - Use autotools-dev plugin
+  * Bump debhelper compat level to 9
+  * Update copyright file using Copyright-Format 1.0
+  * Remove source options
+  * Remove unused lintian overrides
+  * Add Multi-Arch headers
+    - Fix *.install files to use multi-arch paths
+  * Vcs-* tags point to collab-maint repository
+  * Fix short and long descriptions formatting
+  * Ignore beta 3.x releases in watch file
+  * Remove outdated and uselss README.Debian
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 22 May 2012 22:24:49 +0200
+
+zeromq (2.2.0-1) unstable; urgency=low
+
+  * [5661946] Imported Upstream version 2.2.0 (Closes: #672427)
+  * [bbf467d] Bump Standards-Version to 3.9.3 with no changes
+  * [0da0708] Add Vcs-Git and Vcs-Browser to debian/control
+
+ -- Martin Lucina <martin@lucina.net>  Sun, 20 May 2012 11:27:32 +0200
+
+zeromq (2.1.11-1) unstable; urgency=low
+
+  * [4016b65] Imported Upstream version 2.1.11
+  * [eaa74d0] Maintainer e-mail address changed
+  * [9943256] Run testsuite during build (Closes: #655620)
+  * [5ea0ff8] Remove unneeded libzmq.la from libzmq-dev (Closes: #633292)
+
+ -- Martin Lucina <martin@lucina.net>  Mon, 23 Jan 2012 11:14:23 +0100
+
+zeromq (2.1.10-1) unstable; urgency=low
+
+  * New upstream version. 
+
+ -- Martin Lucina <mato@kotelna.sk>  Mon, 03 Oct 2011 17:09:06 +0200
+
+zeromq (2.1.9-1) unstable; urgency=low
+
+  * New upstream version. 
+
+ -- Martin Lucina <mato@kotelna.sk>  Thu, 08 Sep 2011 16:38:46 +0200
+
+zeromq (2.1.7-1) unstable; urgency=low
+
+  * New upstream version. (closes: #619374)
+  * --with-system-pgm is now used instead of the embedded OpenPGM library. 
+  * Added Debian watch file.
+
+ -- Martin Lucina <mato@kotelna.sk>  Fri, 13 May 2011 12:43:09 +0200
+
+zeromq (2.1.4-1) experimental; urgency=low
+
+  * New upstream version.
+  * OpenPGM re-enabled for amd64 and i386, still using embedded library.
+
+ -- Martin Lucina <mato@kotelna.sk>  Thu, 07 Apr 2011 15:37:46 +0200
+
+zeromq (2.1.3-1) experimental; urgency=low
+
+  * New upstream version.
+  * The zeromq-bin package has been removed, as upstream has removed the
+    devices.
+  * Temporarily disabled OpenPGM builds on i386 and amd64 due to changes in
+    upstream OpenPGM intergration. 
+
+ -- Martin Lucina <mato@kotelna.sk>  Mon, 28 Mar 2011 10:39:51 +0200
+
+zeromq (2.0.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * Upstream now uses DFSG-clean OpenPGM tarball, so dropping .dfsg from 
+    the Debian version.
+
+ -- Martin Lucina <mato@kotelna.sk>  Thu, 21 Oct 2010 16:21:20 +0200
+
+zeromq (2.0.9.dfsg-1) unstable; urgency=medium
+
+  * New upstream version. 
+  * Move all manpages in libzmq0 to zeromq-dev package (closes: #595890) 
+  * Updated to standards version 3.9.1.
+  * Add lintian-overrides for spelling-error-in-copyright due to error in
+    upstream license of xmlParser.
+  * Use Breaks: instead of Conflicts: in zeromq-bin package, fixes 
+    conflicts-with-version from lintian.
+  * Various other minor fixes for warnings from lintian.
+
+ -- Martin Lucina <mato@kotelna.sk>  Wed, 08 Sep 2010 15:25:45 +0200
+
+zeromq (2.0.7.dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+  * Reformatted package description, thanks to Rhonda (closes: #577549)
+  * Added AUTHORS, NEWS and README to installed documentation.
+  * New maintainer (closes: #587505)
+
+ -- Martin Lucina <mato@kotelna.sk>  Wed, 30 Jun 2010 12:31:08 +0200
+
+zeromq (2.0.6beta.dfsg-2) unstable; urgency=low
+
+  * Much improved descriptions (thanks to Martin Lucina)
+  * Rename zeromq-utils to -bin to better reflect the nature of these files.
+
+ -- Adrian von Bidder <cmot@debian.org>  Mon, 22 Mar 2010 07:05:29 +0100
+
+zeromq (2.0.6beta.dfsg-1) unstable; urgency=low
+
+  * New upstream version.
+    - Source doesn't include non-C/C++ language bindings anymore.
+    - New versioning: 2.0.6 is official upstream version which is a beta.
+  * Repacked orig tar: removed non-free RFC documents (closes: #567513)
+  * Improved/corrected description and copyright file, added bzip2 build
+    dependency.  Thanks to feedback from zeromq mailing list.
+  * Disable OpenPGM on non-x86 architectures (closes: #567848)
+
+ -- Adrian von Bidder <cmot@debian.org>  Wed, 17 Mar 2010 10:43:40 +0100
+
+zeromq (2.0~beta2-1) unstable; urgency=low
+
+  * Initial package (closes: #566125)
+
+ -- Adrian von Bidder <cmot@debian.org>  Tue, 26 Jan 2010 19:03:39 +0100

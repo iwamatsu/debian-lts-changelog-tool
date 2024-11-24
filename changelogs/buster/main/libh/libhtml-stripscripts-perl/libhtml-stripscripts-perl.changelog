@@ -1,0 +1,92 @@
+libhtml-stripscripts-perl (1.06-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Handler for style attribute is vulnerable to ReDoS.
+    (Fixes: CVE-2023-24038) (Closes: #1029400)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sun, 29 Jan 2023 04:48:04 +0530
+
+libhtml-stripscripts-perl (1.06-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Drop patches, merged upstream.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 13 May 2016 00:19:26 +0200
+
+libhtml-stripscripts-perl (1.05-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ Tim Retout ]
+  * Email change: Tim Retout -> diocles@debian.org
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Switch to source format "3.0 (quilt)".
+  * Add patch from CPAN RT to fix typo in regexp. (Closes: #789845)
+  * Update years of packaging copyright.
+  * Update license stanzas in debian/copyright.
+  * Bump debhelper compatibility level to 9.
+  * Add a patch to fix a spelling mistake.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 25 Jun 2015 22:21:07 +0200
+
+libhtml-stripscripts-perl (1.05-1) unstable; urgency=low
+
+  * New upstream release
+  * Standards-Version 3.8.3 (no changes)
+  * Refresh copyright information
+  * Add myself to Uploaders and Copyright
+  * Rewrote control description
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 05 Nov 2009 17:58:23 -0500
+
+libhtml-stripscripts-perl (1.04-2) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Tim Retout ]
+  * debian/rules: Switch to short format rules file.
+  * debian/control:
+    + Bump Standards-Version to 3.8.2. (No changes needed.)
+    + Start short description with a noun.
+  * debian/copyright: Update information for debian/*
+
+ -- Tim Retout <tim@retout.co.uk>  Mon, 10 Aug 2009 23:59:09 +0100
+
+libhtml-stripscripts-perl (1.04-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #494204)
+
+ -- Tim Retout <tim@retout.co.uk>  Thu, 7 Aug 2008 17:21:30 -0300

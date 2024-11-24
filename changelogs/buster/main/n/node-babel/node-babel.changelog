@@ -1,0 +1,124 @@
+node-babel (6.26.0+dfsg-3+deb10u1) buster-security; urgency=medium
+
+  * Team upload
+  * Only evaluate own String/Number/Math methods
+    (Closes: #1053880, CVE-2023-45133)
+
+ -- Yadd <yadd@debian.org>  Fri, 13 Oct 2023 20:56:38 +0400
+
+node-babel (6.26.0+dfsg-3) unstable; urgency=medium
+
+  * Add new binary node-babel-plugin-transform-proto-to-assign
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 23 Jan 2018 19:49:32 +0530
+
+node-babel (6.26.0+dfsg-2) unstable; urgency=medium
+
+  * Provide babeljs-external-helpers command
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 07 Jan 2018 22:44:30 +0530
+
+node-babel (6.26.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Refresh patches
+  * Bump standards version
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 05 Jan 2018 21:37:50 +0530
+
+node-babel (6.25.0+dfsg1-3) unstable; urgency=medium
+
+  * Provide babeljs from node-babel-cli (as it provides /usr/bin/babeljs) 
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 15 Dec 2017 00:30:15 +0530
+
+node-babel (6.25.0+dfsg1-2) unstable; urgency=medium
+
+  * Drop node-babel-register dependency in node-babel-core (Closes: #876016)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 25 Oct 2017 23:45:49 +0530
+
+node-babel (6.25.0+dfsg1-1) unstable; urgency=medium
+
+  * Remove files without copyright owner, make ftp masters happy. 
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 10 Oct 2017 10:51:25 +0530
+
+node-babel (6.25.0+dfsg-11) unstable; urgency=medium
+
+  * Add more binary packages
+  * Change /usr/bin/babel to /usr/bin/babeljs (Closes: #874420)
+  * Move to main section as babel can now build itself without using npm
+  * Add copyright to Google Inc for 
+    packages/babel-preset-es2015/test/fixtures/traceur/*
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 08 Oct 2017 21:06:36 +0530
+
+node-babel (6.25.0+dfsg-10) unstable; urgency=medium
+
+  * Add node-regexpu-core as dependency for node-babel-preset-es2015
+  * Enable require test for babel-preset-es2015 and node-babel-preset-latest
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 26 Sep 2017 10:35:49 +0530
+
+node-babel (6.25.0+dfsg-9) unstable; urgency=medium
+
+  * Add new binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 22 Sep 2017 22:17:02 +0530
+
+node-babel (6.25.0+dfsg-8) unstable; urgency=medium
+
+  * Add missing dependency for node-babel-preset-stage-0
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 21 Sep 2017 13:38:38 +0530
+
+node-babel (6.25.0+dfsg-7) unstable; urgency=medium
+
+  * Update versions of packages provided by node-babel-preset-es2015 
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 20 Sep 2017 12:36:40 +0530
+
+node-babel (6.25.0+dfsg-6) unstable; urgency=medium
+
+  * Add missing dependencies 
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 19 Sep 2017 23:08:20 +0530
+
+node-babel (6.25.0+dfsg-5) unstable; urgency=medium
+
+  * Add new binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 18 Sep 2017 13:46:10 +0530
+
+node-babel (6.25.0+dfsg-4) unstable; urgency=medium
+
+  [ Pirate Praveen ]
+  * Add node-babel-plugin-transform-strict-mode as dependency for
+    node-babel-preset-es2015
+  * Use packaged modules from system when available
+
+  [ Daniel Ring ]
+  * Add more binary packages
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 17 Sep 2017 10:43:52 +0530
+
+node-babel (6.25.0+dfsg-3) unstable; urgency=medium
+
+  * Add more binary packages: node-babel-plugin-transform-strict-mode,
+    node-babel-helper-call-delegate, node-babel-helper-hoist-variables
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 14 Sep 2017 13:55:13 +0530
+
+node-babel (6.25.0+dfsg-2) unstable; urgency=medium
+
+  * Add more binary packages
+  * Increase autopkgtest coverage to all binary packages 
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Aug 2017 11:17:49 +0530
+
+node-babel (6.25.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #849291)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 27 Dec 2016 11:55:00 +0530

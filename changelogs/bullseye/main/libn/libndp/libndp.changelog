@@ -1,0 +1,76 @@
+libndp (1.6-1+deb11u1) bullseye-security; urgency=medium
+
+  * add debian/patches/CVE-2024-5564.patch from upstream fixing CVE-2024-5564
+    (Closes: #1072366)
+  * d/gbp.conf: update for bullseye release
+
+ -- Florian Ernst <florian@debian.org>  Tue, 11 Jun 2024 07:38:05 +0200
+
+libndp (1.6-1) unstable; urgency=high
+
+  * New upstream release. Fixes CVE-2016-3698. (Closes: #824545, #781755)
+  * Drop kfreebsd patch, since it has been merged upstream.
+  * Bump Standards-Version to 3.9.8 (no changes needed)
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Tue, 17 May 2016 09:20:12 -0700
+
+libndp (1.4-2) unstable; urgency=medium
+
+  * Remove single-debian-patch option
+  * Add kfreebsd support
+  * Bump Standards-Version to 3.9.6 (no changes needed)
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Mon, 29 Sep 2014 20:33:23 -0700
+
+libndp (1.4-1) unstable; urgency=high
+
+  * Fix grammatical/syntactic errors in extended description.
+    Thanks to Filipus Klutiero (Closes: #754917)
+  * Set single-debian-patch and add a patch header.
+  * New upstream release.  Fixes CVE-2014-3554. (Closes: #756389)
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Tue, 29 Jul 2014 06:34:39 -0700
+
+libndp (1.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch: fix rule so that correct URL is downloaded.
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Mon, 30 Jun 2014 21:31:02 -0700
+
+libndp (1.2-5) unstable; urgency=low
+
+  * Disable silent builds so blhc can check for hardening flags
+  * Add Vcs-* headers to control file (Closes: #751999)
+  * Mark binary packages as linux-only (Closes: #752000)
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Wed, 18 Jun 2014 09:59:15 -0700
+
+libndp (1.2-4) unstable; urgency=low
+
+  * Shorten copyright file by defining license text only once
+  * Move src package and -tools bin package to section "net"
+  * Remove unnecessary Build-Depends
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Sun, 15 Jun 2014 14:41:48 -0700
+
+libndp (1.2-3) unstable; urgency=low
+
+  * Make -dbg package "Multi-Arch: same"
+  * Make package description more informative
+  * Switch to Standards-Version 3.9.5
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Sun, 20 Apr 2014 11:24:57 -0700
+
+libndp (1.2-2) unstable; urgency=low
+
+  * Fix debian/copyright to specify correct license.
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Sun, 20 Apr 2014 10:13:54 -0700
+
+libndp (1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #742973)
+
+ -- Andrew Ayer <agwa@andrewayer.name>  Sat, 29 Mar 2014 10:40:30 -0700
+

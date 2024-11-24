@@ -1,0 +1,111 @@
+frr (7.5.1-1.1+deb11u3) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * fix autopkgtest.
+    - enable allow-std-error on py-frr-reload, to avoid a new warning
+      emitted by the test.
+    - stop frr after running py-frr-reload, otherwise autopkgtest breaks
+      networking for subsequent steps, e.g when using pbuilder.
+  * d/clean: Remove generated files on rebuild.
+  * Backport fixed for several buffer overflow vulnerabilties:
+    CVE-2022-26125, CVE-2022-26126, CVE-2022-26127 (Closes: #1008010)
+    CVE-2022-26128, CVE-2022-26129
+  * Enabling patching of the fuzz test vectors with quilt
+    - Add patch to build system disabling handling the fuzz testvectors.
+    - Introduce the fuzz testvectors as patch, as upstream shipped it only
+      compressed and we need to patch it, otherwise the fix for CVE-2022-26125
+      would break the tests.
+  * CVE-2022-37035 - Racy use after free (Closes: #1016978)
+  * CVE-2023-38406 - "flowspec overflow."
+  * CVE-2023-38407 - Buffer overread (Closes: #1055852)
+  * Backport fixes for several vulnerabilties:
+    - DoS (crash) CVE-2023-46752, CVE-2023-46753, CVE-2023-47234, CVE-2023-47235
+      (Also filed in #1055852), CVE-2024-31948 and
+    - CVE-2024-31949 - DoS causing an infinite loop
+  * CVE-2024-44070 - missing length check of remaining stream before using TLV
+    value. (Closes: #1079649)
+
+ -- Tobias Frost <tobi@debian.org>  Mon, 02 Sep 2024 20:43:37 +0200
+
+frr (7.5.1-1.1+deb11u2) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2022-36440, CVE-2022-40302, CVE-2022-40318, CVE-2022-43681:
+    Denial of service with maliciously construct BGP OPEN packet
+    (Closes: #1035829).
+  * CVE-2023-31490: Denial of service caused by malformed SRv6 L3
+    service attribute (Closes: #1036062).
+  * CVE-2023-38802: Denial of service caused by corrupted
+    Tunnel Encapsulation attribute.
+  * CVE-2023-41358: Denial of service while processing NLRIs with
+    zero length attribute.
+
+ -- Aron Xu <aron@debian.org>  Fri, 01 Sep 2023 12:27:31 +0800
+
+frr (7.5.1-1.1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2022-37032: out-of-bounds read in BGP daemon that could lead to
+    segmentation fault and denial of service.
+
+ -- Aron Xu <aron@debian.org>  Fri, 24 Feb 2023 17:14:19 +0800
+
+frr (7.5.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backport upstream fix for compatibility with the bullseye
+    libyang1. (Closes: #990585)
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 11 Jul 2021 19:15:04 +0300
+
+frr (7.5.1-1) unstable; urgency=medium
+
+  * Update the d/gbp.conf for 7.5.1 release
+  * Use wrap-and-sort -a to unify debian/ wrapping and sorting
+  * Work around the sphinx-build error that doesn't copy images to texinfo
+  * Change the upstream-tag in d/gbp.conf to track the upstream tarballs
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 08 Mar 2021 09:40:19 +0100
+
+frr (7.5-1) unstable; urgency=medium
+
+  * New upstream version 7.5
+
+ -- Ondřej Surý <ondrej@debian.org>  Sun, 14 Feb 2021 21:38:50 +0100
+
+frr (7.4-2) unstable; urgency=medium
+
+  * Bump libyang dependency to >= 1.0.184-1~
+  * Make the autopkgtest more resilient (Closes: #980111)
+  * Adjust the ax_python.m4 to hardcode python3.9
+
+ -- Ondřej Surý <ondrej@debian.org>  Sun, 07 Feb 2021 13:15:07 +0100
+
+frr (7.4-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backport upstream fix for FTBFS with Python 3.9. (Closes: #972767)
+
+ -- Adrian Bunk <bunk@debian.org>  Thu, 21 Jan 2021 16:06:12 +0200
+
+frr (7.4-1) unstable; urgency=medium
+
+  [ Ondřej Surý ]
+  * Use dh_installinit capabilities to install frr.tmpfile
+  * Remove unused debian/watchfrr.rc file
+  * Add missing lsof dependency
+  * Remove mention of pkg.frr.snmp build profile from debian/README.Debian
+  * Make lsb-base a hard dependency
+  * Update gbp.conf for 7.4 release
+  * Update and simplify d/watch
+  * Change the debian source format from 3.0 (git) to 3.0 (quilt)
+  * Convert the package to dh compat level 10
+  * Add myself to Uploaders
+  * Bump standards version to 4.5.0.2 (latest) - no change
+  * Use wrap-and-sort -a to unify debian/ wrapping and sorting
+  * Work around the sphinx-build error that doesn't copy images to texinfo
+    (Properly closes: #955067)
+  * Depend on debhelper >= 9.20160709 and drop dh-systemd dependency
+    (Closes: #958626)
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 10 Aug 2020 11:50:45 +0200

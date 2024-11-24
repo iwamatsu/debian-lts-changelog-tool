@@ -1,0 +1,102 @@
+golang-github-hashicorp-memberlist (0.2.2-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 06 Oct 2020 20:24:39 +1100
+
+golang-github-hashicorp-memberlist (0.1.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rules-Requires-Root: no.
+  * Standards-Version: 4.5.0.
+  * (Build-)Depends:
+    = golang-github-hashicorp-go-msgpack-dev (>= 0.5.5~)
+    = golang-github-miekg-dns-dev (>= 1.1.26~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 29 Feb 2020 00:57:13 +1100
+
+golang-github-hashicorp-memberlist (0.1.5-2) unstable; urgency=medium
+
+  * New patch to disable failing test.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 27 Sep 2019 11:26:42 +1000
+
+golang-github-hashicorp-memberlist (0.1.5-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+  * Added myself to Uploaders.
+  * (Build-)Depends:
+    + golang-github-google-btree-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 26 Sep 2019 22:28:30 +1000
+
+golang-github-hashicorp-memberlist (0.1.0+git20180209.2288bf30-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream snapshot.
+  * Standards-Version: 4.1.4
+  * debhelper & compat to version 11
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 26 Jun 2018 16:58:36 +1000
+
+golang-github-hashicorp-memberlist (0.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Update debian/watch.
+  * New upstream release.
+  * Vendor trivial dependency github.com/sean-/seed.
+  * Add new dependency on go-sockaddr.
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Mark package as autopkgtest-able.
+  * debian/copyright: Format uses insecure http protocol instead of
+    https
+  * Stop ignoring test failures.
+  * Fix (or skip) failing tests.
+  * Automatic packaging fixes by cme and pkg-go-common-fixes.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 23 Oct 2017 05:53:12 +0000
+
+golang-github-hashicorp-memberlist (0.0~git20160329.0.88ac4de-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 16:44:20 +0300
+
+golang-github-hashicorp-memberlist (0.0~git20160329.0.88ac4de-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream snapshot (Closes: #822930)
+  * Add new dependencies and update to standards version 3.9.8
+  * Add d/watch file
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 06 May 2016 11:43:45 +1000
+
+golang-github-hashicorp-memberlist (0.0~git20160225.0.ae9a8d9-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+  * Ignore failures in tests.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 13:58:13 +1100
+
+golang-github-hashicorp-memberlist (0.0~git20150921.0.28424fb-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Wed, 21 Oct 2015 15:39:43 -0700

@@ -1,0 +1,83 @@
+golang-github-imdario-mergo (0.3.8-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 06 Feb 2021 03:17:01 +0000
+
+golang-github-imdario-mergo (0.3.8-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Update Standards-Version to 4.5.0 (no changes)
+  * Add Rules-Requires-Root
+  * Remove golang-github-stretchr-testify-dev from Depends.
+    Only used for testing
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 24 Mar 2020 02:10:04 +0800
+
+golang-github-imdario-mergo (0.3.8-1) unstable; urgency=medium
+
+  * New upstream reelase
+  * DH to version 12
+  * Standards-Version: 4.4.1
+  * Added myself to Uploaders
+  * Build-Depends += "golang-github-stretchr-testify-dev"
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 30 Dec 2019 10:27:50 +1100
+
+golang-github-imdario-mergo (0.3.5-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Arnaud Rebillout ]
+  * Bump compat to 11
+  * Update debian url in copyright
+  * Update control file
+  * Add testsuite autopkgtest-pkg-go
+  * Update watch file
+  * Add myself to control and copyright
+  * Remove patch applied upstream
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 13 Jun 2018 08:29:19 +1000
+
+golang-github-imdario-mergo (0.2.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Drop incorrect 0002-fix-test-fixture-locations.patch
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Fri, 16 Feb 2018 09:35:30 +0100
+
+golang-github-imdario-mergo (0.2.2-2) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Tue, 08 Aug 2017 20:28:27 +0300
+
+golang-github-imdario-mergo (0.2.2-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #822934)
+  * Revert accidentally applied patch to master
+  * Run all unit tests
+  * Standards-Version: 3.9.8
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 17 May 2016 12:58:09 +1000
+
+golang-github-imdario-mergo (0.2.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #802743)
+
+ -- Tim Potter <tpot@hpe.com>  Fri, 23 Oct 2015 15:49:38 +1100

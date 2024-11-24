@@ -1,0 +1,505 @@
+php-twig (2.14.3-1+deb11u3) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2024-45411: Possible sandbox bypass
+
+ -- Adrian Bunk <bunk@debian.org>  Mon, 16 Sep 2024 07:04:04 +0300
+
+php-twig (2.14.3-1+deb11u2) bullseye-security; urgency=medium
+
+  [ David Prevot ]
+  * Backport security fix from 3.4.3 [CVE-2022-39261]
+    Fix possibility to load a template outside a configured directory
+    when using the filesystem loader. (Closes: #1020991)
+
+ -- David Prévot <dprevot@evolix.fr>  Fri, 30 Sep 2022 11:22:27 +0200
+
+php-twig (2.14.3-1+deb11u1) bullseye-security; urgency=high
+
+  * Backport fix from 3.3.8 [CVE-2022-23614]
+    Disallow calling non Closure in the `sort` filter as is the case for
+    some other filters.
+
+ -- David Prévot <taffit@debian.org>  Thu, 17 Mar 2022 13:41:33 +0100
+
+php-twig (2.14.3-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Bump copyright year
+  * Move things around
+  * Prepare the 2.14.3 release
+
+  [ David Prévot ]
+  * Update copyright
+  * Adapt to new upstream distribution path
+  * Don’t rely on string not installed in Bullseye
+  * Use LC_ALL=en_US for intl tests
+  * Install /u/s/p/autoloaders file
+
+ -- David Prévot <taffit@debian.org>  Thu, 07 Jan 2021 18:41:35 -0400
+
+php-twig (2.14.1-2) unstable; urgency=medium
+
+  * Adapt to recent version of PHPUnit (9)
+
+ -- David Prévot <taffit@debian.org>  Sun, 20 Dec 2020 17:00:47 -0400
+
+php-twig (2.14.1-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Prepare the 2.14.1 release
+
+  [ David Prévot ]
+  * Update watch file format version to 4.
+  * Update Standards-Version to 4.5.1
+
+ -- David Prévot <taffit@debian.org>  Sat, 21 Nov 2020 15:39:08 -0400
+
+php-twig (2.13.1-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Prepare the 2.13.1 release
+
+  [ Jérôme TAMARELLE ]
+  * Fix compatibility with PHPUnit 10
+
+  [ David Prévot ]
+  * Revert "Fix compatibility with PHPUnit 10"
+  * Rename branch to debian/bullseye (DEP-14)
+
+ -- David Prévot <taffit@debian.org>  Wed, 16 Sep 2020 16:04:28 -0400
+
+php-twig (2.13.0-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Drop support for PHP 7.0
+  * Fix PHP 8 compat
+  * Prepare the 2.13.0 release
+
+  [ Nicolas Grekas ]
+  * Sync LICENSE with GitHub template
+
+  [ David Prévot ]
+  * Set Rules-Requires-Root: no.
+  * Use debhelper-compat 13
+  * Simplify override_dh_auto_test
+  * Use --sourcedirectory instead of --sourcedir
+  * Update copyright
+  * Fix unindented list in extended description
+
+ -- David Prévot <taffit@debian.org>  Tue, 07 Jul 2020 20:34:40 -0400
+
+php-twig (2.12.5-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Bump license year
+  * Prepare the 2.12.5 release
+
+  [ David Prévot ]
+  * Update Standards-Version to 4.5.0
+  * Update copyright (years)
+
+ -- David Prévot <taffit@debian.org>  Sun, 23 Feb 2020 12:10:53 -1000
+
+php-twig (2.12.3-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Prepare the 2.12.3 release
+
+  [ David Prévot ]
+  * Ignore intl and string tests for CI
+
+ -- David Prévot <taffit@debian.org>  Sun, 29 Dec 2019 17:01:32 +1100
+
+php-twig (2.12.2-3) unstable; urgency=medium
+
+  * Update test dependencies
+  * Set upstream metadata fields: Bug-Submit.
+
+ -- David Prévot <taffit@debian.org>  Fri, 27 Dec 2019 03:46:01 +1100
+
+php-twig (2.12.2-2) unstable; urgency=medium
+
+  * Track version 2 for now (bullseye?)
+  * Add extra packages (except php-twig-string-extra that depends on
+    php-symfony-string 5)
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-Browse.
+  * Ignore Intl testsuite for now
+
+ -- David Prévot <taffit@debian.org>  Mon, 09 Dec 2019 09:43:38 -1000
+
+php-twig (2.12.2-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Prepare the 2.12.2 release
+
+  [ David Prévot ]
+  * Update copyright
+  * d/control: Drop versioned dependency satisfied in stable
+
+ -- David Prévot <taffit@debian.org>  Tue, 12 Nov 2019 18:03:58 -1000
+
+php-twig (2.12.1-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Prepare the 2.12.1 release
+
+  [ Barry vd. Heuvel ]
+  * Update .gitattributes to remove tests from \"dist\"
+
+  [ David Prévot ]
+  * Document gbp import-ref usage
+
+ -- David Prévot <taffit@debian.org>  Sat, 19 Oct 2019 16:36:34 -1000
+
+php-twig (2.12.0-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * Prepare the 2.12.0 release
+
+  [ David Prévot ]
+  * Set upstream metadata fields: Repository.
+  * Drop versioned dependency satisfied in (old)stable
+  * Update Standards-Version to 4.4.1
+  * Adapt phpab call to new upstream tests path
+
+ -- David Prévot <taffit@debian.org>  Mon, 07 Oct 2019 16:21:21 -1000
+
+php-twig (2.11.3-3) unstable; urgency=medium
+
+  * Declare php-twig-doc as Multi-Arch: foreign
+  * Compatibility with recent PHPUnit (8)
+  * Add self to Uploaders
+
+ -- David Prévot <taffit@debian.org>  Sat, 14 Sep 2019 01:13:15 -1000
+
+php-twig (2.11.3-2) unstable; urgency=medium
+
+  * Upload to unstable now that buster has been released
+  * Update Standards-Version to 4.4.0
+
+ -- David Prévot <taffit@debian.org>  Fri, 19 Jul 2019 17:27:56 -0300
+
+php-twig (2.11.3-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.11.3 release
+
+ -- David Prévot <taffit@debian.org>  Sun, 23 Jun 2019 16:34:56 -1000
+
+php-twig (2.11.2-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.11.2 release
+
+  [ David Prévot ]
+  * Update copyright
+
+ -- David Prévot <taffit@debian.org>  Mon, 17 Jun 2019 09:30:32 -1000
+
+php-twig (2.10.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.10.0 release
+
+ -- David Prévot <taffit@debian.org>  Wed, 15 May 2019 21:37:39 -1000
+
+php-twig (2.9.0-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.9.0 release
+
+ -- David Prévot <taffit@debian.org>  Sat, 04 May 2019 12:04:35 -1000
+
+php-twig (2.8.1-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.8.1 release
+
+  [ David Prévot ]
+  * Document renaming rationale in previous changelog entry
+
+ -- David Prévot <taffit@debian.org>  Thu, 18 Apr 2019 04:13:50 +0900
+
+php-twig (2.7.4-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.7.4 release
+
+  [ David Prévot ]
+  * Document CVE in previous changelog entry
+  * Rename package as php-twig, since an unrelated twig package used to be in
+    the archive over ten years ago. Starting with (at least) 2.7.2, the
+    uniqueness of version number is not guaranteed anymore, thus violating
+    Policy 3.2.2.
+
+ -- David Prévot <taffit@debian.org>  Sat, 23 Mar 2019 08:33:01 -1000
+
+twig (2.7.2-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * added TemplateWrapper::getTemplateName()
+  * prepared the 2.7.2 release
+
+ -- David Prévot <taffit@debian.org>  Wed, 13 Mar 2019 16:02:05 -1000
+
+twig (2.7.1-1) experimental; urgency=medium
+
+  * Team upload, to experimental during the freeze
+
+  [ Fabien Potencier ]
+  * switched to namespace first, PSR-0 as a fallback
+  * fixed security issue in the sandbox [CVE-2019-9942]
+  * prepared the 2.7.1 release
+
+  [ David Prévot ]
+  * Use /usr/share/dpkg/default.mk instead of dpkg-parsechangelog
+  * Use PSR-4 by default
+  * Unify tests calls
+
+ -- David Prévot <taffit@debian.org>  Tue, 12 Mar 2019 18:19:33 -1000
+
+twig (2.6.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.6.2 release
+
+  [ David Prévot ]
+  * Use debhelper-compat 12
+  * Update Standards-Version to 4.3.0
+  * Update copyright (years)
+
+ -- David Prévot <taffit@debian.org>  Wed, 16 Jan 2019 06:09:02 -1000
+
+twig (2.6.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.6.0 release
+
+  [ David Prévot ]
+  * Use debhelper-compat 11
+  * Drop get-orig-source target
+  * Use https in debian/
+  * Use debian/clean for directories
+  * Update Standards-Version to 4.2.1
+
+ -- David Prévot <taffit@debian.org>  Wed, 19 Dec 2018 08:10:27 +1100
+
+twig (2.5.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * fixed website URL
+  * added the Symfony ctype polyfill as a dependency
+  * prepared the 2.5.0 release
+
+  [ David Prévot ]
+  * Update Homepage URL
+  * Update Standards-Version to 4.1.5
+  * Depend on php-ctype instead of php-symfony-polyfill-ctype
+
+ -- David Prévot <taffit@debian.org>  Sun, 15 Jul 2018 20:55:09 +1200
+
+twig (2.4.8-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.4.8 release
+
+  [ David Prévot ]
+  * Update Standards-Version to 4.1.4
+
+ -- David Prévot <taffit@debian.org>  Sat, 28 Apr 2018 17:01:39 -1000
+
+twig (2.4.7-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.4.7 release
+
+ -- David Prévot <taffit@debian.org>  Fri, 30 Mar 2018 12:32:10 -1000
+
+twig (2.4.6-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.4.6 release
+
+  [ David Prévot ]
+  * Add missing dependency for ci (Closes: #889833)
+  * Update copyright (years)
+  * Move project repository to salsa.d.o
+  * Update Standards-Version to 4.1.3
+
+  [ Miguel Piedrafita ]
+  * Update license year
+
+ -- David Prévot <taffit@debian.org>  Tue, 06 Mar 2018 22:00:33 -1000
+
+twig (2.4.4-2) unstable; urgency=medium
+
+  * Team upload
+  * Upload to unstable in sync with symfony
+  * Update needed build-dependencies for the tests (Closes: #882941)
+
+ -- David Prévot <taffit@debian.org>  Thu, 30 Nov 2017 14:37:17 -1000
+
+twig (2.4.4-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Fabien Potencier ]
+  * prepared the 2.4.4 release
+
+  [ David Prévot ]
+  * Update Standards-Version to 4.1.1
+  * Update CI call
+  * Build-Depend on python3-sphinx instead of python-sphinx
+
+ -- David Prévot <taffit@debian.org>  Fri, 20 Oct 2017 11:20:18 -1000
+
+twig (2.4.3-1) experimental; urgency=medium
+
+  * Team upload to experimental, for symfony 3.3
+
+  [ Fabien Potencier ]
+  * prepared the 2.4.3 release
+
+  [ David Prévot ]
+  * d/control: Add a trivial get-orig-source target
+  * Update copyright
+  * Drop references to packages not part of stable
+  * Don’t depend on php-symfony-polyfill-mbstring
+  * Install psr-4 classes in Twig/psr-4
+  * d/rules: drop now useless -indep suffix
+  * Drop double phpunit test call
+  * Install documentation in /usr/share/doc/php-twig
+  * Update Standards-Version to 4.1.0
+  * Drop mention of Twig/Autoloader.php removed upstream
+
+ -- David Prévot <taffit@debian.org>  Tue, 29 Aug 2017 18:30:18 -1000
+
+twig (1.24.0-2) unstable; urgency=medium
+
+  [ Ondřej Surý ]
+  * Finish the transition to PHP 7.0
+  * Disable building PHP extension until it's rewritten
+    for PHP 7.0 (Closes: #821630)
+
+  [ Daniel Beyer ]
+  * No longer mention the removed twig PHP C extension in README.Debian
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Fri, 22 Apr 2016 14:13:35 +0200
+
+twig (1.24.0-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * prepared the 1.24.0 release
+
+  [ Daniel Beyer ]
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Update d/copyright (years, people)
+  * PHP 7 transition:
+    - No longer recommend (but suggest) php5-twig for php-twig
+    - Add dependencies (build and runtime) against php-mbstring
+    - Run build tests with PHP 5 and PHP 7
+    - Run DEP-8 (as-installed) tests for PHP 7 and PHP 5
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Wed, 30 Mar 2016 05:47:53 +0200
+
+twig (1.23.1-1) unstable; urgency=medium
+
+  [ Fabien Potencier ]
+  * prepared the 1.23.1 release
+
+  [ Daniel Beyer ]
+  * Support composer style autoloading for build time tests
+  * Support composer style autoloading for DEP-8 (as-installed) tests
+  * Drop DEP-8 patch (no longer needed)
+    - Use-installed-class-for-DEP-8-tests.patch
+
+  [ David Prévot ]
+  * Overwrite bootstrap to simplify PHPUnit calls
+  * Use locales-all to run all tests
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sun, 15 Nov 2015 18:14:59 +0100
+
+twig (1.20.0-1) unstable; urgency=low
+
+  * New upstream version:
+    - Fixes issues with volatile tests during build time (Closes: #795950)
+    - Forbid access to the Twig environment from templates and internal
+      parts of Twig_Template
+    - Fixes limited remote code execution when in sandbox mode
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Sun, 16 Aug 2015 16:09:57 +0200
+
+twig (1.18.1-1) unstable; urgency=medium
+
+  * Team upload, as needed by symfony
+
+  [ Fabien Potencier ]
+  * prepared the 1.18.1 release
+
+  [ Julien Pauli ]
+  * Fixed memory leaks
+
+  [ David Prévot ]
+  * Provide homemade static autoload.php
+  * Review copyright
+  * Use dh-php5 instead of homemade handling
+  * Use dh_sphinxdoc instead of homemade handling
+  * Actually install Test for Twig
+
+ -- David Prévot <taffit@debian.org>  Mon, 18 May 2015 23:11:02 -0400
+
+twig (1.16.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * Improve handling of Vcs-Git:
+    - Introduced a new branch 'master' in Vcs-Git, which is based upon
+      upstream's git repository and adds the Debian packaging on top.
+    - Dropped 'debian-sid' and 'upstream-sid' branches in favour of the
+      new and more common branches 'master' and 'upstream' in Vcs-Git.
+    - Simplifyied git-buildpackage configuration found in debian/gbp.conf.
+    - Added instructions how to update the package to a new upstream
+      release in debian/README.source.
+  * Bump Standards-Version to 3.9.6 (no changes needed).
+  * Add automatic as-installed package testing (DEP-8).
+  * Update address of upstream's VCS.
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Tue, 21 Oct 2014 08:14:27 +0200
+
+twig (1.16.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Wed, 30 Jul 2014 17:19:24 +0200
+
+twig (1.15.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #645883)
+
+ -- Daniel Beyer <dabe@deb.ymc.ch>  Wed, 23 Apr 2014 19:36:55 +0200

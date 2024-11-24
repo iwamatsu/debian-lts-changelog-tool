@@ -1,0 +1,80 @@
+golang-github-hashicorp-golang-lru (0.5.4-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+  * Apply multi-arch hints. + golang-github-hashicorp-golang-lru-dev: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 05 Feb 2021 02:32:54 +0000
+
+golang-github-hashicorp-golang-lru (0.5.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 19 Jan 2020 20:03:08 +1100
+
+golang-github-hashicorp-golang-lru (0.5.3-1) unstable; urgency=medium
+
+  [ Anthony Fok ]
+  * Use debhelper (>= 11~)
+
+  [ Dmitry Smirnov ]
+  * New upstream release
+  * Standards-Version: 4.4.1
+  * DH to version 12
+  * Added myself to Uploaders
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 20 Dec 2019 23:46:16 +1100
+
+golang-github-hashicorp-golang-lru (0.5.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.5.0
+  * Apply "cme fix dpkg" fixes to debian/control and debian/copyright,
+    adding "Testsuite: autopkgtest-pkg-go" field, setting Priority to
+    "optional", bumping Standards-Version to 4.2.1, etc.
+  * Update Maintainer address in debian/control
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 20:47:01 -0700
+
+golang-github-hashicorp-golang-lru (0.0~git20160813.0.0a025b7-2) unstable; urgency=medium
+
+  * Use debhelper (>= 10)
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+
+ -- Anthony Fok <foka@debian.org>  Tue, 25 Jul 2017 11:34:52 -0600
+
+golang-github-hashicorp-golang-lru (0.0~git20160813.0.0a025b7-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20160813.0.0a025b7
+  * Change "golang-go" to "golang-any" in Build-Depends
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright
+  * Add myself to the list of Uploaders
+
+ -- Anthony Fok <foka@debian.org>  Sun, 09 Jul 2017 09:54:58 -0600
+
+golang-github-hashicorp-golang-lru (0.0~git20160207.0.a0d98a5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream snapshot.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Mar 2016 12:37:33 +1100
+
+golang-github-hashicorp-golang-lru (0.0~git20151028.0.a6091bb-1) unstable; urgency=medium
+
+  * Initial release
+
+ -- Tianon Gravi <tianon@debian.org>  Fri, 06 Nov 2015 16:03:17 -0800

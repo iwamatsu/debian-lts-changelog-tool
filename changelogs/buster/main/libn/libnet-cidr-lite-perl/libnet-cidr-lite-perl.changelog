@@ -1,0 +1,111 @@
+libnet-cidr-lite-perl (0.21-2+debu10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2021-47154
+    don't allow bypass of access control that is based on IP addresses
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sat, 23 Mar 2024 12:03:02 +0100
+
+libnet-cidr-lite-perl (0.21-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Chris Butler from Uploaders. Thanks for your work!
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Florian Schlichting ]
+  * Fix copyright-format syntax
+  * Update license paragraphs to commonly used versions
+  * Bump dh compat to level 11
+  * Declare compliance with Debian Policy 4.1.5
+
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 06 Jul 2018 21:42:35 +0200
+
+libnet-cidr-lite-perl (0.21-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * Change my email address.
+
+  [ Chris Butler ]
+  * New upstream release
+  * Add myself to uploaders
+  * Refreshed debian/ directory
+  * Set Standards-Version to 3.8.4 (no changes required after the refresh)
+  * Switch to source format 3.0 (quilt)
+  * Changed short description to be a noun phrase, added module name in long
+    description
+
+ -- Chris Butler <chrisb@debian.org>  Sun, 28 Mar 2010 17:59:07 +0100
+
+libnet-cidr-lite-perl (0.20-2) unstable; urgency=low
+
+  [ Stephen Gran ]
+  * Lowered debhelper compatibility level to 5 (Be kind to backporters day)
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+  * debian/watch: use dist-based URL.
+  * debian/rules: delete /usr/lib/perl5 only if it exists (closes: #467799).
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Set debhelper compatibility level to 6.
+  * debian/watch: use extended regexp for matching upstream releases.
+  * debian/copyright: add upstream source location, convert to new format.
+  * debian/rules: update with the help of dh-make-perl's templates; don't
+    install README anymore (contains only installation instructions and
+    copyright).
+  * Add libtest-pod-perl and libtest-pod-coverage-perl to build dependencies
+    in order to enable additional tests.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sat, 01 Mar 2008 21:41:15 +0100
+
+libnet-cidr-lite-perl (0.20-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #329599)
+  * Adopted for the Debian Perl Group. (Closes: #357086)
+  * Upgrade to Standards-Version 3.6.2. No changes needed.
+  * Don't ignore the result of 'make realclean'.
+  * Add debian/watch.
+  * Run 'make test' at build time.
+  * Don't install an empty /usr/lib/perl5/ directory.
+
+ -- Niko Tyni <ntyni@iki.fi>  Sat, 18 Mar 2006 00:33:32 +0200
+
+libnet-cidr-lite-perl (0.15-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Chip Salzenberg <chip@debian.org>  Wed,  4 Feb 2004 11:53:44 -0500

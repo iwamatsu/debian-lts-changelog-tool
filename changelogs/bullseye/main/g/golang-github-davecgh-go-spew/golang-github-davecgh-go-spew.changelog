@@ -1,0 +1,69 @@
+golang-github-davecgh-go-spew (1.1.1-2) unstable; urgency=medium
+
+  * Add myself as an uploader (Closes: #940352)
+    - Thanks for all the work so far, Alexandre Viau.
+  * Bump Standards-Version to 4.4.1
+  * Bump debhelper-compat to 12
+  * Fix package wrt cme
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Tue, 22 Oct 2019 18:46:39 +0530
+
+golang-github-davecgh-go-spew (1.1.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 17 Nov 2018 12:38:00 -0500
+
+golang-github-davecgh-go-spew (1.1.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 06 Feb 2018 00:01:53 -0500
+
+golang-github-davecgh-go-spew (1.1.0-3) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 16:38:53 -0500
+
+golang-github-davecgh-go-spew (1.1.0-2) unstable; urgency=medium
+
+  * Move to salsa.debian.org.
+  * Change my email to @debian.org.
+  * Priority extra -> optional.
+  * Testsuite: autopkgtest-pkg-go.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 30 Dec 2017 13:48:46 -0500
+
+golang-github-davecgh-go-spew (1.1.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Add debian/watch
+  * Change Build-Depends from golang-go to golang-any
+  * Update copyright years in debian/copyright
+
+ -- Anthony Fok <foka@debian.org>  Thu, 29 Dec 2016 17:10:47 -0700
+
+golang-github-davecgh-go-spew (0.0~git20151106.5215b55-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Tim Potter ]
+  * Update to latest upstream commit
+  * d/control: Update to latest standards version
+
+  [ Martín Ferrari ]
+  * debian/control: Use XS-Go-Import-Path, update Vcs-* fields, and
+    update Standards-Version without changes.
+  * debian/rules: add gen-orig-tgz target.
+  * Actually merge the upstream branch, and add commit number to version.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 01 May 2016 20:59:57 +0100
+
+golang-github-davecgh-go-spew (0.0~git20150619-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #792230)
+
+ -- Alexandre Viau <alexandre@alexandreviau.net>  Sun, 12 Jul 2015 19:07:12 -0400

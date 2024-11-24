@@ -1,0 +1,269 @@
+golang-google-cloud (0.56.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.56.0 (Closes: #954532)
+  * Remove 0003-spanner-session-client-should-return-Spanner-errors.patch.
+    Applied in new version
+  * Bump golang-google-genproto-dev to 0.0~git20200413.b5235f6
+  * Excludes all cmd packages
+  * Bump golang-google-api-dev to 0.21.0
+  * Remove vendor rsc.io/binaryregexp
+  * Add patch to skip tests which need network access
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 15 Apr 2020 03:46:30 +0800
+
+golang-google-cloud (0.49.0-1) unstable; urgency=medium
+
+  [ Dmitry Smirnov ]
+  * dev: fixed "golang-google-api-dev" dependency versioning.
+
+  [ Anthony Fok ]
+  * New upstream version 0.49.0
+  * Update matching-pattern in debian/watch so that it would match,
+    for example, v0.43.0 instead of logging/v1.0.0.
+    See https://code-review.googlesource.com/c/gocloud/+/41530
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Bump Standards-Version to 4.5.0 (no change)
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Update dependencies as per go.mod
+  * Add 0003-spanner-session-client-should-return-Spanner-errors.patch
+    from upstream to prevent TestBatchCreateSessions_WithTimeout error.
+    See https://github.com/googleapis/google-cloud-go/issues/1719#issuecomment-571797058
+
+ -- Anthony Fok <foka@debian.org>  Thu, 27 Feb 2020 05:48:29 -0700
+
+golang-google-cloud (0.43.0-1) unstable; urgency=medium
+
+  * New upstream version 0.43.0
+  * Fix typo in debian/gbp.conf: upstream+ng → upstream-ng
+  * Change "Xs-Go-Import-Path" to "XS-Go-Import-Path" in debian/control
+  * Update debian/watch
+  * Add myself to the list of Uploaders
+  * Apply "cme fix dpkg" fixes:
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Update dependencies according to go.mod
+  * Update and simplify DH_GOLANG_INSTALL_EXTRA variable in debian/rules
+    with the help of dh-golang (>= 1.31~)
+  * Update DH_GOLANG_EXCLUDES: unexclude "vision"
+    and exclude "pubsub/internal/longtest"
+  * No longer install AUTHORS and CONTRIBUTORS as docs
+    because these files have been removed upstream in commit 2a23725
+  * Remove all debian/patches files from version 0.9.0
+  * Include our own copy of rsc.io/binaryregexp 0.2.0 in vendor/
+    until we have golang-rsc-binaryregexp properly packaged for Debian
+  * Add Lintian overrides for source-is-missing for upstream
+    cmd/go-cloud-debug-agent/internal/debug binary object testdata
+  * Replace dpkg-maintscript-helper symlink_to_dir calls in
+    golang-google-cloud-compute-metadata-dev.{preinst,postinst,postrm}
+    with debian/golang-google-cloud-compute-metadata-dev.maintscript.
+    Fix Lintian maintainer-script-should-not-use-dpkg-maintscript-helper
+    warnings.
+
+ -- Anthony Fok <foka@debian.org>  Fri, 02 Aug 2019 02:07:11 -0600
+
+golang-google-cloud (0.9.0-10) unstable; urgency=medium
+
+  * Team upload.
+  * Skip very flaky test (Closes: #907907)
+    Thanks to Santiago Vila for the patch
+
+ -- Stephen Gelman <ssgelm@debian.org>  Sun, 14 Apr 2019 23:59:37 -0500
+
+golang-google-cloud (0.9.0-9) unstable; urgency=high
+
+  * Team upload.
+  * Update golang-google-genproto-dev dependency to 0.0~git20190111.db91494
+    (Closes: #921580)
+
+ -- Stephen Gelman <ssgelm@debian.org>  Wed, 06 Feb 2019 19:02:17 -0600
+
+golang-google-cloud (0.9.0-8) unstable; urgency=high
+
+  * Team upload.
+  * Remove speech/apiv1beta as it has been removed upstream (Closes: #920009)
+  * Add patches to fix build failures:
+    * bigtable client changes
+    * spanner proto changes and tests
+    * profiler mock change
+  * Add dependency on golang-github-google-go-cmp-dev to allow for a test to
+    be backported
+
+ -- Stephen Gelman <ssgelm@debian.org>  Tue, 05 Feb 2019 02:23:07 -0600
+
+golang-google-cloud (0.9.0-7) unstable; urgency=medium
+
+  * Team upload.
+  * Bump golang-google-api-dev in -dev Depends.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 21 Sep 2018 14:29:08 +0800
+
+golang-google-cloud (0.9.0-6) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Shengjing Zhu ]
+  * Update team mail address to team+pkg-go@tracker.debian.org.
+  * Update Standards-Version to 4.2.1. (no changes)
+  * Update debhelper and compat to 11.
+  * Add patch to fix build with golang-google-api-dev 0.0~git20180916.19ff876
+  * Bump golang-google-api-dev to 0.0~git20180916.19ff876.
+  * Remove examples, no longer provided by upstream.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 21 Sep 2018 02:53:24 +0800
+
+golang-google-cloud (0.9.0-5) unstable; urgency=medium
+
+  * debian/patches: Fix typo.
+  * Fix racy spanner test. Closes: #891356
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 26 Feb 2018 13:30:54 +0000
+
+golang-google-cloud (0.9.0-4) unstable; urgency=high
+
+  * Fix FTBFS with golang 1.10. Closes: #890938.
+  * Bump Standards-Vesion with no changes.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 24 Feb 2018 11:02:49 +0000
+
+golang-google-cloud (0.9.0-3) unstable; urgency=medium
+
+  * Stop using pristine-tar.
+  * Backport fix to protobuf changes in golang-google-genproto-dev.
+    Closes: 884406.
+
+ -- Martín Ferrari <tincho@debian.org>  Thu, 04 Jan 2018 11:49:56 +0000
+
+golang-google-cloud (0.9.0-2) unstable; urgency=high
+
+  * Disable more flaky tests, as package is still failing to build some times.
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 20 Sep 2017 12:33:09 +0000
+
+golang-google-cloud (0.9.0-1) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Mark package as autopkgtest-able.
+  * debian/control: Remove unneded versioned deps.
+  * debian/copyright: Format uses http protocol instead of https.
+  * Add watch file.
+
+  [ Shengjing Zhu ]
+  * New upstream release (Closes: #873514)
+  * Refresh patches
+    + Drop 0001-Bug#840311-fix-test-timeouts.patch
+    + Drop 0002-Failing_test.patch
+    + Rework patch that disable network access in testing
+  * Update new Build-Depends
+    + Add golang-github-golang-mock-dev Build-Depends
+    + Bump golang-google-grpc-dev to 1.6.0
+    + Bump golang-github-googleapis-gax-go-dev to 0.0~git20170902.8c160ca
+    + Bump golang-google-api-dev to 0.0~git20170907.b1ecfb3
+  * Update compat and dh to 10
+  * Update pkg-go team name
+  * Change priority to optional
+  * No more internal/cloud.go in golang-google-cloud-compute-metadata-dev
+  * Run short test only
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 20 Sep 2017 09:02:31 +0000
+
+golang-google-cloud (0.5.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix FTBFS on 32 bit. (Closes: #860699)
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Thu, 27 Apr 2017 22:30:57 +0200
+
+golang-google-cloud (0.5.0-1) unstable; urgency=medium
+
+  * Start following upstream history (branch upstream-ng), using the new
+    repository.
+  * Switch to the new cloud.google.com/go tree, and provide a compatibility
+    tree.
+  * New upstream release. Closes: #846322
+  * Update patches.
+  * Update dependencies.
+  * Ensure the transition from symlink to directory is handled correctly.
+    Closes: #846799
+  * Disable test which accesses the network.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 16 Dec 2016 18:32:29 +0000
+
+golang-google-cloud (0.0~git20160615-6) unstable; urgency=medium
+
+  * Remove compatibility symlinks, as those clash with golang's rules about
+    internal packages. Closes: 844074.
+  * Instead, duplicate the source tree and replace all references to the old
+    import path.
+  * Depend on latest version of x/oauth2/google to avoid more circular dep
+    problems.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 19 Nov 2016 05:43:11 +0000
+
+golang-google-cloud (0.0~git20160615-5) unstable; urgency=medium
+
+  * Use Xs-Go-Import-Path.
+  * Try to simplify a bit the packaging.
+  * Remove unneeded patch, instead install testdata.
+  * Remove canonical import paths, so compatibility symlinks can be used.
+  * Add compatibility symlinks for google.golang.org/cloud.
+  * Update x/net package name.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 04 Nov 2016 17:22:49 +0000
+
+golang-google-cloud (0.0~git20160615-4) unstable; urgency=medium
+
+  * Add myself to Uploaders.
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Replace golang-go with golang-any in Build-Depends.
+  * Increase timeouts in tests to avoid build failures. Closes: #840311.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 21 Oct 2016 17:42:30 +0000
+
+golang-google-cloud (0.0~git20160615-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix bad install dependencies in d/control.
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 05 Oct 2016 15:44:09 +1100
+
+golang-google-cloud (0.0~git20160615-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix bad B-D's in d/control.
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 27 Sep 2016 11:37:06 +1000
+
+golang-google-cloud (0.0~git20160615-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Tim Potter ]
+  * Newer upstream snapshot (Closes: #835742)
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 06 Sep 2016 12:18:36 +1000
+
+golang-google-cloud (0.0~git20160413-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream snapshot (Closes: #823475)
+  * Build golang-google-compute-dev package
+  * Standards-Version: 3.9.8
+  * Use https for VCS-Browser field
+  * Don't use Built-Using for -dev packages
+  * Add docs file for both binary packages
+  * Add examples
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 17 May 2016 12:15:42 +1000
+
+golang-google-cloud (0.0~git20150613-1) unstable; urgency=medium
+
+  * Initial release (Closes: #788778)
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sun, 14 Jun 2015 00:21:22 +0200

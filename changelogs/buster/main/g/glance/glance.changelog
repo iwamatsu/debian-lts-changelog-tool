@@ -1,0 +1,1061 @@
+glance (2:17.0.0-5+deb10u1) buster-security; urgency=medium
+
+  * Switch the default shell for Glance to be /bin/sh to allow scp / rsync of
+    /var/lib/glance.
+  * CVE-2022-47951: vulnerability in VMDK image processing. By supplying a
+    specially created VMDK flat image which references a specific backing file
+    path, an authenticated user may convince systems to return a copy of that
+    file's contents from the server resulting in unauthorized access to
+    potentially sensitive data. Added upstream patch:
+    CVE-2022-47951-Enforce_image_safety_during_image_conversion.patch
+    (Closes: #1029563).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 25 Jan 2023 14:39:24 +0100
+
+glance (2:17.0.0-4) unstable; urgency=medium
+
+  [ Marcin Juszkiewicz ]
+  * Updated watch file to get rid of 2011.2 upstream tag.
+
+  [ Michal Arbet ]
+  * d/control:
+      - Add me to uploaders field
+      - Bump openstack-pkg-tools to 89
+  * d/copyright: Add me to copyright
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 21 Feb 2019 13:48:07 +0100
+
+glance (2:17.0.0-3) unstable; urgency=medium
+
+  * Add fix-never-ending-recursion-in-py3.7.1.patch (Closes: #911947).
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 05 Nov 2018 10:54:12 +0100
+
+glance (2:17.0.0-2) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * d/glance-common.postinst.in:
+      - If configuring keystone: Add pkgos_inifile set paste_deploy flavor keystone
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Mon, 17 Sep 2018 19:56:48 +0200
+
+glance (2:17.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Uploading to unstable.
+  * Remove /etc/glance/metadefs on purge. (Closes: #905521)
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Aug 2018 11:08:58 +0200
+
+glance (2:17.0.0~rc2-1) experimental; urgency=medium
+
+  * New upstream RC release.
+  * Fixed (build-)depends for this release.
+  * Removed applied upstream / refresh patches.
+  * Rebased fix-py37-compatibility-async-keyword.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 23 Aug 2018 10:38:53 +0200
+
+glance (2:16.0.1-8) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+  [ Thomas Goirand ]
+  * Rebuilding with openstack-pkg-tools >= 82~ to fix SSL cert loading.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 17 Aug 2018 09:35:59 +0200
+
+glance (2:16.0.1-7) unstable; urgency=medium
+
+  * Add fix-py37-compatibility-async-keyword.patch (Closes: #904389).
+  * Add Fix_RuntimeError_when_running_under_py37_-_StopIteration.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 02 Aug 2018 20:00:30 +0200
+
+glance (2:16.0.1-6) unstable; urgency=medium
+
+  * Fixed init startup description.
+  * Bind glance-api also on ipv6, using openstack-pkg-tools >= 80~ which does
+    that automatically now.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 25 May 2018 10:13:49 +0200
+
+glance (2:16.0.1-5) unstable; urgency=medium
+
+  * Change d/glance-api.init.in again
+
+ -- Michal Arbet <michal.arbet@ultimum.io>  Wed, 23 May 2018 10:49:24 +0100
+
+glance (2:16.0.1-4) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * Fix d/glance-api.init.in
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 May 2018 11:20:13 +0200
+
+glance (2:16.0.1-3) unstable; urgency=medium
+
+  * Switch back again to uwsgi, thanks to Matthew Treinish for his great help
+    on how to set it up.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 20 May 2018 15:25:08 +0200
+
+glance (2:16.0.1-2) unstable; urgency=medium
+
+  * Switch back glance-api to eventlet, uwsgi doesn't seem to work and still
+    give error 104: connection reset by peer.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 May 2018 12:07:34 +0200
+
+glance (2:16.0.1-1) unstable; urgency=medium
+
+  [ Michal Arbet ]
+  * New upstream version
+
+  [ Thomas Goirand ]
+  * Switch glance-api to uwsgi.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 May 2018 14:50:53 +0000
+
+glance (2:16.0.0-4) unstable; urgency=medium
+
+  * Fixed dbc postrm.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 26 Mar 2018 16:31:08 +0000
+
+glance (2:16.0.0-3) unstable; urgency=medium
+
+  * Create /var/lib/glance/{images,image-cache} and chown it to glance:glance,
+    otherwise uploading using the file backend simply doesn't work, and glance
+    only complains that "Adding images to store is disabled.", which is quite
+    deceptive.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 09 Mar 2018 22:30:30 +0100
+
+glance (2:16.0.0-2) unstable; urgency=medium
+
+  * Kill the debconf flavor configuration.
+  * Reuse Debian templates from openstack-pkg-tools.
+  * Explicitly using python3- version of config generators.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 06 Mar 2018 12:18:27 +0000
+
+glance (2:16.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Feb 2018 21:48:04 +0000
+
+glance (2:16.0.0~rc1-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Standards-Version is now 4.1.3.
+  * Add patch to allow xattr 0.9.1 which is still in Debian.
+  * Switch to Python 3.
+  * Using pkgos-dh_auto_test.
+  * The doc package is now called glance-doc.
+  * Do not use -R with chmod/chown in maintainer scripts..
+  * Do not set OSLO_PACKAGE_VERSION in debian/rules, leave the value set by
+    openstack-pkg-tools.
+  * Fixed debian/copyright holder list and years.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Feb 2018 16:34:35 +0000
+
+glance (2:15.0.0-7) unstable; urgency=medium
+
+  [ David Rabel ]
+  * Team upload.
+  * Fix encoding in d/po/pt.po.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 10 Feb 2018 12:43:31 +0000
+
+glance (2:15.0.0-6) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 61~.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Dec 2017 09:02:13 +0000
+
+glance (2:15.0.0-5) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 60~.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 Dec 2017 21:17:47 +0000
+
+glance (2:15.0.0-4) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools >= 59~, to make sure we're using allocated
+    UID/GID from #884178.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 Dec 2017 00:09:55 +0000
+
+glance (2:15.0.0-3) unstable; urgency=medium
+
+  * Rebuild with openstack-pkg-tools >= 56~.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 01 Dec 2017 16:51:03 +0000
+
+glance (2:15.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Updated pt.po (Closes: #876170).
+  * Updated fr.po (Closes: #875753).
+  * Updated pt_BR.po (Closes: #861984).
+  * Do not rm -rf /etc/glance on purge (Closes: #867468).
+  * Removed dh-systemd build-depends.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 31 Oct 2017 10:02:06 +0000
+
+glance (2:15.0.0-1) experimental; urgency=medium
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Updating maintainer field.
+  * Running wrap-and-sort -bast.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Correcting permissions in debian packaging files.
+  * Updating standards version to 4.0.1.
+  * Deprecating priority extra as per policy 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed 3 patches applied upstream, rebased the last one.
+  * Fixed install of conf files.
+  * Removed all traces of glare.
+  * Installs usr/bin/glance-wsgi-api.
+  * Package missing migration files (patch adding MANIFEST.in).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 07 Oct 2017 10:33:08 +0200
+
+glance (2:13.0.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Revert net-tools dependency.
+  * Bump build dependency on openstack-pkg-tools (Closes: #858123).
+
+ -- David Rabel <david.rabel@noresoft.com>  Sat, 01 Apr 2017 11:33:39 +0200
+
+glance (2:13.0.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Added dependency: net-tools ( Closes: #858123 )
+
+ -- David Rabel <david.rabel@noresoft.com>  Sat, 18 Mar 2017 19:06:26 +0100
+
+glance (2:13.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bumped debhelper compat version to 10
+  * Patch-out upper constraints of SQLAlchemy
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 20 Jan 2017 11:26:08 +0100
+
+glance (2:13.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 06 Oct 2016 17:47:48 +0200
+
+glance (2:13.0.0~rc2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Use correct branch in Vcs-* fields
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Uploading to unstable.
+  * Build-Depends on openstack-pkg-tools (>= 53~).
+  * Fixed olsotest EPOCH.
+  * Debconf translation:
+    - it (Closes: #839196).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 28 Sep 2016 09:40:21 +0200
+
+glance (2:13.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed default-config.patch.
+  * Rebased sql_conn-registry.patch and fix-requirements.txt.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 Sep 2016 20:00:51 +0200
+
+glance (2:13.0.0~b2-2) experimental; urgency=medium
+
+  * Added python-pep8 to build depends (Closes: #834740)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 19 Aug 2016 23:41:36 +0200
+
+glance (2:13.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Updated Danish translation of debconf (Closes: #830632).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 15 Jul 2016 16:27:27 +0200
+
+glance (2:13.0.0~b1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Added fix-requirements.txt.patch.
+  * Disable test_wsgi_ipv6.IPv6ServerTest.test_evnetlet_no_dnspython that is
+    failing in Xenial.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 09 Jun 2016 09:46:22 +0200
+
+glance (2:12.0.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use /bin/sh as su shell in postinst script explicitly
+  * Standards-Version is 3.9.8 now (no change)
+
+  [ Ivan Udovichenko ]
+  * Add Glance Glare package.
+
+  [ Thomas Goirand ]
+  * Updated Japanese debconf templates (Closes: #820762).
+  * Updated Dutch debconf templates (Closes: #822888).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 20 May 2016 12:46:22 +0000
+
+glance (2:12.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 07 Apr 2016 21:10:55 +0200
+
+glance (2:12.0.0~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Updated ja.po debconf translation (Closes: #815957).
+  * Using testr directly to run tests.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 05 Apr 2016 10:22:46 +0200
+
+glance (2:12.0.0~rc1-2) experimental; urgency=medium
+
+  * Do not use Keystone admin auth token to register API endpoints.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 29 Mar 2016 13:01:47 +0000
+
+glance (2:12.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bumped python-glance-store (build-)depends version.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 Mar 2016 13:14:34 +0100
+
+glance (2:12.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Also installs /usr/bin/glance-glare.
+  * Also generates glance-glare.conf.
+  * Standards-Version: 3.9.7 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 04 Mar 2016 14:34:37 +0800
+
+glance (2:12.0.0~b2-3) experimental; urgency=medium
+
+  * Better config file generation.
+  * Make build reproducible (Closes: #807475).
+  * VCS URLs using HTTPS.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 06 Feb 2016 06:15:09 +0000
+
+glance (2:12.0.0~b2-2) experimental; urgency=medium
+
+  * Fixed use of -S flag in dpkg-parsechangelog, incompatible with Trusty.
+  * Added build-depends on git, due to its use in sphinx-build.
+  * Bump EPOCH to align with Ubuntu.
+  * Fixed rabbitmq credential in debconf to use the oslo_messaging_rabbit
+    section.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 25 Jan 2016 23:31:11 +0800
+
+glance (1:12.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removing /usr/bin/glance-artifacts to glance-common as it's gone from
+    upstream entry-points.
+  * glance-api depends on adduser to avoid a lintian warning.
+  * Update namespaces for config file generation.
+  * Fixed debian/copyright ordering and years.
+  * Unit test fix:
+    - fix-test_multiprocessing.py-call-to-psutils.patch
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 08 Dec 2015 09:26:10 +0100
+
+glance (1:11.0.0-3) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkg-tools 37 to use Keystone API v3.
+  * Added missing python-swiftclient needed for building the config.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Nov 2015 14:17:05 +0000
+
+glance (1:11.0.0-2) unstable; urgency=medium
+
+  * Purge /etc/glance completely on purge (Closes: #802537).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Oct 2015 12:08:06 +0000
+
+glance (1:11.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Adding python-swiftclient as runtime dependency (request from puppet team).
+  * Added tweak of lock_path in glance-api.conf.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 02 Oct 2015 21:58:33 +0200
+
+glance (1:11.0.0~rc1-2) experimental; urgency=medium
+
+  * Now generating config file with oslo-config-generator.
+  * Fixes install of config file.
+  * Using http protocol by default, not https, for glance connecting to
+    Keystone through keystonemiddleware.
+  * Change default value for filesystem_store_datadir in both the
+    glance-api.conf and glance-registry.conf: the default doesn't work as the
+    comments in the config file pretends.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 28 Sep 2015 10:02:16 +0200
+
+glance (1:11.0.0~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Refreshed patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 26 Sep 2015 16:44:58 +0200
+
+glance (1:11.0.0~b3-2) experimental; urgency=medium
+
+  * Now glance-api depends on openstackclient.
+  * Fixed install of schema-image.json.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 23 Sep 2015 11:28:04 +0000
+
+glance (1:11.0.0~b3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Align with MOS packaging.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 31 Aug 2015 22:01:44 +0200
+
+glance (1:11.0.0~b2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 10 Jul 2015 09:30:49 +0200
+
+glance (2015.1.0-2) unstable; urgency=medium
+
+  * Makes glance build reproduceable. Thanks to Juan Picca <jumapico@gmail.com>
+    for the bug report and patch. (Closes: #788469).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 Jun 2015 19:33:36 +0200
+
+glance (2015.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Apr 2015 21:44:52 +0000
+
+glance (2015.1~rc2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable.
+  * Fixed (build-)depends for this release.
+  * Removed disable intersphinx patch, refreshed other patches.
+  * Patches requirements.txt to not use ordereddict.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 23 Dec 2014 21:40:57 +0800
+
+glance (2014.2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Now (build-)depends on python-glance-store >= 0.1.10 (otherwise unit tests
+    are failing). Thanks to James Page for the tip!
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 13 Dec 2014 00:30:44 +0800
+
+glance (2014.2-2) experimental; urgency=medium
+
+  * Added ordereddict to debian/pydist-overrides.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 19 Oct 2014 18:54:11 +0800
+
+glance (2014.2-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 16 Oct 2014 15:31:54 +0000
+
+glance (2014.2~rc2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Now using templated init scripts from openstack-pkg-tools >= 13.
+  * Mangling upstream rc and beta versions in watch file.
+  * Updated nl.po thanks to Frans Spiesschaert (Closes: #764201).
+  * Fixed config file path for glance-api and glance-registry.
+  * Now using a single logrotate file in glance-common for both daemons.
+  * Standards-Version is now 3.9.6 (no change).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 05 Oct 2014 14:27:25 +0800
+
+glance (2014.2~rc1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Updated pt_BR.po thanks to Adriano Rafael Gomes (Closes: #762471).
+  * Updated (build-)depends for this release.
+  * Add patch to allow python-routes == 2.0.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 29 Sep 2014 16:23:59 +0800
+
+glance (2014.2~b3-1) experimental; urgency=low
+
+  [ Thomas Goirand ]
+  * Fixed new (build-)depends.
+  * Fixed packaging branch in gbp.conf
+  * Removed differences with upstream branch.
+
+  [ stanzgy ]
+  * Add dh-systemd support
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 20 Sep 2014 08:55:52 +0000
+
+glance (2014.1.1-3) unstable; urgency=medium
+
+  * Fixed postinst which was doing && [ dpkg instead of && dpkg.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 13 Jun 2014 23:32:21 +0800
+
+glance (2014.1.1-2) unstable; urgency=medium
+
+  * Fixed postinst which was calling debconf without package name.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 10 Jun 2014 17:46:03 +0800
+
+glance (2014.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Glance now needs python-six >= 1.6.0.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 09 Jun 2014 22:23:39 +0800
+
+glance (2014.1-7) unstable; urgency=medium
+
+  * Convert tables into utf8 if we're upgrading from prior to Icehouse.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 05 Jun 2014 17:44:45 +0800
+
+glance (2014.1-6) unstable; urgency=medium
+
+  * Now build-depends on openstack-pkgs-tools >= 12~. This fixes the UTF8 db
+    creation.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 05 Jun 2014 07:09:43 +0000
+
+glance (2014.1-5) unstable; urgency=medium
+
+  * Rebuilt with openstack-pkgs-tools >= 11~.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 02 Jun 2014 17:34:54 +0000
+
+glance (2014.1-4) unstable; urgency=medium
+
+  * Switched from restarting daemons to copytruncate for logrotate.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 29 May 2014 14:08:50 +0800
+
+glance (2014.1-3) unstable; urgency=medium
+
+  * Fixed logrotate script to always use "service X restart" and stop using
+    dpkg-dev (Closes: #747885).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 16 May 2014 23:36:19 +0800
+
+glance (2014.1-2) unstable; urgency=medium
+
+  * Updated Italian debconf translation thanks to Beatrice Torracca
+    <beatricet@libero.it> (Closes: #745388).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 03 May 2014 05:24:35 +0000
+
+glance (2014.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Uploading to unstable
+  * Refreshed & rebased patches.
+  * Replaced DEFAULT/sql_connection with database/connection in the config file
+    handling.
+  * Rebuilt with fix for db charset at db creation (Closes: #744892).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 18 Apr 2014 08:44:30 +0800
+
+glance (2014.1~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Reviewed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 Apr 2014 11:52:30 +0800
+
+glance (2014.1~b3-1) experimental; urgency=low
+
+  * New upstream release (beta3 of Icehouse).
+  * Refresh patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 17 Feb 2014 15:17:34 +0800
+
+glance (2013.2.2-2) unstable; urgency=medium
+
+  * Rebuilt using openstack-pkg-tools >= 9~.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Feb 2014 17:39:52 +0000
+
+glance (2013.2.2-1) unstable; urgency=medium
+
+  * New upstream point release.
+  * Refreshed patches.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Feb 2014 11:19:32 +0800
+
+glance (2013.2.1-3) unstable; urgency=medium
+
+  * Restart glance-api and registry after logrotate.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 03 Feb 2014 16:06:45 +0800
+
+glance (2013.2.1-2) unstable; urgency=medium
+
+  * Fixed sphinx doc building with sphinx 1.2 (Closes: #735802).
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 18 Jan 2014 03:51:40 +0000
+
+glance (2013.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fixed python-iso8601 (>= 0.1.8) and python-six (>= 1.4.1)
+    (build-)dependency.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 16 Dec 2013 16:12:36 +0800
+
+glance (2013.2-2) unstable; urgency=medium
+
+  * Adding new debconf template translations and updates, with thanks:
+    - Russian, Yuri Kozlov <yuray@komyakino.ru> (Closes: #729773).
+    - French, Julien Patriarca <leatherface@debian.org> (Closes: #728768).
+    - Portugese, Traduz <traduz@debianpt.org> (Closes: #726958).
+    - Spanish, Camaleón <noelamac@gmail.com> (Closes: #726738).
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 04 Dec 2013 16:05:43 +0800
+
+glance (2013.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 18 Oct 2013 00:02:45 +0800
+
+glance (2013.2~rc2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 13 Oct 2013 16:32:00 +0800
+
+glance (2013.2~rc1-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 22 Jun 2013 16:21:32 +0800
+
+glance (2013.1.2-2) unstable; urgency=low
+
+  * Added missing schema-image.json in /etc/glance for glance-common.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 17 Jun 2013 02:43:46 +0800
+
+glance (2013.1.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 14 Jun 2013 14:46:03 +0800
+
+glance (2013.1-4) unstable; urgency=low
+
+  * Ran wrap-and-sort.
+  * Rebuild with new version 6 of openstack-pkg-tools.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 May 2013 11:21:41 +0800
+
+glance (2013.1-3) unstable; urgency=low
+
+  * Added missing dbconfig-common dependency in glance-common (Closes: #677080)
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 21 May 2013 14:54:49 +0800
+
+glance (2013.1-2) unstable; urgency=low
+
+  * Uploading to unstable.
+  * Added Should-Start/stop: postgress & mysql in the glance-registry init
+    script (Closes: #706016). Thanks to Julien Cristau for reporting it.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 24 Apr 2013 00:09:42 +0800
+
+glance (2013.1-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 28 Jan 2013 21:28:02 +0800
+
+glance (2012.2.1-1) experimental; urgency=low
+
+  [ Thomas Goirand <zigo@debian.org> ]
+  * New upstream release 2012.2.1
+  * Uses $(VERSION) when building orig.tar.xz
+  * Added .PHONY: target.
+  * Disable git fetch in clean target (sic!).
+  * All the debconf handling is now done in glance-common.
+  * Added missing VCS fields.
+  * Corrected Homepage field.
+  * Rewrote the debconf and dbconfig-common handling using the pkgos functions.
+  * Do not package /usr/bin/glance since this is provided by
+  python-glanceclient.
+  * Added mssing if [ -r /usr/share/debconf/confmodule in prerm.
+  * Removed dangerous deletion of the glance username in postrm.
+  * Added upstream patch for CVE-2012-4573: authentication bypass for image
+  deletion.
+  * Ensure we have sqlalchemy (<< 0.8).
+  * Added upstream patch FakeAuth not always admin.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 02 Dec 2012 07:03:28 +0000
+
+glance (2012.2~rc1-1) experimental; urgency=low
+
+  * New snapshot release
+  * Refresh all patches
+
+ -- Mehdi Abaakouk <sileht@sileht.net>  Mon, 24 Sep 2012 11:18:52 +0200
+
+glance (2012.2~f3-1) experimental; urgency=low
+
+  [ Thomas Goirand ]
+  * Now using xz compression level 9 for the debs.
+  [ Mehdi Abaakouk ]
+  * New upstream version
+  * Refresh all patches
+  * Removed test_interrupt_avoids_respawn_storm.patch (incorporated upstream)
+
+ -- Mehdi Abaakouk <sileht@sileht.net>  Mon, 10 Sep 2012 17:58:45 +0200
+
+glance (2012.1.1-2) unstable; urgency=low
+
+  * Added Chinese Debconf translation, thanks to ben <duyujie.dyj@gmail.com>.
+  * CVE-2012-4573: Authentication bypass for image deletion (Closes: #692641).
+  * Fixes test_interrupt_avoids_respawn_storm fails when run under fakeroot
+  disabling the tests (Closes: #681582). Also adds a || true since pep8 is
+  neatpicking a source code line as too large.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 27 Aug 2012 12:05:22 +0000
+
+glance (2012.1.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix pending l10n issues. Debconf translations:
+    - Portuguese (Pedro Ribeiro).  Closes: #680451
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 24 Jul 2012 20:23:16 -0600
+
+glance (2012.1.1-1) unstable; urgency=low
+
+  * Non-maintainer upload.
+
+ -- Ghe Rivero <ghe@debian.org>  Mon, 25 Jun 2012 19:16:34 +0200
+
+glance (2012.1-4) unstable; urgency=low
+
+  * Fixes most pep8 errors.
+  * Disabled failing tests in debian/rules.
+  * Added few DEP3 comments.
+  * Fixed format 1.0 URL in debian/copyright.
+  * Updated the following debconf translations (thanks to):
+    - ru: Yuri Kozlov <yuray@komyakino.ru> (Closes: #676663).
+    - cs: Michal Simunek <michal.simunek@gmail.com> (Closes: #678656).
+    - fr: Julien Patriarca <patriarcaj@gmail.com> (Closes: #677179).
+    - de: Chris Leick <c.leick@vollbio.de> (Closes: #677151).
+    - it: Beatrice Torracca <beatricet@libero.it> (Closes: #677133).
+    - da: Joe Dalton <joedalton2@yahoo.dk> (Closes: #676951).
+    - pt: Traduz <traduz@debianpt.org> (Closes: #676945).
+    - pl: "Michał Kułach" <michalkulach@gmail.com> (Closes: #676772).
+    - es: Camaleón <noelamac@gmail.com> (Closes: #676670, #676359).
+    - ru: Yuri Kozlov <yuray@komyakino.ru> (Closes: #676663).
+  * Added the following debconf translations (thanks to):
+    - gl: Jorge Barreiro <yortx.barry@gmail.com> (Closes: #678620).
+    - sv: Martin Bagge <brother@bsnet.se> (Closes: #676603).
+    - pt_BR: Adriano Rafael Gomes <adrianorg@gmail.com> (Closes: #677794).
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 24 Jun 2012 07:01:57 +0000
+
+glance (2012.1-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Removed source of dbconfig-common as it is actually not used.
+    Closes: #677080.
+  * Some of the tests are disabled for Debian package build. The reason
+    is that there is a segmentation fault during the run and this is a
+    serious FTBFS error.
+
+ -- Ola Lundqvist <ola@inguza.com>  Sun, 17 Jun 2012 19:29:19 +0000
+
+glance (2012.1-3) unstable; urgency=low
+
+  * Removed python-glance version depends on python-sqlalchemy. Closes: #676458
+  * Fixed glance-common.postrm script
+  * Added Spanish translation (Camaleón). Closes: #666554
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Tue, 05 Jun 2012 17:15:17 +0200
+
+glance (2012.1-2) unstable; urgency=low
+
+  * Debconf templates and debian/control reviewed by the debian-l10n-
+    english team as part of the Smith review project. Closes: #659277
+  * [Debconf translation updates]
+  * Polish (Michał Kułach).  Closes: #661895
+  * Danish (Joe Hansen).  Closes: #661945
+  * Swedish (Martin Bagge / brother).  Closes: #661965
+  * Russian (Yuri Kozlov).  Closes: #661982
+  * German (Chris Leick).  Closes: #662872
+  * French (Julien Patriarca).  Closes: #663061
+  * Dutch; (Jeroen Schot).  Closes: #663987
+  * Italian (Beatrice Torracca).  Closes: #664133
+  * Portuguese (Pedro Ribeiro).  Closes: #664274
+  * Czech (Michal Simunek).  Closes: #664458
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Tue, 05 Jun 2012 08:29:57 +0200
+
+glance (2012.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Mon, 09 Apr 2012 09:00:19 +0200
+
+glance (2012.1~rc3-1) unstable; urgency=low
+
+  * New upstream release .
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Wed, 04 Apr 2012 09:58:34 +0200
+
+glance (2012.1~rc1-2) unstable; urgency=low
+
+  * [9df11b0] Fix interactive install. Closes: #662067
+
+ -- Ghe Rivero <ghe@debian.org>  Tue, 27 Mar 2012 09:24:16 +0200
+
+glance (2012.1~rc1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Ghe Rivero <ghe.rivero@stackops.com>  Wed, 21 Mar 2012 11:24:19 +0100
+
+glance (2012.1~e4-2) UNRELEASED; urgency=low
+
+  * Fixed default config. Closes: 662067
+    Default install and non-interactive doesn't change conf files.
+
+ -- Ghe Rivero <ghe@debian.org>  Mon, 05 Mar 2012 16:56:47 +0100
+
+glance (2012.1~e4-1) unstable; urgency=low
+
+  * New upstream release
+
+  [ Ghe Rivero ]
+  * Added glance-api-paste.ini and policy.json conf files to glance-common
+  * Added glance-registry-paste.ini to glance-registry
+  * Added python-iso8601 depends to glance-common
+  * Fix permissions on glance db
+
+  [ Julien Danjou ]
+  * Revert "mv debconf-updatepo to build phase"
+  * Revert "added po templates"
+  * Merge debian/unstable changes
+  * Fix sqlite database path
+
+ -- Ghe Rivero <ghe@debian.org>  Fri, 02 Mar 2012 08:04:31 +0100
+
+glance (2012.1~e3-4) unstable; urgency=low
+
+  [ Julien Danjou ]
+  * Make /var/log/glance and /etc/glance 0750 instead of 0700
+  * Fix typo in glance-registry.postinst
+  * Move debconf question from glance-api to glance-common
+  * Add dbconfig support
+
+  [ Ghe Rivero ]
+  * Some dbconfig changes
+  * Added python2.7 | argparse depends. (Closes: #653637)
+
+ -- Julien Danjou <acid@debian.org>  Thu, 23 Feb 2012 12:07:08 +0100
+
+glance (2012.1~e3-3) unstable; urgency=low
+
+  * Add debconf templates to configure
+  * Change service name in init scripts
+
+ -- Julien Danjou <acid@debian.org>  Mon, 06 Feb 2012 16:04:08 +0100
+
+glance (2012.1~e3-2) unstable; urgency=low
+
+  * Installs new paste-ini files and json policy
+
+ -- Ghe Rivero <ghe@debian.org>  Fri, 27 Jan 2012 08:23:36 +0100
+
+glance (2012.1~e3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe@debian.org>  Thu, 26 Jan 2012 12:20:27 +0100
+
+glance (2012.1~e2+git82-g98b19af-1) experimental; urgency=low
+
+  * New snapshot release
+
+ -- Ghe Rivero <ghe@debian.org>  Wed, 04 Jan 2012 09:40:55 +0100
+
+glance (2012.1~e2-4) unstable; urgency=low
+
+  * Fix new packages replaces
+  * Fix init script stop action
+  * Fix depends on httplib2
+  * Do not fail if db_sync fails
+
+ -- Julien Danjou <acid@debian.org>  Tue, 20 Dec 2011 10:26:52 +0100
+
+glance (2012.1~e2+git66-gea99d1c-1) experimental; urgency=low
+
+  * New snapshot release
+
+ -- Ghe Rivero <ghe@debian.org>  Mon, 19 Dec 2011 19:02:57 +0100
+
+glance (2012.1~e2-3) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Fix piuparts errors
+  * Split glance into api and registry daemons
+  * Fixed embeded javascript library in python-glance-doc
+
+ -- Ghe Rivero <ghe@debian.org>  Mon, 19 Dec 2011 17:48:42 +0100
+
+glance (2012.1~e2-2) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Fix glance.postrm deleting user/group
+
+ -- Ghe Rivero <ghe@debian.org>  Sat, 17 Dec 2011 23:09:33 +0100
+
+glance (2012.1~e2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ghe Rivero <ghe@debian.org>  Fri, 16 Dec 2011 08:22:26 +0100
+
+glance (2012.1~e1+git41-gb183f43-1) experimental; urgency=low
+
+  * New snapshot release.
+
+ -- Julien Danjou <acid@debian.org>  Fri, 02 Dec 2011 17:33:36 +0100
+
+glance (2012.1~e1-3) unstable; urgency=low
+
+  * Rewrite init scripts properly
+
+ -- Julien Danjou <acid@debian.org>  Fri, 02 Dec 2011 12:13:37 +0100
+
+glance (2012.1~e1-2) unstable; urgency=low
+
+  [ Ghe Rivero ]
+  * Added python-crypto Depends to python-glance
+
+ -- Julien Danjou <acid@debian.org>  Thu, 01 Dec 2011 10:46:28 +0100
+
+glance (2012.1~e1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Julien Danjou <acid@debian.org>  Wed, 30 Nov 2011 17:33:30 +0100
+
+glance (2011.3-1) unstable; urgency=low
+
+  * [624c8de] Imported Upstream version 2011.3
+  * [df2ecd1] pkg cleanup
+  * [1f9054b] added post/pre install/rm scripts
+  * [7b6c293] patches refreshed
+
+ -- Ghe Rivero <ghe@debian.org>  Wed, 09 Nov 2011 11:53:23 +0100
+
+glance (2011.2-1) unstable; urgency=low
+
+  * Added patch headers.
+  * Added stub manpages when missing.
+  * Disabled upstart scripts when in Debian.
+  * Added missing adduser dependency.
+  * Added myself as uploaders.
+  * Added glance-api and glance-registry init.d scripts.
+  * Patches glance-api and glance-registry to use a log file instead of
+  stderr / stdout.
+  * Added logrotate file for glance-api and glance-registry.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 10 May 2011 09:10:56 +0000
+
+glance (2011.2-0ubuntu1) natty; urgency=low
+
+  * New upstream version.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 15 Apr 2011 08:18:16 -0400
+
+glance (2011.2~bzr108-0ubuntu1) natty; urgency=low
+
+  [ Soren Hansen ]
+  * Run test suite during build
+  * Add pep8 as a build-dependency.
+  * Add python-{daemon,eventlet,sqlalchemy} as dependencies of python-
+    glance. Add python-argparse as a dependency of glance.
+  * Add dependency on python-pastedeploy and python-migrate.
+  * Remove deps on Twisted and gflags.
+  * Add curl to build-depends. The test suite needs it.
+  * Add dep on python-argparse.
+  * Build-depend on python-swift. The test suite needs the Swift client.
+  * Install glance-api and glance-registry upstart jobs. (LP: #757404)
+  * Create and chown /var/log/glance directory on install.
+  * Install sample config by default.
+  * Create db on install.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 12 Apr 2011 09:52:06 -0400
+
+glance (0.1.3pre~bzr39-0ubuntu1) natty; urgency=low
+
+  * Initial upload.
+
+ -- Soren Hansen <soren@ubuntu.com>  Wed, 19 Jan 2011 12:01:32 +0100

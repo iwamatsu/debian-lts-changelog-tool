@@ -1,0 +1,184 @@
+sqlparse (0.2.4-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2023-30608: ReDoS (Regular Expression Denial of Service) vulnerability
+    in the SQL parser. (Closes: #1034615)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Tue, 16 May 2023 00:54:33 +0200
+
+sqlparse (0.2.4-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/watch: Use https protocol
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove trailing whitespaces
+  * d/control: Remove Testsuite field, not needed anymore
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Andrii Senkovych ]
+  * d/control, d/compat: raise compat level to 11.
+  * d/control, d/copyright: update maintainers email and proper name spelling.
+  * d/control: bump Standards-Version to 4.2.0.
+  * d/control: add Rules-Requires-Root header set to no.
+  * d/control: add specific dependency on 2to3 (Closes: #884670)
+  * d/tests/control: add explicit dependency on 2to3.
+  * d/control: switch to python3-sphinx.
+  * d/control: add Built-Using header to the -doc package.
+  * Update doc-base file reference to the correct destination.
+  * Remove copyright info on removed file sqlparse/pipeline.py.
+  * Update copyright text according to upstream LICENSE file.
+  * New upstream version 0.2.4
+  * Acknowledge changes from NMU. Thanks to Matthias Klose.
+
+ -- Andrii Senkovych <andrii@senkovych.com>  Tue, 21 Aug 2018 22:55:17 +0300
+
+sqlparse (0.2.4-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version.
+  * Build-depend on 2to3. Closes: #884670.
+  * Add 2to3 to autopkg test depends. Closes: #889007.
+  * Bump standards version.
+  * Mark python-sqlparse-doc as M-A: foreign.
+  * Build-depend on python3-sphinx instead of python-sphinx.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 06 Feb 2018 17:27:17 +0100
+
+sqlparse (0.2.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Andriy Senkovych ]
+  * New upstream version 0.2.2 (Closes: #834826)
+  * Bump Standards-Version to 3.9.8. No changes required.
+  * Add pypy-setuptools to Depends
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Tue, 08 Nov 2016 03:00:45 +0200
+
+sqlparse (0.1.18-1) unstable; urgency=low
+
+  * New upstream release.
+  * Source tarballs are now signed correctly again.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Wed, 04 Nov 2015 14:46:56 +0200
+
+sqlparse (0.1.16-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #794452)
+  * Update project homepage and copyright source URLs.
+  * Use pypi.debian.net for debian/watch.
+  * Raise dh compat level to 9
+  * Remove unnecessary dependencies on self
+  * Update short license names
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Sun, 20 Sep 2015 14:31:21 +0300
+
+sqlparse (0.1.13-2) unstable; urgency=medium
+
+  * Update debian/watch.
+  * Add autopkgtest support.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Fri, 24 Oct 2014 18:25:59 +0300
+
+sqlparse (0.1.13-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.6. No changes required.
+  * Correctly remove alternatives for old package versions.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Thu, 09 Oct 2014 17:07:59 +0300
+
+sqlparse (0.1.11-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add pypy support by creating pypy-sqlparse binary package
+  * Add separate sqlformat package which depends on python3-sqlparse
+  * Do not use alternatives mechanism any more since sqlformat scripts provide
+    the same functionality.
+  * Bump Standards-Version to 3.9.5.0. No changes required.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Wed, 06 Aug 2014 02:29:13 +0300
+
+sqlparse (0.1.10-1) unstable; urgency=low
+
+  * New upstream release(Closes: #722198)
+  * Switch to pybuild
+  * debian/control:
+    - Build-Depend on dh-python
+    - Fix package descriptions
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Wed, 23 Oct 2013 20:04:00 +0300
+
+sqlparse (0.1.8-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Andriy Senkovych ]
+  * New upstream release
+  * Upload to unstable
+  * Add replaces/breaks relation to make separate sqlparse upgrade smoothly
+    (Closes: #717972)
+  * Bump Standards-Version to 3.9.4. Create empty build-arch target.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Wed, 07 Aug 2013 00:20:01 +0300
+
+sqlparse (0.1.6-1) experimental; urgency=low
+
+  * New upstream version. (Closes: #702197, #677982)
+  * Bump Standards-Version to 3.9.4. No changes required.
+  * debian/copyright: new contributor added.
+  * Add python3 support using automatic 2to3 conversion.
+  * Move documentation to its own package python-sqlparse-doc.
+  * Add dependency on python-setuptools, python-pytest.
+  * Use alternatives mechanism to provide /usr/bin/sqlformat.
+  * Update project homepage and debian/watch.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Fri, 08 Mar 2013 21:15:06 +0200
+
+sqlparse (0.1.4-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Sat, 21 Apr 2012 12:41:52 +0300
+
+sqlparse (0.1.3-2) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Bump minimum required python-sphinx version to 1.0.7+dfsg.
+
+  [ Andriy Senkovych ]
+  * Bump Standards-Version to 3.9.3.
+  * Add doc-base documentation reference.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Mon, 27 Feb 2012 23:24:28 +0200
+
+sqlparse (0.1.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Fix debian/watch.
+  * Bump Standards-Version to 3.9.2.
+  * Manpage migrated into upstream, using it.
+  * Include HTML documentation generated with Sphinx rather than .rst files.
+  * debian/copyright: switch to DEP-5 format.
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Fri, 02 Sep 2011 20:23:43 +0300
+
+sqlparse (0.1.2-2) unstable; urgency=low
+
+  * Team upload.
+  * Rebuild for Python 2.7 transition
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sat, 23 Apr 2011 10:49:41 +0200
+
+sqlparse (0.1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #606104)
+
+ -- Andriy Senkovych <jolly_roger@itblog.org.ua>  Mon, 06 Dec 2010 22:01:20 +0200

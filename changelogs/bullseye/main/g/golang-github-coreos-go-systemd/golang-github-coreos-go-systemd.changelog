@@ -1,0 +1,199 @@
+golang-github-coreos-go-systemd (22.1.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Revert "Temporary add golang-golang-x-crypto-dev as a Depends"
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 02 Dec 2020 00:59:44 +0800
+
+golang-github-coreos-go-systemd (22.1.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Temporary add golang-golang-x-crypto-dev as a Depends.
+    To fix autopkgtest regression of golang-github-cloudflare-redoctober
+    Once golang-github-cloudflare-redoctober/0.0~git20161017.0.78e9720-5
+    has migrated to testing, this can be reverted.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Sat, 28 Nov 2020 17:37:29 +0800
+
+golang-github-coreos-go-systemd (22.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Dmitry Smirnov ]
+  * Removed unused "golang-github-coreos-pkg-dev" from
+    (Build-)Depends (Closes: #827928).
+    As of 22.0.0 "coreos/go-systemd" no longer depends on "coreos/pkg":
+    https://github.com/coreos/go-systemd/commit/3344f03f
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Shengjing Zhu ]
+  * New upstream release
+  * Update uscan watch file to version 4
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Add Rules-Requires-Root
+  * Bump debhelper-compat to 13
+  * Bump Standards-Version to 4.5.1 (no changes)
+  * Update Section to golang
+
+ -- Shengjing Zhu <zhsj@debian.org>  Fri, 27 Nov 2020 00:34:11 +0800
+
+golang-github-coreos-go-systemd (22.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.1.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 15 Dec 2019 15:32:16 +1100
+
+golang-github-coreos-go-systemd (20-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+  * (Build-)Depends:
+    = golang-dbus-dev (>= 5.0.2~)
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 09 Sep 2019 13:05:43 +1000
+
+golang-github-coreos-go-systemd (17-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Testsuite: autopkgtest-pkg-go.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 17 Aug 2018 22:10:49 +1000
+
+golang-github-coreos-go-systemd (17-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.2.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 07 Aug 2018 12:01:54 +1000
+
+golang-github-coreos-go-systemd (16-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Standards-Version: 4.1.4
+  * debhelper & compat to version 11.
+  * Install examples.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 26 May 2018 18:07:17 +1000
+
+golang-github-coreos-go-systemd (14-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 07 Dec 2016 15:36:56 +1100
+
+golang-github-coreos-go-systemd (12-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 19 Sep 2016 13:31:41 +1000
+
+golang-github-coreos-go-systemd (10-2) unstable; urgency=medium
+
+  [ Michael Hudson-Doyle ]
+  * Drop now unnecessary DH_GOLANG_EXCLUDES.
+
+  [ Tim Potter ]
+  * Remove unused dbus-x11 dependency (Closes: #836098).
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 31 Aug 2016 07:17:56 +1000
+
+golang-github-coreos-go-systemd (10-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 27 Jun 2016 19:41:07 +1000
+
+golang-github-coreos-go-systemd (9-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Removed "Built-Using" from -dev package.
+  * (Build-)Depends += "golang-github-coreos-pkg-dev".
+  * Corrected "capitalization-error-in-description-synopsis dbus D-Bus".
+
+  [ Martín Ferrari ]
+  * debian/control:
+    - Update Standards-Version with no changes.
+    - Add versioning to dh-golang and golang-go dependencies.
+    - Switch from golang-go to golang-any.
+    - Change Vcs-* fields to use HTTPS.
+    - Fix formatting.
+
+  [ Tim Potter ]
+  * Add B-D on newer version dh-golang to build in jessie-backports.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 20 Jun 2016 05:54:54 +1000
+
+golang-github-coreos-go-systemd (5-1) unstable; urgency=medium
+
+  * New upstream release [March 2016].
+  * Removed obsolete "libsystemd.patch".
+  * Added myself to Uploaders.
+  * Depends:
+    + libsystemd-dev
+    + pkg-config
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 22 Mar 2016 03:02:22 +1100
+
+golang-github-coreos-go-systemd (4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Build-Depends:
+    - golang-dbus-dev
+    + golang-dbus-dev (>= 3)
+    + pkg-config
+    + libsystemd-dev
+  * New "libsystemd.patch" to correct name of .pc file.
+  * Standards-Version: 3.9.7.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 07 Mar 2016 08:17:37 +1100
+
+golang-github-coreos-go-systemd (3-2) unstable; urgency=medium
+
+  * Add "golang-dbus-dev" to Depends where it belongs (Closes: #804464)
+
+ -- Tianon Gravi <tianon@debian.org>  Sun, 08 Nov 2015 13:41:42 -0800
+
+golang-github-coreos-go-systemd (3-1) unstable; urgency=medium
+
+  [Tianon Gravi]
+  * Updated to v3 upstream release.
+
+  [Tim Potter]
+  * Renamed to comply with new naming scheme.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Fri, 14 Aug 2015 14:59:08 -0600
+
+golang-go-systemd (2~git20150505-1) unstable; urgency=medium
+
+  * Updated to latest git master.
+
+ -- Tim Potter <tpot@hp.com>  Thu, 21 May 2015 11:25:45 +1000
+
+golang-go-systemd (2-1) unstable; urgency=medium
+
+  * Updated to v2 upstream release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 11 Jun 2014 19:41:04 -0400
+
+golang-go-systemd (1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #745507).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Thu, 08 May 2014 09:48:52 -0400

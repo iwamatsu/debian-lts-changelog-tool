@@ -1,0 +1,475 @@
+orthanc (1.5.6+dfsg-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2023-33466.patch: Implementation of File System Write Protection
+    This patch introduces a critical security enhancement by backporting
+    the RestApiWriteToFileSystemEnabled option to Orthanc in Debian Buster.
+    With this update, Orthanc is now safeguarded against potential arbitrary
+    file system writes by authenticated users, as indicated by CVE-2023-33466.
+    .
+    The previous behavior, which posed a security risk, can still be reinstated
+    by configuring the RestApiWriteToFileSystemEnabled variable to "true"
+    within the /etc/orthanc/orthanc.json file. (Closes: #1040597)
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 12 Sep 2023 06:11:09 +0200
+
+orthanc (1.5.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Sat, 02 Mar 2019 09:15:35 +0100
+
+orthanc (1.5.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 25 Feb 2019 13:36:58 +0100
+
+orthanc (1.5.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Sat, 09 Feb 2019 10:42:35 +0100
+
+orthanc (1.5.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Sat, 26 Jan 2019 07:59:21 +0100
+
+orthanc (1.5.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 18 Jan 2019 19:56:06 +0100
+
+orthanc (1.5.1+dfsg-2) unstable; urgency=medium
+
+  * Fix FTBFS with DCMTK 3.6.4. Closes: #919193
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 14 Jan 2019 10:13:39 +0100
+
+orthanc (1.5.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 20 Dec 2018 14:08:18 +0100
+
+orthanc (1.5.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 10 Dec 2018 20:48:44 +0100
+
+orthanc (1.4.2+dfsg-2) unstable; urgency=medium
+
+  * Fix URL in README.Debian. Closes: #913722
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 14 Nov 2018 17:26:45 +0100
+
+orthanc (1.4.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 20 Sep 2018 17:12:38 +0200
+
+orthanc (1.4.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 17 Jul 2018 16:52:47 +0200
+
+orthanc (1.4.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Updated d/upstream/metadata with new reference paper about Orthanc
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 13 Jul 2018 17:44:11 +0200
+
+orthanc (1.3.2+dfsg-2) unstable; urgency=medium
+
+  * Fix copyright
+  * Set -DNDEBUG to disable assertion checking
+  * Set -DCMAKE_BUILD_TYPE=None
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 27 Apr 2018 13:24:36 +0200
+
+orthanc (1.3.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 18 Apr 2018 16:09:02 +0200
+
+orthanc (1.3.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 30 Nov 2017 12:04:39 +0100
+
+orthanc (1.3.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 20 Jul 2017 08:52:24 +0200
+
+orthanc (1.2.0+dfsg-3) unstable; urgency=medium
+
+  * Fix FTBFS with libsqlite3-dev >= 3.19.0. Closes: #867782
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 10 Jul 2017 11:34:52 +0200
+
+orthanc (1.2.0+dfsg-2) unstable; urgency=medium
+
+  * Fix FTBFS with libdcmtk-dev 3.6.1~20170228-2. Closes: #865606
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 23 Jun 2017 10:25:41 +0200
+
+orthanc (1.2.0+dfsg-1) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * New upstream version
+
+  [ Andreas Tille ]
+  * debhelper 10
+  * d/watch: version=4
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 13 Dec 2016 20:39:57 +0100
+
+orthanc (1.1.0+dfsg-3) unstable; urgency=medium
+
+  [ Gert Wollny and Sebastien Jodogne]
+  * Let the dcmtk package take care of importing libssl-dev. Closes: #844835
+
+  [ Sebastien Jodogne ]
+  * Fix to use the new version of Google Test in Debian.
+  * Add dependency on lsb-base.
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Sun, 20 Nov 2016 15:14:12 +0100
+
+orthanc (1.1.0+dfsg-2) unstable; urgency=medium
+
+  [ Gianfranco Costamagna and Sebastien Jodogne ]
+  * Fix for cmake to find new versions of dcmtk. Closes: #829608
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 08 Jul 2016 15:42:10 +0200
+
+orthanc (1.1.0+dfsg-1) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * New upstream version
+  * Adding of the tool OrthancRecoverCompressedFile. Closes: #823139
+
+  [ Martin Pitt <mpitt@debian.org> ]
+  * Drop unnecessary initscripts build dependency. Closes: #828002
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 27 Jun 2016 15:59:58 +0200
+
+orthanc (1.0.0+dfsg-4) unstable; urgency=medium
+
+  * Replace macro "__linux" (now obsolete) with "__linux__". Closes: #821011
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 14 Apr 2016 17:57:56 +0000
+
+orthanc (1.0.0+dfsg-3) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * Stick to 2011 ISO C++ standard as JsonCpp version is now above 1.0.0
+
+  [ Andreas Tille ]
+  * d/watch: use repack and compress option
+  * Enable building architecture all package separately
+    Closes: #820062
+  * Fix installation of header files into orthanc-dev package
+  * Enhance hardening
+
+ -- Andreas Tille <tille@debian.org>  Fri, 08 Apr 2016 16:44:43 +0200
+
+orthanc (1.0.0+dfsg-2) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * Fix "FTBFS: Please install libdcmtk*-dev". Closes: #818512
+  * Fix some lintian issues
+
+  [ Andreas Tille ]
+  * cme fix dpkg-control
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 04 Apr 2016 14:15:07 +0200
+
+orthanc (1.0.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 16 Dec 2015 13:24:18 +0100
+
+orthanc (0.9.6+dfsg-1) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * Moved packaging repository from SVN to Git
+
+  [ Sebastien Jodogne ]
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 11 Dec 2015 08:57:02 +0100
+
+orthanc (0.9.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 03 Dec 2015 10:38:27 +0100
+
+orthanc (0.9.4+dfsg-2) unstable; urgency=medium
+
+  * Build-depend on libdcmtk-dev instead of libdcmtk2-dev. Closes: #804571
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 10 Nov 2015 16:23:28 +0100
+
+orthanc (0.9.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Force jQuery version to 1.7.2, as in upstream. Closes: #798514
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 17 Sep 2015 09:11:38 +0200
+
+orthanc (0.9.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Updated URL to the code repository
+  * Removal dependency over google-glog
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 07 Aug 2015 19:34:30 +0200
+
+orthanc (0.9.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 02 Jul 2015 17:06:06 +0200
+
+orthanc (0.9.0+dfsg-2) unstable; urgency=medium
+
+  * Fix upgrade from testing of orthanc-dev. Closes: #790514
+  * Fix upgrade from testing of orthanc-doc. Closes: #790517
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 01 Jul 2015 09:07:19 +0200
+
+orthanc (0.9.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version. Closes: #788920
+  * Fix debian/copyright
+  * Add the ServeFolders plugin
+  * Removal of the liborthancclient* packages
+  * Improvements to the documentation
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 03 Jun 2015 14:47:20 +0200
+
+orthanc (0.8.6+dfsg-2) experimental; urgency=medium
+
+  * New packages: orthanc-dev and orthanc-doc
+  * Refactoring for the orthanc-postgresql package
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 03 Mar 2015 11:11:05 +0100
+
+orthanc (0.8.6+dfsg-1) experimental; urgency=medium
+
+  * New upstream version
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 12 Feb 2015 17:13:53 +0100
+
+orthanc (0.8.5+dfsg-1) experimental; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * New upstream version
+
+  [ Andreas Tille ]
+  * d/watch: repacksuffix=+dfsg
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 04 Nov 2014 16:47:54 +0100
+
+orthanc (0.8.4+dfsg-2) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * Fix crash if bad credentials in HTTP requests
+
+  [ Gianfranco Costamagna ]
+  * Fix base64 copyright, seems more zlib than BSD
+    Closes: #767062
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 28 Oct 2014 09:36:34 +0100
+
+orthanc (0.8.4+dfsg-1) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * New upstream version
+
+  [ Sebastien Jodogne ]
+  * Fixes
+  * Standards-Version: 3.9.6
+
+ -- Andreas Tille <tille@debian.org>  Mon, 13 Oct 2014 11:50:53 +0200
+
+orthanc (0.8.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream version: 0.8.3
+    Closes: #761640
+  * Upgrade Mongoose version: 3.1 to 3.8
+  * Packaging of the plugin SDK
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 12 Sep 2014 11:30:53 +0200
+
+orthanc (0.8.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * Add full text CC-BY
+    Closes: #757676
+  * d/control: Add new Build-Depends: libpugixml-dev
+
+ -- Andreas Tille <tille@debian.org>  Wed, 20 Aug 2014 14:27:21 +0200
+
+orthanc (0.8.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version: 0.8.0
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 11 Jul 2014 11:27:56 +0200
+
+orthanc (0.7.6+dfsg-1) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.7.6
+  * Removed explicit dependency on libboost-atomic1.54-dev. Closes: #751695
+
+  [ Andreas Tille ]
+  * fix debian/watch to correctly append +dfsg
+  * get-orig-source: add -compression xz
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 12 Jun 2014 14:17:13 +0200
+
+orthanc (0.7.5+dfsg-1) unstable; urgency=medium
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.7.5
+
+  [ Andreas Tille ]
+  * Add doc-base control file
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 09 May 2014 13:25:07 +0200
+
+orthanc (0.7.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream version: 0.7.4
+  * Use libboost-atomic1.54-dev >= 1.54.0-5 explicitly, because of #739904
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 28 Apr 2014 12:37:39 +0200
+
+orthanc (0.7.3+dfsg-1) unstable; urgency=low
+
+  * New upstream version: 0.7.3
+  * Minimal version for libgoogle-glog is 0.3.3. Closes: #736845
+  * Replacement of minified JavaScript files by their sources. Closes: #737448
+  * Change from Google Code to GitHub
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 18 Feb 2014 10:28:34 +0100
+
+orthanc (0.7.2-1) unstable; urgency=low
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.7.2
+  * Support big-endian architectures. Closes: #728822
+
+  [ Andreas Tille ]
+  * debian/control:
+     - Build-Depends: unzip
+     - Standards-Version: 3.9.5
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 03 Dec 2013 11:30:41 +0100
+
+orthanc (0.6.2-1) unstable; urgency=low
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.6.2
+  * Packaging of the Orthanc Client library (liborthancclient*)
+  * Fix licensing issue with the SHA-1 library. Closes: #724947
+
+  [ Andreas Tille ]
+  * debian/control: use anonscm in Vcs fields
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 07 Oct 2013 10:56:38 +0200
+
+orthanc (0.6.1-1) unstable; urgency=low
+
+  * New upstream version: 0.6.1
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 16 Sep 2013 15:13:44 +0200
+
+orthanc (0.6.0-1) unstable; urgency=low
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.6.0
+  * Fix image preview. Closes: #716958
+  * Fix missing copyright information. Closes: #712038
+  * Remove explicit dependency on boost1.53
+
+  [ Mathieu Malaterre ]
+  * Remove RelWithDebInfo, because of change in behavior in cmake
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 17 Jul 2013 10:55:49 +0200
+
+orthanc (0.5.2-1) unstable; urgency=low
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.5.2
+
+  [ Mathieu Malaterre ]
+  * Use boost1.53 explicitly, until #704032 happens
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 08 May 2013 14:27:23 +0200
+
+orthanc (0.5.1-1) unstable; urgency=low
+
+  [ Sebastien Jodogne ]
+  * New upstream version: 0.5.1
+  * Handle RGB DICOM. Closes: #698417
+
+  [ Mathieu Malaterre ]
+  * Remove patches applied upstream:
+    + debian/patches/cmake-new-platforms
+    + debian/patches/freebsd-hurd-fixes
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Wed, 17 Apr 2013 14:23:03 +0200
+
+orthanc (0.5.0-2) unstable; urgency=low
+
+  * Fixes for kFreeBSD and Hurd
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 07 Mar 2013 10:20:15 +0100
+
+orthanc (0.5.0-1) unstable; urgency=low
+
+  [ Sebastien Jodogne ]
+  * New upstream version.
+
+  [ Mathieu Malaterre ]
+  * Team upload.
+  * Add README.Debian to get started with Orthanc
+  * (wrap-and-sort): Fix B-D for libgtest-dev. Closes: #698415
+  * Bump Std-Vers to 3.9.4, no changes needed
+  * Remove unzip from B-D (not needed)
+  * Cleanup d/rules (-DNDEBUG in build logs)
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Tue, 05 Mar 2013 12:38:03 +0100
+
+orthanc (0.4.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Mon, 17 Dec 2012 09:35:27 +0100
+
+orthanc (0.2.3-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Fri, 26 Oct 2012 16:35:11 +0200
+
+orthanc (0.2.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #689029)
+
+ -- Sebastien Jodogne <s.jodogne@gmail.com>  Thu, 04 Oct 2012 12:47:52 +0200

@@ -1,0 +1,138 @@
+php-guzzlehttp-psr7 (1.4.2-0.1+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2023-29197: Improper header parsing.  An attacker could sneak in a
+    newline (\n) into both the header names and values.  This is a follow-up
+    to CVE-2022-24775 where the fix was incomplete. (Closes: #1034581)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sun, 31 Dec 2023 20:54:01 +0100
+
+php-guzzlehttp-psr7 (1.4.2-0.1+deb10u1) buster; urgency=medium
+
+  * Track Buster
+  * Backport fixes for improper header parsing [CVE-2022-24775]
+    (Closes: #1008236)
+
+ -- David Prévot <taffit@debian.org>  Fri, 27 May 2022 13:33:28 +0200
+
+php-guzzlehttp-psr7 (1.4.2-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version.
+    + Drop all patches and tests as upstream removed them.
+
+ -- Dominik George <natureshadow@debian.org>  Sun, 02 Dec 2018 18:42:00 +0100
+
+php-guzzlehttp-psr7 (1.3.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix tests for PHPUnit newer than 6.4-somewhat. (Closes: #882943)
+
+ -- Dominik George <natureshadow@debian.org>  Sat, 27 Oct 2018 20:45:27 +0200
+
+php-guzzlehttp-psr7 (1.3.1-1) unstable; urgency=medium
+
+  [ Tobias Schultze ]
+  * 1.3.1 release
+
+  [ Barry vd. Heuvel ]
+  * Remove message about partial implementation
+
+ -- David Prévot <taffit@debian.org>  Wed, 27 Jul 2016 02:00:46 -0400
+
+php-guzzlehttp-psr7 (1.3.0-1) unstable; urgency=medium
+
+  [ Ivan Kerin ]
+  * Add uploaded file and tests
+  * Add ServerRequest and tests
+
+  [ Michael Dowling ]
+  * 1.3.0 release
+
+  [ David Prévot ]
+  * Update Standards-Version to 3.9.8
+
+ -- David Prévot <taffit@debian.org>  Fri, 15 Apr 2016 21:35:01 -0400
+
+php-guzzlehttp-psr7 (1.2.3-2) unstable; urgency=medium
+
+  * Rebuild with recent pkg-php-tools for the PHP 7.0 transition
+
+ -- David Prévot <taffit@debian.org>  Sun, 20 Mar 2016 17:08:08 -0400
+
+php-guzzlehttp-psr7 (1.2.3-1) unstable; urgency=medium
+
+  [ zumba ]
+  * Handle gzip format with a FNAME header
+
+  [ Andy ]
+  * Ensure all requested bytes are read when using seek on caching stream
+
+  [ Jonathan Eskew ]
+  * 1.2.3 release
+
+  [ David Prévot ]
+  * Update Standards-Version to 3.9.7
+
+ -- David Prévot <taffit@debian.org>  Sat, 20 Feb 2016 14:35:47 -0400
+
+php-guzzlehttp-psr7 (1.2.2-1) unstable; urgency=medium
+
+  [ Brent Shaffer ]
+  * proper handling of hier-part with no-authority
+
+  [ Colin O'Dell ]
+  * Add HTTP 451 Unavailable For Legal Reasons
+
+  [ Régis Belson ]
+  * Accept "0" as a valid filename for multipart form file uploads
+
+  [ Fabien Potencier ]
+  * added missing port to the Host when not-standard
+
+  [ Jonathan Eskew ]
+  * 1.2.2 release
+
+ -- David Prévot <taffit@debian.org>  Tue, 26 Jan 2016 12:30:27 -0400
+
+php-guzzlehttp-psr7 (1.2.1-1) unstable; urgency=medium
+
+  [ Jonathan Eskew ]
+  * Copy SEEK_END behavior from fseek
+  * 1.2.1 release
+
+ -- David Prévot <taffit@debian.org>  Tue, 03 Nov 2015 21:22:34 -0400
+
+php-guzzlehttp-psr7 (1.2.0-1) unstable; urgency=medium
+
+  [ Mark Trapp ]
+  * Conditionally require functions.php
+
+  [ Michael Dowling ]
+  * Allow forward seeking in caching stream
+  * Ensuring a Uri is returned
+  * 1.2.0 release
+
+  [ Nicolas Van Eenaeme ]
+  * Support full URLs in requests, such as proxied requests
+
+  [ Kevin Robatel ]
+  * Strict check of $body
+
+  [ Andreas Buchenrieder ]
+  * Fixed Uri::resolve dropping user info from the base uri
+
+ -- David Prévot <taffit@debian.org>  Fri, 28 Aug 2015 12:32:07 -0400
+
+php-guzzlehttp-psr7 (1.1.0-1) unstable; urgency=medium
+
+  [ Michael Dowling ]
+  * 1.1.0 release
+
+ -- David Prévot <taffit@debian.org>  Sun, 28 Jun 2015 09:59:19 -0400
+
+php-guzzlehttp-psr7 (1.0.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- David Prévot <taffit@debian.org>  Thu, 28 May 2015 13:43:34 -0400

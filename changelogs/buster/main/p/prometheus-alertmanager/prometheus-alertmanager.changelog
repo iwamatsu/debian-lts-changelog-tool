@@ -1,0 +1,252 @@
+prometheus-alertmanager (0.15.3+ds-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2023-40577: A vulnerability was found in the way prometheus handles
+    alerts sent by client applications such as the Prometheus server.
+    An attacker with the permission to perform POST requests on the
+    /api/v1/alerts endpoint could be able to execute arbitrary
+    JavaScript code on the users of Prometheus Alertmanager.
+    (Closes: #1050558)
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 29 Sep 2023 19:40:00 +0000
+
+prometheus-alertmanager (0.15.3+ds-3) unstable; urgency=medium
+
+  * Fix webserver patch to serve properly a UI compiled manually.
+  * Create a separate cmdline argument for the default notification
+    template.
+  * Rename cmdline argument for local UI.
+
+ -- Martín Ferrari <tincho@debian.org>  Thu, 21 Feb 2019 19:36:45 +0000
+
+prometheus-alertmanager (0.15.3+ds-2) unstable; urgency=medium
+
+  * Replace custom patch with backporting of upstream fix for common lib
+    chages.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 14 Jan 2019 22:40:29 +0000
+
+prometheus-alertmanager (0.15.3+ds-1) unstable; urgency=high
+
+  * New upstream release.
+  * Make paths relative in dummy webpage. Closes: #907224
+  * Remove now unneeded symlinks. Closes: #910420.
+  * Refresh patches.
+  * Add patch to support current version of the common library.
+    Closes: #917503.
+  * Depend on the latest version of the common library.
+  * Update Standards-Version with no changes.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 14 Jan 2019 00:39:33 +0000
+
+prometheus-alertmanager (0.15.1+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Automated cmd fixes.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 05 Aug 2018 18:58:17 +0000
+
+prometheus-alertmanager (0.15.0+ds-4) unstable; urgency=medium
+
+  * Release to unstable.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 03 Jul 2018 14:40:37 +0000
+
+prometheus-alertmanager (0.15.0+ds-3) experimental; urgency=medium
+
+  * debian/examples: Add missing examples.
+  * Change default location of the amtool config.
+  * amtool: Change default processing for author parameter; fix
+    reproducibility issue.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 02 Jul 2018 01:26:34 +0000
+
+prometheus-alertmanager (0.15.0+ds-2) experimental; urgency=medium
+
+  * Fix tests that fail with certain network configurations.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 29 Jun 2018 11:35:04 +0000
+
+prometheus-alertmanager (0.15.0+ds-1) experimental; urgency=medium
+
+  * New upstream release. Closes: #894131.
+  * Remove now unneeded patch.
+  * Add missing shebang to example script.
+  * debian/control: Fix dependency version (missing epoch).
+  * Automated cmd fixes.
+  * Add nocheck buildflag test; also, actually run tests!
+  * Fix failing tests: missing dep, wrong template path, and missing executable.
+
+ -- Martín Ferrari <tincho@debian.org>  Thu, 28 Jun 2018 15:44:42 +0000
+
+prometheus-alertmanager (0.15.0~rc.2+ds-1) experimental; urgency=medium
+
+  * Re-add missing +ds suffix.
+  * debian/rules: De-mangle upstream version for metadata reporting.
+  * Backport commit 387e684 to fix API breakage.
+  * debian/defaults: Update flags (mesh.* -> cluster.*).
+  * Install missing docs.
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 13 Jun 2018 16:39:52 +0000
+
+prometheus-alertmanager (0.15.0~rc.2-1) experimental; urgency=medium
+
+  * New release candidate.
+  * Refresh patches.
+  * Add notice about the lack of a web interface.
+  * debian/control: Only depend on daemon if systemd is not installed.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 12 Jun 2018 13:20:38 +0000
+
+prometheus-alertmanager (0.15.0~rc.1~git20180507.28967e3+ds-1) experimental; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Martín Ferrari ]
+  * Finally package a new upstream release.
+  * debian/copyright: Update attribution.
+  * debian/control: Update dependencies.
+  * debian/defaults: Update available flags.
+  * Update default config file.
+  * Stop using pristine-tar.
+  * Add bash-completion scripts, amtool binary, and examples.
+  * Remove building of UI assets.
+  * Ship NOTICE file as required by the Apache license.
+  * Remove unused lintian overrides.
+  * Add default API endpoint to amtool.
+  * Simplify installation of files into package & remove old hacks.
+  * Update dependencies.
+  * Generate man pages.
+  * Add index.html placeholder.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 19 May 2018 15:30:34 +0000
+
+prometheus-alertmanager (0.6.2+ds-5) unstable; urgency=high
+
+  * debian/rules: Fix build failure in Arch:all. Closes: #892164
+  * Automated cme fixes.
+  * Remove unneeded lintian overrides.
+  * Update debhelper compat to 11.
+  * Stop using recursive chown.
+  * debian/copyright: Move repackaging comment to appease lintian.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 27 Mar 2018 00:03:07 +0000
+
+prometheus-alertmanager (0.6.2+ds-4) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * Team upload.
+  * Tighten dependency versions.
+  * Fix acceptance tests (log.level flag does not exist anymore).
+  * Add override for missing-notice-file-for-apache-license.
+
+  [ Michael Stapelberg ]
+  * Correctly set Architecture: all for package which contains only sources
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Mon, 05 Mar 2018 19:42:51 +0100
+
+prometheus-alertmanager (0.6.2+ds-3) unstable; urgency=medium
+
+  [ Martín Ferrari ]
+  * Team upload.
+  * debian/control: Update Standards-Version (no changes).
+  * Automatic fixes to control and copyright from cme.
+  * Replace dpkg-parsechangelog with /usr/share/dpkg/pkg-info.mk
+  * debian/control: Update package name for client-golang.
+
+  [ Michael Stapelberg ]
+  * gbp.conf: set debian-branch
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sat, 10 Feb 2018 19:42:29 +0100
+
+prometheus-alertmanager (0.6.2+ds-2) unstable; urgency=medium
+
+  * Fix compilation on gccgo/mips*.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 19 Aug 2017 14:51:59 +0000
+
+prometheus-alertmanager (0.6.2+ds-1) unstable; urgency=medium
+
+  * New upstream release. Closes: 871330, 862007..
+  * Fix installation path for source files.
+  * Refresh patches.
+  * Add gbp.conf.
+  * debian/copyright: Document new vendored dependency.
+  * debian/control:
+    - Update Standards-Version (no changes).
+    - Fix Vcs-* fields.
+    - Mark package as autopkgtest-able.
+    - Require latest version of the common library.
+    - Add new dependencies.
+  * debian/default: Update options.
+  * Fix /var/lib permissions.
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 16 Aug 2017 21:00:28 +0000
+
+prometheus-alertmanager (0.5.1+ds-7) unstable; urgency=medium
+
+  * Increase timing margins even more, hopefully upstream will find a better
+    solution soon.
+    Also ensure the test alertmanager used for acceptance tests is ready (by
+    connecting to its http server) before trying to use it. Closes: 851372.
+  * Don't abort if acceptance tests fail, as they are too sensitive to
+    timing issues.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 16 Jan 2017 03:56:46 +0000
+
+prometheus-alertmanager (0.5.1+ds-6) unstable; urgency=medium
+
+  * Increase timing margings for flaky tests, as this is currently preventing
+    mips from building properly.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 14 Jan 2017 05:48:45 -0300
+
+prometheus-alertmanager (0.5.1+ds-5) unstable; urgency=medium
+
+  * Fix name of minified angular-moment library. Fixes bug reported in GitHub:
+    https://github.com/prometheus/alertmanager/issues/590
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 08 Jan 2017 01:02:38 -0300
+
+prometheus-alertmanager (0.5.1+ds-4) unstable; urgency=medium
+
+  * Provide golang-github-prometheus-alertmanager-dev. Closes: #837756.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 25 Dec 2016 23:54:52 -0300
+
+prometheus-alertmanager (0.5.1+ds-3) unstable; urgency=medium
+
+  * Disable more flaky tests.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 13 Dec 2016 10:37:48 +0100
+
+prometheus-alertmanager (0.5.1+ds-2) unstable; urgency=medium
+
+  * Gccgo can't handle vendoring currently, so process it manually.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 12 Dec 2016 11:04:08 +0000
+
+prometheus-alertmanager (0.5.1+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Refresh patches.
+  * Update dependencies.
+  * New patch to fix API change in prometheus/master, backported from
+    upstream master.
+  * Disable another flaky test.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 02 Dec 2016 22:40:14 +0000
+
+prometheus-alertmanager (0.3.0+ds-2) unstable; urgency=medium
+
+  * Add patch to fix flaky tests due to timing issues. Closes: #830936.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 15 Jul 2016 13:56:49 +0100
+
+prometheus-alertmanager (0.3.0+ds-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #828073)
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 12 Jul 2016 03:23:21 +0000

@@ -1,0 +1,153 @@
+libxml-security-java (2.0.10-2+deb11u1) bullseye-security; urgency=high
+
+  * Team upload.
+  * Fix CVE-2021-40690:
+    Apache Santuario - XML Security for Java is vulnerable to an issue where
+    the "secureValidation" property is not passed correctly when creating a
+    KeyInfo from a KeyInfoReference element. This allows an attacker to abuse
+    an XPath Transform to extract any local .xml files in a RetrievalMethod
+    element.
+
+ -- Markus Koschany <apo@debian.org>  Sun, 14 Nov 2021 21:49:31 +0100
+
+libxml-security-java (2.0.10-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Jochen Sprickerhof ]
+  * Add patch for old API used by libitext5-java (Closes: #906375)
+
+  [ Emmanuel Bourg ]
+  * Standards-Version updated to 4.2.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 24 Sep 2018 12:06:50 +0200
+
+libxml-security-java (2.0.10-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - New build dependency on libmaven-jaxb2-plugin-java
+    - New dependency on libwoodstox-java
+  * Build with Java 8 compatibility
+  * Standards-Version updated to 4.1.5
+  * Switch to debhelper level 11
+  * Use salsa.debian.org Vcs-* URLs
+  * Use a secure URL in debian/watch and debian/orig-tar.sh
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 25 Jul 2018 10:46:30 +0200
+
+libxml-security-java (1.5.8-2) unstable; urgency=medium
+
+  * Team upload.
+  * maven.properties: Skip the tests to prevent build failure on amd64.
+    (Closes: #852930)
+  * libxml-security-java: Improve the short description. (Closes: #756642)
+
+ -- Markus Koschany <apo@debian.org>  Mon, 06 Feb 2017 12:47:14 +0100
+
+libxml-security-java (1.5.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Build with the DH sequencer instead of CDBS
+  * Enabled the OSGi metadata
+  * Moved the package to Git
+  * Removed Niels Thykier from the uploaders (Closes: #770585)
+  * Updated debian/watch to track the latest releases
+  * Removed the non-free RFC3161 from the upstream tarball
+  * Use XZ compression for the upstream tarball
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 16 Nov 2016 16:39:56 +0100
+
+libxml-security-java (1.5.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    - Addresses CVE-2013-4517 (Closes: #733938)
+  * Freshen pom.xml patch for new version.
+
+ -- tony mancill <tmancill@debian.org>  Sun, 02 Feb 2014 10:14:47 -0800
+
+libxml-security-java (1.5.5-2) unstable; urgency=low
+
+  * Upload to unstable
+  * Release 1.5.5 fixes CVE-2013-2172 (Closes: #720375)
+  * Added the Classpath attribute in the jar manifest
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 26 Aug 2013 19:56:57 +0200
+
+libxml-security-java (1.5.5-1) experimental; urgency=low
+
+  * New upstream release
+  * Refreshed the patch
+  * Use canonical URLs for the Vcs-* fields
+  * Changed the Maven rules to Ignore the parent pom
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 03 Jul 2013 15:31:41 +0200
+
+libxml-security-java (1.5.4-1) experimental; urgency=low
+
+  [ Emmanuel Bourg ]
+  * Team upload.
+  * New upstream release
+  * Refreshed the patch
+  * Updated Standards-Version to 3.9.4 (no changes)
+  * Removed Michael Koch from the Uploaders list (Closes: #654103)
+  * Updated debian/copyright to comply with the Machine readable format 1.0
+
+  [ tony mancill ]
+  * Add libbcprov-java to Build-Depends-Indep
+
+ -- tony mancill <tmancill@debian.org>  Sat, 27 Apr 2013 21:18:13 -0700
+
+libxml-security-java (1.4.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Update debian/watch to point to new SVN repo.
+  * Update Standards-Version: 3.9.1.
+  * Switch to source format 3.0.
+  * Use Maven to build the package. Ignore test failures.
+  * Update Description.
+  * Add a documentation package.
+  * Update Homepage field.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 30 Aug 2011 14:07:46 +0200
+
+libxml-security-java (1.4.3-2) unstable; urgency=low
+
+  [ Thierry Carrez ]
+  * debian/build.xml: Build Java2 code to match runtime dependency
+  * debian/build.xml: Fix the jar packaging to include resources
+    (Closes: #557306)
+
+  [ Niels Thykier ]
+  * Removed ${shlibs:Depends} from Depends; does not make sense for java.
+
+ -- Niels Thykier <niels@thykier.net>  Mon, 30 Nov 2009 22:20:10 +0100
+
+libxml-security-java (1.4.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * (Build-)Depends on default-jdk.
+  * Build-Depends on debhelper >= 7.
+  * Moved package to section 'java'.
+  * Addded myself to Uploaders.
+  * Updated Standards-Version to 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Mon, 05 Oct 2009 08:05:07 +0200
+
+libxml-security-java (1.4.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.8.0
+  * debian/copyright: remove the full text of Apache 2.0 license, as now
+    is included in common licenses
+
+ -- Varun Hiremath <varun@debian.org>  Fri, 11 Jul 2008 19:22:33 +0530
+
+libxml-security-java (1.4.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #450611)
+
+ -- Varun Hiremath <varun@debian.org>  Fri, 18 Jan 2008 14:56:26 +0530

@@ -1,0 +1,1754 @@
+wordpress (5.0.21+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * New upstream version 5.0.21+dfsg1.
+  * Address security vulnerabilities fixed in Wordpress 6.4.3. No CVE have been
+    assigned yet.
+     - PHP File Upload bypass via Plugin Installer
+     - RCE POP Chains vulnerability
+
+ -- Markus Koschany <apo@debian.org>  Sun, 10 Mar 2024 18:28:11 +0100
+
+wordpress (5.0.20+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * New upstream version 5.0.20+dfsg1.
+  * Fix CVE-2023-39999: Exposure of Sensitive Information to an Unauthorized
+    Actor in WordPress
+  * Fix CVE-2023-5561:
+    WordPress does not properly restrict which user fields are searchable via
+    the REST API, allowing unauthenticated attackers to discern the email
+    addresses of users who have published public posts on an affected website
+    via an Oracle style attack
+
+ -- Markus Koschany <apo@debian.org>  Mon, 20 Nov 2023 20:12:02 +0100
+
+wordpress (5.0.19+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2023-2745:
+    WordPress Core is vulnerable to Directory Traversal via the ‘wp_lang’ parameter.
+    This allows unauthenticated attackers to access and load arbitrary
+    translation files. In cases where an attacker is able to upload a crafted
+    translation file onto the site, such as via an upload form, this could be
+    also used to perform a Cross-Site Scripting attack.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 20 Jun 2023 23:33:40 +0200
+
+wordpress (5.0.18+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Security release:
+    Several security vulnerabilities have been discovered in Wordpress, a
+    popular content management framework. Possible SQL injection and cross-site
+    scripting (XSS) flaws may allow a remote attacker to execute arbitrary code
+    or facilitate the injection of client-side scripts.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 26 Oct 2022 18:15:33 +0200
+
+wordpress (5.0.17+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Security release:
+    - CVE-2019-17670: Server Side Request Forgery (SSRF) vulnerability
+    - XSS and escaping issues. CVE assignment still pending.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 10 Oct 2022 14:38:06 +0200
+
+wordpress (5.0.15+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Upstream security release Closes: #1003243
+     - CVE-2022-21662 - Stored XSS through authenticated users
+     - CVE-2022-21663 - Authenticated Object Injection in Multisites
+     - CVE-2022-21661 - WordPress: SQL Injection through WP_Query
+     - CVE-2022-21664 - SQL injection due to improper sanitization
+       in WP_Meta_Query
+
+ -- Craig Small <csmall@debian.org>  Sat, 08 Jan 2022 08:06:09 +1100
+
+wordpress (5.0.14+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Security release, fixes 1 bug:
+     - CVE-2021-39201 - XSS in editor Closes: #994059
+
+ -- Craig Small <csmall@debian.org>  Sat, 02 Oct 2021 13:11:35 +1000
+
+wordpress (5.0.12+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Security release, fixes 2 bugs Closes: #987065
+    - CVE-2021-29450 - Authenticated disclosure of password-protected
+      posts and pages.
+    - CVE-2021-29447 - Authenticated XXE attack when installation is
+      running PHP 8
+
+ -- Craig Small <csmall@debian.org>  Sat, 17 Apr 2021 21:02:47 +1000
+
+wordpress (5.0.11+dfsg1-0+deb10u1) buster-security; urgency=high
+
+  * Security release, fixes 8 bugs Closes: #973562
+     - CVE-2020-28039: Protected meta that could lead to arbitrary
+                       file deletion.
+     - CVE-2020-28035: XML-RPC privilege escalation.
+     - CVE-2020-28036: XML-RPC privilege escalation.
+     - CVE-2020-28032: Hardening deserialization requests.
+     - CVE-2020-28037: DoS attack could lead to RCE.
+     - CVE-2020-28038: Stored XSS in post slugs.
+     - CVE-2020-28033: Disable spam embeds from disabled sites
+                       on a multisite network.
+     - CVE-2020-28034: Cross-Site Scripting (XSS) via global variables.
+     - CVE-2020-28040: CSRF attacks that change a theme's background image.
+  * Remove duplicated changeset 45974 Closes: #971914
+
+ -- Craig Small <csmall@debian.org>  Tue, 03 Nov 2020 18:02:39 +1100
+
+wordpress (5.0.10+dfsg1-0+deb10u1) buster-security; urgency=medium
+
+  * Security release, fixes 6 security bugs Closes: #962685
+    - CVE-2020-4046
+      Authenticated XSS through embed block
+    - CVE-2020-4047
+      Authenticated XSS via media attachment page
+    - CVE-2020-4048
+      Open redirect in wp_validate_redirect()
+    - CVE-2020-4049
+      Authenticated self-XSS via theme uploads
+    - CVE-2020-4050
+      'set-screen-option' filter misuse by plugins leading to privilege
+      escalation
+  * Prevent unmoderated comments from search engine indexation
+
+ -- Craig Small <csmall@debian.org>  Fri, 19 Jun 2020 15:46:30 +1000
+
+wordpress (5.0.4+dfsg1-1+deb10u2) buster-security; urgency=medium
+
+  * Import of 5.4.1/5.0.9 security release Closes: #959391
+   - CVE-2020-11025
+     XSS vulnerability in the navigation section of Customizer allows
+     JavaScript code to be executed.
+   - CVE-2020-11026
+     uploaded files to Media section to lead to script execution
+   - CVE-2020-11027
+     Password reset link does not expire
+   - CVE-2020-11028
+     Private posts can be found through searching by date
+   - CVE-2020-11029
+     XSS in stats() method in class-wp-object-cache
+   - CVE-2020-11030
+     Special payload can execute scripts in block editor
+
+ -- Craig Small <csmall@debian.org>  Sat, 02 May 2020 14:29:22 +1000
+
+wordpress (5.0.4+dfsg1-1+deb10u1) buster-security; urgency=medium
+
+  * Backport of the 5.3.1 security release Closes: #946905
+    - CVE-2019-20043
+      an unprivileged user could make a post sticky via the REST API.
+    - CVE-2019-20042
+      cross-site scripting (XSS) could be stored in well-crafted links
+    - CVE-2019-20041
+      hardening wp_kses_bad_protocol() to ensure that it is aware
+      of the named colon attribute.
+    - CVE-2019-16780 and CVE-2019-16781
+      stored XSS vulnerability using block editor content.
+  * Backport of the 5.2.4 security release Closes: #942459
+     - CVE-2019-17674
+       Stored XSS in the Customizer
+     - CVE-2019-17671
+       Viewing unauthenticated posts
+     - CVE-2019-17672
+       Stored XSS to inject javascript into style tags
+     - CVE-2019-17673
+       Poisoning JSON GET requests
+     - CVE-2019-17669
+       SSRF in URL vaidation
+     - CVE-2019-17675
+       Referer validation in admin screens
+   * Backport of 5.2.3 security release, Closes: #939543
+     - CVE-2019-16223
+       XSS in post previews
+     - CVE-2019-16218
+       XSS in stored comments
+     - CVE-2019-16220
+       Open redirect due to validation and sanitization
+     - CVE-2019-16217
+       XSS in media uploads
+     - CVE-2019-16219
+       XSS in shortcode previews
+     - CVE-2019-16221
+       XSS in dashboard
+     - CVE-2019-16222
+       XSS in URL sanitization
+
+ -- Craig Small <csmall@debian.org>  Fri, 27 Dec 2019 15:26:33 +1100
+
+wordpress (5.0.4+dfsg1-1) buster; urgency=medium
+
+  * Backport of 5.1.1 patches
+  * Fix XSS security hole in comments Closes: #924546 CVE-2019-9787
+
+ -- Craig Small <csmall@debian.org>  Sun, 24 Mar 2019 09:20:02 +1100
+
+wordpress (5.0.3+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update to Debian standards 4.3.0
+
+ -- Craig Small <csmall@debian.org>  Tue, 05 Feb 2019 22:23:39 +1100
+
+wordpress (5.0.2+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Fri, 28 Dec 2018 16:00:13 +1100
+
+wordpress (5.0.1+dfsg1-1) unstable; urgency=high
+
+  * New upstream source. fixes 7 Security issues Closes: #916403
+    - CVE-2018-20147
+      Delete files through altered meta data
+    - CVE-2018-20152
+      Create posts of unauthorized post types
+    - CVE-2018-20148
+      PHP object injection through crafted meta data
+    - CVE-2018-20153
+      Edit other users comments, leading to XSS
+    - CVE-2018-20150
+      XSS in plugins through crafted URL inputs
+    - CVE-2018-20151
+      User activation screen visible to search engines
+    - CVE-2018-20149
+      Bypass MIME verification causing XSS
+  * Themes: Remove twentyfifteen, add twentynineteen and make default
+  * Remove remote emojis
+
+ -- Craig Small <csmall@debian.org>  Sun, 16 Dec 2018 10:45:32 +1100
+
+wordpress (4.9.8+dfsg1-2) UNRELEASED; urgency=medium
+
+  * d/copyright: Use https protocol in Format field
+  * d/changelog: Remove trailing whitespaces
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 01 Oct 2018 10:34:25 +0200
+
+wordpress (4.9.8+dfsg1-1) unstable; urgency=medium
+
+  * New upstream source
+    Verify plugin uploads CVE-2018-14028 Closes: #906565
+
+ -- Craig Small <csmall@debian.org>  Tue, 21 Aug 2018 20:47:44 +1000
+
+wordpress (4.9.7+dfsg1-1) unstable; urgency=high
+
+  * New upstream source
+  * Fix directory traversal in thumb parameter
+    CVE-2018-12895 Closes: #902876
+
+ -- Craig Small <csmall@debian.org>  Sat, 07 Jul 2018 22:29:18 +1000
+
+wordpress (4.9.5+dfsg1-1) unstable; urgency=medium
+
+  * New upstream source, fixes 3 Security issues Closes: #895034
+    - CVE-2018-10101
+      Don't treat localhost as same host by default.
+    - CVE-2018-10100
+      Use safe redirects when redirecting login page if SSL is forced
+    - CVE-2018-10102
+      Make sure version string is correctly escaped for use in
+      generator tags
+  * Update to standards version 4.1.4
+  * Remove get-orig-source in rules and use uscan
+
+ -- Craig Small <csmall@debian.org>  Sun, 08 Apr 2018 08:11:40 +1000
+
+wordpress (4.9.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Removed remove_jshint patch as upstream has found a different hinter
+
+ -- Craig Small <csmall@debian.org>  Fri, 09 Feb 2018 21:35:34 +1100
+
+wordpress (4.9.2+dfsg-1) unstable; urgency=high
+
+  * New upstream security release Closes: #887596
+    and resolves CVE-2018-5776
+  * Update standards version to 4.1.3 - no change
+
+ -- Craig Small <csmall@debian.org>  Sat, 20 Jan 2018 18:02:18 +1100
+
+wordpress (4.9.1+dfsg-1) unstable; urgency=high
+
+  * New upstream release
+  * Release 4.9 was never packaged due to licensing problems
+  * This release fixes 6 security issues Closes: #883314
+    - CVE-2017-17091
+      Use a properly generated hash for the newbloguser key instead
+      of a determinate substring.
+    - CVE-2017-17092
+      Remove the ability to upload JavaScript files for users who
+      do not have the unfiltered_html capability
+    - CVE-2017-17093
+      Add escaping to the language attributes used on html elements
+    - CVE-2017-17094
+      Ensure the attributes of enclosures are correctly escaped in
+      RSS and Atom feeds
+  * Updated to standards 4.1.1
+  * New linting for Javascript is disabled due to jshint.js licensing
+    issues
+
+ -- Craig Small <csmall@debian.org>  Sat, 09 Dec 2017 16:57:09 +1100
+
+wordpress (4.8.3+dfsg-1) unstable; urgency=high
+
+  * New upstream security release Closes: #880528
+
+ -- Craig Small <csmall@debian.org>  Thu, 02 Nov 2017 22:16:15 +1100
+
+wordpress (4.8.2+dfsg-2) unstable; urgency=high
+
+  * Hash user activation key Closes: #877629
+    Fixes CVE-2017-14990
+
+ -- Craig Small <csmall@debian.org>  Wed, 04 Oct 2017 21:59:11 +1100
+
+wordpress (4.8.2+dfsg-1) unstable; urgency=high
+
+  * New upstream security release fixes 9 security issues closes: #876274
+    - CVE-2017-14723
+      $wpdb->prepare() can create unexpected and unsafe queries leading to
+      potential SQL injection (SQLi)
+    - CVE-2017-14724
+      Cross-site scripting (XSS) vulnerability in the oEmbed discovery
+    - CVE-2017-14726
+      Cross-site scripting (XSS) vulnerability in the visual editor
+    - CVE-2017-14719
+      Path traversal vulnerability in the file unzipping code
+    - CVE-2017-14721
+      Cross-site scripting (XSS) vulnerability in the plugin editor
+    - CVE-2017-14725
+      Open redirect in the user and term edit screens
+    - CVE-2017-14722
+      Path traversal vulnerability in the customizer
+    - CVE-2017-14720
+      Cross-site scripting (XSS) vulnerability in template names
+    - CVE-2017-14718
+      Cross-site scripting (XSS) vulnerability in the link modal
+
+ -- Craig Small <csmall@debian.org>  Fri, 22 Sep 2017 21:57:06 +1000
+
+wordpress (4.8.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Thu, 03 Aug 2017 21:35:33 +1000
+
+wordpress (4.8+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Fri, 09 Jun 2017 22:43:40 +1000
+
+wordpress (4.7.5+dfsg-2) unstable; urgency=medium
+
+  * Don't trust SERVER_NAME variable for emails
+    CVE-2017-8295 Closes: #862053
+
+ -- Craig Small <csmall@debian.org>  Mon, 05 Jun 2017 21:45:59 +1000
+
+wordpress (4.7.5+dfsg-1) unstable; urgency=high
+
+  * New upstream release fixes 6 security issues Closes: #862816
+    - CVE-2017-9066
+      Insufficient redirect validation in the HTTP class.
+    - CVE-2017-9062
+      Improper handling of post meta data values in the XML-RPC API.
+    - CVE-2017-9065
+      Lack of capability checks for post meta data in the XML-RPC API.
+    - CVE-2017-9064
+      A Cross Site Request Forgery (CRSF) vulnerability was discovered
+      in the filesystem credentials dialog.
+    - CVE-2017-9061
+      A cross-site scripting (XSS) vulnerability was discovered when
+      attempting to upload very large files.
+    - CVE-2017-9063
+      A cross-site scripting (XSS) vulnerability was discovered related
+      to the Customizer.
+
+ -- Craig Small <csmall@debian.org>  Wed, 17 May 2017 22:28:18 +1000
+
+wordpress (4.7.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream maintenance release
+
+ -- Craig Small <csmall@debian.org>  Sat, 22 Apr 2017 09:01:42 +1000
+
+wordpress (4.7.3+dfsg-1) unstable; urgency=high
+
+  * New upstream release fixes 6 security issues Closes: #857026
+    - CVE-2017-6814
+      Cross-site scripting (XSS) via media file metadata.
+    - CVE-2017-6815
+      Control characters can trick redirect URL validation.
+    - CVE-2017-6816
+      Unintended files can be deleted by administrators using the plugin
+      deletion functionality.
+    - CVE-2017-6817
+      Cross-site scripting (XSS) via video URL in YouTube embeds.
+    - CVE-2017-6818
+      Cross-site scripting (XSS) via taxonomy term names.
+    - CVE-2017-6819
+      Cross-site request forgery (CSRF) in Press This leading to excessive
+      use of server resources.
+
+ -- Craig Small <csmall@debian.org>  Tue, 07 Mar 2017 21:59:02 +1100
+
+wordpress (4.7.2+dfsg-1) unstable; urgency=high
+
+  *  New upstream release fixes 3 security issues Closes: #852767
+     - CVE-2017-5610
+       The user interface for assigning taxonomy terms in Press This is
+       shown to users who do not have permissions to use it.
+     - CVE-2017-5611
+       WP_Query is vulnerable to a SQL injection (SQLi)
+     - CVE-2017-5612
+       XSS in the posts list table
+
+ -- Craig Small <csmall@debian.org>  Sun, 29 Jan 2017 08:22:44 +1100
+
+wordpress (4.7.1+dfsg-1) unstable; urgency=high
+
+  * New upstream release fixes 8 security issues, Closes: #851310
+    - CVE-2017-5493
+      Cryptographically Weak Pseudo-Random Number Generator
+    - CVE-2017-5492
+      Accessibility Mode Cross-Site Request Forgery (CSRF)
+    - CVE-2017-5491
+      Post via Email Checks mail.example.com by Default
+      CVE-2017-5490
+    - Stored Cross-Site Scripting (XSS) via Theme Name fallback
+      CVE-2017-5489
+    - Cross-Site Request Forgery (CSRF) via Flash Upload
+      CVE-2017-5488
+    - Authenticated Cross-Site scripting (XSS) in update-core.php
+      CVE-2017-5487
+    - User Information Disclosure via REST API
+      CVE-2016-10066
+    - Potential Remote Command Execution (RCE) in PHPMailer
+
+ -- Craig Small <csmall@debian.org>  Sat, 14 Jan 2017 09:30:12 +1100
+
+wordpress (4.7+dfsg-2) unstable; urgency=medium
+
+  * Add virtual-mysql-* as an option Closes: #847597
+
+ -- Craig Small <csmall@debian.org>  Sat, 10 Dec 2016 06:57:01 +1100
+
+wordpress (4.7+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Removed theme twentyfourteen
+  * Added new theme twentyseventeen
+
+ -- Craig Small <csmall@debian.org>  Wed, 07 Dec 2016 22:14:14 +1100
+
+wordpress (4.6.1+dfsg-2) unstable; urgency=medium
+
+  * Remove -e from for loop Closes: #845388
+  * Thanks to Santiago Vila for above patch
+  * Update and fix the language files
+
+ -- Craig Small <csmall@debian.org>  Wed, 30 Nov 2016 22:40:08 +1100
+
+wordpress (4.6.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream security release, Closes: #837090, fixes CVE-2016-6896,
+    CVE-2016-6897, CVE-2016-7168 and CVE-2016-7169.
+
+ -- Craig Small <csmall@debian.org>  Fri, 09 Sep 2016 21:56:22 +1000
+
+wordpress (4.5.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release, various security fixes
+  * Update tinymce missing sources
+
+ -- Craig Small <csmall@debian.org>  Thu, 23 Jun 2016 22:18:26 +1000
+
+wordpress (4.5.2+dfsg-2) unstable; urgency=medium
+
+  * Updated language files Closes: #772498
+  * Add alias to nginx example configuration
+  * Add warning in description and README about googleapis
+    Closes: #781449
+
+ -- Craig Small <csmall@debian.org>  Mon, 13 Jun 2016 12:29:11 +1000
+
+wordpress (4.5.2+dfsg-1) unstable; urgency=high
+
+  * New upstream release
+  * Fixes reflected XSS attack in plupload Closes: #823640
+  * Do not use old mediaelelement
+
+ -- Craig Small <csmall@debian.org>  Sat, 07 May 2016 12:39:47 +1000
+
+wordpress (4.5.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update to standard version 3.9.8
+
+ -- Craig Small <csmall@debian.org>  Mon, 02 May 2016 22:18:13 +1000
+
+wordpress (4.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Wed, 13 Apr 2016 21:07:16 +1000
+
+wordpress (4.4.2+dfsg-3) unstable; urgency=medium
+
+  * Keep php5* alternates Closes: #820288
+
+ -- Craig Small <csmall@debian.org>  Thu, 07 Apr 2016 21:28:32 +1000
+
+wordpress (4.4.2+dfsg-2) unstable; urgency=medium
+
+  * Update libphp-phpmailer dependency Closes: #818870
+  * Update to non-version PHP dependencies
+  * Update to standards 3.9.7 no change
+
+ -- Craig Small <csmall@debian.org>  Tue, 05 Apr 2016 22:13:33 +1000
+
+wordpress (4.4.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release Closes: #813697
+  * Fixes open redirection attack CVE-2016-2221
+  * Fixes possible SSRF for local URIs CVE-2016-2222
+
+ -- Craig Small <csmall@debian.org>  Fri, 05 Feb 2016 20:34:42 +1100
+
+wordpress (4.4.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixes XSS vulnerability CVE-2016-1564 Closes: #810325
+
+ -- Craig Small <csmall@debian.org>  Fri, 08 Jan 2016 22:05:11 +1100
+
+wordpress (4.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add languages directory to install Closes: #798382
+  * Update the setup-mysql script to use correct wp-content dirs
+    Closes: #755530, #311821, #732134, #783331
+  * Updated language files
+
+ -- Craig Small <csmall@debian.org>  Fri, 11 Dec 2015 21:37:01 +1100
+
+wordpress (4.3.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixes CVE-2015-5714 CVE-2015-5715 Closes: #799140
+
+ -- Craig Small <csmall@debian.org>  Fri, 18 Sep 2015 20:54:53 +1000
+
+wordpress (4.3+dfsg-2) unstable; urgency=medium
+
+  * Backport changeset 33646 to fix cron entries Closes: #798350
+
+ -- Craig Small <csmall@debian.org>  Tue, 08 Sep 2015 22:22:11 +1000
+
+wordpress (4.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Adjusted some wp-content directories
+  * Added symlink for themes
+
+ -- Craig Small <csmall@debian.org>  Wed, 19 Aug 2015 22:48:32 +1000
+
+wordpress (4.2.4+dfsg-1) unstable; urgency=high
+
+  * New upstream release
+  * Security fix for 3 XSS and a SQL injection bugs Closes: #794560
+
+ -- Craig Small <csmall@debian.org>  Tue, 04 Aug 2015 22:48:41 +1000
+
+wordpress (4.2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Moved theme to Recommends Closes: #784689
+  * Remove reference to TODO Closes: #786427
+
+ -- Craig Small <csmall@debian.org>  Fri, 24 Jul 2015 20:54:50 +1000
+
+wordpress (4.2.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fixes security bug in themes on genericons Closes: #784603
+
+ -- Craig Small <csmall@debian.org>  Wed, 13 May 2015 22:32:03 +1000
+
+wordpress (4.2.1+dfsg-1) unstable; urgency=high
+
+  * New Security release Closes: #783554
+  * Patches another XSS due to field length
+
+ -- Craig Small <csmall@debian.org>  Tue, 28 Apr 2015 08:32:48 +1000
+
+wordpress (4.2+dfsg-1) unstable; urgency=high
+
+  * New upstream release
+  * Fixes security bugs:
+    - XSS vulnerability
+    - files with invalid or unsafe names could be added
+    - another limited XSS
+    - some plugins vulnerable to SQL injection
+  * README.debian: Added permission note for config file Closes: #773079
+  * Added php5-ssh2 to suggests Closes: 783333
+  * Added nginx/php5-fpm example Closes: #783334
+
+ -- Craig Small <csmall@debian.org>  Sun, 26 Apr 2015 21:35:58 +1000
+
+wordpress (4.1.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Sat, 28 Feb 2015 11:17:46 +1100
+
+wordpress (4.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Changed trigger to noawait Closes: #772862
+  * Updated apache example Closes: #773075
+  * Updated to standards 3.9.6
+  * Added getid3 and mediaelement to linktree Closes: #762523
+  * Removed two unbuildable mediaelement files
+
+ -- Craig Small <csmall@debian.org>  Sat, 20 Dec 2014 15:31:21 +1100
+
+wordpress (4.0.1+dfsg-2) unstable; urgency=medium
+
+  * Fixed i18n updates
+  * twentyfourteen theme has translations Closes: #772205
+
+ -- Craig Small <csmall@debian.org>  Sat, 06 Dec 2014 18:54:49 +1100
+
+wordpress (4.0.1+dfsg-1) unstable; urgency=high
+
+  * New upstream release
+  * Fixes several security bugs Closes: #770425
+    - Three cross-site scripting issues that a contributor or
+      author could use to compromise a site.
+    - A cross-site request forgery that could be used to trick a
+      user into changing their password.
+    - An issue that could lead to a denial of service when
+      passwords are checked.
+    - Additional protections for server-side request forgery
+      attacks when WordPress makes HTTP requests.
+    - An extremely unlikely hash collision could allow a user’s
+      account to be compromised, that also required that they
+      haven’t logged in since 2008.
+    - WordPress now invalidates the links in a password reset email
+      if the user remembers their password, logs in, and changes
+      their email address.
+
+ -- Craig Small <csmall@debian.org>  Sat, 22 Nov 2014 19:29:37 +1100
+
+wordpress (4.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Fri, 05 Sep 2014 20:58:06 +1000
+
+wordpress (3.9.2+dfsg-1) unstable; urgency=high
+
+  * New Upstream release
+  * Fixes XML Security bug Closes: #757312
+
+ -- Craig Small <csmall@debian.org>  Thu, 07 Aug 2014 18:26:39 +1000
+
+wordpress (3.9.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Use system CA certificate file Closes: #748965
+
+ -- Craig Small <csmall@debian.org>  Wed, 11 Jun 2014 22:33:48 +1000
+
+wordpress (3.9+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * 3.9 seems to handle different locations for plugins so the
+    plugin directory handling patches have been cut back.
+
+ -- Craig Small <csmall@debian.org>  Thu, 17 Apr 2014 20:56:19 +1000
+
+wordpress (3.8.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release - fixes Quick Draft tool that broke in 3.8.2
+
+ -- Craig Small <csmall@debian.org>  Wed, 16 Apr 2014 22:48:26 +1000
+
+wordpress (3.8.2+dfsg-1) unstable; urgency=high
+
+  * New upstream release Fixes CVE-2014-0165, CVE-2014-0166
+    and Closes: #744018
+
+ -- Craig Small <csmall@debian.org>  Wed, 09 Apr 2014 22:13:54 +1000
+
+wordpress (3.8.1+dfsg1-2) unstable; urgency=medium
+
+  * Updated copyright file Closes: #736514
+
+ -- Craig Small <csmall@debian.org>  Fri, 14 Feb 2014 22:03:49 +1100
+
+wordpress (3.8.1+dfsg1-1) unstable; urgency=medium
+
+  * Added Breaks/Replaces for combined wordpress Closes: #736688
+  * Removed moxieplayer.swf and added missing sources Closes: #736804
+
+ -- Craig Small <csmall@debian.org>  Thu, 06 Feb 2014 22:42:07 +1100
+
+wordpress (3.8.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Depend on either mysql or mariadb client Closes: #732914
+
+ -- Craig Small <csmall@debian.org>  Fri, 24 Jan 2014 22:20:08 +1100
+
+wordpress (3.8+dfsg-1) unstable; urgency=low
+
+  [ Pablo Vazquez Martinez ]
+  * Split themes in different binary packages. Closes: #723819
+
+  [ Craig Small ]
+  * New upstream release. Closes: #733726
+  * Update Standards-Version to 3.9.5.
+  * New Maintainer
+
+ -- Craig Small <csmall@debian.org>  Wed, 22 Jan 2014 22:28:02 +1100
+
+wordpress (3.7.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Enable usage of php5-mysqlnd as an alternative to php5-mysql.
+    Closes: #722552
+  * Improve wp-setup to cope with plugins/themes directories with
+    spaces. Thanks to Oskar Liljeblad <oskar@osk.mine.nu> for the patch.
+    Closes: #723074
+  * Refresh patches
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Wed, 13 Nov 2013 20:41:09 +0100
+
+wordpress (3.6.1+dfsg-1) unstable; urgency=high
+
+  * New upstream security release. Fixes CVE-2013-4338 CVE-2013-4339
+    CVE-2013-4340. Closes: #722537
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 12 Sep 2013 07:58:57 +0200
+
+wordpress (3.6+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Improve wp-settings to verify that $_SERVER['HTTP_X_FORWARDED_PROTO']
+    exists before accessing it (avoids a PHP notice).
+    Thanks to Paul Dreik <slask@pauldreik.se> for the report and the patch.
+  * Document in README.Debian the need to login to /wp-admin/ to complete
+    an upgrade.
+  * Drop useless debian/README.source
+  * Drop 008CVE2008-2392.patch since upstream now disables unfiltered
+    uploads by default. See http://core.trac.wordpress.org/ticket/10692
+  * Drop 009CVE2008-6767.patch since the backto parameter is validated
+    against a whitelist, and externally triggered upgrades are not a
+    security problem as long as they work.
+  * Update debian/missing-sources with latest versions.
+  * Update upstream l10n.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Wed, 04 Sep 2013 23:18:58 +0200
+
+wordpress (3.5.2+dfsg-1) unstable; urgency=low
+
+  * New upstream release with many security fixes. Closes: #713947
+    * Server-Side Request Forgery (SSRF) via the HTTP API. CVE-2013-2199.
+    * Privilege Escalation: Contributors can publish posts, and users can
+      reassign authorship. CVE-2013-2200.
+    * Cross-Site Scripting (XSS) in SWFUpload. CVE-2013-2205.
+    * Denial of Service (DoS) via Post Password Cookies. CVE-2013-2173.
+    * Content Spoofing via Flash Applet in TinyMCE Media Plugin.
+      CVE-2013-2204.
+    * Cross-Site Scripting (XSS) when Uploading Media. CVE-2013-2201.
+    * Full Path Disclosure (FPD) during File Upload. CVE-2013-2203.
+  * Additional security hardening includes:
+    * Cross-Site Scripting (XSS) (Low Severity) when Editing Media.
+      CVE-2013-2201.
+    * Cross-Site Scripting (XSS) (Low Severity) when Installing/Updating
+      Plugins/Themes. CVE-2013-2201.
+    * XML External Entity Injection (XXE) via oEmbed. CVE-2013-2202.
+  * Update the Vcs-Git and Vcs-Browser URLs.
+  * Update Standards-Version to 3.9.4.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 25 Jun 2013 15:52:07 +0200
+
+wordpress (3.5.1+dfsg-2) unstable; urgency=low
+
+  * Only replace tinymce files by symlinks if the content is exactly the same.
+    Closes: #700289
+  * Update debian/get-upstream-i18n to include supplementary PO files
+    and use a more efficient method to update them. Closes: #697208
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 11 Feb 2013 13:56:18 +0100
+
+wordpress (3.5.1+dfsg-1) unstable; urgency=low
+
+  * New upstream maintenance and security release. Closes: #698916
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 28 Jan 2013 17:15:27 +0100
+
+wordpress (3.5+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix sample apache.conf so that Alias directives are in the proper order
+    (from the most specific to the less specific). Closes: #693122
+    Thanks to Jérôme Marant for the report.
+  * Update debian/missing-sources/ with latest upstream changes.
+  * Update all translations.
+  * Try to deduplicate (i.e. replace with symlinks) backbone.js and
+    underscore.js too.
+  * Drop debian/patches/006rss_language.patch, the rss_language option
+    is no longer used.
+  * Update/refresh all other patches on top of the new release.
+  * Update lintian overrides and debian/wordpress.linktrees to match the
+    latest changes concerning javascript libraries shipped by WordPress.
+  * Document the loss of the twentyten theme.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Fri, 21 Dec 2012 14:17:50 +0100
+
+wordpress (3.4.2+dfsg-1) unstable; urgency=low
+
+  * New upstream security & bugfix release.
+  * Also setup languages symlink in setup-mysql. Closes: #684628
+    Thanks to Jun NOGATA <nogajun@gmail.com> for the analysis.
+  * Add new patch 011support-symlinks-for-plugins.patch grabbed
+    in the upstream ticket to allow plugin directories to be
+    symlinks (which is required for the Debian package since
+    we put symlinks in /var/lib/wordpress/wp-content/plugins/).
+    Closes: #686228
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Wed, 12 Sep 2012 14:52:14 +0200
+
+wordpress (3.4.1+dfsg-1) unstable; urgency=high
+
+  * New upstream security & bugfix release. Closes: #680721
+    Fixes CVE-2012-3383, CVE-2012-3384, CVE-2012-3385.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 03 Jul 2012 08:36:08 +0200
+
+wordpress (3.4+dfsg-3) unstable; urgency=low
+
+  * [f7a1c09] Drop useless postrm.
+  * [d92219b] Add a prerm script calling wp-setup --purge-wp-content on
+    remove. Closes: #678842
+  * [2fbf903] Allow wp-setup to symlink files as well as directories.
+  * [cef928f] Let wp-setup also manage
+    /var/lib/wordpress/wp-content/languages/.
+  * [ac86408] Densify output of wp-setup.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 26 Jun 2012 10:47:25 +0200
+
+wordpress (3.4+dfsg-2) unstable; urgency=low
+
+  * [2e63535] Merge unused debian/NEWS into debian/wordpress.NEWS so that
+    users are correctly informed of the latest changes.
+  * [e3b7b1c] Improve preinst to also move the
+    /usr/share/wordpress/wp-content/uploads directory to its new location in
+    /var/lib/wordpress/wp-content/. The package never created this directory
+    but many users probably created it and we need to do this to let dpkg
+    install the symlink that we put into place.
+  * [5c0a29b] Add a trigger that watches /usr/share/wordpress/wp-content.
+    When activated, it will execute wp-setup --sync-wp-content
+    which updates /var/lib/wordpress/wp-content/ with symlinks
+    to plugins/themes that have been added and it drops symlinks
+    to plugins/themes which have disappeared. (Closes: #677889)
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 21 Jun 2012 20:44:53 +0200
+
+wordpress (3.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release. Closes: #677534
+
+  [ Raphaël Hertzog ]
+  * [a1c0409] Refresh and update all patches to correctly apply on version
+    3.4.
+  * [3804496] Update debian/missing-sources/ to match the current versions of
+    embedded javascript and flash files.
+  * [185b051] Drop the old "default" theme (and its French translation)
+  * [966ce6c] Grab latest translations
+  * [1983326] Update Standards-Version to 3.9.3 (no change).
+  * [29c48b6] Increase debhelper compat level to 9.
+  * [73e16d0] Replace debian/dh_linktree by the packaged version.
+  * [359b660] Update debian/wordpress.linktrees to match latest developments.
+  * [645b650] Let setup-mysql lowercase the FQDN since the configuration
+    scheme expects this. Thanks to Chris Butler <chrisb@debian.org> for the
+    report (Closes: #658395)
+  * [5433e90] Fix setup-mysql to avoid creating /srv/www with restricted
+    permissions (Closes: #616400)
+  * [dd2ef1d] Move back wp-config.php to /usr/share/wordpress/ since it's only
+    a dispatcher to the real configuration file (Closes: #592502)
+  * [b602372] Improve wp-config.php so that WordPress works behind an https
+    reverse-proxy.
+  * [ba0b729] Entirely update and rewrite README.debian. (Closes: #575985,
+    #639980)
+  * [683a908] Update wp-config.php to not redefine constants which have
+    already been set.  Thanks to Richard van den Berg <richard@vdberg.org> for
+    the report. (Closes: #613283)
+  * [315eb68] Let wordpress-l10n depend on the same version than wordpress.
+    (Closes: #623557)
+  * [a6d0b9f] Default configuration now sets WP_CONTENT_DIR to
+    /var/lib/wordpress/wp-content. And the package provides this new directory
+    appropriately setup with write rights to www-data on blogs.dir and
+    uploads. themes and plugins are root-owned directories with symlinks
+    pointing back to the default themes and plugins. (Closes: #675469)
+  * [4db98c6] Update setup-mysql to use WP_CONTENT_DIR (and no longer use
+    $upload_dir). (Closes: #658508)
+  * [a1970da] Extend debian/wordpress.linktrees to cover swfobject.js.
+  * [8d46dab] Use dpkg-maintscript-helper to drop obsolete
+    /etc/wordpress/wp-config.php
+
+  [ Martin Bagge / brother ]
+  * [56d0a34] Improve the setup script to be able to use a remote MySQL
+    server.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sat, 16 Jun 2012 01:19:20 +0200
+
+wordpress (3.3.2+dfsg-1) unstable; urgency=high
+
+  * New upstream security release. Closes: #670124
+  * Use the embedded copy of SimplePie until #669054 is resolved.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 24 Apr 2012 00:31:42 +0200
+
+wordpress (3.3.1+dfsg-1) unstable; urgency=low
+
+  * New upstream security release. Fixes CVE-2012-0287.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Wed, 04 Jan 2012 10:15:05 +0100
+
+wordpress (3.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release. Closes: #652041
+  * [4deb832] Add all the missing sources in debian/missing-sources/.
+    (Closes: #646729)
+  * [913eba5] Refresh all patches.
+  * [ae61778] Use xz compression for the debian tarball to save some space.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Tue, 20 Dec 2011 01:01:50 +0100
+
+wordpress (3.2.1+dfsg-3) unstable; urgency=medium
+
+  * Upload with urgency medium to speed up a bit the transition to testing
+    since the testing version is broken.
+  * [72d01a3] Improve dh_linktree.
+    It is now able to generate dependencies and to have different behaviour
+    for each file to replace. Modify wordpress.linktrees to ensure we have
+    the very same JQuery files but blindly replaces all the other files.
+    Drop the explicit dependencies in favor of the autogenerated dependencies.
+    As a side-effect this fixes installation of widgets which was broken
+    by the mismatch of some JQuery ui files.
+  * [bbce711] Add lintian overrides for warnings about the embedded copy of JQuery.
+    We do a reasonable effort to replace it if it matches.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Thu, 27 Oct 2011 16:01:49 +0200
+
+wordpress (3.2.1+dfsg-2) unstable; urgency=low
+
+  * [af74ce2] Add a preinst to drop symlinks to directories for tinymce
+    and cropper. The new dh_linktree only symlinks files and hierarchies are
+    duplicated. So we have to drop symlinks to directories in the preinst,
+    otherwise dpkg installs the new symlinks in the tinymce/cropper
+    directories instead of in the wordpress ones.
+    Also drop the upgrade code in the postinst converting the same directories
+    into symlinks... (Closes: #639733)
+  * [0b51c4f] Invite users affected by #639733 to reinstall
+    tinymce/libjs-cropper.
+  * [55af033] Fix invalid test in postinst (upgrade → configure)
+    "upgrade" is not a valid parameter in the postinst. Instead
+    we get "configure".
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sat, 22 Oct 2011 17:01:25 +0200
+
+wordpress (3.2.1+dfsg-1) unstable; urgency=low
+
+  [ Paul Tagliamonte ]
+  * [c5e4b2c] Added a get-orig-source target to recreate the DFSG-clean
+    tarball. It drops all the sourceless flash files. Closes: #625773
+
+  [ Raphaël Hertzog ]
+  * [d1035bd] Imported Upstream version 3.2.1+dfsg
+  * [b968405] Update and refresh all patches.
+  * [10ab97c] Drop manifest.patch because the description in its header
+    doesn't make any sense.
+  * [87537db] Update dependencies as per new upstream requirements.
+  * [0c534ec] Update packaging to avoid using even more embedded PHP/JS
+    libraries.
+  * [ec5c11e] Use a new dh_linktree to replace embedded PHP/JS libraries.
+  * [8690719] Add lintian override for embedded-php-library streams.php since
+    it's a false positive.
+  * [83c15bc] Upgrade Standards-Version to 3.9.2 (no changes needed).
+  * [938fb15] Update internationalization files.
+  * [6ac0357] Install class-smtp.php and class-phpmailer.php so that they can
+    be replaced by dh_linktree.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Mon, 08 Aug 2011 23:06:20 +0200
+
+wordpress (3.0.5+dfsg-1) unstable; urgency=medium
+
+  * [077b77b] Imported Upstream version 3.0.5+dfsg
+  * [8d1ce17] Refreshed patches
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Fri, 11 Feb 2011 17:50:40 +0100
+
+wordpress (3.0.4+dfsg-1) unstable; urgency=high
+
+  * [9d62499] Imported Upstream version 3.0.4+dfsg
+    - This is critical security update, more info: http://wp.me/pZhYe-qt
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Thu, 30 Dec 2010 14:47:40 +0100
+
+wordpress (3.0.3.dfsg-1) unstable; urgency=high
+
+  * [e113893] Imported Upstream version 3.0.3.dfsg
+    - Re-packaged without the hello dolly plugin (Closes: #607240)
+  * [9d62cfd] Removed hello.patch
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Tue, 28 Dec 2010 17:22:34 +0100
+
+wordpress (3.0.3-1) unstable; urgency=high
+
+  * [014c926] Imported Upstream version 3.0.3 (Closes: #606657)
+  * [f29b6ac] Use GPL-compliant lyrics in the hello dolly plugin.
+    (Closes: #607240)
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Fri, 17 Dec 2010 11:03:55 +0100
+
+wordpress (3.0.2-1) unstable; urgency=high
+
+  [ Raphaël Hertzog ]
+  * [9d6922c] Improve wp-config.php to support sites on subdomains and
+    htaccess by providing directives ready to uncomment
+
+  [ Giuseppe Iuculano ]
+  * [1dc32d3] Imported Upstream version 3.0.2 (Closes: #605880)
+    - Author level SQL injection vulnerability fixed (Closes: #605603)
+  * [b4f2869] Refreshed debian/patches/001readme.patch
+  * [612c23f] Remove flv_player.swf from manifest.php (Closes: #602732)
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Tue, 07 Dec 2010 08:43:38 +0100
+
+wordpress (3.0.1-2) unstable; urgency=low
+
+  * [e8a913f] Remove swfupload.swf from the binary package, as it cannot
+    be built from source, violating the Policy. (Closes: #591195)
+  * [92493d0] Document in Readme.Debian how to get swfupload.swf
+  * [3663a53] debian/get-upstream-i18n: download also configuration
+    files for RTL-languages (Closes: #585784)
+  * [8bbdc8b] Added a missing define in debian/wp-config.php (Closes: #590859)
+  * [34dd063] Updated language files
+  * [adf55b3] Install *.php configuration files for RTL-languages
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Thu, 02 Sep 2010 10:33:50 +0200
+
+wordpress (3.0.1-1) unstable; urgency=low
+
+  * [e6e4f09] Updated watch file
+  * [12dd7cd] Imported Upstream version 3.0.1
+  * [7f03621] Bump to standards-version 3.9.1, no changes needed
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Wed, 04 Aug 2010 16:41:24 +0200
+
+wordpress (3.0-1) unstable; urgency=low
+
+  [ Giuseppe Iuculano ]
+  * [a57d26e] Imported Upstream version 3.0 (Closes: #586764)
+  * [a74cd68] MU: enable multi-user by default and install the proper
+    blogs.dir directory
+  * [ffd926e] fix the blogs.dir link
+  * [c81081d] Adjust MU setup for Debian installations
+  * [c14dd9d] Update language files
+  * [6a7296f] Added Raphaël Hertzog in Uploaders
+  * [7ea24ff] Updated watch file
+
+  [ Raphaël Hertzog ]
+  * [2d1df3e] Update patch debian/patches/001readme.patch
+  * [58a772e] Update patch debian/patches/003installer.patch
+  * [332abfc] Update patch debian/patches/006rss_language.patch
+  * [ee99544] Update patch debian/patches/008CVE2008-2392.patch
+  * [b960914] Refresh patch debian/patches/009CVE2008-6767.patch
+  * [511eea7] Refresh patch
+    debian/patches/010disabling_update_note.patch
+  * [22c5015] Refresh patch debian/patches/manifest.patch
+  * [7cfe147] Switch to source format 3.0 (quilt).
+  * [8c86759] Add back the default theme that has been dropped upstream
+  * [390188e] Adjust links and rules to cope with removal of
+    scriptaculous/prototype.js
+  * [1313b13] Add package prefix to many debian/ files for clarity
+  * [c4e7651] Switch to dh7 tiny rules file and general cleanup of the
+    build process.
+  * [625cdbb] Updated Vcs-Git/Vcs-Browser to point to the collab-maint
+    repository.
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Sun, 27 Jun 2010 15:47:40 +0200
+
+wordpress (2.9.2-1) unstable; urgency=low
+
+  * [3f228c1] Imported Upstream version 2.9.2
+  * [7965955] Bump to Standards-Version 3.8.4 (no changes)
+  * [e86fd59] Updated language files
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Tue, 16 Feb 2010 12:41:01 +0100
+
+wordpress (2.9.1-2) unstable; urgency=low
+
+  * [4a7279a] Fixed the security id in wp-admin/menu.php (Closes: #561832) -
+    thanks to Franck Nouyrigat
+  * [aa0f3a0] Allow site names with dash character. (Closes: #566224) -
+    thanks to Mikko Visa
+  * [ee0a44e] Updated language files
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Fri, 22 Jan 2010 19:07:14 +0100
+
+wordpress (2.9.1-1) unstable; urgency=low
+
+  * [a83b8fd] Imported Upstream version 2.9.1
+  * [216890e] Added ${misc:Depends} in Depends
+  * [ec95986] Updated language files
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Wed, 06 Jan 2010 13:20:35 +0100
+
+wordpress (2.9-1) unstable; urgency=low
+
+  * [fdd001e] Change wordpress-l10n section (localization)
+  * [625fa21] Imported Upstream version 2.9
+  * [dd9b536] Refreshed patches
+  * [1ce2a9d] Do not remove anymore plugins/wordpress/js direcotry
+  * [3287ec5] Updated language files (Closes: #556902)
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Wed, 23 Dec 2009 14:31:36 +0100
+
+wordpress (2.8.6-1) unstable; urgency=low
+
+  * [cf87b24] Updated debian/watch (Closes: #555729) - thanks to Hideki
+    Yamane
+  * [997165e] Imported Upstream version 2.8.6
+  * [05395e1] debian/wp-config.php: sanitize $debian_server and do not
+    check if $debian_file is under /etc/wordpress (Closes: #549436)
+  * [dc016ce] Updated language files
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Sat, 14 Nov 2009 12:53:07 +0100
+
+wordpress (2.8.5-1) unstable; urgency=high
+
+  * [b0ebbe1] Imported Upstream version 2.8.5 (Closes: #551841)
+    - This version fixes CVE-2009-3622, Wordpress Trackback DoS
+  * [cad0da2] Updated languages files
+  * [e8438f2] Use /var/log/apache2 directory in the apache example file
+    (Closes: #551380)
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Wed, 21 Oct 2009 21:43:31 +0200
+
+wordpress (2.8.4-3) unstable; urgency=low
+
+  * [dc295db] Provide a more descriptive errror message if the vhost
+    config file is not found. (LP: #365783)
+  * [c23192a] Depend on libjs-jquery >= 1.3.3-1 (Closes: #544473) -
+    thanks to Arnaud Guiton
+  * [fd27308] Updated debian/copyright
+  * [94ad7d3] Split up the language files into a separate package
+  * [08334d7] Updated language files
+  * [6682ab3] Updated my email address and removed DM-Upload-Allowed
+    control field
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Sat, 03 Oct 2009 10:28:16 +0200
+
+wordpress (2.8.4-2) unstable; urgency=low
+
+  * [e582ddd] Removed reference about drag.gif in manifest.php, thanks
+    to Michel Meyers (Closes: #517969)
+  * [a0d70c8] Do not symlink readme.html, instead install it in
+    /usr/share/wordpress
+  * [e81e4c3] Depend on tinymce (>= 3.2.6-0.1) and added a proper
+    symlink to the tabfocus plugin
+  * [0492b02] Added a note in NEWS and README.debian about the secondary
+    consequence caused by the previous fix for a possible script
+    injection via /etc/wordpress/wp-config.php
+  * [6a3c803] Updated language files
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Wed, 26 Aug 2009 14:53:43 +0200
+
+wordpress (2.8.4-1) unstable; urgency=low
+
+  * [5f0812d] Imported Upstream version 2.8.4
+  * [e1ea94b] Switch to quilt
+  * [cf8904e] Removed Andrea De Iacovo from Maintainer field, thanks
+    Andrea for the prior work on wordpress!
+  * [6013bd8] Removed 007_REQUEST.patch, upstream already fixed CVE-2008-5113
+    in a better way
+  * [8da39ea] Removed 004languages.patch, it contains outdated languages
+    files
+  * [d5696ea] debian/control: Updated Vcs control field
+  * [89316e0] debian/rules: Comment the DH_VERBOSE export
+  * [cf78bf5] debian/wp-config.php: check if $debian_file is under
+    /etc/wordpress and mitigate a possible script injection via
+    /etc/wordpress/wp-config.php. Thanks to Raphael Geissert (Closes: #500295)
+  * [ece1c25] debian/get-upstream-i18n: Do not remove outdated language
+    files by default
+  * [59547a2] Do not embed tinymce, php-gettext and cropper. (Closes: #504242)
+  * [848828d] debian/postinst: Create the symlinks manually, dpkg
+    doesn't replace directories with symlinks. (Closes: #517969)
+  * [2af4aea] debian/patches/009CVE2008-6767.patch: Grant upgrade
+    privilege to all admin users. Thanks to Ivan Warren (Closes: #541371)
+  * [46e8f2b] debian/control: Removed the sentence about the French
+    language support, now there are a lot of language files
+  * [fcd94c6] debian/control: Remove outdated packages from Depends,
+    Suggests, and Conflicts
+  * [9c28177] Updated to standards version 3.8.3 (No changes needed)
+  * [700156e] Added a README.source (Debian Policy Manual section 4.14)
+  * [13a98d5] Updated language files
+  * [a86b72a] Do not install readme.html in doc, it doesn't contain any
+    relevant information for Debian users
+  * [25d4e8e] Updated copyright file
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Tue, 18 Aug 2009 08:28:23 +0200
+
+wordpress (2.8.3-2) unstable; urgency=medium
+
+  * [2372863] debian/patches/011enforce_activaction_key.dpatch: Enforce
+    activation key to be a string (Closes: #541102)
+  * [cb80386] Fixed CVE-2008-6767 patch and prevent redirect loop.
+    (Closes: #541199)
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Wed, 12 Aug 2009 18:18:52 +0200
+
+wordpress (2.8.3-1) unstable; urgency=medium
+
+  * [f625087] Imported Upstream version 2.8.3 (Closes: #533387, #539411)
+    This release fixed several security issue:
+    - Privileges unchecked and multiple information disclosures.
+      (CVE-2009-2334, CVE-2009-2335, CVE-2009-2336) (Closes: #536724)
+    - CVE-2009-2431, CVE-2009-2432: Obtain sensitive information
+      (Closes: #537146)
+    - CVE-2008-6762: Open redirect vulnerability in wp-admin/upgrade.php
+      (Closes: #531736)
+  * [347c164] debian/control: Added Giuseppe Iuculano in Uploaders,
+    added Vcs and DM-Upload-Allowed control field
+  * [92fb4ab] Bump to debhelper 7 compatibility levels
+  * [5b8536e] Refreshing patches
+  * [d999c0e] Added a watch file
+  * [4163c0c] debian/rules: Do not remove the autosave tinymce plugin, there
+    isn't anymore.
+  * [9c4d0e5] debian/get-upstream-i18n: download .xpi files into
+    debian/languages
+  * [76b7c5c] Install language files
+  * [a0bfad2] Move gettext in Build-Depends-Indep
+  * [8b607bf] Use set -e instead of passing -e to the shell on the #!
+    line
+  * [6cbbf36] debian/patches/009CVE2008-6767.dpatch: Only admin can
+    upgrade wordpress. (CVE-2008-6767) (Closes: #531736)
+  * [d6adfbe] Disabled the the "please update" warning, thanks to Hans
+    Spaans and Rolf Leggewie (Closes: #506685)
+  * [15c360c] Updated to standards version 3.8.2 (No changes needed)
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Tue, 11 Aug 2009 16:30:35 +0200
+
+wordpress (2.7.1-2) unstable; urgency=low
+
+  * setup-mysql corrected to accept domain names with hyphens (Closes: #514447)
+  * wp-config.php now dies if no config file is found (Closes: #500296)
+  * now the static browser uploader is supported (Closes: #501507)
+  	Users che chose to use the browser (instead of flash) to upload media files.
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Sun, 15 Feb 2009 19:13:35 +0100
+
+wordpress (2.7.1-1) experimental; urgency=low
+
+  * Merge with upstream Wordpress-2.7 (Closes: #514845)
+  * Corrected security regression on CVE-2008-2392.
+  	Admins had unfiltered upload capability again.
+  	Now this options is disabled by default and can be
+  	enable through the security options panel.
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Thu, 12 Feb 2009 00:39:29 +0100
+
+wordpress (2.7-1) experimental; urgency=low
+
+  * Merge with upstream Wordpress-2.7 (Closes: #507356)
+  * README file is now more clear about Apache
+    configuration (Closes: #511312, #507981)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Mon, 12 Jan 2009 12:30:05 +0100
+
+wordpress (2.6.2-2) experimental; urgency=low
+
+  * 007CVE2008-2392.patch modified.
+  	Now users chan dinamically choose to enable unrestricted upload for admins.
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Thu, 06 Nov 2008 10:38:07 +0100
+
+wordpress (2.6.2-1) experimental; urgency=low
+
+  * Merge with upstream Wordpress-2.6.2 (Closes: #490977)
+  * Dependency field was changed to erase useless dependencies (Closes: #496240)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Tue, 23 Oct 2008 17:20:34 +0200
+
+wordpress (2.5.1-8) unstable; urgency=high
+
+  * Added 009CVE2008-4106 patch. (Closes: #500115)
+    Whitespaces in user name are now checked during login.
+    It's not possible to register an "admin(n-whitespaces)" user anymore
+    to gain unauthorized access to the admin panel.
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Thu, 25 Sep 2008 17:02:47 +0200
+
+wordpress (2.5.1-7) unstable; urgency=high
+
+  * Modified CVE2008-3747 patch. (Closes: #497524)
+    The old patch made the package completely unusable. The new
+    one should solve the issue. (Thanks to Del Gurt)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Thu, 04 Sep 2008 00:42:11 +0200
+
+wordpress (2.5.1-6) unstable; urgency=high
+
+  * Added patch to fix remote attack vulnerability (Closes: #497216)
+  	Attackers could gain administrative powers by sniffing cookies.
+  	This patch force wordpress over a ssl connection to prevent
+  	this issue. (CVE-2008-3747)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Sun, 31 Aug 2008 09:02:22 +0200
+
+wordpress (2.5.1-5) unstable; urgency=low
+
+  * Modified rules file to have a lintian clean package.
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Mon, 16 Jun 2008 18:41:21 +0200
+
+wordpress (2.5.1-4) unstable; urgency=low
+
+  * Added patch to fix unrestricted file upload vulnerability (Closes: #485807)
+    Now administrators can upload only files that are in the standard
+    mime-type set (Fixes CVE-2008-2392)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Sat, 14 Jun 2008 17:31:04 +0200
+
+wordpress (2.5.1-3) unstable; urgency=low
+
+  * rss_language is now modifiable through wp-admin panel.
+    Thanks to Lionel Elie Mamane (Closes: #461584)
+  * Makes Wordpress depend on tinymce (>= 3.0.7)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Mon, 05 May 2008 23:39:35 +0200
+
+wordpress (2.5.1-2) unstable; urgency=low
+
+  * Wordpress provides a MODIFIED tinymce (Closes: #478257)
+  * Setup-mysql script modified to handle SECURITY_KEY. (Closes: #478515)
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Mon, 28 Apr 2008 18:45:10 +0200
+
+wordpress (2.5.1-1) unstable; urgency=high
+
+  * Merged with upstream 2.5.1 security release
+  * CVE-2008-1930 integrity protection vulnerability (Closes: #477910)
+  * Depends on tinymce
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Sat, 26 Apr 2008 19:08:14 +0200
+
+wordpress (2.5.0-2) unstable; urgency=low
+
+  * New maintainer. (Closes: #473451: ITA: wordpress -- weblog manager)
+  * Doesn't have a sane upload directory set (Closes: #430781)
+  * Don't embedd prototype/scriptaculous (Closes: #475284
+
+ -- Andrea De Iacovo <andrea.de.iacovo@gmail.com>  Fri, 18 Apr 2008 20:50:26 +0100
+
+wordpress (2.5.0-1) unstable; urgency=low
+
+  [ Kai Hendry ]
+  * New Upstream Version
+
+  [ Lionel Elie Mamane ]
+  * Import translations as of 2008-04-01:
+    ca.po, fr_FR, id_ID, ja, pt_PT, ru_RU, sr_RS
+  * Update French theme to 2.5.0
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Wed, 02 Apr 2008 00:33:30 +0200
+
+wordpress (2.3.3+fr-2) unstable; urgency=low
+
+  * Update French translation to 2.3.3 upstream version.
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Mon, 03 Mar 2008 11:09:56 +0100
+
+wordpress (2.3.3+fr-1) unstable; urgency=low
+
+  * Add French language support back (accidentally dropped in 2.3.2-1,
+    closes: #461617)
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Sat, 09 Feb 2008 09:44:24 +0100
+
+wordpress (2.3.3-1) unstable; urgency=high
+
+  * New upstream security release:
+    http://wordpress.org/development/2008/02/wordpress-233/
+    - Fix for security flaw in XML-RPC implementation (CVE-2008-0664,
+      closes: #464170) and http://trac.wordpress.org/ticket/5313
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 05 Feb 2008 16:22:57 +0000
+
+wordpress (2.3.2+fr-1) unstable; urgency=low
+
+  * Add French language support (Closes: #461617)
+  * Bump up Standards-Version to 3.7.3
+  * Move Homepage from description to dpkg field
+  * Tweak description to make it less advertisy
+  * Consistently prefer php5 over php4 in dependency alternatives
+  * Don't override local admin's idea of permissions on
+    /etc/wordpress/config-* on every upgrade.
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Mon, 21 Jan 2008 23:08:32 +0100
+
+wordpress (2.3.2-1) unstable; urgency=high
+
+  * New upstream security release
+  * http://wordpress.org/development/2007/12/wordpress-232/
+  * new version 2.3.2 fixes security bugs (Closes: #459305)
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 06 Jan 2008 18:12:21 +0000
+
+wordpress (2.3.1-1) unstable; urgency=high
+
+  * New upstream security release
+  * http://wordpress.org/development/2007/10/wordpress-231/
+  * should depend on php4-gd | php5-gd (Closes: #447492)
+    php4-gd | php5-gd moves from suggests to depends
+  * Bugs closed in this release:
+    http://trac.wordpress.org/query?status=closed&milestone=2.3.1
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 28 Oct 2007 17:20:12 +0000
+
+wordpress (2.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Maintainer meets upstream:
+    http://flickr.com/photos/hendry/1468125949/
+  * http://wordpress.org/development/2007/09/wordpress-23/
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 01 Oct 2007 23:51:59 +0100
+
+wordpress (2.2.3-1) unstable; urgency=high
+
+  * New upstream security release
+  * http://wordpress.org/development/2007/09/wordpress-223/
+  * wordpress debian config overrides $file, $server in upstream php
+    files (Closes: #440572)
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 10 Sep 2007 19:36:34 +0100
+
+wordpress (2.2.2-1) unstable; urgency=high
+
+  * New upstream security release
+  * http://wordpress.org/development/2007/08/wordpress-222-and-2011/
+  * Bugs closed http://trac.wordpress.org/query?status=closed&milestone=2.2.2
+  * Changed files
+    http://trac.wordpress.org/changeset?new=branches%2F2.2%405849&old=branches%2F2.2%405725
+  * Several vulnerabilities detected (XSS, SQL-injection) (Closes:
+    #435848)
+  * wp-config.php breaks when accessed with port (Closes: #435289)
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 05 Aug 2007 09:59:15 +0100
+
+wordpress (2.2.1-1) unstable; urgency=high
+
+  * New upstream release
+  * http://wordpress.org/development/2007/06/wordpress-221/
+  * Needs to use libphp-phpmailer (Closes: #429346)
+  * [CVE-2007-3215] remote shell command injection in PHPMailer (Closes:
+    #429194)
+  * remote SQL injection vulnerability (Closes: #428073)
+
+ -- Kai Hendry <hendry@iki.fi>  Sat, 23 Jun 2007 12:47:10 +0100
+
+wordpress (2.2-1) unstable; urgency=low
+
+  * New upstream release
+  * http://wordpress.org/development/2007/05/wordpress-22/
+
+ -- Kai Hendry <hendry@iki.fi>  Wed, 16 May 2007 09:54:36 +0100
+
+wordpress (2.1.3-1) unstable; urgency=high
+
+  * New upstream security release
+  * http://wordpress.org/development/2007/04/wordpress-213-and-2010/
+  * attempt to create a link into /srv/www/, directory which may not
+    exist (Closes: #409258)
+
+ -- Kai Hendry <hendry@iki.fi>  Wed, 04 Apr 2007 20:35:40 +0100
+
+wordpress (2.1.2-1) unstable; urgency=high
+
+  * New upstream security release
+  * possible security issue (Closes: #413171)
+  * http://trac.wordpress.org/ticket/3879
+  * http://wordpress.org/development/2007/03/upgrade-212/
+
+ -- Kai Hendry <hendry@iki.fi>  Sun,  4 Mar 2007 20:53:12 +0000
+
+wordpress (2.1.1-1) unstable; urgency=high
+
+  * New upstream security release
+  * Updated copyright with new download link
+  * http://wordpress.org/development/2007/02/new-releases
+  * http://trac.wordpress.org/milestone/2.1.1
+  * http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1049
+
+ -- Kai Hendry <hendry@iki.fi>  Wed, 21 Feb 2007 11:14:33 +0000
+
+wordpress (2.1.0-1) unstable; urgency=low
+
+  * New upstream release
+  * http://wordpress.org/development/2007/01/ella-21/
+  * Thanks to #debian-devel's Sesse and seanius to help fix the execute perm
+    problems on wp-includes/
+  * Modified Blogroll to point only to Planet Debian
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 23 Jan 2007 14:47:30 +0000
+
+wordpress (2.0.7-1) unstable; urgency=low
+
+  * New upstream release
+  * New upstream available (security fix) (Closes: #407116)
+  * Thanks to Fabio Tranchitella and Moritz Muehlenhoff for their support
+  * Improved the copyright at Moritz's request
+  * Moritz says the security fix does not apply to Debian's PHP hence low
+    urgency
+  * See http://wordpress.org/development/2007/01/wordpress-207/ for details of
+    minor changes
+  * Tweaked the dependency line for better php5 support
+  * setup-mysql -h  minor usage summary error + should be executable
+    (Closes: #407496)
+
+ -- Kai Hendry <hendry@iki.fi>  Fri, 19 Jan 2007 10:35:57 +0000
+
+wordpress (2.0.6-1) unstable; urgency=high
+
+  * New upstream release
+  * Security fix, urgency high.
+  * FrSIRT/ADV-2006-5191, CVE-2006-6808: WordPress "get_file_description()"
+    Function Client-Side Cross Site Scripting Vulnerability.
+    (Closes: #405299, #405691)
+
+ -- Kai Hendry <hendry@iki.fi>  Fri,  5 Jan 2007 14:04:56 +0000
+
+wordpress (2.0.5-0.1) unstable; urgency=medium
+
+  * NMU on maintainer's request.
+  * Security fix, urgency medium.
+  * readme.html: s/license.txt/copyright/. (Closes: #382283)
+  * New upstream release, which fixes:
+    - CVE-2006-4208: Directory traversal vulnerability in WP-DB-Backup
+      plugin for WordPress. (Closes: #384800)
+
+ -- Fabio Tranchitella <kobold@debian.org>  Fri,  3 Nov 2006 15:12:06 +0100
+
+wordpress (2.0.4-2) unstable; urgency=low
+
+  * examples/setup-mysql doesn't work with dash (Closes: #372128)
+  * installs apache AND apache2 by default (Closes: #379118)
+    Many thanks to Fabio Tranchitella and Jesus Climent
+  * "Publish" produces broken links (Closes: #367001)
+    Disabled "Rich editor" by default
+
+ -- Kai Hendry <hendry@iki.fi>  Sun,  6 Aug 2006 12:39:56 +0100
+
+wordpress (2.0.4-1) unstable; urgency=high
+
+  * New upstream release
+  * examples/setup-mysql doesn't work with dash (Closes: #372128)
+
+ -- Kai Hendry <hendry@iki.fi>  Sun,  6 Aug 2006 11:59:39 +0100
+
+wordpress (2.0.3-1) unstable; urgency=high
+
+  * New upstream release
+  * 'Cache' shell injection vulnerability (Closes: #369014)
+
+ -- Kai Hendry <hendry@iki.fi>  Fri,  2 Jun 2006 21:00:51 +0900
+
+wordpress (2.0.2-2) unstable; urgency=high
+
+  * setup-mysql fails if the domain contains a port number (Closes:
+    #362171)
+  * Insecure file permissions in /etc/wordpress (Closes: #363580)
+  * Added a postinst to help users correct permissions
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 20 Apr 2006 10:12:56 +0900
+
+wordpress (2.0.2-1) unstable; urgency=high
+
+  * New upstream release
+  * 'This would have been out sooner, if I wasn't in hospital' release ;)
+  * Changed blogroll link to Planet Debian
+  * Altered 'plugin policy', it's now DIY
+  * mysql syntax error when running setup-mysql script (Closes: #355958)
+  * Several vulnerabilities discovered by 'snake oil' Neo Security Team
+    (Closes: #355055)
+    http://somethingunpredictable.com/archives/01/03/2006/wordpress-vulnerabilities-bogus/
+  * http://wordpress.org/development/2006/03/security-202/
+
+ -- Kai Hendry <hendry@iki.fi>  Mon, 13 Mar 2006 12:44:44 +0900
+
+wordpress (2.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * CSS Security Vulnerability (Closes: #328909)
+  * Please announce that upgrade.php needs to be run after update
+    (Closes: #348458)
+
+ -- Kai Hendry <hendry@iki.fi>  Thu,  2 Feb 2006 11:22:31 +0900
+
+wordpress (2.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Closes: #320462: Wordpress replaces valid characters in urls with
+    HTML entities, breaking the URL
+  * Closes: #326685: Incorrectly mangles URLs using the wptexturize
+    function
+  * Closes: #347339: Wordpress version 2 is available
+  * Closes: #345508: Should have a dependancy on the php5-gd package
+
+ -- Kai Hendry <hendry@iki.fi>  Fri, 13 Jan 2006 03:58:59 +0000
+
+wordpress (1.5.2-2) unstable; urgency=low
+
+  * Now with support for PHP5
+  * Requires mysql-server when the server can actually be on a remote
+    server (Closes: #328554)
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 22 Sep 2005 13:56:50 +1000
+
+wordpress (1.5.2-1) unstable; urgency=high
+
+  * New upstream "security fix" release
+  * Closes: #323040: CAN-2005-2612
+  * See: http://wordpress.org/development/2005/08/one-five-two/
+
+ -- Kai Hendry <hendry@iki.fi>  Fri, 19 Aug 2005 10:58:17 +1000
+
+wordpress (1.5.1.3-4) unstable; urgency=medium
+
+  * 'I really should have tested this on another machine' release
+  * Closes: #319007: dbconfig dep screws upgrade
+
+ -- Kai Hendry <hendry@iki.fi>  Tue, 19 Jul 2005 20:03:10 +1000
+
+wordpress (1.5.1.3-3) unstable; urgency=low
+
+  * Improved the setup-mysql script for Wordpress MASS hosting with Apache's
+    VirtualDocumentRoot
+
+ -- Kai Hendry <hendry@iki.fi>  Fri, 15 Jul 2005 10:50:59 +1000
+
+wordpress (1.5.1.3-2) unstable; urgency=high
+
+  * The no XML-RPC vulnerabilities here release. ;)
+  * Strongly advised to upgrade due to inconsistencies between 1.5.1.3-1 orig
+    tar.gz and the upstream 1.5.1.3 latest.tar.gz after checking.
+  * Closes: #312721: wordpress does not see mysql
+  * Changed upstream's default links. Controversial?
+
+ -- Kai Hendry <hendry@iki.fi>  Fri,  8 Jul 2005 12:11:23 +1000
+
+wordpress (1.5.1.3-1) unstable; urgency=high
+
+  * New upstream release
+  * Yet another security release:
+    http://wordpress.org/development/2005/06/wordpress-1513
+
+ -- Kai Hendry <hendry@iki.fi>  Thu, 30 Jun 2005 15:25:27 +1000
+
+wordpress (1.5.1.2-1) unstable; urgency=high
+
+  * New upstream release
+  * Another security release:
+    http://wordpress.org/development/2005/05/security-update/
+
+ -- Kai Hendry <hendry@iki.fi>  Sun, 29 May 2005 00:52:39 +1000
+
+wordpress (1.5.1-1) unstable; urgency=high
+
+  * Upstream changelog is here:
+    http://codex.wordpress.org/Changelog/1.5.1
+  * Fixes an unannounced "important security fix"
+
+ --  <hendry@cs.helsinki.fi>  Tue, 10 May 2005 01:48:34 +0100
+
+wordpress (1.5.0-2) unstable; urgency=low
+
+  * Thanks to NOKUBI Takatsugu and the Debian Japan people for making this
+    release possible
+  * Moved mysql setup out of postinst allowing multiple blogs on the host at
+    the loss of automated mysql setup.
+  * Closes: #298563: incompatible with mysql-server-4.1
+  * Closes: #298571: multiple installation support
+  * Closes: #300200: multiple installation support
+  * Closes: #300757: How would one add plugins to wordpress ?
+
+ -- Kai Hendry <hendry@cs.helsinki.fi>  Sat, 23 Apr 2005 15:17:45 +0900
+
+wordpress (1.5.0-1) unstable; urgency=high
+
+  * Closes: #275814: New version fixes security flaws
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1559
+  * Closes: #288613: /usr/share/wordpress/readme.html missing
+  * Closes: #287086: new upstream 1.2.2
+  * Added some NEWS that users will find helpful in the upgrade
+
+ -- Kai Hendry <hendry@cs.helsinki.fi>  Fri, 25 Feb 2005 07:11:47 +0200
+
+wordpress (1.2.2-1.1) unstable; urgency=medium
+
+  * NMU
+  * Thank you Dominic Hargreaves and svn-upgrade
+
+ -- Kai Hendry <hendry@cs.helsinki.fi>  Sat, 18 Dec 2004 09:32:14 +0200
+
+wordpress (1.2.1-1.1) unstable; urgency=medium
+
+  * NMU
+  * Closes: #275814: New upstream release that fixes security problem
+    detailed: http://secunia.com/advisories/12773/
+  * Closes: #276112: Need more complete README.Debian for new users
+    Added some detail to README.Debian
+  * Escaped a mysql line in the postrm that might avoid a bug.
+
+ -- Kai Hendry <hendry@cs.helsinki.fi>  Sat, 27 Nov 2004 16:48:32 +0200
+
+wordpress (1.2.0-1.1) unstable; urgency=low
+
+  * NMU
+  * Closes: #250812: New upstream
+  * Closes: #251653: apache2 support
+  * Closes: #255121: conffiles not marked
+  * Revised dependency on mysql-server otherwise debian-sys-maint will never work
+  * Thanks to Teemu Hukkanen, Corey Wright, Christian Hammers and Matt Mullenweg
+
+ -- Kai Hendry <hendry@cs.helsinki.fi>  Thu, 12 Aug 2004 21:50:04 +0300
+
+wordpress (1.0.2-1) unstable; urgency=low
+
+  * New upstream release
+  * New package description (Closes: #237137)
+  * Made a plain text version of readme.html
+
+ -- Gabriel Rodríguez Alberich <chewie@the-geek.org>  Sun, 21 Mar 2004 18:25:20 +0000
+
+wordpress (1.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #230034)
+
+ -- Gabriel Rodríguez Alberich <chewie@the-geek.org>  Thu, 26 Feb 2004 19:37:33 +0000

@@ -1,0 +1,15 @@
+node-hawk (6.0.1+dfsg-1+deb10u1) buster-security; urgency=high
+
+  * CVE-2022-29167: Prevent an issue where Hawk used a regular expression to
+    parse `Host` HTTP headers which was subject to regular expression DoS
+    attack. Each added character in the attacker's input increased the
+    computation time exponentially.
+  * Add new runtime dependency on node-url to satisfy patch for CVE-2022-29167.
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 23 Dec 2022 06:18:20 +0000
+
+node-hawk (6.0.1+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #861795)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 04 May 2017 11:52:14 +0530

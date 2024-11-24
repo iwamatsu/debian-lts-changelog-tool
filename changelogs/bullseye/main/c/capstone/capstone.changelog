@@ -1,0 +1,246 @@
+capstone (4.0.2-3) unstable; urgency=medium
+
+  * Make build verbose (so blhc can inspect the output)
+  * Add hardening flags
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 08 Dec 2020 22:47:42 +0100
+
+capstone (4.0.2-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Hilko Bengen <bengen@debian.org>  Mon, 07 Dec 2020 21:26:26 +0100
+
+capstone (4.0.2-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Hilko Bengen ]
+  * New upstream version 4.0.2 (Closes: #921596)
+  * Rename library package due to SONAME change
+  * Move capstone-tool to utils section (Closes: #960069)
+  * Update Python shared library patch
+
+  [ Debian Janitor ]
+  * Update standards version to 4.5.0, no changes needed.
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 19 May 2020 23:39:21 +0200
+
+capstone (4.0.1+really+3.0.5-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Samuel Henrique ]
+  * Add salsa-ci.yml
+  * Configure git-buildpackage for Debian pkg-security-tools
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * Use secure URI in Homepage field.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #936273
+
+  [ Raphaël Hertzog ]
+  * Drop non-existing file in debian/copyright
+  * Avoid a lintian warning on a duplicate word in the changelog
+
+ -- Raphaël Hertzog <raphael@offensive-security.com>  Fri, 10 Apr 2020 18:30:01 +0200
+
+capstone (4.0.1+really+3.0.5-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop python2 support; Closes: #936273
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 09 Apr 2020 12:51:10 -0400
+
+capstone (4.0.1+really+3.0.5-1) unstable; urgency=medium
+
+  * Team upload
+  * Revert repository to 3.0.5-4 to fix botched upload (Closes: #922960,
+    #922846)
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 26 Feb 2019 22:35:27 +0100
+
+capstone (3.0.5-4) unstable; urgency=medium
+
+  * Team upload
+  * Drop unneeded dh --parallel parameter
+  * Bump Debhelper compat level
+  * Replace dh_install --fail-missing
+  * Bump Standards-Version
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 10 Feb 2019 23:18:26 +0100
+
+capstone (3.0.5-3) unstable; urgency=medium
+
+  * Fix FTBFS by setting LD_LIBRARY_PATH for tests so that the Python
+    tests find libcapstone.so.3
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 27 Jul 2018 13:35:12 +0200
+
+capstone (3.0.5-2) unstable; urgency=medium
+
+  * Team upload
+  * Add fix for loading libcapstone, remove old typos patch (Closes: #904496)
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 25 Jul 2018 15:23:12 +0200
+
+capstone (3.0.5-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.0.5
+  * Update watch file
+  * Update build-dependencies
+  * Add capstone-tool package
+  * Prevent installation of libcapstone.{so,a} into Python bindings packages
+  * Bump Standards-Version
+  * Remove X-Python*-Version tags
+
+ -- Hilko Bengen <bengen@debian.org>  Tue, 24 Jul 2018 12:58:52 +0200
+
+capstone (3.0.4-5) unstable; urgency=medium
+
+  * Team upload
+  * Add python3-distutils dependency to python3-capstone (Closes: #896265)
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 21 Apr 2018 15:54:38 +0200
+
+capstone (3.0.4-4) unstable; urgency=medium
+
+  * Team upload
+  [ Raphaël Hertzog ]
+  * Set Maintainer field to Debian Security Tools
+    <team+pkg-security@tracker.debian.org>
+  * Update Vcs-Git and Vcs-Browser for the move to salsa.debian.org
+
+  [ Hilko Bengen ]
+  * Bump Standards-Version, Debhelper compat level
+  * Add Multi-Arch support
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 31 Mar 2018 23:04:14 +0200
+
+capstone (3.0.4-3) unstable; urgency=medium
+
+  * Fix chroot build and add proper python3 dependency
+  * Further modification after sponsoring request:
+    - Add overrides for clean, configure steps, set LD_LIBRARY_PATH for
+      tests
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 30 Jul 2017 14:26:50 +0200
+
+capstone (3.0.4-2) unstable; urgency=medium
+
+  [ Adrian Bunk ]
+  * python3-capstone lacks python dependency (Closes: #867204)
+
+ -- Pranith Kumar <bobby.prani@gmail.com>  Tue, 04 Jul 2017 16:52:06 -0400
+
+capstone (3.0.4-1) unstable; urgency=medium
+
+  [ Pranith Kumar ]
+  * Add rules to build python3 bindings (Closes: #811115, #836275)
+  * Adopt the package (Closes: #793691)
+
+  [ Hilko Bengen ]
+  * Bump Standards-Version
+
+ -- Pranith Kumar <bobby.prani@gmail.com>  Fri, 23 Dec 2016 15:00:54 -0500
+
+capstone (3.0.4-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Make python-capstone depend on libcapstone3 (Closes: #797870)
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 05 Sep 2015 11:39:10 +0200
+
+capstone (3.0.4-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * New upstream version
+  * Fixed watch file
+  * Removed orig-tar script since the non-free header file
+    (osxkernel_inttypes.h) is gone.
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 25 Jul 2015 14:53:53 +0200
+
+capstone (3.0.3+dfsg-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Added script for stripping non-free content from orig tarball
+  * Removed osxkernel_inttypes.h from orig tarball, using said script
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 03 Jun 2015 23:22:12 +0200
+
+capstone (3.0.3-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * New upstream version
+  * Use distutils-based build script for Python bindings so we don't have
+    to deal with patching include paths and such.
+
+ -- Hilko Bengen <bengen@debian.org>  Sat, 09 May 2015 14:35:24 +0200
+
+capstone (3.0.2-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * New upstream version
+  * Updated watch file ... again
+  * Dropped patch limit_exported_symbols which has been picked up upstream
+
+ -- Hilko Bengen <bengen@debian.org>  Wed, 11 Mar 2015 18:40:05 +0100
+
+capstone (3.0.1-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * New upstream version (Closes: #779271)
+  * Updated watch file
+  * Reworked patches: Patches for lib64 and for dealing with MIPS FTBFS are
+    no longer needed. Added change to limit symbols exported by the shared
+    library.
+  * Enabled parallel builds, added dh_install safeguard
+  * Renamed package to reflect SONAME change, added symbols file
+  * Bumped Standards-Version
+  * Fixed "BSD" entry in debian/copyright
+    (lintian: invalid-short-name-in-dep5-copyright)
+
+ -- Hilko Bengen <bengen@debian.org>  Sun, 08 Mar 2015 11:34:06 +0100
+
+capstone (2.1.2-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename union member "mips" to "mips-arch" to fix FTBFS on mips/mipsel.
+    Drop mips_macro_conflict.patch.
+    Add capstone-mips.patch.
+    Patch by Dejan Latinovic <Dejan.Latinovic@imgtec.com>.
+    Closes: #755193.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 06 Oct 2014 09:51:47 +0100
+
+capstone (2.1.2-2) unstable; urgency=medium
+
+  * debian/patches/mips_macro_conflict.patch: Remove a compiler macro
+    definition that conflicts with the name of a variable in mips, making it
+    FTBFS (closes: #755193).  Thanks, Plamen Aleksandrov.
+
+ -- David Martínez Moreno <ender@debian.org>  Tue, 22 Jul 2014 00:59:29 +0200
+
+capstone (2.1.2-1) unstable; urgency=low
+
+  * Initial release (closes: #741028).
+    - Build only the Python bindings for now.
+  * debian/patches:
+    - typos: Added to fix some stuff I spotted.
+    - no_usr_lib64: Remove the distinction that makes x86_64 install the
+      library in /usr/lib64.
+    - use_cppflags: Add the usage of CPPFLAGS to the build in order to have
+      proper hardened build.
+    - fix_python_bindings: Add necessary includes and library directories to
+      build the bindings in the same run as the library itself, together with
+      a way to pass arbitrary arguments to setup.py.
+
+ -- David Martínez Moreno <ender@debian.org>  Tue, 06 May 2014 14:44:25 -0700

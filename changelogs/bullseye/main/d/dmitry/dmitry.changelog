@@ -1,0 +1,22 @@
+dmitry (1.3a-1.1+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2017-7938: stack-based buffer overflow
+  * CVE-2020-14931: stack-based buffer overflow
+  * CVE-2024-31837: format-string vulnerability
+
+ -- Adrian Bunk <bunk@debian.org>  Tue, 22 Oct 2024 23:01:58 +0300
+
+dmitry (1.3a-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/rules: added DEB_CFLAGS_MAINT_APPEND variable as a workaround to fix
+    a FTBFS with GCC-10. (Closes: #957142)
+
+ -- Joao Eriberto Mota Filho <eriberto@debian.org>  Wed, 19 Aug 2020 15:11:15 -0300
+
+dmitry (1.3a-1) unstable; urgency=low
+
+  * Initial release (Closes: #479121)
+
+ -- Runa Sandvik <runa.sandvik@gmail.com>  Tue, 03 Mar 2009 14:45:02 +0100

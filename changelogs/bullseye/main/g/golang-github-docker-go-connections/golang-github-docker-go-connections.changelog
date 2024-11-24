@@ -1,0 +1,99 @@
+golang-github-docker-go-connections (0.4.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Update Section to golang
+  * Update maintainer address to team+pkg-go@tracker.debian.org
+  * Add Rules-Requires-Root
+  * Drop unused dependency golang-github-opencontainers-runc-dev
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Update uscan watch file to version 4
+  * Add patch to skip tests which use expiered certificate (Closes: #986306)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 05 Apr 2021 19:39:50 +0800
+
+golang-github-docker-go-connections (0.4.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository, Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 05 Feb 2021 03:20:10 +0000
+
+golang-github-docker-go-connections (0.4.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Dmitry Smirnov ]
+  * New upstream release
+  * Priority: optional
+  * Standards-Version: 4.4.0
+  * DH & compat to version 12
+  * Testsuite: autopkgtest-pkg-go
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 12 Sep 2019 12:41:03 +1000
+
+golang-github-docker-go-connections (0.3.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * drop incorrect test-fixture-locations.patch
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Fri, 16 Feb 2018 09:55:09 +0100
+
+golang-github-docker-go-connections (0.3.0-2) unstable; urgency=medium
+
+  * Add a build-dependency on golang-github-stretchr-testify-dev.
+  * Build-depend on ca-certificates, needed for tlsconfig tests.
+    (Closes: #871651)
+
+ -- Andrew Shadura <andrewsh@debian.org>  Thu, 05 Oct 2017 19:23:22 +0200
+
+golang-github-docker-go-connections (0.3.0-1) unstable; urgency=medium
+
+  * New upstream version 0.3.0.
+  * Remove golang-github-sirupsen-logrus-dev dependency.
+
+ -- Andrew Shadura <andrewsh@debian.org>  Wed, 04 Oct 2017 22:21:42 +0200
+
+golang-github-docker-go-connections (0.2.1+git20170331.28.e15c023-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * New upstream snapshot for Docker 17.05.0-ce.
+  * Add new dependency on golang-github-pkg-errors-dev package.
+  * Enable full test suite by patching for test fixture locations.
+
+  [ Konstantinos Margaritis ]
+  * Replace golang-go with golang-any in Build-Depends, remove golang-go from
+    Depends
+
+ -- Konstantinos Margaritis <markos@debian.org>  Wed, 09 Aug 2017 17:16:19 +0300
+
+golang-github-docker-go-connections (0.2.1+git20170204.13.ecb4cb2-1) unstable; urgency=medium
+
+  * New upstream snapshot for Docker 1.13.1.
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 29 Mar 2017 15:40:37 +1100
+
+golang-github-docker-go-connections (0.2.1+git20161115.12.4ccf312-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Tim Potter <tpot@hpe.com>  Mon, 19 Dec 2016 08:31:31 +1100
+
+golang-github-docker-go-connections (0.2.1-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Standards-Version: 3.9.8.
+
+ -- Paul Tagliamonte <paultag@debian.org>  Wed, 29 Jun 2016 20:21:00 -0400
+
+golang-github-docker-go-connections (0.2.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #816777).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 05 Mar 2016 17:45:25 +1100

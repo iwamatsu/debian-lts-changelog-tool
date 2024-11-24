@@ -1,0 +1,280 @@
+x11vnc (0.9.13-6+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * scan: limit access to shared memory segments to current user
+    (CVE-2020-29074) (Closes: #975875)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 26 Nov 2020 06:09:34 +0100
+
+x11vnc (0.9.13-6) unstable; urgency=medium
+
+  * Add two buffer overflow fixes from upstream. Closes: #851496, #859213.
+    This is a temporary measure, new upstream should be package instead.
+
+ -- Nikita Yushchenko <yoush@debian.org>  Mon, 07 May 2018 23:13:43 +0300
+
+x11vnc (0.9.13-5) unstable; urgency=low
+
+  * Split build and install into arch and indep parts (Closes: #895591).
+
+ -- Nikita Yushchenko <yoush@debian.org>  Fri, 13 Apr 2018 17:09:45 +0300
+
+x11vnc (0.9.13-4) unstable; urgency=low
+
+  * New maintainer (Closes: #879439).
+  * Bump Standards-Version to 4.1.4, no changes needed.
+  * Use compat version 10:
+    - no need to pass --parallel to dh,
+    - no need to pass --with autoreconf to dh and build-depend on autoreconf.
+  * Re-arrange commands in debian/rules to avoid need of dh --until.
+
+ -- Nikita Yushchenko <yoush@debian.org>  Tue, 10 Apr 2018 21:39:56 +0300
+
+x11vnc (0.9.13-3) unstable; urgency=low
+
+  * QA upload.
+  * Set maintainer to Debian QA Group. (see #879439)
+  * Use default-jdk for building.
+
+ -- Adrian Bunk <bunk@debian.org>  Thu, 29 Mar 2018 15:15:50 +0300
+
+x11vnc (0.9.13-2) unstable; urgency=medium
+
+  * Add patches:
+    - 0001-Fix-openssl-1.1.x-detection.patch - update configure.ac to detect
+      the OpenSSL  instead of SSL_library_init function
+    - 0002-Support-openssl-1.1.0.patch - add support for OpenSSL 1.1.0
+      (Closes: #845106)
+    - do-not-run-dbus-launch.patch (Closes: #836401)
+    - enforce-bash.patch - enforce bash due to shopt usage (Closes: #690637)
+  * Update 10_usepkgconfig.diff: use $PKG_CONFIG instead of pkg-config.
+    Thanks to Helmut Grohne. (Closes: #845723)
+  * Update debian/control:
+    - add dh-autoreconf build dependency
+    - we really want openjdk, so use openjdk-8-jdk | openjdk-7-jdk
+  * Update debian/rules: pass --without-tightvnc-filetransfer to configure.
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 21 Dec 2016 16:59:50 +0200
+
+x11vnc (0.9.13-1.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with libssl1.0-dev for now. (Closes: #845106)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Mon, 19 Dec 2016 02:37:39 +0000
+
+x11vnc (0.9.13-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * 10_usepkgconfig.diff: Use pkg-config instead of libvncserver-config to
+    locate libvncserver/client. This prevents unnecessary linkage and fixes a
+    FTBFS caused by trying to link against libgcrypt (which is not a
+    build-dependency). Closes: #760086
+
+ -- Andreas Metzler <ametzler@debian.org>  Sun, 31 Aug 2014 18:16:32 +0200
+
+x11vnc (0.9.13-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "Transition package to use default java implementation":
+    apply patch from Ubuntu / James Page:
+
+    Transition package to build with default java implementation:
+     - d/control: BD on default-jdk (>= 1:1.6) instead of openjdk-6-jdk.
+
+    (Closes: #684378)
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 22 May 2013 19:14:10 +0200
+
+x11vnc (0.9.13-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Fathi Boudra <fabo@debian.org>  Sat, 31 Dec 2011 12:57:29 +0200
+
+x11vnc (0.9.12-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #609899)
+    - jar files fail to work on earlier jvm's. (Closes: #593305)
+    - FTBFS: error: 'pointer' redeclared as different kind of symbol.
+      (Closes: #610802)
+
+ -- Fathi Boudra <fabo@debian.org>  Mon, 21 Feb 2011 12:04:32 +0200
+
+x11vnc (0.9.10-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/control: B-D-I on openjdk-6-jdk rather than B-D on default-jdk.
+  * debian/rules: Only rebuild jars in binary and binary-indep targets.
+    (Closes: #598619)
+
+ -- Tim Retout <diocles@debian.org>  Mon, 18 Oct 2010 23:53:56 +0100
+
+x11vnc (0.9.10-1) unstable; urgency=low
+
+  * New upstream release:
+    - enabled fix for tight security type for RFB 3.8 (Closes: #517422)
+  * Add x11vnc-data package: split jar files.
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * Update debian/control:
+    - bump debhelper build dependencies.
+    - bump Standards-Version to 3.8.4 (no changes needed).
+  * Update debian/rules:
+    - enable parallel build (pass --parallel option to dh).
+    - list missing files (pass --list-missing option to dh).
+    - rebuild signed jar files on all architectures except:
+      hppa, hurd-i386, kfreebsd-amd64 and kfreebsd-i386.
+      The Sun's java/jarsigner isn't available on these architectures.
+      (Closes: #559088)
+
+ -- Fathi Boudra <fabo@debian.org>  Mon, 14 Jun 2010 11:49:13 +0300
+
+x11vnc (0.9.9-1) unstable; urgency=low
+
+  * New upstream release:
+    - Improve -rfbauth option documentation in the manual page.
+      (Closes: #496294)
+    - Improve -quiet option documentation. (Closes: #560805)
+    - Print error reasons for -storepasswd failures. (Closes: #560809)
+  * Drop XTrap support. XTrap has been removed from the xserver.
+    Remove libxtrap-dev build dependency. (Closes: #559699)
+  * Add chrpath build dependency to remove x11vnc rpath.
+  * Bump Standards-Version to 3.8.3 (no changes needed).
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 23 Dec 2009 11:58:48 +0100
+
+x11vnc (0.9.8-2) unstable; urgency=low
+
+  * Updated debian/copyright:
+    - Added OpenSSl license exception to link against libssl.
+  * Updated debian/control:
+    - Set myself as Maintainer.
+    - Added libssl-dev build dependency.
+    - Added openssl dependency. (Closes: #501020)
+  * Updated debian/rules:
+    - Removed --without-ssl configure option.
+
+ -- Fathi Boudra <fabo@debian.org>  Mon, 10 Aug 2009 07:55:12 +0200
+
+x11vnc (0.9.8-1) unstable; urgency=low
+
+  * QA upload.
+  * New upstream release (Closes: #529010):
+    - x11vnc is removed upstream from libvncserver sources.
+      Now, it is released separately.
+    - fixed x11vnc -forever segfault. (Closes: #461382)
+    - x11vnc.desktop file is included. (Closes: #475113)
+  * Bumped debian/compat from 5 to 7.
+  * Updated debian/control:
+    - Cleanuped build dependencies.
+    - Removed libssl-dev build dependency.
+    - Added Homepage field.
+    - Added tk dependency. (Closes: #505213)
+    - Added default-jdk build dependency. java applet are built from sources.
+      (Closes: #507011, #500970)
+  * Updated debian/copyright.
+  * Switched debian/rules from cdbs to dh usage.
+
+ -- Fathi Boudra <fabo@debian.org>  Fri, 07 Aug 2009 15:45:36 +0200
+
+libvncserver (0.9.3.dfsg.1-2) unstable; urgency=low
+
+  * QA upload.
+  * Drop useless build-depends on linux-libc-dev.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Wed, 13 May 2009 20:11:07 +0200
+
+libvncserver (0.9.3.dfsg.1-1) unstable; urgency=low
+
+  * QA upload.
+  * New upstream release. (Closes: #448942)
+    - CVS tag X11VNC_REL_0_9_3
+  * Switched rules to CDBS.
+  * Bumped compat to 5.
+  * Bumped Standards-Version to 3.7.2
+  * Enabled shared libraries. (Closes: #373298)
+  * Dropped vncommand, since it isn't installed by make install.
+    - All hate-mail should be sent to debian@pusling.com
+  * Added debug package.
+  * Removed the classes/ dir, there are no sources for the jar files.
+    - Appended .dfsg.1 to source version.
+    - Added patch 01_ignore_classes to allow building without classes/ dir.
+  * Added patch 02_linux_test to look for /usr/include/linux instead of /dev/vcsa
+
+ -- Matthew Rosewarne <mrosewarne@inoutbox.com>  Mon, 05 Nov 2007 03:22:20 -0500
+
+libvncserver (0.8.2-2) unstable; urgency=low
+
+  * Orphaning package 
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Wed, 25 Apr 2007 12:00:32 +0200
+
+libvncserver (0.8.2-1) unstable; urgency=high
+
+  * New upstream release. Closes: #373808
+  * This new release fixes a security bug which might be present in the
+    previous release of the package. Closes: #376824
+  * urgency=high because a probable security bug was fixed.
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Mon, 17 Jul 2006 20:43:38 +0200
+
+libvncserver (0.7.1-5) unstable; urgency=high
+
+  * Re-upload with urgency=high because the package in testing is unusable
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Thu, 12 Jan 2006 15:30:00 +0100
+
+libvncserver (0.7.1-4) unstable; urgency=low
+
+  * Put x11vnc 0.7.3 sources in their own directory. Closes: #333880
+  * Updated build-depends. Closes: #347019
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Mon,  9 Jan 2006 23:13:15 +0100
+
+libvncserver (0.7.1-3) unstable; urgency=low
+
+  * Added x11vnc 0.7.3 sources. Closes: #328943
+  * Added the x11vnc FAQ which is in the README. Closes: #325479
+  * Added build dependencies on libxdamage-dev, libfixes-dev, libxrandr-dev
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Wed, 28 Sep 2005 19:00:05 +0200
+
+libvncserver (0.7.1-2) unstable; urgency=low
+
+  * Removed the /dev/vcsa1 test to fix the pbuilder bug. Closes: #322643
+  * new vncommand package: allows you to attach a VNC server to any command
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Fri, 26 Aug 2005 18:02:16 +0200
+
+libvncserver (0.7.1-1) unstable; urgency=low
+
+  * New upstream release. Closes: #309385
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Fri, 25 Mar 2005 20:48:38 +0100
+
+libvncserver (0.7-1) unstable; urgency=low
+
+  * New upstream release
+  * New upstream x11vnc man page. Closes: Bug#277510
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Mon, 31 Jan 2005 23:06:17 +0100
+
+libvncserver (0.6-3) unstable; urgency=low
+
+  * Added the latest x11vnc.c (0.6.1) which has the -scale option.
+  * Added the scale option in the manual.
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Fri, 16 Jul 2004 16:26:09 +0200
+
+libvncserver (0.6-2) unstable; urgency=low
+
+  * Added the latest x11vnc.c from the CVS. Closes: Bug#246205
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Thu, 29 Apr 2004 22:09:53 +0200
+
+libvncserver (0.6-1) unstable; urgency=low
+
+  * Initial Release.
+  * Integrated the last release of x11vnc.
+
+ -- Ludovic Drolez <ldrolez@debian.org>  Wed, 10 Mar 2004 23:42:26 +0100

@@ -1,0 +1,42 @@
+lua5.3 (5.3.3-1.1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix CVE-2019-6706: Use after free in lua_upvaluejoin in lapi.c. (Closes:
+    #920321)
+  * Fix CVE-2020-24370: Segmentation fault in getlocal and setlocal functions
+    in ldebug.c. (Closes: #988734)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Thu, 22 Jun 2023 22:03:38 +0200
+
+lua5.3 (5.3.3-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Vcs-... tags point to salsa
+  * lua5.3 now uses the alternatives system to manage /usr/bin/lua and
+    /usr/bin/luac (Closes: #863036)
+
+ -- Dima Kogan <dkogan@debian.org>  Fri, 28 Dec 2018 11:10:13 -0800
+
+lua5.3 (5.3.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 5.3.3
+  * Rebase patches on top of Lua 5.3.3 release
+  * Update Vcs-* links
+  * Add myself to Uploaders
+  * Update Debian policy version (no change)
+  * Add patch to fix several invalid pointer conversions
+
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 19 Dec 2016 16:05:01 +0100
+
+lua5.3 (5.3.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Export _IO_stdin_used in debian/version-script (see #816059).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Sun, 31 Jul 2016 20:57:11 +0200
+
+lua5.3 (5.3.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #775565)
+
+ -- Enrico Tassi <gareuselesinge@debian.org>  Sun, 01 Mar 2015 15:39:41 +0100

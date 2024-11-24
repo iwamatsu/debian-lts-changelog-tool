@@ -1,0 +1,220 @@
+nbconvert (5.6.1-3+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2021-32862: When using nbconvert to generate an HTML version of a
+    user-controllable notebook, it is possible to inject arbitrary HTML which
+    may lead to cross-site scripting (XSS) vulnerabilities if these HTML
+    notebooks are served by a web server without tight Content-Security-Policy
+    (e.g., nbviewer):
+    + GHSL-2021-1013: XSS in notebook.metadata.language_info.pygments_lexer;
+    + GHSL-2021-1014: XSS in notebook.metadata.title;
+    + GHSL-2021-1015: XSS in notebook.metadata.widgets;
+    + GHSL-2021-1016: XSS in notebook.cell.metadata.tags;
+    + GHSL-2021-1017: XSS in output data text/html cells;
+    + GHSL-2021-1018: XSS in output data image/svg+xml cells;
+    + GHSL-2021-1019: XSS in notebook.cell.output.svg_filename;
+    + GHSL-2021-1020: XSS in output data text/markdown cells;
+    + GHSL-2021-1021: XSS in output data application/javascript cells;
+    + GHSL-2021-1022: XSS in output.metadata.filenames image/png and
+      image/jpeg;
+    + GHSL-2021-1023: XSS in output data image/png and image/jpeg cells;
+    + GHSL-2021-1024: XSS in output.metadata.width/height image/png and
+      image/jpeg;
+    + GHSL-2021-1025: XSS in output data application/vnd.jupyter.widget-state+
+      json cells;
+    + GHSL-2021-1026: XSS in output data application/vnd.jupyter.widget-view+
+      json cells;
+    + GHSL-2021-1027: XSS in raw cells; and
+    + GHSL-2021-1028: XSS in markdown cells.
+  * Some of these vulnerabilities, namely GHSL-2021-1017, -1020, -1021, and
+    -1028, are actually design decisions where text/html, text/markdown,
+    application/javascript and markdown cells should allow for arbitrary
+    JavaScript code execution.  These vulnerabilities are therefore left open
+    by default, but users can opt-out and strip down all JavaScript elements
+    via a new HTMLExporter option `sanitize_html`.
+  * Convert input to string prior to escape HTML.
+  * Replace base64.encodestring() with .encodebytes() for python 3.9
+    compatibility.
+  * DEP-8: Skip test_default_config which is failing since jupyter-core
+    security update.
+  * d/control: Add python3-lxml to python3-nbconvert's Depends field.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Fri, 16 Aug 2024 14:26:45 +0200
+
+nbconvert (5.6.1-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Gordon Ball ]
+  * d/control: recommend jupyter-client (Closes: #982739)
+  * Patch invalid escape sequence in docstrings (Closes: #979227)
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 19 Feb 2021 15:12:30 +0000
+
+nbconvert (5.6.1-2) unstable; urgency=medium
+
+  * Include test files in the install
+  * Run the test-suite as an autopkgtest
+  * Update Standards-Version to 4.5.0
+  * Drop unneeded build-dependencies, which are either already secondary
+    dependencies, or were needed for tests not currently run at build time,
+    or were obsolete
+     + python3-{ipykernel,ipython,nose,pickleshare,pytest}
+     + inkscape
+     + texlive-{plain-generic,latex-base,latex-extra,fonts-recommended}
+  * Drop explicit python dependencies for python3-nbconvert; python3:Depends
+    correctly detects them.
+  * Add texlive-{xetex,fonts-recommended,plain-generic} as Suggests for
+    python3-nbconvert (needed for PDF/LaTeX output)
+  * Add missing dependency on jupyter-core for jupyter-nbconvert
+  * Drop patch which added a versioned IPython dependency; the relevant
+    version is in oldstable
+
+ -- Gordon Ball <gordon@chronitis.net>  Tue, 01 Sep 2020 11:37:33 +0000
+
+nbconvert (5.6.1-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Gordon Ball ]
+  * New upstream version: 5.6.1
+  * Declare Rules-Requires-Root: no
+
+ -- Gordon Ball <gordon@chronitis.net>  Mon, 20 Jan 2020 18:53:06 +0000
+
+nbconvert (5.6.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Gordon Ball ]
+  * Drop python 2.7 support (Closes: #937117)
+  * Patch latex template to remove grffile package (Closes: #944344)
+
+ -- Gordon Ball <gordon@chronitis.net>  Tue, 12 Nov 2019 15:33:26 +0000
+
+nbconvert (5.6.0-1) unstable; urgency=medium
+
+  * New upstream version: 5.6.0
+  * Drop unused build-depends on python{,3}-path (from 5.4-2ubuntu1)
+  * Version dependency on jupyter-client (>= 5.3.1), as per upstream
+  * Add Testsuite: autopkgtest-pkg-python
+  * Build-depend on texlive-plain-generic instead of
+    texlive-generic-recommended (Closes: #941541)
+
+ -- Gordon Ball <gordon@chronitis.net>  Wed, 09 Oct 2019 18:38:58 +0000
+
+nbconvert (5.5.0-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * New upstream version 5.5.0
+  * Refresh patches; drop now-applied upstream patch from 5.4-2
+  * Add myself to uploaders
+  * Update debhelper compat level to 12
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+
+ -- Gordon Ball <gordon@chronitis.net>  Thu, 26 Sep 2019 10:54:56 +0000
+
+nbconvert (5.4-2) unstable; urgency=medium
+
+  * Add upstream patch (Closes: #918913)
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 17 Jan 2019 15:31:11 +0100
+
+nbconvert (5.4-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Add suggests to python-nbconvert-doc (Closes: #880534)
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Fix Format URL to correct one
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+
+  [ Gordon Ball ]
+  * New upstream version
+  * Update Standards-Version to 4.2.1
+  * New dependency: python3?-defusedxml
+  * Patch out (unpackaged) sphinxcontrib_github_alt for documentation
+
+  [ Julien Puydt ]
+  * Use my debian.org mail address.
+  * Update dates in d/copyright.
+  * Bump dh compat to 11.
+  * Bump std-ver to 4.3.0.
+  * Add patch to remove privacy breaches (and add depends on libjs-*).
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 04 Jan 2019 22:21:03 +0100
+
+nbconvert (5.3.1-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * New upstream release.
+  * Re-enable building documentation now nbsphinx is available.
+  * Update Standards-Version to 4.1.1
+  * Install the upstream changelog
+
+  [ Julien Puydt ]
+  * Correctly sort beta versions in d/watch.
+  * Add python3?-jupyter-client to the depends (Closes: #864700).
+  * New upstream release.
+  * Refresh patches.
+  * Update standards-version to 4.1.0.
+  * Add depends on python-pytest, python3-pytest and python-jupyter-client.
+  * Declare under the team maintenance like my other packages.
+  * Disable autotests since entry points are not available when we want to
+    run them.
+  * Update d/copyright.
+  * Use javascript packages instead of going to the net.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 25 Oct 2017 21:45:13 +0200
+
+nbconvert (4.2.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Recommend pandoc, required for several output formats
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 25 Nov 2016 11:56:49 +0100
+
+nbconvert (4.2.0-3) unstable; urgency=medium
+
+  * Add explicit dep on entrypoints packages. (Closes: #843514)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Mon, 07 Nov 2016 20:29:24 +0100
+
+nbconvert (4.2.0-2) unstable; urgency=medium
+
+  [ Tobias Hansen ]
+  * Team upload.
+  * Upload to unstable.
+
+  [ Julien Puydt ]
+  * Push dh compat to 10.
+
+  [ Gordon Ball ]
+  * Split the jupyter-nbconvert script into a separate package (also named
+    jupyter-nbconvert), which depends on the python 3 library package.
+
+ -- Tobias Hansen <thansen@debian.org>  Wed, 02 Nov 2016 20:01:52 +0000
+
+nbconvert (4.2.0-1) experimental; urgency=medium
+
+  [ Julien Puydt ]
+  * Initial release. (Closes: #801058)
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 30 Jul 2016 07:15:50 +0200

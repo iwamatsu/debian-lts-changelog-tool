@@ -1,0 +1,45 @@
+golang-github-googleapis-gax-go (2.0.5-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 2.0.5
+  * Add debian/watch to track release tarball
+  * Add myself to the list of Uploaders
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Apply "cme fix dpkg" fixes
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 01 Aug 2019 09:25:49 -0600
+
+golang-github-googleapis-gax-go (0.0~git20170902.8c160ca-1) unstable; urgency=medium
+
+  [ Shengjing Zhu ]
+  * Team upload
+  * New upstream release
+  * Update Standards-Version to 4.1.0
+    + Change priority to optional
+    + Add Testsuite
+    + Use https in copyright format url
+  * bump golang-google-grpc-dev version in Build-Depends
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 13 Sep 2017 03:17:00 +0000
+
+golang-github-googleapis-gax-go (0.0~git20161107.0.da06d19-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.0~git20161107.0.da06d19
+  * Remove no longer needed Build-Depends on golang-golang-x-oauth2-google-dev.
+    (Closes: #844661)
+  * Use debhelper v10
+  * Build-Depends on golang-any instead of golang-go
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 20 Nov 2016 16:57:55 +0100
+
+golang-github-googleapis-gax-go (0.0~git20160714.0.8b0741b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #836808)
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 06 Sep 2016 11:38:15 +1000

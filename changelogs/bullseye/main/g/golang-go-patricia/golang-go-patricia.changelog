@@ -1,0 +1,76 @@
+golang-go-patricia (2.2.6-5) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 06 Feb 2018 00:16:52 -0500
+
+golang-go-patricia (2.2.6-4) unstable; urgency=medium
+
+  * Team upload.
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 17:02:55 -0500
+
+golang-go-patricia (2.2.6-3) unstable; urgency=medium
+
+  * Team upload.
+  * Remove useless .install file.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 10 Jan 2018 18:36:29 -0500
+
+golang-go-patricia (2.2.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Depend on golang-github-satori-go.uuid-dev (Closes: #886663)
+  * Remove golang-go-patricia-dev from d/control.
+
+ -- Alexandre Viau <aviau@debian.org>  Tue, 09 Jan 2018 15:43:28 -0500
+
+golang-go-patricia (2.2.6-1) unstable; urgency=medium
+
+  * New upstream snapsnot.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 06 Jan 2018 12:56:56 -0500
+
+golang-go-patricia (2.2.0-3) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+  * Remove Built-Using from arch:all -dev package
+
+  [ Alexandre Viau ]
+  * Move to salsa.debian.org.
+  * Mention all import paths in XS-Go-Import-Path.
+  * Priority extra -> optional.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 06 Jan 2018 12:49:18 -0500
+
+golang-go-patricia (2.2.0-2) unstable; urgency=medium
+
+  * Rename "golang-go-patricia-dev" to "golang-github-tchap-go-patricia-dev"
+    in line with pkg-go policy.
+
+ -- Tianon Gravi <tianon@debian.org>  Sun, 08 Nov 2015 10:01:30 -0800
+
+golang-go-patricia (2.2.0-1) unstable; urgency=medium
+
+  * Update to 2.2.0 upstream release.
+  * Add symlink for "gopkg.in/tchap/go-patricia.v2" import path (optionally
+    supported by upstream).
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Wed, 29 Jul 2015 23:39:34 -0600
+
+golang-go-patricia (2.1.0-1) unstable; urgency=medium
+
+  * Update to 2.1.0 upstream release.
+  * Bump Standards-Version to 3.9.6.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Mon, 04 May 2015 12:18:40 -0600
+
+golang-go-patricia (1.0.1-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Tianon Gravi <admwiggin@gmail.com>  Sat, 23 Aug 2014 22:27:28 -0400

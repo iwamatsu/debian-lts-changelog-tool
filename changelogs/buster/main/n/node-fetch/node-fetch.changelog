@@ -1,0 +1,14 @@
+node-fetch (1.7.3-1+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2022-0235: Exposure of Sensitive Information to an Unauthorized Actor,
+    such as cookie header leak to a 3rd party site or through protocol
+    downgrade.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 05 Dec 2022 00:20:50 +0100
+
+node-fetch (1.7.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #886269)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 03 Jan 2018 22:16:04 +0530

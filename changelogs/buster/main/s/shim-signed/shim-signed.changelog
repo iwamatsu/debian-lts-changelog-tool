@@ -1,0 +1,230 @@
+shim-signed (1.44~1+deb10u2) buster-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS Team.
+  * Build against new signed binaries corresponding to 15.8-1~deb10u2
+    - This adds the Freexian CA's alongside Debian's. That means that
+      previous binaries (signed by Debian) will still be able to boot,
+      as well as new binaries signed by Freexian.
+  * Drop the AARCH64 signed binary. It's outdated and is not being used
+    anyway as we don't currently support SB on arm64.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Mon, 21 Oct 2024 20:40:49 +0200
+
+shim-signed (1.44~1+deb10u1) buster-security; urgency=medium
+
+  * Build against new signed binaries corresponding to 15.8-1~deb10u1
+  * Update build-dep on shim-unsigned to use 15.8-1~deb10u1
+  * NOTE: this will block use of older grub binaries with sbat < 4
+    + Update Depends on grub2-common to match.
+  * Multiple packaging updates backported:
+    + Add Romanian translation for debconf templates (thanks to
+      Remus-Gabriel Chelu)
+    + Stop recommending secureboot-db, we don't have that package
+    + Tweak dependencies using substvars (thanks for help from Fabian
+      Grünbichler)
+
+ -- Steve McIntyre <93sam@debian.org>  Wed, 03 Jul 2024 23:03:37 +0100
+
+shim-signed (1.39~1+deb10u1) buster-security; urgency=medium
+
+  * Build against new signed binaries corresponding to 15.7-1~deb10u1
+    Pulls multiple bugfixes in for the signed version:
+    + Make sbat_var.S parse right with buggy gcc/binutils
+    + Enable NX support at build time, as required by policy for signing
+      new shim binaries.
+  * Update build-dep on shim-unsigned to use 15.7-1~deb10u1
+  * Block Debian grub binaries with sbat < 4 (see #1024617)
+    + Update Depends on grub2-common to match.
+  * postinst/postrm: make config_item() more robust
+
+ -- Steve McIntyre <93sam@debian.org>  Wed, 08 Mar 2023 22:39:52 +0000
+
+shim-signed (1.38~1+deb10u1) buster; urgency=medium
+
+  * Tweak how we call grub-install; don't abort on error. Not ideal
+    behaviour either, but don't break upgrades. Copy the behaviour
+    from the grub packages here. Bug #990984
+  * Update build-dep on shim-unsigned to use 15.4-7~deb10u1
+
+ -- Steve McIntyre <93sam@debian.org>  Tue, 13 Jul 2021 00:28:10 +0100
+
+shim-signed (1.37~1+deb10u1) buster; urgency=medium
+
+  * Buster update: build against new signed binaries corresponding to
+    15.4-6~deb10u1. Pulls multiple bugfixes in for the signed version:
+    + Add arm64 patch to tweak section layout and stop crashing
+      problems. Upstream issue #371. (#990082, #990190)
+    + In insecure mode, don't abort if we can't create the MokListXRT
+      variable. Upstream issue #372. (#989962, #990158)
+  * Update build-dep on shim-unsigned to use 15.4-6~deb10u1
+  * Switch arm64 back to using a current unsigned build (undo changes
+    in 1.36~1+deb10u2)
+
+ -- Steve McIntyre <93sam@debian.org>  Tue, 29 Jun 2021 09:39:32 +0100
+
+shim-signed (1.36~1+deb10u2) buster; urgency=high
+
+  * Workaround for boot-breaking bug on arm64. Despite initial testing
+    suggesting otherwise, even an unsigned arm64 build of 15.4 seems
+    likely to crash at boot on some systems. Copy an old version of
+    the unsigned arm64 shim into place for now. This will not support
+    Secure Boot, but it will at least allow people to boot.
+
+ -- Steve McIntyre <93sam@debian.org>  Sat, 19 Jun 2021 17:17:39 +0100
+
+shim-signed (1.36~1+deb10u1) buster; urgency=medium
+
+  * Add explicit dependency from shim-signed to shim-signed-common.
+    Also check if we have update-secureboot-policy available before we
+    try to call it.
+  * If we're not running on an EFI system then exit cleanly in
+    postinst and postrm. We have nothing to do here
+  * Fix the old doc links for shim-signed.
+  * Add defensive code around calls to db_get. Don't fail if they
+    return errors.
+  * Update build-dep on shim-unsigned to use 15.4-5~deb10u1
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 09 May 2021 00:50:28 +0100
+
+shim-signed (1.34~1+deb10u1) buster; urgency=medium
+
+  * Buster update: build against new signed binaries corresponding to
+    15.4-2~deb10u1
+  * ***WARNING***: arm64 shim is no longer signed, due to major
+    toolchain problems. See NEWS.Debian for more
+    information. Separated out the binary package for arm64 to allow
+    for a different description, and tweaked the Makefile too.
+  * Tweak Makefile setup - do our verification testing chained from
+    the "all" target, not "clean". Closes: #936002
+  * Don't include apport stuff in the Debian build, it's not useful.
+  * Tweak dh_install* usage for docs.
+  * Add Spanish translation for debconf templates, thanks to
+    Camaleón. Closes: #987339
+  * Multiple bugfixes in postinst and postrm handling:
+    + Call grub-install using the correct grub target in postinst
+    + Also call grub-install using the correct grub target in the
+      postrm, and clean up the shim binary from the ESP
+    + In each case, also check and use the correct configured options
+      for grub-install
+    + Move the postinst grub-install code from the -common package to
+      the arch-specific packages, to make sure it's always called when
+      needed.
+    + Only run grub-install etc. if we're actually on an EFI-booted
+      system.
+
+ -- Steve McIntyre <93sam@debian.org>  Mon, 03 May 2021 20:10:11 +0100
+
+shim-signed (1.33) unstable; urgency=medium
+
+  * Build against new signed binaries corresponding to
+    15+1533136590.3beb971-7
+  * Update Build-Depends and Depends to match. Closes: #928107
+  * Drop the hard-coded version in Built-Using; pick up the version of
+    shim we're using properly.
+  * Display the sha256sums of the binaries as we check them
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 09 Jun 2019 17:32:54 +0100
+
+shim-signed (1.32) unstable; urgency=medium
+
+  * Add Breaks/Replaces to shim-signed-common for
+    update-secureboot-policy etc. Closes: #929673
+
+ -- Steve McIntyre <93sam@debian.org>  Tue, 28 May 2019 14:23:54 +0100
+
+shim-signed (1.31) unstable; urgency=medium
+
+  * update-secureboot-policy: fix error if /var/lib/dkms does not
+    exist. Closes: #923718
+  * Separate the helper scripts into a new shim-signed-common package,
+    apart from the actual signed shim binaries so that we can
+    sensibly support co-installability using Multi-Arch.
+    Closes: #928486
+  * Add/update translations:
+    + Italian (Closes: #915993, thanks to Beatrice Torracca)
+    + Swedish (Closes: #921410, thanks to Matrin Bagge)
+    + Russian (Closes: #922229, thanks to Lev Lamberov)
+    + Dutch (Closes: #917580, #926664, thanks to Frans Spiesschaert)
+  * Remove doc link used to quieten old lintian versions
+
+ -- Steve McIntyre <93sam@debian.org>  Mon, 27 May 2019 23:02:10 +0100
+
+shim-signed (1.30) unstable; urgency=medium
+
+  * Force the built-using version to be 15+1533136590.3beb971-6. That
+    *does* match the source we've used, we're only using -5 due to
+    toolchain changes elsewhere. Ick :-(
+
+ -- Steve McIntyre <93sam@debian.org>  Tue, 23 Apr 2019 00:01:10 +0100
+
+shim-signed (1.29) unstable; urgency=medium
+
+  * New signed binaries available from MS for amd64, arm64 and i386
+  * Change maintainer to be the EFI team
+  * Update the build-depends
+    + Specifically depend on sbsigntool (>= 0.9.2-2) to fix a bug in the
+      PE/COFF checksum that otherwise breaks the build
+  * Tweak the binary package setup a lot
+    + We're now building for 3 arches
+    + Depend on the right grub-efi-$arch-bin package for each arch
+    + Depend on the right shim-helpers-$arch-signed package for each
+      arch
+    + Remove the old Replaces: and Breaks:, as we don't clash with files
+      from the shim binary package any more.
+  * Stop copying helper binaries into our package now
+    + We just depend on shim-helpers-ARCH-signed now
+  * Tweak build, don't assume amd64
+  * Add lintian overrides for things we can't really change:
+    + We're including pre-built binaries, as that's where our signatures
+      are coming from. We have the matching source in the shim source
+      package.
+  * Update Standards-Version to 4.3.0 (no changes needed)
+
+ -- Steve McIntyre <93sam@debian.org>  Mon, 22 Apr 2019 22:57:55 +0100
+
+shim-signed (1.28+nmu3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * (Still) explicitly uploading from a chroot with older binaries
+    installed for shim and sbsigntool, and update Build-Depends to
+    point to those speficic versions. This package will *not* function
+    with other versions installed.
+  * Add Breaks: shim (<= 0.9+1474479173.6c180c6-1), Closes: #924100
+  * +nmu2 fixed the installability problem caused by waiting for
+    Microsoft's signature on the new shim packages. Closes: #922179
+
+ -- Steve McIntyre <93sam@debian.org>  Sat, 09 Mar 2019 23:52:41 +0000
+
+shim-signed (1.28+nmu2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Copy the helper binaries from the shim binary so that we no longer
+    need to depend on it. See #922179 for more details. Add a Replaces:
+    shim and to allow us to over-write binaries there.
+  * Explicitly uploading in a chroot with older binaries installed for
+    shim and sbsigntool, and update Build-Depends to point to those
+    speficic versions. This package will *not* function with other
+    versions installed.
+
+ -- Steve McIntyre <93sam@debian.org>  Sun, 03 Mar 2019 22:33:41 +0000
+
+shim-signed (1.28+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix debconf templates, Closes: #910986, #860720.
+  * Update German translation, thanks Markus Hiereth,
+    Closes: #879009, #913463.
+  * Update Dutch translation, thanks Frans Spiesschaert,
+    Closes: #862209, #914531.
+  * Update French translation, thanks Alban Vidal, Closes: #864869, #913563.
+  * Update Portuguese translation, thanks Rui Branco,
+    Closes: #870665, #912886.
+  * Added Czech translation, thanks Michal Simunek, Closes: #913294.
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Sun, 04 Nov 2018 08:09:26 +0100
+
+shim-signed (1.28) unstable; urgency=medium
+
+  * Initial Debian upload, based on Ubuntu package.
+
+ -- Steve Langasek <vorlon@debian.org>  Fri, 14 Apr 2017 21:44:06 +0000

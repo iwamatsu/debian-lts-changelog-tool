@@ -1,0 +1,1121 @@
+lemonldap-ng (2.0.11+ds-4+deb11u6) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * Fix CVE-2024-48933: XSS vulnerability in the login page when userControl
+    has been set to a non-default value that allows special HTML characters.
+    (Closes: #1084979)
+  * Fix CVE-2024-52946: Improper check during session refresh which can allow
+    an authenticated user to raise their authentication level.
+  * Fix CVE-2024-52947: XSS vulnerability in the upgrade session confirmation
+    page.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sat, 30 Nov 2024 15:21:43 +0100
+
+lemonldap-ng (2.0.11+ds-4+deb11u5) bullseye; urgency=medium
+
+  * Fix open redirection when OIDC RP has no redirect uris
+  * Fix open redirection due to incorrect escape handling
+  * Fix Server-Side-Request-Forgery issue in OIDC (CVE-2023-44469)
+
+ -- Yadd <yadd@debian.org>  Fri, 29 Sep 2023 16:35:14 +0400
+
+lemonldap-ng (2.0.11+ds-4+deb11u4) bullseye; urgency=medium
+
+  * Fix 2FA issue when using AuthBasic handler (CVE-2023-28862)
+
+ -- Yadd <yadd@debian.org>  Wed, 29 Mar 2023 15:50:40 +0400
+
+lemonldap-ng (2.0.11+ds-4+deb11u3) bullseye; urgency=medium
+
+  * Fix URL validation bypass
+    (https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng/-/issues/2832)
+
+ -- Yadd <yadd@debian.org>  Sun, 05 Feb 2023 18:03:16 +0400
+
+lemonldap-ng (2.0.11+ds-4+deb11u2) bullseye; urgency=medium
+
+  * Add patch to improve session destroy propagation (Closes: CVE-2022-37186)
+
+ -- Yadd <yadd@debian.org>  Sun, 11 Sep 2022 09:28:30 +0200
+
+lemonldap-ng (2.0.11+ds-4+deb11u1) bullseye; urgency=medium
+
+  * Fix auth process in password-testing plugins (Closes: #1005302, CVE-2021-40874)
+
+ -- Yadd <yadd@debian.org>  Thu, 24 Feb 2022 15:16:09 +0100
+
+lemonldap-ng (2.0.11+ds-4) unstable; urgency=high
+
+  * Import security fixes from 2.0.12
+    * Session cache corruption can lead to authorization bypass or spoofing
+      (Closes: CVE-2021-35472)
+    * OAuth2 handler does not verify access token validity
+      (Closes: CVE-2021-35473)
+    * Fix XSS on register form
+    * Don't display TOTP secret to connected user, neither in logs
+
+ -- Yadd <yadd@debian.org>  Thu, 22 Jul 2021 22:13:38 +0200
+
+lemonldap-ng (2.0.11+ds-3) unstable; urgency=medium
+
+  * Add Breaks+Replaces in lemonldap-ng-handler for
+    lemonldap-ng-fastcgi-server < 2.0.5 (Closes: #985107)
+
+ -- Yadd <yadd@debian.org>  Sat, 13 Mar 2021 08:15:38 +0100
+
+lemonldap-ng (2.0.11+ds-2) unstable; urgency=medium
+
+  * Add recommended dependency to gsfonts, needed to enable Captcha images
+    when using GD::SecurityImage (upstream ref: #2459)
+
+ -- Yadd <yadd@debian.org>  Thu, 11 Feb 2021 10:57:38 +0100
+
+lemonldap-ng (2.0.11+ds-1) unstable; urgency=medium
+
+  * New upstream version 2.0.11+ds
+  * Refresh patches
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 31 Jan 2021 16:54:48 +0100
+
+lemonldap-ng (2.0.10+ds-2) unstable; urgency=medium
+
+  * Fix mime type for JS generated files
+  * Declare compliance with policy 4.5.1
+  * Fix POD (reported)
+  * Remove duplicate dependency to libjson-xs-perl
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 24 Jan 2021 07:39:45 +0100
+
+lemonldap-ng (2.0.10+ds-1) unstable; urgency=medium
+
+  * New upstream version 2.0.10+ds
+  * Refresh patches
+  * Update dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 18 Jan 2021 09:13:46 +0100
+
+lemonldap-ng (2.0.9+ds-2) unstable; urgency=medium
+
+  * Exclude doc/.buildinfo from import
+  * Fix uglfyjs use (Closes: #974431)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 11 Nov 2020 18:22:09 +0100
+
+lemonldap-ng (2.0.9+ds-1) unstable; urgency=medium
+
+  * New upstream version 2.0.9+ds (Closes: CVE-2020-16093, CVE-2020-24660)
+  * Recommend libapache-session-browseable-perl > 1.3.8 (related to
+    CVE-2020-16093)
+  * Refresh patches
+  * Add python3-sphinx and python3-sphinx-bootstrap-theme in build dependencies
+  * Bump debhelper compatibility level to 13
+    + Fix dh_missing ignored files in an override
+  * Update install
+  * Update lintian overrides
+  * Update copyright
+  * Add debian/NEWS entry (related to CVE-2020-16093 and CVE-2020-24660)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 07 Sep 2020 10:51:13 +0200
+
+lemonldap-ng (2.0.8+ds1-2) unstable; urgency=medium
+
+  * Install manager-api configuration files
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 08 May 2020 13:29:42 +0200
+
+lemonldap-ng (2.0.8+ds1-1) unstable; urgency=medium
+
+  * Exclude API doc from import and replace it by an external link
+  * Repack
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 06 May 2020 11:24:01 +0200
+
+lemonldap-ng (2.0.8+ds-1) unstable; urgency=medium
+
+  * New upstream version 2.0.8+ds (Closes: CVE-2019-19791)
+  * Refresh patches
+  * Add build dependency to libtest-output-perl and libtime-fake-perl
+  * Add patch to fix typo in POD
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 05 May 2020 19:23:46 +0200
+
+lemonldap-ng (2.0.7+ds-5) unstable; urgency=medium
+
+  * Exclude AuthGPG test, incompatible with debci machines (Closes: #955664)
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 04 Apr 2020 12:25:16 +0200
+
+lemonldap-ng (2.0.7+ds-4) unstable; urgency=medium
+
+  * Replace ignore-random-oidc-errors patch by upstream fix
+  * Restore man dir removed during import
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 29 Mar 2020 19:39:56 +0200
+
+lemonldap-ng (2.0.7+ds-3) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/copyright: replace tabs with spaces / remove trailing
+    whitespace.
+
+  [ Xavier Guimard ]
+  * Move uwsgi dependency to "recommends"
+  * Add autopkgtest test names
+  * Declare compliance with policy 4.5.0
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 29 Mar 2020 14:02:16 +0200
+
+lemonldap-ng (2.0.7+ds-2) unstable; urgency=medium
+
+  * Add libdatetime-format-rfc3339-perl in dependencies
+  * Fix bad constant export (reported)
+  * Add CertificateResetByMail in syntax skip
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 25 Dec 2019 12:55:40 +0100
+
+lemonldap-ng (2.0.7+ds-1) unstable; urgency=medium
+
+  * Declare compliance with policy 4.4.1
+  * New upstream version 2.0.7+ds (Closes: CVE-2019-19791)
+  * Remove 2 patches included in upstream
+  * Update Files-Excluded field
+  * Update debian/clean
+  * Add a TODO loop to avoid a random failure on OIDC token test (reported)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 23 Dec 2019 14:56:47 +0100
+
+lemonldap-ng (2.0.6+ds-2) unstable; urgency=medium
+
+  * Fix smoke-* files (fixes autopkgtest)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 01 Oct 2019 23:00:38 +0200
+
+lemonldap-ng (2.0.6+ds-1) unstable; urgency=medium
+
+  * Change cron files following upstream recommendations
+  * Exclude auto-generated files from import
+  * Exclude inc/LWP::Protocol::PSGI and use Debian ones
+  * Exclude .map files from import
+  * Regenerate files excluded from import
+  * Fix bad doc link in webserver files for manager (Closes: #939368)
+  * New upstream version 2.0.6+ds
+  * Refresh patches
+  * Fix build
+  * Fix manpage section of FastCGI server
+  * Update debian/copyright
+  * Bump debhelper compatibility version to 12
+  * Declare compliance with policy 4.4.0
+  * Add ${misc:Pre-Depends}, fix skip-systemd-native-flag-missing-pre-depends
+    tags
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 24 Sep 2019 19:56:59 +0200
+
+lemonldap-ng (2.0.5+ds-2) unstable; urgency=medium
+
+  * Install Manager manpages
+  * Back to unstable after Buster release
+  * Add debian/NEWS to ask to change encryption key
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 07 Jul 2019 11:53:49 +0200
+
+lemonldap-ng (2.0.5+ds-1) experimental; urgency=medium
+
+  * Install nginx configuration files with all handlers
+  * New upstream version 2.0.5+ds
+  * Move libstring-random-perl dependency from portal to common, add it to
+    build-depends
+  * Add new dependency to libtext-unidecode-perl
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 30 Jun 2019 13:31:00 +0200
+
+lemonldap-ng (2.0.4+ds-1~exp1) experimental; urgency=medium
+
+  * Add systemd services for scheduled tasks (portal and handler)
+  * Fix cron files to avoid launching them when systemd is enabled
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 20 May 2019 18:13:16 +0200
+
+lemonldap-ng (2.0.4+ds-1~exp) experimental; urgency=medium
+
+  * New upstream version 2.0.4+ds
+  * Remove fix-missing-userControl update-translations and CVE-2019-12046
+    patches, included in upstream
+  * Add systemd timers
+  * Add <!nocheck> to test dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 19 May 2019 23:09:55 +0200
+
+lemonldap-ng (2.0.2+ds-7+deb10u1) unstable; urgency=high
+
+  * Fix tokens security (Closes: #928944, CVE-2019-12046)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 13 May 2019 21:22:34 +0200
+
+lemonldap-ng (2.0.2+ds-7) unstable; urgency=medium
+
+  * Import upstream translations update
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 02 May 2019 08:54:06 +0200
+
+lemonldap-ng (2.0.2+ds-6) unstable; urgency=medium
+
+  * Add patch to fix missing userControl calls (little security fix)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 28 Mar 2019 10:41:14 +0100
+
+lemonldap-ng (2.0.2+ds-5) unstable; urgency=medium
+
+  * Fix bad build dependency: Authen::2F::Tester instead of Authen::2F
+  * Split autopkgtests to test each library separately
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 02 Mar 2019 13:47:29 +0100
+
+lemonldap-ng (2.0.2+ds-4) unstable; urgency=medium
+
+  * Ignore debci GPG errors (Closes: 922265)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 14 Feb 2019 13:31:31 +0100
+
+lemonldap-ng (2.0.2+ds-3) unstable; urgency=medium
+
+  * Skip GPG test in autopkgtest (Closes: #922265)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 14 Feb 2019 13:16:41 +0100
+
+lemonldap-ng (2.0.2+ds-2) unstable; urgency=medium
+
+  * Add gpg in build dependencies (Closes: #922265)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 13 Feb 2019 21:36:59 +0100
+
+lemonldap-ng (2.0.2+ds-1) unstable; urgency=medium
+
+  * New upstream version 2.0.2+ds
+  * Refresh patches
+  * Update copyrights using upstream files
+  * Add libcrypt-urandom-perl and libipc-run-perl in dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 12 Feb 2019 21:30:35 +0100
+
+lemonldap-ng (2.0.1+ds-2) unstable; urgency=medium
+
+  * Remove useless test (Closes: #919730)
+  * Declare compliance with policy 4.3.0
+  * Bump debheper compatibility level to 11
+  * Declare /tmp as private in lemonldap-ng-fastcgi-server.service
+  * Update doc-base index and files
+  * Remove "--with systemd"
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 19 Jan 2019 12:32:57 +0100
+
+lemonldap-ng (2.0.1+ds-1) unstable; urgency=medium
+
+  * Add libgssapi-perl in portal suggested dependencies
+  * Remove libauthcas-perl from portal suggested dependencies
+  * Add gitlab-ci.yml to use Debian-CI
+  * Import upstream release 2.0.1+ds
+  * Remove missing-sub-in-SSL.patch and use-new-libjs-bootstrap4.patch now
+    included in upstream
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 21 Dec 2018 16:25:43 +0100
+
+lemonldap-ng (2.0.0+ds-2) unstable; urgency=medium
+
+  * Add postinst to remove old manager links (Closes: #915682)
+  * Add missing libfcgi-perl in fastcgi server dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 09 Dec 2018 15:24:29 +0100
+
+lemonldap-ng (2.0.0+ds-1) unstable; urgency=medium
+
+  * Remove crypto-js from Files-Excluded
+  * Replace /var/run by /run in systemd files
+  * Install importMetadata
+  * autopkgtest: add logo_llng_400px.png in smoke files
+  * Import upstream version 2.0.0+ds (Closes: #915682)
+  * Update debian/copyright
+  * Update lemonldap-ng-portal.smoke-files
+  * Update debian/NEWS
+  * Update portal bootstrap dependency to libjs-bootstrap4 and add patch to
+    use it
+  * Add patch for missing authLogout() function in Auth::SSL
+  * Moving from to unstable since upstream releases version 2.0.0
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 06 Dec 2018 21:10:52 +0100
+
+lemonldap-ng (2.0.0~git20181106.ee40242+ds-1) experimental; urgency=medium
+
+  * Import upstream version 2.0.0~git20181106.ee40242+ds
+  * debian/watch: use git HEAD
+  * exclude crypto-js
+  * add libjs-cryptojs and fonts-font-awesome in portal dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 06 Nov 2018 16:20:14 +0100
+
+lemonldap-ng (2.0.0~beta1+ds-1) experimental; urgency=medium
+
+  * Allow beta releases in debian/watch
+  * Update Files-Excluded to remove all minified files
+  * Import upstream version 2.0.0~beta1
+  * New upstream version 2.0.0~beta1+ds
+  * Add debian/NEWS entry
+  * Update debian/copyright following upstream COPYING
+  * debian/control:
+    + Update dependencies:
+      - replace libauthen-captcha-perl by libgd-securityimage-perl
+      - replace libmime-lite-perl by libmime-tools-perl
+      - add libauthen-oath-perl, libconvert-base32-perl, libemail-sender-perl,
+        libgssapi-perl, libauthen-u2f-perl and libcrypt-u2f-server-perl
+      - libplack-perl is a dependency of "common" now
+      - rearrange component dependencies following upstream changes
+    + Remove package lemonldap-ng-fr-doc
+    + Add new package lemonldap-ng-uwsgi-app
+  * Add debian/NEWS entry
+  * Update debian/copyright following upstream COPYING
+  * Update dependencies
+  * Add lemonldap-ng-uwsgi-app package
+  * Update examples paths
+  * Update maintainer scripts
+  * debian/rules: update configure variables
+  * Update .install paths
+  * Remove replace-mouse-by-moose.patch
+  * Update patches
+  * Add debian/NEWS entry
+  * Update debian/copyright following upstream COPYING
+  * Update dependencies
+  * Add lemonldap-ng-uwsgi-app package
+  * Update examples paths
+  * Update maintainer scripts
+  * debian/rules: update configure variables
+  * Update .install paths
+  * Update patches
+  * Update autopkgtest files
+  * Update lintian-overrides
+  * Avoid start-and-stop warning (see upstream #1069)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 30 Oct 2018 18:29:16 +0100
+
+lemonldap-ng (1.9.18+ds-1) unstable; urgency=medium
+
+  * Add minimal version to libnet-facebook-oauth2-perl (0.10) since
+    Facebook API has changed
+  * Declare compliance with policy 4.2.0
+  * Change replace-mouse-by-moose.patch link to OW2 Gitlab
+  * Email change: Xavier Guimard -> yadd@debian.org
+  * Change autopkgtest to use more pkg-perl-autopkg-test features and add a
+    debian/tests/README.md file
+  * Exclude minified files from upstream
+  * Import upstream version 1.9.18 (Closes: #903738)
+  * Declare compliance with policy 4.2.1
+  * Refresh replace-mouse-by-moose.patch
+  * Update lintian-overrides
+  * Update upstream copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 07 Oct 2018 09:10:37 +0200
+
+lemonldap-ng (1.9.17-1) unstable; urgency=medium
+
+  * Import upstream release 1.9.17
+  * Update replace-mouse-by-moose.patch
+  * Update debian/copyright years
+  * Update debian/copyright links
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 16 Jun 2018 22:38:20 +0200
+
+lemonldap-ng (1.9.16-3) unstable; urgency=medium
+
+  * Declare conformance with Policy 4.1.4 (no changes needed)
+  * Add libgssapi-perl in portal suggested dependencies
+  * Remove unnecessary libauthcas-perl build dependency
+  * Update debian/copyright links to https when available
+  * debian/watch: replace Gitlab tag search by releases.ow2.org
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 03 Jun 2018 06:59:34 +0200
+
+lemonldap-ng (1.9.16-2) unstable; urgency=medium
+
+  * Add libcgi-pm-perl in liblemonldap-ng-handler-perl dependencies
+    (Closes: #896544)
+  * Use $(TMP) macro in debian/rules
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 22 Apr 2018 12:44:29 +0200
+
+lemonldap-ng (1.9.16-1) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 10
+  * Move Nginx dependency to "recommends" as FastCGI server may be on
+    another server
+  * Update source link in debian/copyright (https)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Xavier Guimard ]
+  * Update debian/watch to point to Gitlab
+  * New upstream release
+  * Update patches
+  * debian/copyright:
+    - Exclude upstream debian/ dir in debian/copyright to avoid conflicts
+    - Update source
+    - Update copyrights
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 16 Mar 2018 15:44:26 +0100
+
+lemonldap-ng (1.9.15-1) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Xavier Guimard ]
+  * New upstream release
+  * Use https URI for debian/watch
+  * Set Rules-Requires-Root to binary-targets in debian/control
+  * Refresh patches
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 23 Jan 2018 14:57:23 +0100
+
+lemonldap-ng (1.9.14-1) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.2 (no changes needed)
+
+  [ Xavier Guimard ]
+  * Update metadata to point to new repository
+  * Remove javascript-typo.patch and avoid-modify-sources.patch now included
+    in upstream
+  * Update replace-mouse-by-moose.patch
+  * Update debian/copyright
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 05 Dec 2017 06:55:28 +0100
+
+lemonldap-ng (1.9.13-2) unstable; urgency=medium
+
+  * Add libmouse-perl in liblemonldap-ng-common-perl recommended dependencies
+    since command-line configuration client uses it.
+    See https://jira.ow2.org/browse/LEMONLDAP-1315
+  * Remove liblemonldap-ng-conf-perl transional package (introduced in Jessie)
+  * Remove patch that disable captcha test
+  * Add minimal version to libauthen-captcha-perl or use old libpng to
+    workaround libauthen-captcha-perl bug (#875627)
+  * Import upstream little fix for "Form replay" feature (JS error when field
+    contains a dot)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 25 Oct 2017 21:48:12 +0200
+
+lemonldap-ng (1.9.13-1) unstable; urgency=medium
+
+  * Move priority from extra to optional to be compliant to 4.1.0 policy
+    changes
+  * use HTTPS in upstream homepage links
+  * Build-dependencies: update debhelper version in Build-Depends and remove
+    dh-systemd (remove build-depends-on-obsolete-package Lintian error)
+  * Remove Testsuite header to avoid
+    unnecessary-testsuite-autopkgtest-header lintian warning
+  * Bump Standards-Version to 4.1.1
+  * New upstream release
+  * Refresh JS patch
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 29 Sep 2017 16:06:03 +0200
+
+lemonldap-ng (1.9.12-2) unstable; urgency=medium
+
+  * Dependencies:
+    - Prefer FastCGI server as required by upstream documentation (may fix
+      Debian-ci failures)
+    - Remove SAML and other interoperability libs from portal "Recommends"
+      fields: OpenID-Connect is embedded and LLNG can works alone
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 15 Sep 2017 07:39:21 +0200
+
+lemonldap-ng (1.9.12-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Add Italian debconf translation.
+    Thanks to Beatrice Torracca for the patch.
+    (Closes: #872731)
+
+  [ Xavier Guimard ]
+  * New upstream version
+  * Fix missing files/links for French doc (closes: #874553)
+  * Remove "upstart" files for FastCGI server
+  * Bump Standards-Version to 4.1.0
+  * Update patches
+  * Update manager examples
+  * Add patch to disable captcha test: Authen::Captcha fails randomly due to
+    #875627
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 12 Sep 2017 21:40:06 +0200
+
+lemonldap-ng (1.9.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update patches
+  * Remove unused symlinks (closes: #855647)
+  * Enable manager in autopkgtests
+  * Update Lintian overrides
+  * Don't publish public.pl by default
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 20 May 2017 10:03:17 +0200
+
+lemonldap-ng (1.9.7-3) unstable; urgency=medium
+
+  * Remove unnecessary version dependency for lsb-base
+  * Fix unhandled symlink to directory conversion (Closes: #854859)
+  * Update debian/copyright years
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 12 Feb 2017 13:12:21 +0100
+
+lemonldap-ng (1.9.7-2) unstable; urgency=medium
+
+  * Add patch to disable some heavy developer tests (Closes: #845167)
+  * Add libdbd-sqlite3-perl in build dependencies for better test
+    coverage
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 26 Dec 2016 10:01:52 +0100
+
+lemonldap-ng (1.9.7-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove unused override for angularjs
+  * Update short description for handler packages
+  * Update long description to replace "Apache" by "web server"
+  * Remove alternate dependency to libwww-perl <<6
+  * Update patches
+  * Keep Mouse for tests and command-line
+  * Add lsb-base in fastcgi server dependencies
+  * Replace Net::Twitter dependency by Net::OAuth
+  * Add autopkgtest tests (copied from pkg-perl-autopkgtest and adapted)
+  * Add libjs-bootstrap and libjs-es5-shim in manager dependencies
+  * Add libmouse-perl in build dependencies
+  * Use compiled doc for doc packages
+  * Remove spelling error patch now included in upstream
+  * Add lintian override for serialized but unused bootstrap files
+  * Add lintian override for simple but serialized JS files in documentation
+  * Update debian/copyright
+
+ -- Xavier Guimard <x.guimard@free.fr>  Thu, 15 Dec 2016 17:52:23 +0100
+
+lemonldap-ng (1.9.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patch added in 1.9.4-3, now included in upstream
+  * Update patchs
+  * Add spelling error patch
+
+ -- Xavier Guimard <x.guimard@free.fr>  Thu, 14 Jul 2016 11:50:22 +0200
+
+lemonldap-ng (1.9.4-3) unstable; urgency=medium
+
+  * Add patch to avoid network access attempts (Closes: #830223)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 08 Jul 2016 07:04:39 +0200
+
+lemonldap-ng (1.9.4-2) unstable; urgency=medium
+
+  * Fix "FastCGI server restart fails with SysVinit": remove old unused tip
+    (Closes: #830166)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 06 Jul 2016 22:54:09 +0200
+
+lemonldap-ng (1.9.4-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #826759)
+  * Refresh patch
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 15 Jun 2016 23:13:09 +0200
+
+lemonldap-ng (1.9.3-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Xavier Guimard ]
+  * New upstream release
+  * Update patches
+  * Add libfcgi-procmanager-perl as dependency of
+    lemonldap-ng-fastcgi-server
+  * Update lemonldap-ng-doc.links (Closes: #825587)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 07 Jun 2016 19:48:32 +0200
+
+lemonldap-ng (1.9.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove keep-angular-files patch since libjs-angularjs >1.4 is now
+    available
+  * Fix "circular dependency": split liblemonldap-ng-handler-perl into
+    lemonldap-ng-handler and liblemonldap-ng-handler-perl (Closes: #821139)
+    - Add a debian/NEWS entry for this
+  * Remove liblemonldap-ng-handler-perl.postrm since My::Package isn't
+    built since 1.4
+  * Portal: move XML* deps from Recommends to Depends since
+    notifications are enabled by default
+  * Add lintian overrides for false positive "duplicate word" in
+    README.Debian
+  * Add patch to replace Mouse by Moose since it seems to not work under
+    ModPerl::Registry (see #823217)
+    - update debian/control
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 07 May 2016 16:59:27 +0200
+
+lemonldap-ng (1.9.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add NEWS entry
+  * Add libhttp-parser-xs-perl in recommended libraries
+  * Remove unnecessary versioned dependency for liblasso-perl
+  * Replace image duplication between doc packages by links
+  * debian/copyright: remove unused BSD license
+  * Add lintian-overrides for a false positive source-is-missing warning
+  * debian/patches:
+    - remove spelling-error patch now included in upstream
+    - add patch to preserve original sources
+    - update javascript-path patch
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 05 Apr 2016 21:37:49 +0200
+
+lemonldap-ng (1.9.0-1) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Move priority from optional to extra to be compliant to 2.5 policy chapter
+    (some dependencies are in extra section)
+  * Update lintian override for false positive
+    'source-contains-prebuilt-javascript-object' tag for customized (removed)
+    jquery-ui
+  * Replace some duplicated icons in doc by links
+  * Replace MIT license by Expat for jquery* libraries
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ Xavier Guimard ]
+  * New upstream release
+  * Install README.Debian only for lemonldap-ng metapackage (Closes: #814381)
+  * Add Nginx doc in README.Debian
+  * Update copyrights
+  * Update example files
+  * Update dependencies
+  * Update install directories
+  * Update description (+OpenID-Connect)
+  * Update doc files
+  * debian/control:
+    - Bump Standards-Version to 3.9.7
+    - Add openid-connect-provider and openid-connect-relying-party virtual
+      packages
+    - Move liblemonldap-ng-cli-perl conflict to
+      liblemonldap-ng-common-perl
+    - Add lemonldap-ng-fr-doc and lemonldap-ng-fastcgi-server new packages
+  * Add systemd files for lemonldap-ng-fastcgi-server
+  * debian/patches:
+    - Remove all patches: now included in upstream
+    - Add keep-angularjs-files.patch to keep AngularJS files in install until
+      Debian version of it >= 1.4
+    - Keep angularjs files until libjs-angularjs reaches 1.4.0
+    - Add new spelling-errors patch
+  * lintian:
+    - Remove "source-is-missing" lintian overrides
+    - Replace duplicate files by links in doc
+    - Hide false positive lintian warning about privacy breach
+    - Add psessions directories in lintian overrides and move all sessions
+      relative overrides to common
+  * debian/rules:
+    - Update make variables
+    - Use USEDEBIANLIBS=yes in make install
+  * Update README.Debian
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 06 Mar 2016 17:42:11 +0100
+
+lemonldap-ng (1.4.6-3) unstable; urgency=medium
+
+  * Replace jquery-ui libs by shared packages
+  * Manager now depends on lemonldap-ng-doc
+  * Add virtual packages saml-identity-provider and saml-service-provider
+  * Replace fr-doc target by an alias to english documentation. 'fr-doc'
+    Makefile target generates some errors with OmegaT.
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 25 Dec 2015 13:09:27 +0100
+
+lemonldap-ng (1.4.6-2) unstable; urgency=medium
+
+  * Update documentation path (Closes: #808473)
+  * Add patch for a broken inheritance since upgrade (Closes: #808474)
+  * Update debian/rules to clean double symlinks (not supported by Perl-5.22).
+    Bug reported to upstream authors
+  * Add spelling-errors.patch (reported)
+  * Add lintian overrides file for false positive 'source-is-missing' tag:
+    customized jquery-ui is not recognized by lintian (bug #808756)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 22 Dec 2015 14:25:30 +0100
+
+lemonldap-ng (1.4.6-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Add Dutch debconf translation.
+    Thanks to Frans Spiesschaert. (Closes: #766514)
+
+  [ Axel Beckert ]
+  * debian/copyright: Use a Wayback Machine capture of Colin Clark's
+    homepage. (Issue reported by DUCK.)
+
+  [ Xavier Guimard ]
+  * Imported Upstream version 1.4.6
+  * Update debian/copyright
+  * Replace Apache-2.4 patch by new apache-2.X upstream files
+  * Update javascript patch to also replace bootstrap.js files by libjs-
+    bootstrap package
+  * Add libmouse-perl dependency
+  * Add misc dependency to liblemonldap-ng-conf-perl transitional
+    package
+  * Update debian/NEWS: My::Handler example files are no more provided
+  * Update handler.install file to remove My::Package files
+  * Update debian/rules to remove files that are not deleted by quilt
+  * Bump debhelper compatibility level to 9
+  * Insert real names in long descriptions
+  * Add debian/upstream/metadata
+  * Add libjs-bootstrap in recommended dependencies
+  * Really remove bootstrap fonts
+  * Remove jquery copyright since it is deleted in packages
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 12 Oct 2015 12:54:26 +0200
+
+lemonldap-ng (1.3.3-1) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Imported Upstream version 1.3.3 (Closes: #736739, #736807)
+  * Update images copyrights
+  * Add captcha directories management
+  * Rename liblemonldap-ng-conf-perl to liblemonldap-ng-common-perl with a
+    transitional package
+  * Add libnet-facebook-oauth2-perl to recommended dependencies
+  * Add libunicode-string-perl in dependencies
+  * Rearrange dependencies as required in upstream
+  * Update lintian overrides to add notifications directory
+  * Call "migrate" debconf arg only if a previous version exists
+  * Bump Standards-Version to 3.9.5
+  * Update javascript patch
+  * Restore libxml-simple-perl in manager dependencies
+  * Add psession dirs in lintian overrides
+  * Use dpkg only to compare versions
+  * Modify Apache-2.4 patch to be compliant both with Apache 2.2 and 2.4
+    unsing mod_version
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Guard `dpkg --compare-versions' call in .config script with a check if
+    the currently installed package version exists.
+    Thanks to Ryan Tandy for the bug report. (Closes: #755945)
+  * Explicitly (build) depend on libcgi-pm-perl.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 15 Oct 2014 21:14:52 +0200
+
+lemonldap-ng (1.2.5-1) unstable; urgency=low
+
+  * Imported Upstream version 1.2.5
+  * Change dependencies as proposed by upstream :
+    + Add liblwp-protocol-https-perl in dependencies
+    + Move liblemonldap-ng-handler-perl from portal dependencies to
+      suggested dependencies
+  * Remove hide-perl-warning and remove-dev-hook patches now included in
+    upstram
+  * Update description
+
+ -- Xavier Guimard <x.guimard@free.fr>  Thu, 05 Sep 2013 06:37:22 +0200
+
+lemonldap-ng (1.2.4-2) unstable; urgency=low
+
+  * Fix "transition towards Apache 2.4" by adding a patch to comment
+    Apache-2.4 example configuration files (Closes: #669808, #669809, #669822)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 02 Jun 2013 17:08:26 +0200
+
+lemonldap-ng (1.2.4-1) unstable; urgency=low
+
+  * Imported upstream version 1.2.4
+  * Replace libhttp-message-perl dependency by
+    "libhttp-message-perl | libwww-perl (<< 6)"
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 24 Apr 2013 07:05:48 +0200
+
+lemonldap-ng (1.2.3-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+
+  [ Xavier Guimard ]
+    Thanks a lot to Florian Schlichting for its review
+  * Imported upstream version 1.2.3
+  * Update debian/copyright:
+    + change remote license to GPL-2+
+    + update years
+  * Update dependencies (many changes in upstream)
+  * Remove verify-saml-signatures.patch now included in upstream
+  * Fix permissions in debian/rules instead of in postinst scripts and add
+    lintian-overrides files to hide lintian permissions warnings
+  * Add patch to fix "Use of qw(...) as parentheses is deprecated" warning
+  * Install MyHandler.pm in /usr/share/lemonldap-ng/handler/
+  * Update debian/control description
+  * Change remote license to GPL-2+ (change introduced in 1.2.3)
+  * Use dpkg --compare-versions to launch migration scripts in *.postinst
+  * Correct #DEBHELPER# usage in *.postinst
+  * Add patch to remove upstream dev hook
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 15 Apr 2013 06:33:58 +0200
+
+lemonldap-ng (1.2.2-3) unstable; urgency=low
+
+  * Remove recursive changes in debian/*.postinst (chown and chmod)
+  * Remove /var/lib/lemonldap-ng/handler from dh_installdirs list
+    (Closes: #694890)
+  * Remove pre-defined MyHandler file. Now available from examples only
+  * Move test application to examples directory
+  * Update README.Debian file
+  * Replace duplicate files by links
+  * Update descriptions
+  * Update debian/copyright (missing entries)
+  * Add verify-saml-signatures.patch, fix for CVE-2012-6426 (Closes: #696329)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 23 Dec 2012 17:36:39 +0100
+
+lemonldap-ng (1.2.2-2) unstable; urgency=low
+
+  * Change maintainer to Debian Perl Group
+  * Add Brazilian template translation (Closes: #693366)
+  * Update debian/rules to modern format
+  * Clean documentation
+  * Clean postinst scripts
+  * Update debian/copyright
+  * Replace old jquery removal script by a patch
+  * Update README.Debian
+  * Add debian/NEWS
+  * Remove lemonldap-ng-doc.dirs
+  * Add Vcs-* fields in debian/control
+  * Remove debian/distributions file
+  * Add libauthcas-perl in the recommended list
+  * Update Build-Depends-Indep to test all cases
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 30 Nov 2012 20:30:17 +0100
+
+lemonldap-ng (1.2.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standard-Version to 3.9.4
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 23 Sep 2012 07:34:49 +0200
+
+lemonldap-ng (1.2.1-1+svn20120715) unstable; urgency=low
+
+  * New upstream release
+  * SVN repo include some little bugfixes added here
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 15 Jul 2012 09:54:17 +0200
+
+lemonldap-ng (1.1.2-5) unstable; urgency=low
+
+  * Remove some mistakes reported by
+    http://lintian.debian.org/full/x.guimard@free.fr.html :
+    - use http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+      instead of
+      http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=196
+    - points to /usr/share/common-licenses/LGPL-3 instead of
+      usr/share/common-licenses/LGPL
+  * Use dh_link for examples in doc
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 24 Mar 2012 17:56:34 +0100
+
+lemonldap-ng (1.1.2-4) unstable; urgency=low
+
+  * Debian po update:
+    - da translation (Closes: #664234)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 19 Mar 2012 21:32:17 +0100
+
+lemonldap-ng (1.1.2-3) unstable; urgency=low
+
+  * Use libjs-jquery-cookie package instead of embeddeding it
+  * Upgrade to standard 3.9.3
+  * Minify js and css
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 05 Mar 2012 21:53:40 +0100
+
+lemonldap-ng (1.1.2-2) unstable; urgency=low
+
+  * Fix files not purged (Closes: #656458)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 20 Feb 2012 18:00:09 +0100
+
+lemonldap-ng (1.1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * liblemonldap-ng-portal-perl:should depend on libmime-lite-perl
+    (Closes: #645217)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 15 Oct 2011 09:16:53 +0200
+
+lemonldap-ng (1.1.1-2) unstable; urgency=low
+
+  * liblasso3-perl has been renamed to liblasso-perl
+  * lemonldap-ng should depend on javascript-common (Closes: #637223)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 18 Sep 2011 14:14:58 +0200
+
+lemonldap-ng (1.1.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 08 Aug 2011 11:31:40 +0200
+
+lemonldap-ng (1.1.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Debian po update:
+    * fi translation (Closes: #619752)
+    * ja translation update (Closes: #624829)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 09 Jul 2011 09:12:21 +0200
+
+lemonldap-ng (1.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Debian po update:
+    * es translation update (Closes: #607735)
+    * sv translation update (Closes: #608785)
+    * sk translation update (Closes: #619264)
+  * Missing build dependencies (libhtml-template-perl and libxml-simple-perl)
+    (Closes: #608878)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 26 Mar 2011 09:56:35 +0100
+
+lemonldap-ng (1.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Debian po update:
+    * ru translation (Closes:#606366)
+    * cz translation (Closes:#606435)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 17 Dec 2010 21:32:33 +0100
+
+lemonldap-ng (1.0-2) unstable; urgency=low
+
+  * Debian po update:
+    * pt translation (Closes: #605917)
+    * de translation (Closes: #605936)
+    * Minor language improvement (Closes: #605937)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 05 Dec 2010 08:16:08 +0100
+
+lemonldap-ng (1.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 01 Dec 2010 14:55:09 +0100
+
+lemonldap-ng (0.9.4.1-5) unstable; urgency=low
+
+  * Fix bug "cleanup sub slows down considerably the Apache server"
+    (Closes: #599688)
+  * quilt format
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 10 Oct 2010 10:24:04 +0200
+
+lemonldap-ng (0.9.4.1-4) unstable; urgency=low
+
+  * Spanish po-debconf template translation (Closes: #584453)
+  * Debian policy update
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 18 Sep 2010 06:56:36 +0200
+
+lemonldap-ng (0.9.4.1-3) unstable; urgency=low
+
+  * Japanese po-debconf template translation (Closes: #559396)
+  * Debian policy update
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 13 Feb 2010 14:36:40 +0100
+
+lemonldap-ng (0.9.4.1-2) unstable; urgency=low
+
+  * Lintian :
+    - lintian.override for liblemonldap-ng-conf
+    - registering doc
+  * change lemonldap-ng section to perl as claimed by archive-administrator
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 12 Oct 2009 16:26:26 +0200
+
+lemonldap-ng (0.9.4.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Russian translation (Closes: #550552)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 12 Oct 2009 14:40:46 +0200
+
+lemonldap-ng (0.9.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Closes: #512009 (closed since 0.9.3.2)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 05 Jul 2009 13:46:54 +0200
+
+lemonldap-ng (0.9.3.4-2) unstable; urgency=low
+
+  * Missing build-depends libregexp-assemble-perl (Closes: #521959)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 11 Apr 2009 08:14:19 +0200
+
+lemonldap-ng (0.9.3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Closes 3 bugs (see
+    http://forge.objectweb.org/tracker/?atid=350401&group_id=274&func=browse
+    bugs number 312418, 312625 and 312627)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Thu, 05 Feb 2009 16:27:16 +0100
+
+lemonldap-ng (0.9.3.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Closes: #510562
+  * Closes: #510563
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sat, 03 Jan 2009 09:51:55 +0100
+
+lemonldap-ng (0.9.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 31 Dec 2008 12:11:50 +0100
+
+lemonldap-ng (0.9.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Czech translation for debconf (Closes: #483301)
+  * Swedish translation for debconf (Closes: #487713)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Tue, 24 Jun 2008 15:12:09 +0200
+
+lemonldap-ng (0.9.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Xavier Guimard <x.guimard@free.fr>  Fri, 11 Apr 2008 16:48:59 +0200
+
+lemonldap-ng (0.9-1) unstable; urgency=low
+
+  New upstream release
+  * purgeCentralCache was not correctly installed (Closes: #461572)
+  * Portuguese debconf translation (Closes: #451820)
+  * German debconf translation (Closes: #462807)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 25 Feb 2008 15:06:49 +0100
+
+lemonldap-ng (0.8.3.1-1) unstable; urgency=low
+
+  * Initial release. (Closes: #429441: ITP: lemonldap-ng -- lemonldap-ng
+    is a Perl web single-sign-on system usable as Apache module - Debian
+    Bug report logs)
+
+ -- Xavier Guimard <x.guimard@free.fr>  Wed, 07 Nov 2007 16:51:23 +0100

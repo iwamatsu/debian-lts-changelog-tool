@@ -1,0 +1,556 @@
+amd64-microcode (3.20240820.1~deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the ELTS Security Team.
+  * Rebuild for buster, addressing CVE-2023-31356, CVE-2023-31315 and
+    CVE-2023-20584 (see below for details on the vulnerabilties.)
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 23 Nov 2024 13:20:52 +0100
+
+amd64-microcode (3.20240820.1~deb11u1) bullseye; urgency=medium
+
+  * Rebuild for bullseye
+  * Revert merged-usr changes from unstable
+  * Revert move to non-free-firmware
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 24 Aug 2024 09:28:39 -0300
+
+amd64-microcode (3.20240820.1) unstable; urgency=high
+
+  * Update package data from linux-firmware 20240820
+    * New AMD-SEV firmware from AMD upstream (20240820)
+      + Updated SEV firmware:
+        Family 17h models 30h-3fh: version 0.24 build 20
+        Family 19h models 00h-0fh: version 1.55 build 21
+        Family 19h models 10h-1fh: version 1.55 build 37
+      + New SEV firmware:
+        Family 19h models a0h-afh: version 1.55 build 37
+  * SECURITY UPDATE (AMD-SB-3003):
+    * Mitigates CVE-2023-20584: IOMMU improperly handles certain special
+      address ranges with invalid device table entries (DTEs), which may allow
+      an attacker with privileges and a compromised Hypervisor to induce DTE
+      faults to bypass RMP checks in SEV-SNP, potentially leading to a loss of
+      guest integrity.
+    * Mitigates CVE-2023-31356: Incomplete system memory cleanup in SEV
+      firmware could allow a privileged attacker to corrupt guest private
+      memory, potentially resulting in a loss of data integrity.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 21 Aug 2024 21:31:07 -0300
+
+amd64-microcode (3.20240710.2~deb11u1) bullseye; urgency=high
+
+  * Rebuild for bullseye
+  * Revert merged-usr changes from unstable
+  * Revert move to non-free-firmware
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 12 Aug 2024 09:59:32 -0300
+
+amd64-microcode (3.20240710.2) unstable; urgency=high
+
+  * postrm: activate the update-initramfs dpkg trigger on remove/purge
+    instead of always executing update-initramfs directly, just like it
+    was done for postinst in 3.20240710.1: call update-initramfs directly
+    only if the dpkg-trigger activation call fails.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 12 Aug 2024 09:00:19 -0300
+
+amd64-microcode (3.20240710.1) unstable; urgency=high
+
+  * Update package data from linux-firmware 20240709-141-g59460076
+    (closes: #1076128)
+  * SECURITY UPDATE: Mitigates "Sinkclose" CVE-2023-31315 (AMD-SB-7014) on
+    AMD Epyc processors: SMM lock bypass - Improper validation in a model
+    specific register (MSR) could allow a malicious program with ring 0
+    access (kernel) to modify SMM configuration while SMI lock is enabled,
+    potentially leading to arbitrary code execution.
+    Note: a firmware update is recommended for AMD Epyc (to protect the
+    system as early as possible).  Many other AMD processor models are
+    also vulnerable to SinkClose, and can only be fixed by a firmware
+    update at this time.
+  * Updated Microcode patches:
+    + Family=0x17 Model=0x01 Stepping=0x02: Patch=0x0800126f
+    + Family=0x17 Model=0x31 Stepping=0x00: Patch=0x0830107c
+    + Family=0x19 Model=0x01 Stepping=0x00: Patch=0x0a00107a
+    + Family=0x19 Model=0x11 Stepping=0x02: Patch=0x0a101248
+    + Family=0x19 Model=0xa0 Stepping=0x02: Patch=0x0aa00215
+    + Family=0x19 Model=0x01 Stepping=0x02: Patch=0x0a001238
+    + Family=0x19 Model=0x11 Stepping=0x01: Patch=0x0a101148
+    + Family=0x19 Model=0x01 Stepping=0x01: Patch=0x0a0011d5
+  * README.Debian: "late" microcode updates are unsupported in Debian
+    (closes: #1074514)
+  * postinst: use dpkg-trigger to activate update-initramfs, this enables
+    dracut integration (closes: #1000193)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 11 Aug 2024 18:38:59 -0300
+
+amd64-microcode (3.20240116.2) unstable; urgency=medium
+
+  * Add AMD-TEE firmware to the package (closes: #1062678)
+    + amdtee: add amd_pmf TA firmware 20230906
+  * debian: install amdtee to /lib/firmware/amdtee
+  * debian/control: update short and long descriptions
+  * debian/copyright: update with amd-pmf license
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 15 Feb 2024 16:56:06 -0300
+
+amd64-microcode (3.20240116.1) unstable; urgency=medium
+
+  * Update package data from linux-firmware 20240115-80-gb4b04a5c
+  * Updated Microcode patches:
+    + Family=0x17 Model=0x31 Stepping=0x00: Patch=0x0830107b
+    + Family=0x19 Model=0x01 Stepping=0x01: Patch=0x0a0011d3
+    + Family=0x19 Model=0x01 Stepping=0x02: Patch=0x0a001236
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 06 Feb 2024 15:35:27 -0300
+
+amd64-microcode (3.20231019.1) unstable; urgency=medium
+
+  * Update package data from linux-firmware 20231019
+  * Updated Microcode patches:
+    + Family=0x19 Model=0x11 Stepping=0x01: Patch=0x0a101144
+    + Family=0x19 Model=0x11 Stepping=0x02: Patch=0x0a101244
+    + Family=0x19 Model=0xa0 Stepping=0x02: Patch=0x0aa00213
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 21 Oct 2023 15:06:29 -0300
+
+amd64-microcode (3.20230823.1) unstable; urgency=medium
+
+  * Update package data from linux-firmware 20230919
+    * New AMD-SEV firmware from AMD upstream (20230823)
+      + Updated SEV firmware:
+        Family 19h models 00h-0fh: version 1.55 build 8
+      + New SEV firmware:
+        Family 19h models 10h-1fh: version 1.55 build 21
+  * amd-ucode: Add note on fam19h warnings.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 13 Oct 2023 02:02:47 -0300
+
+amd64-microcode (3.20230808.1.1~deb11u1) bullseye; urgency=medium
+
+  * Build for bullseye
+  * Revert move to non-free-firmware
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 02 Sep 2023 20:38:42 -0300
+
+amd64-microcode (3.20230808.1.1) unstable; urgency=high
+
+  * Update package data from linux-firmware 20230804-6-gf2eb058a
+    * Fixes for CVE-2023-20569 "AMD Inception" on AMD Zen4 processors
+    (closes: #1043381)
+  * WARNING: for proper operation on AMD Genoa and Bergamo processors,
+    either up-to-date BIOS (with AGESA 1.0.0.8 or newer) or up-to-date
+    Linux kernels (minimal versions on each active Linux stable branch:
+    v4.19.289 v5.4.250 v5.10.187 v5.15.120 v6.1.37 v6.3.11 v6.4.1)
+    are *required*
+  * New Microcode patches:
+    +  Family=0x19 Model=0x11 Stepping=0x01: Patch=0x0a10113e
+    +  Family=0x19 Model=0x11 Stepping=0x02: Patch=0x0a10123e
+    +  Family=0x19 Model=0xa0 Stepping=0x02: Patch=0x0aa00212
+    +  Family=0x19 Model=0xa0 Stepping=0x01: Patch=0x0aa00116
+  * README: update for new release
+  * debian/NEWS: AMD Genoa/Bergamo kernel version restrictions
+  * debian/changelog: update entry for release 3.20230719.1, noting
+    that it included fixes for "AMD Inception" for Zen3 processors.
+    We did not know about AMD Inception at the time, but we always
+    include all available microcode updates when issuing a new
+    package, so we lucked out.
+  * debian/changelog: correct some information in 3.20230808.1
+    entry and reupload as 3.20230808.1.1.  There's no Zenbleed
+    for Zen4... oops!
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 10 Aug 2023 10:18:38 -0300
+
+amd64-microcode (3.20230719.1~deb11u1) bullseye-security; urgency=high
+
+  * Build for bullseye-security
+  * Revert move to non-free-firmware
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 24 Jul 2023 16:19:13 -0300
+
+amd64-microcode (3.20230719.1~deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Rebuild for buster-security.
+  * Revert move to non-free-firmware
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Mon, 31 Jul 2023 12:02:41 +0200
+
+amd64-microcode (3.20230719.1) unstable; urgency=high
+
+  * Update package data from linux-firmware 20230625-39-g59fbffa9:
+    * Fixes for CVE-2023-20593 "Zenbleed" on AMD Zen2 processors
+      (closes: #1041863)
+    * Fixes for CVE-2023-20569 "AMD Inception" on AMD Zen3 processors
+      (this changelog entry time-travelled from the future, we were
+      lucky we always include all microcode updates available)
+    * New Microcode patches:
+      + Family=0x17 Model=0xa0 Stepping=0x00: Patch=0x08a00008
+    * Updated Microcode patches:
+      + Family=0x17 Model=0x31 Stepping=0x00: Patch=0x0830107a
+      + Family=0x19 Model=0x01 Stepping=0x00: Patch=0x0a001079
+      + Family=0x19 Model=0x01 Stepping=0x01: Patch=0x0a0011d1
+      + Family=0x19 Model=0x01 Stepping=0x02: Patch=0x0a001234
+  * README: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 24 Jul 2023 13:07:34 -0300
+
+amd64-microcode (3.20230414.1) unstable; urgency=medium
+
+  * Update package data from linux-firmware 20230404-38-gfab14965:
+    (closes: #1031103)
+    * Updated Microcode patches:
+      + Family=0x17 Model=0x31 Stepping=0x00: Patch=0x08301072
+      + Family=0x19 Model=0x01 Stepping=0x00: Patch=0x0a001078
+      + Family=0x19 Model=0x01 Stepping=0x01: Patch=0x0a0011ce
+      + Family=0x19 Model=0x01 Stepping=0x02: Patch=0x0a001231
+  * README: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 28 Apr 2023 17:24:39 -0300
+
+amd64-microcode (3.20220411.2) unstable; urgency=medium
+
+  * Move source and binary from non-free/admin to non-free-firmware/admin
+    following the 2022 General Resolution about non-free firmware.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 17 Feb 2023 01:19:05 +0100
+
+amd64-microcode (3.20220411.1) unstable; urgency=medium
+
+  * Update package data from linux-firmware 20220411:
+    * New microcode updates from AMD upstream (20220408)
+      (closes: #1006444, #1009333)
+      + New Microcode patches:
+        sig 0x00830f10, patch id 0x08301055, 2022-02-15
+        sig 0x00a00f10, patch id 0x0a001058, 2022-02-10
+        sig 0x00a00f11, patch id 0x0a001173, 2022-01-31
+        sig 0x00a00f12, patch id 0x0a001229, 2022-02-10
+      + Updated Microcode patches:
+        sig 0x00800f12, patch id 0x0800126e, 2021/11/11
+    * New AMD-SEV firmware from AMD upstream (20220308)
+      Fixes: CVE-2019-9836 (closes: #970395)
+      + New SEV firmware:
+        Family 17h models 00h-0fh: version 0.17 build 48
+        Family 17h models 30h-3fh: version 0.24 build 15
+        Family 19h models 00h-0fh: version 1.51 build 3
+  * README: update for new release
+  * debian: ship AMD-SEV firmware.
+    Upstream license is the same license used for amd-ucode
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 15 Apr 2022 18:27:36 -0300
+
+amd64-microcode (3.20191218.1) unstable; urgency=medium
+
+  * New microcode update packages from AMD upstream:
+    + Removed Microcode updates (known to cause issues):
+      sig 0x00830f10, patch id 0x08301025, 2019-07-11
+  * README: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 20 Dec 2019 18:36:27 -0300
+
+amd64-microcode (3.20191021.1) unstable; urgency=medium
+
+  * New microcode update packages from AMD upstream:
+    + New Microcodes:
+      sig 0x00830f10, patch id 0x08301025, 2019-07-11
+    + Updated Microcodes:
+      sig 0x00800f12, patch id 0x08001250, 2019-04-16
+      sig 0x00800f82, patch id 0x0800820d, 2019-04-16
+  * README: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 22 Oct 2019 21:00:17 -0300
+
+amd64-microcode (3.20181128.1) unstable; urgency=medium
+
+  * New microcode update packages from AMD upstream:
+    + New Microcodes:
+      sig 0x00800f82, patch id 0x0800820b, 2018-06-20
+  * README: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 15 Dec 2018 18:42:12 -0200
+
+amd64-microcode (3.20180524.1) unstable; urgency=high
+
+  * New microcode update packages from AMD upstream:
+    + Re-added Microcodes:
+      sig 0x00610f01, patch id 0x06001119, 2012-07-13
+  * This update avoids regressing sig 0x610f01 processors on systems with
+    outdated firmware by adding back exactly the same microcode patch that was
+    present before [for these processors].  It does not implement Spectre-v2
+    mitigation for these processors.
+  * README: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 25 May 2018 15:38:22 -0300
+
+amd64-microcode (3.20180515.1) unstable; urgency=high
+
+  * New microcode update packages from AMD upstream:
+    + New Microcodes:
+      sig 0x00800f12, patch id 0x08001227, 2018-02-09
+    + Updated Microcodes:
+      sig 0x00600f12, patch id 0x0600063e, 2018-02-07
+      sig 0x00600f20, patch id 0x06000852, 2018-02-06
+    + Removed Microcodes:
+      sig 0x00610f01, patch id 0x06001119, 2012-07-13
+  * Adds Spectre v2 (CVE-2017-5715) microcode-based mitigation support,
+    plus other unspecified fixes/updates.
+  * README, debian/copyright: update for new release
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 19 May 2018 13:51:06 -0300
+
+amd64-microcode (3.20171205.2) unstable; urgency=medium
+
+  * debian/control: update Vcs-* fields for salsa.debian.org
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 04 May 2018 07:51:40 -0300
+
+amd64-microcode (3.20171205.1) unstable; urgency=high
+
+  * New microcode updates (closes: #886382):
+    sig 0x00800f12, patch id 0x08001213, 2017-12-05
+    Thanks to SuSE for distributing these ahead of AMD's official release!
+  * Add IBPB support for family 17h AMD processors (CVE-2017-5715)
+  * README: describe source for faml17h microcode update
+  * Upload to unstable to match IBPB microcode support on Intel in Debian
+    unstable.
+  * WARNING: requires at least kernel 4.15, 4.14.13, 4.9.76, 4.4.111 (or a
+    backport of commit f4e9b7af0cd58dd039a0fb2cd67d57cea4889abf
+    "x86/microcode/AMD: Add support for fam17h microcode loading") otherwise
+    it will not be applied to the processor.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 08 Jan 2018 12:19:57 -0200
+
+amd64-microcode (3.20160316.3) unstable; urgency=medium
+
+  * initramfs: Make the early initramfs reproducible (closes: #845194)
+  * rules: switch to simplified dh-based build (debhelper v9)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 29 Nov 2016 23:54:53 -0200
+
+amd64-microcode (3.20160316.2) unstable; urgency=medium
+
+  * NEWS.debian: fix minor typo
+  * debian/control, debian/compat: bump debhelper compat mode to 9
+  * debian/control: bump standards version to 3.9.8 (no changes needed)
+  * debian/: prefix binary-package control files with package name
+  * debian/control: recommend tiny-initramfs as an alternative to
+    initramfs-tools tiny-initramfs specifically supports early microcode
+    updates, so it is a viable alternative to initramfs-tools
+    (closes: #839882)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 09 Oct 2016 15:43:16 -0300
+
+amd64-microcode (3.20160316.1) unstable; urgency=low
+
+  * Bump major version number to 3: early-initramfs support
+  * Support is now restricted to Linux kernel 3.14 and later.  For older
+    kernels, please use the version 2 (older) branch of the package.
+  * Implement early-initramfs mode, and remove normal mode
+    * debian/control: add versioned recommends for initramfs-tools and
+      dracut.  Note that dracut 044 is required for Linux 4.4 and later,
+      otherwise dracut 040 would be enough
+    * debian/default: add early mode, remove normal mode from comments
+    * initramfs hook: use cpio to generate an early-initramfs with
+      microcode for all processors, blacklist kernels older than 3.14,
+      and remove normal mode support.
+    * initramfs.init-premount: remove, not needed for early-initramfs
+    * debian/rules: don't install init-premount initramfs script.
+  * initramfs.hook: detect a missing microcode.ko and don't attempt to
+    force_load() it.  In verbose mode, log when the microcode driver is
+    modular.  For Linux 4.4 and later, skip the module loading logic
+    (closes: #809444)
+  * README.Debian: update for early initramfs support, and add information
+    on how to disable early updates using the dis_ucode_ldr kernel boot
+    parameter
+  * Support for x32 was enabled in debian/control for the 2.20160316.1
+    upload, but the changelog did not record this by mistake.  The missing
+    entry was retroactively added to debian/changelog by this upload
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 10 Apr 2016 16:31:23 -0300
+
+amd64-microcode (2.20160316.1) unstable; urgency=critical
+
+  * Upstream release 20160316 built from linux-firmware:
+    + Updated Microcodes:
+      sig 0x00600f20, patch id 0x0600084f, 2016-01-25
+    + This microcode updates fixes a critical erratum on NMI handling
+      introduced by microcode patch id 0x6000832 from the 20141028 update.
+      The erratum is also present on microcode patch id 0x6000836.
+    + THIS IS A CRITICAL STABILITY AND SECURITY UPDATE FOR THE EARLIER
+      AMD PILEDRIVER PROCESSORS, including:
+      + AMD Opteron 3300, 4300, 6300
+      + AMD FX "Vishera" (43xx, 63xx, 83xx, 93xx, 95xx)
+      + AMD processors with family 21, model 2, stepping 0
+  * Robert Święcki, while fuzzing the kernel using the syzkaller tool,
+    uncovered very strange behavior on an AMD FX-8320, later reproduced on
+    other AMD Piledriver model 2, stepping 0 processors including the Opteron
+    6300.  Robert discovered, using his proof-of-concept exploit code, that
+    the incorrect behavior allows an unpriviledged attacker on an unpriviledged
+    VM to corrupt the return stack of the host kernel's NMI handler.  At best,
+    this results in unpredictable host behavior.  At worst, it allows for an
+    unpriviledged user on unpriviledged VM to carry a sucessful host-kernel
+    ring 0 code injection attack.
+  * The erratum is timing-dependant, easily triggered by workloads that cause
+    a high number of NMIs, such as running the "perf" tool.
+  * debian/control: enable buiding on x32 (closes: #777233)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 19 Mar 2016 14:02:44 -0300
+
+amd64-microcode (2.20141028.1) unstable; urgency=medium
+
+  * Upstream release 20141028 built from linux-firmware:
+    + Updated microcode patches for family 0x15 processors
+    + Added microcode patches for family 0x16 processors
+  * AMD did not update the relevant microcode documentation (errata fixed,
+    microcode patch levels, etc), so there is no documentation for the
+    family 0x16 microcode patches, and the documentation for family 0x15 is
+    stale.
+  * postinst: do not update microcode on upgrades:
+    Remove code that triggers a microcode update on package upgrade.  The
+    resulting postinst script is now identical to the one in Debian jessie's
+    intel-microcode, and thus known-good.
+    NOTE: this code was already disabled for the majority of the users due
+    to Debian bug #723975 (closes: #723975, #723081)
+  * kpreinst: remove, we don't update microcode on postinst anymore
+  * blacklist automated loading of the microcode module:
+    This is in line with the desired behavior of only updating microcode
+    *automatically* during system boot, when it is safer to do so.  The
+    local admin can still load the microcode module and update the microcode
+    manually at any time, of course.  This is in sync with the intel-microcode
+    packages in Debian jessie, which will also blacklist the microcode module.
+    Note that the initramfs will force-load the microcode module in a safe
+    condition, the blacklist avoids module autoloading outside the initramfs
+  * control: bump standards version (no changes required)
+  * copyright: update upstream URL and upstream copyright date
+    (closes: #753593)
+  * docs: future-proof by using a glob pattern for per-family README files
+  * initramfs hook: support forced installation of amd64-microcode:
+    Add a config file (/etc/default/amd64-microcode) to select the mode of
+    operation: do nothing, force install to initramfs, install only when
+    running on an amd64 processor (closes: #726854)
+  * initramfs hook: fix (likely unexploitable) issues found by shellcheck
+  * Add a NEWS.Debian file to warn users we will no longer update the
+    microcode on package upgrade (note that we were not doing it on any
+    Debian kernels anyway).  Also document the existence of the new
+    /etc/default/amd64-microcode file
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 18 Dec 2014 13:36:27 -0200
+
+amd64-microcode (2.20131007.1+really20130710.1) unstable; urgency=low
+
+  * Fix M-D-Y issue that leaked to the package version number
+  * The real upstream release date is 2013-07-10
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 07 Sep 2013 22:22:00 -0300
+
+amd64-microcode (2.20131007.1) unstable; urgency=low
+
+  * New upstream release, received through linux-firmware and LKML
+    + updated microcode:
+      sig 0x00500F10, id 0x05000029: erratum (+) 784;
+      sig 0x00500F20, id 0x05000119: erratum (+) 784;
+      sig 0x00600F12, id 0x0600063D: errata (-) 668, (+) 759, 778;
+    + new microcode:
+      sig 0x00200F31, id 0x02000032: errata 311, 316;
+      sig 0x00600F20, id 0x06000822: errata 691, 699, 704, 708, 709, 734,
+          740, 778;
+    + This update fixes important processor bugs that cause data corruption
+      or unpredictable system behaviour.  It also fixes a performance issue
+      and several issues that cause system lockup.
+  * Switch to native package, since there is no upstream tarball
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 07 Sep 2013 15:22:09 -0300
+
+amd64-microcode (2.20120910-1) unstable; urgency=high
+
+  * debian/control: update Breaks for new intel-microcode version scheme
+  * Bump major version number, this will allow us to also update the stable
+    branch of amd64-microcode in the future without clashing with the stable
+    branch of intel-microcode.  The real issue is that amd64-microcode
+    1.20120910-3 and intel-microcode 1.20130222.6 have changed (in lockstep)
+    to a different initramfs cooperation protocol, but I failed to bump the
+    major version at that time
+  * Urgency high to avoid delaying a series of high-priority intel-microcode
+    updates being done at the moment: we need this version in testing before
+    I can upload stable backports of intel-microcode or amd64-microcode
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 18 Aug 2013 16:19:42 -0300
+
+amd64-microcode (1.20120910-3) unstable; urgency=low
+
+  * control: remove homepage and update standards-version
+  * initramfs: update copyright information
+  * initramfs, postinst: don't do anything on non-AMD systems (Closes: #715518)
+  * initramfs, postinst: blacklist several kernel versions (Closes: #717185)
+  * control: add breaks: intel-microcode (<< 1.20130222.6~)
+  * load microcode module on package install/upgrade
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 20 Jul 2013 12:45:04 -0300
+
+amd64-microcode (1.20120910-2) unstable; urgency=medium
+
+  * initramfs: work around initramfs-tools bug #688794.
+    Use "_" in place of "+-." for the initramfs script name.  This works
+    around a PANIC during boot when the initramfs was created in a system
+    with noexec $TMPDIR.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Tue, 09 Oct 2012 08:18:01 -0300
+
+amd64-microcode (1.20120910-1) unstable; urgency=medium
+
+  * AMD microcode release 20120910
+    + updated microcode:
+      sig 0x00600F12, id 0x06000629: errata (+) 691, 709, 740;
+    + new microcode:
+      sig 0x00610F01, id 0x06001119: errata 671, 686, 697, 698, 699, 704, 709,
+          734, 740;
+    + This update adds critical errata fixes for commonly used features.
+      The hit probability of these errata is unknown to the Debian maintainer.
+  * README.Debian: mention module-init-tools, not just kmod.  This is useful
+    when backporting to Debian Squeeze
+  * debian/control: add Vcs-* fields
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 14 Sep 2012 15:39:37 -0300
+
+amd64-microcode (1.20120117-2) unstable; urgency=low
+
+  * debian/control: priority of this package should be standard,
+    not extra.  All AMD-based X86 boxes should install this package
+  * debian/control: update package description
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 09 Jul 2012 21:50:35 -0300
+
+amd64-microcode (1.20120117-1) unstable; urgency=low
+
+  * Update ABI (first component of package version) to 1, to match
+    the ABI of intel-microcode packages with /lib/firmware support
+  * Update online processor cores and the initramfs image on package
+    upgrade and the initramfs on package removal
+  * Install initramfs-tools helpers to handle boot-time microcode
+    updates
+  * README.Debian: describe supported mod/built-in configs
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 09 Jul 2012 19:31:47 -0300
+
+amd64-microcode (0.20120117-1) unstable; urgency=medium
+
+  * AMD microcode release 20120117:
+    sig 0x00100F22, id 0x01000083: errata 244, 260, 280, 302, 308, 315, 342;
+    sig 0x00100F23, id 0x01000083: errata 244, 260, 280, 302, 308, 315, 342;
+    sig 0x00100F2A, id 0x01000084: errata 244, 260, 280, 302, 308, 315, 342;
+    sig 0x00100F42, id 0x010000DB: errata 342, 440, 573;
+    sig 0x00100F43, id 0x010000C8: errata 407, 440;
+    sig 0x00100F52, id 0x010000DB: errata 342, 440, 573;
+    sig 0x00100F53, id 0x010000C8: errata 407, 440;
+    sig 0x00100F62, id 0x010000C7: errata 407, 440;
+    sig 0x00100F63, id 0x010000C8: errata 407, 440;
+    sig 0x00100F80, id 0x010000DA: errata 419, 440, 573;
+    sig 0x00100F81, id 0x010000D9: errata 406, 407, 440, 573, 669;
+    sig 0x00100F91, id 0x010000D9: errata 406, 407, 440, 573, 669;
+    sig 0x00100FA0, id 0x010000DC: errata 438, 440, 573;
+    sig 0x00300F10, id 0x03000027: errata 564, 573, 662, 686;
+    sig 0x00500F10, id 0x05000028: errata 461, 564, 594, 595;
+    sig 0x00500F20, id 0x0500010D: errata 461, 564, 594, 639, 662, 686;
+    sig 0x00600F12, id 0x06000624: errata 659, 660, 661, 668, 671, 672, 673;
+  * Initial upload to Debian, urgency medium because we need this in Wheezy
+    to properly support AMD processors.  Closes: #676921.
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 10 Jun 2012 12:22:01 -0300

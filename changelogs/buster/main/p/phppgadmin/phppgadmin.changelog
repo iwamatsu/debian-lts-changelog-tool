@@ -1,0 +1,601 @@
+phppgadmin (5.1+ds-4+deb10u1) buster-security; urgency=high
+
+  * Non-maintainer upload by the Debian LTS team.
+  * CVE-2023-40619: Prevent an issue related to the deserialisation of
+    untrusted data, which may have led to remote code execution because
+    user-controlled data was passed directly to the PHP 'unserialize()'
+    function. (Closes: #1053004)
+
+ -- Chris Lamb <lamby@debian.org>  Thu, 02 Nov 2023 15:45:45 +0100
+
+phppgadmin (5.1+ds-4) unstable; urgency=medium
+
+  * Team upload.
+  * Move maintainer address to team+postgresql@tracker.debian.org.
+  * Remove myself from Uploaders.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Mon, 11 Feb 2019 09:32:02 +0100
+
+phppgadmin (5.1+ds-3) unstable; urgency=medium
+
+  [ Christoph Berg ]
+  * Move packaging repository to salsa.debian.org
+
+  [ Jean-Michel Vourgère ]
+  * Bumped policy to 4.1.3: Priority is now optional.
+  * Bumped compat to 11. 
+  * Fix exports with new patch fix-obsolete-pgdump-flag to remove -i option
+    from pg_dump calls. Thanks to roger21. Closes: #886454
+  * Add support for postgres version with 2 digits with patch
+    2digit-pg-versions. Closes: #888446
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Wed, 14 Feb 2018 20:52:56 +0000
+
+phppgadmin (5.1+ds-2) unstable; urgency=medium
+
+  [ Jean-Michel Vourgère ]
+  * Updated to PHP7. Thanks Nishanth Aravamudan. Closes: #821606
+  * Downgraded postgresql-doc from Recommends to Suggests.
+  * Dropped list of postgresql supported versions from package description.
+  * Updates uploaders: Removed Peter Eisentraut, updated my email address.
+  * Dropped lintian override for build-depends on dh-apache2, fixed in lintian.
+  * Bumped policy to 3.9.8: No change required.
+  * Switched Vcs-Git to a secure uri.
+
+  [ Christoph Berg ]
+  * Remove myself from Uploaders, thanks Jean-Michel for taking over!
+    Closes: #777617.
+
+ -- Jean-Michel Vourgère <nirgal@debian.org>  Tue, 26 Apr 2016 23:10:21 +0200
+
+phppgadmin (5.1+ds-1) unstable; urgency=low
+
+  [ Christoph Berg ]
+  * Depends: | php5, so alternative PHP server-side engines like php5-fpm can
+    be used.  Closes: #710101.
+  * Set team as maintainer.
+
+  [ Jean-Michel Nirgal Vourgère ]
+  * Added myself in uploaders.
+  * Lintian override for build-depends on dh-apache2.
+  * d/copyright: Change to DEP5 format.
+  * Remove binary only jquery.js from source:
+    . Add +ds suffix to version in d/changelog and d/watch.
+    . Add Files-Excluded in d/copyright.
+    . Drop jquery license from d/copyright.
+    . d/rules no longer needs to rm jquery.js, move link creation to d/links.
+  * Use debian version of php-adodb:
+    . d/copyright: Add Files-Excluded to remove from source, remove license.
+    . Create link in d/links.
+    . Add dir_to_symlink in maintscript.
+    . Add Depends: libphp-adodb.
+  * Minimise d/rules so that get-orig-source target is provided:
+    . New d/clean file
+  * Update dpkg-maintscript-helper calls:
+    . Stop moving old old conf in /etc/apache2/conf.d/.
+    . Drop (pre|post)(inst|rm) for a d/maintscript.
+    . Added Pre-Depends on ${misc:Pre-Depends}.
+  * Drop obsolete file d/svn-deblayout.
+  * Limit lang/ installed files to *.php rather than removing other
+    files after dh_install.
+  * Bumped compat level to 9.
+  * Allow configuration without essential apache module 'dir'. Closes:
+    #779544.
+  * New patch scriptexec_lines_start_with_semicol.diff to fix partial
+    SQL execution failure. Closes: #762378.
+  * d/control: Update Vcs-Browser to match alioth changes.
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Tue, 28 Apr 2015 14:12:23 +0200
+
+phppgadmin (5.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Changes for apache2.4 settings (Closes: #669837)
+    . Upgrade phppgadmin.conf restriction to localhost to 2.4 format.
+    . Update rules:
+        Use "--with apache2" in rules.
+        No longer copying apache.conf, dh_apache2 does that.
+    . Rename apache.conf into phppgadmin.conf.
+    . Drop /etc/apache2/conf.d from dirs.
+    . Remove manual reload of apache in maintainer scripts, dh_apache2 does it
+      automatically.
+    . Build-depends on dh-apache2.
+    . Use {$misc:Suggests} so apache2 is no longer a direct Depends.
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Mon, 22 Jul 2013 13:01:15 +0000
+
+phppgadmin (5.1-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fixes PHP 5.4 Strict errors.  Closes: #693404.
+  * Remove debian/patches/slony1-path.patch.
+  * Fix path to apache config in README.Debian, thanks to Matthew Vernon for
+    spotting.  Closes: #683267.
+  * Move packaging to git.debian.org.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 18 Apr 2013 12:04:59 +0200
+
+phppgadmin (5.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Christoph Berg <myon@debian.org>  Fri, 23 Mar 2012 09:50:08 +0100
+
+phppgadmin (5.0.3-2) unstable; urgency=low
+
+  * Install js subdirectory.  Closes: #641127.
+  * Isaac has retired from Debian, taking over as maintainer.
+    Closes: #656002.
+  * Convert apache config snipped from symlink to file, as the symlink is dead
+    while phppgadmin is not yet configured (the file is still called .dpkg-new
+    at this point).  Closes: #511133.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 01 Feb 2012 18:24:54 +0100
+
+phppgadmin (5.0.3-1) unstable; urgency=low
+
+  * New upstream release, fixes XSS vulnerabilities.
+    Closes: #644290, CVE-2011-3598.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 05 Oct 2011 21:47:32 +0200
+
+phppgadmin (5.0.2-2) unstable; urgency=low
+
+  * NMU changelog for 4.2.3-1.1 was not included in 5.0.2-1, fix that.
+    (Changes went upstream.)
+
+ -- Christoph Berg <myon@debian.org>  Sun, 19 Jun 2011 10:20:42 +0200
+
+phppgadmin (5.0.2-1) unstable; urgency=low
+
+  * New upstream release (closes: #612316)
+    + Data export fixed (closes: #575396)
+    + Correct appcharset in Czech localization (closes: #533242)
+    + Supports post-8.3 per-table autovacuum configuration
+      (closes: #550386)
+  * Add instructions for the reports database to README.Debian; also
+    install INSTALL file (closes: #627895)
+  * Correct access instructions wrt the postgres user in README.Debian
+    (closes: #519932)
+  * Add php5-cgi code to apache config, only used if mod_php5 is not
+    installed; disable FollowSymlinks (closes: #391397)
+  * Depend on libjs-jquery instead of shipping our own copy.
+    (Using libphp-adodb does not work at the moment.)
+  * Include copyright terms of libraries included in debian/copyright.
+  * Update description with current list of supported versions.
+  * Bump to dh 7.
+  * Add myself as co-maintainer
+
+ -- Christoph Berg <myon@debian.org>  Wed, 15 Jun 2011 18:02:28 +0200
+
+phppgadmin (4.2.3-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * debian/patches
+    - (php5.3-reference-value-fix.patch): New. Patch thanks to
+      Alan Chandler <alan.chandler@chandlerfamily.org.uk>.
+      (grave; Closes: #571220).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 15 Oct 2010 17:05:27 +0300
+
+phppgadmin (4.2.3-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes PHP 5.3 compatibility (closes: #571220)
+  * Updated standards version
+  * Use set -e in postinst, per Lintian
+  * Converted to source format 3.0 (quilt)
+  * Remove executable permissions from *.php files, per Lintian
+
+ -- Peter Eisentraut <petere@debian.org>  Tue, 27 Apr 2010 23:32:42 +0300
+
+phppgadmin (4.2.2-1) unstable; urgency=low
+
+  * New upstream release
+    - Fixes local file inclusion vulnerability (CVE-2008-5587) (closes: #508026)
+  * Removed register_globals from debian/apache.conf (closes: #508026)
+
+ -- Peter Eisentraut <petere@debian.org>  Wed, 31 Dec 2008 19:32:22 +0200
+
+phppgadmin (4.2.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Peter Eisentraut <petere@debian.org>  Mon, 11 Aug 2008 12:16:00 +0300
+
+phppgadmin (4.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Added myself as comaintainer
+  * Added to pkg-postgresql SVN (closes: #483606)
+  * Added Homepage control field
+  * Added watch file
+  * Fixed slony1 paths (closes: #414986)
+  * New config.inc.php version, patches managed with quilt
+  * Put postgresql and slony1-bin into Suggests
+  * Removed support for old web servers and PHP, dropped debconf use
+    (closes: #485861)
+  * Revised README.Debian
+  * Updated standards version
+  * Changed to Debhelper level 5
+
+ -- Peter Eisentraut <petere@debian.org>  Fri, 20 Jun 2008 15:52:34 +0200
+
+phppgadmin (4.1.3-0.3) unstable; urgency=low
+
+  * Non-maintainer upload to fix pending l10n issues
+  * Debconf translations:
+    - Italian. Closes: #460129
+    - Japanese. Closes: #463245
+    - Galician. Closes: #484095
+    - Turkish. Closes: #484518
+    - Basque. Closes: #484939
+  * [Lintian] Drop the (now?) useless build dependency on dpatch
+
+ -- Christian Perrier <bubulle@debian.org>  Thu, 22 May 2008 17:58:34 +0200
+
+phppgadmin (4.1.3-0.2) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Added support for IPv6 in default Apache access configuration
+    (closes: #397928)
+
+ -- Peter Eisentraut <petere@debian.org>  Tue, 01 Apr 2008 13:45:53 +0200
+
+phppgadmin (4.1.3-0.1) unstable; urgency=low
+
+  * Non-maintainer upload from the Zurich BSP.
+  * Fixes cross-site scripting vulnerability (CVE 2007-5728), closes: #449103.
+    The only changes introduced upstream with this version were to fix this
+    bug.
+
+ -- Tobias Klauser <tklauser@access.unizh.ch>  Sun, 13 Jan 2008 17:52:27 +0100
+
+phppgadmin (4.1.2-1) unstable; urgency=low
+
+  * New upstream release
+    * Fixes security bug (CVE-2007-2865), closes: #427151 
+  * Update configuration files
+  * Prefer php5 over php4 on install
+  * NMU acknowledge, closes: #405849, #411057, #413772, #417007
+
+ -- Isaac Clerencia <isaac@debian.org>  Sat, 02 Jun 2007 14:25:23 +0200
+
+phppgadmin (4.0.1-3.2) unstable; urgency=high
+
+  * Non-maintainer upload during BSP.
+  * Fix unconditional use of debconf in postrm (Closes: #417007).
+  * Update Portuguese debconf translation (Closes: #413772).
+
+ -- Luk Claes <luk@debian.org>  Sat, 19 May 2007 18:45:10 +0200
+
+phppgadmin (4.0.1-3.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix pending l10n issues.
+  * Debconf translations:
+    - Dutch. Closes: #405849
+    - German. Closes: #411057
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 27 Feb 2007 18:42:29 +0100
+
+phppgadmin (4.0.1-3) unstable; urgency=low
+
+  +++ Changes by Christian Perrier +++
+  * Debconf templates translations:
+    - Portuguese added. Closes: #381431
+    - Dutch added. Closes: #383338
+    - Spanish updated. Closes: #383086
+    - Swedish updated. Sent during the call for updates of the NMU campaign.
+    - Czech updated. Sent during the call for updates of the NMU campaign.
+    - Russian added. Sent during the call for updates of the NMU campaign.
+    - Brazilian Portuguese updated. Sent during the call for updates
+      of the NMU campaign.
+    - Vietnamese updated. Sent during the call for updates of the NMU campaign.
+  * Lintian fixes:
+    - Move debhelper and dpatch to Build-Depends
+    - Rewrite debconf templates to fix the Developers Reference suggested
+      write style
+
+ -- Isaac Clerencia <isaac@debian.org>  Thu,  7 Dec 2006 08:06:52 +0100
+
+phppgadmin (4.0.1-2) unstable; urgency=low
+
+  * Remove dangling links from conf.d dirs when removing the package,
+    closes: #355508
+
+ -- Isaac Clerencia <isaac@debian.org>  Mon,  6 Mar 2006 08:44:56 +0100
+
+phppgadmin (4.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Added debconf translation for Portuguese, closes: #336846
+  * Adjust install file
+  * Bumped Standards-Version to 3.6.2, no changes required
+  * Update debian/config.inc.php from new upstream config file
+
+ -- Isaac Clerencia <isaac@debian.org>  Wed, 16 Nov 2005 21:39:30 +0100
+
+phppgadmin (3.5.6-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove patches included upstream
+  * Added debconf translation for Swedish, closes: #330646
+  * Allow to install phppgadmin with php5, closes: #325888
+  * Prefer apache2 over apache
+
+ -- Isaac Clerencia <isaac@debian.org>  Tue, 18 Oct 2005 19:45:00 +0200
+
+phppgadmin (3.5.5-2) unstable; urgency=low
+
+  * Further fixes for "Only variable references should be returned by
+  reference", closes: #321921
+
+ -- Isaac Clerencia <isaac@debian.org>  Mon, 29 Aug 2005 00:07:51 +0200
+
+phppgadmin (3.5.5-1) unstable; urgency=low
+
+  * New upstream release,
+    closes: #321921, "Only variable references should be returned by reference"
+  * Added dpatch to build-depends
+  * Include a patch to fix a problem similar to #321921,
+    "Only variables should be assigned by reference"
+  * Provide alternative (and safer) auth schema in README.Debian,
+     closes: #322682, provided by Andreas Tille
+  * Added/updated debconf translations for Arabic, Czech and French,
+     closes: #322417, #320774, #320304
+
+ -- Isaac Clerencia <isaac@debian.org>  Fri, 19 Aug 2005 00:17:24 +0200
+
+phppgadmin (3.5.4-1) unstable; urgency=low
+
+  * New upstream release, fixes security bug CAN-2005-2256: #318284
+  * Updated Japanese po-debconf file, closes: #310087
+  * Added Vietnamese po-debconf file, closes: #316842
+
+ -- Isaac Clerencia <isaac@debian.org>  Mon, 18 Jul 2005 11:19:26 +0200
+
+phppgadmin (3.5.2-3) unstable; urgency=low
+
+  * Added Apache 2 as a choice for autoconfiguration, closes: #297696
+
+ -- Isaac Clerencia <isaac@debian.org>  Wed,  2 Mar 2005 16:12:44 +0100
+
+phppgadmin (3.5.2-2) unstable; urgency=low
+
+  * Configure apache via conf.d, closes: #296504
+
+ -- Isaac Clerencia <isaac@debian.org>  Wed, 23 Feb 2005 02:39:49 +0100
+
+phppgadmin (3.5.2-1) unstable; urgency=low
+
+  * New upstream release, closes: #290604, #288551
+  * Fixed PHP depends, closes: #293441
+  * Removed bashism from postrm, closes: #292187
+  * Include initial Czech translation of debconf messages, closes: #293616
+
+ -- Isaac Clerencia <isaac@debian.org>  Mon, 21 Feb 2005 13:42:20 +0100
+
+phppgadmin (3.5.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove some i18n tools from lang/
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Tue, 14 Dec 2004 14:33:03 +0100
+
+phppgadmin (3.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Mon, 15 Nov 2004 10:57:18 +0100
+
+phppgadmin (3.4.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Tue,  6 Jul 2004 15:46:09 +0200
+
+phppgadmin (3.4-3) unstable; urgency=low
+
+  * Added show_comments option to the default config file, closes: #254299 
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Mon, 14 Jun 2004 20:53:46 +0200
+
+phppgadmin (3.4-2) unstable; urgency=low
+
+  * Moved db_stop after #DEBHELPER# in postrm since debhelper uses debconf
+    to purge, closes: #252882
+  * Renamed templates file to phppgadmin.templates
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Sat,  5 Jun 2004 20:54:31 +0200
+
+phppgadmin (3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Renamed some phppgadmin.foobar files to foobar
+  * Removed the disappeared BUGS file from debian/docs
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Fri,  4 Jun 2004 15:10:15 +0200
+
+phppgadmin (3.3.1-2) unstable; urgency=low
+
+  * Added libapache2-mod-php as an alternative for php4 in order to have
+    phppgadmin usable with apache2, closes: #248845
+  * Added #DEBHELPER# to all maintainer scripts
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Fri, 14 May 2004 16:27:13 +0200
+
+phppgadmin (3.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Added Catalan (ca) debconf template translation, sent by Aleix Badia,
+    closes: #236637
+  * DH_COMPAT in rules moved to debian/compat
+  * conffile file removed, because files in /etc are automatically conffiles
+    with DH_COMPAT 4
+  * removing po-debconf Build-Depend, since debhelper >= 4.1.16 implies it
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Sat, 13 Mar 2004 10:17:22 +0100
+
+phppgadmin (3.3-2) unstable; urgency=low
+
+  * Added German (de) debconf template translation, sent by Peter Eisentraut
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Wed,  3 Mar 2004 11:58:10 +0100
+
+phppgadmin (3.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Add Brazilian Portuguese (pt_BR) debconf template translation
+  	closes: #231715, translation sent by Andre Luis Lopes
+  * Upstream:
+     Checkbox to LIMIT output rows from SQL box added, closes: #217426 
+     SQL query from link (not box) can be edited after "Go", closes: #217430
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Wed, 25 Feb 2004 11:31:35 +0100
+
+phppgadmin (3.2.1-2) unstable; urgency=low
+
+  * Now the package doesn't overwrite the old configuration silently
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Sat, 10 Jan 2004 22:31:26 +0100
+
+phppgadmin (3.2.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Added Japanese debconf translation, closes: #222285
+  * LIMIT conflict in reports fixed upstream, closes: #217433
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Sat, 29 Nov 2003 23:57:48 +0100
+
+phppgadmin (3.1+beta1-3) unstable; urgency=low
+
+  * Changed _Choices to __Choices in templates file, closes: #211058
+  * Added two missing files, indexes.js and robots.txt, closes: #211689
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Friday,  19 September 2003 17:30:15 +0100
+
+phppgadmin (3.1+beta1-2) unstable; urgency=low
+
+  * Added French debconf translation, closes: #210639
+  * Fixed debconf error in preconfigure and postinst, closes: #210723
+  * Added po-debconf to Build-Depends-Indep
+  * Changed Standards-Version from 3.5.9.0 to 3.6.1.0 (no changes needed)
+  * Removed php3 stuff from debian/apache.conf
+  * Added apache as real package that provides httpd
+  * Removed starting "A " from Description
+  * Transition from cp to install to avoid umask problems in debian/rules
+  * Added missing binary-arch and build targets in debian/rules
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Saturday,  13 September 2003 11:30:15 +0100
+
+phppgadmin (3.1+beta1-1) unstable; urgency=low
+
+  * New upstream release
+  * Changed dependency on apache to dependency on httpd, closes: #203742
+  * Switched to the gettext debconf format, closes: #210489
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Friday,  12 September 2003 00:18:15 +0100
+
+phppgadmin (3.0-1) unstable; urgency=low
+
+  * New upstream release, closes: #203329, #197806, #202099, #197281, #127837
+  * Created with debhelper
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Sunday,  22 June 2003 16:48:15 +0100
+
+phppgadmin (2.4.2-2) unstable; urgency=low
+
+  * Forgot to close "new upstream" and "spanish debconf" bugs, closes: #162075, #153072
+  * Build-depend to yada, closes: #152186
+  * Fixes error in documentation URL (cfgManualBase), closes: #147140
+   
+ -- Isaac Clerencia <isaac@sindominio.net>  Saturday,  26 October 2002 15:01:15 +0100
+
+phppgadmin (2.4.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Spanish debconf template
+  * Adopted, closes: #162570
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Friday,  25 October 2002 15:45:50 +0100
+
+phppgadmin (2.4.1-3) unstable; urgency=high
+
+  * left.js was missing from binary package, closes: #145458
+  * The default policy is now "allow from localhost", closes: #135411
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue,  7 May 2002 10:50:18 +0200
+
+phppgadmin (2.4.1-2) unstable; urgency=low
+
+  * Fixes typo in README, closes: #142519
+  * Fixes wwwconfig-common stuff.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Thu, 18 Apr 2002 12:07:22 +0200
+
+phppgadmin (2.4.1-1) unstable; urgency=low
+
+  * New upstream release
+  * phppgadmin doesn't depend php3, closes: #142165
+  * Fixed postrm script if package is not configured yet, closes: #131658
+  * Russian debconf template, closes: #137673
+
+ -- Piotr Roszatycki <dexter@debian.org>  Fri, 12 Apr 2002 11:56:27 +0200
+
+phppgadmin (2.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue, 29 Jan 2002 16:58:03 +0100
+
+phppgadmin (2.3.1-2.4-beta-1-1) unstable; urgency=low
+
+  * New upstream release, closes: #122589
+  * Fixed spelling error in description, closes: #125244
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue, 18 Dec 2001 14:45:27 +0100
+
+phppgadmin (2.3-5) unstable; urgency=low
+
+  * German template, closes: #114077
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue, 16 Oct 2001 15:52:45 +0200
+
+phppgadmin (2.3-4) unstable; urgency=low
+
+  * Fix documentation files suffix, closes: #113049
+  * Don't use file_exists and include "./$goto"
+  * DebConf and wwwconfig-common for automatic webserver reconfiguration.
+
+ -- Piotr Roszatycki <dexter@debian.org>  Mon, 24 Sep 2001 17:26:10 +0200
+
+phppgadmin (2.3-3) unstable; urgency=low
+
+  * left.php now display tables which has 'pg' substring, closes: #101593
+  * Depends: httpd
+
+ -- Piotr Roszatycki <dexter@debian.org>  Sat,  7 Jul 2001 17:11:04 +0200
+
+phppgadmin (2.3-2) unstable; urgency=medium
+
+  * Modified very unsecure method of advanced authentication. Now, the
+    stduser/stdpass pair is not required for enabled adv_auth.
+  * Slightly modified config.inc.php
+  * Updated README.Debian
+  * Clean up some old dh_clean in debian/packages
+  * FAQ in /usr/share/doc
+
+ -- Piotr Roszatycki <dexter@debian.org>  Mon, 21 May 2001 12:20:02 +0200
+
+phppgadmin (2.3-1) unstable; urgency=high
+
+  * New upstream release
+
+ -- Piotr Roszatycki <dexter@debian.org>  Wed,  9 May 2001 12:39:03 +0200
+
+phppgadmin (2.2.1.pl1-1) unstable; urgency=low
+
+  * Initial Debian version, closes: #89617
+
+ -- Piotr Roszatycki <dexter@debian.org>  Tue, 10 Apr 2001 13:58:05 +0200
+

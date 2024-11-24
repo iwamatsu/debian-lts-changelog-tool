@@ -1,0 +1,158 @@
+brotli (1.0.7-2+deb10u1) buster-security; urgency=medium
+
+  * CVE-2020-8927
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Wed, 25 Nov 2020 22:33:28 +0100
+
+brotli (1.0.7-2) unstable; urgency=medium
+
+  * Refresh packaging (std-ver, compat=12)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Mon, 07 Jan 2019 23:11:10 +0100
+
+brotli (1.0.7-1) unstable; urgency=medium
+
+  * New upstream version 1.0.7
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sat, 27 Oct 2018 13:08:16 +0200
+
+brotli (1.0.6-1) unstable; urgency=medium
+
+  * New upstream version 1.0.6
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sat, 22 Sep 2018 10:16:39 +0200
+
+brotli (1.0.5-2) unstable; urgency=medium
+
+  * depend on python3-all-dev (Closes: #903923)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Thu, 02 Aug 2018 15:35:52 +0800
+
+brotli (1.0.5-1) unstable; urgency=medium
+
+  * New upstream version 1.0.5
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sun, 01 Jul 2018 22:36:19 +0200
+
+brotli (1.0.4-1) unstable; urgency=medium
+
+  * New upstream version 1.0.4
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sat, 28 Apr 2018 16:01:50 +0200
+
+brotli (1.0.3-1) unstable; urgency=medium
+
+  * New upstream version 1.0.3
+  * Drop obsolete patches
+
+ -- Tomasz Buchert <tomasz@debian.org>  Tue, 06 Mar 2018 00:00:39 +0100
+
+brotli (1.0.2-3) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * Use dh_missing --fail-missing (Closes: #888950)
+
+  [ Tomasz Buchert ]
+  * d/copyright: remove appveyor path (Closes: #888947)
+  * Bump debhelper compat to 11
+
+ -- Tomasz Buchert <tomasz@debian.org>  Wed, 31 Jan 2018 23:52:35 +0100
+
+brotli (1.0.2-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Tomasz Buchert <tomasz@debian.org>  Thu, 07 Dec 2017 09:51:13 +0100
+
+brotli (1.0.2-1~exp0) experimental; urgency=medium
+
+  * New upstream version 1.0.2
+  * Updated std-ver to 4.1.0 (no changes needed)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sun, 03 Dec 2017 11:57:59 +0100
+
+brotli (1.0.0-1~exp0) experimental; urgency=medium
+
+  * New upstream version 1.0.0
+  * d/*: migrate 0.6.0 to 1.0.0
+  * d/symbols: fix symbols file (Closes: #870831)
+  * d/patches: refresh
+  * Upload to experimental
+
+ -- Tomasz Buchert <tomasz@debian.org>  Fri, 22 Sep 2017 00:18:40 +0200
+
+brotli (0.6.0-2~exp0) experimental; urgency=medium
+
+  [Tomasz Buchert]
+  * d/gbp.conf: remove obsolete gbp.conf
+  * d/control: add Ondřej to Uploaders
+  * debian: provide shared libs pkgs
+  * d/control: bump Standards-Version to 4 (no changes needed)
+
+  [Ondřej Surý]
+  * Use SOVERSION in libbrotli package name and add symbols file
+  * Rewrite smoke_test.sh as autopkgtests
+  * Upload to experimental
+  * Add missing cmake to Build-Depends
+  * Fix libbrotli0.6.0.symbols to refer to correct package
+  * Add lintian override for amalgated libbrotli0.6.0 package
+
+ -- Ondřej Surý <ondrej@debian.org>  Wed, 28 Jun 2017 14:23:39 +0200
+
+brotli (0.6.0-1) unstable; urgency=medium
+
+  * d/*: debhelper 10 and uscan 4
+  * New upstream version 0.6.0
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sun, 23 Apr 2017 19:54:21 +0200
+
+brotli (0.5.2+dfsg-2) unstable; urgency=medium
+
+  * Make object list deterministic (Closes: #845780)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sun, 18 Dec 2016 11:37:54 +0100
+
+brotli (0.5.2+dfsg-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.5.2+dfsg (Closes: #842016)
+  * Update debian/rules to use new build system
+
+ -- Tomasz Buchert <tomasz@debian.org>  Tue, 25 Oct 2016 23:08:26 +0200
+
+brotli (0.4.0+dfsg-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.4.0+dfsg
+  * Bumped Standards-Version to 3.9.8 (no changes needed)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sat, 18 Jun 2016 15:22:06 +0200
+
+brotli (0.3.0+dfsg-3) unstable; urgency=medium
+
+  [ Raúl Benencia ]
+  * Fixes for CVE-2016-1968 and CVE-2016-1624 (Closes: #817233)
+
+  [ Tomasz Buchert ]
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Sun, 27 Mar 2016 09:00:55 +0200
+
+brotli (0.3.0+dfsg-2) unstable; urgency=medium
+
+  * d/copyright: update to MIT
+  * move brotli to the "utils" section (Closes: #814704)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Mon, 15 Feb 2016 09:53:52 +0100
+
+brotli (0.3.0+dfsg-1) unstable; urgency=medium
+
+  * d/gbp.conf: updated filtered files
+  * d/patches: drop patches merged upstream
+  * Imported Upstream version 0.3.0+dfsg
+
+ -- Tomasz Buchert <tomasz@debian.org>  Fri, 05 Feb 2016 22:10:56 +0100
+
+brotli (0.2.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #808062)
+
+ -- Tomasz Buchert <tomasz@debian.org>  Wed, 16 Dec 2015 10:34:42 +0100

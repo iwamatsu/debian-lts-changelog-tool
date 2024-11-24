@@ -1,0 +1,142 @@
+acmetool (0.0.62-3+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Rebuild against golang-go.crypto 1:0.0~git20181203.505ab14-1+deb10u1.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 13 Jun 2023 12:47:25 +0200
+
+acmetool (0.0.62-3) unstable; urgency=medium
+
+  * Use https for copyright-format URL
+  * Update Standards-Version to 4.2.1
+  * Update Maintainer address.
+    Thanks to Lukas Schwaighofer (Closes: #899439)
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 17 Nov 2018 00:29:47 -0500
+
+acmetool (0.0.62-2) unstable; urgency=medium
+
+  * Fix undefined status code in redirector test (Closes: #890925)
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 17 Mar 2018 00:21:04 -0400
+
+acmetool (0.0.62-1) unstable; urgency=medium
+
+  * New upstream release
+
+  [ Michael Stapelberg ]
+  * Drop unnecessary -O--buildsystem=golang args. (Closes: #879276)
+
+  [ Peter Colberg ]
+  * Update Vcs-* fields for move to salsa.debian.org
+  * Update Let's Encrypt Subscriber Agreement URL in README.Debian
+  * Skip tests if DEB_BUILD_OPTIONS contains nocheck
+  * Set Priority to optional as per policy 4.0.1
+  * Remove unused lintian overrides for spelling false positive
+  * Bump Standards-Version to 4.1.3
+
+ -- Peter Colberg <peter@colberg.org>  Mon, 05 Feb 2018 21:12:17 -0500
+
+acmetool (0.0.59-1) unstable; urgency=medium
+
+  * New upstream release
+    - Validate hostnames in 'acmetool want'
+    - Allow environment variables to be passed to challenge hooks
+    - Allow acmeapi to obtain new nonces if nonce pool is depleted
+    - Don't attempt fdb permission tests on non-cgo builds
+    - Add read/write timeouts to redirector server
+    - Allow hidden files within the state directory
+
+  [ Peter Colberg ]
+  * Fix import path of square/go-jose
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 19 Feb 2017 22:41:49 -0500
+
+acmetool (0.0.58-5) unstable; urgency=medium
+
+  * Rewrite README.Debian
+  * Add optional systemd service and timer
+  * Create and purge directory /var/lib/acme
+  * Create and purge directory /var/log/acmetool
+  * Create directory /etc/acme/hooks
+  * Add /usr/lib/tmpfiles.d/acmetool.conf
+  * Add /etc/rsyslog.d/acmetool.conf
+  * Add /etc/logrotate.d/acmetool
+  * Add /etc/nginx/snippets/acmetool.conf
+  * Add /etc/apache2/conf-available/acmetool.conf
+  * Replace Debian with DEB_VENDOR in --version
+  * Add lintian override for spelling false positive
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 08 Jan 2017 23:50:30 -0500
+
+acmetool (0.0.58-4) unstable; urgency=medium
+
+  * Skip parseperm test if cgo is disabled
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 20 Nov 2016 22:40:27 -0500
+
+acmetool (0.0.58-3) unstable; urgency=medium
+
+  * Build-depend on libcap-dev for linux-any.
+    Fixes FTBFS with golang-gopkg-hlandau-svcutils.v1 >= 1.0.10-4
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 20 Nov 2016 13:44:03 -0500
+
+acmetool (0.0.58-2) unstable; urgency=medium
+
+  * Bump debhelper compat level to 10
+  * Build-depend on golang-any instead of golang-go
+  * Build-depend on golang-gopkg-yaml.v2-dev or golang-yaml.v2-dev
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 19 Nov 2016 23:52:06 -0500
+
+acmetool (0.0.58-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop patch and build dependency on golang-github-hlandau-degoutils-dev
+  * Build depend on golang-github-hlandau-goutils-dev
+  * Build depend on golang-github-hlandau-dexlogconfig-dev
+  * Add copy of upstream license text
+
+ -- Peter Colberg <peter@colberg.org>  Wed, 19 Oct 2016 08:02:06 -0400
+
+acmetool (0.0.56-2) unstable; urgency=medium
+
+  * Add example for live-updated hook to README.Debian
+  * Remove lintian override for libyaml, no longer needed with Go 1.7
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 28 Aug 2016 08:34:17 -0400
+
+acmetool (0.0.56-1) unstable; urgency=high
+
+  * New upstream release (Closes: #833494)
+  * Revert to degoutils due to missing upstream licenses
+  * Document response file for unattended subscriber agreement in README.Debian
+
+ -- Peter Colberg <peter@colberg.org>  Sat, 06 Aug 2016 08:54:28 -0400
+
+acmetool (0.0.54-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Peter Colberg <peter@colberg.org>  Thu, 23 Jun 2016 08:33:22 -0400
+
+acmetool (0.0.51-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop patches applied upstream
+  * Build depend on
+    - golang-gopkg-cheggaaa-pb.v1-dev
+    - golang-gopkg-square-go-jose.v1-dev
+    - golang-github-hlandau-degoutils-dev (>= 0.0~git20160421.0.389a847)
+  * Build depend on dh-golang (>= 1.17~) and install with --no-source
+  * Do not compress example scripts
+  * Add lintian overrides for spelling error false positives
+
+ -- Peter Colberg <peter@colberg.org>  Wed, 18 May 2016 07:48:14 -0400
+
+acmetool (0.0.49-1) unstable; urgency=medium
+
+  * Initial release (Closes: #817091)
+
+ -- Peter Colberg <peter@colberg.org>  Sun, 15 May 2016 15:48:08 +0000

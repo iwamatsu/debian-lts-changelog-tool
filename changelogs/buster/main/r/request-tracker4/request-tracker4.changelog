@@ -1,0 +1,726 @@
+request-tracker4 (4.4.3-2+deb10u3) buster-security; urgency=medium
+
+  * Apply upstream patch which fixes several security vulnerabilities
+    (Closes: #1054516).
+    - [CVE-2023-41259] Vulnerablility to unvalidated email headers in
+      incoming email and the mail-gateway REST interface.
+    - [CVE-2023-41260] Information leakage via response messages returned
+      from requests sent via the mail-gateway REST interface.
+  * Add upstream fix to tests for FTBFS due to expired certs.
+
+ -- Andrew Ruthven <andrew@etc.gen.nz>  Sun, 08 Oct 2023 22:41:41 +1300
+
+request-tracker4 (4.4.3-2+deb10u2) buster-security; urgency=medium
+
+  * Apply upstream patch which fixes several security vulnerabilities.
+    - A cross-site scripting (XSS) issue when displaying attachment content
+      with fraudulent content types. This vulnerability is assigned
+      CVE-2022-25802.
+    - Not performing full rights checks on access to file or image type
+      custom fields, possibly allowing access to these custom fields by
+      users without rights to access to the associated objects (like the
+      ticket it is associated with).
+
+ -- Andrew Ruthven <andrew@etc.gen.nz>  Sun, 03 Jul 2022 20:09:25 +1200
+
+request-tracker4 (4.4.3-2+deb10u1) buster; urgency=medium
+
+  * Apply upstream patch which fixes a security vulnerability that involves a
+    login timing side-channel attack. This resolves CVE-2021-38562
+    (Closes: #995175)
+
+ -- Andrew Ruthven <andrew@etc.gen.nz>  Thu, 30 Sep 2021 00:41:47 +1300
+
+request-tracker4 (4.4.3-2) unstable; urgency=high
+
+  * Add missing dependencies on libcpanel-json-xs-perl (Closes: #920744)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 08 Feb 2019 17:50:03 +0000
+
+request-tracker4 (4.4.3-1) unstable; urgency=medium
+
+  [ Niels Thykier ]
+  * Declare the explicit requirement for (fake)root
+
+  [ Dominic Hargreaves ]
+  * debian/bug/script: use dpkg --verify to avoid manual access to
+    dpkg database (Closes: #905703)
+  * New upstream release
+    - Fix bug in system configuration display with regexps (Closes: #895600)
+  * Drop dependency on dh-systemd (thanks, Lintian)
+  * Mark rt4-standlone as being a metapackage to avoid Lintian warning 
+    (Closes: #907420)
+  * Replace exim4 with default-mta in Depends (thanks, Lintian)
+  * Force the use of Cpanel::JSON::XS (Closes: #848041)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 09 Sep 2018 22:40:16 +0100
+
+request-tracker4 (4.4.2-2) unstable; urgency=medium
+
+  * Don't break RT when epochs are used in the Debian version. Thanks
+    to Andrew Ruthven for the patch (Closes: #881985)
+  * Don't enable rt-externalize-attachments cron job by default
+    (Closes: #883472)
+  * Update Vcs-* fields to point to Salsa
+  * Update clean target to work correctly, and ensure configure is run.
+    Thanks to Andrew Ruthven for the patch (Closes: #881984)
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 08 Apr 2018 00:15:44 +0100
+
+request-tracker4 (4.4.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - Add database upgrade script
+    - Update versioned dependency on libemail-address-perl
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 25 Aug 2017 23:10:11 +0100
+
+request-tracker4 (4.4.1-5) unstable; urgency=medium
+
+  * Fix broken config script (Closes: #865196)
+  * Fix test failure with perl 5.26 caused by "Unescaped left brace in
+    regex" warning (Closes: #865047)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 19 Jun 2017 21:26:28 +0100
+
+request-tracker4 (4.4.1-4) unstable; urgency=high
+
+  * Add dependency on libhtml-gumbo-perl for better table rendering
+  * Handle configuration permissions correctly following
+    RT_SiteConfig.d changes (Closes: #862426)
+  * Improve documentation for Apache configurations (thanks to
+    Michael Howe for the text)
+  * Add support for dbconfig-no-thanks opt-out (Closes: #854789)
+  * Fix multiple security issues:
+    - [CVE-2017-5943] CSRF verification token information leak
+    - [CVE-2016-6127] XSS in file uploads
+    - [CVE-2017-5361] Timing side-channel vulnerability in password
+      verification
+    - [CVE-2017-5944] Remote code execution in dashboard interface
+    - Add check for incorrect RestrictLoginReferrer configuration setting
+  * Work around a DoS vulnerability in Email::Address (CVE-2015-7686)
+
+ -- Dominic Hargreaves <dom@earth.li>  Wed, 14 Jun 2017 23:55:29 +0100
+
+request-tracker4 (4.4.1-3) unstable; urgency=medium
+
+  * Revert RT_SiteConfig.pm handling to ucf, for smoother upgrades
+    (Closes: #852516)
+  * Correct Conflicts/Replaces on rt4-extension-authenexternalauth
+    (Closes: #852522)
+  * Correct typo when removing obsolete update-rt-siteconfig alternatives
+    to fix a piuparts issue
+  * Correctly install rt-ldapimport manpage links
+
+ -- Dominic Hargreaves <dom@earth.li>  Wed, 25 Jan 2017 15:22:46 +0000
+
+request-tracker4 (4.4.1-2) unstable; urgency=medium
+
+  * Tweaks to RT_SiteConfig.d patch to improve correctness
+  * Add Conflicts/Replaces on rt4-extension-sla which is now in
+    core
+  * Upload to unstable
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 20 Jan 2017 14:25:54 +0000
+
+request-tracker4 (4.4.1-1) experimental; urgency=medium
+
+  * Drop alternative dependency on removed libapache2-mod-fastcgi
+    (Closes: #847748)
+  * New upstream release
+  * Add database upgrade script and NEWS entry
+  * Adapt package to use dynamically-read configuration snippets
+    in /etc/request-tracker4/RT_SiteConfig.d. See NEWS for more
+    information about this change (Closes: #550271)
+  * Update debhelper compat to version 9
+  * Update Lintian overrides for files with source in third-party-source
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 02 Jan 2017 23:56:12 +0000
+
+request-tracker4 (4.2.13-4) unstable; urgency=medium
+
+  * Revert patches to not configure gpg path at runtime
+  * Use gpg1 explicitly in runtime (Closes: #845534)
+  * Fix test failure with OpenSSL 1.1 by adapting probe 
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 27 Nov 2016 11:14:31 +0000
+
+request-tracker4 (4.2.13-3) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/rules: run tests with http_proxy unset.
+  * debian/control: add tzdata to Build-Depends.
+  * set LC_ALL to C
+  * Force gpg1 in RT::Test::GnuPG's configuration (Closes: #839580)
+  * debian/control: update Vcs-* headers.
+  * debian/control: update mysql dependencies to the new default-* packages.
+  * debian/control: add lsb-base to packages' dependencies with init scripts.
+  * Editorial changes to debian/copyright.
+  * debian/control: remove duplicate build dependency.
+  * Update lintian overrides.
+  * debian/control: update build and runtime dependencies.
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 25 Oct 2016 22:11:39 +0100
+
+request-tracker4 (4.2.13-2) unstable; urgency=medium
+
+  * Correct typo in gpg1 patch description
+  * Fix another use of gpg in the test suite (Closes: #835536)
+  * Fix FTBFS with '.' removed from @INC (Closes: #836833)
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 06 Sep 2016 13:26:01 +0100
+
+request-tracker4 (4.2.13-1) unstable; urgency=medium
+
+  * Update debian/watch to reflect new upstream download page
+    (thanks, Max Kosmach)
+  * New upstream release
+  * Add 'use utf8;' to RT_SiteConfig.pm to allow Unicode strings to
+    be used
+  * Apply upstream fix for test failures with Mojolicious 7
+    (Closes: #832829)
+  * Fix FTBFS with gpg 2.1 by no longer explicitly configuring the
+    path to gpg (Closes: #835536)
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 27 Aug 2016 23:48:45 +0100
+
+request-tracker4 (4.2.12-6) unstable; urgency=medium
+
+  * Remove dependency on request-tracker4 by rt4-fcgi, since that
+    results in a circular dependency which is problematic
+    (Closes: #812316)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 15 Apr 2016 14:43:50 +0100
+
+request-tracker4 (4.2.12-5) unstable; urgency=medium
+
+  * Revert previous change following fix to DateTime::Locale
+  * Fix findutils perm syntax. Thanks to Andreas Metzler for the patch
+    (Closes: #803021)
+  * Run dh_autoreconf so changes in configure.ac are picked up
+  * Extract correct (Debian) version number in configure.ac and annotate
+    it as from Debian in the web interface (Closes: #796851)
+  * Fix problem with SMIME and non-ASCII emails. Thanks to Max Kosmach
+    for the patch (Closes: #795133)
+  * Include systemd unit file for rt4-fcgi, contributed by
+    Christian Loos (Closes: #809376)
+  * Add missing dependency on request-tracker4 to rt4-fcgi
+  * Update local documentation to reflect current web server support
+  * Use dh_prep instead of dh_clean -k, and other Lintian cleanups
+  * Switch from fonts-droid to fonts-noto (+ fonts-droid-fallback)
+    (Closes: #804687)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 10 Jan 2016 22:36:34 +0000
+
+request-tracker4 (4.2.12-4) unstable; urgency=medium
+
+  * Fix FTBFS caused by change in DateTime::Locale (Closes: #806449)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 28 Nov 2015 17:08:01 +0000
+
+request-tracker4 (4.2.12-3) unstable; urgency=medium
+
+  * Apply patches to allow for extension testing (Closes: #799591)
+  * Add missing Should-Start/Should-Stop on rt4-fcgi to fix
+    startup dependency issues with systemd (Closes: #794467)
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 01 Oct 2015 22:42:45 +0100
+
+request-tracker4 (4.2.12-2) unstable; urgency=high
+
+  * Further simplify rt4-apache2 dependencies; drop all references to
+    obsolete libapache-dbi-perl and remove erroneous dependency
+    on libapache2-mod-fastcgi with no alternative (Closes: #798383)
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 08 Sep 2015 21:33:11 +0100
+
+request-tracker4 (4.2.12-1) unstable; urgency=medium
+
+  * New upstream release
+  * Apply test fix with newer libhtml-formattext-withlinks-andtables-perl
+    (Closes: #797295)
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 01 Sep 2015 22:27:54 +0100
+
+request-tracker4 (4.2.11-3) unstable; urgency=medium
+
+  * Drop libapache-dbi-perl as a Build-Depends, as it's not used (and
+    is preventing testing against perl 5.22 whilst libapache2-mod-perl2
+    is uninstallable)
+  * Prefer libapache2-mod-fcgid over libapache2-mod-perl2, as it's
+    generally a better choice
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 21 Aug 2015 11:56:49 +0200
+
+request-tracker4 (4.2.11-2) unstable; urgency=high
+
+  * Apply upstream patches fixing security vulnerabilities:
+    - cross-site scripting (XSS) attack via the user and group rights
+      management pages (CVE-2015-5475)
+    - cross-site scripting (XSS) attack via the cryptography interface
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 11 Aug 2015 22:49:56 +0100
+
+request-tracker4 (4.2.11-1) unstable; urgency=medium
+
+  * The issue fixed by security patch sec-2015-02-05-1 is addressed
+    properly in 4.2.10 by depending on a newer Encode, so drop that patch
+  * Add alternative Depends/Suggests on the virtual MySQL packages, to
+    support the MariaDB and Percona forks (Closes: #732910)
+  * Apply a workaround for changes to File::Which which broke the test
+    suite (fixes FTBFS)
+  * New upstream release
+  * Add database upgrade script and NEWS entry
+  * Add NEWS entry for manual steps needed to benefit from faster FTS
+  * Upload to unstable
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 10 May 2015 13:49:19 +0100
+
+request-tracker4 (4.2.10-1) experimental; urgency=medium
+
+  * New upstream release (Closes: #773814)
+  * Add Recommends on optional new libhtml-formatexternal-perl
+    to improve plain text rendering
+  * Update dependency on Encode to 2.64
+  * Remove some redundant permission changes in debian/rules
+  * Use Conflicts rather than Breaks for rt4-extension-assettracker
+    (thanks, Lintian)
+  * Add database upgrade script and NEWS entry
+  * Depend on libtime-parsedate-perl instead of libtime-modules-perl
+    (Closes: #749873)
+  * Add Build-Depends on libdbd-mysql-perl to fix test failure for
+    MySQL-specific script
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 29 Mar 2015 23:03:43 +0100
+
+request-tracker4 (4.2.8-3) unstable; urgency=high
+
+  * Fix remote DoS via email gateway (CVE-2014-9472)
+  * Fix information discloure revealing RSS feed URLs (CVE-2015-1165)
+  * Fix privilege escalation via RSS feed URLs (CVE-2015-1464)
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 26 Feb 2015 10:05:25 +0000
+
+request-tracker4 (4.2.8-2) unstable; urgency=medium
+
+  [ Niko Tyni ]
+  * Fix upgrade problems caused by a bug in the wheezy
+    rt4-extension-assettracker installation procedure. (Closes: #773343)
+  * Break all versions of rt4-extension-assettracker: its upstream
+    says RT 4.2 isn't supported anymore and recommends RT-Extension-Assets
+    instead. (See #748737)
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 01 Jan 2015 16:47:30 +0000
+
+request-tracker4 (4.2.8-1) unstable; urgency=medium
+
+  * New upstream release
+    - This release mitigates against the Shellshock bash vulnerability.
+      The RT specific reference for this is CVE-2014-7227. This should
+      already be fixed by updates to bash, so this is not itself treated
+      as a security issue in RT.
+    - Minor bugfixes are also included.
+  * Revert to logging to Syslog by default; file-based logging is more
+    fragile and was missing logrotate configuration (Closes: #747076)
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 20 Oct 2014 21:35:57 +0100
+
+request-tracker4 (4.2.7-1) unstable; urgency=high
+
+  * Add a missed lintian override for missing sources
+  * New upstream release (Closes: #757879)
+    - update versioned dependency on libdbix-searchbuilder-perl 
+    - include database upgrade script and NEWS entry
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 13 Sep 2014 01:43:15 +0100
+
+request-tracker4 (4.2.6-1) unstable; urgency=medium
+
+  * Depend unconditionally on libcgi-pm-perl to fix FTBFS with
+    perl 5.20 (Closes: #759975)
+  * New upstream release (Closes: #760500)
+  * Apply patch from Daniel Kahn Gillmor to allow changing the
+    status during commenting in the rt command line tool
+    (Closes: #760292)
+  * Add lintian override for missing sources shipped in
+    third-party-source
+  * Use install -d rather than mkdir in a few places to avoid
+    umask issues (thanks, Lintian)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 06 Sep 2014 22:17:37 +0100
+
+request-tracker4 (4.2.4-1) unstable; urgency=medium
+
+  * Add missing Depends on libcss-squish-perl (Closes: #747298)
+  * New upstream release
+    - include database upgrade script and NEWS entry
+    - add Build-Depends on libtest-pod-perl
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 18 May 2014 22:40:33 +0100
+
+request-tracker4 (4.2.3-2) unstable; urgency=low
+
+  * Correct path in lintian override
+  * Add missing Build-Depends on liblog-dispatch-perl-perl
+  * Apply patch from upstream fixing the reference to the font path
+    (Closes: #746150)
+  * Upload to unstable
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 04 May 2014 12:49:03 +0100
+
+request-tracker4 (4.2.3-1) experimental; urgency=medium
+
+  * New upstream release (Closes: #733516)
+    - update (Build)-Depends
+    - update Apache config to match upstream docs
+    - improve PostgreSQL indices (Closes: #512759)
+    - don't enable GPG (or SMIME) by default (Closes: #654697) 
+    - include database upgrade script and NEWS entry
+    - update debian/copyright
+    - include NEWS item alerting of incompatible changes
+    - update Lintian overrides for new file paths
+  * Add rt4-standalone package (Closes: #644187)
+    (thanks, Bastian Blank)
+  * Log to a file rather than syslog by default (Closes: #712147)
+  * Update Standards-Version (no changes)
+  * Add a note about how to configure RT from the root URL (Closes: #735490)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 02 Mar 2014 16:04:58 +0000
+
+request-tracker4 (4.0.19-1) unstable; urgency=medium
+
+  * Pass "-s /bin/sh" to "su www-data" to cope with the change of www-data's
+    shell in base-passwd 3.5.30. Thanks to Colin Watson for the bug report
+    and patch (Closes: #734728)
+  * New upstream release
+  * Include database upgrade scripts/NEWS
+  * Don't fetch logo from bestpractical.com from 'broken install'
+    page (fixes Lintian privacy error)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 16 Feb 2014 16:15:23 +0000
+
+request-tracker4 (4.0.18-1) unstable; urgency=low
+
+  * New upstream release (Closes: #732013)
+    - Add Build-Depends on liblocale-po-perl
+  * Remove Depends/Suggests on version-specific PostgreSQL packages
+    (Closes: #732497)
+
+ -- Dominic Hargreaves <dom@earth.li>  Wed, 01 Jan 2014 13:58:39 +0000
+
+request-tracker4 (4.0.17-2) unstable; urgency=low
+
+  * Fix double-encoding bug with newer versions of Encode (Closes: #724795)
+  * Add alternative build-depends on perl for Pod::Simple
+    (thanks, Lintian)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 28 Sep 2013 23:08:49 +0100
+
+request-tracker4 (4.0.17-1) unstable; urgency=medium
+
+  * Remove Dmitry Smirnov from Uploaders, on request
+  * Add Brazilian Portuguese debconf templates translation
+    (Closes: #719150)
+  * New upstream release
+    - Fixes perl 5.18 compatibility issues (Closes: #720498)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 24 Aug 2013 11:24:26 +0100
+
+request-tracker4 (4.0.13-1) unstable; urgency=low
+
+  * New upstream release
+  * Depend on fonts-droid instead of the transitional ttf-droid
+    (Closes: #708940)
+  * Update configuration files to Apache 2.4 host ACL style
+    (Closes: #669774)
+  * Run make testdeps, ignoring errors for now as some dependencies
+    aren't needed for the Debian package and aren't packaged
+  * Add Build-Depends on libterm-readkey-perl, and don't run
+    t/web/installer.t (tests functionality not used in the Debian
+    package (Closes: #708950)
+  * Add Build-Depends on libfcgi-perl
+  * Update Standards-Version (no changes)
+  * Remove rt-validate-aliases alternative in prerm (Closes: #708101)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 02 Jun 2013 14:16:34 +0100
+
+request-tracker4 (4.0.12-2) unstable; urgency=high
+
+  * Multiple security fixes for:
+    - Privileged user escalation (CVE-2012-4733)
+    - Semi-predictable temporary file names (CVE-2013-3368)
+    - Arbitrary Mason component execution (CVE-2013-3369)
+    - Direct execution of private callback components (CVE-2013-3370)
+    - XSS via attachment filenames and URLs in messages (CVE-2013-3371)
+    - XSS via Content-Disposition header (CVE-2013-3372)
+    - MIME header injection (CVE-2013-3373)
+    - Limited session reuse when using Apache::Session::File (CVE-2013-3374)
+  * Include database upgrade (dbconfig-common and NEWS)
+
+ -- Dominic Hargreaves <dom@earth.li>  Wed, 22 May 2013 18:53:16 +0100
+
+request-tracker4 (4.0.12-1) unstable; urgency=low
+
+  * New upstream release
+    - include database update for consistently lower-case ticket types
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 11 May 2013 15:06:11 +0100
+
+request-tracker4 (4.0.11-1) experimental; urgency=low
+
+  * Set the Section of rt-doc-html to doc, matching the current Debian
+    archive
+  * Run test suite during package build (Closes: #688976)
+  * The above change adds a Build-Depends on liblist-moreutils-perl which
+    also fixes a FTBFS with 4.0.10-1 (Closes: #705002)
+  * New upstream release
+    - Update versioned build-dependency on libpod-simple-perl
+  * Don't depend on a -1 revision libhtml-mason-perl, to assist with
+    backporting (thanks, Lintian)
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 16 Apr 2013 21:50:07 +0100
+
+request-tracker4 (4.0.10-1) experimental; urgency=low
+
+  * Switch to git-dpm for patch management
+  * Remove no_syslogd_running patch as the bug worked around
+    has been fixed
+  * New upstream release (Closes: #703345)
+    - Update copyright years in debian/copyright
+    - Update versioned dependency on libhtml-rewriteattributes-perl
+    - Add dbconfig upgrade script and associated NEWS item
+    - customize some documentation to refer to Debian paths
+    - add POD for rt-validate-aliases
+  * Add rt4-doc-html package containing HTML documentation for RT
+  * Reorder and trim the long package descriptions to reduce duplication
+  * Rework copyright file to meet the Version 1.0 spec
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 29 Mar 2013 17:33:17 +0000
+
+request-tracker4 (4.0.7-5) unstable; urgency=medium
+
+  * Change localstatedir from /var/cache/request-tracker4 to
+    /var/lib/request-tracker4 as it contains things which aren't caches
+  * Update other references to /var/cache/request-tracker4 where
+    appropriate
+  * Move /var/cache/request-tracker4/data/gpg to
+    /var/lib/request-tracker4/data/gpg in postinst
+  * Add NEWS item about moves from /var/cache/request-tracker4
+  * Closes: #704107
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 29 Mar 2013 13:15:32 +0000
+
+request-tracker4 (4.0.7-4) unstable; urgency=low
+
+  * Add extra robustness to hostname handling (Closes: 685502)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 16 Dec 2012 14:08:31 +0000
+
+request-tracker4 (4.0.7-3) unstable; urgency=low
+
+  * Cherry-pick fix from 4.0.8 fixing duplicate transaction creation
+    bug (Closes: #691701)
+  * Remove unused code which uses Digest::SHA1 which in turn has been
+    removed from Debian (Closes: #694484)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 10 Dec 2012 14:13:24 +0000
+
+request-tracker4 (4.0.7-2) unstable; urgency=high
+
+  * Multiple security fixes for:
+    - Email header injection attack (CVE-2012-4730)
+    - Missing rights checking for Articles (CVE-2012-4731)
+    - CSRF protection allows attack on bookmarks (CVE-2012-4732)
+    - Confused deputy attack for non-logged-in users (CVE-2012-4734)
+    - Multiple message signing/encryption attacks related to GnuPG
+      (CVE-2012-4735)
+    - Arbitrary command-line argument injection to GnuPG (CVE-2012-4884)
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 23 Oct 2012 10:58:58 +0100
+
+request-tracker4 (4.0.7-1) unstable; urgency=low
+
+  * In debian/config, fall back to using plain 'hostname' if
+    'hostname -f' does not work. Thanks to Daniel Baumann
+    (Closes: #685502)
+  * New upstream release
+  * Add missing dependency on libipc-run-perl (versioned to 0.90 following
+    upstream dependencies)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 15 Oct 2012 18:23:39 +0100
+
+request-tracker4 (4.0.6-4) unstable; urgency=low
+
+  * Remove recommendation of libapache2-mod-fastcgi since this is
+    non-free (Closes: #682133)
+  * Remove cron job during package purge (Closes: #682186)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 17 Aug 2012 19:54:42 +0100
+
+request-tracker4 (4.0.6-3) unstable; urgency=high
+
+  * Fix broken regex character range that results in failed installs;
+    thanks to Carl Fürstenber (Closes: #678239)
+  * Urgency high due to RC bug fix
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 21 Jun 2012 22:28:11 +0100
+
+request-tracker4 (4.0.6-2) unstable; urgency=low
+
+  * update-rt-siteconfig: Allow inclusion of files with capital letters
+    and underscores in their name (Closes: #674409)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 03 Jun 2012 17:50:50 +0100
+
+request-tracker4 (4.0.6-1) unstable; urgency=low
+
+  * Provide specific instructions for restarting a mod_perl based
+    Apache server
+  * New upstream release
+    - update dependencies
+    - add NEWS items
+    - apply database upgrades
+  * Update mod_fcgid config to allow large attachments
+  * Fix debian/copyright syntax (thanks, Lintian)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 27 May 2012 18:24:26 +0100
+
+request-tracker4 (4.0.5-3) unstable; urgency=high
+
+  [ Dmitry Smirnov ]
+  * debian/copyright update
+  * added missing 'libfcgi-perl' dependency to 'rt4-fcgi'
+  * debian/rt4-fcgi.init: fixed 'status' function
+
+  [ Dominic Hargreaves ]
+  * Multiple security fixes for:
+    - XSS vulnerabilities (CVE-2011-2083)
+    - information disclosure vulnerabilities including password hash
+      exposure and correspondence disclosure to privileged users
+      (CVE-2011-2084)
+    - CSRF vulnerabilities allowing information disclosure,
+      privilege escalation, and arbitrary code execution. Original
+      behaviour may be restored by setting $RestrictReferrer to 0 for
+      installations which rely on it (CVE-2011-2085)
+    - remote code execution vulnerabilities including in VERP
+      functionality (CVE-2011-4458)
+  * Add vulnerable-password and clean-user-txns scripts to accompany
+    above fixes, and run in postinst
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 19 May 2012 22:30:27 +0100
+
+request-tracker4 (4.0.5-2) unstable; urgency=low
+
+  * Improve rt4-fcgi description to clarify that it's only required
+    where an external FCGI process is needed, and that it's not
+    nginx specific
+  * Add Dutch debconf translation (Closes: #661101)
+  * Create cron job world-readable during new installations
+    (Closes: #660867)
+  * Correctly remove all conffiles during purge (Closes: #668451)
+  * Remove references to obsolete /etc/apache2/conf.d (see #669774)
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 22 Apr 2012 14:58:39 +0100
+
+request-tracker4 (4.0.5-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove no longer needed libhtml-parser-perl dependency
+  * Remove patch 67_restore_database_disconnection_state, integrated
+    upstream
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 05 Feb 2012 22:48:38 +0000
+
+request-tracker4 (4.0.4-3) unstable; urgency=low
+
+  [ Dmitry Smirnov ]
+  * debian/copyright
+    + updated to DEP-5
+    + corrected source URL
+    + added copyrights of debian contributors
+    - removed Perl copyright paragraph
+  * debian/watch is updated
+  * new rt4-fcgi package and sample nginx configuration
+  * debian/control:
+    + request-tracker4 depend either on rt4-apache2 or on rt4-fcgi
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 26 Jan 2012 19:59:23 +0000
+
+request-tracker4 (4.0.4-2) unstable; urgency=low
+
+  * Add Recommends on all Apache-related modules; although any one can
+    be used to produce a working configuration, installing them all will
+    result in less confusion (LP: #769765)
+  * Restore database disconnection state after successful safe_run_child;
+    fixes problems with mod_perl + PostgreSQL + mod_ssl. Thanks to
+    Alex Vandiver (Closes: #632129)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 02 Jan 2012 15:05:48 +0000
+
+request-tracker4 (4.0.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Don't hard-code the DBA user in rt-setup-fulltext-index
+    (Closes: #644093)
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 10 Nov 2011 23:02:28 +0000
+
+request-tracker4 (4.0.2-1) unstable; urgency=low
+
+  * Include Homepage in debian/control (Closes: #631668)
+  * Don't hard-code the DBA user in rt-setup-database (Closes: #637215)
+  * Improve reference to upstream documentation
+  * New upstream release
+  * Remove dependency on libjavascript-minifier-perl, no longer used 
+
+ -- Dominic Hargreaves <dom@earth.li>  Wed, 17 Aug 2011 22:53:39 +0100
+
+request-tracker4 (4.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Tidy up obsolete strings from Debconf translations
+  * Add Danish debconf translation (from: #631304)
+  * Add build-arch and build-indep targets to debian/rules
+    (thanks, Lintian)
+  * Move po-debconf from Build-Depends-Indep to Build-Depends
+    (thanks, Lintian)
+  * Correct name of cron.d file from request-tracker40 to request-tracker4
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 24 Jun 2011 19:48:24 +0100
+
+request-tracker4 (4.0.1~rc2-1) experimental; urgency=low
+
+  * New upstream release candidate
+
+ -- Dominic Hargreaves <dom@earth.li>  Tue, 14 Jun 2011 20:51:13 +0100
+
+request-tracker4 (4.0.1~rc1-2) experimental; urgency=low
+
+  * Ignore quilt .pc files when backing up generated files;
+    fixes FTBFS under some circumstances (Closes: #628901)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 05 Jun 2011 15:41:32 +0100
+
+request-tracker4 (4.0.1~rc1-1) experimental; urgency=low
+
+  * Initial release with packaging taken from request-tracker3.8
+    3.8.8-6 (Closes: #605103)
+    - rebase/drop various patches
+    - install new scripts
+    - update documentation
+    - remove support for SpeedyCGI
+    - update example Apache configurations
+    - update dependencies
+    - remove some old upgrade utility scripts
+  * Correct name of file in cron.d to one which will be run by cron
+  * Remove completely misleading documentation from NOTES.Debian
+    relating to migrating between SQLite and other databases
+  * Bump Standards-Version (no changes)
+  * Include BSD license text in debian/copyright (thanks, Lintian)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 29 May 2011 13:01:30 +0100

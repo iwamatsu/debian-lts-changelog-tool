@@ -1,0 +1,24 @@
+node-css-what (2.1.0-1+deb10u1) buster-security; urgency=medium
+
+  * Team upload
+  * node-css-what was vulnerable to Regular Expression Denial of Service
+    (ReDoS) due to the usage of insecure regular expression in the
+    re_attr variable.
+    The exploitation of this vulnerability could be triggered
+    via the parse function.
+    Fix CVE-2022-21222, CVE-2021-33587 (Closes: #989264, #1032188)
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 01 Mar 2023 15:33:15 +0000
+
+node-css-what (2.1.0-1) unstable; urgency=medium
+
+  * new upstream version
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 05 Feb 2016 21:41:17 +0100
+
+node-css-what (2.0.2-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Wed, 09 Sep 2015 01:41:17 +0200
+

@@ -1,0 +1,152 @@
+postgresql-multicorn (1.3.4-4+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS Security Team.
+  * Fix PEP440 non compliant version
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 27 Nov 2023 22:35:01 +0000
+
+postgresql-multicorn (1.3.4-4) unstable; urgency=medium
+
+  * Remove python/multicorn.egg-info/ on clean instead of ignoring it.
+  * Skip write_filesystem test with python3.7, still broken.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Thu, 22 Nov 2018 11:54:39 +0100
+
+postgresql-multicorn (1.3.4-3) unstable; urgency=medium
+
+  * Upload for PostgreSQL 11.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Fri, 19 Oct 2018 11:37:02 +0200
+
+postgresql-multicorn (1.3.4-2) unstable; urgency=medium
+
+  * Move packaging repository to salsa.debian.org
+  * Move maintainer address to team+postgresql@tracker.debian.org.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 23 Jul 2018 22:39:03 +0200
+
+postgresql-multicorn (1.3.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Thu, 23 Nov 2017 13:03:19 +0100
+
+postgresql-multicorn (1.3.3-6) unstable; urgency=medium
+
+  * Test-Depend on python(3)-all-dev to pull in the correct python version if
+    there are several. Analysis and patch by Steve Langasek, thanks!
+    Closes: #879897.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 06 Nov 2017 19:24:13 +0100
+
+postgresql-multicorn (1.3.3-5) unstable; urgency=medium
+
+  * Update Makefile and regression tests to actually test PG10.
+  * Skip write_filesystem test with python3.6, currently broken.
+  * Use socket in /tmp for tests.
+
+ -- Christoph Berg <myon@debian.org>  Sun, 22 Oct 2017 16:23:46 +0200
+
+postgresql-multicorn (1.3.3-4) unstable; urgency=medium
+
+  * Team upload.
+  * Update recommends to python(3)-ldap3, spotted by Michael Fladischer.
+    Closes: #854976.
+  * Move newpid build-dependency to debian/tests/control.in where it is
+    actually needed.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Fri, 06 Oct 2017 12:36:38 +0200
+
+postgresql-multicorn (1.3.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Cherry-pick patch to support PostgreSQL 10.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Thu, 21 Sep 2017 14:43:58 +0200
+
+postgresql-multicorn (1.3.3-2) unstable; urgency=medium
+
+  * Wrap testsuite in "newnet" to have port 5432 available.
+  * Cherry-pick to fix ERROR:  Error in python: ImportError
+    DETAIL:  cannot import name 'ARRAY'
+    https://github.com/soring/Multicorn/commit/655e4fb2b854cc004bf93db7a73a825dd49e35b5.patch
+
+ -- Christoph Berg <myon@debian.org>  Sat, 14 Jan 2017 21:22:30 +0100
+
+postgresql-multicorn (1.3.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version with 9.6 support.
+  * Fix some regression diffs, see
+    https://github.com/Kozea/Multicorn/issues/171.
+  * Drop less-restrictive-testing.diff, no longer needed.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 27 Sep 2016 13:07:01 +0200
+
+postgresql-multicorn (1.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Grab patches from upstream:
+    + Fix "ImportError: 'plpy' is not a built-in module" on python3.
+    + Make sure that plpython3 is initialized before Multicorn.
+    + Fix string conversion compat layer for Python 3.
+  * The built-in regression tests are not important, let's declare this
+    Closes: #795590.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 12 Apr 2016 22:48:42 +0200
+
+postgresql-multicorn (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release with 9.5 support.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Mon, 11 Jan 2016 12:43:36 +0100
+
+postgresql-multicorn (1.2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Testsuite is unfortunately still broken, just differently now.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 22 Dec 2015 16:33:35 +0100
+
+postgresql-multicorn (1.2.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Ignore testsuite failure until #795590 is resolved.
+    (Test is broken, not the code)
+
+ -- Christoph Berg <myon@debian.org>  Sun, 06 Sep 2015 18:18:36 +0200
+
+postgresql-multicorn (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upload to unstable.
+  * Add patch less-restrictive-testing.diff to fix autopkgtests for debci.
+  * Restrict autopkgtests to just postgresql-9.4 as that's the only
+    version of the extension the control file lists as a dependency (and
+    we cannot dynamically add packages, there).
+  * More specific dependencies for autopkgtest.
+
+ -- Markus Wanner <markus@bluegap.ch>  Sun, 28 Jun 2015 11:38:10 +0200
+
+postgresql-multicorn (1.1.0-1~exp1) experimental; urgency=low
+
+  [ Christoph Berg ]
+  * debian/test/control: Note minimum versions of postgresql-server-dev-all
+    (we need pg_buildext -i) and postgresql-common (we need locale_gen).
+  * Improve the VPATH fix patch.
+
+  [ Markus Wanner ]
+  * New upstream version.
+  * Drop patches 88ce4f068e48f5d748dc92d40ce9ed1c5ae67105 and
+    vpath-build.diff, these got applied upstream.
+  * Bump S-V: no changes required.
+
+ -- Christoph Berg <christoph.berg@credativ.de>  Tue, 02 Dec 2014 10:27:02 +0100
+
+postgresql-multicorn (1.0.4-1) unstable; urgency=low
+
+  [ Markus Wanner ]
+  * Initial release. Closes: #753889.
+
+ -- Christoph Berg <myon@debian.org>  Sun, 28 Sep 2014 17:59:59 +0200

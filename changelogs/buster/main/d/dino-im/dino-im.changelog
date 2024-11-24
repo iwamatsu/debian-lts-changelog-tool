@@ -1,0 +1,97 @@
+dino-im (0.0.git20181129-1+deb10u1) buster-security; urgency=high
+
+  * Fix check of source of a carbons message (CVE-2019-16235)
+  * Check roster push authorization (CVE-2019-16236)
+  * Fix check of source of MAM message (CVE-2019-16237)
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 13 Sep 2019 19:00:21 +0000
+
+dino-im (0.0.git20181129-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 04 Dec 2018 22:27:07 +0000
+
+dino-im (0.0.git20181120-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 21 Nov 2018 09:26:25 +0000
+
+dino-im (0.0.git20181102-1) unstable; urgency=medium
+
+  * New upstream git snapshot (Closes: #909488)
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 05 Nov 2018 23:46:31 +0000
+
+dino-im (0.0.git20180921-1) unstable; urgency=medium
+
+  * New upstream git snapshot (Closes: #909488)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 07 Oct 2018 18:47:42 +0000
+
+dino-im (0.0.git20180904-1) unstable; urgency=medium
+
+  * New upstream git snapshot (Closes: #907935)
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 04 Sep 2018 20:02:20 +0000
+
+dino-im (0.0.git20180805-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 12 Aug 2018 00:06:25 +0000
+
+dino-im (0.0.git20180603-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 06 Jun 2018 17:48:50 +0000
+
+dino-im (0.0.git20180430-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+  * Bump standards version and dh compat
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 01 May 2018 20:49:49 +0000
+
+dino-im (0.0.git20180310-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 20 Mar 2018 22:52:15 +0000
+
+dino-im (0.0.git20180130-1) unstable; urgency=medium
+
+  * New upstream git snapshot
+  * First upload to unstable
+  * Move packaging to Debian XMPP Maintainers, use salsa.debian.org
+  * Bump standards version
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 30 Jan 2018 22:42:17 +0000
+
+dino-im (0.0.git20171205-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 06 Dec 2017 22:00:30 +0000
+
+dino-im (0.0.git20171117-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+  * Add some useful recommends
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 18 Nov 2017 13:40:16 +0000
+
+dino-im (0.0.git20171101-1) experimental; urgency=medium
+
+  * New upstream git snapshot
+  * dino-im depends on dino-im-common (Closes: #880716)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 04 Nov 2017 18:35:51 +0000
+
+dino-im (0.0.git20171023-1) experimental; urgency=medium
+
+  * Initial release. (Closes: #860055)
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 23 Oct 2017 21:56:37 +0000

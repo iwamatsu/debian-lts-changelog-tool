@@ -1,0 +1,135 @@
+golang-golang-x-oauth2 (0.0~git20190604.0f29369-2) unstable; urgency=medium
+
+  * Tighten golang-golang-x-oauth2-google-dev versioned dependency
+    on golang-google-cloud-compute-metadata-dev (>= 0.34.0~)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 07 Aug 2019 05:22:39 -0600
+
+golang-golang-x-oauth2 (0.0~git20190604.0f29369-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20190604.0f29369
+  * Apply "cme fix dpkg" fixes
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Add myself to the list of Uploaders
+  * Set DH_GOLANG_EXCLUDES_ALL to false in debian/rules to maintain the
+    same behaviour when updating debhelper-compat from 11 to 12.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 28 Jul 2019 03:29:14 -0600
+
+golang-golang-x-oauth2 (0.0~git20180821.d2e6202-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Shengjing Zhu ]
+  * New upstream snapshot 0.0~git20180821.d2e6202.
+  * Update debhelper and compat to 11.
+  * Update Standards-Version to 4.2.1. (no changes)
+  * Update team mail address to team+pkg-go@tracker.debian.org.
+  * Use git mode in debian/watch.
+  * Move golang-google-appengine-dev to Suggests
+    google.golang.org/appengine is only imported with build tags
+    appengine and appenginevm.
+
+ -- Shengjing Zhu <zhsj@debian.org>  Thu, 20 Sep 2018 10:43:13 +0800
+
+golang-golang-x-oauth2 (0.0~git20180207.543e378-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20180207.543e378
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Fri, 16 Feb 2018 19:36:09 +0100
+
+golang-golang-x-oauth2 (0.0~git20170901.d89af98-1) unstable; urgency=medium
+
+  [ Shengjing Zhu ]
+  * Team upload
+  * New upstream release
+  * Drop 0001-Use_old_imports.patch
+  * Update compat and dh to 10
+  * Update pkg-team name
+  * Change priority to optional
+
+ -- Martín Ferrari <tincho@debian.org>  Wed, 13 Sep 2017 02:44:52 +0000
+
+golang-golang-x-oauth2 (0.0~git20161103.0.36bc617-5) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Team upload.
+  * Remove Built-Using from arch:all -dev package
+
+  [ Martín Ferrari ]
+  * debian/control: Update Standards-Version (no changes).
+  * debian/control: Mark package as autopkgtest-able.
+  * debian/control: Remove unneded versioned deps.
+  * debian/control: Remove references to obsolete golang-go.net-dev.
+  * debian/copyright: Format uses http protocol instead of https.
+
+ -- Martín Ferrari <tincho@debian.org>  Mon, 28 Aug 2017 03:03:56 +0000
+
+golang-golang-x-oauth2 (0.0~git20161103.0.36bc617-4) unstable; urgency=medium
+
+  * debian/control: Add Breaks field to avoid collisions with pre-split
+    package. Closes: #844435.
+
+ -- Martín Ferrari <tincho@debian.org>  Tue, 15 Nov 2016 19:20:47 +0100
+
+golang-golang-x-oauth2 (0.0~git20161103.0.36bc617-3) unstable; urgency=medium
+
+  * Use legacy import paths for Google stuff.
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 13 Nov 2016 14:54:16 +0000
+
+golang-golang-x-oauth2 (0.0~git20161103.0.36bc617-2) unstable; urgency=medium
+
+  * Split the binary package, and stop testing the google subdir to avoid
+    circular (build-)dependencies.
+
+ -- Martín Ferrari <tincho@debian.org>  Sat, 12 Nov 2016 21:57:01 +0000
+
+golang-golang-x-oauth2 (0.0~git20161103.0.36bc617-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Martín Ferrari ]
+  * New upstream release.
+  * Add myself to Uploaders.
+  * debian/control: Remove golang-go dependency from -dev package.
+  * debian/control: Switch to golang-any for building.
+  * Simplify rules by using newer dh-golang.
+  * Depend on latest golang-google-cloud-compute-metadata-dev.
+  * Update x/net package name.
+
+ -- Martín Ferrari <tincho@debian.org>  Fri, 04 Nov 2016 18:29:43 +0100
+
+golang-golang-x-oauth2 (0.0~git20160416.0.7e9cd5d-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream snapshot (Closes: #823473)
+  * Standards-Version: 3.9.8
+  * Update Vcs-Browser to https
+  * Add d/docs file
+
+ -- Tim Potter <tpot@hpe.com>  Tue, 17 May 2016 12:44:14 +1000
+
+golang-golang-x-oauth2 (0.0~git20151116.0.442624c-1) unstable; urgency=medium
+
+  * Team upload.
+  * Update to latest upstream version (Closes: #806175)
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 25 Nov 2015 12:41:58 +1100
+
+golang-golang-x-oauth2 (0.0~git20150527-2) unstable; urgency=medium
+
+  * Depend on now-available golang-google-cloud-compute-metadata-dev.
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Thu, 18 Jun 2015 18:49:39 +0200
+
+golang-golang-x-oauth2 (0.0~git20150527-1) unstable; urgency=medium
+
+  * Initial release (Closes: #788765)
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Sun, 14 Jun 2015 22:40:23 +0200

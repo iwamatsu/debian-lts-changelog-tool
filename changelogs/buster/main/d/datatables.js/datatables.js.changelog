@@ -1,0 +1,109 @@
+datatables.js (1.10.19+dfsg-1+deb10u1) buster-security; urgency=medium
+
+  * Non-maintainer upload by the LTS team.
+  * Fix: If an array was passed to the HTML escape entities function
+    it would not have its contents escaped.
+    (Closes: #995229) (Fixes: CVE-2021-23445)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Tue, 15 Aug 2023 17:24:45 +0530
+
+datatables.js (1.10.19+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sascha Steinbiss <satta@debian.org>  Thu, 28 Jun 2018 11:40:41 +0200
+
+datatables.js (1.10.18+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version.
+  * Use debhelper 11.
+  * Use secure format link in d/copyright.
+  * Use Salsa VCS-* links.
+
+ -- Sascha Steinbiss <satta@debian.org>  Mon, 18 Jun 2018 15:24:21 +0200
+
+datatables.js (1.10.16+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use debhelper 10.
+  * Bump Standards-Version.
+
+ -- Sascha Steinbiss <satta@debian.org>  Sun, 03 Sep 2017 21:32:32 +0200
+
+datatables.js (1.10.15+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sascha Steinbiss <satta@debian.org>  Mon, 19 Jun 2017 10:51:36 +0200
+
+datatables.js (1.10.15+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Sascha Steinbiss <satta@debian.org>  Fri, 21 Apr 2017 16:50:56 +0200
+
+datatables.js (1.10.13+dfsg-2) unstable; urgency=medium
+
+  * Avoid use of static filenames in /tmp during build.
+    Thanks to Christoph Biedl for the patch.
+    Closes: #850879
+
+ -- Sascha Steinbiss <satta@debian.org>  Fri, 13 Jan 2017 12:40:37 +0000
+
+datatables.js (1.10.13+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update maintainer email address.
+  * d/copyright: 'tests' -> 'old-tests'
+  * Remove unused override.
+  * Fix watchfile to directly prepare orig tarball.
+
+ -- Sascha Steinbiss <satta@debian.org>  Fri, 09 Dec 2016 08:11:48 +0000
+
+datatables.js (1.10.12+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Sun, 22 May 2016 01:09:52 +0000
+
+datatables.js (1.10.11+dfsg-3) unstable; urgency=medium
+
+  * Remove Build-dep on PHP completely as it is unnecessary.
+  * Transfer package to JS team.
+  * Bump Standards-Version.
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Fri, 06 May 2016 08:54:57 +0000
+
+datatables.js (1.10.11+dfsg-2) unstable; urgency=medium
+
+  * Update to PHP7.0 build-dependencies.
+    Thanks to Nishanth Aravamudan for the patch from Ubuntu.
+  * Bump Standards-Version.
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Wed, 06 Apr 2016 08:16:21 +0000
+
+datatables.js (1.10.11+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Fri, 12 Feb 2016 11:06:55 +0000
+
+datatables.js (1.10.10+dfsg-2) unstable; urgency=medium
+
+  * Adjust VCS-Git to use HTTPS
+  * Adjust override to match new Lintian message 
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Tue, 26 Jan 2016 15:12:01 +0000
+
+datatables.js (1.10.10+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Sat, 28 Nov 2015 12:11:01 +0000
+
+datatables.js (1.10.9+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #719601)
+
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Tue, 13 Oct 2015 14:46:54 +0200

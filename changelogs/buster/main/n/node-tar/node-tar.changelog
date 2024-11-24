@@ -1,0 +1,166 @@
+node-tar (4.4.6+ds1-3+deb10u2) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS Security Team.
+  * CVE-2021-37701, CVE-2021-37712: Arbitrary File Creation/Overwrite via
+    insufficient symlink protection due to directory cache poisoning using
+    symbolic links. (Closes: #993981)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Mon, 12 Dec 2022 03:26:51 +0100
+
+node-tar (4.4.6+ds1-3+deb10u1) buster; urgency=medium
+
+  * Team upload
+  * Remove paths from dirCache when no longer dirs
+    (Closes: #992110, CVE-2021-32803)
+  * Strip absolute paths more comprehensively
+    (Closes: #992111, CVE-2021-32804)
+
+ -- Yadd <yadd@debian.org>  Thu, 12 Aug 2021 00:06:36 +0200
+
+node-tar (4.4.6+ds1-3) unstable; urgency=medium
+
+  * Team upload
+  * Tighten dependencies (Closes: #910165)
+  * Update copyright file (remove chownr section)
+  * Add autopkgtest
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 15 Oct 2018 22:13:56 +0530
+
+node-tar (4.4.6+ds1-2) unstable; urgency=medium
+
+  * Team upload
+  * Drop chownr component in favor of node-chownr package
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 28 Sep 2018 01:27:08 +0530
+
+node-tar (4.4.6+ds1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 4.4.6+ds1
+  * Allow pkg-components from backports
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 16 Sep 2018 13:29:46 +0530
+
+node-tar (4.4.4+ds1-2) unstable; urgency=medium
+
+  * Team upload
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 17 Aug 2018 11:48:35 +0530
+
+node-tar (4.4.4+ds1-1) experimental; urgency=medium
+
+  * Properly rebuild ds1, including all tarballs
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 19 Jul 2018 12:23:16 +0200
+
+node-tar (4.4.4+ds-4) experimental; urgency=medium
+
+  * Properly build package from vcs. See README.source. 
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 19 Jul 2018 11:37:57 +0200
+
+node-tar (4.4.4+ds-3) experimental; urgency=medium
+
+  * Build-Depends on some modules needed for tests
+  * New upstream version 4.4.4+ds
+  * Update minipass version
+  * api-backward-compatibility.patch: restore capitalized methods
+    names. (Closes: #900491)
+  * copyright: move comment from Source into Comment
+  * Improve 4.4.1 changelog entry
+  * Depends pkg-components >= 0.10
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 08 Jun 2018 09:31:29 +0200
+
+node-tar (4.4.1+ds-2) experimental; urgency=medium
+
+  * Call dh-components using dh_override_install/clean,
+    because default hook is only after dh_install.
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 23 Apr 2018 13:43:58 +0200
+
+node-tar (4.4.1+ds-1) experimental; urgency=medium
+
+  * New upstream version 4.4.1+ds
+  * Section javascript
+  * Priority optional
+  * Vcs salsa
+  * Remove Testsuite field
+  * Exclude benchmarks modules and repack
+  * Standards-Version 4.1.4
+  * Drop useless patch
+  * Update Depends
+  * Bundle these modules:
+    + chownr (ITP #863985)
+    + minipass
+    + fs-minipass
+    + minizlib
+    using salsa:kapouer/pkg-components#f8714364 (see also
+    #896608) which makes them easy to maintain using
+    uscan-components and dh-components.
+    Bundling criterions:
+    - small source and same(ish) upstream author as main package
+    - or not actively maintained and small number of potential
+      reverse dependencies.
+   * Run package tests
+   * Add patch to avoid dependency on chmodr for running tests
+     (node-chmodr is not available at the moment)
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 23 Apr 2018 01:14:10 +0200
+
+node-tar (2.2.1-1) unstable; urgency=medium
+
+  [ Bas Couwenberg ]
+  * Remove myself from Uploaders.
+
+  [ Jérémy Lal ]
+  * Imported Upstream version 2.2.1
+  * Run tests in autopkgtest
+  * Move build-deps to test deps
+  * Upstream license moved to ISC
+  * Secure Vcs url
+  * Standards-Version 3.9.8
+  * Add patch fixing test
+  * Tighten dependency on node-fstream 1.0.10
+  * Override lintian error about missing source for test data
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 18 Nov 2016 09:52:18 +0100
+
+node-tar (1.0.3-2) unstable; urgency=medium
+
+  * Merge changes from previous releases.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 15 Mar 2015 22:59:07 +0100
+
+node-tar (1.0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #780440)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 14 Mar 2015 01:29:10 +0100
+
+node-tar (0.1.18-1) unstable; urgency=low
+
+  * Upstream update
+  * control:
+    + tighten dependency on node-inherits (>= 2)
+    + canonicalize Vcs fields
+    + Standards-Version 3.9.4
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 15 Aug 2013 16:06:15 +0200
+
+node-tar (0.1.17-1) experimental; urgency=low
+
+  * Upstream update.
+  * Use github url in watch file.
+  * Use dh_installexamples instead of dh_installdocs.
+
+ -- Jérémy Lal <kapouer@melix.org>  Fri, 22 Mar 2013 10:18:26 +0100
+
+node-tar (0.1.13-1) unstable; urgency=low
+
+  * Initial release (Closes: #664719)
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 17 Mar 2012 23:37:48 +0100

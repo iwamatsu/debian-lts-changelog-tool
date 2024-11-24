@@ -1,0 +1,976 @@
+pillow (8.1.2+dfsg-0.3+deb11u2) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Backport follow-up fix for CVE-2022-22817, upstream commit c930be075.
+  * Backport fixes for CVE-2023-44271, CVE-2023-50447, CVE-2024-28219.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 02 Jun 2024 16:59:20 +0100
+
+pillow (8.1.2+dfsg-0.3+deb11u1) bullseye-security; urgency=medium
+
+  * CVE-2022-22815 CVE-2022-22816 CVE-2022-22817
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Fri, 14 Jan 2022 16:44:08 +0100
+
+pillow (8.1.2+dfsg-0.3) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix "CVE-2021-34552 - buffer overflow in Convert.c. Replace sprintf with
+    snprintf. Backport upstream change from 8.3 to 8.1. (Closes: #991293)
+
+ -- Neil Williams <codehelp@debian.org>  Tue, 20 Jul 2021 06:42:31 +0100
+
+pillow (8.1.2+dfsg-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Cherrypick security fixes from 8.2:
+    - CVE-2021-25287 / CVE-2021-25288 / CVE-2021-28675 / CVE-2021-28676
+      CVE-2021-28677 / CVE-2021-28678 (Closes: #989062)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Sun, 13 Jun 2021 18:11:04 +0200
+
+pillow (8.1.2+dfsg-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Repack for DFSG compliance and update d/copyright. Closes: #952899.
+  * Update d/watch for +dfsg repack.
+
+ -- Romain Porte <debian@microjoe.org>  Sat, 24 Apr 2021 15:51:24 +0200
+
+pillow (8.1.2-1) unstable; urgency=high
+
+  * New upstream version.
+    - Fix Memory DOS in BLP (CVE-2021-27921), ICNS (CVE-2021-27922)
+      and ICO (CVE-2021-27923) Image Plugins.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 09 Mar 2021 08:12:51 +0100
+
+pillow (8.1.1-1) unstable; urgency=high
+
+  * New upstream version.
+    - Use more specific regex chars to prevent ReDoS. CVE-2021-25292.
+    - Fix OOB Read in TiffDecode.c, and check the tile validity before reading.
+      CVE-2021-25291.
+    - Fix negative size read in TiffDecode.c. CVE-2021-25290.
+    - Fix OOB read in SgiRleDecode.c. CVE-2021-25293.
+    - Incorrect error code checking in TiffDecode.c. CVE-2021-25289.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 04 Mar 2021 07:13:48 +0100
+
+pillow (8.1.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Bump standards and debhelper versions.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 06 Jan 2021 13:18:02 +0100
+
+pillow (8.0.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 29 Oct 2020 20:02:10 +0100
+
+pillow (8.0.0-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 17 Oct 2020 12:09:16 +0200
+
+pillow (7.2.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Update debian/copyright, partially addresses #952899.
+    - Mention contributors.
+    - Add copyright information for fonts.
+  * Bump debhelper version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 16 Jul 2020 13:42:51 +0200
+
+pillow (7.0.0-4) unstable; urgency=medium
+
+  * Don't rely on python2's python.mk in the build.
+  * Bump standards version.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 29 Jan 2020 08:33:20 +0100
+
+pillow (7.0.0-3) unstable; urgency=medium
+
+  * Drop the Python2 autopkg tests.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 12 Jan 2020 09:54:31 +0100
+
+pillow (7.0.0-2) unstable; urgency=medium
+
+  * Build-depend on python2 for the use of python.mk.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 06 Jan 2020 16:19:39 +0100
+
+pillow (7.0.0-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Drops Python2 support.
+  * Stop building the Python2 packages, now built from the pillow-python2
+    source.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 06 Jan 2020 13:38:42 +0100
+
+pillow (6.2.1-2) unstable; urgency=medium
+
+  * Call python2 in the autopkg python2 tests.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 04 Nov 2019 08:41:21 +0100
+
+pillow (6.2.1-1) unstable; urgency=medium
+
+  * New upstream version, "last Pillow release to support Python 2.7".
+  * Replaces python-dbg debpendencies with python2-dbg.
+  * Remove Python2 suggests.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 26 Oct 2019 16:49:09 +0200
+
+pillow (6.2.0-1) unstable; urgency=medium
+
+  * New upstream version, last version supporting Python2.
+  * Bump standards version.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 16 Oct 2019 15:47:42 +0200
+
+pillow (6.1.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 07 Jul 2019 14:36:49 +0200
+
+pillow (6.0.0-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 07 Apr 2019 02:43:30 +0200
+
+pillow (5.4.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Enable imagequant support.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 18 Jan 2019 11:05:56 +0100
+
+pillow (5.3.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 18 Oct 2018 12:16:31 +0200
+
+pillow (5.2.0-2) unstable; urgency=medium
+
+  * Apply proposed patch for issue #3227. Closes: #887752.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 20 Jul 2018 14:57:58 +0200
+
+pillow (5.2.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 11 Jul 2018 14:50:06 +0200
+
+pillow (5.1.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Add recommendations for olefile.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 09 Apr 2018 15:43:37 +0200
+
+pillow (5.0.0-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Closing old python-imaging issues. Closes: #510877, #708449, #806973.
+    - Example scripts not installed anymore. Closes: #513536, #554906.
+  * Stop building the python-imaging package.
+  * Build-depend on libraqm-dev.
+  * python-pil-doc: Stop suggesting python-pil-doc-html. Closes: #814567.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 06 Jan 2018 00:24:59 +0100
+
+pillow (4.3.0-2) unstable; urgency=medium
+
+  * Install the ImagingUtils.h header file. Closes: #879788.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 26 Oct 2017 08:53:42 +0200
+
+pillow (4.3.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * python-pil: Stop shipping the Python2 based script files.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 17 Oct 2017 11:43:20 +0200
+
+pillow (4.2.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 03 Aug 2017 18:56:22 -0400
+
+pillow (4.1.1-3) unstable; urgency=medium
+
+  * Restore the python-imaging package for the upload to unstable.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 01 Jul 2017 12:08:54 +0200
+
+pillow (4.1.1-2) experimental; urgency=medium
+
+  * Re-add olefile build dependencies.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 12 May 2017 12:24:32 -0700
+
+pillow (4.1.1-1) experimental; urgency=medium
+
+  * Pillow 4.1.1 release.
+  * Build with external OleFileIO module.
+  * Stop building the python-imaging package.
+    Obsolete bug reports, closes: #557251, #711343, #773307, #815533, #858226.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 12 May 2017 12:05:48 -0700
+
+pillow (4.0.0-4) unstable; urgency=medium
+
+  * Build again with internal OleFileIO module.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 24 Jan 2017 16:52:07 +0100
+
+pillow (4.0.0-3) unstable; urgency=medium
+
+  * Re-add build dependencies on python*-olefile.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 10 Jan 2017 23:44:36 +0100
+
+pillow (4.0.0-2) unstable; urgency=medium
+
+  * Add imagingtk-int-overflow.patch. Fix integer overflow on 32 bit
+    architectures (Markus Koschany). Closes: #847812.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 09 Jan 2017 23:50:08 +0100
+
+pillow (4.0.0-1) unstable; urgency=medium
+
+  * Pillow 4.0.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 05 Jan 2017 19:47:03 +0100
+
+pillow (3.4.2-1) unstable; urgency=medium
+
+  * Pillow 3.4.2 release.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 02 Nov 2016 15:48:03 +0100
+
+pillow (3.3.1-1) unstable; urgency=medium
+
+  * Pillow 3.3.1 release.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 31 Aug 2016 16:32:48 +0200
+
+pillow (3.3.0-1) unstable; urgency=medium
+
+  * Pillow 3.3.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 11 Aug 2016 10:18:19 +0200
+
+pillow (3.2.0-2) unstable; urgency=medium
+
+  * Don't run test needing the removed icc profiles.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 05 May 2016 17:42:07 +0200
+
+pillow (3.2.0-1) unstable; urgency=medium
+
+  * Pillow 3.2.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 16 Apr 2016 18:01:45 +0200
+
+pillow (3.1.1-1) unstable; urgency=medium
+
+  * Pillow 3.1.1 release.
+    - CVE-2016-0740: Fix buffer overflow in TiffDecode.c. Closes: #813905.
+    - CVE-2016-0775: Fix buffer overflow in FliDecode.c. Closes: #813909.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 10 Feb 2016 10:40:44 +0100
+
+pillow (3.1.0-1) unstable; urgency=medium
+
+  * Pillow 3.1.0 release.
+  * Breaks rapid-photo-downloader (<< 0.4.11). Closes: #806976.
+  * Breaks tilestache (<< 1.49.8-3). Closes: #808238.
+  * Install upstream changelog. Closes: #805694.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 19 Jan 2016 17:49:58 +0100
+
+pillow (3.0.0-1) unstable; urgency=medium
+
+  * Pillow 3.0.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 30 Nov 2015 08:35:40 +0100
+
+pillow (2.9.0-1) unstable; urgency=medium
+
+  * Pillow 2.9.0 release.
+  * d/rules: Don't add $DEB_HOST_MULTIARCH to SOABI for Python 3.5 since
+    it's already included there. Closes: #790085.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 12 Aug 2015 02:59:31 +0200
+
+pillow (2.8.1-1) unstable; urgency=medium
+
+  * Pillow 2.8.1 release.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 01 Jun 2015 19:15:59 +0200
+
+pillow (2.7.0-1) experimental; urgency=medium
+
+  * Pillow 2.7.0 release.
+  * Stop building the sane package, not built anymore from this source.
+  * Disable running the tests in debug mode for now, hangs the build.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 26 Feb 2015 14:29:15 +0100
+
+pillow (2.6.1-1) unstable; urgency=medium
+
+  * Pillow 2.6.1 release.
+  * Update jpeg build dependency. Closes: #763491.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 13 Oct 2014 20:30:42 +0200
+
+pillow (2.6.0-1) unstable; urgency=medium
+
+  * Pillow 2.6.0 release.
+  * Add test images missing in the release.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 02 Oct 2014 14:23:21 +0200
+
+pillow (2.6.0~rc1-1) unstable; urgency=medium
+
+  * Pillow 2.6.0 release candidate 1.
+    - Provides distributable test image files. Closes: #760171.
+    - Fix comparing an Image to anything that's not an image. Closes: #758927.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 30 Sep 2014 12:13:58 +0200
+
+pillow (2.5.3-1) unstable; urgency=medium
+
+  * Pillow 2.5.3 release.
+    - Fix CVE-2014-3589, a DOS in the IcnsImagePlugin. Closes: #758772.
+    - Fix CVE-2014-3598, a DOS in the Jpeg2KImagePlugin.
+  * Build-Depend on dh-python.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 21 Aug 2014 08:56:15 +0200
+
+pillow (2.5.1-6) unstable; urgency=medium
+
+  * Allow stderr output for the upstream autopkg tests.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 15 Aug 2014 00:15:29 +0200
+
+pillow (2.5.1-5) unstable; urgency=medium
+
+  * Add python-nose, python3-nose to the autopkg test dependencies.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 13 Aug 2014 13:10:39 +0200
+
+pillow (2.5.1-4) unstable; urgency=medium
+
+  * Run the tests sequentially, and increase the timeout.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 11 Aug 2014 19:20:32 +0200
+
+pillow (2.5.1-3) unstable; urgency=medium
+
+  * Run tests during the build.
+  * Disable running the imagecms tests.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 11 Aug 2014 17:57:45 +0200
+
+pillow (2.5.1-2) unstable; urgency=medium
+
+  * Update autopkg tests for 2.5.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 10 Aug 2014 13:14:26 +0200
+
+pillow (2.5.1-1) unstable; urgency=medium
+
+  * Pillow 2.5.1 release.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 17 Jul 2014 23:43:18 +0200
+
+pillow (2.4.0-2) unstable; urgency=medium
+
+  * Require python-tk and python3-tk versions built for Tcl/Tk 8.6.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 13 Jun 2014 13:59:57 +0200
+
+pillow (2.4.0-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Fix configuration on non-linux platforms. Closes: #745714.
+    - CVE-2014-1932, CVE-2014-1933: Fix insecure use of /tmp. Closes: #737059.
+  * Fix detection of Tk. Closes: #746051.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 16 Apr 2014 00:48:53 +0200
+
+pillow (2.3.0-2) unstable; urgency=medium
+
+  * Build for python 3.4.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 12 Feb 2014 20:41:50 +0100
+
+pillow (2.3.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Don't ship the color profiles in the source and disable the tests
+    using the profiles. Closes: #737425.
+  * Support a webp file in $ADTTMP in the testsuite, and generate it in the
+    autopktests. Closes: #736242.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 04 Feb 2014 15:02:06 +0100
+
+pillow (2.2.1-3) unstable; urgency=low
+
+  * Add PngImagePlugin.py to PILcompat directory.
+  * Add autopkgtest. Closes: #729462.
+  * Build using lcms2.
+  * Build with WebP support. Closes: #707827.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 16 Dec 2013 12:49:38 +0100
+
+pillow (2.2.1-2) unstable; urgency=low
+
+  * Fix build failure with new freetype header layout.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 02 Dec 2013 18:54:44 +0100
+
+pillow (2.2.1-1) unstable; urgency=low
+
+  * New upstream version, package source as pillow.
+  * python-imaging: Breaks fretsonfire-game (<= 1.3.110.dfsg-3).
+    Closes: #729209.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 11 Nov 2013 23:48:20 +0000
+
+python-imaging (1.1.7+2.0.0-1.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Rename python3-imaging* packages to python3-pil*
+  * Rename python-imaging to python-pil and python-imaging-compat to
+    python-imaging (use python-imaging until given package imports Image
+    directly, i.e. needs .pth file)
+  * Rename python-imaging-tk to python-pil.imagetk, provide the old name
+  * Rename python-imaging-sane to python-sane, provide the old name
+  * Rename other python-imaging-* packages to python-pil-* and Provide the old
+    names
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 20 Oct 2013 22:23:11 +0200
+
+python-imaging (1.1.7+2.0.0-1) experimental; urgency=low
+
+  * Pillow 2.0.0 release.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 20 Mar 2013 16:44:01 -0700
+
+python-imaging (1.1.7+1.7.8-4) experimental; urgency=low
+
+  * Require python-defaults (>= 2.7.3-11) for the build. Closes: #700716.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 28 Feb 2013 14:59:19 +0100
+
+python-imaging (1.1.7+1.7.8-3) experimental; urgency=low
+
+  * Fix python-tk build dependencies. Closes: #700716.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 18 Feb 2013 02:24:36 +0100
+
+python-imaging (1.1.7+1.7.8-2) experimental; urgency=low
+
+  * Add python-imaging-compat modules to get back the old top-level
+    module names (i.e. not subpackages within PIL) for Python 2 only.
+  * python-imaging: Depend on python-imaging-compat for now.
+
+ -- Matthias Klose <doko@debian.org>  Sun, 10 Feb 2013 16:48:37 +0100
+
+python-imaging (1.1.7+1.7.8-1) experimental; urgency=low
+
+  * Build from the Pillow fork, version 1.7.8, plus vcs updates.
+  * Build using setuptools.
+  * Build python3 packages, using port by Brian Crowell.
+  * Allow the package to cross-build.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 31 Jan 2013 18:52:38 +0100
+
+python-imaging (1.1.7-4) unstable; urgency=low
+
+  * Add multiarch search directories as given by dpkg-architecture.
+    This re-enables support for: tkinter, jpeg, zlib, freetype2, and
+    littlecms (Marc Tardif, Barry Warsaw). LP: #806661.
+    Closes: #632962, #632180.
+  * Build using libjpeg8.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 09 Jul 2011 11:56:15 +0200
+
+python-imaging (1.1.7-3) unstable; urgency=low
+
+  * Fix buffer overflow (taken from Fedora).
+  * Fix "split after open" bug. Closes: #561965.
+  * Remove obsolete conflicts/replaces.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 28 Jun 2011 18:54:43 +0200
+
+python-imaging (1.1.7-2) unstable; urgency=low
+
+  * Build-depend on liblcms1-dev. Closes: #583620.
+  * Build using dh_python2 instead of dh_pycentral.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 26 Jul 2010 11:46:12 +0200
+
+python-imaging (1.1.7-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@debian.org>  Fri, 20 Nov 2009 19:22:59 +0100
+
+python-imaging (1.1.6-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "manipulates site-packages/ directly, failing with Python 2.6"
+    Applied and uploaded Kumar's patch. (Closes: #547844)
+
+ -- Bastian Venthur <venthur@debian.org>  Sat, 07 Nov 2009 12:54:12 +0100
+
+python-imaging (1.1.6-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Switch from Tcl/Tk 8.4 to 8.5, following the move initiated in
+    python-tk 2.5.2-1.1 (See: #521078):
+     - Build-Depends on tk8.5-dev rather than tk8.4-dev.
+     - Build-Depends on python-tk-dbg (>= 2.5.2-1.1) rather than
+       python-tk-dbg (>= 2.4.3).
+     - Depends on/Recommends python-tk (>= 2.5.2-1.1) rathen than
+       python-tk (>= 2.4.3).
+     - Use /usr/include/tcl8.5 in setup.py, instead of tcl8.4
+    Thanks to Jakub Wilk for the patch on which this is based, which fixes
+    the FTBFS (Closes: #537003).
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 03 Sep 2009 05:04:46 +0200
+
+python-imaging (1.1.6-3) unstable; urgency=low
+
+  * Do not build-depend on python-numarray, it's deprecated. Closes: #478466.
+  * Merge from Ubuntu:
+    - In __array_interface__ add support for 16bit TIF images (Luke
+      Campagnola). LP: #198892.
+    - Search for available image viewers. LP: #67755. Closes: #321658.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 23 Jun 2008 21:52:59 +0200
+
+python-imaging (1.1.6-2) unstable; urgency=low
+
+  * Build-depend on python-tk-dbg. Closes: #460372.
+  * Apply fix for PIL not saving TIFF dpi correctly. Closes: #419463.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 28 Jan 2008 23:40:28 +0100
+
+python-imaging (1.1.6-1) unstable; urgency=low
+
+  * New upstream version.
+  * Merge from Ubuntu:
+    - Build python-debug packages.
+    - Add build dependency on python-numarray-dbg.
+    - Sane/_sane.c: Initialize variable. Ubuntu #88059.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 24 May 2007 06:31:21 +0200
+
+python-imaging (1.1.5-11) unstable; urgency=low
+
+  * python-imaging-sane: Depend on python-numarray. Closes: #382190.
+  * Add dependencies on ${shlibs:Depends}, lost in -6. Closes: #378596.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 28 Aug 2006 23:14:10 +0000
+
+python-imaging (1.1.5-10) unstable; urgency=low
+
+  * pilfont.py: Add interpreter name. Closes: #350146.
+
+ -- Matthias Klose <doko@debian.org>  Sat,  8 Jul 2006 00:07:36 +0000
+
+python-imaging (1.1.5-9) unstable; urgency=low
+
+  * Call dh_python before dh_pycentral.
+
+ -- Matthias Klose <doko@debian.org>  Wed, 14 Jun 2006 23:16:29 +0000
+
+python-imaging (1.1.5-8) unstable; urgency=low
+
+  * Do not depend on python2.4.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 13 Jun 2006 22:47:12 +0000
+
+python-imaging (1.1.5-7) unstable; urgency=low
+
+  * Readd the provides for the versioned packages.
+
+ -- Matthias Klose <doko@debian.org>  Fri,  9 Jun 2006 16:06:45 +0000
+
+python-imaging (1.1.5-6) unstable; urgency=low
+
+  * New maintainer.
+  * Convert to python-central.
+
+ -- Matthias Klose <doko@debian.org>  Tue,  6 Jun 2006 23:05:06 +0000
+
+python-imaging (1.1.5-5) unstable; urgency=low
+
+  * Test build using python-central.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 24 Jan 2006 18:15:59 +0000
+
+python-imaging (1.1.5-4) unstable; urgency=low
+
+  * Change section to python.
+  * Remove binaries from python2.4-imaging package (closes: #316917).
+  * Acknowledge NMU (1.1.4-3.1). Closes: #303897.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 12 Jul 2005 18:13:33 +0000
+
+python-imaging (1.1.5-3) unstable; urgency=low
+
+  * Fix upgrade from old python2.3-imaging package (closes: #316917).
+
+ -- Matthias Klose <doko@debian.org>  Fri,  8 Jul 2005 13:29:34 +0000
+
+python-imaging (1.1.5-2) unstable; urgency=low
+
+  * Move the binary scripts into the python-imaging package.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 29 Jun 2005 11:18:24 +0200
+
+python-imaging (1.1.5-0ubuntu1) breezy; urgency=low
+
+  * Synchronise with Debian.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 27 Jun 2005 22:00:16 +0200
+
+python-imaging (1.1.5-1) unstable; urgency=low
+
+  * New upstream version (closes: #303067).
+  * Merge changes from Ubuntu:
+    - Add python2.4 packages, drop python2.1 and python2.2 packages.
+      Closes: #292567.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 27 Jun 2005 20:21:06 +0200
+
+python-imaging (1.1.4-3.1) unstable; urgency=low
+
+  * NMU. 
+  * debian/control: Build-Depends: change libjpegg-dev to libjpeg-dev.
+    (Closes: #303897). Thanks Daniel Schepler.
+
+ -- Bill Allombert <ballombe@debian.org>  Thu, 14 Apr 2005 18:10:45 +0200
+
+python-imaging (1.1.4-3) unstable; urgency=low
+
+  * New maintainer.
+    - ACKing NMUs.
+    - No longer use dpatch -- they were introduced by the first NMU;
+      I tend to use a real source management system. ;-)
+  * Reworded a few Description: tags to shut up Lintian.
+
+ -- Matthias Urlichs <smurf@debian.org>  Mon,  5 Jan 2004 19:00:21 +0100
+
+python-imaging (1.1.4-2.2) unstable; urgency=low
+
+  * NMU from Minneapolis BSP.
+  * Fixed freetype header reference. (Closes: #222469)
+
+ -- Scott Dier <sdier@debian.org>  Sat, 13 Dec 2003 23:26:22 -0600
+
+python-imaging (1.1.4-2.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * use dh_python, which needs build-depends on python
+    (Closes: #188146) - removal of .py[co] files
+  * Standards version 3.6.1
+  * use dpatch:
+    - 01_fix_png_text_parsing
+      (Closes: #211712)
+    - 02_fix_olefileio_typo
+      (Closes: #197165) (Closes: #198210)
+    - 03_remove_rexec_usage
+      (Closes: #182149)
+    - 04_retain_gif_transparency
+      (Closes: #159693)
+    - 05_dump_to_jpeg
+      (Closes: #146493)
+  * install docs in python-imaging-doc package (Closes: #176420)
+  * Sane patch already applied (Closes: #156158)
+  * add mime-support | python(X.Y)-imaging-tk to depends, because the
+    Image.show() function uses either TkImage or _showmime
+  * improve -tk package description (Closes: #209976)
+
+ -- Bastian Kleineidam <calvin@debian.org>  Sat,  4 Oct 2003 16:57:59 +0200
+
+python-imaging (1.1.4-2) unstable; urgency=low
+
+  * New source version due to the fact that testing cannot handle all-
+    architecture binary-only uploads (Closes: #212853)
+
+ -- Simon Richter <sjr@debian.org>  Tue, 30 Sep 2003 02:45:34 +0200
+
+python-imaging (1.1.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Simon Richter <sjr@debian.org>  Thu, 10 Apr 2003 17:49:10 +0200
+
+python-imaging (1.1.3-4) unstable; urgency=low
+
+  * Accepted changes from NMU, although I still don't like distutils for
+    being opaque (Actually closes: #161120, #161718, #162065)
+  * We now use Tcl/Tk 8.4
+
+ -- Simon Richter <sjr@debian.org>  Tue, 26 Nov 2002 16:49:50 +0100
+
+python-imaging (1.1.3-3.3) unstable; urgency=low
+
+  * Add python2.[123]-tk to the build dependencies.
+
+ -- Matthias Klose <doko@debian.org>  Thu,  3 Oct 2002 14:38:11 +0200
+
+python-imaging (1.1.3-3.1) unstable; urgency=low
+
+  * NMU.
+  * Build using distutils (closes: #161120, #161718, #162065).
+
+ -- Matthias Klose <doko@debian.org>  Sat, 28 Sep 2002 15:28:40 +0200
+
+python-imaging (1.1.3-3) unstable; urgency=low
+
+  * Added Python 2.3 support
+
+ -- Simon Richter <sjr@debian.org>  Sun, 15 Sep 2002 18:10:28 +0200
+
+python-imaging (1.1.3-2) unstable; urgency=low
+
+  * Also switched python-imaging-sane and python-imaging-tk to 2.2 as
+    default version
+  * Dropped python 1.5 packages
+
+ -- Simon Richter <sjr@debian.org>  Thu, 29 Aug 2002 14:53:50 +0200
+
+python-imaging (1.1.3-1.1) unstable; urgency=low
+
+  * Change python default to python2.2.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 24 Aug 2002 14:02:03 +0200
+
+python-imaging (1.1.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #138739)
+
+ -- Simon Richter <sjr@debian.org>  Fri, 22 Mar 2002 15:46:31 +0100
+
+python-imaging (1.1.2-5) unstable; urgency=low
+
+  * Applied a patch from CVS that fixes an invalid call to __init__
+    without an object reference (Closes: #133272)
+  * Made Image.show() use the generic "see" command rather than "xv"
+    (Closes: #133078)
+
+ -- Simon Richter <sjr@debian.org>  Mon, 11 Feb 2002 20:41:29 +0100
+
+python-imaging (1.1.2-4) unstable; urgency=low
+
+  * Acknowledged changes from NMU (Closes: #117859, #118267)
+
+ -- Simon Richter <sjr@debian.org>  Fri, 18 Jan 2002 15:26:24 +0100
+
+python-imaging (1.1.2-3.2) unstable; urgency=low
+
+  * NMU, coordinated with maintainer, to make package compliant with
+    the new Debian Python policy draft (#117859, #118267):
+    
+    - python2 packages removed
+    - new python1.5, python2.1 and python2.2 packages
+    - python-* packages are empty placeholders for the default
+      Python version packages, 2.1.
+
+ -- Gregor Hoffleit <flight@debian.org>  Fri,  9 Nov 2001 10:43:35 +0100
+
+python-imaging (1.1.2-3.1) unstable; urgency=low
+
+  * NMU. Build with python (2.1), remove python2 packages.
+
+ -- Matthias Klose <doko@debian.org>  Fri,  9 Nov 2001 07:42:52 +0100
+
+python-imaging (1.1.2-3) unstable; urgency=low
+
+  * Indented the lists in the description fields, so dselect knows these
+    are preformatted (Closes: #106439).
+
+ -- Simon Richter <sjr@debian.org>  Tue, 24 Jul 2001 18:06:39 +0200
+
+python-imaging (1.1.2-2) unstable; urgency=low
+
+  * Added an rm to the configure target so ImConfig.h (which upstream
+    forgot to delete) is removed before the build. For some reason it
+    took precedence over the generated ImConfig.h from configure
+    (Closes: #105999)
+  * Removed an unnecessary (for Debian) -I/usr/local/include which
+    apparently slipped through
+
+ -- Simon Richter <sjr@debian.org>  Sat, 21 Jul 2001 15:55:10 +0200
+
+python-imaging (1.1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Split out documentation into python-imaging-doc-handbook package
+
+ -- Simon Richter <sjr@debian.org>  Sat,  9 Jun 2001 19:23:51 +0200
+
+python-imaging (1.1.1.ds1-6) unstable; urgency=low
+
+  * Fixed debian/rules to take the version number from the changelog
+    rather than hardcoded
+
+ -- Simon Richter <sjr@debian.org>  Tue,  8 May 2001 02:11:15 +0200
+
+python-imaging (1.1.1.ds1-5) unstable; urgency=low
+
+  * Took over maintainership (Closes: #72435)
+
+ -- Simon Richter <sjr@debian.org>  Tue,  8 May 2001 02:10:16 +0200
+
+python-imaging (1.1.1.ds1-4) unstable; urgency=low
+
+  * Add zlib1g-dev to build dependencies (fixes #89705).
+  * Build python2-imaging with correct python version (fixes #90567).
+
+ -- Matthias Klose <doko@debian.org>  Thu, 29 Mar 2001 20:19:53 +0200
+
+python-imaging (1.1.1.ds1-3) unstable; urgency=low
+
+  * Fix dependencies.
+
+ -- Matthias Klose <doko@debian.org>  Sat,  3 Mar 2001 17:56:08 +0100
+
+python-imaging (1.1.1.ds1-2) unstable; urgency=low
+
+  * Rebuild for tk8.3.
+  * New python2 packages.
+  * Reorganized source code, so version number has to change in source.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 24 Feb 2001 18:46:58 +0100
+
+python-imaging (1.1.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Tue, 28 Nov 2000 11:19:12 +0100
+
+python-imaging (1.1-2) unstable; urgency=low
+
+  * debian/control: Add missing build dependencies (fixes #66393).
+  * Link module with shared libs (jpeg, z). Fixes #66653.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Mon,  3 Jul 2000 14:56:30 +0200
+
+python-imaging (1.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add manual in PDF format.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Mon, 26 Jun 2000 16:39:31 +0200
+
+python-imaging (1.0.1-3) frozen unstable; urgency=low
+
+  * Add cascading stylesheet labdoc.css (fixes #63052).
+  * Move ImageTk.py to python-imaging-tk package (fixes part of #63050).
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Thu,  4 May 2000 01:07:41 +0200
+
+python-imaging (1.0.1-2) frozen unstable; urgency=low
+
+  * debian/python-imaging-doc.doc-base: Missing /usr/doc -> /usr/share/doc
+    transition (fixes important #56372).
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Sat, 19 Feb 2000 10:41:04 +0100
+
+python-imaging (1.0.1-1) unstable; urgency=low
+
+  * /usr/doc -> /usr/share/doc transition.
+  * Apply patch from Erno Kuusela <erno@erno.iki.fi> (closes #50768).
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Sun,  5 Dec 1999 17:56:48 +0100
+
+python-imaging (1.0.1-0pre2) unstable; urgency=low
+
+  * debian/control: Add conflicts for python-pil (closes: #43736).
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Sat,  4 Sep 1999 14:33:05 +0200
+
+python-imaging (1.0.1-0pre1) unstable; urgency=low
+
+  * New upstream release.
+  * Renamed package to match upstream name (Imaging-1.0.1).
+  * Separated out Tk dependencies to python-pil-tk package (fixes #41690).
+  * Build python-imaging-sane package.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Sun, 15 Aug 1999 21:22:07 +0200
+
+python-pil (1.0final-1) unstable; urgency=low
+
+  * New upstream release.
+  * Now really depends on python-tk (Closes #41690).
+  * Separated out python-pil-doc and python-pil-scripts package.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Wed,  4 Aug 1999 19:46:00 +0200
+
+python-pil (1.0b1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixes #34902.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Sun, 28 Mar 1999 10:59:57 +0200
+
+python-pil (0.3b2-3) frozen unstable; urgency=low
+
+  * Corrected location of doc files (fixes #30735).
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Tue, 15 Dec 1998 14:57:43 +0100
+
+python-pil (0.3b2-2) frozen unstable; urgency=low
+
+  * Renamed package pil to python-pil to conform to Debian python policy
+    (fixes #27495).
+  * Link against ncurses4.
+
+ -- Matthias Klose <doko@cs.tu-berlin.de>  Thu, 26 Nov 1998 23:55:11 +0200
+
+python-pil (0.3b2-2) unstable; urgency=low
+
+  * Build dynamically loadable Tcl module `PIL'.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 11 Aug 1998 14:29:25 +0200
+
+python-pil (0.3b2-1) unstable; urgency=low
+
+  * New upstream release 0.3b2.
+  * Added documentation from website
+
+ -- Matthias Klose <doko@debian.org>  Tue, 21 Jul 1998 11:49:38 +0200
+
+python-pil (0.3-0beta1.1) unstable; urgency=low
+
+  * New upstream release 0.3b1. Includes pilfont.
+
+ -- Matthias Klose <doko@debian.org>  Mon, 13 Jul 1998 18:58:12 +0200
+
+python-pil (0.3-0alpha4.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 28 May 1998 16:35:22 +0200
+
