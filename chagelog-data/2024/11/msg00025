@@ -1,0 +1,32 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Sun, 24 Nov 2024 13:53:00 +0200
+Source: ghostscript
+Architecture: source
+Version: 9.53.3~dfsg-7+deb11u9
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Changed-By: Adrian Bunk <bunk@debian.org>
+Changes:
+ ghostscript (9.53.3~dfsg-7+deb11u9) bullseye-security; urgency=medium
+ .
+   * Non-maintainer upload by the LTS Team.
+   * CVE-2024-46951: PS interpreter unchecked pointer
+   * CVE-2024-46953: output filename format string integer overflow
+   * CVE-2024-46955: PS interpreter out-of-bounds
+   * CVE-2024-46956: PS interpreter out-of-bounds
+Checksums-Sha1:
+ 4f0aff495c466025eb95fe992b4f4483d4790e2d 2709 ghostscript_9.53.3~dfsg-7+deb11u9.dsc
+ 9ce4415e5f37d858b5eb4d11040cf4079f2129c6 23948068 ghostscript_9.53.3~dfsg.orig.tar.xz
+ 1bd19d0d19101118d4ffa40b8db67b82ab901cb2 132576 ghostscript_9.53.3~dfsg-7+deb11u9.debian.tar.xz
+Checksums-Sha256:
+ 0bf66d9a00bf2e718e68bebc697a00595a4a6b615c760f4cc890a5ea517e54db 2709 ghostscript_9.53.3~dfsg-7+deb11u9.dsc
+ 678f99fc6cca9a224f49891b8db5d9a325b8b3fbbffa9f29d44bac9f54603f3d 23948068 ghostscript_9.53.3~dfsg.orig.tar.xz
+ aa9d0a7fcab91c9e539d8373664a49182f4df610a2fe1a9d894d131072f9cc15 132576 ghostscript_9.53.3~dfsg-7+deb11u9.debian.tar.xz
+Files:
+ a4257b61c8b28c04c0b78a7adab75e61 2709 text optional ghostscript_9.53.3~dfsg-7+deb11u9.dsc
+ 653da2a0bebf9949634c137da72d1e26 23948068 text optional ghostscript_9.53.3~dfsg.orig.tar.xz
+ 942148719eab97f8e1084c35ffb6b6ed 132576 text optional ghostscript_9.53.3~dfsg-7+deb11u9.debian.tar.xz
+
