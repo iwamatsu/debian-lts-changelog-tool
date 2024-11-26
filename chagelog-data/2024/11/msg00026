@@ -1,0 +1,43 @@
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 26 Nov 2024 09:18:20 +0100
+Source: pypy3
+Architecture: source
+Version: 7.3.5+dfsg-2+deb11u4
+Distribution: bullseye-security
+Urgency: medium
+Maintainer: Stefano Rivera <stefanor@debian.org>
+Changed-By: Andrej Shadura <andrewsh@debian.org>
+Changes:
+ pypy3 (7.3.5+dfsg-2+deb11u4) bullseye-security; urgency=medium
+ .
+   * Security patches to the standard library:
+     - Apply cPython upstream security fix for CVE-2022-45061:
+       Fix quadratic time idna decoding.
+     - Apply cPython upstream security fix for CVE-2022-0391:
+       Remove the newline, and tab early from query and fragments.
+     - Apply cPython upstream security fix for CVE-2021-3737:
+       Fix http client infinite line reading (DoS) after
+       a HTTP 100 Continue.
+     - Apply cPython upstream security fix for CVE-2024-9287:
+       Quote template strings in `venv` activation scripts.
+     - Apply cPython upstream security fix for CVE-2021-28861:
+       Fix an open redirection vulnerability in http.server.
+     - Apply cPython upstream security fix for CVE-2023-27043:
+       Reject malformed addresses in email.parseaddr().
+   * Apply upstream security fix CVE-2020-10735:
+     Prevent DoS by large int<->str conversions,
+     implement the int_max_str_digits handling.
+   * Apply security fix for CVE-2020-29651 in the bundled python-py:
+     svnwc: fix regular expression vulnerable to DoS.
+Checksums-Sha1:
+ b0956b9b98624362baf0aee309c2b933270745f1 2103 pypy3_7.3.5+dfsg-2+deb11u4.dsc
+ 4aaac3595ee19d9bb0b309c473423c03cb8e07ce 77784 pypy3_7.3.5+dfsg-2+deb11u4.debian.tar.xz
+Checksums-Sha256:
+ 116756ffd6511ad6281562cf4c43d3c47c63d92475f494dbfd7ab51c5216f21f 2103 pypy3_7.3.5+dfsg-2+deb11u4.dsc
+ 7db8a6bebad77fb91e957b0081612a29416d8acaee74744e232d8302e37eba3e 77784 pypy3_7.3.5+dfsg-2+deb11u4.debian.tar.xz
+Files:
+ 58852ea819b60dfcb45b2d4e14818c71 2103 python optional pypy3_7.3.5+dfsg-2+deb11u4.dsc
+ 69f02f25d4457666f285e5a527209df9 77784 python optional pypy3_7.3.5+dfsg-2+deb11u4.debian.tar.xz
+
