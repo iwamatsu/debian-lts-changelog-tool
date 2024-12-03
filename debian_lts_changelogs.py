@@ -396,8 +396,8 @@ class DebianLTSChangelogs:
     def download_sources_files(self, source_url:str = None):
 
         if source_url is not None:
-            url = source_url
-            return self.__download_sources_file(self, url)
+            save_filename = f'Sources-{self.suite}-{self.maint_mode}-main'
+            return self.__download_sources_file(source_url, save_filename)
 
         section_list = self.section[self.suite]
 
