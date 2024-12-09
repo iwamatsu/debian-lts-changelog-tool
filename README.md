@@ -10,7 +10,7 @@ repository into the changelogs directory.
 
 For Debian 10 (buster):
 ```
-./update-debian-elts-changelogs.py -s buster
+./update-debian-lts-changelogs.py -s buster
 ```
 
 2. Create changelog diff between Debian stable + Debian LTS to /tmp/changelog.SUITE.
