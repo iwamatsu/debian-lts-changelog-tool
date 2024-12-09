@@ -1,0 +1,419 @@
+havp (0.93-2+deb11u2) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS team.
+  * No-change upload to rebuild it against new ClamAV library in i386.
+    - ClamAV FTBFS in i386, therefore, the previous rebuild did not work for
+      this specific architecture.
+
+ -- Lucas Kanashiro <lucas@freexian.com>  Fri, 06 Dec 2024 00:17:23 -0300
+
+havp (0.93-2+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS team.
+  * Add compatibility with ClamAV 1.0.7.
+    - d/p/0001-Do-not-call-cl_strerror.patch: fix API change in ClamAV 1.0.7.
+    - d/control: b-d on libclamav-dev (>= 1.0.7).
+
+ -- Lucas Kanashiro <lucas@freexian.com>  Tue, 03 Dec 2024 18:14:55 -0300
+
+havp (0.93-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Bump standards version to 4.3.0 (no changes made).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 28 Feb 2019 23:25:25 +0100
+
+havp (0.93-1) experimental; urgency=medium
+
+  [ Sebastian Andrzej Siewior ]
+  * Add support for clamav 0.101 (Closes: #920865).
+
+  [ Scott Kitterman ]
+  * New upstream release
+  * Set minimum libclamav version to ensure it builds against the
+    version in experimental
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 04 Feb 2019 11:35:28 -0500
+
+havp (0.92a-6) unstable; urgency=medium
+
+  * Add e2fsprogs to Depends (it may be needed by the postinst script)
+   (Closes: #887273).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 23 Jun 2018 21:32:09 +0200
+
+havp (0.92a-5) unstable; urgency=medium
+
+  * Set Homepage to http://www.havp.org/, update watchfile.
+  * Update compat level to 11.
+  * Move VCS* to salsa.
+  * Bump standards version to 4.1.4.
+    - Use "invoke-rc.d havp" instead /etc/init.d/havp
+  * Enable hardening.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 21 Jun 2018 21:57:44 +0200
+
+havp (0.92a-4) unstable; urgency=medium
+
+  [ Andreas Cadhalpun ]
+  * Switch VCS-Browser to the cgit interface.
+  * Remove the obsolete havp.templates and rename havp.templates.master to
+    havp.templates.
+    This fixes the untranslatable-debconf-templates lintian errors.
+  * Run debconf-updatepo.
+  * Update debian/copyright to copyright-format 1.0.
+  * Fix debian/watch to recognise the current version 0.92a.
+  * Drop version constraint satisfied in oldoldstable from lsb-base dependency.
+  * Drop obsolete files (NEWS.Debian and svn-deblayout).
+
+  [ Sebastian Andrzej Siewior ]
+  * Create ext2 fs on installation, patch by Laurent Baysse (Closes: #628611).
+  * Reopen log-files on SIGHUP (Closes: #524045).
+  * Update USE_LOOPBACK in /etc/default/havp after "dpkg-reconfigure havp" set
+    the debconf value to true _and_ false. Reading the debconf value from the
+    init script breaks systemd so we keep the copy (Closes: #418415).
+  * Drop Via: header if X_FORWARDED_FOR is disabled (Closes: #606631).
+  * Update link for transparent proxy mini howto (Closes: #589129).
+  * Bump standards version to 3.9.6, no changes required.
+  * Enable LFS. This requires autoreconf and default.h split.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 01 Aug 2015 08:32:59 +0200
+
+havp (0.92a-3) unstable; urgency=medium
+
+  [ Sebastian Andrzej Siewior ]
+  * convert package to git-dpm and drop dpatch (Closes: #664346).
+  * Do not ship /var/run/havp, patch by Thomas Goirand (Closes: #689892).
+  * purge /var/run/havp und removal (Closes: #689778).
+  * remove the -x flag from .html files in the debian folder where the package
+    got intalled to actually fix lintian executable-not-elf-or-script.
+  * redo the rules with minimal debhelper 8
+
+  [ Andreas Cadhalpun ]
+  * Use 'set -e' in maintainer scripts.
+  * Add homepage to debian/control.
+  * Add CPPFLAGS to CFLAGS, because CPPFLAGS are not respected by havp's
+    build system.
+  * Call 'modprobe loop' in the init script before trying to mount a loop
+    device. This is necessary for newer kernels.
+  * Remove all logs in /var/log/havp, the contents of /var/lib/havp and
+    /etc/default/havp on purge (Closes: #666016).
+  * Fix restart action of init script. (Closes: #628612)
+    Thanks to Laurent Baysse for the bug report and patch.
+
+  [ Scott Kitterman ]
+  * Agreed maintainer change to pkg-clamav team, added myself, Sebastian
+    Andrzej Siewior, and Andreas Cadhalpun as uploaders along with Rene
+    Mayrhofer (the previous maintainer)
+  * Fix PID file naming for reload statement in havp.init, partially addresses
+    #524045
+  * Add lsb-base (>= 3.2-13) to depends
+  * Use lsb common functions to simplify status case in havp.init
+  * Added remote_fs to Required-start and Required stop in havp.init
+  * Add run level 1 to default stop in havp.init
+  * Bump stanards version to 3.9.5
+  * Add SSLTIMEOUT to etc/havp/havp.config.in (Closes: #628613)
+  * Set default clamd socket value to the correct location for Debian
+   (Closes: #628615)
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 10 Aug 2014 01:12:27 -0400
+
+havp (0.92a-2) unstable; urgency=low
+
+  * Include debconf language updates from previous NMU and new updates.
+    Closes: #624730: havp: [INTL:ja] please add Japanese po-debconf template
+                     translation (ja.po)
+    Closes: #625232: [INTL:es] Spanish debconf template translation for havp
+    Acknowledge NMU bug reports:
+     - Spanish (Camaleón).  Closes: #584442
+     - Danish (Joe Hansen).  Closes: #599824
+     - Italian (Vincenzo Campanella).  Closes: #600437
+  * The previous fix for havp.init with "umount -l" should make it unnecessary
+    to wait for unmount on havp stop.
+    Closes: #558370: havp fails to (re)start because of mounted /var/spool/havp
+  * Fix restart in havp.init by implementing it as stop and start.
+    Closes: #612919: havp: /etc/init.d/havp restart fails
+  * Acknowledge previous NMU
+    Closes: #557109: havp: FTBFS on GNU/kFreeBSD: missing flag
+    Closes: #558052: Japanese po-debconf template translation
+  * Compiled against newest libclamav6 (0.97).
+    Closes: #578036: Does not work anymore, linked against libclamav5 (0.94)
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Thu, 19 May 2011 12:25:29 +0000
+
+havp (0.92a-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Wed, 06 Apr 2011 17:42:05 +0000
+
+havp (0.91-2) unstable; urgency=low
+
+  * Apply fixes from Ubuntu:
+    - debian/havp.{init,postrm}: Under certain circumstances,
+      the init script and/or postrm script will fail to umount
+      loop-back devices. This issue has been addressed by performing
+      a lazy umount in these two scripts.
+     - debian/havp.init: Fixes "Fails to restart because of mounted
+       '/var/spool/havp'"
+  * Finally add patch by Heiko Schlittermann to enable an SSLTIMEOUT option in
+    havp.config that allows increasing the (otherwise hardcoded) connection
+    time limit.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Wed, 06 Apr 2011 16:57:41 +0200
+
+havp (0.91-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS on GNU/kFreeBSD (Closes: #557109): pass --disable-locking
+    when DEB_HOST_ARCH_OS equals kfreebsd.
+  * Include Japanese po-debconf template translation, thanks to Hideki
+    Yamane (Closes: #558052).
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 21 Dec 2009 10:57:16 +0100
+
+havp (0.91-1) unstable; urgency=low
+
+  * New upstream release. This should fix a potential DNS lookup segfault.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Thu, 20 Aug 2009 22:38:52 +0200
+
+havp (0.90-2) unstable; urgency=low
+
+  * Change default configuration to let havp listen only on localhost so
+    as not to create an open relay. The config file now has
+    BIND_ADDRESS 127.0.0.1 by default.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Fri, 15 May 2009 10:53:21 +0200
+
+havp (0.90-1) unstable; urgency=low
+
+  * New upstream release.
+  * Recompiled for libclamav translation.
+  * Bump to standards version 3.8.1, no changes.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Tue, 31 Mar 2009 13:02:22 +0000
+
+havp (0.89-2) unstable; urgency=low
+
+  * Create /var/run/havp if it doesn't exist when running init script so
+    that it can be used when /var/run is on tmpfs.
+    Closes: #502048: havp: Havp init fails after reboot if /var/run is tempfs
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Mon, 22 Dec 2008 18:07:52 +0100
+
+havp (0.89-1) unstable; urgency=high
+
+  Justification for urgency high: compiles with new libclamav-dev and
+  therefore fixes FTBFS for Lenny,
+  * New upstream release. This includes the fix for the potential DoS
+    issue. Therefore, remove
+    debian/patches/05_bts496034_CVE-2008-3688_fix_infinite_retry.dpatch.
+    The new upstream version has another small bugfix (sending Via:
+    header) but no additional changes and is therefore safe for Lenny.
+    Closes: #496034: CVE-2008-3688: DoS by infinite loop
+    Closes: #498338: havp depends on old clamav. This clamav version is
+                     vulnerable.
+  * Acknowledge NMU:
+    Closes: #492235: havp: does not delete temp files
+    Closes: #492236: havp: can't install if port 8080 in use
+    Closes: #487598: [INTL:sv] Swedish translation of debconf templates
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Tue, 09 Sep 2008 19:40:53 +0200
+
+havp (0.88-2) UNRELEASED; urgency=low
+
+  * Support reload command in init script, and thus make log rotation
+    work without interruption.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Sun, 15 Jun 2008 23:53:06 +0200
+
+havp (0.88-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/havp.init
+    - added cleanup for temporary files under /var/spool/havp; thanks to
+      Alberto for the report; Closes: #492235
+  * debian/{havp.prerm,havp.postinst,rules}
+    - modified to skip errors on service start/stop; thanks to Alberto for the
+      report; Closes: #492236
+  * debian/rules
+    - added removal for generated files
+    - clean run only if Makefile is present
+  * debian/patches/05_bts496034_CVE-2008-3688_fix_infinite_retry.dpatch
+    - added to fix CVE-2008-3688, DoS by connecting to a non-responsive server,
+      generating an infinite loop; thanks to Steffen Joeris for the report;
+      Closes: #496034
+  * debian/po/sv.po
+    - added Swedish translation of debconf templates; thanks to Martin Bagge;
+      Closes: #487598
+  * debian/copyright
+    - added copyright notices
+    - added GPLv2+ license boilerplate
+  * debian/havp.docs
+    - removed since it installed only INSTALL file
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Sat, 30 Aug 2008 10:58:54 +0200
+
+havp (0.88-1) unstable; urgency=low
+
+  * New upstream release, now compatible with new libclamav.
+    Closes: #479891: havp: FTBFS: clamlibscanner.cpp:198:
+            error: 'struct cl_limits' has no member named 'maxratio'
+    Closes: #457669: havp reports: "clamav: cannot create temprorary files"
+            (volatile project)
+  * Removed empty line between comments and first Template: header from
+    debian/havp.templates.master.
+    Closes: #457666: havp does not install properly in Sarge when build from
+            source (+workaround)
+  * Acknowledge NMU, although FTBFS is now fixed by now upstream version and
+    NMU patch to these files is no longer needed.
+    Closes: #471387: havp: diff for NMU version 0.87-1.1
+  * Update debian/watch file to version 3 and fix it for the current upstream
+    webpage layout.
+    Closes: #450154: havp: debian/watch fails to report upstream's version
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Thu, 29 May 2008 20:23:18 +0200
+
+havp (0.87-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add Malayalam debconf translation (Closes: #426234).
+  * Add Finnish debconf translation (Closes: #456965).
+  * Fix FTBFS with GCC 4.3 (Closes: #417873).
+
+ -- Luk Claes <luk@debian.org>  Mon, 17 Mar 2008 21:34:24 +0000
+
+havp (0.87-1) unstable; urgency=low
+
+  * New upstream release:
+    - Support for DrWeb.
+    - Smaller fixes and more configuration and template options.
+
+ -- Rene Mayrhofer <rene@mayrhofer.eu.org>  Thu, 24 Jan 2008 21:14:17 +0100
+
+havp (0.86-1) unstable; urgency=low
+
+  * New upstream release with experimental support for chunked Transfer-
+    Encoding, supposed to fix some broken sites.
+    Drop 01_Makefile.in.dpatch and 02_configure.dpatch, as they are now
+    included upstream.
+  * Always change ownership of havp directories under /var in postinst,
+    not only when the havp user is created. This makes updates from
+    earlier havp packages work.
+    Closes: #418414: /var/run/havp is owned by root
+  * Ship a logrotate config filem thanks to Vincent Deffontaines for the cue.
+  Apply patch prepared by Christian Perrier:
+  * Debconf templates and debian/control reviewed by the debian-l10n-
+    english team as part of the Smith review project.
+    Closes: #420262: havp: [debconf_rewrite] Debconf templates review
+  * Debconf translation updates:
+    - Tamil. Closes: #420783
+    - Galician. Closes: #420812
+    - German. Closes: #420927
+    - Russian. Closes: #421585
+    - Portuguese. Closes: #422486
+    - Dutch. Closes: #422768
+    - Czech. Closes: #422796
+    - French. Closes: #423106
+    - Brazilian Portuguese. Closes: #423251
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Sun, 20 May 2007 23:21:43 +0100
+
+havp (0.85-1) unstable; urgency=low
+
+  This is the "two Austrians independently submit patches to the slacking
+  Austrian maintainer" release. Thanks for the help, which was surprisingly
+  nearly orthogonal so that I could integrate both patches!
+  * New upstream release, fixes compilation with libclamav 0.90. Now
+    build-depend on libclamav-dev instead of libclamav1-dev.
+    Closes: #409690: FTBFS: 'cl_loaddbdir' was not declared in this scope
+  * Move run-time files from /var/tmp/havp to /var/spool/havp, which is still
+    not ideal but my current interpretation of FHS 2.3 in the context of what
+    havp is doing with these files (temporary storage for the scanner
+    threads).
+    Closes: #400218: havp: install directory in /var/tmp
+  * Add debconf question about automatic creation of loopback filesystem. This
+    creates a filesystem of user-defined size under /var/lib/state and mounts
+    it at /var/spool/havp with mandatory locking support. In my interpretation
+    of FHS 2.3, this is the best placement, but please feel free to comment.
+    Now pre-depend on debconf and build-depend on po-debconf.
+    Closes: #400218: havp: install directory in /var/tmp
+    Closes: #381113 Problem removing havp
+  * Make init script support the status command and only try to stop havp when
+    it is considered to be running.
+    Prevents future instances of: #381113 Problem removing havp
+  Integrate parts of a patch by Michael Fladischer, many thanks!
+  * Bump Standards-Version to 3.7.2.1, no changes.
+  * Add suggests: squid.
+  * Fix my messed up long description formatting.
+    Closes: #350681: havp: poorly formatted description
+  * Fix typo in LSB header of init script.
+  * Add a manual page, now build-depend on docbook-to-man.
+  * Also migrate this package to use dpatch, now build-depend on dpatch.
+  Integrate and rework parts of a patch by Harald Jenny, many thanks!
+  * Support automatic creation of a loopback filesystem to solve the problem
+    of required mandatory locks for temporary files. However, mounting and
+    unmounting is done by the init script and not via fstab, which seems
+    "safer" to me (havp mount errors for its temporary storage should not
+    prevent the whole system but just havp from starting).
+  * Enable SSL passing support (--enable-ssl-tunnel configure option).
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Fri, 16 Mar 2007 11:43:14 +0000
+
+havp (0.84-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Sun, 25 Feb 2007 20:07:43 +0000
+
+havp (0.82-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Wed,  2 Aug 2006 21:13:16 +0100
+
+havp (0.79-1) unstable; urgency=low
+
+  * New upstream release. This is the first release to support multiple
+    scanners (selectable at run-time instead of compile-time).
+    Closes: Bug#364728: new version for havp
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Sat, 15 Apr 2006 21:32:36 +0100
+
+havp (0.76-2) unstable; urgency=low
+
+  * Corrected location of PID file in init script.
+    Since I forgot to duplicate this line in the last changelog entry (which
+    was the first upload to unstable), do it now:
+    Closes: #304530: RFP: havp -- HAVP (HTTP Anti-Virus Proxy) is a proxy
+                     with a clamav antivirus scanner
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Tue, 10 Jan 2006 13:34:57 +0000
+
+havp (0.76-1) unstable; urgency=low
+
+  * New upstream release. This should fix problems with partial HTTP requests,
+    like e.g. apt-get is using them.
+  * Bump standards version to 3.6.2.2.
+  * Remove config.status and config.log in the clean target to get a clean
+    source package.
+  * Correct permissions of HTML templates files.
+  * Changed the location for temporary files created during scanning from
+    /var/tmp/havp to /var/run/havp, which is how I read the FHS.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Sat,  7 Jan 2006 20:29:59 +0000
+
+havp (0.74-1) unstable; urgency=low
+
+  * New upstream release.
+    Closes: #304530: RFP: havp -- HAVP (HTTP Anti-Virus Proxy) is a proxy
+                     with a clamav antivirus scanner
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Thu,  8 Dec 2005 14:34:35 +0000
+
+havp (0.73-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Rene Mayrhofer <rene.mayrhofer@gibraltar.at>  Thu, 3 Nov 2005 12:16:31 +0000

@@ -1,0 +1,251 @@
+c-icap-modules (1:0.5.4-2+deb11u2) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS team.
+  * No-change upload to rebuild it against new ClamAV library in i386.
+    - ClamAV FTBFS in i386, therefore, the previous rebuild did not work for
+      this specific architecture.
+
+ -- Lucas Kanashiro <lucas@freexian.com>  Fri, 06 Dec 2024 00:10:43 -0300
+
+c-icap-modules (1:0.5.4-2+deb11u1) bullseye-security; urgency=medium
+
+  * Non-maintainer upload by the ELTS team.
+  * No-change upload to rebuild it against new ClamAV library.
+
+ -- Lucas Kanashiro <lucas@freexian.com>  Wed, 04 Dec 2024 21:21:09 -0300
+
+c-icap-modules (1:0.5.4-2) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Salsa Pipeline ]
+  * Update salsa CI pipeline
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 02 Feb 2021 19:24:46 +0000
+
+c-icap-modules (1:0.5.4-1) unstable; urgency=medium
+
+  * QA upload.
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+
+  [ Håvard Flaget Aasen ]
+  * New upstream version 0.5.4
+    fix in upstream version closes: #952009
+  * Update Standards-Version to 4.5.0
+  * Remove libltdl3-dev as build-dependency
+  * Disable autopkgtest which needs internet access
+  * d/tests/toolbox.sh, add sleep before reading pid file
+
+ -- Håvard Flaget Aasen <haavard_aasen@yahoo.no>  Sat, 07 Mar 2020 15:59:45 +0100
+
+c-icap-modules (1:0.5.3-2) unstable; urgency=medium
+
+  * Orphan package (See: #907669)
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 11 Oct 2019 19:03:57 +0200
+
+c-icap-modules (1:0.5.3-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/watch: Use https protocol
+
+  [ Mathieu Parent ]
+  * New upstream version 0.5.3
+    - Supports libclamav9 (Closes: #919814)
+  * tests: Ensure clamav-daemon is started after freshclam
+  * Add debian/gitlab-ci.yml
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 21 Jan 2019 14:11:27 +0100
+
+c-icap-modules (1:0.5.1-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * debian/tests/virus-scan: sudo not needed (and not installed)
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 09 Sep 2018 16:30:07 +0200
+
+c-icap-modules (1:0.5.1-1) experimental; urgency=medium
+
+  * Upload to experimental
+  * New upstream version 0.5.1
+    - Bump libicapapi-dev Build-dep to 0.5
+  * Lintian and other housekeeping:
+    - Update Vcs-* fields to salsa
+    - Standards-Version: 4.2.1
+    - Run wrap-and-sort
+    - Priority: extra -> optional
+    - Fix insecure-copyright-format-uri
+    - Debhelper compat 9 -> 11
+    - Drop transitional package libc-icap-mod-clamav (Closes: #878371)
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 07 Sep 2018 05:13:51 +0200
+
+c-icap-modules (1:0.4.4-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 09 Oct 2016 21:29:45 +0200
+
+c-icap-modules (1:0.4.3-2) unstable; urgency=medium
+
+  * Add autopkgtest tests
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 20 May 2016 07:21:45 +0200
+
+c-icap-modules (1:0.4.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.4.3
+  * 0002-Implicit-declaration.patch: Merged upstream
+  * 0001-Fix-manpage.patch: Merged upstream
+  * Standards-Version: 3.9.8, no change
+  * Set hardening to +all (which actually enable pie)
+
+ -- Mathieu Parent <sathieu@debian.org>  Mon, 16 May 2016 21:45:49 +0200
+
+c-icap-modules (1:0.4.2-2) unstable; urgency=medium
+
+  * Take ownership of the package. Thanks Tim and Jochen
+  * Fix FTBFS when built with dpkg-buildpackage -A (Closes: #806001)
+  * Fix vcs-field-uses-insecure-uri
+  * Standards-Version: 3.9.7
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 17 Apr 2016 03:09:55 +0200
+
+c-icap-modules (1:0.4.2-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.4.2
+  * Configure --with-{zlib,bzlib,clamav,bdb}=yes
+  * Install missing files for libc-icap-mod-virus-scan (Closes: #806757)
+  * Add libc-icap-mod-contentfiltering
+  * Ensure all files are installed with dh_install --fail-missing
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 12 Dec 2015 21:24:43 +0100
+
+c-icap-modules (1:0.4.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.4.1
+  * Update Build-Depends on libicapapi-dev >=1:0.4.1~
+  * gbp.conf: renamed git-buildpackage section to buildpackage
+  * Standards-Version: 3.9.6, no change
+
+ -- Mathieu Parent <sathieu@debian.org>  Sun, 20 Sep 2015 02:01:17 +0200
+
+c-icap-modules (1:0.3.2-2) unstable; urgency=medium
+
+  * Fix lintian pre-depends-directly-on-multiarch-support
+  * Add Vcs-* fields
+
+ -- Mathieu Parent <sathieu@debian.org>  Fri, 22 Aug 2014 21:33:05 +0200
+
+c-icap-modules (1:0.3.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated Standards-Version to 3.9.5 - no change
+  * Use dh-autoreconf (Closes: #736634)
+  * Use ci_strcasestr() instead of strcasestr() (Closes: #732801)
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 25 Jan 2014 19:10:27 +0100
+
+c-icap-modules (1:0.3.1-2) unstable; urgency=medium
+
+  * really Build-Depends on libdb-dev (Closes: #708351)
+  * copyright:
+    - move to copyright-format/1.0
+    - c-icap-modules is GPL-2+ (Closes: #732559)
+
+ -- Mathieu Parent <sathieu@debian.org>  Sat, 21 Dec 2013 10:23:13 +0100
+
+c-icap-modules (1:0.3.1-1) unstable; urgency=low
+
+  * Take package ownership, as Tim is very busy (see #709151)
+  * New upstream
+  * Build-Depends on libdb-dev (Closes: #708351) and newer libicapapi-dev
+  * clamav module renamed virus_scan
+    - renaming package libc-icap-mod-clamav to libc-icap-mod-virus-scan
+    - transitionnal package libc-icap-mod-clamav
+  * Add me to uploaders
+  * debian/control: Bump Standards version to 3.9.4
+  * debian/control: Removing obsolete DM-Upload-Allowed  lintian warning
+  * Move to debhelper 9:
+    - debian/compat: changed from 7 to 9
+    - debian/control: Build-Depends raised
+  * Multi-arch (from dh 9)
+    - debian/*.install: Use multiarch path
+    - debian/control: Pre-Depend multiarch-support for libicapapi3
+  * Hardening (from dh9)
+    - Use override_dh_auto_configure (this enable missing hardening build
+      flags)
+    - debian/rules: bindnow hardening
+  * Install templates, c-icap-mods-sguardDB and corresponding manpage
+  * Fix manpages
+  * Fix template perms
+  * Add a Provides: libc-icap-module
+  * Remove postinst script copying from doc (Closes: #710310)
+  * Add gbp.conf
+
+ -- Mathieu Parent <sathieu@debian.org>  Wed, 18 Dec 2013 13:08:32 +0100
+
+c-icap-modules (1:0.1.6-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control: Added Jochen Friedrich to Uploaders
+  * debian/control: Bump Standards Version fo 3.9.2
+  * debian/control: Added DM-Upload-Allowed
+  * debian/patches: Remove allow204-outside-preview-patch
+  * debian/*.docs: Removed NEWS and README as these are empty files
+
+ -- Tim Weippert <weiti@weiti.org>  Sun, 14 Aug 2011 18:09:18 +0200
+
+c-icap-modules (1:0.1.5-1) unstable; urgency=low
+
+  * New Upstream release
+  * Upstream fix some sguard database issues (domain comparison)
+  * debian/patches: Added allow204 outside preview patches
+
+ -- Tim Weippert <weiti@weiti.org>  Thu, 07 Apr 2011 15:10:17 +0200
+
+c-icap-modules (1:0.1.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tim Weippert <weiti@weiti.org>  Tue, 29 Mar 2011 22:50:24 +0200
+
+c-icap-modules (1:0.1.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #607836)
+  * Added Depend to clamav, without no scanning can occur
+  * Bump Standards version to 3.9.1
+  * Restructure rules file to use override_
+  * Added onupdate script to recognize clamav pattern updates.
+
+ -- Tim Weippert <weiti@weiti.org>  Wed, 05 Jan 2011 11:23:39 +0100
+
+c-icap-modules (1:0.1.2-1) unstable; urgency=low
+
+  * Upstream splits modules and server
+
+ -- Tim Weippert <weiti@weiti.org>  Tue, 23 Nov 2010 15:10:51 +0100
+
+c-icap (20080706rc3-2) unstable; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Bump Standards version to 3.8.4
+  * Fix init script dependency on $remote_fs
+
+ -- Jochen Friedrich <jochen@scram.de>  Fri, 07 May 2010 11:22:32 +0200
+
+c-icap (20080706rc3-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #556100)
+  * Completed debianization.
+  * First upload to Debian.
+
+ -- Jochen Friedrich <jochen@scram.de>  Mon, 16 Nov 2009 16:04:15 +0100
+
+c-icap (20070418-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Yauhen Kharuzhy <jekhor@gmail.com>  Wed, 31 Oct 2007 17:59:04 +0200

@@ -1,3 +1,20 @@
+php7.4 (7.4.33-1+deb11u7) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * Fix CVE-2024-8929: Partial content leak of the heap through heap buffer
+    over-read in mysqlnd. (Closes: #1088688)
+  * Fix CVE-2024-8932: Out-of-bound write in ldap_escape(). (Closes: #1088688)
+  * Fix CVE-2024-11233: Single byte overread with
+    convert.quoted-printable-decode filter. (Closes: #1088688)
+  * Fix CVE-2024-11234: Configuring a proxy in a stream context might allow
+    for CRLF injection in URIs. (Closes: #1088688)
+  * Fix CVE-2024-11236: Out-of-bound writes in in the firebird and dblib
+    quoters due integer overflow. (Closes: #1088688)
+  * Fix GHSA-4w77-75f9-2c8w: Heap-Use-After-Free in sapi_read_post_data()
+    Processing in CLI SAPI Interface.
+
+ -- Guilhem Moulin <guilhem@debian.org>  Sat, 07 Dec 2024 23:44:42 +0100
+
 php7.4 (7.4.33-1+deb11u6) bullseye-security; urgency=high
 
   * Non-maintainer upload by the LTS Team.
@@ -9,7 +26,7 @@ php7.4 (7.4.33-1+deb11u6) bullseye-security; urgency=high
   * Fix CVE-2024-8927: `cgi.force_redirect` configuration is bypassable due to
     the environment variable collision.
   * Fix CVE-2024-9026: Logs from childrens may be altered.
-  * d/gbp.config: Adjust debian-branch and set pristine-tar=False.
+  * d/gbp.conf: Adjust debian-branch and set pristine-tar=False.
 
  -- Guilhem Moulin <guilhem@debian.org>  Mon, 14 Oct 2024 19:47:44 +0200
 
