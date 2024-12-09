@@ -280,7 +280,7 @@ class DebianLTSChangelogs:
 
         section_list = self.get_section_list()
         if section not in section_list:
-            print ('    Section {section} is not support with {self.suite}')
+            print (f'    Section {section} is not support with {self.suite}')
             return
 
         filename = f'Sources-{self.suite}-{self.maint_mode}-{section}'
