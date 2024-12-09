@@ -28,6 +28,7 @@ class DebianLTSChangelogs:
     apt_pkg.init_system()
 
     section = {}
+    esr = ['firefox-esr']
 
     def __init__(self, suite: str, maint_mode:str = None):
 
@@ -137,7 +138,11 @@ class DebianLTSChangelogs:
         with open(generate_changelog_filename, mode = write_mode) as fout:
             with open(changelog_filename, mode='r') as fin:
                 for line in fin:
-                    if re.search(f'^{package_name}', line):
+                    __package_name = package_name
+                    # for mozilla's software
+                    if __package_name in self.esr:
+                        __package_name = __package_name.replace('-esr','')
+                    if re.search(f'^{__package_name}', line):
                         reg = '(?<=\\().+?(?=\\))'
                         version_line = re.findall(reg, line)[0]
 
