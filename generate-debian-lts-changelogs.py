@@ -35,7 +35,7 @@ def main():
             print ('Could not download sources file.')
             sys.exit()
 
-        base_data = base.parse_meta_data(base_data)
+        base_data = base.parse_meta_data(base_parse_data = base_data)
 
     packages_list = {}
     for package_name in base_data:
