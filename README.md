@@ -2,7 +2,7 @@
 
 # How to use
 
-1. Get the latest ELTS package information and package changelog.
+1. Get the latest ELTS all package information and package changelog.
 
 When run, it will download the Sources.gz for the ELTS. Next,
 it downloads the changelog files for the packages managed in the
@@ -13,9 +13,14 @@ For Debian 10 (buster):
 ./update-debian-lts-changelogs.py -s buster
 ```
 
+When run, it downloads Sources.gz for (old)oldstable, LTS, and ELTS, and stores
+the latest version information and changelog files for the source packages
+provided in each section in the changelogs directory.
+This is updated each time it is run.
+
 2. Create changelog diff between Debian stable + Debian LTS to /tmp/changelog.SUITE.
 
-Download Sources.gz for Debian stable and Debian LTS.
+Download Sources.gz for Debian oldstable and Debian LTS.
 Output d/changelog of updated packages to /tmp/changelog.SUITE.  
 
 ```
